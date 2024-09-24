@@ -2,10 +2,10 @@
 title: Vista de depuración push
 description: Esta guía detalla información acerca de la vista Depurar push en Adobe Experience Platform Assurance.
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f9cc088cdda4323c80e35978fcde373cbba9204d
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 100%
+source-wordcount: '919'
+ht-degree: 86%
 
 ---
 
@@ -25,7 +25,7 @@ Esta vista solo está habilitada para un único cliente, por lo que al seleccion
 
 ## Validar configuración
 
-La pestaña **[!UICONTROL Validar configuración]** valida y proporciona detalles adicionales acerca de la configuración push de la aplicación. Existen tres paneles que ejecutan validaciones. Muestran una marca de verificación verde si todas las validaciones son correctas. Si hay tres marcas de verificación verdes, la aplicación se ha configurado correctamente para la mensajería push, escribe tokens push en el perfil de usuario y tiene una superficie de aplicación asociada configurada.
+La pestaña **[!UICONTROL Validar configuración]** valida y proporciona detalles adicionales acerca de la configuración push de la aplicación. Existen tres paneles que ejecutan validaciones. Muestran una marca de verificación verde si todas las validaciones son correctas. Si hay tres marcas de verificación verdes, la aplicación se ha configurado correctamente para la mensajería push, está escribiendo tokens push en el perfil de usuario y tiene configurada una configuración de canal asociada.
 
 Si algo no funciona como se espera, aparece una alerta con detalles sobre cómo solucionar ese problema:
 
@@ -49,11 +49,9 @@ Por último, en la parte inferior del panel se encuentra un vínculo que abrirá
 
 ### Credenciales y configuración de la AppStore
 
-Este panel valida que el ID de aplicación y la plataforma de mensajería guardada en el perfil tengan una superficie de aplicación coincidente creada. Una superficie de aplicación es donde se cargan las credenciales push de la aplicación.
+Este panel valida que el ID de aplicación y la plataforma de mensajería guardada en el perfil tengan una configuración de canal coincidente creada. En una configuración de canal es donde se cargan las credenciales push de la aplicación.
 
-Si es válida, el perfil muestra el nombre de la superficie de la aplicación, el ID de la aplicación y el nombre del servicio de mensajería.
-
-Por último, en la parte inferior del panel hay un vínculo que abre esta superficie específica de la aplicación en una pestaña nueva.
+Si es válido, el perfil mostrará el nombre de la configuración del canal, el ID de aplicación y el nombre del servicio de mensajería.
 
 ## Enviar push de prueba
 
@@ -71,9 +69,9 @@ En el panel **[!UICONTROL Mensaje]**, puede proporcionar un título y un cuerpo 
 
 ### Destinatario push
 
-El panel **[!UICONTROL Destinatario push]** le permite personalizar qué superficie de aplicación y token push utilizar al enviar el mensaje push.
+El panel **[!UICONTROL Destino push]** le permite personalizar qué configuración de canal y token push se utilizará al enviar el mensaje push.
 
-Esta información se proporciona de forma predeterminada si la pestaña **[!UICONTROL Validar configuración]** muestra tres marcas de verificación verdes. Sin embargo, puede proporcionar su propio token push y su superficie de aplicación, aunque la aplicación no esté completamente configurada.
+Esta información se proporciona de forma predeterminada si la pestaña **[!UICONTROL Validar configuración]** muestra tres marcas de verificación verdes. Sin embargo, puede proporcionar su propio token push y la configuración de canal, aunque la aplicación no esté completamente configurada.
 
 ![Panel Destinatario](./images/push-debug-view/target-pane.png)
 

@@ -4,7 +4,7 @@ title: Navegar a los manuales de casos de uso
 description: Aprenda a navegar por una galería de libros de reproducción y a empezar con una zona protegida inspiradora.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 2%
@@ -67,7 +67,7 @@ Configure también canales para libros de reproducción que contengan mensajes t
 
 ### Superficie del canal push
 
-Confirme que las superficies de la aplicación estén configuradas desde la interfaz de Experience Platform o de Recopilación de datos. Este es el aspecto de las superficies de aplicación en el entorno de recopilación de datos.
+Confirme que las configuraciones de canal se hayan realizado desde la interfaz de Experience Platform o de Recopilación de datos. Este es el aspecto de las configuraciones de canal en el entorno de recopilación de datos.
 
 ## Pasos siguientes {#next-steps}
 

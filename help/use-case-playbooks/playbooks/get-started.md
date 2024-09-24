@@ -4,9 +4,9 @@ title: Introducción a los manuales de casos de uso
 description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de manuales de tácticas de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 14%
 
 ---
@@ -105,11 +105,11 @@ Configure también canales para libros de reproducción que contengan mensajes t
 
 ### Superficie del canal push
 
-Confirme que las superficies de la aplicación estén configuradas desde la interfaz de Experience Platform o de Recopilación de datos. Este es el aspecto de las superficies de aplicación en el entorno de recopilación de datos.
+Confirme que las configuraciones de canal se hayan realizado desde la interfaz de Experience Platform o de Recopilación de datos. Este es el aspecto de las configuraciones de canal en el entorno de recopilación de datos.
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-A continuación, seleccione el canal, las plataformas y las aplicaciones que ha visto en las configuraciones de superficie de la aplicación. Seleccione **Enviar** para crear la superficie del canal push.
+A continuación, seleccione el canal, las plataformas y las aplicaciones que ha visto en las configuraciones de canal. Seleccione **Enviar** para crear la superficie del canal push.
 
 Lea la documentación sobre [cómo configurar las superficies de los canales push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
