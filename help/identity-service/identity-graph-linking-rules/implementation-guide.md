@@ -3,9 +3,9 @@ title: Guía de implementación para reglas de vinculación de gráficos de iden
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1470'
 ht-degree: 2%
 
 ---
@@ -20,16 +20,89 @@ Lea este documento para obtener una guía paso a paso que puede seguir al implem
 
 Descripción paso a paso:
 
-1. [Crear las áreas de nombres de identidad necesarias](#namespace)
-2. [Utilice la herramienta de simulación de gráficos para familiarizarse con el algoritmo de optimización de identidad](#graph-simulation)
-3. [Utilice la herramienta de configuración de identidad para designar las áreas de nombres únicas y configurar las clasificaciones de prioridad para las áreas de nombres](#identity-settings)
-4. [Creación de un esquema de modelo de datos de experiencia (XDM)](#schema)
-5. [Crear un conjunto de datos](#dataset)
-6. [Ingesta de datos en Experience Platform](#ingest)
 
-## Requisitos previos a la implementación
+1. [Completar requisitos previos para la implementación](#prerequisites-for-implementation)
+2. [Crear las áreas de nombres de identidad necesarias](#namespace)
+3. [Utilice la herramienta de simulación de gráficos para familiarizarse con el algoritmo de optimización de identidad](#graph-simulation)
+4. [Utilice la herramienta de configuración de identidad para designar las áreas de nombres únicas y configurar las clasificaciones de prioridad para las áreas de nombres](#identity-settings)
+5. [Creación de un esquema de modelo de datos de experiencia (XDM)](#schema)
+6. [Crear un conjunto de datos](#dataset)
+7. [Ingesta de datos en Experience Platform](#ingest)
 
-Antes de empezar, primero debe asegurarse de que los eventos autenticados en el sistema siempre contengan un identificador de persona.
+## Requisitos previos para la implementación {#prerequisites-for-implementation}
+
+En esta sección se describen los pasos previos que debe llevar a cabo antes de implementar las reglas de vinculación de gráficos de identidad con los datos.
+
+### Espacio de nombres único
+
+#### Requisito de área de nombres de persona única {#single-person-namespace-requirement}
+
+Debe asegurarse de que el área de nombres única con la prioridad más alta esté siempre presente en cada perfil. Al hacerlo, el servicio de identidad puede detectar el identificador de persona adecuado en un gráfico determinado.
+
++++Seleccione esta opción para ver un ejemplo de gráfico sin un área de nombres de identificador de persona individual
+
+Sin un área de nombres única que represente los identificadores de persona, puede terminar con un gráfico que se vincule a identificadores de persona diferentes para el mismo ECID. En este ejemplo, B2BCRM y B2CRM están vinculados al mismo ECID al mismo tiempo. Este gráfico sugiere que Tom, usando su cuenta de inicio de sesión B2C, compartió un dispositivo con Summer, usando su cuenta de inicio de sesión B2B. Sin embargo, el sistema reconocerá que este es un perfil (colapso de gráfico).
+
+![Escenario de gráfico en el que dos identificadores de persona están vinculados al mismo ECID.](../images/graph-examples/multi_namespaces.png)
+
++++
+
++++Seleccione esta opción para ver un ejemplo de un gráfico con un área de nombres de identificador de persona única
+
+Dado un área de nombres única (en este caso, un CRMID en lugar de dos áreas de nombres dispares), el servicio de identidad puede discernir el identificador de persona que se asoció por última vez con el ECID. En este ejemplo, como existe un CRMID único, el servicio de identidad puede reconocer un escenario de &quot;dispositivo compartido&quot;, en el que dos entidades comparten el mismo dispositivo.
+
+![Escenario de gráfico de dispositivo compartido, en el que dos identificadores de persona están vinculados al mismo ECID, pero se ha eliminado el vínculo anterior.](../images/graph-examples/crmid_only_multi.png)
+
++++
+
+### Configuración de prioridad de área de nombres
+
+Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para la ingesta de datos, debe dar a sus ECID una prioridad mayor que la de Adobe Analytics ID (AAID), ya que el servicio de identidad bloquea la AAID. Al priorizar ECID, puede indicar al Perfil del cliente en tiempo real que almacene eventos no autenticados en ECID en lugar de AAID.
+
+### Eventos de experiencia XDM
+
+* Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará al Experience Platform siempre contengan un identificador de persona, como CRMID.
+* No envíe una cadena vacía como valor de identidad al enviar eventos mediante eventos de experiencia XDM. Al hacerlo, se producirán errores del sistema.
+
++++Seleccione esta opción para ver un ejemplo de una carga útil con una cadena vacía
+
+El ejemplo siguiente devuelve un error porque el valor de identidad de `Phone` se envía como una cadena vacía.
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ],
+        "Phone": [
+            {
+                "id": "",
+                "primary": true
+            }
+        ]
+    }
+```
+
++++
+
+Debe asegurarse de tener una identidad completa al enviar eventos mediante eventos de experiencia XDM.
+
++++Seleccione esta opción para ver un ejemplo de un evento con una identidad completa
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ]
+    }
+```
+
++++
 
 ## Definición de permisos {#set-permissions}
 
@@ -72,12 +145,6 @@ Para obtener instrucciones sobre cómo crear un conjunto de datos, lea la [guía
 
 ## Ingesta de datos {#ingest}
 
->[!WARNING]
->
->* Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará al Experience Platform siempre contengan un identificador de persona, como CRMID.
->* Durante la implementación, debe asegurarse de que el área de nombres única con la prioridad más alta esté siempre presente en cada perfil. Consulte el [apéndice](#appendix) para ver ejemplos de escenarios de gráficos que se solucionan asegurándose de que cada perfil contenga el área de nombres única con la prioridad más alta.
->* Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para la ingesta de datos, debe dar a sus ECID una prioridad mayor que AAID, ya que el servicio de identidad bloquea AAID. Al priorizar ECID, puede indicar al Perfil del cliente en tiempo real que almacene eventos no autenticados en ECID en lugar de AAID.
-
 En este punto, debería tener lo siguiente:
 
 * Los permisos necesarios para acceder a las funciones del servicio de identidad.
@@ -101,26 +168,6 @@ Para obtener cualquier comentario, use la opción **[!UICONTROL comentarios de B
 ## Apéndice {#appendix}
 
 Lea esta sección para obtener información adicional a la que puede hacer referencia al implementar la configuración de identidad y las áreas de nombres únicas.
-
-### Requisito de área de nombres de persona única {#single-person-namespace-requirement}
-
-Debe asegurarse de que se utiliza un solo área de nombres en todos los perfiles que representen a una persona. Al hacerlo, el servicio de identidad puede detectar el identificador de persona adecuado en un gráfico determinado.
-
->[!BEGINTABS]
-
->[!TAB Sin un área de nombres de identificador de persona individual]
-
-Sin un área de nombres única que represente los identificadores de persona, puede terminar con un gráfico que se vincule a identificadores de persona diferentes para el mismo ECID. En este ejemplo, B2BCRM y B2CRM están vinculados al mismo ECID al mismo tiempo. Este gráfico sugiere que Tom, usando su cuenta de inicio de sesión B2C, compartió un dispositivo con Summer, usando su cuenta de inicio de sesión B2B. Sin embargo, el sistema reconocerá que este es un perfil (colapso de gráfico).
-
-![Escenario de gráfico en el que dos identificadores de persona están vinculados al mismo ECID.](../images/graph-examples/multi_namespaces.png)
-
->[!TAB Con un área de nombres de identificador de persona individual]
-
-Dado un área de nombres única (en este caso, un CRMID en lugar de dos áreas de nombres dispares), el servicio de identidad puede discernir el identificador de persona que se asoció por última vez con el ECID. En este ejemplo, como existe un CRMID único, el servicio de identidad puede reconocer un escenario de &quot;dispositivo compartido&quot;, en el que dos entidades comparten el mismo dispositivo.
-
-![Escenario de gráfico de dispositivo compartido, en el que dos identificadores de persona están vinculados al mismo ECID, pero se ha eliminado el vínculo anterior.](../images/graph-examples/crmid_only_multi.png)
-
->[!ENDTABS]
 
 ### Escenario de ID de inicio de sesión pendiente {#dangling-loginid-scenario}
 
@@ -158,6 +205,6 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad de área de nombres](./namespace-priority.md)
+* [Prioridad de espacios de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)
