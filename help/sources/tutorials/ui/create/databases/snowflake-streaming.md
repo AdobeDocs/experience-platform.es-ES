@@ -1,12 +1,10 @@
 ---
 title: Transmita datos de la base de datos de Snowflake a Experience Platform mediante la interfaz de usuario
-type: Tutorial
 description: Aprenda a transmitir datos de su base de datos de Snowflake a Experience Platform
-badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1647'
 ht-degree: 3%
 
 ---

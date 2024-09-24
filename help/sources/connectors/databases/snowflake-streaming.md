@@ -1,13 +1,12 @@
 ---
 title: Información general sobre el conector Source de Snowflake Streaming
 description: Obtenga información sobre cómo crear una conexión de origen y un flujo de datos para introducir datos de flujo continuo de la instancia de Snowflake a Adobe Experience Platform
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-05-25T00:00:00Z
+last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
@@ -16,8 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* El origen de flujo continuo [!DNL Snowflake] está en fase beta. Lea [Resumen de fuentes](../../home.md#terms-and-conditions) para obtener más información sobre cómo usar fuentes con etiquetas beta.
->* El origen de flujo continuo [!DNL Snowflake] está disponible en la API para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
+> El origen de flujo continuo [!DNL Snowflake] está disponible en la API para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 

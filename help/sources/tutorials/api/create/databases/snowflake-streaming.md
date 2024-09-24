@@ -1,12 +1,11 @@
 ---
 title: Conexión de la cuenta de flujo de Snowflake a Adobe Experience Platform
 description: Obtenga información sobre cómo conectar Adobe Experience Platform al flujo de Snowflake mediante la API de Flow Service.
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '845'
 ht-degree: 5%
 
 ---
@@ -15,8 +14,8 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->* El origen de flujo continuo [!DNL Snowflake] está en fase beta. Lea [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre cómo usar fuentes con etiquetas beta.
->* El origen de flujo continuo [!DNL Snowflake] está disponible en la API para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
+>
+> El origen de flujo continuo [!DNL Snowflake] está disponible en la API para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
 
 Este tutorial proporciona pasos sobre cómo conectar y transmitir datos desde su cuenta de [!DNL Snowflake] a Adobe Experience Platform mediante la [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
