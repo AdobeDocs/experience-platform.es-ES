@@ -2,10 +2,10 @@
 title: Resumen de registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 36%
+source-wordcount: '1350'
+ht-degree: 35%
 
 ---
 
@@ -133,6 +133,22 @@ Para exportar la lista actual de registros de auditoría, seleccione **[!UICONTR
 En el cuadro de diálogo que aparece, seleccione el formato que prefiera (**[!UICONTROL CSV]** o **[!UICONTROL JSON]**) y, a continuación, seleccione **[!UICONTROL Descargar]**. El explorador descarga el archivo generado y lo guarda en el equipo.
 
 ![Se resaltó el cuadro de diálogo de selección de formato de archivo con [!UICONTROL Descargar].](../../images/audit-logs/select-download-format.png)
+
+## Habilitar alertas {#enable-alerts}
+
+Puede activar alertas de auditoría para recibir notificaciones para las siguientes reglas:
+
+* Creación de audiencia
+* Actualización de audiencia
+* Audience delete
+* Crear conjunto de datos
+* Actualización de conjuntos de datos
+* Eliminación de conjunto de datos
+* Creación de esquema
+* Actualización de esquema
+* Eliminación de esquema
+
+Seleccione la alerta que desee en la lista para suscribirse y recibir notificaciones. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas mediante la interfaz de usuario](../../../observability/alerts/ui.md).
 
 ## Administración de registros de auditoría en la API
 
