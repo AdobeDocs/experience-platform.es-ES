@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 35%
+source-wordcount: '135'
+ht-degree: 36%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 35%
       * Filtros {#filters}
          * [Filtro de fecha](data-distiller/query-pro-mode/filters/date-filter.md)
          * [Filtro global](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Explorar en profundidad](data-distiller/query-pro-mode/drill-through.md)
       * [Ver más](data-distiller/query-pro-mode/view-more.md)
       * [Ver SQL](data-distiller/query-pro-mode/view-sql.md)
       * [Descargar como CSV](data-distiller/query-pro-mode/download-csv.md)
