@@ -1,11 +1,11 @@
 ---
 title: Conexión de la cuenta de Salesforce mediante la interfaz de usuario de Experience Platform
-description: Aprenda a conectar su cuenta de Salesforce y llevar los datos de CRM al Experience Platform mediante la interfaz de usuario.
+description: Aprenda a conectar su cuenta de Salesforce y a llevar los datos de CRM al Experience Platform mediante la interfaz de usuario de.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '935'
+ht-degree: 2%
 
 ---
 
@@ -71,9 +71,9 @@ Seleccione **[!DNL Salesforce]** en la categoría *[!UICONTROL CRM]* y luego sel
 >
 >Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
 
-![El catálogo de orígenes en la interfaz de usuario de Experience Platform con la tarjeta de origen de Salesforce seleccionada.](../../../../images/tutorials/create/salesforce/catalog.png)
+![El catálogo de orígenes en la interfaz de usuario del Experience Platform con la tarjeta de origen de Salesforce seleccionada.](../../../../images/tutorials/create/salesforce/catalog.png)
 
-Aparecerá la página **[!UICONTROL Conectar con Salesforce]**. En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá la página **[!UICONTROL Conectarse a Salesforce]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Usar una cuenta existente
 
@@ -85,7 +85,7 @@ Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y l
 
 Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y proporciona un nombre y una descripción para tu nueva cuenta de [!DNL Salesforce].
 
-![Interfaz en la que puede crear una nueva cuenta de Salesforce al proporcionar las credenciales de autenticación adecuadas.](../../../../images/tutorials/create/salesforce/new.png)
+![Interfaz en la que puede crear una nueva cuenta de Salesforce proporcionando las credenciales de autenticación adecuadas.](../../../../images/tutorials/create/salesforce/new.png)
 
 A continuación, seleccione el tipo de autenticación que desee utilizar para la nueva cuenta.
 
@@ -118,6 +118,12 @@ Cuando termine, seleccione **[!UICONTROL Conectarse al origen]**.
 ![Interfaz de OAuth para la creación de cuentas de Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### Omitir vista previa de datos de ejemplo {#skip-preview-of-sample-data}
+
+Durante el paso de selección de datos, puede encontrar un tiempo de espera al ingerir tablas o archivos de datos grandes. Puede omitir la previsualización de datos para evitar el tiempo de espera y seguir viendo el esquema, aunque sin datos de ejemplo. Para omitir la vista previa de datos, active la opción **[!UICONTROL Omitir vista previa de datos de ejemplo]**.
+
+El resto del flujo de trabajo sigue siendo el mismo. La única advertencia es que omitir la previsualización de datos puede impedir que los campos calculados y requeridos se validen automáticamente durante el paso de asignación y, a continuación, tendrá que validar manualmente esos campos durante la asignación.
 
 ## Pasos siguientes
 

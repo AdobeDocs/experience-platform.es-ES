@@ -3,9 +3,9 @@ title: Creación de una conexión de Google Big Query Source en la interfaz de u
 description: Obtenga información sobre cómo crear una conexión de origen de Google Big Query mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '620'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,12 @@ Para usar la autenticación del servicio, selecciona **[!UICONTROL Autenticació
 ![Interfaz de la nueva cuenta donde se ha seleccionado la autenticación del servicio.](../../../../images/tutorials/create/google-big-query/service_auth.png)
 
 >[!ENDTABS]
+
+### Omitir vista previa de datos de ejemplo {#skip-preview-of-sample-data}
+
+Durante el paso de selección de datos, puede encontrar un tiempo de espera al ingerir tablas o archivos de datos grandes. Puede omitir la previsualización de datos para evitar el tiempo de espera y seguir viendo el esquema, aunque sin datos de ejemplo. Para omitir la vista previa de datos, active la opción **[!UICONTROL Omitir vista previa de datos de ejemplo]**.
+
+El resto del flujo de trabajo sigue siendo el mismo. La única advertencia es que omitir la previsualización de datos puede impedir que los campos calculados y requeridos se validen automáticamente durante el paso de asignación y, a continuación, tendrá que validar manualmente esos campos durante la asignación.
 
 ## Pasos siguientes
 
