@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
+source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
 workflow-type: tm+mt
-source-wordcount: '5805'
+source-wordcount: '6024'
 ht-degree: 2%
 
 ---
@@ -178,6 +178,10 @@ Para obtener información sobre la característica de copia de objetos, consulte
 | size_of | Devuelve el tamaño de la entrada. | <ul><li>ENTRADA: **Requerida** El objeto del que intenta encontrar el tamaño.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Esta función se utiliza para anexar todos los elementos de toda la matriz de entrada al final de la matriz en Profile. Esta función es **solamente** aplicable durante las actualizaciones. Si se utiliza en el contexto de las inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** La matriz para anexar la matriz en el perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Esta función se utiliza para reemplazar elementos en una matriz. Esta función es **solamente** aplicable durante las actualizaciones. Si se utiliza en el contexto de las inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** La matriz para reemplazar la matriz en el perfil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| [!BADGE Beta]{type=Informative} array_to_string | Une las representaciones de cadena de los elementos de una matriz utilizando el separador especificado. Si la matriz es multidimensional, se acopla antes de unirse. **Nota**: esta función se usa en destinos. Lea la [documentación](../destinations/ui/export-arrays-calculated-fields.md) para obtener más información. | <ul><li>SEPARADOR: **Requerido** El separador usado para unir los elementos de la matriz.</li><li>MATRIZ: **Requerida** Matriz que se unirá (después del acoplamiento).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hola;mundo&quot; |
+| [!BADGE Beta]{type=Informative} filterArray* | Filtra la matriz determinada en función de un predicado. **Nota**: esta función se usa en destinos. Lea la [documentación](../destinations/ui/export-arrays-calculated-fields.md) para obtener más información. | <ul><li>MATRIZ: **Requerido** La matriz que se filtrará</li><li>PREDICADO: **Requerido** El predicado que se aplicará en cada elemento de la matriz dada. | filterArray(MATRIZ, PREDICADO) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
+| [!BADGE Beta]{type=Informative} transformArray* | Transforma la matriz determinada en función de un predicado. **Nota**: esta función se usa en destinos. Lea la [documentación](../destinations/ui/export-arrays-calculated-fields.md) para obtener más información. | <ul><li>MATRIZ: **Requerido** La matriz que se va a transformar.</li><li>PREDICADO: **Requerido** El predicado que se aplicará en cada elemento de la matriz dada. | transformArray(MATRIZ, PREDICADO) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE Beta]{type=Informative} flattenArray* | Acople la matriz determinada (multidimensional) a una matriz unidimensional. **Nota**: esta función se usa en destinos. Lea la [documentación](../destinations/ui/export-arrays-calculated-fields.md) para obtener más información. | <ul><li>MATRIZ: **Requerido** La matriz que se va a acoplar.</li></ul> | flattenArray(MATRIZ) | flattenArray([[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
