@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
+source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
 workflow-type: tm+mt
-source-wordcount: '4767'
+source-wordcount: '4717'
 ht-degree: 5%
 
 ---
@@ -111,8 +111,6 @@ Puede situarse sobre el ⓘ situado junto a una audiencia para ver información 
 
 ![Imagen que muestra cómo funciona la jerarquía de carpetas para las audiencias.](../images/ui/segment-builder/audience-folder-structure.png)
 
-También puede buscar audiencias mediante la barra de búsqueda, que utiliza la sintaxis de búsqueda de [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). En la ficha **[!UICONTROL Audiencias]**, al seleccionar una carpeta de nivel superior, aparece la barra de búsqueda, lo que le permite buscar dentro de esa carpeta. Los resultados de la búsqueda solo comienzan a rellenarse una vez que se introducen palabras completas. Por ejemplo, para buscar una audiencia denominada `Online Shoppers`, empiece a escribir &quot;En línea&quot; en la barra de búsqueda. Una vez escrita la palabra &quot;Online&quot;, aparecen los resultados de búsqueda que contienen la palabra &quot;Online&quot;.
-
 ## Lienzo del generador de reglas {#rule-builder-canvas}
 
 >[!IMPORTANT]
@@ -158,6 +156,11 @@ Tenga en cuenta que se permite un máximo de 250 valores. Si supera esta cantida
 ![Se muestra una advertencia que indica que se ha alcanzado el número máximo de valores.](../images/ui/segment-builder/maximum-values.png)
 
 ### Adición de audiencias
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="Buscar actualizaciones"
+>abstract="El sistema de búsqueda existente se ha actualizado para utilizar la búsqueda unificada. La búsqueda unificada le permite buscar en sus audiencias de forma más sencilla y sólida miembros de segmentos."
 
 Puede arrastrar y soltar una audiencia de la ficha **[!UICONTROL Audiencia]** en el lienzo del generador de reglas para hacer referencia a la pertenencia a la audiencia en la nueva definición de segmento. Esto le permite incluir o excluir la pertenencia a audiencias como atributo en las nuevas reglas de definición de segmentos.
 
