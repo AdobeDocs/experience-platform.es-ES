@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '2051'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,28 @@ Como alternativa, para ver una lista de las ejecuciones programadas de una plant
 
 Aparecerá la lista de ejecuciones de consulta para esa consulta programada.
 
+### Calcular horas en el nivel de trabajo {#compute-hours}
+
+Rastree las horas calculadas consumidas en el nivel de ejecución de consultas para sus consultas por lotes CTAS/ITAS. Esta función ofrece perspectivas sobre el uso de computación, lo que le ayuda a optimizar la asignación de recursos y mejorar el rendimiento de las consultas.
+
+>[!AVAILABILITY]
+>
+>La funcionalidad Calcular horas es exclusiva para los usuarios que hayan adquirido el [SKU de Distiller de datos](../data-distiller/overview.md). Póngase en contacto con el representante del Adobe para obtener más información.
+
 ![La sección de detalles del área de trabajo Consultas programadas con una lista de ejecuciones de consulta resaltada para una consulta programada.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+En la tabla siguiente se describen las columnas disponibles en la sección de detalles que enumera las ejecuciones de consultas programadas.
+
+| Título de columna | Descripción |
+|---------------------|----------------------------------|
+| [!UICONTROL ID de ejecución de consulta] | Muestra un identificador único para cada ejecución de consulta, lo que permite realizar un seguimiento y hacer referencia a ejecuciones individuales de consultas programadas. |
+| [!UICONTROL Inicio de ejecución de consulta] | Indica la fecha y hora de inicio de la ejecución de la consulta para ayudarle a monitorizar cuándo comenzó cada ejecución. |
+| [!UICONTROL Ejecución de consulta completa] | Muestra la fecha y hora de finalización de la ejecución de la consulta para proporcionar información sobre la duración y el estado de la ejecución. |
+| [!UICONTROL Estado] | Muestra el estado actual de la ejecución de la consulta, como `Completed,` `Running,` o `Failed,` para evaluar el resultado rápidamente. |
+| [!UICONTROL Conjuntos de datos] | Enumera los conjuntos de datos utilizados en la ejecución de la consulta para mostrar qué fuentes de datos participaron en la ejecución. |
+| [!UICONTROL Calcular horas] | Muestra el tiempo de cálculo utilizado para cada ejecución de consulta, medido en horas. Esto ayuda a realizar un seguimiento del uso de los recursos y optimizar el rendimiento de las consultas. |
+
+{style="table-layout:auto"}
 
 Consulte la [guía de consulta programada de monitor](./monitor-queries.md#inline-actions) para obtener información completa sobre cómo supervisar el estado de todos los trabajos de consulta a través de la interfaz de usuario.
 
