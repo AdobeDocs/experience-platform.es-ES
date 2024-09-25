@@ -2,7 +2,7 @@
 title: Crear un filtro global
 description: Obtenga información sobre cómo filtrar las perspectivas de datos con un filtro personalizado aplicado globalmente.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5dd821383e1b1a7bd4998a6cf14a941bfdf3f26c
+source-git-commit: 581eb2a33f9bdfddc89c9d8dbf9fca8eb3725b1d
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -66,4 +66,3 @@ Para abrir el cuadro de diálogo [!UICONTROL Filtros] que enumera todos los filt
 Para borrar todos los filtros globales personalizados, selecciona **[!UICONTROL Borrar todo]** en el cuadro de diálogo [!UICONTROL Filtros].
 
 ![Cuadro de diálogo Filtros con Borrar todo resaltado.](../../../images/query-pro-mode/clear-all.png)
-

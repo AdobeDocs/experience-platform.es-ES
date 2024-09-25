@@ -2,10 +2,10 @@
 title: Crear un filtro de fecha
 description: Obtenga información sobre cómo filtrar sus perspectivas personalizadas por fecha.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 77cedd351b5628d15c279fceabde735f4f93f392
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 0%
+source-wordcount: '922'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +22,60 @@ Si no está familiarizado con los parámetros de consulta, consulte la documenta
 Para aplicar un filtro de fecha, seleccione **[!UICONTROL Agregar filtro]** y, a continuación, **[!UICONTROL Filtro de fecha]** en el menú desplegable de la vista de panel.
 
 ![Panel personalizado con el elemento Agregar filtro y su menú desplegable resaltados.](../../../images/query-pro-mode/add-filter.png)
+
+Se le presentarán las siguientes opciones de filtrado de fechas.
+
+| Filtro | Descripción |
+| --- | --- |
+| Sin fechas personalizadas | Seleccione una o más fechas personalizadas de varios valores preestablecidos. |
+| Intervalo de fechas personalizado | Seleccione una o más fechas personalizadas de varios valores preestablecidos o especifique un intervalo de fechas personalizado. |
+| Fecha personalizada | Seleccione entre los valores preestablecidos o especifique la fecha de inicio del panel. |
+
+![Cuadro de diálogo Crear filtro de fecha con las tres opciones de selector de fecha personalizadas resaltadas.](../../../images/query-pro-mode/create-date-filter.png)
+
+### Crear un filtro de fecha no personalizado
+
+Para aplicar un filtro de fecha predefinido, seleccione **[!UICONTROL Sin fecha personalizada]** y, a continuación, seleccione las opciones de fecha predefinidas que desee incluir. Finalmente, use el menú desplegable para seleccionar el intervalo de fechas predeterminado y luego seleccione **[!UICONTROL Guardar]**.
+
+![El cuadro de diálogo Crear filtro de fecha sin filtro de fecha personalizado y guardado resaltado.](../../../images/query-pro-mode/no-custom-date-filter.png)
+
+Volverá al panel, que muestra el intervalo de fechas predeterminado seleccionado anteriormente. Utilice el menú desplegable para seleccionar otro intervalo de fecha preestablecido.
+
+![Panel personalizado que muestra el intervalo de fechas predeterminado con la lista desplegable resaltada.](../../../images/query-pro-mode/no-custom-date-filter-results.png)
+
+### Crear un filtro de intervalo de fechas personalizado
+
+Para aplicar un filtro de intervalo de fechas personalizado, seleccione **[!UICONTROL Intervalo de fechas personalizado]** y, a continuación, las opciones de fechas predefinidas que desee incluir. Finalmente, seleccione **[!UICONTROL Personalizado]** para establecer el intervalo de fechas predeterminado. Use el calendario para especificar un intervalo de fechas y luego seleccione **[!UICONTROL Guardar]**.
+
+>[!NOTE]
+>
+>No es necesario seleccionar opciones de fecha predefinidas.
+
+![Cuadro de diálogo Crear filtro de fecha con el filtro de intervalo de fecha personalizado, personalizado y guardado resaltado.](../../../images/query-pro-mode/custom-date-range-filter.png)
+
+Volverá al tablero, que muestra el intervalo de datos personalizados especificado anteriormente. Utilice el menú desplegable para seleccionar otro intervalo de fecha preestablecido.
+
+![Panel personalizado que muestra el intervalo de fechas predeterminado con la fecha personalizada resaltada.](../../../images/query-pro-mode/custom-date-range-filter-results.png)
+
+### Creación de un filtro de fecha personalizado
+
+Para aplicar un filtro de fecha personalizado, seleccione **[!UICONTROL Fecha personalizada]** y las opciones de fecha predefinidas que desee incluir. Finalmente, selecciona **[!UICONTROL Personalizado]** y luego usa el calendario para seleccionar una fecha de inicio. Finalmente, seleccione **[!UICONTROL Guardar]**.
+
+>[!NOTE]
+>
+>No es necesario seleccionar opciones de fecha predefinidas.
+
+![Cuadro de diálogo Crear filtro de fecha con el filtro de fecha personalizado, personalizado y guardado resaltado.](../../../images/query-pro-mode/custom-date-filter.png)
+
+Volverá al tablero, que muestra los datos personalizados especificados anteriormente. Utilice el menú desplegable para seleccionar otra fecha.
+
+![Panel personalizado que muestra el intervalo de fechas predeterminado con la fecha personalizada resaltada.](../../../images/query-pro-mode/custom-date-filter-results.png)
+
+## Eliminación de un filtro de fecha {#delete-date-filter}
+
+Para quitar el filtro de fecha, seleccione el icono Eliminar filtro (![El icono Eliminar filtro.](/help/images/icons/filter-delete.png)).
+
+![Panel personalizado con el icono de eliminación de filtro resaltado.](../../../images/query-pro-mode/delete-date-filter.png)
 
 ## Edite el SQL para incluir parámetros de consulta de fecha {#include-date-parameters}
 
@@ -75,25 +129,3 @@ A continuación, seleccione los parámetros de consulta adecuados en los menús 
 ![El compositor de widgets con el menú desplegable Start_date resaltado.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Finalmente, selecciona **[!UICONTROL Guardar y cerrar]** para regresar a tu panel. Los filtros de fecha ahora están habilitados para todas las perspectivas que tienen parámetros de fecha de inicio y finalización.
-
-## Uso del filtro de fecha
-
-Para utilizar un filtro de fecha personalizado, seleccione el icono de calendario y elija un inicio y un final en la vista de calendario.
-
->[!IMPORTANT]
->
->Añadir simplemente un filtro de fecha no hará que los gráficos cambien. Debe editar cada una de las perspectivas para incluir las fechas de inicio y finalización seleccionadas.
-
-![Panel personalizado con el calendario de filtro de fecha resaltado.](../../../images/query-pro-mode/date-filter.png)
-
-Una vez que haya seleccionado un intervalo de fechas en el panel, las perspectivas que tengan parámetros de fecha en su SQL verán las opciones de filtro de fecha en el compositor de widgets.
-
->[!NOTE]
->
->Al seleccionar un intervalo de fechas en el panel, se muestran los alternadores para filtros de fecha como parte del flujo de trabajo de creación de perspectivas.
-
-## Eliminación de un filtro de fecha {#delete-date-filter}
-
-Para quitar el filtro de fecha, seleccione el icono Eliminar filtro (![El icono Eliminar filtro.](/help/images/icons/filter-delete.png)).
-
-![Panel personalizado con el icono de eliminación de filtro resaltado.](../../../images/query-pro-mode/delete-date-filter.png)
