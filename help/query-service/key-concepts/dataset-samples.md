@@ -2,10 +2,10 @@
 title: Ejemplos de conjuntos de datos
 description: Los conjuntos de datos de ejemplo del servicio de consultas le permiten realizar consultas exploratorias de big data con un tiempo de procesamiento muy reducido a costa de la precisión de la consulta. Esta guía proporciona información sobre cómo administrar los ejemplos para el procesamiento aproximado de consultas
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 0%
+source-wordcount: '632'
+ht-degree: 1%
 
 ---
 
@@ -17,12 +17,13 @@ Dado que muchos usuarios no necesitan una respuesta exacta para una operación d
 
 Para ayudarle a administrar los ejemplos para un procesamiento de consultas aproximado, el Servicio de consultas admite las siguientes operaciones para ejemplos de conjuntos de datos:
 
-- [Cree una muestra de conjunto de datos aleatorio uniforme.](#create-a-sample)
-- [Especificar opcionalmente un criterio de filtro](##optional-filter-criteria)
-- [Vea la lista de ejemplos de una tabla ADLS.](#view-list-of-samples)
-- [Consulte directamente los conjuntos de datos de ejemplo.](#query-sample-datasets)
-- [Eliminar una muestra.](#delete-a-sample)
-- Elimine las muestras asociadas al soltar la tabla ADLS original.
+- [Ejemplos de conjuntos de datos](#dataset-samples)
+   - [Introducción {#get-started}](#getting-started-get-started)
+   - [Crear una muestra de conjunto de datos aleatorio uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Opcionalmente, especifique un criterio de filtro {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Ver la lista de muestras {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [Consultar el conjunto de datos de ejemplo {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+   - [Eliminar muestras del conjunto de datos {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
 ## Introducción {#get-started}
 
@@ -32,7 +33,7 @@ Para utilizar las capacidades de procesamiento de consultas de creación y elimi
 >
 >Debe habilitar el indicador de sesión cada vez que inicie sesión en Platform.
 
-![Se resaltó el Editor de consultas con el comando &#39;SET aqp=true;&#39;.](../images/essential-concepts/set-session-flag.png)
+![Se resaltó el Editor de consultas con el comando &#39;SET aqp=true;&#39;.](../images/key-concepts/set-session-flag.png)
 
 ## Crear una muestra de conjunto de datos aleatorio uniforme {#create-a-sample}
 

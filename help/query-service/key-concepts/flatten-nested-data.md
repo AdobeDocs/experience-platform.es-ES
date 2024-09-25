@@ -3,7 +3,7 @@ keywords: Experience Platform;servicio de consultas;servicio de consultas;estruc
 title: Acoplar estructuras de datos anidadas para usarlas con herramientas de BI
 description: En este documento se explica cómo acoplar esquemas XDM para todas las tablas y vistas durante una sesión al utilizar herramientas de BI de terceros con el servicio de consulta.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 0%
@@ -56,7 +56,7 @@ prod:all?FLATTEN
 
 El esquema de ejemplo utilizado en esta guía emplea el grupo de campos estándar [!UICONTROL Commerce Details], que utiliza la estructura de objetos `commerce` y la matriz `productListItems`. Consulte la documentación de XDM para obtener [más información sobre el grupo de campos [!UICONTROL Detalles de Commerce]](../../xdm/field-groups/event/commerce-details.md). En la siguiente imagen se puede ver una representación de la estructura del esquema.
 
-![Un diagrama de esquema del grupo de campos Detalles de Commerce que incluye las estructuras `commerce` y `productListItems`.](../images/essential-concepts/commerce-details.png)
+![Un diagrama de esquema del grupo de campos Detalles de Commerce que incluye las estructuras `commerce` y `productListItems`.](../images/key-concepts/commerce-details.png)
 
 Si la herramienta de BI no admite estructuras de datos anidadas, puede resultar difícil hacer referencia a campos anidados si contienen valores serializados (como `commerce` y `productListItems` en el esquema de ejemplo). Estos valores pueden aparecer como partes de un único campo de cadena `commerce` codificado y no pueden utilizarse de forma realista.
 

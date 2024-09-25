@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: a7796a93d588b4e41c668f1a0f60bffbcb291550
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 19%
+source-wordcount: '325'
+ht-degree: 23%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 19%
       - [Funciones de ingeniero para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportación de datos a entornos XML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flujo de trabajo completo de enriquecimiento de la canalización de datos AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- [Hipercubos de Data Distiller](hypercubes.md)
 - Ejemplos {#use-cases}
    - [Información general](use-cases/overview.md)
    - [Exploración abandonada](use-cases/abandoned-browse.md)
@@ -46,7 +47,7 @@ ht-degree: 19%
    - [Filtrado de bots](use-cases/bot-filtering.md)
    - [Creación de un informe de tendencias de eventos](use-cases/trended-report-of-events.md)
    - [Análisis de consentimiento](use-cases/consent-analysis.md)
-   - [Valor de duración del cliente](use-cases/customer-lifetime-value.md)
+   - [Valor de tiempo de vida del cliente](use-cases/customer-lifetime-value.md)
    - [Exploración de datos](./use-cases/data-exploration.md)
    - [Conjuntos de datos derivados basados en deciles](use-cases/deciles-use-case.md)
    - [Coincidencia aproximada](use-cases/fuzzy-match.md)
