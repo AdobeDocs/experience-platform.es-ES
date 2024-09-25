@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform de septiembre de 2024
 description: Notas de la versión de septiembre de 2024 de Adobe Experience Platform.
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 27%
+source-wordcount: '2144'
+ht-degree: 25%
 
 ---
 
@@ -48,10 +48,12 @@ Experience Platform proporciona varios paneles a través de los cuales puede ver
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
-| --- | --- |
+| ------- | ----------- |
+| Tabla de complementos de uso de licencias | Obtenga visibilidad granular sobre el uso de licencias y administre sus recursos de Platform con tablas dedicadas para productos principales y complementos. Rastree y analice métricas clave para cada producto principal con vistas de obtención de detalles en el nivel de zona protegida. Las métricas de complementos se integran perfectamente con las métricas de productos principales y ofrecen una vista completa del uso. La visibilidad mejorada le ayuda a optimizar la administración de licencias y a alinear los recursos con las necesidades de la organización. Consulte la [[!UICONTROL Guía de tablero para uso de licencias]](../../dashboards/guides/license-usage.md#overview-tab) para obtener más detalles. |
 | Modo Query Pro: actualizaciones del filtro global | Mejore el análisis con el nuevo filtro de fechas del modo Query Pro. Refine las perspectivas con parámetros de fecha dinámicos en las consultas SQL y filtre los datos por intervalos de tiempo específicos. Elija intervalos de fechas preestablecidos o personalizados con una interfaz de usuario intuitiva, lo que mantiene los paneles relevantes para todos los usuarios. Simplifique los flujos de trabajo, mantenga la precisión y tome decisiones oportunas. Lea la [guía sobre la creación de filtros de fecha](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md) para obtener más información. |
 | Modos de Query Pro: obtención de detalles | Desbloquee perspectivas más profundas con la función de obtención de detalles del modo Query Pro y navegue sin problemas desde gráficos de alto nivel a paneles detallados. Utilice esta función para pasar sin esfuerzo de resúmenes a análisis en profundidad y explorar tendencias, comportamientos de clientes y KPI. Los pasos de filtro automáticos y las perforaciones de varios niveles mantienen la homogeneidad de los datos, lo que garantiza una exploración sin problemas. Simplifique los flujos de trabajo, mantenga el contexto y acelere las decisiones. Lea la [guía paso a paso sobre la creación de obtención de detalles](../../dashboards/data-distiller/query-pro-mode/drill-through.md) para obtener más información. |
 | Query Pro Mode: atributos de tabla avanzados | Utilice los atributos avanzados de tabla del modo Query Pro para optimizar la visualización de datos, mejorar la eficacia del flujo de trabajo y mejorar la claridad de los datos. Agregue ordenación automática, cambio de tamaño y paginación a las tablas directamente desde los paneles personalizados. Ordene columnas para priorizar los datos clave, cambiar el tamaño para obtener una legibilidad óptima y navegar por conjuntos de datos grandes sin problemas sin modificar las consultas SQL. Lea la guía &#39;[Ver más](../../dashboards/data-distiller/query-pro-mode/view-more.md)&#39; para obtener información sobre cómo integrar estas características y mejorar sus datos. |
+| Volumen total de datos | La métrica &quot;Riqueza de perfil promedio&quot; se ha reemplazado con la métrica &quot;Volumen de datos total&quot;. Volumen total de datos hace referencia a la cantidad total de datos disponibles que se pueden utilizar con el perfil del cliente en tiempo real para los flujos de trabajo de participación y personalización. Encontrará más detalles sobre este cambio en la [guía Volumen total de datos](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 
 {style="table-layout:auto"}
 
@@ -152,7 +154,8 @@ Para obtener más información acerca del servicio de consultas, lea la [descrip
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
-| --- | --- |
+| ------- | ----------- |
+| Actualización de criterios de segmentación de streaming | A partir de la versión de septiembre de 2024 de, se han actualizado los criterios para que sus audiencias puedan optar a la segmentación de streaming. Encontrará más información sobre estos cambios en la [actualización de los criterios de idoneidad para la segmentación de streaming](../../segmentation/eligibility-criteria-update.md). |
 | Implementación de búsqueda unificada | El comportamiento de búsqueda dentro del Generador de segmentos ahora utilizará la búsqueda unificada. Esto ofrece una experiencia más sólida a la hora de administrar y buscar audiencias que reutilizar para la pertenencia a segmentos. Para obtener más información sobre este cambio, lea la [guía del Generador de segmentos](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}

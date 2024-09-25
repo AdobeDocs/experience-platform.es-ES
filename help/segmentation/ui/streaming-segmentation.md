@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de streaming
 description: La segmentación por streaming en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que alivia la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la inscripción a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,13 @@ La segmentación de streaming en [!DNL Adobe Experience Platform] permite a los 
 
 Una consulta se evaluará automáticamente con la segmentación de flujo continuo si cumple cualquiera de los siguientes criterios:
 
-| Tipo de consulta | Detalles | Ejemplo |
-| ---------- | ------- | ------- |
-| Evento único | Cualquier definición de segmento que haga referencia a un único evento entrante sin restricción horaria. | ![Se muestra un ejemplo de un solo evento.](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Evento único dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un único evento entrante. | ![Se muestra un ejemplo de un solo evento dentro de una ventana de tiempo relativa.](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Evento único con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante con un intervalo de tiempo. | ![Se muestra un ejemplo de un solo evento con una ventana de tiempo.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. | |
-| Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. | ![Se muestra un ejemplo de un solo evento con un atributo de perfil en un intervalo de tiempo relativo.](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**. | ![Se muestra un ejemplo de un segmento de segmentos.](../images/ui/streaming-segmentation/two-batches.png) |
-| Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tenga uno o más atributos de perfil. | ![Se muestra un ejemplo de varios eventos con un atributo de perfil.](../images/ui/streaming-segmentation/event-history-success.png) |
+| Tipo de consulta | Detalles |
+| ---------- | ------- |
+| Evento único en un intervalo de tiempo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante en un intervalo de tiempo inferior a 24 horas. |
+| Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
+| Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. |
+| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**. |
+| Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tenga uno o más atributos de perfil. |
 
 Una definición de segmento **no** se habilitará para la segmentación de flujo continuo en los siguientes casos:
 

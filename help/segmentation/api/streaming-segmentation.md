@@ -4,9 +4,9 @@ title: Evaluar eventos en tiempo casi real con segmentación de streaming
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2027'
 ht-degree: 4%
 
 ---
@@ -73,9 +73,7 @@ Para que una definición de segmento se evalúe mediante la segmentación de flu
 
 | Tipo de consulta | Detalles |
 | ---------- | ------- |
-| Evento único | Cualquier definición de segmento que haga referencia a un único evento entrante sin restricción horaria. |
-| Evento único dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un único evento entrante. |
-| Evento único con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante con un intervalo de tiempo. |
+| Evento único en un intervalo de tiempo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante en un intervalo de tiempo inferior a 24 horas. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
 | Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. |
 | Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**. |

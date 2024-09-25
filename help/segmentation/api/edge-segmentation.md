@@ -4,10 +4,10 @@ title: Segmentación de Edge mediante la API
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de Edge con la API del servicio de segmentación de Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 1%
+source-wordcount: '783'
+ht-degree: 2%
 
 ---
 
@@ -43,9 +43,7 @@ Para que se pueda evaluar un segmento mediante la segmentación de Edge, la cons
 
 | Tipo de consulta | Detalles |
 | ---------- | ------- |
-| Evento único | Cualquier definición de segmento que haga referencia a un único evento entrante sin restricción horaria. |
-| Evento único dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un único evento entrante. |
-| Evento único con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante con un intervalo de tiempo. |
+| Evento único en un intervalo de tiempo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante en un intervalo de tiempo inferior a 24 horas. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
 | Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. |
 | Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**. |
