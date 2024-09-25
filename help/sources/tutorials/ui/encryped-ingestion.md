@@ -3,9 +3,9 @@ title: Ingesta de datos cifrados en la IU de fuentes de Workspace
 description: Aprenda a introducir datos cifrados en el espacio de trabajo de la interfaz de usuario de fuentes.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 3eba8690dcf9c808495a00b7fd4558478606f628
+source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1464'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Antes de continuar con este tutorial, lea los siguientes documentos para compren
 * Cree un par de claves de cifrado con el espacio de trabajo de orígenes en la interfaz de usuario de Experience Platform.
    * Opcionalmente, también puede crear su propio par de claves de verificación de firma para proporcionar una capa adicional de seguridad a los datos cifrados.
 * Utilice la clave pública del par de claves de cifrado para cifrar los datos.
-* Coloque los datos cifrados en su proveedor de almacenamiento en la nube. Durante este paso, también debe asegurarse de que tiene un archivo de muestra que puede utilizarse como referencia para asignar los datos de origen a un esquema Experience Data Model (XDM).
+* Coloque los datos cifrados en su almacenamiento en la nube. Durante este paso, también debe asegurarse de que tiene un archivo de muestra de los datos en el almacenamiento en la nube que se puede utilizar como referencia para asignar los datos de origen a un esquema Experience Data Model (XDM).
 * Utilice su origen de lote de almacenamiento en la nube e inicie el proceso de ingesta de datos en el espacio de trabajo de fuentes en la interfaz de usuario de Experience Platform.
 * Durante el proceso de creación de la conexión de origen, proporcione el ID de clave que corresponda a la clave pública que utilizó para cifrar los datos.
    * Si también ha utilizado el mecanismo de par de claves de verificación de firma, también debe proporcionar el ID de clave de verificación de firma que corresponda a los datos cifrados.

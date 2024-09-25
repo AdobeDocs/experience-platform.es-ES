@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform de septiembre de 2024
 description: Notas de la versión de septiembre de 2024 de Adobe Experience Platform.
-source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
+source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 29%
+source-wordcount: '1975'
+ht-degree: 27%
 
 ---
 
@@ -111,6 +111,12 @@ Para obtener más información sobre XDM, lea la [descripción general del siste
 
 El servicio de identidad de Adobe Experience Platform le ofrece una vista completa de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 
+**Característica actualizada**
+
+| Función | Descripción |
+| --- | --- |
+| Disponibilidad limitada de las reglas de vinculación de gráficos de identidad | Las reglas de vinculación de gráficos de identidad son un conjunto de herramientas en Identity Service que puede utilizar para garantizar una personalización precisa para los usuarios. <ul><li>Ahora puede usar el [algoritmo de optimización de identidad](../../identity-service/identity-graph-linking-rules/identity-optimization-algorithm.md) para asegurarse de que un gráfico de identidad sea representativo de una sola persona y, por lo tanto, evitar la combinación no deseada de identidades en el perfil del cliente en tiempo real.</li><li>Configure [prioridades del área de nombres](../../identity-service/identity-graph-linking-rules/namespace-priority.md) para definir la importancia de sus respectivas áreas de nombres e influir en la forma y segmentación de sus perfiles.</li><li>Use la [herramienta de simulación de gráficos en la interfaz de usuario](../../identity-service/identity-graph-linking-rules/graph-simulation.md) para simular gráficos de identidad con configuraciones variables.</li><li>Use la [interfaz de configuración de identidad](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md) para designar su área de nombres única y establecer prioridades para todas las áreas de nombres de su organización.</li><li>Consulte [tablero de identidad](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs) para ver las métricas y tendencias relacionadas con los datos de gráficos.</li></ul> Para probar las reglas de vinculación de gráficos de identidad, póngase en contacto con el equipo de cuenta de Adobe para obtener acceso a los entornos limitados de desarrollo. |
+
 **Documentación actualizada**
 
 | Función | Descripción |
@@ -130,7 +136,7 @@ El servicio de consulta le permite utilizar SQL estándar para consultar datos e
 
 | Función | Descripción |
 | --- | --- |
-| Audiencias de Data Distiller | Cree, administre y active audiencias fácilmente con la extensión de audiencia SQL en el Distiller de datos de Experience Platform. Defina segmentos de audiencia con comandos SQL directamente desde el lago de datos, evitando la necesidad de datos sin procesar en los perfiles. Refine las estrategias de segmentación y sincronice automáticamente las audiencias con destinos basados en archivos con este enfoque flexible basado en datos. Optimice los flujos de trabajo, optimice la gestión de público y desbloquee todo el potencial de los datos. Lea la [guía sobre el uso de la extensión de audiencia SQL](../../query-service/home.md) para elevar sus estrategias de audiencia. |
+| Audiencias de Data Distiller | Cree, administre y active audiencias fácilmente con la extensión de audiencia SQL en el Distiller de datos de Experience Platform. Defina segmentos de audiencia con comandos SQL directamente desde el lago de datos, evitando la necesidad de datos sin procesar en los perfiles. Refine las estrategias de segmentación y sincronice automáticamente las audiencias con destinos basados en archivos con este enfoque flexible basado en datos. Optimice los flujos de trabajo, optimice la gestión de público y desbloquee todo el potencial de los datos. Lea la [guía sobre el uso de la extensión de audiencia SQL](../../query-service/data-distiller-audiences/overview.md) para elevar sus estrategias de audiencia. |
 | Datos Estadísticas de Distiller - Hypercubes | Optimizar el análisis de big data con Hypercubes. Gestionar cálculos complejos, como recuentos distintos y análisis multidimensional, sin volver a procesar datos históricos. Actualice los datos de forma incremental, optimice los flujos de trabajo y reduzca el tiempo de procesamiento a la vez que mantiene la precisión y la eficacia. Obtenga perspectivas más rápidas, escalables y rentables que transforman la toma de decisiones. Explore la [guía sobre el uso de Hypercubes](../../query-service/hypercubes.md) para desbloquear análisis avanzados. |
 | Explorador de objetos del Editor de consultas | Aumente la eficacia de las consultas con el nuevo Examinador de objetos del Editor de consultas. Busque, filtre y acceda rápidamente a conjuntos de datos para escribir y refinar consultas más rápido. Con las actualizaciones de esquema en tiempo real y los metadatos de tabla instantáneos, puede optimizar los flujos de trabajo, reducir el tiempo de navegación y mejorar la experiencia de consulta. Libere el potencial de sus datos y optimice el análisis. Lea la [guía sobre el uso del Examinador de objetos](../../query-service/ui/user-guide.md#object-browser) para obtener más información. |
 | Calcular horas | Obtenga control sobre el uso de los recursos con la métrica de horas calculadas recién visible para consultas programadas. Vea las horas de cálculo en el nivel de ejecución de la consulta para monitorizar y optimizar el uso de los recursos para consultas por lotes CTAS/ITAS. Rastree las horas de inicio, el estado de finalización y calcule el tiempo de cada ejecución de consulta. Ajuste el rendimiento y reduzca los costes sin esfuerzo. Lea la [guía de Horas calculadas](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) para obtener información sobre cómo maximizar la eficacia de las consultas. |

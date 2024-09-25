@@ -3,9 +3,9 @@ title: Guía de implementación para reglas de vinculación de gráficos de iden
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
+source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -164,6 +164,10 @@ Una vez que tenga todos los elementos enumerados arriba, puede empezar a ingerir
 >Una vez introducidos los datos, la carga de datos sin procesar del XDM no cambia. Es posible que siga viendo las configuraciones de identidad principales en la interfaz de usuario. Sin embargo, estas configuraciones se sobrescribirán con la configuración de identidad.
 
 Para obtener cualquier comentario, use la opción **[!UICONTROL comentarios de Beta]** en el área de trabajo de la interfaz de usuario del servicio de identidad.
+
+## Validación de los gráficos {#validate}
+
+Utilice el panel de identidad para obtener información sobre el estado de los gráficos de identidad, como el recuento general de identidades y las tendencias del recuento de gráficos, el recuento de identidades por área de nombres y el recuento de gráficos por tamaño de gráfico. También puede utilizar el panel de identidad para ver las tendencias en gráficos con dos o más identidades, organizadas por área de nombres.
 
 ## Apéndice {#appendix}
 
