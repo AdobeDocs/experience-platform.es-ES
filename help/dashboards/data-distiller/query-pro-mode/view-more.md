@@ -2,10 +2,10 @@
 title: Ver más
 description: Obtenga información sobre las distintas opciones de visualización para los datos analizados por SQL. En el panel personalizado puede ver los resultados tabulados del análisis o descargar los datos procesados en formato CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 2%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
@@ -30,6 +30,38 @@ La característica [!UICONTROL Ver más] muestra los puntos de datos específico
 >La descarga de CSV está limitada a los 500 primeros registros.
 
 ![Cuadro de diálogo que muestra una vista previa de su perspectiva y los resultados tabularizados de su SQL que generó la perspectiva.](../../images/query-pro-mode/view-more-download-csv.png)
+
+## Ordenar por columna {#sort-column}
+
+Al ver los resultados en forma de tabla, puede utilizar la funcionalidad de ordenación para ordenar por columna en orden ascendente o descendente. En el tablero personalizado, seleccione los puntos suspensivos (`...`) de cualquier tabla para obtener acceso a la opción [!UICONTROL Ver más].
+
+![Panel personalizado con menú desplegable de elipses de tabla y la opción Ver más resaltada.](../../images/query-pro-mode/advanced-ellipses-dropdown.png)
+
+Puede ordenar las columnas seleccionando el menú desplegable junto al nombre de la columna y, a continuación, **[!UICONTROL Orden ascendente]** o **[!UICONTROL Orden descendente]**.
+
+>[!NOTE]
+>
+>Las opciones [!UICONTROL Orden ascendente] y [!UICONTROL Orden descendente] solo aparecerán para las columnas que se hayan configurado con [funcionalidad de ordenación](../overview.md/#advanced-attributes).
+
+![Menú desplegable de columna de tabla que muestra las opciones Orden ascendente y Orden descendente resaltadas.](../../images/query-pro-mode/advanced-sort-dropdown.png)
+
+## Cambiar el tamaño de una columna {#resize-column}
+
+Puede cambiar el tamaño de las columnas en los resultados tabulados para mejorar la legibilidad de los datos. En el tablero personalizado, seleccione los puntos suspensivos (`...`) de la tabla para obtener acceso a la opción [!UICONTROL Ver más]. Utilice el menú desplegable situado junto al nombre de la columna para cambiar su tamaño y, a continuación, seleccione **[!UICONTROL Cambiar tamaño de columna]**.
+
+![Menú desplegable de columna de tabla que muestra resaltada la opción Cambiar tamaño de columna.](../../images/query-pro-mode/advanced-resize-dropdown.png)
+
+Seleccione el control deslizante y arrastre hacia la izquierda o la derecha para ajustar el tamaño de la columna según sea necesario.
+
+![Tabla que muestra la barra de cambio de tamaño de columna resaltada.](../../images/query-pro-mode/advanced-resize-column.png)
+
+## Paginación de tabla {#table-pagination}
+
+La paginación se aplica automáticamente a las tablas en la característica [!UICONTROL Ver más], lo que elimina la necesidad de modificar manualmente las consultas SQL. Esta función garantiza que los datos se presenten en un formato más manejable, lo que facilita el proceso de navegar por conjuntos de datos grandes.
+
+Puede ver hasta 500 registros por página. Para navegar por los registros, use **[!UICONTROL >]** ubicado en la parte inferior de la página.
+
+![Resultados tabulados con resultados y paginación resaltados.](../../images/query-pro-mode/advanced-table-pagination.png)
 
 ## Pasos siguientes
 

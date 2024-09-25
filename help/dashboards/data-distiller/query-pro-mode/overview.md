@@ -2,9 +2,9 @@
 title: Información general sobre el modo Query Pro
 description: Aprenda a utilizar consultas SQL en la interfaz de usuario de Adobe Experience Platform para generar gráficos para sus paneles personalizados.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ En este ejemplo de gráfico circular, las opciones son tamaño y color. El color
 Para cambiar el tipo de gráfico del widget, selecciona una de las opciones disponibles en la lista desplegable [!UICONTROL Marcas]. Las opciones incluyen [!UICONTROL Línea], [!UICONTROL Anillo], [!UICONTROL Número grande] y [!UICONTROL Barra]. Una vez seleccionada, se genera una visualización previa de la configuración actual del widget.
 
 ![Compositor de widgets con la vista previa de widget resaltada.](../../images/sql-insights/widget-preview.png)
+
+## Atributos de tabla avanzados {#advanced-attributes}
+
+Para aplicar capacidades de ordenación automática para una o todas las columnas de las tablas, seleccione **[!UICONTROL Editar]** para editar todo el tablero.
+
+![Panel personalizado con la opción Editar resaltada.](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+Seleccione los puntos suspensivos (`...`) en el gráfico de tabla donde desee agregar la ordenación de columnas y, a continuación, seleccione **[!UICONTROL Editar]**.
+
+![Tabla que muestra el menú de los tres puntos con la opción Editar resaltada.](../../images/query-pro-mode/advanced-table-edit.png)
+
+Para habilitar la ordenación de cualquier columna, marque las casillas **[!UICONTROL Clasificable]**.
+
+![Página de edición de tabla con casillas de verificación que se pueden ordenar resaltadas.](../../images/query-pro-mode/advanced-table-sortable.png)
+
+Seleccione el icono de propiedades (![El icono de propiedades.](/help/images/icons/properties.png)) en el carril derecho para abrir el panel [!UICONTROL Propiedades]. En el panel **[!UICONTROL Propiedades]**, utilice la lista desplegable para seleccionar la columna **[!UICONTROL Orden predeterminado]** y luego utilice la lista desplegable para seleccionar **[!UICONTROL Dirección de orden]**. Finalmente, seleccione **[!UICONTROL Guardar y cerrar]**.
+
+![Se ha resaltado el compositor de widgets con el icono de propiedades, la ordenación, la dirección de ordenación y el guardado y cierre predeterminados.](../../images/query-pro-mode/advanced-table-properties.png)
+
+Para obtener más información sobre cómo usar las características de ordenación, cambio de tamaño de columnas y paginación, consulte [Ver más](./view-more.md).
 
 ## Propiedades del widget {#properties}
 
