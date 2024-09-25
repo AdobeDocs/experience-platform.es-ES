@@ -4,9 +4,9 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2739'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 5%
 
 Puede ver información importante sobre el uso de licencias de su organización en el panel de control de Adobe Experience Platform [!UICONTROL Uso de licencias]. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
 
-Los informes de uso de licencias proporcionan un alto grado de granularidad sobre las métricas de uso de licencias. El panel proporciona métricas de uso para cada producto comprado, el uso consolidado de métricas en todas las zonas protegidas de producción o desarrollo y la métrica de uso de una zona protegida específica. Las siguientes aplicaciones de Experience Platform se pueden rastrear con métricas de uso: Real-time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics.
+Los informes de uso de licencias proporcionan un alto grado de granularidad sobre las métricas de uso de licencias. El panel proporciona métricas de uso para cada producto comprado (y complementos asociados), el uso consolidado de métricas en todas las zonas protegidas de producción o desarrollo y la métrica de uso de una zona protegida específica. Las siguientes aplicaciones de Experience Platform se pueden rastrear con métricas de uso: Real-time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics.
 
 Esta guía describe cómo acceder y trabajar con el tablero de uso de licencias en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el tablero.
 
@@ -52,7 +52,7 @@ Para obtener una descripción general de la interfaz de usuario de Platform, con
 
 ## [!UICONTROL Uso de licencias] datos de tablero
 
-El panel [!UICONTROL Uso de licencias] muestra una lista de todos los productos de Experience Platform que ha adquirido. Desde esta lista, puede encontrar una instantánea de los datos relacionados con las licencias de su organización para Experience Platform en cualquier zona protegida asociada.
+El tablero [!UICONTROL Uso de licencias] muestra una lista de todos los productos de Experience Platform que ha comprado y los complementos de dichos productos. Desde este panel, puede encontrar una instantánea de los datos relacionados con las licencias de su organización para Experience Platform en cualquier zona protegida asociada.
 
 Los datos de este tablero se muestran exactamente como aparecen en el momento específico en el que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o una muestra de los datos y el panel no se actualiza en tiempo real.
 
@@ -72,12 +72,16 @@ Para navegar al panel de uso de licencias dentro de la interfaz de usuario de Pl
 
 ## [!UICONTROL Ficha Información general] {#overview-tab}
 
-Este tablero muestra todos sus productos de Adobe Experience Platform con licencia, incluidos los complementos, en formato de tabla. La tabla proporciona información clave sobre el uso de la licencia en todos los perfiles disponibles.
+El panel [!UICONTROL Uso de licencias] muestra dos tablas independientes: **Productos principales** y **Complementos**.
+
+- **[!UICONTROL Tabla de productos principales]**: Esta tabla enumera los principales productos de Adobe Experience Platform con licencia de su organización. Cada producto principal tiene sus propias métricas, seguimiento de uso y vistas de obtención de detalles a nivel de zona protegida. Estos productos principales proporcionan las métricas clave para el seguimiento y todos los complementos se incluyen en estas métricas.
+
+- **[!UICONTROL Tabla de complementos]**: Esta tabla enumera productos adicionales cuyas cantidades de licencias se combinan con las métricas admitidas por los productos principales. Los complementos no tienen métricas independientes, pero mejoran el seguimiento de uso de los productos principales con los que están asociados.
 
 | Nombre de columna | Descripción |
 |---|---|
 | **[!UICONTROL Producto]** | La solución de Adobe con licencia de su organización. |
-| **[!UICONTROL Métrica principal]** | La métrica principal utilizada para rastrear en para ese producto. |
+| **[!UICONTROL Métrica principal]** | La métrica principal utilizada para el seguimiento dentro de ese producto. |
 | **[!UICONTROL Importe de licencia]** | El valor contratado para la cantidad máxima de la métrica principal según lo acordado en el contrato de licencia del producto. |
 | **[!UICONTROL Uso]** | Cantidad de la métrica principal utilizada. Este valor proporciona el uso total de esa métrica en todas las zonas protegidas, ya sea de producción o desarrollo. |
 | **[!UICONTROL Uso %]** | El porcentaje de la métrica principal utilizado según la cantidad de licencia. |
@@ -85,9 +89,9 @@ Este tablero muestra todos sus productos de Adobe Experience Platform con licenc
 
 >[!NOTE]
 >
->Las adiciones al [!UICONTROL Importe de licencia] como resultado de los complementos se agregan sobre el [!UICONTROL Importe de licencia] para los productos base como Real-time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics. El uso de esa cantidad con licencia (después de los complementos) se rastrea a través de los productos base. Por ejemplo, si compra un paquete de cinco zonas protegidas, la cantidad de cinco se agrega a la del producto base. En este caso, el complemento muestra un [!UICONTROL Importe de licencia] de uno, y el uso de ese complemento está &quot;en blanco&quot;, ya que el uso se rastrea a través del producto base.
+>Las cantidades de licencias para complementos se incluyen en [!UICONTROL Cantidad de licencias] de los productos principales. Por ejemplo, si compra un paquete de cinco zonas protegidas como complemento, la cantidad se agrega a la del producto base. La tabla de complementos muestra un [!UICONTROL Importe de licencia] específico del complemento, pero el uso real se rastrea a través del producto base.
 
-La tabla indica la métrica principal de cada producto, ya que cada producto puede realizar el seguimiento de numerosas métricas.
+Las tablas indican la métrica principal de cada producto, ya que cada producto puede realizar el seguimiento de numerosas métricas.
 
 ### Uso previsto {#predicted-usage}
 
@@ -111,16 +115,18 @@ Administre y optimice de forma proactiva sus recursos de licencias en función d
 >
 >Las predicciones se actualizan mensualmente. La fecha de actualización se incluye en un icono de información (![Este icono de información.](../images/license-usage/info-icon.png)) sobre el título de columna.
 
-Para ver un resumen del uso de derechos de productos, selecciona un producto de la lista [!UICONTROL Información general].
+Para ver un resumen del uso de derechos de un producto, seleccione un producto de la tabla [!UICONTROL Productos principales].
 
+<!-- update image ... -->
 ![El [!UICONTROL uso de licencias] [!UICONTROL Información general] con un producto y la columna de uso previsto resaltada.](../images/license-usage/product-predicted-usage.png)
 
-Aparecerá la pestaña Resumen. Puede usar las predicciones detalladas disponibles en las fichas [!UICONTROL Resumen] y [!UICONTROL Detalles] para garantizar una toma de decisiones informada y un uso eficiente de la licencia.
+Aparecerá la pestaña Resumen. Puede usar las predicciones detalladas disponibles en las pestañas [!UICONTROL Resumen] y [!UICONTROL Detalles] para garantizar una toma de decisiones informada y un uso eficiente de la licencia.
 
 >[!NOTE]
 >
 >Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe.
 
+<!-- update image ... -->
 ![Vista de resumen de un producto de Platform con la columna de uso previsto resaltada.](../images/license-usage/summary-predicted-usage.png)
 
 El porcentaje de uso previsto se determina de la siguiente manera:
@@ -229,7 +235,7 @@ El panel de uso de licencias informa sobre varias métricas únicas que se aplic
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían según la licencia que haya adquirido su organización. Para obtener definiciones detalladas de cada métrica, consulte la documentación de descripción del producto correspondiente:
 
 | Licencia | Descripción del producto |
-|---|---|
+| --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:ESTÁNDAR OD</li><li>ADOBE EXPERIENCE PLATFORM:PESADO OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, servicios de aplicaciones y servicios inteligentes](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 10M</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) |
