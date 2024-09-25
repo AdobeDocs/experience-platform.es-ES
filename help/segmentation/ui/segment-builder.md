@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
+source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
-source-wordcount: '4717'
+source-wordcount: '4784'
 ht-degree: 5%
 
 ---
@@ -98,6 +98,11 @@ Una vez asignados los grupos de informes, puede utilizar estos campos recién as
 | Varios grupos de informes | No se incluyen descriptores de nombres descriptivos con las variables genéricas. <br><br>**Ejemplo:** eVar 2 | <ul><li>Cualquier campo con varios descriptores aparece como genérico. Esto significa que no aparecen nombres descriptivos en la interfaz de usuario.</li><li>Las consultas pueden utilizar datos de cualquier conjunto de datos que contenga el eVar, lo que puede dar como resultado resultados mixtos o incorrectos.</li></ul> | Las consultas utilizan resultados correctamente combinados de varios conjuntos de datos. |
 
 ### Públicos
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="Evaluación compleja"
+>abstract="La siguiente expresión es demasiado complicada para expresarse como una sola audiencia. Para utilizar reglas B2B y eventos basados en personas en la misma definición de segmento, siga los pasos a continuación.<ol><li>Cree una definición de segmento que solo haga referencia a los eventos basados en personas y guárdela como su propia definición de segmento.</li><li>En una definición de segmento nueva, importe la definición de segmento creada anteriormente al hacer referencia a las reglas B2B.</li></ol>"
 
 >[!NOTE]
 >
