@@ -4,9 +4,9 @@ title: Resumen de políticas de combinación
 type: Documentation
 description: Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada cliente. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear la vista unificada.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1285'
 ht-degree: 1%
 
 ---
@@ -71,11 +71,11 @@ Una organización puede crear una política de combinación predeterminada para 
 
 Cada organización puede crear varias políticas de combinación relacionadas con una sola clase de esquema XDM, pero solo puede tener una política de combinación predeterminada declarada para cada clase. Por ejemplo, su organización podría tener una política de combinación predeterminada relacionada con la clase [!DNL XDM Individual Profile] y una política de combinación predeterminada diferente para una clase de inventario de productos personalizada.
 
-Si crea una nueva política de combinación y la establece como predeterminada, el sistema actualizará automáticamente la política de combinación predeterminada anterior para que ya no sea la predeterminada.
+Si crea una nueva política de combinación y la establece como predeterminada, el sistema actualizará automáticamente la política de combinación predeterminada anterior para que ya no sea la predeterminada. Cualquier audiencia creada después de este momento utilizará esta nueva política de combinación predeterminada.
 
 >[!WARNING]
 >
->Los recuentos de perfiles y las audiencias con una política de combinación predeterminada asociada existente pueden verse afectados. Cualquier audiencia que tenga aplicada una política de combinación predeterminada se actualizará a la nueva política de combinación predeterminada.
+>Los recuentos de perfiles y las audiencias con una política de combinación predeterminada asociada existente pueden verse afectados. Además, las audiencias **no** se actualizarán automáticamente para usar la nueva política de combinación predeterminada y seguirán usando la política de combinación anterior.
 
 ## Pasos siguientes
 
