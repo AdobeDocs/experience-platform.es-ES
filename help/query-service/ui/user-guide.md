@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2802'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,12 @@ Las consultas ejecutadas desde el Editor de consultas se ejecutan de forma inter
 
 Con el Editor de consultas, puede escribir, ejecutar y guardar consultas para datos de experiencia del cliente. Todas las consultas ejecutadas o guardadas en el Editor de consultas están disponibles para todos los usuarios de su organización con acceso al Servicio de consultas.
 
+### Selector de base de datos {#database-selector}
+
+Seleccione una base de datos para consultar en el menú desplegable de la parte superior derecha del Editor de consultas. La base de datos seleccionada se muestra en la lista desplegable.
+
+![Se resaltó el Editor de consultas con el menú desplegable de base de datos.](../images/ui/query-editor/database-dropdown.png)
+
 ### Configuración {#settings}
 
 Un icono de configuración sobre el campo de entrada del Editor de consultas incluye una opción para habilitar/deshabilitar el tema oscuro o para deshabilitar/habilitar el autocompletado.
@@ -66,9 +72,6 @@ Para habilitar los temas oscuros o claros, seleccione el icono de configuración
 El Editor de consultas sugiere automáticamente palabras clave SQL potenciales junto con detalles de tabla o columna para la consulta a medida que la escribe. La función de autocompletar está habilitada de forma predeterminada y se puede deshabilitar o habilitar en cualquier momento desde la configuración del Editor de consultas.
 
 La configuración de autocompletar es por usuario y se recuerda por los inicios de sesión consecutivos de ese usuario. Al deshabilitar esta función, se detienen varios comandos de metadatos y se proporcionan recomendaciones que generalmente benefician la velocidad del autor al editar consultas.
-
-<!-- Currently editing the auto complete setting info. -->
-
 
 
 ### Ejecutar varias consultas secuenciales {#execute-multiple-sequential-queries}
@@ -112,17 +115,7 @@ Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas 
 
 ## Herramientas de escritura en el Editor de consultas {#writing-tools}
 
-- **Resaltado automático de sintaxis:** Facilita la lectura y organización de SQL.
-
-![Instrucción SQL en el Editor de consultas que muestra resaltado de color de sintaxis.](../images/ui/query-editor/syntax-highlight.png)
-
-- **Palabra clave SQL autocompletada:** Empiece a escribir la consulta, use las teclas de dirección para ir al término deseado y presione **Entrar**.
-
-![Algunos caracteres de SQL con el menú desplegable de autocompletar que proporciona opciones del Editor de consultas.](../images/ui/query-editor/syntax-auto.png)
-
-- **Autocompletar tabla y campo:** Empiece a escribir el nombre de tabla desde el que desea `SELECT`, utilice las teclas de dirección para desplazarse a la tabla que está buscando y presione **Entrar**. Una vez seleccionada una tabla, el completado automático reconoce los campos de esa tabla.
-
-![La entrada del Editor de consultas muestra sugerencias de nombres de tablas desplegables.](../images/ui/query-editor/tables-auto.png)
+Utilice las herramientas de escritura del Editor de consultas para mejorar el proceso de creación de consultas. Las funciones incluyen opciones para dar formato al texto, copiar SQL, administrar detalles de consultas y guardar o programar el trabajo a medida que avanza.
 
 ### Formatear texto {#format-text}
 
@@ -202,6 +195,43 @@ Si se programó una consulta, entonces la ficha [!UICONTROL Consultas programada
 >[!NOTE]
 >
 >El registro no guarda las consultas que no se ejecutan. Para que la consulta esté disponible en el servicio de consultas, debe ejecutarse o guardarse en el Editor de consultas.
+
+### Examinador de objetos {#object-browser}
+
+>[!AVAILABILITY]
+>
+>El carril de navegación del conjunto de datos solo está disponible para los clientes de Data Distiller. Es posible que la IU de Platform no contenga el carril izquierdo de navegación del conjunto de datos.  Otras imágenes de este documento pueden no reflejar el carril de navegación del conjunto de datos. Póngase en contacto con el representante del Adobe para obtener más información.
+
+Utilice el explorador de objetos para buscar y filtrar conjuntos de datos fácilmente. El explorador de objetos reduce el tiempo empleado en buscar tablas y conjuntos de datos en entornos grandes con numerosos conjuntos de datos. Con un acceso optimizado a los datos y metadatos relevantes, puede centrarse más en la creación de consultas y menos en la navegación.
+
+Para explorar la base de datos con el Examinador de objetos, escriba un nombre de tabla en el campo de búsqueda o seleccione **[!UICONTROL Tablas]** para expandir la lista de tablas y conjuntos de datos disponibles. Al utilizar el campo de búsqueda, la lista de tablas disponibles se filtra dinámicamente en función de la entrada.
+
+>[!NOTE]
+>
+>Todos los conjuntos de datos contenidos en [su base de datos seleccionada](#database-dropdown) se muestran en un carril de navegación a la izquierda del Editor de consultas.
+
+![Carril de navegación del conjunto de datos del Editor de consultas con la entrada de búsqueda resaltada.](../images/ui/query-editor/search-tables.png)
+
+El esquema mostrado en el explorador de objetos es un esquema observable. Esto significa que puede utilizarlo para monitorizar los cambios y las actualizaciones en tiempo real a medida que los cambios sean visibles inmediatamente. Los esquemas observables ayudan a garantizar la sincronización de datos y ayudan con las tareas de depuración o análisis.
+
+#### Limitaciones actuales {#current-limitations}
+
+A continuación se muestra una lista de las limitaciones actuales:
+
+- Ejecución de consulta secuencial: solo se puede ejecutar una consulta a la vez. Mientras una consulta está en curso, no se pueden abrir tablas adicionales en la navegación izquierda, ya que las consultas se procesan secuencialmente.
+- Filas adicionales en los registros de consultas: puede encontrar consultas extrañas etiquetadas como &quot;MOSTRAR TABLAS&quot; en los registros. Se eliminarán en futuras versiones.
+
+#### Acceso a metadatos de tabla {#table-metadata}
+
+Además de las búsquedas rápidas, ahora puede acceder fácilmente a los metadatos de cualquier tabla seleccionando el icono &quot;i&quot; junto al nombre de la tabla. Esto proporciona información detallada acerca de la tabla seleccionada, que le ayuda a tomar decisiones informadas al escribir consultas.
+
+![Carril de navegación del conjunto de datos del Editor de consultas con la entrada de búsqueda resaltada.](../images/ui/query-editor/table-metadata.png)
+
+#### Explorar tablas secundarias
+
+Para explorar tablas secundarias o vinculadas, seleccione la flecha desplegable junto al nombre de una tabla en la lista. Esto expande la tabla para mostrar cualquier tabla secundaria asociada, proporciona una vista clara de la estructura de datos y permite construcciones de consulta más complejas. El icono situado junto al nombre del campo indica el tipo de datos de la columna para ayudarle a identificarla durante consultas complejas.
+
+![Editor de consultas que muestra la lista de tablas filtradas.](../images/ui/query-editor/child-table-list.png)
 
 ## Ejecución de consultas mediante el Editor de consultas {#executing-queries}
 
