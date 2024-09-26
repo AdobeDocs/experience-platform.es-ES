@@ -2,9 +2,9 @@
 title: Herramientas de zona protegida
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: ac013f4a1b0f8053963771b66d0bd80111f7d215
+source-git-commit: 50f3976d73c8a34a51179157a7c93e3d9b1c0ff4
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2404'
 ht-degree: 7%
 
 ---
@@ -57,6 +57,9 @@ La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualment
 | [!DNL Adobe Journey Optimizer] | Recorrido - detalles del lienzo | La representación del recorrido en el lienzo incluye los objetos del recorrido, como condiciones, acciones, eventos, audiencias de lectura, etc., que se copian. La actividad de salto se excluye de la copia. |
 | [!DNL Adobe Journey Optimizer] | Evento | Se copian los eventos y los detalles del evento utilizados en el recorrido. Siempre se crea una nueva versión en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Acción | Los mensajes push y de correo electrónico utilizados en el recorrido se pueden copiar como objetos dependientes. No se comprueba la integridad de las actividades de acción de canal utilizadas en los campos de recorrido que se utilizan para la personalización en el mensaje. Los bloques de contenido no se copian.<br><br>Se puede copiar la acción de actualización de perfil utilizada en el recorrido. Las acciones personalizadas y los detalles de acción utilizados en el recorrido también se copian. Siempre se crea una nueva versión en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] |  Recorrido  | Si se añade un recorrido completo a un paquete, se copiarán la mayoría de los objetos de los que depende el recorrido, incluidas las audiencias, los esquemas, los eventos y las acciones. |
+| [!DNL Adobe Journey Optimizer] | Plantilla de contenido | Una plantilla de contenido se puede copiar como un objeto dependiente del objeto de recorrido. Plantillas independientes que le permiten reutilizar fácilmente contenido personalizado en todas las campañas y recorridos de Journey Optimizer. |
+| [!DNL Adobe Journey Optimizer] | Fragmento | Un fragmento se puede copiar como un objeto dependiente del objeto de recorrido. Los fragmentos son componentes reutilizables a los que se puede hacer referencia en uno o varios correos electrónicos en campañas y recorridos de Journey Optimizer. |
 
 Las superficies (por ejemplo, los ajustes preestablecidos) no se copian. El sistema selecciona automáticamente la coincidencia más cercana posible en la zona protegida de destino en función del tipo de mensaje y el nombre de la superficie. Si no se encuentran superficies en la zona protegida de destino, la copia de superficie fallará, lo que provocará que la copia del mensaje falle porque un mensaje requiere que haya una superficie disponible para la configuración. En este caso, es necesario crear al menos una superficie para el canal derecho del mensaje para que funcione la copia.
 
