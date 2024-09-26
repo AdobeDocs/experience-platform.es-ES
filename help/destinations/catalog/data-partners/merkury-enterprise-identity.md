@@ -1,13 +1,14 @@
 ---
 title: Destino de identidad empresarial de Merkury
 description: Obtenga información sobre cómo crear una conexión de destino de Enterprise Identity de Mercury mediante la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Destino de identidad empresarial de Merkury
 
@@ -67,7 +68,7 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | **Audiencia** | **Compatible** | **Descripción** | **origen** |
 |---|---|---|---|
-| Servicio de segmentación | ✓ | Audiencias generadas a través del Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Servicio de segmentación | ✓ | Audiencias generadas a través del Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
 | Cargas personalizadas | x | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
@@ -78,7 +79,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | **Audiencia** | **Compatible** | **Origen de la descripción** |
 |---|---|---|      
-| Servicio de segmentación | ✓ | Audiencias generadas a través del Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Servicio de segmentación | ✓ | Audiencias generadas a través del Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
 | Cargas personalizadas | X | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}

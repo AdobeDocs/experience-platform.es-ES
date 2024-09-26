@@ -1,13 +1,14 @@
 ---
 title: Destino de conexiones de Merkury Enterprise
 description: Obtenga información sobre cómo crear una conexión de destino de conexiones de Experience Enterprise mediante la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Destino de conexiones de Merkury Enterprise
 
@@ -17,7 +18,7 @@ ht-degree: 3%
 
 ## Información general
 
-Use el destino [!DNL Merkury Enterprise Connections] para entregar audiencias a [!DNL Merkury] de forma segura. [!DNL Merkury] facilita a los especialistas en marketing la coincidencia y el envío de audiencias basadas en personas a las conexiones de TV/CTV, editor y tecnología de publicidad premium de [!DNL Merkury] con más de 80 direcciones. [!DNL Merkury] cuenta con la tecnología de un gráfico completo de identidad de consumidor adulto de EE. UU. de más de 268 millones de personas.
+Use el destino [!DNL Merkury Enterprise Connections] para entregar públicos a [!DNL Merkury] de forma segura. [!DNL Merkury] facilita a los especialistas en marketing la coincidencia y el envío de audiencias basadas en personas a las conexiones de TV/CTV, editor y tecnología de publicidad premium de [!DNL Merkury] con más de 80 direcciones. [!DNL Merkury] cuenta con la tecnología de un gráfico completo de identidad de consumidor adulto de EE. UU. de más de 268 millones de personas.
 
 ![Diagrama que muestra la interconexión entre Merkury y el Experience Platform, incluida la ingesta y la activación](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
@@ -60,7 +61,7 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | **Audiencia** | **Compatible** | **Origen de la descripción** |
 |---|---|---|      
-| Servicio de segmentación | ✓ | Audiencias generadas a través del Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Servicio de segmentación | ✓ | Audiencias generadas a través del Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
 | Cargas personalizadas | X | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
