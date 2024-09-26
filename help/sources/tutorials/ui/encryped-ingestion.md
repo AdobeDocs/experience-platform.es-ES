@@ -6,7 +6,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
 source-wordcount: '1464'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -84,7 +84,7 @@ Para ver información sobre una clave de cifrado existente, seleccione los punto
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"
->title="Identificador de clave de verificación de firma"
+>title="ID de clave de verificación de firma"
 >abstract="Proporcione el ID de la clave de verificación de firma que corresponda a los datos de origen cifrados y firmados."
 
 >[!BEGINSHADEBOX]

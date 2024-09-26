@@ -147,7 +147,7 @@ Utilice las casillas de verificación de la izquierda de los nombres de los conj
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Actualizar la fecha de finalización de este cuerpo de flujo de datos"
->abstract="Debido a las recientes actualizaciones en este destino, el flujo de datos ahora requiere una fecha de finalización. El Adobe ha establecido una fecha de finalización predeterminada para el 1 de mayo de 2025. Actualice a la fecha de finalización deseada; de lo contrario, las exportaciones de datos se detendrán en la fecha predeterminada."
+>abstract="Debido a las recientes actualizaciones en este destino, el flujo de datos ahora requiere una fecha de finalización. Adobe ha establecido una fecha de finalización predeterminada para el 1 de marzo de 2025. Actualice a la fecha de finalización deseada; de lo contrario, las exportaciones de datos se detendrán en la fecha predeterminada."
 
 Use el paso **[!UICONTROL Programación]** para:
 
