@@ -2,9 +2,9 @@
 title: Carga incremental en el servicio de consultas
 description: La función de carga incremental utiliza las funciones de bloque anónimo y de instantánea para proporcionar una solución casi en tiempo real que permite mover datos del lago de datos al almacén de datos e ignorar los datos coincidentes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -125,10 +125,6 @@ Los pasos siguientes muestran cómo crear y cargar datos de forma incremental me
 Esta lógica se puede aplicar a cualquier tabla para realizar cargas incrementales.
 
 ## Instantáneas caducadas
-
->[!IMPORTANT]
->
->Los metadatos de la instantánea caducan al cabo de **dos** días. Una instantánea caducada invalida la lógica de la secuencia de comandos proporcionada anteriormente.
 
 Para resolver el problema de un ID de instantánea caducado, inserte el siguiente comando al principio del bloque anónimo. La siguiente línea de código anula `@from_snapshot_id` con los primeros `snapshot_id` disponibles de los metadatos.
 
