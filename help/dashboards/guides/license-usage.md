@@ -4,9 +4,9 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2738'
 ht-degree: 13%
 
 ---
@@ -171,7 +171,7 @@ Los informes de consumo para las zonas protegidas son acumulativos para todas la
 >2. En Permiso en la categoría Zona protegida, agregue todas las zonas protegidas que desee ver en el panel de uso de licencias.
 >3. En la categoría Permiso del tablero de usuarios, agregue el permiso &quot;Ver tablero de uso de licencias&quot;.
 
-## La ficha [!UICONTROL Detalles] {#details-tab}
+## Ficha [!UICONTROL Detalles] {#details-tab}
 
 Para ver **una métrica de uso en particular de una zona protegida específica**, vaya a la pestaña [!UICONTROL Detalles]. La pestaña [!UICONTROL Detalles] muestra todas las zonas protegidas disponibles en las zonas protegidas de producción o desarrollo.
 

@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
+source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,11 @@ En la tabla siguiente se describen las columnas disponibles en la sección de de
 | [!UICONTROL Calcular horas] | Muestra el tiempo de cálculo utilizado para cada ejecución de consulta, medido en horas. Esto ayuda a realizar un seguimiento del uso de los recursos y optimizar el rendimiento de las consultas. |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Los datos de horas calculadas están disponibles a partir del 15/08/2024. Los datos anteriores a esta fecha aparecen como &quot;No disponible&quot;.
+
 
 Consulte la [guía de consulta programada de monitor](./monitor-queries.md#inline-actions) para obtener información completa sobre cómo supervisar el estado de todos los trabajos de consulta a través de la interfaz de usuario.
 
