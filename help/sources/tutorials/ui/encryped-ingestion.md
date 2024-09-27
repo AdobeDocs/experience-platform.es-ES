@@ -3,9 +3,9 @@ title: Ingesta de datos cifrados en la IU de fuentes de Workspace
 description: Aprenda a introducir datos cifrados en el espacio de trabajo de la interfaz de usuario de fuentes.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
+source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1456'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->La compatibilidad con la ingesta de datos cifrados en la interfaz de usuario de fuentes está en versión beta y es posible que no esté disponible para su organización. La funcionalidad y la documentación están sujetas a cambios.
+>La compatibilidad con la ingesta de datos cifrados en la interfaz de usuario de fuentes está en versión beta. La funcionalidad y la documentación están sujetas a cambios.
 
 Puede introducir archivos y carpetas de datos cifrados en Adobe Experience Platform mediante fuentes por lotes de almacenamiento en la nube. Con la ingesta de datos cifrados, puede aprovechar los mecanismos de cifrado asimétricos para transferir datos por lotes de forma segura a Experience Platform. Los mecanismos de cifrado asimétrico admitidos son PGP y GPG.
 

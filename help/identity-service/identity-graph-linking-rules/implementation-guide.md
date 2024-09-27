@@ -3,9 +3,9 @@ title: Guía de implementación para reglas de vinculación de gráficos de iden
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1546'
 ht-degree: 2%
 
 ---
@@ -168,6 +168,8 @@ Para obtener cualquier comentario, use la opción **[!UICONTROL comentarios de B
 ## Validación de los gráficos {#validate}
 
 Utilice el panel de identidad para obtener información sobre el estado de los gráficos de identidad, como el recuento general de identidades y las tendencias del recuento de gráficos, el recuento de identidades por área de nombres y el recuento de gráficos por tamaño de gráfico. También puede utilizar el panel de identidad para ver las tendencias en gráficos con dos o más identidades, organizadas por área de nombres.
+
+Seleccione los puntos suspensivos (`...`) y, a continuación, seleccione **[!UICONTROL Ver más]** para obtener más información y para comprobar que no hay gráficos contraídos.
 
 ## Apéndice {#appendix}
 

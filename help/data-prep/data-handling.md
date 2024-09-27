@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administrar formatos de datos con preparación de datos
 description: Este documento ofrece información general sobre cómo se administran los distintos tipos de datos en la preparación de datos.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '626'
 ht-degree: 11%
 
 ---
@@ -75,6 +75,10 @@ Cuando los campos de cadena de los datos entrantes se asignan a campos de fecha 
 > La preparación de datos intentará convertir las cadenas en fechas lo mejor posible. Sin embargo, estas conversiones pueden dar lugar a resultados no deseados. Por ejemplo, el valor de cadena &quot;12112020&quot; coincide con el patrón &quot;ddMMyyyy&quot;, pero el usuario puede haber pensado que la fecha se leyera con el patrón &quot;ddMMyyyy&quot;. Como resultado, los usuarios deben mencionar explícitamente el formato de fecha para las cadenas.
 
 ### Cadenas de formato de fecha y hora {#format}
+
+>[!TIP]
+>
+>Actualmente, la función de fecha de la ingesta por lotes elimina los milisegundos si los valores de fecha están en este formato: `2024-05-05 20:39:00.005` PST. Para conservar los milisegundos, use este formato: `2024-05-05 20:39:00.005-0800`
 
 En la tabla siguiente se muestra qué letras de patrón se definen para las cadenas de formato. Tenga en cuenta que las letras distinguen entre mayúsculas y minúsculas.
 
