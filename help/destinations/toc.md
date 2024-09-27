@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
+source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1251'
 ht-degree: 6%
 
 ---
@@ -67,6 +67,7 @@ ht-degree: 6%
       * [uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Conexión de composición de audiencia federada (disponibilidad limitada)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos de Advertising{#advertising}
+      * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
       * [Información general sobre destinos Advertising](./catalog/advertising/overview.md)
       * [Conexión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extensión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
