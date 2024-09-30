@@ -1,11 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform de septiembre de 2024
-description: Notas de la versión de septiembre de 2024 de Adobe Experience Platform.
+description: Las notas de la versión de septiembre de 2024 para Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
 workflow-type: tm+mt
 source-wordcount: '2149'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
