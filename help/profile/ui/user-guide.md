@@ -6,7 +6,7 @@ exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
 source-wordcount: '2212'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -131,7 +131,7 @@ Una vez que se haya introducido un valor, seleccione **[!UICONTROL Ver]** y se d
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="Entidad no encontrada"
->abstract="Esto significa que Platform no pudo encontrar la entidad solicitada. Para resolver este error, pruebe una de las siguientes soluciones:<ul><li>Asegúrese de que el ID de perfil correcto aparece en la dirección URL de la entidad a la que intenta acceder.</li><li>Asegúrese de que tiene la combinación correcta de organización y zona protegida para la entidad a la que intenta acceder.</li></ul>"
+>abstract="Esto significa que la plataforma no ha podido encontrar la entidad solicitada. Para resolver este error, pruebe una de las siguientes soluciones:<ul><li>Asegúrese de que el ID de perfil correcto aparece en la dirección URL de la entidad a la que intenta acceder.</li><li>Asegúrese de que tiene la combinación correcta de organización y zona protegida para la entidad a la que intenta acceder.</li></ul>"
 
 Después de seleccionar un **[!UICONTROL ID de perfil]**, se abre la pestaña **[!UICONTROL Detalle]**. La información de perfil mostrada en la ficha **[!UICONTROL Detail]** se ha combinado a partir de varios fragmentos de perfil para formar una sola vista del cliente individual. Esto incluye detalles del cliente, como atributos básicos, identidades vinculadas y preferencias de canal.
 
@@ -179,7 +179,7 @@ Para ver la pertenencia de la audiencia a los perfiles disponibles en Edge, sele
 
 ![El selector de ubicación de datos dentro de la ficha pertenencia a audiencias está resaltado.](../images/user-guide/audience-membership-select.png)
 
-## Políticas de combinación
+## Combinar políticas
 
 En el menú principal **[!UICONTROL Perfiles]**, seleccione la ficha **[!UICONTROL Políticas de combinación]** para ver una lista de las políticas de combinación que pertenecen a su organización. Cada directiva de la lista muestra su nombre, independientemente de si es o no la directiva de combinación predeterminada y la clase de esquema a la que se aplica.
 

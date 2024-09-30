@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
 source-wordcount: '4784'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -102,7 +102,7 @@ Una vez asignados los grupos de informes, puede utilizar estos campos recién as
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
 >title="Evaluación compleja"
->abstract="La siguiente expresión es demasiado complicada para expresarse como una sola audiencia. Para utilizar reglas B2B y eventos basados en personas en la misma definición de segmento, siga los pasos a continuación.<ol><li>Cree una definición de segmento que solo haga referencia a los eventos basados en personas y guárdela como su propia definición de segmento.</li><li>En una definición de segmento nueva, importe la definición de segmento creada anteriormente al hacer referencia a las reglas B2B.</li></ol>"
+>abstract="La siguiente expresión es demasiado complicada para expresarse como un solo público. Para utilizar reglas B2B y eventos basados en personas en la misma definición de segmento, siga los pasos a continuación.<ol><li>Cree una definición de segmento que solo haga referencia a los eventos basados en personas y guárdela como su propia definición de segmento.</li><li>En una definición de segmento nueva, importe la definición de segmento creada anteriormente mientras hace referencia a las reglas B2B.</li></ol>"
 
 >[!NOTE]
 >
@@ -160,12 +160,12 @@ Tenga en cuenta que se permite un máximo de 250 valores. Si supera esta cantida
 
 ![Se muestra una advertencia que indica que se ha alcanzado el número máximo de valores.](../images/ui/segment-builder/maximum-values.png)
 
-### Adición de audiencias
+### Adición de públicos
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
 >title="Buscar actualizaciones"
->abstract="El sistema de búsqueda existente se ha actualizado para utilizar la búsqueda unificada. La búsqueda unificada le permite buscar en sus audiencias de forma más sencilla y sólida miembros de segmentos."
+>abstract="El sistema de búsqueda existente se ha actualizado para utilizar la búsqueda unificada. Búsqueda unificada le permite buscar en sus públicos de forma más sencilla y sólida la pertenencia al segmento."
 
 Puede arrastrar y soltar una audiencia de la ficha **[!UICONTROL Audiencia]** en el lienzo del generador de reglas para hacer referencia a la pertenencia a la audiencia en la nueva definición de segmento. Esto le permite incluir o excluir la pertenencia a audiencias como atributo en las nuevas reglas de definición de segmentos.
 
@@ -327,11 +327,11 @@ Una vez que seleccione **[!UICONTROL Desenvolver contenedor]**, el contenedor se
 
 ![El contenedor se muestra después de haberse desenvuelto.](../images/ui/segment-builder/unwrapped-container.png)
 
-## Políticas de combinación
+## Combinar políticas
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
->title="Políticas de combinación"
+>title="Combinar políticas"
 >abstract="La política de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Platform proporciona una política de combinación predeterminada. También puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para este público."
 
 [!DNL Experience Platform] le permite reunir datos de varios orígenes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear un perfil.

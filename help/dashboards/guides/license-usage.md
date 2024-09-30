@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
 source-wordcount: '2738'
-ht-degree: 13%
+ht-degree: 16%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 13%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"
 >title="Tabla de complementos"
->abstract="La tabla Complementos enumera los productos cuyas cantidades de licencias se combinan con las métricas admitidas por los productos principales. Estos complementos no tienen métricas independientes, pero mejoran el seguimiento de uso de los productos principales con los que están asociados."
+>abstract="La tabla de complementos enumera los productos cuyas cantidades de licencias se combinan con las métricas admitidas por los productos principales. Estos complementos no tienen métricas independientes, pero mejoran el seguimiento de uso de los productos principales con los que están asociados."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
