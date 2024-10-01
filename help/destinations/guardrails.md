@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1686'
 ht-degree: 2%
 
 ---
@@ -178,7 +178,7 @@ Más información sobre [exportar conjuntos de datos](/help/destinations/ui/expo
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
 | Número máximo de [destinos personalizados privados](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Protección de rendimiento | Puede crear un máximo de 5 destinos privados por lotes o de flujo continuo personalizados utilizando Destination SDK. Póngase en contacto con un representante de atención personalizada si necesita crear más de 5 de estos destinos. |
-| Política de exportación de perfiles para el Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1.800 y máximo 3.600)</li><li>`maxNumEventsInBatch` (mínimo 1 000, máximo 10 000)</li></ul> | Protección impuesta por el sistema | Cuando uses la opción [agregación configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para tu destino, ten en cuenta los valores mínimos y máximos que determinan la frecuencia con la que los mensajes HTTP se envían a tu destino basado en API y cuántos perfiles deben incluir los mensajes. |
+| Política de exportación de perfiles para el Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1800 y máximo 3600)</li><li>`maxNumEventsInBatch` (mínimo 1000 y máximo 10 000)</li></ul> | Protección impuesta por el sistema | Cuando uses la opción [agregación configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para tu destino, ten en cuenta los valores mínimos y máximos que determinan la frecuencia con la que los mensajes HTTP se envían a tu destino basado en API y cuántos perfiles deben incluir los mensajes. |
 
 {style="table-layout:auto"}
 

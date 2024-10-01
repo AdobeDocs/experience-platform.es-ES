@@ -3,7 +3,8 @@ title: Conexión de Demandbase
 description: Utilice este destino para activar las audiencias de su cuenta para los casos de uso de Account-Based Marketing (ABM). Anuncie a personalidades y roles relevantes en sus cuentas de destinatario a través del Demand Side Platform DSP B2B () de DemandBase. Las cuentas de Target también se pueden enriquecer con datos de terceros de Demandbase para otros casos de uso posteriores en marketing y ventas.
 badgeB2B: label="Edición B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: 5c694dfab7e53cf8a78500e3ecd086a3986b9b91
+last-substantial-update: 2024-09-30T00:00:00Z
+source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 4%

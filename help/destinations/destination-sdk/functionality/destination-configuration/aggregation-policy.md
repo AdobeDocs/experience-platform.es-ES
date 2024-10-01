@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo configurar una directiva de agregación para determinar cómo se deben agrupar y agrupar las solicitudes HTTP al destino.
 title: Política de agregación
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 2%
@@ -110,7 +110,7 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 | `aggregationType` | Cadena | Indica el tipo de directiva de agregación que debe utilizar el destino. Tipos de agregación admitidos: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | Booleano | Utilice este indicador si la llamada al destino debe dividirse por identidad. Establezca este indicador en `true` si el servidor solo acepta una identidad por llamada, para un área de nombres de identidad determinada. |
 | `configurableAggregation.maxBatchAgeInSecs` | Entero | Este parámetro, que se usa junto con `maxNumEventsInBatch`, determina cuánto tiempo debe esperar el Experience Platform hasta que envíe una llamada de API al extremo. <ul><li>Valor mínimo (segundos): 1800</li><li>Valor máximo (segundos): 3600</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
-| `configurableAggregation.maxNumEventsInBatch` | Entero | Este parámetro, que se usa junto con `maxBatchAgeInSecs`, determina cuántos perfiles completos se deben agregar en una llamada de API. <ul><li>Valor mínimo: 1000</li><li>Valor máximo: 10000</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
+| `configurableAggregation.maxNumEventsInBatch` | Entero | Este parámetro, que se usa junto con `maxBatchAgeInSecs`, determina cuántos perfiles completos se deben agregar en una llamada de API. <ul><li>Valor mínimo: 1000</li><li>Valor máximo: 10 000</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10 000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
 | `configurableAggregation.aggregationKey` | - | Permite agregar los perfiles exportados asignados al destino en función de los parámetros que se describen a continuación. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Establezca este parámetro en `true` si desea agrupar los perfiles exportados a su destino por ID de audiencia. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Establezca este parámetro y `includeSegmentId` en `true`, si desea agrupar los perfiles exportados a su destino por ID de audiencia y estado de audiencia. |
