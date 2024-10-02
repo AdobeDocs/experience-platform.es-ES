@@ -3,9 +3,9 @@ keywords: Dirección IP, rango de IP, lista de permitidos, lista de permitidos, 
 title: LISTA DE PERMITIDOS de direcciones IP para el servicio de consultas
 description: Esta página proporciona rangos de IP actualizados que puede agregar a su lista de permitidos para obtener acceso seguro al servicio de consultas.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: 029d0ad63460a71770e5ba3cd75a29cb04c0cb9c
+source-git-commit: a48b3995abc1ee2033e3827b12581f4771cdb2d7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * El Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. El Adobe no notifica nuevos intervalos de IP.
-> * Aunque el Adobe admite la exportación de datos a servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar datos son [!DNL Amazon S3] y [!DNL Azure Blob].
 > * A partir del 15 de octubre de 2024, los nuevos intervalos de IP sustituirán a los existentes. Asegúrese de que las direcciones IP antiguas y nuevas se añadan a la lista de permitidos antes de esta fecha para evitar cualquier interrupción en el servicio.
 
 ## Información general {#overview}
 
-Esta página proporciona direcciones IP que puede agregar a su lista de permitidos para exportar con seguridad datos del Experience Platform a su [servidor SFTP](../destinations/catalog/cloud-storage/sftp.md).
-
-Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
+Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el acceso al Servicio de consultas.
 
 Como parte de las mejoras en curso, Adobe ha actualizado los intervalos de IP utilizados para el acceso de red al servicio de consultas el 15 de octubre de 2024. Las direcciones IP existentes quedarán obsoletas y las nuevas direcciones IP ocuparán su lugar. Es crucial añadir los rangos de IP antiguos y nuevos a la lista de permitidos durante el periodo de transición para garantizar un servicio ininterrumpido.
 
