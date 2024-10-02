@@ -1,20 +1,19 @@
 ---
-title: Prioridad de área de nombres
+title: Prioridad de espacios de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
-badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1605'
 ht-degree: 2%
 
 ---
 
-# Prioridad de área de nombres
+# Prioridad de espacios de nombres
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en fase beta. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación. La funcionalidad y la documentación están sujetas a cambios.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
 
 Cada implementación de cliente es única y está diseñada para satisfacer los objetivos de una organización en particular y, como tal, la importancia de un área de nombres determinada varía según el cliente. Algunos ejemplos del mundo real son:
 
@@ -90,7 +89,7 @@ Para estructuras de gráficos relativamente complejas, la prioridad del área de
 >
 >* La identidad principal es la identidad con la que se almacena un fragmento de perfil. Un fragmento de perfil es un registro de datos que almacena información sobre un usuario determinado: atributos (normalmente incorporados mediante registros CRM) o eventos (normalmente incorporados a partir de eventos de experiencia o datos en línea).
 
-### Ejemplo de escenario de gráfico
+### Ejemplo de escenario
 
 Esta sección proporciona un ejemplo de cómo la configuración de prioridad puede afectar a los datos.
 
@@ -137,7 +136,7 @@ Si los criterios de calificación de segmentos se basaran únicamente en eventos
 
 Esta sección describe cómo la prioridad del área de nombres puede afectar a otros servicios de Experience Platform.
 
-### Administración avanzada del ciclo vital de datos
+### Administración avanzada del ciclo de vida de los datos
 
 La eliminación de registros de higiene de datos solicita funciones de la siguiente manera, para una identidad determinada:
 
@@ -184,6 +183,6 @@ Para obtener más información sobre, lea los documentos sobre [Attribution AI](
 
 Para obtener más información, lea la [descripción general del servicio de privacidad](../../privacy-service/home.md).
 
-### Personalización de Adobe Target y Edge
+### Adobe Target
 
-La [personalización de Edge](../../server-api/personalization-target.md) seguirá haciendo referencia a cómo configuró su casilla de verificación &quot;Principal&quot; en el tipo de elemento de datos en WebSDK (que se traduce como `primary=true` en identityMap).
+Solo puede activar la segmentación por lotes y de flujo continuo en Adobe Target.

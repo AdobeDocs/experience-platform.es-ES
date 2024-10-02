@@ -1,12 +1,11 @@
 ---
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
-badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 0%
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en fase beta. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación. La funcionalidad y la documentación están sujetas a cambios.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
 
 La configuración de identidad es una característica de la interfaz de usuario del servicio de identidad de Adobe Experience Platform que puede utilizar para designar áreas de nombres únicas y configurar la prioridad del área de nombres.
 
@@ -28,7 +27,7 @@ Lea los siguientes documentos antes de empezar a trabajar con la configuración 
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
-* [Prioridad de área de nombres](./namespace-priority.md)
+* [Prioridad de espacios de nombres](./namespace-priority.md)
 * [Simulación de gráfico](./graph-simulation.md)
 
 ## Configuración de la identidad
@@ -70,5 +69,5 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad de área de nombres](./namespace-priority.md)
+* [Prioridad de espacios de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)

@@ -3,9 +3,9 @@ title: Guía de implementación para reglas de vinculación de gráficos de iden
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
+source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en fase beta. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación. La funcionalidad y la documentación están sujetas a cambios.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
 
 Lea este documento para obtener una guía paso a paso que puede seguir al implementar los datos con el servicio de identidad de Adobe Experience Platform.
 
@@ -61,8 +61,67 @@ Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/cre
 
 ### Eventos de experiencia XDM
 
-* Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará al Experience Platform siempre contengan un identificador de persona, como CRMID.
-* No envíe una cadena vacía como valor de identidad al enviar eventos mediante eventos de experiencia XDM. Al hacerlo, se producirán errores del sistema.
+Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará al Experience Platform siempre contengan un identificador de persona, como CRMID.
+
+>[!BEGINTABS]
+
+>[!TAB Eventos autenticados con identificador de persona]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB Eventos autenticados sin identificador de persona]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+No envíe una cadena vacía como valor de identidad al enviar eventos mediante eventos de experiencia XDM. Si el valor de identidad del área de nombres con la prioridad de área de nombres más alta es una cadena vacía, el registro se omitirá del perfil del cliente en tiempo real. Esto se aplica tanto a identityMap como a los campos marcados como identidad.
 
 +++Seleccione esta opción para ver un ejemplo de una carga útil con una cadena vacía
 
@@ -170,6 +229,12 @@ Para obtener cualquier comentario, use la opción **[!UICONTROL comentarios de B
 Utilice el panel de identidad para obtener información sobre el estado de los gráficos de identidad, como el recuento general de identidades y las tendencias del recuento de gráficos, el recuento de identidades por área de nombres y el recuento de gráficos por tamaño de gráfico. También puede utilizar el panel de identidad para ver las tendencias en gráficos con dos o más identidades, organizadas por área de nombres.
 
 Seleccione los puntos suspensivos (`...`) y, a continuación, seleccione **[!UICONTROL Ver más]** para obtener más información y para comprobar que no hay gráficos contraídos.
+
+![Panel de identidad en el área de trabajo de la interfaz de usuario del servicio de identidad.](../images/implementation/identity_dashboard.png)
+
+Utilice la ventana que aparece para ver información sobre los gráficos contraídos. En este ejemplo, tanto el correo electrónico como el teléfono están marcados como un área de nombres única, por lo que no hay gráficos contraídos en la zona protegida.
+
+![Ventana emergente para gráficos con varias identidades.](../images/implementation/graphs.png)
 
 ## Apéndice {#appendix}
 

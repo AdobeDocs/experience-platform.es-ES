@@ -1,11 +1,10 @@
 ---
 title: Guía de IU de simulación de gráficos
 description: Aprenda a utilizar la simulación de gráfico en la interfaz de usuario del servicio de ID.
-badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1440'
 ht-degree: 1%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en fase beta. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación. La funcionalidad y la documentación están sujetas a cambios.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
 
 [!DNL Graph Simulation] es una herramienta en la interfaz de usuario del servicio de identidad que puedes usar para simular cómo se comporta un gráfico de identidad dada una combinación particular de identidades y cómo configuras el [algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
 
@@ -177,5 +176,5 @@ Al leer este documento, ahora sabe cómo usar la herramienta [!DNL Graph Simulat
 * [Guía de implementación](./implementation-guide.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
-* [Prioridad de área de nombres](./namespace-priority.md)
+* [Prioridad de espacios de nombres](./namespace-priority.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)

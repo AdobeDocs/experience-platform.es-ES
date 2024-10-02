@@ -1,12 +1,11 @@
 ---
 title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
-badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 1%
+source-wordcount: '1528'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en fase beta. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación. La funcionalidad y la documentación están sujetas a cambios.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
 
 El algoritmo de optimización de identidad es un algoritmo gráfico del servicio de identidad que ayuda a garantizar que un gráfico de identidad sea representativo de una sola persona y, por lo tanto, evita la combinación no deseada de identidades en el perfil del cliente en tiempo real.
 
@@ -22,7 +21,7 @@ El algoritmo de optimización de identidad es un algoritmo gráfico del servicio
 
 Lea esta sección para obtener información sobre áreas de nombres únicas y prioridad de áreas de nombres. Estos dos conceptos sirven como parámetros de entrada requeridos por el algoritmo de optimización de identidad.
 
-### Área de nombres única {#unique-namespace}
+### Espacio de nombres único {#unique-namespace}
 
 Un área de nombres única determina los vínculos que se eliminan si se contrae el gráfico.
 
@@ -41,7 +40,7 @@ Un área de nombres que declare única se configurará automáticamente para ten
 >
 >* Todas las áreas de nombres que sean identificadores de persona y que se utilicen en la zona protegida para generar gráficos de identidad deben marcarse como un área de nombres única. De lo contrario, puede ver resultados de vinculación no deseados.
 
-### Prioridad de área de nombres {#namespace-priority}
+### Prioridad de espacios de nombres {#namespace-priority}
 
 La prioridad del área de nombres determina cómo elimina los vínculos el algoritmo de optimización de identidad.
 
@@ -82,7 +81,7 @@ Un dispositivo compartido hace referencia a un dispositivo que utilizan más de 
 
 >[!TAB Ejemplo uno]
 
-| Área de nombres | Área de nombres única |
+| Área de nombres | Espacio de nombres único |
 | --- | --- |
 | CRMID | Sí |
 | Correo electrónico | Sí |
@@ -99,7 +98,7 @@ En este ejemplo, tanto CRMID como Email se designan como áreas de nombres únic
 
 >[!TAB Ejemplo dos]
 
-| Área de nombres | Área de nombres única |
+| Área de nombres | Espacio de nombres único |
 | --- | --- |
 | CRMID | Sí |
 | ECID | No |
@@ -120,7 +119,7 @@ En este ejemplo, el área de nombres CRMID se designa como un área de nombres �
 
 Hay casos en los que un usuario puede introducir valores erróneos en su correo electrónico o números de teléfono.
 
-| Área de nombres | Área de nombres única |
+| Área de nombres | Espacio de nombres único |
 | --- | --- |
 | CRMID | Sí |
 | Correo electrónico | Sí |
@@ -165,6 +164,6 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad de área de nombres](./namespace-priority.md)
+* [Prioridad de espacios de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)

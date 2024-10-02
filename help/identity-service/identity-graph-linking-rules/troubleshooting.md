@@ -1,11 +1,10 @@
 ---
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
-badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '3226'
+source-wordcount: '3247'
 ht-degree: 0%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La función Reglas de vinculación de gráfico de identidad está actualmente en fase beta. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación. La funcionalidad y la documentación están sujetas a cambios.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
 
 A medida que prueba y valida las reglas de vinculación de gráficos de identidad, puede encontrar algunos problemas relacionados con la ingesta de datos y el comportamiento del gráfico. Lea este documento para aprender a solucionar algunos problemas comunes que pueden producirse al trabajar con reglas de vinculación de gráficos de identidad.
 
@@ -167,7 +166,10 @@ También puede ejecutar la siguiente consulta para comprobar si la ingesta en el
   FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
 ```
 
-Estas dos consultas suponen que se envía una identidad desde el identityMap y otra identidad desde un descriptor de identidad. **NOTA**: en esquemas XDM (Experience Data Model), el descriptor de identidad es el campo marcado como identidad.
+Estas dos consultas suponen lo siguiente:
+
+* Se envía una identidad desde el mapa de identidad y otra identidad desde un descriptor de identidad. **NOTA**: en esquemas XDM (Experience Data Model), el descriptor de identidad es el campo marcado como identidad.
+* El CRMID se envía mediante identityMap. Si el CRMID se envía como un campo, quite `key='Email'` de la cláusula WHERE.
 
 ### Mis fragmentos de eventos de experiencia se han introducido, pero tienen la identidad principal &quot;incorrecta&quot; en el perfil
 
@@ -367,7 +369,7 @@ Los puntos clave a destacar son los siguientes:
    * Con esta función, los ECID ya no siempre se asocian a un perfil.
    * Se recomienda iniciar recorridos con áreas de nombres de persona (CRMID).
 
-## Prioridad de área de nombres
+## Prioridad de espacios de nombres
 
 Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca de [prioridad del área de nombres](./namespace-priority.md).
 
@@ -398,7 +400,7 @@ En términos generales, las pruebas en una zona protegida de desarrollo deben im
 | Caso de prueba | Pasos de prueba | Resultado esperado |
 | --- | --- | --- |
 | Representación precisa de la entidad de persona | <ul><li>Imitar la exploración anónima</li><li>Imita el inicio de sesión de dos personas (John, Jane) utilizando el mismo dispositivo</li></ul> | <ul><li>Tanto John como Jane deben asociarse a sus atributos y eventos autenticados.</li><li>El último usuario autenticado debe estar asociado a los eventos de navegación anónimos.</li></ul> |
-| Segmentación | Crear cuatro definiciones de segmento (**NOTA**: Cada par de definiciones de segmento debe tener una evaluada mediante un lote y otra de flujo continuo.) <ul><li>Definición del segmento A: Calificación de segmentos basada en los eventos autenticados de John.</li><li>Definición del segmento B: Calificación de segmentos basada en los eventos autenticados de Jane.</li></ul> | Independientemente de los escenarios de dispositivos compartidos, John y Jane siempre deben cumplir los requisitos para sus respectivos segmentos. |
+| Segmentación | Crear cuatro definiciones de segmento (**NOTA**: Cada par de definiciones de segmento debe tener una evaluada mediante un lote y otra de flujo continuo.) <ul><li>Definición del segmento A: Calificación de segmentos basada en los eventos autenticados o atributos de John.</li><li>Definición del segmento B: Calificación de segmentos basada en los eventos autenticados o atributos de Jane.</li></ul> | Independientemente de los escenarios de dispositivos compartidos, John y Jane siempre deben cumplir los requisitos para sus respectivos segmentos. |
 | Calificación de audiencias / recorridos unitarios en Adobe Journey Optimizer | <ul><li>Cree un recorrido que comience con una actividad de calificación de audiencia (como la segmentación de streaming creada anteriormente).</li><li>Cree un recorrido que comience con un evento unitario. Este evento unitario debe ser un evento autenticado.</li><li>Debe deshabilitar la reentrada al crear estos recorridos.</li></ul> | <ul><li>Independientemente de los escenarios de dispositivos compartidos, John y Jane deben almacenar en déclencheur los recorridos respectivos que deben introducir.</li><li>John y Jane no deben volver a entrar en el recorrido cuando se les transfiera el ECID.</li></ul> |
 
 {style="table-layout:auto"}
