@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo
 title: Creación de una conexión de flujo continuo de API HTTP mediante la API de Flow Service
 description: Este tutorial proporciona pasos sobre cómo crear una conexión de flujo continuo utilizando el origen de API HTTP para los datos sin procesar y XDM mediante la API de Flow Service
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1646'
 ht-degree: 4%
 
 ---
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Sin transformaciones]
+>[!TAB XDM]
 
-La siguiente solicitud crea un flujo de datos de flujo continuo para la API HTTP sin transformaciones de datos.
+La siguiente solicitud crea un flujo de datos de flujo continuo para los datos XDM.
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB Con transformaciones]
+>[!TAB SIN PROCESAR]
 
-Las siguientes solicitudes crean un flujo de datos de flujo continuo para la API HTTP con transformaciones de asignación aplicadas a los datos.
+Las siguientes solicitudes crean un flujo de datos de flujo continuo para los datos sin procesar.
 
 Al crear un flujo de datos con transformaciones, el parámetro `name` no se puede cambiar. Este valor siempre debe establecerse en `Mapping`.
 
@@ -559,7 +559,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles del flujo de dat
 }
 ```
 
-## Datos de Post que se van a introducir en Platform {#ingest-data}
+## Publicar datos para ingerirlos en Platform {#ingest-data}
 
 >[!NOTE]
 >
