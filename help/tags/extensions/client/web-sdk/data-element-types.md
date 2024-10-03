@@ -2,7 +2,7 @@
 title: Tipos de elementos de datos en la extensión SDK para web de Adobe Experience Platform
 description: Obtenga información acerca de los distintos tipos de elementos de datos que proporciona la extensión de etiqueta del SDK web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
+source-git-commit: e34a9ee5b1a09ff3391e5b0e981215fefbc157fc
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 5%
