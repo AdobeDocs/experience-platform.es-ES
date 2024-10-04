@@ -1,17 +1,17 @@
 ---
-title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión de septiembre de 2023 de Adobe Experience Platform.
+title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2023'
+description: Las notas de la versión de septiembre de 2023 de Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '2263'
-ht-degree: 24%
+source-wordcount: '2265'
+ht-degree: 31%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de lanzamiento: viernes, 28 de septiembre de 2023**
+**Fecha de la versión: viernes, 28 de septiembre de 2023**
 
 Nuevas funciones de Adobe Experience Platform:
 
@@ -37,7 +37,7 @@ Los atributos calculados permiten resumir fácilmente los datos de evento en atr
 
 ## Alertas {#alerts}
 
-Experience Platform permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a diferentes reglas de alerta a través de la ficha [!UICONTROL Alertas] de la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o a través de notificaciones por correo electrónico.
+Experience Platform permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a diferentes reglas de alerta a través de la pestaña [!UICONTROL Alertas] de la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia IU o a través de notificaciones por correo electrónico.
 
 **Funciones nuevas o actualizadas**
 
@@ -74,7 +74,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 {style="table-layout:auto"}
 
-Para obtener más información acerca de la recopilación de datos, lea la [descripción general de la recopilación de datos](../../tags/home.md).
+Para obtener más información acerca de la recopilación de datos, lea la [información general de recopilación de datos](../../tags/home.md).
 
 ## Control de datos {#data-governance}
 
@@ -92,7 +92,7 @@ Para obtener más información acerca de la gobernanza de datos, lea la [informa
 
 ## Higiene de datos {#hygiene}
 
-Experience Platform proporciona un conjunto de funciones de higiene de datos que le permiten administrar los datos almacenados mediante la eliminación mediante programación de registros de consumidores y conjuntos de datos. Con el área de trabajo [!UICONTROL Data Lifecycle] en la interfaz de usuario o a través de llamadas a la API de higiene de datos, puede administrar de manera eficaz sus almacenes de datos. Utilice estas funciones para asegurarse de que la información se utiliza según lo esperado, se actualiza cuando es necesario corregir datos incorrectos y se elimina cuando las políticas de la organización lo consideran necesario.
+Experience Platform proporciona un conjunto de funciones de higiene de datos que le permiten administrar los datos almacenados mediante la eliminación mediante programación de registros de consumidores y conjuntos de datos. Con el área de trabajo [!UICONTROL Data Lifecycle] en la interfaz de usuario o a través de llamadas a la API de higiene de datos, puede administrar de manera eficaz sus almacenes de datos. Utilice estas funciones para asegurarse de que la información se utiliza según lo esperado, se actualiza cuando es necesario corregir datos incorrectos y se elimina cuando las políticas organizativas lo consideran necesario.
 
 **Nuevas funciones**
 
@@ -195,11 +195,11 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 
 {style="table-layout:auto"}
 
-Para obtener más información acerca del servicio de identidad, lea la [descripción general del servicio de identidad](../../identity-service/home.md).
+Para obtener más información acerca del Servicio de identidad, lea la [Información general del Servicio de identidad](../../identity-service/home.md).
 
 ## Servicio de consultas {#query-service}
 
-El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unirse a cualquier conjunto de datos de [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, Data Science Workspace o para su inserción en el Perfil del cliente en tiempo real.
+El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos del [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su ingesta en el Perfil del cliente en tiempo real.
 
 **Funciones actualizadas**
 

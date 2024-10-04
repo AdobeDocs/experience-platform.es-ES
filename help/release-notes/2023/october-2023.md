@@ -1,11 +1,11 @@
 ---
-title: Notas de la versión de Adobe Experience Platform
+title: Notas de la versión de Adobe Experience Platform de octubre de 2023
 description: Las notas de la versión de octubre de 2023 de Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f2d0848952902d94b441566da677ef174518192e
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1054'
+ht-degree: 39%
 
 ---
 
@@ -80,7 +80,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## Zonas protegidas {#sandboxes}
 
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudarle a desarrollar aplicaciones de experiencia digital y hacer que evolucionen.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para responder a esta necesidad, Experience Platform proporciona zonas protegidas que dividen una única instancia de Platform en entornos virtuales separados para ayudar a desarrollar y evolucionar las aplicaciones de la experiencia digital.
 
 **Nueva funcionalidad**
 
@@ -98,7 +98,7 @@ Para obtener más información sobre las zonas protegidas, consulte la [descripc
 
 | Función | Descripción |
 | ------- | ----------- |
-| Audiencias de cuenta (GA limitado) | En Real-time Customer Data Platform B2B Edition, ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas. Para obtener más información acerca de esta característica, lea la [descripción general de las audiencias de la cuenta](../../segmentation/ui/account-audiences.md). |
+| Audiencias de cuenta (GA limitado) | En Real-time Customer Data Platform B2B edition, ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/ui/account-audiences.md). |
 
 Para obtener más información sobre el servicio de segmentación, lea la [descripción general del servicio de segmentación](../../segmentation/home.md).
 
