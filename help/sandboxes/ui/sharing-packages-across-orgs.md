@@ -2,9 +2,9 @@
 title: Uso Compartido De Paquetes Entre Organizaciones Mediante La Herramienta Sandbox
 description: Aprenda a utilizar la herramienta de zona protegida en Adobe Experience Platform para compartir paquetes entre diferentes organizaciones.
 badge: Beta
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Para crear una solicitud de asociación con una organización, vaya a la pestañ
 
 ![Interfaz de usuario de zonas protegidas, con la ficha Organizaciones asociadas y Administrar organizaciones asociadas resaltadas.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-En el cuadro de diálogo [!UICONTROL Administración de socios de paquetes], escriba el identificador de organización en **[!UICONTROL Introducir identificador de organización]** y presione Intro. El identificador de organización se muestra en la sección **[!UICONTROL ID de organización seleccionados]** a continuación. Después de agregar los identificadores, selecciona **[!UICONTROL Confirmar]**.
+En el cuadro de diálogo [!UICONTROL Administración de socios de paquetes], escriba el identificador de organización en **[!UICONTROL Escriba el identificador de organización]** y presione Intro (Windows) o Retorno (Mac). El identificador de organización se muestra en la sección **[!UICONTROL ID de organización seleccionados]** a continuación. Después de agregar los identificadores, selecciona **[!UICONTROL Confirmar]**.
 
 >[!TIP]
 >
