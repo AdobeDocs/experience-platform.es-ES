@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2821'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,10 @@ Aparecerá un cuadro de diálogo de confirmación. Seleccione **[!UICONTROL Conf
 ### Recuento de resultados {#result-count}
 
 El Editor de consultas tiene un resultado máximo de 50 000 filas. Puede elegir el número de filas que se muestran a la vez en la consola del Editor de consultas. Para cambiar el número de filas que se muestran en la consola, seleccione la lista desplegable **[!UICONTROL Recuento de resultados]** y elija entre las opciones 50, 100, 150, 300 y 500.
+
+>[!NOTE]
+>
+>Como la interfaz de usuario de Platform solo admite hasta 500 filas, se omite el paso de un valor LIMIT superior a 500.
 
 ![Editor de consultas con la lista desplegable Recuento de resultados resaltada.](../images/ui/query-editor/result-count.png)
 

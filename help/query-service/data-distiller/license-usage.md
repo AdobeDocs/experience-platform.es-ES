@@ -2,9 +2,9 @@
 title: Monitorizar uso de licencia de consulta por lotes
 description: La interfaz de usuario de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre el uso de la licencia de Data Distiller de su organización.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: 971c462a18a2a3ff3c98936c99b54a0d03b7c488
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,9 @@ El panel proporciona métricas de uso para cada producto comprado, el uso consol
 >
 >El panel de uso de licencias no está habilitado de forma predeterminada. Los usuarios deben tener permiso para &quot;Ver tablero de uso de licencias&quot; para poder ver el tablero. Para obtener los pasos sobre la concesión de permisos de acceso para ver el tablero de uso de licencias, consulte la [guía de permisos de tablero](../../dashboards/permissions.md).
 
-## Tiempo de cálculo {#compute-hours}
+## Calcular horas {#compute-hours}
 
 La métrica [!UICONTROL Calcular horas] solo se aplica a los clientes con licencia de Data Distiller para consultas por lotes. [!UICONTROL Calcular horas] es la medida del tiempo que tardan los motores de servicio de consultas en leer, procesar y escribir datos en el lago de datos cuando se ejecuta una consulta por lotes.
-
->[!NOTE]
->
->Los datos mostrados para el uso de [!UICONTROL Calcular horas] comienzan a partir del 15 de septiembre de 2023 o de la fecha de la renovación anual del contrato, lo que ocurra más tarde.
 
 ![Panel de uso de licencias con la métrica de cálculo de horas resaltada.](../images/data-distiller/compute-hours.png)
 
