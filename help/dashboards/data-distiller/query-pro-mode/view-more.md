@@ -2,7 +2,7 @@
 title: Ver más
 description: Obtenga información sobre las distintas opciones de visualización para los datos analizados por SQL. En el panel personalizado puede ver los resultados tabulados del análisis o descargar los datos procesados en formato CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Puede ordenar las columnas seleccionando el menú desplegable junto al nombre de
 
 >[!NOTE]
 >
->Las opciones [!UICONTROL Orden ascendente] y [!UICONTROL Orden descendente] solo aparecerán para las columnas que se hayan configurado con [funcionalidad de ordenación](../overview.md/#advanced-attributes).
+>Las opciones [!UICONTROL Orden ascendente] y [!UICONTROL Orden descendente] solo aparecerán para las columnas que se hayan configurado con [funcionalidad de ordenación](./overview.md#advanced-attributes).
 
 ![Menú desplegable de columna de tabla que muestra las opciones Orden ascendente y Orden descendente resaltadas.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 

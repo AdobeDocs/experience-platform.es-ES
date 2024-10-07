@@ -2,7 +2,7 @@
 title: SQL Insights
 description: Obtenga información sobre los casos de uso, las funcionalidades esenciales y los pasos necesarios para desarrollar un panel de perspectivas SQL con Data Distiller. Descubra cómo la capacidad de SQL Insights en Data Distiller puede mejorar la transparencia y obtener perspectivas operativas en diferentes dimensiones, como perfiles, audiencias, campañas, recorridos, autorizaciones y consentimientos.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Cree modelos de datos de informes personalizados para extraer perspectivas más profundas, optimizar estrategias y adaptar los análisis para satisfacer necesidades comerciales específicas con SQL Insights de Data Distiller. Utilice la capacidad Perspectivas de SQL para mejorar la transparencia y obtener perspectivas operativas de sus datos de Adobe Experience Platform en dimensiones como perfiles, audiencias, campañas, recorridos, autorizaciones y consentimientos. Esta capacidad proporciona una solución versátil y adaptable para adaptar los modelos de datos de creación de informes de su organización a las necesidades específicas de su empresa.
 
-Para [visualizar sus perspectivas de SQL](../../../dashboards/data-distiller/overview.md), puede usar [query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md) para realizar análisis complejos con consultas SQL personalizadas y transformar sus datos en gráficos fácilmente interpretables. Utilice el modo query pro para crear perspectivas y visualizaciones personalizadas en sus paneles y atender a audiencias técnicas y no técnicas descargando sus perspectivas como archivos CSV.
+Para [visualizar sus perspectivas de SQL](../../../dashboards/data-distiller/sql-insights/overview.md), puede usar [query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md) para realizar análisis complejos con consultas SQL personalizadas y transformar sus datos en gráficos fácilmente interpretables. Utilice el modo query pro para crear perspectivas y visualizaciones personalizadas en sus paneles y atender a audiencias técnicas y no técnicas descargando sus perspectivas como archivos CSV.
 
 Este documento cubre los casos de uso, las funcionalidades esenciales y los pasos necesarios para desarrollar un panel de perspectivas SQL con Data Distiller.
 

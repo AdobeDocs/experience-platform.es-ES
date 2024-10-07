@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
+source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 36%
+source-wordcount: '134'
+ht-degree: 35%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 36%
 * [Paneles](user-defined-dashboards.md)
 * [Descargar tableros para el PDF](download.md)
 * Data Distiller {#data-distiller}
-   * [Información general](data-distiller/overview.md)
    * SQL Insights para el sistema de informes de aplicaciones extendidas {#sql-insights}
       * [Información general](data-distiller/sql-insights/overview.md)
    * Modo de consulta profesional {#query-pro-mode}
