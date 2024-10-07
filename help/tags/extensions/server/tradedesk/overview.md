@@ -1,10 +1,8 @@
 ---
 title: Información general sobre la extensión de la API de conversiones en tiempo real de Trade Desk
 description: Obtenga información acerca de la extensión de la API de Conversiones en tiempo real de Trade Desk para el reenvío de eventos en Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: eb650da02ac69c5afbebfe6ba371cc19617f79d0
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 2%
