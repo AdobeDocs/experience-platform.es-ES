@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexión
 description: Google Ad Manager 360 es una plataforma de servicio de anuncios de Google que ofrece a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 4%
+source-wordcount: '1217'
+ht-degree: 6%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
-> Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_en) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
+> Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_es) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
 ><br/>
->Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según DMA en la Unión Europea.
+>Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.
 ><br/>
 >Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no tienen que realizar ninguna acción.
 ><br/>
@@ -35,6 +35,7 @@ El destino [!DNL Google Ad Manager 360] exporta [!DNL CSV] archivos a su bloque 
 
 Tenga en cuenta los siguientes detalles que son específicos de [!DNL Google Ad Manager 360] destinos.
 
+* Actualmente, este destino no admite la característica [exportar archivos bajo demanda](../../ui/export-file-now.md).
 * Las audiencias activadas se crean mediante programación en la plataforma de Google y se rellenan en el archivo CSV.
 
 ## Identidades admitidas {#supported-identities}
@@ -79,7 +80,7 @@ La inclusión en la lista de permitidos es obligatoria antes de configurar su pr
 >
 >La excepción a esta regla es para clientes existentes de [Audience Manager](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html). Si ya ha creado una conexión con este destino de Google en Audience Manager, no es necesario volver a pasar por el proceso de inclusión en la lista de permitidos y puede continuar con los siguientes pasos.
 
-1. Siga los pasos descritos en la [documentación de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para agregar el Adobe como plataforma de administración de datos (DMP) vinculada.
+1. Siga los pasos descritos en la [documentación de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para agregar Adobe como plataforma de administración de datos vinculada (DMP).
 2. En la interfaz de [!DNL Google Ad Manager], vaya a **[!UICONTROL Administración]** > **[!UICONTROL Configuración global]** > **[!UICONTROL Configuración de red]** y habilite el control deslizante **[!UICONTROL Acceso a la API]**.
 
 
