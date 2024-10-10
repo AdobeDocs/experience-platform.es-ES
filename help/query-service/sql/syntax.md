@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento detalla y explica la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 2%
 
 ---
@@ -577,7 +577,7 @@ En la tabla siguiente se muestra la diferencia en los resultados que tiene la co
 
 ### Resolver instantánea de reserva ante un error {#resolve-fallback-snapshot-on-failure}
 
-La opción `resolve_fallback_snapshot_on_failure` se usa para resolver el problema de un identificador de instantánea caducado. Los metadatos de la instantánea caducan al cabo de dos días y una instantánea caducada puede invalidar la lógica de un script. Esto puede suponer un problema al utilizar bloques anónimos.
+La opción `resolve_fallback_snapshot_on_failure` se usa para resolver el problema de un identificador de instantánea caducado.
 
 Establezca la opción `resolve_fallback_snapshot_on_failure` en true para anular una instantánea con un ID de instantánea anterior.
 

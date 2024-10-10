@@ -1,9 +1,9 @@
 ---
 title: Crear audiencias con SQL
 description: Aprenda a utilizar la extensión de audiencia SQL en el Distiller de datos de Adobe Experience Platform para crear, administrar y publicar audiencias mediante comandos SQL. Esta guía cubre todos los aspectos del ciclo vital de la audiencia, incluida la creación, actualización y eliminación de perfiles, y el uso de definiciones de audiencia basadas en datos para dirigirse a destinos basados en archivos.
-source-git-commit: fbfd232c4e101f29ae01328c33763786a0e4a8cb
+source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1280'
 ht-degree: 1%
 
 ---
@@ -137,41 +137,103 @@ Esta sección aborda las preguntas más frecuentes sobre la creación y administ
 
 +++Seleccione para mostrar preguntas y respuestas
 
+**Preguntas**:
+
 - ¿La creación de audiencias solo se admite para conjuntos de datos planos?
-- También se admiten conjuntos de datos anidados, pero solo atributos planos están disponibles en la audiencia.
+
++++Respuesta
+
+También se admiten conjuntos de datos anidados, pero solo atributos planos están disponibles en la audiencia.
+
++++
 
 - ¿La creación de audiencias resulta en un único conjunto de datos o en varios conjuntos de datos, o varía según la configuración?
-- Hay una asignación uno a uno entre una audiencia y un conjunto de datos.
+
++++Respuesta
+
+Hay una asignación uno a uno entre una audiencia y un conjunto de datos.
+
++++
 
 - ¿El conjunto de datos creado durante la creación de audiencias está marcado para Perfil?
-- No, el conjunto de datos creado durante la creación de audiencias no está marcado para Perfil.
+
++++Respuesta
+
+No, el conjunto de datos creado durante la creación de audiencias no está marcado para Perfil.
+
++++
 
 - ¿Se crea el conjunto de datos en el lago de datos?
-- Sí, el conjunto de datos se crea en el lago de datos.
+
++++Respuesta
+
+Sí, el conjunto de datos se crea en el lago de datos.
+
++++
 
 - ¿Están restringidos los atributos de la audiencia para usarlos únicamente en destinos basados en archivos por lotes de empresa? (Sí o No)
-- Sí, los atributos de la audiencia están restringidos para utilizarse únicamente en destinos basados en archivos por lotes de empresa.
+
++++Respuesta
+
+Sí, los atributos de la audiencia están restringidos para utilizarse únicamente en destinos basados en archivos por lotes de empresa.
+
++++
 
 - ¿Puedo crear una audiencia de audiencias que use una audiencia de Data Distiller?
-- Sí, puede crear una audiencia de audiencias que utilice una audiencia de Data Distiller.
+
++++Respuesta
+
+Sí, puede crear una audiencia de audiencias que utilice una audiencia de Data Distiller.
+
++++
 
 - ¿Aparecen estas audiencias en Adobe Journey Optimizer? Si no es así, ¿qué sucede cuando se crea una nueva audiencia en el generador de reglas que incluye a todos los miembros de esta audiencia?
-- Las audiencias del destilador de datos no están disponibles actualmente en Adobe Journey Optimizer. Debe crear una nueva audiencia en el generador de reglas de Adobe Journey Optimizer para que esté disponible en Adobe Journey Optimizer.
+
++++Respuesta
+
+Las audiencias del destilador de datos no están disponibles actualmente en Adobe Journey Optimizer. Debe crear una nueva audiencia en el generador de reglas de Adobe Journey Optimizer para que esté disponible en Adobe Journey Optimizer.
+
++++
 
 - ¿Cómo debo crear dos audiencias de Data Distiller con horarios diferentes? ¿Cuántos conjuntos de datos se crean y están marcados para Perfil?
-- Se crearán dos conjuntos de datos, ya que cada audiencia tiene un conjunto de datos subyacente. Sin embargo, estos conjuntos de datos no están marcados para Perfil. Los dos conjuntos de datos se administran en sus propias programaciones individuales.
+
++++Respuesta
+
+Se crearán dos conjuntos de datos, ya que cada audiencia tiene un conjunto de datos subyacente. Sin embargo, estos conjuntos de datos no están marcados para Perfil. Los dos conjuntos de datos se administran en sus propias programaciones individuales.
+
++++
 
 - ¿Cómo elimino una audiencia?
-- Para eliminar una audiencia, puede usar el comando [`DROP AUDIENCE` ](#delete-audience) en la interfaz de la línea de comandos o usar las [acciones rápidas del espacio de trabajo de audiencias](../../segmentation/ui/audience-portal.md#quick-actions). NOTA: Las audiencias que se utilizan en destinos descendentes o que dependen de otras audiencias no se pueden eliminar.
+
++++Respuesta
+
+Para eliminar una audiencia, puede usar el comando [`DROP AUDIENCE` ](#delete-audience) en la interfaz de la línea de comandos o usar las [acciones rápidas del espacio de trabajo de audiencias](../../segmentation/ui/audience-portal.md#quick-actions). NOTA: Las audiencias que se utilizan en destinos descendentes o que dependen de otras audiencias no se pueden eliminar.
+
++++
 
 - Cuando publico una audiencia en el perfil, ¿en qué momento está disponible en la interfaz de usuario del generador de segmentos y cuándo pasa a estar disponible en los destinos?
-- Una vez completada la exportación de instantáneas de perfil, los perfiles se pueden ver en la audiencia.
+
++++Respuesta
+
+Una vez completada la exportación de instantáneas de perfil, los perfiles se pueden ver en la audiencia.
+
++++
 
 - ¿Las audiencias de Data Distiller se eliminan cada 30 días, ya que son audiencias externas?
-- Sí, las audiencias de Data Distiller se eliminan cada 30 días, ya que son audiencias externas.
+
++++Respuesta
+
+Sí, las audiencias de Data Distiller se eliminan cada 30 días, ya que son audiencias externas.
+
++++
 
 - ¿Aparecen las audiencias de Data Distiller en el inventario de audiencias?
-- Sí, las audiencias de Data Distiller aparecen en el inventario Audiencias con el nombre de origen &quot;Data Distiller&quot;.
+
++++Respuesta
+
+Sí, las audiencias de Data Distiller aparecen en el inventario Audiencias con el nombre de origen &quot;Data Distiller&quot;.
+
++++
 
 +++
 

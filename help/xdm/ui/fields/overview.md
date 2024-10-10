@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Definición de campos XDM en la IU
 description: Obtenga información sobre cómo definir campos XDM en la interfaz de usuario del Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 1%
+source-wordcount: '1607'
+ht-degree: 2%
 
 ---
 
@@ -89,7 +89,6 @@ Al definir un nuevo campo, pueden aparecer opciones de configuración adicionale
 | Propiedad de campo | Tipos compatibles | Descripción |
 | --- | --- | --- |
 | [!UICONTROL Asignar tipo de valor] | [!UICONTROL Mapa] | La propiedad [!UICONTROL Map value type] solo aparece en la interfaz de usuario si selecciona el valor Map en las opciones desplegables de [!UICONTROL Type]. Puede seleccionar entre los tipos de valor Cadena y Entero para el Mapa.<br>![Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados.](../../images/ui/fields/overview/map-type.png "Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados."){width="100" zoomable="yes"}<br>Nota: todos los tipos de datos de asignación creados mediante la API que no sean de tipo String ni Integer se muestran como un tipo de datos &#39;[!UICONTROL Complex]&#39;. No puede crear tipos de datos &#39;[!UICONTROL Complex]&#39; a través de la interfaz de usuario. |
-| [!UICONTROL Valor predeterminado] | [!UICONTROL Cadena], [!UICONTROL Doble], [!UICONTROL Largo], [!UICONTROL Entero], [!UICONTROL Corto], [!UICONTROL Byte], [!UICONTROL Booleano] | Un valor predeterminado que se asigna a este campo si no se proporciona ningún otro valor durante la ingesta. Este valor debe cumplir con el tipo seleccionado en el campo.<br><br>Los valores predeterminados no se guardan en el conjunto de datos en el momento de la ingesta, ya que pueden cambiar con el tiempo. Los servicios y aplicaciones de Platform secundarios infieren los valores predeterminados establecidos en el esquema cuando leen los datos del conjunto de datos. Por ejemplo, al consultar los datos mediante el servicio de consulta, si el atributo tiene un valor NULL, pero el valor predeterminado está establecido en `5` en el nivel de esquema, se espera que el servicio de consulta devuelva `5` en lugar de NULL. Tenga en cuenta que este comportamiento no es uniforme actualmente en todos los servicios de AEP. |
 | [!UICONTROL Patrón] | [!UICONTROL Cadena] | Una [expresión regular](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) a la que debe ajustarse el valor de este campo para que se acepte durante la ingesta. |
 | [!UICONTROL Formato] | [!UICONTROL Cadena] | Seleccione de una lista de formatos predefinidos para cadenas con los que debe ajustarse el valor. Los formatos disponibles incluyen: <ul><li>[[!UICONTROL fecha-hora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL correo electrónico]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL nombre de host]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL puntero json]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Longitud mínima] | [!UICONTROL Cadena] | Número mínimo de caracteres que debe contener la cadena para que el valor se acepte durante la ingesta. |
