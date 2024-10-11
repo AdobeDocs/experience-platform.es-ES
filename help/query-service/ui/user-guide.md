@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
 workflow-type: tm+mt
-source-wordcount: '2821'
+source-wordcount: '2845'
 ht-degree: 0%
 
 ---
@@ -200,19 +200,18 @@ Si se programó una consulta, entonces la ficha [!UICONTROL Consultas programada
 >
 >El registro no guarda las consultas que no se ejecutan. Para que la consulta esté disponible en el servicio de consultas, debe ejecutarse o guardarse en el Editor de consultas.
 
-### Examinador de objetos {#object-browser}
+### [!BADGE Beta]{type=Informative} Examinador de objetos {#object-browser}
 
 >[!AVAILABILITY]
 >
->El carril de navegación del conjunto de datos solo está disponible para los clientes de Data Distiller. Es posible que la IU de Platform no contenga el carril izquierdo de navegación del conjunto de datos.  Otras imágenes de este documento pueden no reflejar el carril de navegación del conjunto de datos. Póngase en contacto con el representante del Adobe para obtener más información.
+El carril de navegación del conjunto de datos solo está disponible para los clientes de Data Distiller. Es posible que la IU de Platform no contenga el carril izquierdo de navegación del conjunto de datos. Otras imágenes de este documento pueden no reflejar el carril de navegación del conjunto de datos. Póngase en contacto con el representante del Adobe para obtener más información.<br>
+El Examinador de objetos está actualmente en fase beta y disponible solamente en una **versión limitada**. Póngase en contacto con su representante de Adobe para obtener acceso anticipado.
 
 Utilice el explorador de objetos para buscar y filtrar conjuntos de datos fácilmente. El explorador de objetos reduce el tiempo empleado en buscar tablas y conjuntos de datos en entornos grandes con numerosos conjuntos de datos. Con un acceso optimizado a los datos y metadatos relevantes, puede centrarse más en la creación de consultas y menos en la navegación.
 
-Para explorar la base de datos con el Examinador de objetos, escriba un nombre de tabla en el campo de búsqueda o seleccione **[!UICONTROL Tablas]** para expandir la lista de tablas y conjuntos de datos disponibles. Al utilizar el campo de búsqueda, la lista de tablas disponibles se filtra dinámicamente en función de la entrada.
+Para explorar la base de datos con el explorador de objetos, escriba un nombre de tabla en el campo de búsqueda o seleccione **[!UICONTROL Tablas]** para expandir la lista de tablas y conjuntos de datos disponibles. Al utilizar el campo de búsqueda, la lista de tablas disponibles se filtra dinámicamente en función de la entrada.
 
->[!NOTE]
->
->Todos los conjuntos de datos contenidos en [su base de datos seleccionada](#database-dropdown) se muestran en un carril de navegación a la izquierda del Editor de consultas.
+Todos los conjuntos de datos contenidos en [su base de datos seleccionada](#database-dropdown) se muestran en un carril de navegación a la izquierda del Editor de consultas.
 
 ![Carril de navegación del conjunto de datos del Editor de consultas con la entrada de búsqueda resaltada.](../images/ui/query-editor/search-tables.png)
 
@@ -233,7 +232,7 @@ Además de las búsquedas rápidas, ahora puede acceder fácilmente a los metada
 
 #### Explorar tablas secundarias
 
-Para explorar tablas secundarias o vinculadas, seleccione la flecha desplegable junto al nombre de una tabla en la lista. Esto expande la tabla para mostrar cualquier tabla secundaria asociada, proporciona una vista clara de la estructura de datos y permite construcciones de consulta más complejas. El icono situado junto al nombre del campo indica el tipo de datos de la columna para ayudarle a identificarla durante consultas complejas.
+Para explorar tablas secundarias o vinculadas, seleccione la flecha desplegable junto al nombre de una tabla en la lista. Esto expande la tabla para mostrar cualquier tabla secundaria asociada, proporciona una vista clara de la estructura de datos y permite construcciones de consulta más complejas. El icono situado junto al nombre del campo indica el tipo de datos de la columna, to le ayudará a identificarlo durante consultas complejas.
 
 ![Editor de consultas que muestra la lista de tablas filtradas.](../images/ui/query-editor/child-table-list.png)
 
@@ -249,7 +248,7 @@ La consola proporciona información sobre el estado y el funcionamiento del serv
 
 >[!NOTE]
 >
->La consola solo muestra los errores resultantes de la ejecución de una consulta. No muestra los errores de validación de consultas que se producen antes de ejecutar una consulta.
+La consola solo muestra los errores resultantes de la ejecución de una consulta. No muestra los errores de validación de consultas que se producen antes de ejecutar una consulta.
 
 ### Resultados de consulta {#query-results}
 
@@ -269,7 +268,7 @@ El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Exp
 
 >[!NOTE]
 >
->La interfaz de usuario que se muestra en el vídeo está obsoleta, pero la lógica utilizada en el flujo de trabajo sigue siendo la misma.
+La interfaz de usuario que se muestra en el vídeo está obsoleta, pero la lógica utilizada en el flujo de trabajo sigue siendo la misma.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
