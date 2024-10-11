@@ -3,9 +3,9 @@ title: Utilice campos calculados para exportar matrices como cadenas
 type: Tutorial
 description: Aprenda a utilizar campos calculados para exportar matrices de Real-Time CDP a destinos de almacenamiento en la nube como cadenas.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Obtenga información detallada sobre los campos calculados, qué son y por qué 
 
 ## Matrices y otros tipos de objetos en Platform {#arrays-strings-other-objects}
 
-En Experience Platform, puede utilizar [esquemas XDM](/help/xdm/home.md) para administrar diferentes tipos de campos. Anteriormente, podía exportar campos de tipo de par clave-valor simples, como cadenas, fuera de Experience Platform a los destinos deseados. Un ejemplo de un campo de este tipo que se admitía para la exportación anteriormente es `personalEmail.address`:`johndoe@acme.org`.
+En Experience Platform, puede utilizar [esquemas XDM](/help/xdm/home.md) para administrar diferentes tipos de campos. Antes de añadir compatibilidad con las exportaciones de matrices, podía exportar campos de tipo par clave-valor simples, como cadenas de Experience Platform a los destinos deseados. Un ejemplo de un campo de este tipo que se admitía para la exportación anteriormente es `personalEmail.address`:`johndoe@acme.org`.
 
 Otros tipos de campo de Experience Platform incluyen campos de matriz. Obtenga más información acerca de [administrar campos de matriz en la interfaz de usuario del Experience Platform](/help/xdm/ui/fields/array.md). Además de los tipos de campo admitidos anteriormente, ahora puede exportar objetos de matriz como el ejemplo siguiente, concatenados en una cadena mediante la función `array_to_string`.
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### Función `flattenArray` para exportar matrices aplanadas
-
-Utilice la función `flattenArray` para acoplar una matriz multidimensional exportada. Puede combinar esta función con la función `array_to_string` descrita anteriormente.
-
-Continuando con el objeto de matriz `organizations` desde arriba, puede escribir una función como `array_to_string('_', flattenArray(organizations))`. Tenga en cuenta que la función `array_to_string` aplana la matriz de entrada de forma predeterminada en una cadena.
-
-El resultado es el mismo que para la función `array_to_string` descrita anteriormente.
-
-
 ### Función `filterArray` para exportar matrices filtradas
 
 Utilice la función `filterArray` para filtrar los elementos de una matriz exportada. Puede combinar esta función con la función `array_to_string` descrita anteriormente.
@@ -210,6 +201,14 @@ En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo los
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### Función `flattenArray` para exportar matrices aplanadas
+
+Utilice la función `flattenArray` para acoplar una matriz multidimensional exportada. Puede combinar esta función con la función `array_to_string` descrita anteriormente.
+
+Continuando con el objeto de matriz `organizations` desde arriba, puede escribir una función como `array_to_string('_', flattenArray(organizations))`. Tenga en cuenta que la función `array_to_string` aplana la matriz de entrada de forma predeterminada en una cadena.
+
+El resultado es el mismo que para la función `array_to_string` descrita anteriormente.
 
 ### Función `coalesce` para exportar matrices {#coalesce-function-export-arrays}
 
