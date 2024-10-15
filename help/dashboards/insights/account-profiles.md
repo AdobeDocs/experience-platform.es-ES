@@ -4,7 +4,7 @@ description: Descubra el SQL que alimenta las perspectivas de su perfil de cuent
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Con acceso al SQL que alimenta sus perspectivas, puede comprender mejor sus dato
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Las siguientes perspectivas están disponibles para que las use como parte del [panel de perfiles de cuenta](../guides/account-profiles.md) o un [panel personalizado](../user-defined-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
+Las siguientes perspectivas están disponibles para que las use como parte del [panel de perfiles de cuenta](../guides/account-profiles.md) o un [panel personalizado](../standard-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../standard-dashboards.md#create-widget).
 
 ## Perfiles de cuenta añadidos {#account-profiles-added}
 

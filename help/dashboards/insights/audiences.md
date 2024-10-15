@@ -2,7 +2,7 @@
 title: Audiences Insights
 description: Descubra el SQL que alimenta las perspectivas de audiencia y utilice estas consultas para generar perspectivas personalizadas y explorar aún más los datos de audiencia de Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprenda sus perspectivas de audiencia accediendo al SQL que las alimenta y, a 
 
 Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-Las siguientes perspectivas están disponibles para que las use como parte del [tablero de audiencias](../guides/audiences.md) o un [tablero personalizado definido por el usuario](../user-defined-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
+Las siguientes perspectivas están disponibles para que las use como parte del [tablero de audiencias](../guides/audiences.md) o un [tablero personalizado definido por el usuario](../standard-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../standard-dashboards.md#create-widget).
 
 Las siguientes perspectivas están disponibles para que las use como parte del [tablero de audiencias](../guides/audiences.md) o un tablero personalizado.
 

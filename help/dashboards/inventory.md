@@ -2,7 +2,7 @@
 title: Ver paneles configurados
 description: Vea una lista de los paneles configurados de su organización en la interfaz de usuario de Experience Platform.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -27,4 +27,4 @@ Cuando se selecciona, el panel se abre en la interfaz de usuario de Platform o e
 
 ## Creación de paneles personalizados
 
-Paneles de Adobe Experience Platform le permite crear y administrar paneles personalizados, donde puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Consulte la [guía de paneles definidos por el usuario](./user-defined-dashboards.md) para obtener instrucciones completas sobre la creación y configuración de paneles personalizados.
+Paneles de Adobe Experience Platform le permite crear y administrar paneles personalizados, donde puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Consulte la [guía de paneles definidos por el usuario](./standard-dashboards.md) para obtener instrucciones completas sobre la creación y configuración de paneles personalizados.

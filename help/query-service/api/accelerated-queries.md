@@ -3,7 +3,7 @@ title: Punto final de consultas aceleradas
 description: Obtenga información sobre cómo acceder al almacén acelerado de consultas de forma independiente para devolver rápidamente resultados basados en datos agregados. Este documento proporciona una solicitud y una respuesta HTTP de ejemplo para el extremo de consultas aceleradas del servicio de consultas.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Extremo de consultas aceleradas
 
-Como parte del SKU de Data Distiller, la [API de servicio de consultas](https://developer.adobe.com/experience-platform-apis/references/query-service/) le permite realizar consultas sin estado en el almacén acelerado. Los resultados devueltos se basan en los datos agregados. La disminución de la latencia de los resultados permite un intercambio de información más interactivo. Las API de consultas aceleradas también se usan para activar [paneles definidos por el usuario](../../dashboards/user-defined-dashboards.md).
+Como parte del SKU de Data Distiller, la [API de servicio de consultas](https://developer.adobe.com/experience-platform-apis/references/query-service/) le permite realizar consultas sin estado en el almacén acelerado. Los resultados devueltos se basan en los datos agregados. La disminución de la latencia de los resultados permite un intercambio de información más interactivo. Las API de consultas aceleradas también se usan para activar [paneles definidos por el usuario](../../dashboards/standard-dashboards.md).
 
 Antes de continuar con esta guía, asegúrese de haber leído y comprendido la [guía de API del servicio de consultas](./getting-started.md) para usar correctamente la API del servicio de consultas.
 

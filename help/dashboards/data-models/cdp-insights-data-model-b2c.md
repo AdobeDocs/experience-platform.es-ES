@@ -4,7 +4,7 @@ description: Aprenda a utilizar consultas SQL con los modelos de datos de Real-t
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -21,7 +21,7 @@ El modelo de datos de Real-time Customer Data Platform Insights para [B2C Editio
 
 ## Requisitos previos
 
-Esta guía requiere una comprensión práctica de la [función de paneles definida por el usuario](../user-defined-dashboards.md). Lea la documentación antes de continuar con esta guía.
+Esta guía requiere una comprensión práctica de la [función de paneles definida por el usuario](../standard-dashboards.md). Lea la documentación antes de continuar con esta guía.
 
 ## Informes de perspectivas y casos de uso de Real-Time CDP
 

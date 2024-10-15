@@ -2,7 +2,7 @@
 title: Perspectivas de destinos
 description: Descubra el SQL que alimenta las perspectivas de sus destinos y utilice estas consultas para generar perspectivas personalizadas y explorar aún más la activación de datos de Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprenda sus perspectivas de destino accediendo al SQL que las alimenta y, a co
 
 Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-Las siguientes perspectivas están disponibles para que las uses como parte del [panel de destinos](../guides/destinations.md) o un [panel personalizado definido por el usuario](../user-defined-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
+Las siguientes perspectivas están disponibles para que las uses como parte del [panel de destinos](../guides/destinations.md) o un [panel personalizado definido por el usuario](../standard-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../standard-dashboards.md#create-widget).
 
 ## Públicos activados {#activated-audiences}
 
@@ -144,7 +144,7 @@ SELECT d.destination_name,
 
 Consulte la [documentación del widget de tendencia de tamaño de audiencia](../guides/destinations.md#audience-size-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
-## Públicos comunes {#common-audiences}
+## Audiencias comunes {#common-audiences}
 
 Preguntas respondidas por esta perspectiva:
 

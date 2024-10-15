@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2023'
 description: Las notas de la versión de abril de 2023 de Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -37,7 +37,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Paneles definidos por el usuario | Ahora puede **filtrar datos históricos** desde las perspectivas del widget y utilizar datos recientes o un período de análisis personalizado. Si desea obtener más información, consulte la [guía de paneles definidos por el usuario](../../dashboards/user-defined-dashboards.md#filter-historical-data).<br>Ahora también puede **duplicar los widgets existentes**. Al personalizar un duplicado y editar sus atributos, puede evitar reiniciar desde el principio al crear un widget nuevo y único. Lea la [guía de duplicación de widgets](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) para obtener más información. |
+| Paneles definidos por el usuario | Ahora puede **filtrar datos históricos** desde las perspectivas del widget y utilizar datos recientes o un período de análisis personalizado. Si desea obtener más información, consulte la [guía de paneles definidos por el usuario](../../dashboards/standard-dashboards.md#filter-historical-data).<br>Ahora también puede **duplicar los widgets existentes**. Al personalizar un duplicado y editar sus atributos, puede evitar reiniciar desde el principio al crear un widget nuevo y único. Lea la [guía de duplicación de widgets](../../dashboards/standard-dashboards.md#duplicate-a-widget) para obtener más información. |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | --- | --- |
 | Ofuscación de direcciones IP para flujos de datos | Ahora puede definir opciones de ofuscación de IP parciales o completas en el nivel de flujo de datos en la variable [IU de configuración de secuencia de datos](../../datastreams/configure.md). <br><br>La configuración de ofuscación de IP en el nivel de flujo de datos tiene prioridad sobre cualquier ofuscación de IP configurada en Adobe Target y Audience Manager. <br><br>Los datos enviados a Adobe Analytics no se ven afectados por la configuración [!UICONTROL Ofuscación de IP] del nivel de conjunto de datos. Actualmente, Adobe Analytics recibe direcciones IP no ofuscadas. Para que Analytics reciba direcciones IP ofuscadas, debe configurar la ofuscación de IP por separado en Adobe Analytics. Este comportamiento se actualizará en futuras versiones.<br><br> Para obtener más información acerca de la ofuscación de IP e instrucciones sobre cómo configurarla, consulte la [documentación de configuración de secuencia de datos](../../datastreams/configure.md#advanced-options). |
 | [Anulaciones de configuración de secuencia de datos](../../datastreams/overrides.md) | Ahora puede definir opciones de configuración adicionales para flujos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tókenes de propiedades de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones de secuencia de datos es un proceso de dos pasos: <ol><li>En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](../../datastreams/configure.md).</li><li>A continuación, debe enviar las anulaciones a Edge Network mediante un comando del SDK web o la [extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) del SDK web.</li></ol> |
-| Secreto JWT de OAuth  | El [Secreto JWT de OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) les permite a los clientes utilizar tókenes de Adobe y de servicio de Google para admitir interacciones de servidor a servidor en el reenvío de eventos. |
+| Secreto JWT de OAuth  | El [Secreto JWT de OAuth](https://experienceleague.adobe.com/es/docs/experience-platform/tags/event-forwarding/secrets) les permite a los clientes utilizar tókenes de Adobe y de servicio de Google para admitir interacciones de servidor a servidor en el reenvío de eventos. |
 | Extensión [!DNL Pinterest Conversions API] | La extensión de reenvío de eventos [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=es) permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Pinterest] en forma de eventos del lado del servidor que utilizan el [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}

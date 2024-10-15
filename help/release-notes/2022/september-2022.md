@@ -1,17 +1,17 @@
 ---
-title: Notas de la versión de Adobe Experience Platform de septiembre de 2022
-description: Notas de la versión de septiembre de 2022 de Adobe Experience Platform.
+title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2022'
+description: Las notas de la versión de septiembre de 2022 de Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2762'
-ht-degree: 18%
+ht-degree: 26%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de lanzamiento: jueves, 28 de septiembre de 2022**
+**Fecha de la versión: jueves, 28 de septiembre de 2022**
 
 Nuevas funciones de Adobe Experience Platform:
 
@@ -35,7 +35,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 >
 >El control de acceso basado en atributos se habilitará a partir de octubre de 2022. Si desea ser uno de los primeros en adoptarlo, póngase en contacto con su representante de Adobe.
 
-El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
+El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
 
 Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y otro tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
 
@@ -44,7 +44,7 @@ Mediante el control de acceso basado en atributos, los administradores de su org
 | Control de acceso basado en atributos | El control de acceso basado en atributos le permite etiquetar campos y segmentos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir políticas de acceso que cubran los campos y segmentos de esquema XDM para administrar mejor el acceso dado a usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Para obtener más información, consulte la [descripción general del control de acceso basado en atributos](../../access-control/abac/overview.md). |
 | Permisos | Permisos es el área del Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto. Mediante Permisos, puede crear y administrar funciones, asignar los permisos de recursos deseados para estas funciones y crear directivas para aprovechar las etiquetas y definir qué funciones de usuario tienen acceso a recursos de Platform específicos. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de la interfaz de usuario de permisos](../../access-control/abac/ui/browse.md). |
 
-Para obtener más información sobre el control de acceso basado en atributos, vea la [descripción general del control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
+Para obtener más información sobre el control de acceso basado en atributos, consulte la [información general del control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -93,7 +93,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 | Función | Descripción |
 | --- | --- |
 | Etiqueta en uso | Cuando se visualiza en la biblioteca de widgets, la etiqueta en uso identifica fácilmente la presencia de widgets existentes en el tablero. Esto facilita evitar la duplicación, aunque puede añadir el mismo widget más de una vez si lo desea. |
-| Paneles definidos por el usuario | Los paneles definidos por el usuario ayudan a acelerar las perspectivas y personalizar las visualizaciones, lo que le permite crear y administrar paneles personalizados. Con los paneles definidos por el usuario puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Lee la [guía de características](../../dashboards/user-defined-dashboards.md) para obtener más información. |
+| Paneles definidos por el usuario | Los paneles definidos por el usuario ayudan a acelerar las perspectivas y personalizar las visualizaciones, lo que le permite crear y administrar paneles personalizados. Con los paneles definidos por el usuario puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Lee la [guía de características](../../dashboards/standard-dashboards.md) para obtener más información. |
 | Modelo de datos de perspectivas de Customer Data Platform | La función del modelo de datos de perspectivas de la plataforma de datos del cliente (CDP) expone los modelos de datos y SQL que alimenta las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para los casos de uso de indicadores de rendimiento clave y marketing. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles definidos por el usuario. Lea la [guía de características del modelo de datos de perspectivas de CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) para obtener más información. |
 | Widget del informe de superposición de audiencia | Este widget está disponible tanto para paneles de [!UICONTROL Perfiles] como de [!UICONTROL Segmentos]. El informe proporciona una lista ordenada de audiencias clasificadas según los porcentajes de superposición más altos o más bajos para el segmento elegido. En el panel [!UICONTROL Perfiles] puede filtrar y ver la superposición de audiencias mediante una política de combinación a partir de todos los segmentos disponibles. Los paneles [!UICONTROL Segmentos] le permiten filtrar la superposición de audiencias según un segmento específico.<br>Use este análisis para generar nuevos segmentos de alto rendimiento y evitar enviar la misma audiencia a diferentes destinos. El informe también ayuda a identificar perspectivas ocultas para mejorar la segmentación o localizar perfiles únicos que perseguir. Lea las respectivas guías de los widgets [perfiles](../../dashboards/guides/profiles.md#audience-overlap-report) y [segmentos](../../dashboards/guides/audiences.md#audience-overlap-report) para obtener más información. |
 
@@ -107,9 +107,9 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| Integración de navegación izquierda en la IU de Platform | Todas las funcionalidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas, el reenvío de eventos y las secuencias de datos) ahora también están disponibles a través de la navegación izquierda en Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre interfaces al trabajar con las capacidades de recopilación de datos en Platform. |
+| Integración de navegación izquierda en la IU de Platform | Todas las funcionalidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas, el reenvío de eventos y las secuencias de datos) ahora también están disponibles a través de la navegación izquierda en Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre interfaces de usuario cuando se trabaja con las capacidades de recopilación de datos en Platform. |
 | Atribución de usuario en etiquetas y reenvío de eventos | Al enumerar [!UICONTROL Propiedades] disponibles en las etiquetas y el reenvío de eventos, cada propiedad enumerada ahora muestra cuándo se actualizó por última vez y qué usuario realizó la actualización. |
-| [[!DNL Snap Conversions API] extensión](https://exchange.adobe.com/apps/ec/108550) para reenvío de eventos | Ahora puede enviar datos a [!DNL Snapchat Conversions API] mediante una extensión de [reenvío de eventos](../../tags/ui/event-forwarding/overview.md). Para obtener más información sobre cómo autenticar y usar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html). |
+| [[!DNL Snap Conversions API] extensión](https://exchange.adobe.com/apps/ec/108550) para reenvío de eventos | Ahora puede enviar datos a [!DNL Snapchat Conversions API] mediante una extensión de [reenvío de eventos](../../tags/ui/event-forwarding/overview.md). Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [Sugerencias del cliente agente de usuario en el SDK web](/help/web-sdk/use-cases/client-hints.md) | El SDK web ahora admite [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las sugerencias del cliente permiten a los propietarios de sitios web tener acceso a gran parte de la misma información disponible en la cadena [!DNL User-Agent], pero de una manera que preserva la privacidad. |
 | [Migración página por página del SDK web](../../web-sdk/home.md#migrating-to-web-sdk) | Ahora puede migrar las propiedades web existentes desde otras bibliotecas de Experience Cloud, como [!DNL at.js], al SDK web, página por página. Esto permite un enfoque gradual de la migración al SDK web, sin necesidad de migrar todas las páginas a la vez. |
 | [[!DNL Adobe Journey Optimizer] compatibilidad con flujos de datos](../../datastreams/overview.md#aep) | El servicio Adobe Experience Platform para flujos de datos ahora admite [!DNL Adobe Journey Optimizer]. Esta opción le permite usar canales entrantes web y basados en aplicaciones en [!DNL Adobe Journey Optimizer]. |
@@ -208,7 +208,7 @@ Para obtener más información acerca del servicio de identidad, lea la [descrip
 
 ## Servicio de consultas {#query-service}
 
-El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unirse a cualquier conjunto de datos de [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, Data Science Workspace o para su inserción en el Perfil del cliente en tiempo real.
+El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos del [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su ingesta en el Perfil del cliente en tiempo real.
 
 **Funciones actualizadas**
 

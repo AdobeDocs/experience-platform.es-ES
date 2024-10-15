@@ -2,7 +2,7 @@
 title: Seguimiento de señales de datos para generar el valor de duración del cliente
 description: Esta guía proporciona una demostración completa sobre cómo utilizar Data Distiller y los paneles definidos por el usuario con Real-time Customer Data Platform para medir y visualizar el valor de duración del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Asegúrese de establecer una programación para actualizar el modelo de datos pe
 
 ## Crear un tablero para capturar información {#build-a-custom-dashboard}
 
-Ahora que ha creado su modelo de datos personalizado, está listo para visualizar los datos con consultas personalizadas y paneles definidos por el usuario. Consulte la información general sobre los paneles definidos por el usuario para obtener instrucciones completas sobre cómo [crear un panel personalizado](../../dashboards/user-defined-dashboards.md). La guía de la interfaz de usuario incluye detalles sobre:
+Ahora que ha creado su modelo de datos personalizado, está listo para visualizar los datos con consultas personalizadas y paneles definidos por el usuario. Consulte la información general sobre los paneles definidos por el usuario para obtener instrucciones completas sobre cómo [crear un panel personalizado](../../dashboards/standard-dashboards.md). La guía de la interfaz de usuario incluye detalles sobre:
 
 * Cómo crear un widget.
 * Cómo usar el compositor de widgets.

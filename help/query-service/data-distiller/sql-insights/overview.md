@@ -2,7 +2,7 @@
 title: SQL Insights
 description: Obtenga información sobre los casos de uso, las funcionalidades esenciales y los pasos necesarios para desarrollar un panel de perspectivas SQL con Data Distiller. Descubra cómo la capacidad de SQL Insights en Data Distiller puede mejorar la transparencia y obtener perspectivas operativas en diferentes dimensiones, como perfiles, audiencias, campañas, recorridos, autorizaciones y consentimientos.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Cree modelos de datos de informes personalizados para extraer perspectivas más profundas, optimizar estrategias y adaptar los análisis para satisfacer necesidades comerciales específicas con SQL Insights de Data Distiller. Utilice la capacidad Perspectivas de SQL para mejorar la transparencia y obtener perspectivas operativas de sus datos de Adobe Experience Platform en dimensiones como perfiles, audiencias, campañas, recorridos, autorizaciones y consentimientos. Esta capacidad proporciona una solución versátil y adaptable para adaptar los modelos de datos de creación de informes de su organización a las necesidades específicas de su empresa.
 
-Para [visualizar sus perspectivas de SQL](../../../dashboards/data-distiller/sql-insights/overview.md), puede usar [query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md) para realizar análisis complejos con consultas SQL personalizadas y transformar sus datos en gráficos fácilmente interpretables. Utilice el modo query pro para crear perspectivas y visualizaciones personalizadas en sus paneles y atender a audiencias técnicas y no técnicas descargando sus perspectivas como archivos CSV.
+Para [visualizar sus perspectivas de SQL](../../../dashboards/sql-insights-query-pro-mode/overview.md), puede usar [query pro mode](../../../dashboards/sql-insights-query-pro-mode/overview.md) para realizar análisis complejos con consultas SQL personalizadas y transformar sus datos en gráficos fácilmente interpretables. Utilice el modo query pro para crear perspectivas y visualizaciones personalizadas en sus paneles y atender a audiencias técnicas y no técnicas descargando sus perspectivas como archivos CSV.
 
 Este documento cubre los casos de uso, las funcionalidades esenciales y los pasos necesarios para desarrollar un panel de perspectivas SQL con Data Distiller.
 
 ## Requisitos previos
 
-Este tutorial utiliza paneles definidos por el usuario para visualizar datos del modelo de datos personalizado en la interfaz de usuario de Platform. Consulte la [documentación de paneles definidos por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener más información sobre esta función.
+Este tutorial utiliza paneles definidos por el usuario para visualizar datos del modelo de datos personalizado en la interfaz de usuario de Platform. Consulte la [documentación de paneles definidos por el usuario](../../../dashboards/standard-dashboards.md) para obtener más información sobre esta función.
 
 ## Introducción
 
@@ -72,7 +72,7 @@ Para desarrollar un panel de SQL Insights dentro de Data Distiller, siga las ins
 1. **Exploración de consultas ad hoc:** Comience ejecutando consultas ad hoc `SELECT` para explorar datos sin procesar en el lago de datos. Esto permite realizar análisis de datos exploratorios sobre la marcha para experimentar y validar datos en los que los resultados de las consultas no se almacenan en el lago de datos.
 1. **Utilización de consultas por lotes:** Use consultas por lotes para [crear trabajos programados](../../api/scheduled-queries.md#create-a-new-scheduled-query) para generar tablas agregadas de información, lo que garantiza un enfoque sistemático y automatizado para el procesamiento de datos. Las consultas por lotes ejecutan `INSERT TABLE AS SELECT` y `CREATE TABLE AS SELECT` consultas para limpiar, dar forma, manipular y enriquecer datos. Los resultados de estas consultas se almacenan en el lago de datos.
 1. **Carga de perspectivas agregadas:** Cargue las perspectivas agregadas generadas en el almacén acelerado y use SQL para probar consultas, y garantizar la precisión y eficacia de la recuperación de datos. Para obtener información sobre cómo [realizar consultas sin estado en el almacén acelerado](../../api/accelerated-queries.md), consulte la documentación.
-1. **Acceso e integración:** Acceda a las perspectivas almacenadas en el almacén acelerado sin problemas mediante la integración con los [paneles definidos por el usuario](../../../dashboards/user-defined-dashboards.md) de Adobe Experience Platform u otras herramientas de Business Intelligence (BI) preferidas. Estas integraciones con clientes de terceros facilitan una experiencia coherente e intuitiva para los usuarios.
+1. **Acceso e integración:** Acceda a las perspectivas almacenadas en el almacén acelerado sin problemas mediante la integración con los [paneles definidos por el usuario](../../../dashboards/standard-dashboards.md) de Adobe Experience Platform u otras herramientas de Business Intelligence (BI) preferidas. Estas integraciones con clientes de terceros facilitan una experiencia coherente e intuitiva para los usuarios.
 
 ![Infografía que ilustra los cuatro pasos de SQL Insights en Data Distiller.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

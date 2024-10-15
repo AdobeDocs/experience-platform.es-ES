@@ -2,7 +2,7 @@
 title: Guía de información de Query Accelerated Store Reporting
 description: Obtenga información sobre cómo crear un modelo de datos de perspectivas de creación de informes a través del servicio de consultas para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -19,7 +19,7 @@ El modelo de datos de Real-Time CDP de Adobe Experience Platform proporciona per
 
 ## Requisitos previos
 
-Este tutorial utiliza paneles definidos por el usuario para visualizar datos del modelo de datos personalizado en la interfaz de usuario de Platform. Consulte la [documentación de paneles definida por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener más información sobre esta función.
+Este tutorial utiliza paneles definidos por el usuario para visualizar datos del modelo de datos personalizado en la interfaz de usuario de Platform. Consulte la [documentación de paneles definida por el usuario](../../../dashboards/standard-dashboards.md) para obtener más información sobre esta función.
 
 ## Introducción
 
@@ -228,4 +228,4 @@ La siguiente imagen proporciona un ejemplo de las posibles visualizaciones perso
 
 ![Un recuento de coincidencias por destino y widget de audiencia creado a partir del nuevo modelo de datos de perspectivas de informes.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-El modelo de datos personalizado se encuentra en la lista de modelos de datos disponibles en el espacio de trabajo del panel definido por el usuario. Consulte la [guía de tablero definida por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener instrucciones sobre cómo utilizar su modelo de datos personalizado.
+El modelo de datos personalizado se encuentra en la lista de modelos de datos disponibles en el espacio de trabajo del panel definido por el usuario. Consulte la [guía de tablero definida por el usuario](../../../dashboards/standard-dashboards.md) para obtener instrucciones sobre cómo utilizar su modelo de datos personalizado.

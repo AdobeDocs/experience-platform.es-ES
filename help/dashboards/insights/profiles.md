@@ -2,7 +2,7 @@
 title: Perspectivas de perfil
 description: Descubra el SQL que alimenta las perspectivas de perfil y utilice estas consultas para generar perspectivas personalizadas que exploren aún más a sus clientes y sus experiencias como consumidores.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprenda sus perspectivas de perfil accediendo al SQL que las alimenta y, a con
 
 Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la interfaz de usuario de Platform.
 
-Las siguientes perspectivas están disponibles para que las use como parte del [panel de perfiles](../guides/profiles.md) o un [panel personalizado definido por el usuario](../user-defined-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
+Las siguientes perspectivas están disponibles para que las use como parte del [panel de perfiles](../guides/profiles.md) o un [panel personalizado definido por el usuario](../standard-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../standard-dashboards.md#create-widget).
 
 ## Superposición de público por política de combinación {#audience-overlap-by-merge-policy}
 
