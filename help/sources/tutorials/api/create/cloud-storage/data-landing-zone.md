@@ -5,10 +5,10 @@ title: Conexión de la zona de aterrizaje de datos a Adobe Experience Platform m
 type: Tutorial
 description: Aprenda a conectar Adobe Experience Platform a la zona de aterrizaje de datos mediante la API de Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
+source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 5%
+source-wordcount: '1326'
+ht-degree: 4%
 
 ---
 
@@ -121,6 +121,106 @@ La siguiente respuesta devuelve la información de credenciales de la zona de at
 | `SASToken` | El token de firma de acceso compartido para su zona de aterrizaje. Esta cadena contiene toda la información necesaria para autorizar una solicitud. |
 | `SASUri` | El URI de firma de acceso compartido para su zona de aterrizaje. Esta cadena es una combinación del URI de la zona de aterrizaje para la que se está autenticando y su token SAS correspondiente, |
 | `expiryDate` | La fecha en la que caducará su token SAS. Debe actualizar el token antes de la fecha de caducidad para poder seguir utilizándolo en la aplicación para cargar datos en la zona de aterrizaje de datos. Si no actualiza manualmente el token antes de la fecha de caducidad indicada, se actualizará automáticamente y proporcionará un nuevo token cuando se realice la llamada de credenciales de GET. |
+
+### Recuperación de los campos obligatorios mediante API
+
+Después de generar el token, puede recuperar los campos obligatorios mediante programación utilizando los ejemplos de solicitud que se muestran a continuación:
+
+>[!BEGINTABS]
+
+>[!TAB Python]
+
+```py
+import requests
+ 
+# API endpoint
+url = "https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone"
+ 
+headers = {
+    "Authorization": "{TOKEN}",
+    "Content-Type": "application/json",
+    "x-gw-ims-org-id": "{ORG_ID}",
+    "x-api-key": "{API_KEY}"
+}
+ 
+# Send GET request to the API
+response = requests.get(url, headers=headers)
+ 
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the response as JSON (if applicable)
+    data = response.json()
+ 
+    # Print or work with the fetched data 
+    print(" Sas Token:", data['SASToken'])
+    print(" Container Name:",  data['containerName'])
+    print("\n")
+ 
+else:
+    # Print an error message if the request failed
+    print(f"Failed to fetch data. Status code: {response.status_code}")
+    print(f"Response: {response.text}")
+```
+
+>[!TAB Java]
+
+
+```java
+package org.example;
+ 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+ 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+ 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+ 
+public class Main {
+    public static void main(String[] args) {
+ 
+        ObjectMapper objectMapper = new ObjectMapper();
+ 
+        try {
+ 
+            DefaultHttpClient httpClient = new DefaultHttpClient();
+            HttpGet getRequest = new HttpGet(
+                "https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone");
+            getRequest.addHeader("accept", "application/json");
+            getRequest.addHeader("Authorization","<TOKEN>");
+            getRequest.addHeader("Content-Type", "application/json");
+            getRequest.addHeader("x-gw-ims-org-id", "<ORG_ID>");
+            getRequest.addHeader("x-api-key", "<API_KEY>");
+ 
+            HttpResponse response = httpClient.execute(getRequest);
+ 
+            if (response.getStatusLine().getStatusCode() != 200) {
+                throw new RuntimeException("Failed : HTTP error code : "
+                    + response.getStatusLine().getStatusCode());
+            }
+ 
+            final JsonNode jsonResponse = objectMapper.readTree(response.getEntity().getContent());
+ 
+            System.out.println("\nOutput from API Response .... \n");
+            System.out.printf("ContainerName: %s%n", jsonResponse.at("/containerName").textValue());
+            System.out.printf("SASToken: %s%n", jsonResponse.at("/SASToken").textValue());
+ 
+            httpClient.getConnectionManager().shutdown();
+ 
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+>[!ENDTABS]
 
 
 ## Actualizar credenciales de [!DNL Data Landing Zone]
