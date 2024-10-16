@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción a la API de Registro de esquemas
 description: Este documento proporciona una introducción a los conceptos principales que necesita conocer antes de intentar realizar llamadas a la API de Registro de esquemas.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1361'
 ht-degree: 5%
 
 ---
@@ -254,6 +254,7 @@ El siguiente campo de ejemplo ilustra un campo XDM con formato correcto, con má
 * El nombre de un objeto de campo puede contener caracteres alfanuméricos, guiones o guiones bajos, pero **no** puede comenzar con un guion bajo.
    * **Correcto:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **Incorrecto:** `_fieldName`
+* Los nombres de campo no distinguen entre mayúsculas y minúsculas y deben tener nombres diferentes en el mismo nivel del esquema.
 * Se prefiere camelCase para el nombre del objeto de campo. Ejemplo: `fieldName`
 * El campo debe incluir un `title`, escrito en Mayúsculas y minúsculas. Ejemplo: `Field Name`
 * El campo requiere un `type`.

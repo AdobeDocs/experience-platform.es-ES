@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Restricciones de tipo de campo XDM
 description: Una referencia para las restricciones de tipo de campo en el Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '683'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Si planea definir sus propios tipos de campo en la API, se recomienda comenzar c
 
 ## Estructura base y ejemplos {#basic-types}
 
-XDM se basa en el esquema JSON y, por lo tanto, los campos XDM heredan una sintaxis similar al definir su tipo. Comprender cómo se representan los distintos tipos de campo en el esquema JSON puede ayudar a indicar las restricciones base de cada tipo.
+XDM se basa en el esquema JSON y, por lo tanto, los campos XDM heredan una sintaxis similar al definir su tipo. Comprender cómo se representan los distintos tipos de campo en el esquema JSON puede ayudar a indicar las restricciones base de cada tipo. Los nombres de los campos personalizados no distinguen entre mayúsculas y minúsculas y deben tener nombres diferentes en el mismo nivel del esquema.
 
 >[!NOTE]
 >
