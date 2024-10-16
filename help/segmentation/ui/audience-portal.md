@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4320'
 ht-degree: 3%
 
 ---
@@ -286,6 +286,10 @@ Las estimaciones se generan utilizando un tamaño de muestra de los datos de mue
 ### Detalles de ingesta {#ingestion-details}
 
 Para audiencias con un origen de **[!UICONTROL carga personalizada]**, la sección **[!UICONTROL Detalles de ingesta]** muestra tanto el total del perfil como los detalles del conjunto de datos en el que se ingirió la audiencia generada externamente.
+
+>[!NOTE]
+>
+>El recuento de perfiles de la audiencia puede tardar hasta 30 minutos después del trabajo de exportación en actualizarse por completo.
 
 ![Se muestra la sección de detalles de ingesta de la página de detalles de audiencia.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
