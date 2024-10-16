@@ -3,9 +3,9 @@ keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
 description: Obtenga información sobre las protecciones para la ingesta de datos en Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
+source-git-commit: b8f64793b7f869e50c33ead3a5f02f3a8af51ff4
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ En la tabla siguiente se describen las protecciones que se deben tener en cuenta
 | Ingesta por lotes en el perfil | <ul><li>El tamaño máximo de una clase de registro es 100 KB (duro).</li><li>El tamaño máximo de una clase ExperienceEvent es 10 KB (duro).</li></ul> | |
 | Número de lotes de Perfil o ExperienceEvent introducidos por día | **El número máximo de lotes de Perfil o ExperienceEvent ingeridos por día es 90.** Esto significa que el total combinado de lotes Profile y ExperienceEvent ingeridos cada día no puede superar los 90. La ingesta de lotes adicionales afectará al rendimiento del sistema. | Este es un límite flexible. Es posible ir más allá de un límite flexible, sin embargo, los límites flexibles proporcionan una guía recomendada para el rendimiento del sistema. |
 | Ingesta de datos cifrados | El tamaño máximo admitido de un solo archivo cifrado es de 1 GB. Por ejemplo, aunque puede introducir datos de 2 GB o más en una sola ejecución de flujo de datos, ningún archivo individual de la ejecución de flujo de datos puede superar 1 GB. | El proceso de ingesta de datos cifrados puede llevar más tiempo que el de una ingesta de datos normal. Lea la [guía de API de ingesta de datos cifrados](../sources/tutorials/api/encrypt-data.md) para obtener más información. |
+| Actualizar ingesta por lotes | La ingesta de lotes actualizados puede ser hasta 10 veces más lenta que los lotes normales; por lo tanto, debe **mantener sus lotes actualizados por debajo de los dos millones de registros** para garantizar un tiempo de ejecución eficiente y evitar que otros lotes se procesen en la zona protegida. | Aunque no cabe duda de que puede ingerir lotes que superen los dos millones de registros, el tiempo de ingesta será considerablemente mayor debido a las limitaciones de las pequeñas zonas protegidas. |
 
 {style="table-layout:auto"}
 
