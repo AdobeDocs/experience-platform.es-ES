@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4250'
+source-wordcount: '4298'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ En Audience Portal, puede realizar las siguientes tareas:
    - [Utilice el Generador de segmentos para crear una audiencia](#segment-builder)
    - [Usar Composición de audiencia para crear una audiencia](#audience-composition)
    - [Use la composición de audiencia federada para crear una audiencia usando datos de su almacén de datos existente](#fac) (disponibilidad limitada)
-- [Importación de audiencias generadas externamente](#import-audience)
+- [Importación de públicos generados externamente](#import-audience)
 
 Para abrir Audience Portal, seleccione la ficha **[!UICONTROL Examinar]** en la sección Segmentación.
 
@@ -209,6 +209,11 @@ Se muestra la lista de filtros disponibles.
 ![Los filtros disponibles se muestran y resaltan en la página Examinar audiencias.](../images/ui/audience-portal/filter-audiences.png)
 
 #### Acciones masivas {#bulk-actions}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Límites flexibles de evaluación de audiencia"
+>abstract="Puede evaluar hasta 20 audiencias en una sola ejecución flexible de evaluación de audiencias.<br/><br/>Además, mientras el trabajo de evaluación se ejecuta lo antes posible, puede haber retrasos en el sistema, ya que las evaluaciones bajo demanda <b>no se pueden</b> ejecutar simultáneamente con otra evaluación bajo demanda o por lotes."
 
 Además, puede seleccionar hasta 25 audiencias diferentes y realizar diversas acciones en estas audiencias. Estas acciones incluyen [mover a una carpeta](#folders), [editar o aplicar una etiqueta](#tags), [aplicar etiquetas de acceso](../../access-control/abac/ui/labels.md) y [eliminar](#browse).
 
