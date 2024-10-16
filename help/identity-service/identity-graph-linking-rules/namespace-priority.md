@@ -2,7 +2,7 @@
 title: Prioridad de espacios de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 2%
@@ -185,4 +185,4 @@ Para obtener más información, lea la [descripción general del servicio de pri
 
 ### Adobe Target
 
-Solo puede activar la segmentación por lotes y de flujo continuo en Adobe Target.
+Adobe Target puede generar una segmentación de usuarios inesperada para escenarios de dispositivos compartidos.
