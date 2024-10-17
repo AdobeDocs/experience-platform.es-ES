@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
 source-wordcount: '4955'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -32,7 +32,7 @@ Los componentes básicos de las definiciones de segmentos son los atributos y lo
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="Datos de resumen"
->abstract="Los datos de resumen solo aparecen para los atributos de perfil y <b>no</b> para los atributos de evento o de audiencia.<br/><br/>Es posible que los datos de resumen de los atributos de perfil no aparezcan en las siguientes circunstancias: <ol><li>Algunos de los valores del atributo tienen más de 100 caracteres.</li><li>Hay más de 3000 valores únicos para el atributo.</li></ol>"
+>abstract="Los datos de resumen solo aparecen para los atributos de perfil y <b>no</b> para los atributos de evento o de público.<br/><br/>Es posible que los datos de resumen de los atributos de perfil no aparezcan en las siguientes circunstancias: <ol><li>Algunos de los valores del atributo tienen más de 100 caracteres.</li><li>Hay más de 3000 valores únicos para el atributo.</li></ol>"
 
 >[!NOTE]
 >

@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
 source-wordcount: '1827'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -67,7 +67,7 @@ La información del perfil de cuenta que se muestra en la ficha [!UICONTROL Deta
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
->title="Resumen de clientes por cuenta"
+>title="Información general sobre clientes por cuenta"
 >abstract="Este widget de obtención de detalles proporciona perspectivas sobre la estructura de los datos B2B. Ayuda a identificar cuántos perfiles de cuenta no tienen perfiles de cliente vinculados o tienen uno o más perfiles de cliente asociados a ellos.<ul><li>Clientes directos: son perfiles de clientes vinculados directamente a una cuenta a través de la ruta `personComponents`.</li><li>Clientes indirectos: son perfiles de clientes vinculados a una cuenta a través de la ruta `Account-Person`.</li></ul>"
 
 Adobe proporciona widgets estándar que puede utilizar para visualizar diferentes métricas relacionadas con los perfiles de la cuenta.
