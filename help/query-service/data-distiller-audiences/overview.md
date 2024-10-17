@@ -1,9 +1,9 @@
 ---
 title: Crear audiencias con SQL
 description: Aprenda a utilizar la extensión de audiencia SQL en el Distiller de datos de Adobe Experience Platform para crear, administrar y publicar audiencias mediante comandos SQL. Esta guía cubre todos los aspectos del ciclo vital de la audiencia, incluida la creación, actualización y eliminación de perfiles, y el uso de definiciones de audiencia basadas en datos para dirigirse a destinos basados en archivos.
-source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
+source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1166'
 ht-degree: 1%
 
 ---
@@ -135,15 +135,13 @@ Active las audiencias segmentándolas a cualquier destino basado en archivos, co
 
 Esta sección aborda las preguntas más frecuentes sobre la creación y administración de audiencias externas mediante SQL en Data Distiller.
 
-+++Seleccione para mostrar preguntas y respuestas
-
 **Preguntas**:
 
 - ¿La creación de audiencias solo se admite para conjuntos de datos planos?
 
 +++Respuesta
 
-También se admiten conjuntos de datos anidados, pero solo atributos planos están disponibles en la audiencia.
+Actualmente, la creación de audiencias se limita a atributos planos (de nivel raíz) al definir la audiencia.
 
 +++
 
@@ -167,15 +165,15 @@ No, el conjunto de datos creado durante la creación de audiencias no está marc
 
 +++Respuesta
 
-Sí, el conjunto de datos se crea en el lago de datos.
+Sí, el conjunto de datos asociado con la audiencia se crea en el lago de datos. Los atributos de este conjunto de datos están disponibles en el Compositor de audiencias y en el flujo de destino como atributos enriquecidos.
 
 +++
 
-- ¿Están restringidos los atributos de la audiencia para usarlos únicamente en destinos basados en archivos por lotes de empresa? (Sí o No)
+- ¿Los atributos de la audiencia están restringidos a destinos basados en archivos por lotes de empresa? (Sí o No)
 
 +++Respuesta
 
-Sí, los atributos de la audiencia están restringidos para utilizarse únicamente en destinos basados en archivos por lotes de empresa.
+No. Los atributos enriquecidos en la audiencia están disponibles para su uso tanto en destinos por lotes de empresa como basados en archivos. Si aparece un error como &quot;Los siguientes ID de segmento tienen áreas de nombres no permitidas para este destino: e917f626-a038-42f7-944c-xyxyx&quot;, cree un nuevo segmento en Data Distiller y utilícelo con cualquier destino disponible.
 
 +++
 
@@ -195,45 +193,11 @@ Las audiencias del destilador de datos no están disponibles actualmente en Adob
 
 +++
 
-- ¿Cómo debo crear dos audiencias de Data Distiller con horarios diferentes? ¿Cuántos conjuntos de datos se crean y están marcados para Perfil?
-
-+++Respuesta
-
-Se crearán dos conjuntos de datos, ya que cada audiencia tiene un conjunto de datos subyacente. Sin embargo, estos conjuntos de datos no están marcados para Perfil. Los dos conjuntos de datos se administran en sus propias programaciones individuales.
-
-+++
-
-- ¿Cómo elimino una audiencia?
-
-+++Respuesta
-
-Para eliminar una audiencia, puede usar el comando [`DROP AUDIENCE` ](#delete-audience) en la interfaz de la línea de comandos o usar las [acciones rápidas del espacio de trabajo de audiencias](../../segmentation/ui/audience-portal.md#quick-actions). NOTA: Las audiencias que se utilizan en destinos descendentes o que dependen de otras audiencias no se pueden eliminar.
-
-+++
-
-- Cuando publico una audiencia en el perfil, ¿en qué momento está disponible en la interfaz de usuario del generador de segmentos y cuándo pasa a estar disponible en los destinos?
-
-+++Respuesta
-
-Una vez completada la exportación de instantáneas de perfil, los perfiles se pueden ver en la audiencia.
-
-+++
-
 - ¿Las audiencias de Data Distiller se eliminan cada 30 días, ya que son audiencias externas?
 
 +++Respuesta
 
 Sí, las audiencias de Data Distiller se eliminan cada 30 días, ya que son audiencias externas.
-
-+++
-
-- ¿Aparecen las audiencias de Data Distiller en el inventario de audiencias?
-
-+++Respuesta
-
-Sí, las audiencias de Data Distiller aparecen en el inventario Audiencias con el nombre de origen &quot;Data Distiller&quot;.
-
-+++
 
 +++
 

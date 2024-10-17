@@ -4,10 +4,10 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 16%
+source-wordcount: '2855'
+ht-degree: 15%
 
 ---
 
@@ -117,7 +117,6 @@ Administre y optimice de forma proactiva sus recursos de licencias en función d
 
 Para ver un resumen del uso de derechos de un producto, seleccione un producto de la tabla [!UICONTROL Productos principales].
 
-<!-- update image ... -->
 ![El [!UICONTROL uso de licencias] [!UICONTROL Información general] con un producto y la columna de uso previsto resaltada.](../images/license-usage/product-predicted-usage.png)
 
 Aparecerá la pestaña Resumen. Puede usar las predicciones detalladas disponibles en las pestañas [!UICONTROL Resumen] y [!UICONTROL Detalles] para garantizar una toma de decisiones informada y un uso eficiente de la licencia.
@@ -126,7 +125,6 @@ Aparecerá la pestaña Resumen. Puede usar las predicciones detalladas disponibl
 >
 >Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe.
 
-<!-- update image ... -->
 ![Vista de resumen de un producto de Platform con la columna de uso previsto resaltada.](../images/license-usage/summary-predicted-usage.png)
 
 El porcentaje de uso previsto se determina de la siguiente manera:
@@ -142,10 +140,9 @@ El porcentaje de uso previsto se determina de la siguiente manera:
 La función de uso previsto admite las siguientes métricas:
 
 - [!UICONTROL Audiencia a la que se puede dirigir]
-- [!UICONTROL Promedio de riqueza de perfiles]
 - [!UICONTROL Calcular horas]
 - [!UICONTROL Número de filas de la audiencia del Recorrido del cliente]
-- [!UICONTROL Almacenamiento total]
+- [!UICONTROL Volumen total de datos]
 
 ## Pestaña [!UICONTROL Resumen] {#summary-tab}
 
@@ -204,6 +201,10 @@ También puede seleccionar **[!UICONTROL Fecha personalizada]** para elegir el p
 
 ## Métricas disponibles {#available-metrics}
 
+>[!IMPORTANT]
+>
+>A partir del 20 de agosto, los clientes con derechos para &#39;[!UICONTROL Average Profile Richness]&#39; y &#39;[!UICONTROL Total Storage]&#39; vieron &#39;[!UICONTROL Total Data Volume]&#39; en el Tablero de uso de licencias. No se han realizado cambios en los derechos de los clientes, solo una simplificación de las métricas de seguimiento. [!UICONTROL Volumen total de datos] representa los datos disponibles en el servicio de perfil de Adobe Experience Platform para los flujos de trabajo de participación y personalización. Esta métrica simplificada mejoró la administración y la medición del uso del servicio de perfil. Se animó a los clientes a ponerse en contacto con su representante del Adobe para obtener más aclaraciones sobre este cambio.
+
 El panel de uso de licencias informa sobre varias métricas únicas que se aplican a varios productos de la organización. Las métricas disponibles son:
 
 | Métrica | Descripción |
@@ -211,6 +212,7 @@ El panel de uso de licencias informa sobre varias métricas únicas que se aplic
 | [!UICONTROL Tamaño de Audience Activation] | El tamaño total de los perfiles activados en cualquier destino basado en archivos en un año. Nota: Esto no incluye perfiles enviados a través de destinos de flujo continuo. |
 | [!UICONTROL Audiencia a la que se puede dirigir] | La suma de los derechos de audiencia empresarial y de audiencia de consumidor. Una audiencia de consumidor se define como el número de perfiles de persona identificados como una &quot;Audiencia de consumidor&quot; en el pedido de ventas. Una audiencia empresarial se define como el número de perfiles de personas de negocios identificados como la &quot;Audiencia empresarial&quot; en el pedido de ventas. |
 | [!UICONTROL Paquetes de usuarios de servicio de consultas ad hoc] | Un complemento para aumentar el derecho de los usuarios autorizados del servicio de consulta simultánea en cinco usuarios adicionales del servicio de consulta simultánea y una consulta ad hoc adicional que se ejecuta simultáneamente por paquete. Se pueden adquirir licencias para varios paquetes de usuarios de Ad Hoc Query adicionales. |
+| [!UICONTROL Promedio de riqueza de perfiles] | **Obsoleto**: la suma de todos los datos de producción almacenados en el servicio de perfil de concentrador en cualquier momento, dividida por cinco veces el número de perfiles de personas de negocios autorizados. [!UICONTROL Promedio de riqueza de perfiles] es una característica compartida. |
 | [!UICONTROL Filas de CJA disponibles] | Las filas medias diarias de datos disponibles para su análisis dentro de Customer Journey Analytics. |
 | [!UICONTROL Atributos calculados] | Recuento total de datos de comportamiento del perfil agregados. Los datos de comportamiento del perfil agregados se basan en eventos de experiencia que se convierten en un atributo de perfil y que pueden incluirse en un perfil de persona o un perfil de persona de negocios. |
 | [!UICONTROL Audiencia del consumidor] | El número de perfiles de persona identificados como &quot;Audiencia del consumidor&quot; en el pedido de ventas. |
