@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Funciones de agregación de PQL
 description: Las funciones de agregación se utilizan para agrupar varios valores dentro de matrices de Profile Query Language (PQL) para formar un único valor de resumen.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 6%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ Las funciones de agregación se utilizan para agrupar varios valores en matrices
 
 ## Cuenta
 
-La función `count` devuelve el número de elementos dentro de la matriz determinada.
+La función `count` devuelve el número de elementos dentro de la matriz determinada en forma de número.
 
 **Formato**
 
@@ -34,7 +34,7 @@ orders.count()
 
 ## Sum
 
-La función `sum` devuelve la suma de todos los valores seleccionados dentro de la matriz.
+La función `sum` devuelve la suma de todos los valores seleccionados dentro de la matriz como un número.
 
 **Formato**
 
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## Promedio
 
-La función `average` devuelve la media aritmética de todos los valores seleccionados dentro de la matriz.
+La función `average` devuelve la media aritmética de todos los valores seleccionados dentro de la matriz como un número.
 
 **Formato**
 
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## Mínimo
 
-La función `min` devuelve el menor de todos los valores seleccionados dentro de la matriz.
+La función `min` devuelve como número el menor de todos los valores seleccionados dentro de la matriz.
 
 **Formato**
 
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## Máximo
 
-La función `max` devuelve el mayor de todos los valores seleccionados dentro de la matriz.
+La función `max` devuelve como número el mayor de todos los valores seleccionados dentro de la matriz.
 
 **Formato**
 

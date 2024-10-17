@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funciones booleanas de PQL
 description: Las funciones booleanas se utilizan para realizar lógica booleana en diferentes elementos de Profile Query Language (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '248'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ Las funciones booleanas se utilizan para realizar lógica booleana en diferentes
 
 ## Y
 
-La función `and` se usa para crear una conjunción lógica.
+La función `and` se usa para crear una conjunción lógica como booleano.
 
 **Formato**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## O
 
-La función `or` se usa para crear una disyunción lógica.
+La función `or` se usa para crear una disyunción lógica como booleano.
 
 **Formato**
 
@@ -71,7 +71,7 @@ not (homeAddress.countryISO = "CA")
 
 ## Si
 
-La función `if` se usa para resolver una expresión en función de si una condición especificada es verdadera.
+La función `if` se usa para resolver una expresión en función de si una condición especificada es verdadera como valor booleano.
 
 **Formato**
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funciones de cadena de PQL
 description: Profile Query Language (PQL) ofrece funciones para facilitar la interacción con cadenas.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '848'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 ## Me gusta
 
-La función `like` se usa para determinar si una cadena coincide con un patrón especificado.
+La función `like` se usa para determinar si una cadena coincide con un patrón especificado como booleano.
 
 **Formato**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Comienza con
 
-La función `startsWith` se usa para determinar si una cadena empieza con una subcadena especificada.
+La función `startsWith` se usa para determinar si una cadena empieza con una subcadena especificada como booleano.
 
 **Formato**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## No empieza por
 
-La función `doesNotStartWith` se usa para determinar si una cadena no comienza con una subcadena especificada.
+La función `doesNotStartWith` se usa para determinar si una cadena no comienza con una subcadena especificada como booleano.
 
 **Formato**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Termina con
 
-La función `endsWith` se usa para determinar si una cadena termina con una subcadena especificada.
+La función `endsWith` se usa para determinar si una cadena termina con una subcadena especificada como booleano.
 
 **Formato**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## No termina por
 
-La función `doesNotEndWith` se usa para determinar si una cadena no termina con una subcadena especificada.
+La función `doesNotEndWith` se usa para determinar si una cadena no termina con una subcadena especificada como booleano.
 
 **Formato**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-La función `contains` se usa para determinar si una cadena contiene una subcadena especificada.
+La función `contains` se usa para determinar si una cadena contiene una subcadena especificada como booleano.
 
 **Formato**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## No contiene
 
-La función `doesNotContain` se usa para determinar si una cadena no contiene una subcadena especificada.
+La función `doesNotContain` se usa para determinar si una cadena no contiene una subcadena especificada como booleano.
 
 **Formato**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Es igual a
 
-La función `equals` se usa para determinar si una cadena es igual a la cadena especificada.
+La función `equals` se usa para determinar si una cadena es igual a la cadena especificada como booleano.
 
 **Formato**
 
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## No igual a
 
-La función `notEqualTo` se usa para determinar si una cadena no es igual a la cadena especificada.
+La función `notEqualTo` se usa para determinar si una cadena no es igual a la cadena especificada como booleano.
 
 **Formato**
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## Iguala
 
-La función `matches` se usa para determinar si una cadena coincide con una expresión regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre los patrones coincidentes en las expresiones regulares.
+La función `matches` se usa para determinar si una cadena coincide con una expresión regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre patrones coincidentes en expresiones regulares como valor booleano.
 
 **Formato**
 
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## Grupo de expresiones regulares
 
-La función `regexGroup` se usa para extraer información específica, basada en la expresión regular proporcionada.
+La función `regexGroup` se usa para extraer información específica, basada en la expresión regular proporcionada como cadena.
 
 **Formato**
 

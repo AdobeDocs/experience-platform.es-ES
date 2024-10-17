@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funciones de fecha y hora de PQL
 description: Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro de Profile Query Language (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '496'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## Ocurre
 
-La función `occurs` compara la función de marca de tiempo determinada con un período de tiempo fijo.
+La función `occurs` compara la función de marca de tiempo dada con un período de tiempo fijo como booleano.
 
 **Formato**
 
