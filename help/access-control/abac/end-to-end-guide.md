@@ -4,16 +4,16 @@ title: Guía completa de control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
+source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
 workflow-type: tm+mt
 source-wordcount: '1736'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
 # Guía completa de control de acceso basado en atributos
 
-Utilice el control de acceso basado en atributos en Adobe Experience Platform para ofrecerse a usted y a otros clientes conscientes de la privacidad de varias marcas una mayor flexibilidad para administrar el acceso de los usuarios. El acceso a objetos individuales, como campos de esquema y segmentos, se puede conceder con directivas basadas en los atributos y la función del objeto. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
+Utilice el control de acceso basado en atributos en Adobe Experience Platform para ofrecerse a usted y a otros clientes conscientes de la privacidad de varias marcas una mayor flexibilidad para administrar el acceso de los usuarios. El acceso a objetos individuales, como campos de esquema y segmentos, se puede conceder con directivas basadas en los atributos y la función del objeto. Esta función permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
 
 Esta funcionalidad le permite categorizar campos de esquema, segmentos, etc. con etiquetas que definen ámbitos organizativos o de uso de datos. Puede aplicar estas mismas etiquetas a recorridos, ofertas y otros objetos en Adobe Journey Optimizer. Al mismo tiempo, los administradores pueden definir políticas de acceso relacionadas con los campos de esquema del Modelo de datos de experiencia (XDM) y administrar mejor qué usuarios o grupos (usuarios internos, externos o de terceros) pueden acceder a esos campos.
 
@@ -45,8 +45,7 @@ Lo hará:
 
 * [Etiquetar las funciones de los usuarios](#label-roles): use el ejemplo de un proveedor de atención médica (Grupo empresarial ACME) cuyo grupo de marketing trabaja con agencias externas.
 * [Etiquete sus recursos (campos y segmentos de esquema)](#label-resources): Asigne la etiqueta **[!UICONTROL PHI/ Datos de mantenimiento regulados]** a los recursos y segmentos de esquema.
-* 
-   * [Activar la directiva que los vinculará:](#policy): habilite la directiva predeterminada para impedir el acceso a los campos y segmentos de esquema conectando las etiquetas de los recursos a las etiquetas de la función. Los usuarios con etiquetas coincidentes recibirán acceso al campo de esquema y al segmento en todas las zonas protegidas.
+* [Activar la directiva que los vinculará](#policy): habilite la directiva predeterminada para impedir el acceso a los campos y segmentos de esquema conectando las etiquetas de los recursos a las etiquetas de la función. Los usuarios con etiquetas coincidentes recibirán acceso al campo de esquema y al segmento en todas las zonas protegidas.
 
 ## Permisos
 
