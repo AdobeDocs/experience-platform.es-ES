@@ -6,10 +6,10 @@ breadcrumb-title: Guía de secuencias de datos
 user-guide-description: Obtenga información sobre cómo configurar secuencias de datos en Adobe Experience Platform.
 feature: Datastreams
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4f3bec03d26c7606e70db75320cf3ba39d9d2b0d
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 90%
+source-wordcount: '54'
+ht-degree: 83%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 90%
 
 * [Información general de secuencias de datos](overview.md)
 * [Configurar una secuencia de datos](configure.md)
+* [Crear configuraciones de flujo de datos dinámico](configure-dynamic-datastream.md)
 * [Configuración de la detección de bots para flujos de datos](bot-detection.md)
 * [Configurar anulaciones de secuencia de datos](overrides.md)
 * [Preparación de datos para la recopilación de datos](data-prep.md)
