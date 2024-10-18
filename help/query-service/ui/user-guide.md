@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
+source-git-commit: e66f3540d22a441089916183538921ea5654b312
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2843'
 ht-degree: 0%
 
 ---
@@ -200,12 +200,12 @@ Si se programó una consulta, entonces la ficha [!UICONTROL Consultas programada
 >
 >El registro no guarda las consultas que no se ejecutan. Para que la consulta esté disponible en el servicio de consultas, debe ejecutarse o guardarse en el Editor de consultas.
 
-### [!BADGE Beta]{type=Informative} Examinador de objetos {#object-browser}
+### [!BADGE Disponibilidad limitada]{type=Informative} Explorador de objetos {#object-browser}
 
 >[!AVAILABILITY]
 >
 El carril de navegación del conjunto de datos solo está disponible para los clientes de Data Distiller. Es posible que la IU de Platform no contenga el carril izquierdo de navegación del conjunto de datos. Otras imágenes de este documento pueden no reflejar el carril de navegación del conjunto de datos. Póngase en contacto con el representante del Adobe para obtener más información.<br>
-El Examinador de objetos está actualmente en fase beta y disponible solamente en una **versión limitada**. Póngase en contacto con su representante de Adobe para obtener acceso anticipado.
+Actualmente, el Examinador de objetos sólo está disponible en **versión limitada**. Póngase en contacto con su representante de Adobe para obtener acceso anticipado.
 
 Utilice el explorador de objetos para buscar y filtrar conjuntos de datos fácilmente. El explorador de objetos reduce el tiempo empleado en buscar tablas y conjuntos de datos en entornos grandes con numerosos conjuntos de datos. Con un acceso optimizado a los datos y metadatos relevantes, puede centrarse más en la creación de consultas y menos en la navegación.
 
