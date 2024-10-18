@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de flujo;actualizar cuentas
-solution: Experience Platform
 title: Actualización de cuentas mediante la API de Flow Service
-type: Tutorial
 description: Este tutorial cubre los pasos para actualizar los detalles y las credenciales de una cuenta mediante la API de Flow Service.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '539'
 ht-degree: 3%
 
 ---
 
 # Actualización de cuentas mediante la API de Flow Service
 
-En algunas circunstancias, puede ser necesario actualizar los detalles de una conexión de origen existente. [!DNL Flow Service] le permite agregar, editar y eliminar detalles de una conexión de flujo continuo o por lotes existente, incluidos su nombre, descripción y credenciales.
+En algunas circunstancias, puede ser necesario actualizar los detalles de una conexión base existente. [!DNL Flow Service] le permite agregar, editar y eliminar detalles de una conexión de flujo continuo o por lotes existente, incluidos su nombre, descripción y credenciales.
 
 Este tutorial cubre los pasos para actualizar los detalles y las credenciales de una conexión mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>No es necesario crear una nueva conexión base cuando se requiera una actualización. Cualquier cambio que realice en la conexión base se reflejará en el flujo de datos asociado.
 
 ## Introducción
 

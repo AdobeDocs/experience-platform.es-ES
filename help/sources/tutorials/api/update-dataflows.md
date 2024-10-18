@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de flujo;actualizar flujos de datos
-solution: Experience Platform
 title: Actualización de flujos de datos mediante la API de Flow Service
-type: Tutorial
-description: Este tutorial cubre los pasos para actualizar un flujo de datos, incluido su nombre, descripción y programación, mediante la API de Flow Service.
+description: Obtenga información sobre cómo crear un flujo de datos, incluido su nombre, descripción y programación, mediante la API de Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '656'
 ht-degree: 3%
 
 ---
@@ -15,6 +12,10 @@ ht-degree: 3%
 # Actualización de flujos de datos mediante la API de Flow Service
 
 Este tutorial describe los pasos para actualizar un flujo de datos, incluida su información básica, programación y conjuntos de asignaciones mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>La conexión de origen y la conexión de destino deben asignarse a un solo flujo de datos. No debe actualizar las conexiones de origen y destino por separado, ya que los cambios no se reflejarán en su flujo de datos correspondiente. Si su caso de uso requiere una actualización de las conexiones de origen y destino, debe crear un nuevo par de conexiones de origen y destino, así como un nuevo flujo de datos.
 
 ## Introducción
 
@@ -49,11 +50,11 @@ La siguiente solicitud recupera información actualizada sobre el ID de flujo.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Respuesta**
