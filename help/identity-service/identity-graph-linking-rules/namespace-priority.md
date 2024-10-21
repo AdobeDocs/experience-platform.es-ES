@@ -2,9 +2,9 @@
 title: Prioridad de espacios de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1700'
 ht-degree: 2%
 
 ---
@@ -107,7 +107,7 @@ Supongamos que se establecen las siguientes configuraciones para una zona proteg
 
 Dadas las configuraciones descritas anteriormente, las acciones del usuario y la determinación de la identidad principal se resolverán de esta manera:
 
-| Acción del usuario (evento de experiencia) | Estado de autenticación | Fuente de datos | Mapa de identidad | Identidad principal (clave principal del fragmento de perfil) |
+| Acción del usuario (evento de experiencia) | Estado de autenticación | Fuente de datos | Áreas de nombres en evento | Área de nombres de identidad principal |
 | --- | --- | --- | --- | --- |
 | Ver página de oferta de tarjeta de crédito | No autenticado (anónimo) | SDK web | {ECID} | ECID |
 | Ver página de ayuda | No autenticado | SDK móvil | {ECID, IDFA} | IDFA |
@@ -121,12 +121,16 @@ Dadas las configuraciones descritas anteriormente, las acciones del usuario y la
 
 ![Un diagrama del almacenamiento de pertenencia a segmento](../images/namespace-priority/segment-membership-storage.png)
 
-Para un perfil combinado determinado, las suscripciones a segmentos se almacenarán en la identidad con el área de nombres de mayor prioridad.
+Para un perfil combinado determinado, las suscripciones a segmentos se almacenarán en la identidad con la prioridad de área de nombres más alta.
 
 Por ejemplo, supongamos que hay dos perfiles:
 
-* El primer perfil representa a John.
-* El segundo perfil representa a Jane.
+* El perfil 1 representa a John.
+   * El perfil de John es apto para S1 (abono a segmento 1). Por ejemplo, S1 podría hacer referencia a un segmento de clientes que se identifican como hombres.
+   * El perfil de John también cumple los requisitos para S2 (abono a segmento 2). Esto podría hacer referencia a un segmento de clientes cuyo estado de fidelidad es oro.
+* El Perfil 2 representa a Jane.
+   * El perfil de Jane es apto para S3 (abono a segmento 3). Esto podría hacer referencia a un segmento de clientes que se identifican como mujeres.
+   * El perfil de Jane también cumple los requisitos para S4 (abono a segmento 4). Esto podría hacer referencia a un segmento de clientes cuyo estado de lealtad es de platino.
 
 Si John y Jane comparten un dispositivo, el ECID (explorador web) se transfiere de una persona a otra. Sin embargo, esto no influye en la información de abono de segmentos almacenada en contra de John y Jane.
 
@@ -141,15 +145,13 @@ Esta sección describe cómo la prioridad del área de nombres puede afectar a o
 La eliminación de registros de higiene de datos solicita funciones de la siguiente manera, para una identidad determinada:
 
 * Perfil del cliente en tiempo real: elimina cualquier fragmento de perfil con la identidad especificada como identidad principal. **La identidad principal del perfil se determinará ahora en función de la prioridad del área de nombres.**
-* Repositorio de datos: elimina cualquier registro con la identidad especificada como identidad principal.
+* Repositorio de datos: elimina cualquier registro con la identidad especificada como identidad principal. A diferencia del perfil del cliente en tiempo real, la identidad principal en el lago de datos se basa en la identidad principal especificada en WebSDK (`primary=true`) o en un campo marcado como identidad principal
 
 Para obtener más información, lea la [descripción general avanzada de la administración del ciclo vital](../../hygiene/home.md).
 
 ### Atributos calculados
 
-Los atributos calculados no utilizan la prioridad de área de nombres para calcular valores. Si utiliza atributos calculados, debe asegurarse de que el CRMID está designado como su identidad principal para WebSDK. Se espera que esta limitación se resuelva en agosto de 2024.
-
-Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
+Los atributos calculados no utilizan la prioridad de área de nombres para calcular valores. Si utiliza atributos calculados, debe asegurarse de que el CRMID está designado como su identidad principal para WebSDK. Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
 
 ### Lago de datos
 

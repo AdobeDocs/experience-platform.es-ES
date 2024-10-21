@@ -2,9 +2,9 @@
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3335'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,8 @@ En el contexto de las reglas de vinculación de gráficos de identidad, se puede
 
 Considere el siguiente evento con dos suposiciones:
 
-* El nombre de campo CRMID está marcado como una identidad con el área de nombres CRMID.
-* El CRMID del área de nombres se define como un área de nombres única.
+1. El nombre de campo CRMID está marcado como una identidad con el área de nombres CRMID.
+2. El CRMID del área de nombres se define como un área de nombres única.
 
 El siguiente evento devolverá un mensaje de error que indica que la ingesta ha fallado.
 
@@ -123,6 +123,24 @@ Después de ejecutar la consulta, busque el registro de evento que esperaba para
 >
 >Si las dos identidades son exactamente iguales y si el evento se ingiere mediante streaming, tanto Identity como Profile anularán la duplicación de la identidad.
 
+### Los ExperienceEvents posteriores a la autenticación se atribuyen al perfil autenticado incorrecto
+
+La prioridad del área de nombres desempeña un papel importante en la forma en que los fragmentos de evento determinan la identidad principal.
+
+* Una vez que haya configurado y guardado la [configuración de identidad](./identity-settings-ui.md) para una zona protegida determinada, el perfil usará [prioridad de área de nombres](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) para determinar la identidad principal. En el caso de identityMap, el perfil ya no usará el indicador `primary=true`.
+* Aunque el perfil ya no hará referencia a este indicador, es posible que otros servicios del Experience Platform sigan utilizando el indicador `primary=true`.
+
+Para que [eventos de usuario autenticados](implementation-guide.md#ingest-your-data) se vinculen al área de nombres de persona, todos los eventos autenticados deben contener el área de nombres de persona (CRMID). Esto significa que, incluso después de que un usuario inicie sesión, el área de nombres de persona debe estar presente en cada evento autenticado.
+
+Puede seguir viendo el indicador &quot;eventos&quot; de `primary=true` al buscar un perfil en el visor de perfiles. Sin embargo, se ignora y el perfil no lo utiliza.
+
+Los AAID están bloqueados de forma predeterminada. Por lo tanto, si está usando el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md), debe asegurarse de que ECID tenga una prioridad mayor que ECID para que los eventos no autenticados tengan una identidad principal de ECID.
+
+**Pasos para solucionar problemas**
+
+1. Para validar que los eventos autenticados contienen el área de nombres de persona y de cookie, lea los pasos descritos en la sección sobre [solución de errores relacionados con los datos que no se están ingiriendo en el servicio de identidad](#my-identities-are-not-getting-ingested-into-identity-service).
+2. Para validar que los eventos autenticados tienen la identidad principal del área de nombres de persona (por ejemplo, CRMID), busque el área de nombres de persona en el visor de perfiles mediante una política de combinación sin unión (esta es la política de combinación que no utiliza gráficos privados). Esta búsqueda solo devolverá eventos asociados al área de nombres de persona.
+
 ### Mis fragmentos de eventos de experiencia no se están ingiriendo en el perfil {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 Existen varias razones que explican por qué los fragmentos de eventos de experiencia no se incorporan en el perfil, entre ellas, las siguientes:
@@ -171,29 +189,11 @@ Estas dos consultas suponen lo siguiente:
 * Se envía una identidad desde el mapa de identidad y otra identidad desde un descriptor de identidad. **NOTA**: en esquemas XDM (Experience Data Model), el descriptor de identidad es el campo marcado como identidad.
 * El CRMID se envía mediante identityMap. Si el CRMID se envía como un campo, quite `key='Email'` de la cláusula WHERE.
 
-### Mis fragmentos de eventos de experiencia se han introducido, pero tienen la identidad principal &quot;incorrecta&quot; en el perfil
-
-La prioridad del área de nombres desempeña un papel importante en la forma en que los fragmentos de evento determinan la identidad principal.
-
-* Una vez que haya configurado y guardado la [configuración de identidad](./identity-settings-ui.md) para una zona protegida determinada, el perfil usará [prioridad de área de nombres](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) para determinar la identidad principal. En el caso de identityMap, el perfil ya no usará el indicador `primary=true`.
-* Aunque el perfil ya no hará referencia a este indicador, es posible que otros servicios del Experience Platform sigan utilizando el indicador `primary=true`.
-
-Para que [eventos de usuario autenticados](implementation-guide.md#ingest-your-data) se vinculen al área de nombres de persona, todos los eventos autenticados deben contener el área de nombres de persona (CRMID). Esto significa que, incluso después de que un usuario inicie sesión, el área de nombres de persona debe estar presente en cada evento autenticado.
-
-Puede seguir viendo el indicador &quot;eventos&quot; de `primary=true` al buscar un perfil en el visor de perfiles. Sin embargo, se ignora y el perfil no lo utiliza.
-
-Los AAID están bloqueados de forma predeterminada. Por lo tanto, si está usando el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md), debe asegurarse de que ECID tenga una prioridad mayor que ECID para que los eventos no autenticados tengan una identidad principal de ECID.
-
-**Pasos para solucionar problemas**
-
-* Para validar que los eventos autenticados contienen el área de nombres de persona y de cookie, lea los pasos descritos en la sección sobre [solución de errores relacionados con los datos que no se están ingiriendo en el servicio de identidad](#my-identities-are-not-getting-ingested-into-identity-service).
-* Para validar que los eventos autenticados tienen la identidad principal del área de nombres de persona (por ejemplo, CRMID), busque el área de nombres de persona en el visor de perfiles mediante una política de combinación sin unión (esta es la política de combinación que no utiliza gráficos privados). Esta búsqueda solo devolverá eventos asociados al área de nombres de persona.
-
 ## Problemas relacionados con el comportamiento de gráficos {#graph-behavior-related-issues}
 
 Esta sección describe problemas comunes que pueden surgir con respecto al comportamiento del gráfico de identidad.
 
-### La identidad se está vinculando a la persona &quot;incorrecta&quot;
+### Los ExperienceEvents no autenticados se están adjuntando al perfil autenticado incorrecto
 
 El algoritmo de optimización de identidad respetará [los vínculos establecidos más recientemente y eliminará los vínculos más antiguos](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Por lo tanto, es posible que una vez habilitada esta función, los ECID se puedan reasignar (volver a vincular) de una persona a otra. Para comprender el historial de cómo se vincula una identidad a lo largo del tiempo, siga los pasos a continuación:
 
@@ -209,11 +209,11 @@ El algoritmo de optimización de identidad respetará [los vínculos establecido
 
 En primer lugar, debe recopilar la siguiente información:
 
-* El símbolo de identidad (namespaceCode) del área de nombres de la cookie (por ejemplo, ECID) y el área de nombres de la persona (por ejemplo, CRMID) que se enviaron.
-   * Para implementaciones de SDK web, estas suelen ser las áreas de nombres incluidas en identityMap.
-   * En implementaciones de conector de origen de Analytics, estos son el identificador de cookie incluido en el identityMap. El identificador de persona es un campo de eVar marcado como identidad.
-* El conjunto de datos en el que se envió el evento (dataset_name).
-* El valor de identidad del área de nombres de la cookie que se va a buscar (identity_value).
+1. El símbolo de identidad (namespaceCode) del área de nombres de la cookie (por ejemplo, ECID) y el área de nombres de la persona (por ejemplo, CRMID) que se enviaron.
+1.1. Para implementaciones de SDK web, estas suelen ser las áreas de nombres incluidas en identityMap.
+1.2. Para implementaciones de conector de origen de Analytics, estos son el identificador de cookie incluido en el identityMap. El identificador de persona es un campo de eVar marcado como identidad.
+2. El conjunto de datos en el que se envió el evento (dataset_name).
+3. El valor de identidad del área de nombres de la cookie que se va a buscar (identity_value).
 
 Los símbolos de identidad (namespaceCode) distinguen entre mayúsculas y minúsculas. Para recuperar todos los símbolos de identidad de un conjunto de datos determinado en el identityMap, ejecute la siguiente consulta:
 
@@ -241,7 +241,7 @@ Si no conoce el valor de identidad del identificador de cookie y desea buscar un
 
 >[!ENDTABS]
 
-A continuación, examine la asociación del área de nombres de la cookie en orden de marca de tiempo ejecutando la siguiente consulta:
+Ahora que ha identificado los valores de las cookies vinculados a varios ID de persona, tome uno de los resultados y utilícelo en la siguiente consulta para obtener una vista cronológica de cuándo ese valor de cookie se vinculó a un identificador de persona diferente:
 
 >[!BEGINTABS]
 
@@ -368,6 +368,13 @@ Los puntos clave a destacar son los siguientes:
    * Por ejemplo, si hay una condición de espera entre las acciones y el ECID se transfiere durante el período de espera, se puede establecer un perfil diferente.
    * Con esta función, los ECID ya no siempre se asocian a un perfil.
    * Se recomienda iniciar recorridos con áreas de nombres de persona (CRMID).
+
+>[!TIP]
+>
+>Los recorridos deben buscar un perfil con áreas de nombres únicas porque es posible que se vuelva a asignar un área de nombres no única a otro usuario.
+>
+>* Los ECID y los áreas de nombres de correo electrónico/teléfono no únicos podrían moverse de una persona a otra.
+>* Si un recorrido tiene una condición de espera y si estas áreas de nombres no únicas se utilizan para buscar un perfil en un recorrido, el mensaje de recorrido se puede enviar a la persona incorrecta.
 
 ## Prioridad de espacios de nombres
 

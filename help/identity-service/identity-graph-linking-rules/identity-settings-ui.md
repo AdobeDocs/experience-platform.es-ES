@@ -2,9 +2,9 @@
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 32229555a8bad3632bde974e3d97772a8cb21b71
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Cuando haya terminado con sus configuraciones, seleccione **[!UICONTROL Siguient
 
 ![La página de validación con el estado Fin resaltado.](../images/rules/finish.png)
 
-Aparece un mensaje de advertencia que indica que los gráficos existentes solo se verán afectados por el algoritmo de gráficos si los gráficos se actualizan **después de guardar la configuración** y que la identidad principal de los fragmentos de evento en el Perfil del cliente en tiempo real no se actualizará incluso después de que cambie la prioridad del área de nombres. Además, se le notifica que la nueva configuración tardará **seis horas** en surtir efecto. Para confirmar, escribe el nombre de tu zona protegida y selecciona **[!UICONTROL Confirmar]**.
+Aparece un mensaje de advertencia que indica que los gráficos existentes solo se verán afectados por el algoritmo de gráficos si los gráficos se actualizan **después de guardar la configuración** y que la identidad principal de los fragmentos de evento en el Perfil del cliente en tiempo real no se actualizará incluso después de que cambie la prioridad del área de nombres. Además, se le notifica que su configuración nueva o actualizada tardará **seis horas** en surtir efecto. Para confirmar, escribe el nombre de tu zona protegida y selecciona **[!UICONTROL Confirmar]**.
 
 ![Ventana de confirmación que muestra una advertencia sobre un retraso de seis horas antes de que se procesen las configuraciones.](../images/rules/confirm-settings.png)
 
