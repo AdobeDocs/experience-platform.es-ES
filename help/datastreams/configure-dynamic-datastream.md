@@ -4,9 +4,9 @@ description: Aprenda a crear configuraciones de flujo de datos dinámico para en
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 86416dc11f92a774cda5d95365d3981a637a5595
+source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Después de [crear un conjunto de datos](configure.md) y [agregarle un servicio]
 
    ![Imagen de la interfaz de usuario de flujos de datos que muestra la regla de configuración dinámica.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. En la sección **[!UICONTROL Configuración]**, active o desactive los servicios que desee habilitar o deshabilitar para cada regla, dependiendo de si desea que los datos se envíen a cada servicio. Si desactiva la opción, la regla se deshabilita y *todos los datos* se enviarán al servicio de subida.
+1. En la sección **[!UICONTROL Configuración]**, active o desactive los servicios que desee habilitar o deshabilitar para cada regla, dependiendo de si desea que los datos se envíen a cada servicio. Si desactiva la opción, el enrutamiento del servicio se deshabilita y *no se enviarán datos* al servicio ascendente.
 
    ![Imagen de la interfaz de usuario de flujos de datos que muestra la regla de configuración dinámica.](assets/configure-dynamic-datastream/enable-service.png)
 
