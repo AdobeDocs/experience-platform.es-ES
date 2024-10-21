@@ -2,9 +2,9 @@
 title: Guía de implementación del servicio de ID
 description: Descubra cómo se procesan los datos proporcionados a Adobe Experience Platform antes de que el servicio de identidad los utilice para crear gráficos de identidad.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Por ejemplo, al etiquetar los campos de número de teléfono como campos de iden
 >
 >* Los campos de tipo matriz y mapa no son compatibles y no se pueden marcar y etiquetar como campos de identidad.
 >* El área de nombres de las identidades resultantes se proporciona en el momento en que se etiqueta el campo.
+>* Un campo se puede marcar como identidad, siempre que este campo no esté en un objeto de matriz.
 
 Para obtener más información, lea la guía sobre [definición de campos de identidad en la interfaz de usuario](../xdm/ui/fields/identity.md).
 
