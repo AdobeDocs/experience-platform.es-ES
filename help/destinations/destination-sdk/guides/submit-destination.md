@@ -2,9 +2,9 @@
 description: Esta página proporciona toda la información necesaria para enviar a revisión un destino de productos creado con Destination SDK.
 title: Enviar para revisión un destino de productos creado en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ En esta página se muestra toda la información que debe proporcionar al enviar 
 * Una descripción de los casos de uso que resuelve su destino. Esto solo es necesario si envía una nueva configuración de destino.
 * Una descripción del motivo del envío de destino. Esto solo es necesario si está actualizando una configuración de destino existente.
 * Resultados de la prueba después de usar el punto final de la API de destino de prueba para realizar una llamada HTTP a su destino. Comparta con el Adobe una llamada de API realizada al extremo de destino y la respuesta de API recibida desde el extremo de destino.
+* Grabación de pantalla que muestra la experiencia del usuario cuando alguien se conecta a su destino y continúa con los pasos de activación.
 * Requisitos adicionales para destinos basados en archivos:
    * Comparta una solicitud y un ejemplo de respuesta después de usar la API de prueba para [probar el destino basado en archivos con perfiles de muestra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Adjunte un archivo de muestra generado por el destino y exportado a la ubicación de almacenamiento.
