@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
 source-wordcount: '1556'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="Compatibilidad con matrices de exportación"
->abstract="<p>Use el control **Agregar campo calculado** para exportar matrices de valores de objeto, cadena, booleano e int desde Experience Platform al destino de almacenamiento en la nube deseado.</p><p> Las matrices deben exportarse como cadenas utilizando la función `array_to_string`. Consulte la documentación para ver ejemplos detallados y funciones más compatibles.</p>"
+>title="Compatibilidad con exportación de matrices"
+>abstract="<p>Utilice el control **Añadir campo calculado** para exportar matrices de valores int, cadena, booleanos y objetos desde Experience Platform al destino de almacenamiento en la nube deseado.</p><p> Las matrices deben exportarse como cadenas utilizando la función `array_to_string`. Consulte la documentación para ver ejemplos exhaustivos y más funciones compatibles.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=es#examples" text="Ejemplos"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=es#known-limitations" text="Limitaciones conocidas"
 
@@ -79,13 +79,13 @@ Tenga en cuenta las siguientes limitaciones conocidas que actualmente se aplican
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
->title="Habilitar esquema de salida jerárquico"
+>title="Habilite el esquema de salida jerárquico"
 >abstract="Active esta opción si desea exportar estructuras jerárquicas como matrices."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
->title="Agregar campos calculados deshabilitados"
->abstract="Este control está desactivado porque ha seleccionado exportar estructuras planas al conectarse al destino."
+>title="Añadir campos calculados deshabilitado"
+>abstract="Este control está deshabilitado porque ha seleccionado exportar estructuras planas al conectarse al destino."
 
 En el paso de asignación del flujo de trabajo de activación para los destinos de almacenamiento en la nube, seleccione **[!UICONTROL Agregar campo calculado]**.
 

@@ -5,7 +5,7 @@ exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
 source-wordcount: '4320'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -212,8 +212,8 @@ Se muestra la lista de filtros disponibles.
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Límites flexibles de evaluación de audiencia"
->abstract="Puede evaluar hasta 20 audiencias en una sola ejecución flexible de evaluación de audiencias.<br/><br/>Además, mientras el trabajo de evaluación se ejecuta lo antes posible, puede haber retrasos en el sistema, ya que las evaluaciones bajo demanda <b>no se pueden</b> ejecutar simultáneamente con otra evaluación bajo demanda o por lotes."
+>title="Límites flexibles de evaluación de público"
+>abstract="Puede evaluar hasta 20 públicos en una sola ejecución flexible de evaluación de públicos.<br/><br/>Además, mientras el trabajo de evaluación se ejecuta lo antes posible, puede haber retrasos en el sistema, ya que las evaluaciones bajo demanda <b>no se pueden</b> ejecutar simultáneamente con otra evaluación bajo demanda o por lotes."
 
 Además, puede seleccionar hasta 25 audiencias diferentes y realizar diversas acciones en estas audiencias. Estas acciones incluyen [mover a una carpeta](#folders), [editar o aplicar una etiqueta](#tags), [aplicar etiquetas de acceso](../../access-control/abac/ui/labels.md) y [eliminar](#browse).
 
