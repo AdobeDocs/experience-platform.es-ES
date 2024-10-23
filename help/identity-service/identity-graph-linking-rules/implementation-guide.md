@@ -2,9 +2,9 @@
 title: Guía de implementación para reglas de vinculación de gráficos de identidad
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1668'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Descripción paso a paso:
 1. [Completar requisitos previos para la implementación](#prerequisites-for-implementation)
 2. [Crear las áreas de nombres de identidad necesarias](#namespace)
 3. [Utilice la herramienta de simulación de gráficos para familiarizarse con el algoritmo de optimización de identidad](#graph-simulation)
-4. [Utilice la herramienta de configuración de identidad para designar las áreas de nombres únicas y configurar las clasificaciones de prioridad para las áreas de nombres](#identity-settings)
+4. [Utilice la interfaz de usuario de configuración de identidad para designar las áreas de nombres únicas y configurar las clasificaciones de prioridad de las áreas de nombres](#identity-settings)
 5. [Creación de un esquema de modelo de datos de experiencia (XDM)](#schema)
 6. [Crear un conjunto de datos](#dataset)
 7. [Ingesta de datos en Experience Platform](#ingest)
@@ -183,9 +183,13 @@ Mediante la creación de diferentes configuraciones, puede utilizar la herramien
 
 ## Configuración de la identidad {#identity-settings}
 
-Una vez que tengas una mejor idea de cómo deseas que se comporte tu gráfico, ve a la [herramienta de configuración de identidad](./identity-settings-ui.md) en el área de trabajo de la interfaz de usuario del servicio de identidad.
+Una vez que tengas una mejor idea de cómo deseas que se comporte tu gráfico, ve a la [interfaz de usuario de configuración de identidad](./identity-settings-ui.md) en el área de trabajo de la interfaz de usuario del servicio de identidad. Para acceder a la interfaz de usuario de configuración de identidad, selecciona **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, selecciona **[!UICONTROL Configuración]**.
 
-Utilice la herramienta de configuración de identidad para designar las áreas de nombres únicas y configurar las áreas de nombres por orden de prioridad. Una vez que haya terminado de aplicar la configuración, debe esperar al menos seis horas antes de continuar con la ingesta de datos, ya que la nueva configuración tarda al menos seis horas en reflejarse en el servicio de identidad.
+![La página de exploración de identidades con el botón de configuración resaltado.](../images/implementation/settings.png)
+
+Utilice la interfaz de usuario de configuración de identidad para designar las áreas de nombres únicas y configurar las áreas de nombres por orden de prioridad. Una vez que haya terminado de aplicar la configuración, debe esperar al menos seis horas antes de continuar con la ingesta de datos, ya que la nueva configuración tarda al menos seis horas en reflejarse en el servicio de identidad.
+
+Para obtener más información, lea la [guía de interfaz de usuario de configuración de identidad](./identity-settings-ui.md).
 
 ## Creación de un esquema XDM {#schema}
 

@@ -2,7 +2,7 @@
 title: Reglas de vinculación de gráfico de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 2%
@@ -98,11 +98,11 @@ Puede configurar un área de nombres para que sea única mediante el área de tr
 
 Considere el siguiente escenario:
 
-* Scott usa una tableta y abre su navegador Google Chrome para ir a nike<span>.com, donde inicia sesión y busca nuevos zapatos de baloncesto.
+* Scott usa una tableta y abre su explorador Google Chrome para ir a acme<span>.com, donde inicia sesión y busca nuevos zapatos de baloncesto.
    * En segundo plano, este escenario registra las siguientes identidades:
       * Un área de nombres y valor ECID para representar el uso del explorador
       * Un área de nombres CRMID y un valor para representar al usuario autenticado (Scott inició sesión con su nombre de usuario y contraseña combinados).
-* A continuación, su hijo Peter usa la misma tableta y también usa Google Chrome para ir a nike<span>.com, donde inicia sesión con su propia cuenta para buscar equipos de fútbol.
+* A continuación, su hijo Peter usa la misma tableta y también usa Google Chrome para ir a acme<span>.com, donde inicia sesión con su propia cuenta para buscar equipos de fútbol.
    * En segundo plano, este escenario registra las siguientes identidades:
       * El mismo espacio de nombres y valor de ECID para representar el explorador.
       * Un nuevo espacio de nombres CRMID y valor para representar al usuario autenticado.
