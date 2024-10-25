@@ -2,7 +2,7 @@
 title: Filtrado de datos de nivel de fila para una Source mediante la API de Flow Service
 description: Este tutorial trata los pasos sobre cómo filtrar datos en el nivel de origen mediante la API de Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 5%
@@ -687,12 +687,12 @@ Para actualizar la conexión de origen, realice una solicitud de PATCH al extrem
 **Formato de API**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | Id. de la conexión de origen que desea recuperar. |
+| `{SOURCE_CONNECTION_ID}` | El identificador de la conexión de origen que desea actualizar |
 
 +++Solicitud
 

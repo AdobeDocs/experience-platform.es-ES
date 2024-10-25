@@ -2,9 +2,9 @@
 title: Prioridad de espacios de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -109,11 +109,11 @@ Dadas las configuraciones descritas anteriormente, las acciones del usuario y la
 
 | Acción del usuario (evento de experiencia) | Estado de autenticación | Fuente de datos | Áreas de nombres en evento | Área de nombres de identidad principal |
 | --- | --- | --- | --- | --- |
-| Ver página de oferta de tarjeta de crédito | No autenticado (anónimo) | SDK web | {ECID} | ECID |
-| Ver página de ayuda | No autenticado | SDK móvil | {ECID, IDFA} | IDFA |
-| Ver saldo de cuenta corriente | Authenticated | SDK web | {CRMID, ECID} | CRMID |
-| Regístrese para obtener un préstamo hipotecario | Authenticated | Conector de origen de Analytics | {CRMID, ECID, AAID} | CRMID |
-| Transferir $1,000 de cheques a ahorros | Authenticated | SDK móvil | {CRMID, GAID, ECID} | CRMID |
+| Ver página de oferta de tarjeta de crédito | No autenticado (anónimo) | SDK web | `{ECID}` | ECID |
+| Ver página de ayuda | No autenticado | SDK móvil | `{ECID, IDFA}` | IDFA |
+| Ver saldo de cuenta corriente | Authenticated | SDK web | `{CRMID, ECID}` | CRMID |
+| Regístrese para obtener un préstamo hipotecario | Authenticated | Conector de origen de Analytics | `{CRMID, ECID, AAID}` | CRMID |
+| Transferir $1,000 de cheques a ahorros | Authenticated | SDK móvil | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
