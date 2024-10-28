@@ -3,9 +3,9 @@ keywords: destino de almacenamiento en nube;almacenamiento en nube
 title: Información general sobre destinos de Cloud Storage
 description: Adobe Experience Platform puede enviar audiencias como archivos de datos a sus ubicaciones de Amazon S3, AWS Kinesis, Azure Event Hubs o almacenamiento en la nube SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
+source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '463'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Para enviar audiencias a destinos de almacenamiento en la nube para sus campaña
 
 >[!NOTE]
 >
-> La funcionalidad descrita en esta sección está disponible actualmente solo para destinos de [Amazon S3](amazon-s3.md).
+> La funcionalidad descrita en esta sección está disponible para todos los destinos de almacenamiento en la nube. Sin embargo, el destino [Amazon S3](amazon-s3.md) actualmente solo admite las macros `%SEGMENT_ID%` y `%SEGMENT_NAME%`.
 
 Para crear una carpeta personalizada por archivo de audiencia en su ubicación de almacenamiento, puede utilizar macros en el campo de entrada de la ruta de la carpeta. Inserte las macros al final del campo de entrada, como se muestra a continuación.
 
