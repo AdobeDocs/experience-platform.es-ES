@@ -3,10 +3,10 @@ keywords: coincidencia de cliente de google;coincidencia de cliente de Google;co
 title: Conexión de Google Customer Match
 description: Customer Match de Google le permite utilizar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping, Gmail y YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 1%
+source-wordcount: '2100'
+ht-degree: 2%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_en) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
+> Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_es) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
 ><br/>
->Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según DMA en la Unión Europea.
+>Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.
 ><br/>
 >Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no tienen que realizar ninguna acción.
 ><br/>
@@ -215,6 +215,20 @@ Selección de campos de destino:
 Los datos de origen de los atributos no se cifran automáticamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación.
 
 ![Aplicar control de transformación resaltado en el paso Asignación del flujo de trabajo de activación.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## Supervisar destino {#monitor-destination}
+
+Después de conectarse al destino y establecer un flujo de datos de destino, puede usar la [funcionalidad de supervisión](/help/dataflows/ui/monitor-destinations.md) en Real-Time CDP para obtener información detallada acerca de los registros de perfil activados en el destino en cada ejecución de flujo de datos.
+
+>[!IMPORTANT]
+>
+> A partir de octubre de 2024, Adobe implementará una actualización para aumentar la precisión de la creación de informes en los destinos de flujo continuo. Esta mejora garantiza una mejor alineación entre el Experience Platform y los informes de las plataformas de destino.
+>
+> Antes de esta actualización, **[!UICONTROL Identidades con errores]** incluían todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total.
+>
+> Esta mejora se aplica actualmente a [Google Customer Match destination](google-customer-match.md), pero se implementará gradualmente en otros destinos de streaming para Experience Platform.
+> Después de esta mejora, es posible que los usuarios de este destino vean una caída esperada en su recuento de **[!UICONTROL Identidades con errores]**.
+
 
 ## Compruebe que la activación de la audiencia se haya realizado correctamente {#verify-activation}
 

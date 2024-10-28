@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 10%
+source-wordcount: '3639'
+ht-degree: 9%
 
 ---
 
@@ -94,6 +94,17 @@ Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 - **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil que se activaron correctamente en el destino seleccionado como parte de la ejecución del flujo de datos. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
 - **[!UICONTROL Identidades excluidas]**: El número total de identidades de perfil que se excluyen de la activación en función de los atributos que faltan y la infracción de consentimiento.
 - **[!UICONTROL Identidades con errores]**: número total de identidades de perfil que no se activaron en el destino debido a errores.
+
+  >[!IMPORTANT]
+  >
+  > A partir de octubre de 2024, Adobe implementará una actualización para aumentar la precisión de la creación de informes en los destinos de flujo continuo. Esta mejora garantiza una mejor alineación entre el Experience Platform y los informes de las plataformas de destino.
+  >
+  > Antes de esta actualización, **[!UICONTROL Identidades con errores]** incluían todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total.
+  > 
+  > Esta mejora se aplica actualmente a [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md), pero se implementará gradualmente en otros destinos de streaming para Experience Platform.
+  > Tras esta mejora, es posible que los usuarios del destino [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) vean una caída esperada en su recuento de **[!UICONTROL Identidades con errores]**.
+
+
 - **[!UICONTROL Tasa de activación]**: El porcentaje de identidades recibidas que se activaron u omitieron correctamente. La fórmula siguiente muestra cómo se calcula este valor:
   ![Fórmula de tasa de activación.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Estado]**: Representa el estado en el que se encuentra el flujo de datos: [!UICONTROL Completado] o [!UICONTROL Procesando]. [!UICONTROL Completado] significa que todas las identidades de la ejecución del flujo de datos correspondiente se exportaron en el período de una hora. [!UICONTROL Procesando] significa que la ejecución del flujo de datos aún no ha finalizado.
@@ -205,7 +216,7 @@ Para acceder al panel [!UICONTROL Supervisión], seleccione **[!UICONTROL Superv
 
 Use el panel [!UICONTROL Destinos] para tener una idea general del estado de los flujos de activación. Comience por obtener perspectivas en un nivel agregado para todos los destinos de lote y flujo continuo y, a continuación, explore las vistas detalladas de flujos de datos, ejecuciones de flujos de datos y audiencias activadas para obtener una vista detallada de los datos de activación. Las pantallas del tablero [!UICONTROL Supervisión] proporcionan información procesable a través de métricas y descripciones de error para ayudarle a solucionar cualquier problema que pueda surgir en sus escenarios de activación.
 
-Puede filtrar la información mostrada por tipo de datos: clientes, cuentas (solo para la edición B2B de Adobe Real-Time CDP), clientes potenciales y enriquecimiento de cuentas. Obtenga más información sobre estas opciones en la [guía de supervisión del panel](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+Puede filtrar la información mostrada por tipo de datos: clientes, cuentas (solo para Adobe Real-Time CDP B2B edition), clientes potenciales y enriquecimiento de cuentas. Obtenga más información sobre estas opciones en la [guía de supervisión del panel](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![Filtro de tipo de datos resaltado en la vista del panel de supervisión.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
