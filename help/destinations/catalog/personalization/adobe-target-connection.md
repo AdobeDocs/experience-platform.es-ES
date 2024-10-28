@@ -3,9 +3,9 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión de Adobe Target
 description: Adobe Target es una aplicación que proporciona capacidades de personalización y experimentación en tiempo real impulsadas por IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1768'
 ht-degree: 10%
 
 ---
@@ -126,7 +126,8 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
   >[!IMPORTANT]
   >
-  >El ID de la secuencia de datos es único para cada conexión de destino de Adobe Target. Si necesita asignar las mismas audiencias a varios flujos de datos, debe [crear una nueva conexión de destino](../../ui/connect-destination.md) para cada ID de flujo de datos y pasar por el [flujo de activación de audiencia](#activate).
+  >El ID de la secuencia de datos es único para cada conexión de destino de Adobe Target. No se puede usar el mismo ID de flujo de datos para varias conexiones de destino de Adobe Target.
+  >Si necesita asignar las mismas audiencias a varios flujos de datos, debe [crear una nueva conexión de destino](../../ui/connect-destination.md) para cada ID de flujo de datos y pasar por el [flujo de activación de audiencia](#activate).
 
    * **[!UICONTROL Ninguno]**: seleccione esta opción si necesita configurar la personalización de Adobe Target pero no puede implementar el [SDK web de Experience Platform](/help/web-sdk/home.md). Con esta opción, las audiencias exportadas de Experience Platform a Target solo admiten la personalización de la sesión siguiente y la segmentación de Edge está desactivada. Consulte la tabla en la sección [casos de uso admitidos](#supported-use-cases) para ver una comparación de los casos de uso disponibles por tipo de implementación.
 
