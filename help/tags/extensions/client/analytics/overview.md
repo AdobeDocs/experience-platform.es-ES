@@ -2,10 +2,10 @@
 title: Información general sobre la extensión Adobe Analytics
 description: Obtenga información acerca de la extensión de etiqueta de Adobe Analytics en Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 92%
+source-wordcount: '2331'
+ht-degree: 83%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información sobre cómo configurar la extensión de Adobe Analytics y las opciones disponibles al utilizar esta extensión para generar una regla.
 
@@ -289,7 +289,19 @@ La extensión de Analytics proporciona las siguientes acciones:
 
 ### Configurar variables {#set-variables}
 
-Importante: Usar una acción “set variables” no enviará la señal. Debe utilizar la acción &quot;send beacon&quot;.
+>[!IMPORTANT]
+>
+>No puede enviar la señalización con la acción &quot;set variables&quot;. Para enviar la señalización, debe seleccionar la acción &quot;enviar señalización&quot;.
+
+Puede elegir entre dos vistas diferentes en **Establecer variables**:
+
+>[!BEGINTABS]
+
+>[!TAB Proporcionar atributos individuales]
+
+En esta vista, puede especificar distintas variables como `eVars`, `Props`, `Events`.
+
+![Página de vista de formulario de Adobe Analytics, donde se muestran atributos adicionales.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 
@@ -319,6 +331,25 @@ Configure uno o varios [eventos](https://experienceleague.adobe.com/docs/analyti
 1. (Opcional) Seleccione o especifique un elemento de datos utilizado para la [serialización de eventos](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=es).
 1. (Opcional) Seleccione **[!UICONTROL Añadir evento]** para definir más eventos.
 1. Seleccione **[!UICONTROL Conservar cambios]**.
+
+>[!TAB Vista JSON]
+
+En esta vista, puede ver y editar una versión JSON de la acción **Set Variables**.
+
+![Vista que representa la configuración actual de las variables del conjunto en formato JSON en la extensión de Adobe Analytics.](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+En la acción **Set Variables**, use la vista JSON para cargar, copiar o descargar datos JSON y almacenarlos en su dispositivo.
+
+Sin embargo, existen algunas limitaciones:
+
+* **Código personalizado**: si usa código personalizado para rellenar variables, no aparecerá en la vista JSON. En su lugar, aparece una alerta al ver, copiar o descargar el JSON que indica que no se incluirán las modificaciones realizadas mediante código personalizado.
+* **Copiar de atributo de URL**: No se admite la copia de un valor de una URL en la vista JSON. Se muestra una alerta para indicar esta limitación.
+* **Variables retiradas**: las variables retiradas u obsoletas se muestran en la vista JSON y se muestra una alerta que indica que se han establecido variables retiradas.
+* **Elementos de datos**: Los elementos de datos se representan en la vista JSON. Si los datos JSON se copian en otra propiedad de etiquetas, es posible que los elementos de datos correspondientes no se definan allí y no se resuelvan correctamente cuando se ejecuten.
+
+>[!ENDTABS]
 
 #### Jerarquía
 
