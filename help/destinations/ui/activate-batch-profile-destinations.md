@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
-source-wordcount: '4095'
+source-wordcount: '4151'
 ht-degree: 11%
 
 ---
@@ -133,11 +133,11 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en décle
 
 2. Use el conmutador **[!UICONTROL Tiempo]** para seleccionar si la exportación debe realizarse inmediatamente después de la evaluación de la audiencia o de forma programada a una hora especificada. Al seleccionar la opción **[!UICONTROL Programado]**, puede utilizar el selector para elegir la hora del día, en formato [!DNL UTC], en la que debe realizarse la exportación.
 
-   >[!NOTE]
-   >
-   >La opción **[!UICONTROL Después de la evaluación del segmento]** que se describe a continuación solo está disponible para clientes seleccionados de Beta.
+   Utilice la opción **[!UICONTROL Después de la evaluación del segmento]** para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esta opción garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino. Esto puede hacer que la audiencia se exporte varias veces al día según las acciones que realice.
 
-   Utilice la opción **[!UICONTROL Después de la evaluación del segmento]** para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esta opción garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino.
+   >[!IMPORTANT]
+   >
+   >Si ejecuta [evaluación de audiencia flexible](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) en audiencias que ya están configuradas para activarse después de la evaluación de segmentos, las audiencias se activarán en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior. Esto puede hacer que las audiencias se exporten varias veces al día, según las acciones que realice.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
