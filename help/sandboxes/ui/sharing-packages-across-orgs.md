@@ -1,29 +1,24 @@
 ---
 title: Uso Compartido De Paquetes Entre Organizaciones Mediante La Herramienta Sandbox
 description: Aprenda a utilizar la herramienta de zona protegida en Adobe Experience Platform para compartir paquetes entre diferentes organizaciones.
-badge: Beta
-source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
+source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
 
 # Uso compartido de paquetes entre organizaciones mediante la herramienta Sandbox
 
->[!NOTE]
->
->El uso compartido de paquetes entre organizaciones está actualmente en fase beta y solo está disponible para determinados clientes de la versión beta.
-
 Mejore la precisión de la configuración en los entornos limitados y exporte e importe sin problemas las configuraciones de los entornos limitados entre distintas organizaciones con la función de herramientas de entornos limitados. Este documento explica cómo utilizar las herramientas de zona protegida en Adobe Experience Platform para compartir paquetes entre distintas organizaciones. Existen dos tipos de paquetes compartidos:
 
 - **Paquete privado**
 
-[Los paquetes privados](#private-packages) solo se pueden compartir con organizaciones que hayan aprobado la solicitud de uso compartido de la organización de origen a través de una lista de permitidos de inclusión.
+[Los paquetes privados](#private-packages) solo se pueden compartir con organizaciones que hayan aprobado la solicitud de uso compartido de la organización de origen.
 
 - **Paquete público**
 
-Hay [paquetes públicos](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) disponibles para importar sin aprobación adicional. Estos paquetes se pueden compartir en el sitio web, el blog o la plataforma de un socio. La carga útil del paquete permite copiar y pegar paquetes de estos canales en la organización de destino.
+Hay [paquetes públicos](#public-packages) disponibles para importar sin aprobación adicional. Estos paquetes se pueden compartir en el sitio web, el blog o la plataforma de un socio. La carga útil del paquete permite copiar y pegar paquetes de estos canales en la organización de destino.
 
 ## Paquetes privados {#private-packages}
 
@@ -88,6 +83,52 @@ En el cuadro de diálogo **[!UICONTROL Compartir paquete]**, seleccione el paque
 >Es posible seleccionar más de una organización. Las organizaciones seleccionadas aparecerán debajo del menú desplegable [!UICONTROL Compartir configuración].
 
 ![Cuadro de diálogo Compartir paquete con la configuración de Compartir y Confirmar resaltada.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Paquetes públicos {#public-packages}
+
+Utilice la función Herramientas para zonas protegidas para crear paquetes públicos compartibles que no requieran ninguna aprobación adicional y que se importen fácilmente con el uso de la carga útil del paquete.
+
+### Actualizar disponibilidad del paquete a público {#update-package}
+
+Para actualizar el tipo de disponibilidad de un paquete, vaya a la pestaña [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]**. A continuación, seleccione los puntos suspensivos (`...`) junto al paquete y, a continuación, seleccione **[!UICONTROL Actualizar al paquete público]** en el menú desplegable.
+
+![La interfaz de usuario de las zonas protegidas con la ficha de paquetes y el menú de opciones desplegables con la opción Actualizar al paquete público resaltada.](../images/ui/sandbox-tooling/update-to-public.png)
+
+En el cuadro de diálogo **[!UICONTROL Cambiar la disponibilidad del paquete al público]**, compruebe que el nombre del paquete es correcto y seleccione **[!UICONTROL Confirmar]**.
+
+>[!IMPORTANT]
+>
+> Una vez que un paquete se ha hecho público, no se puede volver a cambiar a privado.
+
+![Cambiar la disponibilidad del paquete al cuadro de diálogo público con Confirmar resaltado.](../images/ui/sandbox-tooling/change-package-availability.png)
+
+### Uso compartido de paquetes mediante la carga útil del paquete
+
+Para compartir el paquete público, seleccione los puntos suspensivos (`...`) junto al paquete y, a continuación, seleccione **[!UICONTROL Copiar carga útil del paquete]**.
+
+![La interfaz de usuario de las zonas protegidas muestra un menú desplegable de paquetes individuales con la carga útil de Copiar paquete resaltada.](../images/ui/sandbox-tooling/copy-package-payload.png)
+
+El cuadro de diálogo **[!UICONTROL Copiar carga útil del paquete]** muestra el nombre del paquete y la carga útil. Seleccione **[!UICONTROL Copiar carga útil del paquete]** para copiar la carga útil asociada al paquete.
+
+![Copiar el cuadro de diálogo de carga útil del paquete que muestra la carga útil JSON con la carga útil del paquete de copia resaltada.](../images/ui/sandbox-tooling/confirm-payload-copy.png)
+
+### Creación de un nuevo paquete mediante una carga útil de paquete
+
+Para crear un paquete mediante una carga útil de paquete, vaya a la pestaña [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]**. A continuación, seleccione **[!UICONTROL Crear paquete]**.
+
+![Se resaltó la interfaz de usuario de las zonas protegidas que muestra Crear paquete.](../images/ui/sandbox-tooling/create-package.png)
+
+En el cuadro de diálogo **[!UICONTROL Crear paquete]**, seleccione la opción para **[!UICONTROL Pegar carga útil del paquete]** y, a continuación, seleccione **[!UICONTROL Seleccionar]**.
+
+![Cuadro de diálogo Crear paquete con la carga útil de pegado seleccionada y la opción Seleccionar resaltada.](../images/ui/sandbox-tooling/create-package-options.png)
+
+Pegue la carga útil del paquete copiado en el campo de texto y seleccione **[!UICONTROL Crear]**.
+
+![Cuadro de diálogo Crear paquete con el campo de texto vacío y Crear resaltado.](../images/ui/sandbox-tooling/paste-payload.png)
+
+Para ver el estado actual de tu solicitud de uso compartido, ve al **[!UICONTROL estado de uso compartido]**. El estado actual de la solicitud se muestra en la columna **[!UICONTROL Compartir estado]**.
+
+![La ficha Estado de uso compartido muestra una solicitud de carga útil pendiente.](../images/ui/sandbox-tooling/sharing-status.png)
 
 ## Pasos siguientes {#next-steps}
 
