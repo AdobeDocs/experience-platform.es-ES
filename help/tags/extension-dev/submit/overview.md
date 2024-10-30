@@ -2,10 +2,10 @@
 title: Descripción general del proceso de envío de extensiones
 description: Conozca los pasos para presentar su extensión de Adobe Experience Platform desde el desarrollo hasta el lanzamiento.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 87%
+source-wordcount: '231'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Enviar una extensión al catálogo de recopilación de datos en Adobe Experience Platform puede parecer una tarea intimidante. Este documento proporciona una guía paso a paso para enviar la extensión mediante el uso de guías secuenciales individuales. Para enviar la extensión, deberá completar los siguientes pasos:
 
@@ -21,7 +21,7 @@ Enviar una extensión al catálogo de recopilación de datos en Adobe Experience
 1. [Concesión de acceso al usuario para el desarrollo de extensiones](./access.md)
 1. [Desarrollar una extensión](./develop.md)
 1. [Crear una lista de intercambio](./create-listing.md)
-1. Creación del paquete de extensión
+1. [Creación del zip del paquete de extensión](./create-extension-package-zip.md)
 1. [Carga y prueba de la extensión](./upload-and-test.md)
 1. [Lanzamiento de la extensión](./release.md)
 

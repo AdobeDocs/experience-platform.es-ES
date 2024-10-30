@@ -2,10 +2,10 @@
 title: Cargar e implementar pruebas de extremo a extremo para una extensión
 description: Obtenga información sobre cómo validar, cargar y probar la extensión en Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 91%
+source-wordcount: '2345'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Para probar las extensiones de etiquetas en Adobe Experience Platform, utilice la API de etiquetas o las herramientas de línea de comandos para cargar los paquetes de extensiones. A continuación, utilice la IU de Platform o la IU de recopilación de datos para instalar el paquete de extensión en una propiedad y ejercer sus funcionalidades dentro de una biblioteca de etiquetas y compilarlo.
 
@@ -61,14 +61,16 @@ npx @adobe/reactor-uploader
 
 `npx` le permite descargar y ejecutar un paquete npm sin instalarlo realmente en su equipo. Es la forma más sencilla de ejecutar el Uploader.
 
-El Cargador le pedirá que introduzca varios datos. El ID de cuenta técnica, la clave de API y otros datos se pueden recuperar de la consola de Adobe I/O. Vaya a la [página Integraciones](https://console.adobe.io/integrations) en la consola de I/O. Seleccione la organización correcta en el menú desplegable, busque la integración correcta y seleccione **[!UICONTROL Ver]**.
+>[!NOTE]
+> De forma predeterminada, el cargador espera credenciales de Adobe I/O para un flujo de Oauth de servidor a servidor. Las credenciales heredadas de `jwt-auth`
+> se puede usar ejecutando `npx @adobe/reactor-uploader@v5.2.0` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
+> para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-- ¿Cuál es la ruta a la clave privada? /path/to/private.key. Este es el lugar donde guardó la clave privada en el paso 2 anterior.
-- ¿Cuál es su ID de organización? Copie y pegue esto desde la página de información general de la consola de I/O que dejó abierta anteriormente.
-- ¿Cuál es su ID de cuenta técnica? Copie y pegue esto desde la consola de I/O.
-- ¿Cuál es su clave de API? Copie y pegue esto desde la consola de I/O.
-- ¿Qué es el secreto del cliente? Copie y pegue esto desde la consola de I/O.
-- ¿Cuál es la ruta al extension_package que desea cargar? /path/to/extension_package.zip. Si invoca el cargador desde el directorio que contiene el paquete .zip, solo puede seleccionarlo en la lista en lugar de escribir la ruta.
+El cargador solo requiere que introduzca unos pocos datos. `clientId` y `clientSecret` se pueden recuperar de la consola de Adobe I/O. Vaya a la [página Integraciones](https://console.adobe.io/integrations) en la consola de I/O. Seleccione la organización correcta en el menú desplegable, busque la integración correcta y seleccione **[!UICONTROL Ver]**.
+
+- ¿Cuál es su `clientId`? Copie y pegue esto desde la consola de I/O.
+- ¿Cuál es su `clientSecret`? Copie y pegue esto desde la consola de I/O.
+- Si invoca el cargador desde el directorio que contiene el paquete .zip, solo puede seleccionarlo en la lista en lugar de escribir la ruta.
 
 El paquete de extensión se cargará y el cargador le proporcionará el ID del extension_package.
 
@@ -79,6 +81,8 @@ El paquete de extensión se cargará y el cargador le proporcionará el ID del e
 >[!NOTE]
 >
 >Si tiene pensado ejecutar el cargador con frecuencia, poner toda esta información cada vez que lo haga puede ser un lastre. También puede pasarla como argumento desde la línea de comandos. Consulte la sección [Command Line Arguments (argumentos de la línea de comandos)](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) de los documentos de NPM para obtener más información.
+
+Si desea administrar la carga de su extensión directamente mediante la API, consulte las llamadas de ejemplo para [crear](../../api/endpoints/extension-packages.md/#create) o [actualizar](../../api/endpoints/extension-packages.md#update) un paquete de extensión en los documentos de la API para obtener más información.
 
 ## Creación de una propiedad de desarrollo {#property}
 
