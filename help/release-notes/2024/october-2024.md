@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de Adobe Experience Platform de octubre de 2024
 description: Las notas de la versión de octubre de 2024 de Adobe Experience Platform.
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 35%
@@ -14,12 +14,12 @@ ht-degree: 35%
 
 Actualizaciones de funciones y documentación existentes en Adobe Experience Platform:
 
-- [Paneles {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [Recopilación de datos {#collection}](#data-collection-collection)
-- [Destinos {#destinations}](#destinations-destinations)
-- [Servicio de segmentación {#segmentation-service}](#segmentation-service-segmentation-service)
-- [Zonas protegidas {#sandboxes}](#sandboxes-sandboxes)
-- [Fuentes {#sources}](#sources-sources)
+- [Paneles](#dashboards)
+- [Recopilación de datos](#data-collection-)
+- [Destinos](#destinations)
+- [Servicio de segmentación](#segmentation-service)
+- [Zonas protegidas](#sandboxes)
+- [Fuentes](#sources)
 
 ## Paneles {#dashboards}
 

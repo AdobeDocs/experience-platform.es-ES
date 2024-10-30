@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform de octubre de 2024
 description: Las notas de la versión de octubre de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 35%
@@ -15,12 +15,12 @@ ht-degree: 35%
 
 Actualizaciones de funciones y documentación existentes en Adobe Experience Platform:
 
-- [Paneles {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [Recopilación de datos {#collection}](#data-collection-collection)
-- [Destinos {#destinations}](#destinations-destinations)
-- [Servicio de segmentación {#segmentation-service}](#segmentation-service-segmentation-service)
-- [Zonas protegidas {#sandboxes}](#sandboxes-sandboxes)
-- [Fuentes {#sources}](#sources-sources)
+- [Paneles](#dashboards)
+- [Recopilación de datos](#data-collection-)
+- [Destinos](#destinations)
+- [Servicio de segmentación](#segmentation-service)
+- [Zonas protegidas](#sandboxes)
+- [Fuentes](#sources)
 
 ## Paneles {#dashboards}
 
@@ -40,7 +40,7 @@ Experience Platform proporciona varios paneles a través de los cuales puede ver
 
 Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
 
-## Recopilación de datos {#collection}
+## Recopilación de datos {#data-collection}
 
 Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la Edge Network de Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
