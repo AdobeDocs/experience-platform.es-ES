@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 35%
+source-wordcount: '142'
+ht-degree: 41%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 35%
 * [Descargar tableros para el PDF](download.md)
 * Datos de SQL: query pro mode {#sql-insights-query-pro-mode}
    * [Información general](sql-insights-query-pro-mode/overview.md)
+   * Plantillas de Distiller de datos {#templates}
+      * [Información general](sql-insights-query-pro-mode/templates/overview.md)
+      * [Superposiciones de público avanzadas](sql-insights-query-pro-mode/templates/overlaps.md)
+      * [Comparación de públicos](sql-insights-query-pro-mode/templates/comparison.md)
+      * [Tendencias de público](sql-insights-query-pro-mode/templates/trends.md)
+      * [Superposiciones de identidad de público](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * Filtros {#filters}
       * [Filtro de fecha](sql-insights-query-pro-mode/filters/date-filter.md)
       * [Filtro global](sql-insights-query-pro-mode/filters/global-filter.md)
@@ -51,7 +57,7 @@ ht-degree: 35%
 * Casos de uso de perspectivas {#insights-use-cases}
    * [Análisis de consentimiento](insights-use-cases/consent-analysis.md)
 * Modelos de datos disponibles {#data-models}
-   * [Edición B2B del modelo de datos de Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
+   * [B2B edition del modelo de datos de Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
    * [Edición B2C del modelo de datos de Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Integraciones de aplicaciones {#integrations}
    * [Power BI](integrations/power-bi.md)
