@@ -3,10 +3,10 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 2%
+source-wordcount: '2044'
+ht-degree: 5%
 
 ---
 
@@ -15,6 +15,26 @@ ht-degree: 2%
 
 Este documento describe las notas de la versión del SDK web de Adobe Experience Platform.
 Para obtener las últimas notas de la versión de la extensión de etiquetas SDK web, consulte las [notas de la versión de la extensión de etiquetas SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.24.0: viernes, 31 de octubre de 2024
+
+**Nuevas funciones**
+
+- Ahora se admiten [invalidaciones de secuencia de datos](../datastreams/overrides.md) al iniciar sesiones de contenidos.
+
+- Se ha agregado compatibilidad con los tokens de respuesta de Adobe Target en el vínculo de monitorización de procesamiento correcto.
+
+**Correcciones y mejoras**
+
+- Cuando se devuelven varios mensajes en la aplicación, solo se muestra el que tenga la prioridad más alta. Los demás se registran como suprimidos.
+- Ya no se envían al Edge Network invalidaciones de secuencia de datos vacías, lo que reduce los posibles conflictos con las configuraciones de enrutamiento del lado del servidor.
+- Se ha cambiado el nombre de los siguientes componentes de mensaje de registro para alinearlos con otros SDK de Adobe:
+   - `DecisioningEngine` cambió su nombre a `RulesEngine`
+   - `LegacyMediaAnalytics` cambió su nombre a `MediaAnalyticsBridge`
+   - `Privacy` cambió su nombre a `Consent`
+- Se corrigió un error que se producía cuando los elementos de contenido predeterminados se representaban a través de [`applyPropositions`](../web-sdk/commands/applypropositions.md).
+- Se ha corregido un error de CSS en las acciones de mover y cambiar el tamaño de Adobe Target.
+- Se eliminó la clave `machineLearning` de [`sendEvent`](../web-sdk/commands/sendevent/overview.md) respuestas.
 
 ## Versión 2.23.0: 19 de septiembre de 2024
 
@@ -40,13 +60,13 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se ha corregido un problema del cliente con la llamada a.
 - Se ha corregido un problema por el cual una codificación de URL no válida en el parámetro `adobe_mc` provocaba que las llamadas a [sendEvent](commands/sendevent/overview.md) fallaran.
 
-## Versión 2.21.1: 18 de julio de 2024
+## Versión 2.21.1: viernes, 18 de julio de 2024
 
 **Correcciones y mejoras**
 
 - Se corrigió un error de compilación al utilizar la biblioteca NPM.
 
-## Versión 2.21.0: 16 de julio de 2024
+## Versión 2.21.0: miércoles, 16 de julio de 2024
 
 **Nuevas funciones**
 
@@ -54,7 +74,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se ha añadido un script de compilación personalizada que proporciona un archivo alloy.js.
 - Se ha mejorado la recopilación de clics con Activity Map y la compatibilidad con la agrupación de eventos.
 
-## Versión 2.20.0: 21 de mayo de 2024
+## Versión 2.20.0: miércoles, 21 de mayo de 2024
 
 **Nuevas funciones**
 
@@ -64,7 +84,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 
 - Se ha corregido un error que hacía que el fragmento de preocultación ocultara el contenido predeterminado cuando se optaba por el consentimiento.
 
-## Versión 2.19.2: 10 de enero de 2024
+## Versión 2.19.2: jueves, 10 de enero de 2024
 
 **Correcciones y mejoras**
 
@@ -72,13 +92,13 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se corrigió un problema en el cual las llamadas de final de página nunca se enviaban cuando había una llamada superior de página con `renderDecisions` establecido en `false`.
 - Se corrigió un problema en el cual el SDK web no podía leer identidades entre dominios cuando había varios `adobe_mc` parámetros de cadena de consulta.
 
-## Versión 2.19.1: 10 de noviembre de 2023
+## Versión 2.19.1: sábado, 10 de noviembre de 2023
 
 **Correcciones y mejoras**
 
 - Se corrigió un problema en el cual la matriz de propuestas devuelta desde `sendEvent` llamadas siempre estaba vacía.
 
-## Versión 2.19.0: 1 de noviembre de 2023
+## Versión 2.19.0: jueves, 01 de noviembre de 2023
 
 **Nuevas funciones**
 
@@ -92,7 +112,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se corrigió un problema en el cual los nombres de vistas de aplicaciones de una sola página distinguían entre mayúsculas y minúsculas.
 - Se ha corregido un problema con los selectores de oferta personalizados DOM de sombra.
 
-## Versión 2.18.0: 31 de julio de 2023
+## Versión 2.18.0: martes, 31 de julio de 2023
 
 **Nuevas funciones**
 
@@ -103,7 +123,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se ha corregido un problema por el cual los vínculos de salida no se clasificaban debido a que el dominio formaba parte de la consulta.
 - `edgeConfigId` está en desuso a favor de `datastreamId` en la configuración del SDK web.
 
-## Versión 2.17.0: 17 de mayo de 2023
+## Versión 2.17.0: jueves, 17 de mayo de 2023
 
 **Correcciones y mejoras**
 
@@ -127,7 +147,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - La colección de vínculos ahora incluye el nombre del vínculo y la región del visitante.
 - Se ha eliminado el error de consola para destinos URL fallidos.
 
-## Versión 2.14.0: 25 de enero de 2023
+## Versión 2.14.0: jueves, 25 de enero de 2023
 
 - (Beta) Se ha añadido compatibilidad con superficies y propuestas de Adobe Journey Optimizer.
 
@@ -138,7 +158,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se corrigió un problema en el cual las propiedades de [user agent client hint](/help/web-sdk/use-cases/client-hints.md) se podían establecer en un tipo incorrecto.
 - Se corrigió un problema en el cual `placeContext.localTime` no coincidía con el esquema.
 
-## Versión 2.13.1: 13 de octubre de 2022
+## Versión 2.13.1: viernes, 13 de octubre de 2022
 
 - Se ha corregido un problema en el cual la migración de visitantes no funcionaba si window.Visitor se definía después de configurar. Esto es especialmente un problema cuando se ejecuta con etiquetas de Adobe.
 - Se corrigió un problema en el cual `device.screenWidth` y `device.screenHeight` se rellenaban como cadenas en algunos entornos.
@@ -160,12 +180,12 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se agregó la validación del área de nombres duplicada para el comando `getIdentity`.
 - Se agregó la validación duplicada del ámbito de decisión para el comando `sendEvent`.
 
-## Versión 2.12.0: 29 de junio de 2022
+## Versión 2.12.0: jueves, 29 de junio de 2022
 
 - Cambie las solicitudes al Edge Network para que use la sugerencia de ubicación de la cookie `cluster` como parte de la dirección URL. Esto garantiza que los usuarios que cambian de ubicación (por ejemplo, a través de una VPN o conduciendo con dispositivos móviles, etc.) a mitad de la sesión tengan el mismo perfil personalizado.
 - Consolide las funciones configuradas en la respuesta del comando getLibraryInfo.
 
-## Versión 2.11.0: 13 de junio de 2022
+## Versión 2.11.0: martes, 13 de junio de 2022
 
 **Nuevas funciones**
 
@@ -179,7 +199,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se corrigió un problema en el cual el contenido personalizado no se aplicaba correctamente al usar el pseudoselector `eq`.
 - Se corrigió un problema en el cual `localTimezoneOffset` podría fallar en la validación del Experience Platform.
 
-## Versión 2.10.1: 3 de mayo de 2022
+## Versión 2.10.1: miércoles, 03 de mayo de 2022
 
 - Se ha corregido un problema en el cual se creaban varios iframes persistentes para sincronizaciones de ID y destinos de segmento.
 
@@ -198,13 +218,13 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Se ha corregido un problema en el cual los eventos de interacción no se contaban en Adobe Target. Esto se solucionó añadiendo el nombre de la vista al XDM en web.webPageDetails.viewName.
 - Corrección de vínculos de documentación dañados en los mensajes de la consola.
 
-## Versión 2.8.0: 19 de enero de 2022
+## Versión 2.8.0: jueves, 19 de enero de 2022
 
 - Compatibilidad con selectores DOM en la sombra para la personalización.
 - Se ha cambiado el nombre de tipos de eventos de personalización. (`display` y `click` se convierten en `decisioning.propositionDisplay` y `decisioning.propositionInteract`)
 - Se ha corregido un problema por el cual las ofertas de HTML con etiquetas de scripts en línea añadían las etiquetas de scripts dos veces a la página aunque el script solo se ejecutara una vez.
 
-## Versión 2.7.0: 26 de octubre de 2021
+## Versión 2.7.0: miércoles, 26 de octubre de 2021
 
 - Exponer información adicional del Edge Network en el valor devuelto de `sendEvent`, incluidos `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una Beta.
 
@@ -220,11 +240,11 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 
 - Se ha corregido un problema en el cual una advertencia sobre la obsolescencia de `result.decisions` (proporcionada por el comando `sendEvent`) se registraba en la consola incluso cuando no se tenía acceso a la propiedad `result.decisions`. No se registrará ninguna advertencia al acceder a la propiedad `result.decisions`, pero la propiedad sigue en desuso.
 
-## Versión 2.6.1: 29 de julio de 2021
+## Versión 2.6.1: viernes, 29 de julio de 2021
 
 - Se ha corregido un problema en el cual al procesar la personalización para una vista de aplicación de una sola página sin contenido de personalización, se producía un error y se rechazaba la promesa devuelta por el comando `sendEvent`.
 
-## Versión 2.6.0: 27 de julio de 2021
+## Versión 2.6.0: miércoles, 27 de julio de 2021
 
 - Proporciona más contenido de personalización en la promesa resuelta de `sendEvent`, incluidos tokens de respuesta de Adobe Target. Cuando se ejecuta el comando `sendEvent`, se devuelve una promesa, que finalmente se resuelve con un objeto `result` que contiene información recibida del servidor. Anteriormente, este objeto de resultado incluía una propiedad denominada `decisions`. Esta propiedad de `decisions` se ha dejado de utilizar. Se ha agregado una nueva propiedad, `propositions`. Esta nueva propiedad brinda a los clientes acceso a más contenido de personalización, entre ellos [tokens de respuesta](/help/web-sdk/personalization/adobe-target/accessing-response-tokens.md).
 
