@@ -2,9 +2,9 @@
 title: Herramientas de zona protegida
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2431'
 ht-degree: 7%
 
 ---
@@ -151,6 +151,8 @@ La página [!UICONTROL Objeto de paquete y dependencias] proporciona una lista d
 >[!NOTE]
 >
 >Los objetos dependientes se pueden reemplazar por objetos existentes en la zona protegida de destino, lo que permite reutilizar objetos existentes en lugar de crear una nueva versión. Por ejemplo, al importar un paquete que incluye esquemas, puede reutilizar el grupo de campos personalizados existente y las áreas de nombres de identidad en la zona protegida de destino. Alternativamente, al importar un paquete que incluya Recorridos, puede reutilizar segmentos existentes en la zona protegida de Target.
+>
+>Actualmente, las herramientas de zona protegida no admiten la actualización o sobrescritura de objetos existentes. Puede elegir crear un objeto nuevo o seguir utilizando el objeto existente sin modificaciones.
 
 Para utilizar un objeto existente, seleccione el icono de lápiz situado junto al objeto dependiente.
 
