@@ -3,9 +3,9 @@ title: Tipos de eventos en la extensión SDK para web de Adobe Experience Platfo
 description: Obtenga información acerca de cómo utilizar los tipos de eventos proporcionados por la extensión SDK para web de Adobe Experience Platform en Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # Tipos de eventos
 
 En esta página se describen los tipos de eventos de Adobe Experience Platform que proporciona la extensión de etiquetas de SDK web de Adobe Experience Platform. Se usan para [generar reglas](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=es) y no deben confundirse con el campo `eventType` en el objeto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md).
+
+## Enlace de monitorización activado {#monitoring-hook-triggered}
+
+El SDK web de Adobe Experience Platform incluye vínculos de monitorización que puede utilizar para monitorizar varios eventos del sistema. Estas herramientas son útiles para desarrollar sus propias herramientas de depuración y capturar registros del SDK web.
+
+Para obtener información detallada acerca de los parámetros que contiene cada evento de vínculo de supervisión, consulte la [documentación sobre los vínculos de supervisión del SDK web](../../../../web-sdk/monitoring-hooks.md).
+
+![Imagen de la interfaz de usuario de etiquetas que muestra el tipo de evento del vínculo de monitorización](assets/monitoring-hook-triggered.png)
+
+La extensión de etiqueta del SDK web admite los siguientes vínculos de monitorización:
+
+* **[!UICONTROL onInstanceCreated]**: este evento de vínculo de supervisión se activa cuando se crea correctamente una nueva instancia del SDK web.
+* **[!UICONTROL onInstanceConficonfigured]**: el SDK web activa este evento de vínculo de supervisión cuando el comando [`configure`](../../../../web-sdk/commands/configure/overview.md) se resuelve correctamente
+* **[!UICONTROL onBeforeCommand]**: el SDK web activa este evento de vínculo de supervisión antes de ejecutar cualquier otro comando. Puede utilizar este vínculo de monitorización para recuperar las opciones de configuración de un comando específico.
+* **[!UICONTROL onCommandResolved]**: este evento de vínculo de supervisión se activa antes de resolver la promesa de comando. Puede utilizar esta función para ver las opciones y el resultado del comando.
+* **[!UICONTROL onCommandRejected]**: este evento de vínculo de supervisión se activa cuando se rechaza una promesa de comando y contiene información sobre la causa del error.
+* **[!UICONTROL onBeforeNetworkRequest]**: este evento de vínculo de supervisión se activa antes de que se ejecute una solicitud de red.
+* **[!UICONTROL onNetworkResponse]**: este evento de vínculo de supervisión se activa cuando el explorador recibe una respuesta.
+* **[!UICONTROL onNetworkError]**: este evento de vínculo de supervisión se activa cuando falla la solicitud de red.
+* **[!UICONTROL onBeforeLog]**: este evento de vínculo de supervisión se activa antes de que el SDK web registre algo en la consola.
+* **[!UICONTROL onContentRendering]**: este evento de vínculo de supervisión se activa mediante el componente `personalization` y le ayuda a depurar la representación del contenido de personalización. Este evento puede tener diferentes estados:
+   * `rendering-started`: indica que el SDK web está a punto de procesar propuestas. Antes de que el SDK web empiece a procesar una vista o un ámbito de decisión, en el objeto `data` puede ver las propuestas que están a punto de ser representadas por el componente `personalization` y el nombre del ámbito.
+   * `no-offers`: indica que no se recibió carga útil para los parámetros solicitados.
+   * `rendering-failed`: indica que el SDK web no pudo procesar una propuesta.
+   * `rendering-succeeded`: indica que se ha completado el procesamiento para un ámbito de decisión.
+   * `rendering-redirect`: indica que el SDK web ejecutará una propuesta de redirección.
+* **[!UICONTROL onContentHiding]**: este evento de vínculo de supervisión se activa cuando se aplica o se quita un estilo de ocultamiento previo.
+
 
 ## [!UICONTROL Enviar evento completado]
 

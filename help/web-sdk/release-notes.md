@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
+source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 
 - Ahora se admiten [invalidaciones de secuencia de datos](../datastreams/overrides.md) al iniciar sesiones de contenidos.
 
-- Se ha agregado compatibilidad con los tokens de respuesta de Adobe Target en el vínculo de monitorización de procesamiento correcto.
+- Se ha agregado compatibilidad con los tokens de respuesta de Adobe Target en el vínculo de monitorización [`onContentRendering`](monitoring-hooks.md#onContentRendering).
 
 **Correcciones y mejoras**
 
