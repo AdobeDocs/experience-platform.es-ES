@@ -2,9 +2,9 @@
 title: Prioridad de espacios de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1732'
 ht-degree: 2%
 
 ---
@@ -150,6 +150,8 @@ La eliminación de registros de higiene de datos solicita funciones de la siguie
 Para obtener más información, lea la [descripción general avanzada de la administración del ciclo vital](../../hygiene/home.md).
 
 ### Atributos calculados
+
+Los atributos calculados utilizan la prioridad de área de nombres para almacenar el valor de atributo calculado. Para un evento determinado, la identidad con la prioridad de área de nombres más alta tendrá el valor del atributo calculado escrito en él. Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
 
 Los atributos calculados no utilizan la prioridad de área de nombres para calcular valores. Si utiliza atributos calculados, debe asegurarse de que el CRMID está designado como su identidad principal para WebSDK. Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
 
