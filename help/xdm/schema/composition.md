@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conceptos básicos de composición de esquemas
 description: Obtenga información acerca de los esquemas XDM (Experience Data Model) y los componentes básicos, los principios y las prácticas recomendadas para componer esquemas en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4365'
 ht-degree: 8%
 
 ---
@@ -223,6 +223,10 @@ La siguiente captura de pantalla muestra cómo se representan los grupos de camp
 
 Para obtener la lista más actualizada de grupos de campos XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/fieldgroups). También puede consultar la guía [Exploración de componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
 
+>[!NOTE]
+>
+> Los grupos de campos XDM estándar siempre están evolucionando y algunos grupos de campos han quedado obsoletos. Para obtener la lista más actualizada de grupos de campos obsoletos, consulte la [sección de grupos de campos obsoletos](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) en el repositorio XDM oficial.
+
 ### Tipo de datos {#data-type}
 
 Los tipos de datos se utilizan como tipos de campo de referencia en clases o esquemas de la misma manera que los campos literales básicos. La diferencia clave es que los tipos de datos pueden definir varios subcampos de la misma manera que los grupos de campos. La diferencia clave entre ellos es que los tipos de datos se pueden incluir en cualquier lugar de un esquema agregándolo como el &quot;tipo de datos&quot; de un campo. Aunque los grupos de campos solo son compatibles con determinadas clases, los tipos de datos se pueden incluir en cualquier clase principal o grupo de campos.
@@ -238,6 +242,10 @@ La siguiente captura de pantalla muestra cómo se representan los tipos de datos
 ![Diagrama del Editor de esquemas para una persona individual con el objeto Nombre completo y los atributos resaltados.](../images/schema-composition/data-type.png)
 
 Para obtener la lista más actualizada de tipos de datos XDM estándar disponibles, consulte el [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/datatypes). También puede consultar la guía [Exploración de componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
+
+>[!NOTE]
+>
+> Los tipos de datos XDM estándar siempre están evolucionando y algunos tipos de datos han quedado obsoletos. Para obtener la lista más actualizada de tipos de datos obsoletos, consulte la [sección de tipos de datos obsoletos](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) en el repositorio XDM oficial.
 
 ### Campo {#field}
 
