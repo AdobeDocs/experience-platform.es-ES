@@ -1,11 +1,11 @@
 ---
-title: Notas de la versión de Adobe Experience Platform de octubre de 2024
+title: 'Notas de la versión de Adobe Experience Platform: octubre de 2024'
 description: Las notas de la versión de octubre de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 35%
+ht-degree: 78%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Tipo | Función | Descripción |
 | --- | --- | --- |
-| Etiquetas y extensiones | Vista JSON de Adobe Analytics | Ahora puede utilizar la extensión de etiquetas de Adobe Analytics para examinar eVars, props y configuración de eventos como JSON, que ahora se puede incluir en la extensión del SDK web y exportar para su edición. También puede cargar o copiar estos datos y almacenarlos en su dispositivo. Lea la [documentación de la extensión de Adobe Analytics](../../tags/extensions/client/analytics/overview.md) para obtener más información. |
+| Etiquetas y extensiones | Vista JSON de Adobe Analytics | Ahora puede utilizar la extensión de etiquetas de Adobe Analytics para examinar eVars, props y configuración de eventos como JSON, que ahora se puede incluir en la extensión de SDK web y exportar para su edición. También puede cargar o copiar estos datos y almacenarlos en su dispositivo. Lea la [documentación de la extensión de Adobe Analytics](../../tags/extensions/client/analytics/overview.md) para obtener más información. |
 
 {style="table-layout:auto"}
 
@@ -62,9 +62,9 @@ Para obtener más información, lea la [Información general sobre la recopilaci
 
 | Función | Descripción |
 | ----------- | ----------- |
-| [Compatibilidad con exportación de matrices disponible en general](../../destinations/ui/export-arrays-calculated-fields.md) | Ahora todos los clientes pueden usar la opción **[!UICONTROL Agregar campo calculado]** al activar las audiencias *en destinos basados en archivos* para exportar matrices completas o elementos de matrices. Tenga en cuenta que todavía necesita utilizar la función `array_to_string` para acoplar la matriz en una cadena en el archivo de destino. <br> ![Agregar selección de campo calculado con funciones y campos.](../2024/assets/october/array-export.gif "Agregue un campo calculado con una selección de la función array_to_string y la matriz de organizaciones."){width="250" align="center" zoomable="yes"} |
-| [Mejoras en la precisión de los informes para destinos de streaming](/help/destinations/ui/export-datasets.md) | A partir de octubre de 2024, Adobe implementará una actualización para aumentar la precisión de la creación de informes en los destinos de flujo continuo. Esta mejora garantiza una mejor alineación entre el Experience Platform y los informes de las plataformas de destino. <br> Antes de esta actualización, **[!UICONTROL las identidades fallaron]** e incluyeron todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total. <br> Esta mejora se aplica actualmente a [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md), pero se implementará gradualmente en otros destinos de flujo de Experience Platform. Tras esta mejora, es posible que los usuarios del destino [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) vean una caída esperada en su recuento de **[!UICONTROL Identidades con errores]**. |
-| Implicaciones flexibles de evaluación de audiencia en [activación de audiencia por lotes](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Si ejecuta [evaluación de audiencia flexible](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) en audiencias que ya están configuradas para activarse después de la evaluación de segmentos, las audiencias se activarán en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior. <br> Esto podría hacer que las audiencias se exporten varias veces al día, según las acciones que realice. |
+| [Compatibilidad con exportación de matrices disponible en general](../../destinations/ui/export-arrays-calculated-fields.md) | Ahora todos los clientes pueden usar la opción **[!UICONTROL Añadir campo calculado]** al activar los públicos en *destinos basados en archivos* para exportar matrices completas o elementos de matrices. Tenga en cuenta que todavía necesita utilizar la función `array_to_string` para comprimir la matriz en una cadena en el archivo de destino. <br> ![Añadir selección de campos calculados con funciones y campos.](../2024/assets/october/array-export.gif "Añada un campo calculado con una selección de la función array_to_string y la matriz de organizaciones."){width="250" align="center" zoomable="yes"} |
+| [Mejoras en la precisión de la creación de informes para destinos de streaming](/help/destinations/ui/export-datasets.md) | A partir de octubre de 2024, Adobe implementará gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre el Experience Platform y la creación de informes de las plataformas de destino. <br> Antes de esta actualización, **[!UICONTROL Identities failed]** incluía todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total. <br> Esta mejora se aplica actualmente a un [destino de segmentación por lista de clientes de Google](../../destinations/catalog/advertising/google-customer-match.md), pero se implementará gradualmente en otros destinos de streaming de Experience Platform. Tras esta mejora, es posible que los usuarios del destino de [segmentación por lista de clientes de Google](../../destinations/catalog/advertising/google-customer-match.md) vean una caída esperada en su recuento de **[!UICONTROL Identities failed]**. |
+| Implicaciones flexibles de evaluación de público en [Audience Activation por lotes](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Si ejecuta una [evaluación de público flexible](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) en públicos que ya están configuradas para activarse después de la evaluación de segmentos, los públicos se activarán en cuanto finalice el trabajo de evaluación de público flexible, independientemente de cualquier trabajo de activación diario anterior. <br> Esto podría hacer que los públicos se exporten varias veces al día, según las acciones realizadas. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Para obtener más información, lea la [Información general de destinos](../../
 
 | Función | Descripción |
 | ------- | ----------- |
-| [!BADGE Disponibilidad limitada]{type=Informative} Evaluación flexible de la audiencia | La evaluación flexible de audiencias le permite crear rápidamente nuevas audiencias bajo demanda para comunicaciones en las que el tiempo es un factor importante. Encontrará más información sobre esta nueva característica en la [documentación de Audience Portal](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
+| [!BADGE Disponibilidad limitada]{type=Informative} Evaluación de público flexible | La evaluación de público flexible le permite crear rápidamente nuevos públicos bajo demanda para comunicaciones en las que el tiempo es un factor importante. Encontrará más información sobre esta nueva función en la [documentación de Portal de público](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
 
 {style="table-layout:auto"}
 
@@ -92,8 +92,8 @@ Adobe Experience Platform está diseñado para enriquecer las aplicaciones de ex
 
 | Función | Descripción |
 | --- | --- |
-| Uso compartido de paquetes de herramientas de zona protegida | Ahora puede utilizar las herramientas de zona protegida para exportar e importar fácilmente configuraciones de zona protegida entre zonas protegidas de diferentes organizaciones. Ahora hay dos categorías de paquetes compartidos disponibles: <br><ul><li>**[Paquete privado](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** Use el uso compartido de paquetes privados con organizaciones que hayan aprobado la solicitud de uso compartido de la organización de origen.</li><li>**[Paquete público](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** Los paquetes públicos se pueden compartir sin aprobaciones adicionales y se importan fácilmente mediante la carga útil del paquete.</li></ul><br>Para obtener más información sobre estas características, lea la guía sobre [compartir paquetes entre organizaciones](../../sandboxes/ui/sharing-packages-across-orgs.md). |
-| [Uso compartido de paquetes](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) en la API de herramientas de la zona protegida | Utilice la API de herramientas de zona protegida para realizar solicitudes a dos nuevos extremos, `/handshake` y `/transfer`, para compartir en varias organizaciones, recuperar y crear solicitudes de uso compartido de paquetes. Se ha agregado una solicitud adicional al extremo `/packages` para recuperar la carga útil de un paquete. |
+| Uso compartido de paquetes de herramientas de zona protegida | Ahora puede utilizar las herramientas de zona protegida para exportar e importar fácilmente configuraciones de zona protegida entre zonas protegidas de diferentes organizaciones. Ahora hay dos categorías de paquetes compartidos disponibles:<br><ul><li>**[Paquete privado](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** use el uso compartido de paquetes privados con organizaciones que hayan aprobado la solicitud de uso compartido de la organización de origen.</li><li>**[Paquete público](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** los paquetes públicos se pueden compartir sin aprobaciones adicionales y se importan fácilmente mediante la carga útil del paquete.</li></ul><br>Para obtener más información sobre estas funciones, lea la guía sobre el [uso compartido de paquetes entre organizaciones](../../sandboxes/ui/sharing-packages-across-orgs.md). |
+| [Uso compartido de paquetes](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) en la API de herramientas de la zona protegida | Utilice la API de herramientas de zona protegida para realizar solicitudes a dos nuevos puntos finales, `/handshake` y `/transfer`, para compartir entre varias organizaciones, recuperar y crear solicitudes de uso compartido de paquetes. Se ha añadido una solicitud adicional al punto final `/packages` para recuperar la carga útil de un paquete. |
 
 {style="table-layout:auto"}
 
@@ -109,7 +109,7 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con el filtrado de entidades de actividad estándar en [!DNL Marketo Engage] | Puede usar la API [!DNL Flow Service] para filtrar entidades de actividad estándar al ingerir datos de su origen [!DNL Marketo Engage]. Lea la guía sobre [filtrado [!DNL Marketo] datos de actividad estándar](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) para obtener más información. |
+| Compatibilidad con el filtrado de entidades de actividad estándar en [!DNL Marketo Engage] | Puede usar la API de [!DNL Flow Service] para filtrar entidades de actividad estándar al ingerir datos del origen de [!DNL Marketo Engage]. Lea la guía sobre [filtrado de datos de actividad estándar de [!DNL Marketo] ](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) para obtener más información. |
 
 {style="table-layout:auto"}
 
