@@ -4,9 +4,9 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
+source-git-commit: 37192addffea094cb2d2f3b0201bb128c912e762
 workflow-type: tm+mt
-source-wordcount: '2855'
+source-wordcount: '2867'
 ht-degree: 15%
 
 ---
@@ -226,7 +226,7 @@ El panel de uso de licencias informa sobre varias métricas únicas que se aplic
 | [!UICONTROL Número de paquetes de riqueza de perfiles] | Un aumento en su volumen total de datos autorizado de 25 KB por perfil para cada paquete de riqueza de perfiles adicional. |
 | [!UICONTROL Horas de cálculo del servicio de consultas] | Una medida de la cantidad de tiempo que los motores de servicios de consulta tardan en leer, procesar y escribir datos en el lago de datos cuando se ejecuta una consulta por lotes. |
 | [!UICONTROL Nº de paquetes de segmentación de transmisión] | Los paquetes actualizan el abono de segmentos de un perfil de persona a medida que los nuevos datos entran en el servicio de segmentación a través de un flujo de streaming. La pertenencia a segmentos se evalúa en función de los atributos de perfil de la persona actual y el valor del evento actual, sin tener en cuenta el comportamiento histórico. La segmentación por secuencias es una función compartida. |
-| [!UICONTROL Volumen total de datos] | Cantidad total de datos disponibles para que el servicio de perfil de Adobe Experience Platform los utilice en los flujos de trabajo de participación. |
+| [!UICONTROL Volumen total de datos] | Cantidad total de datos disponibles para que el servicio de perfil de Adobe Experience Platform los utilice en los flujos de trabajo de participación. Consulte las [preguntas más frecuentes acerca del volumen total de datos](../../landing/license-usage-and-guardrails/total-data-volume.md) para obtener más información. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

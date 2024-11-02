@@ -1,43 +1,62 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;guía de solución de problemas;faq;solución de problemas;
 solution: Experience Platform
-title: Preguntas frecuentes
-description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
+title: Preguntas frecuentes sobre el servicio de consultas y Data Distiller
+description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas y Data Distiller. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
+source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
 workflow-type: tm+mt
-source-wordcount: '4564'
-ht-degree: 1%
+source-wordcount: '5055'
+ht-degree: 0%
 
 ---
 
-# Preguntas frecuentes
+# Preguntas frecuentes sobre el servicio de consultas y Data Distiller
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre el servicio de consultas y proporciona una lista de los códigos de error más frecuentes al utilizar el servicio de consultas. Si tiene alguna pregunta o solución de problemas relacionada con otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas para Experience Platform](../landing/troubleshooting.md).
+Este documento responde a las preguntas más frecuentes sobre el servicio de consultas y Data Distiller. También incluye códigos de error comúnmente vistos al utilizar el producto &quot;Consultas&quot; para la validación de datos o escribir datos transformados de nuevo en el lago de datos. Si tiene alguna pregunta o desea solucionar problemas de otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas para Experience Platform](../landing/troubleshooting.md).
 
-La siguiente lista de respuestas a las preguntas más frecuentes se divide en las siguientes categorías:
+Para aclarar cómo Query Service y Data Distiller trabajan juntos en Adobe Experience Platform, aquí hay dos preguntas básicas.
+
+## ¿Cuál es la relación entre Query Service y Data Distiller?
+
+Query Service y Data Distiller son componentes distintos y complementarios que proporcionan capacidades específicas de consulta de datos. El servicio de consultas está diseñado para que las consultas ad hoc exploren, validen y experimenten con los datos ingeridos sin alterar el lago de datos. Por el contrario, Data Distiller se centra en consultas por lotes que transforman y enriquecen los datos, con resultados almacenados de nuevo en el lago de datos para uso futuro. Las consultas por lotes en Data Distiller se pueden programar, monitorizar y administrar, lo que permite un procesamiento y una manipulación de datos más profundos que el servicio de consultas por sí solo no facilita.
+
+En conjunto, Query Service facilita perspectivas rápidas, mientras que Data Distiller permite transformaciones de datos profundas y persistentes.
+
+## ¿Cuál es la diferencia entre Query Service y Data Distiller?
+
+**Servicio** de consulta: se utiliza para consultas SQL centradas en la exploración, el validación y la experimentación de datos. Las salidas no se almacenan en el lago de datos y el tiempo de ejecución está limitado a 10 minutos. Las consultas ad hoc son adecuadas para realizar comprobaciones y análisis de datos ligeros e interactivos.
+
+**Distiller** de datos: permite consultas por lotes que procesan, limpian y enriquecen datos, con resultados almacenados nuevamente en el lago de datos. Estas consultas admiten una ejecución más prolongada (hasta 24 horas) y funciones adicionales gustar programación, supervisión y sistema de informes acelerado. Data Distiller es ideal para la manipulación de datos en profundidad y tareas de procesamiento de datos programadas.
+
+Consulte el documento](./packaging.md) de empaquetado del [servicio de consultas para obtener información más detallada.
+
+## Categorías de preguntas {#categories}
+
+El siguiente lista de respuestas a las preguntas más frecuentes se divide en las siguientes categorías:
 
 - [General](#general)
-- [IU de consultas](#queries-ui) 
+- [Data Distiller](#data-distiller)
+- [Consultas IU](#queries-ui)
 - [Ejemplos de conjuntos de datos](#dataset-samples)
 - [Exportación de datos](#exporting-data)
 - [Sintaxis SQL](#sql-syntax) 
-- [Consultas de ITAS](#itas-queries)
+- [Consultas ITAS](#itas-queries)
 - [Herramientas de terceros](#third-party-tools)
 - [Errores de API de PostgreSQL](#postgresql-api-errors)
 - [Errores de API de REST](#rest-api-errors)
 
-## Preguntas generales del servicio de consultas {#general}
+## Preguntas del Servicio de consulta general {#general}
 
-Esta sección incluye información sobre el rendimiento, los límites y los procesos.
+Esta sección incluye información sobre rendimiento, límites y procesos.
 
-### ¿Puedo desactivar la función de autocompletar en el Editor del servicio de consultas?
+### ¿Puedo desactivar la función de autocompletar en el editor del servicio de consultas?
 
 +++Respuesta
-No. El editor no admite actualmente la desactivación de la característica de autocompletar.
+No. Actualmente, el editor no admite la función de completado automático.
 +++
 
-### ¿Por qué el Editor de consultas a veces se vuelve lento cuando escribo en una consulta?
+### ¿Por qué el editor de consultas a veces se vuelve lento cuando escribo un consulta?
 
 +++Respuesta
 Una causa potencial es la función de autocompletar. La función procesa ciertos comandos de metadatos que ocasionalmente pueden ralentizar el editor durante la edición de consultas.
@@ -118,39 +137,39 @@ Los siguientes pasos describen cómo mostrar una vista tabular de un conjunto de
 
 - Seleccione cualquier campo del esquema para mostrar su contenido en una columna aplanada. El nombre de la columna se muestra encima de su contenido en el lado derecho de la página. Debe copiar este nombre para utilizarlo para consultar este conjunto de datos.
 
-![El esquema XDM y la vista tabular de los datos aplanados. El nombre de columna de un conjunto de datos anidado se resalta en la interfaz de usuario.](./images/troubleshooting/column-name.png)
+![El XDM esquema y vista tabular de los datos acoplados. El nombre de columna de un conjunto de datos anidado se resalta en el IU.](./images/troubleshooting/column-name.png)
 
-Consulte la documentación para obtener instrucciones completas sobre [cómo trabajar con estructuras de datos anidadas](./key-concepts/nested-data-structures.md) con el Editor de consultas o un cliente de terceros.
+Consulte la documentación para obtener instrucciones completas sobre [cómo trabajar con estructuras](./key-concepts/nested-data-structures.md) de datos anidadas mediante el Editor de consultas o un cliente terceros.
 +++
 
-### ¿Cómo acelero una consulta en un conjunto de datos que contiene matrices?
+### ¿Cómo puedo acelerar un consulta en un conjunto de datos que contiene matrices?
 
 +++Respuesta
-Para mejorar el rendimiento de las consultas en conjuntos de datos que contienen matrices, debería [explorar la matriz](https://spark.apache.org/docs/latest/api/sql/index.html#explode) como una [consulta CTAS](./sql/syntax.md#create-table-as-select) en tiempo de ejecución y luego explorarla para encontrar más oportunidades que mejoren su tiempo de procesamiento.
+Para mejorar el rendimiento de las consultas en conjuntos de datos que contienen matrices, debe [explotar la matriz](https://spark.apache.org/docs/latest/api/sql/index.html#explode) como un [consulta](./sql/syntax.md#create-table-as-select) CTAS en tiempo de ejecución y, a continuación, explorarla en busca de oportunidades para mejorar su tiempo de procesamiento.
 +++
 
-### ¿Por qué mi consulta CTAS sigue procesándose después de muchas horas para un pequeño número de filas?
+### ¿Por qué mi CTAS consulta sigue procesándose después de muchas horas solo para un pequeño número de filas?
 
 +++Respuesta
-Si la consulta ha tardado mucho tiempo en un conjunto de datos muy pequeño, póngase en contacto con el servicio de atención al cliente.
+Si el consulta ha tardado mucho tiempo en un conjunto de datos muy pequeño, póngase en contacto con el servicio de atención al cliente.
 
-Puede haber varias razones para que una consulta se bloquee durante el procesamiento. Para determinar la causa exacta se requiere un análisis en profundidad caso por caso. [Póngase en contacto con el servicio de atención al cliente de Adobe](#customer-support) para que sea este proceso.
+Puede haber varias razones por las que un consulta atascado durante el procesamiento. Para determinar la causa exacta se requiere una análisis en profundidad caso por caso. [Póngase en contacto con Adobe Systems atención](#customer-support) al cliente para realizar este proceso.
 +++
 
-### ¿Cómo puedo contactar con Atención al cliente de Adobe? {#customer-support}
+### ¿Cómo me pongo en contacto con Adobe Systems atención al cliente? {#customer-support}
 
 +++Respuesta
-[Hay disponible una lista completa de los números de teléfono de atención al cliente de Adobe](https://helpx.adobe.com/ca/contact/phone.html) en la página de ayuda de Adobe. También puede encontrar ayuda en línea si completa los siguientes pasos:
+[Una lista completa de Adobe Systems números](https://helpx.adobe.com/ca/contact/phone.html) de teléfono de atención al cliente está disponible en el Página de ayuda de Adobe Systems. Alternativamente, también puede encontrar ayuda en línea completando los siguientes pasos:
 
-- Vaya a [https://www.adobe.com/](https://www.adobe.com/) en su explorador web.
-- En el lado derecho de la barra de navegación superior, selecciona **[!UICONTROL Iniciar sesión]**.
+- Desplácese hasta [https://www.adobe.com/](https://www.adobe.com/) en su explorador web.
+- En el lado derecho de la barra de navegación superior, seleccione **[!UICONTROL Iniciar sesión]**.
 
-![El sitio web de Adobe con el inicio de sesión resaltado.](./images/troubleshooting/adobe-sign-in.png)
+![El sitio web Adobe Systems con Iniciar sesión resaltado.](./images/troubleshooting/adobe-sign-in.png)
 
-- Utilice su Adobe ID y contraseña registrados con su licencia de Adobe.
+- Utilice sus Adobe ID y contraseña registrados con su licencia Adobe Systems.
 - Seleccione **[!UICONTROL Ayuda y asistencia]** en la barra de navegación superior.
 
-![Menú desplegable de la barra de navegación superior con Ayuda y soporte técnico, Soporte técnico para empresas y Contáctenos resaltados.](./images/troubleshooting/help-and-support.png)
+![El menú desplegable de la barra navegación superior con Ayuda y soporte, Soporte para empresas y Contáctenos resaltado.](./images/troubleshooting/help-and-support.png)
 
 Aparece un banner desplegable que contiene la sección [!UICONTROL Ayuda y soporte técnico]. Seleccione **[!UICONTROL Póngase en contacto con nosotros]** para abrir el Asistente virtual del Servicio de atención al cliente de Adobe o seleccione **[!UICONTROL Soporte empresarial]** para obtener ayuda específica para organizaciones grandes.
 +++
@@ -294,20 +313,20 @@ El servicio de consulta proporciona varias funciones de ayuda de SQL integradas 
 Hasta ahora, no todas las funciones de código abierto [!DNL Spark SQL] se han probado en los datos del lago de datos. Una vez probadas y confirmadas, se añadirán a la lista de admitidas. Consulte la [lista de [!DNL Spark SQL] funciones](./sql/spark-sql-functions.md) compatibles para buscar una función específica.
 +++
 
-### ¿Pueden los usuarios definir sus propias funciones definidas por el usuario (UDF) que se pueden utilizar en otras consultas?
+### ¿Pueden los usuarios definir sus propias funciones definidas usuario (UDF) que se pueden utilizar en otras consultas?
 
 +++Respuesta
-Debido a consideraciones de seguridad de los datos, no se permite la definición personalizada de FDU.
+Debido a consideraciones de seguridad de datos, no se permite la definición personalizada de UDF.
 +++
 
-### ¿Qué debo hacer si falla mi consulta programada?
+### ¿Qué debo hacer si mi consulta programada falla?
 
 +++Respuesta
-En primer lugar, compruebe los registros para conocer los detalles del error. La sección de preguntas más frecuentes sobre [búsqueda de errores en los registros](#error-logs) proporciona más información sobre cómo hacerlo.
+En primer lugar, compruebe los registros para averiguar los detalles del error. La sección de preguntas frecuentes sobre [la búsqueda de errores en los](#error-logs) registros proporciona más información sobre cómo hacerlo.
 
-También debería consultar la documentación para obtener instrucciones sobre cómo realizar [consultas programadas en la interfaz de usuario](./ui/user-guide.md#scheduled-queries) y a través de [la API](./api/scheduled-queries.md).
+También debe consultar la documentación para obtener orientación sobre cómo realizar [consultas programadas en el IU](./ui/user-guide.md#scheduled-queries) y a través [de la API](./api/scheduled-queries.md).
 
-Tenga en cuenta que al usar [!DNL Query Editor] solo puede agregar una programación a una consulta que ya se haya creado y guardado. Esto no se aplica a la API [!DNL Query Service].
+Tenga en cuenta que, al utilizar el [!DNL Query Editor] solo puede agregar un programa a un consulta que ya se ha creado y guardado. Esto no se aplica a la [!DNL Query Service] API.
 +++
 
 ### ¿Qué significa el error &quot;Límite de sesión alcanzado&quot;?
@@ -607,6 +626,38 @@ Sí, puede usar el comando `CREATE VIEW` sin acceso a Data Distiller. Este coman
 Sí. Sin embargo, algunos clientes de terceros, como DbVisualizer, pueden requerir un identificador independiente antes y después de un bloque SQL para indicar que una parte de un script debe gestionarse como una sola instrucción. Encontrará más detalles en la [documentación de bloque anónimo](./key-concepts/anonymous-block.md) o en [la documentación oficial de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
+## Data Distiller {#data-distiller}
+
+### ¿Cómo se rastrea el uso de licencias de Data Distiller y dónde puedo ver esta información?
+
++++Respuesta\
+La métrica principal utilizada para rastrear el uso de consultas por lotes es Calcular hora. Tiene acceso a esta información y a su consumo actual a través del [tablero de uso de licencias](../dashboards/guides/license-usage.md).
++++
+
+### ¿Qué es una Compute Hour?
+
++++Respuesta\
+Las horas calculadas son la medida del tiempo que tardan los motores de servicios de consulta en leer, procesar y escribir datos en el lago de datos cuando se ejecuta una consulta por lotes.
++++
+
+### ¿Cómo se miden las horas calculadas?
+
++++Respuesta\
+Las horas calculadas se miden de forma acumulativa en todas las zonas protegidas autorizadas.
++++
+
+### ¿Por qué a veces noto una variación en el consumo de hora calculado incluso cuando ejecuto la misma consulta consecutivamente?
+
++++Respuesta\
+Calcular las horas de una consulta puede fluctuar debido a varios factores. Estos incluyen el volumen de datos procesado, la complejidad de las operaciones de transformación dentro de la consulta SQL, etc. El servicio de consulta escala el clúster en función de los parámetros anteriores para cada consulta, lo que puede provocar diferencias en las horas calculadas.
++++
+
+### ¿Es normal notar una reducción en las horas calculadas cuando ejecuto la misma consulta utilizando los mismos datos durante un largo período de tiempo? ¿Por qué podría estar pasando esto?
+
++++Respuesta\
+La infraestructura back-end se mejora constantemente para optimizar la utilización de Compute Hour y el tiempo de procesamiento. Como resultado, es posible que observe cambios con el tiempo a medida que se implementan las mejoras de rendimiento.
++++
+
 ## IU de consultas
 
 ### La opción &quot;Crear consulta&quot; se bloquea &quot;Inicializando conexión...&quot; al intentar conectarse al servicio de consultas. ¿Cómo puedo solucionar el problema?
@@ -743,7 +794,7 @@ La siguiente tabla proporciona códigos de error PSQL y sus posibles causas.
 | Código de error | Estado de conexión | Descripción | Posible causa |
 |------------|---------------------------|-------------|----------------|
 | **08P01** | N/A | Tipo de mensaje no compatible | Tipo de mensaje no compatible |
-| **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
+| **28P01** | Inicio-up: autenticación | Contraseña no válida | Token de autenticación no válido |
 | **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
 | **42P12** | Inicio: autenticación | No se han encontrado tablas | No se han encontrado tablas para su uso |
 | **42601** | Consulta | Error de sintaxis | Error de comando o sintaxis no válido |
