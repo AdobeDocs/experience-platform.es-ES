@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
+source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1952'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Después de agregar una regla personalizada, selecciona **[!UICONTROL Guardar]**
 
 ## [!UICONTROL Excluir] {#exclude-block}
 
-El tipo de bloque **[!UICONTROL Exclude]** le permite excluir subaudiencias o atributos especificados de la nueva audiencia mayor.
+El tipo de bloque **[!UICONTROL Exclude]** le permite excluir una subaudiencia o atributos especificados de su nueva audiencia mayor.
 
 Para agregar un bloque **[!UICONTROL Exclude]**, selecciona el icono **+**, seguido de **[!UICONTROL Exclude]**.
 
@@ -100,7 +100,7 @@ Se ha agregado el bloque **[!UICONTROL Exclude]**. Cuando se selecciona este blo
 
 ### Excluir por audiencia {#exclude-audience}
 
-Si excluyes por audiencia, puedes seleccionar las audiencias que deseas excluir seleccionando **[!UICONTROL Agregar audiencia]**.
+Si excluyes por audiencia, puedes seleccionar la audiencia que deseas excluir seleccionando **[!UICONTROL Agregar audiencia]**.
 
 ![El botón [!UICONTROL Agregar audiencia] está seleccionado, lo que le permite elegir la audiencia que desea excluir.](../images/ui/audience-composition/add-excluded-audience.png)
 
@@ -108,7 +108,7 @@ Si excluyes por audiencia, puedes seleccionar las audiencias que deseas excluir 
 >
 >Solo se pueden usar las **audiencias publicadas** creadas mediante el Generador de segmentos. Las audiencias creadas con Composición de audiencias y audiencias generadas externamente están disponibles **no**.
 
-Aparecerá una lista de audiencias. Seleccione **[!UICONTROL Agregar]** para agregar las audiencias que desee excluir al bloque de exclusión.
+Aparecerá una lista de audiencias. Seleccione **[!UICONTROL Agregar]** para agregar la audiencia que desee excluir al bloque de exclusión.
 
 ![Aparece una lista de audiencias. Puede seleccionar la audiencia que desea agregar en este cuadro de diálogo.](../images/ui/audience-composition/select-audience.png)
 
