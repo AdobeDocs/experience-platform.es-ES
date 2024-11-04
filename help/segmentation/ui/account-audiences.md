@@ -1,13 +1,13 @@
 ---
 title: Audiencias de cuenta
 description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perfiles de cuenta en destinos de flujo descendente.
-badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 27%
+source-wordcount: '1518'
+ht-degree: 21%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 >[!AVAILABILITY]
 >
->Las audiencias de cuenta solo están disponibles en [B2B Edition de Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) y en [B2P Edition de Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>Las audiencias de cuenta solo están disponibles en [B2B edition de Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) y en [B2P Edition de Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Con la segmentación de cuentas, Adobe Experience Platform le permite ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas.
 
@@ -66,6 +66,39 @@ En la ficha [!UICONTROL Audiencias], puede agregar audiencias basadas en persona
 ![La ficha Audiencias del Generador de segmentos está resaltada.](../images/ui/account-audiences/audiences.png)
 
 Para obtener más información sobre el uso del Generador de segmentos, lea la [guía de la interfaz de usuario del Generador de segmentos](./segment-builder.md).
+
+### Establecer relaciones {#relationships}
+
+De forma predeterminada, para las audiencias de cuenta, la interfaz de usuario del Generador de segmentos muestra la relación directa entre una cuenta y una persona. Sin embargo, hay otros tipos de relación disponibles para las audiencias de cuenta.
+
+Para usar los tipos de relación alternativos, seleccione ![el icono de configuración](../../images/icons/settings.png).
+
+![El icono de configuración está resaltado en la sección Campos.](../images/ui/account-audiences/select-settings.png)
+
+En la ficha [!UICONTROL Configuración], seleccione **[!UICONTROL Mostrar selectores de relación]** en la sección **[!UICONTROL Relación de campos]**.
+
+![La opción Mostrar selectores de relación está seleccionada en la sección Relación de campos de la ficha Configuración.](../images/ui/account-audiences/show-relation-selectors.png)
+
+Vuelva a seleccionar ![el icono de configuración](../../images/icons/settings.png) para volver a la ficha [!UICONTROL Campos]. Ahora puede ver la sección **[!UICONTROL Establecer relaciones]**, que le permite establecer cómo está conectada la cuenta a la persona y cómo está conectada la persona a la oportunidad.
+
+![Se resalta la sección Establecer relaciones, que muestra las opciones para conectar una cuenta a una persona y para conectar a una persona a una oportunidad.](../images/ui/account-audiences/establish-relationships.png)
+
+Al conectar la cuenta a la persona, puede elegir entre las siguientes opciones:
+
+| Opción | Descripción |
+| ------ | ----------- |
+| Relación directa | La conexión directa entre la cuenta y la persona. Esto especifica a qué cuentas está vinculada cada persona a través de la matriz de `accountID` valores en la matriz `personComponents` del esquema person. Esta ruta es la utilizada con más frecuencia. |
+| Relación cuenta con la persona | La relación entre la cuenta y la persona, definida por el objeto `accountPersonRelation`. Esta ruta también permite que cada persona esté conectada a varias cuentas. Se utiliza cuando su organización ha definido una tabla de relación explícita a partir de los datos de origen. |
+| Relación oportunidad-persona | Relación entre la oportunidad y la persona, definida por el objeto `opportunityPersonRelation`. Esto conecta a la persona con una cuenta pasando de la persona de la oportunidad a la oportunidad. Esto permite describir a qué empresas está vinculada la persona a las oportunidades en. |
+
+Al conectar la oportunidad con la persona, puede elegir entre las siguientes opciones:
+
+| Opción | Descripción |
+| ------ | ----------- |
+| Cuenta | La conexión directa entre la cuenta y la oportunidad. Cuando utiliza esto en una audiencia de cuenta, esta ruta conecta a todas las personas de la compañía con la oportunidad. |
+| Relación oportunidad-persona | La relación entre la oportunidad y la persona, que se basa en el objeto oportunidad-persona. Esta ruta conecta solo a las personas que han sido identificadas específicamente como involucradas en una oportunidad a esa oportunidad. |
+
+Después de establecer la relación deseada, puede agregar las personas-audiencias necesarias a la definición del segmento.
 
 ## Activar público {#activate}
 
