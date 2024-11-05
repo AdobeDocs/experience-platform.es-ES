@@ -1,11 +1,11 @@
 ---
 title: Creación de una conexión base de Marketing Cloud de Salesforce mediante la API de Flow Service
-description: Obtenga información sobre cómo autenticar su cuenta de Salesforce Marketing Cloud con Experience Platform mediante la API de Flow Service.
+description: Obtenga información sobre cómo autenticar su cuenta de Marketing Cloud de Salesforce con Experience Platform mediante la API de Flow Service.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 5%
+source-wordcount: '508'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->La integración de origen de [!DNL Salesforce Marketing Cloud] no admite actualmente la ingesta de objetos personalizados.
+>El origen [!DNL Salesforce Marketing Cloud] quedará obsoleto a finales de mayo de 2025. Como alternativa, puede utilizar el origen [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
@@ -46,6 +46,10 @@ Para que [!DNL Flow Service] se conecte con [!DNL Salesforce Marketing Cloud], d
 Para obtener más información sobre cómo empezar, consulte este [[!DNL Salesforce Marketing Cloud] documento](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## Crear una conexión base
+
+>[!IMPORTANT]
+>
+>La integración de origen de [!DNL Salesforce Marketing Cloud] no admite actualmente la ingesta de objetos personalizados.
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 

@@ -2,14 +2,18 @@
 title: Información general sobre el conector Eloqua de oracle
 description: Aprenda a conectar el Oracle Eloqua a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
-source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # Conector [!DNL Oracle Eloqua]
+
+>[!IMPORTANT]
+>
+>El origen [!DNL Oracle Eloqua] quedará obsoleto a finales de mayo de 2025. Como alternativa, puede utilizar el origen [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 

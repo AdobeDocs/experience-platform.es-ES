@@ -3,14 +3,18 @@ keywords: Experience Platform;inicio;temas populares;Nube de servicios de Oracle
 title: Creación de una conexión de Oracle Service Cloud Source en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Cloud Oracle Service mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen de nube de Oracle Service en la interfaz de usuario
+
+>[!IMPORTANT]
+>
+>El origen [!DNL Oracle Service Cloud] quedará obsoleto a finales de mayo de 2025. Como alternativa, puede utilizar el origen [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Este tutorial proporciona los pasos para crear una conexión de origen de Cloud Oracle Service mediante la interfaz de usuario de Adobe Experience Platform.
 
