@@ -2,10 +2,10 @@
 title: Configurar la extensión de etiqueta del SDK web
 description: Obtenga información sobre cómo configurar la extensión de etiquetas de SDK web de Experience Platform en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -170,6 +170,66 @@ Como alternativa a pasar las invalidaciones a través de un comando del SDK web,
 Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
 
 ![Imagen que muestra las invalidaciones de configuración de la secuencia de datos usando la página de extensión de etiquetas del SDK web.](assets/datastream-overrides.png)
+
+De forma predeterminada, la anulación de la configuración de la secuencia de datos está desactivada. La opción **[!UICONTROL Coincidir configuración de secuencia de datos]** está seleccionada de forma predeterminada.
+
+![La interfaz de usuario de la extensión de etiquetas del SDK web que muestra la configuración de secuencia de datos invalida la configuración predeterminada.](assets/datastream-override-default.png)
+
+Para habilitar las invalidaciones de secuencia de datos en la extensión de etiqueta, seleccione **[!UICONTROL Habilitado]** en el menú desplegable.
+
+![La interfaz de usuario de la extensión de etiquetas del SDK web muestra las anulaciones de configuración de secuencia de datos habilitada.](assets/datastream-override-enabled.png)
+
+Después de habilitar las invalidaciones de configuración de la secuencia de datos, puede configurar las invalidaciones para cada servicio descrito a continuación.
+
+La configuración de anulación de la secuencia de datos que aparece a continuación anulará cualquier configuración y regla del conjunto de datos del lado del servidor para el entorno seleccionado.
+
+### Adobe Analytics {#analytics}
+
+Utilice la configuración de esta sección para anular el enrutamiento de datos al servicio Adobe Analytics.
+
+![Imagen de la interfaz de usuario de la extensión de etiquetas del SDK web que muestra la configuración de anulación de secuencia de datos de Adobe Analytics.](assets/datastream-override-analytics.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Deshabilitado]**: Use este menú desplegable para habilitar o deshabilitar el enrutamiento de datos al servicio Adobe Analytics.
+* **[!UICONTROL Grupos de informes]**: Los ID de los grupos de informes de destino en Adobe Analytics. El valor debe ser un grupo de informes de anulación preconfigurado (o una lista de grupos de informes separados por comas) de la configuración del conjunto de datos. Esta configuración anula los grupos de informes principales.
+* **[!UICONTROL Agregar grupo de informes]**: seleccione esta opción para agregar grupos de informes adicionales.
+
+### Adobe Audience Manager {#audience-manager}
+
+Utilice la configuración de esta sección para anular el enrutamiento de datos al servicio Adobe Audience Manager.
+
+![Imagen de la interfaz de usuario de la extensión de etiquetas del SDK web que muestra la configuración de anulación de secuencia de datos de Adobe Audience Manager.](assets/datastream-override-audience-manager.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Deshabilitado]**: Use este menú desplegable para habilitar o deshabilitar el enrutamiento de datos al servicio Adobe Audience Manager.
+* **[!UICONTROL Contenedor de sincronización de ID de terceros]**: El ID del contenedor de sincronización de ID de terceros de destino en el Audience Manager. El valor debe ser un contenedor secundario preconfigurado de la configuración del conjunto de datos y anula el contenedor principal.
+
+### Adobe Experience Platform {#experience-platform}
+
+Utilice la configuración de esta sección para anular el enrutamiento de datos al servicio Adobe Experience Platform.
+
+![Imagen de la interfaz de usuario de la extensión de etiquetas del SDK web que muestra la configuración de anulación de secuencia de datos de Adobe Experience Platform.](assets/datastream-override-experience-platform.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Deshabilitado]**: Use este menú desplegable para habilitar o deshabilitar el enrutamiento de datos al servicio Adobe Experience Platform.
+* **[!UICONTROL Conjunto de datos de evento]**: ID del conjunto de datos de evento de destino en Adobe Experience Platform. El valor debe ser un conjunto de datos secundario preconfigurado de la configuración del conjunto de datos.
+* **[!UICONTROL Offer decisioning]**: utilice este menú desplegable para habilitar o deshabilitar el enrutamiento de datos al servicio [!DNL Offer Decisioning].
+* **[!UICONTROL Segmentación de Edge]**: use este menú desplegable para habilitar o deshabilitar el enrutamiento de datos al servicio [!DNL Edge Segmentation].
+* **[!UICONTROL Destinos de Personalization]**: utilice este menú desplegable para habilitar o deshabilitar el enrutamiento de datos a destinos de personalización.
+* **[!UICONTROL Adobe Journey Optimizer]**: Utilice este menú desplegable para habilitar o deshabilitar el enrutamiento de datos al servicio [!DNL Adobe Journey Optimizer].
+
+### Adobe Reenvío de eventos del lado del servidor {#ssf}
+
+Utilice la configuración de esta sección para anular el enrutamiento de datos al servicio de reenvío de eventos del lado del servidor de Adobe.
+
+![Imagen de la interfaz de usuario de la extensión de etiquetas del SDK web que muestra la configuración de anulación de secuencia de datos del reenvío de eventos del lado del servidor de Adobe.](assets/datastream-override-ssf.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Deshabilitado]**: Utilice este menú desplegable para habilitar o deshabilitar el enrutamiento de datos al servicio de reenvío de eventos del lado del servidor de Adobe.
+
+### Adobe Target {#target}
+
+Utilice la configuración de esta sección para anular el enrutamiento de datos al servicio Adobe Target.
+
+![Imagen de la interfaz de usuario de la extensión de etiquetas del SDK web que muestra la configuración de anulación de secuencia de datos de Adobe Target.](assets/datastream-override-target.png)
+
+* **[!UICONTROL Habilitado]** / **[!UICONTROL Deshabilitado]**: Use este menú desplegable para habilitar o deshabilitar el enrutamiento de datos al servicio Adobe Target.
 
 ## Configuración avanzada
 
