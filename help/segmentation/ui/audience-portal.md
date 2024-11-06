@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
+source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
 workflow-type: tm+mt
-source-wordcount: '4530'
+source-wordcount: '4547'
 ht-degree: 4%
 
 ---
@@ -244,7 +244,7 @@ Aparece la ventana emergente **[!UICONTROL Evaluar audiencias bajo demanda]**, q
 
 ![Se muestran las audiencias que se pueden evaluar mediante una evaluación de audiencia flexible.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-Después de confirmar que se enumeran las audiencias correctas, continúe con la solicitud y comenzará la evaluación flexible de audiencias.
+Después de confirmar que se enumeran las audiencias correctas, puede continuar con la solicitud, y comenzará la evaluación flexible de audiencias. Puede ver el estado de esta evaluación de audiencia en la [vista de supervisión del trabajo de evaluación](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
