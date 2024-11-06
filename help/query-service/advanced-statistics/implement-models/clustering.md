@@ -2,9 +2,9 @@
 title: Algoritmos de clúster
 description: Aprenda a configurar y optimizar varios algoritmos de agrupación en clúster con parámetros clave, descripciones y códigos de ejemplo para ayudarle a implementar modelos estadísticos avanzados.
 role: Developer
-source-git-commit: 4d4e9ae527deb149f02edb39716851e995c23d21
+source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
@@ -112,7 +112,7 @@ Create MODEL modelname OPTIONS(
 
 **Parámetros**
 
-| Parámetro | Descripción | Valor predeterminado | Valores posibles |                                                                                                                                                                  | Valor predeterminado | Valores posibles |
+| Parámetro | Descripción | Valor predeterminado | Valores posibles |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | Número máximo de iteraciones que ejecuta el algoritmo. | 20 | (>= 0) |
 | `OPTIMIZER` | El optimizador o algoritmo de inferencia utilizado para estimar el modelo LDA. Las opciones compatibles son `"online"` (Variaciones de bayas en línea) y `"em"` (Expectación-Maximización). | &quot;en línea&quot; | `online`, `em` |
@@ -127,6 +127,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE` | Para el optimizador `online`: la fracción del corpus muestreada y utilizada en cada iteración de descenso de degradado de minilotes, en el rango `(0, 1]`. | 0,05 | `(0, 1]` |
 | `TOPIC_CONCENTRATION` | Parámetro de concentración (&quot;beta&quot; o &quot;eta&quot;) para el anuncio anterior colocado en las distribuciones de los temas en términos. | Automático | (>= 0) |
 | `TOPIC_DISTRIBUTION_COL` | Columna de salida con estimaciones de la distribución de la mezcla de temas para cada documento. | SIN CONFIGURAR | Cualquier cadena |
+
+{style="table-layout:auto"}
 
 **Ejemplo**
 
