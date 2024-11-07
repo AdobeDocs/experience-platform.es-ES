@@ -2,9 +2,9 @@
 title: Prioridad de espacios de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
+source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -176,7 +176,16 @@ Al seleccionar los datos, deberá especificar un área de nombres, que se utiliz
 
 Esta configuración resulta en calcular puntuaciones solo mediante eventos autenticados.
 
-Para obtener más información sobre, lea los documentos sobre [Attribution AI](../../intelligent-services/attribution-ai/overview.md) y [inteligencia artificial aplicada al cliente](../../intelligent-services/customer-ai/overview.md).
+Para obtener más información, lea los documentos sobre [Attribution AI](../../intelligent-services/attribution-ai/overview.md) y [inteligencia artificial aplicada al cliente](../../intelligent-services/customer-ai/overview.md).
+
+### Destinos creados por socios
+
+Es posible que los resultados actualizados de descalificación de audiencia para perfiles asociados a un dispositivo compartido no se envíen a destinos descendentes. Esto puede ocurrir en ciertos casos excepcionales en los que:
+
+* La calificación de audiencias se basa únicamente en la actividad anónima.
+* Los inicios de sesión en varios perfiles se producen en un corto período de tiempo.
+
+Para obtener más información sobre los destinos creados por el socio, lea la [descripción general de los destinos](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
