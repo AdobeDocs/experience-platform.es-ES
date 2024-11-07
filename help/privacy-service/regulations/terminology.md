@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminología de normas de privacidad
 description: Este documento proporciona definiciones de términos clave relacionados con las regulaciones de privacidad admitidas por Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2404'
 ht-degree: 1%
 
 ---
@@ -52,6 +52,8 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 **Responsable de la protección de datos**: Un experto en privacidad de datos que trabaja de forma independiente para garantizar que una entidad cumple las políticas y procedimientos detallados en el RGPD.
 
 **Sujeto de datos**: Persona física cuyos datos personales procesa un controlador o procesador.
+
+**[!DNL Delaware Personal Data Privacy Act]**: [!DNL Delaware Personal Data Privacy Act] proporciona a los residentes de Delaware derechos para acceder, corregir, eliminar y excluir la venta de datos personales y la publicidad segmentada. La ley se aplica a las empresas que procesan datos para al menos 35 000 consumidores o que obtienen más del 20 % de los ingresos por ventas de datos que afectan a más de 10 000 consumidores. Aplicada por el Departamento de Justicia, incluye prácticas obligatorias de protección de datos y un período de 60 días para abordar las violaciones.
 
 **Actos delegados**: Actos no legislativos adoptados para complementar la legislación existente y proporcionar criterios o claridad.
 
@@ -141,6 +143,8 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 **Seudonimización**: el procesamiento de datos personales de manera que ya no puedan atribuirse a un único sujeto de datos sin el uso de datos adicionales, siempre que esos datos adicionales permanezcan separados para garantizar la no atribución.
 
 ## Q
+
+**[!DNL Quebec Law 25]**: [!DNL Quebec Law 25] mejora los derechos de privacidad de los residentes y exige consentimiento explícito, minimización de datos y derechos para acceder, corregir, eliminar y transferir datos personales. Las organizaciones deben nombrar a un responsable de privacidad, realizar evaluaciones de impacto de la privacidad e informar sobre infracciones. Los plazos de cumplimiento y las sanciones importantes se aplican a las violaciones.
 
 ## R
 
