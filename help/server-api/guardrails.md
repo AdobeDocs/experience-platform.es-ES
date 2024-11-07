@@ -2,9 +2,9 @@
 title: Protecciones de rendimiento para la API de Edge Network Server
 description: Aprenda a utilizar la API de servidor dentro de protecciones de rendimiento óptimas.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 2%
 
 ---
@@ -21,6 +21,8 @@ El Adobe de no es responsable de la degradación del rendimiento causada por los
 >[!IMPORTANT]
 >
 >Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+
+Todas las protecciones de rendimiento descritas en esta página se aplican al nivel de organización de IMS. Para los usuarios con varias organizaciones de IMS configuradas, cada organización está sujeta individualmente a las protecciones de rendimiento que se indican a continuación. Consulte el [glosario de Experience Platform](../landing/glossary.md) para obtener más información sobre [!DNL IMS Organizations].
 
 ## Definiciones
 
