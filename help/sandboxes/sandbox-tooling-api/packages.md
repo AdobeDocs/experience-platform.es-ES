@@ -2,9 +2,9 @@
 title: Punto final de API de paquetes de herramientas de zona protegida
 description: El extremo /packages en la API de herramientas de espacio aislado le permite administrar paquetes mediante programación en Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
+source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2543'
 ht-degree: 10%
 
 ---
@@ -1595,7 +1595,13 @@ Una respuesta correcta devuelve una lista de todas las solicitudes de transferen
 
 ### Actualización de la disponibilidad del paquete de privado a público {#update-availability}
 
-Cambie un paquete de privado a público realizando una solicitud de GET al extremo `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC`. De forma predeterminada, se crea un paquete con disponibilidad privada.
+Cambie un paquete de privado a público realizando una solicitud de GET al extremo `/packages/update`. De forma predeterminada, se crea un paquete con disponibilidad privada.
+
+**Formato de API**
+
+```http
+GET `/packages/update`
+```
 
 **Solicitud**
 
@@ -1603,7 +1609,7 @@ La siguiente solicitud cambia la disponibilidad de los paquetes de privada a pú
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
