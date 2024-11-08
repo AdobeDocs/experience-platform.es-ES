@@ -2,7 +2,7 @@
 title: Conecte su cuenta de Marketing Cloud de Salesforce con el Experience Platform a través de la interfaz de usuario
 description: Obtenga información sobre cómo conectar su cuenta de Marketing Cloud de Salesforce a Experience Platform a través de la interfaz de usuario.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Conecte su cuenta de [!DNL Salesforce Marketing Cloud] al Experience Platform mediante la interfaz de usuario
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >El origen [!DNL Salesforce Marketing Cloud] quedará obsoleto a finales de mayo de 2025.
 

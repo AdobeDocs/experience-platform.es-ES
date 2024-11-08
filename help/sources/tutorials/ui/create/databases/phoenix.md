@@ -2,7 +2,7 @@
 title: Conectar su cuenta de Phoenix mediante la interfaz de usuario de Experience Platform
 description: Aprenda a conectar su cuenta de Phoenix y a llevar los datos de la base de datos de Phoenix al Experience Platform de mediante la interfaz de usuario de.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Conecte su cuenta de [!DNL Phoenix] al Experience Platform mediante la interfaz de usuario
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >El origen [!DNL Phoenix] quedará obsoleto a finales de mayo de 2025.
 

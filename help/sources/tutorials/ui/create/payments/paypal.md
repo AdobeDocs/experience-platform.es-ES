@@ -5,7 +5,7 @@ title: Creación de una conexión de Source con PayPal en la IU
 type: Tutorial
 description: Aprenda a crear una conexión de origen de PayPal mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Crear una conexión de origen [!DNL PayPal] en la interfaz de usuario
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >El origen [!DNL PayPal] quedará obsoleto a finales de mayo de 2025.
 

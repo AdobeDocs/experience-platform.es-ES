@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;Nube de servicios de Oracle
 title: Creación de una conexión de Oracle Service Cloud Source mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a la nube de servicios de Oracle mediante la API de Flow Service.
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Crear una conexión de origen de nube de Oracle Service mediante la API [!DNL Flow Service]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >El origen [!DNL Oracle Service Cloud] quedará obsoleto a finales de mayo de 2025.
 

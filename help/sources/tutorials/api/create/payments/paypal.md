@@ -5,7 +5,7 @@ title: Creación de una conexión base de PayPal mediante la API de Flow Service
 type: Tutorial
 description: Aprenda a conectar PayPal a Adobe Experience Platform mediante la API de Flow Service.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Crear una conexión base [!DNL PayPal] mediante la API [!DNL Flow Service]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >El origen [!DNL PayPal] quedará obsoleto a finales de mayo de 2025.
 

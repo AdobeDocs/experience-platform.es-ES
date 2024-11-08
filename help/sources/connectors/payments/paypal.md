@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descripción general del conector Source de PayPal
 description: Aprenda a conectar PayPal a Adobe Experience Platform mediante las API o la interfaz de usuario.
 exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Conector [!DNL PayPal]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >El origen [!DNL PayPal] quedará obsoleto a finales de mayo de 2025.
 
