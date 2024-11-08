@@ -4,9 +4,9 @@ title: Información general sobre Salesforce Marketing Cloud Source
 description: Obtenga información sobre cómo conectar el Marketing Cloud de Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->El origen [!DNL Salesforce Marketing Cloud] quedará obsoleto a finales de mayo de 2025. Puede usar [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) en lugar del origen [!DNL Salesforce Marketing Cloud].
+>El origen [!DNL Salesforce Marketing Cloud] quedará obsoleto a finales de mayo de 2025.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 

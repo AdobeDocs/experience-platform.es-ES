@@ -4,9 +4,9 @@ title: Información general sobre el conector Source de Oracle Service Cloud
 description: Obtenga información sobre cómo conectar Oracle Service Cloud a Adobe Experience Platform mediante API o la interfaz de usuario.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->El origen [!DNL Oracle Service Cloud] quedará obsoleto a finales de mayo de 2025. Puede usar [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) en lugar del origen [!DNL Oracle Service Cloud].
+>El origen [!DNL Oracle Service Cloud] quedará obsoleto a finales de mayo de 2025.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
