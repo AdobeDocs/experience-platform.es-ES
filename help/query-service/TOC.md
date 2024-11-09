@@ -5,9 +5,9 @@ breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
+source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '366'
 ht-degree: 22%
 
 ---
@@ -104,7 +104,7 @@ Implementar modelos {#implement-models}
    - [Monitorización de consultas programadas](ui/monitor-queries.md)
    - [Guía de credenciales](ui/credentials.md)
    - [Generar conjuntos de datos de salida a partir de resultados de consulta](ui/create-datasets.md)
-- Extremos de API de servicio de consultas {#api}
+- API de servicio de consultas {#api}
    - [Introducción](api/getting-started.md)
    - [Consultas](api/queries.md)
    - [Parámetros de conexión](api/connection-parameters.md)
@@ -113,6 +113,11 @@ Implementar modelos {#implement-models}
    - [Plantillas de consulta](api/query-templates.md)
    - [Consultas aceleradas](api/accelerated-queries.md)
    - [Suscripciones de alerta](api/alert-subscriptions.md)
+- API de autenticación del servicio de consultas {#auth-api}
+   - [Información general](auth-api/overview.md)
+   - [Primeros pasos](auth-api/getting-started.md)
+   - [Acceso IP](auth-api/ip-access.md)
+   - [Validación](auth-api/validate.md)
 - Gobernanza de datos {#data-governance}
    - [Información general](data-governance/overview.md)
    - [Guía de registro de auditoría](data-governance/audit-log-guide.md)
