@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 2%
+source-wordcount: '1715'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +53,7 @@ Las protecciones siguientes generalmente se aplican a la activación mediante [t
 | Número máximo de atributos asignados a un destino | 50 | Protección de rendimiento | En el caso de varios destinos y tipos de destino, puede seleccionar atributos e identidades de perfil para asignar para la exportación. Para obtener un rendimiento óptimo, se debe asignar un máximo de 50 atributos en un flujo de datos a un destino. |
 | Número máximo de destinos | 100 | Protección impuesta por el sistema | Puede crear un máximo de 100 destinos a los que conectar y activar datos, *por espacio aislado*. [Los destinos de personalización de Edge (personalización personalizada)](#edge-destinations-activation) pueden constituir un máximo de 10 de los 100 destinos recomendados. |
 | Tipo de datos activados en los destinos | Datos de perfil, incluidas identidades y mapa de identidad | Protección impuesta por el sistema | Actualmente, solo es posible exportar *atributos de registro de perfil* a destinos. Los atributos XDM que describen datos de evento no son compatibles con la exportación en este momento. |
-| Tipo de datos activados para destinos: compatibilidad con atributos de matriz y asignación | No disponible | Protección impuesta por el sistema | En este momento, **no** es posible exportar *atributos de matriz o asignación* a destinos. La excepción a esta regla es el [mapa de identidad](/help/xdm/field-groups/profile/identitymap.md), que se exporta en las activaciones de flujo continuo y basadas en archivos. |
+| Tipo de datos activados para destinos: compatibilidad con atributos de matriz y asignación | Disponible parcialmente | Protección impuesta por el sistema | Puede exportar atributos de matriz a [destinos basados en archivos](/help/destinations/destination-types.md#file-based). Aún debe utilizar la función `array_to_string` para acoplar la matriz en una cadena en el archivo de destino. [Más información](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) sobre la funcionalidad. <br><br> En este momento, **no** es posible exportar *atributos de asignación* a destinos. La excepción a esta regla es el [mapa de identidad](/help/xdm/field-groups/profile/identitymap.md), que se exporta en las activaciones de flujo continuo y basadas en archivos. |
 
 {style="table-layout:auto"}
 
