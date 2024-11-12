@@ -2,7 +2,7 @@
 title: applyPropositions
 description: Volver a procesar propuestas que ya se hayan procesado con sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Ejecute el comando `applyPropositions` al llamar a la instancia configurada del 
 * **`viewName`**: nombre de la vista que se va a procesar en una aplicación de una sola página. Las notificaciones de visualización para estas decisiones se almacenan en caché y se pueden incluir en un comando `sendEvent` posterior con `personalization.includePendingDisplayNotifications`.
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""
