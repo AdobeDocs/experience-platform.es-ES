@@ -2,7 +2,7 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para su destino en el catálogo de Adobe Experience Platform. // Reemplace con el párrafo en la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 10521602a5871419c0c49d54c8ed250af39a78a4
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 2%
