@@ -3,9 +3,9 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2603'
 ht-degree: 8%
 
 ---
@@ -238,7 +238,7 @@ En el flujo de trabajo [conectar con destino](/help/destinations/ui/connect-dest
 
 Tenga en cuenta la diferencia de formato de archivo entre los dos tipos de archivo al comprimirlos:
 
-* Al exportar archivos JSON comprimidos, el formato de archivo exportado es `json.gz`
+* Al exportar archivos JSON comprimidos, el formato de archivo exportado es `json.gz`. El formato del JSON exportado es NDJSON, que es el formato de intercambio estándar en el ecosistema de big data. Adobe recomienda utilizar un cliente compatible con NDJSON para leer los archivos exportados.
 * Al exportar archivos de parquet comprimidos, el formato de archivo exportado es `gz.parquet`
 
 Solo se admiten las exportaciones a archivos JSON *en modo comprimido*. Las exportaciones a archivos de Parquet se admiten en modo comprimido y sin comprimir.

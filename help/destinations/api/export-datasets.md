@@ -4,9 +4,9 @@ title: Exportación de conjuntos de datos mediante la API de Flow Service
 description: Aprenda a utilizar la API de Flow Service para exportar conjuntos de datos a destinos seleccionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5107'
+source-wordcount: '5138'
 ht-degree: 3%
 
 ---
@@ -1163,9 +1163,11 @@ Observe el ID de conexión de la respuesta. Este ID será necesario en el siguie
 
 A continuación, debe crear una conexión de destino que almacene los parámetros de exportación para los conjuntos de datos. Los parámetros de exportación incluyen ubicación, formato de archivo, compresión y otros detalles. Consulte las propiedades de `targetSpec` proporcionadas en la especificación de conexión del destino para comprender las propiedades admitidas para cada tipo de destino. Haga referencia a las fichas siguientes para las propiedades de `targetSpec` de todos los destinos admitidos.
 
->[!WARNING]
+>[!IMPORTANT]
 >
->Las exportaciones a archivos JSON solo se admiten en modo comprimido. Se admiten las exportaciones a [!DNL Parquet] archivos en los modos comprimido y sin comprimir.
+>Las exportaciones a archivos JSON solo se admiten en modo comprimido. Las exportaciones a [!DNL Parquet] archivos se admiten en los modos comprimido y sin comprimir.
+>
+>El formato del archivo JSON exportado es NDJSON, que es el formato de intercambio estándar en el ecosistema de big data. Adobe recomienda utilizar un cliente compatible con NDJSON para leer los archivos exportados.
 
 >[!BEGINTABS]
 
