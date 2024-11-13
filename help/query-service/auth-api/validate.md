@@ -3,14 +3,19 @@ keywords: Experience Platform; seguridad; acceso ip; validación; guía de API; 
 title: Extremo de validación de IP
 description: Obtenga información sobre cómo validar el acceso IP para zonas protegidas en el servicio de consultas mediante el punto final de la API de validación IP.
 role: Developer
-source-git-commit: ad1b6d8449a2a3ca9c8422e70769d12e33d8e255
+exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 1%
+source-wordcount: '229'
+ht-degree: 4%
 
 ---
 
 # Extremo de validación de IP
+
+>[!AVAILABILITY]
+>
+>Esta funcionalidad está disponible para los clientes que han adquirido el complemento Data Distiller. Para obtener más información, contacte con su representante de Adobe.
 
 Utilice el punto final de la API de validación IP para comprobar si una dirección IP especificada puede acceder a una zona protegida designada en el servicio de consultas. Esta comprobación confirma si se aplican restricciones de acceso o si se permite a una dirección IP acceder a los datos dentro de una zona protegida.
 

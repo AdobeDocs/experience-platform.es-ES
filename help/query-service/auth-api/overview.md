@@ -2,14 +2,19 @@
 title: Guía de API de autorización del servicio de consultas
 description: Aprenda a utilizar la API de autorización del servicio de consultas para aplicar restricciones IP basadas en la red para conexiones seguras a través de SQL. Utilice esta API para mejorar el control de acceso a los datos de Adobe Experience Platform.
 role: Developer
-source-git-commit: f673d0d71458fe87491318f06be59719e4c9d76c
+exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 1%
+source-wordcount: '386'
+ht-degree: 2%
 
 ---
 
 # Guía de API de autorización del servicio de consultas
+
+>[!AVAILABILITY]
+>
+>Esta funcionalidad está disponible para los clientes que han adquirido el complemento Data Distiller. Para obtener más información, contacte con su representante de Adobe.
 
 Utilice la API de autorización del servicio de consultas para aplicar restricciones basadas en IP. La aplicación de estas medidas garantiza que solo las redes y los equipos cliente aprobados puedan acceder a los datos a través de SQL en Adobe Experience Platform. Estos controles le ayudan a cumplir con los estrictos estándares de seguridad, a la vez que proporcionan supervisión y alertas de acceso en tiempo real.
 

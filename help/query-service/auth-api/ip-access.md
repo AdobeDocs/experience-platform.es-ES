@@ -3,14 +3,19 @@ keywords: Experience Platform; seguridad; acceso ip; QS-Auth; guía de API; serv
 title: Punto final de acceso IP
 description: Obtenga información sobre cómo administrar intervalos de IP para el acceso a zonas protegidas en el servicio de consultas mediante el punto final de la API de acceso IP.
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 3%
+source-wordcount: '422'
+ht-degree: 5%
 
 ---
 
 # Extremo de acceso IP
+
+>[!AVAILABILITY]
+>
+>Esta funcionalidad está disponible para los clientes que han adquirido el complemento Data Distiller. Para obtener más información, contacte con su representante de Adobe.
 
 Para proteger el acceso a los datos dentro de una zona protegida del servicio de consulta especificada, utilice el extremo de acceso IP para administrar los intervalos de IP permitidos. Puede utilizar esta API para recuperar, configurar o eliminar intervalos de IP asociados al ID de su organización.
 
@@ -163,4 +168,3 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de los intervalo
   ]
 }
 ```
-
