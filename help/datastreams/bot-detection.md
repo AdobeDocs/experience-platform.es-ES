@@ -2,24 +2,22 @@
 title: Configuración de la detección de bots para flujos de datos
 description: Aprenda a configurar la detección de bots para flujos de datos a fin de diferenciar el tráfico humano del no humano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # Configuración de la detección de bots para flujos de datos
 
-El tráfico proveniente de entidades no humanas, como programas automatizados, raspadores web, arañas web o escáneres de secuencias de comandos, puede dificultar la identificación de eventos que ocurren desde visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos.
+El tráfico no humano procedente de programas automatizados, raspadores web, arañas y escáneres con secuencias de comandos puede dificultar la identificación de eventos de visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos.
 
 La detección de bots le permite identificar eventos generados por [SDK web](../web-sdk/home.md), [SDK móvil](https://developer.adobe.com/client-sdks/home/) y [[!DNL Server API]](../server-api/overview.md) como generados por arañas web y bots conocidos.
 
-Al configurar la detección de bots para sus flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud que desee clasificar como eventos de bots.
+Al configurar la detección de bots para los flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud para clasificarlos como eventos de bots. Esto ayuda a proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil.
 
-La identificación del tráfico de bots puede proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil.
-
-Cuando una solicitud al Edge Network coincide con cualquiera de las reglas de detección de bots, el esquema XDM se actualiza con una puntuación de bots (siempre establecida en 1), como se muestra a continuación.
+Cuando una solicitud al Edge Network coincide con cualquiera de las reglas de detección de bots, el esquema XDM se actualiza con una puntuación de bots (siempre establecida en 1), como se muestra a continuación:
 
 ```json
 {
@@ -66,9 +64,12 @@ Desde la página Reglas de detección de bots, puede configurar la detección de
 
 ### Utilice la Lista internacional de arañas web y bots de la IAB/ABC {#iab-list}
 
-La [Lista internacional de arañas web y bots de la IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) es una lista estándar de terceros de arañas web y bots, que le ayuda a identificar el tráfico automatizado, como rastreadores de motores de búsqueda, herramientas de supervisión y otro tráfico no humano, que es posible que no desee que aparezca en sus recuentos de análisis.
+La [Lista Internacional de Arañas y Bots de la IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) es una lista estándar de terceros de arañas web y bots. Esta lista le ayuda a identificar el tráfico automatizado, como los rastreadores de los motores de búsqueda, las herramientas de monitorización y otro tráfico no humano que es posible que no desee incluir en los recuentos de análisis.
 
-Para configurar la secuencia de datos para que use [!DNL IAB/ABC International Spiders and Bots List], active la opción **[!UICONTROL Usar la lista internacional de arañas web y bots de IAB/ABC para la detección de bots en esta secuencia de datos]** y, a continuación, seleccione Guardar para aplicar la configuración de detección de bots a la secuencia de datos.
+Para configurar el flujo de datos para que utilice la Lista internacional de arañas web y bots de IAB/ABC:
+
+1. Alterne la opción **[!UICONTROL Usar la lista internacional de arañas web y bots de IAB/ABC para la detección de bots en esta secuencia de datos]**.
+2. Seleccione **[!UICONTROL Guardar]** para aplicar la configuración de detección de bots a su secuencia de datos.
 
 ![Lista de bots y arañas IAB habilitada.](assets/bot-detection/bot-detection-list.png)
 

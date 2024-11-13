@@ -2,16 +2,18 @@
 title: Información general de secuencias de datos
 description: Descubra cómo los flujos de datos le ayudan a conectar la integración del SDK de Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 77%
+source-wordcount: '712'
+ht-degree: 70%
 
 ---
 
 # Información general de secuencias de datos
 
-Una secuencia de datos representa la configuración del lado del servidor al implementar los SDK web y móvil de Adobe Experience Platform. Mientras que el comando [`configure`](/help/web-sdk/commands/configure/overview.md) del SDK controla las cosas que se deben controlar en el cliente (como `edgeDomain`), las secuencias de datos administran todas las demás configuraciones del SDK. Cuando se envía una solicitud a Adobe Experience Platform Edge Network, el `datastreamId` se utiliza para hacer referencia a la secuencia de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios en el código del sitio web.
+Un conjunto de datos representa la configuración del lado del servidor para los SDK móviles y web de Adobe Experience Platform. Mientras que el comando [`configure`](/help/web-sdk/commands/configure/overview.md) del SDK administra la configuración del lado del cliente (como `edgeDomain`), las secuencias de datos administran todas las demás configuraciones.
+
+Cuando envía una solicitud al Edge Network, `datastreamId` hace referencia al conjunto de datos al que se envían los datos. Esto le permite actualizar la configuración del lado del servidor sin cambiar el código del sitio web.
 
 Puede crear y administrar secuencias de datos seleccionando **[!UICONTROL Secuencias de datos]** en el panel de navegación izquierdo dentro de la IU de Adobe Experience Platform o de la IU de recopilación de datos.
 
@@ -27,7 +29,7 @@ Para obtener más información sobre cómo configurar una secuencia de datos en 
 
 Las políticas de administración de datos corporativos y los requisitos regulatorios son restricciones cada vez mayores sobre cómo se pueden recopilar, procesar y utilizar los datos confidenciales de los clientes. Esto incluye la recopilación, el procesamiento y el uso de los Datos de salud protegidos (PHI), que están sujetos a regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA).
 
-Secuencias de datos proporciona tres métodos para ayudarle a gestionar de forma segura sus datos confidenciales:
+Los flujos de datos ofrecen tres métodos para ayudarle a gestionar de forma segura sus datos confidenciales:
 
 * [Cifrado mejorado](#encryption)
 * [Gobernanza de datos](#governance)
