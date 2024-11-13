@@ -6,7 +6,7 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '778'
 ht-degree: 43%
@@ -261,7 +261,7 @@ ht-degree: 43%
    * [Navegadores admitidos](./extension-dev/browsers.md)
    * Proceso de envío {#submit}
       * [Información general](./extension-dev/submit/overview.md)
-      * [Configuración de compañía](./extension-dev/submit/setup.md)
+      * [Configuración de organización](./extension-dev/submit/setup.md)
       * [Conceder acceso al usuario](./extension-dev/submit/access.md)
       * [Desarrollar una extensión](./extension-dev/submit/develop.md)
       * [Crear una lista de intercambio](./extension-dev/submit/create-listing.md)
