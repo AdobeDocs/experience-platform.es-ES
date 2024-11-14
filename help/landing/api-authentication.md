@@ -4,9 +4,9 @@ title: Autenticar y acceder a las API de Experience Platform
 type: Tutorial
 description: Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2383'
 ht-degree: 3%
 
 ---
@@ -67,6 +67,10 @@ Consulte la guía sobre [administración de grupos de usuarios en [!DNL Admin Co
 >Si está siguiendo este documento desde la [guía de API de Privacy Service](../privacy-service/api/getting-started.md), ahora puede volver a esa guía para generar las credenciales de acceso únicas de [!DNL Privacy Service].
 
 Después de que se le haya concedido acceso de desarrollador y usuario a Platform mediante [!DNL Admin Console], el siguiente paso es generar sus credenciales de `{ORG_ID}` y `{API_KEY}` en Adobe Developer Console. Estas credenciales solo deben generarse una vez y pueden reutilizarse en futuras llamadas a la API de Platform.
+
+>[!TIP]
+>
+>En lugar de ir a Developer Console, puede obtener todas las credenciales de autenticación que necesita para trabajar con las API de Platform directamente desde las páginas de documentación de referencia de la API. [Más información](#get-credentials-functionality) sobre la funcionalidad.
 
 ### Añadir un Experience Platform a un proyecto {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ El siguiente paso es generar una credencial `{ACCESS_TOKEN}` para usarla en llam
 >[!TIP]
 >
 También puede utilizar un entorno y una colección de Postman para generar tokens de acceso. Para obtener más información, lea la sección sobre [el uso de Postman para autenticar y probar las llamadas a la API](#use-postman).
+
+## Cree y recupere credenciales de autenticación directamente en la documentación de referencia de la API {#get-credentials-functionality}
+
+A partir de la versión de noviembre de 2024 de Experience Platform, puede obtener las credenciales para usar las API de Experience Platform directamente desde las páginas de referencia de las API, sin necesidad de ir a [!UICONTROL Developer Console]. Vea el ejemplo siguiente desde la [API de Flow Service: página de destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+
+![Obtener funcionalidad de credenciales resaltada en la parte superior de una página de referencia de API.](././images/api-authentication/get-credentials-highlighted.png)
+
+Para obtener las credenciales para llamar a las API de Platform, ve a cualquier página de referencia de la API de Experience Platform y selecciona **[!UICONTROL Iniciar sesión]** en la parte superior de la página. Inicia sesión con tu **[!UICONTROL cuenta personal]** o con **[!UICONTROL cuenta de empresa o escuela]**.
+
+Después de iniciar sesión, seleccione **[!UICONTROL Crear nueva credencial]** para crear un nuevo conjunto de credenciales y poder acceder a las API de Platform.
+
+![Cree nuevas credenciales para acceder a las API de Platform.](././images/api-authentication/create-credentials.gif)
+
+A continuación, utilice el selector desplegable para abrir la ventana de credenciales, generar un token de acceso y obtener la clave de API y el ID de organización. Copie las credenciales en los bloques [**[!UICONTROL Try it]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) de las páginas de referencia de la API para empezar a trabajar con las API de Platform.
+
+![Use el selector desplegable para ver las credenciales y generar un token de acceso.](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+El bloque de credenciales de la parte superior de la página permanece mostrado a medida que navega entre diferentes páginas de extremos en la documentación de referencia de la API de Experience Platform.
 
 ## [!BADGE Obsoleto]{type=negativo} Generar un token web JSON (JWT) {#jwt}
 
