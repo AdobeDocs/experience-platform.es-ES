@@ -2,9 +2,9 @@
 title: Prioridad de espacios de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
+source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1789'
 ht-degree: 2%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 2%
 
 Cada implementación de cliente es única y está diseñada para satisfacer los objetivos de una organización en particular y, como tal, la importancia de un área de nombres determinada varía según el cliente. Algunos ejemplos del mundo real son:
 
-* Por un lado, puede considerar que el área de nombres de correo electrónico representa una entidad de persona y, por lo tanto, es única por persona. Por otro lado, otro cliente puede considerar el área de nombres de correo electrónico como un identificador no fiable y, por lo tanto, puede permitir que un único CRMID se asocie a varias identidades con el área de nombres de correo electrónico.
+* Su compañía podría considerar que cada dirección de correo electrónico representa una entidad de una sola persona y, por lo tanto, usar [configuración de identidad](./identity-settings-ui.md) para configurar el área de nombres de correo electrónico como única. Sin embargo, es posible que otra empresa desee representar las entidades de una sola persona como si tuvieran varias direcciones de correo electrónico y, por lo tanto, configurar el área de nombres de correo electrónico como no única. Estas empresas necesitarían utilizar otro área de nombres de identidad como única, como un área de nombres CRMID, para que pueda haber un identificador de una sola persona vinculado a las distintas direcciones de correo electrónico.
 * Puede recopilar el comportamiento en línea mediante un área de nombres de &quot;ID de inicio de sesión&quot;. Este ID de inicio de sesión podría tener una relación 1:1 con el CRMID, que luego almacena atributos de un sistema CRM y puede considerarse el área de nombres más importante. En este caso, está determinando que el área de nombres CRMID es una representación más precisa de una persona, mientras que el área de nombres de ID de inicio de sesión es la segunda más importante.
 
-Debe realizar configuraciones en el servicio de identidad que reflejen la importancia de sus áreas de nombres, ya que esto influye en la forma y segmentación de los perfiles.
+Debe realizar configuraciones en Identity Service que reflejen la importancia de las áreas de nombres, ya que esto influye en la forma y división de los perfiles y sus gráficos de identidad relacionados.
 
 ## Determine sus prioridades
 
@@ -52,11 +52,11 @@ Otra forma de abordar este tema es a través de la cardinalidad. Para una entida
 
 ## Validar la configuración de prioridad del área de nombres
 
-Una vez que tenga idea de cómo priorizar las áreas de nombres, puede utilizar la herramienta Simulación de gráficos para probar varios escenarios de colapso de gráficos y asegurarse de que las configuraciones de prioridad devuelvan los resultados de gráficos esperados. Para obtener más información, lea la guía sobre el uso de [Herramienta de simulación de gráficos](./graph-simulation.md).
+Una vez que tenga idea de cómo priorizar las áreas de nombres, puede utilizar la herramienta Simulación de gráficos en la interfaz de usuario para probar varios escenarios de colapso de gráficos y asegurarse de que las configuraciones de prioridad devuelvan los resultados de gráficos esperados. Para obtener más información, lea la guía sobre el uso de [Herramienta de simulación de gráficos](./graph-simulation.md).
 
 ## Configurar prioridad de área de nombres
 
-La prioridad del área de nombres se puede configurar usando [!UICONTROL Configuración de identidad]. En la interfaz [!UICONTROL Configuración de identidad], puede arrastrar y soltar un área de nombres para determinar su importancia relativa.
+La prioridad del área de nombres se puede configurar usando la [interfaz de usuario de configuración de identidad](./identity-settings-ui.md). En la interfaz de configuración de identidad, puede arrastrar y soltar un área de nombres para determinar su importancia relativa.
 
 >[!IMPORTANT]
 >
@@ -74,20 +74,20 @@ Para estructuras de gráficos relativamente complejas, la prioridad del área de
 
 ### Perfil del cliente en tiempo real: determinación de identidad principal para eventos de experiencia
 
-* En el caso de los eventos de experiencia, una vez que haya configurado la Configuración de identidad para una zona protegida determinada, la identidad principal se determinará según la prioridad de área de nombres más alta a partir de ahora.
+* Una vez que haya configurado la configuración de identidad para una zona protegida determinada, la identidad principal de los eventos de experiencia se determinará mediante la prioridad de área de nombres más alta de la configuración.
    * Esto se debe a que los eventos de experiencia son de naturaleza dinámica. Un mapa de identidad puede contener tres o más identidades y la prioridad del área de nombres garantiza que el área de nombres más importante esté asociada al evento de experiencia.
 * Como resultado, Real-Time Customer Profile **ya no usará las siguientes configuraciones**:
-   * La casilla &quot;Principal&quot; del tipo de elemento de datos en WebSDK (que se traduce como `primary=true` en identityMap). **Nota**: el área de nombres de identidad y el valor de identidad se seguirán usando en el perfil. Además, debe seguir configurando la casilla de verificación &quot;Principal&quot;, ya que los servicios fuera del perfil del cliente en tiempo real seguirán haciendo referencia a esta configuración.
+   * La configuración de identidad principal (`primary=true`) al enviar identidades en identityMap mediante el SDK web, el SDK móvil o la API de servidor de Edge Network (el área de nombres de identidad y el valor de identidad se seguirán usando en el perfil). **Nota**: Los servicios fuera del perfil del cliente en tiempo real, como el almacenamiento del lago de datos o Adobe Target, seguirán usando la configuración de identidad principal (`primary=true`).
    * Cualquier campo marcado como identidad principal en un esquema de clase de evento de experiencia XDM.
    * Configuración de identidad principal predeterminada en el conector de origen de Adobe Analytics (ECID o AAID).
 * Por otro lado, la prioridad **namespace no determina la identidad principal para los registros de perfil**.
-   * Para los registros de perfil, puede utilizar el espacio de trabajo de esquemas de la interfaz de usuario de Experience Platform para definir los campos de identidad, incluida la identidad principal. Lea la guía [definición de campos de identidad en la interfaz de usuario](../../xdm/ui/fields/identity.md) para obtener más información.
+   * Para los registros de perfil, debe seguir definiendo los campos de identidad en el esquema, incluida la identidad principal. Lea la guía [definición de campos de identidad en la interfaz de usuario](../../xdm/ui/fields/identity.md) para obtener más información.
 
 >[!TIP]
 >
 >* La prioridad del área de nombres es **una propiedad de un área de nombres**. Es un valor numérico asignado a un área de nombres para indicar su importancia relativa.
 >
->* La identidad principal es la identidad con la que se almacena un fragmento de perfil. Un fragmento de perfil es un registro de datos que almacena información sobre un usuario determinado: atributos (normalmente incorporados mediante registros CRM) o eventos (normalmente incorporados a partir de eventos de experiencia o datos en línea).
+>* La identidad principal es la identidad con la que se almacena un fragmento de perfil. Un fragmento de perfil es un registro de datos que almacena información sobre un usuario determinado: atributos (por ejemplo, registros CRM) o eventos (por ejemplo, navegación por sitios web).
 
 ### Ejemplo de escenario
 
@@ -151,9 +151,7 @@ Para obtener más información, lea la [descripción general avanzada de la admi
 
 ### Atributos calculados
 
-Los atributos calculados utilizan la prioridad de área de nombres para almacenar el valor de atributo calculado. Para un evento determinado, la identidad con la prioridad de área de nombres más alta tendrá el valor del atributo calculado escrito en él. Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
-
-Los atributos calculados no utilizan la prioridad de área de nombres para calcular valores. Si utiliza atributos calculados, debe asegurarse de que el CRMID está designado como su identidad principal para WebSDK. Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
+Si la configuración de identidad está habilitada, los atributos calculados utilizarán la prioridad de área de nombres para almacenar el valor de atributo calculado. Para un evento determinado, la identidad con la prioridad de área de nombres más alta tendrá el valor del atributo calculado escrito en él. Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
 
 ### Lago de datos
 
@@ -198,4 +196,4 @@ Para obtener más información, lea la [descripción general del servicio de pri
 
 ### Adobe Target
 
-Adobe Target puede generar una segmentación de usuarios inesperada para escenarios de dispositivos compartidos.
+Adobe Target puede generar una segmentación de usuarios inesperada para escenarios de dispositivos compartidos al utilizar la segmentación de Edge.
