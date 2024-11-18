@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2461'
 ht-degree: 2%
 
 ---
@@ -172,9 +172,9 @@ Las entidades Dimension proporcionan datos de búsqueda que ayudan y simplifican
 
 En este documento, hay varias protecciones que hacen referencia a &quot;fragmentos de perfil&quot;. En Experience Platform, se combinan varios fragmentos de perfil para formar el perfil del cliente en tiempo real. Cada fragmento representa una identidad principal única y el registro correspondiente o el conjunto completo de datos de evento para ese ID dentro de un conjunto de datos determinado. Para obtener más información sobre los fragmentos de perfil, consulte [Información general del perfil](home.md#profile-fragments-vs-merged-profiles).
 
-### Políticas de combinación {#merge-policies}
+### Combinar políticas {#merge-policies}
 
-Al unir datos de varias fuentes, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Platform, se combinan para crear un único perfil para ese cliente. Cuando los datos de varias fuentes entran en conflicto, la política de combinación determina qué información se incluirá en el perfil de la persona. Se permite un máximo de cinco (5) políticas de combinación por organización. Para obtener más información acerca de las políticas de combinación, lea la [descripción general de las políticas de combinación](merge-policies/overview.md).
+Al unir datos de varias fuentes, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada. Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Platform, se combinan para crear un único perfil para ese cliente. Cuando los datos de varias fuentes entran en conflicto, la política de combinación determina qué información se incluirá en el perfil de la persona. Se permite un máximo de cinco (5) políticas de combinación que utilizan el esquema `_xdm.context.profile` por zona protegida. Para obtener más información acerca de las políticas de combinación, lea la [descripción general de las políticas de combinación](merge-policies/overview.md).
 
 ### Conjuntos de datos de grupos de informes Adobe Analytics en Platform {#aa-datasets}
 
