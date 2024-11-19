@@ -2,7 +2,7 @@
 title: applyPropositions
 description: Volver a procesar propuestas que ya se hayan procesado con sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -16,7 +16,7 @@ El comando `applyPropositions` le permite volver a procesar propuestas que ya se
 Este comando admite los campos siguientes:
 
 * **Propositions**: matriz de objetos de propuesta que desea volver a procesar.
-* **Nombre de vista**: Nombre de la vista que se va a procesar. Las notificaciones de visualización para estas decisiones se almacenan en caché y se pueden incluir en un comando `sendEvent` posterior usando la opción `personalization.includePendingDisplayNotifications`.
+* **Nombre de vista**: Nombre de la vista que se va a procesar. Las notificaciones de visualización para estas decisiones se almacenan en caché y se pueden incluir en un comando `sendEvent` posterior usando la opción `personalization.includeRenderedPropositions`.
 * **Metadatos**: Un objeto que determina cómo se pueden aplicar las ofertas de HTML. Contiene las siguientes propiedades:
    * Ámbito
    * Selector
@@ -43,7 +43,7 @@ Ejecute el comando `applyPropositions` al llamar a la instancia configurada del 
 * **`metadata`**: determina cómo se aplican las ofertas de HTML. Es un mapa donde la clave es un ámbito o una superficie y el valor es un objeto que contiene las claves `selector` y `actionType`.
    * `selector`: cadena que contiene un selector CSS de dónde aplicar el HTML.
    * `actionType`: acción que se va a realizar con el HTML. Los valores válidos incluyen `setHtml`, `replaceHtml` y `appendHtml`.
-* **`viewName`**: nombre de la vista que se va a procesar en una aplicación de una sola página. Las notificaciones de visualización para estas decisiones se almacenan en caché y se pueden incluir en un comando `sendEvent` posterior con `personalization.includePendingDisplayNotifications`.
+* **`viewName`**: nombre de la vista que se va a procesar en una aplicación de una sola página. Las notificaciones de visualización para estas decisiones se almacenan en caché y se pueden incluir en un comando `sendEvent` posterior con `personalization.includeRenderedPropositions`.
 
 ```js
 alloy("applyPropositions",{

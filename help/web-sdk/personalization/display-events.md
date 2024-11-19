@@ -2,7 +2,7 @@
 title: Administrar eventos de visualización en el SDK web
 description: Este artículo explica qué son los eventos de visualización y cómo puede utilizarlos en el SDK web.
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ El envío de eventos de visualización proporciona automáticamente métricas de
 Para enviar eventos de visualización automáticamente después de que se procese el contenido personalizado en la página, debe configurar los siguientes parámetros:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` o no especificado
+* `personalization.sendDisplayEvent: true` o no especificado
 
 El SDK web envía los eventos de visualización inmediatamente después de que se procese cualquier personalización como resultado de una llamada a `sendEvent`.
 
@@ -50,9 +50,9 @@ Además, el envío de eventos de visualización en llamadas de `sendEvent` minim
 Para enviar eventos de visualización para propuestas procesadas automáticamente, debe configurar los siguientes parámetros en la llamada `sendEvent`:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` para la parte superior de la visita de página
+* `personalization.sendDisplayEvent: false` para la parte superior de la visita de página
 
-Para enviar los eventos de visualización, llame a `sendEvent` con `personalization.includePendingDisplayNotifications: true`
+Para enviar los eventos de visualización, llame a `sendEvent` con `personalization.includeRenderedPropositions: true`
 
 ### Envío de eventos de visualización para propuestas procesadas manualmente {#manually-rendered-propositions}
 
