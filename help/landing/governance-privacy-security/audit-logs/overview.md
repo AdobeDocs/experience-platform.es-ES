@@ -1,11 +1,13 @@
 ---
 title: Resumen de registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
+role: Admin,Developer
+feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1350'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -138,11 +140,11 @@ En el cuadro de diálogo que aparece, seleccione el formato que prefiera (**[!UI
 
 Puede activar alertas de auditoría para recibir notificaciones para las siguientes reglas:
 
-* Creación de audiencia
-* Actualización de audiencia
-* Audience delete
-* Crear conjunto de datos
-* Actualización de conjuntos de datos
+* Creación de público
+* Actualización de público
+* Eliminación de público
+* Creación de conjunto de datos
+* Actualización de conjunto de datos
 * Eliminación de conjunto de datos
 * Creación de esquema
 * Actualización de esquema

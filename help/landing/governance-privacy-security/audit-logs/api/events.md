@@ -1,8 +1,10 @@
 ---
 title: Extremo de API de eventos de auditoría
 description: Obtenga información sobre cómo recuperar eventos de auditoría en Experience Platform mediante la API de consulta de auditoría.
+role: Developer
+feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 2%

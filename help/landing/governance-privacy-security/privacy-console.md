@@ -1,7 +1,8 @@
 ---
 title: Información general de Privacy Console
 description: Obtenga información sobre cómo monitorizar los flujos de trabajo relacionados con la privacidad en la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
+feature: Privacy
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 4%
@@ -52,6 +53,6 @@ Para obtener más información sobre los distintos servicios de Platform que se 
 
 * [Control de acceso basado en atributos](../../access-control/abac/overview.md)
 * [Registros de auditoría](./audit-logs/overview.md)
-* [Control de datos](../../data-governance/home.md)
+* [Gobernanza de datos](../../data-governance/home.md)
 * [Higiene de los datos](../../hygiene/home.md)
 * [Privacy Service](../../privacy-service/home.md)

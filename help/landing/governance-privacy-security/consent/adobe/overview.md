@@ -3,8 +3,10 @@ keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Procesamiento de consentimiento en Adobe Experience Platform
 description: Obtenga información sobre cómo procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el uso del estándar Adobe 2.0.
+role: Developer
+feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 0%
