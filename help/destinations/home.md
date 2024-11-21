@@ -2,10 +2,10 @@
 title: Información general sobre los destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
+source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 4%
+source-wordcount: '1231'
+ht-degree: 3%
 
 ---
 
@@ -115,3 +115,13 @@ Para obtener más información sobre las infracciones de directivas de datos en 
 * [Activar datos de audiencia para transmitir audiencias y exportar destinos](./ui/activate-segment-streaming-destinations.md#review)
 * [Activación de datos de audiencia en destinos de exportación de perfil de flujo continuo](./ui/activate-streaming-profile-destinations.md#review)
 * [Activar datos de audiencia en destinos de exportación de perfiles por lotes](./ui/activate-batch-profile-destinations.md#review)
+
+## Términos y condiciones {#terms-and-conditions}
+
+Al usar cualquiera de los destinos etiquetados como beta (&quot;Beta&quot;), el Cliente reconoce por la presente que Beta se proporciona ***&quot;tal cual&quot; sin garantía de ningún tipo***.
+
+El Adobe no tendrá ninguna obligación de mantener, corregir, actualizar, cambiar, modificar o de otro modo apoyar a Beta. Se le aconseja utilizar Informativo y no confiar en modo alguno en el correcto funcionamiento o rendimiento de dicho Beta y/o materiales de acompañamiento. Beta se considera información confidencial de Adobe.
+
+Cualquier &quot;comentario&quot; (información sobre Beta, incluidos, entre otros, problemas o defectos que encuentre al utilizar Beta, sugerencias, mejoras y recomendaciones) proporcionado por el cliente al Adobe se asigna por la presente al Adobe, incluidos todos los derechos, el título y el interés en y para dichos comentarios.
+
+Envíe comentarios abiertos o cree un ticket de asistencia para compartir sus sugerencias o informar de un error, y busque una mejora de las funciones.
