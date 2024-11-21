@@ -2,10 +2,10 @@
 title: Alojamientos de SFTP
 description: Obtenga información sobre cómo configurar Adobe Experience Platform para que entregue compilaciones de biblioteca a un servidor SFTP seguro y autoalojado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
 workflow-type: tm+mt
 source-wordcount: '811'
-ht-degree: 36%
+ht-degree: 38%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Adobe Experience Platform permite enviar compilaciones de biblioteca de etiquetas a un servidor SFTP protegido que aloje, lo que le proporciona un mayor control sobre cómo se almacenan y administran las compilaciones. Esta guía explica cómo configurar un host SFTP para una propiedad de etiquetas en la interfaz de usuario del Experience Platform o en la interfaz de usuario de recopilación de datos.
 
@@ -70,7 +70,7 @@ El cuadro de diálogo se amplía para incluir opciones de configuración adicion
 | [!UICONTROL No usar enlaces simbólicos] | De forma predeterminada, todos los hosts SFTP utilizan vínculos simbólicos (enlaces simbólicos) para hacer referencia a las [compilaciones](../builds.md) de la biblioteca que se guardan en el servidor. Sin embargo, no todos los servidores admiten el uso de enlaces simbólicos. Cuando se selecciona esta opción, el host utiliza una operación de copia para actualizar los recursos de la versión directamente en lugar de utilizar enlaces simbólicos. |
 | [!UICONTROL URL del servidor SFTP] | Ruta de acceso base de URL del servidor. |
 | [!UICONTROL Ruta] | Ruta de acceso que se anexará a la dirección URL del servidor base para este host. |
-| [!UICONTROL Puerto] | El puerto debe ser uno de los siguientes:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Como práctica recomendada de seguridad, Adobe limita la cantidad de puertos que se pueden utilizar para el tráfico saliente. Los puertos seleccionados suelen permitirse a través de servidores de seguridad corporativos e incluyen algunos rangos de flexibilidad. |
+| [!UICONTROL Puerto] | El puerto debe ser uno de los siguientes:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Como práctica recomendada de seguridad, Adobe limita la cantidad de puertos que se pueden utilizar para el tráfico saliente. Los puertos seleccionados suelen permitirse a través de servidores de seguridad corporativos e incluyen algunos rangos de flexibilidad. |
 | [!UICONTROL Nombre de usuario] | Nombre de usuario que se utilizará al acceder al servidor. |
 | [!UICONTROL Clave privada cifrada] | La clave privada cifrada que creó en un [paso anterior](#access-key). |
 
