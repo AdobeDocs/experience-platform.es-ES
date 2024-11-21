@@ -3,7 +3,7 @@ keywords: Dirección IP, rango de IP, lista de permitidos, lista de permitidos, 
 title: LISTA DE PERMITIDOS de direcciones IP para el servicio de consultas
 description: Esta página proporciona rangos de IP actualizados que puede agregar a su lista de permitidos para obtener acceso seguro al servicio de consultas.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: e6c148b943c68bff5330c7ff021ffa88ba131639
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -47,7 +47,7 @@ El Adobe recomienda añadir los siguientes intervalos de IP específicos de la r
 
 ## Configurar restricciones basadas en IP {#set-ip-restrictions}
 
-Use las [guías de API de autorización de servicio de consulta](./auth-api/overview.md) para configurar restricciones basadas en IP. Estas restricciones basadas en IP garantizan que solo las redes y los equipos cliente aprobados puedan acceder a los datos a través de SQL en Adobe Experience Platform. Obtenga información sobre cómo configurar, aplicar y supervisar restricciones de IP para mantener altos estándares de seguridad, con funciones de seguimiento y alertas de acceso en tiempo real.
+Use las [guías de la API de autorización de Data Distiller](./auth-api/overview.md) para configurar restricciones basadas en IP. Estas restricciones basadas en IP garantizan que solo las redes y los equipos cliente aprobados puedan acceder a los datos a través de SQL en Adobe Experience Platform. Obtenga información sobre cómo configurar, aplicar y supervisar restricciones de IP para mantener altos estándares de seguridad, con funciones de seguimiento y alertas de acceso en tiempo real.
 
 * [Guía de introducción](./auth-api/getting-started.md)
 * [Guía de extremo de acceso IP](./auth-api/ip-access.md)
