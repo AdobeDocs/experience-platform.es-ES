@@ -3,7 +3,7 @@ title: Extremo de carpetas
 description: Obtenga información sobre cómo crear, actualizar, administrar y eliminar carpetas mediante las API de Adobe Experience Platform.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
@@ -31,7 +31,7 @@ Puede recuperar una lista de carpetas que pertenecen a su organización realizan
 **Formato de API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
+GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 ```
 
 | Parámetro | Descripción |
@@ -44,7 +44,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 +++Una solicitud de ejemplo para enumerar todas las carpetas de conjuntos de datos de nivel superior
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfolders
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subfolders
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -111,14 +111,14 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las ca
 
 +++
 
-## Crear una carpeta nueva {#create}
+## Creación de una nueva carpeta {#create}
 
 Puede crear una carpeta nueva realizando una solicitud de POST al extremo `/folder` y especificando el tipo de carpeta.
 
 **Formato de API**
 
 ```http
-POST /folder/{FOLDER_TYPE}
+POST /folders/{FOLDER_TYPE}
 ```
 
 | Parámetro | Descripción |
@@ -130,7 +130,7 @@ POST /folder/{FOLDER_TYPE}
 +++Solicitud de ejemplo para crear una carpeta nueva.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
+curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -190,7 +190,7 @@ Puede recuperar una carpeta específica que pertenezca a su organización realiz
 **Formato de API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parámetro | Descripción |
@@ -203,7 +203,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Una solicitud de ejemplo para recuperar una carpeta específica.
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -261,7 +261,7 @@ Puede validar si una carpeta cumple los requisitos para tener objetos en ella re
 **Formato de API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 ```
 
 | Parámetro | Descripción |
@@ -274,7 +274,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 +++Solicitud de ejemplo para validar una carpeta específica
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -321,7 +321,7 @@ Puede actualizar los detalles de una carpeta específica que pertenezca a su org
 **Formato de API**
 
 ```http
-PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
+PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parámetro | Descripción |
@@ -334,7 +334,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Solicitud de ejemplo para actualizar una carpeta específica.
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -383,7 +383,7 @@ Puede eliminar una carpeta específica que pertenezca a su organización realiza
 ***Formato de API**
 
 ```http
-DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
+DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parámetro | Descripción |
@@ -396,7 +396,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Una solicitud de ejemplo para eliminar una carpeta específica
 
 ```shell
-curl -X DELETE https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X DELETE https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
