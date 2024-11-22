@@ -5,10 +5,10 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 6%
+source-wordcount: '1257'
+ht-degree: 5%
 
 ---
 
@@ -42,6 +42,7 @@ ht-degree: 6%
       * [Activación de audiencias en destinos de exportación de perfiles de flujo continuo](./ui/activate-streaming-profile-destinations.md)
       * [Activar audiencias para destinos de exportación de perfiles por lotes](./ui/activate-batch-profile-destinations.md)
       * [Activación de audiencias en destinos de personalización de Edge](./ui/activate-edge-personalization-destinations.md)
+      * [Búsqueda de atributos de perfil en Edge en tiempo real](./ui/activate-edge-profile-lookup.md)
       * [Activar audiencias en destinos depurados según identificadores de LiveRamp](./ui/activate-curated-destinations.md)
       * [Activar audiencias de clientes potenciales en destinos](./ui/activate-prospect-audiences.md)
       * [Activar audiencias de cuenta en destinos](./ui/activate-account-audiences.md)
