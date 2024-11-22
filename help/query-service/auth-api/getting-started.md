@@ -4,9 +4,9 @@ title: Guía de API de autorización de Data Distiller
 description: Obtenga información sobre cómo empezar a aplicar restricciones de autorización y de intervalo de IP para el acceso seguro a datos en el servicio de consultas de Adobe Experience Platform.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '507'
 ht-degree: 5%
 
 ---
@@ -66,3 +66,5 @@ Con los permisos y valores de encabezado requeridos recopilados, está listo par
 Cada ejemplo de llamada a la API muestra cómo dar formato a las solicitudes e interpretar las respuestas, lo que le ayuda a aplicar el acceso seguro a los datos en el servicio de consultas.
 
 Para obtener instrucciones específicas sobre cómo configurar y validar restricciones IP, consulte la [documentación del extremo de acceso IP](./ip-access.md) y la [documentación del extremo de validación IP](./validate.md).
+
+Consulte la [Documentación de referencia de OpenAPI para la autorización de Data Distiller](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) para ver un formato estandarizado y legible por el equipo que facilita la integración, las pruebas y la exploración.
