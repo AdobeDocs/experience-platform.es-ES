@@ -4,18 +4,18 @@ title: Guía completa de control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
+source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '1794'
 ht-degree: 17%
 
 ---
 
 # Guía completa de control de acceso basado en atributos
 
-Utilice el control de acceso basado en atributos en Adobe Experience Platform para ofrecerse a usted y a otros clientes conscientes de la privacidad de varias marcas una mayor flexibilidad para administrar el acceso de los usuarios. El acceso a objetos individuales, como campos de esquema y segmentos, se puede conceder con directivas basadas en los atributos y la función del objeto. Esta función permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
+Utilice el control de acceso basado en atributos en Adobe Experience Platform para ofrecerse a usted y a otros clientes conscientes de la privacidad de varias marcas una mayor flexibilidad para administrar el acceso de los usuarios. El acceso a objetos individuales, como campos de esquema y audiencias, se puede conceder con directivas basadas en los atributos y la función del objeto. Esta función permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
 
-Esta funcionalidad le permite categorizar campos de esquema, segmentos, etc. con etiquetas que definen ámbitos organizativos o de uso de datos. Puede aplicar estas mismas etiquetas a recorridos, ofertas y otros objetos en Adobe Journey Optimizer. Al mismo tiempo, los administradores pueden definir políticas de acceso relacionadas con los campos de esquema del Modelo de datos de experiencia (XDM) y administrar mejor qué usuarios o grupos (usuarios internos, externos o de terceros) pueden acceder a esos campos.
+Esta funcionalidad le permite categorizar campos de esquema, audiencias, etc. con etiquetas que definen ámbitos organizativos o de uso de datos. Puede aplicar estas mismas etiquetas a recorridos, ofertas y otros objetos en Adobe Journey Optimizer. Al mismo tiempo, los administradores pueden definir políticas de acceso relacionadas con los campos de esquema del Modelo de datos de experiencia (XDM) y administrar mejor qué usuarios o grupos (usuarios internos, externos o de terceros) pueden acceder a esos campos.
 
 >[!NOTE]
 >
@@ -44,8 +44,8 @@ Para ello, debe configurar las funciones, los recursos y las directivas.
 Lo hará:
 
 * [Etiquetar las funciones de los usuarios](#label-roles): use el ejemplo de un proveedor de atención médica (Grupo empresarial ACME) cuyo grupo de marketing trabaja con agencias externas.
-* [Etiquete sus recursos (campos y segmentos de esquema)](#label-resources): Asigne la etiqueta **[!UICONTROL PHI/ Datos de mantenimiento regulados]** a los recursos y segmentos de esquema.
-* [Activar la directiva que los vinculará](#policy): habilite la directiva predeterminada para impedir el acceso a los campos y segmentos de esquema conectando las etiquetas de los recursos a las etiquetas de la función. Los usuarios con etiquetas coincidentes recibirán acceso al campo de esquema y al segmento en todas las zonas protegidas.
+* [Etiquete sus recursos (campos de esquema y audiencias)](#label-resources): Asigne la etiqueta **[!UICONTROL PHI/ Datos de estado regulados]** a los recursos y audiencias de esquema.
+* [Activar la directiva que los vinculará](#policy): habilite la directiva predeterminada para impedir el acceso a los campos y audiencias de esquema conectando las etiquetas de los recursos a las etiquetas de la función. Los usuarios con etiquetas coincidentes recibirán acceso al campo de esquema y al segmento en todas las zonas protegidas.
 
 ## Permisos
 
@@ -59,7 +59,7 @@ Una vez que tengas privilegios de administrador, ve a [Adobe Experience Cloud](h
 
 ![Imagen que muestra el producto Permisos seleccionado en Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-Aparece el área de trabajo Permisos para la interfaz de usuario de Platform, que se abre en la página **[!UICONTROL Roles]**.
+Aparece el área de trabajo Permisos para la interfaz de usuario de Platform, que se abre en la página **[!UICONTROL Información general]**.
 
 ## Aplicar etiquetas a una función {#label-roles}
 
@@ -94,15 +94,15 @@ Aparece el área de trabajo Permisos para la interfaz de usuario de Platform, qu
 
 Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Platform y son componentes básicos de las directivas de control de acceso. Una función tiene un conjunto determinado de permisos y los miembros de la organización pueden asignarse a una o varias funciones, según el ámbito de acceso que necesiten.
 
-Para empezar, seleccione **[!UICONTROL Grupo de trabajo ACME]** de la página **[!UICONTROL Roles]**.
+Para empezar, seleccione **[!UICONTROL Roles]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Grupo de trabajo ACME]**.
 
-![Imagen que muestra el rol de negocio ACME seleccionado en los roles](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![Imagen que muestra el grupo de trabajo ACME seleccionado en los roles](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
 A continuación, selecciona **[!UICONTROL Etiquetas]** y luego selecciona **[!UICONTROL Agregar etiquetas]**.
 
 ![Imagen que muestra las etiquetas Agregar seleccionadas en la ficha Etiquetas](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Aparecerá una lista de todas las etiquetas de su organización. Seleccione **[!UICONTROL RHD]** para agregar la etiqueta para **[!UICONTROL PHI/Datos de mantenimiento regulados]**. Espere unos momentos para que aparezca una marca de verificación azul junto a la etiqueta y, a continuación, seleccione **[!UICONTROL Guardar]**.
+Aparecerá una lista de todas las etiquetas de su organización. Seleccione **[!UICONTROL RHD]** para agregar la etiqueta para **[!UICONTROL PHI/Datos de mantenimiento regulados]** y luego seleccione **[!UICONTROL Guardar]**.
 
 ![Imagen que muestra la etiqueta RHD seleccionada y guardada](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -113,6 +113,10 @@ Aparecerá una lista de todas las etiquetas de su organización. Seleccione **[!
 ## Aplicar etiquetas a campos de esquema {#label-resources}
 
 Ahora que ha configurado un rol de usuario con la etiqueta [!UICONTROL RHD], el siguiente paso es agregar esa misma etiqueta a los recursos que desea controlar para ese rol.
+
+En el panel de navegación superior, seleccione **conmutador de aplicaciones**, representado por el icono ![conmutador de aplicaciones](/help/images/icons/apps.png) y, a continuación, seleccione **[!UICONTROL Experience Platform]**.
+
+![Imagen que muestra el Experience Platform seleccionado en el menú desplegable del conmutador de aplicaciones](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 Seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL ACME Healthcare]** de la lista de esquemas que aparecen.
 
@@ -130,30 +134,30 @@ Aparece el cuadro de diálogo **[!UICONTROL Editar etiquetas]**, que le permite 
 >
 >Cuando se agrega una etiqueta a un campo, esa etiqueta se aplica al recurso principal de ese campo (una clase o un grupo de campos). Si la clase principal o el grupo de campos están empleados por otros esquemas, esos esquemas heredarán la misma etiqueta.
 
-## Aplicación de etiquetas a segmentos
+## Aplicación de etiquetas a audiencias
 
 >[!NOTE]
 >
->Cualquier segmento que utilice un atributo etiquetado debe etiquetarse también si desea que se le apliquen las mismas restricciones de acceso.
+>Cualquier audiencia que utilice un atributo etiquetado debe etiquetarse del mismo modo si desea que se le apliquen las mismas restricciones de acceso.
 
-Una vez que haya completado el etiquetado de los campos de esquema, puede empezar a etiquetar los segmentos.
+Una vez que haya completado el etiquetado de los campos de esquema, puede empezar a etiquetar las audiencias.
 
-Seleccione **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Se muestra una lista de los segmentos disponibles en su organización. En este ejemplo, los dos segmentos siguientes deben etiquetarse, ya que contienen datos confidenciales de estado:
+Seleccione **[!UICONTROL Audiencias]** en la sección **[!UICONTROL Clientes]** de la navegación izquierda. Se muestra una lista de las audiencias disponibles en su organización. En este ejemplo, las dos audiencias siguientes deben etiquetarse como si contuvieran datos confidenciales de estado:
 
 * Glucosa en sangre > 100
 * Insulina &lt;50
 
-Seleccione **[!UICONTROL Glucosa en sangre >100]** para comenzar a etiquetar el segmento.
+Seleccione **[!UICONTROL Glucosa en sangre >100]** (por el nombre de la audiencia, no la casilla de verificación) para comenzar a etiquetar a la audiencia.
 
-![Imagen que muestra la glucosa >100 en sangre seleccionada de la ficha Segmentos](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![Imagen que muestra la glucosa en sangre >100 seleccionada de la ficha Audiencias](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
 Aparecerá la pantalla del segmento **[!UICONTROL Detalles]**. Seleccione **[!UICONTROL Administrar acceso]**.
 
-![Imagen que muestra la selección de Acceso de administración](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![Imagen que muestra la selección de Acceso de administración](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Editar etiquetas]**, que le permite elegir las etiquetas que desea aplicar al segmento. Para este caso de uso, seleccione la etiqueta **[!UICONTROL PHI/ Datos de mantenimiento regulados]** y luego seleccione **[!UICONTROL Guardar]**.
+Aparece el cuadro de diálogo **[!UICONTROL Aplicar etiquetas de acceso y control de datos]**, que le permite elegir las etiquetas que desea aplicar a la audiencia. Para este caso de uso, seleccione la etiqueta **[!UICONTROL PHI/ Datos de mantenimiento regulados]** y luego seleccione **[!UICONTROL Guardar]**.
 
-![Imagen que muestra la selección de la etiqueta RHD y que se está guardando](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![Imagen que muestra la selección de la etiqueta RHD y que se está guardando](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
 Repita los pasos anteriores con **[!UICONTROL Insulina &lt;50]**.
 
@@ -163,13 +167,13 @@ Repita los pasos anteriores con **[!UICONTROL Insulina &lt;50]**.
 
 ## Activación de la directiva de control de acceso {#policy}
 
-La directiva de control de acceso predeterminada aprovecha las etiquetas para definir qué funciones de usuario tienen acceso a recursos de Platform específicos. En este ejemplo, el acceso a los campos y segmentos de esquema se denegará en todas las zonas protegidas para los usuarios que no estén en una función que tenga las etiquetas correspondientes en el campo de esquema.
+La directiva de control de acceso predeterminada aprovecha las etiquetas para definir qué funciones de usuario tienen acceso a recursos de Platform específicos. En este ejemplo, se denegará el acceso a los campos y audiencias de esquema en todas las zonas protegidas a los usuarios que no tengan una función que tenga las etiquetas correspondientes en el campo de esquema.
 
 Para activar la directiva de control de acceso, seleccione [!UICONTROL Permisos] en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Directivas]**.
 
 ![Lista de directivas mostrada](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-A continuación, seleccione los puntos suspensivos (`...`) junto al nombre de la directiva y aparecerá una lista desplegable con controles para editar, activar, eliminar o duplicar la función. Seleccione **[!UICONTROL Activar]** de la lista desplegable.
+A continuación, seleccione los puntos suspensivos (`...`) junto a la **[!UICONTROL Directiva de control de acceso a nivel de campo predeterminado]** y aparecerá un menú desplegable con controles para editar, activar, eliminar o duplicar la función. Seleccione **[!UICONTROL Activar]** de la lista desplegable.
 
 ![Menú desplegable para activar la directiva](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
@@ -216,7 +220,7 @@ Access control policies leverage labels to define which user roles have access t
 >[!NOTE]
 >
 >A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
-
+a
 To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
 ![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
@@ -260,7 +264,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Pasos siguientes
 
-Ha completado la aplicación de etiquetas a un rol, campos de esquema y segmentos. La agencia externa asignada a estas funciones tiene restringido el acceso a la visualización de estas etiquetas y sus valores en la vista de esquema, conjunto de datos y perfil. Estos campos también están restringidos para no utilizarse en la definición del segmento al utilizar el Generador de segmentos.
+Ha completado la aplicación de etiquetas a un rol, campos de esquema y audiencias. La agencia externa asignada a estas funciones tiene restringido el acceso a la visualización de estas etiquetas y sus valores en la vista de esquema, conjunto de datos y perfil. Estos campos también están restringidos para no utilizarse en la definición del segmento al utilizar el Generador de segmentos.
 
 Para obtener más información sobre el control de acceso basado en atributos, vea la [descripción general del control de acceso basado en atributos](./overview.md).
 
