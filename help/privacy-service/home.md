@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Resumen del Privacy Service
 description: Descubra cómo Privacy Service puede facilitar el cumplimiento automatizado de las regulaciones legales de privacidad en las operaciones de datos de sus Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 19b33ddf2fc3f8d889d370eedfc732ac54178dcd
+source-git-commit: 61a5b4fd7af68e7379b456ddd37218d183e76256
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 5%
+source-wordcount: '1660'
+ht-degree: 4%
 
 ---
 
@@ -68,6 +68,14 @@ Lea el documento sobre [datos de identidad para solicitudes de privacidad](./ide
 
 Una vez que haya determinado las necesidades de privacidad de su empresa y haya decidido qué valores de identidad enviar a Privacy Service, puede empezar a realizar solicitudes de privacidad. Utilice Privacy Service para enviar solicitudes de privacidad a través de la API o la interfaz de usuario.
 
+#### Detalles del archivo de solicitud de acceso {#access-requests}
+
+En la respuesta a una solicitud de acceso correcta, hay una **URL de descarga** que contiene varios archivos. Se proporciona un archivo para cada aplicación de Adobe donde se solicitaron datos. Tenga en cuenta que el formato de archivo de cada aplicación puede variar en función de la estructura de datos de la aplicación.
+
+#### Eliminar solicitudes: sin URL de descarga {#delete-requests}
+
+No hay **ninguna URL de descarga** en la respuesta para una **solicitud de eliminación**, ya que no se están recuperando datos de clientes.
+
 >[!IMPORTANT]
 >
 >Las secciones siguientes proporcionan vínculos a documentación que explica cómo realizar solicitudes de privacidad genéricas en la API o la IU. Sin embargo, según las [!DNL Experience Cloud] aplicaciones que utilice, los campos que debe enviar en la carga de la solicitud pueden diferir de los ejemplos mostrados en estas guías.
@@ -97,6 +105,10 @@ Una vez que haya realizado trabajos de privacidad, tiene varias opciones para mo
 | IU de Privacy Service | Puede ver una representación visual del estado de todas las solicitudes activas con el panel de monitorización de la IU de Privacy Service. Consulte la [guía de usuario para Privacy Service](ui/overview.md) para obtener más información. |
 | API de Privacy Service | Puede monitorizar mediante programación el estado de los trabajos de privacidad mediante los puntos finales de búsqueda proporcionados por la API de Privacy Service. Consulte la [guía de API de Privacy Service](./api/overview.md) para ver los pasos detallados sobre cómo usar la API. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] utiliza eventos de Adobe I/O que se envían a un gancho web configurado para facilitar la automatización eficiente de las solicitudes de trabajo. Reducen o eliminan la necesidad de sondear la API de Privacy Service para comprobar si un trabajo se ha completado o si se ha alcanzado un determinado hito dentro de un flujo de trabajo. Consulte el tutorial sobre la suscripción de [a eventos de privacidad](./privacy-events.md) para obtener más información. |
+
+#### Respuestas para usuarios no existentes {#non-existing-users}
+
+Al enviar una solicitud de acceso o eliminación, incluso si no se encuentran los datos del usuario, la respuesta siempre devolverá un `success` si la llamada se completó correctamente. Esto significa que, incluso si los datos no existen, un acceso o eliminación puede completarse correctamente sin que se recuperen o eliminen datos.
 
 ## Pasos siguientes
 
