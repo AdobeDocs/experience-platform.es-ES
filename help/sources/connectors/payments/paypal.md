@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descripción general del conector Source de PayPal
 description: Aprenda a conectar PayPal a Adobe Experience Platform mediante las API o la interfaz de usuario.
 exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->El origen [!DNL PayPal] quedará obsoleto a finales de mayo de 2025.
+>El origen [!DNL PayPal] quedará obsoleto a finales de junio de 2025.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
