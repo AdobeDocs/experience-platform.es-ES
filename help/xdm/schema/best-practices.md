@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
+source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
 workflow-type: tm+mt
-source-wordcount: '3245'
+source-wordcount: '3227'
 ht-degree: 1%
 
 ---
@@ -246,12 +246,12 @@ Para establecer restricciones en un campo determinado, seleccione el campo en el
 A continuación se muestra una colección de sugerencias para mantener la integridad de los datos al crear un esquema.
 
 * **Tenga en cuenta las identidades principales**: Para productos de Adobe como SDK web, SDK móvil, Adobe Analytics y Adobe Journey Optimizer, el campo `identityMap` suele servir como identidad principal. Evite designar campos adicionales como identidades principales para ese esquema.
-* **Evitar usar `_id` como identidad**: Evite usar el campo `_id` en esquemas de Experience Event como identidad. Está pensado para la exclusividad de los registros, no para su uso como identidad.
+* **Asegúrese de que `_id` no se use como identidad**: el campo `_id` de los esquemas de Experience Event no se puede usar como identidad porque está pensado para la exclusividad de los registros.
 * **Establecer restricciones de longitud**: se recomienda establecer longitudes mínimas y máximas en los campos marcados como identidades. Se muestra un déclencheur de advertencia si intenta asignar un área de nombres personalizada a un campo de identidad sin cumplir las restricciones de longitud mínima y máxima. Estas limitaciones ayudan a mantener la coherencia y la calidad de los datos.
 * **Aplicar patrones para valores coherentes**: Si los valores de identidad siguen un patrón específico, debe usar la configuración **[!UICONTROL Patrón]** para aplicar esta restricción. Esta configuración puede incluir reglas como solo dígitos, mayúsculas o minúsculas, o combinaciones de caracteres específicas. Utilice expresiones regulares para hacer coincidir patrones en las cadenas.
 * **Limitar eVars en esquemas de Analytics**: normalmente, un esquema de Analytics solo debe tener un eVar designado como identidad. Si tiene intención de utilizar más de un eVar como identidad, debe comprobar si la estructura de datos se puede optimizar.
-* **Asegúrese de que un campo seleccionado sea único**: el campo elegido debe ser único en comparación con la identidad principal del esquema. Si no es así, no la marque como identidad. Por ejemplo, si varios clientes pueden proporcionar la misma dirección de correo electrónico, ese área de nombres no es una identidad adecuada. Este principio también se aplica a otras áreas de nombres de identidad, como los números de teléfono.
-* **Advertencias de déclencheur de restricciones para campos de espacio de nombres personalizados**: establezca restricciones para almacenar en déclencheur una advertencia cuando un campo de esquema se marque con un espacio de nombres personalizado sin especificar las longitudes mínima y máxima. La advertencia sirve como precaución importante para mantener la integridad de los datos. Consulte la documentación de [propiedades de campo específicas del tipo](../ui/fields/overview.md#type-specific-properties) para obtener información sobre cómo establecer restricciones en un campo en particular.
+* **Asegúrese de que un campo seleccionado sea único**: el campo elegido debe ser único en comparación con la identidad principal del esquema. Si no es así, no la marque como identidad. Por ejemplo, si varios clientes pueden proporcionar la misma dirección de correo electrónico, ese área de nombres no es una identidad adecuada. Este principio también se aplica a otras áreas de nombres de identidad, como los números de teléfono. Marcar un campo no único como identidad podría provocar el colapso no deseado del perfil.
+* **Verificar la longitud mínima de las cadenas**: todos los campos de cadena deben tener al menos un carácter, ya que los valores de cadena nunca deben estar vacíos. Sin embargo, se aceptan valores nulos para los campos no obligatorios.
 
 ## Pasos siguientes
 
