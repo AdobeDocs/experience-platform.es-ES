@@ -2,10 +2,10 @@
 title: Tipo de datos de atributos de auditoría del sistema de Source externo
 description: Obtenga información sobre el tipo de datos del Modelo de datos de experiencia (XDM) de atributos de auditoría del sistema de Source externo.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 03735e7099ffb2cfd44fc7fffd35e3a4a858e3ba
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 7%
+source-wordcount: '186'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 | `lastActivityDate` | Fecha/Hora | Fecha de la última actividad del sistema de origen. |
 | `lastReferencedDate` | Fecha/Hora | La última fecha de referencia del sistema de origen. |
 | `lastUpdatedBy` | Cadena | Nombre de la persona que actualizó este registro por última vez. |
-| `lastUpdatedDate` | Fecha/Hora | Fecha de la última actualización del sistema de origen. |
+| `lastUpdatedDate` | Fecha/Hora | Fecha de la última actualización del sistema de origen. Este valor lo usa la [política de combinación de atributos](../../profile/api/merge-policies.md#attribute-merge) para determinar la prioridad en caso de conflictos de combinación. |
 | `lastViewedDate` | Fecha/Hora | La última fecha de visualización del sistema de origen. |
 
 {style="table-layout:auto"}
