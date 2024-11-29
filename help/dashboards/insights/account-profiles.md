@@ -4,16 +4,16 @@ description: Descubra el SQL que alimenta las perspectivas de su perfil de cuent
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
 # Datos del perfil de cuenta
 
-[Los perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) se utilizan para consolidar información de cuenta de varias fuentes, incluidos varios canales de marketing y sistemas organizativos. Esta vista unificada permite comprender las cuentas de los clientes y mejorar las campañas de marketing B2B. Las perspectivas derivadas del análisis del modelo de datos hacen que los datos B2B de Adobe Real-time Customer Data Platform sean más accesibles, comprensibles e impactantes para la toma de decisiones.
+[Los perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) se utilizan para consolidar información de cuenta de varias fuentes, incluidos varios canales de marketing y sistemas organizativos. Esta vista unificada permite comprender las cuentas de los clientes y mejorar las campañas de marketing B2B. Las perspectivas derivadas del análisis del modelo de datos hacen que los datos B2B de Adobe Real-Time CDP sean más accesibles, comprensibles e impactantes para la toma de decisiones.
 
 Con acceso al SQL que alimenta sus perspectivas, puede comprender mejor sus datos B2B y generar sus propias perspectivas reutilizables altamente personalizadas para explorar aún más la información de su cuenta de cliente. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 

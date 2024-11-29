@@ -2,16 +2,16 @@
 title: Perspectivas de perfil
 description: Descubra el SQL que alimenta las perspectivas de perfil y utilice estas consultas para generar perspectivas personalizadas que exploren aún más a sus clientes y sus experiencias como consumidores.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1659'
 ht-degree: 3%
 
 ---
 
 # Perspectivas de perfil
 
-Las perspectivas derivadas del análisis del modelo de datos hacen que los datos de Adobe Real-time Customer Data Platform sean más accesibles, comprensibles e impactantes para la toma de decisiones.
+Las perspectivas derivadas del análisis del modelo de datos hacen que los datos de Adobe Real-Time CDP sean más accesibles, comprensibles e impactantes para la toma de decisiones.
 
 Comprenda sus perspectivas de perfil accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más a sus clientes y a sus experiencias de consumidor que conforman sus perfiles. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 

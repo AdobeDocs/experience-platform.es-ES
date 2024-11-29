@@ -2,16 +2,16 @@
 title: Audiences Insights
 description: Descubra el SQL que alimenta las perspectivas de audiencia y utilice estas consultas para generar perspectivas personalizadas y explorar aún más los datos de audiencia de Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1122'
 ht-degree: 3%
 
 ---
 
 # Perspectivas de audiencias
 
-Las perspectivas derivadas del análisis del modelo de datos hacen que los datos de Adobe Real-time Customer Data Platform sean más accesibles, comprensibles e impactantes para la toma de decisiones.
+Las perspectivas derivadas del análisis del modelo de datos hacen que los datos de Adobe Real-Time CDP sean más accesibles, comprensibles e impactantes para la toma de decisiones.
 
 Comprenda sus perspectivas de audiencia accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más las identidades y perfiles que conforman sus audiencias. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 

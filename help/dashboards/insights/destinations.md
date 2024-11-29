@@ -2,16 +2,16 @@
 title: Perspectivas de destinos
 description: Descubra el SQL que alimenta las perspectivas de sus destinos y utilice estas consultas para generar perspectivas personalizadas y explorar aún más la activación de datos de Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
 
 # Perspectivas de destinos
 
-Las perspectivas derivadas del análisis del modelo de datos hacen que los datos de Adobe Real-time Customer Data Platform sean más accesibles, comprensibles e impactantes para la toma de decisiones.
+Las perspectivas derivadas del análisis del modelo de datos hacen que los datos de Adobe Real-Time CDP sean más accesibles, comprensibles e impactantes para la toma de decisiones.
 
 Comprenda sus perspectivas de destino accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más la activación de datos de Adobe Experience Platform a sus plataformas de destino. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 

@@ -1,19 +1,19 @@
 ---
-title: Real-time Customer Data Platform Insights Data Model edición B2B
+title: B2B edition del modelo de datos de Real-time Customer Data Platform Insights
 description: Aprenda a utilizar consultas SQL con los modelos de datos de perspectivas de Real-time Customer Data Platform (B2B edition) para personalizar sus propios informes de Real-Time CDP para los casos de uso de KPI y marketing.
-badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform Insights Data Model B2B Edition
+# B2B edition del modelo de datos de Real-Time CDP Insights
 
-El modelo de datos de Real-time Customer Data Platform Insights para B2B edition expone los modelos de datos y SQL que alimentan las perspectivas para [perfiles de cuenta](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de indicadores clave de rendimiento (KPI) y marketing B2B. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles.
+El modelo de datos de Real-Time CDP Insights para B2B edition expone los modelos de datos y SQL que alimentan las perspectivas para [perfiles de cuenta](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de indicadores clave de rendimiento (KPI) y marketing B2B. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles.
 
 >[!AVAILABILITY]
 >
