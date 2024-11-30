@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform de noviembre de 2024
 description: Notas de la versión de noviembre de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4786a1f33c76b6023f6e3edfd4f70c18230fda5f
+source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '852'
 ht-degree: 29%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 29%
 
 >[!TIP]
 >
->Ya está disponible la nueva [página de aterrizaje de documentación del producto del Asistente de IA](../../ai-assistant/landing.md). Utilice esta página como centro para todos los recursos relacionados con el asistente de IA.
+>Ya está disponible la nueva [documentación del producto del Asistente de IA](../../ai-assistant/landing.md). Utilice esta página como centro para todos los recursos relacionados con el asistente de IA.
 
 **Fecha de la versión: 26 de noviembre de 2024**
 
