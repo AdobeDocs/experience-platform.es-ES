@@ -2,10 +2,10 @@
 title: Información general sobre el asistente de IA en Adobe Experience Platform
 description: Obtenga información sobre el asistente de IA, sus matices y casos de uso, y cómo puede utilizarlo para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 16%
+source-wordcount: '938'
+ht-degree: 15%
 
 ---
 
@@ -58,6 +58,10 @@ El conocimiento del producto hace referencia a conceptos y temas basados en la d
 | Resolución de problemas | <ul><li>¿Por qué no puedo activar un esquema propiedad de Adobe para el perfil?</li><li>¿Por qué no puedo eliminar un segmento?</li></ul> |
 
 {style="table-layout:auto"}
+
+Vea el siguiente vídeo para obtener información adicional sobre los conocimientos del producto AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Datos operativos {#operational-insights}
 
