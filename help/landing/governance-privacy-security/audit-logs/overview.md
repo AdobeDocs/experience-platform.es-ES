@@ -4,10 +4,10 @@ description: Descubra cómo los registros de auditoría le permiten ver quién r
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
 workflow-type: tm+mt
-source-wordcount: '1350'
-ht-degree: 36%
+source-wordcount: '1388'
+ht-degree: 35%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 36%
 Para aumentar la transparencia y la visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform le permite auditar la actividad del usuario para varios servicios y funcionalidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 
 En un sentido básico, un registro de auditoría indica a **quién** realizó **qué** acción y **cuándo**. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción.
+
+>[!NOTE]
+>
+> Los metadatos de las acciones **Agregar usuario** y **Quitar usuario** dentro del recurso **Rol** no contendrán el ID de correo electrónico del usuario que realizó la acción. En su lugar, los registros mostrarán el ID de correo electrónico generado por el sistema (system@adobe.com).
 
 Este documento cubre los registros de auditoría en Platform, incluido cómo verlos y administrarlos en la interfaz de usuario o la API.
 
