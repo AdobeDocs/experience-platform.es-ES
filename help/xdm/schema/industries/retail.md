@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Modelo de datos del sector minorista
 description: Vea un modelo de datos estandarizado para el sector minorista, compatible con el modelo de datos de experiencia (XDM) para su uso en Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -21,12 +21,12 @@ El siguiente diagrama de relación de entidades (ERD) representa un modelo de da
 Utilice la siguiente leyenda para interpretar este ERD:
 
 * Cada entidad mostrada en se basa en una clase [Experience Data Model (XDM) subyacente](../composition.md#class).
-* Para una entidad determinada, cada fila marcada con **bold** representa un grupo de campos o un tipo de datos, con los campos relevantes que proporciona enumerados a continuación en texto sin negrita.
+* Los campos con sangría debajo de un campo principal representan un campo secundario, o subcampo, que pertenece al grupo de campos del elemento principal.
 * Los campos más importantes de una entidad determinada se resaltan en rojo.
 * Todas las propiedades que se pueden utilizar para identificar clientes individuales se marcan como &quot;identidad&quot;, con una de estas propiedades marcada como &quot;identidad principal&quot;.
 * Las relaciones de entidad se marcan como no dependientes, ya que los eventos basados en cookies a menudo no pueden determinar la persona o individuo que realizó la transacción.
 
-![](../../images/industries/retail.png)
+![Ejemplo de ERD para un modelo de datos de un sector comercial](../../images/industries/retail.png)
 
 >[!NOTE]
 >
