@@ -3,9 +3,9 @@ keywords: conexión de linkedin;conexión de linkedin;destinos de linkedin;linke
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para la segmentación, personalización y supresión de audiencias, en función de los correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1095'
 ht-degree: 4%
 
 ---
@@ -149,7 +149,7 @@ Consulte [Activar datos de audiencia en destinos de exportación de audiencia de
 
 ## Datos exportados {#exported-data}
 
-Una activación correcta significa que se crearía una audiencia personalizada de [!DNL LinkedIn] mediante programación en [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). La pertenencia a audiencias se añadiría y eliminaría a medida que los usuarios se calificaran o descalificaran para las audiencias activadas.
+Una activación correcta significa que se crea una audiencia personalizada de [!DNL LinkedIn] mediante programación en [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). La pertenencia a audiencias se ajusta a medida que los usuarios se califican o descalifican para las audiencias activadas.
 
 >[!TIP]
 >

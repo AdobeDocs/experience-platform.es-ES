@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1262'
 ht-degree: 5%
 
 ---
@@ -201,6 +201,7 @@ ht-degree: 5%
    * Destinos sociales{#social}
       * [Información general sobre destinos sociales](./catalog/social/overview.md)
       * [Conexión de facebook](./catalog/social/facebook.md)
+      * [(Compañías) Conexión de audiencias coincidentes de LinkedIn](./catalog/social/linkedin-b2b.md)
       * [Conexión de audiencias coincidentes de linkedIn](./catalog/social/linkedin.md)
       * [Conexión de TikTok](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] conexión](./catalog/social/twitter.md)
