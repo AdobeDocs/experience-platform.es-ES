@@ -3,9 +3,9 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2612'
 ht-degree: 8%
 
 ---
@@ -293,54 +293,54 @@ Tenga en cuenta las siguientes limitaciones para la publicación de disponibilid
 
 **¿Podemos generar un archivo sin carpeta si solo lo guardamos en `/` como ruta de la carpeta? Además, si no se requiere una ruta de carpeta, ¿cómo se generarán los archivos con nombres duplicados en una carpeta o ubicación?**
 
-+++
++++Respuesta
 A partir de la versión de septiembre de 2024, es posible personalizar el nombre de la carpeta e incluso utilizar `/` para exportar archivos de todos los conjuntos de datos de la misma carpeta. Adobe no lo recomienda para destinos que exportan varios conjuntos de datos, ya que los nombres de archivo generados por el sistema que pertenecen a diferentes conjuntos de datos se mezclarán en la misma carpeta.
 +++
 
 **¿Puede enrutar el archivo de manifiesto a una carpeta y los archivos de datos a otra?**
 
-+++
++++Respuesta
 No, no es posible copiar el archivo de manifiesto en otra ubicación.
 +++
 
 **¿Podemos controlar la secuencia o el tiempo de entrega de los archivos?**
 
-+++
++++Respuesta
 Existen opciones para programar la exportación. No hay opciones para retrasar o secuenciar la copia de los archivos. Se copian en su ubicación de almacenamiento en cuanto se generan.
 +++
 
 **¿Qué formatos están disponibles para el archivo de manifiesto?**
 
-+++
++++Respuesta
 El archivo de manifiesto está en formato .json.
 +++
 
 **¿Hay disponibilidad de API para el archivo de manifiesto?**
 
-+++
++++Respuesta
 No hay ninguna API disponible para el archivo de manifiesto, pero incluye una lista de archivos que comprenden la exportación.
 +++
 
 **¿Podemos agregar detalles adicionales al archivo de manifiesto (es decir, recuento de registros)? Si es así, ¿cómo?**
 
-+++
++++Respuesta
 No es posible añadir información adicional al archivo de manifiesto. El recuento de registros está disponible a través de la entidad `flowRun` (consultable mediante API). Obtenga más información en la monitorización de destinos.
 +++
 
 **¿Cómo se dividen los archivos de datos? ¿Cuántos registros por archivo?**
 
-+++
++++Respuesta
 Los archivos de datos se dividen según la partición predeterminada en el lago de datos del Experience Platform. Los conjuntos de datos más grandes tienen un número mayor de particiones. El usuario no puede configurar la partición predeterminada porque está optimizada para la lectura.
 +++
 
 **¿Podemos establecer un umbral (número de registros por archivo)?**
 
-+++
++++Respuesta
 No, no es posible.
 +++
 
 **¿Cómo reenviamos un conjunto de datos en caso de que el envío inicial sea incorrecto?**
 
-+++
++++Respuesta
 Los reintentos se realizan automáticamente para la mayoría de los tipos de errores del sistema.
 +++

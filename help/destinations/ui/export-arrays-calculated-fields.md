@@ -3,7 +3,7 @@ title: Utilice campos calculados para exportar matrices como cadenas
 type: Tutorial
 description: Aprenda a utilizar campos calculados para exportar matrices de Real-Time CDP a destinos de almacenamiento en la nube como cadenas.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 7%
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->* La funcionalidad para exportar matrices a través de campos calculados está disponible de forma general.
+>La funcionalidad para exportar matrices a través de campos calculados está disponible de forma general.
 
 Obtenga información sobre cómo exportar matrices a través de campos calculados desde Real-Time CDP a [destinos de almacenamiento en la nube](/help/destinations/catalog/cloud-storage/overview.md) como cadenas. Lea este documento para comprender los casos de uso habilitados por esta funcionalidad.
 
