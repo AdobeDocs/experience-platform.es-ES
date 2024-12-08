@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de IU del servicio de consultas
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 1%
@@ -175,4 +175,3 @@ La ficha **[!UICONTROL Credenciales]** muestra tanto las credenciales que caduca
 ## Pasos siguientes
 
 Ahora que está familiarizado con la interfaz de usuario del Servicio de consultas en [!DNL Platform], puede acceder al Editor de consultas para empezar a crear sus propios proyectos de consultas y compartirlos con otros usuarios de su organización. Para obtener más información sobre la creación y ejecución de consultas en el Editor de consultas, consulte la [guía del usuario del Editor de consultas](./user-guide.md).
-
