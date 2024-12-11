@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Aprenda los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4056'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ En el área de trabajo [!UICONTROL Esquemas], seleccione **[!UICONTROL Crear esq
 
 Aparecerá el cuadro de diálogo [!UICONTROL Crear un esquema]. En este cuadro de diálogo, puede elegir crear manualmente un esquema añadiendo campos y grupos de campos, o puede cargar un archivo CSV y utilizar algoritmos XML para generar un esquema. Seleccione un flujo de trabajo de creación de esquemas en el cuadro de diálogo.
 
-![El cuadro de diálogo Crear un esquema con las opciones de flujo de trabajo y la selección resaltadas.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![El cuadro de diálogo Crear un esquema con las opciones de flujo de trabajo y la selección resaltadas.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} Creación de esquemas asistida por ML o manual {#manual-or-assisted}
 
@@ -49,15 +49,35 @@ Aparece el flujo de trabajo [!UICONTROL Crear esquema]. Puede elegir una clase b
 
 ![Flujo de trabajo [!UICONTROL Crear esquema] con las tres opciones de clase y [!UICONTROL Siguiente] resaltado.](../../images/ui/resources/schemas/schema-class-options.png)
 
+Al elegir **[!UICONTROL Otros]**, aparece una lista de clases disponibles. Desde aquí puede examinar y filtrar clases preexistentes.
+
+![El flujo de trabajo [!UICONTROL Crear esquema] con [!UICONTROL Otros] resaltado en la sección [!UICONTROL Detalles del esquema].](../../images/ui/resources/schemas/other-schema-details.png)
+
+Seleccione un botón de opción para filtrar las clases en función de si son clases personalizadas o estándar. También puede filtrar los resultados disponibles según su sector o buscar una clase específica utilizando el campo de búsqueda.
+
+![Se ha resaltado el flujo de trabajo [!UICONTROL Crear esquema] con la barra de búsqueda, [!UICONTROL Personalizado] y [!UICONTROL Industrias].](../../images/ui/resources/schemas/filter-and-search.png)
+
+Para ayudarle a decidir la clase adecuada, hay iconos de información y vista previa para cada clase. El icono de información (![Un icono de información.](/help/images/icons/info.png)) abre un cuadro de diálogo que proporciona una descripción de la clase y del sector al que está asociada.
+
+![Se resaltaron el icono de información y la información de objeto de la clase seleccionada.](../../images/ui/resources/schemas/class-info.png)
+
+El icono de vista previa (![Un icono de vista previa.](/help/images/icons/preview.png)) abre un cuadro de diálogo de vista previa para la clase que contiene un diagrama de esquema y sus propiedades.
+
+![Vista previa de la clase seleccionada con el diagrama de esquema y las propiedades de clase.](../../images/ui/resources/schemas/class-preview.png)
+
+Seleccione cualquier fila para elegir una clase y, a continuación, seleccione **[!UICONTROL Siguiente]** para confirmar su elección.
+
+![El flujo de trabajo [!UICONTROL Crear esquema] con una clase seleccionada de la tabla de clases disponibles y [!UICONTROL Siguiente] resaltado.](../../images/ui/resources/schemas/select-class.png)
+
 Después de seleccionar una clase, aparece la sección [!UICONTROL Nombre y revisión]. En esta sección, proporcione un nombre y una descripción para identificar el esquema. palo de golfLa estructura base del esquema (proporcionada por la clase ) se muestra en el lienzo para que revise y compruebe la clase y la estructura de esquema seleccionadas.
 
 Escriba un [!UICONTROL nombre para mostrar del esquema] descriptivo en el campo de texto. A continuación, introduzca una descripción adecuada para ayudar a identificar el esquema. Cuando haya revisado la estructura de esquema y esté satisfecho con la configuración, seleccione **[!UICONTROL Finalizar]** para crear el esquema.
 
 ![Se ha resaltado la sección [!UICONTROL Nombre y revisión] del flujo de trabajo [!UICONTROL Crear esquema] con [!UICONTROL Nombre para mostrar esquema], [!UICONTROL Descripción] y [!UICONTROL Finalizar].](../../images/ui/resources/schemas/name-and-review.png)
 
-Aparecerá la ficha [!UICONTROL Esquema] [!UICONTROL Examinar]. El esquema creado recientemente aparece ahora en la Biblioteca de esquemas y está disponible para editar en [!DNL Schema Editor].
+Aparecerá el Editor de esquemas con la estructura del esquema mostrada en el lienzo. Si lo desea, ahora puede iniciar [agregando campos a la clase](../../ui/resources/classes.md#add-fields).
 
-![La pestaña Examinar del espacio de trabajo de esquemas muestra el esquema creado recientemente.](../../images/ui/resources/schemas/example-schema.png)
+![Editor de esquemas con la estructura del esquema mostrada en el lienzo.](../../images/ui/resources/schemas/edit.png)
 
 ## Editar un esquema existente {#edit}
 
