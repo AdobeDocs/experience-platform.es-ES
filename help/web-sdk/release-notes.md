@@ -1,11 +1,11 @@
 ---
 title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
-keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;notas de la versión;
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2085'
 ht-degree: 5%
 
 ---
@@ -13,8 +13,14 @@ ht-degree: 5%
 
 # Notas de la versión
 
-Este documento describe las notas de la versión del SDK web de Adobe Experience Platform.
-Para obtener las últimas notas de la versión de la extensión de etiquetas SDK web, consulte las [notas de la versión de la extensión de etiquetas SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
+Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.24.1: sábado, 06 de diciembre de 2024
+
+**Correcciones y mejoras**
+
+- Se ha resuelto un problema de dependencia relacionado con [Motor de reglas de Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/), que estaba causando errores en algunas integraciones de clientes. Web SDK ahora requiere [Motor de reglas de Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/) versión 2.0.3 o posterior.
 
 ## Versión 2.24.0: viernes, 31 de octubre de 2024
 
@@ -44,7 +50,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 
 **Correcciones y mejoras**
 
-- Se ha corregido un problema por el cual las cookies no se escribían correctamente al ejecutar el SDK web localmente.
+- Se ha corregido un problema por el cual las cookies no se escribían correctamente al ejecutar Web SDK localmente.
 
 ## Versión 2.22.0: 22 de agosto de 2024
 
@@ -90,7 +96,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 
 - Se ha corregido un problema por el cual los errores de identidad enmascaraban otros errores y cambiaban los errores de identidad a advertencias.
 - Se corrigió un problema en el cual las llamadas de final de página nunca se enviaban cuando había una llamada superior de página con `renderDecisions` establecido en `false`.
-- Se corrigió un problema en el cual el SDK web no podía leer identidades entre dominios cuando había varios `adobe_mc` parámetros de cadena de consulta.
+- Se corrigió un problema en el cual Web SDK no podía leer identidades entre dominios cuando había varios `adobe_mc` parámetros de cadena de consulta.
 
 ## Versión 2.19.1: sábado, 10 de noviembre de 2023
 
@@ -121,13 +127,13 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 **Correcciones y mejoras**
 
 - Se ha corregido un problema por el cual los vínculos de salida no se clasificaban debido a que el dominio formaba parte de la consulta.
-- `edgeConfigId` está en desuso a favor de `datastreamId` en la configuración del SDK web.
+- `edgeConfigId` quedará obsoleto en favor de `datastreamId` en la configuración de Web SDK.
 
 ## Versión 2.17.0: jueves, 17 de mayo de 2023
 
 **Correcciones y mejoras**
 
-- El SDK web ahora codifica los valores de destino de las cookies del Audience Manager, de forma similar a la [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es).
+- Web SDK ahora codifica los valores de destino de las cookies del Audience Manager, de forma similar a la [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es).
 
 ## Versión 2.16.0: 25 de abril de 2023
 
@@ -167,7 +173,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 
 **Nuevas funciones**
 
-- Se agregó compatibilidad con [Página por migración completa de página](home.md#migrating-to-web-sdk). El perfil de Adobe Target ahora se conservará a medida que un visitante se desplace entre las páginas de at.js y del SDK web.
+- Se agregó compatibilidad con [Página por migración completa de página](home.md#migrating-to-web-sdk). El perfil de Adobe Target ahora se conservará cuando un visitante se mueva entre páginas de at.js y de Web SDK.
 - Se agregó compatibilidad configurable para [sugerencias de cliente de agente de usuario de alta entropía](/help/web-sdk/use-cases/client-hints.md).
 - Se agregó compatibilidad con el comando [`applyResponse`](/help/web-sdk/commands/applyresponse.md). Esto habilita la personalización híbrida mediante la [API de Edge Network Server](../server-api/overview.md).
 - Los vínculos del modo de control de calidad ahora funcionan en varias páginas.
@@ -257,17 +263,17 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 
 ## Versión 2.4.0: marzo de 2021
 
-- Ahora, el SDK se puede instalar como [paquete NPM](/help/web-sdk/install/npm.md).
+- SDK ahora se puede instalar como [paquete NPM](/help/web-sdk/install/npm.md).
 - Se agregó compatibilidad con la opción `out` al [configurar el consentimiento predeterminado](/help/web-sdk/commands/configure/defaultconsent.md), que anula todos los eventos hasta que se reciba el consentimiento (la opción `pending` existente pone en cola los eventos y los envía una vez que se recibe el consentimiento).
 - Ahora se puede usar la llamada de retorno [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) para evitar que se envíe un evento.
 - Ahora utiliza un grupo de campos de esquema XDM en lugar de `meta.personalization` al enviar eventos sobre el contenido personalizado que se procesa o en el que se hace clic.
 - El comando [`getIdentity`](/help/web-sdk/commands/getidentity.md) ahora devuelve el ID de región perimetral junto con la identidad.
 - Las advertencias y los errores recibidos del servidor se han mejorado y se gestionan de forma más adecuada.
 - Se agregó compatibilidad con el estándar Consentimiento de Adobe 2.0 para el comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
-- Cuando se reciben, las preferencias de consentimiento tienen un cifrado hash y se almacenan en el almacenamiento local para una integración optimizada entre CMP, el SDK web de Platform y el Edge Network de Platform. Si está recopilando las preferencias de consentimiento, le recomendamos que llame a `setConsent` en cada carga de página.
+- Cuando se reciben, las preferencias de consentimiento tienen un cifrado hash y se almacenan en el almacenamiento local para una integración optimizada entre CMP, Platform Web SDK y Platform Edge Network. Si está recopilando las preferencias de consentimiento, le recomendamos que llame a `setConsent` en cada carga de página.
 - Se han agregado dos [vínculos de supervisión](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` y `onCommandRejected`.
 - Corrección de errores: Los eventos de notificación de interacción de Personalization contendrían información duplicada sobre la misma actividad cuando un usuario navegaba a una nueva vista de aplicación de una sola página, volvía a la vista original y hacía clic en un elemento que cumplía los requisitos para la conversión.
-- Corrección de errores: Si el primer evento enviado por el SDK tenía `documentUnloading` establecido en `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) se usaría para enviar el evento, lo que da como resultado un error con respecto a una identidad que no se está estableciendo.
+- Corrección de errores: Si el primer evento enviado por SDK tenía `documentUnloading` establecido en `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) se usaría para enviar el evento, lo que da como resultado un error con respecto a una identidad que no se está estableciendo.
 
 ## Versión 2.3.0: noviembre de 2020
 
@@ -277,12 +283,12 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas SDK
 - Corrección de errores: `sendBeacon` no se estaba usando cuando `documentUnloading` se estableció en `true` o cuando se realizaba un seguimiento automático de los clics en los vínculos.
 - Corrección de errores: No se rastrearía automáticamente un vínculo si el elemento de anclaje contuviera contenido de HTML.
 - Corrección de errores: Algunos errores del explorador que contienen una propiedad de solo lectura `message` no se gestionaron correctamente, lo que dio como resultado que se expusiera un error diferente al cliente.
-- Corrección de errores: La ejecución del SDK dentro de un iframe produciría un error si la página del HTML del iframe era de un subdominio diferente a la página del HTML de la ventana principal.
+- Corrección de errores: La ejecución de SDK dentro de un iframe produciría un error si la página del HTML del iframe era de un subdominio diferente a la página del HTML de la ventana principal.
 
 ## Versión 2.2.0: octubre de 2020
 
-- Corrección de errores: El objeto Opt-in bloqueaba el SDK web para que no realizara llamadas cuando `idMigrationEnabled` es `true`.
-- Corrección de errores: Haga que el SDK web tenga en cuenta las solicitudes que deberían devolver ofertas de personalización para evitar un problema de parpadeo.
+- Corrección de errores: El objeto Opt-in bloqueaba las llamadas de Web SDK cuando `idMigrationEnabled` es `true`.
+- Corrección de errores: Haga que Web SDK tenga en cuenta las solicitudes que deben devolver ofertas de personalización para evitar un problema de parpadeo.
 
 ## Versión 2.1.0: agosto de 2020
 
