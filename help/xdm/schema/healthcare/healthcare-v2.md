@@ -5,10 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 36f1a443eda47917d5b6bd84d4765ff044b5093a
+source-git-commit: 8eaff2361e76a7856b3371156ed9fe5c542fec28
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 12%
+source-wordcount: '552'
+ht-degree: 3%
 
 ---
 
@@ -18,179 +18,13 @@ ht-degree: 12%
 
 La siguiente tabla describe las clases recomendadas y los grupos de campos de esquema para varios casos de uso sanitarios comunes.
 
-<table>
-  <thead>
-    <tr>
-      <th>Casos de uso</th>
-      <th>Grupos de campo</th>
-      <th>Clases compatibles</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Crear/actualizar paciente</strong>: cuando un paciente llega a la recepción del hospital, se establece un registro del paciente, que incluye detalles demográficos como un identificador (opcional), el nombre del paciente, su fecha de nacimiento, su sexo y su dirección. Esto sirve como un componente vital de la TI de la atención sanitaria.</td>
-      <td><a href="./field-groups/patient.md">Paciente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="6"><strong>Vacunación</strong>: Facilitar el proceso de vacunación, administrar los registros de inmunización de los pacientes e integrar EMRs con los sistemas de administración de vacunas.</td>
-      <td><a href="./field-groups/immunization.md">Inmunización</a></td>
-      <td>
-        <li><a href="../../classes/experienceevent.md">Evento de experiencia XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/patient.md">Paciente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Ubicación</a></td>
-      <td>
-        <li><a href="./classes/location.md">Ubicación</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication.md">Medicación</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicación</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-dispense.md">Dispensación de medicamentos</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicación</a></li>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-request.md">Solicitud de medicamento</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicación</a></li>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4"><strong>Cumplimiento posterior a la atención</strong>: Motivar a los pacientes y cuidadores a completar sus planes de tratamiento y reducir las tasas de envío de dinero.</td>
-      <td><a href="./field-groups/patient.md">Paciente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Ubicación</a></td>
-      <td>
-        <li><a href="./classes/location.md">Ubicación</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/care-plan.md">Plan de atención</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/goal.md">Meta</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="7"><strong>Experiencia del consumidor con un seguro</strong>: Mejore la adquisición digital y las experiencias de los consumidores que buscan un seguro. Algunos ejemplos son: 
-        <li> Comprender el comportamiento del consumidor para enviar correos electrónicos promocionales o anuncios de terceros segmentados a las personas que acceden a páginas que contienen información general (como planes, nombres o niveles de planes, Medicaid o programas de bienestar)
-        </li> 
-        <li> Enviar información relacionada con la vacuna sobre la salud del corazón para crear conciencia de marca o solicitudes para programar vacunas a personas que buscan información sobre la salud del corazón y la vacuna.
-        </li>
-      </td>
-      <td><a href="./field-groups/patient.md">Paciente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/coverage.md">Cobertura</a></td>
-      <td>
-        <li><a href="../../classes/plan.md">Plan</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/account.md">Cuenta</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Ubicación</a></td>
-      <td>
-        <li><a href="./classes/location.md">Ubicación</a></li>
-      </td>
-    </tr>
-      <tr>
-      <td><a href="./field-groups/medication.md">Medicación</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicación</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-dispense.md">Dispensación de medicamentos</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicación</a></li>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-request.md">Solicitud de medicamento</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicación</a></li>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="5"><strong>Experiencia mejorada del proveedor</strong>: Uso de los datos del proveedor del sistema EMR para sugerir proveedores alternativos en función de la disponibilidad, la ubicación y la especialidad de la cita. <br> <br>Mejora de las búsquedas de proveedores para mostrar los resultados con la disponibilidad deseada, comprobando que el proveedor seleccionado forma parte de la red de pagadores y proporcionando estimaciones de costos.
-      </td>
-      <td><a href="./field-groups/patient.md">Paciente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Ubicación</a></td>
-      <td>
-        <li><a href="./classes/location.md">Ubicación</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/organization.md">Organización</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/practioner.md">Profesional</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/schedule.md">Programación</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Perfil individual de XDM</a></li>
-        <li><a href="../../classes/provider.md">Proveedor</a></li>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Ejemplo de uso | Grupos de campos y clases compatibles |
+| --- | --- |
+| **Crear/actualizar paciente**: cuando un paciente llega a la recepción del hospital, se establece un registro del paciente, que incluye detalles demográficos como un identificador (opcional), el nombre del paciente, su fecha de nacimiento, su sexo y su dirección. Esto sirve como un componente vital de la TI de la atención sanitaria. | <ul><li>**[Perfiles individuales XDM](../../classes/individual-profile.md)**:<ul><li>[Paciente](./field-groups/patient.md)</li></ul></li></ul> |
+| **Vacunación**: Facilitar el proceso de vacunación, administrar los registros de inmunización de los pacientes e integrar EMRs con los sistemas de administración de vacunas. | <ul><li>**[ExperienceEvent de XDM](../../classes/experienceevent.md)**:<ul><li>[Vacunación](./field-groups/immunization.md)</li></ul></li><li>**[Perfil individual de XDM](../../classes/individual-profile.md)**:<ul><li>[Dispensación de medicamentos](./field-groups/medication-dispense.md)</li><li>[Solicitud de medicamento](./field-groups/medication-request.md)</li><li>[Paciente](./field-groups/patient.md)</li></ul></li><li>**[Ubicación](./classes/location.md)**:<ul><li>[Ubicación](./field-groups/location.md)</li></ul><li>**[Medicamento](../../classes/medication.md)**:<ul><li>[Medicamento](./field-groups/medication.md)</li><li>[Dispensación de medicamentos](./field-groups/medication-dispense.md)</li><li>[Solicitud de medicamento](./field-groups/medication-request.md)</li></ul></li><li>**[Proveedor](../../classes/provider.md)**:<ul><li>[Dispensación de medicamentos](./field-groups/medication-dispense.md)</li><li>[Solicitud de medicamento](./field-groups/medication-request.md)</li></ul></li></ul> |
+| **Cumplimiento posterior a la atención**: Motivar a los pacientes y cuidadores a completar sus planes de tratamiento y reducir las tasas de envío de dinero. | <ul><li>**[Perfil individual de XDM](../../classes/individual-profile.md)**:<ul><li>[Plan de atención](./field-groups/care-plan.md)</li><li>[Meta](./field-groups/goal.md)</li><li>[Paciente](./field-groups/patient.md)</li></ul></li><li>**[Ubicación](./classes/location.md)**:<ul><li>[Ubicación](./field-groups/location.md)</li></ul><li>**[Proveedor](../../classes/provider.md)**:<ul><li>[Meta](./field-groups/goal.md)</li></ul></li></ul> |
+| **Experiencia del consumidor con un seguro**: Mejore la adquisición digital y las experiencias de los consumidores que buscan un seguro. Algunos ejemplos son: <li> Comprender el comportamiento del consumidor para enviar correos electrónicos promocionales o anuncios de terceros segmentados a las personas que acceden a páginas que contienen información general (como planes, nombres o niveles de planes, Medicaid o programas de bienestar)</li><li> Enviar información relacionada con la vacuna sobre la salud del corazón para crear conciencia de marca o solicitudes para programar vacunas a personas que buscan información sobre la salud del corazón y la vacuna. </li> | <ul><li>**[Perfil individual de XDM](../../classes/individual-profile.md)**:<ul><li>[Cuenta](./field-groups/account.md)</li><li>[Dispensación de medicamentos](./field-groups/medication-dispense.md)</li><li>[Solicitud de medicamento](./field-groups/medication-request.md)</li><li>[Paciente](./field-groups/patient.md)</li></ul></li><li>**[Ubicación](./classes/location.md)**:<ul><li>[Ubicación](./field-groups/location.md)</li></ul><li>**[Medicamento](../../classes/medication.md)**:<ul><li>[Medicamento](./field-groups/medication.md)</li><li>[Dispensación de medicamentos](./field-groups/medication-dispense.md)</li><li>[Solicitud de medicamento](./field-groups/medication-request.md)</li></ul></li><li>**[Proveedor](../../classes/provider.md)**:<ul><li>[Cuenta](./field-groups/account.md)</li><li>[Dispensación de medicamentos](./field-groups/medication-dispense.md)</li><li>[Solicitud de medicamento](./field-groups/medication-request.md)</li></ul><li>**[Plan](../../classes/plan.md)**:<ul><li>[Meta](./field-groups/coverage.md)</li></ul></li></ul> |
+| **Experiencia mejorada del proveedor**: Uso de los datos del proveedor del sistema EMR para sugerir proveedores alternativos en función de la disponibilidad, la ubicación y la especialidad de la cita. <br> <br>Mejora de las búsquedas de proveedores para mostrar los resultados con la disponibilidad deseada, comprobando que el proveedor seleccionado forma parte de la red de pago y proporcionando estimaciones de costos. | <ul><li>**[Perfiles individuales XDM](../../classes/individual-profile.md)**:<ul><li>[Organización](./field-groups/organization.md)</li><li>[Paciente](./field-groups/patient.md)</li><li>[Profesional](./field-groups/practioner.md)</li><li>[Programación](./field-groups/schedule.md)</li></ul></li><li>**[Ubicación](./classes/location.md)**:<ul><li>[Ubicación](./field-groups/location.md)</li></ul><li>**[Proveedor](../../classes/provider.md)**:<ul><li>[Organización](./field-groups/organization.md)</li><li>[Profesional](./field-groups/practioner.md)</li><li>[Programación](./field-groups/schedule.md)</li></ul></li></ul> |
 
 ## Tipos de datos {#data-types}
 
