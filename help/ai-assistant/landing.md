@@ -2,7 +2,7 @@
 title: Asistente de IA en la documentación del producto de Adobe Experience Platform
 description: Introducción al Asistente de IA en Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 86edf0c8eeca5b3d2be5776664c397fcf5028e29
+source-git-commit: d2de642b7e84d3c4fad57cf0052afa67878dcac0
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 1%
@@ -150,7 +150,7 @@ Vea los siguientes vídeos para ver ejemplos de casos de uso adicionales del asi
 
 >[!ENDTABS]
 
-## Recursos adicionales
+## Recursos adicionales {#additional-resources}
 
 >[!BEGINSHADEBOX]
 
