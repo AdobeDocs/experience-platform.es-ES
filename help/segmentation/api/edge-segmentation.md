@@ -4,10 +4,10 @@ title: Segmentación de Edge mediante la API
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de Edge con la API del servicio de segmentación de Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 2%
+source-wordcount: '808'
+ht-degree: 1%
 
 ---
 
@@ -46,7 +46,7 @@ Para que se pueda evaluar un segmento mediante la segmentación de Edge, la cons
 | Evento único en un intervalo de tiempo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante en un intervalo de tiempo inferior a 24 horas. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
 | Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. |
-| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**. |
+| Segmento de segmentos | Cualquier definición de segmento que contenga una o más definiciones de segmento por lotes o de flujo continuo. **Nota:** Si se usa el segmento de segmentos con definiciones de segmento de **lote**, la descalificación del perfil puede tardar **hasta 24 horas** en producirse. Si el segmento de segmentos se usa con las definiciones de segmento **streaming**, la descalificación del perfil se producirá de manera continua. |
 | Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tenga uno o más atributos de perfil. |
 
 Además, el segmento **debe** estar vinculado a una política de combinación que esté activa en Edge. Para obtener más información acerca de las políticas de combinación, lea la [guía de políticas de combinación](../../profile/api/merge-policies.md).

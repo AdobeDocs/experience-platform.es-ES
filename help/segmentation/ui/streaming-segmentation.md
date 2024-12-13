@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de streaming
 description: La segmentación por streaming en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que alivia la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la inscripción a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Una consulta se evaluará automáticamente con la segmentación de flujo continu
 | Evento único en un intervalo de tiempo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante en un intervalo de tiempo inferior a 24 horas. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
 | Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. |
-| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**. |
+| Segmento de segmentos | Cualquier definición de segmento que contenga una o más definiciones de segmento por lotes o de flujo continuo. **Nota:** Si se usa el segmento de segmentos con definiciones de segmento de **lote**, la descalificación del perfil puede tardar **hasta 24 horas** en producirse. Si el segmento de segmentos se usa con las definiciones de segmento **streaming**, la descalificación del perfil se producirá de manera continua. |
 | Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tenga uno o más atributos de perfil. |
 
 Una definición de segmento **no** se habilitará para la segmentación de flujo continuo en los siguientes casos:

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de Edge
 description: Aprenda a utilizar la segmentación de Edge para evaluar definiciones de segmentos en Platform de forma instantánea en Edge de, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Una consulta se puede evaluar con la segmentación de extremos si cumple cualqui
 | Evento único con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante con un intervalo de tiempo. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
 | Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. |
-| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**. |
+| Segmento de segmentos | Cualquier definición de segmento que contenga una o más definiciones de segmento por lotes o de flujo continuo. **Nota:** Si se usa el segmento de segmentos con definiciones de segmento de **lote**, la descalificación del perfil puede tardar **hasta 24 horas** en producirse. Si el segmento de segmentos se usa con las definiciones de segmento **streaming**, la descalificación del perfil se producirá de manera continua. |
 | Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tenga uno o más atributos de perfil. |
 
 Una definición de segmento **no** se habilitará para la segmentación de perímetros en el siguiente escenario:
