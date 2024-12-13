@@ -2,9 +2,9 @@
 title: Asistente de IA en la documentación del producto de Adobe Experience Platform
 description: Introducción al Asistente de IA en Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
+source-git-commit: 86edf0c8eeca5b3d2be5776664c397fcf5028e29
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '688'
 ht-degree: 1%
 
 ---
@@ -77,31 +77,57 @@ Consulte los vídeos siguientes para ampliar aún más sus conocimientos sobre l
 
 Vea el siguiente vídeo para obtener una descripción general del asistente de IA.
 
++++Seleccione esta opción para ver un vídeo de información general del asistente de IA
+
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Para obtener más información, lea la [guía de la interfaz de usuario del Asistente de IA](ui-guide.md).
+
++++
 
 ### Obtener acceso al asistente de IA
 
 Vea el siguiente vídeo para aprender a configurar el acceso a AI Assistant para sus organizaciones y usuarios.
 
++++Seleccione esta opción para ver un vídeo sobre cómo obtener acceso al asistente de IA
+
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Para obtener más información, lea la [Guía de acceso del Asistente de IA](access.md).
+
++++
 
 ### Uso del conocimiento del producto AI Assistant para reducir el tiempo de incorporación
 
 Vea el siguiente vídeo para aprender a utilizar el conocimiento del producto AI Assistant para reducir el tiempo de incorporación.
 
++++Seleccione esta opción para ver un vídeo sobre cómo utilizar el asistente de IA para reducir el tiempo de incorporación
+
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 Para obtener más información, lea acerca del [conocimiento del producto en el asistente de IA](home.md#product-knowledge)
+
++++
 
 ### Utilice el asistente de IA para desordenar las audiencias
 
 Vea el siguiente vídeo para aprender a utilizar el Asistente de IA con el fin de desordenar la audiencia y optimizar las operaciones de marketing.
 
++++Seleccione esta opción para ver un vídeo sobre cómo utilizar el Asistente de IA para desordenar las audiencias
+
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
+
++++
+
+### Utilice el panel de detección para ayudarle a empezar
+
+Vea el siguiente vídeo para obtener más información sobre el panel de detección del asistente de IA y cómo puede utilizarlo para empezar a utilizar el asistente de IA
+
++++Seleccione para ver un vídeo sobre la capacidad de detección
+
+>[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
+
++++
 
 ## Biblioteca de casos de uso del asistente de IA
 
@@ -133,6 +159,10 @@ Vea los siguientes vídeos para ver ejemplos de casos de uso adicionales del asi
 Para obtener más información sobre el Asistente de IA, lea la [hoja informativa de seguridad para el Asistente de IA en Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
 >[!ENDSHADEBOX]
+
+Vea el siguiente vídeo para obtener más información sobre las funciones de seguridad de AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 Examine los vínculos siguientes para comprender mejor los casos de uso, las capacidades y mucho más del Asistente de IA.
 
