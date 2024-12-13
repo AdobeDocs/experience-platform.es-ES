@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 60%
+source-wordcount: '1651'
+ht-degree: 61%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 23 de octubre de 2024
+
+Versión 3.4.2
+
+* Se ha corregido un error de validación de esquema para el evento Formulario -> Cambiar cuando &quot;y tener ciertos valores de propiedad...&quot; está activo.
 
 ## 29 de marzo de 2023
 
@@ -64,7 +70,7 @@ Se introdujeron los siguientes cambios en el elemento de datos Valor condicional
 * Los valores de número se exponen como números en el objeto de configuración.
 * El valor condicional ya no es necesario para que pueda comportarse del mismo modo que el valor de reserva.
 
-## 17 de septiembre de 2021
+## sábado, 17 de septiembre de 2021
 
 Versión 3.1.1
 
