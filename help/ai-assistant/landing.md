@@ -2,9 +2,9 @@
 title: Asistente de IA en la documentación del producto de Adobe Experience Platform
 description: Introducción al Asistente de IA en Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
+source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,14 @@ Vea el siguiente vídeo para aprender a configurar el acceso a AI Assistant para
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Para obtener más información, lea la [Guía de acceso del Asistente de IA](access.md).
+
+### Explicación del conocimiento del producto en AI Assistant
+
+Vea el siguiente vídeo para obtener más información sobre el conocimiento del producto en AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+Para obtener más información, lea acerca del [conocimiento del producto en el asistente de IA](home.md#product-knowledge)
 
 ### Uso del conocimiento del producto AI Assistant para reducir el tiempo de incorporación
 
