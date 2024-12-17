@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
+source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1267'
 ht-degree: 5%
 
 ---
@@ -174,7 +174,9 @@ ht-degree: 5%
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Conexión de SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensiones de etiquetas {#launch-extensions}
-      * [Información general sobre la extensión de etiquetas](./catalog/launch-extensions/overview.md)
+      * [Resumen de extensión de etiquetas](./catalog/launch-extensions/overview.md)
+   * Automatización de marketing {#marketing-automation}
+      * [Perfiles de asistentes de RainFocus](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * Destinos de participación móvil {#mobile-engagement}
       * [Información general sobre destinos de participación móvil](./catalog/mobile-engagement/overview.md)
       * [Conexión de Atributos del dirigible](./catalog/mobile-engagement/airship-attributes.md)
