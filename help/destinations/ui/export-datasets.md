@@ -3,9 +3,9 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '2594'
 ht-degree: 8%
 
 ---
@@ -38,11 +38,11 @@ Utilice la siguiente tabla para comprender qué tipos de conjuntos de datos pued
   <tr>
     <td rowspan="2">Real-Time CDP</td>
     <td>Prime</td>
-    <td>Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de la ingesta o recopilación de datos mediante fuentes, SDK web, SDK móvil, conector de datos de Analytics y Audience Manager.</td>
+    <td>Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de ingerir o recopilar datos a través de fuentes, Web SDK, Mobile SDK, Analytics Data Connector y Audience Manager.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de la ingesta o recopilación de datos mediante fuentes, SDK web, SDK móvil, conector de datos de Analytics y Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Conjunto de datos de instantánea de perfil generado por el sistema</a>.</li></td>
+    <td><ul><li>Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de ingerir o recopilar datos a través de fuentes, Web SDK, Mobile SDK, Analytics Data Connector y Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Conjunto de datos de instantánea de perfil generado por el sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
@@ -56,7 +56,7 @@ Utilice la siguiente tabla para comprender qué tipos de conjuntos de datos pued
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Todas</td>
-    <td> Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de la ingesta o recopilación de datos mediante fuentes, SDK web, SDK móvil, conector de datos de Analytics y Audience Manager.</td>
+    <td> Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de ingerir o recopilar datos a través de fuentes, Web SDK, Mobile SDK, Analytics Data Connector y Audience Manager.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -281,7 +281,6 @@ Puede ver y rastrear sus exportaciones de perfil en relación con sus límites c
 
 Tenga en cuenta las siguientes limitaciones para la publicación de disponibilidad general de las exportaciones de conjuntos de datos:
 
-* Actualmente, solo puede exportar archivos incrementales y no se puede seleccionar una fecha de finalización para las exportaciones de conjuntos de datos.
 * El Experience Platform puede exportar varios archivos incluso para conjuntos de datos pequeños. La exportación de conjuntos de datos está diseñada para la integración entre sistemas y optimizada para el rendimiento, por lo que el número de archivos exportados no se puede personalizar.
 * Los nombres de archivo exportados no se pueden personalizar en este momento.
 * Actualmente, los conjuntos de datos creados mediante API no están disponibles para la exportación.

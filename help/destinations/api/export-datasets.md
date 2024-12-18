@@ -4,9 +4,9 @@ title: Exportación de conjuntos de datos mediante la API de Flow Service
 description: Aprenda a utilizar la API de Flow Service para exportar conjuntos de datos a destinos seleccionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
+source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
 workflow-type: tm+mt
-source-wordcount: '5138'
+source-wordcount: '5146'
 ht-degree: 3%
 
 ---
@@ -2469,6 +2469,10 @@ Tenga en cuenta la diferencia de formato de archivo entre los dos tipos de archi
 ## Administración de errores de API {#api-error-handling}
 
 Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de respuestas de error.
+
+## Limitaciones conocidas {#known-limitations}
+
+Ver [limitaciones conocidas](/help/destinations/ui/export-datasets.md#known-limitations) acerca de las exportaciones de conjuntos de datos.
 
 ## Preguntas frecuentes {#faq}
 
