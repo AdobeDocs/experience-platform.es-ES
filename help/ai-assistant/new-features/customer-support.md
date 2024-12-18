@@ -2,7 +2,8 @@
 title: Asistente de IA para asistencia al cliente
 description: Aprenda cómo puede utilizar el Asistente de IA para agilizar la resolución de problemas y el proceso de archivado de tickets de asistencia al cliente.
 badge: Alpha
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ Obtenga respuestas instantáneas a preguntas comunes de asistencia procedentes d
 * **Documentación legal del producto** que proporciona información precisa y orientada a licencias.
    * Ejemplos de preguntas:
       * &quot;¿Cuál es el límite para los trabajos de segmentación por lotes en Adobe Experience Platform Activation?&quot;
-&quot;¿Cuál es el límite promedio de riqueza de perfiles en Adobe Experience Platform Activation?&quot;
+      * &quot;¿Cuál es el límite promedio de riqueza de perfiles en Adobe Experience Platform Activation?&quot;
 
 ## Creación de casos de soporte
 
