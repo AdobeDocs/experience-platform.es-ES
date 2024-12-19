@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;servi
 title: Opciones SSL del servicio de consultas
 description: Obtenga información sobre la compatibilidad SSL con conexiones de terceros al servicio Adobe Experience Platform Query y cómo conectarse mediante el modo de verificación SSL completo.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 229ce98da8f1c97e421ef413826b0d23754d16df
+source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1008'
 ht-degree: 1%
 
 ---
@@ -30,8 +30,8 @@ Los diferentes valores de parámetro `sslmode` proporcionan niveles de protecci�
 
 | sslmode | Protección contra escuchas | Protección MITM | Descripción |
 |---|---|---|---|
-| `allow` | Parcial | No | La seguridad no es una prioridad, la velocidad y una baja sobrecarga de procesamiento son más importantes. Este modo solo opta por el cifrado si el servidor insiste en él. |
-| `prefer` | Parcial | No | No se requiere cifrado, pero la comunicación se cifrará si el servidor la admite. |
+| `allow` | Sí | No | Se requiere cifrado en todas las comunicaciones. La red es de confianza para conectarse al servidor correcto. |
+| `prefer` | Sí | No | Se requiere cifrado en todas las comunicaciones. La red es de confianza para conectarse al servidor correcto. |
 | `require` | Sí | No | Se requiere cifrado en todas las comunicaciones. La red es de confianza para conectarse al servidor correcto. No se requiere la validación del certificado SSL del servidor. |
 | `verify-ca` | Sí | Depende de la directiva de CA | Se requiere cifrado en todas las comunicaciones. Se requiere la validación del servidor antes de compartir los datos. Esto requiere que configure un certificado raíz en el directorio principal de [!DNL PostgreSQL]. [A continuación se proporcionan detalles](#instructions) |
 | `verify-full` | Sí | Sí | Se requiere cifrado en todas las comunicaciones. Se requiere la validación del servidor antes de compartir los datos. Esto requiere que configure un certificado raíz en el directorio principal de [!DNL PostgreSQL]. [A continuación se proporcionan detalles](#instructions). |
