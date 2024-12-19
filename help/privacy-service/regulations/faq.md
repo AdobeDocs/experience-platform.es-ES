@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preguntas frecuentes sobre normas de privacidad
 description: Este documento proporciona respuestas a las preguntas más frecuentes acerca de las regulaciones legales de privacidad admitidas y su implementación en Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: d643b2aeadd4080fa89d6a7b0f84a9f6882d7b89
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1606'
 ht-degree: 1%
 
 ---
@@ -87,7 +87,7 @@ Suponiendo que la empresa haya recopilado información personal y que pueda aute
 | Regulación | Plazo de respuesta | Notas |
 | --- | --- | --- |
 | CCPA (California) | 45 días | |
-| RGPD (Unión Europea) | 30 días | Si la solicitud es compleja o el mismo interesado ha realizado numerosas solicitudes, esta se puede ampliar a 60 días. |
+| RGPD (Unión Europea) | 30 días | |
 | LGPD (Brasil) | 15 días | |
 | PDPA (Tailandia) | 30 días | Si una empresa no puede responder a la solicitud de un interesado dentro del período de cumplimiento, tendrá un plazo adicional de 30 días a partir de la fecha en la que no pudo cumplir la solicitud para responder por escrito al interesado. |
 
