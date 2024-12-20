@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos de identidad en la IU
 description: Obtenga información sobre cómo definir un campo de identidad en la interfaz de usuario del Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
+source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '651'
 ht-degree: 6%
 
 ---
@@ -43,6 +43,10 @@ Aparecerán controles adicionales después de seleccionar la casilla de verifica
 En **[!UICONTROL área de nombres de identidad]**, utilice el menú desplegable para seleccionar el área de nombres adecuada para el campo de identidad. Se muestran las áreas de nombres estándar proporcionadas por Adobe, junto con cualquier área de nombres personalizada definida por su organización.
 
 Cuando termine, seleccione **[!UICONTROL Aplicar]** para aplicar el cambio al esquema.
+
+>[!IMPORTANT]
+>
+>Si ya se ha establecido un campo de identidad principal, puede cambiar este campo en el esquema siguiendo los pasos anteriores. Sin embargo, debe deshabilitar y volver a habilitar los conjuntos de datos asociados en el perfil para que el cambio entre en vigor.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
