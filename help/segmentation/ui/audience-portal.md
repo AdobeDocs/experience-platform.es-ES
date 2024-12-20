@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4571'
 ht-degree: 4%
 
 ---
@@ -249,7 +249,7 @@ Después de confirmar que se enumeran las audiencias correctas, puede continuar 
 
 >[!NOTE]
 >
-Si ejecuta una evaluación de audiencia flexible en audiencias que ya están configuradas para activarse [después de la evaluación de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), las audiencias se activarán en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior.
+Si ejecuta una evaluación de audiencia flexible, debe asegurarse de que la frecuencia esté configurada en **[!UICONTROL Después de la evaluación de segmentos]**. La ejecución de una evaluación de audiencia flexible en audiencias que ya están configuradas para activarse [después de la evaluación de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), activará las audiencias en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior.
 
 ## Detalles de público {#audience-details}
 

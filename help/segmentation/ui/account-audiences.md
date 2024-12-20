@@ -4,9 +4,9 @@ description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perf
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -195,10 +195,6 @@ En la siguiente sección se proporciona información adicional sobre las audienc
 >abstract="El público infringe una restricción. Lea el documento vinculado para obtener más información."
 
 Al usar audiencias de cuenta, la audiencia **debe** cumplir con las siguientes restricciones:
-
->[!NOTE]
->
->La siguiente lista muestra las restricciones **default** para las audiencias de cuenta. Estos valores **pueden** cambiar, según la configuración implementada por el administrador de su organización.
 
 - La ventana retrospectiva máxima para eventos de experiencia es de **30 días**.
 - La profundidad máxima de los contenedores anidados es de **5**.

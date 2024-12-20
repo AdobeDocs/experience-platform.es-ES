@@ -3,9 +3,9 @@ title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1452'
 ht-degree: 3%
 
 ---
@@ -45,6 +45,7 @@ Al recuperar una lista de audiencias, se pueden utilizar los siguientes parámet
 | `property` | Filtro que le permite especificar audiencias que **exactamente** coinciden con el valor de un atributo. Esto se escribe con el formato `property=` | `property=audienceId==test-audience-id` |
 | `name` | Filtro que le permite especificar audiencias cuyos nombres **contienen** el valor proporcionado. Este valor no distingue entre mayúsculas y minúsculas. | `name=Sample` |
 | `description` | Filtro que le permite especificar audiencias cuyas descripciones **contienen** el valor proporcionado. Este valor no distingue entre mayúsculas y minúsculas. | `description=Test Description` |
+| `entityType` | Un filtro que le permite especificar el tipo de audiencia que está buscando. | `entityType=_xdm.context.account` |
 
 **Solicitud**
 
