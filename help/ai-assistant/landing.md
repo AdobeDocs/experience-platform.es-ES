@@ -2,9 +2,9 @@
 title: Asistente de IA en la documentación del producto de Adobe Experience Platform
 description: Introducción al Asistente de IA en Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
+source-git-commit: 9a8b1527f932e8b0091af7fb999ed638e28de2d0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,20 @@ Vea el siguiente vídeo para obtener más información sobre el panel de detecci
 
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
 
+### Uso del Ayudante de IA para validar respuestas
+
+Vea el siguiente vídeo para aprender a utilizar el Asistente de IA para verificar y validar las respuestas.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on)
+
+Para obtener más información, lea la documentación sobre [verificación de las respuestas del Asistente de IA](ui-guide.md#verify-operational-insights-responses).
+
+### Uso del asistente de IA para el análisis de impacto
+
+Vea el siguiente vídeo para aprender a utilizar el asistente de IA con el fin de ejecutar un análisis de impacto más eficaz antes de realizar cambios en los objetos de datos.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
 ## Biblioteca de casos de uso del asistente de IA
 
 >[!BEGINTABS]
@@ -136,6 +150,7 @@ Lea lo siguiente para ver ejemplos de casos de uso del asistente de IA:
 * [Reducir el tiempo de incorporación de los nuevos miembros de su equipo](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [Elimine el desorden de sus audiencias y optimice sus operaciones de marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Compruebe las dependencias y minimice el riesgo durante las actualizaciones de datos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [Minimizar el riesgo durante las actualizaciones de datos comprobando las dependencias en segundos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 >[!TAB Contenido de vídeo adicional]
 
