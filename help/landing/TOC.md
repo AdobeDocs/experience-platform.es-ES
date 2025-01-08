@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real con guías, documentación y tutoriales.
-source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
+source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 24%
+source-wordcount: '288'
+ht-degree: 25%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 24%
       * IAB TCF 2.0 {#iab}
          * [Información general](./governance-privacy-security/consent/iab/overview.md)
          * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencia](./governance-privacy-security/consent/iab/dataset.md)
-      * [Integrar el SDK web de Platform para procesar datos de consentimiento y preferencias](./governance-privacy-security/consent/sdk.md)
+      * [Integrar Platform Web SDK para procesar datos de preferencias y consentimiento](./governance-privacy-security/consent/sdk.md)
    * Registros de auditoría {#audit-logs}
       * [Información general](./governance-privacy-security/audit-logs/overview.md)
       * API de consulta de auditoría {#audit-api}
@@ -71,6 +71,8 @@ ht-degree: 24%
       * [Configurar un Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
       * [Utilice la API para configurar CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [Uso de la interfaz de usuario para configurar CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+   * Servicio de administración de claves {#key-management-service}
+      * [Servicio de administración de claves](./governance-privacy-security/key-management-service/overview.md)
 * Uso de licencias y protecciones {#license}
    * [Prácticas recomendadas de asignación de licencias para administración de datos](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)

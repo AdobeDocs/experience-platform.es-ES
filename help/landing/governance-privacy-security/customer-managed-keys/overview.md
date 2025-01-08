@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo configurar sus propias claves de c
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Claves administradas por el cliente en Adobe Experience Platform
 
 Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante claves de nivel de sistema. Si utiliza una aplicación basada en Platform, puede optar por utilizar sus propias claves de cifrado, lo que le proporciona un mayor control sobre la seguridad de los datos.
+
+>[!AVAILABILITY]
+>
+>Si la implementación de Experience Platform se ejecuta en Amazon Web Service (AWS), tiene la opción de utilizar el Servicio de administración de claves (KMS) para el cifrado de datos de Platform. Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). Para obtener más información acerca de la creación y administración de claves de cifrado en AWS KMS, consulte la [Guía de cifrado de datos de AWS KMS](../key-management-service/overview.md).
 
 >[!NOTE]
 >
