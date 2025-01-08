@@ -1,11 +1,11 @@
 ---
-title: Información general sobre el conector Source de Salesforce
+title: Información general sobre el conector Salesforce Source
 description: Obtenga información sobre cómo conectar Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
+source-git-commit: 258e54b969e7b392eec97459e0a51931f2109fe7
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 0%
+source-wordcount: '1483'
+ht-degree: 1%
 
 ---
 
@@ -65,11 +65,11 @@ La siguiente tabla contiene valores de ejemplo, así como información adicional
 | `munchkinId` | Identificador exclusivo de su cuenta de [!DNL Marketo]. Vea el tutorial sobre [autenticación de su [!DNL Marketo] instancia](../adobe-applications/marketo/marketo-auth.md) para obtener información sobre cómo recuperar su `munchkinId`. | `123-ABC-456` |
 | `sfdc_org_id` | Identificador de organización de su cuenta de [!DNL Salesforce]. Consulte la siguiente [[!DNL Salesforce] guía](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) para obtener más información sobre cómo adquirir su ID de organización [!DNL Salesforce]. | `00D4W000000FgYJUA0` |
 | `has_abm` | Un valor booleano que indica si está suscrito a [!DNL Marketo Account-Based Marketing]. | `false` |
-| `has_msi` | Un valor booleano que indica si se ha suscrito a [!DNL Marketo Sales Insight]. | `false` |
+| `has_msi` | Un valor booleano que indica si está suscrito a [!DNL Marketo Sales Insight]. | `false` |
 
 {style="table-layout:auto"}
 
-### Ejecución de scripts
+### Ejecutar los scripts
 
 Con la colección y el entorno [!DNL Postman] configurados, ahora puede ejecutar el script a través de la interfaz [!DNL Postman].
 
@@ -83,15 +83,191 @@ Aparecerá la interfaz [!DNL Runner]. Aquí, asegúrese de que todas las casilla
 
 Una solicitud correcta crea los espacios de nombres y esquemas B2B según las especificaciones beta.
 
-## Conectar [!DNL Salesforce] a Platform mediante API
+## Configurar el origen de [!DNL Salesforce] para el Experience Platform en Amazon Web Service {#aws}
+
+>[!AVAILABILITY]
+>
+>Esta sección se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
+
+Siga los pasos a continuación para aprender a configurar su cuenta de [!DNL Salesforce] para Experience Platform en Amazon Web Service (AWS).
+
+### Requisitos previos
+
+Para conectar su cuenta de [!DNL Salesforce] al Experience Platform en una región de AWS, debe tener lo siguiente:
+
+- Una cuenta de [!DNL Salesforce] con acceso a API.
+- Un [!DNL Salesforce Connected App] que puede usar para habilitar el flujo de OAuth JWT_BEARER.
+- Los permisos necesarios en [!DNL Salesforce] para tener acceso a los datos.
+
+También debe agregar las siguientes direcciones IP a la lista de permitidos para conectar la cuenta de [!DNL Salesforce] al Experience Platform en Amazon Web Service (AWS):
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
+
+### Crear un(a) [!DNL Salesforce Connected App]
+
+En primer lugar, utilice lo siguiente para crear un certificado/par clave de archivos PEM.
+
+```shell
+openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
+```
+
+1. En el panel [!DNL Salesforce], seleccione la configuración (![El icono de configuración.](/help/images/icons/settings.png)) y después seleccione **[!DNL Setup]**.
+2. Vaya a [!DNL App Manager] y seleccione **[!DNL New Connection App]**.
+3. Asigne un nombre a la aplicación y permita que el resto de los campos se rellenen automáticamente.
+4. Habilite la casilla para [!DNL Enable OAuth Settings].
+5. Establecer una URL de devolución de llamada. Dado que esto no se usará para JWT, puede usar `https://localhost`.
+6. Habilite la casilla para [!DNL Use Digital Signatures].
+7. Cargue el archivo cert.perm creado anteriormente.
+
+#### Añadir los permisos necesarios
+
+Añada los siguientes permisos:
+
+1. Administración de datos de usuario mediante API
+2. Acceso a permisos personalizados (custom_permissions)
+3. Acceso al servicio de URL de identidad (ID, perfil, correo electrónico, dirección, teléfono)
+4. Acceso a identificadores únicos (openid)
+5. Realizar solicitudes en cualquier momento (refresh_token, offline_access)
+
+Una vez agregados los permisos, asegúrese de habilitar la casilla para **[!DNL Issue JSON Web Token (JWT)-based access tokens for named user]**.
+
+A continuación, seleccione **[!DNL Save]**, **[!DNL Continue]** y luego **[!DNL Manage Customer Details]**. Utilice el panel de detalles del consumidor para recuperar lo siguiente:
+
+- **Clave de consumidor**: Más adelante utilizará esta clave de consumidor como ID de cliente al autenticar su cuenta de [!DNL Salesforce] en el Experience Platform.
+- **Secreto de consumidor**: Más adelante utilizará este secreto de consumidor como ID de cliente al autenticar su cuenta de [!DNL Salesforce] en el Experience Platform.
+
+### Autorizar al usuario [!DNL Salesforce] a la aplicación conectada
+
+Siga los pasos a continuación para obtener autorización para utilizar la aplicación conectada:
+
+1. Vaya a **[!DNL Manage Connected Apps]**.
+2. Seleccione **[!DNL Edit]**.
+3. Configure **[!DNL Permitted Users]** como **[!DNL Admin approved users are pre-authorized]** y luego seleccione **[!DNL Save]**.
+4. Vaya a **[!DNL Settings]> [!DNL Manage Users] >[!DNL Profiles]**.
+5. Edite el perfil asociado al usuario.
+6. Vaya a **[!DNL Connected App Access]** y, a continuación, seleccione la aplicación que creó en un paso anterior.
+
+### Generar token de portador JWT
+
+Siga los pasos a continuación para generar su token de portador JWT.
+
+#### Convertir par clave en pkcs12
+
+Para generar el token de portador de JWT, primero debe utilizar el siguiente comando para convertir el certificado/par de claves al formato pkcs12. Durante este paso, también debe **establecer una contraseña de exportación** cuando se le solicite.
+
+```shell
+openssl pkcs12 -export -in cert.pem -inkey key.pem -name jwtcert >jwtcert.p12
+```
+
+#### Crear un repositorio de claves Java basado en pkcs12
+
+A continuación, utilice el siguiente comando para crear un repositorio de claves java basado en el pkcs12 que acaba de generar. Durante este paso, también debe especificar **establecer una contraseña de almacén de claves de destino** cuando se le solicite. Además, debe proporcionar la contraseña de exportación anterior como contraseña del almacén de claves de origen.
+
+```shell
+keytool -importkeystore -srckeystore jwtcert.p12 -destkeystore keystore.jks -srcstoretype pkcs12 -alias jwtcert
+```
+
+#### Confirme que keystroke.jks incluye un alias jwtcert
+
+A continuación, use el comando follow para confirmar que su `keystroke.jks` incluye un alias `jwtcert`. Durante este paso, se le pedirá que proporcione la contraseña del almacén de claves de destino generada en el paso anterior.
+
+```shell
+keytool -keystore keystore.jks -list
+```
+
+#### Generar token firmado
+
+Finalmente, utilice el ejemplo JWTE de clase java a continuación para generar el token firmado.
+
+```java
+package org.example;
+ 
+import org.apache.commons.codec.binary.Base64;
+ 
+import java.io.*;
+import java.security.*;
+import java.text.MessageFormat;
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String header = "{\"alg\":\"RS256\"}";
+        String claimTemplate = "'{'\"iss\": \"{0}\", \"sub\": \"{1}\", \"aud\": \"{2}\", \"exp\": \"{3}\"'}'";
+ 
+        try {
+            StringBuffer token = new StringBuffer();
+ 
+            //Encode the JWT Header and add it to our string to sign
+            token.append(Base64.encodeBase64URLSafeString(header.getBytes("UTF-8")));
+ 
+            //Separate with a period
+            token.append(".");
+ 
+            //Create the JWT Claims Object
+            String[] claimArray = new String[5];
+            claimArray[0] = "{CLIENT_ID}";
+            claimArray[1] = "{AUTHORIZED_SALESFORCE_USERNAME}";
+            claimArray[2] = "{SALESFORCE_LOGIN_URL}";
+            claimArray[3] = Long.toString((System.currentTimeMillis() / 1000) + 2629746*4);
+            MessageFormat claims;
+            claims = new MessageFormat(claimTemplate);
+            String payload = claims.format(claimArray);
+ 
+            //Add the encoded claims object
+            token.append(Base64.encodeBase64URLSafeString(payload.getBytes("UTF-8")));
+ 
+            //Load the private key from a keystore
+            KeyStore keystore = KeyStore.getInstance("JKS");
+            keystore.load(new FileInputStream("path/to/keystore"), "keystorepassword".toCharArray());
+            PrivateKey privateKey = (PrivateKey) keystore.getKey("jwtcert", "privatekeypassword".toCharArray());
+ 
+            //Sign the JWT Header + "." + JWT Claims Object
+            Signature signature = Signature.getInstance("SHA256withRSA");
+            signature.initSign(privateKey);
+            signature.update(token.toString().getBytes("UTF-8"));
+            String signedPayload = Base64.encodeBase64URLSafeString(signature.sign());
+ 
+            //Separate with a period
+            token.append(".");
+ 
+            //Add the encoded signature
+            token.append(signedPayload);
+ 
+            System.out.println(token.toString());
+ 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+| Propiedad | Configuraciones  |
+| --- | --- |
+| `claimArray[0]` | Actualice `claimArray[0]` con su ID de cliente. |
+| `claimArray[1]` | Actualice `claimArray[1]` con el nombre de usuario [!DNL Salesforce] autorizado para la aplicación. |
+| `claimArray[2]` | Actualice `claimArray[2]` con la URL de inicio de sesión de [!DNL Salesforce]. |
+| `claimArray[3]` | Actualice `claimArray[3]` con una fecha de caducidad formateada en milisegundos desde la hora epoch. Por ejemplo `3660624000000` es 31-12-2085. |
+| `/path/to/keystore` | Reemplazar `/path/to/keystore` por la ruta correcta de su keystore.jks |
+| `keystorepassword` | Reemplace `keystorepassword` por su contraseña de almacén de claves de destino. |
+| `privatekeypassword` | Reemplace `privatekeypassword` por su contraseña de almacén de claves de origen. |
+
+## Pasos siguientes
+
+Una vez que haya completado la configuración de los requisitos previos de su cuenta de [!DNL Salesforce], puede continuar conectando su cuenta de [!DNL Salesforce] al Experience Platform e introduciendo los datos de CRM. Lea la documentación siguiente para obtener más información:
+
+### Conectar [!DNL Salesforce] a Platform mediante API
 
 La siguiente documentación proporciona información sobre cómo conectar [!DNL Salesforce] a Platform mediante API o la interfaz de usuario:
 
-- [Creación de una conexión base de Salesforce mediante la API de Flow Service](../../tutorials/api/create/crm/salesforce.md)
+- [Crear una conexión base de Salesforce mediante la API de Flow Service](../../tutorials/api/create/crm/salesforce.md)
 - [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
 - [Crear un flujo de datos para una fuente CRM mediante la API de Flow Service](../../tutorials/api/collect/crm.md)
 
-## Conectar [!DNL Salesforce] a Platform mediante la interfaz de usuario
+### Conectar [!DNL Salesforce] a Platform mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Salesforce en la interfaz de usuario](../../tutorials/ui/create/crm/salesforce.md)
 - [Crear un flujo de datos para una conexión CRM en la interfaz de usuario](../../tutorials/ui/dataflow/crm.md)
