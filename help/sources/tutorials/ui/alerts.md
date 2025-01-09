@@ -3,18 +3,14 @@ keywords: Experience Platform;inicio;temas populares; alertas
 description: Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 title: Suscripción a alertas en contexto en la interfaz de usuario
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
+source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '819'
 ht-degree: 7%
 
 ---
 
 # Suscripción a alertas para flujos de datos de origen en la IU
-
->[!NOTE]
->
->Las alertas no son compatibles con los entornos limitados que no son de producción. Para suscribirse a alertas, debe asegurarse de que está utilizando una zona protegida de producción.
 
 Adobe Experience Platform le permite suscribirse a alertas basadas en eventos relativas a actividades de Adobe Experience Platform. Las alertas reducen o eliminan la necesidad de sondear la [[!DNL Observability Insights] API](../../../observability/api/overview.md) para comprobar si un trabajo se ha completado, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se ha producido algún error.
 
