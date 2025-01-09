@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platform le permite acceder a los datos del perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como "perfiles", mediante la API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 9f9823a23c488e63b8b938cb885f050849836e36
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 2%
+source-wordcount: '2181'
+ht-degree: 4%
 
 ---
 
@@ -20,11 +20,13 @@ Adobe Experience Platform le permite acceder a los datos de [!DNL Real-Time Cust
 
 El extremo de API utilizado en esta guía forma parte de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revisa la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de [!DNL Experience Platform].
 
-## Acceso a datos de perfil por identidad
+## Recuperación de una entidad {#retrieve-entity}
 
-Puede obtener acceso a una entidad [!DNL Profile] realizando una solicitud de GET al extremo `/access/entities` y proporcionando la identidad de la entidad como una serie de parámetros de consulta. Esta identidad consta de un valor de identificador (`entityId`) y el área de nombres de identidad (`entityIdNS`).
+Puede recuperar una entidad de perfil o sus datos de serie temporal realizando una solicitud de GET al extremo `/access/entities` junto con los parámetros de consulta necesarios.
 
-Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;). Se proporciona una lista completa de parámetros válidos en la sección [parámetros de consulta](#query-parameters) del apéndice.
+>[!BEGINTABS]
+
+>[!TAB Entidad de perfil]
 
 **Formato de API**
 
@@ -32,20 +34,37 @@ Los parámetros de consulta proporcionados en la ruta de solicitud especifican a
 GET /access/entities?{QUERY_PARAMETERS}
 ```
 
+Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;).
+
+Para tener acceso a una entidad de perfil, **debe** proporcionar los siguientes parámetros de consulta:
+
+- `schema.name`: nombre del esquema XDM de la entidad. En este caso de uso, `schema.name=_xdm.context.profile`.
+- `entityId`: ID de la entidad que intenta recuperar.
+- `entityIdNS`: área de nombres de la entidad que intenta recuperar. Se debe proporcionar este valor si `entityId` es **no** un XID.
+
+Se proporciona una lista completa de parámetros válidos en la sección [parámetros de consulta](#query-parameters) del apéndice.
+
 **Solicitud**
 
-La siguiente solicitud recupera el correo electrónico y el nombre de un cliente mediante una identidad:
+La siguiente solicitud recupera el correo electrónico y el nombre de un cliente mediante una identidad.
+
++++ Una solicitud de ejemplo para recuperar una entidad mediante una identidad
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con la entidad solicitada.
+
++++ Una respuesta de ejemplo que contiene la entidad solicitada
 
 ```json
 {
@@ -69,7 +88,7 @@ curl -X GET \
                     }
                 },
                 {
-                    "id": "janesmith@example.com",
+                    "id": "johnsmith@example.com",
                     "namespace": {
                         "code": "email"
                     }
@@ -114,13 +133,305 @@ curl -X GET \
 }
 ```
 
++++
+
 >[!NOTE]
 >
 >Si un gráfico relacionado vincula más de 50 identidades, este servicio devolverá el estado HTTP 422 y el mensaje &quot;Demasiadas identidades relacionadas&quot;. Si recibe este error, considere la posibilidad de agregar más parámetros de consulta para restringir la búsqueda.
 
-## Acceso a datos de perfil por lista de identidades
+>[!TAB Evento de serie temporal]
 
-Puede acceder a varias entidades de perfil según sus identidades realizando una solicitud de POST al extremo `/access/entities` y proporcionando las identidades en la carga útil. Estas identidades consisten en un valor de identificador (`entityId`) y un área de nombres de identidad (`entityIdNS`).
+**Formato de API**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;).
+
+Para tener acceso a los datos de eventos de series temporales, **debe** proporcionar los siguientes parámetros de consulta:
+
+- `schema.name`: nombre del esquema XDM de la entidad. En este caso de uso, este valor es `schema.name=_xdm.context.experienceevent`.
+- `relatedSchema.name`: nombre del esquema relacionado. Dado que el nombre de esquema es Evento de experiencia, el valor de este **debe** ser `relatedSchema.name=_xdm.context.profile`.
+- `relatedEntityId`: ID de la entidad relacionada.
+- `relatedEntityIdNS`: área de nombres de la entidad relacionada. Se debe proporcionar este valor si `relatedEntityId` es **no** un XID.
+
+Se proporciona una lista completa de parámetros válidos en la sección [parámetros de consulta](#query-parameters) del apéndice.
+
+**Solicitud**
+
+La siguiente solicitud encuentra una entidad de perfil por identificador y recupera los valores de las propiedades `endUserIDs`, `web` y `channel` para todos los eventos de series temporales asociados a la entidad.
+
++++ Una solicitud de ejemplo para recuperar los eventos de series temporales asociados a una entidad
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con una lista paginada de eventos de series temporales y campos asociados especificados en los parámetros de consulta de solicitud.
+
+>[!NOTE]
+>
+>La solicitud especificó un límite de uno (`limit=1`), por lo tanto `count` en la respuesta siguiente es 1 y solo se devuelve una entidad.
+
++++ Una respuesta de ejemplo que contiene los datos de eventos de series temporales solicitados
+
+```json
+{
+    "_page": {
+        "orderby": "timestamp",
+        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
+        "count": 1,
+        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
+    },
+    "children": [
+        {
+            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
+            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
+            "timestamp": 1531260476000,
+            "entity": {
+                "endUserIDs": {
+                    "_experience": {
+                        "ecid": {
+                            "id": "89149270342662559642753730269986316900",
+                            "namespace": {
+                                "code": "ecid"
+                            }
+                        }
+                    }
+                },
+                "channel": {
+                    "_type": "web"
+                },
+                "web": {
+                    "webPageDetails": {
+                        "name": "Fernie Snow",
+                        "pageViews": {
+                            "value": 1
+                        }
+                    }
+                }
+            },
+            "lastModifiedAt": "2018-08-21T06:49:02Z"
+        }
+    ],
+    "_links": {
+        "next": {
+            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
+        }
+    }
+}
+```
+
++++
+
+>[!TAB Cuenta B2B]
+
+**Formato de API**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;).
+
+Para acceder a los datos de la cuenta B2B, **debe** proporcionar los siguientes parámetros de consulta:
+
+- `schema.name`: nombre del esquema XDM de la entidad. En este caso de uso, este valor es `schema.name=_xdm.context.account`.
+- `entityId`: ID de la entidad que intenta recuperar.
+- `entityIdNS`: área de nombres de la entidad que intenta recuperar. Se debe proporcionar este valor si `entityId` es **no** un XID.
+
+Se proporciona una lista completa de parámetros válidos en la sección [parámetros de consulta](#query-parameters) del apéndice.
+
+**Solicitud**
+
++++ Una solicitud de ejemplo para recuperar una cuenta B2B
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.account&entityIdNs=b2b_account&entityId=2334262' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con la entidad solicitada.
+
++++ Una respuesta de ejemplo que contiene la entidad solicitada
+
+```json
+{
+    "GuQ-AUFjgjaeIw": {
+        "entityId": "GuQ-AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "{SOURCE_ID}",
+                    "sourceKey": "{SOURCE_KEY}",
+                    "sourceInstanceID": "{SOURCE_INSTANCE_ID}",
+                    "sourceType": "{SOURCE_TYPE}"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "{SOURCE_ID}"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!TAB Oportunidad B2B]
+
+**Formato de API**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;).
+
+Para acceder a una entidad de oportunidad B2B, **debe** proporcionar los siguientes parámetros de consulta:
+
+- `schema.name`: nombre del esquema XDM de la entidad. En este caso de uso, `schema.name=_xdm.context.opportunity`.
+- `entityId`: ID de la entidad que intenta recuperar.
+- `entityIdNS`: área de nombres de la entidad que intenta recuperar. Se debe proporcionar este valor si `entityId` es **no** un XID.
+
+Se proporciona una lista completa de parámetros válidos en la sección [parámetros de consulta](#query-parameters) del apéndice.
+
+**Solicitud**
+
++++ Una solicitud de muestra para recuperar una entidad de oportunidad B2B
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.opportunity&entityIdNs=b2b_opportunity&entityId=2334262' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con la entidad solicitada.
+
++++ Una respuesta de ejemplo que contiene la entidad solicitada
+
+```json
+{
+  "Ggw_AUFjgjaeIw": {
+        "entityId": "Ggw_AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!ENDTABS]
+
+## Recuperar varias entidades {#retrieve-entities}
+
+Puede recuperar varias entidades de perfil o eventos de series temporales realizando una solicitud de POST al extremo `/access/entities` y proporcionando las identidades en la carga útil.
+
+>[!BEGINTABS]
+
+>[!TAB Entidades de perfil]
 
 **Formato de API**
 
@@ -130,11 +441,12 @@ POST /access/entities
 
 **Solicitud**
 
-La siguiente solicitud recupera los nombres y direcciones de correo electrónico de varios clientes mediante una lista de identidades:
+La siguiente solicitud recupera los nombres y direcciones de correo electrónico de varios clientes mediante una lista de identidades.
+
++++Una solicitud de ejemplo para recuperar varias entidades.
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/access/entities \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -174,26 +486,29 @@ curl -X POST \
             "endTime": 1539838510
         },
         "limit": 10,
-        "orderby": "-timestamp",
-        "withCA": true
+        "orderby": "-timestamp"
       }'
 ```
 
-| Propiedad | Descripción |
-|---|---|
-| `schema.name` | ***(Obligatorio)*** El nombre del esquema XDM al que pertenece la entidad. |
-| `fields` | Los campos XDM que se van a devolver, como una matriz de cadenas. De forma predeterminada, se devuelven todos los campos. |
-| `identities` | ***(Obligatorio)*** Una matriz que contiene una lista de identidades para las entidades a las que desea tener acceso. |
-| `identities.entityId` | El ID de una entidad a la que desea acceder. |
-| `identities.entityIdNS.code` | El área de nombres de un ID de entidad al que desea acceder. |
-| `timeFilter.startTime` | Hora de inicio del filtro de intervalo de tiempo, incluida. Debe tener una granularidad de milisegundos. Si no se especifica, el valor predeterminado es el comienzo del tiempo disponible. |
-| `timeFilter.endTime` | Filtro de intervalo de tiempo de hora de finalización, excluido. Debe tener una granularidad de milisegundos. Si no se especifica, el valor predeterminado es el final del tiempo disponible. |
-| `limit` | Número de registros que devolver. Solo se aplica al número de eventos de experiencia devueltos. Predeterminado: 1000. |
-| `orderby` | Orden de los eventos de experiencia recuperados por marca de tiempo, escritos como `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
-| `withCA` | Indicador de funcionalidad para habilitar atributos calculados para la búsqueda. Predeterminado: false. |
+| Propiedad | Tipo | Descripción |
+| -------- |----- | ----------- |
+| `schema.name` | Cadena | **(Obligatorio)** El nombre del esquema XDM al que pertenece la entidad. |
+| `fields` | Matriz | Los campos XDM que se van a devolver, como una matriz de cadenas. De forma predeterminada, se devuelven todos los campos. |
+| `identities` | Matriz | **(Obligatorio)** Una matriz que contiene una lista de identidades para las entidades a las que desea tener acceso. |
+| `identities.entityId` | Cadena | El ID de una entidad a la que desea acceder. |
+| `identities.entityIdNS.code` | Cadena | El área de nombres de un ID de entidad al que desea acceder. |
+| `timeFilter.startTime` | Entero | Especifica la hora de inicio del filtro de entidades de perfil (en milisegundos). De forma predeterminada, este valor se establece como el principio del tiempo disponible. |
+| `timeFilter.endTime` | Entero | Especifica la hora de finalización para filtrar entidades de perfil (en milisegundos). De forma predeterminada, este valor se establece como el final del tiempo disponible. |
+| `limit` | Entero | Número máximo de registros que se van a devolver. De forma predeterminada, este valor se establece en 1000. |
+| `orderby` | Cadena | Orden de los eventos de experiencia recuperados por marca de tiempo, escritos como `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
+
++++
 
 **Respuesta**
-Una respuesta correcta devuelve los campos solicitados de las entidades especificadas en el cuerpo de la solicitud.
+
+Una respuesta correcta devuelve el estado HTTP 200 con los campos solicitados de entidades especificadas en el cuerpo de la solicitud.
+
++++ Una respuesta de ejemplo que contiene las entidades solicitadas
 
 ```json
 {
@@ -332,171 +647,9 @@ Una respuesta correcta devuelve los campos solicitados de las entidades especifi
 }
 ```
 
-## Acceso a eventos de series temporales para un perfil por identidad
++++
 
-Puede acceder a los eventos de series temporales por la identidad de su entidad de perfil asociada realizando una solicitud de GET al extremo `/access/entities`. Esta identidad consta de un valor de identificador (`entityId`) y un área de nombres de identidad (`entityIdNS`).
-
-Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;). Se proporciona una lista completa de parámetros válidos en la sección [parámetros de consulta](#query-parameters) del apéndice.
-
-**Formato de API**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-**Solicitud**
-
-La siguiente solicitud encuentra una entidad de perfil por identificador y recupera los valores de las propiedades `endUserIDs`, `web` y `channel` para todos los eventos de series temporales asociados a la entidad.
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve una lista paginada de eventos de series temporales y campos asociados especificados en los parámetros de consulta de la solicitud.
-
->[!NOTE]
->
->La solicitud especificó un límite de uno (`limit=1`), por lo tanto `count` en la respuesta siguiente es 1 y solo se devuelve una entidad.
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
-
-### Acceso a una página posterior de resultados
-
-Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados subsiguientes, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra solicitud de GET al extremo `/access/entities`; sin embargo, debe asegurarse de reemplazar `/entities` por el valor del URI proporcionado.
-
->[!NOTE]
->
->Asegúrese de no repetir accidentalmente `/entities/` en la ruta de solicitud. Solo debería aparecer una vez como `/access/entities?start=...`
-
-**Formato de API**
-
-```http
-GET /access/{NEXT_URI}
-```
-
-| Parámetro | Descripción |
-|---|---|
-| `{NEXT_URI}` | El valor de URI tomado de `_links.next.href`. |
-
-**Solicitud**
-
-La siguiente solicitud recupera la siguiente página de resultados usando el URI `_links.next.href` como ruta de solicitud.
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve la siguiente página de resultados. Esta respuesta no tiene páginas de resultados subsiguientes, como indican los valores de cadena vacíos de `_page.next` y `_links.next.href`.
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236037",
-        "count": 1,
-        "next": ""
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236037",
-            "timestamp": 1531260477000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:50:01Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": ""
-        }
-    }
-}
-```
-
-## Acceso a eventos de series temporales para varios perfiles por identidades
-
-Puede acceder a los eventos de series temporales desde varios perfiles asociados realizando una solicitud de POST al extremo `/access/entities` y proporcionando las identidades de perfil en la carga útil. Cada una de estas identidades consta de un valor de identificador (`entityId`) y un área de nombres de identidad (`entityIdNS`).
+>[!TAB Eventos de series temporales]
 
 **Formato de API**
 
@@ -506,11 +659,12 @@ POST /access/entities
 
 **Solicitud**
 
-La siguiente solicitud recupera los ID de usuario, las horas locales y los códigos de país de los eventos de series temporales asociados a una lista de identidades de perfil:
+La siguiente solicitud recupera los ID de usuario, las horas locales y los códigos de país de los eventos de series temporales asociados a una lista de identidades de perfil.
+
++++ Una solicitud de ejemplo para recuperar los datos de la serie temporal
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/access/entities \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -541,26 +695,29 @@ curl -X POST \
         "startTime": 11539838505
         "endTime": 1539838510
     },
-    "limit": 10
+    "limit": 10,
+    "orderby": "-timestamp"
 }'
 ```
 
-| Propiedad | Descripción |
-|---|---|
-| `schema.name` | **(REQUERIDO)** El esquema XDM de la entidad que se va a recuperar |
-| `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent`, este valor debe especificar el esquema para la entidad de perfil con la que están relacionados los eventos de series temporales. |
-| `identities` | **(OBLIGATORIO)** Lista de matriz de perfiles desde la que recuperar los eventos de series temporales asociados. Cada entrada en la matriz se establece de una de las dos maneras siguientes: 1) utilizando una identidad completa compuesta por el valor de ID y el área de nombres o 2) proporcionando un XID. |
-| `fields` | Aísla los datos devueltos en un conjunto de campos especificado. Utilice esto para filtrar qué campos de esquema se incluyen en los datos recuperados. Ejemplo: personalEmail,person.name,person.gender |
-| `mergePolicyId` | Identifica la política de combinación por la que se rigen los datos devueltos. Si no se especifica ninguno en la llamada de servicio, se utilizará el valor predeterminado de su organización para ese esquema. Si no se ha configurado ninguna política de combinación predeterminada, el valor predeterminado es sin combinación de perfiles ni vinculación de identidad. |
-| `orderby` | Orden de los eventos de experiencia recuperados por marca de tiempo, escritos como `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
-| `timeFilter.startTime` | Especifique la hora de inicio para filtrar los objetos de series temporales (en milisegundos). |
-| `timeFilter.endTime` | Especifique la hora de finalización para filtrar los objetos de series temporales (en milisegundos). |
-| `limit` | Valor numérico que especifica el número máximo de objetos que se van a devolver. Predeterminado: 1000 |
-| `withCA` | Indicador de funcionalidad para habilitar atributos calculados para la búsqueda. Valor predeterminado: false |
+| Propiedad | Tipo | Descripción |
+| -------- | ---- | ----------- |
+| `schema.name` | Cadena | **(Obligatorio)** El nombre del esquema XDM al que pertenece la entidad. |
+| `relatedSchema.name` | Cadena | Si `schema.name` es `_xdm.context.experienceevent`, este valor debe especificar el esquema para la entidad de perfil con la que están relacionados los eventos de series temporales. |
+| `identities` | Matriz | **(Obligatorio)** Una matriz con una lista de perfiles desde los que recuperar los eventos de series temporales asociados. Cada entrada de la matriz se establece de una de las dos maneras siguientes: <ol><li>Uso de una identidad completa formada por el valor de ID y el área de nombres</li><li>Proporcionar un XID</li></ol> |
+| `fields` | Cadena | Los campos XDM que se van a devolver, como una matriz de cadenas. De forma predeterminada, se devuelven todos los campos. |
+| `orderby` | Cadena | Orden de los eventos de experiencia recuperados por marca de tiempo, escritos como `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
+| `timeFilter.startTime` | Entero | Especifique la hora de inicio para filtrar los objetos de series temporales (en milisegundos). De forma predeterminada, este valor se establece como el principio del tiempo disponible. |
+| `timeFilter.endTime` | Entero | Especifique la hora de finalización para filtrar los objetos de series temporales (en milisegundos). De forma predeterminada, este valor se establece como el final del tiempo disponible. |
+| `limit` | Entero | Número máximo de registros que se van a devolver. De forma predeterminada, este valor se establece en 1000. |
+
++++
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista paginada de eventos de series temporales asociados con varios perfiles especificados en la solicitud.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista paginada de eventos de series temporales asociados con varios perfiles especificados en la solicitud.
+
++++ Una respuesta de ejemplo que contiene los eventos de series temporales
 
 ```json
 {
@@ -768,110 +925,625 @@ Una respuesta correcta devuelve una lista paginada de eventos de series temporal
 }`
 ```
 
-En esta respuesta de ejemplo, el primer perfil enumerado (&quot;GkouAW-yD9aoRCPhRYROJ-TestAFW&quot;) proporciona un valor para `_links.next.payload`, lo que significa que hay páginas de resultados adicionales para este perfil. Consulte la siguiente sección sobre [acceso a resultados adicionales](#access-additional-results) para obtener detalles sobre cómo acceder a esos resultados adicionales.
++++
 
-### Acceso a resultados adicionales {#access-additional-results}
+>[!NOTE]
+>
+>En esta respuesta de ejemplo, el primer perfil enumerado (&quot;GkouAW-yD9aoRCPhRYROJ-TestAFW&quot;) proporciona un valor para `_links.next.payload`, lo que significa que hay páginas de resultados adicionales para este perfil.
+>
+>Para acceder a estos resultados, puede realizar una solicitud de POST adicional al extremo `/access/entities` con la carga útil indicada como cuerpo de la solicitud.
 
-Al recuperar eventos de series temporales, puede haber muchos resultados devueltos, por lo que los resultados suelen paginarse. Si hay páginas de resultados posteriores para un perfil en particular, el valor `_links.next.payload` de ese perfil contendrá un objeto de carga útil.
-
-Con esta carga útil en el cuerpo de la solicitud, puede realizar una solicitud de POST adicional al extremo `access/entities` para recuperar la página posterior de datos de series temporales para ese perfil.
-
-## Acceso a eventos de series temporales en varias entidades de esquema
-
-Puede acceder a varias entidades conectadas a través de un descriptor de relación. La siguiente llamada de API de ejemplo supone que ya se ha definido una relación entre dos esquemas. Para obtener más información sobre los descriptores de relación, lea la [!DNL Schema Registry] Guía para desarrolladores de API [Guía de extremo de descriptores](../../xdm/api/descriptors.md).
-
-Puede incluir parámetros de consulta en la ruta de solicitud para especificar a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;). Se proporciona una lista completa de parámetros válidos en la sección [parámetros de consulta](#query-parameters) del apéndice.
+>[!TAB Cuenta B2B]
 
 **Formato de API**
 
 ```http
-GET /access/entities?{QUERY_PARAMETERS}
+POST /access/entities
 ```
 
 **Solicitud**
 
-La siguiente solicitud recupera una entidad que contiene un descriptor de relación establecido anteriormente para acceder a la información en diferentes esquemas.
+La siguiente solicitud recupera las cuentas B2B solicitadas.
+
++++Una solicitud de ejemplo para recuperar varias entidades.
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/access/entities?relatedSchema.name=_xdm.context.profile&schema.name=_xdm.context.experienceevent&relatedEntityId=GkouAW-2Xkftzer3bBtHiW8GkaFL \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "schema":{
+            "name":"_xdm.context.account"
+        },
+        "identities": [
+            {
+                "entityId": "2334262",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            },
+            {
+                "entityId": "2334263",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            },
+            {
+                "entityId": "2334264",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            }
+        ]
+    }'
 ```
+
+| Propiedad | Tipo | Descripción |
+| -------- |----- | ----------- |
+| `schema.name` | Cadena | **(Obligatorio)** El nombre del esquema XDM al que pertenece la entidad. |
+| `identities` | Matriz | **(Obligatorio)** Una matriz que contiene una lista de identidades para las entidades a las que desea tener acceso. |
+| `identities.entityId` | Cadena | El ID de una entidad a la que desea acceder. |
+| `identities.entityIdNS.code` | Cadena | El área de nombres de un ID de entidad al que desea acceder. |
+
++++
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista paginada de eventos de series temporales asociados con varias entidades.
+Una respuesta correcta devuelve el estado HTTP 200 con las entidades solicitadas.
+
++++ Una respuesta de ejemplo que contiene las entidades solicitadas
+
+```json
+{
+    "GuQ-AUFjgjeeIw": {
+        "requestedIdentity": {
+            "entityId": "2334263",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjeeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "GuQ-AUFjgjaeIw": {
+        "requestedIdentity": {
+            "entityId": "2334262",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "GuQ-AUFjgjmeIw": {
+        "requestedIdentity": {
+            "entityId": "2334265",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjmeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334265",
+            "identityMap": {
+            "b2b_account": [
+                {
+                    "id": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                },
+                {
+                    "id": "2334265"
+                }
+            ]
+        },
+        "isDeleted": false,
+        "accountKey": {
+            "sourceID": "2334265",
+            "sourceKey": "2334265",
+            "sourceInstanceID": "2334265",
+            "sourceType": "Random"
+        }
+    }
+}
+```
+
++++
+
+>[!TAB Oportunidad B2B]
+
+**Formato de API**
+
+```http
+POST /access/entities
+```
+
+**Solicitud**
+
+La siguiente solicitud recupera las oportunidades B2B solicitadas.
+
++++ Una solicitud de ejemplo para recuperar varias entidades
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "schema":{
+            "name":"_xdm.context.opportunity"
+        },
+        "identities": [
+            {
+                "entityId": "2334262",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334263",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334264",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334265",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            }
+        ]
+    }'
+```
+
+| Propiedad | Tipo | Descripción |
+| -------- |----- | ----------- |
+| `schema.name` | Cadena | **(Obligatorio)** El nombre del esquema XDM al que pertenece la entidad. |
+| `identities` | Matriz | **(Obligatorio)** Una matriz que contiene una lista de identidades para las entidades a las que desea tener acceso. |
+| `identities.entityId` | Cadena | El ID de una entidad a la que desea acceder. |
+| `identities.entityIdNS.code` | Cadena | El área de nombres de un ID de entidad al que desea acceder. |
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con las entidades solicitadas.
+
++++ Una respuesta de ejemplo que contiene las entidades solicitadas
+
+```json
+{
+    "Ggw_AUFjgjaeIw": {
+        "requestedIdentity": {
+            "entityId": "2334262",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "Ggw_AUFjgjieIw": {
+        "requestedIdentity": {
+            "entityId": "2334264",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjieIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334264",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "2334264"
+                    },
+                    {
+                        "id": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334264",
+                "sourceKey": "2334264",
+                "sourceInstanceID": "2334264",
+                "sourceType": "Salesforce"
+            }
+        }
+    },
+    "Ggw_AUFjgjeeIw": {
+        "requestedIdentity": {
+            "entityId": "2334263",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjeeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "Ggw_AUFjgjmeIw": {
+        "requestedIdentity": {
+            "entityId": "2334265",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjmeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334265",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "2334265"
+                    },
+                    {
+                        "id": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334265",
+                "sourceKey": "2334265",
+                "sourceInstanceID": "2334265",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!ENDTABS]
+
+### Acceso a una página posterior de resultados
+
+Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados subsiguientes, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra solicitud de GET al extremo `/access/entities` y reemplace `/entities` por el valor del URI proporcionado.
+
+>[!NOTE]
+>
+>Asegúrese de no repetir accidentalmente `/entities/` en la ruta de solicitud. Solo debería aparecer una vez como `/access/entities?start=...`
+
+**Formato de API**
+
+```http
+GET /access/{NEXT_URI}
+```
+
+| Parámetro | Descripción |
+|---|---|
+| `{NEXT_URI}` | El valor de URI tomado de `_links.next.href`. |
+
+**Solicitud**
+
+La siguiente solicitud recupera la siguiente página de resultados usando el URI `_links.next.href` como ruta de solicitud.
+
++++ Una solicitud de ejemplo para acceder a la siguiente página de resultados
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve la siguiente página de resultados. Esta respuesta no tiene páginas de resultados subsiguientes, como indican los valores de cadena vacíos de `_page.next` y `_links.next.href`.
+
++++ Una respuesta de ejemplo que contiene la siguiente página de entidades
 
 ```json
 {
     "_page": {
         "orderby": "timestamp",
-        "start": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
+        "start": "c8d11988-6b56-4571-a123-b6ce74236037",
         "count": 1,
         "next": ""
     },
     "children": [
         {
-            "relatedEntityId": "GkouAW-2Xkftzer3bBtHiW8GkaFL",
-            "entityId": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
-            "timestamp": 1564614939000,
+            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
+            "entityId": "c8d11988-6b56-4571-a123-b6ce74236037",
+            "timestamp": 1531260477000,
             "entity": {
-                "environment": {
-                    "browserDetails": {}
-                },
-                "identityMap": {
-                    "CRMId": [
-                        {
-                            "id": "78520026455138218785449796480922109723",
-                            "primary": true
-                        }
-                    ]
-                },
-
-                "commerce": {
-                    "productViews": {
-                        "value": 1
-                    }
-                },
-                "productListItems": [
-                    {
-                        "name": "Red shoe",
-                        "quantity": 85,
-                        "storesAvailableIn": [
-                            "da6dced5-9574-4dda-89b5-9dc106903f80",
-                            "981bb433-2ee5-4db0-a19a-449ec9dbf39f"
-                        ],
-                        "SKU": "8f998279-797b-4da2-9e60-88bf73a9f15a",
-                        "priceTotal": 934.8
-                    }
-                ],
-                "_id": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
-                "commerce": {
-                    "order": {}
-                },
-                "placeContext": {
-                    "geo": {
-                        "_schema": {}
-                    }
-                },
-                "device": {},
-                "timestamp": "2019-07-31T23:15:39Z",
-                "_experience": {
-                    "profile": {
-                        "identityNamespaces": {
-                            "/productListItems[*]/SKU": {
-                                "namespace": {
-                                    "code": "ECID"
-                                }
+                "endUserIDs": {
+                    "_experience": {
+                        "ecid": {
+                            "id": "89149270342662559642753730269986316900",
+                            "namespace": {
+                                "code": "ecid"
                             }
+                        }
+                    }
+                },
+                "channel": {
+                    "_type": "web"
+                },
+                "web": {
+                    "webPageDetails": {
+                        "name": "Fernie Snow",
+                        "pageViews": {
+                            "value": 1
                         }
                     }
                 }
             },
-            "lastModifiedAt": "2019-10-10T00:14:19Z"
+            "lastModifiedAt": "2018-08-21T06:50:01Z"
         }
     ],
     "_links": {
@@ -882,9 +1554,46 @@ Una respuesta correcta devuelve una lista paginada de eventos de series temporal
 }
 ```
 
-### Acceso a una página posterior de resultados
++++
 
-Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados subsiguientes, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente realizando solicitudes de GET adicionales al extremo `access/entities`.
+## Eliminar una entidad {#delete-entity}
+
+Puede eliminar una entidad del almacén de perfiles realizando una solicitud de DELETE al extremo `/access/entities` junto con los parámetros de consulta necesarios.
+
+**Formato de API**
+
+```http
+DELETE /access/entities?{QUERY_PARAMETERS}
+```
+
+Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;).
+
+Para eliminar una entidad, **debe** proporcionar los siguientes parámetros de consulta:
+
+- `schema.name`: nombre del esquema XDM de la entidad. En este caso de uso, puede **solamente** usar `schema.name=_xdm.context.profile`.
+- `entityId`: ID de la entidad que intenta recuperar.
+- `entityIdNS`: área de nombres de la entidad que intenta recuperar. Se debe proporcionar este valor si `entityId` es **no** un XID.
+- `mergePolicyId`: ID de política de combinación de la entidad. La política de combinación contiene información sobre la vinculación de identidad y la combinación de objetos XDM clave-valor. Si no se proporciona este valor, se utilizará la política de combinación predeterminada.
+
+**Solicitud**
+
+La siguiente solicitud elimina la entidad especificada.
+
++++ Una solicitud de ejemplo para eliminar una entidad
+
+```shell
+curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 202 con un cuerpo de respuesta vacío.
 
 ## Pasos siguientes
 
@@ -899,18 +1608,17 @@ La siguiente sección proporciona información adicional sobre el acceso a los d
 Los siguientes parámetros se utilizan en la ruta de acceso de las solicitudes de GET al extremo `/access/entities`. Sirven para identificar la entidad de perfil a la que desea acceder y filtrar los datos devueltos en la respuesta. Los parámetros obligatorios están etiquetados, mientras que el resto son opcionales.
 
 | Parámetro | Descripción | Ejemplo |
-|---|---|---|
-| `schema.name` | **(REQUERIDO)** El esquema XDM de la entidad que se va a recuperar | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | Si `schema.name` es &quot;_xdm.context.experienceevent&quot;, este valor debe especificar el esquema de la entidad de perfil con la que están relacionados los eventos de series temporales. | `relatedSchema.name=_xdm.context.profile` |
-| `entityId` | **(OBLIGATORIO)** El identificador de la entidad. Si el valor de este parámetro no es un XID, también se debe proporcionar un parámetro de área de nombres de identidad (consulte `entityIdNS` a continuación). | `entityId=janedoe@example.com` |
-| `entityIdNS` | Si `entityId` no se proporciona como un XID, este campo debe especificar el área de nombres de identidad. | `entityIdNE=email` |
-| `relatedEntityId` | Si `schema.name` es &quot;_xdm.context.experienceevent&quot;, este valor debe especificar el área de nombres de identidad de la entidad de perfil relacionada. Este valor sigue las mismas reglas que `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
+| --------- | ----------- | ------- |
+| `schema.name` | **(Obligatorio)** El nombre del esquema XDM de la entidad. | `schema.name=_xdm.context.experienceevent` |
+| `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent`, este valor **debe** especificar el esquema para la entidad de perfil con la que están relacionados los eventos de series temporales. | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **(Obligatorio)** El identificador de la entidad. Si el valor de este parámetro no es un XID, también se debe proporcionar un parámetro de área de nombres de identidad (`entityIdNS`). | `entityId=janedoe@example.com` |
+| `entityIdNS` | Si `entityId` no se proporciona como un XID, este campo **debe** especificar el área de nombres de identidad. | `entityIdNS=email` |
+| `relatedEntityId` | Si `schema.name` es `_xdm.context.experienceevent`, este valor **debe** especificar el identificador de la entidad de perfil relacionada. Este valor sigue las mismas reglas que `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | Si `schema.name` es &quot;_xdm.context.experienceevent&quot;, este valor debe especificar el área de nombres de identidad para la entidad especificada en `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
-| `fields` | Filtra los datos devueltos en la respuesta. Utilice esto para especificar qué valores de campo de esquema incluir en los datos recuperados. Para varios campos, separe los valores con una coma sin espacios entre ellos | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | Identifica la política de combinación por la que se rigen los datos devueltos. Si no se especifica uno en la llamada de, se utilizará el valor predeterminado de su organización para ese esquema. Si no se ha configurado ninguna política de combinación predeterminada, el valor predeterminado es sin combinación de perfiles ni vinculación de identidad. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | Orden de los eventos de experiencia recuperados por marca de tiempo, escritos como `(+/-)timestamp` con el valor predeterminado `+timestamp`. | `orderby=-timestamp` |
-| `startTime` | Especifique la hora de inicio para filtrar los objetos de series temporales (en milisegundos). | `startTime=1539838505` |
-| `endTime` | Especifique la hora de finalización para filtrar los objetos de series temporales (en milisegundos). | `endTime=1539838510` |
-| `limit` | Valor numérico que especifica el número máximo de objetos que se van a devolver. Predeterminado: 1000 | `limit=100` |
-| `property` | Filtra por el valor de propiedad. Admite los siguientes evaluadores: =, !=, &lt;, &lt;=, >, >=. Solo se puede utilizar con eventos de experiencia, con un máximo de tres propiedades admitidas. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
-| `withCA` | Indicador de funcionalidad para habilitar atributos calculados para la búsqueda. Valor predeterminado: false | `withCA=true` |
+| `fields` | Filtra los datos devueltos en la respuesta. Utilice esto para especificar qué valores de campo de esquema incluir en los datos recuperados. Para varios campos, separe los valores con una coma sin espacios entre ellos. | `fields=personalEmail,person.name,person.gender` |
+| `mergePolicyId` | Identifica la política de combinación que rige los datos devueltos. Si no se especifica uno en la llamada de, se utilizará el valor predeterminado de su organización para ese esquema. Si no se ha configurado ninguna política de combinación predeterminada, el valor predeterminado es sin combinación de perfiles ni vinculación de identidad. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `orderBy` | Orden de las entidades recuperadas por marca de tiempo. Esto se escribe como `(+/-)timestamp`, con el valor predeterminado `+timestamp`. | `orderby=-timestamp` |
+| `startTime` | Especifica el tiempo de inicio para filtrar las entidades (en milisegundos). | `startTime=1539838505` |
+| `endTime` | Especifica el tiempo de finalización para filtrar entidades (en milisegundos). | `endTime=1539838510` |
+| `limit` | Especifica el número máximo de entidades que se van a devolver. De forma predeterminada, este valor se establece en 1000. | `limit=100` |
+| `property` | Filtra por el valor de propiedad. Este parámetro de consulta admite los siguientes evaluadores: =, !=, &lt;, &lt;=, >, >=. Esto solo se puede utilizar con eventos de experiencia, con un máximo de tres propiedades admitidas. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
