@@ -3,10 +3,10 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de público en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '1985'
-ht-degree: 7%
+source-wordcount: '2091'
+ht-degree: 6%
 
 ---
 
@@ -151,6 +151,22 @@ El siguiente vídeo también muestra los pasos para configurar un destino [!DNL 
 2. Seleccione **[!UICONTROL Conectar con destino]**.
    ![Paso Autenticar en Facebook mostrado en el flujo de trabajo de activación.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Escriba sus credenciales de Facebook y seleccione **Iniciar sesión**.
+
+### Actualizar credenciales de autenticación {#refresh-authentication-credentials}
+
+Los tokens de facebook caducan cada 60 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
+
+1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]**
+2. (Opcional) Utilice los filtros disponibles en la página para mostrar solo las cuentas de Facebook.
+   ![Filtrar para mostrar solo cuentas de Facebook](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+3. Seleccione la cuenta que desea actualizar, seleccione los puntos suspensivos y seleccione **[!UICONTROL Editar detalles]**.
+   ![Seleccionar el control Editar detalles](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
+4. En la ventana modal, seleccione **[!UICONTROL Volver a conectar OAuth]** y vuelva a autenticarse con sus credenciales de Facebook.
+   ![Ventana modal con la opción Reconectar OAuth](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Las credenciales de autenticación se actualizan y su hora de caducidad se restablece a 60 días.
 
 ### Rellenar detalles de destino {#destination-details}
 

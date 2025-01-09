@@ -3,9 +3,9 @@ keywords: conexión de linkedin;conexión de linkedin;destinos de linkedin;linke
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para la segmentación, personalización y supresión de audiencias, en función de los correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
+source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1201'
 ht-degree: 4%
 
 ---
@@ -118,6 +118,22 @@ El siguiente vídeo también muestra los pasos para configurar un destino [!DNL 
 2. Seleccione **[!UICONTROL Conectar con destino]**.
    ![Autenticar con LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. Escriba sus credenciales de LinkedIn y seleccione **Iniciar sesión**.
+
+### Actualizar credenciales de autenticación {#refresh-authentication-credentials}
+
+Los tokens de linkedIn caducan cada 60 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
+
+1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]**
+2. (Opcional) Utilice los filtros disponibles en la página para mostrar solo las cuentas de LinkedIn.
+   ![Filtrar para mostrar solo cuentas de LinkedIn](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. Seleccione la cuenta que desea actualizar, seleccione los puntos suspensivos y seleccione **[!UICONTROL Editar detalles]**.
+   ![Seleccionar el control Editar detalles](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+4. En la ventana modal, seleccione **[!UICONTROL Volver a conectar OAuth]** y vuelva a autenticarse con sus credenciales de LinkedIn.
+   ![Ventana modal con la opción Reconectar OAuth](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Las credenciales de autenticación se actualizan y su hora de caducidad se restablece a 60 días.
 
 ### Rellenar detalles de destino {#destination-details}
 
