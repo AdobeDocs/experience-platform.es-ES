@@ -2,9 +2,9 @@
 title: Asistente de IA en Adobe Experience Platform
 description: Aprenda a utilizar el asistente de IA para desplazarse por los conceptos de Experience Platform y Real-time Customer Data Platform, y comprender sus conceptos, así como la información de uso de sus objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -75,10 +75,6 @@ El asistente de IA actualiza la interfaz y le proporciona vínculos a documentac
 
 ![Menú desplegable de las citas que el Asistente de IA proporciona para las preguntas de concepto.](./images/citations.png)
 
-También puede usar las sugerencias que el Asistente de inteligencia artificial proporciona en **[!UICONTROL Sugerencias relacionadas]** para explorar más en profundidad los temas relacionados con su pregunta original.
-
-![Una lista de sugerencias proporcionadas por el Asistente de IA.](./images/related-suggestions.png)
-
 +++
 
 ### Datos operativos {#operational-insights}
@@ -127,9 +123,9 @@ Cuando se consulta con una pregunta de información operativa, el Asistente de I
 
 +++
 
-### Usar completado automático {#use-auto-complete}
+### Usar autocompletar de entidad {#use-entity-auto-complete}
 
-Puede utilizar la función de autocompletar para recibir una lista de los objetos de datos que existen en su zona protegida. Las recomendaciones de autocompletar están disponibles para los siguientes dominios: audiencias, esquemas, conjuntos de datos, fuentes y destinos.
+Puede utilizar la función de autocompletar para recibir una lista de los objetos de datos que existen en su zona protegida. Las recomendaciones de autocompletar están disponibles para los siguientes dominios: audiencias, esquemas, conjuntos de datos, recorridos, fuentes y destinos.
 
 +++Seleccione esta opción para ver un ejemplo de autocompletado
 
@@ -176,6 +172,44 @@ Para ver la detección, seleccione el icono de la bombilla en el encabezado supe
 A continuación, seleccione una categoría y, a continuación, seleccione una solicitud de la lista proporcionada. Puede utilizar esta función para tener una mejor idea de los tipos de preguntas que AI Assistant puede responder. También puedes actualizar las indicaciones preexistentes con detalles específicos que pertenecen a tu zona protegida usando texto libre o [autocompletar](#use-auto-complete).
 
 ![El Ayudante de IA solicita confirmación.](./images/prompt.png)
+
++++
+
+### Usar pregunta autocompletada {#use-question-autocomplete}
+
+Puede utilizar la función de autocompletar preguntas del asistente de IA para seleccionar una pregunta de una lista de recomendaciones de este asistente.
+
++++Seleccione esta opción para ver un ejemplo de pregunta autocompletada
+
+Para ver el panel de preguntas sugeridas, escriba al menos siete (7) caracteres en el cuadro de entrada. A continuación, seleccione la pregunta que le interesa en el menú que aparece.
+
+![Panel emergente con preguntas sugeridas del Asistente de IA.](./images/suggested_questions.png)
+
+Es posible que tenga que actualizar los marcadores de posición en algunos casos en los que una pregunta sugerida implique perspectivas operativas. Por ejemplo, es posible que tenga que agregar el nombre específico de un conjunto de datos o una audiencia si la sugerencia del asistente de IA incluye marcadores de posición.
+
+![Sugerencia del Asistente de IA que incluye marcadores de posición.](./images/placeholder.png)
+
+Los marcadores de posición se resaltan en azul. Seleccione el marcador de posición para empezar a actualizar su valor. Para obtener mejores resultados en los marcadores de posición numéricos, asegúrese de utilizar dígitos en lugar de texto. También puede utilizar la función de autocompletar entidad para actualizar los valores de marcador de posición. No puede enviar una pregunta con marcadores de posición sin rellenar.
+
+**NOTA**: las sugerencias están habilitadas de manera predeterminada. Seleccione la opción **[!UICONTROL Sugerir ideas]** para deshabilitar la característica.
+
+![Sugerencia del Asistente de IA con marcadores de posición actualizados.](./images/updated_placeholder.png)
+
++++
+
+### Usar sugerencias relacionadas {#use-related-suggestions}
+
+Puede utilizar la sección de sugerencias relacionadas de cada respuesta del asistente de IA para continuar con la conversación.
+
++++Seleccione esta opción para ver un ejemplo de sugerencias relacionadas
+
+Las sugerencias relacionadas se devuelven con cada respuesta del asistente de IA. Para continuar con la conversación, seleccione cualquiera de las sugerencias de la sección sugerencias relacionadas.
+
+![Una lista de sugerencias relacionadas del Asistente de IA.](./images/related_suggestions.png)
+
+De forma similar a los marcadores de posición en el autocompletado de pregunta, deberá actualizar los marcadores de posición que se incluyen en las sugerencias relacionadas antes de poder enviar la consulta.
+
+![Consulta de sugerencias relacionadas con los marcadores de posición actualizados.](./images/related_suggestions_placeholder.png)
 
 +++
 
