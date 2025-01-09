@@ -4,14 +4,18 @@ solution: Experience Platform
 title: conector del Marketo Engage
 description: Este documento proporciona información general sobre el conector de origen del Marketo Engage, incluida la información sobre su autenticación, asignación y latencia de datos.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
+source-git-commit: 37e23b060c34c628b2be80256cffd1480c899ce7
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
 
 # Conector [!DNL Marketo Engage]
+
+>[!IMPORTANT]
+>
+>Ahora puede usar el origen [!DNL Marketo Engage] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../../landing/multi-cloud.md).
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
@@ -21,7 +25,7 @@ Con el conector de origen [!DNL Marketo Engage], puede llevar los datos B2B de [
 
 >[!IMPORTANT]
 >
->Debe tener acceso a [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) para usar todos los conjuntos de datos de Marketo para la segmentación con el [Perfil del cliente en tiempo real](../../../../profile/home.md). Sin Real-Time CDP B2B Edition, aún puede utilizar el origen de Marketo para llevar los datos de los conjuntos de datos de personas y actividades al Perfil del cliente en tiempo real para la segmentación.
+>Debe tener acceso a [Adobe Real-time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) para usar todos los conjuntos de datos de Marketo para la segmentación con el [perfil del cliente en tiempo real](../../../../profile/home.md). Sin Real-Time CDP B2B edition, aún puede utilizar la fuente de Marketo para llevar los datos de los conjuntos de datos de personas y actividades al Perfil del cliente en tiempo real para la segmentación.
 
 Este documento proporciona información general sobre el conector de origen [!DNL Marketo Engage], incluida información sobre cómo autenticar el conector, cómo asignar campos de [!DNL Marketo Engage] al modelo de datos de experiencia (XDM) y la latencia de datos del conector.
 
