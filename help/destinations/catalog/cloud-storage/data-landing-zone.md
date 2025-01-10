@@ -3,9 +3,9 @@ title: Destino de zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar audiencias y exportar conjuntos de datos.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
+source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1968'
 ht-degree: 2%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 Platform aplica un tiempo de vida (TTL) estricto de siete días a todos los archivos cargados en un contenedor de [!DNL Data Landing Zone]. Todos los archivos se eliminan a los siete días.
 
-El conector de destino [!DNL Data Landing Zone] está disponible para los clientes que usan la compatibilidad con la nube de Azure o Amazon Web Service. El mecanismo de autenticación es diferente en función de la nube en la que se aprovisiona el destino, todo lo demás sobre el destino y sus casos de uso son los mismos. Obtenga más información acerca de los dos mecanismos de autenticación diferentes en las secciones [Autenticar en la zona de aterrizaje de datos aprovisionada en Azure Blob] y [Autenticar en la zona de aterrizaje de datos aprovisionada por AWS](#authenticate-dlz-aws).
+El conector de destino [!DNL Data Landing Zone] está disponible para los clientes que usan la compatibilidad con la nube de Azure o Amazon Web Service. El mecanismo de autenticación es diferente en función de la nube en la que se aprovisiona el destino, todo lo demás sobre el destino y sus casos de uso son los mismos. Obtenga más información acerca de los dos mecanismos de autenticación diferentes en las secciones [Autenticar en la zona de aterrizaje de datos aprovisionada en Azure Blob](#authenticate-dlz-azure) y [Autenticar en la zona de aterrizaje de datos aprovisionada por AWS](#authenticate-dlz-aws).
 
-![Diagrama que muestra cómo la implementación del destino de zona de aterrizaje de datos es diferente según la compatibilidad con la nube.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
+![Diagrama que muestra cómo la implementación del destino de zona de aterrizaje de datos es diferente en función de la compatibilidad con la nube.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Implementación de destino de zona de aterrizaje de datos por soporte en la nube"){zoomable="yes"}
 
 ## Conéctese a su almacenamiento de [!UICONTROL zona de aterrizaje de datos] mediante la API o la interfaz de usuario {#connect-api-or-ui}
 
@@ -77,7 +77,7 @@ Puede leer y escribir archivos en el contenedor a través de [!DNL Azure Storage
 
 [!DNL Data Landing Zone] admite la autenticación basada en SAS y sus datos están protegidos con mecanismos de seguridad de almacenamiento estándar de [!DNL Azure Blob] en reposo y en tránsito. SAS significa [firma de acceso compartido](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-La autenticación basada en SAS le permite tener acceso de forma segura a su contenedor de [!DNL Data Landing Zone] a través de una conexión pública a Internet. No se requieren cambios de red para tener acceso al contenedor de [!DNL Data Landing Zone], lo que significa que no es necesario configurar listas de permitidos ni configuraciones entre regiones para la red.
+Para proteger los datos mediante una conexión pública a Internet, use la autenticación basada en SAS para tener acceso de forma segura al contenedor de [!DNL Data Landing Zone]. No se requieren cambios de red para tener acceso al contenedor de [!DNL Data Landing Zone], lo que significa que no es necesario configurar listas de permitidos ni configuraciones entre regiones para la red.
 
 ### Conectar su contenedor de [!DNL Data Landing Zone] a [!DNL Azure Storage Explorer]
 
@@ -212,7 +212,7 @@ Con el contenedor [!DNL Data Landing Zone] conectado a [!DNL Azure Storage Explo
 >
 >Esta sección se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Realice las operaciones siguientes para obtener credenciales de la instancia de zona de aterrizaje de datos aprovisionada en AWS. A continuación, utilice un cliente de su elección para conectarse a la instancia de la zona de aterrizaje de datos.
+Realice las siguientes operaciones para obtener las credenciales de la instancia [!DNL Data Landing Zone] aprovisionada en AWS. A continuación, utilice un cliente de su elección para conectarse a su instancia de [!DNL Data Landing Zone].
 
 >[!BEGINSHADEBOX]
 
@@ -228,7 +228,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | Parámetros de consulta | Descripción |
 | --- | --- |
-| `dlz_destination` | El tipo `dlz_destination` permite a la API distinguir un contenedor de destino de zona de aterrizaje de otros tipos de contenedores disponibles para usted. |
+| `dlz_destination` | Agregue el parámetro de consulta `dlz_destination` para especificar que desea que se recuperen las credenciales del contenedor [!DNL Data Landing Zone] *destino*. Para conectar y recuperar credenciales para una zona de aterrizaje de datos *source*, consulte la [documentación de fuentes](/help/sources/connectors/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
@@ -270,7 +270,7 @@ La siguiente respuesta devuelve la información de credenciales de la zona de at
 | `credentials` | Este objeto incluye `awsAccessKeyId`, `awsSecretAccessKey` y `awsSessionToken` que el Experience Platform utiliza para exportar archivos a la ubicación de la zona de aterrizaje de datos aprovisionada. |
 | `dlzPath` | Este objeto incluye la ruta de la ubicación de AWS aprovisionada de Adobe en la que se depositan los archivos exportados. |
 | `dlzProvider` | Indica que se trata de una zona de aterrizaje de datos aprovisionada para Amazon S3. |
-| `expiryTime` | Indica cuándo caducarán las credenciales del objeto situado más arriba. Puede actualizarlas realizando de nuevo la llamada. |
+| `expiryTime` | Indica cuándo caducarán las credenciales del objeto `credentials`. Para actualizar las credenciales, vuelva a realizar la solicitud. |
 
 {style="table-layout:auto"}
 
