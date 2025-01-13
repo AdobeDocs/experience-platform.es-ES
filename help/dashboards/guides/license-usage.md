@@ -4,10 +4,10 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
+source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
-source-wordcount: '2908'
-ht-degree: 15%
+source-wordcount: '2947'
+ht-degree: 16%
 
 ---
 
@@ -46,6 +46,14 @@ ht-degree: 15%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Horas calculadas previstas"
 >abstract="Su uso podría alcanzar la cantidad con licencia. Para evaluar o reducir las horas de cálculo, vaya a Consultas > Registro para revisar el historial de consultas. Si no tiene permiso para acceder al espacio de trabajo Consultas, póngase en contacto con el administrador."
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="Espacio de trabajo Registro de consultas"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="Audiencia a la que se puede dirigir predicha"
+>abstract="Su uso podría alcanzar la cantidad con licencia. Para reducir el uso, configure la caducidad de los conjuntos de datos o de perfiles seudónimos para las zonas protegidas y los conjuntos de datos."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Caducidad de Experience Event"
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/profile/pseudonymous-profiles" text="Caducidades de los datos de perfiles seudónimos"
 
 Puede ver información importante sobre el uso de licencias de su organización en el panel de control de Adobe Experience Platform [!UICONTROL Uso de licencias]. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
 
