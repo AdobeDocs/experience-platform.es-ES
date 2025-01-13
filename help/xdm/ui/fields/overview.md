@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos XDM en la IU
 description: Obtenga información sobre cómo definir campos XDM en la interfaz de usuario del Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
+source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1606'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ En el carril derecho bajo **[!UICONTROL Propiedades del campo]**, puede configur
 
 | Propiedad de campo | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre de campo] | Un nombre único y descriptivo para el campo. Tenga en cuenta que el nombre del campo no se puede cambiar una vez guardado el esquema. Este valor se usa para identificar y hacer referencia al campo en el código y en otras aplicaciones de flujo descendente<br><br>Idealmente, el nombre debería escribirse en camelCase. Puede contener caracteres alfanuméricos, guiones o guiones bajos, pero **no** puede comenzar con un guion bajo.<ul><li>**Correcto**: `fieldName`</li><li>**Aceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrecto**: `_fieldName`</li></ul> |
+| [!UICONTROL Nombre de campo] | Un nombre único y descriptivo para el campo. Tenga en cuenta que el nombre del campo no se puede cambiar una vez guardado el esquema. Este valor se usa para identificar y hacer referencia al campo en el código y en otras aplicaciones de flujo descendente<br><br>Idealmente, el nombre debería escribirse en camelCase. Puede contener caracteres alfanuméricos o guiones bajos, pero **no puede** comenzar con un guion bajo.<ul><li>**Correcto**: `fieldName`</li><li>**Aceptable:** `field_name2`, `fieldName_3`</li><li>**Incorrecto**: `_fieldName`</li></ul> |
 | [!UICONTROL Nombre para mostrar] | Un nombre para mostrar para el campo. Este es el nombre que se utilizará para representar el campo en el lienzo del Editor de esquemas. El nombre de campo se puede cambiar al nombre para mostrar mediante [display name toggle](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL Tipo] | Tipo de datos que contendrá el campo. Desde este menú desplegable, puede seleccionar uno de los [tipos escalares estándar](../../schema/field-constraints.md) compatibles con XDM, o uno de los [tipos de datos](../resources/data-types.md) de varios campos que se han definido previamente en [!DNL Schema Registry].<br>Nota: si selecciona el tipo de datos Map, aparecerá la propiedad [!UICONTROL Map value type].<br><br>También puede seleccionar **[!UICONTROL Búsqueda de tipo avanzada]** para buscar y filtrar los tipos de datos existentes y encontrar el tipo deseado con mayor facilidad. |
 | [!UICONTROL Asignar tipo de valor] | Este valor es necesario si selecciona [!UICONTROL Map] como tipo de datos para el campo. Los valores disponibles para el mapa son [!UICONTROL String] y [!UICONTROL Integer]. Seleccione un valor de la lista desplegable de opciones disponibles.<br>Para obtener más información acerca de [propiedades de campo específicas del tipo](#type-specific-properties), consulte la descripción general de definir campos. |
