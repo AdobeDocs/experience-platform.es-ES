@@ -1,12 +1,12 @@
 ---
 keywords: coincidencia de cliente de google;coincidencia de cliente de Google;coincidencia de cliente de Google
 title: Conexión de Google Customer Match
-description: Customer Match de Google le permite utilizar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping, Gmail y YouTube.
+description: Customer Match de Google le permite utilizar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping y Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
 workflow-type: tm+mt
-source-wordcount: '2100'
-ht-degree: 2%
+source-wordcount: '2140'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,11 @@ ht-degree: 2%
 ><br/>
 >Los clientes que no hayan adquirido Adobe Privacy &amp; Security Shield deben utilizar las funciones de [definición de segmento](../../../segmentation/home.md#segment-definitions) de [Generador de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar los perfiles no consentidos y así poder seguir utilizando los destinos de Real-Time CDP Google existentes sin interrupción.
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) le permite utilizar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google que posee y gestiona, como: [!DNL Search], [!DNL Shopping], [!DNL Gmail] y [!DNL YouTube].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) le permite usar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google que posee y opera, como: [!DNL Search], [!DNL Shopping] y [!DNL Gmail].
+
+>[!TIP]
+>
+>Para llegar a los clientes en el inventario [!DNL YouTube], usa el destino [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md), que usa la API de Google Audience Partner.
 
 ![Destino de Google Customer Match en la interfaz de usuario de Adobe Experience Platform.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -35,6 +39,10 @@ Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Googl
 Una marca de ropa deportiva quiere llegar a los clientes existentes a través de [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM al Experience Platform y crear audiencias a partir de sus propios datos sin conexión. A continuación, puede enviar estas audiencias a [!DNL Google Customer Match] para que las usen en [!DNL Search] y [!DNL Shopping], con lo que se optimiza el gasto en publicidad.
 
 ### Caso de uso #2
+
+>[!TIP]
+>
+>Para ejecutar este caso de uso en el inventario [!DNL YouTube], use el nuevo destino [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md), que usa la API de Google Audience Partner.
 
 Una destacada compañía tecnológica lanzó un nuevo teléfono. Para promocionar este nuevo modelo de teléfono, buscan concienciar sobre las nuevas funciones y funcionalidades del teléfono a los clientes que poseen modelos anteriores de sus teléfonos.
 
@@ -222,7 +230,7 @@ Después de conectarse al destino y establecer un flujo de datos de destino, pue
 
 >[!IMPORTANT]
 >
-> A partir de octubre de 2024, Adobe implementará una actualización para aumentar la precisión de la creación de informes en los destinos de flujo continuo. Esta mejora garantiza una mejor alineación entre el Experience Platform y los informes de las plataformas de destino.
+> A partir de octubre de 2024, Adobe implementará gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre el Experience Platform y los informes de las plataformas de destino.
 >
 > Antes de esta actualización, **[!UICONTROL Identidades con errores]** incluían todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total.
 >
