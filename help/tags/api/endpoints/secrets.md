@@ -2,7 +2,7 @@
 title: Extremo secreto
 description: Aprenda a realizar llamadas al extremo /secret en la API de Reactor.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 12%
@@ -17,7 +17,7 @@ Esta guía muestra cómo realizar llamadas al extremo `/secrets` en la API de Re
 
 ## Primeros pasos
 
-El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
+El extremo utilizado en esta guía forma parte de la [API de Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
 ## Recuperación de una lista de secretos para una propiedad {#list-property}
 

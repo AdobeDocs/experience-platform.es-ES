@@ -1,20 +1,20 @@
 ---
-title: Notas de la versión de Adobe Experience Platform, septiembre de 2019
-description: Notas de la versión de septiembre de 2019 de Adobe Experience Platform.
+title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2019'
+description: Las notas de la versión de septiembre de 2019 de Adobe Experience Platform.
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de lanzamiento: miércoles, 10 de septiembre de 2019**
+**Fecha de la versión: miércoles, 10 de septiembre de 2019**
 
 Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] es un servicio totalment
 
 **Problemas conocidos**
 
-* Actualmente no hay ninguna forma accesible en [!DNL Service Gallery] de eliminar un servicio existente. Mientras tanto, consulte la [referencia de la API de aprendizaje automático de Sensei](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para eliminar un servicio existente mediante llamadas a la API.
+* Actualmente no hay ninguna forma accesible en [!DNL Service Gallery] de eliminar un servicio existente. Mientras tanto, consulte la [referencia de la API de aprendizaje automático de Sensei](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) para eliminar un servicio existente mediante llamadas a la API.
 * [!DNL Service Gallery] no tiene compatibilidad de paginación para filtrar las ejecuciones de puntuación y aprendizaje de un servicio.
 * Al configurar la formación programada o las ejecuciones de puntuación a través de [!DNL Service Gallery], establecer la frecuencia en cada hora evita que se aplique la programación.
 

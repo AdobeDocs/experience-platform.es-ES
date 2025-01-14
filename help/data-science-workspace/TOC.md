@@ -6,7 +6,7 @@ user-guide-description: Utilice el aprendizaje automático para desarrollar, pre
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 32%
@@ -43,7 +43,7 @@ ht-degree: 32%
 * Creando modelo {#authoring}
    * [SDK de creación de modelos](authoring/sdk.md)
    * [Creación de una canalización de funciones](authoring/feature-pipeline.md)
-   * [Creación de modelos con el SDK de Platform (Python)](authoring/platform-sdk.md)
+   * [Creación de modelos con Platform SDK (Python)](authoring/platform-sdk.md)
    * [Acceso a datos en Python](authoring/python.md)
    * [Acceso a datos de Spark](authoring/spark.md)
 * Tutoriales de modelo y fórmula {#models-recipes}
@@ -51,10 +51,10 @@ ht-degree: 32%
    * [Creación de los esquemas y conjuntos de datos de Luma de demostración](models-recipes/create-luma-data.md)
    * [Crear el esquema y el conjunto de datos de ventas minoristas](models-recipes/create-retails-sales-dataset.md)
    * [Previsualizar esquemas y conjuntos de datos](models-recipes/preview-schema-data.md)
-   * [Empaqueta archivos de origen en una fórmula](models-recipes/package-source-files-recipe.md)
+   * [Empaquetado de archivos de origen en una fórmula](models-recipes/package-source-files-recipe.md)
    * [Importa una fórmula empaquetada (IU)](models-recipes/import-packaged-recipe-ui.md)
    * [Importar una fórmula empaquetada (API)](models-recipes/import-packaged-recipe-api.md)
-   * [Entrena y evalúa un modelo (IU)](models-recipes/train-evaluate-model-ui.md)
+   * [Entrene y evalúe un modelo (IU)](models-recipes/train-evaluate-model-ui.md)
    * [Formación y evaluación de un modelo (API)](models-recipes/train-evaluate-model-api.md)
    * [Puntuación de un modelo (IU)](models-recipes/score-model-ui.md)
    * [Puntuación de un modelo (API)](models-recipes/score-model-api.md)
@@ -64,5 +64,5 @@ ht-degree: 32%
    * [Publish ofrece un modelo como servicio (API)](models-recipes/publish-model-service-api.md)
    * [Programar formación y puntuación automatizadas en un servicio (IU)](models-recipes/schedule-models-ui.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
-* [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [Referencia de API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
 * [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

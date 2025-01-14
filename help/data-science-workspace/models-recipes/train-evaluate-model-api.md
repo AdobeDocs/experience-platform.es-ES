@@ -5,33 +5,33 @@ title: Entrenar y evaluar un modelo con la API de aprendizaje automático de Sen
 type: Tutorial
 description: Este tutorial muestra cómo crear, entrenar y evaluar un modelo mediante llamadas a la API de aprendizaje automático de Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 1%
 
 ---
 
-# Entrenar y evaluar un modelo con la [!DNL Sensei Machine Learning] API
+# Entrenar y evaluar un modelo mediante la API [!DNL Sensei Machine Learning]
 
 >[!NOTE]
 >
->La Espacio de trabajo de ciencia de datos ya no está disponible para su compra.
+>Data Science Workspace ya no se puede adquirir.
 >
->Esta documentación está destinada a clientes existentes con derechos previos a Data Science Espacio de trabajo.
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
-Este tutorial le mostrará cómo crear, entrenar y evaluar un modelo mediante llamadas a la API. Consulte [este documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) para obtener una lista detallada de la documentación de la API.
+Este tutorial muestra cómo crear, entrenar y evaluar un modelo mediante llamadas a la API. Consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) para obtener una lista detallada de la documentación de la API.
 
 ## Requisitos previos
 
-Siga la [Importar una receta empaquetada utilizando la API](./import-packaged-recipe-api.md) para crear un motor, que es necesaria para entrenar y evaluar un modelo mediante la API.
+Siga la fórmula [Importar una fórmula empaquetada mediante la API](./import-packaged-recipe-api.md) para crear un motor, lo cual es necesario para entrenar y evaluar un modelo mediante la API.
 
-Siga el tutorial de autenticación de API de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para inicio realizar llamadas a la [API.
+Siga el [tutorial de autenticación de API de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para empezar a realizar llamadas de API.
 
-Desde la tutorial ahora debería tener los siguientes valores:
+En el tutorial, ahora debe tener los siguientes valores:
 
-- `{ACCESS_TOKEN}`: El valor específico del token al portador proporcionado después de la autenticación.
-- `{ORG_ID}`: las credenciales de su organización se encuentran en su integración de Adobe Experience Platform única.
+- `{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.
+- `{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.
 - `{API_KEY}`: se encontró el valor de clave de API específico en la integración de Adobe Experience Platform única.
 
 - Vínculo a una imagen Docker de un servicio inteligente
@@ -44,7 +44,7 @@ Vamos a consumir las API para crear una ejecución de experimento para formació
 
 >[!NOTE]
 >
->Los términos &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experimento&quot; y &quot;Model&quot; se denominan términos diferentes en el IU. Si viene de la interfaz de usuario de, la siguiente tabla muestra las diferencias.
+>Los términos &quot;Motor&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experimento&quot; y &quot;Modelo&quot; se denominan como términos diferentes en la interfaz de usuario. Si viene de la interfaz de usuario de, la siguiente tabla muestra las diferencias.
 
 | Término de IU | Término de API |
 | --- | --- |
@@ -69,8 +69,8 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`: El valor específico del token al portador proporcionado después de la autenticación.\
-`{ORG_ID}`: las credenciales de su organización se encuentran en su integración de Adobe Experience Platform única.\
+`{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
+`{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.\
 `{API_KEY}`: se encontró el valor de clave de API específico en la integración de Adobe Experience Platform única.\
 `{JSON_PAYLOAD}`: la configuración de nuestra MLInstance. El ejemplo que utilizamos en nuestro tutorial se muestra aquí:
 
@@ -183,8 +183,8 @@ curl -X POST \
 
 `{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.\
 `{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`: el valor específico de la clave de API que se encuentra en la integración única de Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: Experimento objeto que se crea. El ejemplo que usamos en nuestro tutorial se muestra aquí:
+`{API_KEY}`: se encontró el valor de clave de API específico en la integración de Adobe Experience Platform única.\
+`{JSON_PAYLOAD}`: objeto de experimento creado. El ejemplo que utilizamos en nuestro tutorial se muestra aquí:
 
 ```JSON
 {
@@ -221,7 +221,7 @@ La respuesta de la creación Experimento tiene este aspecto.
 
 ### Crear un experimento programado para aprendizaje
 
-Los experimentos programados se utilizan para que no tengamos que crear cada Experimento se ejecuta a través de una llamada a la API. En su lugar, proporcionamos todos los parámetros necesarios durante Experimento creación y cada ejecución se creará periódicamente.
+Los experimentos programados se utilizan para que no tengamos que crear cada experimento individual que se ejecuta mediante una llamada de API. En su lugar, proporcionamos todos los parámetros necesarios durante la creación del experimento y cada ejecución se creará periódicamente.
 
 Para indicar la creación de un experimento programado, debemos agregar una sección `template` en el cuerpo de la solicitud. En `template`, se incluyen todos los parámetros necesarios para programar ejecuciones, como `tasks`, que indica qué acción, y `schedule`, que indica el tiempo de las ejecuciones programadas.
 
@@ -238,9 +238,9 @@ curl -X POST \
 ```
 
 `{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.\
-`{ACCESS_TOKEN}`: El valor específico del token al portador proporcionado después de la autenticación.\
-`{API_KEY}`: el valor específico de la clave de API que se encuentra en la integración única de Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: Conjunto de datos que se publicará. El ejemplo que usamos en nuestro tutorial se muestra aquí:
+`{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
+`{API_KEY}`: se encontró el valor de clave de API específico en la integración de Adobe Experience Platform única.\
+`{JSON_PAYLOAD}`: conjunto de datos a publicar. El ejemplo que utilizamos en nuestro tutorial se muestra aquí:
 
 ```JSON
 {
@@ -270,7 +270,7 @@ curl -X POST \
 }
 ```
 
-Cuando creamos un Experimento, el cuerpo, `{JSON_PAYLOAD}`, debe contener el `mlInstanceId` o el `mlInstanceQuery` parámetro. En este ejemplo, una Experimento programada invocará una ejecución cada 20 minutos, establecida en el `cron` parámetro, comenzando desde la `startTime` función hasta .`endTime`
+Cuando creamos un experimento, el cuerpo `{JSON_PAYLOAD}` debe contener el parámetro `mlInstanceId` o `mlInstanceQuery`. En este ejemplo, un experimento programado invocará una ejecución cada 20 minutos, establecida en el parámetro `cron`, desde el `startTime` hasta el `endTime`.
 
 **Respuesta**
 
@@ -304,13 +304,13 @@ Cuando creamos un Experimento, el cuerpo, `{JSON_PAYLOAD}`, debe contener el `ml
 }
 ```
 
-`{EXPERIMENT_ID}`: el ID que representa el Experimento.\
-`{INSTANCE_ID}`: El ID que representa a MLInstance.
+`{EXPERIMENT_ID}`: ID que representa el experimento.\
+`{INSTANCE_ID}`: ID que representa la instancia de MLI.
 
 
-### Crear un Experimento Run for aprendizaje
+### Crear una ejecución de experimento para formación
 
-Con una entidad Experimento creada, se puede crear y ejecutar una ejecución aprendizaje utilizando la siguiente llamada. Necesitará el `{EXPERIMENT_ID}` e indicar lo que `mode` desea activar en el cuerpo solicitud.
+Con una entidad Experimento creada, se puede crear y ejecutar una ejecución de formación utilizando la llamada siguiente. Necesitará el `{EXPERIMENT_ID}` y determinará qué `mode` desea almacenar en déclencheur en el cuerpo de la solicitud.
 
 **Solicitud**
 
@@ -328,7 +328,7 @@ curl -X POST \
 `{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.\
 `{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
 `{API_KEY}`: se encontró el valor de clave de API específico en la integración de Adobe Experience Platform única.\
-`{JSON_PAYLOAD}`: Para crear una ejecución aprendizaje, deberá incluir lo siguiente en el cuerpo:
+`{JSON_PAYLOAD}`: para crear una ejecución de formación, deberá incluir lo siguiente en el cuerpo:
 
 ```JSON
 {
@@ -397,11 +397,11 @@ curl -X GET \
 `{EXPERIMENT_RUN_ID}`: ID que representa la ejecución del experimento.\
 `{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
 `{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.\
-`{API_KEY}`: el valor específico de la clave de API que se encuentra en la integración única de Adobe Experience Platform.
+`{API_KEY}`: se encontró el valor de clave de API específico en la integración de Adobe Experience Platform única.
 
 **Respuesta**
 
-La llamada de GET proporcionará el estado en el `state` parámetro como se muestra a continuación:
+La llamada de GET proporcionará el estado en el parámetro `state` como se muestra a continuación:
 
 ```JSON
 {
@@ -434,7 +434,7 @@ La llamada de GET proporcionará el estado en el `state` parámetro como se mues
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: el ID que representa la Experimento Ejecutar.\
+`{EXPERIMENT_RUN_ID}`: ID que representa la ejecución del experimento.\
 `{EXPERIMENT_ID}`: ID que representa el experimento en el que se encuentra la ejecución del experimento.
 
 Además del estado `DONE`, otros estados incluyen:
@@ -489,11 +489,11 @@ La respuesta representa el modelo entrenado que se creó.
 
 `{MODEL_ID}`: ID correspondiente al modelo.\
 `{EXPERIMENT_ID}`: el ID correspondiente al experimento en el que se ejecuta el experimento.\
-`{EXPERIMENT_RUN_ID}`: el ID correspondiente a la Experimento Ejecutar.
+`{EXPERIMENT_RUN_ID}`: ID correspondiente a la ejecución del experimento.
 
-### Parada y eliminar un Experimento programado
+### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un Experimento programado antes de su `endTime`, puede hacerlo consultando un petición DELETE al `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su `endTime`, se puede hacer consultando una solicitud del DELETE a `{EXPERIMENT_ID}`
 
 **Solicitud**
 
@@ -512,7 +512,7 @@ curl -X DELETE \
 >
 >La llamada de API deshabilita la creación de nuevas ejecuciones de experimentos. Sin embargo, no detendrá la ejecución de ejecuciones de experimentos que ya se estén ejecutando.
 
-La siguiente es la respuesta que notifica que el Experimento se ha eliminado correctamente.
+A continuación se muestra la respuesta que notifica que el experimento se ha eliminado correctamente.
 
 **Respuesta**
 

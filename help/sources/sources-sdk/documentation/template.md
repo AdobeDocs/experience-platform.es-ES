@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Plantilla de autoservicio de documentación
 description: Aprenda a conectar Adobe Experience Platform a su origen mediante la API de Flow Service.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 2%
@@ -303,7 +303,7 @@ Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consu
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), que proporcione el ID del esquema de destino en la carga útil.
 
 Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

@@ -1,9 +1,9 @@
 ---
-title: Plantilla de autoservicio de documentación para la API del SDK de streaming
+title: Plantilla de autoservicio de documentación para la API de SDK de streaming
 description: Aprenda a llevar los datos de flujo continuo de una fuente a Adobe Experience Platform mediante la API de Flow Service.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 2%
@@ -47,7 +47,7 @@ Para obtener más información sobre estas credenciales, consulte la documentaci
 
 ### Integrar *YOURSOURCE* con tu webhook
 
-*El SDK de streaming requiere que el origen admita los webhooks para poder comunicarse con el Experience Platform. En esta sección, debe proporcionar los pasos que los usuarios deberán seguir para integrar YOURSOURCE con un webhook.*
+*Streaming SDK requiere que tu fuente admita los webhooks para poder comunicarse con el Experience Platform. En esta sección, debe proporcionar los pasos que los usuarios deberán seguir para integrar YOURSOURCE con un webhook.*
 
 ## Conectar *YOURSOURCE* a Platform mediante la API [!DNL Flow Service]
 
@@ -117,7 +117,7 @@ Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consu
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), que proporcione el ID del esquema de destino en la carga útil.
 
 Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

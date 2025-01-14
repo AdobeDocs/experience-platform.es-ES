@@ -3,7 +3,7 @@ title: Creación De Una Conexión De Source De Flujo Y Un Flujo De Datos Para Lo
 description: Aprenda a crear una conexión de origen de flujo continuo y un flujo de datos para los datos de Shopify mediante la API de Flow Service.
 badge: Beta
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1421'
 ht-degree: 2%
@@ -97,7 +97,7 @@ Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consu
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), que proporcione el ID del esquema de destino en la carga útil.
 
 Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
 

@@ -5,7 +5,7 @@ title: Creación de un flujo de datos de streaming para datos sin procesar media
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar los datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 3%
@@ -265,7 +265,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la nueva conex
 
 Para que los datos de origen se incorporen en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino.
 
-Para crear un conjunto de asignaciones, realice una solicitud de POST al extremo `mappingSets` de la [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) y proporcione el esquema XDM de destino `$id` y los detalles de los conjuntos de asignaciones que desee crear.
+Para crear un conjunto de asignaciones, realice una solicitud de POST al extremo `mappingSets` de la [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) y proporcione el esquema XDM de destino `$id` y los detalles de los conjuntos de asignaciones que desee crear.
 
 **Formato de API**
 
@@ -482,7 +482,7 @@ Una respuesta correcta devuelve el identificador (`id`) del flujo de datos reci�
 }
 ```
 
-## Datos de Post para la ingesta
+## Publicar datos para ingesta
 
 Consulte la carga útil de ejemplo a continuación para ver ejemplos de json sin procesar o compatible con XDM que puede enviar para su ingesta.
 

@@ -3,7 +3,7 @@ title: Crear una conexión y un flujo de datos de Source para Pendo mediante la 
 description: Aprenda a conectar Adobe Experience Platform a Pendo mediante la API de Flow Service.
 badge: Beta
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 2%
@@ -93,7 +93,7 @@ Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consu
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), que proporcione el ID del esquema de destino en la carga útil.
 
 Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

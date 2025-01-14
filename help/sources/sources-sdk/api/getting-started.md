@@ -2,9 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 solution: Experience Platform
 title: Introducción a las fuentes de autoservicio (SDK por lotes)
-description: Este documento proporciona una introducción a la información sobre requisitos previos que necesita conocer antes de intentar crear una nueva fuente mediante fuentes de autoservicio (SDK por lotes).
+description: Este documento proporciona una introducción a la información sobre requisitos previos que necesita conocer antes de intentar crear una nueva fuente utilizando fuentes de autoservicio (SDK por lotes).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 17%
@@ -13,7 +13,7 @@ ht-degree: 17%
 
 # Introducción a las fuentes de autoservicio (SDK por lotes)
 
-El SDK por lotes de fuentes de autoservicio le permite integrar su propia fuente basada en REST para llevar los datos por lotes a Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que necesita conocer antes de intentar realizar llamadas a la [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Las fuentes de autoservicio (SDK por lotes) le permiten integrar su propia fuente basada en REST para llevar los datos por lotes a Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que necesita conocer antes de intentar realizar llamadas a la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Requisitos previos
 
@@ -26,7 +26,7 @@ Esta guía también requiere una comprensión práctica de los siguientes compon
 
 ## Lectura de llamadas de API de muestra
 
-La documentación de fuentes de autoservicio (SDK por lotes) y la API [!DNL Flow Service] proporciona ejemplos de llamadas a la API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+La documentación de la API de fuentes de autoservicio (SDK por lotes) y [!DNL Flow Service] proporciona ejemplos de llamadas a la API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
 ## Recopilación de valores para los encabezados obligatorios
 

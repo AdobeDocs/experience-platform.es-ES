@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear un flujo de datos para una fuente de integración de OneTrust mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a la integración de OneTrust mediante la API de Flow Service.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1913'
 ht-degree: 2%
@@ -629,7 +629,7 @@ Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consu
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), que proporcione el ID del esquema de destino en la carga útil.
 
 Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
 
