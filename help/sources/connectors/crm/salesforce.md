@@ -2,9 +2,9 @@
 title: Información general sobre el conector Salesforce Source
 description: Obtenga información sobre cómo conectar Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1533'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >Ahora puede usar el origen [!DNL Salesforce] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
-
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
@@ -50,6 +49,8 @@ Para usar el origen [!DNL Salesforce] como parte de [!DNL B2B-CDP], primero debe
 
 Con una consola de desarrollador de Platform y [!DNL Postman] configuradas, ahora puede empezar a aplicar los valores de entorno apropiados a su entorno [!DNL Postman].
 
++++Ver la guía de tabla de variables
+
 La siguiente tabla contiene valores de ejemplo, así como información adicional sobre cómo rellenar el entorno [!DNL Postman]:
 
 | Variable | Descripción | Ejemplo |
@@ -73,6 +74,8 @@ La siguiente tabla contiene valores de ejemplo, así como información adicional
 | `has_msi` | Un valor booleano que indica si está suscrito a [!DNL Marketo Sales Insight]. | `false` |
 
 {style="table-layout:auto"}
+
++++
 
 ### Ejecutar los scripts
 
@@ -124,7 +127,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 4. Habilite la casilla para [!DNL Enable OAuth Settings].
 5. Establecer una URL de devolución de llamada. Dado que esto no se usará para JWT, puede usar `https://localhost`.
 6. Habilite la casilla para [!DNL Use Digital Signatures].
-7. Cargue el archivo cert.perm creado anteriormente.
+7. Cargue el archivo cert.pem creado anteriormente.
 
 #### Añadir los permisos necesarios
 
