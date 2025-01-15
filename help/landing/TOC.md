@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real con guías, documentación y tutoriales.
-source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
+source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '304'
 ht-degree: 24%
 
 ---
@@ -68,12 +68,14 @@ ht-degree: 24%
          * [Exportar](./governance-privacy-security/audit-logs/api/export.md)
    * [Cifrado de datos](./governance-privacy-security/encryption.md)
    * Claves administradas por el cliente {#customer-managed-keys}
-      * [Claves administradas por el cliente](./governance-privacy-security/customer-managed-keys/overview.md)
-      * [Configurar un Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
-      * [Utilice la API para configurar CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
-      * [Uso de la interfaz de usuario para configurar CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
-   * Servicio de administración de claves {#key-management-service}
-      * [Servicio de administración de claves](./governance-privacy-security/key-management-service/overview.md)
+      * [Claves gestionadas por el cliente](./governance-privacy-security/customer-managed-keys/overview.md)
+      * Azure {#azure}
+         * [Configurar un Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
+         * [Utilice la API para configurar CMK](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
+         * [Uso de la interfaz de usuario para configurar CMK](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+      * Amazon Web Service {#aws}
+         * [Configuración de AWS KMS para CMK](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
+         * [Utilice la interfaz de usuario para configurar CMK en AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
 * Uso de licencias y protecciones {#license}
    * [Prácticas recomendadas de asignación de licencias para administración de datos](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
