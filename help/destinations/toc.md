@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
+source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1273'
 ht-degree: 5%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 5%
       * [información general sobre destinos de Adobe](./catalog/adobe/overview.md)
       * [Públicos de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
+      * [Conexión de sincronización de persona del Marketo Engage (Beta)](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Conexión de composición de audiencia federada (disponibilidad limitada)](https://www.adobe.com/go/destinations-federated-audience-composition)
