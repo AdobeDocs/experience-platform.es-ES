@@ -4,10 +4,10 @@ user-guide-title: Ayuda sobre las zonas protegidas en Adobe Experience Platform
 breadcrumb-title: Guía de zonas protegidas
 user-guide-description: Descubra cómo funcionan las zonas protegidas limitadas y partición de una instancia de Platform en entornos virtuales para desarrollo, pruebas e implementación de aplicaciones.
 feature: Sandboxes
-source-git-commit: 868800de5dc6dde6654ff5256c91bddc2997b11b
+source-git-commit: ecace5503fcd054ef992763044304b03b9661b3b
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 66%
+source-wordcount: '82'
+ht-degree: 64%
 
 ---
 
@@ -33,6 +33,9 @@ ht-degree: 66%
    * [Paquetes](sandbox-tooling-api/packages.md)
    * [Herramientas](sandbox-tooling-api/tools.md)
    * [Apéndice](sandbox-tooling-api/appendix.md)
+* Casos de uso {#use-cases}
+   * [Copia de seguridad de configuraciones de objeto](use-cases/backup-object-configuration.md)
+   * [Centro de excelencia](use-cases/center-of-excellence.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
