@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aplicaciones de Privacy Service y Experience Cloud
 description: Este documento proporciona una referencia sobre cómo configurar distintas aplicaciones de Experience Cloud para operaciones relacionadas con la privacidad.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 46ca46460de9211c3e876454c986d030b964646e
+source-git-commit: a1ac1f56a22b279aca6607a53dd1e44ffccd1877
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 9%
+source-wordcount: '900'
+ht-degree: 10%
 
 ---
 
@@ -39,9 +39,10 @@ A continuación se muestra una lista de [!DNL Experience Cloud] aplicaciones int
 | Adobe Campaign Standard | ✓ | ✓ | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Acceder o eliminar documentación](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=es)</li><li>[Documentación de exclusión](../segmentation/consents.md)</li></ul> |
 | Atributos del cliente de Adobe (CRS) | ✓ | N/A | Los atributos del interesado se eliminan del sistema. | <ul><li>[Acceder o eliminar la documentación de RGPD](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html?lang=es)</li><li>[Acceder o eliminar la documentación de la CCPA](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html?lang=es)</li><li>Los atributos del cliente no tienen la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | Cuando el Experience Platform recibe una solicitud de eliminación del Privacy Service, Platform envía una confirmación al Privacy Service de que la solicitud se ha recibido y de que los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del repositorio de datos o del almacén de perfiles una vez que se ha completado el trabajo de privacidad. Antes de que se complete el trabajo, los datos se eliminan de forma suave y, por lo tanto, ningún servicio de Platform puede acceder a ellos. | <ul><li>[Acceder o eliminar la documentación del lago de datos](../catalog/privacy.md)</li><li>[Acceder o eliminar la documentación del servicio de identidad](../identity-service/privacy.md)</li><li>[Acceder o eliminar la documentación de Real-Time Customer Profile](../profile/privacy.md)</li><li>[!DNL Experience Platform] acepta [solicitudes de exclusión para segmentos de audiencia](../segmentation/consents.md).</li></ul> |
-| Adobe Journey Optimizer | ✓ | N/A | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Acceder o eliminar documentación](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests)</li></ul> |
+| Adobe Journey Optimizer | ✓ | N/A | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Acceder o eliminar documentación](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/privacy/requests)</li></ul> |
 | Adobe Pass Authentication | ✓ | N/A | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Acceder o eliminar documentación](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Pass no tiene la capacidad de transferir datos, por lo tanto las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 | Adobe Target | ✓ | N/A | Todos los datos asociados con el ID del interesado se eliminan de su perfil del visitante. Los datos agregados o anonimizados que no identifican a la persona o que no están relacionados (como los datos de contenido) no se aplican a las solicitudes de eliminación. | <ul><li>[Acceder o eliminar documentación](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=es)</li><li>[!DNL Target] no tiene la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
+| Commerce (Personalization) | ✓ | N/A | El Privacy Service elimina los datos de [!DNL Commerce] almacenados en los servicios SaaS de Commerce con fines de marketing, lo que significa que los perfiles y los pedidos de los interesados ya no se envían a las aplicaciones de marketing de Adobe para su uso en campañas y recorridos de clientes. Sin embargo, el Privacy Service no elimina datos en la aplicación [!DNL Commerce], ya que podrían ser necesarios para las necesidades transaccionales del comerciante. Los comerciantes son responsables de cualquier solicitud de eliminación/acceso de datos en la aplicación [!DNL Commerce]. | <ul><li>[Acceder o eliminar la documentación de Commerce](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/data-connection/handle-privacy-request)</li></ul> |
 | Marketo Engage | ✓ | N/A | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Acceder o eliminar documentación](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] no tiene la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 
 {style="table-layout:auto"}
@@ -54,7 +55,7 @@ La siguiente es una lista de [!DNL Experience Cloud] aplicaciones que no están 
 | ------- | ----------- |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | AEM Una visión general de cómo un administrador de privacidad del cliente o un administrador de puede gestionar las solicitudes de RGPD. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Pasos para realizar solicitudes de acceso y eliminación de RGPD utilizando Livefyre. |
-| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Asegúrese de que las instalaciones de su Magento Commerce cumplen con los requisitos de las legislaciones de privacidad específicas. |
+| [Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview) | Asegúrese de que las instalaciones de Adobe Commerce cumplan con los requisitos de las legislaciones de privacidad específicas. |
 | [Etiquetas en Adobe Experience Platform](../tags/ui/client-side/consent.md) | Cómo los desarrolladores pueden usar las extensiones y el creador de reglas para definir las soluciones de inclusión y de exclusión. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Descubra cómo Workfront recopila datos personales y cómo un interesado puede enviar una solicitud de privacidad mediante un formulario. |
 
