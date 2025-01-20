@@ -2,7 +2,7 @@
 title: Crear audiencias con SQL
 description: Aprenda a utilizar la extensión de audiencia SQL en el Distiller de datos de Adobe Experience Platform para crear, administrar y publicar audiencias mediante comandos SQL. Esta guía cubre todos los aspectos del ciclo vital de la audiencia, incluida la creación, actualización y eliminación de perfiles, y el uso de definiciones de audiencia basadas en datos para dirigirse a destinos basados en archivos.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 1%
@@ -44,7 +44,7 @@ Utilice estos parámetros para definir la consulta de creación de audiencias SQ
 | `schema` | Opcional. Define el esquema XDM para el conjunto de datos creado por la consulta. |
 | `table_name` | Nombre de la tabla y audiencia. |
 | `primary_identity` | Especifica la columna de identidad principal de la audiencia. |
-| `identity_namespace` | Área de nombres de la identidad. Puede utilizar un área de nombres existente o crear una nueva. Para ver las áreas de nombres disponibles, use el comando `SHOW NAMESPACE`. Para crear un área de nombres nueva, use `CREATE NAMESPACE`. Por ejemplo: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
+| `identity_namespace` | Área de nombres de la identidad. Puede utilizar un área de nombres existente o crear una nueva. Para ver las áreas de nombres disponibles, use el comando `SHOW NAMESPACES`. Para crear un área de nombres nueva, use `CREATE NAMESPACE`. Por ejemplo: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
 | `select_query` | Una instrucción SELECT que define la audiencia. La sintaxis de la consulta SELECT se encuentra en la sección [consultas SELECT](../sql/syntax.md#select-queries). |
 
 {style="table-layout:auto"}
