@@ -3,9 +3,9 @@ title: Asistente de IA en la documentación del producto de Adobe Experience Pla
 description: Introducción al Asistente de IA en Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3c100042ab828e10326d314fcaa00278cc8eb694
+source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
@@ -23,17 +23,22 @@ Empiece leyendo el material de los vínculos siguientes para familiarizarse con 
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style"="width:100%;max-height:100%&quot;"></a>
     <div><strong>Comprenda sus objetos de datos</strong><br/>Recupere información operativa perteneciente a sus objetos de datos para obtener una mejor vista de sus estados, uso e impacto en el linaje.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"  style="width:100%;max-height:100%"></a>
     <div><strong>Mejore su aprendizaje</strong><br/>Descubra, solucione problemas y amplíe su comprensión del conocimiento del producto sin interrumpir sus flujos de trabajo.</div>
+    </td>
+    <td>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <div><strong>Visita la lista de reproducción en vídeo del Asistente de IA</strong><br/>Conoce los muchos desafíos y casos de uso que puedes resolver con el Asistente de IA.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -152,6 +157,7 @@ Lea lo siguiente para ver ejemplos de casos de uso del asistente de IA:
 * [Elimine el desorden de sus audiencias y optimice sus operaciones de marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Compruebe las dependencias y minimice el riesgo durante las actualizaciones de datos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [Minimizar el riesgo durante las actualizaciones de datos comprobando las dependencias en segundos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [Descubra e implemente nuevas características más rápido](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
 
 >[!TAB Contenido de vídeo adicional]
 
