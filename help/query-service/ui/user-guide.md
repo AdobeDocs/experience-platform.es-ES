@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e66f3540d22a441089916183538921ea5654b312
+source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2807'
 ht-degree: 0%
 
 ---
@@ -217,12 +217,9 @@ Todos los conjuntos de datos contenidos en [su base de datos seleccionada](#data
 
 El esquema mostrado en el explorador de objetos es un esquema observable. Esto significa que puede utilizarlo para monitorizar los cambios y las actualizaciones en tiempo real a medida que los cambios sean visibles inmediatamente. Los esquemas observables ayudan a garantizar la sincronización de datos y ayudan con las tareas de depuración o análisis.
 
-#### Limitaciones actuales {#current-limitations}
+#### Limitación actual {#current-limitation}
 
-A continuación se muestra una lista de las limitaciones actuales:
-
-- Ejecución de consulta secuencial: solo se puede ejecutar una consulta a la vez. Mientras una consulta está en curso, no se pueden abrir tablas adicionales en la navegación izquierda, ya que las consultas se procesan secuencialmente.
-- Filas adicionales en los registros de consultas: puede encontrar consultas extrañas etiquetadas como &quot;MOSTRAR TABLAS&quot; en los registros. Se eliminarán en futuras versiones.
+El sistema procesa las consultas de forma secuencial, lo que significa que solo se puede ejecutar una consulta a la vez. Mientras una consulta está en curso, no se puede acceder a tablas adicionales en el panel de navegación izquierdo.
 
 #### Acceso a metadatos de tabla {#table-metadata}
 
