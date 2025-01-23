@@ -2,7 +2,7 @@
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -171,7 +171,7 @@ Si los datos se envían al lago de datos, pero no al perfil, y cree que esto se 
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-Estas consultas suponen lo siguiente:
+Esta consulta supone lo siguiente:
 
 * Se envía una identidad desde el mapa de identidad y otra identidad desde un descriptor de identidad. **NOTA**: en esquemas XDM (Experience Data Model), el descriptor de identidad es el campo marcado como identidad.
 * El CRMID se envía mediante identityMap. Si el CRMID se envía como un campo, quite `key='Email'` de la cláusula WHERE.
