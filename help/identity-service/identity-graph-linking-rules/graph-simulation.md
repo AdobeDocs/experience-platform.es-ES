@@ -2,10 +2,10 @@
 title: Guía de IU de simulación de gráficos
 description: Aprenda a utilizar la simulación de gráfico en la interfaz de usuario del servicio de ID.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 1%
+source-wordcount: '1489'
+ht-degree: 4%
 
 ---
 
@@ -50,6 +50,12 @@ Visualizador de gráficos simulado: el visualizador de gráficos simulado muestr
 >[!ENDTABS]
 
 ## Añadir eventos {#add-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Añadir eventos"
+>abstract="Simule gráficos para comprender cómo el servicio de identidad vincula las identidades y cómo funciona el algoritmo de optimización de identidad."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es#understanding-data-usage-labels" text="Información general sobre las etiquetas de uso de datos"
 
 Para empezar, seleccione **[!UICONTROL Agregar eventos]**.
 
@@ -126,6 +132,16 @@ Para eliminar un evento, seleccione los puntos suspensivos (`...`) junto a un ev
 ![Icono de evento de eliminación seleccionado.](../images/graph-simulation/delete.png)
 
 ## Configurar algoritmo {#configure-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="Configuración de algoritmo"
+>abstract="Configure un espacio de nombres único y una prioridad de área de nombres adaptada a las identidades ingeridas."
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Configuración de algoritmo"
+>abstract="La prioridad del espacio de nombres determina cómo se quitan los vínculos del gráfico de identidad."
 
 >[!IMPORTANT]
 >

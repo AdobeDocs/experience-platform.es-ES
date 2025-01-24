@@ -2,10 +2,10 @@
 title: Reglas de vinculación de gráfico de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 2%
+source-wordcount: '1440'
+ht-degree: 3%
 
 ---
 
@@ -34,6 +34,11 @@ Los siguientes documentos son esenciales para comprender las reglas de vinculaci
 En esta sección se describen ejemplos de escenarios que se pueden tener en cuenta al configurar reglas de vinculación de gráficos de identidad.
 
 ### Dispositivo compartido
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphcollapsescenarios"
+>title="Escenarios de contracción de gráficos"
+>abstract="Existen varias razones por las que los gráficos podrían “contraerse” o representar entidades de varias personas."
 
 Hay casos en los que se pueden producir varios inicios de sesión en un solo dispositivo:
 
@@ -117,7 +122,7 @@ Debe configurar un área de nombres única para informar al algoritmo de optimiz
 
 La prioridad del área de nombres hace referencia a la importancia relativa de las áreas de nombres en comparación con otras. La prioridad del área de nombres se puede configurar a través de la interfaz de usuario y puede clasificar las áreas de nombres en un gráfico de identidad determinado.
 
-Una forma en que se utiliza la prioridad del área de nombres es determinar la identidad principal de los fragmentos de evento de experiencia (comportamiento del usuario) en el Perfil del cliente en tiempo real. Si se establece la configuración de prioridad, ya no se utilizará la configuración de identidad principal del SDK web para determinar qué fragmentos de perfil se almacenan.
+Una forma en que se utiliza la prioridad del área de nombres es determinar la identidad principal de los fragmentos de evento de experiencia (comportamiento del usuario) en el Perfil del cliente en tiempo real. Si se establece la configuración de prioridad, la configuración de identidad principal de Web SDK ya no se utilizará para determinar qué fragmentos de perfil se almacenan.
 
 Las áreas de nombres únicas y las prioridades de área de nombres se pueden configurar en el área de trabajo de IU de configuración de identidad. Sin embargo, los efectos de sus configuraciones son diferentes:
 
