@@ -2,14 +2,19 @@
 title: Administración de permisos para la recopilación de datos en Experience Platform
 description: Una descripción general de alto nivel de cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 60590a77859320891717244eec58b556935354b5
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1356'
 ht-degree: 26%
 
 ---
 
-# Administración de permisos para la recopilación de datos en Experience Platform
+# Administración de permisos para la recopilación de datos en Experience Platform {#permission-management}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Permisos"
+>abstract="Comprenda los permisos clave necesarios para trabajar con flujos de datos, esquemas, identidades y zonas protegidas en Adobe Experience Platform."
 
 [La recopilación de datos en Adobe Experience Platform](./home.md) se compone de diferentes tecnologías que trabajan juntas para recopilar y transferir los datos. El acceso a estas tecnologías se controla mediante permisos granulares basados en funciones en Adobe Admin Console.
 
