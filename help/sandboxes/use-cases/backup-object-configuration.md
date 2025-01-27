@@ -1,7 +1,8 @@
 ---
 title: Hacer copia de seguridad de configuraciones de objeto mediante herramientas de zona protegida
 description: Para restablecer de forma segura los entornos limitados y añadir compatibilidad con las versiones, haga una copia de seguridad de las configuraciones de objetos (o metadatos) mediante paquetes de herramientas de entorno limitado. Los paquetes de copia de seguridad evitan la pérdida de configuraciones críticas como esquemas, conjuntos de datos y audiencias, especialmente durante las iteraciones de desarrollo.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
+source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 3%
