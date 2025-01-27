@@ -2,20 +2,15 @@
 title: Punto final de API de contenido
 description: Obtenga información sobre cómo recuperar los datos de acceso mediante la API de Privacy Service.
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
+source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
 
 # Extremo de contenido
-
->[!IMPORTANT]
->
->El extremo `/content` se encuentra actualmente en la versión beta y es posible que su organización aún no tenga acceso a él. La funcionalidad y la documentación están sujetas a cambios.
 
 Use el extremo `/content` para recuperar de forma segura *información de acceso* (la información a la que un sujeto de privacidad puede solicitar acceso con razón) para sus clientes. La URL de descarga proporcionada en la respuesta a una solicitud de GET de `/jobs/{JOB_ID}` apunta a un extremo de servicio de Adobe. Luego puede realizar una solicitud de GET a `/jobs/:JOB_ID/content` para que devuelva los datos de sus clientes en formato JSON. Este método de acceso implementa varias capas de autenticación y control de acceso para mejorar la seguridad.
 
