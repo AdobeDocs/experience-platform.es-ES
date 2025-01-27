@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Resumen del servicio de segmentación
 description: Obtenga información acerca del servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 13%
+source-wordcount: '1679'
+ht-degree: 12%
 
 ---
 
@@ -54,11 +54,7 @@ Para obtener información sobre cómo generar definiciones de segmentos mediante
 
 ### Composición de público federado {#fac}
 
-Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
-
->[!AVAILABILITY]
->
->Ahora mismo, la composición de público federado solo está disponible para un conjunto de organizaciones (disponibilidad limitada). Para obtener más información, contacte con su representante de Adobe.
+Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
 
 ## Evaluar públicos {#evaluate-segments}
 
@@ -122,7 +118,7 @@ Al crear una nueva definición de segmento, es necesario proporcionar un nombre.
 >
 >Al planificar una definición de segmento, recuerde que se puede hacer referencia a las definiciones de segmento desde cualquier otra definición de segmento y combinarlas con ella. Al seleccionar un nombre, considere la posibilidad de que la definición del segmento contenga partes reutilizables.
 
-### Políticas de combinación
+### Combinar políticas
 
 Las políticas de combinación son reglas utilizadas por [!DNL Profile] para determinar cómo se priorizarán y combinarán los datos en una vista unificada en ciertas condiciones.
 

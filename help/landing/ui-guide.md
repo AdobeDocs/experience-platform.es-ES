@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general de IU de Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 2%
+source-wordcount: '1924'
+ht-degree: 1%
 
 ---
 
@@ -157,7 +157,7 @@ La sección **[!UICONTROL Consultas]** le permite crear y administrar consultas,
 
 La sección **[!UICONTROL Supervisión]** le permite supervisar la ingesta por lotes y streaming. Puede encontrar más información sobre la supervisión en la [guía del usuario sobre supervisión de la ingesta de datos](../ingestion/quality/monitor-data-ingestion.md).
 
-### [!UICONTROL Datos federados] (disponibilidad limitada)
+### [!UICONTROL Datos federados]
 
 La sección **[!UICONTROL Modelos]** le permite diseñar y crear modelos de datos y esquemas que definen la estructura, las relaciones y las restricciones de los datos. Puede encontrar más información sobre los modelos de datos y los esquemas en la [guía del usuario de la Composición de audiencias federada](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
 
@@ -166,11 +166,7 @@ La sección **[!UICONTROL Pista de auditoría]** proporciona un registro detalla
 
 La sección **[!UICONTROL Bases de datos federadas]** le permite conectar Adobe Experience Platform a su almacén de datos empresarial. Puede encontrar más información sobre la conexión a bases de datos federadas en la [guía del usuario de Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
 
->[!AVAILABILITY]
->
->Ahora mismo, la composición de público federado solo está disponible para un conjunto de organizaciones (disponibilidad limitada). Para obtener más información, contacte con su representante de Adobe.
-
-### [!UICONTROL Toma de decisiones]
+### [!UICONTROL Decisioning]
 
 Adobe Journey Optimizer es un servicio de aplicaciones de Experience Platform. Le permite utilizar potentes tecnologías de toma de decisiones para ofrecer la mejor oferta y experiencia a sus clientes en todos los puntos de contacto y en el momento adecuado. Para obtener más información acerca de Journey Optimizer, como trabajar con [!UICONTROL Ofertas] y [!UICONTROL Actividades], visita la [documentación de Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=es).
 

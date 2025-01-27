@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '4571'
+source-wordcount: '4569'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ En Audience Portal, puede realizar las siguientes tareas:
 - [Crear un público](#create-audience)
    - [Utilice el Generador de segmentos para crear una audiencia](#segment-builder)
    - [Usar Composición de audiencia para crear una audiencia](#audience-composition)
-   - [Use la composición de audiencia federada para crear una audiencia usando datos de su almacén de datos existente](#fac) (disponibilidad limitada)
+   - [Use la Composición de audiencia federada para crear una audiencia con los datos de su almacén de datos existente](#fac)
 - [Importación de públicos generados externamente](#import-audience)
 
 Para abrir Audience Portal, seleccione la ficha **[!UICONTROL Examinar]** en la sección Segmentación.
