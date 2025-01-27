@@ -2,7 +2,7 @@
 title: Guía de IU de simulación de gráficos
 description: Aprenda a utilizar la simulación de gráfico en la interfaz de usuario del servicio de ID.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1484'
 ht-degree: 4%
@@ -53,8 +53,9 @@ Visualizador de gráficos simulado: el visualizador de gráficos simulado muestr
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
->title="Añadir eventos"
+>title="Simulación de gráfico"
 >abstract="Simule gráficos para comprender cómo el servicio de identidad vincula las identidades y cómo funciona el algoritmo de optimización de identidad."
+>text="Learn more in documentation"
 
 Para empezar, seleccione **[!UICONTROL Agregar eventos]**.
 
@@ -139,7 +140,7 @@ Para eliminar un evento, seleccione los puntos suspensivos (`...`) junto a un ev
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="Configuración de algoritmo"
+>title="Prioridad de área de nombres"
 >abstract="La prioridad del espacio de nombres determina cómo se quitan los vínculos del gráfico de identidad."
 
 >[!IMPORTANT]

@@ -2,7 +2,7 @@
 title: Reglas de vinculación de gráfico de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 3%
@@ -37,7 +37,7 @@ En esta sección se describen ejemplos de escenarios que se pueden tener en cuen
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Escenarios de contracción de gráficos"
+>title="Contraer escenarios de gráfico"
 >abstract="Existen varias razones por las que los gráficos podrían “contraerse” o representar entidades de varias personas."
 
 Hay casos en los que se pueden producir varios inicios de sesión en un solo dispositivo:

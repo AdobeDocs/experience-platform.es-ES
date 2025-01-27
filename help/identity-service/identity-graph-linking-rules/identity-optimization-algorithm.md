@@ -2,7 +2,7 @@
 title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Lea esta sección para obtener información sobre áreas de nombres únicas y pr
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="Configuración de algoritmo"
+>title="Área de nombres única"
 >abstract="Un gráfico no puede tener dos identidades con un área de nombres única. Si un gráfico intenta superar este límite, se conservan los vínculos más recientes y se eliminan los vínculos más antiguos."
 
 Un área de nombres única determina los vínculos que se eliminan si se contrae el gráfico.
