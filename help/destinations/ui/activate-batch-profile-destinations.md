@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4387'
 ht-degree: 11%
 
 ---
@@ -439,25 +439,32 @@ Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza
 
 * **Selección determinística**: cuando varios perfiles tienen claves de anulación de duplicación idénticas y la misma marca de tiempo de referencia, la lógica de anulación de duplicación determina qué perfil se va a exportar ordenando los valores de otras columnas seleccionadas (excluyendo tipos complejos como matrices, mapas u objetos). Los valores ordenados se evalúan en orden lexicográfico y se selecciona el primer perfil.
 
-* **Ejemplo de escenario**:\
-  Considere los siguientes datos, donde la clave de anulación de duplicación es la columna `Email`:\
-  |Correo electrónico*|nombre|apellido|marca de tiempo|\
-  |—|—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+* **Ejemplo de escenario**
 
-  Después de la deduplicación, el archivo de exportación contiene:\
-  |Correo electrónico*|nombre|apellido|marca de tiempo|\
-  |—|—|—|—|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+Considere los siguientes datos, donde la clave de anulación de duplicación es la columna `Email`:
 
-  **Explicación**: Para `test1@test.com`, ambos perfiles comparten la misma clave de anulación de duplicación y la misma marca de tiempo. El algoritmo ordena lexicográficamente los valores de las columnas `first_name` y `last_name`. Dado que los nombres son idénticos, la hora se resuelve usando la columna `last_name`, donde &quot;Doe&quot; va antes que &quot;Morris&quot;.
+| Correo electrónico* | first_name | last_name | timestamp |
+|---|---|---|---|  
+| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
-* **Confiabilidad mejorada**: Este proceso de deduplicación actualizado garantiza que las ejecuciones sucesivas con las mismas coordenadas siempre produzcan los mismos resultados, lo que mejora la coherencia.
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} Exporta matrices a través de campos calculados {#export-arrays-calculated-fields}
+Después de la deduplicación, el archivo de exportación contiene:
+
+| Correo electrónico* | first_name | last_name | timestamp |
+|---|---|---|---|  
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**Explicación**: Para `test1@test.com`, ambos perfiles comparten la misma clave de anulación de duplicación y la misma marca de tiempo. El algoritmo ordena lexicográficamente los valores de las columnas `first_name` y `last_name`. Dado que los nombres son idénticos, la hora se resuelve usando la columna `last_name`, donde &quot;Doe&quot; va antes que &quot;Morris&quot;.
+
+**Confiabilidad mejorada**: Este proceso de deduplicación actualizado garantiza que las ejecuciones sucesivas con las mismas coordenadas siempre produzcan los mismos resultados, lo que mejora la coherencia.
+
+### Exportar matrices a través de campos calculados {#export-arrays-calculated-fields}
 
 Seleccione los clientes beta que pueden exportar objetos de matriz desde destinos de Experience Platform a almacenamiento en la nube. Obtenga más información sobre [exportar matrices y campos calculados](/help/destinations/ui/export-arrays-calculated-fields.md) y póngase en contacto con su representante de Adobe para obtener acceso a la funcionalidad.
 
@@ -474,10 +481,10 @@ Debido a una limitación conocida, actualmente no puede usar la ventana **[!UICO
 
 >[!NOTE]
 >
-Para los destinos de almacenamiento en la nube, se añaden los siguientes atributos a la asignación de forma predeterminada:
+>Para los destinos de almacenamiento en la nube, se añaden los siguientes atributos a la asignación de forma predeterminada:
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 Las exportaciones de archivos variarán de las siguientes maneras, dependiendo de si `segmentMembership.seg_namespace.seg_id.status` está seleccionado o no:
 
@@ -500,9 +507,9 @@ Como solución temporal si necesita agregar áreas de nombres de identidad a los
 
 >[!IMPORTANT]
 > 
-Todos los destinos de almacenamiento en la nube del catálogo pueden ver un [[!UICONTROL Asignación] paso](#mapping) mejorado que reemplaza el paso **[!UICONTROL Seleccionar atributos]** descrito en esta sección.
+>Todos los destinos de almacenamiento en la nube del catálogo pueden ver un [[!UICONTROL Asignación] paso](#mapping) mejorado que reemplaza el paso **[!UICONTROL Seleccionar atributos]** descrito en esta sección.
 >
-Este paso de **[!UICONTROL Seleccionar atributos]** todavía se muestra para los destinos de marketing por correo electrónico de Adobe Campaign, Oracle Responsys, Oracle Eloqua y Salesforce Marketing Cloud.
+>Este paso de **[!UICONTROL Seleccionar atributos]** todavía se muestra para los destinos de marketing por correo electrónico de Adobe Campaign, Oracle Responsys, Oracle Eloqua y Salesforce Marketing Cloud.
 
 Para los destinos basados en perfiles, debe seleccionar los atributos de perfil que desea enviar al destino de destino.
 
@@ -522,15 +529,15 @@ Para los destinos basados en perfiles, debe seleccionar los atributos de perfil 
 
 >[!NOTE]
 >
-Adobe Experience Platform rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia en su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> Adobe Experience Platform rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia en su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Imagen que muestra atributos recomendados rellenados previamente en el paso de asignación del flujo de trabajo de activación de audiencia.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-Debido a una limitación conocida, actualmente no puede usar la ventana **[!UICONTROL Seleccionar campo]** para agregar `segmentMembership.seg_namespace.seg_id.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.seg_namespace.seg_id.status` en el campo de esquema, como se muestra a continuación.
+>Debido a una limitación conocida, actualmente no puede usar la ventana **[!UICONTROL Seleccionar campo]** para agregar `segmentMembership.seg_namespace.seg_id.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.seg_namespace.seg_id.status` en el campo de esquema, como se muestra a continuación.
 >
-![Grabación de pantalla que muestra la solución alternativa para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Grabación de pantalla que muestra la solución alternativa para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Las exportaciones de archivos varían de las siguientes maneras, dependiendo de si `segmentMembership.seg_namespace.seg_id.status` está seleccionado o no:
 * Si se selecciona el campo `segmentMembership.seg_namespace.seg_id.status`, los archivos exportados incluyen **[!UICONTROL miembros activos]** en la instantánea completa inicial y **[!UICONTROL miembros activos]** y **[!UICONTROL caducados]** en las exportaciones incrementales posteriores.
@@ -538,14 +545,14 @@ Las exportaciones de archivos varían de las siguientes maneras, dependiendo de 
 
 ## Seleccionar atributos de enriquecimiento {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="Excluir atributos de enriquecimiento"
-abstract="Active esta opción para exportar los perfiles de los públicos que se han cargado, personalizado y seleccionado a su destino, excluyendo al mismo tiempo todos sus atributos."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="Excluir atributos de enriquecimiento"
+>abstract="Active esta opción para exportar los perfiles de los públicos que se han cargado, personalizado y seleccionado a su destino, excluyendo al mismo tiempo todos sus atributos."
 
 >[!IMPORTANT]
 >
-Este paso solo se muestra si ha seleccionado **[!UICONTROL Audiencias de carga personalizada]** durante el paso [Selección de audiencias](#select-audiences).
+>Este paso solo se muestra si ha seleccionado **[!UICONTROL Audiencias de carga personalizada]** durante el paso [Selección de audiencias](#select-audiences).
 
 Los atributos de enriquecimiento corresponden a audiencias cargadas personalizadas introducidas en Experience Platform como **[!UICONTROL cargas personalizadas]**. En este paso, puede seleccionar qué atributos desea exportar a su destino para cada audiencia externa seleccionada.
 
@@ -572,12 +579,12 @@ Seleccione **[!UICONTROL Siguiente]** para pasar al paso [Revisar](#review).
 
 >[!NOTE]
 > 
-Si se han aplicado etiquetas de uso de datos a ciertos campos dentro de un conjunto de datos (en lugar de a todo el conjunto de datos), la aplicación de esas etiquetas de nivel de campo en la activación se produce en las siguientes condiciones:
+>Si se han aplicado etiquetas de uso de datos a ciertos campos dentro de un conjunto de datos (en lugar de a todo el conjunto de datos), la aplicación de esas etiquetas de nivel de campo en la activación se produce en las siguientes condiciones:
 >
-* Los campos se utilizan en la definición de audiencia.
-* Los campos se configuran como atributos proyectados para el destino final.
+>* Los campos se utilizan en la definición de audiencia.
+>* Los campos se configuran como atributos proyectados para el destino final.
 >
-Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostrará una infracción de directiva de uso de datos en el paso de revisión. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostrará una infracción de directiva de uso de datos en el paso de revisión. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 En la página **[!UICONTROL Revisar]**, puedes ver un resumen de tu selección. Seleccione **[!UICONTROL Cancelar]** para dividir el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar su selección y comenzar a enviar datos al destino.
 
@@ -585,10 +592,10 @@ En la página **[!UICONTROL Revisar]**, puedes ver un resumen de tu selección. 
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="Ver directivas de consentimiento aplicables"
-abstract="Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué directivas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Este control está deshabilitado si su empresa no tiene acceso a los SKU mencionados anteriormente."
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Ver directivas de consentimiento aplicables"
+>abstract="Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué directivas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Este control está deshabilitado si su empresa no tiene acceso a los SKU mencionados anteriormente."
 
 Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué directivas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Lea acerca de [evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
