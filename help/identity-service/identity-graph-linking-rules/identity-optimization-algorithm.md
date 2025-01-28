@@ -2,9 +2,9 @@
 title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_uniquenamespace"
 >title="Área de nombres única"
 >abstract="Un gráfico no puede tener dos identidades con un área de nombres única. Si un gráfico intenta superar este límite, se conservan los vínculos más recientes y se eliminan los vínculos más antiguos."
->additional-url="http://www.adobe.com/go/identity-ido-algo" text="Más información"
 
 >[!AVAILABILITY]
 >

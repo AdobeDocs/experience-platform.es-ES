@@ -2,9 +2,9 @@
 title: Lógica de vinculación del servicio de identidad
 description: Obtenga información acerca de cómo el servicio de identidad vincula identidades dispares para crear una vista completa de un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '968'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_simulatedgraph"
 >title="Gráfico simulado"
 >abstract="Las identidades se vinculan cuando coinciden el espacio de nombres de identidad y el valor de identidad."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="Más información"
 
 Se establece un vínculo entre dos identidades cuando coinciden el área de nombres de identidad y los valores de identidad.
 

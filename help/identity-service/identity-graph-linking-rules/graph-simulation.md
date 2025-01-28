@@ -2,9 +2,9 @@
 title: Guía de IU de simulación de gráficos
 description: Aprenda a utilizar la simulación de gráfico en la interfaz de usuario del servicio de ID.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1458'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_graphsimulation"
 >title="Simulación de gráfico"
 >abstract="Simule gráficos para comprender cómo el servicio de identidad vincula las identidades y cómo funciona el algoritmo de optimización de identidad."
->additional-url="http://www.adobe.com/go/identity-graph-simulation" text="Más información"
 
 >[!AVAILABILITY]
 >
