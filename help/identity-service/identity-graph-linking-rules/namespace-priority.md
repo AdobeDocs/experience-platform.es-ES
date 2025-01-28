@@ -2,14 +2,20 @@
 title: Prioridad de espacios de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 2%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
-# Prioridad de espacios de nombres
+# Prioridad de espacios de nombres {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Prioridad de área de nombres"
+>abstract="La prioridad del espacio de nombres determina cómo se quitan los vínculos del gráfico de identidad."
+>additional-url="http://www.adobe.com/go/identity-namespace-priority" text="Más información"
 
 >[!AVAILABILITY]
 >
@@ -77,7 +83,7 @@ Para estructuras de gráficos relativamente complejas, la prioridad del área de
 * Una vez que haya configurado la configuración de identidad para una zona protegida determinada, la identidad principal de los eventos de experiencia se determinará mediante la prioridad de área de nombres más alta de la configuración.
    * Esto se debe a que los eventos de experiencia son de naturaleza dinámica. Un mapa de identidad puede contener tres o más identidades y la prioridad del área de nombres garantiza que el área de nombres más importante esté asociada al evento de experiencia.
 * Como resultado, Real-Time Customer Profile **ya no usará las siguientes configuraciones**:
-   * La configuración de identidad principal (`primary=true`) al enviar identidades en identityMap mediante el SDK web, el SDK móvil o la API de servidor de Edge Network (el área de nombres de identidad y el valor de identidad se seguirán usando en el perfil). **Nota**: Los servicios fuera del perfil del cliente en tiempo real, como el almacenamiento del lago de datos o Adobe Target, seguirán usando la configuración de identidad principal (`primary=true`).
+   * La configuración de identidad principal (`primary=true`) al enviar identidades en identityMap mediante Web SDK, Mobile SDK o la API de Edge Network Server (el área de nombres de identidad y el valor de identidad se seguirán usando en el perfil). **Nota**: Los servicios fuera del perfil del cliente en tiempo real, como el almacenamiento del lago de datos o Adobe Target, seguirán usando la configuración de identidad principal (`primary=true`).
    * Cualquier campo marcado como identidad principal en un esquema de clase de evento de experiencia XDM.
    * Configuración de identidad principal predeterminada en el conector de origen de Adobe Analytics (ECID o AAID).
 * Por otro lado, la prioridad **namespace no determina la identidad principal para los registros de perfil**.
@@ -155,7 +161,7 @@ Si la configuración de identidad está habilitada, los atributos calculados uti
 
 ### Lago de datos
 
-La ingesta de datos en el lago de datos seguirá cumpliendo la configuración de identidad principal establecida en [SDK web](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) y esquemas.
+La ingesta de datos en el lago de datos seguirá cumpliendo la configuración de identidad principal establecida en [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) y los esquemas.
 
 El lago de datos no determinará la identidad principal en función de la prioridad del área de nombres. Por ejemplo, Adobe Customer Journey Analytics seguirá utilizando valores en el mapa de identidad incluso después de habilitar la prioridad del área de nombres (por ejemplo, al agregar un conjunto de datos a una nueva conexión), porque Customer Journey Analytics consume sus datos del lago de datos.
 

@@ -2,9 +2,9 @@
 title: Reglas de vinculación de gráfico de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1443'
 ht-degree: 3%
 
 ---
@@ -33,12 +33,13 @@ Los siguientes documentos son esenciales para comprender las reglas de vinculaci
 
 En esta sección se describen ejemplos de escenarios que se pueden tener en cuenta al configurar reglas de vinculación de gráficos de identidad.
 
-### Dispositivo compartido
+### Dispositivo compartido {#shared-device}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Contraer escenarios de gráfico"
 >abstract="Existen varias razones por las que los gráficos podrían “contraerse” o representar entidades de varias personas."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="Más información"
 
 Hay casos en los que se pueden producir varios inicios de sesión en un solo dispositivo:
 

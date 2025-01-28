@@ -2,14 +2,20 @@
 title: Guía de IU de simulación de gráficos
 description: Aprenda a utilizar la simulación de gráfico en la interfaz de usuario del servicio de ID.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 4%
+source-wordcount: '1461'
+ht-degree: 2%
 
 ---
 
-# Guía de la interfaz de usuario [!DNL Graph Simulation]
+# Guía de la interfaz de usuario [!DNL Graph Simulation] {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Simulación de gráfico"
+>abstract="Simule gráficos para comprender cómo el servicio de identidad vincula las identidades y cómo funciona el algoritmo de optimización de identidad."
+>additional-url="http://www.adobe.com/go/identity-graph-simulation" text="Más información"
 
 >[!AVAILABILITY]
 >
@@ -50,12 +56,6 @@ Visualizador de gráficos simulado: el visualizador de gráficos simulado muestr
 >[!ENDTABS]
 
 ## Añadir eventos {#add-events}
-
->[!CONTEXTUALHELP]
->id="platform_identities_graphsimulation"
->title="Simulación de gráfico"
->abstract="Simule gráficos para comprender cómo el servicio de identidad vincula las identidades y cómo funciona el algoritmo de optimización de identidad."
->text="Learn more in documentation"
 
 Para empezar, seleccione **[!UICONTROL Agregar eventos]**.
 
@@ -132,16 +132,6 @@ Para eliminar un evento, seleccione los puntos suspensivos (`...`) junto a un ev
 ![Icono de evento de eliminación seleccionado.](../images/graph-simulation/delete.png)
 
 ## Configurar algoritmo {#configure-algorithm}
-
->[!CONTEXTUALHELP]
->id="platform_identities_algorithmconfiguration"
->title="Configuración de algoritmo"
->abstract="Configure un espacio de nombres único y una prioridad de área de nombres adaptada a las identidades ingeridas."
-
->[!CONTEXTUALHELP]
->id="platform_identities_namespacepriority"
->title="Prioridad de área de nombres"
->abstract="La prioridad del espacio de nombres determina cómo se quitan los vínculos del gráfico de identidad."
 
 >[!IMPORTANT]
 >

@@ -2,14 +2,20 @@
 title: Lógica de vinculación del servicio de identidad
 description: Obtenga información acerca de cómo el servicio de identidad vincula identidades dispares para crear una vista completa de un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '971'
 ht-degree: 2%
 
 ---
 
-# Lógica de vinculación del servicio de identidad
+# Lógica de vinculación del servicio de identidad {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Gráfico simulado"
+>abstract="Las identidades se vinculan cuando coinciden el espacio de nombres de identidad y el valor de identidad."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="Más información"
 
 Se establece un vínculo entre dos identidades cuando coinciden el área de nombres de identidad y los valores de identidad.
 
@@ -29,12 +35,7 @@ Una identidad representa una entidad real. Si hay un vínculo establecido entre 
 | Un usuario final inicia sesión con Google Chrome y luego Firefox. | CRMID está vinculado con dos ECID diferentes. | Una persona (CRMID) está asociada a dos exploradores web (**Nota**: cada explorador tendrá su propio ECID). |
 | Un ingeniero de datos introduce un registro CRM que incluye dos campos marcados como identidad: CRMID y Correo electrónico. | El CRMID y el correo electrónico están vinculados. | Una persona (CRMID) está asociada a la dirección de correo electrónico. |
 
-## Explicación de la lógica de vinculación del servicio de identidad {#identity-linking-logic}
-
->[!CONTEXTUALHELP]
->id="platform_identities_simulatedgraph"
->title="Gráfico simulado"
->abstract="Las identidades se vinculan cuando coinciden el espacio de nombres de identidad y el valor de identidad."
+## Explicación de la lógica de vinculación del servicio de identidad
 
 Una identidad consta de un área de nombres de identidad y un valor de identidad.
 
