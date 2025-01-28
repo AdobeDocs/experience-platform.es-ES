@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
+source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
 workflow-type: tm+mt
-source-wordcount: '4151'
+source-wordcount: '4395'
 ht-degree: 11%
 
 ---
@@ -137,7 +137,7 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en décle
 
    >[!IMPORTANT]
    >
-   >Si ejecuta [evaluación de audiencia flexible](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) en audiencias que ya están configuradas para activarse después de la evaluación de segmentos, las audiencias se activarán en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior. Esto puede hacer que las audiencias se exporten varias veces al día, según las acciones que realice.
+   >Si ejecuta una [evaluación de público flexible](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) en públicos que ya están configuradas para activarse después de la evaluación de segmentos, los públicos se activarán en cuanto finalice el trabajo de evaluación de público flexible, independientemente de cualquier trabajo de activación diario anterior. Esto puede hacer que las audiencias se exporten varias veces al día, según las acciones que realice.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -431,14 +431,31 @@ Suponiendo la anulación de duplicación por la clave compuesta `personalEmail +
 
 El Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID] o una dirección de correo electrónico como clave de anulación de duplicación para garantizar que todos los registros de perfil se identifiquen de forma exclusiva.
 
->[!NOTE]
-> 
->Si se han aplicado etiquetas de uso de datos a ciertos campos dentro de un conjunto de datos (en lugar de a todo el conjunto de datos), la aplicación de esas etiquetas de nivel de campo en la activación se produce en las siguientes condiciones:
->
->* Los campos se utilizan en la definición de audiencia.
->* Los campos se configuran como atributos proyectados para el destino final.
->
-> Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostrará una infracción de directiva de uso de datos en el paso de revisión. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
+
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles compartan la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+
+#### Consideraciones clave
+
+* **Selección determinística**: cuando varios perfiles tienen claves de anulación de duplicación idénticas y la misma marca de tiempo de referencia, la lógica de anulación de duplicación determina qué perfil se va a exportar ordenando los valores de otras columnas seleccionadas (excluyendo tipos complejos como matrices, mapas u objetos). Los valores ordenados se evalúan en orden lexicográfico y se selecciona el primer perfil.
+
+* **Ejemplo de escenario**:\
+  Considere los siguientes datos, donde la clave de anulación de duplicación es la columna `Email`:\
+  |Correo electrónico*|nombre|apellido|marca de tiempo|\
+  |—|—|—|—|\
+  |test1@test.com|John|Morris|2024-10-12T09:50|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  Después de la deduplicación, el archivo de exportación contiene:\
+  |Correo electrónico*|nombre|apellido|marca de tiempo|\
+  |—|—|—|—|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  **Explicación**: Para `test1@test.com`, ambos perfiles comparten la misma clave de anulación de duplicación y la misma marca de tiempo. El algoritmo ordena lexicográficamente los valores de las columnas `first_name` y `last_name`. Dado que los nombres son idénticos, la hora se resuelve usando la columna `last_name`, donde &quot;Doe&quot; va antes que &quot;Morris&quot;.
+
+* **Confiabilidad mejorada**: Este proceso de deduplicación actualizado garantiza que las ejecuciones sucesivas con las mismas coordenadas siempre produzcan los mismos resultados, lo que mejora la coherencia.
 
 ### [!BADGE Beta]{type=Informative} Exporta matrices a través de campos calculados {#export-arrays-calculated-fields}
 
@@ -552,6 +569,15 @@ Si desea activar audiencias externas en sus destinos sin exportar ningún atribu
 Seleccione **[!UICONTROL Siguiente]** para pasar al paso [Revisar](#review).
 
 ## Revisar {#review}
+
+>[!NOTE]
+> 
+Si se han aplicado etiquetas de uso de datos a ciertos campos dentro de un conjunto de datos (en lugar de a todo el conjunto de datos), la aplicación de esas etiquetas de nivel de campo en la activación se produce en las siguientes condiciones:
+>
+* Los campos se utilizan en la definición de audiencia.
+* Los campos se configuran como atributos proyectados para el destino final.
+>
+Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostrará una infracción de directiva de uso de datos en el paso de revisión. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 En la página **[!UICONTROL Revisar]**, puedes ver un resumen de tu selección. Seleccione **[!UICONTROL Cancelar]** para dividir el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar su selección y comenzar a enviar datos al destino.
 
