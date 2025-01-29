@@ -4,9 +4,9 @@ title: Casos de uso y libros de reproducción disponibles para Real-time Custome
 description: Una lista de todos los libros de reproducción de Real-time Customer Data Platform y Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
+source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '955'
 ht-degree: 2%
 
 ---
@@ -65,9 +65,9 @@ Lea esta página para obtener una descripción general de todos los libros de re
 
 | Nombre del manual | Descripción |
 | ------------- | ----------- |
-| Exploración abandonada: mercancía para activación | Reasigne los seguidores a una acción después de que abandonen el sitio web o la aplicación después de agregar la mercancía al carro de compras. |
-| Exploración abandonada: producto para activación | Vuelva a dirigirse a los compradores después de que abandonen el sitio web o la aplicación después de agregar los productos al carro de compras. |
-| Exploración abandonada: reserva para activación | Reasigne a los invitados después de que abandonen el sitio web o la aplicación después de agregar una nueva reserva al carro de compras. |
+| Exploración abandonada: mercancía para activación | Vuelve a dirigirte a los seguidores después de que abandonen tu sitio web o aplicación después de navegar por la mercancía. |
+| Exploración abandonada: producto para activación | Vuelva a dirigirse a los compradores después de que abandonen el sitio web o la aplicación después de examinar un producto. |
+| Exploración abandonada: reserva para activación | Reasigne a los huéspedes después de que abandonen el sitio web o la aplicación después de examinar una reserva potencial. |
 | Carro abandonado: mercancía: para su activación | Reasigne a los seguidores después de que abandonen el sitio web o la aplicación después de agregar el artículo deportivo al carro de compras. |
 | Carro abandonado: producto: para activación | Reasigne a los compradores después de que abandonen el sitio web o la aplicación después de agregar productos al carro de compras. |
 | Carro abandonado: reserva para activación | Reasigne a los invitados después de que abandonen el sitio web o la aplicación después de agregar una nueva reserva al carro de compras. |
