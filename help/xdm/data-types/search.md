@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Buscar tipo de datos
 description: Obtenga información acerca del tipo de datos Modelo de datos de experiencia de búsqueda (XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 11%
+source-wordcount: '164'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 [!UICONTROL Buscar] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que contiene información sobre la actividad de búsqueda web.
 
-<img src="../images/data-types/search.PNG" width="500" /><br />
+![buscar imagen](../images/data-types/search.PNG){width=500}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de datos de interacción web
 description: Obtenga información acerca del tipo de datos del Modelo de datos de experiencia (XDM) de interacción web.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '169'
 ht-degree: 10%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 [!UICONTROL Interacción web] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe información sobre las interacciones que se produjeron en una página web después de que se completara la carga inicial de la página. Está diseñado para registrar interacciones en aplicaciones web enriquecidas que no almacenan en déclencheur SPA una nueva carga de página, como aplicaciones web de una sola página ().
 
-<img src="../images/data-types/web-interaction.PNG" width="500" /><br />
+![imagen de interacción web](../images/data-types/web-interaction.PNG){width=500}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

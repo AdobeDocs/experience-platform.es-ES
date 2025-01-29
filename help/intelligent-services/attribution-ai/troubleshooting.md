@@ -6,9 +6,9 @@ title: solución de problemas de Attribution AI
 description: Encuentre respuestas a errores comunes en Attribution AI.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Este documento proporciona respuestas a las preguntas frecuentes acerca de Attri
 
 Los errores de carga en el modo incógnito de Google Chrome están presentes debido a las actualizaciones en la configuración de seguridad del modo incógnito de Google Chrome. El problema se está trabajando activamente con Chrome para hacer de experience.adobe.com un dominio de confianza.
 
-<img src="./images/faq/error.PNG" width="500" /><br />
+![Imagen de error](./images/faq/error.PNG){width=500}
 
 ### Corrección recomendada
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipo de datos de elemento de pago
 description: Obtenga información sobre el tipo de datos Modelo de datos de experiencia (XDM) de artículo de pago.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 15%
+source-wordcount: '144'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 [!UICONTROL Elemento de pago] es un tipo de datos XDM (Experience Data Model) estándar que describe un pago asociado a un pedido y que define el tipo de pago, el importe y la moneda asociada.
 
-<img src="../images/data-types/payment-item.PNG" width="400" /><br />
+![imagen de elemento de pago](../images/data-types/payment-item.PNG){width=400}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

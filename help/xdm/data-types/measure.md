@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de datos de medida
 description: Obtenga información acerca del tipo de datos del Modelo de datos de experiencia de medida (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '208'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!UICONTROL Measure] es un tipo de datos XDM (Experience Data Model) estándar que contiene un punto de datos cuantificable concreto de una métrica en particular. Una medida está compuesta por un identificador único y un valor.
 
-<img src="../images/data-types/measure.PNG" width="500" /><br />
+![imagen de medida](../images/data-types/measure.PNG){width=500}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

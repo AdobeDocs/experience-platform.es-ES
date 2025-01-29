@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de datos de detalles de página web
 description: Obtenga información sobre los detalles de la página web del tipo de datos del Modelo de datos de experiencia (XDM).
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '386'
 ht-degree: 11%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 SPA El tipo de datos está diseñado para obtener detalles de página completa y cargas de página iniciales de aplicaciones web de una sola página (). Para las interacciones que se producen en una página cargada que no almacena en déclencheur una nueva carga de página, consulte el tipo de datos [web interaction](./web-interaction.md).
 
-<img src="../images/data-types/web-page-details.PNG" width="500" /><br />
+![detalles de página web](../images/data-types/web-page-details.PNG){width="500"}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
