@@ -2,10 +2,10 @@
 title: Información general sobre la extensión Adobe Target v2
 description: Obtenga información sobre la extensión de etiqueta Adobe Target v2 en Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 91%
+source-wordcount: '1351'
+ht-degree: 88%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información sobre las opciones disponibles al utilizar esta extensión para generar una regla.
 
@@ -71,11 +71,13 @@ No es necesaria ninguna configuración.
 
 ### Carga de Target con la toma de decisiones en el dispositivo
 
-Añada esta acción a la regla de etiqueta donde tiene sentido cargar Target con la [toma de decisiones en el dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=es) activada en el contexto de la regla. Esto carga la biblioteca at.js con la toma de decisiones en el dispositivo habilitada en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio. Adobe recomienda usar la acción Cargar destinatario con toma de decisiones en el dispositivo solo si va precedida de una llamada de Target. De lo contrario, podría tener problemas como la demora de la llamada de Analytics.
+Añada esta acción a la regla de etiqueta donde tiene sentido cargar Target con la [toma de decisiones en el dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=es) activada en el contexto de la regla. Esto carga la biblioteca at.js con la toma de decisiones en el dispositivo habilitada en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio. El Adobe recomienda utilizar la acción Load Target with on-device decisioning solo si va precedida de una llamada de Target. De lo contrario, podría tener problemas como la demora de la llamada de Analytics.
 
-No es necesaria ninguna configuración.
+>[!IMPORTANT]
+>
+>Utilice únicamente una solicitud de carga de página con toma de decisiones en el dispositivo si ya está configurada. Añadir esta acción a la regla aumentará el tamaño del paquete de Launch final porque incluye el motor de reglas de toma de decisiones en el dispositivo.
 
-### Agregar parámetros a todas las solicitudes
+### Añadir parámetros a todas las solicitudes
 
 Este tipo de acción permite agregar parámetros a todas las solicitudes de Target. La acción Load Target debe usarse anteriormente.
 
