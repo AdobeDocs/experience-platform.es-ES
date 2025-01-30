@@ -4,13 +4,13 @@ description: Aprenda a crear configuraciones de flujo de datos dinámico para en
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
+source-git-commit: 39e65f1f74b95fffffb3c5400ce1b7e60aa81bad
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
-
 
 # Crear configuraciones de flujo de datos dinámico
 
@@ -30,6 +30,14 @@ Para crear una configuración dinámica para el conjunto de datos, deben cumplir
 * Debe tener *al menos* un servicio de Experience Cloud agregado a su secuencia de datos. Consulte la documentación sobre cómo [agregar un servicio](configure.md#add-services) a un conjunto de datos para obtener información detallada.
 
 Después de crear una secuencia de datos y agregarle un servicio de Experience Cloud, puede [crear una configuración dinámica](#create-dynamic-configuration).
+
+## Configuraciones dinámicas de flujo de datos frente a anulaciones de configuración de flujo de datos {#dynamic-versus-overrides}
+
+Las configuraciones dinámicas de secuencia de datos y las [anulaciones de configuración de secuencia de datos](overrides.md) son funcionalidades mutuamente exclusivas.
+
+Esto significa que no puede utilizar configuraciones de flujo de datos dinámico junto con anulaciones de configuración de flujo de datos. Debe elegir una o la otra.
+
+Si habilita tanto las configuraciones de flujo de datos dinámico como las invalidaciones de configuración de flujo de datos, las invalidaciones de configuración tendrán prioridad y las reglas de configuración de flujo de datos dinámico se omitirán.
 
 ## Crear una configuración de flujo de datos dinámico {#create-dynamic-configuration}
 
