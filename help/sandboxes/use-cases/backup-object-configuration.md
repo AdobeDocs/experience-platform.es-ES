@@ -2,9 +2,9 @@
 title: Hacer copia de seguridad de configuraciones de objeto mediante herramientas de zona protegida
 description: Para restablecer de forma segura los entornos limitados y añadir compatibilidad con las versiones, haga una copia de seguridad de las configuraciones de objetos (o metadatos) mediante paquetes de herramientas de entorno limitado. Los paquetes de copia de seguridad evitan la pérdida de configuraciones críticas como esquemas, conjuntos de datos y audiencias, especialmente durante las iteraciones de desarrollo.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 Para restablecer de forma segura los entornos limitados y añadir compatibilidad con las versiones, haga una copia de seguridad de las configuraciones de objetos (o metadatos) mediante paquetes de herramientas de entorno limitado. Los paquetes de copia de seguridad evitan la pérdida de configuraciones críticas como esquemas, conjuntos de datos y audiencias, especialmente durante las iteraciones de desarrollo.
 
-![Información general que muestra las ventajas de las herramientas de espacio aislado](../images/use-cases/tooling-overview.png)
+![Información general que muestra las ventajas de las herramientas de espacio aislado](../images/use-cases/tooling-overview.png){zoomable="yes"}
 
 ## Por qué considerar este caso de uso {#why-this-use-case}
 
@@ -63,7 +63,7 @@ Antes de empezar a crear el paquete de copia de seguridad, debe tener en cuenta 
 >
 > Si está considerando hacer una copia de seguridad de su zona protegida para restablecerla, tenga en cuenta las [limitaciones](../ui/user-guide.md#reset-a-sandbox) que rodean el restablecimiento de las zonas protegidas.
 
-### Exportación de los metadatos seleccionados en un paquete
+### Exportar los metadatos seleccionados en un paquete
 
 En este punto, ya puede realizar una copia de seguridad de la zona protegida mediante la interfaz de usuario de las herramientas para zonas protegidas. Este paso cubre la copia de seguridad de una zona protegida completa y la copia de seguridad de objetos específicos.
 

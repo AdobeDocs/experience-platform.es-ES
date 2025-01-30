@@ -1,7 +1,8 @@
 ---
 title: Activación de un centro de excelencia mediante herramientas de zona protegida
 description: Habilite un centro de excelencia con las herramientas de zona protegida creando un paquete de "zona protegida dorada" para estandarizar las prácticas recomendadas en varias zonas protegidas.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 7%
@@ -12,7 +13,7 @@ ht-degree: 7%
 
 Habilite un centro de excelencia con las herramientas de zona protegida creando un paquete de &quot;zona protegida dorada&quot; para estandarizar las prácticas recomendadas en varias zonas protegidas.
 
-![Información general sobre la exportación de paquetes entre distintas organizaciones](../images/use-cases/packages-across-orgs.png)
+![Información general sobre la exportación de paquetes entre distintas organizaciones](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## Por qué considerar este caso de uso {#why-this-use-case}
 
