@@ -6,9 +6,9 @@ description: Este documento proporciona un tutorial paso a paso para obtener acc
 role: Developer
 feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 48c75f88d6862fa602e43929b72a6eac27d20e07
+source-git-commit: 850a4ae82fda22a761a28ac9059d7dea57c9662a
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2487'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Para mantener la seguridad de sus aplicaciones y usuarios, todas las solicitudes
 
 Este tutorial explica cómo recopilar las credenciales necesarias para autenticar las llamadas a la API de Platform, tal como se describe en el diagrama de flujo siguiente. Puede recopilar la mayoría de las credenciales necesarias en la configuración inicial única. Sin embargo, el token de acceso debe actualizarse cada 24 horas.
 
-![](./images/api-authentication/authentication-flowchart.png)
+![Requisitos del flujo de autenticación para la configuración inicial única y cada sesión subsiguiente.](./images/api-authentication/authentication-flowchart.png)
 
 ## Requisitos previos {#prerequisites}
 
@@ -52,15 +52,15 @@ Antes de crear integraciones en Adobe Developer Console, la cuenta debe tener pe
 
 ### Obtener acceso de desarrollador {#gain-developer-access}
 
-Póngase en contacto con un administrador de [!DNL Admin Console] de su organización para agregarlo como desarrollador a un perfil de producto de Experience Platform mediante [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulte la documentación de [!DNL Admin Console] para obtener instrucciones específicas sobre cómo [administrar el acceso de desarrollador para perfiles de producto](https://helpx.adobe.com/es/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+Póngase en contacto con un administrador de Admin Console de su organización para agregarle como desarrollador a un perfil de productos de Experience Platform. Consulte la documentación del Admin Console para obtener instrucciones específicas sobre cómo [administrar el acceso de desarrollador para perfiles de producto](https://helpx.adobe.com/es/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 Una vez que se le asigne como desarrollador, puede empezar a crear integraciones en [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Estas integraciones son una canalización de aplicaciones y servicios externos a las API de Adobe.
 
 ### Obtener acceso de usuario {#gain-user-access}
 
-El administrador de [!DNL Admin Console] también debe agregarlo a usted como usuario al mismo perfil de producto. Con el acceso de los usuarios, puede ver en la interfaz de usuario el resultado de las operaciones de API que realiza.
+El administrador del Admin Console también debe agregarle como usuario al mismo perfil de productos. Con el acceso de los usuarios, puede ver en la interfaz de usuario el resultado de las operaciones de API que realiza.
 
-Consulte la guía sobre [administración de grupos de usuarios en [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) para obtener más información.
+Consulte la guía sobre [administración de grupos de usuarios en Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) para obtener más información.
 
 ## Generación de una clave de API (ID de cliente) y un ID de organización {#generate-credentials}
 
@@ -68,11 +68,11 @@ Consulte la guía sobre [administración de grupos de usuarios en [!DNL Admin Co
 >
 >Si está siguiendo este documento desde la [guía de API de Privacy Service](../privacy-service/api/getting-started.md), ahora puede volver a esa guía para generar las credenciales de acceso únicas de [!DNL Privacy Service].
 
-Después de que se le haya concedido acceso de desarrollador y usuario a Platform mediante [!DNL Admin Console], el siguiente paso es generar sus credenciales de `{ORG_ID}` y `{API_KEY}` en Adobe Developer Console. Estas credenciales solo deben generarse una vez y pueden reutilizarse en futuras llamadas a la API de Platform.
+Una vez que se le haya concedido acceso de desarrollador y usuario a Platform mediante el Admin Console, el siguiente paso es generar sus credenciales de `{ORG_ID}` y `{API_KEY}` en Adobe Developer Console. Estas credenciales solo deben generarse una vez y pueden reutilizarse en futuras llamadas a la API de Platform.
 
 >[!TIP]
 >
->En lugar de ir a Developer Console, puede obtener todas las credenciales de autenticación que necesita para trabajar con las API de Platform directamente desde las páginas de documentación de referencia de la API. [Más información](#get-credentials-functionality) sobre la funcionalidad.
+>En lugar de ir a Developer Console, puede obtener todas las credenciales de autenticación que necesita para trabajar con las API de Platform directamente desde las páginas de documentación de referencia de la API. [Más información](#get-credentials-functionality) sobre la nueva funcionalidad.
 
 ### Añadir un Experience Platform a un proyecto {#add-platform-to-project}
 
@@ -86,9 +86,9 @@ Una vez que haya creado un nuevo proyecto, seleccione **[!UICONTROL Agregar API]
 
 ![Pantalla de Developer Console con la opción Agregar API resaltada.](./images/api-authentication/add-api.png)
 
-Aparece la pantalla **[!UICONTROL Añadir una API]**. Seleccione el icono de producto para Adobe Experience Platform y, a continuación, seleccione **[!UICONTROL API de Experience Platform]** antes de seleccionar **[!UICONTROL Siguiente]**.
+Aparece la pantalla **[!UICONTROL Añadir una API]**. Seleccione el icono del producto para **[!UICONTROL Adobe Experience Platform]** y, a continuación, elija **[!UICONTROL API de Experience Platform]** antes de seleccionar **[!UICONTROL Siguiente]**.
 
-![Seleccionar API de Experience Platform.](./images/api-authentication/platform-api.png)
+![Seleccione la API de Experience Platform en la pantalla Agregar una API.](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
@@ -96,22 +96,17 @@ Aparece la pantalla **[!UICONTROL Añadir una API]**. Seleccione el icono de pro
 
 ### Seleccione el tipo de autenticación [!UICONTROL OAuth Server-to-Server] {#select-oauth-server-to-server}
 
-A continuación, seleccione el tipo de autenticación [!UICONTROL OAuth Server-to-Server] para generar tokens de acceso y acceder a la API de Experience Platform.
+A continuación, seleccione el tipo de autenticación **[!UICONTROL OAuth Server-to-Server]** para generar tokens de acceso y acceder a la API de Experience Platform. Asigne un nombre significativo a su credencial en el campo de texto **[!UICONTROL Nombre de credencial]** antes de seleccionar **[!UICONTROL Siguiente]**.
 
 >[!IMPORTANT]
 >
->El método **[!UICONTROL OAuth Server-to-Server]** es el único método de generación de tokens compatible a partir de ahora. El método **[!UICONTROL Service Account (JWT)]** compatible anteriormente está obsoleto y no se puede seleccionar para nuevas integraciones. Aunque las integraciones existentes que utilicen el método de autenticación JWT seguirán funcionando hasta el 1 de enero de 2025, Adobe recomienda migrar las integraciones existentes al nuevo método [!UICONTROL OAuth Server-to-Server] antes de esa fecha. Obtenga más información en la sección [!BADGE Obsoleto]{type=negative}[Generar un token web JSON (JWT)](#jwt).
+>El método **[!UICONTROL OAuth Server-to-Server]** es el único método de generación de tokens compatible a partir de ahora. El método **[!UICONTROL Service Account (JWT)]** compatible anteriormente está obsoleto y no se puede seleccionar para nuevas integraciones. Aunque las integraciones existentes que utilicen el método de autenticación JWT seguirán funcionando hasta el 30 de junio de 2025, Adobe recomienda migrar las integraciones existentes al nuevo método [!UICONTROL OAuth Server-to-Server] antes de esa fecha. Obtenga más información en la sección [!BADGE Obsoleto]{type=negative}[Generar un token web JSON (JWT)](#jwt).
 
 ![Seleccione el método de autenticación de servidor a servidor OAuth para la API de Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Selección de los perfiles de producto para la integración {#select-product-profiles}
 
-En la pantalla **[!UICONTROL Configurar API]**, seleccione **[!UICONTROL AEP-Default-All-Users]**.
-
-<!--
-Your integration's service account will gain access to granular features through the product profiles selected here.
-
--->
+En la pantalla **[!UICONTROL Configurar API]**, seleccione **[!UICONTROL AEP-Default-All-Users]** junto con cualquier perfil de producto adicional al que desee obtener acceso.
 
 >[!IMPORTANT]
 >
@@ -127,7 +122,7 @@ En el tutorial de vídeo siguiente también se muestra una descripción detallad
 
 ### Recopilar credenciales {#gather-credentials}
 
-Una vez agregada la API al proyecto, la página **[!UICONTROL API de Experience Platform]** del proyecto muestra las siguientes credenciales, que son necesarias en todas las llamadas a las API de Experience Platform:
+Una vez que la API se ha agregado al proyecto, la página **[!UICONTROL Servidor a servidor OAuth]** del proyecto muestra las siguientes credenciales que son necesarias en todas las llamadas a las API de Experience Platform:
 
 ![Información de integración después de agregar una API en Developer Console.](./images/api-authentication/api-integration-information.png)
 
@@ -148,9 +143,9 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## Generación de un token de acceso {#generate-access-token}
 
-El siguiente paso es generar una credencial `{ACCESS_TOKEN}` para usarla en llamadas a la API de Platform. A diferencia de los valores de `{API_KEY}` y `{ORG_ID}`, se debe generar un nuevo token cada 24 horas para seguir usando las API de Platform. Seleccione **[!UICONTROL Generar token de acceso]**, como se muestra a continuación.
+El siguiente paso es generar una credencial `{ACCESS_TOKEN}` para usarla en llamadas a la API de Platform. A diferencia de los valores de `{API_KEY}` y `{ORG_ID}`, se debe generar un nuevo token cada 24 horas para seguir usando las API de Platform. Seleccione **[!UICONTROL Generar token de acceso]** que produce su token de acceso, como se muestra a continuación.
 
-![Mostrar cómo generar token de acceso](././images/api-authentication/generate-access-token.gif)
+![Mostrar cómo generar token de acceso](././images/api-authentication/generate-access-token.png)
 
 >[!TIP]
 >
@@ -180,7 +175,7 @@ El bloque de credenciales de la parte superior de la página permanece mostrado 
 
 >[!WARNING]
 >
-El método JWT para generar tokens de acceso ha quedado obsoleto. Todas las integraciones nuevas deben crearse con el [método de autenticación de servidor a servidor OAuth](#select-oauth-server-to-server). El Adobe también requiere que migre las integraciones existentes al método OAuth antes del 1 de enero de 2025 para que las integraciones sigan funcionando. Lea la siguiente documentación importante:
+El método JWT para generar tokens de acceso ha quedado obsoleto. Todas las integraciones nuevas deben crearse con el [método de autenticación de servidor a servidor OAuth](#select-oauth-server-to-server). El Adobe también requiere que migre las integraciones existentes al método OAuth antes del 30 de junio de 2025 para que las integraciones sigan funcionando. Lea la siguiente documentación importante:
 > 
 * [Guía de migración para sus aplicaciones de JWT a OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Guía de implementación para aplicaciones nuevas y antiguas con OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -331,71 +326,47 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 ## Administradores del sistema: Conceder control de acceso a API y desarrollador con permisos de Experience Platform {#grant-developer-and-api-access-control}
 
+Para poder crear integraciones en Adobe Developer Console, la cuenta debe tener permisos de desarrollador y usuario para un perfil de producto de Experience Platform.
+
 >[!NOTE]
 >
 Solo los administradores del sistema tienen la capacidad de ver y administrar credenciales de API en Permisos.
 
-Antes de crear integraciones en Adobe Developer Console, la cuenta debe tener permisos de desarrollador y usuario para un perfil de producto de Experience Platform en Adobe Admin Console.
-
 ### Añadir desarrolladores al perfil del producto {#add-developers-to-product-profile}
 
-Vaya a [[!DNL Admin Console]](https://adminconsole.adobe.com/) e inicie sesión con su Adobe ID.
+Vaya al [Admin Console](https://adminconsole.adobe.com/) e inicie sesión con su Adobe ID.
 
-Seleccione **[!UICONTROL Productos]** y después seleccione **[!UICONTROL Adobe Experience Platform]** de la lista de productos.
+Seleccione **[!UICONTROL Productos]** de la barra de navegación y luego seleccione **[!UICONTROL Adobe Experience Platform]** de la lista de productos.
 
-![Lista de productos en el Admin Console](././images/api-authentication/products.png)
+![La página de productos en Adobe Admin Console con el producto Adobe Experience Platform resaltado.](././images/api-authentication/products.png)
 
 En la ficha **[!UICONTROL Perfiles de producto]**, seleccione **[!UICONTROL AEP-Default-All-Users]**. También puede utilizar la barra de búsqueda para buscar el perfil del producto introduciendo el nombre.
 
-![Buscar el perfil del producto](././images/api-authentication/select-product-profile.png)
+![La página de perfiles de producto con la barra de búsqueda y el producto AEP-Default-All-Users resaltados.](././images/api-authentication/select-product-profile.png)
 
 Seleccione la ficha **[!UICONTROL Desarrolladores]** y luego seleccione **[!UICONTROL Agregar desarrollador]**.
 
-![Agregar desarrollador de la ficha Desarrolladores](././images/api-authentication/add-developer1.png)
+![Se muestra la ficha de desarrolladores con la opción Agregar desarrolladores resaltada,](././images/api-authentication/add-developer1.png)
 
-Escriba el **[!UICONTROL correo electrónico o nombre de usuario]** del desarrollador. Un [!UICONTROL correo electrónico o nombre de usuario] válido mostrará los detalles del desarrollador. Seleccione **[!UICONTROL Guardar]**.
+Aparecerá el cuadro de diálogo **[!UICONTROL Agregar desarrolladores]**. Escriba el **[!UICONTROL correo electrónico o nombre de usuario]** del desarrollador. [!UICONTROL Correo electrónico o nombre de usuario] válidos muestran los detalles del desarrollador. Seleccione **[!UICONTROL Guardar]**.
 
-![Agregar desarrollador con su correo electrónico o nombre de usuario](././images/api-authentication/add-developer-email.png)
+![Se ha rellenado el cuadro de diálogo Agregar desarrolladores con información de desarrolladores y se ha resaltado la opción Guardar.](././images/api-authentication/add-developer-email.png)
 
-El desarrollador se ha agregado correctamente y aparece en la ficha [!UICONTROL Desarrolladores].
+El desarrollador se ha agregado correctamente y aparece en la ficha **[!UICONTROL Desarrolladores]**.
 
-![Desarrolladores enumerados en la ficha Desarrolladores](././images/api-authentication/developer-added.png)
+![La pestaña de desarrolladores muestra la lista de todos los desarrolladores agregados con el desarrollador recién agregado resaltado.](././images/api-authentication/developer-added.png)
 
-<!--
+### Asignar credenciales de API a un rol
 
-Commenting out this part since it duplicates information from the section Add Experience Platform to a project
+>[!NOTE]
+>
+Solo un administrador del sistema puede asignar API a funciones en la interfaz de usuario del Experience Platform.
 
-### Set up an API
+Para utilizar y realizar operaciones en las API de Experience Platform, un administrador del sistema debe agregar las credenciales de la API además del conjunto de permisos dado a una función. Obtenga más información en la sección acerca de [administrar credenciales de API para un rol](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 
-A developer can add and configure an API within a project in the Adobe Developer Console.
+En el tutorial de vídeo siguiente también se muestra una descripción detallada de los pasos descritos anteriormente para añadir desarrolladores a perfiles de producto y asignar API a funciones:
 
-Select your project, then select **[!UICONTROL Add API]**.
-
-![Add API to a project](././images/api-authentication/add-api-project.png)
-
-In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
-
-![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
-
-In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
-
--->
-
-### Asignar API a un rol
-
-Un administrador del sistema puede asignar API a funciones en la interfaz de usuario del Experience Platform.
-
-Seleccione **[!UICONTROL Permisos]** y la función a la que desee agregar la API. Seleccione la ficha **[!UICONTROL Credenciales de API]** y, a continuación, seleccione **[!UICONTROL Agregar credenciales de API]**.
-
-![Ficha de credenciales de API en el rol seleccionado](././images/api-authentication/api-credentials.png)
-
-Seleccione la API que desee agregar al rol y luego seleccione **[!UICONTROL Guardar]**.
-
-![Lista de API disponibles para la selección](././images/api-authentication/select-api.png)
-
-Se le devuelve a la ficha [!UICONTROL Credenciales de API], donde se enumera la API recién agregada.
-
-![Ficha de credenciales de API con API recién agregada](././images/api-authentication/api-credentials-with-added-api.png)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## Recursos adicionales {#additional-resources}
 
