@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de Sandbox
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con los entornos limitados de la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: c63de71c248e6a41dbbadbe8089156ee3c2829cf
+source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1066'
 ht-degree: 4%
 
 ---
@@ -81,6 +81,7 @@ Una vez que haya terminado de crear la zona protegida, actualice la página y ap
 >
 >* Una zona protegida de producción creada por el usuario que se utiliza para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de Audience se puede restablecer después de un mensaje de advertencia.
 >* Antes de iniciar el restablecimiento de una zona protegida, se le pedirá que elimine sus composiciones manualmente para asegurarse de que los datos de audiencia asociados se limpien correctamente.
+>* La ID de la zona protegida cambiará una vez completado el restablecimiento.
 
 ### Eliminar composiciones de audiencia
 
