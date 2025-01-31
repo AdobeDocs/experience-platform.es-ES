@@ -3,9 +3,9 @@ title: Asistente de IA para asistencia al cliente
 description: Aprenda cómo puede utilizar el Asistente de IA para agilizar la resolución de problemas y el proceso de archivado de tickets de asistencia al cliente.
 badge: Alpha
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
+source-git-commit: e224716f8fba59529c5d7634d4b4a3013a0986a3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,8 @@ Realice un seguimiento completo del estado de los problemas de asistencia.
    * &quot;¿Cuál es la actualización del ticket E-67890?&quot;
 
 Para obtener acceso al Asistente de IA para la asistencia al cliente, póngase en contacto con el equipo de cuenta de Adobe.
+
+Para obtener más información, vea el siguiente vídeo para aprender cómo puede utilizar el Asistente de IA para la asistencia al cliente con el fin de solucionar problemas sin abandonar los flujos de trabajo.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
