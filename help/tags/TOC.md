@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
+source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '775'
 ht-degree: 43%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 43%
          * [Información general](./extensions/client/product-string/overview.md)
          * [Notas de la versión](./extensions/client/product-string/release-notes.md)
       * [Generador de cadenas de producto de Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
-      * [Adobe Analytics a través del SDK web de Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
+      * [Adobe Analytics mediante Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Información general](./extensions/client/audience-manager/overview.md)
       * Capa de datos de cliente de Adobe {#client-data-layer}
@@ -100,14 +100,14 @@ ht-degree: 43%
          * [Información general](./extensions/client/platform-demo/overview.md)
       * SDK web de Adobe Experience Platform {#web-sdk}
          * [Información general](./extensions/client/web-sdk/overview.md)
-         * [Configurar la extensión de etiqueta del SDK web](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [Configuración de la extensión de etiquetas Web SDK](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
          * [Tipos de eventos](./extensions/client/web-sdk/event-types.md)
          * [Tipos de acción](./extensions/client/web-sdk/action-types.md)
          * [Tipos de elementos de datos](./extensions/client/web-sdk/data-element-types.md)
          * [Acceso al ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
-         * [Complementos del SDK web](./extensions/client/web-sdk/web-sdk-plugins.md)
-         * [Notas de la versión de la extensión Web SDK](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [Notas de la versión de complementos de SDK web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
+         * [Complementos de Web SDK](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Notas de la versión de Web SDK](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Notas de la versión de complementos de Web SDK](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Datos del recurso de Adobe Experience Manager {#asset-insights}
          * [Información general](./extensions/client/asset-insights/overview.md)
          * [Notas de la versión](./extensions/client/asset-insights/release-notes.md)
@@ -115,7 +115,7 @@ ht-degree: 43%
       * Adobe Medium Analytics para audio y vídeo {#media-analytics}
          * [Información general](./extensions/client/media-analytics/overview.md)
          * [Notas de la versión](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Medium Analytics (SDK 3.x) {#media-analytics-3x}
+      * Adobe Medium Analytics (3.x SDK) {#media-analytics-3x}
          * [Información general](./extensions/client/media-analytics-3x/overview.md)
          * [Notas de la versión](./extensions/client/media-analytics-3x/release-notes.md)
       * Privacidad de Adobe {#privacy}
@@ -184,7 +184,7 @@ ht-degree: 43%
       * [!DNL Meta Pixel] {#meta}
          * [Información general](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
-      * [SDK digital de Nielsen](https://exchange.adobe.com/apps/ec/101361)
+      * [SDK digital Nielsen](https://exchange.adobe.com/apps/ec/101361)
       * [Administración de consentimiento de OneTrust para cookies](https://exchange.adobe.com/apps/ec/100340)
       * [Mermelada de pimienta](https://exchange.adobe.com/apps/ec/103587)
       * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
@@ -206,9 +206,8 @@ ht-degree: 43%
       * [Reproducción de Vimeo](https://exchange.adobe.com/apps/ec/108937)
       * [constantes web](https://exchange.adobe.com/apps/ec/106769)
       * [Compositor XDM](https://exchange.adobe.com/apps/ec/106062)
-      * [Punto de Yahoo](https://exchange.adobe.com/apps/ec/106062)
       * [Seguimiento de conversión de texto](https://exchange.adobe.com/apps/ec/103174)
-      * [[!DNL Youtube] Reproducción](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] Reproducción](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube] seguimiento de vídeo {#youtube}
          * [Información general](./extensions/client/youtube/overview.md)
          * [Notas de la versión](./extensions/client/youtube/release-notes.md)
