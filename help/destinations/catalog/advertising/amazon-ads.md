@@ -1,16 +1,16 @@
 ---
 title: Amazon Ads
 description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido el Amazon DSP (ADSP). Con el destino de Amazon Ads en Adobe Experience Platform Amazon DSP, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en la interfaz de usuario de.
-last-substantial-update: 2024-09-20T00:00:00Z
+last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1837'
 ht-degree: 2%
 
 ---
 
-# (Beta) Conexión de Amazon Ads {#amazon-ads}
+# Conexión de Amazon Ads {#amazon-ads}
 
 ## Información general {#overview}
 
@@ -24,7 +24,7 @@ AMC reúne señales únicas de todas las propiedades de Amazon y operadas, abarc
 
 >[!IMPORTANT]
 >
->El equipo *[!DNL Amazon Ads]* crea y mantiene este conector de destino y esta página de documentación. Actualmente, este es un producto beta y la funcionalidad está sujeta a cambios. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en *`amc-support@amazon.com`.*
+>El equipo *[!DNL Amazon Ads]* crea y mantiene este conector de destino y esta página de documentación. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en *`amc-support@amazon.com`.*
 
 ## Casos de uso {#use-cases}
 
@@ -85,8 +85,6 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 Se le redirigirá a la interfaz de conexión de [!DNL Amazon Ads], donde seleccionará por primera vez las cuentas de anunciante a las que desea conectarse. Tras la conexión, se le redirigirá de nuevo a Adobe Experience Platform con una nueva conexión, siempre que tenga el ID de la cuenta del anunciante que haya seleccionado. Seleccione la cuenta del anunciante adecuada en la pantalla de configuración de destino para continuar.
 
-* **[!UICONTROL Token de portador]**: complete el token de portador para autenticarse en el destino.
-
 ### Rellenar detalles de destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
@@ -101,9 +99,13 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 * **[!UICONTROL Región del anunciante]**: selecciona la región apropiada en la que está alojado tu anunciante. Para obtener más información sobre los mercados admitidos en cada región, visite la [documentación de Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
+>[!IMPORTANT]
+>
+>La actualización para incluir la **[!UICONTROL señal de consentimiento de Amazon Ads]** está programada para el 7 de febrero de 2025.
 
+* **[!UICONTROL Señal de consentimiento de Amazon Ads]**: confirme que todos los datos enviados a través de esta conexión han consentido el uso de datos personales para su uso con fines publicitarios. &quot;CONCEDIDO&quot; indica el consentimiento de Amazon para utilizar los datos personales del cliente con fines publicitarios. Los valores permitidos son &quot;GRANTED&quot; y &quot;DENIED&quot;. Cualquier registro enviado a través de conexiones con &quot;DENEGADO&quot; se rechazará para un uso posterior en Amazon Ads.
 
-![Configurar nuevo destino](../../assets/catalog/advertising/amazon_ads_image_4.png)
+![Configurar nuevo destino](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -124,7 +126,7 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 La conexión [!DNL Amazon Ads] admite direcciones de correo electrónico con hash y números de teléfono con hash para fines de coincidencia de identidad. La captura de pantalla siguiente proporciona un ejemplo de coincidencia compatible con la conexión [!DNL Amazon Ads]:
 
-![Asignación de Adobe a Amazon Ads](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![Asignación de Adobe a Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * Para asignar direcciones de correo electrónico con hash, seleccione el área de nombres de identidad `Email_LC_SHA256` como campo de origen.
 * Para asignar números de teléfono con hash, seleccione el área de nombres de identidad `Phone_SHA256` como campo de origen.
@@ -143,7 +145,7 @@ Una vez que la audiencia se ha cargado, puede validar que se ha creado y cargado
 
 Vaya a **[!UICONTROL ID del anunciante]** > **[!UICONTROL Audiencias]** > **[!UICONTROL Audiencias del anunciante]**. Si la audiencia se creó correctamente y cumple la cantidad mínima de miembros, verá un estado de `Active`. Encontrará más detalles sobre el tamaño y el alcance de su audiencia en el panel Alcance previsto a la derecha de la interfaz de usuario de Amazon DSP.
 
-![Validación de creación de audiencia de AmazonDSP](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Validación de creación de audiencia de AmazonDSP](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **Para[!DNL Amazon Marketing Cloud]**
 
@@ -151,8 +153,7 @@ En el explorador de esquemas de la izquierda, busque su audiencia en **[!UICONTR
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Validación de creación de audiencia de Marketing Cloud de Amazon](../../assets/catalog/advertising/amazon_ads_image_5.png)
-
+![Validación de creación de audiencia de Marketing Cloud de Amazon](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
@@ -172,6 +173,7 @@ Esta sección recoge la funcionalidad y las actualizaciones significativas de la
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
+| Febrero de 2025 | Se ha agregado el requisito de agregar **[!UICONTROL Señal de consentimiento de Amazon Ads]** para exportar flujos de datos y promocionar el destino de la versión beta a la versión disponible de forma general. |
 | Mayo de 2024 | Actualización de funcionalidad y documentación | Se agregó la opción de asignación para exportar el parámetro `countryCode` en Amazon Ads. Use `countryCode` en el [paso de asignación](#map) para mejorar las tasas de coincidencia de identidad con Amazon. |
 | Marzo de 2024 | Actualización de funcionalidad y documentación | Se agregó la opción de exportar audiencias para usarlas en [!DNL Amazon Marketing Cloud] (AMC). |
 | Mayo de 2023 | Actualización de funcionalidad y documentación | <ul><li>Se agregó compatibilidad con la selección Región del anunciante en [flujo de trabajo de conexión de destino](#destination-details).</li><li>Se ha actualizado la documentación para reflejar la adición de la selección Región del anunciante. Para obtener más información sobre cómo seleccionar la región del anunciante correcta, consulte la [documentación de Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
