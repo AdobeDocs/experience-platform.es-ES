@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: Obtenga información sobre cómo configurar Experience Platform Web SDK para que recopile automáticamente datos de vínculos.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## Habilite propuestas automáticas e interacciones mediante el rastreo de clics a través de la extensión de etiquetas de Web SDK {#tag-extension}
 
 1. Inicie sesión en [experience.adobe.com](https://experience.adobe.com) con sus credenciales de Adobe ID.
-2. Vaya a **Recopilación de datos** > **Etiquetas**.
-3. Seleccione la propiedad de etiquetas que desee.
-4. Vaya a **Extensiones** y, a continuación, seleccione **Configurar** en la tarjeta de Adobe Experience Platform Web SDK.
-5. Desplácese hacia abajo hasta la sección **[!UICONTROL Recopilación de datos]** y, a continuación, active la casilla de verificación **Habilitar propuestas y el seguimiento de vínculos de interacción**.
-6. Seleccione **Guardar** y luego publique los cambios.
+1. Vaya a **Recopilación de datos** > **Etiquetas**.
+1. Seleccione la propiedad de etiquetas que desee.
+1. Vaya a **Extensiones** y, a continuación, seleccione **Configurar** en la tarjeta de Adobe Experience Platform Web SDK.
+1. Desplácese hacia abajo hasta la sección **[!UICONTROL Recopilación de datos]** y, a continuación, active la casilla de verificación **Habilitar propuestas y el seguimiento de vínculos de interacción**.
+1. Seleccione **Guardar** y luego publique los cambios.
 
 ## Habilite el seguimiento automático de propuestas e interacciones de vínculos a través de la biblioteca JavaScript de Web SDK {#library}
 
