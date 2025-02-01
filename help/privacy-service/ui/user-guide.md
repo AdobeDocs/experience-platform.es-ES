@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administración de trabajos de privacidad en la IU de Privacy Service
 description: Aprenda a utilizar la interfaz de usuario de Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones de Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1786'
 ht-degree: 11%
 
 ---
@@ -159,29 +159,29 @@ Para empezar a usar el Generador de solicitudes, seleccione **[!UICONTROL Crear 
 
 Se abre el cuadro de diálogo **[!UICONTROL Crear solicitud]**, que muestra las opciones disponibles para enviar una solicitud de trabajo de privacidad para el tipo de regulación seleccionado actualmente.
 
-<img src="../images/user-guide/request-builder.png" width="500" /><br/>
+![](../images/user-guide/request-builder.png){width=500}
 
 Seleccione el **[!UICONTROL Tipo de trabajo]** de la solicitud (&quot;Eliminar&quot; o &quot;Acceso&quot;) y uno o más productos disponibles de la lista.
 
 El Privacy Service admite dos tipos de solicitudes de trabajo para datos personales: [!UICONTROL Acceso] (lectura) y [!UICONTROL Eliminar]. Puede enviar una solicitud para recibir toda la información contenida en el producto que se relaciona con el sujeto de la consulta, o solicitar que se elimine toda la información relacionada con el sujeto de la consulta.
 
-<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
+![](../images/user-guide/type-and-products.png){width=500}
 
 En **[!UICONTROL Tipo de área de nombres]**, seleccione el tipo de área de nombres adecuado para los ID de cliente que se envían a [!DNL Privacy Service].
 
-<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+![](../images/user-guide/namespace-type.png){width=500}
 
 Al utilizar el tipo de área de nombres estándar, seleccione un área de nombres en el menú desplegable (correo electrónico, ECID o AAID) y, a continuación, escriba los valores de ID en el cuadro de texto de la derecha y presione **\&lt;enter>** para que cada ID la añada a la lista.
 
-<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+![](../images/user-guide/standard-namespace.png){width=500}
 
 Cuando utilice el tipo de área de nombres personalizada, debe escribir manualmente el área de nombres antes de proporcionar los valores de ID siguientes.
 
-<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+![](../images/user-guide/custom-namespace.png){width=500}
 
 Cuando termine, seleccione **[!UICONTROL Crear]**.
 
-<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
+![](../images/user-guide/request-builder-create.png){width=500}
 
 El cuadro de diálogo desaparece y los nuevos trabajos (o trabajos) se enumeran en el widget Solicitudes de trabajo junto con su estado de procesamiento actual.
 
@@ -195,12 +195,12 @@ Seleccione la flecha situada junto a **[!UICONTROL Crear solicitud]**, debajo de
 
 Aparecerá el cuadro de diálogo **[!UICONTROL Cargar JSON]**, que proporciona una ventana para que arrastre y suelte el archivo JSON en.
 
-<img src="../images/user-guide/upload-json.png" width="500" /><br/>
+![](../images/user-guide/upload-json.png){width=500}
 
 Si no tiene un archivo JSON para cargar, seleccione **[!UICONTROL Descargar Adobe-GDPR-Request.json]** para descargar una plantilla que pueda rellenar según los valores que haya recopilado de sus interesados.
 
 
-<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
+![](../images/user-guide/privacy-template.png){width=500}
 
 
 Busque el archivo JSON en el equipo y arrástrelo a la ventana de diálogo. Si la carga se realiza correctamente, el nombre del archivo aparecerá en el cuadro de diálogo. Puede continuar agregando más archivos JSON según sea necesario arrastrándolos y soltándolos en el cuadro de diálogo.

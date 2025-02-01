@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipo de datos del dispositivo
 description: Obtenga información sobre el tipo de datos XDM del dispositivo.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 18%
+source-wordcount: '307'
+ht-degree: 17%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 [!UICONTROL Dispositivo] es un tipo de datos XDM estándar que describe un dispositivo identificado. Un dispositivo es una aplicación o instancia de explorador que se puede rastrear a través de sesiones (por lo general, mediante cookies).
 
-<img src="../images/data-types/device.png" width="450" /><br />
+![](../images/data-types/device.png){width=450}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

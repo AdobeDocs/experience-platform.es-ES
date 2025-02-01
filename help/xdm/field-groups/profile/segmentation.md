@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Grupo de campos de esquema de detalles de pertenencia a segmento
 description: Obtenga información acerca del grupo de campos de esquema Detalles de pertenencia a segmentos.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 3%
+source-wordcount: '402'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 >
 >Aunque el campo `segmentMembership` debe agregarse manualmente al esquema de perfil mediante este grupo de campos, no debe intentar rellenar ni actualizar este campo manualmente. El sistema actualiza automáticamente la asignación `segmentMembership` para cada perfil a medida que se realizan los trabajos de segmentación.
 
-<img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
+![segmentación de perfiles](../../images/data-types/profile-segmentation.png){width=400}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de datos del nombre de persona
 description: Obtenga información sobre el tipo de datos XDM de nombre de persona.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '232'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 Además, el tipo de datos proporciona una serie de propiedades opcionales que se pueden utilizar en situaciones que requieren utilizar solo un fragmento del nombre completo, como la creación de un saludo formal o informal.
 
-<img src="../images/data-types/person-name.png" width="500" /><br />
+![](../images/data-types/person-name.png){width=500}
 
 | Propiedad | Descripción |
 | --- | --- |

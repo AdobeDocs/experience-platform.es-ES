@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Grupo de campos de esquema de detalles del entorno
 description: Obtenga información sobre el grupo de campos de esquema Detalles del entorno de ExperienceEvent.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '191'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 [!UICONTROL Detalles del entorno] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md) que se usa para capturar información con respecto a los detalles del entorno relacionados con un evento de experiencia, como detalles del dispositivo, información del explorador, hora local y otra información geográfica.
 
-<img src="../../images/field-groups/environment-details.png" width="500" /><br />
+![](../../images/field-groups/environment-details.png){width=500}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

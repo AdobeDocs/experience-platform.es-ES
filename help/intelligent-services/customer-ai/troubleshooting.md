@@ -6,9 +6,9 @@ title: Solución de errores de Customer AI
 description: Encuentre respuestas a errores comunes en Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ La inteligencia artificial aplicada al cliente muestra errores cuando falla la f
 
 En caso de que se muestre **[!UICONTROL Error]** o **[!UICONTROL Problema de formación]**, puede seleccionar el estado de ejecución para abrir un panel lateral. El panel lateral contiene **[!UICONTROL Último estado de ejecución]** y **[!UICONTROL Detalles de la última ejecución]**. **[!UICONTROL Detalles de la última ejecución]** contiene información sobre el motivo del error de la ejecución. En caso de que la inteligencia artificial aplicada al cliente no pueda proporcionar detalles sobre el error, póngase en contacto con el servicio de asistencia técnica e incluya el código de error proporcionado.
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## No se puede acceder a la inteligencia artificial aplicada al cliente en Chrome de incógnito
 
@@ -39,7 +39,7 @@ Para solucionar este problema, debe agregar experience.adobe.com como sitio que 
 
 Si recibe el error &quot;[!UICONTROL La calidad del modelo es deficiente. Se recomienda crear una aplicación nueva con la configuración modificada &quot;]&quot;. Siga los pasos recomendados a continuación para solucionar los problemas.
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### Corrección recomendada
 

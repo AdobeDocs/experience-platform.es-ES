@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de datos del círculo geográfico
 description: Obtenga información sobre el tipo de datos XDM de círculo geográfico.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '126'
 ht-degree: 11%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 [!UICONTROL Círculo geográfico] es un tipo de datos XDM estándar que describe una región geográfica circular, dado un radio particular centrado en un conjunto específico de coordenadas. Este tipo de datos se basa en la especificación pública documentada en [schema.org](https://schema.org/GeoCircle).
 
-<img src="../images/data-types/geo-circle.png" width="400" /><br />
+![](../images/data-types/geo-circle.png){width=400}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

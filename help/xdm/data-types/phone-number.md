@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de datos de número de teléfono
 description: Obtenga información sobre el tipo de datos XDM Número de teléfono.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '189'
 ht-degree: 16%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 [!UICONTROL Número de teléfono] es un tipo de datos XDM estándar que describe los detalles de un número de teléfono.
 
-<img src="../images/data-types/phone-number.png" width="600" /><br />
+![](../images/data-types/phone-number.png){width=600}
 
 | Propiedad | Descripción |
 | --- | --- |

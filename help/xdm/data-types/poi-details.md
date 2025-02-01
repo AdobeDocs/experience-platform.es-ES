@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de datos de detalles del punto de interés
 description: Obtenga información sobre el tipo de datos XDM de detalles del punto de interés.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '182'
 ht-degree: 15%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 [!UICONTROL Detalles del punto de interés] es un tipo de datos XDM estándar que describe los datos geográficos donde se observó un evento.
 
-<img src="../images/data-types/poi-details.png" width="550" /><br />
+![](../images/data-types/poi-details.png){width=550}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

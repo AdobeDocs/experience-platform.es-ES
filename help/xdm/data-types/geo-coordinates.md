@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipo de datos de coordenadas geográficas
 description: Obtenga información sobre el tipo de datos XDM de coordenadas geográficas.
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 13%
+source-wordcount: '124'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 [!UICONTROL Coordenadas geográficas] es un tipo de datos XDM estándar que describe las coordenadas geográficas de un lugar. Este tipo de datos se basa en la especificación pública documentada en [schema.org](https://schema.org/GeoCoordinates).
 
-<img src="../images/data-types/geo-coordinates.png" width="400" /><br />
+![](../images/data-types/geo-coordinates.png){width=400}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |

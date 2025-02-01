@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo de datos de suscripción
 description: Obtenga información acerca del tipo de datos del Modelo de datos de experiencia de suscripción (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '390'
 ht-degree: 28%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 28%
 
 [!UICONTROL Subscription] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe los derechos con licencia para software, servicios o bienes que se utilizan en función del tiempo o el uso.
 
-<img src="../images/data-types/subscription-data-type.png" width="500" /><br />
+![](../images/data-types/subscription-data-type.png){width=500}
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
