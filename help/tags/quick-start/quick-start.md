@@ -2,10 +2,10 @@
 title: Guía de inicio rápido
 description: Aprenda a empezar rápidamente a usar etiquetas con Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
+source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
 workflow-type: tm+mt
 source-wordcount: '1521'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las etiquetas son la nueva generación de tecnología de administración de etiquetas de Adobe Experience Platform. Se desarrolla desde cero para ofrecer un ecosistema abierto y sostenible, donde cualquier persona puede crear sus propias integraciones que los clientes de Adobe pueden implementar en sus sitios. Es una aplicación API First, por lo que todo lo que se puede hacer a través de la IU también se puede hacer mediante una API.
 
@@ -134,6 +134,6 @@ Para obtener más información sobre los distintos estados y opciones disponible
 
 Para obtener más información sobre las etiquetas, consulte los siguientes recursos:
 
-* **[La comunidad de recopilación de datos](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Formule y responda preguntas, aporte ideas, y vote las ideas de otros. Inicie sesión con su ID de Adobe.
+* **[La comunidad de recopilación de datos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Formule y responda preguntas, aporte ideas, y vote las ideas de otros. Inicie sesión con su ID de Adobe.
 * **[Documentos de desarrolladores](../api/overview.md)**: Participe en la comunidad de desarrolladores de etiquetas para desarrollar extensiones o utilizar las API de etiquetas.
 * **[Información general sobre tutoriales](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=es)**: Estos documentos le presentan conceptos de etiquetas, incluidos el reenvío de eventos y SDK móvil en aplicaciones Android.
