@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Etiquetas de administración de control de acceso basado en atributos
 description: Este documento proporciona información sobre la administración de etiquetas a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
+source-git-commit: 71a2e91b6c23021aa11c19d84096d6b23f0de112
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 10%
+source-wordcount: '247'
+ht-degree: 24%
 
 ---
 
@@ -24,6 +24,12 @@ Las etiquetas permiten categorizar conjuntos de datos y campos según las polít
 >id="platform_abac_labelusage"
 >title="Uso de etiquetas"
 >abstract="Puede utilizar etiquetas personalizadas para aplicar a los datos configuraciones de control de acceso y de gobernanza de datos."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Crear nueva etiqueta"
+>abstract="Puede crear sus propias etiquetas personalizadas para adaptarlas a las necesidades de su organización. Las etiquetas personalizadas se pueden usar para aplicar a los datos configuraciones de control de acceso y de gobernanza de datos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es#manage-labels" text="Administrar etiquetas personalizadas"
 
 >[!NOTE]
 >

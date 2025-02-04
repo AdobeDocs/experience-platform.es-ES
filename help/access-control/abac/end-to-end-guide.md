@@ -4,10 +4,10 @@ title: Guía completa de control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 17%
+source-wordcount: '1593'
+ht-degree: 3%
 
 ---
 
@@ -66,31 +66,8 @@ Aparece el área de trabajo Permisos para la interfaz de usuario de Platform, qu
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="¿Qué son las etiquetas?"
->abstract="Las etiquetas permiten clasificar los conjuntos de datos y campos según las directivas de uso que se aplican a esos datos. Platform proporciona varias etiquetas de uso de datos “principales” definidas por Adobe, que abarcan una amplia variedad de restricciones comunes aplicables a la gobernanza de datos. Por ejemplo, las etiquetas “S” confidenciales, como RHD (Datos protegidos de salud), permiten clasificar los datos que hacen referencia a la información confidencial sobre salud (PHI). También puede definir sus propias etiquetas personalizadas para que se adapten a las necesidades de su organización."
+>abstract="Utilice etiquetas para categorizar conjuntos de datos y campos según las políticas de uso y acceso que se aplican a esos datos. Platform proporciona varias etiquetas de uso de datos <strong>core</strong> definidas por el Adobe que cubren una amplia variedad de restricciones comunes aplicables al control de datos. Por ejemplo, las etiquetas confidenciales <strong>S</strong>, como RHD (Datos de salud regulados), le permiten categorizar los datos que hacen referencia a Información de salud protegida (PHI). También puede definir sus propias etiquetas personalizadas para que se adapten a las necesidades de su organización."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es#understanding-data-usage-labels" text="Información general sobre las etiquetas de uso de datos"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_labels_about_create"
->title="Crear nueva etiqueta"
->abstract="Puede crear sus propias etiquetas personalizadas para adaptarlas a las necesidades de su organización. Las etiquetas personalizadas se pueden usar para aplicar a los datos configuraciones de control de acceso y de gobernanza de datos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es#manage-labels" text="Administrar etiquetas personalizadas"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about"
->title="¿Qué son las funciones?"
->abstract="Las funciones son formas de clasificar los tipos de usuarios que interactúan con la instancia de Platform y que son componentes básicos de las directivas de control de acceso. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=es" text="Administrar funciones"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about_create"
->title="Crear nueva función"
->abstract="Puede crear una nueva función para clasificar mejor a los usuarios que acceden a su instancia de Platform. Por ejemplo, puede crear una función para un equipo de marketing interno y aplicar la etiqueta RHD a esa función, lo que permite que su equipo de marketing interno acceda a la información confidencial sobre salud (PHI). Alternativamente, también puede crear una función para una agencia externa y denegar el acceso de esa función a los datos de PHI al no aplicar la etiqueta RHD a esa función."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=es#create-a-new-role" text="Crear una nueva función"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_details"
->title="Información general sobre la función"
->abstract="El cuadro de diálogo de información general sobre la función muestra los recursos y las zonas protegidas a los que puede acceder una función determinada."
 
 Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Platform y son componentes básicos de las directivas de control de acceso. Una función tiene un conjunto determinado de permisos y los miembros de la organización pueden asignarse a una o varias funciones, según el ámbito de acceso que necesiten.
 

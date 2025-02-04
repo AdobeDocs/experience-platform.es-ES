@@ -3,14 +3,20 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Administrar permisos de funciones
 description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
+source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 1%
+source-wordcount: '1608'
+ht-degree: 4%
 
 ---
 
-# Administración de permisos de una función
+# Administración de permisos de una función {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="¿Qué son las funciones?"
+>abstract="Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. Clasifican los usuarios que interactúan con la instancia de Platform y son los componentes básicos de las políticas de control de acceso. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=es" text="Administrar funciones"
 
 >[!IMPORTANT]
 >
@@ -41,7 +47,14 @@ Para quitar un filtro, selecciona la &quot;X&quot; en el icono de la píldora pa
 
 ![El panel Roles de la interfaz de usuario de permisos con la X y Borrar todas las selecciones resaltadas en los filtros elegidos.](../../images/flac-ui/flac-clear-filters.png)
 
-## Detalles del rol
+## Detalles del rol {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Información general sobre la función"
+>abstract="El cuadro de diálogo de información general de funciones muestra los detalles de la función, incluidos los recursos y los entornos limitados a los que una función determinada puede acceder. Puede administrar etiquetas, usuarios, grupos de usuarios y credenciales de API para la función navegando a la pestaña correspondiente dentro del espacio de trabajo de la función."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Administrar etiquetas de un rol"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Administrar usuarios de un rol"
 
 Seleccione el rol de la ficha **[!UICONTROL Roles]**, la cual abrirá el tablero [!UICONTROL Detalles] del rol.
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Crear una función
 description: Este documento proporciona información sobre la administración de funciones a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '618'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,14 @@ ht-degree: 7%
 
 Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten.
 
-## Crear una nueva función
+## Crear una nueva función {#create-new-role}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Crear nueva función"
+>abstract="Cree nuevas funciones para categorizar mejor a los usuarios que interactúan con la instancia de Platform. Por ejemplo, puede crear una función para un equipo de marketing interno y aplicar la etiqueta de datos de mantenimiento regulados (RHD) a esa función, lo que permite a su equipo de marketing interno acceder a la información médica protegida (PHI). Alternativamente, también puede crear una función para una agencia externa y negar a esa función el acceso a los datos de PHI al no aplicar la etiqueta RHD a esa función."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=es" text="Administrar un rol"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Aplicar etiquetas a una función"
 
 Para crear una función nueva, seleccione la ficha **[!UICONTROL Funciones]** en la barra lateral y seleccione **[!UICONTROL Crear función]**.
 
