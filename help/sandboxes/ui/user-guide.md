@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de Sandbox
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con los entornos limitados de la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
+source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1115'
 ht-degree: 4%
 
 ---
@@ -82,6 +82,7 @@ Una vez que haya terminado de crear la zona protegida, actualice la página y ap
 >* Una zona protegida de producción creada por el usuario que se utiliza para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de Audience se puede restablecer después de un mensaje de advertencia.
 >* Antes de iniciar el restablecimiento de una zona protegida, se le pedirá que elimine sus composiciones manualmente para asegurarse de que los datos de audiencia asociados se limpien correctamente.
 >* La ID de la zona protegida cambiará una vez completado el restablecimiento.
+>* Para [Journey Optimizer B2B edition](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/guide-overview), el restablecimiento de la zona protegida **no se admite actualmente**. Restablecer o eliminar una zona protegida asignada a Journey Optimizer B2B edition puede provocar la pérdida permanente de datos en Journey Optimizer B2B edition y requerir la provisión de una nueva instancia de Journey Optimizer B2B edition.
 
 ### Eliminar composiciones de audiencia
 
