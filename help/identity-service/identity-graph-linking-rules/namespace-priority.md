@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
 >title="Prioridad de área de nombres"
->abstract="La prioridad del espacio de nombres determina cómo se quitan los vínculos del gráfico de identidad."
+>abstract="La prioridad del área de nombres determina cómo se eliminan los vínculos del gráfico de identidad."
 
 >[!AVAILABILITY]
 >

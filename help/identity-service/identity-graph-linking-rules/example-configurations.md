@@ -13,8 +13,8 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
->title="Configuración de algoritmo"
->abstract="Configure un espacio de nombres único y una prioridad de área de nombres adaptada a las identidades ingeridas."
+>title="Configuración del algoritmo"
+>abstract="Configure un área de nombres único y una prioridad de área de nombres adaptada a las identidades ingeridas."
 
 >[!AVAILABILITY]
 >

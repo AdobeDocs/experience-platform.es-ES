@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
 source-wordcount: '2947'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
@@ -45,14 +45,14 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Horas calculadas previstas"
->abstract="Su uso podría alcanzar la cantidad con licencia. Para evaluar o reducir las horas de cálculo, vaya a Consultas > Registro para revisar el historial de consultas. Si no tiene permiso para acceder al espacio de trabajo Consultas, póngase en contacto con el administrador."
+>abstract="Su uso podría alcanzar la cantidad bajo licencia. Para evaluar o reducir las horas de cálculo, vaya a Consultas > Registro para revisar el historial de consultas. Si no tiene permiso para acceder al espacio de trabajo Consultas, póngase en contacto con el administrador."
 >additional-url="https://experience.adobe.com/#/platform/query/log" text="Espacio de trabajo Registro de consultas"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
->title="Audiencia a la que se puede dirigir predicha"
->abstract="Su uso podría alcanzar la cantidad con licencia. Para reducir el uso, configure la caducidad de los conjuntos de datos o de perfiles seudónimos para las zonas protegidas y los conjuntos de datos."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Caducidad de Experience Event"
+>title="Público destinatario previsto"
+>abstract="Su uso podría alcanzar la cantidad bajo licencia. Para reducir el uso, puede configurar las caducidades de los datos del conjunto de datos o de perfiles seudónimos para las zonas protegidas y los conjuntos de datos."
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/profile/event-expirations" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/profile/pseudonymous-profiles" text="Caducidades de los datos de perfiles seudónimos"
 
 Puede ver información importante sobre el uso de licencias de su organización en el panel de control de Adobe Experience Platform [!UICONTROL Uso de licencias]. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
@@ -111,14 +111,14 @@ Las tablas indican la métrica principal de cada producto, ya que cada producto 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Uso previsto"
->abstract="Las predicciones se basan en el uso durante los últimos 6 a 7 meses y se generan el 15 de cada mes. Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe. Para reducir el uso, configure la caducidad de los conjuntos de datos o de perfiles seudónimos para las zonas protegidas y los conjuntos de datos."
+>abstract="Las predicciones se basan en el uso durante los últimos 6 a 7 meses y se generan el 15 de cada mes. Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe. Para reducir el uso, puede configurar las caducidades de los datos del conjunto de datos o de perfiles seudónimos para las zonas protegidas y los conjuntos de datos."
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Caducidades automatizadas de conjuntos de datos"
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/profile/pseudonymous-profiles" text="Caducidades de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Uso previsto"
->abstract="Las predicciones se basan en el uso durante los últimos 6 a 7 meses y se generan el 15 de cada mes. Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe. Para reducir el uso, configure la caducidad de los conjuntos de datos o de perfiles seudónimos para las zonas protegidas y los conjuntos de datos."
+>abstract="Las predicciones se basan en el uso durante los últimos 6 a 7 meses y se generan el 15 de cada mes. Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe. Para reducir el uso, puede configurar las caducidades de los datos del conjunto de datos o de perfiles seudónimos para las zonas protegidas y los conjuntos de datos."
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Caducidades automatizadas de conjuntos de datos"
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/profile/pseudonymous-profiles" text="Caducidades de los datos de perfiles seudónimos"
 

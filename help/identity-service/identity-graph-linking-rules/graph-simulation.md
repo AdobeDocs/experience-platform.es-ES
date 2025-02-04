@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="Simulación de gráfico"
->abstract="Simule gráficos para comprender cómo el servicio de identidad vincula las identidades y cómo funciona el algoritmo de optimización de identidad."
+>abstract="Simule gráficos para comprender cómo vincula el servicio de identidad las identidades y cómo funciona el algoritmo de optimización de identidad."
 
 >[!AVAILABILITY]
 >
