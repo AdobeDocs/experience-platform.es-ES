@@ -6,10 +6,10 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
+source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
 workflow-type: tm+mt
-source-wordcount: '775'
-ht-degree: 43%
+source-wordcount: '772'
+ht-degree: 44%
 
 ---
 
@@ -241,7 +241,8 @@ ht-degree: 43%
       * [Centro de decisiones de clientes de Pega](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Información general](./extensions/server/pinterest/overview.md)
-      * [API de conversiones de instantáneas](https://exchange.adobe.com/apps/ec/108550)
+      * [!DNL Snapchat] {#snap}
+         * [Información general](./extensions/server/snap/overview.md)
       * [!DNL Snowflake] {#snowflake}
          * [Información general](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}

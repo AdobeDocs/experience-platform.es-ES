@@ -3,10 +3,10 @@ title: Introducción al reenvío de eventos
 description: Siga este tutorial paso a paso para empezar a utilizar el reenvío de eventos en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 74%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Para utilizar el reenvío de eventos en Adobe Experience Platform, los datos deben enviarse a Adobe Experience Platform Edge Network mediante una o varias de las tres opciones siguientes:
 
@@ -35,7 +35,7 @@ Después de enviar datos a Edge Network, puede activar las soluciones de Adobe p
 
 * Adobe Real-Time CDP Connections, Prime o Ultimate (póngase en contacto con el equipo de su cuenta de Adobe para conocer los precios)
 * Reenvío de eventos en Adobe Experience Platform
-* SDK web de Adobe Experience Platform, SDK móvil o API de servidor de Edge Network configurada para enviar datos al Edge Network
+* Adobe Experience Platform Web SDK, Mobile SDK o la API de Edge Network Server configurada para enviar datos al Edge Network
 * Los datos deben asignarse al modelo de datos de experiencia (XDM) (esta asignación puede realizarse utilizando etiquetas)
 
 ## Creación de un esquema XDM
@@ -82,7 +82,7 @@ La descripción ayuda a identificar las configuraciones en una lista de varias c
 
 1. Seleccione **[!UICONTROL Guardar]**.
 
-## Habilitar el reenvío de eventos
+## Habilitar el reenvío de eventos {#enable-event-forwarding}
 
 A continuación, configure Edge Network para enviar datos a reenvío de eventos y a otros productos de Adobe.
 
@@ -100,17 +100,17 @@ A continuación, configure Edge Network para enviar datos a reenvío de eventos 
 
 Después de realizar la configuración, anote los ID de entorno para la nueva propiedad.
 
-## Configure la extensión del SDK web de Platform para enviar datos al conjunto de datos creado anteriormente
+## Configure la extensión Platform Web SDK para enviar datos al conjunto de datos creado anteriormente
 
-Cree su propiedad en el área de trabajo **[!UICONTROL Etiquetas]**, luego vaya a **[!UICONTROL Extensiones]** y seleccione la extensión de SDK web de Experience Platform del catálogo para configurarla e instalarla.
+Cree su propiedad en el área de trabajo **[!UICONTROL Tags]**, luego vaya a **[!UICONTROL Extensiones]** y seleccione la extensión de Experience Platform Web SDK en el catálogo para configurarla e instalarla.
 
-Consulte la [documentación de la extensión del SDK web](../../extensions/client/web-sdk/overview.md) para obtener más información sobre las opciones de configuración.
+Consulte la [documentación de la extensión de Web SDK](../../extensions/client/web-sdk/overview.md) para obtener detalles sobre las opciones de configuración.
 
 ## Creación de una regla de etiqueta para enviar datos al SDK web de Platform
 
 Cuando todo lo anterior esté listo, podrá generar las definiciones de datos, las reglas, etc. que utilicen el reenvío de eventos y etiquetas, pero que solo necesiten una única solicitud de la página.
 
-Cree una regla de carga de página con la extensión del SDK web de Platform y el tipo de acción Enviar evento:
+Cree una regla de carga de página con la extensión Platform Web SDK y el tipo de acción Enviar evento:
 
 1. Abra la pestaña **[!UICONTROL Reglas]** y seleccione **[!UICONTROL Crear nueva regla]**.
 
