@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Caducidad de datos de perfil seudónimo
 description: Este documento proporciona instrucciones generales para configurar la caducidad de los datos de los perfiles seudónimos en Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 9489156617f29d4aab2038b74f75a832ff4dc8eb
+source-git-commit: 208f327d35749c97ac77f337493d8759e8622dcd
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,12 @@ ht-degree: 0%
 En Adobe Experience Platform, puede configurar los tiempos de caducidad de los datos para perfiles seudónimos, lo que le permite eliminar automáticamente los datos del almacén de perfiles que ya no son válidos o útiles para sus casos de uso.
 
 ## Perfil seudónimo {#pseudonymous-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_pseudonymousprofile"
+>title="¿Qué es un perfil seudónimo?"
+>abstract="Un perfil seudónimo es un perfil que tiene un área de nombres de identidad seudónima o desconocida o un perfil que no ha tenido actividad durante un período de tiempo determinado."
+>text="Learn more in documentation"
 
 Un perfil se considera para la caducidad de datos seudónimos si cumple las siguientes condiciones:
 
