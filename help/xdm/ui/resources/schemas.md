@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Aprenda los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4072'
 ht-degree: 1%
 
 ---
@@ -354,7 +354,7 @@ Tenga en cuenta que los nombres para mostrar de los campos que pertenecen a clas
 >
 Una vez que realice cambios en los nombres para mostrar de los campos de un esquema, esos cambios se reflejarán inmediatamente en cualquier conjunto de datos existente basado en ese esquema.
 
-Para editar el nombre para mostrar de un campo de esquema, seleccione el campo en el lienzo. En el carril derecho, proporcione el nuevo nombre en **[!UICONTROL Nombre para mostrar]**.
+Cambie los nombres de campo a los nombres para mostrar activando **[!UICONTROL Mostrar nombres para mostrar para los campos]**. Para editar el nombre para mostrar de un campo de esquema, seleccione el campo en el lienzo. En el carril derecho, proporcione el nuevo nombre en **[!UICONTROL Nombre para mostrar]**.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
