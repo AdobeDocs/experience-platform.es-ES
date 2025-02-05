@@ -2,10 +2,10 @@
 title: Guía de preguntas para el asistente de IA
 description: Lea este documento para conocer las preguntas de ejemplo que puede utilizar al consultar el Ayudante de IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 3%
+source-wordcount: '2105'
+ht-degree: 2%
 
 ---
 
@@ -81,7 +81,7 @@ Las preguntas siguientes están agrupadas por objetos de datos y se clasifican c
    * ¿Cuándo debo usar un tipo de datos o un grupo de campos?
    * ¿Cuál es la diferencia entre una identidad y una clave principal o externa?
 * **Solución de problemas - Conocimiento del producto (Real-Time CDP y Journey Optimizer)**
-   * ¿En qué puede ayudar el Asistente de IA?
+   * ¿En qué puede ayudar el asistente de IA?
    * ¿Puedo eliminar un esquema habilitado para perfiles después de la ingesta de datos?
    * ¿Por qué no puedo eliminar una audiencia?
    * ¿Cuánto tiempo tardan las audiencias en evaluarse y los resultados en estar disponibles para la segmentación?
@@ -115,6 +115,75 @@ En las tablas siguientes se describen las prácticas recomendadas que puede segu
 | Omitir criterios o parámetros. | Mostrar conjuntos de datos. |
 
 {style="table-layout:auto"}
+
+## Observabilidad de conjuntos de datos {#dataset-observability}
+
+El asistente de IA ahora puede responder preguntas sobre métricas de conjuntos de datos específicas, como el tamaño de almacenamiento y el recuento de filas.
+
+* ¿Cuáles son mis conjuntos de datos más grandes por tamaño?
+* ¿Cuál es mi conjunto de datos más grande por filas?
+* ¿Cuántos conjuntos de datos están vacíos?
+* ¿Qué conjuntos de datos están vacíos?
+
+Además, puede transmitir una intención similar a través de una serie de variaciones diferentes a las cuatro preguntas mencionadas.
+
++++Seleccione esta opción para ver las variaciones aceptadas de preguntas de observabilidad de conjuntos de datos
+
+* ¿Cuáles son los cinco conjuntos de datos principales por tamaño?
+* ¿Qué conjunto de datos tiene el mayor número de filas?
+* ¿Cuántos conjuntos de datos no contienen datos?
+* ¿Desea enumerar los conjuntos de datos con un tamaño >10 MB?
+* Enumere los conjuntos de datos con filas inferiores a 10.
+* ¿Puede mostrarme los conjuntos de datos que están completamente vacíos?
+* ¿Qué conjunto de datos es el más grande por tamaño de almacenamiento?
+* ¿Cuál es el conjunto de datos más pequeño en términos de recuento de filas?
+* ¿Cuántos de mis conjuntos de datos tienen datos y cuántos están vacíos?
+* ¿Cuál es el recuento de filas del conjunto de datos denominado {DATASET_NAME}?
+* ¿En qué se diferencia el tamaño de {DATASET_NAME} de mis otros conjuntos de datos?
+* ¿Qué tamaño tiene {DATASET_NAME}?
+* ¿Cuántas filas tiene {DATASET_NAME}?
+* ¿Cuál es el tamaño y el recuento de filas de {DATASET_NAME}?
+* ¿Puede enumerar los conjuntos de datos más grandes y más pequeños por tamaño de almacenamiento?
+
++++
+
+También puede perfeccionar las preguntas de observación de datos con un calificador para filtrar la consulta por un período de tiempo determinado:
+
+* Conjuntos de datos que reciben lotes en los últimos (x) días
+* Conjuntos de datos que no reciben lotes en los últimos (x) días
+* Conjuntos de datos con la mayor cantidad de datos ingeridos en los últimos (x) días
+* Registrar el recuento de un conjunto de datos específico en los últimos (x) días
+
++++Seleccione esta opción para ver las variaciones aceptadas de preguntas de observabilidad de conjuntos de datos
+
+* ¿Cuántos conjuntos de datos han recibido lotes en los últimos (x) días?
+* ¿Qué conjuntos de datos han recibido lotes en los últimos (x) días?
+* ¿Puede enumerar los conjuntos de datos que tuvieron datos ingeridos en los últimos (x) días?
+* ¿Cuántos conjuntos de datos recibieron lotes nuevos en los días anteriores (x)?
+* ¿Cuáles son los conjuntos de datos que se actualizaron con nuevos datos en los últimos (x) días?
+* Enumerar conjuntos de datos que han tenido actividad por lotes en los últimos (x) días.
+* ¿Cuántos conjuntos de datos no recibieron lotes en los últimos (x) días?
+* ¿Qué conjuntos de datos no han recibido ningún lote en los últimos (x) días?
+* ¿Puede identificar conjuntos de datos sin ingesta de datos en los últimos (x) días?
+* ¿Cuántos conjuntos de datos no han recibido actualizaciones en los últimos (x) días?
+* ¿Qué conjuntos de datos han estado inactivos durante los últimos (x) días?
+* Enumerar conjuntos de datos que no recibieron lotes nuevos en los últimos (x) días.
+* ¿Cuándo fue la última vez que se ingirieron datos en el conjunto de datos (x)?
+* ¿Cuáles son los 10 conjuntos de datos principales en los que se ingirió la mayor cantidad de datos en los últimos (x) días?
+* ¿Cuáles son los 10 conjuntos de datos principales por volumen de datos ingerido en los últimos (x) días?
+* ¿Qué 10 conjuntos de datos han tenido la mayor ingesta de datos en los últimos (x) días?
+* Muestre los 10 conjuntos de datos con la ingesta de datos más alta de los últimos (x) días.
+* ¿Cuáles son los conjuntos de datos principales por datos recibidos en los últimos (x) días?
+* Lista de los 10 conjuntos de datos que más datos han introducido en los últimos (x) días.
+* ¿Cuántos registros se recibieron en el conjunto de datos (x) en los últimos (y) días?
+* ¿Cuántos registros recibió el conjunto de datos (x) en los últimos (y) días?
+* ¿Cuál es el recuento de registros ingerido para el conjunto de datos (x) en los últimos (y) días?
+* ¿Puede proporcionar el número de registros agregados al conjunto de datos (x) durante los últimos (y) días?
+* ¿Cuántos datos ha recibido el conjunto de datos (x) en los últimos (y) días?
+* ¿Cuál es el volumen de registros ingeridos para el conjunto de datos (x) en los días anteriores (y)?
+
++++
+
 
 ## Ejemplos de preguntas no admitidas {#unsupported-questions}
 
