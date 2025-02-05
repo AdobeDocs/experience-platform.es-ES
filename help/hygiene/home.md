@@ -2,10 +2,10 @@
 title: Información general sobre Advanced Data Lifecycle Management
 description: La administración avanzada del ciclo de vida de los datos permite administrar el ciclo de vida de los datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
+source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 2%
+source-wordcount: '828'
+ht-degree: 1%
 
 ---
 
@@ -38,24 +38,30 @@ Para ver los pasos detallados sobre la administración de tareas de ciclo de vid
 
 La interfaz de usuario [!UICONTROL Data Lifecycle] se basa en la API de higiene de datos, cuyos extremos están disponibles para que los use directamente si prefiere automatizar las actividades del ciclo de vida de datos. Consulte la [Guía de API de higiene de datos](./api/overview.md) para obtener más información.
 
-## Cronología y transparencia
+## Cronología y transparencia {#timelines-and-transparency}
 
 [Eliminación de registros](./ui/record-delete.md) y las solicitudes de caducidad de conjuntos de datos tienen sus propias escalas de tiempo de procesamiento y proporcionan actualizaciones de transparencia en puntos clave de sus respectivos flujos de trabajo.
-
-<!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
 Lo siguiente ocurre cuando se crea una [solicitud de caducidad del conjunto de datos](./ui/dataset-expiration.md):
 
 | Prueba | Tiempo tras el vencimiento programado | Descripción |
 | --- | --- | --- |
 | Se ha enviado la solicitud | 0 horas | Un administrador de datos o analista de privacidad envía una solicitud para que un conjunto de datos caduque en un momento determinado. La solicitud es visible en la [!UICONTROL IU del ciclo de vida de datos] después de enviarse y permanece en un estado pendiente hasta la hora de caducidad programada, después de la cual se ejecutará. |
-| Conjunto de datos perdido | 1 hora | El conjunto de datos se quitó de la [página de inventario del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario. Los datos dentro del lago de datos solo se eliminan de forma suave y permanecerán así hasta el final del proceso, después del cual se eliminarán de forma dura. |
+| El conjunto de datos está marcado para eliminación | 0 a 2 horas | Una vez ejecutada la solicitud, el conjunto de datos se marca para su eliminación. Si utiliza el almacenamiento de datos de Amazon Web Service (AWS), este proceso puede tardar hasta dos horas. Durante este tiempo, las operaciones como la segmentación por lotes y de flujo continuo, la previsualización o estimación, la exportación y el acceso ignoran este conjunto de datos. |
+| Conjunto de datos perdido | 3 horas | **Una hora después de que se haya marcado la eliminación del conjunto de datos**, se ha eliminado completamente del sistema. En este punto, el conjunto de datos se borra de la [página de inventario de conjuntos de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario. Sin embargo, los datos dentro del lago de datos solo se eliminan en este momento de forma suave y permanecerán así hasta que se complete el proceso de eliminación en firme. |
 | Recuento de perfiles actualizado | 30 horas | Según el contenido del conjunto de datos que se elimine, algunos perfiles pueden eliminarse del sistema si todos sus atributos de componentes están vinculados a ese conjunto de datos. 30 horas después de que se elimine el conjunto de datos, los cambios resultantes en los recuentos generales de perfiles se reflejarán en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
 | Audiencias actualizadas | 48 horas | Una vez que se hayan actualizado todos los perfiles afectados, todas las [audiencias](../segmentation/home.md) relacionadas se actualizarán para reflejar su nuevo tamaño. Según el conjunto de datos eliminado y los atributos por los que esté segmentando, el tamaño de cada audiencia podría aumentar o disminuir como resultado de la eliminación. |
 | Recorridos y destinos actualizados | 50 horas | Los [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
 | Eliminación completa del hardware | 15 días | Todos los datos relacionados con el conjunto de datos se eliminan del lago de datos. El [estado del trabajo del ciclo de vida de datos](./ui/browse.md#view-details) que eliminó el conjunto de datos se ha actualizado para reflejarlo. |
 
 {style="table-layout:auto"}
+
+>[!IMPORTANT]
+>
+>Las eliminaciones de conjuntos de datos en Amazon Web Service (AWS) están sujetas a una latencia de unas tres horas antes de que los cambios se apliquen completamente. Esto incluye hasta dos horas para que el conjunto de datos se marque para su eliminación, seguidas de una hora adicional antes de que se elimine completamente del sistema. Por el contrario, las solicitudes de eliminación para instancias de Platform que utilizan el lago de datos de Azure producen cambios inmediatos en las funciones empresariales.
+>
+>Para los usuarios de AWS, este retraso puede afectar a la segmentación por lotes, la segmentación por flujo continuo, las vistas previas, las estimaciones, las exportaciones y el acceso a los datos. Esta latencia solo afecta a los clientes que utilizan AWS, ya que los usuarios del lago de datos de Azure experimentan actualizaciones inmediatas. Para los usuarios de AWS, las solicitudes de eliminación pueden tardar hasta tres horas en propagarse completamente a través de todos los sistemas afectados. Ajuste sus expectativas en consecuencia.
+
 
 <!-- ### Record deletes {#record-delete-transparency}
 
