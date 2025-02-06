@@ -3,10 +3,10 @@ title: Exportación de objetos de matriz de Real-Time CDP a destinos de almacena
 type: Tutorial
 description: Aprenda a utilizar campos calculados para exportar matrices de Real-Time CDP a destinos de almacenamiento en la nube como cadenas.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
+source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 7%
+source-wordcount: '1698'
+ht-degree: 6%
 
 ---
 
@@ -72,6 +72,11 @@ Tenga en cuenta las siguientes limitaciones conocidas que actualmente se aplican
 ## Cómo exportar campos calculados {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="Habilite el esquema de salida jerárquico"
+>abstract="<p> Active esta configuración **en** para habilitar la exportación de matrices, mapas y objetos a archivos JSON o Parquet.</p><p>Con esta opción desactivada, puede utilizar la opción de campos calculados al activar audiencias, pero no puede exportar matrices, mapas y objetos a archivos JSON o Parquet</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Habilite el esquema de salida jerárquico"
 >abstract="Active esta opción si desea exportar estructuras jerárquicas como matrices."
@@ -79,7 +84,7 @@ Tenga en cuenta las siguientes limitaciones conocidas que actualmente se aplican
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Añadir campos calculados deshabilitado"
->abstract="Este control está deshabilitado porque ha seleccionado exportar estructuras planas al conectarse al destino."
+>abstract="Este control está deshabilitado porque seleccionó la opción **Exportar matrices, asignaciones, objetos** *en* al configurar esta conexión de destino. Para usar los campos calculados y las funciones disponibles en, configure una nueva conexión de destino con **Exportar matrices, mapas, objetos** y desactive *3}.*"
 
 En el paso de asignación del flujo de trabajo de activación para los destinos de almacenamiento en la nube, seleccione **[!UICONTROL Agregar campo calculado]**.
 
