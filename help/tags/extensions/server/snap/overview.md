@@ -2,9 +2,10 @@
 title: Información general sobre la extensión API Snapchat Conversions
 description: Utilice la conversión de Snapchat para enviar datos de evento del lado del servidor a Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
+source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 3%
 
 ---
@@ -24,7 +25,7 @@ Cree una [secuencia de datos](/help/tags/ui/event-forwarding/getting-started.md)
 
 Se requiere una cuenta de **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) para usar la API de conversiones. Business Manager ayuda a los anunciantes a integrar los esfuerzos de marketing de **[!DNL Snapchat]** en su negocio y con socios externos. Consulte el **[!DNL Snapchat]** [artículo del centro de ayuda](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sobre la creación de una cuenta de Business Manager si no dispone de una.
 
-Se debe configurar un **[!DNL Snap Pixel]**(https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) en el Administrador de anuncios de Snapchat y usted debe tener acceso para ver el `Pixel ID`. `Pixel ID` se encuentra en la sección **[!UICONTROL Administrador de eventos]**(https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
+Se debe configurar un(a) [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) en el Administrador de anuncios de Snapchat y usted debe tener acceso para ver el(la) `Pixel ID`. `Pixel ID` se encuentra en la sección [!UICONTROL [Administrador de eventos]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
 
 Necesita un token de API estático y de larga duración. Consulte la [[!DNL Snapchat] Documentación de la API de conversiones](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) para obtener este token.
 
@@ -190,7 +191,7 @@ Una vez que haya establecido el nombre, la condición y la acción de la regla c
 
 ![Imagen que muestra la regla habilitada](../../../images/extensions/server/snap/enabled_rule.png)
 
-Ahora puede publicar estos cambios en su propiedad. Consulte la documentación sobre [flujo de publicación](/help/tags/ui/publishing/overview.md)(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) para obtener más información.
+Ahora puede publicar estos cambios en su propiedad. Consulte la documentación sobre [flujo de publicación](/help/tags/ui/publishing/overview.md) para obtener más información.
 
 ## Resolución de problemas {#troubleshoot}
 
