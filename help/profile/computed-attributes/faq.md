@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre los atributos calculados
 description: Encuentre respuestas a las preguntas más frecuentes acerca del uso de atributos calculados.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Dado que los atributos calculados se crean mediante campos de Evento de experien
 
 ## ¿Hay algún límite en el número de atributos calculados que puedo crear?
 
-Sí, hay un límite en el número de atributos calculados que puede crear. Consulte la descripción del producto o póngase en contacto con el equipo de cuenta de Adobe para obtener más información.
+Sí, hay un límite en el número de atributos calculados que puede crear. Este límite solo se aplica a **atributos calculados activos**. Consulte la descripción del producto o póngase en contacto con el equipo de cuenta de Adobe para obtener más información.
 
 ## ¿Hay alguna consecuencia en sentido descendente de la desactivación de un atributo calculado?
 
