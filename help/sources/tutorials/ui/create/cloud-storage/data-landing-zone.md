@@ -2,9 +2,9 @@
 title: Conexión de la zona de aterrizaje de datos a Platform mediante la IU
 description: Obtenga información sobre cómo crear un conector de origen de zona de aterrizaje de datos mediante la interfaz de usuario de Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: cdcce07a5adf08bf9d5e6a08d6bc965d37458a5d
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,10 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Traer los archivos de [!DNL Data Landing Zone] a Platform
+
+>[!IMPORTANT]
+>
+> Para conectarse al origen, necesita los permisos de control de acceso de **[!UICONTROL Ver orígenes]** y **[!UICONTROL Administrar orígenes]**. Lea la [descripción general del control de acceso](../../../../../access-control/home.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 

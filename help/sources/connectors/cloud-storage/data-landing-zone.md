@@ -2,9 +2,9 @@
 title: Source de zona de aterrizaje de datos
 description: Aprenda a conectar la zona de aterrizaje de datos a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1316'
 ht-degree: 0%
 
 ---
@@ -299,6 +299,12 @@ Por último, vaya a la dirección URL generada para iniciar sesión directamente
 
 ## Conectar [!DNL Data Landing Zone] al Experience Platform
 
+>[!IMPORTANT]
+>
+>- Para conectarse al origen, necesita los permisos de control de acceso de **[!UICONTROL Ver orígenes]** y **[!UICONTROL Administrar orígenes]**. Para obtener más información, lea la [descripción general del control de acceso](../../../access-control/home.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>- Actualmente no se admiten vínculos privados al conectarse al Experience Platform mediante [!DNL Data Landing Zone]. Los únicos métodos admitidos para el acceso son los enumerados [aquí](#manage-the-contents-of-your-data-landing-zone).
+
 La siguiente documentación proporciona información sobre cómo obtener datos del contenedor de [!DNL Data Landing Zone] a Adobe Experience Platform mediante API o la interfaz de usuario.
 
 ### Uso de API
@@ -310,8 +316,4 @@ La siguiente documentación proporciona información sobre cómo obtener datos d
 
 - [Conectar  [!DNL Data Landing Zone] a Platform mediante la interfaz de usuario](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Cree un flujo de datos para una conexión de almacenamiento en la nube en la IU](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->Actualmente no se admiten vínculos privados al conectarse al Experience Platform mediante [!DNL Data Landing Zone]. Los únicos métodos admitidos para el acceso son los enumerados [aquí](#manage-the-contents-of-your-data-landing-zone).
 
