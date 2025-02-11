@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido el Amazon DSP (ADSP). Con el destino de Amazon Ads en Adobe Experience Platform Amazon DSP, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en la interfaz de usuario de.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
@@ -98,10 +98,6 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 >Después de guardar la configuración de destino, no podrá cambiar el identificador del anunciante [!DNL Amazon Ads] aunque vuelva a autenticarse con su cuenta de Amazon. Para usar un identificador de anunciante [!DNL Amazon Ads] diferente, debe crear una nueva conexión de destino. Los anunciantes que ya estén configurados en una integración con ADSP para deben crear un nuevo flujo de destino si desean que sus audiencias se envíen a AMC o a una cuenta ADSP diferente.
 
 * **[!UICONTROL Región del anunciante]**: selecciona la región apropiada en la que está alojado tu anunciante. Para obtener más información sobre los mercados admitidos en cada región, visite la [documentación de Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
-
->[!IMPORTANT]
->
->La actualización para incluir la **[!UICONTROL señal de consentimiento de Amazon Ads]** está programada para el 7 de febrero de 2025.
 
 * **[!UICONTROL Señal de consentimiento de Amazon Ads]**: confirme que todos los datos enviados a través de esta conexión han consentido el uso de datos personales para su uso con fines publicitarios. &quot;CONCEDIDO&quot; indica el consentimiento de Amazon para utilizar los datos personales del cliente con fines publicitarios. Los valores permitidos son &quot;GRANTED&quot; y &quot;DENIED&quot;. Cualquier registro enviado a través de conexiones con &quot;DENEGADO&quot; se rechazará para un uso posterior en Amazon Ads.
 
