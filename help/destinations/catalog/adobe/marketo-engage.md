@@ -1,15 +1,15 @@
 ---
-title: Destino del Marketo Engage
-description: Marketo Engage es la única solución integral de administración de la experiencia del cliente (CXM) para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
+title: Destino de Marketo Engage
+description: Marketo Engage es la única solución de administración de la experiencia del cliente (CXM) integral para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
 
-# destino del Marketo Engage {#beta-marketo-engage-destination}
+# Marketo Engage destination {#beta-marketo-engage-destination}
 
 ## Registro de cambios de destino {#changelog}
 
@@ -57,8 +57,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Está exportando todos los miembros de una audiencia con los identificadores (correo electrónico, ECID) utilizados en el destino [!DNL Marketo Engage]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ El siguiente vídeo también muestra los pasos para configurar un destino de Mar
 >El vídeo no refleja completamente la capacidad actual. Para obtener la información más actualizada, consulte la guía vinculada anteriormente. Las siguientes partes del vídeo están obsoletas:
 > 
 >* La tarjeta de destino que debe usar en la interfaz de usuario de Experience Platform es **[!UICONTROL Marketo V2]**.
->* El vídeo no muestra el nuevo campo de selector **[!UICONTROL Creación de persona]** en el flujo de trabajo de conexión a destino.
+>* El vídeo no muestra el nuevo campo de selector **[!UICONTROL Creación de persona]** en el flujo de trabajo de conexión a destino. Para utilizar ese campo, debe asignar tanto el nombre como los apellidos durante el paso de asignación de atributos.
 >* Las dos limitaciones indicadas en el vídeo ya no se aplican. Ahora puede asignar muchos otros campos de atributos de perfil además de la información de pertenencia a audiencias compatible en el momento de grabar el vídeo. También puede exportar a Marketo miembros de la audiencia que aún no existan en sus listas estáticas de Marketo y que se añadirán a las listas.
 >* En el paso **[!UICONTROL Programar audiencia]** del flujo de trabajo de activación, en Marketo V1, necesitaba agregar manualmente un **[!UICONTROL ID. de asignación]** para exportar correctamente los datos a Marketo. Este paso manual ya no es necesario en Marketo V2.
 
