@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real con guías, documentación y tutoriales.
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '309'
 ht-degree: 24%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 24%
 * [Información general de plataforma](home.md)
 * [Información general de la plataforma (vídeo)](video/platform-overview.md)
 * [Información general sobre varias nubes](multi-cloud.md)
+* [Comparación de Edge Network y hub](./edge-and-hub-comparison.md)
 * [Tutoriales de plataforma](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience.md)
 * [En segundo plano, una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience-bts.md)
@@ -42,17 +43,17 @@ ht-degree: 24%
    * [Idiomas de soporte](documentation/language-support.md)
 * Aplicaciones creadas en la plataforma {#ecosystem}
    * [Información general](application-services.md)
-   * [Adobe Real-time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Adobe Real-Time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Servicios inteligentes y de aplicaciones (vídeo)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=es)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=es)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
-   * [Integraciones de Platform con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
+   * [Integraciones de plataforma con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
 * Gobernanza, privacidad y seguridad {#governance-privacy-security}
    * [Información general](./governance-privacy-security/overview.md)
    * Gestión de consentimiento {#consent}
-      * Adobe estándar {#adobe}
+      * Estándar de Adobe {#adobe}
          * [Información general](./governance-privacy-security/consent/adobe/overview.md)
          * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencia](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
