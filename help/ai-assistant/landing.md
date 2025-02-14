@@ -3,18 +3,18 @@ title: Asistente de IA en la documentación del producto de Adobe Experience Pla
 description: Introducción al Asistente de IA en Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: 49c06a1dfb3431ce8fe416d35a22567ce614107a
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '902'
+ht-degree: 0%
 
 ---
 
 # Asistente de IA en la documentación del producto de Adobe Experience Platform
 
-AI Assistant de Adobe Experience Platform es una herramienta conversacional que puede utilizar para acelerar los flujos de trabajo con aplicaciones y servicios de Experience Platform. Utilice el asistente de IA para aumentar su productividad general, ampliar su comprensión del conocimiento del producto y las perspectivas operativas, así como recopilar recomendaciones relevantes para sus consultas y casos de uso empresariales.
+AI Assistant de Adobe Experience Platform es una herramienta conversacional que puede utilizar para acelerar los flujos de trabajo con las aplicaciones y los servicios de Experience Platform. Utilice el asistente de IA para aumentar su productividad general, ampliar su comprensión del conocimiento del producto y las perspectivas operativas, así como recopilar recomendaciones relevantes para sus consultas y casos de uso empresariales.
 
-El asistente de IA es compatible con Experience Platform, Real-Time CDP, Adobe Journey Optimizer y Customer Journey Analytics.
+AI Assistant es compatible con Experience Platform, Real-Time CDP, Adobe Journey Optimizer y Customer Journey Analytics.
 
 ## Introducción 
 
@@ -42,10 +42,9 @@ Empiece leyendo el material de los vínculos siguientes para familiarizarse con 
     </tr>
 </table>
 
-
 ## Nuevas funciones
 
-Eche un vistazo a las mejoras más recientes en AI Assistant, incluidas las funcionalidades que se encuentran actualmente en las fases de Alpha o Beta.
+Eche un vistazo a las mejoras más recientes de AI Assistant, incluidas las funcionalidades que se encuentran actualmente en las fases de Alpha o Beta.
 
 >[!BEGINTABS]
 
@@ -69,7 +68,7 @@ Puede utilizar las capacidades de estimación de lenguaje natural del asistente 
 
 ### Descubra los campos XDM para la creación de audiencias
 
-Puede utilizar el Asistente de IA para ayudarle a descubrir los campos del Modelo de datos de experiencia (XDM) que puede utilizar a continuación para crear audiencias de destino dentro de Experience Platform.
+Puede utilizar el Asistente de IA para ayudarle a descubrir los campos del Modelo de datos de experiencia (XDM) que puede utilizar a continuación para crear audiencias de destino en Experience Platform.
 
 [![Imagen](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
@@ -82,6 +81,21 @@ Puede utilizar el Asistente de IA para la asistencia al cliente con el fin de so
 [![Imagen](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
+
+## Características de seguridad del asistente de IA {#security}
+
+
+Vea el siguiente vídeo para obtener más información sobre las funciones de seguridad de AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**Leer la hoja de datos de seguridad del Asistente de IA**
+
+Para obtener más información sobre el Asistente de IA, lea la [hoja informativa de seguridad para el Asistente de IA en Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 ## Biblioteca de vídeos
 
@@ -183,20 +197,6 @@ Vea los siguientes vídeos para ver ejemplos de casos de uso adicionales del asi
 * [Conozca el Asistente de IA para audiencias](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
-
-## Recursos adicionales
-
->[!BEGINSHADEBOX]
-
-**Leer la hoja de datos de seguridad del Asistente de IA**
-
-Para obtener más información sobre el Asistente de IA, lea la [hoja informativa de seguridad para el Asistente de IA en Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
-
->[!ENDSHADEBOX]
-
-Vea el siguiente vídeo para obtener más información sobre las funciones de seguridad de AI Assistant:
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 Examine los vínculos siguientes para comprender mejor los casos de uso, las capacidades y mucho más del Asistente de IA.
 
