@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Aprenda los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '4072'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Esta guía proporciona información general sobre cómo crear, editar y administ
 
 ## Requisitos previos {#prerequisites}
 
-Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para ver una introducción al papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para ver una descripción general de cómo se construyen los esquemas.
+Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para obtener una introducción al papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para obtener una descripción general de cómo se construyen los esquemas.
 
 ## Creación de un nuevo esquema {#create}
 
@@ -159,7 +159,7 @@ Una vez que haya elegido los grupos de campos, seleccione **[!UICONTROL Agregar 
 
 >[!NOTE]
 >
-En el Editor de esquemas, las clases y los grupos de campos estándar (generados por el Adobe) se indican con el icono de candado (![Icono de candado.](/help/images/icons/lock-closed.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
+Dentro del Editor de esquemas, las clases y los grupos de campos estándar (generados por Adobe) se indican con el icono de candado ![Un icono de candado.](/help/images/icons/lock-closed.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
 >
 ![Editor de esquemas con el icono de candado resaltado](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -374,7 +374,7 @@ Para reasignar una clase, seleccione **[!UICONTROL Assign]** en el lado izquierd
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-Aparece un cuadro de diálogo que muestra una lista de todas las clases disponibles, incluidas las definidas por su organización (el propietario es &quot;[!UICONTROL Customer]&quot;), así como las clases estándar definidas por el Adobe.
+Aparece un cuadro de diálogo que muestra una lista de todas las clases disponibles, incluidas las definidas por su organización (el propietario es &quot;[!UICONTROL Customer]&quot;) y las clases estándar definidas por Adobe.
 
 Seleccione una clase de la lista para mostrar su descripción en el lado derecho del cuadro de diálogo. También puede seleccionar **[!UICONTROL Previsualizar estructura de clase]** para ver los campos y metadatos asociados con la clase. Seleccione **[!UICONTROL Asignar clase]** para continuar.
 
