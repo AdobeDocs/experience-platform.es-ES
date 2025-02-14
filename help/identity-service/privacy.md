@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares
 title: Procesamiento de solicitudes de privacidad en Identity Service
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para Identity Service.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 0%
+source-wordcount: '1000'
+ht-degree: 1%
 
 ---
 
@@ -18,9 +18,9 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 
 >[!NOTE]
 >
->Esta guía solo explica cómo realizar solicitudes de privacidad para el almacén de datos de ID en Experience Platform. Si también planea realizar solicitudes de privacidad para el lago de datos de Platform o [!DNL Real-Time Customer Profile], consulte la guía sobre [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md) y la guía sobre [procesamiento de solicitudes de privacidad para el perfil](../profile/privacy.md), además de este tutorial.
+>Esta guía solo explica cómo realizar solicitudes de privacidad para el almacén de datos de identidad en Experience Platform. Si también planea realizar solicitudes de privacidad para el lago de datos de Platform o [!DNL Real-Time Customer Profile], consulte la guía sobre [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md) y la guía sobre [procesamiento de solicitudes de privacidad para el perfil](../profile/privacy.md), además de este tutorial.
 >
->Para obtener información sobre cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Para ver los pasos de cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [documentación de Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Introducción
 
@@ -32,7 +32,7 @@ Se recomienda tener una comprensión práctica de los siguientes [!DNL Experienc
 
 ## Explicación de los espacios de nombres de identidad {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] vincula los datos de identidad de los clientes entre sistemas y dispositivos. [!DNL Identity Service] utiliza **áreas de nombres de identidad** para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Un área de nombres puede representar un concepto genérico como una dirección de correo electrónico (&quot;correo electrónico&quot;) o asociar la identidad a una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o Adobe Target ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] vincula los datos de identidad de los clientes entre sistemas y dispositivos. [!DNL Identity Service] utiliza **áreas de nombres de identidad** para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Un área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;correo electrónico&quot;) o asociar la identidad a una aplicación específica, como un ID de Adobe Advertising Cloud (&quot;AdCloud&quot;) o un ID de Adobe Target (&quot;TNTID&quot;).
 
 El servicio de identidad mantiene un almacén de áreas de nombres de identidad definidas globalmente (estándar) y definidas por el usuario (personalizadas). Las áreas de nombres estándar están disponibles para todas las organizaciones (por ejemplo, &quot;correo electrónico&quot; y &quot;ECID&quot;), mientras que su organización también puede crear áreas de nombres personalizadas para adaptarlas a sus necesidades particulares.
 
@@ -52,7 +52,7 @@ La siguiente solicitud crea un nuevo trabajo de privacidad en el RGPD para los d
 
 >[!TIP]
 >
->Al eliminar un área de nombres personalizada mediante la API, debe especificar el símbolo de identidad como el área de nombres, en lugar del nombre para mostrar.
+>Debe especificar el símbolo de identidad como el área de nombres en lugar del nombre para mostrar, al eliminar identidades mediante la eliminación del RGPD.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->Al eliminar un área de nombres personalizada mediante la interfaz de usuario de, debe especificar el símbolo de identidad como el área de nombres en lugar del nombre para mostrar. Además, no puede eliminar áreas de nombres personalizadas en la interfaz de usuario para zonas protegidas que no sean de producción.
+>Debe especificar el símbolo de identidad como el área de nombres en lugar del nombre para mostrar, al eliminar identidades mediante la eliminación del RGPD.
 
 Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Identidad]** en **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en [!DNL Identity Service].
 

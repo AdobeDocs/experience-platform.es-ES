@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 26%
+source-wordcount: '143'
+ht-degree: 28%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 26%
       - [Guía de implementación para reglas de vinculación de gráficos de identidad](./identity-graph-linking-rules/implementation-guide.md)
       - [Ejemplo de configuraciones de gráficos](./identity-graph-linking-rules/example-configurations.md)
       - [Solución de problemas de reglas de vinculación de gráficos de identidad](./identity-graph-linking-rules/troubleshooting.md)
-      - [Prioridad de área de nombres](./identity-graph-linking-rules/namespace-priority.md)
+      - [Prioridad de espacios de nombres](./identity-graph-linking-rules/namespace-priority.md)
       - [IU de simulación de gráficos](./identity-graph-linking-rules/graph-simulation.md)
       - [IU de configuración de identidad](./identity-graph-linking-rules/identity-settings-ui.md)
    - [Información general de ECID](./features/ecid.md)
@@ -44,7 +44,6 @@ ht-degree: 26%
    - [Crear un área de nombres personalizada](api/create-custom-namespace.md)
    - [Enumeración del ID nativo de una identidad](api/list-native-id.md)
    - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Detección de dispositivos compartidos](shared-device-detection.md)
 - [Definición de campos de identidad en la IU](label-identities.md)
 - [Procesamiento de solicitud de privacidad](privacy.md)
 - [Guía de resolución de problemas](troubleshooting-guide.md)
