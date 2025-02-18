@@ -1,12 +1,12 @@
 ---
-description: Descubra cómo puede monitorizar los flujos de datos de sus destinos mediante la interfaz de usuario del Experience Platform.
+description: Descubra cómo puede monitorizar los flujos de datos de sus destinos mediante la interfaz de usuario de Experience Platform.
 solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
+source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
 workflow-type: tm+mt
-source-wordcount: '3636'
+source-wordcount: '3637'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ Utilice los distintos destinos del catálogo de Experience Platform para activar
 
 El panel de monitorización le proporciona una representación visual del recorrido de un flujo de datos, incluido el destino al que se activan los datos, el tipo de datos que está viendo, los datos exportados por ejecución de flujo de datos y mucho más.
 
-Este tutorial proporciona instrucciones sobre cómo puede monitorizar los flujos de datos directamente en el espacio de trabajo de destinos o utilizar el panel de monitorización para monitorizar los flujos de datos de sus destinos mediante la interfaz de usuario del Experience Platform.
+Este tutorial proporciona instrucciones sobre cómo puede supervisar los flujos de datos directamente en el espacio de trabajo de destinos o utilizar el panel de monitorización para supervisar los flujos de datos de sus destinos mediante la interfaz de usuario de Experience Platform.
 
 ## Introducción {#getting-started}
 
@@ -97,11 +97,11 @@ Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
   >[!IMPORTANT]
   >
-  > A partir de octubre de 2024, Adobe implementará gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre el Experience Platform y los informes de las plataformas de destino.
+  > A partir de octubre de 2024, Adobe implementará gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre los informes de Experience Platform y de las plataformas de destino.
   >
   > Antes de esta actualización, **[!UICONTROL Identidades con errores]** incluían todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total.
   > 
-  > Esta mejora se aplica actualmente a [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md), pero se implementará gradualmente en otros destinos de streaming para Experience Platform.
+  > Esta mejora se aplica actualmente a [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md), pero se implementará gradualmente en otros destinos de flujo continuo de Experience Platform.
   > Tras esta mejora, es posible que los usuarios del destino de [segmentación por lista de clientes de Google](../../destinations/catalog/advertising/google-customer-match.md) vean una caída esperada en su recuento de **[!UICONTROL Identities failed]**.
 
 
@@ -121,7 +121,12 @@ La página de detalles también muestra una lista de identidades que fallaron y 
 
 #### (Beta) Monitorización de ejecución de flujo de datos en el nivel de audiencia para destinos de streaming {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Puede ver información sobre las identidades activadas, excluidas o fallidas desglosada a nivel de audiencia para cada audiencia que forme parte del flujo de datos. Actualmente, la monitorización a nivel de audiencia para destinos de streaming solo está disponible para [[!DNL Google Customer Match + Display & Video 360] destino](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+Puede ver información sobre las identidades activadas, excluidas o fallidas desglosada a nivel de audiencia para cada audiencia que forme parte del flujo de datos.
+
+Actualmente, la monitorización a nivel de audiencia para destinos de streaming solo está disponible para los siguientes destinos:
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![Supervisión a nivel de audiencia para destinos de flujo continuo.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -205,7 +210,7 @@ También puede seleccionar ver información enriquecida sobre un flujo de datos 
 
 >[!NOTE]
 >
->Actualmente, la funcionalidad de supervisión de destinos es compatible con todos los destinos del Experience Platform *excepto* los destinos [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md).
+>Actualmente, la funcionalidad de supervisión de destinos es compatible con todos los destinos de Experience Platform *excepto* los destinos de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md).
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
