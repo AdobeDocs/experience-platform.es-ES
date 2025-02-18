@@ -3,9 +3,9 @@ title: Conexión de TikTok
 description: Cree audiencias personalizadas en TikTok con sus datos para segmentar con sus campañas publicitarias. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1077'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Una marca de ropa deportiva quiere llegar a los clientes existentes a través de
 
 Necesita tener acceso de [!DNL Admin] o [!DNL Operator] a la cuenta de TikTok Ads Manager a la que desee enviar audiencias. Encontrará más instrucciones en [Centro de ayuda de TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
-Antes de enviar datos a su cuenta de TikTok Ads Manager, deberá dar permiso a Adobe Experience Platform para acceder a su cuenta de publicidad de `Audience Management`. Este permiso se puede proporcionar [introduciendo su ID. de administrador de anuncios](#authenticate) en la interfaz de usuario de Experience Platform y concediendo el permiso después de ser redirigido a su cuenta de administrador de TikTok Ads.
+Antes de enviar datos a su cuenta de TikTok Ads Manager, deberá dar permiso a Adobe Experience Platform para acceder a su cuenta de publicidad de `Audience Management`. Este permiso se puede proporcionar [introduciendo su ID de administrador de anuncios](#authenticate) en la interfaz de usuario de Experience Platform y concediendo el permiso después de ser redirigido a su cuenta de administrador de TikTok Ads.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -47,6 +47,18 @@ TikTok admite la activación de las identidades que se describen en la tabla sig
 
 {style="table-layout:auto"}
 
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
+
+| Origen de audiencia | Admitido | Descripción |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
+| [!DNL Federated Audience Composition] | ✓ | Audiencias importadas en Experience Platform mediante [Composición de audiencias federada](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+
+{style="table-layout:auto"}
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
@@ -54,7 +66,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino de TikTok. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,7 +80,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, se le redirigirá para que inicie sesión en su cuenta de [!DNL TikTok Ads Manager] y autorice el Adobe para administrar audiencias en su nombre.
+Para autenticarse en el destino, se le redirigirá para que inicie sesión en su cuenta de [!DNL TikTok Ads Manager] y autorice a Adobe a administrar audiencias en su nombre.
 
 ![Selección de permisos de TikTok](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Imagen de la interfaz de usuario de TikTok para seleccionar permisos")
 
