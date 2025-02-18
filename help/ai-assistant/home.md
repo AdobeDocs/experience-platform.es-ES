@@ -2,10 +2,10 @@
 title: Información general sobre el asistente de IA en Adobe Experience Platform
 description: Obtenga información sobre el asistente de IA, sus matices y casos de uso, y cómo puede utilizarlo para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 15%
+source-wordcount: '927'
+ht-degree: 16%
 
 ---
 
@@ -43,13 +43,13 @@ Esta representación interna de datos subyacentes también se conoce como **[!DN
 
 * Perspectivas operativas del cliente.
 * Perspectivas operativas del cliente en varias metatiendas.
-* Documentación del Experience League.
+* Documentación de Experience League.
 
 Hay dos clases de preguntas que se deben tener en cuenta antes de consultar el Asistente de IA:
 
 ### Conocimiento del producto {#product-knowledge}
 
-El conocimiento del producto hace referencia a conceptos y temas basados en la documentación del Experience League. Las preguntas sobre conocimientos del producto se pueden especificar en los siguientes subgrupos:
+El conocimiento del producto hace referencia a conceptos y temas basados en la documentación de Experience League. Las preguntas sobre conocimientos del producto se pueden especificar en los siguientes subgrupos:
 
 | Conocimiento del producto | Ejemplos |
 | --- | --- |
@@ -64,10 +64,6 @@ Vea el siguiente vídeo para obtener información adicional sobre los conocimien
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Datos operativos {#operational-insights}
-
->[!IMPORTANT]
->
->Las respuestas de Operational Insights están en versión beta. Cualquier persona que tenga acceso al permiso **Ver perspectivas operativas** tendrá acceso a las respuestas de perspectivas operativas.
 
 Perspectivas operativas se refiere a las respuestas que genera AI Assistant sobre los objetos de metadatos (atributos, audiencias, flujos de datos, conjuntos de datos, destinos, recorridos, esquemas y fuentes), incluidos los recuentos, las búsquedas y el impacto en el linaje. No observa ningún dato dentro de la zona protegida.
 
@@ -100,7 +96,7 @@ Vea el siguiente vídeo para obtener información adicional sobre las perspectiv
 
 En la actualidad, el ámbito del asistente de IA es el siguiente:
 
-* [Conocimiento del producto](./home.md#product-knowledge): el Asistente de IA puede responder preguntas de conocimiento del producto para Experience Platform, Real-time Customer Data Platform y Adobe Journey Optimizer. También puede profundizar en los temas de conocimiento del producto para Customer Journey Analytics, pero solo a través de la interfaz de usuario de Customer Journey Analytics.
+* [Conocimiento del producto](./home.md#product-knowledge): el Asistente de IA puede responder preguntas de conocimiento del producto para Experience Platform, Real-Time Customer Data Platform y Adobe Journey Optimizer. También puede profundizar en los temas de conocimiento del producto para Customer Journey Analytics, pero solo a través de la IU de Customer Journey Analytics.
 * [Perspectivas operativas](./home.md#operational-insights): puede hacer preguntas al Asistente de IA sobre perspectivas operativas en los siguientes objetos de datos: atributos, audiencias, flujos de datos, conjuntos de datos, destinos, recorridos, esquemas y fuentes.
 
 ## Pasos siguientes

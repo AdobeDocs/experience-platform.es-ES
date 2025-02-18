@@ -1,10 +1,10 @@
 ---
 title: Asistente de IA en Adobe Experience Platform
-description: Aprenda a utilizar el asistente de IA para desplazarse por los conceptos de Experience Platform y Real-time Customer Data Platform, y comprender sus conceptos, así como la información de uso de sus objetos.
+description: Aprenda a utilizar el Asistente de IA para navegar y comprender los conceptos de Experience Platform y Real-Time Customer Data Platform, así como la información de uso sobre los objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ Lea esta guía para aprender a utilizar el asistente de IA en la interfaz de usu
 
 ## Acceso al Asistente de IA en la IU de Experience Platform
 
-Para iniciar el Asistente de IA, seleccione el **[!UICONTROL icono del Asistente de IA]** en el encabezado superior de la interfaz de usuario del Experience Platform.
+Para iniciar el Asistente de IA, seleccione el **[!UICONTROL icono del Asistente de IA]** en el encabezado superior de la interfaz de usuario de Experience Platform.
 
-![La página de inicio del Experience Platform, con el icono del Asistente de IA seleccionado y la interfaz del Asistente de IA abierta.](./images/ai-assistant-full-icon.png)
+![Página de inicio de Experience Platform, con el icono Asistente de IA seleccionado y la interfaz del Asistente de IA abierta.](./images/ai-assistant-full-icon.png)
 
 Aparecerá la interfaz del Asistente de IA, que le proporcionará inmediatamente información para empezar. Puede usar las opciones que se proporcionan en [!UICONTROL Ideas para empezar] a responder preguntas y comandos como:
 
@@ -35,11 +35,11 @@ Considere un caso de uso en el que esté creando un **Esquema de comercio de dis
 
 Para empezar, escriba su pregunta en el cuadro de texto proporcionado. En el ejemplo siguiente, se proporciona el Asistente para IA con la pregunta: &quot;**¿Qué es el campo eventType en un esquema ExperienceEvent?**&quot;
 
-![Asistente de IA para el Experience Platform con la siguiente pregunta preparada para la consulta: &quot;¿Cuál es el campo eventType en un esquema ExperienceEvent?](./images/question.png)
+![Asistente de IA para Experience Platform con la siguiente pregunta preparada para la consulta: &quot;¿Cuál es el campo eventType en un esquema ExperienceEvent?](./images/question.png)
 
 A continuación, el asistente de IA consulta su base de conocimiento y calcula una respuesta. Después de unos momentos, el Asistente de IA devuelve una respuesta y sugerencias relacionadas que puede utilizar como preguntas de seguimiento.
 
-![Asistente de IA para el Experience Platform con una respuesta a la consulta anterior.](./images/answer.png)
+![Asistente de IA para Experience Platform con respuesta a la consulta anterior.](./images/answer.png)
 
 Después de recibir una respuesta del Asistente de IA, puede seleccionar entre una serie de opciones para decidir cómo desea continuar.
 
@@ -87,7 +87,7 @@ En el ejemplo siguiente, se solicita al Asistente de IA la siguiente consulta: *
 
 ![Pregunta sobre perspectivas operacionales.](./images/op-insights-question.png)
 
-A continuación, el asistente de IA responde con una tabla que enumera los flujos de datos y sus ID correspondientes. Para ver toda la tabla de datos, seleccione el icono de expansión en la parte superior derecha.
+A continuación, el asistente de IA responde con una tabla que enumera los flujos de datos y sus ID correspondientes. Seleccione el icono de descarga (![Icono de descarga](/help/images/icons/download.png)) para descargar la tabla como archivo CSV. Para ver toda la tabla, seleccione el icono de expansión (![Icono de expansión](/help/images/icons/expand.png)).
 
 ![Una respuesta de información operativa](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ Cuando se le solicita una pregunta de perspectivas operativas, AI Assistant prop
 ![Asistente de IA que proporciona una explicación sobre cómo calculó su respuesta.](./images/answer-explained.png)
 
 También puede proporcionar filtros y modificaciones a las preguntas, y puede indicar al Asistente de inteligencia artificial que procese sus conclusiones en función de los filtros que incluya. Por ejemplo, puede pedir al Asistente de IA que le muestre una tendencia del recuento de definiciones de segmento en el orden de su fecha de creación, elimine definiciones de segmento con perfiles totales cero y utilice nombres de mes en lugar de enteros al mostrar los datos.
-
-**Nota:** Las respuestas de Operational Insights se encuentran actualmente en fase beta. Seleccione el icono de información de objeto en la interfaz de usuario del asistente de IA para ver el aviso de Beta y un vínculo a la documentación.
-
-![Icono de información sobre herramientas del Ayudante de IA seleccionado.](./images/op-insights-beta-note.png)
 
 +++
 
