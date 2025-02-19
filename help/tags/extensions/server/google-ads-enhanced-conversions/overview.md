@@ -3,7 +3,7 @@ title: Extensión de conversiones mejoradas de Google Ads
 description: Obtenga información acerca de la extensión de conversiones mejoradas de Google Ads para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -47,7 +47,7 @@ Para enviar un evento de conversión desde un sitio web, [!DNL Google Global Sit
 
 ### Configurar e instalar la extensión [!DNL Google Global Site Tag]
 
-Vaya a la interfaz de usuario de [!UICONTROL Recopilación de datos] o a la interfaz de usuario del Experience Platform y seleccione **[!UICONTROL Etiquetas]** en el panel de navegación izquierdo. Seleccione la propiedad de etiqueta en la que desea instalar la extensión y, a continuación, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Catálogo]**, busque la extensión [!UICONTROL Google Global Site Tag (gtag)] y seleccione **[!UICONTROL Instalar]**.
+Vaya a la interfaz de usuario de [!UICONTROL Recopilación de datos] o a la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Etiquetas]** en el panel de navegación izquierdo. Seleccione la propiedad de etiqueta en la que desea instalar la extensión y, a continuación, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Catálogo]**, busque la extensión [!UICONTROL Google Global Site Tag (gtag)] y seleccione **[!UICONTROL Instalar]**.
 
 ![La extensión [!UICONTROL Google Global Site Tag (gtag)] se está seleccionando en la vista [!UICONTROL Extensiones] de la interfaz de usuario de [!UICONTROL Recopilación de datos].](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
@@ -74,6 +74,7 @@ Aparecen controles adicionales que le permiten configurar el evento [!DNL gtag].
 1. **[!UICONTROL Nombre del evento (Acción)]**: escriba `conversion` como valor.
 1. Agregue un nuevo campo donde la clave sea `transaction_id` y el valor sea un [elemento de datos](../../../ui/managing-resources/data-elements.md) que contenga el valor [ID de transacción](https://support.google.com/google-ads/answer/6386790).
 1. **[!UICONTROL Etiqueta de conversión]**: escribe la etiqueta de conversión adecuada desde tu cuenta de [!DNL Google Ads]. Para encontrar este valor, inicie sesión en Google Ads y vaya a **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. La etiqueta de conversión se encuentra en [!DNL Instructions].
+
    >[!IMPORTANT]
    >
    >Mientras se encuentra en el área de configuración de etiquetas de su cuenta de [!DNL Google Ads], asegúrese de que las conversiones mejoradas estén habilitadas. Para ello, revise y acepte los Términos de servicio y, a continuación, seleccione **[!DNL Turn on enhanced conversions]** y **[!DNL API]** como método de implementación.

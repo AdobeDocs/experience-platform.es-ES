@@ -1,9 +1,9 @@
 ---
 keywords: conexión de facebook;conexión de facebook;destinos de facebook;facebook;instagram;messenger;facebook messenger
-title: Conexión de facebook
+title: Conexión de Facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de público en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 6%
@@ -54,8 +54,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -66,24 +66,27 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino de Facebook. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Requisitos previos de cuenta de facebook {#facebook-account-prerequisites}
+## Requisitos previos de cuenta de Facebook {#facebook-account-prerequisites}
 
 Antes de enviar las audiencias a [!DNL Facebook], asegúrese de cumplir con los siguientes requisitos:
 
 * La cuenta de usuario [!DNL Facebook] debe tener acceso completo a [!DNL Facebook Business Account], que posee la cuenta de publicidad que está utilizando.
 * La cuenta de usuario [!DNL Facebook] debe tener habilitado el permiso **[!DNL Manage campaigns]** para la cuenta de publicidad que planea usar.
 * La cuenta empresarial **Adobe Experience Cloud** debe agregarse como socio de publicidad en [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Agregar socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
+
   >[!IMPORTANT]
   >
   > Al configurar los permisos para Adobe Experience Cloud, debe habilitar el permiso **Administrar campañas**. Se requiere el permiso para la integración de [!DNL Adobe Experience Platform].
+
 * Lea y firme los términos de servicio de [!DNL Facebook Custom Audiences]. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, donde `accountID` es su [!DNL Facebook Ad Account ID]. Asegúrese de que la sección `business_id=206617933627973` esté presente en la dirección URL al firmar los Términos de servicio.
+
   >[!IMPORTANT]
   >
-  >Al firmar los términos de servicio de [!DNL Facebook Custom Audiences], asegúrese de usar la misma cuenta de usuario que utilizó para autenticarse en la API de Facebook.
+  >Al firmar los Términos de servicio de [!DNL Facebook Custom Audiences], asegúrese de usar la misma cuenta de usuario que utilizó para autenticarse en la API de Facebook.
 
 ## Requisitos de coincidencia de ID {#id-matching-requirements}
 
@@ -104,7 +107,7 @@ Hay dos métodos para activar números de teléfono en [!DNL Facebook]:
 
 ## Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
-Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o bien puede usar las direcciones de correo electrónico en borrar en el Experience Platform, y hacer que [!DNL Platform] las hash en la activación.
+Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede usar las direcciones de correo electrónico en borrar en Experience Platform y hacer que [!DNL Platform] las hash en la activación.
 
 Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la [descripción general de la ingesta por lotes](/help/ingestion/batch-ingestion/overview.md) y la [descripción general de la ingesta por transmisión](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -143,18 +146,18 @@ El siguiente vídeo también muestra los pasos para configurar un destino [!DNL 
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte el [tutorial de configuración de destino](../../ui/connect-destination.md).
+>La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Autenticarse en el destino {#authenticate}
 
-1. Busque el destino Facebook en el catálogo de destino y seleccione **[!UICONTROL Configurar]**.
+1. Busque el destino de Facebook en el catálogo de destino y seleccione **[!UICONTROL Configurar]**.
 2. Seleccione **[!UICONTROL Conectar con destino]**.
    ![Paso Autenticar en Facebook mostrado en el flujo de trabajo de activación.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
-3. Escriba sus credenciales de Facebook y seleccione **Iniciar sesión**.
+3. Escribe tus credenciales de Facebook y selecciona **Iniciar sesión**.
 
 ### Actualizar credenciales de autenticación {#refresh-authentication-credentials}
 
-Los tokens de facebook caducan cada 60 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
+Los tokens de Facebook caducan cada 60 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
 
 1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]**
 2. (Opcional) Utilice los filtros disponibles en la página para mostrar solo las cuentas de Facebook.

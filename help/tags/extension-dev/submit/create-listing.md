@@ -2,10 +2,10 @@
 title: Crear un listado de intercambio para una extensión
 description: Obtenga información sobre cómo añadir la extensión al catálogo público en Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: fcc586034317fb31122721fa9754b580c761a1da
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1193'
-ht-degree: 67%
+ht-degree: 69%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Adobe Experience Platform tiene un único catálogo en el que los usuarios pueden ver las extensiones de etiquetas disponibles para la instalación. Este catálogo está disponible dentro del producto y contiene extensiones de tres tipos:
 
@@ -45,6 +45,7 @@ Si ya tiene una cuenta de empresa o si no necesita un listado de Exchange (solo 
 1. Seleccione la pestaña **Crear nueva aplicación** y, a continuación, seleccione **Crear nueva aplicación** para una solución personalizada, o seleccione una plantilla.
 1. Proporcione la información de su anuncio. Para obtener información detallada sobre App Manager, consulta el [artículo](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931) completo. La información de la lista debería aclarar qué hace la extensión y por qué resulta útil. La lista funciona como un espacio de marketing para la aplicación. Promocione la extensión aquí con descripciones claras, vínculos a páginas de destino del sitio, vínculos a documentos de ayuda o direcciones de correo electrónico de asistencia, etc. Aunque el espacio en las vistas de extensión es limitado, la lista de Exchange ofrece la oportunidad de promocionar tanto la extensión como la compañía. A continuación, se presentan sugerencias para mejorar la promoción de la extensión:
    - **Icono de la aplicación** - Asegúrese de que el icono de la lista de Exchange tenga las dimensiones adecuadas de 512 x 512 para archivos png o una relación de aspecto de 1:1 para jpg.
+
      >[!NOTE]
      >
      >Nota: Este es un formato de archivo diferente del que utilizará en el código de la extensión. La extensión contendrá un archivo svg como [icono](../manifest.md).
@@ -55,7 +56,7 @@ Si ya tiene una cuenta de empresa o si no necesita un listado de Exchange (solo 
    - **Etiquetas**: en la primera página de edición del anuncio, asegúrese de incluir la palabra &quot;Launch&quot; en el campo &quot;Etiquetas personalizadas&quot;. Esto hará que su anuncio aparezca en las búsquedas de etiquetas en Exchange Marketplace:
      ![](../images/getting-started/custom-tags.jpg)
    - **Zonas protegidas**: Su acceso a las soluciones de Adobe se realiza a través de una cuenta de zona protegida en la que tiene acceso a una versión de Adobe Experience Platform que funciona completamente. Estas cuentas de zona protegida se solicitan a medida que crea su anuncio de aplicaciones. En la sección **Conexiones**, seleccione las conexiones específicas aplicables a la aplicación que ha creado (su extensión de la etiqueta) y, cuando pulse **Guardar**, se generará la solicitud de zona protegida si es necesario.
-1. Envíe su anuncio. El equipo de Adobe Exchange revisará su aplicación y proporcionará comentarios si es necesario hacer algún cambio. Si marca la casilla **Publicar inmediatamente** al enviar el anuncio, este se publicará inmediatamente después de su aprobación. Si desea publicar la aplicación más adelante, deje la casilla de verificación sin marcar. Cuando se apruebe el anuncio de la extensión, aparecerá el botón azul **Publish** junto al anuncio en la página de anuncios de la aplicación (extensión).
+1. Envíe su anuncio. El equipo de Adobe Exchange revisará su aplicación y proporcionará comentarios si es necesario hacer algún cambio. Si marca la casilla **Publicar inmediatamente** al enviar el anuncio, este se publicará inmediatamente después de su aprobación. Si desea publicar la aplicación más adelante, deje la casilla de verificación sin marcar. Cuando se apruebe el anuncio de la extensión, aparecerá el botón azul **Publicar** junto al anuncio en la página de anuncios de la aplicación (extensión).
 
 ### Crear un anuncio eficaz
 

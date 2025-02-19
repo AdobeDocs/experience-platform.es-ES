@@ -2,7 +2,7 @@
 title: Información general sobre la extensión Splunk
 description: Obtenga información acerca de la extensión Splunk para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Información general sobre la extensión Splunk
 
-[Splunk](https://www.splunk.com) es una plataforma de observabilidad que proporciona búsqueda, análisis y visualización de información procesable sobre tus datos. La extensión Splunk [reenvío de eventos](../../../ui/event-forwarding/overview.md) aprovecha [la API de REST del recopilador de eventos HTTP de Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints) para enviar eventos del Edge Network de Adobe Experience Platform al [recopilador de eventos HTTP de Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector).
+[Splunk](https://www.splunk.com) es una plataforma de observabilidad que proporciona búsqueda, análisis y visualización de información procesable sobre tus datos. La extensión Splunk [reenvío de eventos](../../../ui/event-forwarding/overview.md) aprovecha [la API de REST del recopilador de eventos HTTP de Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints) para enviar eventos desde Adobe Experience Platform Edge Network al [recopilador de eventos HTTP de Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector).
 
 Splunk utiliza tokens de portador como mecanismo de autenticación para comunicarse con la API del Recopilador de eventos de Splunk.
 
@@ -38,6 +38,7 @@ También debe tener los siguientes valores técnicos para configurar la extensi�
 
 * Un [token de Recopilador de eventos](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). Los tokens suelen tener el formato UUIDv4 siguiente: `12345678-1234-1234-1234-1234567890AB`.
 * La dirección y el puerto de la instancia de la plataforma Splunk para su organización. Una dirección de instancia de plataforma y un puerto suelen tener el siguiente formato: `mysplunkserver.example.com:443`.
+
   >[!IMPORTANT]
   >
   > Los extremos de Splunk a los que se hace referencia en el reenvío de eventos solo deben utilizar el puerto `443`. Actualmente, los puertos no estándar no son compatibles con las implementaciones de reenvío de eventos.
@@ -84,7 +85,7 @@ El siguiente paso es asignar las propiedades del evento Splunk a los elementos d
 
 ### Validación de datos en Splunk {#validate}
 
-Después de crear y ejecutar la regla de reenvío de eventos, valide si el evento enviado a la API de Splunk se muestra según lo esperado en la interfaz de usuario de Splunk. Si la recopilación de eventos y la integración del Experience Platform se realizaron correctamente, verá eventos dentro de la consola de Splunk de esta manera:
+Después de crear y ejecutar la regla de reenvío de eventos, valide si el evento enviado a la API de Splunk se muestra según lo esperado en la interfaz de usuario de Splunk. Si la recopilación de eventos y la integración de Experience Platform se han realizado correctamente, verá eventos dentro de la consola de Splunk de esta manera:
 
 ![Los datos de evento aparecen en la interfaz de usuario de Splunk durante la validación](../../../images/extensions/server/splunk/splunk-data.png)
 
