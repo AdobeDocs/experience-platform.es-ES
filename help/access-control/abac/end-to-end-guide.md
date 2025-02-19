@@ -25,7 +25,7 @@ Esta funcionalidad le permite categorizar campos de esquema, audiencias, etc. co
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md): El motor de segmentación de [!DNL Platform] se usa para crear segmentos de audiencia a partir de los perfiles de clientes en función de los comportamientos y atributos de los clientes.
@@ -66,7 +66,7 @@ Aparece el área de trabajo Permisos para la interfaz de usuario de Platform, qu
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="¿Qué son las etiquetas?"
->abstract="Utilice etiquetas para categorizar conjuntos de datos y campos según las políticas de uso y acceso que se aplican a esos datos. Platform proporciona varias etiquetas de uso de datos <strong>core</strong> definidas por el Adobe que cubren una amplia variedad de restricciones comunes aplicables al control de datos. Por ejemplo, las etiquetas confidenciales <strong>S</strong>, como RHD (Datos de salud regulados), le permiten categorizar los datos que hacen referencia a Información de salud protegida (PHI). También puede definir sus propias etiquetas personalizadas para que se adapten a las necesidades de su organización."
+>abstract="Utilice etiquetas para categorizar conjuntos de datos y campos según las políticas de uso y acceso que se aplican a esos datos. Platform proporciona varias etiquetas de uso de datos <strong>core</strong> definidas por Adobe que cubren una amplia variedad de restricciones comunes aplicables al control de datos. Por ejemplo, las etiquetas confidenciales <strong>S</strong>, como RHD (Datos de salud regulados), le permiten categorizar los datos que hacen referencia a Información de salud protegida (PHI). También puede definir sus propias etiquetas personalizadas para que se adapten a las necesidades de su organización."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es#understanding-data-usage-labels" text="Información general sobre las etiquetas de uso de datos"
 
 Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Platform y son componentes básicos de las directivas de control de acceso. Una función tiene un conjunto determinado de permisos y los miembros de la organización pueden asignarse a una o varias funciones, según el ámbito de acceso que necesiten.
@@ -93,7 +93,7 @@ Ahora que ha configurado un rol de usuario con la etiqueta [!UICONTROL RHD], el 
 
 En el panel de navegación superior, seleccione **conmutador de aplicaciones**, representado por el icono ![conmutador de aplicaciones](/help/images/icons/apps.png) y, a continuación, seleccione **[!UICONTROL Experience Platform]**.
 
-![Imagen que muestra el Experience Platform seleccionado en el menú desplegable del conmutador de aplicaciones](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
+![Imagen que muestra Experience Platform seleccionado en el menú desplegable del conmutador de aplicaciones](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 Seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL ACME Healthcare]** de la lista de esquemas que aparecen.
 

@@ -4,8 +4,8 @@ description: Cree una conexión saliente activa a su almacenamiento de Amazon We
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 17%
+source-wordcount: '1498'
+ht-degree: 16%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 17%
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
 | Enero de 2024 | Actualización de funcionalidad y documentación | El conector de destino de Amazon S3 ahora admite un nuevo tipo de autenticación de función asumida. Obtenga más información al respecto en la [sección de autenticación](#assumed-role-authentication). |
-| Julio de 2023 | Actualización de funcionalidad y documentación | Con la versión del Experience Platform de julio de 2023, el destino [!DNL Amazon S3] proporciona nuevas funciones, como se muestra a continuación: <br><ul><li>[Compatibilidad con la exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md)</li><li>[Opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) adicionales.</li><li>Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través del [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Capacidad para personalizar el formato de los archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+| Julio de 2023 | Actualización de funcionalidad y documentación | Con la versión de Experience Platform de julio de 2023, el destino [!DNL Amazon S3] proporciona nuevas funciones, como se indica a continuación: <br><ul><li>[Compatibilidad con la exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md)</li><li>[Opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) adicionales.</li><li>Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través del [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Capacidad para personalizar el formato de los archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -36,8 +36,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 #### Autenticación de clave de acceso y clave secreta
 
-Utilice este método de autenticación cuando desee introducir la clave de acceso y la clave secreta de Amazon S3 para permitir que el Experience Platform exporte los datos a las propiedades de Amazon S3.
+Utilice este método de autenticación cuando desee introducir la clave de acceso y la clave secreta de Amazon S3 para permitir que Experience Platform exporte datos a las propiedades de Amazon S3.
 
 ![Imagen de los campos requeridos al seleccionar la clave de acceso y la autenticación de clave secreta.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
@@ -107,9 +107,9 @@ Utilice este método de autenticación cuando desee introducir la clave de acces
 
 ![Imagen de los campos requeridos al seleccionar la autenticación de rol asumido.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-Utilice este tipo de autenticación si prefiere no compartir claves de cuenta y claves secretas con Adobe. En su lugar, el Experience Platform se conecta a la ubicación de Amazon S3 mediante el acceso basado en funciones.
+Utilice este tipo de autenticación si prefiere no compartir claves de cuenta y claves secretas con Adobe. En su lugar, Experience Platform se conecta a su ubicación de Amazon S3 mediante el acceso basado en funciones.
 
-Para ello, debe crear en la consola de AWS un usuario supuesto para el Adobe de los [permisos necesarios](#minimum-permissions-iam-user) para escribir en los bloques de Amazon S3. Cree una **[!UICONTROL entidad de confianza]** en AWS con la cuenta de Adobe **[!UICONTROL 670664943635]**. Para obtener más información, consulte la [documentación de AWS sobre la creación de funciones](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Para ello, debe crear en la consola de AWS un usuario supuesto para Adobe con los [permisos necesarios](#minimum-permissions-iam-user) para escribir en los bloques de Amazon S3. Cree una **[!UICONTROL entidad de confianza]** en AWS con la cuenta de Adobe **[!UICONTROL 670664943635]**. Para obtener más información, consulte la [documentación de AWS sobre la creación de funciones](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 * **[!DNL Role]**: pegue el ARN del rol que creó en AWS para el usuario de Adobe. El patrón es similar a `arn:aws:iam::800873819705:role/destinations-role-customer`.
 * **[!UICONTROL Clave de cifrado]**: de forma opcional, puede adjuntar la clave pública con formato RSA para agregar el cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
@@ -119,7 +119,7 @@ Para ello, debe crear en la consola de AWS un usuario supuesto para el Adobe de 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="Nombre del segmento"
->abstract="Debe tener entre 3 y 63 caracteres. Debe comenzar y terminar con una letra o un número. Solo debe contener letras minúsculas, números o guiones (-). No se debe aplicar el formato de una dirección IP (por ejemplo, 192.100.1.1)."
+>abstract="Debe tener entre 3 y 63 caracteres. Debe comenzar y terminar con una letra o un número. Solo debe contener letras minúsculas, números o guiones (-). No debe tener el formato de dirección IP (por ejemplo, 192.100.1.1)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
@@ -133,8 +133,8 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Descripción]**: escriba una descripción para este destino.
 * **[!UICONTROL Nombre del contenedor]**: Escriba el nombre del contenedor [!DNL Amazon S3] que usará este destino.
 * **[!UICONTROL Ruta de carpeta]**: escriba la ruta de acceso a la carpeta de destino que alojará los archivos exportados.
-* **[!UICONTROL Tipo de archivo]**: seleccione el formato que el Experience Platform debe usar para los archivos exportados. Al seleccionar la opción [!UICONTROL CSV], también puede [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe usar para los archivos exportados.
+* **[!UICONTROL Tipo de archivo]**: seleccione el formato que Experience Platform debe usar para los archivos exportados. Al seleccionar la opción [!UICONTROL CSV], también puede [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que Experience Platform debe usar para los archivos exportados.
 * **[!UICONTROL Incluir archivo de manifiesto]**: Active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de la exportación, etc. Se ha asignado un nombre al manifiesto con el formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Ver [archivo de manifiesto de ejemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). El archivo de manifiesto incluye los campos siguientes:
    * `flowRunId`: la [ejecución de flujo de datos](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que generó el archivo exportado.
    * `scheduledTime`: la hora en UTC en que se exportó el archivo.

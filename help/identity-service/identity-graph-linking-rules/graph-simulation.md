@@ -5,15 +5,15 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# Guía de la interfaz de usuario [!DNL Graph Simulation] {#graph-simulation}
+# Guía de la interfaz de usuario de [!DNL Graph Simulation] {#graph-simulation}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
->title="Simulación de gráfico"
+>title="Simulación de gráficos"
 >abstract="Simule gráficos para comprender cómo vincula el servicio de identidad las identidades y cómo funciona el algoritmo de optimización de identidad."
 
 >[!AVAILABILITY]
@@ -181,5 +181,5 @@ Al leer este documento, ahora sabe cómo usar la herramienta [!DNL Graph Simulat
 * [Guía de implementación](./implementation-guide.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
-* [Prioridad de espacios de nombres](./namespace-priority.md)
+* [Prioridad del área de nombres](./namespace-priority.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)

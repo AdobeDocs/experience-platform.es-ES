@@ -1,19 +1,19 @@
 ---
-title: Prioridad de espacios de nombres
+title: Prioridad del área de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1801'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# Prioridad de espacios de nombres {#namespace-priority}
+# Prioridad del área de nombres {#namespace-priority}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="Prioridad de área de nombres"
+>title="Prioridad del área de nombres"
 >abstract="La prioridad del área de nombres determina cómo se eliminan los vínculos del gráfico de identidad."
 
 >[!AVAILABILITY]
@@ -82,7 +82,7 @@ Para estructuras de gráficos relativamente complejas, la prioridad del área de
 * Una vez que haya configurado la configuración de identidad para una zona protegida determinada, la identidad principal de los eventos de experiencia se determinará mediante la prioridad de área de nombres más alta de la configuración.
    * Esto se debe a que los eventos de experiencia son de naturaleza dinámica. Un mapa de identidad puede contener tres o más identidades y la prioridad del área de nombres garantiza que el área de nombres más importante esté asociada al evento de experiencia.
 * Como resultado, Real-Time Customer Profile **ya no usará las siguientes configuraciones**:
-   * La configuración de identidad principal (`primary=true`) al enviar identidades en identityMap mediante Web SDK, Mobile SDK o la API de Edge Network Server (el área de nombres de identidad y el valor de identidad se seguirán usando en el perfil). **Nota**: Los servicios fuera del perfil del cliente en tiempo real, como el almacenamiento del lago de datos o Adobe Target, seguirán usando la configuración de identidad principal (`primary=true`).
+   * La configuración de identidad principal (`primary=true`) al enviar identidades en el identityMap mediante la API de Web SDK, Mobile SDK o Edge Network Server (el área de nombres de identidad y el valor de identidad se seguirán usando en el perfil). **Nota**: Los servicios fuera del perfil del cliente en tiempo real, como el almacenamiento del lago de datos o Adobe Target, seguirán usando la configuración de identidad principal (`primary=true`).
    * Cualquier campo marcado como identidad principal en un esquema de clase de evento de experiencia XDM.
    * Configuración de identidad principal predeterminada en el conector de origen de Adobe Analytics (ECID o AAID).
 * Por otro lado, la prioridad **namespace no determina la identidad principal para los registros de perfil**.
@@ -162,7 +162,7 @@ Si la configuración de identidad está habilitada, los atributos calculados uti
 
 La ingesta de datos en el lago de datos seguirá cumpliendo la configuración de identidad principal establecida en [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) y los esquemas.
 
-El lago de datos no determinará la identidad principal en función de la prioridad del área de nombres. Por ejemplo, Adobe Customer Journey Analytics seguirá utilizando valores en el mapa de identidad incluso después de habilitar la prioridad del área de nombres (por ejemplo, al agregar un conjunto de datos a una nueva conexión), porque Customer Journey Analytics consume sus datos del lago de datos.
+El lago de datos no determinará la identidad principal en función de la prioridad del área de nombres. Por ejemplo, Adobe Customer Journey Analytics seguirá utilizando valores en el mapa de identidad incluso después de habilitar la prioridad del área de nombres (por ejemplo, agregando un conjunto de datos a una nueva conexión), ya que Customer Journey Analytics consume sus datos del lago de datos.
 
 ### Esquemas del modelo de datos de experiencia (XDM)
 
@@ -179,7 +179,7 @@ Al seleccionar los datos, deberá especificar un área de nombres, que se utiliz
 
 Esta configuración resulta en calcular puntuaciones solo mediante eventos autenticados.
 
-Para obtener más información, lea los documentos sobre [Attribution AI](../../intelligent-services/attribution-ai/overview.md) y [inteligencia artificial aplicada al cliente](../../intelligent-services/customer-ai/overview.md).
+Para obtener más información, lea los documentos sobre [Inteligencia artificial aplicada a la atribución](../../intelligent-services/attribution-ai/overview.md) y [Inteligencia artificial aplicada al cliente](../../intelligent-services/customer-ai/overview.md).
 
 ### Destinos creados por socios
 
