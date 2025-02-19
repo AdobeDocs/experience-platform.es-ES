@@ -2,30 +2,32 @@
 keywords: Experience Platform;inicio;temas populares;filtrar;filtrar;filtrar datos;filtrar datos;filtrar datos;intervalo de fechas
 solution: Experience Platform
 title: Filtrado de datos de catálogo mediante parámetros de consulta
-description: La API del servicio de catálogo permite filtrar los datos de respuesta mediante el uso de parámetros de consulta de solicitud. Parte de las prácticas recomendadas para Catálogo es utilizar filtros en todas las llamadas a la API, ya que reducen la carga en la API y ayudan a mejorar el rendimiento general.
+description: Utilice parámetros de consulta para filtrar los datos de respuesta en la API del servicio de catálogo y recuperar únicamente la información que necesite. Aplique filtros a las llamadas de API para reducir la carga y mejorar el rendimiento, lo que garantiza una recuperación de datos más rápida y eficaz.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
+source-git-commit: 14ecb971af3f6cdcc605caa05ef6609ecb9b38fd
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2339'
 ht-degree: 2%
 
 ---
 
 # Filtrar datos de [!DNL Catalog] mediante parámetros de consulta
 
-La API [!DNL Catalog Service] permite filtrar los datos de respuesta mediante el uso de parámetros de consulta de solicitud. Parte de las prácticas recomendadas para [!DNL Catalog] es utilizar filtros en todas las llamadas a la API, ya que reducen la carga en la API y ayudan a mejorar el rendimiento general.
+Para mejorar el rendimiento y recuperar los resultados relevantes, utilice parámetros de consulta para filtrar [!DNL Catalog Service] datos de respuesta de API.
 
-Este documento describe los métodos más comunes para filtrar objetos [!DNL Catalog] en la API. Se recomienda hacer referencia a este documento mientras se lee la [Guía para desarrolladores de catálogos](getting-started.md) para obtener más información acerca de cómo interactuar con la API [!DNL Catalog]. Para obtener más información general sobre [!DNL Catalog Service], vea la [[!DNL Catalog] descripción general](../home.md).
+Obtenga información acerca de métodos de filtrado comunes para objetos [!DNL Catalog] en la API. Utilice este documento junto con la [Guía para desarrolladores de catálogos](getting-started.md) para obtener más información sobre las interacciones de API. Para obtener información general sobre [!DNL Catalog Service], consulte la [[!DNL Catalog] descripción general](../home.md).
 
-## Límite de objetos devueltos
+## Límite de objetos devueltos {#limit-returned-objects}
 
-El parámetro de consulta `limit` restringe el número de objetos devueltos en una respuesta. [!DNL Catalog] respuestas se miden automáticamente de acuerdo con los límites configurados:
+El parámetro de consulta `limit` restringe el número de objetos devueltos en una respuesta. [!DNL Catalog] respuestas siguen límites predefinidos:
 
-* Si no se especifica un parámetro `limit`, el número máximo de objetos por carga de respuesta es 20.
+* Si no se especifica el parámetro `limit`, el número máximo de objetos por respuesta es 20.
 * Para las consultas de conjuntos de datos, si se solicita `observableSchema` mediante el parámetro de consulta `properties`, el número máximo de conjuntos de datos devueltos es 20.
-* El límite global para todas las demás consultas de catálogo es de 100 objetos.
-* Los parámetros `limit` no válidos (incluido `limit=0`) dan como resultado respuestas de error de 400 niveles que describen los intervalos adecuados.
-* Los límites o desplazamientos que se pasan como parámetros de consulta tienen prioridad sobre los que se pasan como encabezados.
+* Para los tokens de usuario, el límite máximo es 1.
+* Para los tokens de servicio, el límite máximo es de 20.
+* El límite global para otras consultas de catálogo es de 100 objetos.
+* Los valores `limit` no válidos (incluido `limit=0`) dan como resultado respuestas de error de 400 niveles que especifican los intervalos adecuados.
+* Los límites o desplazamientos pasados como parámetros de consulta tienen prioridad sobre los de los encabezados.
 
 **Formato de API**
 
@@ -35,8 +37,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a recuperar. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{LIMIT}` | Un entero que indica el número de objetos que se van a devolver, entre 1 y 100. |
+| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a recuperar. Objetos válidos: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{LIMIT}` | Un entero que especifica el número de objetos que se van a devolver (intervalo: 1-100). |
 
 **Solicitud**
 
@@ -73,7 +75,7 @@ Una respuesta correcta devuelve una lista de conjuntos de datos, limitados al n�
 }
 ```
 
-## Limitar propiedades mostradas
+## Limitar propiedades mostradas {#limit-displayed-properties}
 
 Incluso cuando se filtra el número de objetos devueltos mediante el parámetro `limit`, los propios objetos devueltos pueden contener con frecuencia más información de la que realmente necesita. Para reducir aún más la carga en el sistema, se recomienda filtrar las respuestas para incluir solo las propiedades que necesite.
 
@@ -158,7 +160,7 @@ Sobre la base de la respuesta anterior, se puede inferir lo siguiente:
 >
 >En la propiedad `schemaRef` para cada conjunto de datos, el número de versión indica la última versión secundaria del esquema. Consulte la sección sobre [versiones de esquema](../../xdm/api/getting-started.md#versioning) en la guía de API de XDM para obtener más información.
 
-## Desplazamiento del índice inicial de la lista de respuestas
+## Desplazamiento del índice inicial de la lista de respuestas {#offset-starting-index}
 
 El parámetro de consulta `start` desplaza la lista de respuestas un número especificado, utilizando la numeración basada en cero. Por ejemplo, `start=2` desplazaría la respuesta para comenzar en el tercer objeto de la lista.
 
@@ -455,6 +457,10 @@ Una respuesta correcta contiene una lista de [!DNL Catalog] objetos que se orden
 * [Uso de filtros simples](#using-simple-filters): filtre por si una propiedad específica coincide con un valor específico.
 * [Uso del parámetro de propiedad](#using-the-property-parameter): utilice expresiones condicionales para filtrar basándose en si existe una propiedad o si el valor de una propiedad coincide, se aproxima o se compara con otro valor especificado o expresión regular.
 
+>[!NOTE]
+>
+>Cualquier atributo de un objeto Catalog se puede utilizar para filtrar los resultados en la API del servicio de catálogo.
+
 ### Uso de filtros simples {#using-simple-filters}
 
 Los filtros simples le permiten filtrar las respuestas en función de valores de propiedad específicos. Un filtro simple adopta la forma de `{PROPERTY_NAME}={VALUE}`.
@@ -524,6 +530,22 @@ Una respuesta correcta contiene una lista de conjuntos de datos, que excluye cua
 
 El parámetro de consulta `property` proporciona más flexibilidad para el filtrado basado en propiedades que los filtros simples. Además del filtrado basado en si una propiedad tiene un valor específico, el parámetro `property` puede utilizar otros operadores de comparación (como &quot;más que&quot; (`>`) y &quot;menos que&quot; (`<`)), así como expresiones regulares para filtrar por valores de propiedad. También puede filtrar por si existe o no una propiedad, independientemente de su valor.
 
+Use un signo &amp; (`&`) para combinar varios filtros y restringir la consulta en una única solicitud. Cuando filtra por varios campos, se aplica una relación `AND` de forma predeterminada.
+
+>[!NOTE]
+>
+>Si combina varios parámetros `property` en una sola consulta, debe aplicarse al menos uno al campo `id` o `created`. La siguiente consulta devuelve objetos donde `id` es `abc123` **Y** `name` no es `test`:
+>
+>```http
+>GET /datasets?property=id==abc123&property=name!=test
+>```
+
+Si usa varios parámetros `property` en el mismo campo, solo surtirá efecto el último parámetro especificado.
+
+>[!IMPORTANT]
+>
+>Usted **no puede** usar un solo parámetro `property` para filtrar varios campos a la vez. Cada campo debe tener su propio parámetro `property`. El siguiente ejemplo (`property=id>abc,name==myDataset`) es **no** permitido porque intenta aplicar condiciones a `id` y `name` dentro de un **único parámetro `property`**.
+
 El parámetro `property` puede aceptar cualquier propiedad de objeto de nivel. `sampleKey` se puede usar para filtrar con `?properties=subItem.sampleKey`.
 
 ```json
@@ -562,6 +584,8 @@ El valor del parámetro `property` admite varios tipos diferentes de expresiones
 | &lt;= | Devuelve solo objetos cuyos valores de propiedad sean menores (o iguales) que una cantidad establecida. | `property=version<=1.0.0` |
 | > | Devuelve solo objetos cuyos valores de propiedad sean mayores (pero no iguales) que una cantidad establecida. | `property=version>1.0.0` |
 | >= | Devuelve solo objetos cuyos valores de propiedad sean mayores (o iguales) que una cantidad establecida. | `property=version>=1.0.0` |
+| * | Un comodín se aplica a cualquier propiedad de cadena y coincide con cualquier secuencia de caracteres. Use `**` para omitir un asterisco literal. | `property=name==te*st` |
+| &amp; | Combina varios parámetros `property` con una relación `AND` entre ellos. | `property=id==abc&property=name!=test` |
 
 >[!NOTE]
 >
@@ -619,12 +643,38 @@ Una respuesta correcta contiene una lista de conjuntos de datos cuyos números d
 }
 ```
 
-## Combinación de varios filtros
+## Filtrar matrices con el parámetro de propiedad {#filter-arrays}
 
-Con un signo &amp; (`&`), puede combinar varios filtros en una única solicitud. Cuando se añaden condiciones adicionales a una solicitud, se asume una relación AND.
+Utilice operadores de igualdad y desigualdad para incluir o excluir valores específicos al filtrar los resultados en función de propiedades de matriz.
+
+### Filtros de igualdad {#equality-filters}
+
+Para filtrar un campo de matriz por varios valores, utilice parámetros de propiedad independientes para cada valor. Utilice los filtros de igualdad para devolver únicamente las entradas de la matriz de datos que coincidan con los valores especificados.
+
+>[!NOTE]
+>
+>El requisito de incluir `id` o `created` al filtrar varios campos no se aplica **no** al filtrar varios valores dentro de un campo de matriz.
+
+La consulta de ejemplo siguiente solo devuelve los resultados de la matriz que incluye `val1` y `val2`.
 
 **Formato de API**
 
 ```http
-GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
+GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
+
+### Filtros de desigualdad {#inequality-filters}
+
+Utilice operadores de desigualdad (`!=`) en un campo de matriz para excluir cualquier entrada de los datos donde la matriz contenga los valores especificados.
+
+**Formato de API**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
+```
+
+Esta consulta devuelve documentos donde arrayField no contiene `val1` ni `val2`.
+
+### Limitaciones del filtro de igualdad y desigualdad {#equality-inequality-limitations}
+
+No se pueden aplicar igualdad (`=`) y desigualdad (`!=`) al mismo campo en una sola consulta.
