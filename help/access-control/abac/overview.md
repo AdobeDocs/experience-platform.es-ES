@@ -3,19 +3,14 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 13%
+source-wordcount: '1860'
+ht-degree: 14%
 
 ---
 
 # Información general de control de acceso basado en atributos {#attribute-based-access-control-overview}
-
->[!CONTEXTUALHELP]
->id="platform_accesscontrol_abac_labelusageaccesspolicy"
->title="Política de acceso al uso de etiquetas"
->abstract=""
 
 El control de acceso basado en atributos es una capacidad de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funcionalidades basadas en atributos. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo o segmento de esquema. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios.
 
@@ -53,7 +48,7 @@ El control de acceso basado en atributos implica los siguientes componentes:
 >
 >Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Funciones en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de la organización.
 
-Permisos es el área del Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
+Permisos es el área de Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
 
 Mediante Permisos, puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de permisos](ui/browse.md).
 
@@ -75,7 +70,7 @@ Hay disponibilidad limitada para el control de acceso basado en atributos para c
 
 * Etiquetado: Añada, edite y elimine etiquetas a las funciones de usuario, los campos de esquema, los segmentos y otros objetos admitidos para aprovechar las políticas de control de acceso. **Nota:** Cualquier segmento que utilice un atributo etiquetado también debe estar etiquetado si desea que se le apliquen las mismas restricciones de acceso.
 
-Se están cambiando los flujos de trabajo de administración de todas las aplicaciones con tecnología de Experience Platform de Admin Console a la nueva interfaz de Permisos.
+Se están cambiando los flujos de trabajo de administración de todas las aplicaciones con tecnología de Experience Platform desde Admin Console a la nueva interfaz de Permisos.
 
 >[!IMPORTANT]
 >

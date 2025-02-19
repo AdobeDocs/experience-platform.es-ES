@@ -3,16 +3,22 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Zonas protegidas de control de acceso basado en atributos
 description: Este documento proporciona información sobre la administración de zonas protegidas a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
-# Administrar zonas protegidas
+# Administrar zonas protegidas {#mange-sandboxes}
 
-Los entornos limitados son particiones virtuales en una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de sus aplicaciones de experiencia digital. Todo el contenido y las acciones realizadas en una zona protegida se limitan únicamente a esa zona protegida y no afectan a ninguna otra. Para obtener más información sobre las zonas protegidas, consulte la [Información general sobre las zonas protegidas](../../../sandboxes/home.md).
+>[!CONTEXTUALHELP]
+>id="platform_permissions_sandboxes_about"
+>title="¿Qué son las zonas protegidas?"
+>abstract="Las zonas protegidas son particiones virtuales en una sola instancia de Platform. Todo el contenido y las acciones realizadas en una zona protegida se limitan a ella y no afectan a otras zonas protegidas. El acceso a las zonas protegidas se administra mediante funciones."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Resumen de zonas protegidas"
+
+Los zonas protegidas son particiones virtuales en una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de sus aplicaciones de experiencia digital. Todo el contenido y las acciones realizadas en una zona protegida se limitan únicamente a esa zona protegida y no afectan a ninguna otra. Para obtener más información sobre las zonas protegidas, consulte la [Información general sobre las zonas protegidas](../../../sandboxes/home.md).
 
 ## Configuración de zonas protegidas
 

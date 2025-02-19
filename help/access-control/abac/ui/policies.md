@@ -3,16 +3,16 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Administrar directivas de control de acceso
 description: Este documento proporciona información sobre la administración de directivas de control de acceso a través de la interfaz Permisos en Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 0%
+source-wordcount: '684'
+ht-degree: 2%
 
 ---
 
 # Administrar directivas de control de acceso
 
-Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Las directivas de acceso pueden ser locales o globales, y pueden invalidar otras directivas. El Adobe proporciona una directiva predeterminada que se puede activar inmediatamente o siempre que su organización esté lista para empezar a controlar el acceso a objetos específicos en función de las etiquetas. La directiva predeterminada aprovecha las etiquetas aplicadas a los recursos para denegar el acceso a menos que los usuarios tengan una función con una etiqueta coincidente.
+Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Las directivas de acceso pueden ser locales o globales, y pueden invalidar otras directivas. Adobe proporciona una directiva predeterminada que se puede activar inmediatamente o siempre que su organización esté lista para empezar a controlar el acceso a objetos específicos en función de las etiquetas. La directiva predeterminada aprovecha las etiquetas aplicadas a los recursos para denegar el acceso a menos que los usuarios tengan una función con una etiqueta coincidente.
 
 >[!IMPORTANT]
 >
@@ -184,7 +184,13 @@ Aparecerá el cuadro de diálogo **[!UICONTROL Quitar]** que le pedirá que conf
 >
 >La zona protegida seleccionada se ha eliminado correctamente de la directiva.
 
-## Activar una directiva
+## Activar una directiva {#activate-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="¿Qué son las directivas?"
+>abstract="Las directivas son declaraciones que reúnen atributos para establecer acciones permitidas y no permitidas. Cada organización viene con una directiva predeterminada que debe activar para comenzar a controlar el acceso a objetos específicos en función de las etiquetas. Las etiquetas aplicadas a los recursos deniegan el acceso a menos que se asigne a los usuarios una función con una etiqueta coincidente. Las directivas predeterminadas no se pueden editar ni eliminar, pero se pueden activar o desactivar."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Administrar etiquetas"
 
 Para activar una directiva existente, selecciónela en la ficha **[!UICONTROL Directivas]**.
 

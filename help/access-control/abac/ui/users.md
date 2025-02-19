@@ -3,14 +3,20 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Administrar usuarios
 description: Este documento proporciona información sobre la administración de usuarios y grupos de usuarios a través de la interfaz de permisos en Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 0%
+source-wordcount: '285'
+ht-degree: 1%
 
 ---
 
-# Administrar usuarios
+# Administrar usuarios {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="¿Qué son los usuarios?"
+>abstract="Los usuarios son las personas que tienen acceso a Experience Platform. El acceso de un usuario individual a los recursos de una organización se administra mediante funciones."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Administrar funciones"
 
 Si desea ver los detalles de usuario y las funciones a las que están asignados, seleccione la pestaña **[!UICONTROL Usuarios]**.
 

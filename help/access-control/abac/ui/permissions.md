@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Administrar permisos de funciones
 description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1699'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 >
 >El control de acceso utiliza un ID de usuario (un ID único interno asignado a un usuario) para conceder permisos. Cuando se migra una organización de Adobe ID a un ID empresarial, se perderán todos los permisos establecidos para sus usuarios, ya que el ID de usuario cambia y el control de acceso utiliza el ID de usuario recién generado. Si su organización se migra a un ID empresarial, póngase en contacto con su representante de Adobe para migrar su ID de usuario de Adobe ID a un ID empresarial.
 
-Permisos es el área del Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
+Permisos es el área de Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
 
 Mediante Permisos, puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas. Los permisos también le permiten administrar las etiquetas, las zonas protegidas y los usuarios asociados a una función específica.
 
@@ -120,11 +120,17 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de un
 
 ## Administrar credenciales de API para un rol {#manage-api-credentials-for-role}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_apicredentials_about"
+>title="¿Qué son las credenciales de API?"
+>abstract="Las credenciales de la API se asignan a funciones para conceder a los usuarios y desarrolladores acceso a las API de Platform. Con las API de Platform, puede realizar mediante programación operaciones básicas de CRUD (crear, leer, actualizar, eliminar) en los datos, como configurar atributos calculados, acceder a datos o entidades, exportar datos, eliminar datos o lotes innecesarios, etc."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Guía de API de Platform"
+
 >[!IMPORTANT]
 >
 > Para usar y administrar credenciales de API en [!UICONTROL Permisos], los usuarios deben tener privilegios de administrador del sistema.
 
-Para utilizar las API de Experience Platform como usuario o desarrollador, el administrador del sistema debe agregar las credenciales de la API además del conjunto de permisos dado a una función. Para obtener una guía completa sobre cómo crear y asignar credenciales de API, así como los permisos necesarios, consulte el tutorial paso a paso en [autenticar y acceder a las API de Experience Platform](../../../landing/api-authentication.md#generate-credentials).
+Para utilizar las API de Experience Platform como usuario o desarrollador, un administrador del sistema debe agregar credenciales de API además del conjunto de permisos dado de una función. Para obtener una guía completa sobre cómo crear y asignar credenciales de API, así como los permisos necesarios, consulte el tutorial paso a paso en [autenticar y acceder a las API de Experience Platform](../../../landing/api-authentication.md#generate-credentials).
 
 Seleccione la ficha **[!UICONTROL Credenciales de API]** para abrir el área de trabajo de credenciales de API de roles y, a continuación, seleccione **[!UICONTROL Agregar credenciales de API]** para asignar credenciales de API al rol.
 
@@ -148,7 +154,13 @@ Aparece el cuadro de diálogo **[!UICONTROL Quitar credenciales de API]**, que l
 
 Se le devolverá a la ficha **[!UICONTROL Credenciales de API]**.
 
-## Administrar grupos de usuarios para un rol
+## Administrar grupos de usuarios para un rol {#manage-user-groups}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_usergroups_about"
+>title="¿Qué son los grupos de usuarios?"
+>abstract="Los grupos de usuarios son colecciones de varios usuarios que comparten el acceso a las mismas funciones. El acceso a los recursos de una organización se administra mediante las funciones asignadas a los grupos de usuarios."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Administrar funciones"
 
 Los grupos de usuarios son varios usuarios que se han agrupado y tienen acceso para ejecutar las mismas funciones.
 
@@ -174,11 +186,11 @@ Aparece el cuadro de diálogo **[!UICONTROL Quitar grupo de usuarios]**, que le 
 
 Volverá a la ficha **[!UICONTROL Grupos de usuarios]**.
 
-## Añadir usuarios al Experience Platform
+## Adición de usuarios a Experience Platform
 
 Como administrador del sistema, puede otorgar acceso de desarrollador a un usuario para que pueda [crear integraciones](../../../landing/api-authentication.md#generate-credentials) en Adobe Developer Console.
 
-Para agregar un Experience Platform de usuario, inicia sesión en el [Admin Console](https://adminconsole.adobe.com) y selecciona **[!UICONTROL Agregar usuarios]**.
+Para agregar un Experience Platform de usuario, inicia sesión en [Admin Console](https://adminconsole.adobe.com) y selecciona **[!UICONTROL Agregar usuarios]**.
 
 ![Panel de Adobe Admin Console con la opción Agregar usuarios resaltada.](../../images/flac-ui/product-profile-add-users.png)
 
