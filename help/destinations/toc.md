@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 5%
 
 ---
@@ -60,13 +60,13 @@ ht-degree: 5%
    * [Suscribirse a alertas de destino en contexto](ui/alerts.md)
 * Catálogo de destinos {#catalog}
    * [Resumen del catálogo de destinos](./catalog/overview.md)
-   * destinos de Adobe{#adobe}
-      * [información general sobre destinos de Adobe](./catalog/adobe/overview.md)
+   * Destinos de Adobe{#adobe}
+      * [Información general sobre destinos Adobe](./catalog/adobe/overview.md)
       * [Públicos de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-      * [conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
-      * [Conexión de sincronización de persona del Marketo Engage (Beta)](./catalog/adobe/marketo-engage-person-sync.md)
+      * [Conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
+      * [(Beta) Conexión de sincronización de personas de Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Conexión de composición de audiencia federada](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos de Advertising{#advertising}
       * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
@@ -78,10 +78,10 @@ ht-degree: 5%
       * [Extensión Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extensión de seguimiento universal de eventos (UET) de Bing Ads](./catalog/advertising/bing-ads.md)
       * [Extensión de rama](./catalog/advertising/branch.md)
-      * [(Beta) Conexión de Criteo](./catalog/advertising/criteo.md)
+      * [Conexión de Criteo](./catalog/advertising/criteo.md)
       * [Conexión de Demandbase](./catalog/advertising/demandbase.md)
       * [Extensión DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
-      * [Extensión de facebook Pixel](./catalog/advertising/facebook-pixel.md)
+      * [Extensión de Facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Extensión OneTag de Flashtalk](./catalog/advertising/flashtalking.md)
       * [Conexión de Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extensión de Google Ads](./catalog/advertising/google-ads-extension.md)
@@ -91,26 +91,26 @@ ht-degree: 5%
       * [(Beta) Conexión Google Customer Match + DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Conexión de Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extensión gtag de Google](./catalog/advertising/gtag-advertising.md)
-      * [Extensión de etiqueta de linkedIn Insight](./catalog/advertising/linkedin.md)
+      * [Extensión de etiqueta de LinkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp: conexión de incorporación](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp: conexión de distribución](./catalog/advertising/liveramp-distribution.md)
       * [Lote de Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
       * [Magnite Streaming Real-time connection](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Conexión de Microsoft Bing](./catalog/advertising/bing.md)
-      * [Extensión de seguimiento de conversión de pinterest](./catalog/advertising/pinterest-extension.md)
-      * [Conexión de lista de clientes de pinterest](./catalog/advertising/pinterest.md)
-      * [Actualización de conexión de pinterest](./catalog/advertising/pinterest-upgrade.md)
+      * [Extensión de seguimiento de conversión de Pinterest](./catalog/advertising/pinterest-extension.md)
+      * [Conexión de lista de clientes de Pinterest](./catalog/advertising/pinterest.md)
+      * [Actualización de conexión de Pinterest](./catalog/advertising/pinterest-upgrade.md)
       * [Conexión de PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [Conexión de anuncios de Snapchat](./catalog/advertising/snap-inc.md)
       * [La conexión con la Oficina de Comercio](./catalog/advertising/tradedesk.md)
       * [La conexión CRM de Trade Desk](./catalog/advertising/tradedesk-emails.md)
-      * [Twitter Extensión de etiquetas de sitios web universales](./catalog/advertising/twitter-uwt.md)
+      * [Extensión de etiqueta de sitio web universal de Twitter](./catalog/advertising/twitter-uwt.md)
       * [Conexión DataX de Yahoo/Verizon](./catalog/advertising/datax.md)
    * Destinos de Analytics {#analytics}
       * [Resumen de destinos de Analytics](./catalog/analytics/overview.md)
       * [Extensión de seguimiento de sitio web de Adobe](./catalog/analytics/adform.md)
       * [Extensión de Adobe Analytics](./catalog/analytics/adobe-analytics.md)
-      * [Extensión de Adobe Medium Analytics para audio y vídeo](./catalog/analytics/adobe-video-analytics.md)
+      * [Extensión de Adobe Media Analytics para audio y vídeo](./catalog/analytics/adobe-video-analytics.md)
       * [Extensión Clicktale](./catalog/analytics/clicktale.md)
       * [Extensión de Contentsquare](./catalog/analytics/contentsquare.md)
       * [Extensión Decibel](./catalog/analytics/decibel.md)
@@ -147,7 +147,7 @@ ht-degree: 5%
       * [Conexión de Zendesk](catalog/crm/zendesk.md)
    * Destinos de la plataforma de administración de datos {#data-management}
       * [Información general sobre destinos de Data Management Platform (DMP)](./catalog/data-management/overview.md)
-      * [Extensión de DIL de Audience Manager](./catalog/data-management/aam-dil-extension.md)
+      * [Extensión de Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
       * [Plataforma de marketing de Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Socio de datos e identidad {#data-partner}
       * [Supresión de perspectiva de Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
@@ -169,9 +169,9 @@ ht-degree: 5%
       * [Etiquetas de Mailchimp](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Conexión de Oracle Eloqua](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(Archivos) Conexión de Oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
-      * [Conexión de oracle de Responsys](./catalog/email-marketing/oracle-responsys.md)
-      * [(API) Conexión de Marketing Cloud de Salesforce](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
-      * [(Archivos) Conexión de Marketing Cloud de Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [Conexión de Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
+      * [(API) Conexión de Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+      * [(Archivos) Conexión de Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Conexión de SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensiones de etiquetas {#launch-extensions}
@@ -203,9 +203,9 @@ ht-degree: 5%
       * [Conexión del perfil Pega](./catalog/personalization/pega-profile.md)
    * Destinos sociales{#social}
       * [Información general sobre destinos sociales](./catalog/social/overview.md)
-      * [Conexión de facebook](./catalog/social/facebook.md)
+      * [Conexión de Facebook](./catalog/social/facebook.md)
       * [(Compañías) Conexión de audiencias coincidentes de LinkedIn](./catalog/social/linkedin-b2b.md)
-      * [Conexión de audiencias coincidentes de linkedIn](./catalog/social/linkedin.md)
+      * [Conexión de audiencias coincidentes de LinkedIn](./catalog/social/linkedin.md)
       * [Conexión de TikTok](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] conexión](./catalog/social/twitter.md)
    * Destinos de streaming {#streaming}
@@ -267,7 +267,7 @@ ht-degree: 5%
          * [Configurar un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Configurar un destino basado en archivos para exportar audiencias de clientes potenciales](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Referencia de API de creación de destino {#authoring-api}
-      * [Referencia de API de Destination SDK (creación de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Referencia de la API de Destination SDK (creación de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Operaciones del servidor de destino {#server-operations}
          * [Crear una configuración de servidor de destino](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [Recuperar una configuración de servidor de destino](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)

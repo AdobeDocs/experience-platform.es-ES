@@ -3,20 +3,20 @@ keywords: publicidad; criterios;
 title: Conexión de Criteo
 description: Criteo potencia la publicidad de confianza e impactante para llevar experiencias más ricas a todos los consumidores a través de la internet abierta. Con el conjunto de datos de comercio más grande del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio adecuado, en el momento adecuado.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1016'
 ht-degree: 3%
 
 ---
 
-# (Beta) Conexión de Criteo
+# Conexión de Criteo
 
 ## Información general {#overview}
 
 >[!IMPORTANT]
 >
->Este conector de destino y la página de documentación son creados y mantenidos por Criteo. Actualmente, este es un producto beta y la funcionalidad está sujeta a cambios. Para cualquier consulta o solicitud de actualización, comuníquese directamente con Criteo [aquí](mailto:criteoTechnicalPartnerships@criteo.com).
+>Este conector de destino y la página de documentación son creados y mantenidos por Criteo. Para cualquier consulta o solicitud de actualización, comuníquese directamente con Criteo [aquí](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo potencia la publicidad de confianza e impactante para llevar experiencias más ricas a todos los consumidores a través de la internet abierta. Con el conjunto de datos de comercio más grande del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio adecuado, en el momento adecuado.
 
@@ -49,7 +49,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 | --- | --- | --- |
 | Tipo de exportación | Exportación de audiencia | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino [!DNL Criteo]. |
-| Frecuencia de exportación | Streaming | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](../../destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | Streaming | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](../../destination-types.md#streaming-destinations). |
 
 ## Casos de uso {#use-cases}
 
@@ -61,7 +61,7 @@ Muestre su negocio con ofertas de productos relevantes y creativos flexibles. Co
 
 ### Caso de uso 2 : Aumento de las conversiones del sitio web
 
-Cuando los visitantes abandonen el sitio web, recuérdeles lo que se pierden con los anuncios de retargeting que aumentan las conversiones al mostrar ofertas especiales y ofertas hiperrelevantes, independientemente de dónde vayan a continuación. Conecte la audiencia de CDP de Adobe para volver a atraer a los clientes existentes o dirigirse a consumidores similares a sus compradores más fieles.
+Cuando los visitantes abandonen el sitio web, recuérdeles lo que se pierden con los anuncios de retargeting que aumentan las conversiones al mostrar ofertas especiales y ofertas hiperrelevantes, independientemente de dónde vayan a continuación. Conecte su audiencia de CDP de Adobe para volver a atraer a los clientes existentes o dirigirse a consumidores similares a sus compradores más fieles.
 
 ## Conectar con Criteo {#connect}
 
