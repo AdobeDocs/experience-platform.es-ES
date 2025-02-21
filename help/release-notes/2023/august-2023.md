@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2023
 description: Las notas de la versión de agosto de 2023 de Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 43%
@@ -29,7 +29,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Real-time Customer Data Platform ([!DNL Real-Time CDP]), que se creó en el Experience Platform, ayuda a las empresas a reunir datos conocidos y desconocidos para activar perfiles de clientes con decisiones inteligentes a lo largo del recorrido del cliente.
+Real-Time Customer Data Platform ([!DNL Real-Time CDP]), que se creó en Experience Platform, ayuda a las empresas a reunir datos conocidos y desconocidos para activar perfiles de clientes con decisiones inteligentes a lo largo del recorrido del cliente.
 
 [!DNL Real-Time CDP] combina varias fuentes de datos empresariales para crear perfiles de clientes en tiempo real. Los segmentos creados a partir de estos perfiles se pueden enviar a destinos de flujo descendente para ofrecer experiencias de cliente personalizadas en todos los canales y dispositivos.
 
@@ -82,7 +82,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Tipo | Función | Descripción |
 | --- | --- | --- |
-| Reenvío de eventos y etiquetas | [Etiquetas de Experience Platform (China)](/help/tags/ui/publishing/premium-cdn.md) | La nueva función Etiquetas de Experience Platform (China) mejora la fiabilidad y latencia del sitio web, lo que conduce a tiempos de respuesta más rápidos para los clientes que implementan etiquetas en sitios web en China. Los clientes ahora pueden utilizar el código de JavaScript en la biblioteca de etiquetas al implementar sitios web en China. Esta función también se ha agregado al Protocolo de aprovisionamiento unificado (UPP), lo que permite automatizar la implementación de productos tras la compra. |
+| Reenvío de eventos y etiquetas | [Etiquetas de Experience Platform (China)](/help/tags/ui/publishing/premium-cdn.md) | La nueva función Etiquetas de Experience Platform (China) mejora la fiabilidad y la latencia del sitio web, lo que conduce a tiempos de respuesta más rápidos para los clientes que implementan etiquetas en sitios web en China. Los clientes ahora pueden utilizar el código de JavaScript en la biblioteca de etiquetas al implementar sitios web en China. Esta función también se ha agregado al Protocolo de aprovisionamiento unificado (UPP), lo que permite automatizar la implementación de productos tras la compra. |
 
 {style="table-layout:auto"}
 
@@ -156,7 +156,7 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 
 | Función | Descripción |
 | --- | --- |
-| Cambios en los límites del gráfico de identidad | A finales de septiembre, el gráfico de identidad cambiará a 50 identidades por gráfico y se ingestará la última identidad. Como consecuencia, la identidad más antigua se eliminará en función de la marca de tiempo de ingesta y el tipo de identidad, y los tipos de identidad de cookies se eliminarán primero. Actualmente, los gráficos de identidad tienen un límite de 150 identidades por gráfico y, una vez alcanzado este límite, los gráficos ya no se actualizan. Póngase en contacto con el representante de cuentas para solicitar un cambio en el tipo de identidad si la zona protegida de producción contiene lo siguiente: <ul><li>un área de nombres personalizada donde los identificadores de persona (como los ID de CRM) están configurados como tipo de identidad de cookie/dispositivo.</li><li>un área de nombres personalizada donde los identificadores de cookies/dispositivos están configurados como tipo de identidad entre dispositivos.</li></ul> El personal de ingeniería de Adobes procesará manualmente estas solicitudes. Para obtener más información, lea las [protecciones para los datos del servicio de identidad](../../identity-service/guardrails.md). |
+| Cambios en los límites del gráfico de identidad | A finales de septiembre, el gráfico de identidad cambiará a 50 identidades por gráfico y se ingestará la última identidad. Como consecuencia, la identidad más antigua se eliminará en función de la marca de tiempo de ingesta y el tipo de identidad, y los tipos de identidad de cookies se eliminarán primero. Actualmente, los gráficos de identidad tienen un límite de 150 identidades por gráfico y, una vez alcanzado este límite, los gráficos ya no se actualizan. Póngase en contacto con el representante de cuentas para solicitar un cambio en el tipo de identidad si la zona protegida de producción contiene lo siguiente: <ul><li>un área de nombres personalizada donde los identificadores de persona (como los ID de CRM) están configurados como tipo de identidad de cookie/dispositivo.</li><li>un área de nombres personalizada donde los identificadores de cookies/dispositivos están configurados como tipo de identidad entre dispositivos.</li></ul> El personal de ingeniería de Adobe procesará manualmente estas solicitudes. Para obtener más información, lea las [protecciones para los datos del servicio de identidad](../../identity-service/guardrails.md). |
 
 Para obtener más información, lea la [descripción general del servicio de identidad](../../identity-service/home.md).
 
@@ -168,7 +168,7 @@ Para obtener más información, lea la [descripción general del servicio de ide
 
 | Función | Descripción |
 | --- | --- |
-| Audiencias de similitud (disponibilidad limitada) | Las audiencias de similitud proporcionan una perspectiva inteligente de cada una de sus audiencias, aprovechando las perspectivas basadas en el aprendizaje automático para identificar y dirigirse a clientes de alto valor con sus campañas de marketing. Con las audiencias de similitud, puede crear audiencias ampliadas dirigidas a clientes similares a sus audiencias de alto rendimiento o a clientes de destino similares a audiencias convertidas anteriormente. Para obtener más información sobre audiencias de similitud, lea la [Información general sobre audiencias de similitud](../../segmentation/ui/lookalike-audiences.md). |
+| Audiencias de similitud (disponibilidad limitada) | Las audiencias de similitud proporcionan una perspectiva inteligente de cada una de sus audiencias, aprovechando las perspectivas basadas en el aprendizaje automático para identificar y dirigirse a clientes de alto valor con sus campañas de marketing. Con las audiencias de similitud, puede crear audiencias ampliadas dirigidas a clientes similares a sus audiencias de alto rendimiento o a clientes de destino similares a audiencias convertidas anteriormente. Para obtener más información sobre audiencias de similitud, lea la [Información general sobre audiencias de similitud](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

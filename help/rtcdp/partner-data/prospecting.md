@@ -3,7 +3,7 @@ title: Interactúe y adquiera nuevos clientes sin depender de cookies de tercero
 description: Descubra cómo captar y adquirir nuevos clientes a través de casos de uso de prospección, sin depender de cookies de terceros.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 85%
@@ -14,7 +14,7 @@ ht-degree: 85%
 
 >[!AVAILABILITY]
 >
->* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Utilice la compatibilidad con datos de terceros en Real-Time CDP para ampliar su base de perfiles con perfiles potenciales de socios de datos y comprometerse con ellos para adquirir o llegar a nuevos clientes.
 
@@ -24,7 +24,7 @@ Utilice la compatibilidad con datos de terceros en Real-Time CDP para ampliar su
 
 Las marcas se enfrentan simultáneamente a enormes desafíos al ejecutar de forma responsable los casos de uso de adquisición de clientes principales sin depender de cookies de terceros, presupuestos limitados y una mayor demanda de transparencia y retorno de la inversión publicitaria.
 
-Adobe Real-time Customer Data Platform puede ayudar a las marcas a realizar una transición segura de los casos de uso admitidos de Data Management Platform (DMP) a alternativas sin cookies y hacerlo de una manera que afirme la sofisticación y la potencia completas de la segmentación de autoservicio, la depuración de audiencias y la activación en un solo sistema. Todo sin comprometer el enfoque inquebrantable de Adobe en el uso responsable de los datos a través de un marco patentado de gobernanza de datos y consentimiento.
+Adobe Real-Time Customer Data Platform puede ayudar a las marcas a realizar una transición segura de los casos de uso admitidos de Data Management Platform (DMP) a alternativas sin cookies y hacerlo de una manera que aúne en un único sistema la completa sofisticación y potencia de la segmentación de autoservicio, la depuración de audiencias y la activación. Todo sin comprometer el enfoque inquebrantable de Adobe en el uso responsable de los datos a través de un marco patentado de gobernanza de datos y consentimiento.
 
 Por ejemplo, siga los pasos descritos en este caso de uso cuando necesite ejecutar una campaña para atraer clientes potenciales para que se conviertan en usuarios o clientes conocidos.
 
@@ -71,7 +71,7 @@ A medida que complete los pasos para implementar el caso de uso, utilizará las 
 * [Conjuntos de datos](/help/catalog/datasets/overview.md)
 * [Fuentes](/help/sources/home.md)
 * [Perfiles de clientes potenciales](/help/profile/ui/prospect-profile.md)
-* [Públicos de clientes potenciales](/help/segmentation/ui/prospect-audience.md)
+* [Públicos de clientes potenciales](/help/segmentation/types/prospect-audiences.md)
 * [Destinos](/help/destinations/home.md)
 
 ### Detalles del perfil de terceros de licencia del socio {#license-profiles-from-partner}
@@ -213,7 +213,7 @@ Tenga en cuenta que la experiencia de creación de públicos para perfiles de cl
 * Solo evaluación del perfil del lote.
 * No admite la creación de públicos basados en eventos de series de tiempo.
 
-Más información sobre [audiencias de clientes potenciales](/help/segmentation/ui/prospect-audience.md).
+Más información sobre [audiencias de clientes potenciales](/help/segmentation/types/prospect-audiences.md).
 
 ### Activar perfiles de clientes potenciales en destinos {#activate-to-destinations}
 

@@ -2,16 +2,16 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
-source-wordcount: '4235'
-ht-degree: 0%
+source-wordcount: '4830'
+ht-degree: 2%
 
 ---
 
 # Preguntas frecuentes
 
-Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estas audiencias se configuran de forma centralizada y se mantienen en Platform, y son fácilmente accesibles desde cualquier solución de Adobe. A continuación se muestra una lista de las preguntas más frecuentes sobre las audiencias y la segmentación.
+Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estas audiencias se configuran de forma centralizada y se mantienen en Platform, y cualquier solución de Adobe puede acceder a ellas fácilmente. A continuación se muestra una lista de las preguntas más frecuentes sobre las audiencias y la segmentación.
 
 ## Audience Portal
 
@@ -19,7 +19,7 @@ En la siguiente sección se enumeran las preguntas relacionadas con Audience Por
 
 ### ¿Tengo acceso a Audience Portal y a Composición de audiencias?
 
-Audience Portal y Audience Composition están disponibles para todos los clientes de Real-Time CDP Prime y Ultimate (ediciones B2C, B2B y B2P) y para los clientes de Journey Optimizer Select, Prime, Ultimate Starter y Ultimate.
+El portal de audiencias y la composición de audiencias están disponibles para todos los clientes de Real-Time CDP Prime y Ultimate (ediciones B2C, B2B y B2P) y para los clientes de Journey Optimizer Select, Prime, Ultimate Starter y Ultimate.
 
 En este momento, solo se admiten audiencias basadas en perfiles. En una versión posterior se añadirá compatibilidad con audiencias basadas en cuentas.
 
@@ -51,7 +51,7 @@ Sí, la audiencia generada de forma externa se combinará con el perfil existent
 
 ### ¿Cómo se respetan las preferencias de consentimiento del cliente para las audiencias generadas externamente que se importan en Audience Portal?{#consent}
 
-A medida que los datos del cliente se capturan desde varios canales, la vinculación de identidad y las políticas de combinación permiten que estos datos se consoliden en un único perfil del cliente en tiempo real. La información sobre las preferencias de consentimiento de los clientes se almacena y evalúa en el nivel de perfil.
+A medida que los datos del cliente se capturan desde varios canales, la identificación de identidades y las políticas de combinación permiten que estos datos se consoliden en un único perfil del cliente en tiempo real. La información sobre las preferencias de consentimiento de los clientes se almacena y evalúa a nivel de perfil.
 
 Los destinos descendentes comprueban cada perfil para obtener información de consentimiento antes de la activación. La información de consentimiento de cada perfil se compara con los requisitos de consentimiento para un destino en particular. Si el perfil no cumple los requisitos, no se envía a un destino.
 
@@ -180,7 +180,7 @@ Una vez que una audiencia se encuentra en el estado publicado, **no puede** volv
 
 ### ¿Cómo puedo colocar una audiencia en el estado publicado?
 
-Para las audiencias creadas con el Generador de segmentos o la Composición de audiencias, puede establecer la audiencia en el estado publicado seleccionando &quot;[!UICONTROL Publish]&quot; en sus respectivas interfaces de usuario.
+Para las audiencias creadas con el Generador de segmentos o la Composición de audiencias, puede establecer la audiencia en el estado publicado seleccionando &quot;[!UICONTROL Publicar]&quot; en sus respectivas interfaces de usuario.
 
 Las audiencias creadas externamente se establecen automáticamente como publicadas.
 
@@ -194,7 +194,7 @@ Puede poner una audiencia publicada en el estado inactivo abriendo el menú de a
 >
 >El estado &quot;Volver a publicar&quot; es el mismo que el estado publicado para el comportamiento de audiencia.
 
-Para volver a publicar una audiencia, seleccione una audiencia que esté en estado inactivo, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Publish].
+Para volver a publicar una audiencia, seleccione una audiencia que esté en estado inactivo, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Publicar].
 
 ### ¿Cómo puedo poner una audiencia en el estado eliminado?
 
@@ -358,6 +358,16 @@ En la siguiente sección se enumeran las preguntas relacionadas con la pertenenc
 
 Para confirmar la pertenencia de un perfil a la audiencia, visite la página de detalles del perfil que desee confirmar. Seleccione **[!UICONTROL Atributos]**, seguido de **[!UICONTROL Ver JSON]**, y podrá confirmar que el objeto `segmentMembership` contiene el ID de la audiencia.
 
+### ¿Puede la pertenencia a audiencias oscilar entre la pertenencia ideal y la real?
+
+Sí, la pertenencia a audiencias puede variar entre la pertenencia ideal y la real si se evalúa una audiencia con la segmentación por secuencias **y**. Esa audiencia se basa en una audiencia evaluada mediante segmentación por lotes.
+
+Por ejemplo, si la audiencia A se basa en la audiencia B y la audiencia B se evalúa mediante segmentación por lotes, ya que la audiencia B solo se actualiza cada 24 horas, la audiencia A se alejará más de los datos reales hasta que se vuelva a sincronizar con las actualizaciones de la audiencia B.
+
+## Segmentación por lotes {#batch-segmentation}
+
+En la siguiente sección se enumeran las preguntas relacionadas con la segmentación por lotes.
+
 ### ¿Cómo resuelve la segmentación por lotes la pertenencia a perfiles?
 
 Las audiencias evaluadas mediante la segmentación por lotes se resuelven a diario y los resultados de los miembros de la audiencia se registran en el atributo `segmentMembership` del perfil. Las búsquedas de perfiles generan una nueva versión del perfil en el momento de la búsqueda, pero **no** actualiza los resultados de segmentación por lotes.
@@ -380,3 +390,44 @@ Los datos de streaming pueden tardar hasta tres horas en estar disponibles en lo
 
 Por ejemplo, si un trabajo de segmentación por lotes se ejecuta a las 9 p. m., se garantiza que contendrá datos ingeridos por streaming de **hasta las** 6 p. m. Se incluirán los datos ingeridos por streaming que se ingirieron después de las 6 p. m. pero antes de las 9 p. m. **puede**.
 
+## Segmentación de Edge {#edge-segmentation}
+
+En la siguiente sección se enumeran las preguntas relacionadas con la segmentación de Edge.
+
+### ¿Cuánto tiempo tarda una definición de segmento en estar disponible en Edge Network?
+
+Una definición de segmento tarda hasta una hora en estar disponible en Edge Network.
+
+## Segmentación de streaming {#streaming-segmentation}
+
+En la siguiente sección se enumeran las preguntas relacionadas con la segmentación de flujo continuo.
+
+### ¿La &quot;descalificación&quot; de la segmentación de streaming también se produce en tiempo real?
+
+En la mayoría de los casos, la descalificación de la segmentación de streaming se produce en tiempo real. Sin embargo, los segmentos de streaming que usan segmentos de segmentos **no** descalifican en tiempo real, en lugar de descalificar después de 24 horas.
+
+### ¿En qué datos funciona la segmentación por streaming?
+
+La segmentación por flujo funciona en todos los datos que se ingirieron con una fuente de flujo continuo. Los datos ingeridos mediante una fuente basada en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación por transmisión. Los eventos transmitidos al sistema con una marca de tiempo de más de 24 horas se procesarán en el trabajo por lotes siguiente.
+
+### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
+
+Una definición de segmento se define como segmentación por lotes, por secuencias o perimetral basada en una combinación de tipo de consulta y duración del historial de eventos. Se puede encontrar una lista de los segmentos que se evaluarán como una definición de segmento de flujo continuo en la [sección de tipos de consulta de segmentación de flujo continuo](#query-types).
+
+Tenga en cuenta que si una definición de segmento contiene **both** una expresión `inSegment` y una cadena de evento único directa, no puede calificar para la segmentación de flujo continuo. Si desea que esta definición de segmento cumpla los requisitos de la segmentación de flujo continuo, debe convertir la cadena de evento único directo en su propio segmento.
+
+### ¿Por qué sigue aumentando el número de segmentos &quot;cualificados totales&quot; mientras que el número de &quot;últimos X días&quot; permanece en cero dentro de la sección de detalles de definición del segmento?
+
+El número total de segmentos cualificados se obtiene del trabajo de segmentación diario, que incluye audiencias que cumplen los requisitos para los segmentos por lotes y de flujo continuo. Este valor se muestra para los segmentos por lotes y de flujo continuo.
+
+El número bajo los &quot;últimos X días&quot; **solo** incluye audiencias que se califican en la segmentación por transmisión y **solo** aumenta si ha transmitido datos al sistema y cuenta para esa definición de transmisión. Este valor se muestra **solamente** para los segmentos de streaming. Como resultado, este valor **may** se muestra como 0 para los segmentos por lotes.
+
+Como resultado, si ve que el número bajo &quot;Últimos X días&quot; es cero y el gráfico de líneas también informa cero, tiene **no** transmitido ningún perfil al sistema que calificaría para ese segmento.
+
+### ¿Cuánto tiempo tarda una definición de segmento en estar disponible?
+
+Una definición de segmento tarda hasta una hora en estar disponible.
+
+### ¿Existen limitaciones a los datos que se transmiten en?
+
+Para que los datos transmitidos se usen en la segmentación de flujo continuo, **debe** haber un espacio entre los eventos transmitidos. Si se transmiten demasiados eventos en el mismo segundo, Platform los tratará como datos generados por bots y se descartarán. Como práctica recomendada, debe tener **al menos** cinco segundos entre los datos de evento para asegurarse de que los datos se utilizan correctamente.

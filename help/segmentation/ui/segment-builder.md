@@ -3,14 +3,14 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '4955'
+source-wordcount: '4976'
 ht-degree: 8%
 
 ---
 
-# Guía de la interfaz de usuario [!DNL Segment Builder]
+# Guía de la interfaz de usuario de [!DNL Segment Builder]
 
 >[!NOTE]
 >
@@ -86,10 +86,10 @@ Por ejemplo, considere una situación en la que tenía dos grupos de informes co
 
 | Campo | Esquema A del grupo de informes | Esquema B del grupo de informes |
 | ----- | --------------------- | --------------------- |
-| EVAR 1 | Dominio de referencia | Sesión iniciada en S/N |
-| EVAR 2 | Nombre de página | ID de fidelización de miembro |
-| EVAR 3 | URL | Nombre de página |
-| EVAR 4 | Términos de búsqueda | Nombre de producto |
+| EVAR1 | Dominio de referencia | Sesión iniciada en S/N |
+| EVAR2 | Nombre de página | ID de fidelización de miembro |
+| EVAR3 | URL | Nombre de página |
+| EVAR4 | Términos de búsqueda | Nombre de producto |
 | event1 | Clics | Page Views |
 | event2 | Page Views | Adiciones al carro |
 | event3 | Adiciones al carro | Cierres de compra |
@@ -101,14 +101,14 @@ En este caso, puede asignar los dos grupos de informes con el esquema siguiente:
 
 >[!NOTE]
 >
->Aunque los valores de eVar genéricos aún se rellenan, **no** debería usarlos en sus definiciones de segmento (si es posible), ya que los valores podrían significar cosas diferentes a las que originalmente tenían en sus informes.
+>Aunque los valores genéricos de eVar aún se rellenan, **no** debería usarlos en sus definiciones de segmento (si es posible), ya que los valores podrían significar cosas diferentes a las que originalmente tenían en sus informes.
 
 Una vez asignados los grupos de informes, puede utilizar estos campos recién asignados dentro de la segmentación y los flujos de trabajo relacionados con el perfil.
 
 | Escenario | Experiencia del esquema de unión | Variable genérica de segmentación | Variable asignada de segmentación |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
-| Grupo de informes único | El descriptor de nombre descriptivo se incluye con variables genéricas. <br><br>**Ejemplo:** Nombre de página (eVar 2) | <ul><li>Descriptor de nombre descriptivo incluido con variables genéricas</li><li>Las consultas utilizan datos del conjunto de datos específico, ya que es el único</li></ul> | Las consultas pueden utilizar datos de Adobe Analytics y potencialmente otras fuentes. |
-| Varios grupos de informes | No se incluyen descriptores de nombres descriptivos con las variables genéricas. <br><br>**Ejemplo:** eVar 2 | <ul><li>Cualquier campo con varios descriptores aparece como genérico. Esto significa que no aparecen nombres descriptivos en la interfaz de usuario.</li><li>Las consultas pueden utilizar datos de cualquier conjunto de datos que contenga el eVar, lo que puede dar como resultado resultados mixtos o incorrectos.</li></ul> | Las consultas utilizan resultados correctamente combinados de varios conjuntos de datos. |
+| Grupo de informes único | El descriptor de nombre descriptivo se incluye con variables genéricas. <br><br>**Ejemplo:** Nombre de página (eVar2) | <ul><li>Descriptor de nombre descriptivo incluido con variables genéricas</li><li>Las consultas utilizan datos del conjunto de datos específico, ya que es el único</li></ul> | Las consultas pueden utilizar datos de Adobe Analytics y potencialmente otras fuentes. |
+| Varios grupos de informes | No se incluyen descriptores de nombres descriptivos con las variables genéricas. <br><br>**Ejemplo:** eVar2 | <ul><li>Cualquier campo con varios descriptores aparece como genérico. Esto significa que no aparecen nombres descriptivos en la interfaz de usuario.</li><li>Las consultas pueden utilizar datos de cualquier conjunto de datos que contenga eVar, lo que puede dar como resultado resultados mixtos o incorrectos.</li></ul> | Las consultas utilizan resultados correctamente combinados de varios conjuntos de datos. |
 
 ### Públicos
 
@@ -241,6 +241,10 @@ Las restricciones de tiempo permiten aplicar restricciones de tiempo en atributo
 >[!IMPORTANT]
 >
 >Si ha creado una definición de segmento con las restricciones temporales de &quot;Este mes&quot; o &quot;Este año&quot; anteriores a junio de 2024, deberá volver a guardar las definiciones de segmento. Antes de junio de 2024, &quot;Este mes&quot; estaba basado en 30 días y &quot;Este año&quot; estaba basado en 365 días.
+
+>[!NOTE]
+>
+>Tanto la restricción de tiempo de año [omitir](./ignore-year.md) como las [restricciones de tiempo de nivel de regla](./segment-refactoring.md) se refactorizaron anteriormente, con más información disponible en las descripciones generales vinculadas.
 
 La lista de restricciones de tiempo disponibles es la siguiente:
 
@@ -394,7 +398,7 @@ A medida que vaya creando la definición del segmento, podrá obtener una vista 
 
 También puede seleccionar el método de evaluación. Si sabe qué método de evaluación desea utilizar, puede seleccionarlo mediante la lista desplegable. Si desea saber para qué tipos de evaluación se califica esta definición de segmento, puede seleccionar el icono de examinar ![icono de carpeta con una lupa](/help/images/icons/folder-search.png) para ver una lista de los métodos de evaluación de definición de segmento disponibles.
 
-Aparece la ventana emergente [!UICONTROL Idoneidad del método de evaluación]. Esta ventana emergente muestra los métodos de evaluación disponibles, que son por lotes, flujo continuo y Edge. La ventana emergente muestra qué métodos de evaluación son elegibles e inelegibles. Según los parámetros que haya utilizado en la definición del segmento, es posible que no cumpla los requisitos para determinados métodos de evaluación. Para obtener más información sobre los requisitos de cada método de evaluación, lea la [segmentación por transmisión](./streaming-segmentation.md#query-types) o las descripciones generales de [segmentación por perímetros](./edge-segmentation.md#query-types).
+Aparece la ventana emergente [!UICONTROL Idoneidad del método de evaluación]. Esta ventana emergente muestra los métodos de evaluación disponibles, que son por lotes, flujo continuo y Edge. La ventana emergente muestra qué métodos de evaluación son elegibles e inelegibles. Según los parámetros que haya utilizado en la definición del segmento, es posible que no cumpla los requisitos para determinados métodos de evaluación. Para obtener más información sobre los requisitos de cada método de evaluación, lea la [segmentación por transmisión](../methods/streaming-segmentation.md#query-types) o las descripciones generales de [segmentación por perímetros](../methods/edge-segmentation.md#query-types).
 
 También puede cambiar el método de evaluación de la definición del segmento una vez que haya terminado de crearla. Si cambia el método de evaluación de Edge o de Transmisión por lotes, **no** podrá cambiarlo de nuevo a Edge o Transmisión por lotes. El cambio en el método de evaluación **solo** surtirá efecto una vez que seleccione **[!UICONTROL Guardar]** en la ventana emergente. Si se cancela el cuadro de diálogo, **se mantendrá** el método de evaluación original.
 

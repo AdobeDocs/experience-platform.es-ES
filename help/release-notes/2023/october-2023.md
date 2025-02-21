@@ -1,17 +1,17 @@
 ---
-title: Notas de la versión de Adobe Experience Platform de octubre de 2023
+title: 'Notas de la versión de Adobe Experience Platform: octubre de 2023'
 description: Las notas de la versión de octubre de 2023 de Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1054'
-ht-degree: 39%
+ht-degree: 40%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 25 de octubre de 2023**
+**Fecha de la versión: jueves, 25 de octubre de 2023**
 
 Actualizaciones de funciones existentes en Experience Platform:
 
@@ -44,8 +44,8 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Tipo | Función | Descripción |
 | --- | --- | --- |
-| Extensiones | Mejora de la API de conversiones [!DNL Meta] | Hay tres mejoras en la extensión [Meta Conversions API](/help/tags/extensions/server/meta/overview.md): <ul><li>Integración con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea una experiencia de inicio de sesión fluida al permitirle compartir su pixelID y el token de acceso para la integración de la API de conversiones con Adobe.</li><li>Integración con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar publicidad a las personas que tienen más probabilidades de completar una acción deseada y vincular la acción de nuevo a los anuncios enviados.</li><li>Integración con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite pasar el RampID de LiveRamp en el campo Transferencia fácil, lo que elimina la necesidad de compartir PII directamente con socios o Meta. </li></ul> |
-| Extensiones | API de conversiones [!DNL LinkedIn] | La extensión de la API [[!DNL LinkedIn] Conversiones](../../tags/extensions/server/linkedin/overview.md) le permite evaluar la efectividad de sus campañas de marketing de LinkedIn reenviando datos de evento del Experience Platform a LinkedIn. |
+| Extensiones | Mejora de la API de conversiones [!DNL Meta] | Hay tres mejoras en la extensión [Meta Conversions API](/help/tags/extensions/server/meta/overview.md): <ul><li>Integración con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea una experiencia de inicio de sesión perfecta, ya que le permite compartir su pixelID y el token de acceso para la integración de la API de conversiones con Adobe.</li><li>Integración con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar publicidad a las personas que tienen más probabilidades de completar una acción deseada y vincular la acción de nuevo a los anuncios enviados.</li><li>Integración con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite pasar el RampID de LiveRamp en el campo Transferencia fácil, lo que elimina la necesidad de compartir PII directamente con socios o Meta. </li></ul> |
+| Extensiones | API de conversiones [!DNL LinkedIn] | La extensión de la API [[!DNL LinkedIn] Conversiones](../../tags/extensions/server/linkedin/overview.md) le permite evaluar la efectividad de sus campañas de marketing de LinkedIn reenviando datos de evento de Experience Platform a LinkedIn. |
 | Secreto | Secreto de OAuth 2 de [!DNL LinkedIn] | El [[!DNL LinkedIn] Secreto de OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) le permite enviar interacciones servidor-servidor a [!DNL LinkedIn] en el reenvío de eventos. |
 | Reenvío de eventos | Actualización de Etiquetas y Reenvío de eventos | Para conservar el rendimiento de [Etiquetas](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y [Reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) en Platform, solo se conservarán las compilaciones de desarrollo y fase más recientes, tanto las que se realizaron correctamente como las que no se realizaron correctamente. Se eliminarán todas las compilaciones que ya no estén en uso. Además, se han implementado restricciones de limitación de velocidad y limitación de restricción para garantizar que algunos usos intensos de la API no degraden el rendimiento de la API para otros. |
 | Extensiones | Elementos, reglas y extensiones | [Los elementos, las reglas y las extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) ahora se ordenan en el resultado de la biblioteca para garantizar una mayor coherencia entre varias compilaciones e implementaciones de la misma biblioteca. |
@@ -70,7 +70,7 @@ Para obtener más información sobre la recopilación de datos, lea la [Informac
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
 | (Beta) Compatibilidad con funciones hash en campos calculados | Además de las funciones específicas de [exportar matrices](../../destinations/ui/export-arrays-calculated-fields.md) o elementos de una matriz, ahora puede usar [funciones hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) adicionales para hash atributos en los archivos exportados. Las funciones hash admitidas son: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
-| (GA limitado) Activar audiencias de cuenta en ciertos destinos | Los clientes de Real-Time CDP B2B ahora pueden activar [audiencias de cuenta](../../segmentation/ui/account-audiences.md) a ciertos destinos. Para obtener más información acerca de esta característica, lea el [tutorial para activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md). |
+| (GA limitado) Activar audiencias de cuenta en ciertos destinos | Los clientes de Real-Time CDP B2B ahora pueden activar [audiencias de cuenta](../../segmentation/types/account-audiences.md) a ciertos destinos. Para obtener más información acerca de esta característica, lea el [tutorial para activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Para obtener más información sobre las zonas protegidas, consulte la [descripc
 
 | Función | Descripción |
 | ------- | ----------- |
-| Audiencias de cuenta (GA limitado) | En Real-time Customer Data Platform B2B edition, ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/ui/account-audiences.md). |
+| Audiencias de cuenta (GA limitado) | En Real-Time Customer Data Platform B2B edition, ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/types/account-audiences.md). |
 
 Para obtener más información sobre el servicio de segmentación, lea la [descripción general del servicio de segmentación](../../segmentation/home.md).
 

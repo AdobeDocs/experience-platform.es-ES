@@ -1,18 +1,18 @@
 ---
 title: Búsqueda de atributos de perfil de Edge en tiempo real
-description: Aprenda a buscar atributos de perfil de Edge en tiempo real, mediante la API de Edge Network y destino de Personalization personalizada
+description: Aprenda a buscar atributos de perfil de Edge en tiempo real, mediante el destino de Personalization personalizado y la API de Edge Network
 type: Tutorial
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 2%
 
 ---
 
-
 # Búsqueda de atributos de perfil en Edge en tiempo real
 
-Adobe Experience Platform usa el [perfil del cliente en tiempo real](../../profile/home.md) como única fuente fiable para todos los datos de perfil. Para recuperar datos de forma rápida y en tiempo real, utiliza [perfiles Edge](../../profile/edge-profiles.md), que son perfiles ligeros distribuidos por todo el [Edge Network](../../collection/home.md#edge). Esto permite casos de uso de personalización rápidos en tiempo real.
+Adobe Experience Platform usa el [perfil del cliente en tiempo real](../../profile/home.md) como única fuente fiable para todos los datos de perfil. Para recuperar datos de forma rápida y en tiempo real, utiliza [perfiles Edge](../../profile/edge-profiles.md), que son perfiles ligeros distribuidos en [Edge Network](../../collection/home.md#edge). Esto permite casos de uso de personalización rápidos en tiempo real.
 
 ## Casos de uso {#use-cases}
 
@@ -27,14 +27,14 @@ En esta página se describen los pasos que debe seguir para buscar datos de perf
 
 Al configurar el caso de uso descrito en esta página, utilizará los siguientes componentes de Platform:
 
-* [Datastreams](../../datastreams/overview.md): un conjunto de datos recibe datos de evento entrantes del SDK web y responde con datos de perfil Edge.
+* [Datastreams](../../datastreams/overview.md): un conjunto de datos recibe datos de evento entrantes de Web SDK y responde con datos de perfil perimetral.
 * [Políticas de combinación](../../segmentation/ui/segment-builder.md#merge-policies): Creará una política de combinación [!UICONTROL Activa en Edge] para garantizar que los perfiles de Edge utilicen correctamente los datos de perfil.
-* [Conexión personalizada de Personalization](../catalog/personalization/custom-personalization.md): configurará una nueva conexión personalizada que enviará los atributos de perfil al Edge Network.
+* [Conexión personalizada de Personalization](../catalog/personalization/custom-personalization.md): configurará una nueva conexión personalizada que enviará los atributos de perfil a Edge Network.
 * [API de Edge Network](../../server-api/overview.md): usará la funcionalidad de la API de Edge Network [recopilación interactiva de datos](../../server-api/interactive-data-collection.md) para recuperar rápidamente atributos de perfil de los perfiles de Edge.
 
 ## Protecciones de rendimiento {#guardrails}
 
-Los casos de uso de búsqueda de perfiles de Edge están sujetos a las protecciones de rendimiento específicas que se describen en la tabla siguiente. Para obtener más información acerca de las protecciones de la API de Edge Network, consulte la [página de documentación](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/) de las protecciones.
+Los casos de uso de búsqueda de perfiles de Edge están sujetos a las protecciones de rendimiento específicas que se describen en la tabla siguiente. Para obtener más información acerca de las protecciones de la API de Edge Network, consulte las protecciones [página de documentación](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
 
 | Servicio de Edge Network | Segmentación de Edge | Solicitudes por segundo |
 |---------|----------|---------|
@@ -61,7 +61,7 @@ Siga los pasos de la documentación de [configuración de secuencia de datos](..
 
 La búsqueda de atributos de perfil en Edge requiere que las audiencias estén configuradas para la evaluación de Edge.
 
-Asegúrese de que las audiencias que planea activar tengan [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) establecida como predeterminada. La política de combinación [!DNL Active-On-Edge] garantiza que las audiencias se evalúen constantemente [en el perímetro](../../segmentation/ui/edge-segmentation.md) y que estén disponibles para casos de uso de personalización en tiempo real.
+Asegúrese de que las audiencias que planea activar tengan [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) establecida como predeterminada. La política de combinación [!DNL Active-On-Edge] garantiza que las audiencias se evalúen constantemente [en el perímetro](../../segmentation/methods/edge-segmentation.md) y que estén disponibles para casos de uso de personalización en tiempo real.
 
 Siga las instrucciones de [creación de una política de combinación](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) y asegúrese de habilitar la opción **[!UICONTROL Política de combinación activa en Edge]**.
 
@@ -69,9 +69,9 @@ Siga las instrucciones de [creación de una política de combinación](../../pro
 >
 >Si las audiencias utilizan una política de combinación diferente, no podrá recuperar atributos de perfil de Edge y no podrá realizar búsquedas de perfiles de Edge.
 
-## Paso 3: Envío de datos de atributos de perfil al Edge Network{#configure-custom-personalization-connection}
+## Paso 3: Envío de datos de atributos de perfil a Edge Network{#configure-custom-personalization-connection}
 
-Para buscar perfiles Edge, incluidos atributos y datos de pertenencia a audiencias, en tiempo real, los datos deben estar disponibles en el Edge Network. Para ello, debe crear una conexión con un destino de **[!UICONTROL Personalization personalizado con atributos]** y activar las audiencias, incluidos los atributos que desee buscar en los perfiles de Edge.
+Para buscar perfiles Edge, incluidos atributos y datos de pertenencia a audiencias, en tiempo real, los datos deben estar disponibles en Edge Network. Para ello, debe crear una conexión con un destino de **[!UICONTROL Personalization personalizado con atributos]** y activar las audiencias, incluidos los atributos que desee buscar en los perfiles de Edge.
 
 +++ Configuración de un Personalization personalizado con conexión de atributos
 
@@ -79,13 +79,13 @@ Siga el [tutorial de creación de conexión de destino](../ui/connect-destinatio
 
 Al configurar el nuevo destino, seleccione la secuencia de datos que creó en el [paso 1](#create-datastream) en el campo **[!UICONTROL ID de secuencia de datos]**. Para **[!UICONTROL alias de integración]**, puede usar cualquier valor que le ayude a identificar esta conexión de destino en el futuro, como el nombre del destino.
 
-![Imagen de la interfaz de usuario del Experience Platform que muestra la pantalla de configuración Personalization personalizado con atributos.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra la pantalla de configuración Personalization personalizado con atributos.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
 +++
 
 +++Active las audiencias en la conexión Personalization personalizado con atributos
 
-Después de crear una conexión de **[!UICONTROL Personalization personalizado con atributos]**, ya puede enviar datos de perfil al Edge Network.
+Después de crear una conexión de **[!UICONTROL Personalization personalizado con atributos]**, ya puede enviar datos de perfil a Edge Network.
 
 >[!IMPORTANT]
 > 
@@ -95,7 +95,7 @@ Después de crear una conexión de **[!UICONTROL Personalization personalizado c
 
 1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione la pestaña **[!UICONTROL Catálogo]**.
 
-   ![Ficha Catálogo de destino resaltada en la interfaz de usuario del Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![Ficha Catálogo de destino resaltada en la interfaz de usuario de Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. Busque la tarjeta de destino **[!UICONTROL Personalization personalizado con atributos]** y, a continuación, seleccione **[!UICONTROL Activar audiencias]**, como se muestra en la imagen siguiente.
 
@@ -129,7 +129,7 @@ Después de crear una conexión de **[!UICONTROL Personalization personalizado c
 
 Cuando termine de asignar atributos de perfil, seleccione **[!UICONTROL Siguiente]**.
 
-En la página **[!UICONTROL Revisar]**, puedes ver un resumen de tu selección. Seleccione **[!UICONTROL Cancelar]** para dividir el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar su selección y comenzar a enviar datos de perfil al Edge Network.
+En la página **[!UICONTROL Revisar]**, puedes ver un resumen de tu selección. Seleccione **[!UICONTROL Cancelar]** para dividir el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar su selección y comenzar a enviar datos de perfil a Edge Network.
 
 ![Resumen de la selección en el paso de revisión.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
@@ -141,7 +141,7 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 **Comprobaciones de directivas de uso de datos**
 
-En el paso **[!UICONTROL Revisar]**, el Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
+En el paso **[!UICONTROL Revisar]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
 
 ![Ejemplo de infracción de directiva de datos.](../assets/common/data-policy-violation.png)
 
@@ -160,13 +160,13 @@ Si está satisfecho con su selección y no se han detectado infracciones de dire
 
 ## Paso 4: Búsqueda de los atributos de perfil en el perímetro {#configure-edge-profile-lookup}
 
-A estas alturas, ya debería haber [configurado su secuencia de datos](#create-datastream), ha [creado una nueva conexión de destino de Personalization personalizado con atributos](#configure-destination) y ha utilizado esta conexión para [enviar los atributos de perfil](#activate-audiences) que podrá consultar al Edge Network.
+A estas alturas, ya debería haber [configurado su secuencia de datos](#create-datastream), ha [creado una nueva conexión de destino de Personalization personalizado con atributos](#configure-destination) y ha utilizado esta conexión para [enviar los atributos de perfil](#activate-audiences) que podrá buscar a Edge Network.
 
 El siguiente paso es configurar la solución de personalización para recuperar atributos de perfil de los perfiles Edge.
 
 >[!IMPORTANT]
 >
->Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, debe recuperar los atributos de perfil mediante la [API de Edge Network](../../server-api/overview.md). Además, debe recuperar los atributos de perfil a través de la API de Edge Network [extremo interactivo de recopilación de datos](../../server-api/interactive-data-collection.md), para que se autentiquen las llamadas de API.
+>Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, debe recuperar los atributos de perfil a través de la [API de Edge Network](../../server-api/overview.md). Además, debe recuperar los atributos de perfil a través de la API de Edge Network [extremo interactivo de recopilación de datos](../../server-api/interactive-data-collection.md), para que se autentiquen las llamadas de API.
 ><br>Si no sigue los requisitos anteriores, la personalización se basará únicamente en la pertenencia a audiencias y los atributos de perfil no estarán disponibles para usted.
 
 La secuencia de datos que configuró en [paso 1](#create-datastream) ya está lista para aceptar datos de evento entrantes y responder con información de perfil de Edge.
@@ -282,7 +282,7 @@ El objeto `handle` proporciona la información descrita en la tabla siguiente.
 | `attributes` | Esta matriz incluye los atributos de perfil de Edge de las audiencias que activó en el [paso 3](#configure-custom-personalization-connection). |
 | `segments` | Esta matriz incluye las audiencias que activó en el [paso 3](#configure-custom-personalization-connection). |
 | `type` | `handle` objetos están agrupados por tipo. En los casos de uso de búsqueda de perfiles perimetrales, el tipo del objeto `handle` siempre es `activation:pull`. |
-| `eventIndex` | El Edge Network recibe eventos del cliente en forma de matrices. El orden de los eventos de la matriz se conserva durante su procesamiento y se refleja en este índice. La indexación de eventos comienza con `0`. |
+| `eventIndex` | Edge Network recibe eventos del cliente en forma de matrices. El orden de los eventos de la matriz se conserva durante su procesamiento y se refleja en este índice. La indexación de eventos comienza con `0`. |
 
 >[!TAB El perfil no existe en el perímetro]
 
@@ -307,7 +307,7 @@ El objeto `handle` proporciona la información descrita en la tabla siguiente.
 |---------|----------|
 | `payload` | Cuando el perfil no está presente en el perímetro, el objeto `payload` está vacío. |
 | `type` | `payload` objetos están agrupados por tipo. En los casos de uso de búsqueda de perfiles perimetrales, el tipo del objeto `payload` siempre es `activation:pull`. |
-| `eventIndex` | El Edge Network recibe eventos del cliente en forma de matrices. El orden de los eventos de la matriz se conserva durante su procesamiento y se refleja en este índice. La indexación de eventos comienza con `0`. |
+| `eventIndex` | Edge Network recibe eventos del cliente en forma de matrices. El orden de los eventos de la matriz se conserva durante su procesamiento y se refleja en este índice. La indexación de eventos comienza con `0`. |
 
 >[!ENDTABS]
 

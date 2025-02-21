@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo activar audiencias de cuenta en de
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La funcionalidad para activar audiencias de cuenta en destinos está disponible para compañías que compren las ediciones de Real-time Customer Data Platform [De empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [De empresa a persona](/help/rtcdp/overview.md#rtcdp-b2p).
+>La funcionalidad para activar audiencias de cuenta en destinos está disponible para compañías que compren las ediciones de Real-Time Customer Data Platform [De empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [De empresa a persona](/help/rtcdp/overview.md#rtcdp-b2p).
 
-En este artículo se explica el flujo de trabajo necesario para exportar [audiencias de cuenta](/help/segmentation/ui/account-audiences.md) de Adobe Experience Platform a su destino preferido.
+En este artículo se explica el flujo de trabajo necesario para exportar [audiencias de cuenta](/help/segmentation/types/account-audiences.md) de Adobe Experience Platform a su destino preferido.
 
 ## Destinos admitidos {#supported-destinations}
 
-Vaya a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la ficha **[!UICONTROL Catálogo]**. Use el filtro **[!UICONTROL Tipos de datos]** y seleccione **[!UICONTROL Cuentas]** para ver los destinos que admiten la activación de audiencias de cuenta. Actualmente, la exportación de audiencias de cuenta solo está disponible para determinados destinos de almacenamiento en la nube ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) y [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) y para el destino de streaming de [Demandbase](/help/destinations/catalog/advertising/demandbase.md) y [(Empresas) Audiencias coincidentes de LinkedIn](/help/destinations/catalog/social/linkedin-b2b.md).
+Vaya a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la ficha **[!UICONTROL Catálogo]**. Use el filtro **[!UICONTROL Tipos de datos]** y seleccione **[!UICONTROL Cuentas]** para ver los destinos que admiten la activación de audiencias de cuenta. Actualmente, la exportación de audiencias de cuenta solo está disponible para determinados destinos de almacenamiento en la nube ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) y [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) y para el destino de streaming [Demandbase](/help/destinations/catalog/advertising/demandbase.md) y [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
 
 ![Destinos que admiten audiencias de cuenta.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -34,7 +34,7 @@ Vea el siguiente vídeo para obtener información general sobre la creación y a
 
 ## Requisitos previos {#prerequisites}
 
-* Primero debe ingerir [perfiles de cuenta](/help/rtcdp/accounts/account-profile-overview.md) y crear [audiencias de cuenta](/help/segmentation/ui/account-audiences.md) para poder activarlos en destinos de flujo descendente.
+* Primero debe ingerir [perfiles de cuenta](/help/rtcdp/accounts/account-profile-overview.md) y crear [audiencias de cuenta](/help/segmentation/types/account-audiences.md) para poder activarlos en destinos de flujo descendente.
 * Para activar audiencias de cuenta en destinos, debe haberse conectado correctamente a un destino. Si aún no lo ha hecho, vaya al [catálogo de destinos](../catalog/overview.md), examine los destinos admitidos y configure el destino que desee utilizar. Lea el tutorial de la interfaz de usuario sobre [conexión a destinos](./connect-destination.md) para obtener más información.
 
 ### Permisos necesarios {#permissions}
@@ -77,7 +77,7 @@ Utilice las casillas de verificación de la izquierda de los nombres de audienci
 
 ## Programación y pasos siguientes
 
-Para el resto del flujo de trabajo de activación para exportar audiencias de cuenta, lea el tutorial sobre la activación de datos en destinos basados en archivos. Continúe desde el paso [programar exportación de audiencia](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). Si está activando audiencias de cuenta en el destino **[!UICONTROL (Compañías) Audiencias coincidentes de LinkedIn]**, lea el tutorial sobre la activación de destinos de flujo continuo. Continúe desde el [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+Para el resto del flujo de trabajo de activación para exportar audiencias de cuenta, lea el tutorial sobre la activación de datos en destinos basados en archivos. Continúe desde el paso [programar exportación de audiencia](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). Si está activando audiencias de cuenta en el destino **[!UICONTROL (Empresas) Audiencias coincidentes de LinkedIn]**, lea el tutorial sobre la activación de destinos de flujo continuo. Continúe desde el [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 >[!NOTE]
 >
@@ -87,9 +87,9 @@ Para el resto del flujo de trabajo de activación para exportar audiencias de cu
 
 Tenga en cuenta las siguientes llamadas importantes y limitaciones conocidas para la versión de disponibilidad general de la funcionalidad para activar audiencias de cuenta.
 
-### Pares de asignación requeridos en el paso de asignación al activar audiencias de cuenta en el destino **[!UICONTROL (Compañías) Audiencias coincidentes de LinkedIn]** {#required-mappings}
+### Pares de asignación requeridos en el paso de asignación al activar audiencias de cuenta en el destino **[!UICONTROL (Compañías) audiencias coincidentes de LinkedIn]** {#required-mappings}
 
-Al activar audiencias de cuenta en el destino **[!UICONTROL (Compañías) Audiencias coincidentes de LinkedIn]**, tenga en cuenta que los dos pares de asignación siguientes son obligatorios para exportar datos correctamente:
+Al activar audiencias de cuenta en el destino **[!UICONTROL (Empresas) de audiencias coincidentes de LinkedIn]**, tenga en cuenta que los dos pares de asignación siguientes son obligatorios para exportar datos correctamente:
 
 ![Campos obligatorios de asignación de LinkedIn.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 

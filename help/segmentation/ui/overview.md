@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 2%
@@ -31,7 +31,7 @@ También debe comprender los siguientes términos clave que se utilizan en este 
 
 ## Información general
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Audiencias]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Información general]** que muestra el panel [!UICONTROL Audiencias].
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Audiencias]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Información general]** que muestra el panel [!UICONTROL Audiencias].
 
 >[!NOTE]
 >
@@ -92,7 +92,7 @@ La página Composición de audiencia aparece con los componentes básicos que co
 
 ## Composición de público federado {#fac}
 
-Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Adobe Federated Audience Composition para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenar esas audiencias en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
 
 ![Lista de audiencias creadas en la Composición de audiencias federadas para su organización.](../images/ui/overview/federated-audience-composition.png)
 
@@ -100,7 +100,7 @@ Además de las composiciones de audiencias y las definiciones de segmentos, pued
 
 La segmentación por transmisión es la capacidad de segmentar [!DNL Platform] en tiempo casi real, al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación para la segmentación ahora se produce cuando los datos llegan a [!DNL Platform], lo que alivia la necesidad de programar y ejecutar trabajos de segmentación.
 
-Encontrará más información sobre la segmentación de transmisión en la [guía del usuario de segmentación de transmisión](./streaming-segmentation.md).
+Encontrará más información sobre la segmentación de transmisión en la [guía del usuario de segmentación de transmisión](../methods/streaming-segmentation.md).
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Encontrará más información sobre la segmentación de transmisión en la [guí
 
 La segmentación de Edge es la capacidad de evaluar audiencias en Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 
-Encontrará más información sobre la segmentación de Edge en la [guía de la interfaz de usuario de segmentación de Edge](./edge-segmentation.md)
+Encontrará más información sobre la segmentación de Edge en la [guía de la interfaz de usuario de segmentación de Edge](../methods/edge-segmentation.md)
 
 ## Infracciones de directiva
 

@@ -1,25 +1,25 @@
 ---
-keywords: perfil;perfil del cliente en tiempo real;solución de problemas;protecciones;directrices;límite;entidad;entidad principal;entidad de dimensión;RTCDP;CDP;edición B2B;Real-time Customer Data Platform;plataforma de datos del cliente en tiempo real;cdp en tiempo real;b2b;cdp;
-title: Protecciones predeterminadas para Real-time Customer Data Platform B2B Edition
+keywords: perfil;perfil del cliente en tiempo real;solución de problemas;protecciones;directrices;límite;entidad;entidad principal;entidad de dimensión;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;plataforma de datos del cliente en tiempo real;cdp en tiempo real;b2b;cdp;
+title: Protecciones predeterminadas para Real-Time Customer Data Platform B2B edition
 type: Documentation
-description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos para obtener un rendimiento óptimo del sistema con Adobe Real-time Customer Data Platform B2B Edition.
-badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos para obtener un rendimiento óptimo del sistema con Adobe Real-Time Customer Data Platform B2B edition.
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 2%
 
 ---
 
-# Protecciones predeterminadas para Real-time Customer Data Platform B2B Edition
+# Protecciones predeterminadas para Real-Time Customer Data Platform B2B edition
 
 >[!NOTE]
 >
->Los límites descritos en este documento representan los cambios habilitados por Real-time Customer Data Platform B2B Edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B Edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
+>Los límites descritos en este documento representan los cambios habilitados por Real-Time Customer Data Platform B2B edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 
-Real-time Customer Data Platform B2B Edition le permite ofrecer experiencias multicanal personalizadas basadas en perspectivas de comportamiento y atributos del cliente en forma de Perfiles de cliente en tiempo real y Perfiles de cuenta. Para admitir este nuevo enfoque para los perfiles, Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional.
+Real-Time Customer Data Platform B2B edition le permite ofrecer experiencias multicanal personalizadas basadas en perspectivas de comportamiento y atributos del cliente en forma de Perfiles de cliente en tiempo real y Perfiles de cuenta. Para admitir este nuevo enfoque de los perfiles, Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional.
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ Existen dos tipos de límites predeterminados en este documento:
 
 | Tipo de protección | Descripción |
 | -------------- | ----------- |
-| **Protección de rendimiento (límite leve)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. El Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
+| **Protección de rendimiento (límite leve)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
 | **Protecciones impuestas por el sistema (límite estricto)** | La interfaz de usuario o la API de Real-Time CDP aplican las protecciones impuestas por el sistema. Estos son límites que no se pueden superar, ya que la IU y la API le bloquearán el acceso o devolverán un error. |
 
 >[!INFO]
@@ -52,20 +52,20 @@ Las siguientes protecciones proporcionan límites recomendados al modelar datos 
 
 >[!NOTE]
 >
->Los límites del modelo de datos descritos en esta sección representan los cambios habilitados por Real-time Customer Data Platform B2B Edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B Edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
+>Los límites del modelo de datos descritos en esta sección representan los cambios habilitados por Real-Time Customer Data Platform B2B edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
-| Conjuntos de datos de clase XDM estándar de Real-Time CDP B2B Edition | 60 | Protección de rendimiento | Se recomienda un máximo de 60 conjuntos de datos que aprovechen las clases estándar del Modelo de datos de experiencia (XDM) proporcionadas por Real-Time CDP B2B Edition. Para obtener una lista completa de las clases XDM estándar para casos de uso B2B, consulte los [esquemas de la documentación de Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Nota: Debido a la naturaleza del modelo de datos híbrido desnormalizado de Experience Platform, la mayoría de los clientes no superan este límite. Si tiene alguna pregunta sobre cómo modelar los datos o si desea obtener más información sobre los límites personalizados, póngase en contacto con el representante del servicio de atención al cliente.* |
+| Conjuntos de datos de clase XDM estándar de Real-Time CDP B2B edition | 60 | Protección de rendimiento | Se recomienda un máximo de 60 conjuntos de datos que aprovechen las clases estándar del Modelo de datos de experiencia (XDM) proporcionadas por Real-Time CDP B2B edition. Para obtener una lista completa de las clases XDM estándar para casos de uso B2B, consulte los [esquemas de la documentación de Real-Time CDP B2B edition](schemas/b2b.md). <br/><br/>*Nota: Debido a la naturaleza del modelo de datos híbrido desnormalizado de Experience Platform, la mayoría de los clientes no superan este límite. Si tiene alguna pregunta sobre cómo modelar los datos o si desea obtener más información sobre los límites personalizados, póngase en contacto con el representante del servicio de atención al cliente.* |
 | Recuento de identidad de una cuenta individual en un gráfico de identidad | 50 | Protección de rendimiento | El número máximo de identidades en un gráfico de identidad para una cuenta individual es 50. Cualquier perfil con más de 50 identidades se excluye de la segmentación, las exportaciones y las búsquedas. |
 | Relaciones heredadas entre varias entidades | 20 | Protección de rendimiento | Se recomienda un máximo de 20 relaciones de varias entidades definidas entre entidades principales y entidades de dimensión. No se deben realizar asignaciones de relaciones adicionales hasta que se elimine o deshabilite una relación existente. |
 | Relaciones varios a uno por clase XDM | 2 | Protección de rendimiento | Se recomienda un máximo de dos relaciones varios a uno definidas por clase XDM. No se debe establecer una relación adicional hasta que se elimine o deshabilite una relación existente. Para ver los pasos sobre cómo crear una relación entre dos esquemas, consulte el tutorial sobre [definición de relaciones de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
 
-### protecciones de entidad Dimension
+### Protecciones de entidad de Dimension
 
 >[!NOTE]
 >
->Los límites del modelo de datos descritos en esta sección representan los cambios habilitados por Real-time Customer Data Platform B2B Edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B Edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
+>Los límites del modelo de datos descritos en esta sección representan los cambios habilitados por Real-Time Customer Data Platform B2B edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
@@ -86,23 +86,23 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 
 >[!NOTE]
 >
->Los límites de tamaño de datos descritos en esta sección representan los cambios habilitados por Real-time Customer Data Platform B2B Edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B Edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
+>Los límites de tamaño de datos descritos en esta sección representan los cambios habilitados por Real-Time Customer Data Platform B2B edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
 | Lotes ingeridos por clase XDM por día | 45 | Protección de rendimiento | El número total de lotes introducidos cada día por clase XDM no debe superar los 45. La ingesta de lotes adicionales puede impedir un rendimiento óptimo. |
 
-### protecciones de entidad Dimension
+### Protecciones de entidad de Dimension
 
 >[!NOTE]
 >
->Los límites de tamaño de datos descritos en esta sección representan los cambios habilitados por Real-time Customer Data Platform B2B Edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B Edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
+>Los límites de tamaño de datos descritos en esta sección representan los cambios habilitados por Real-Time Customer Data Platform B2B edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
 | Tamaño total para todas las entidades dimensionales | 5GB | Protección de rendimiento | El tamaño total recomendado para todas las entidades dimensionales es de 5 GB. La ingesta de entidades de gran dimensión puede afectar al rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como entidad de dimensión. |
 | Conjuntos de datos por esquema de entidad dimensional | 5 | Protección de rendimiento | Se recomienda un máximo de 5 conjuntos de datos asociados con cada esquema de entidad dimensional. Por ejemplo, si crea un esquema para &quot;productos&quot; y agrega cinco conjuntos de datos colaboradores, no debe crear un sexto conjunto de datos vinculado al esquema de productos. |
-| Lotes de entidades Dimension introducidos por día | 4 por entidad | Protección de rendimiento | El número máximo recomendado de lotes de entidades de dimensión introducidos por día es de 4 por entidad. Por ejemplo, puede introducir actualizaciones en un catálogo de productos hasta cuatro veces al día. La ingesta de lotes de entidades de dimensión adicionales para la misma entidad puede afectar al rendimiento del sistema. |
+| Lotes de entidades de Dimension ingeridos por día | 4 por entidad | Protección de rendimiento | El número máximo recomendado de lotes de entidades de dimensión introducidos por día es de 4 por entidad. Por ejemplo, puede introducir actualizaciones en un catálogo de productos hasta cuatro veces al día. La ingesta de lotes de entidades de dimensión adicionales para la misma entidad puede afectar al rendimiento del sistema. |
 
 ## Protecciones de segmentación
 
@@ -110,7 +110,7 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 
 >[!NOTE]
 >
->Los límites de segmentación descritos en esta sección representan los cambios habilitados por Real-time Customer Data Platform B2B Edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B Edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
+>Los límites de segmentación descritos en esta sección representan los cambios habilitados por Real-Time Customer Data Platform B2B edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
@@ -118,7 +118,7 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 
 ## Pasos siguientes
 
-Los límites descritos en este documento representan los cambios habilitados por Real-time Customer Data Platform B2B Edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B Edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
+Los límites descritos en este documento representan los cambios habilitados por Real-Time Customer Data Platform B2B edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 
 ## Apéndice
 
@@ -136,12 +136,12 @@ Los atributos independientes del tiempo, también conocidos como &quot;datos de 
 
 ![Infografía que describe las diferencias entre los datos de los registros y los datos de las series temporales.](../profile/images/guardrails/profile-entity.png)
 
-#### entidad Dimension
+#### Dimension entity
 
-Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, el perfil permite la integración con entidades de dimensión pequeñas para crear audiencias de una manera simplificada e intuitiva. Esta integración se conoce como [segmentación de varias entidades](../segmentation/multi-entity-segmentation.md).
+Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, el perfil permite la integración con entidades de dimensión pequeñas para crear audiencias de una manera simplificada e intuitiva. Esta integración se conoce como [segmentación de varias entidades](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Su organización también puede definir clases XDM para describir cosas que no sean individuales, como tiendas, productos o propiedades. Estos esquemas distintos de [!DNL XDM Individual Profile] se denominan &quot;entidades de dimensión&quot; (también conocidas como &quot;entidades de búsqueda&quot;) y no contienen datos de series temporales. Los esquemas que representan entidades de dimensión se vinculan a entidades de perfil mediante el uso de [relaciones de esquema](../xdm/tutorials/relationship-ui.md).
 
-Las entidades Dimension proporcionan datos de búsqueda que ayudan y simplifican las definiciones de segmentos de varias entidades y deben ser lo suficientemente pequeñas como para que el motor de segmentación pueda cargar todo el conjunto de datos en la memoria para un procesamiento óptimo (búsqueda rápida de puntos).
+Las entidades de Dimension proporcionan datos de búsqueda que ayudan y simplifican las definiciones de segmentos de varias entidades y deben ser lo suficientemente pequeñas como para que el motor de segmentación pueda cargar todo el conjunto de datos en la memoria para un procesamiento óptimo (búsqueda rápida de puntos).
 
 ![Infografía que muestra que una entidad de perfil está compuesta por entidades de dimensión.](../profile/images/guardrails/profile-and-dimension-entities.png)

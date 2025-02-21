@@ -3,7 +3,7 @@ title: Personalice experiencias en el sitio para visitantes desconocidos mediant
 description: Aprenda a utilizar el reconocimiento de visitantes asistido por socios para ofrecer experiencias personalizadas en el sitio a sus visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -14,7 +14,7 @@ ht-degree: 89%
 
 >[!AVAILABILITY]
 >
->Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Aprenda a utilizar el reconocimiento asistido por socios para ofrecer experiencias personalizadas a los visitantes de su propiedad web. Utilice este tutorial para comprender la secuencia de implementación de varios elementos en Experience Platform y otras soluciones de Experience Cloud para mostrar una experiencia personalizada a los visitantes autenticados y no autenticados.
 
@@ -24,7 +24,7 @@ Aprenda a utilizar el reconocimiento asistido por socios para ofrecer experienci
 
 La fragmentación de experiencias digitales a medida que los consumidores interactúan con las marcas de innumerables maneras es muy real y cada vez es más difícil de resolver. Las mejores estrategias de participación del cliente para experiencias coherentes, recomendaciones segmentadas e interacciones personalizadas se ven limitadas por el reconocimiento del usuario.
 
-Aquí es donde el reconocimiento en tiempo real asistido por socios puede marcar una diferencia significativa. El Adobe de permite a los socios de identidad conectarse a nuestra sofisticada recopilación de datos del lado del cliente y a nuestras ofertas de optimización de experiencias líderes en el mercado, para aumentar de forma eficaz el listón en la entrega de experiencias desde la primera visita en adelante, sin historial previo ni autenticación.
+Aquí es donde el reconocimiento en tiempo real asistido por socios puede marcar una diferencia significativa. Adobe permite a los socios de identidad conectarse a nuestra sofisticada recopilación de datos del lado del cliente y a nuestras ofertas de optimización de experiencias líderes en el mercado, para aumentar de forma eficaz el listón en la entrega de experiencias desde la primera visita en adelante, sin historial previo ni autenticación.
 
 Esto resulta especialmente útil en verticales con tasas de autenticación bajas, como Bienes de Consumo Empaquetados, venta minorista en línea y mucho más.
 
@@ -56,7 +56,7 @@ Para implementar correctamente este caso de uso, debe utilizar varias áreas de 
    * [Etiquetas de uso de datos](/help/data-governance/labels/overview.md)
    * [Conjuntos de datos](/help/catalog/datasets/overview.md)
 * Personalización de propiedades web
-   * [Segmentación de Edge](/help/segmentation/ui/edge-segmentation.md)
+   * [Segmentación de Edge](/help/segmentation/methods/edge-segmentation.md)
    * [Destinos de personalización de Edge](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (o una plataforma de personalización de su elección. Este tutorial de caso de uso resalta Adobe Target como motor de personalización)
 
@@ -263,7 +263,7 @@ En la interfaz de usuario de Platform, vaya a **[!UICONTROL Cliente]** > **[!UIC
 
 ![Vista de cómo navegar a las audiencias.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Debe configurar su audiencia con [segmentación de Edge](/help/segmentation/ui/edge-segmentation.md) para que la pertenencia a audiencias de sus visitantes se evalúe en tiempo real cuando visiten su propiedad web.
+Debe configurar su audiencia con [segmentación de Edge](/help/segmentation/methods/edge-segmentation.md) para que la pertenencia a audiencias de sus visitantes se evalúe en tiempo real cuando visiten su propiedad web.
 
 Asegúrese de configurar también [políticas de combinación activas en el perímetro](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) para los públicos de perímetro.
 

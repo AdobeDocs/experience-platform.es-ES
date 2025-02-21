@@ -3,7 +3,7 @@ title: Perfiles de clientes potenciales
 description: Aprenda a crear y utilizar perfiles de clientes potenciales para recopilar información sobre clientes desconocidos mediante información de terceros.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 1%
@@ -62,4 +62,4 @@ Para obtener información sobre cómo puede utilizar la funcionalidad de perfile
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora comprende cómo se pueden utilizar los perfiles de clientes potenciales en Adobe Experience Platform. Para saber cómo se pueden usar estos perfiles de clientes potenciales en las audiencias, lea la [guía de audiencias de clientes potenciales](../../segmentation/ui/prospect-audience.md).
+Después de leer esta guía, ahora comprende cómo se pueden utilizar los perfiles de clientes potenciales en Adobe Experience Platform. Para saber cómo se pueden usar estos perfiles de clientes potenciales en las audiencias, lea la [guía de audiencias de clientes potenciales](../../segmentation/types/prospect-audiences.md).

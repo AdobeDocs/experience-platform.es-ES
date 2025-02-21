@@ -2,8 +2,9 @@
 solution: Experience Platform
 title: Guía de IU de restricciones de tiempo de segmentación refactorizada
 description: El Generador de segmentos proporciona un espacio de trabajo enriquecido que le permite interactuar con los elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
+hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
+source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 9%

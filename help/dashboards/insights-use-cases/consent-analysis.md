@@ -2,7 +2,7 @@
 title: Análisis de consentimiento y seguimiento
 description: Obtenga información sobre cómo crear un panel de análisis de consentimiento para rastrear las tendencias del consentimiento del usuario a lo largo del tiempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Análisis y seguimiento del consentimiento
 
-En el panorama de marketing actual, debe comprender y respetar las preferencias de consentimiento del cliente. Adobe Real-time Customer Data Platform permite a los especialistas en marketing analizar el consentimiento de los clientes para generar confianza, cumplir con las normas de privacidad y ofrecer experiencias más personalizadas.
+En el panorama de marketing actual, debe comprender y respetar las preferencias de consentimiento del cliente. Adobe Real-Time Customer Data Platform permite a los especialistas en marketing analizar el consentimiento de los clientes para generar confianza, cumplir con las normas de privacidad y ofrecer experiencias más personalizadas.
 
 Este documento detalla cómo crear un panel de consentimiento para varios casos de uso de marketing para datos de Real-Time CDP. En concreto, se centra en cómo crear una audiencia con los atributos adecuados para sus necesidades comerciales y luego consumir las perspectivas mediante el uso de widgets preconfigurados en la interfaz de usuario de Adobe Experience Platform. También se presenta un método alternativo para crear su propio widget personalizado con la función de paneles definida por el usuario.
 
@@ -24,7 +24,7 @@ Los casos de uso cubiertos en esta guía son las tendencias de consentimiento y 
 
 ## Creación de audiencias consentidas {#create-consent-audiences}
 
-Para crear un panel de consentimiento, primero debe crear una audiencia de todos los perfiles que han aceptado contactar. Para ir al Generador de segmentos de Real-time Customer Data Platform, seleccione **[!UICONTROL Audiencias]** en el panel de navegación izquierdo de la interfaz de usuario de Platform. En la ficha [!UICONTROL Cliente] del panel de [!UICONTROL Audiencias], seleccione **[!UICONTROL Crear audiencia]** en la parte superior derecha de la vista y luego **[!UICONTROL Generar reglas]**.
+Para crear un panel de consentimiento, primero debe crear una audiencia de todos los perfiles que han aceptado contactar. Para ir al Generador de segmentos de Real-Time Customer Data Platform, seleccione **[!UICONTROL Audiencias]** en el panel de navegación izquierdo de la interfaz de usuario de Platform. En la ficha [!UICONTROL Cliente] del panel de [!UICONTROL Audiencias], seleccione **[!UICONTROL Crear audiencia]** en la parte superior derecha de la vista y luego **[!UICONTROL Generar reglas]**.
 
 ![Se ha resaltado el panel [!UICONTROL Audiencias] con [!UICONTROL Cliente], [!UICONTROL Audiencias] y [!UICONTROL Crear segmento].](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -36,9 +36,9 @@ Busque los atributos de consentimiento de las opciones disponibles. Seleccione *
 
 >[!NOTE]
 >
->Si ha mantenido su consentimiento de usuario en un atributo diferente al grupo de campos Adobe recomendado, debe seleccionar esos atributos en lugar de los que se muestran a continuación.
+>Si ha mantenido su consentimiento de usuario en un atributo diferente al grupo de campos recomendado por Adobe, debe seleccionar esos atributos en lugar de los que se muestran a continuación.
 
-Encontrará más información sobre la [administración del consentimiento en la documentación de segmentation](../../segmentation/consents.md#handling-consent-in-segmentation).
+Encontrará más información sobre la [administración del consentimiento en la documentación de segmentation](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation).
 
 ![El Generador de segmentos con la carpeta de atributos [!UICONTROL Consentimiento y preferencias] resaltada.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
@@ -155,7 +155,7 @@ Los paneles de consentimiento que cree capturarán únicamente la **distribució
 
 >[!NOTE]
 >
->Para los clientes de **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, estos paneles **no** reflejan ningún seguimiento de directivas de consentimiento. El seguimiento disponible incluye el número de directivas creadas, habilitadas y el impacto en el abono a audiencias.
+>Para los clientes de **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, estos paneles **no** reflejan ningún seguimiento de las directivas de consentimiento. El seguimiento disponible incluye el número de directivas creadas, habilitadas y el impacto en el abono a audiencias.
 
 ## Pasos siguientes
 

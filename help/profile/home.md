@@ -2,7 +2,7 @@
 title: Resumen del perfil del cliente en tiempo real
 description: El perfil del cliente en tiempo real combina datos de varias fuentes y proporciona acceso a esos datos en forma de perfiles de clientes individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
+source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con [!DNL Real-Time Customer Profile], puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de sus clientes en una vista unificada, que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes. Esta introducción le ayudará a comprender el rol y el uso de [!DNL Real-Time Customer Profile] en [!DNL Experience Platform].
 
-## [!DNL Profile] en el Experience Platform
+## [!DNL Profile] en Experience Platform
 
-La relación entre el perfil del cliente en tiempo real y otros servicios dentro de Experience Platform se resalta en el siguiente diagrama:
+La relación entre el perfil del cliente en tiempo real y otros servicios de Experience Platform aparece resaltada en el siguiente diagrama:
 
 ![La relación entre el perfil del cliente en tiempo real y otros servicios en Adobe Experience Platform. Este diagrama muestra que el perfil es uno de los componentes principales de Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
 
@@ -25,7 +25,7 @@ La relación entre el perfil del cliente en tiempo real y otros servicios dentro
 
 ### Composición de entidades de perfil
 
-Un perfil del cliente en tiempo real está compuesto por una entidad principal llamada **entidad principal** y varias entidades auxiliares. En el contexto de Experience Platform, la entidad principal suele ser **profile entity**, que se compone de características, comportamientos y pertenencias a audiencias de una persona individual. Otras entidades permiten que el motor de segmentación utilice datos fuera de la entidad principal del perfil e incluyen lo siguiente:
+Un perfil del cliente en tiempo real está compuesto por una entidad principal llamada **entidad principal** y varias entidades auxiliares. En el contexto de Experience Platform, la entidad principal suele ser una **entidad de perfil**, que se compone de características, comportamientos y pertenencias a audiencias de una persona individual. Otras entidades permiten que el motor de segmentación utilice datos fuera de la entidad principal del perfil e incluyen lo siguiente:
 
 - **Entidad dimensional**: La entidad que se usa para simplificar el proceso de modelado de datos para la información compartida entre eventos o registros de perfil. Esto también se conoce como entidad de búsqueda o entidad de clasificación.
 - **Entidad B2B**: Entidades que describen la relación del perfil con oportunidades y cuentas de empresa a empresa.
@@ -53,7 +53,7 @@ Experience Platform proporciona una serie de protecciones que le ayudarán a evi
 
 ### Tablero de perfil {#profile-dashboard}
 
-La interfaz de usuario de Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real, tal y como se capturan durante una instantánea diaria. Para obtener información sobre cómo acceder al panel [!DNL Profile] y trabajar con él en la interfaz de usuario, así como información detallada sobre las métricas mostradas en el panel, consulte la [Guía de la interfaz de usuario del panel de perfil](ui/profile-dashboard.md).
+La interfaz de usuario de Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real, tal como se capturan durante una instantánea diaria. Para obtener información sobre cómo acceder al panel [!DNL Profile] y trabajar con él en la interfaz de usuario, así como información detallada sobre las métricas mostradas en el panel, consulte la [Guía de la interfaz de usuario del panel de perfil](ui/profile-dashboard.md).
 
 ### Fragmentos de perfil frente a perfiles combinados {#profile-fragments-vs-merged-profiles}
 
@@ -81,7 +81,7 @@ Al unir fragmentos de datos de varias fuentes y combinarlos para ver una vista c
 
 Cuando hay datos en conflicto de varios conjuntos de datos, la política de combinación determina cómo se deben tratar esos datos y qué valor se debe utilizar. A través de las API de RESTful o de la interfaz de usuario, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una política de combinación predeterminada para su organización.
 
-Para obtener más información acerca de las políticas de combinación y su función dentro del Experience Platform, lea la [descripción general de las políticas de combinación](merge-policies/overview.md).
+Para obtener más información acerca de las políticas de combinación y su función en Experience Platform, lea la [descripción general de las políticas de combinación](merge-policies/overview.md).
 
 ### Esquemas de unión {#profile-fragments-and-union-schemas}
 
@@ -111,7 +111,7 @@ La entrada en tiempo real es posible mediante un proceso denominado ingesta de t
 
 >[!NOTE]
 >
->Los datos recopilados a través de las soluciones de Adobe, incluyendo [!DNL Analytics Cloud], [!DNL Marketing Cloud] y [!DNL Advertising Cloud], fluyen a [!DNL Experience Platform] y se incorporan a [!DNL Profile].
+>Los datos recopilados a través de las soluciones de Adobe, incluyendo [!DNL Analytics Cloud], [!DNL Marketing Cloud] y [!DNL Advertising Cloud], fluyen a [!DNL Experience Platform] y se incorporan en [!DNL Profile].
 
 ### Métricas de ingesta de perfil
 
@@ -135,8 +135,8 @@ La gobernanza de datos se administra en varios puntos. Estos incluyen decidir qu
 
 ### Gestión de solicitudes de exclusión y privacidad de datos
 
-[!DNL Experience Platform] permite que sus clientes envíen solicitudes de exclusión relacionadas con el uso y almacenamiento de sus datos en [!DNL Real-Time Customer Profile]. Para obtener más información sobre cómo se administran las solicitudes de exclusión, consulte la documentación sobre [cumplimiento de las solicitudes de exclusión](../segmentation/consents.md).
+[!DNL Experience Platform] permite que sus clientes envíen solicitudes de exclusión relacionadas con el uso y almacenamiento de sus datos en [!DNL Real-Time Customer Profile]. Para obtener más información sobre cómo se administran las solicitudes de exclusión, consulte la documentación sobre [cumplimiento de las solicitudes de exclusión](../segmentation/tutorials/consents.md).
 
 ## Pasos siguientes y recursos adicionales
 
-Para obtener más información sobre cómo trabajar con datos del perfil del cliente en tiempo real usando la interfaz de usuario del Experience Platform o la API de perfil, comience por leer la [guía de la interfaz de usuario del perfil](ui/user-guide.md) o la [guía para desarrolladores de API](api/overview.md), respectivamente.
+Para obtener más información sobre cómo trabajar con los datos del perfil del cliente en tiempo real usando la interfaz de usuario de Experience Platform o la API de perfil, comience por leer la [guía de la interfaz de usuario del perfil](ui/user-guide.md) o la [guía para desarrolladores de API](api/overview.md), respectivamente.

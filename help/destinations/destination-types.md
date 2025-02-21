@@ -3,7 +3,7 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 1%
@@ -41,9 +41,9 @@ Los destinos de exportación de perfiles reciben datos sin procesar, a menudo co
 
 >[!IMPORTANT]
 >
->Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+>Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
-Utilice los conectores de datos de destino empresariales avanzados para ofrecer perfiles de Adobe Real-time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros para la sincronización de datos, el análisis y más casos de uso de enriquecimiento de perfiles.
+Utilice los conectores de datos de destino empresariales avanzados para ofrecer perfiles de Adobe Real-Time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros para la sincronización de datos, el análisis y más casos de uso de enriquecimiento de perfiles.
 
 Estos destinos reciben datos de audiencia y perfil como flujos de datos de Experience Platform.
 
@@ -81,7 +81,7 @@ Puede exportar tres tipos de audiencias desde Experience Platform a varios desti
 * Públicos de la cuenta
 * Públicos de clientes potenciales
 
-Más información sobre los [distintos tipos de audiencia](/help/segmentation/ui/account-audiences.md#terminology).
+Más información sobre los [distintos tipos de audiencia](/help/segmentation/types/account-audiences.md#terminology).
 
 Un símbolo en la tarjeta de destino muestra qué tipos de audiencias puede exportar a cada destino.
 

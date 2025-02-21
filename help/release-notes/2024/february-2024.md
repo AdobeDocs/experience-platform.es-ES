@@ -2,8 +2,8 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2024'
 description: Las notas de la versión de febrero de 2024 de Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
-workflow-type: ht
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 100%
 
@@ -115,7 +115,7 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 | Función | Descripción |
 | ------- | ----------- |
-| Públicos de la cuenta | Los públicos de cuenta ya están disponibles de forma general. Ahora puede utilizar la segmentación de cuentas para proporcionar la facilidad y sofisticación totales de la experiencia de segmentación de marketing de los públicos basados en personas a los públicos basados en cuentas en las ediciones B2B y B2P de Real-Time Customer Platform. Esta versión permite utilizar públicos basados en personas como predicado para públicos basados en cuentas, añade funcionalidades de búsqueda, admite el uso de entidades personalizadas y cumple con la gobernanza de datos. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/ui/account-audiences.md). |
+| Públicos de la cuenta | Los públicos de cuenta ya están disponibles de forma general. Ahora puede utilizar la segmentación de cuentas para proporcionar la facilidad y sofisticación totales de la experiencia de segmentación de marketing de los públicos basados en personas a los públicos basados en cuentas en las ediciones B2B y B2P de Real-Time Customer Platform. Esta versión permite utilizar públicos basados en personas como predicado para públicos basados en cuentas, añade funcionalidades de búsqueda, admite el uso de entidades personalizadas y cumple con la gobernanza de datos. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

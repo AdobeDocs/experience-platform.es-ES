@@ -3,14 +3,14 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '2212'
 ht-degree: 3%
 
 ---
 
-# Guía de la interfaz de usuario [!DNL Real-Time Customer Profile]
+# Guía de la interfaz de usuario de [!DNL Real-Time Customer Profile]
 
 [!DNL Real-Time Customer Profile] crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con los datos de [!DNL Real-Time Customer Profile] en la interfaz de usuario (IU) de Adobe Experience Platform.
 
@@ -24,7 +24,7 @@ Esta guía de interfaz de usuario requiere una comprensión de los distintos ser
 
 ## Información general de 
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Información general]** que muestra el panel de perfil.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Información general]** que muestra el panel de perfil.
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ Para obtener más información sobre la segmentación en Experience Platform, co
 
 ![La ficha Pertenencia a audiencia está resaltada. Se muestran los detalles de pertenencia a audiencias del perfil.](../images/user-guide/audience-membership.png)
 
-Para ver la pertenencia de la audiencia a los perfiles disponibles en Edge, selecciona **[!UICONTROL Edge]** en el selector de ubicación de datos. Encontrará más información sobre la segmentación de Edge en la [guía de segmentación de Edge](../../segmentation/ui/edge-segmentation.md).
+Para ver la pertenencia de la audiencia a los perfiles disponibles en Edge, selecciona **[!UICONTROL Edge]** en el selector de ubicación de datos. Encontrará más información sobre la segmentación de Edge en la [guía de segmentación de Edge](../../segmentation/methods/edge-segmentation.md).
 
 ![El selector de ubicación de datos dentro de la ficha pertenencia a audiencias está resaltado.](../images/user-guide/audience-membership-select.png)
 
@@ -205,4 +205,4 @@ Para obtener más información sobre los atributos calculados, lea la [descripci
 
 ## Pasos siguientes
 
-Al leer esta guía, sabe cómo ver y administrar los datos de perfil de su organización mediante la interfaz de usuario de Experience Platform. Para obtener información sobre cómo trabajar con datos de perfil usando API de Experience Platform, consulte la [guía de API de perfil del cliente en tiempo real](../api/overview.md).
+Al leer esta guía, sabe cómo ver y administrar los datos de perfil de su organización mediante la interfaz de usuario de Experience Platform. Para obtener información sobre cómo trabajar con datos de perfil usando las API de Experience Platform, consulte la [guía de la API del perfil del cliente en tiempo real](../api/overview.md).

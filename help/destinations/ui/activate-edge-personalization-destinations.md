@@ -3,7 +3,7 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Adobe Experience Platform usa [segmentación de Edge](../../segmentation/ui/edge-segmentation.md) junto con [destinos Edge](/help/destinations/destination-types.md#edge-personalization-destinations) para permitir que los clientes creen y segmenten audiencias a gran escala en tiempo real. Esta capacidad le ayuda a configurar casos de uso de personalización de la misma página y de la siguiente.
+Adobe Experience Platform usa [segmentación de Edge](../../segmentation/methods/edge-segmentation.md) junto con [destinos Edge](/help/destinations/destination-types.md#edge-personalization-destinations) para permitir que los clientes creen y segmenten audiencias a gran escala en tiempo real. Esta capacidad le ayuda a configurar casos de uso de personalización de la misma página y de la siguiente.
 
 Algunos ejemplos de destinos Edge son las conexiones [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md).
 
@@ -31,13 +31,13 @@ Algunos ejemplos de destinos Edge son las conexiones [Adobe Target](../../destin
 > 
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-En este artículo se explica el flujo de trabajo necesario para activar audiencias en destinos Edge de Adobe Experience Platform. Cuando se usan junto con [segmentación de Edge](../../segmentation/ui/edge-segmentation.md) y la asignación de atributos de perfil [opcional](#mapping), estos destinos habilitan casos de uso de personalización de la misma página y de la siguiente página en las propiedades web y móviles.
+En este artículo se explica el flujo de trabajo necesario para activar audiencias en destinos Edge de Adobe Experience Platform. Cuando se usan junto con [segmentación de Edge](../../segmentation/methods/edge-segmentation.md) y la asignación de atributos de perfil [opcional](#mapping), estos destinos habilitan casos de uso de personalización de la misma página y de la siguiente página en las propiedades web y móviles.
 
 Para obtener una breve descripción general sobre cómo configurar la conexión de Adobe Target para la personalización de Edge, vea el siguiente vídeo.
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
+>La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
@@ -47,7 +47,7 @@ Vea el siguiente vídeo para obtener una breve descripción general de cómo com
 
 ## Casos de uso {#use-cases}
 
-Utilice soluciones de personalización de Adobe, como Adobe Target, o sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno) para impulsar una experiencia de personalización del cliente más profunda mediante el destino [Personalization personalizado](../catalog/personalization/custom-personalization.md). Todo esto, a la vez que aprovecha las capacidades de segmentación y recopilación de datos de Experience Platform Edge Network.
+Utilice soluciones de personalización de Adobe, como Adobe Target, o sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno) para impulsar una experiencia de personalización del cliente más profunda mediante el destino de [Personalization personalizado](../catalog/personalization/custom-personalization.md). Todo esto mientras también aprovecha las funcionalidades de segmentación y recopilación de datos de Experience Platform Edge Network.
 
 Los casos de uso que se describen a continuación incluyen personalización del sitio y publicidad en el sitio segmentada.
 
@@ -55,7 +55,7 @@ Para habilitar estos casos de uso, los clientes necesitan una forma rápida y se
 
 ### Personalización en la misma página {#same-page}
 
-Un usuario visita una página del sitio web. Puede utilizar la información de visita a la página actual (por ejemplo, la dirección URL de referencia, el idioma del explorador o la información de producto incrustada) para seleccionar la siguiente acción o decisión (por ejemplo, personalización), mediante la conexión [Personalización personalizada](../catalog/personalization/custom-personalization.md) para plataformas que no sean de Adobe (por ejemplo, [!DNL Pega], [!DNL Optimizely] u otras).
+Un usuario visita una página del sitio web. Puede utilizar la información de visita a la página actual (por ejemplo, la dirección URL de referencia, el idioma del explorador o la información de producto incrustada) para seleccionar la siguiente acción o decisión (por ejemplo, personalización), mediante la conexión de [Personalización personalizada](../catalog/personalization/custom-personalization.md) para plataformas que no sean de Adobe (por ejemplo, [!DNL Pega], [!DNL Optimizely] u otras).
 
 ### Personalización de la página siguiente {#next-page}
 
@@ -75,7 +75,7 @@ Una empresa de venta y alquiler de viviendas quiere personalizar su página de i
 
 ### Configuración de una secuencia de datos en la IU de recopilación de datos {#configure-datastream}
 
-El primer paso para configurar el destino de personalización es configurar una secuencia de datos para el SDK web de Experience Platform. Esto se realiza en la IU de recopilación de datos.
+El primer paso para configurar el destino de personalización es configurar una secuencia de datos para Experience Platform Web SDK. Esto se realiza en la IU de recopilación de datos.
 
 Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]**, asegúrese de que tanto **[!UICONTROL Segmentación de Edge]** como **[!UICONTROL Destinos de Personalization]** estén seleccionados.
 
@@ -85,11 +85,11 @@ Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]
 
 ![Configuración de flujo de datos con segmentación Edge y destinos Personalization resaltados.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Para obtener más información sobre cómo configurar una secuencia de datos, siga las instrucciones descritas en la [documentación del SDK web de Platform](../../datastreams/configure.md#aep).
+Para obtener más información sobre cómo configurar una secuencia de datos, siga las instrucciones que se describen en [Documentación de Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Crear una política de combinación [!DNL Active-On-Edge] {#create-merge-policy}
 
-Después de crear la conexión de destino, debe crear una política de combinación de [!DNL Active-On-Edge]. La política de combinación [!DNL Active-On-Edge] garantiza que las audiencias se evalúen constantemente [en el perímetro](../../segmentation/ui/edge-segmentation.md) y que estén disponibles para casos de uso de personalización en tiempo real y de la página siguiente.
+Después de crear la conexión de destino, debe crear una política de combinación de [!DNL Active-On-Edge]. La política de combinación [!DNL Active-On-Edge] garantiza que las audiencias se evalúen constantemente [en el perímetro](../../segmentation/methods/edge-segmentation.md) y que estén disponibles para casos de uso de personalización en tiempo real y de la página siguiente.
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ Después de completar los requisitos previos, ahora puede seleccionar el destino
 
 1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione la pestaña **[!UICONTROL Catálogo]**.
 
-   ![Ficha Catálogo de destino resaltada en la interfaz de usuario del Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![Ficha Catálogo de destino resaltada en la interfaz de usuario de Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. Seleccione **[!UICONTROL Activar audiencias]** en la tarjeta correspondiente al destino de personalización en el que desee activar las audiencias, como se muestra en la imagen siguiente.
 
@@ -152,7 +152,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >
 >Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Custom Personalization]** requiere que use la [API de Edge Network Server](../../server-api/overview.md) al configurar el destino para la personalización basada en atributos. Todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../server-api/authentication.md).
 >
-><br>Si ya está utilizando el SDK web o el SDK móvil para su integración, puede recuperar atributos mediante la API de servidor agregando una integración del lado del servidor.
+><br>Si ya utiliza Web SDK o Mobile SDK para la integración, puede recuperar atributos mediante la API de servidor agregando una integración del lado del servidor.
 >
 ><br>Si no cumple los requisitos anteriores, la personalización se basará únicamente en el abono a audiencias.
 
@@ -204,7 +204,7 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
-En el paso **[!UICONTROL Revisar]**, el Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
+En el paso **[!UICONTROL Revisar]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
 
 ![Ejemplo de infracción de directiva de datos.](../assets/common/data-policy-violation.png)
 

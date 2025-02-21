@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1f682fc5c109f3dc8a7ed8513260a1a3c3108bbb
+source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
 workflow-type: tm+mt
 source-wordcount: '2511'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Protecciones predeterminadas para datos y segmentación de [!DNL Real-Time Customer Profile]
 
-Adobe Experience Platform le permite ofrecer experiencias multicanal personalizadas en función de perspectivas de comportamiento y atributos del cliente en forma de perfiles del cliente en tiempo real. Para admitir este nuevo enfoque para los perfiles, Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional.
+Adobe Experience Platform le permite ofrecer experiencias multicanal personalizadas en función de perspectivas de comportamiento y atributos del cliente en forma de perfiles del cliente en tiempo real. Para admitir este nuevo enfoque de los perfiles, Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional.
 
 >[!IMPORTANT]
 >
@@ -28,7 +28,7 @@ Este documento proporciona límites predeterminados de uso y velocidad para ayud
 
 ## Introducción
 
-Los siguientes servicios de Experience Platform están implicados en el modelado de datos del perfil del cliente en tiempo real:
+Los siguientes servicios de Experience Platform están relacionados con el modelado de datos del perfil del cliente en tiempo real:
 
 * [[!DNL Real-Time Customer Profile]](home.md): cree perfiles de consumidor unificados con datos de varios orígenes.
 * [Identidades](../identity-service/home.md): identidades de Bridge de diferentes fuentes de datos a medida que se incorporan en Platform.
@@ -41,7 +41,7 @@ Existen dos tipos de límites predeterminados en este documento:
 
 | Tipo de protección | Descripción |
 | -------------- | ----------- |
-| **Protección de rendimiento (límite leve)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. El Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
+| **Protección de rendimiento (límite leve)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
 | **Protecciones impuestas por el sistema (límite estricto)** | La interfaz de usuario o la API de Real-Time CDP aplican las protecciones impuestas por el sistema. Estos son límites que no se pueden superar, ya que la IU y la API le bloquearán el acceso o devolverán un error. |
 
 {style="table-layout:auto"}
@@ -71,7 +71,7 @@ Las siguientes protecciones proporcionan límites recomendados al modelar datos 
 
 {style="table-layout:auto"}
 
-### protecciones de entidad Dimension
+### Protecciones de entidad de Dimension
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
@@ -102,13 +102,13 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 
 {style="table-layout:auto"}
 
-### protecciones de entidad Dimension
+### Protecciones de entidad de Dimension
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
 | Tamaño total para todas las entidades dimensionales | 5GB | Protección de rendimiento | El tamaño total recomendado para todas las entidades dimensionales es de 5 GB. La ingesta de entidades de gran dimensión puede afectar al rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como entidad de dimensión. |
 | Conjuntos de datos por esquema de entidad dimensional | 5 | Protección de rendimiento | Se recomienda un máximo de 5 conjuntos de datos asociados con cada esquema de entidad dimensional. Por ejemplo, si crea un esquema para &quot;productos&quot; y agrega cinco conjuntos de datos colaboradores, no debe crear un sexto conjunto de datos vinculado al esquema de productos. |
-| Lotes de entidades Dimension introducidos por día | 4 por entidad | Protección de rendimiento | El número máximo recomendado de lotes de entidades de dimensión introducidos por día es de 4 por entidad. Por ejemplo, puede introducir actualizaciones en un catálogo de productos hasta cuatro veces al día. La ingesta de lotes de entidades de dimensión adicionales para la misma entidad puede afectar al rendimiento del sistema. |
+| Lotes de entidades de Dimension ingeridos por día | 4 por entidad | Protección de rendimiento | El número máximo recomendado de lotes de entidades de dimensión introducidos por día es de 4 por entidad. Por ejemplo, puede introducir actualizaciones en un catálogo de productos hasta cuatro veces al día. La ingesta de lotes de entidades de dimensión adicionales para la misma entidad puede afectar al rendimiento del sistema. |
 
 {style="table-layout:auto"}
 
@@ -119,12 +119,12 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
 | Audiencias por zona protegida | 4000 | Protección de rendimiento | Puede tener hasta 4000 **audiencias activas** por zona protegida. Puede tener más de 4000 zonas protegidas por organización, siempre y cuando haya menos de 4000 audiencias en cada zona protegida **individual**. Esto incluye audiencias por lotes, de streaming y de Edge. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. Obtenga más información sobre [la creación de audiencias](/help/segmentation/ui/segment-builder.md) a través del generador de segmentos. |
-| Audiencias de Edge por zona protegida | 150 | Protección de rendimiento | Puede tener hasta 150 **audiencias de Edge activas** por zona protegida. Puede tener más de 150 audiencias de Edge por organización, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida **individual**. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de Edge](/help/segmentation/ui/edge-segmentation.md). |
-| Rendimiento de Edge en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación de Edge admite un valor máximo de 1500 eventos entrantes por segundo al entrar en el Edge Network de Adobe Experience Platform. La segmentación de Edge puede tardar hasta 350 milisegundos en procesar un evento entrante después de que entre en el Edge Network de Adobe Experience Platform. Más información sobre [audiencias de Edge](/help/segmentation/ui/edge-segmentation.md). |
-| Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Puede tener hasta 500 **audiencias de streaming activas** por zona protegida. Puede tener más de 500 audiencias de streaming por organización, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida **individual**. Esto incluye tanto a las audiencias de streaming como a las de Edge. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de streaming](/help/segmentation/ui/streaming-segmentation.md). |
-| Rendimiento de streaming en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación por flujo continuo admite un valor máximo de 1500 eventos entrantes por segundo. La segmentación por streaming puede tardar hasta 5 minutos en calificar un perfil para el abono a un segmento. Más información sobre [audiencias de streaming](/help/segmentation/ui/streaming-segmentation.md). |
+| Audiencias de Edge por zona protegida | 150 | Protección de rendimiento | Puede tener hasta 150 **audiencias de Edge activas** por zona protegida. Puede tener más de 150 audiencias de Edge por organización, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida **individual**. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de Edge](/help/segmentation/methods/edge-segmentation.md). |
+| Rendimiento de Edge en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación de Edge admite un valor máximo de 1500 eventos entrantes por segundo al entrar en Adobe Experience Platform Edge Network. La segmentación de Edge puede tardar hasta 350 milisegundos en procesar un evento entrante después de que entre en Adobe Experience Platform Edge Network. Más información sobre [audiencias de Edge](/help/segmentation/methods/edge-segmentation.md). |
+| Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Puede tener hasta 500 **audiencias de streaming activas** por zona protegida. Puede tener más de 500 audiencias de streaming por organización, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida **individual**. Esto incluye tanto a las audiencias de streaming como a las de Edge. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de streaming](/help/segmentation/methods/streaming-segmentation.md). |
+| Rendimiento de streaming en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación por flujo continuo admite un valor máximo de 1500 eventos entrantes por segundo. La segmentación por streaming puede tardar hasta 5 minutos en calificar un perfil para el abono a un segmento. Más información sobre [audiencias de streaming](/help/segmentation/methods/streaming-segmentation.md). |
 | Audiencias por lotes por zona protegida | 4000 | Protección de rendimiento | Puede tener hasta 4000 **audiencias por lotes activas** por zona protegida. Puede tener más de 4000 audiencias de lote por organización, siempre y cuando haya menos de 4000 audiencias de lote en cada zona protegida **individual**. Si intenta crear audiencias por lotes adicionales, el rendimiento del sistema puede verse afectado. |
-| Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | Puede crear un máximo de 50 audiencias de cuenta en una zona protegida. Después de llegar a 50 audiencias en una zona protegida, el control **[!UICONTROL Crear audiencia]** se deshabilita al intentar crear una nueva audiencia de cuenta. Más información sobre [audiencias de la cuenta](/help/segmentation/ui/account-audiences.md). |
+| Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | Puede crear un máximo de 50 audiencias de cuenta en una zona protegida. Después de llegar a 50 audiencias en una zona protegida, el control **[!UICONTROL Crear audiencia]** se deshabilita al intentar crear una nueva audiencia de cuenta. Más información sobre [audiencias de la cuenta](/help/segmentation/types/account-audiences.md). |
 | Composiciones publicadas por zona protegida | 10 | Protección de rendimiento | Puede tener un máximo de 10 composiciones publicadas en una zona protegida. Obtenga más información sobre [composición de audiencias en la guía de la interfaz de usuario](/help/segmentation/ui/audience-composition.md). |
 | Tamaño máximo de audiencia | 30 por ciento | Protección de rendimiento | La pertenencia máxima recomendada de una audiencia es del 30 % del número total de perfiles en el sistema. Es posible crear audiencias con más del 30 % de los perfiles como miembros o varias audiencias grandes, pero esto afectará al rendimiento del sistema. |
 
@@ -158,13 +158,13 @@ Los atributos independientes del tiempo, también conocidos como &quot;datos de 
 
 ![Infografía que describe las diferencias entre los datos de los registros y los datos de las series temporales.](images/guardrails/profile-entity.png)
 
-#### entidad Dimension
+#### Dimension entity
 
-Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, el perfil permite la integración con entidades de dimensión pequeñas para crear audiencias de una manera simplificada e intuitiva. Esta integración se conoce como [segmentación de varias entidades](../segmentation/multi-entity-segmentation.md).
+Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, el perfil permite la integración con entidades de dimensión pequeñas para crear audiencias de una manera simplificada e intuitiva. Esta integración se conoce como [segmentación de varias entidades](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Su organización también puede definir clases XDM para describir cosas que no sean individuales, como tiendas, productos o propiedades. Estos esquemas distintos de [!DNL XDM Individual Profile] se denominan &quot;entidades de dimensión&quot; (también conocidas como &quot;entidades de búsqueda&quot;) y no contienen datos de series temporales. Los esquemas que representan entidades de dimensión se vinculan a entidades de perfil mediante el uso de [relaciones de esquema](../xdm/tutorials/relationship-ui.md).
 
-Las entidades Dimension proporcionan datos de búsqueda que ayudan y simplifican las definiciones de segmentos de varias entidades y deben ser lo suficientemente pequeñas como para que el motor de segmentación pueda cargar todo el conjunto de datos en la memoria para un procesamiento óptimo (búsqueda rápida de puntos).
+Las entidades de Dimension proporcionan datos de búsqueda que ayudan y simplifican las definiciones de segmentos de varias entidades y deben ser lo suficientemente pequeñas como para que el motor de segmentación pueda cargar todo el conjunto de datos en la memoria para un procesamiento óptimo (búsqueda rápida de puntos).
 
 ![Infografía que muestra que una entidad de perfil está compuesta por entidades de dimensión.](images/guardrails/profile-and-dimension-entities.png)
 
@@ -186,6 +186,6 @@ Consulte la siguiente documentación para obtener más información sobre otras 
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-time Customer Data Platform (edición B2C - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (edición B2C - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
