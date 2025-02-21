@@ -1,10 +1,10 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2025'
 description: Las notas de la versión de febrero de 2025 de Adobe Experience Platform.
-source-git-commit: 03c0b782d0763a1638afeab34d61f89db8075d5b
+source-git-commit: b29c63942b00fdf597ebfd3ab105519a6b05a476
 workflow-type: tm+mt
-source-wordcount: '1439'
-ht-degree: 21%
+source-wordcount: '1378'
+ht-degree: 22%
 
 ---
 
@@ -38,13 +38,14 @@ El Asistente de IA de Adobe Experience Platform es una experiencia conversaciona
 
 | Función | Descripción |
 | --- | --- |
-| Disponibilidad general de perspectivas operativas | Las perspectivas operativas en AI Assistant ahora están en GA. Perspectivas operativas se refiere a las respuestas que genera AI Assistant sobre los objetos de metadatos (atributos, audiencias, flujos de datos, conjuntos de datos, destinos, recorridos, esquemas y fuentes), incluidos los recuentos, las búsquedas y el impacto en el linaje. Operational Insights no observa ningún dato dentro de la zona protegida. Para obtener más información, lea la [guía de la interfaz de usuario del Asistente de IA](../../ai-assistant/ui-guide.md). |
 | Compatibilidad con el completado automático de preguntas | Al introducir una pregunta en el asistente de inteligencia artificial, ahora puede seleccionar una lista de preguntas recomendadas que proporciona el asistente de inteligencia artificial. Utilice esta función para acelerar aún más los flujos de trabajo con AI Assistant. Para obtener más información, lea la guía de [uso del completado automático de preguntas con el Asistente de IA](../../ai-assistant/ui-guide.md#use-question-autocomplete). |
 | Compatibilidad con la observabilidad del conjunto de datos | Ahora puede utilizar el Asistente de IA para responder preguntas sobre métricas de conjuntos de datos específicas, como tamaños de almacenamiento y recuentos de filas. Las preguntas de observabilidad de datos admiten calificadores que puede utilizar para filtrar las consultas por un período de tiempo determinado. Para obtener más información, lea la [guía de preguntas del Asistente de IA](../../ai-assistant/questions.md). |
 
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [descripción general del Asistente de IA](../../ai-assistant/home.md).
+
+<!-- | General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). | -->
 
 ## Servicio de catálogo {#catalog-service}
 
