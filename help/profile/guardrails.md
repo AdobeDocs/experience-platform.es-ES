@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
+source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2523'
 ht-degree: 2%
 
 ---
@@ -118,7 +118,7 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
-| Audiencias por zona protegida | 4000 | Protección de rendimiento | Puede tener hasta 4000 **audiencias activas** por zona protegida. Puede tener más de 4000 zonas protegidas por organización, siempre y cuando haya menos de 4000 audiencias en cada zona protegida **individual**. Esto incluye audiencias por lotes, de streaming y de Edge. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. Obtenga más información sobre [la creación de audiencias](/help/segmentation/ui/segment-builder.md) a través del generador de segmentos. |
+| Audiencias por zona protegida | 4000 | Protección de rendimiento | Puede tener hasta 4000 **audiencias activas** por zona protegida. Puede tener más de 4000 audiencias por organización, siempre y cuando haya menos de 4000 audiencias en cada zona protegida **individual**. Esto incluye audiencias por lotes, de streaming y de Edge. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. Obtenga más información sobre [la creación de audiencias](/help/segmentation/ui/segment-builder.md) a través del generador de segmentos. |
 | Audiencias de Edge por zona protegida | 150 | Protección de rendimiento | Puede tener hasta 150 **audiencias de Edge activas** por zona protegida. Puede tener más de 150 audiencias de Edge por organización, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida **individual**. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de Edge](/help/segmentation/methods/edge-segmentation.md). |
 | Rendimiento de Edge en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación de Edge admite un valor máximo de 1500 eventos entrantes por segundo al entrar en Adobe Experience Platform Edge Network. La segmentación de Edge puede tardar hasta 350 milisegundos en procesar un evento entrante después de que entre en Adobe Experience Platform Edge Network. Más información sobre [audiencias de Edge](/help/segmentation/methods/edge-segmentation.md). |
 | Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Puede tener hasta 500 **audiencias de streaming activas** por zona protegida. Puede tener más de 500 audiencias de streaming por organización, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida **individual**. Esto incluye tanto a las audiencias de streaming como a las de Edge. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de streaming](/help/segmentation/methods/streaming-segmentation.md). |
@@ -162,7 +162,7 @@ Los atributos independientes del tiempo, también conocidos como &quot;datos de 
 
 Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, el perfil permite la integración con entidades de dimensión pequeñas para crear audiencias de una manera simplificada e intuitiva. Esta integración se conoce como [segmentación de varias entidades](../segmentation/tutorials/multi-entity-segmentation.md).
 
-Su organización también puede definir clases XDM para describir cosas que no sean individuales, como tiendas, productos o propiedades. Estos esquemas distintos de [!DNL XDM Individual Profile] se denominan &quot;entidades de dimensión&quot; (también conocidas como &quot;entidades de búsqueda&quot;) y no contienen datos de series temporales. Los esquemas que representan entidades de dimensión se vinculan a entidades de perfil mediante el uso de [relaciones de esquema](../xdm/tutorials/relationship-ui.md).
+Su organización también puede definir clases XDM para describir cosas que no sean individuales, como tiendas, productos o propiedades. Estos esquemas, que se modelan con clases XDM distintas de la clase XDM Individual Profile, se denominan &quot;entidades de dimensión&quot; (también conocidas como &quot;entidades de búsqueda&quot;) y no contienen datos de series temporales. Los esquemas que representan entidades de dimensión se vinculan a entidades de perfil mediante el uso de [relaciones de esquema](../xdm/tutorials/relationship-ui.md).
 
 Las entidades de Dimension proporcionan datos de búsqueda que ayudan y simplifican las definiciones de segmentos de varias entidades y deben ser lo suficientemente pequeñas como para que el motor de segmentación pueda cargar todo el conjunto de datos en la memoria para un procesamiento óptimo (búsqueda rápida de puntos).
 
