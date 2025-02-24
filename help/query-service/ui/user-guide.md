@@ -2,20 +2,16 @@
 keywords: Experience Platform;inicio;temas populares;Editor de consultas;editor de consultas;servicio de consultas;servicio de consultas;
 solution: Experience Platform
 title: Guía de IU del Editor de consultas
-description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
+description: El Editor de consultas es una herramienta interactiva proporcionada por el Servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
+source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
 
 # Guía de IU del Editor de consultas
-
->[!NOTE]
->
->El editor anterior quedó obsoleto el 24 de mayo de 2024. Ya no es accesible para su uso. Ahora puede usar el [Editor de consultas mejorado](#enhanced-editor-toggle) para escribir, validar y ejecutar sus consultas
 
 El Editor de consultas es una herramienta interactiva proporcionada por el Servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente en la interfaz de usuario de [!DNL Experience Platform]. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en [!DNL Experience Platform].
 
@@ -42,10 +38,6 @@ El Editor de consultas tarda unos segundos en inicializarse y conectarse al Serv
 Las consultas ejecutadas desde el Editor de consultas se ejecutan de forma interactiva, lo que significa que si cierra el explorador o sale, la consulta se cancela. Lo mismo ocurre con las consultas realizadas para generar conjuntos de datos a partir de resultados de consultas.
 
 ## Creación de consultas mediante el Editor de consultas mejorado {#query-authoring}
-
->[!NOTE]
->
->El editor anterior quedó obsoleto el 24 de mayo de 2024. Ya no es accesible para su uso. Ahora puede utilizar el Editor de consultas mejorado para escribir, validar y ejecutar consultas.
 
 Con el Editor de consultas, puede escribir, ejecutar y guardar consultas para datos de experiencia del cliente. Todas las consultas ejecutadas o guardadas en el Editor de consultas están disponibles para todos los usuarios de su organización con acceso al Servicio de consultas.
 
@@ -101,11 +93,11 @@ Aparecerá un cuadro de diálogo de confirmación. Seleccione **[!UICONTROL Conf
 
 ### Recuento de resultados {#result-count}
 
-El Editor de consultas tiene un resultado máximo de 50 000 filas. Puede elegir el número de filas que se muestran a la vez en la consola del Editor de consultas. Para cambiar el número de filas que se muestran en la consola, seleccione la lista desplegable **[!UICONTROL Recuento de resultados]** y elija entre las opciones 50, 100, 150, 300 y 500.
+El Editor de consultas tiene un resultado máximo de 50 000 filas. Puede elegir el número de filas que se muestran a la vez en la consola del Editor de consultas. Para cambiar el número de filas que se muestran en la consola, seleccione la lista desplegable **[!UICONTROL Recuento de resultados]** y elija entre las opciones 50, 100, 150, 300, 500 y 1000.
 
 >[!NOTE]
 >
->Como la interfaz de usuario de Platform solo admite hasta 500 filas, se omite el paso de un valor LIMIT superior a 500.
+>Como la IU de Platform puede admitir hasta 1000 filas, se omite el paso de un valor LIMIT superior a 1000.
 
 ![Editor de consultas con la lista desplegable Recuento de resultados resaltada.](../images/ui/query-editor/result-count.png)
 
@@ -204,8 +196,8 @@ Si se programó una consulta, entonces la ficha [!UICONTROL Consultas programada
 
 >[!AVAILABILITY]
 >
-El carril de navegación del conjunto de datos solo está disponible para los clientes de Data Distiller. Es posible que la IU de Platform no contenga el carril izquierdo de navegación del conjunto de datos. Otras imágenes de este documento pueden no reflejar el carril de navegación del conjunto de datos. Póngase en contacto con el representante del Adobe para obtener más información.<br>
-Actualmente, el Examinador de objetos sólo está disponible en **versión limitada**. Póngase en contacto con su representante de Adobe para obtener acceso anticipado.
+El carril de navegación del conjunto de datos solo está disponible para los clientes de Data Distiller. Es posible que la IU de Platform no contenga el carril izquierdo de navegación del conjunto de datos. Otras imágenes de este documento pueden no reflejar el carril de navegación del conjunto de datos. Póngase en contacto con su representante de Adobe para obtener más información.<br>
+Actualmente, el Examinador de objetos sólo está disponible en **versión limitada**. Póngase en contacto con su representante de Adobe para obtener acceso anticipado a la versión.
 
 Utilice el explorador de objetos para buscar y filtrar conjuntos de datos fácilmente. El explorador de objetos reduce el tiempo empleado en buscar tablas y conjuntos de datos en entornos grandes con numerosos conjuntos de datos. Con un acceso optimizado a los datos y metadatos relevantes, puede centrarse más en la creación de consultas y menos en la navegación.
 
@@ -249,7 +241,7 @@ La consola solo muestra los errores resultantes de la ejecución de una consulta
 
 ### Resultados de consulta {#query-results}
 
-Una vez finalizada una consulta, los resultados se muestran en la ficha **[!UICONTROL Resultados]**, junto a la ficha **[!UICONTROL Consola]**. Esta vista muestra el resultado tabular de la consulta, mostrando entre 50 y 500 filas de resultados según el [recuento de resultados](#result-count) que haya elegido. Esta vista le permite comprobar que la consulta produce el resultado esperado. Para generar un conjunto de datos con la consulta, quite los límites de las filas devueltas y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con el resultado. Consulte el [tutorial de generación de conjuntos de datos](./create-datasets.md) para obtener instrucciones sobre cómo generar un conjunto de datos a partir de los resultados de la consulta en el Editor de consultas.
+Una vez finalizada una consulta, los resultados se muestran en la ficha **[!UICONTROL Resultados]**, junto a la ficha **[!UICONTROL Consola]**. Esta vista muestra el resultado tabular de la consulta, mostrando entre 50 y 1000 filas de resultados según el [recuento de resultados](#result-count) seleccionado. Esta vista le permite comprobar que la consulta produce el resultado esperado. Para generar un conjunto de datos con la consulta, quite los límites de las filas devueltas y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con el resultado. Consulte el [tutorial de generación de conjuntos de datos](./create-datasets.md) para obtener instrucciones sobre cómo generar un conjunto de datos a partir de los resultados de la consulta en el Editor de consultas.
 
 ![La ficha Resultados de la consola del Editor de consultas muestra los resultados de una ejecución de consulta.](../images/ui/query-editor/query-results.png)
 
@@ -261,7 +253,7 @@ El servicio de consulta proporciona soluciones para una variedad de casos de uso
 
 ## Tutorial en vídeo de ejecución de consultas con el servicio de consultas {#query-tutorial-video}
 
-El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente SQL. En el vídeo también se muestra el uso de propiedades individuales en un objeto XDM, funciones definidas por el Adobe y cómo utilizar CREATE TABLE AS SELECT (CTAS).
+El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente SQL. En el vídeo también se muestra el uso de propiedades individuales en un objeto XDM, funciones definidas por Adobe y cómo utilizar CREATE TABLE AS SELECT (CTAS) como consultas.
 
 >[!NOTE]
 >
