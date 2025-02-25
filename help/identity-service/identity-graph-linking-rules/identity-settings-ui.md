@@ -2,10 +2,10 @@
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: ee0f6d6dbbbdf55a1a0f10038b785e48f2b41474
+source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ Lea los siguientes documentos antes de empezar a trabajar con la configuración 
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
-* [Prioridad de espacios de nombres](./namespace-priority.md)
+* [Prioridad del área de nombres](./namespace-priority.md)
 * [Simulación de gráfico](./graph-simulation.md)
 
 ## Configuración de la identidad
@@ -46,7 +46,7 @@ Para configurar la prioridad del área de nombres, seleccione un área de nombre
 
 ### Designar un área de nombres única
 
-Para designar un área de nombres única, active la casilla de verificación [!UICONTROL Único por gráfico] que corresponde a ese área de nombres. Puede seleccionar más de un área de nombres única para la configuración de identidad.
+Para designar un área de nombres única, active la casilla de verificación [!UICONTROL Único por gráfico] que corresponde a ese área de nombres. Puede seleccionar hasta tres áreas de nombres únicas para la configuración de la configuración de identidad.
 
 ![Dos áreas de nombres seleccionadas y definidas como únicas.](../images/rules/unique-namespace.png)
 
@@ -69,5 +69,5 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad de espacios de nombres](./namespace-priority.md)
+* [Prioridad del área de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
