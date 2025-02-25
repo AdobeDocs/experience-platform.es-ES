@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Asignación de campos para el conector de Adobe Analytics Source
 description: Asigne campos de Adobe Analytics a campos XDM mediante el conector de Source de Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
+source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2415'
 ht-degree: 8%
 
 ---
@@ -173,9 +173,9 @@ Los campos seleccionados procedentes de ADC deben transformarse, lo que requiere
 | `ip` | `environment.ipV4` | cadena | La dirección IP, basada en el encabezado HTTP de la solicitud de imagen. |
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | Booleano | La versión de JavaScript utilizada. |
 | `mcvisid_high` + `mcvisid_low` | identityMap | objeto | El ID de visitante de Experience Cloud. |
-| `mcvisid_high` + `mcvisid_low` | endUserID._experience.mcid.id | cadena | El ID del Experience Cloud (ECID) también se conoce como MCID y a veces se utiliza en áreas de nombres. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | Booleano | El ID del Experience Cloud (ECID) también se conoce como MCID y a veces se utiliza en áreas de nombres. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | cadena | El ID del Experience Cloud (ECID) también se conoce como MCID y a veces se utiliza en áreas de nombres. |
+| `mcvisid_high` + `mcvisid_low` | endUserID._experience.mcid.id | cadena | El Experience Cloud ID (ECID) también se conoce como MCID y a veces se utiliza en áreas de nombres. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | Booleano | El Experience Cloud ID (ECID) también se conoce como MCID y a veces se utiliza en áreas de nombres. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | cadena | El Experience Cloud ID (ECID) también se conoce como MCID y a veces se utiliza en áreas de nombres. |
 | `mcvisid_low` | `identityMap` | objeto | El ID de visitante de Experience Cloud. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | cadena | ID de vinculación de visita. El campo de análisis sdid_high y sdid_low es el ID de datos suplementario que se utiliza para unir dos (o más) visitas entrantes. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | cadena | Proximidad de señalización de Mobile Services. |
@@ -186,7 +186,9 @@ Los campos seleccionados procedentes de ADC deben transformarse, lo que requiere
 
 ## Campos de asignación avanzados
 
-Los campos seleccionados (conocidos como &quot;valores posteriores&quot;) contienen datos después de que el Adobe haya ajustado sus valores mediante Reglas de procesamiento, Reglas de VISTA y Tablas de búsqueda. La mayoría de los valores de publicación tienen un homólogo preprocesado. Su organización puede decidir si desea utilizar el campo preprocesado, el campo posprocesado o ambos.
+Los campos seleccionados (conocidos como &quot;valores posteriores&quot;) contienen datos después de que Adobe haya ajustado sus valores mediante Reglas de procesamiento, Reglas de VISTA y Tablas de búsqueda. La mayoría de los valores de publicación tienen un homólogo preprocesado.
+
+El conector de origen de Analytics envía datos preprocesados a un conjunto de datos en Experience Platform. Puede transformar estos datos en su homólogo posprocesado mediante transformaciones. Para obtener más información sobre cómo realizar estas transformaciones mediante el servicio de consultas, consulte [Funciones definidas por Adobe](/help/query-service/sql/adobe-defined-functions.md) en la guía del usuario del servicio de consultas.
 
 Para obtener más información sobre cómo realizar estas transformaciones mediante el servicio de consultas, consulte [Funciones definidas por Adobe](/help/query-service/sql/adobe-defined-functions.md) en la guía del usuario del servicio de consultas.
 
