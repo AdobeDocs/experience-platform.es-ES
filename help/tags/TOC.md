@@ -6,10 +6,10 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 44%
+source-wordcount: '776'
+ht-degree: 43%
 
 ---
 
@@ -90,7 +90,9 @@ ht-degree: 44%
       * Capa de datos de cliente de Adobe {#client-data-layer}
          * [Información general](./extensions/client/client-data-layer/overview.md)
          * [Notas de la versión](./extensions/client/client-data-layer/release-notes.md)
-      * Adobe de ContextHub {#contexthub}
+      * Análisis de contenido de Adobe {#contentanalytics}
+         * [Información general](./extensions/client/content-analytics/overview.md)
+      * Adobe ContextHub {#contexthub}
          * [Información general](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
       * Servicio de Adobe Experience Cloud ID {#id-service}
@@ -112,15 +114,15 @@ ht-degree: 44%
          * [Información general](./extensions/client/asset-insights/overview.md)
          * [Notas de la versión](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
-      * Adobe Medium Analytics para audio y vídeo {#media-analytics}
+      * Adobe Media Analytics para audio y vídeo {#media-analytics}
          * [Información general](./extensions/client/media-analytics/overview.md)
          * [Notas de la versión](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Medium Analytics (3.x SDK) {#media-analytics-3x}
+      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Información general](./extensions/client/media-analytics-3x/overview.md)
          * [Notas de la versión](./extensions/client/media-analytics-3x/release-notes.md)
       * Privacidad de Adobe {#privacy}
          * [Información general](./extensions/client/privacy/overview.md)
-      * [Selector de grupo de informes de Adobe](https://exchange.adobe.com/apps/ec/100640)
+      * [Selector de grupos de informes de Adobe](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [Información general](./extensions/client/target/overview.md)
          * [Notas de la versión](./extensions/client/target/release-notes.md)
@@ -129,7 +131,7 @@ ht-degree: 44%
          * [Notas de la versión](./extensions/client/target-v2/release-notes.md)
       * [Kit de herramientas de Adobe Target](https://exchange.adobe.com/apps/ec/100640)
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
-      * AEM [Información de recursos de la](https://exchange.adobe.com/apps/ec/103406)
+      * [Información de recursos de AEM](https://exchange.adobe.com/apps/ec/103406)
       * [Notificador JS del freno neumático](https://exchange.adobe.com/apps/ec/103342)
       * [Amplitud](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
@@ -161,7 +163,7 @@ ht-degree: 44%
       * [Decibelio](https://exchange.adobe.com/apps/ec/100913)
       * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
       * [Privacidad diferencial](https://exchange.adobe.com/apps/ec/104535)
-      * [Visualizadores de Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
+      * [Visores de Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
       * [Ayudante EDDL](https://exchange.adobe.com/apps/ec/107691)
       * [OneTag parlante](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
