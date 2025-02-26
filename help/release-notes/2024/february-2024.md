@@ -3,7 +3,7 @@ title: 'Notas de la versión de Adobe Experience Platform: febrero de 2024'
 description: Las notas de la versión de febrero de 2024 de Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1244'
 ht-degree: 100%
 
@@ -119,7 +119,7 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 {style="table-layout:auto"}
 
-## Fuentes {#sources}
+## Orígenes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
