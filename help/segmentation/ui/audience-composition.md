@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2342'
+source-wordcount: '2313'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Cuando selecciona el bloque **[!UICONTROL Audience]**, el carril derecho muestra
 
 Para añadir audiencias al bloque Audiencia. seleccione **[!UICONTROL Agregar audiencia]**.
 
-![El botón Agregar audiencia está resaltado.](../images/ui/audience-composition/add-audience.png)
+![El botón Agregar audiencia está resaltado.](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Las audiencias seleccionadas aparecerán ahora dentro del carril derecho cuando 
 
 Para agregar una regla personalizada al bloque Audiencia, seleccione **[!UICONTROL Generar regla]**.
 
-![El botón Generar regla está resaltado.](../images/ui/audience-composition/build-rule.png)
+![El botón Generar regla está resaltado.](../images/ui/audience-composition/select-build-rule.png)
 
 Aparecerá el Generador de segmentos. Puede usar el Generador de segmentos para crear una regla personalizada para la audiencia que seguirá. Encontrará más información sobre el uso del Generador de segmentos en la [guía del Generador de segmentos](./segment-builder.md).
 
@@ -196,7 +196,7 @@ Para seleccionar el conjunto de datos con el que enriquecer la audiencia, selecc
 
 Aparece la ventana emergente **[!UICONTROL Seleccionar conjunto de datos]**. Seleccione el conjunto de datos que desee agregar para el enriquecimiento, seguido de **[!UICONTROL Select]** para agregar el conjunto de datos para el enriquecimiento.
 
-![El conjunto de datos elegido está seleccionado.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![El conjunto de datos elegido está seleccionado.](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ La sección **[!UICONTROL Criterios de enriquecimiento]** aparece ahora en el ca
 
 Para seleccionar la clave de unión de **[!UICONTROL Source]**, seleccione el icono ![filtro](/help/images/icons/project-edit.png).
 
-![El icono de filtro de la [!UICONTROL clave de unión de Source] está resaltado.](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 Aparece la ventana emergente **[!UICONTROL Seleccionar un atributo de perfil]**. Seleccione el atributo de perfil que desee usar como clave de unión de origen, seguido de **[!UICONTROL Seleccionar]** para elegir ese atributo como clave de unión de origen.
 
-![El atributo que desea usar como clave de combinación de origen está resaltado.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![El atributo que desea usar como clave de combinación de origen está resaltado.](../images/ui/audience-composition/select-source-join-key.png)
 
 Para seleccionar la clave de unión del conjunto de datos **[!UICONTROL Enrichment]**, seleccione el icono ![filter](/help/images/icons/project-edit.png).
 
-![El icono de filtro de la clave de unión del conjunto de datos de enriquecimiento [!UICONTROL 2} está resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)]
-
 Aparece la ventana emergente **[!UICONTROL Atributos de enriquecimiento]**. Seleccione el atributo que desee usar como clave de unión del conjunto de datos enriquecido, seguido de **[!UICONTROL Seleccionar]** para elegir ese atributo como clave de unión del conjunto de datos enriquecido.
 
-![El atributo que desea usar como clave de unión del conjunto de datos de enriquecimiento está resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![El atributo que desea usar como clave de unión del conjunto de datos de enriquecimiento está resaltado.](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 Ahora que ha agregado ambas claves de combinación, aparece la sección **[!UICONTROL Atributos de enriquecimiento]**. Ahora puede añadir el atributo con el que desee mejorar la audiencia. Para agregar estos atributos, seleccione **[!UICONTROL Agregar atributo]**.
 
-![El botón [!UICONTROL Agregar atributo] está resaltado.](../images/ui/audience-composition/enrich-select-add-attribute.png)
-
 Aparece la ventana emergente **[!UICONTROL Atributos de enriquecimiento]**. Puede seleccionar los atributos del conjunto de datos con los que enriquecer la audiencia, seguidos de **[!UICONTROL Select]** para agregarlos a la audiencia.
 
-![Los atributos de enriquecimiento que desea agregar están resaltados.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![Los atributos de enriquecimiento que desea agregar están resaltados.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Para seleccionar por qué atributo clasificar las audiencias, seleccione el icon
 
 Aparecerá una lista de atributos de perfil. En esta ventana emergente, puede seleccionar el tipo de atributo por el que desea clasificar la audiencia. Seleccione **[!UICONTROL Select]** para agregarlo a su bloque de clasificación. Tenga en cuenta que el atributo seleccionado **solamente** puede ser números.
 
-![Se muestra una lista de atributos.](../images/ui/audience-composition/select-attribute-rank.png)
+![Se muestra una lista de atributos.](../images/ui/audience-composition/rank-attribute.png)
 
 Después de seleccionar el atributo, puede seleccionar el orden por el que desea clasificarlo. Puede ser ascendente (de menor a mayor) o descendente (de mayor a menor).
 
 Además, puede limitar el número de perfiles devueltos habilitando la opción **[!UICONTROL Agregar límite de perfiles]**. Cuando se habilita esta opción, puede establecer el número máximo de perfiles devueltos dentro del campo **[!UICONTROL Perfiles incluidos]**.
 
-![Se ha resaltado la opción Agregar límite de perfil, que le permite limitar el número de perfiles devueltos.](../images/ui/audience-composition/add-profile-limit.png)
+![Se ha resaltado la opción Agregar límite de perfil, que le permite limitar el número de perfiles devueltos.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL División] {#split-block}
 
@@ -307,7 +301,7 @@ Además, puede limitar el número de perfiles devueltos habilitando la opción *
 >title="Otros perfiles"
 >abstract="La opción Other profiles permite crear una ruta adicional con los perfiles restantes que no coinciden con ninguna de las condiciones especificadas de las otras rutas."
 
-El tipo de bloque **[!UICONTROL Split]** le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo. Al dividir la audiencia en subaudiencias, esta división es **no** persistente. Esto significa que los perfiles pueden estar en diferentes subaudiencias para cada evaluación.
+El tipo de bloque **[!UICONTROL Split]** le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo.
 
 Para agregar un bloque **[!UICONTROL Split]**, selecciona el icono **+**, seguido de **[!UICONTROL Split]**.
 
@@ -325,23 +319,25 @@ Al dividir la audiencia, puede hacerlo por porcentaje o por atributo.
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="División persistente"
->abstract="Puede hacer que la división porcentual sea persistente habilitando esta opción y seleccionando en qué área de nombres de identidad se va a mantener la división."
+>abstract="Puede hacer que la división porcentual sea persistente habilitando esta opción y seleccionando un área de nombres de identidad."
 
 Al dividir por porcentaje, las audiencias se dividirán aleatoriamente en función del número de rutas y porcentajes proporcionados.
 
-Por ejemplo, puede tener tres rutas, cada una con un porcentaje diferente de perfiles.
+![Se resalta la división porcentual.](../images/ui/audience-composition/split-by-percentage.png)
 
-![Se muestra el desglose en número de audiencias y porcentajes guardados.](../images/ui/audience-composition/percentages.png)
+También puede proporcionar una identidad, lo que haría que la división basada en porcentajes fuera persistente. Los tipos de identidad disponibles incluyen todas las áreas de nombres de identidad disponibles en su organización.
+
+![La casilla de verificación Dividir por identidad está resaltada. Además, se resalta la lista desplegable que le permite seleccionar con la identidad para dividir.](../images/ui/audience-composition/split-by-identity.png)
 
 ### Dividir por atributo {#split-attribute}
 
 Al dividir por atributo, las audiencias se dividen según los atributos proporcionados. Para seleccionar el atributo por el que dividir, selecciona el bloque **[!UICONTROL Split]**, seguido del icono ![filter](/help/images/icons/project-edit.png).
 
-![Se ha seleccionado el botón de filtro, que muestra cómo filtrar por atributo.](../images/ui/audience-composition/select-split-attribute.png)
+![Se ha seleccionado el botón de filtro, que muestra cómo filtrar por atributo.](../images/ui/audience-composition/split-by-attribute.png)
 
 Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo, seguido de **[!UICONTROL Select]** para agregarlo al bloque dividido.
 
-![Se muestra una lista de atributos.](../images/ui/audience-composition/select-attribute-exclude.png)
+![Se muestra una lista de atributos.](../images/ui/audience-composition/select-attribute.png)
 
 Después de seleccionar el atributo, puede elegir qué perfiles pertenecerán a cada subaudiencia agregando los valores dentro del campo **[!UICONTROL Valores]**.
 

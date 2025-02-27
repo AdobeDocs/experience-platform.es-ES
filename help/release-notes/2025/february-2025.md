@@ -1,10 +1,11 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2025'
 description: Las notas de la versión de febrero de 2025 de Adobe Experience Platform.
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 94%
+source-wordcount: '1645'
+ht-degree: 97%
 
 ---
 
@@ -22,6 +23,7 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 - [Servicio de catálogo](#catalog-service)
 - [Preparación de los datos](#data-prep)
 - [Destinos](#destinations)
+- [Servicio de segmentación](#segmentation)
 - [Orígenes](#sources)
 - [Actualizaciones de la documentación](#documentation-updates)
    - [Comparación entre Edge Network y hub](#edge)
@@ -95,7 +97,7 @@ Para obtener más información, lea la [Información general sobre la preparaci�
 | Utilice etiquetas de acceso para administrar el acceso de los usuarios a los flujos de datos de destino | Como parte de la funcionalidad del [[!UICONTROL control de acceso basado en atributos]](/help/access-control/abac/overview.md) de Real-Time CDP, ahora puede aplicar etiquetas de acceso a [flujos de datos de destino](/help/dataflows/ui/monitor-destinations.md). De este modo, puede asegurarse de que solo un subconjunto de usuarios de su organización obtenga acceso a flujos de datos de destino específicos. <br> **Importante**: Al buscar flujos de datos de destino mediante el cuadro de búsqueda en la parte superior de la interfaz de usuario de Experience Platform, los resultados pueden incluir flujos de datos de destino que las etiquetas de acceso de usuario no le permiten ver. Este comportamiento se actualizará en una futura actualización. |
 | [Sistema de informes a nivel de público](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) para la [conexión de Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md) | Ahora puede [ver información](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) sobre las identidades activadas, excluidas o fallidas desglosadas a nivel de público para cada público que forme parte de los flujos de datos de este destino. |
 | Compatibilidad con públicos externos para las conexiones de [TikTok](/help/destinations/catalog/social/tiktok.md) y [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Puede activar públicos externos en estos destinos desde [cargas personalizadas](../../segmentation/ui/audience-portal.md#import-audience) y [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/start/audiences). |
-| Exportar matrices, asignaciones y objetos a destinos de almacenamiento en la nube | Si usa la nueva opción **[!UICONTROL Exportar matrices, mapas y objetos]** al conectarse a un destino de almacenamiento en la nube, podrá exportar nuevos objetos complejos para seleccionar destinos. [Más información](/help/destinations/ui/export-arrays-calculated-fields.md) sobre la nueva funcionalidad. |
+| Exportar matrices, mapas y objetos a destinos de almacenamiento en la nube | Si utiliza la nueva opción **[!UICONTROL Exportar matrices, mapas y objetos]** al conectarse a un destino de almacenamiento en la nube, podrá exportar nuevos objetos complejos a destinos seleccionados. [Más información](/help/destinations/ui/export-arrays-calculated-fields.md) sobre la nueva funcionalidad. |
 
 {style="table-layout:auto"}
 
@@ -103,10 +105,21 @@ Para obtener más información, lea la [Información general sobre la preparaci�
 
 - Se ha corregido un problema en las herramientas de prueba de Destination SDK. Algunos clientes o socios han detectado problemas con la [herramienta de generación de perfiles de muestra](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) debido a un formato no admitido cuando el esquema utilizado para generar perfiles incluía tipos de datos con un selector `No format`.
 - Se ha corregido un problema al actualizar la especificación de destinos `targetConnection` mediante la API del servicio de flujo. En algunos casos, la operación PATCH se comportaría de manera similar a una operación POST, dañando los flujos de datos existentes. Este problema ya está solucionado y todos los clientes pueden usar la API del servicio de flujo para actualizar su especificación `targetConnection`. [Más información](/help/destinations/api/edit-destination.md#patch-target-connection).
-- Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles compartan la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta versión incluye una actualización del proceso de deduplicación, lo que garantiza que las ejecuciones sucesivas con las mismas coordenadas siempre produzcan los mismos resultados, lo que mejora la coherencia. [Más información](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
+- Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta versión incluye una actualización del proceso de deduplicación, lo que garantiza que las ejecuciones sucesivas con las mismas coordenadas produzcan siempre los mismos resultados, lo que mejora la coherencia. [Más información](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 Para obtener más información, lea la [Información general de destinos](../../destinations/home.md).
 
+## Servicio de segmentación {#segmentation-service}
+
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| ------- | ----------- |
+| División persistente | Composición de audiencia ahora admite divisiones persistentes. Puede hacer que las audiencias divididas permanezcan constantes al dividir por perfil agregando un área de nombres de identidad al bloque dividido. Encontrará más información sobre esta característica en la [documentación de composición de audiencias](../../segmentation/ui/audience-composition.md). |
+
+Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
 ## Orígenes {#sources}
 

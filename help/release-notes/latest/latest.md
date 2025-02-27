@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2025'
 description: Las notas de la versión de febrero de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
-workflow-type: ht
-source-wordcount: '1542'
-ht-degree: 100%
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
+workflow-type: tm+mt
+source-wordcount: '1645'
+ht-degree: 97%
 
 ---
 
@@ -24,6 +24,7 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 - [Preparación de los datos](#data-prep)
 - [Destinos](#destinations)
 - [Orígenes](#sources)
+- [Servicio de segmentación](#segmentation)
 - [Actualizaciones de la documentación](#documentation-updates)
    - [Comparación entre Edge Network y hub](#edge)
    - [API del servicio de flujo expandida para orígenes](#flow-service)
@@ -107,6 +108,18 @@ Para obtener más información, lea la [Información general sobre la preparaci�
 - Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta versión incluye una actualización del proceso de deduplicación, lo que garantiza que las ejecuciones sucesivas con las mismas coordenadas produzcan siempre los mismos resultados, lo que mejora la coherencia. [Más información](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 Para obtener más información, lea la [Información general de destinos](../../destinations/home.md).
+
+## Servicio de segmentación {#segmentation-service}
+
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| ------- | ----------- |
+| División persistente | Composición de audiencia ahora admite divisiones persistentes. Puede hacer que las audiencias divididas permanezcan constantes al dividir por perfil agregando un área de nombres de identidad al bloque dividido. Encontrará más información sobre esta característica en la [documentación de composición de audiencias](../../segmentation/ui/audience-composition.md). |
+
+Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
 ## Orígenes {#sources}
 
