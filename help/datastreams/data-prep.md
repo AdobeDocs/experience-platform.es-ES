@@ -2,10 +2,10 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 60%
+source-wordcount: '1199'
+ht-degree: 59%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 60%
 
 La preparación de datos es un servicio de Adobe Experience Platform que le permite asignar, transformar y validar datos desde y hacia el [Modelo de datos de experiencia (XDM)](../xdm/home.md). Al configurar una [secuencia de datos](./overview.md) habilitada para Platform, puede utilizar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Platform Edge Network.
 
-Todos los datos enviados desde una página web deben aterrizar en Experience Platform como XDM. Existen tres formas de traducir datos de una capa de datos en la página al XDM aceptado por el Experience Platform:
+Todos los datos enviados desde una página web deben aterrizar en Experience Platform como XDM. Existen tres formas de traducir datos de una capa de datos en la página al XDM aceptado por Experience Platform:
 
 1. Vuelva a dar formato a la capa de datos en XDM en la propia página web.
 2. Utilice la funcionalidad Etiquetas de elementos de datos nativos para reformatear el formato de capa de datos existente de una página web en XDM.
-3. Vuelva a dar formato al formato de capa de datos existente de una página web en XDM mediante el Edge Network con la preparación de datos para la recopilación de datos.
+3. Vuelva a dar formato al formato de capa de datos existente de una página web en XDM mediante Edge Network y utilice la preparación de datos para la recopilación de datos.
 
 Esta guía se centra en la tercera opción.
 
@@ -25,14 +25,14 @@ Esta guía se centra en la tercera opción.
 
 Existen dos casos de uso en los que la preparación de datos para la recopilación de datos es útil:
 
-1. El sitio web tiene una capa de datos bien formada, controlada y mantenida, y hay una preferencia por enviarla directamente al Edge Network en lugar de utilizar la manipulación de JavaScript para convertirla a XDM en la página (ya sea mediante elementos de datos de etiquetas o mediante la manipulación manual de JavaScript).
+1. El sitio web tiene una capa de datos bien formada, controlada y mantenida, y hay una preferencia por enviarla directamente a Edge Network en lugar de utilizar la manipulación de JavaScript para convertirla a XDM en la página (ya sea mediante elementos de datos de etiquetas o mediante la manipulación manual de JavaScript).
 2. En el sitio se implementa un sistema de etiquetado que no sea Etiquetas.
 
-## Envíe una capa de datos existente al Edge Network mediante WebSDK {#send-datalayer-via-websdk}
+## Envíe una capa de datos existente a Edge Network a través de WebSDK {#send-datalayer-via-websdk}
 
 La capa de datos existente debe enviarse usando el objeto [`data`](/help/web-sdk/commands/sendevent/data.md) dentro del comando `sendEvent`.
 
-Si usa etiquetas, debe usar el campo **[!UICONTROL Datos]** del tipo de acción **[!UICONTROL Enviar evento]**, tal como se describe en la [documentación de extensión de etiqueta del SDK web](/help/tags/extensions/client/web-sdk/action-types.md).
+Si usa etiquetas, debe usar el campo **[!UICONTROL Datos]** del tipo de acción **[!UICONTROL Enviar evento]**, tal como se describe en la [documentación de extensión de etiquetas de Web SDK](/help/tags/extensions/client/web-sdk/action-types.md).
 
 El resto de esta guía se centrará en cómo asignar la capa de datos a los estándares XDM después de que el SDK web la haya enviado.
 
@@ -166,6 +166,10 @@ Aparece el paso **[!UICONTROL Asignación]**, lo que le permite asignar los camp
 
 * [Cree reglas de asignación](#create-mapping) para este conjunto de datos mediante un proceso manual.
 * [Importar reglas de asignación](#import-mapping) de una secuencia de datos existente.
+
+>[!IMPORTANT]
+>
+>La asignación de la preparación de datos anula las cargas XDM de `identityMap`, lo que puede afectar aún más a la coincidencia de perfiles con audiencias de Real-Time CDP.
 
 ### Creación de reglas de asignación {#create-mapping}
 
