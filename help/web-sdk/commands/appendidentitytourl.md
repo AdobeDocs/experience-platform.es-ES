@@ -2,7 +2,7 @@
 title: appendIdentityToUrl
 description: Ofrezca experiencias personalizadas con mayor precisión entre aplicaciones, sitios web y dominios cruzados.
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
+source-git-commit: 7c262e5819f8e3488c5ddd5a0221d1c52c28c029
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # `appendIdentityToUrl`
 
-El comando `appendIdentityToUrl` le permite agregar un identificador de usuario a la dirección URL como una cadena de consulta. Esta acción le permite transferir la identidad de un visitante entre dominios, lo que evita recuentos de visitantes duplicados para conjuntos de datos que incluyen dominios o canales. Está disponible en las versiones 2.11.0 o posteriores del SDK web.
+El comando `appendIdentityToUrl` le permite agregar un identificador de usuario a la dirección URL como una cadena de consulta. Esta acción le permite transferir la identidad de un visitante entre dominios, lo que evita recuentos de visitantes duplicados para conjuntos de datos que incluyen dominios o canales. Está disponible en las versiones 2.11.0 o posteriores de Web SDK.
 
-La cadena de consulta generada y anexada a la dirección URL es `adobe_mc`. Si el SDK web no encuentra un ECID, llama al extremo `/acquire` para generar uno.
+La cadena de consulta generada y anexada a la dirección URL es `adobe_mc`. Si Web SDK no encuentra un ECID, llama al extremo `/acquire` para generar uno.
 
 >[!NOTE]
 >
 >Si no se ha proporcionado el consentimiento, la dirección URL de este método se devuelve sin cambios. Este comando se ejecuta inmediatamente; no espera una actualización de consentimiento.
 
-## Anexar identidad a una URL mediante la extensión del SDK web {#extension}
+## Anexar la identidad a la URL mediante la extensión web de SDK {#extension}
 
 La adición de una identidad a una dirección URL se realiza como una acción dentro de una regla de la interfaz de etiquetas de recopilación de datos de Adobe Experience Platform.
 
@@ -28,7 +28,7 @@ La adición de una identidad a una dirección URL se realiza como una acción de
 1. Seleccione la propiedad de etiquetas que desee.
 1. Vaya a **[!UICONTROL Reglas]** y luego seleccione la regla que desee.
 1. En [!UICONTROL Acciones], seleccione una acción existente o cree una acción.
-1. Establezca el campo desplegable [!UICONTROL Extension] en **[!UICONTROL SDK web de Adobe Experience Platform]** y establezca [!UICONTROL Action Type] en **[!UICONTROL Redirect with identity]**.
+1. Establezca el campo desplegable [!UICONTROL Extension] en **[!UICONTROL Adobe Experience Platform Web SDK]** y establezca [!UICONTROL Action Type] en **[!UICONTROL Redirect with identity]**.
 1. Haga clic en **[!UICONTROL Conservar cambios]** y, a continuación, ejecute el flujo de trabajo de publicación.
 
 Este comando suele utilizarse con una regla específica que escucha clics y comprueba los dominios deseados.
@@ -65,19 +65,23 @@ Déclencheur solo en los dominios deseados.
 
 Anexe la identidad a la dirección URL.
 
-* **[!UICONTROL Extensión]**: SDK web de Adobe Experience Platform
+* **[!UICONTROL Extensión]**: Adobe Experience Platform Web SDK
 * **[!UICONTROL Tipo de acción]**: redireccionar con identidad
 
 ![Acción de regla](../assets/id-sharing-action-configuration.png)
 
 +++
 
-## Anexar la identidad a una URL mediante la biblioteca JavaScript del SDK web
+## Anexar la identidad a la dirección URL mediante la biblioteca JavaScript de Web SDK
 
 Ejecute el comando `appendIdentityToUrl` con una dirección URL como parámetro. El método devuelve una dirección URL con el identificador anexado como cadena de consulta.
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 Puede agregar un detector de eventos para todos los clics recibidos en la página y comprobar si la dirección URL coincide con algún dominio deseado. En caso afirmativo, anexe la identidad a la dirección URL y redirija al usuario.
