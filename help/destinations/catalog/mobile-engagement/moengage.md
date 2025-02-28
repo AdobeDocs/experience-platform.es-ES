@@ -3,9 +3,9 @@ title: Conexión de Moengage
 description: Moengage es una plataforma de participación del cliente que potencia las interacciones centradas en el cliente entre consumidores y marcas en tiempo real.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Use el destino [!DNL Moengage] para conectarse y asignar los datos de Adobe (atributos de usuario, segmentos y eventos) a MoEngage en tiempo real. A continuación, los clientes pueden actuar sobre estos datos y ofrecer experiencias personalizadas y específicas.
+Utilice el destino [!DNL Moengage] para conectar y asignar los datos de Adobe (atributos de usuario, segmentos y eventos) a MoEngage en tiempo real. A continuación, los clientes pueden actuar sobre estos datos y ofrecer experiencias personalizadas y específicas.
 
-Con Adobe, la integración es muy sencilla e intuitiva. Simplemente, tome cualquier perfil de usuario de Adobe y asígnelo a un atributo de usuario MoEngage.
+Con Adobe, la integración es muy sencilla e intuitiva. Simplemente, tome cualquier perfil de usuario de Adobe y asígnelo a un atributo de usuario de MoEngage.
 
 >[!IMPORTANT]
 >
@@ -51,7 +51,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (user_id, anonymous_id) junto con los atributos personalizados definidos por ha exportado a [!DNL Moengage]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -143,7 +143,10 @@ Para agregar más asignaciones, repita los pasos anteriores.
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
-Para comprobar si los datos se han exportado correctamente al destino [!DNL Moengage], vaya al perfil de usuario de la cuenta de [!DNL Moengage]. Verá un atributo de usuario denominado Segmento de AEP.
+Para comprobar si los datos se han exportado correctamente al destino [!DNL Moengage], vaya al perfil de usuario de la cuenta de [!DNL Moengage]. Aquí encontrará un atributo de usuario denominado `AEPSegments`, creado automáticamente y los demás atributos personalizados que se han asignado en los pasos anteriores de Adobe Experience Platform.
+
+`AEPSegments` es un atributo de tipo matriz en [!DNL Moengage]. Enumera todos los nombres de audiencia de Adobe a los que está asociado el usuario en Experience Platform.
+
 
 ![Asignación de destino de Moengage completa](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
