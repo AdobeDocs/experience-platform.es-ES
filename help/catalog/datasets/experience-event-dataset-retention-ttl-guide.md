@@ -1,9 +1,10 @@
 ---
 title: Administrar la retención de conjuntos de datos de Experience Event en el lago de datos mediante TTL
 description: Obtenga información sobre cómo evaluar, establecer y administrar la retención de conjuntos de datos de evento de experiencia en el lago de datos mediante configuraciones de tiempo de vida (TTL) con API de Adobe Experience Platform. Esta guía explica cómo la caducidad a nivel de fila TTL admite políticas de retención de datos, optimiza la eficiencia del almacenamiento y garantiza una administración eficaz del ciclo de vida de los datos. También proporciona casos de uso y prácticas recomendadas para ayudarle a aplicar el TTL de forma eficaz.
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2196'
 ht-degree: 1%
 
 ---
@@ -28,6 +29,12 @@ TTL es útil cuando se administran datos con distinción de tiempo que pierden r
 - Mejore el rendimiento de las consultas minimizando los datos irrelevantes.
 - Mantenga la higiene de los datos conservando solo la información relevante.
 - Optimizar la retención de datos para lograr los objetivos empresariales.
+
+>[!NOTE]
+>
+>La retención de conjuntos de datos de evento de experiencia se aplica a los datos de evento almacenados en el lago de datos. Si está administrando la retención en Real-Time Customer Data Platform, considere la posibilidad de usar [Caducidad del evento de experiencia](../../profile/event-expirations.md) y [Caducidad del perfil seudónimo](../../profile/pseudonymous-profiles.md) junto con la configuración de retención del lago de datos.
+>
+>Las configuraciones de TTL le ayudan a optimizar el almacenamiento en función de sus derechos. Aunque los datos del almacén de perfiles (utilizados en Real-Time CDP) se pueden considerar obsoletos y se eliminan a los 30 días, los mismos datos de evento del lago de datos pueden permanecer disponibles durante 12-13 meses (o más según el derecho) para los casos de uso de Analytics y Data Distiller.
 
 ### Ejemplo del sector {#industry-example}
 
@@ -121,7 +128,7 @@ Una respuesta correcta devuelve la configuración TTL para el conjunto de datos,
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ Una respuesta correcta muestra la configuración TTL para el conjunto de datos. 
 | `extensions` | Un contenedor de metadatos adicionales relacionados con el conjunto de datos. |
 | `extensions.adobe_lakeHouse` | Especifica la configuración relacionada con la arquitectura de almacenamiento, incluidas las configuraciones de caducidad de nivel de fila |
 | `rowExpiration` | El objeto contiene la configuración de TTL que define el período de retención del conjunto de datos. |
-| `rowExpiration.ttlValue` | Define la duración antes de que los registros del conjunto de datos se quiten automáticamente. Utiliza el formato de período ISO-8601 (por ejemplo, `P3M` durante 3 meses o `P7D` durante una semana). |
+| `rowExpiration.ttlValue` | Define la duración antes de que los registros del conjunto de datos se quiten automáticamente. Utiliza el formato de período ISO-8601 (por ejemplo, `P3M` durante 3 meses o `P30D` durante una semana). |
 | `rowExpiration.valueStatus` | La cadena indica si la configuración TTL es un valor predeterminado del sistema o un valor personalizado establecido por un usuario. Valores posibles: `default`, `custom`. |
 | `rowExpiration.setBy` | Especifica quién modificó por última vez la configuración de TTL. Los valores posibles incluyen: `user` (configurado manualmente) o `service` (asignado automáticamente). |
 | `rowExpiration.updated` | La marca de tiempo de la última actualización TTL. Este valor indica cuándo se modificó por última vez la configuración de TTL. |
@@ -418,4 +425,3 @@ Ahora que ha aprendido a administrar la configuración de TTL para la caducidad 
 - Trabajos de retención: aprenda a programar y automatizar las caducidades de los conjuntos de datos en la IU de Platform con la [guía de la IU del ciclo vital de datos](../../hygiene/ui/dataset-expiration.md), o compruebe las configuraciones de retención de conjuntos de datos y compruebe que se eliminan los registros caducados.
 - [Guía de extremo de API de caducidad de conjuntos de datos](../../hygiene/api/dataset-expiration.md): Descubra cómo eliminar conjuntos de datos completos en lugar de solo filas. Aprenda a programar, administrar y automatizar la caducidad de los conjuntos de datos mediante la API para garantizar una retención de datos eficiente.
 - [Información general sobre políticas de uso de datos](../../data-governance/policies/overview.md): Aprenda a alinear su estrategia de retención de datos con requisitos de cumplimiento más amplios y restricciones de uso de marketing.
-
