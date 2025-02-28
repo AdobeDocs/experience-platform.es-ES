@@ -1,18 +1,22 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API
 title: Punto final de API de entidades (acceso a perfil)
 type: Documentation
 description: Adobe Experience Platform le permite acceder a los datos del perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como "perfiles", mediante la API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 9f9823a23c488e63b8b938cb885f050849836e36
+source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '1706'
 ht-degree: 4%
 
 ---
 
 # Extremo de entidades (acceso a perfiles)
+
+>[!IMPORTANT]
+>
+>La búsqueda de ExperienceEvent mediante la API de acceso al perfil quedará obsoleta. Utilice funciones como atributos calculados para casos de uso que requieran la búsqueda de ExperienceEvents. Para obtener más información sobre este cambio, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
 Adobe Experience Platform le permite acceder a los datos de [!DNL Real-Time Customer Profile] mediante las API RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a los perfiles mediante la interfaz de usuario de [!DNL Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
 
@@ -22,7 +26,7 @@ El extremo de API utilizado en esta guía forma parte de [[!DNL Real-Time Custom
 
 ## Recuperación de una entidad {#retrieve-entity}
 
-Puede recuperar una entidad de perfil o sus datos de serie temporal realizando una solicitud de GET al extremo `/access/entities` junto con los parámetros de consulta necesarios.
+Puede recuperar una entidad de perfil realizando una petición GET al extremo `/access/entities` junto con los parámetros de consulta necesarios.
 
 >[!BEGINTABS]
 
@@ -138,100 +142,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con la entidad solicitada.
 >[!NOTE]
 >
 >Si un gráfico relacionado vincula más de 50 identidades, este servicio devolverá el estado HTTP 422 y el mensaje &quot;Demasiadas identidades relacionadas&quot;. Si recibe este error, considere la posibilidad de agregar más parámetros de consulta para restringir la búsqueda.
-
->[!TAB Evento de serie temporal]
-
-**Formato de API**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-Los parámetros de consulta proporcionados en la ruta de solicitud especifican a qué datos acceder. Puede incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;).
-
-Para tener acceso a los datos de eventos de series temporales, **debe** proporcionar los siguientes parámetros de consulta:
-
-- `schema.name`: nombre del esquema XDM de la entidad. En este caso de uso, este valor es `schema.name=_xdm.context.experienceevent`.
-- `relatedSchema.name`: nombre del esquema relacionado. Dado que el nombre de esquema es Evento de experiencia, el valor de este **debe** ser `relatedSchema.name=_xdm.context.profile`.
-- `relatedEntityId`: ID de la entidad relacionada.
-- `relatedEntityIdNS`: área de nombres de la entidad relacionada. Se debe proporcionar este valor si `relatedEntityId` es **no** un XID.
-
-Se proporciona una lista completa de parámetros válidos en la sección [parámetros de consulta](#query-parameters) del apéndice.
-
-**Solicitud**
-
-La siguiente solicitud encuentra una entidad de perfil por identificador y recupera los valores de las propiedades `endUserIDs`, `web` y `channel` para todos los eventos de series temporales asociados a la entidad.
-
-+++ Una solicitud de ejemplo para recuperar los eventos de series temporales asociados a una entidad
-
-```shell
-curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-+++
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 200 con una lista paginada de eventos de series temporales y campos asociados especificados en los parámetros de consulta de solicitud.
-
->[!NOTE]
->
->La solicitud especificó un límite de uno (`limit=1`), por lo tanto `count` en la respuesta siguiente es 1 y solo se devuelve una entidad.
-
-+++ Una respuesta de ejemplo que contiene los datos de eventos de series temporales solicitados
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
-
-+++
 
 >[!TAB Cuenta B2B]
 
@@ -427,7 +337,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con la entidad solicitada.
 
 ## Recuperar varias entidades {#retrieve-entities}
 
-Puede recuperar varias entidades de perfil o eventos de series temporales realizando una solicitud de POST al extremo `/access/entities` y proporcionando las identidades en la carga útil.
+Puede recuperar varias entidades de perfil realizando una petición POST al extremo `/access/entities` y proporcionando las identidades en la carga.
 
 >[!BEGINTABS]
 
@@ -648,290 +558,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con los campos solicitados de
 ```
 
 +++
-
->[!TAB Eventos de series temporales]
-
-**Formato de API**
-
-```http
-POST /access/entities
-```
-
-**Solicitud**
-
-La siguiente solicitud recupera los ID de usuario, las horas locales y los códigos de país de los eventos de series temporales asociados a una lista de identidades de perfil.
-
-+++ Una solicitud de ejemplo para recuperar los datos de la serie temporal
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "schema": {
-        "name": "_xdm.context.experienceevent"
-    },
-    "relatedSchema": {
-        "name": "_xdm.context.profile"
-    },
-    "identities": [
-        {
-            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW"
-        }
-        {
-            "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY"
-        }
-    ],
-    "fields": [
-        "endUserIDs",
-        "placeContext.localTime",
-        "placeContext.geo.countryCode"
-    ],
-    
-    "timeFilter": {
-        "startTime": 11539838505
-        "endTime": 1539838510
-    },
-    "limit": 10,
-    "orderby": "-timestamp"
-}'
-```
-
-| Propiedad | Tipo | Descripción |
-| -------- | ---- | ----------- |
-| `schema.name` | Cadena | **(Obligatorio)** El nombre del esquema XDM al que pertenece la entidad. |
-| `relatedSchema.name` | Cadena | Si `schema.name` es `_xdm.context.experienceevent`, este valor debe especificar el esquema para la entidad de perfil con la que están relacionados los eventos de series temporales. |
-| `identities` | Matriz | **(Obligatorio)** Una matriz con una lista de perfiles desde los que recuperar los eventos de series temporales asociados. Cada entrada de la matriz se establece de una de las dos maneras siguientes: <ol><li>Uso de una identidad completa formada por el valor de ID y el área de nombres</li><li>Proporcionar un XID</li></ol> |
-| `fields` | Cadena | Los campos XDM que se van a devolver, como una matriz de cadenas. De forma predeterminada, se devuelven todos los campos. |
-| `orderby` | Cadena | Orden de los eventos de experiencia recuperados por marca de tiempo, escritos como `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
-| `timeFilter.startTime` | Entero | Especifique la hora de inicio para filtrar los objetos de series temporales (en milisegundos). De forma predeterminada, este valor se establece como el principio del tiempo disponible. |
-| `timeFilter.endTime` | Entero | Especifique la hora de finalización para filtrar los objetos de series temporales (en milisegundos). De forma predeterminada, este valor se establece como el final del tiempo disponible. |
-| `limit` | Entero | Número máximo de registros que se van a devolver. De forma predeterminada, este valor se establece en 1000. |
-
-+++
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 200 con una lista paginada de eventos de series temporales asociados con varios perfiles especificados en la solicitud.
-
-+++ Una respuesta de ejemplo que contiene los eventos de series temporales
-
-```json
-{
-    "GkouAW-yD9aoRCPhRYROJ-TetAFW": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-            "count": 10,
-            "next": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-                "timestamp": 1537275882000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:42Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "a9e137b4-1348-4878-8167-e308af523d8b",
-                "timestamp": 1537275889000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:49Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": "/entities",
-                "payload": {
-                    "schema": {
-                        "name": "_xdm.context.experienceevent"
-                    },
-                    "relatedSchema": {
-                        "name": "_xdm.context.profile"
-                    },
-                    "timeFilter": {
-                        "startTime": 1537275882000
-                    },
-                    "fields": [
-                        "endUserIDs",
-                        "placeContext.localTime",
-                        "placeContext.geo.countryCode"
-                    ],
-                    "identities": [
-                        {
-                            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                            "start": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-                        }
-                    ],
-                    "limit": 10
-                }
-            }
-        }
-    },
-    "GkouAW-2u-7iWt5vQ9u2wm40JOZY": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "2746d0db-fa64-4e29-b67e-324bec638816",
-            "count": 9,
-            "next": ""
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "2746d0db-fa64-4e29-b67e-324bec638816",
-                "timestamp": 1537559483000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:23Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "9bf337a1-3256-431e-a38c-5c0d42d121d1",
-                "timestamp": 1537559486000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:26Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": ""
-            }
-        }
-    }
-}`
-```
-
-+++
-
->[!NOTE]
->
->En esta respuesta de ejemplo, el primer perfil enumerado (&quot;GkouAW-yD9aoRCPhRYROJ-TestAFW&quot;) proporciona un valor para `_links.next.payload`, lo que significa que hay páginas de resultados adicionales para este perfil.
->
->Para acceder a estos resultados, puede realizar una solicitud de POST adicional al extremo `/access/entities` con la carga útil indicada como cuerpo de la solicitud.
 
 >[!TAB Cuenta B2B]
 
@@ -1468,7 +1094,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con las entidades solicitadas
 
 ### Acceso a una página posterior de resultados
 
-Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados subsiguientes, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra solicitud de GET al extremo `/access/entities` y reemplace `/entities` por el valor del URI proporcionado.
+Los resultados se paginan al recuperar eventos de series temporales. Si hay páginas de resultados subsiguientes, la propiedad `_page.next` contendrá un ID. Además, la propiedad `_links.next.href` proporciona un URI de solicitud para recuperar la página siguiente. Para recuperar los resultados, realice otra petición GET al extremo `/access/entities` y reemplace `/entities` por el valor del URI proporcionado.
 
 >[!NOTE]
 >
@@ -1558,7 +1184,7 @@ Una respuesta correcta devuelve la siguiente página de resultados. Esta respues
 
 ## Eliminar una entidad {#delete-entity}
 
-Puede eliminar una entidad del almacén de perfiles realizando una solicitud de DELETE al extremo `/access/entities` junto con los parámetros de consulta necesarios.
+Puede eliminar una entidad del almacén de perfiles realizando una petición DELETE al extremo `/access/entities` junto con los parámetros de consulta necesarios.
 
 **Formato de API**
 
@@ -1605,11 +1231,11 @@ La siguiente sección proporciona información adicional sobre el acceso a los d
 
 ### Parámetros de consulta {#query-parameters}
 
-Los siguientes parámetros se utilizan en la ruta de acceso de las solicitudes de GET al extremo `/access/entities`. Sirven para identificar la entidad de perfil a la que desea acceder y filtrar los datos devueltos en la respuesta. Los parámetros obligatorios están etiquetados, mientras que el resto son opcionales.
+Los siguientes parámetros se utilizan en la ruta de acceso de las solicitudes GET al extremo `/access/entities`. Sirven para identificar la entidad de perfil a la que desea acceder y filtrar los datos devueltos en la respuesta. Los parámetros obligatorios están etiquetados, mientras que el resto son opcionales.
 
 | Parámetro | Descripción | Ejemplo |
 | --------- | ----------- | ------- |
-| `schema.name` | **(Obligatorio)** El nombre del esquema XDM de la entidad. | `schema.name=_xdm.context.experienceevent` |
+| `schema.name` | **(Obligatorio)** El nombre del esquema XDM de la entidad. | `schema.name=_xdm.context.profile` |
 | `relatedSchema.name` | Si `schema.name` es `_xdm.context.experienceevent`, este valor **debe** especificar el esquema para la entidad de perfil con la que están relacionados los eventos de series temporales. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(Obligatorio)** El identificador de la entidad. Si el valor de este parámetro no es un XID, también se debe proporcionar un parámetro de área de nombres de identidad (`entityIdNS`). | `entityId=janedoe@example.com` |
 | `entityIdNS` | Si `entityId` no se proporciona como un XID, este campo **debe** especificar el área de nombres de identidad. | `entityIdNS=email` |
