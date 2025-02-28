@@ -1,14 +1,15 @@
 ---
 title: PubMatic Connect
 description: PubMatic maximiza el valor del cliente al ofrecer la cadena de suministro de marketing digital programática del futuro. PubMatic Connect combina la tecnología de la plataforma y el servicio dedicado para mejorar la forma en que se empaquetan y se realizan las transacciones de inventario y datos.
-last-substantial-update: 2023-12-14T00:00:00Z
+last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 2041c06e660e24f63d4c44adc0e8f3082bb007ae
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '1056'
 ht-degree: 2%
 
 ---
+
 
 # Destino de PubMatic Connect {#pubmatic-connect}
 
@@ -16,11 +17,21 @@ ht-degree: 2%
 
 Utilice [!DNL PubMatic Connect] para maximizar el valor de los clientes mediante la entrega de la cadena de suministro de marketing digital programática del futuro. [!DNL PubMatic Connect] combina tecnología de plataforma y servicio dedicado para mejorar la forma en que se empaquetan y se realizan transacciones de datos e inventarios.
 
-Utilice este destino para enviar datos de audiencia a la plataforma [!DNL PubMatic Connect].
+Hay dos destinos disponibles que le permiten enviar datos de audiencia a la plataforma PubMatic Connect. Difieren ligeramente en su funcionalidad:
+
+1. PubMatic Connect
+
+   Durante la activación inicial, este destino registrará automáticamente las audiencias en la plataforma PubMatic y utilizará el Adobe Experience Platform ID interno para la asignación.
+
+2. PubMatic Connect (asignación de ID de audiencia personalizada)
+
+   Este destino le permite elegir añadir manualmente un ID de asignación durante el flujo de trabajo de activación. Utilice este destino cuando los datos deban enviarse a audiencias existentes en la plataforma PubMatic o si se requiere un &quot;ID de audiencia de Source&quot; personalizado.
+
+![Vista en paralelo de los dos conectores PubMatic en el catálogo de destinos.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
 
 >[!IMPORTANT]
 >
->El conector de destino y la página de documentación los crea y mantiene el equipo [!DNL PubMatic]. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en `support@pubmatic.com`.
+> El conector de destino y la página de documentación los crea y mantiene el equipo [!DNL PubMatic]. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en `support@pubmatic.com`.
 
 ## Casos de uso {#use-cases}
 
@@ -39,7 +50,7 @@ Hable con el administrador de cuentas de [!DNL PubMatic] para asegurarse de que 
 [!DNL PubMatic Connect] admite la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
-| --------------- | ------ | --- |
+| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
 | GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
@@ -51,9 +62,9 @@ Hable con el administrador de cuentas de [!DNL PubMatic] para asegurarse de que 
 Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
-| --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +73,7 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
-| --- | --- | --- |
+| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en el destino de PubMatic Connect. |
 | Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Cuando se actualiza un perfil en Experience Platform en función de la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -128,6 +139,12 @@ Selección de campos de destino:
 - Seleccione el número de tipo [!DNL PubMatic UID] que coincida con el identificador seleccionado en el primer paso.
 
 ![Asignar atributos e identidades](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+
+### Programación de audiencias
+
+Si utiliza el destino de PubMatic Connect (asignación de ID de audiencia personalizada), debe proporcionar un ID de asignación para cada audiencia que corresponda a la &quot;ID de audiencia de Source&quot; en la plataforma de PubMatic.
+
+![Programación de audiencias](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
