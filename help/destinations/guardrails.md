@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
+source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 1%
+source-wordcount: '1666'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +33,7 @@ Existen dos tipos de límites predeterminados en este documento:
 
 | Tipo de protección | Descripción |
 |----------|---------|
-| **Protección de rendimiento (límite leve)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. El Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
+| **Protección de rendimiento (límite leve)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
 | **Protecciones impuestas por el sistema (límite estricto)** | La interfaz de usuario o la API de Real-Time CDP aplican las protecciones impuestas por el sistema. Estos son límites que no se pueden superar, ya que la IU y la API le bloquearán el acceso o devolverán un error. |
 
 {style="table-layout:auto"}
@@ -53,7 +53,7 @@ Las protecciones siguientes generalmente se aplican a la activación mediante [t
 | Número máximo de atributos asignados a un destino | 50 | Protección de rendimiento | En el caso de varios destinos y tipos de destino, puede seleccionar atributos e identidades de perfil para asignar para la exportación. Para obtener un rendimiento óptimo, se debe asignar un máximo de 50 atributos en un flujo de datos a un destino. |
 | Número máximo de destinos | 100 | Protección impuesta por el sistema | Puede crear un máximo de 100 destinos a los que conectar y activar datos, *por espacio aislado*. [Los destinos de personalización de Edge (personalización personalizada)](#edge-destinations-activation) pueden constituir un máximo de 10 de los 100 destinos recomendados. |
 | Tipo de datos activados en los destinos | Datos de perfil, incluidas identidades y mapa de identidad | Protección impuesta por el sistema | Actualmente, solo es posible exportar *atributos de registro de perfil* a destinos. Los atributos XDM que describen datos de evento no son compatibles con la exportación en este momento. |
-| Tipo de datos activados para destinos: compatibilidad con atributos de matriz y asignación | Disponible parcialmente | Protección impuesta por el sistema | Puede exportar atributos de matriz a [destinos basados en archivos](/help/destinations/destination-types.md#file-based). Aún debe utilizar la función `array_to_string` para acoplar la matriz en una cadena en el archivo de destino. [Más información](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) sobre la funcionalidad. <br><br> En este momento, **no** es posible exportar *atributos de asignación* a destinos. La excepción a esta regla es el [mapa de identidad](/help/xdm/field-groups/profile/identitymap.md), que se exporta en las activaciones de flujo continuo y basadas en archivos. |
+| Tipo de datos activados para destinos: compatibilidad con atributos de matriz y asignación | Disponible parcialmente | Protección impuesta por el sistema | Puede exportar atributos de matriz a [destinos basados en archivos](/help/destinations/destination-types.md#file-based). [Más información](/help/destinations/ui/export-arrays-calculated-fields.md) sobre la nueva funcionalidad. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ Las siguientes protecciones se aplican a la activación a través de [destinos d
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Número de activaciones (mensajes HTTP con exportaciones de perfil) por segundo | N/A | - | Actualmente no hay límite en el número de mensajes por segundo enviados desde el Experience Platform a los extremos de API de los destinos del socio. <br>: los límites o latencias los dicta el extremo donde el Experience Platform envía datos. Asegúrese de consultar también la página [catálogo](/help/destinations/catalog/overview.md) del destino al que se está conectando y activando los datos. |
+| Número de activaciones (mensajes HTTP con exportaciones de perfil) por segundo | N/A | - | Actualmente no hay límite en el número de mensajes por segundo enviados desde Experience Platform a los extremos de API de los destinos del socio. <br>: los límites o latencias los dicta el extremo al que Experience Platform envía datos. Asegúrese de consultar también la página [catálogo](/help/destinations/catalog/overview.md) del destino al que se está conectando y activando los datos. |
 
 {style="table-layout:auto"}
 
@@ -173,12 +173,12 @@ Más información sobre [exportar conjuntos de datos](/help/destinations/ui/expo
 
 ### protecciones de Destination SDK {#destination-sdk-guardrails}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md) es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que Experience Platform envíe datos de audiencia y perfil a su extremo en función de los datos y formatos de autenticación que elija. Las siguientes protecciones se aplican a los destinos configurados con Destination SDK.
+[Destination SDK](/help/destinations/destination-sdk/overview.md) es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que Experience Platform envíe datos de audiencia y perfil a su extremo en función de los datos y los formatos de autenticación que elija. Las siguientes protecciones se aplican a los destinos configurados con Destination SDK.
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Número máximo de [destinos personalizados privados](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Protección de rendimiento | Puede crear un máximo de 5 destinos privados por lotes o de flujo continuo personalizados utilizando Destination SDK. Póngase en contacto con un representante de atención personalizada si necesita crear más de 5 de estos destinos. |
-| Política de exportación de perfiles para el Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1800 y máximo 3600)</li><li>`maxNumEventsInBatch` (mínimo 1000 y máximo 10 000)</li></ul> | Protección impuesta por el sistema | Cuando uses la opción [agregación configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para tu destino, ten en cuenta los valores mínimos y máximos que determinan la frecuencia con la que los mensajes HTTP se envían a tu destino basado en API y cuántos perfiles deben incluir los mensajes. |
+| Número máximo de [destinos personalizados privados](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Protección de rendimiento | Puede crear un máximo de 5 destinos privados por lotes o de flujo continuo personalizados con Destination SDK. Póngase en contacto con un representante de atención personalizada si necesita crear más de 5 de estos destinos. |
+| Directiva de exportación de perfiles para Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1800 y máximo 3600)</li><li>`maxNumEventsInBatch` (mínimo 1000 y máximo 10 000)</li></ul> | Protección impuesta por el sistema | Cuando uses la opción [agregación configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para tu destino, ten en cuenta los valores mínimos y máximos que determinan la frecuencia con la que los mensajes HTTP se envían a tu destino basado en API y cuántos perfiles deben incluir los mensajes. |
 
 {style="table-layout:auto"}
 
@@ -188,7 +188,7 @@ Detalles sobre los umbrales de restricción o las limitaciones para determinados
 
 | Tipo de destino | Descripción |
 | --- | --- |
-| Destinos empresariales (API HTTP, Amazon Kinesis, Azure EventHubs) | En el 95 por ciento de los casos, Experience Platform intenta ofrecer una latencia de rendimiento de menos de 10 minutos para los mensajes enviados correctamente con una tasa de menos de 10 000 solicitudes por segundo para cada flujo de datos a un destino empresarial. <br>: en caso de solicitudes con errores al destino de la empresa, el Experience Platform almacena las solicitudes con errores y las reintenta dos veces para enviarlas al extremo. |
+| Destinos empresariales (API HTTP, Amazon Kinesis, Azure EventHubs) | En el 95 por ciento de los casos, Experience Platform intenta ofrecer una latencia de rendimiento de menos de 10 minutos para los mensajes enviados correctamente con una tasa de menos de 10 000 solicitudes por segundo para cada flujo de datos a un destino empresarial. <br>: en caso de solicitudes con errores al destino de empresa, Experience Platform almacena las solicitudes con errores y reintenta enviarlas dos veces al extremo. |
 
 {style="table-layout:auto"}
 
@@ -198,6 +198,6 @@ Consulte la siguiente documentación para obtener más información sobre otras 
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-time Customer Data Platform (edición B2C - paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (paquetes B2B - Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (edición B2C - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
