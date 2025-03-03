@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '1593'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -66,7 +66,7 @@ Aparece el área de trabajo Permisos para la interfaz de usuario de Platform, qu
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="¿Qué son las etiquetas?"
->abstract="Utilice etiquetas para categorizar conjuntos de datos y campos según las políticas de uso y acceso que se aplican a esos datos. Platform proporciona varias etiquetas de uso de datos <strong>core</strong> definidas por Adobe que cubren una amplia variedad de restricciones comunes aplicables al control de datos. Por ejemplo, las etiquetas confidenciales <strong>S</strong>, como RHD (Datos de salud regulados), le permiten categorizar los datos que hacen referencia a Información de salud protegida (PHI). También puede definir sus propias etiquetas personalizadas para que se adapten a las necesidades de su organización."
+>abstract="Utilice etiquetas para clasificar los conjuntos de datos y campos según las directivas de uso que se aplican a esos datos. Platform proporciona varias etiquetas de uso de datos <strong>principales</strong> definidas por Adobe, que abarcan una amplia variedad de restricciones comunes aplicables a la gobernanza de datos. Por ejemplo, las etiquetas confidenciales <strong>S</strong> como RHD (datos de salud regulados) le permiten clasificar los datos que hacen referencia a información de salud protegida (PHI). También puede definir sus propias etiquetas personalizadas para que se adapten a las necesidades de su organización."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es#understanding-data-usage-labels" text="Información general sobre las etiquetas de uso de datos"
 
 Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Platform y son componentes básicos de las directivas de control de acceso. Una función tiene un conjunto determinado de permisos y los miembros de la organización pueden asignarse a una o varias funciones, según el ámbito de acceso que necesiten.

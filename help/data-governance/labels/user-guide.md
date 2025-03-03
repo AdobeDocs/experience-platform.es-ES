@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;inicio;temas populares;control de datos;etiqueta de uso de datos;servicio de directivas;guía del usuario de etiquetas de uso de datos
+keywords: Experience Platform;inicio;temas populares;control de datos;etiqueta de uso de datos;servicio de directivas;guía del usuario sobre etiquetas de uso de datos
 solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la IU
 description: Esta guía describe los pasos para trabajar con las etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
@@ -24,7 +24,7 @@ Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de 
 
 Para aplicar etiquetas a los datos, necesita el permiso **[!UICONTROL Administrar etiquetas de uso]** para utilizarlo en la zona protegida de producción predeterminada llamada &quot;prod&quot;. Para crear una etiqueta personalizada, también debe tener derechos administrativos en el perfil del producto. Cada organización solo tiene una lista de etiquetas aplicables. Usted **no puede** eliminar etiquetas. En su lugar, puede eliminarlos de los conjuntos de datos o campos a los que se aplican.
 
-Consulte la guía sobre cómo [configurar permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [descripción general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso al Admin Console de su organización, póngase en contacto con el administrador de la organización.
+Consulte la guía sobre cómo [configurar permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [descripción general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso a Admin Console para su organización, póngase en contacto con el administrador de la organización.
 
 ## Administrar etiquetas en el nivel de esquema
 
@@ -115,7 +115,7 @@ La opción **[!UICONTROL Mostrar etiquetas heredadas]** está activada de forma 
 >![Pestaña Control de datos del área de trabajo Conjuntos de datos con una etiqueta eliminable resaltada.](../images/labels/remove-governance-labels.png)
 >Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
 
-## Administrar etiquetas personalizadas {#manage-custom-labels}
+## Administración de etiquetas personalizadas {#manage-custom-labels}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"

@@ -2,10 +2,11 @@
 title: Realizar transformaciones en los datos exportados a destinos de almacenamiento en la nube mediante campos calculados
 type: Tutorial
 description: Aprenda a utilizar la funcionalidad de campos calculados para realizar transformaciones en los datos exportados a destinos de almacenamiento en la nube
-source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
+exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
+source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -44,7 +45,7 @@ Para utilizar campos calculados para transformaciones de datos:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Añadir campos calculados deshabilitado"
->abstract="Este control está deshabilitado porque seleccionó la opción **Exportar matrices, asignaciones, objetos** *en* al configurar esta conexión de destino. Para usar los campos calculados y las funciones disponibles en, configure una nueva conexión de destino con **Exportar matrices, mapas, objetos** y desactive *3}.*"
+>abstract="Este control está deshabilitado porque estableció la opción **Exportar matrices, asignaciones, objetos** en *on* (activada) al configurar esta conexión de destino. Para usar los campos calculados y las funciones disponibles, configure una nueva conexión de destino con la opción **Exportar matrices, mapas, objetos** en *off (desactivada).*"
 
 En el paso de asignación del flujo de trabajo de activación para los destinos de almacenamiento en la nube, seleccione **[!UICONTROL Agregar campo calculado]**.
 

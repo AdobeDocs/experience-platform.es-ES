@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
 source-wordcount: '1498'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
@@ -119,7 +119,7 @@ Para ello, debe crear en la consola de AWS un usuario supuesto para Adobe con lo
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="Nombre del segmento"
->abstract="Debe tener entre 3 y 63 caracteres. Debe comenzar y terminar con una letra o un número. Solo debe contener letras minúsculas, números o guiones (-). No debe tener el formato de dirección IP (por ejemplo, 192.100.1.1)."
+>abstract="Debe tener entre 3 y 63 caracteres. Debe comenzar y terminar con una letra o un número. Solo debe contener letras minúsculas, números o guiones (-). No debe tener el formato de una dirección IP (por ejemplo, 192.100.1.1)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"

@@ -29,7 +29,7 @@ Las etiquetas permiten categorizar conjuntos de datos y campos según las polít
 >id="platform_permissions_labels_about_create"
 >title="Crear nueva etiqueta"
 >abstract="Puede crear sus propias etiquetas personalizadas para adaptarlas a las necesidades de su organización. Las etiquetas personalizadas se pueden usar para aplicar a los datos configuraciones de control de acceso y de gobernanza de datos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es#manage-labels" text="Administrar etiquetas personalizadas"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es#manage-labels" text="Administración de etiquetas personalizadas"
 
 >[!NOTE]
 >

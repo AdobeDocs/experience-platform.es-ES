@@ -6,16 +6,16 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
-# Administración de permisos de una función {#manage-role-permissions}
+# Administración de permisos para una función {#manage-role-permissions}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="¿Qué son las funciones?"
->abstract="Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. Clasifican los usuarios que interactúan con la instancia de Platform y son los componentes básicos de las políticas de control de acceso. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten."
+>abstract="Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. Clasifican a los usuarios que interactúan con la instancia de Platform y son los componentes básicos de las políticas de control de acceso. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=es" text="Administrar funciones"
 
 >[!IMPORTANT]
@@ -47,14 +47,14 @@ Para quitar un filtro, selecciona la &quot;X&quot; en el icono de la píldora pa
 
 ![El panel Roles de la interfaz de usuario de permisos con la X y Borrar todas las selecciones resaltadas en los filtros elegidos.](../../images/flac-ui/flac-clear-filters.png)
 
-## Detalles del rol {#role-details}
+## Detalles de la función {#role-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
->title="Información general sobre la función"
->abstract="El cuadro de diálogo de información general de funciones muestra los detalles de la función, incluidos los recursos y los entornos limitados a los que una función determinada puede acceder. Puede administrar etiquetas, usuarios, grupos de usuarios y credenciales de API para la función navegando a la pestaña correspondiente dentro del espacio de trabajo de la función."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Administrar etiquetas de un rol"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Administrar usuarios de un rol"
+>title="Información general sobre las funciones"
+>abstract="El cuadro de diálogo de información general sobre la función muestra los recursos y las zonas protegidas a los que puede acceder una función determinada. Puede administrar etiquetas, usuarios, grupos de usuarios y credenciales de API para la función navegando a la pestaña correspondiente dentro del espacio de trabajo de la función."
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Administración de etiquetas para una función"
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Administración de usuarios para una función"
 
 Seleccione el rol de la ficha **[!UICONTROL Roles]**, la cual abrirá el tablero [!UICONTROL Detalles] del rol.
 
@@ -62,7 +62,7 @@ Seleccione el rol de la ficha **[!UICONTROL Roles]**, la cual abrirá el tablero
 
 El panel [!UICONTROL Detalles] proporciona información general sobre el rol. La descripción general muestra el nombre de la función, la descripción, el creador y el último modificador, junto con las fechas de creación y modificación. También muestra los permisos adjuntos a la función y la lista de zonas protegidas asignadas. El nombre y la descripción de la función se pueden modificar, si es necesario.
 
-## Administrar etiquetas de un rol
+## Administración de etiquetas para una función
 
 Seleccione la ficha **[!UICONTROL Etiquetas]** para abrir el área de trabajo de etiquetas de roles y, a continuación, seleccione **[!UICONTROL Agregar etiquetas]** para asignar etiquetas al rol.
 
@@ -96,7 +96,7 @@ La siguiente pantalla le solicita que elija qué recursos de zonas protegidas in
 
 ![Panel de recursos del rol con el menú desplegable de recursos de la zona protegida resaltado.](../../images/flac-ui/flac-add-role-permission.png)
 
-## Administrar usuarios de un rol
+## Administración de usuarios para una función
 
 Seleccione la ficha **[!UICONTROL Usuarios]** para abrir el área de trabajo de funciones [!UICONTROL Usuarios] y, a continuación, seleccione **[!UICONTROL Agregar usuarios]** para asignar usuarios a la función.
 
