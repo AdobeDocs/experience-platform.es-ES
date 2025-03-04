@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2025'
 description: Las notas de la versión de febrero de 2025 de Adobe Experience Platform.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 97%
@@ -97,7 +97,7 @@ Para obtener más información, lea la [Información general sobre la preparaci�
 | Utilice etiquetas de acceso para administrar el acceso de los usuarios a los flujos de datos de destino | Como parte de la funcionalidad del [[!UICONTROL control de acceso basado en atributos]](/help/access-control/abac/overview.md) de Real-Time CDP, ahora puede aplicar etiquetas de acceso a [flujos de datos de destino](/help/dataflows/ui/monitor-destinations.md). De este modo, puede asegurarse de que solo un subconjunto de usuarios de su organización obtenga acceso a flujos de datos de destino específicos. <br> **Importante**: Al buscar flujos de datos de destino mediante el cuadro de búsqueda en la parte superior de la interfaz de usuario de Experience Platform, los resultados pueden incluir flujos de datos de destino que las etiquetas de acceso de usuario no le permiten ver. Este comportamiento se actualizará en una futura actualización. |
 | [Sistema de informes a nivel de público](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) para la [conexión de Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md) | Ahora puede [ver información](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) sobre las identidades activadas, excluidas o fallidas desglosadas a nivel de público para cada público que forme parte de los flujos de datos de este destino. |
 | Compatibilidad con públicos externos para las conexiones de [TikTok](/help/destinations/catalog/social/tiktok.md) y [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Puede activar públicos externos en estos destinos desde [cargas personalizadas](../../segmentation/ui/audience-portal.md#import-audience) y [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/start/audiences). |
-| Exportar matrices, mapas y objetos a destinos de almacenamiento en la nube | Si utiliza la nueva opción **[!UICONTROL Exportar matrices, mapas y objetos]** al conectarse a un destino de almacenamiento en la nube, podrá exportar nuevos objetos complejos a destinos seleccionados. [Más información](/help/destinations/ui/export-arrays-calculated-fields.md) sobre la nueva funcionalidad. |
+| Exportar matrices, mapas y objetos a destinos de almacenamiento en la nube | Si utiliza la nueva opción **[!UICONTROL Exportar matrices, mapas y objetos]** al conectarse a un destino de almacenamiento en la nube, podrá exportar nuevos objetos complejos a destinos seleccionados. [Más información](/help/destinations/ui/export-arrays-maps-objects.md) sobre la nueva funcionalidad. |
 
 {style="table-layout:auto"}
 

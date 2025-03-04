@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 2%
@@ -53,7 +53,7 @@ Las protecciones siguientes generalmente se aplican a la activación mediante [t
 | Número máximo de atributos asignados a un destino | 50 | Protección de rendimiento | En el caso de varios destinos y tipos de destino, puede seleccionar atributos e identidades de perfil para asignar para la exportación. Para obtener un rendimiento óptimo, se debe asignar un máximo de 50 atributos en un flujo de datos a un destino. |
 | Número máximo de destinos | 100 | Protección impuesta por el sistema | Puede crear un máximo de 100 destinos a los que conectar y activar datos, *por espacio aislado*. [Los destinos de personalización de Edge (personalización personalizada)](#edge-destinations-activation) pueden constituir un máximo de 10 de los 100 destinos recomendados. |
 | Tipo de datos activados en los destinos | Datos de perfil, incluidas identidades y mapa de identidad | Protección impuesta por el sistema | Actualmente, solo es posible exportar *atributos de registro de perfil* a destinos. Los atributos XDM que describen datos de evento no son compatibles con la exportación en este momento. |
-| Tipo de datos activados para destinos: compatibilidad con atributos de matriz y asignación | Disponible parcialmente | Protección impuesta por el sistema | Puede exportar atributos de matriz a [destinos basados en archivos](/help/destinations/destination-types.md#file-based). [Más información](/help/destinations/ui/export-arrays-calculated-fields.md) sobre la nueva funcionalidad. |
+| Tipo de datos activados para destinos: compatibilidad con atributos de matriz y asignación | Disponible parcialmente | Protección impuesta por el sistema | Puede exportar atributos de matriz a [destinos basados en archivos](/help/destinations/destination-types.md#file-based). [Más información](/help/destinations/ui/export-arrays-maps-objects.md) sobre la nueva funcionalidad. |
 
 {style="table-layout:auto"}
 

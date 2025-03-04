@@ -3,10 +3,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4387'
-ht-degree: 11%
+source-wordcount: '4374'
+ht-degree: 12%
 
 ---
 
@@ -92,7 +92,7 @@ Experience Platform establece automáticamente una programación predeterminada 
 
 Para editar varias programaciones al mismo tiempo, selecciona las audiencias mediante las casillas de verificación de la izquierda de la pantalla y, a continuación, selecciona **[!UICONTROL Editar programación]**. La programación que configure se aplicará a todos los archivos exportados para las audiencias seleccionadas.
 
-![Imagen de la interfaz de usuario del Experience Platform que muestra la opción de programación de edición para varias audiencias seleccionadas.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra la opción de programación de edición para varias audiencias seleccionadas.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
@@ -142,7 +142,7 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en décle
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![Imagen que resalta la opción Después de la evaluación del segmento en el flujo de activación para los destinos por lotes.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-Use la opción **[!UICONTROL Programado]** para que el trabajo de activación se ejecute a una hora fija. Esta opción garantiza que los datos de perfil del Experience Platform se exporten a la misma hora cada día. Sin embargo, es posible que los perfiles que exporte no estén los más actualizados, en función de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación.
+Use la opción **[!UICONTROL Programado]** para que el trabajo de activación se ejecute a una hora fija. Esta opción garantiza que los datos de perfil de Experience Platform se exporten a la misma hora cada día. Sin embargo, es posible que los perfiles que exporte no estén los más actualizados, en función de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación.
 
    ![Imagen que resalta la opción Programado en el flujo de activación para destinos por lotes y muestra el selector de tiempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -221,7 +221,7 @@ El nombre de destino y el ID de audiencia no se pueden eliminar de los nombres d
 
 Para editar varios nombres de archivo al mismo tiempo, seleccione las audiencias mediante las casillas de verificación de la izquierda de la pantalla y, a continuación, seleccione **[!UICONTROL Editar nombre de archivo]**. Las opciones de nombre de archivo que configure se aplicarán a todos los archivos exportados para las audiencias seleccionadas.
 
-![Imagen de la interfaz de usuario del Experience Platform que muestra la opción de editar nombre de archivo para varias audiencias seleccionadas.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra la opción de editar nombre de archivo para varias audiencias seleccionadas.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Seleccione **[!UICONTROL Aplicar cambios]** para confirmar su selección.
 
@@ -429,11 +429,11 @@ Suponiendo la anulación de duplicación por la clave compuesta `personalEmail +
 | johndoe@example.com | D | John |
 | johndoe@example.com | Doe | John |
 
-El Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID] o una dirección de correo electrónico como clave de anulación de duplicación para garantizar que todos los registros de perfil se identifiquen de forma exclusiva.
+Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID] o una dirección de correo electrónico como clave de anulación de duplicación para garantizar que todos los registros de perfil se identifiquen de forma exclusiva.
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles compartan la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave
 
@@ -464,9 +464,9 @@ Después de la deduplicación, el archivo de exportación contiene:
 
 **Confiabilidad mejorada**: Este proceso de deduplicación actualizado garantiza que las ejecuciones sucesivas con las mismas coordenadas siempre produzcan los mismos resultados, lo que mejora la coherencia.
 
-### Exportar matrices a través de campos calculados {#export-arrays-calculated-fields}
+### Realizar transformaciones de datos mediante campos calculados {#calculated-fields}
 
-Seleccione los clientes beta que pueden exportar objetos de matriz desde destinos de Experience Platform a almacenamiento en la nube. Obtenga más información sobre [exportar matrices y campos calculados](/help/destinations/ui/export-arrays-calculated-fields.md) y póngase en contacto con su representante de Adobe para obtener acceso a la funcionalidad.
+Puede usar el control [Campos calculados](/help/destinations/ui/data-transformations-calculated-fields.md) para realizar varias transformaciones de datos en los datos exportados a destinos basados en archivos.
 
 ### Limitaciones conocidas {#known-limitations}
 
@@ -601,7 +601,7 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
-En el paso **[!UICONTROL Revisar]**, el Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
+En el paso **[!UICONTROL Revisar]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
 
 ![Ejemplo de infracción de directiva de datos mostrado en el flujo de trabajo de activación.](../assets/common/data-policy-violation.png)
 

@@ -3,9 +3,9 @@ title: Realizar transformaciones en los datos exportados a destinos de almacenam
 type: Tutorial
 description: Aprenda a utilizar la funcionalidad de campos calculados para realizar transformaciones en los datos exportados a destinos de almacenamiento en la nube
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
+source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1595'
 ht-degree: 3%
 
 ---
@@ -16,8 +16,15 @@ ht-degree: 3%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Añadir campos calculados"
 >abstract="<p>Use el control **Agregar campo calculado** para realizar varias transformaciones de datos en los datos exportados a destinos de almacenamiento en la nube. Por ejemplo, puede aplicar la función hash a los datos, concatenar matrices en cadenas, etc."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=es#examples" text="Ejemplos"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=es#known-limitations" text="Limitaciones conocidas"
+
+<!--
+
+disable additional URLs for a while
+
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#examples" text="Examples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#known-limitations" text="Known limitations"
+
+-->
 
 >[!AVAILABILITY]
 >
@@ -32,7 +39,7 @@ Para realizar varias transformaciones en los datos exportados a destinos de alma
 
 Para utilizar campos calculados para transformaciones de datos:
 
-1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectar con el destino de nube deseado, desactiva la **[!UICONTROL opción [Exportar matrices, mapas, objetos]** y ](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle).
+1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectar con el destino de nube deseado, desactiva la **[!UICONTROL opción [Exportar matrices, mapas, objetos]** y ](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Siga los [pasos de activación para los destinos de almacenamiento en la nube](/help/destinations/ui/activate-batch-profile-destinations.md) y vaya al paso [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Cómo trabajar con campos calculados {#how-to-export-calculated-fields}
@@ -51,7 +58,7 @@ En el paso de asignación del flujo de trabajo de activación para los destinos 
 
 >[!TIP]
 >
->El control **[!UICONTROL Agregar campo calculado]** está deshabilitado para las conexiones de destino en las que el control **[!UICONTROL Exportar matrices, mapas y objetos]** estaba desactivado. [Más información](/help/destinations/ui/export-arrays-calculated-fields.md#export-arrays-maps-objects-toggle).
+>El control **[!UICONTROL Agregar campo calculado]** está deshabilitado para las conexiones de destino en las que el control **[!UICONTROL Exportar matrices, mapas y objetos]** estaba desactivado. [Más información](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![Agregue el campo calculado resaltado en el paso de asignación del flujo de trabajo de activación por lotes.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 

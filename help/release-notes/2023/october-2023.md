@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Platform: octubre de 2023'
 description: Las notas de la versión de octubre de 2023 de Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 40%
@@ -69,7 +69,7 @@ Para obtener más información sobre la recopilación de datos, lea la [Informac
 
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
-| (Beta) Compatibilidad con funciones hash en campos calculados | Además de las funciones específicas de [exportar matrices](../../destinations/ui/export-arrays-calculated-fields.md) o elementos de una matriz, ahora puede usar [funciones hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) adicionales para hash atributos en los archivos exportados. Las funciones hash admitidas son: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Compatibilidad con funciones hash en campos calculados | Además de las funciones específicas de [exportar matrices](../../destinations/ui/export-arrays-maps-objects.md) o elementos de una matriz, ahora puede usar [funciones hash](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) adicionales para hash atributos en los archivos exportados. Las funciones hash admitidas son: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
 | (GA limitado) Activar audiencias de cuenta en ciertos destinos | Los clientes de Real-Time CDP B2B ahora pueden activar [audiencias de cuenta](../../segmentation/types/account-audiences.md) a ciertos destinos. Para obtener más información acerca de esta característica, lea el [tutorial para activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
@@ -102,7 +102,7 @@ Para obtener más información sobre las zonas protegidas, consulte la [descripc
 
 Para obtener más información sobre el servicio de segmentación, lea la [descripción general del servicio de segmentación](../../segmentation/home.md).
 
-## Fuentes {#sources}
+## Orígenes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
