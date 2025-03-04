@@ -3,14 +3,24 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
+source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2344'
 ht-degree: 1%
 
 ---
 
 # Guía de IU de composición de audiencia
+
+>[!AVAILABILITY]
+>
+>Para utilizar esta función, debe tener los siguientes permisos:
+>
+>- Administrar segmentos
+>- Administrar perfiles
+>- Administrar políticas de combinación
+>
+>Encontrará más información sobre los permisos de Platform en la [descripción general del control de acceso](../../access-control/home.md#permissions).
 
 >[!NOTE]
 >
