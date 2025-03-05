@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
 workflow-type: tm+mt
 source-wordcount: '1628'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -114,7 +114,7 @@ Para obtener más información, lea la [Información general de destinos](../../
 
 | Función | Descripción |
 | ------- | ----------- |
-| División persistente | Composición de audiencia ahora admite divisiones persistentes. Puede hacer que las audiencias divididas permanezcan constantes al dividir por perfil agregando un área de nombres de identidad al bloque dividido. Encontrará más información sobre esta característica en la [documentación de composición de audiencias](../../segmentation/ui/audience-composition.md). |
+| División persistente | La composición de público admite ahora divisiones persistentes. Puede hacer que los públicos divididos permanezcan constantes al dividir por perfil añadiendo un espacio de nombres de identidad al bloque de división. Encontrará más información sobre esta nueva función en la [documentación sobre composición de público](../../segmentation/ui/audience-composition.md). |
 
 Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
