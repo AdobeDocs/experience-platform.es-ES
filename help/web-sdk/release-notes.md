@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2285'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,18 @@ ht-degree: 5%
 Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
 Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Versión 2.26.0: 5 de marzo de 2025
+
+**Nuevas funciones**
+
+- Ahora puede utilizar el paquete Web SDK NPM para crear compilaciones personalizadas de Web SDK y seleccionar solo los componentes de biblioteca que necesite. Esto conduce a una reducción del tamaño de la biblioteca y a tiempos de carga optimizados. Consulte la documentación sobre cómo [crear una compilación personalizada de Web SDK con el paquete NPM](install/create-custom-build.md).
+- El comando [`getIdentity`](commands/getidentity.md) ahora lee automáticamente el ECID directamente desde la cookie de identidad `kndctr`. Si llama a `getIdentity` con el área de nombres `ECID` y ya existe una cookie de identidad, Web SDK ya no realiza una solicitud a Edge Network para obtener la identidad. Ahora lee la identidad de la cookie.
+
+**Correcciones y mejoras**
+
+- Se corrigió un problema en el cual los comandos `getIdentity` no devolvían la identidad después de que se enviara una llamada a `collect`.
+- Se ha corregido un problema por el cual las redirecciones de personalización provocaban parpadeos en el contenido antes de la redirección.
+
 ## Versión 2.25.0: viernes, 23 de enero de 2025
 
 **Correcciones y mejoras**
@@ -24,7 +36,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 - Se agregó una advertencia al configurar una función `onBeforeLinkClickSend` o un calificador de vínculo de descarga cuando la recopilación de clics está deshabilitada.
 - Se ha corregido un problema en el cual las propuestas procesadas no se incluían en las notificaciones de visualización.
 
-**Nuevas características**
+**Nuevas funciones**
 
 - Se ha implementado una alternativa al dominio de Edge configurado cuando las cookies de terceros están habilitadas y las solicitudes a adobedc.demdex.net están bloqueadas.
 
@@ -45,7 +57,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Cuando se devuelven varios mensajes en la aplicación, solo se muestra el que tenga la prioridad más alta. Los demás se registran como suprimidos.
-- Ya no se envían al Edge Network invalidaciones de secuencia de datos vacías, lo que reduce los posibles conflictos con las configuraciones de enrutamiento del lado del servidor.
+- Las invalidaciones de flujos de datos vacíos ya no se envían a Edge Network, lo que reduce los posibles conflictos con las configuraciones de enrutamiento del lado del servidor.
 - Se ha cambiado el nombre de los siguientes componentes de mensaje de registro para alinearlos con otros SDK de Adobe:
    - `DecisioningEngine` cambió su nombre a `RulesEngine`
    - `LegacyMediaAnalytics` cambió su nombre a `MediaAnalyticsBridge`
@@ -145,7 +157,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 
 **Correcciones y mejoras**
 
-- Web SDK ahora codifica los valores de destino de las cookies del Audience Manager, de forma similar a la [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es).
+- Web SDK ahora codifica los valores de destino de las cookies de Audience Manager, de forma similar a [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es).
 
 ## Versión 2.16.0: 25 de abril de 2023
 
@@ -172,7 +184,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un problema con las acciones de código personalizado del VEC de Adobe Target en el cual el código se insertaba en una ubicación alternativa a [!DNL at.js].
-- Se ha corregido un problema en el cual en algunos casos extremos el encabezado &quot;referente&quot; no se establecía correctamente en las solicitudes al Edge Network.
+- Se ha corregido un problema en el cual en algunos casos extremos el encabezado &quot;referente&quot; no se establecía correctamente en las solicitudes a Edge Network.
 - Se corrigió un problema en el cual las propiedades de [user agent client hint](/help/web-sdk/use-cases/client-hints.md) se podían establecer en un tipo incorrecto.
 - Se corrigió un problema en el cual `placeContext.localTime` no coincidía con el esquema.
 
@@ -187,7 +199,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 
 - Se agregó compatibilidad con [Página por migración completa de página](home.md#migrating-to-web-sdk). El perfil de Adobe Target ahora se conservará cuando un visitante se mueva entre páginas de at.js y de Web SDK.
 - Se agregó compatibilidad configurable para [sugerencias de cliente de agente de usuario de alta entropía](/help/web-sdk/use-cases/client-hints.md).
-- Se agregó compatibilidad con el comando [`applyResponse`](/help/web-sdk/commands/applyresponse.md). Esto habilita la personalización híbrida mediante la [API de Edge Network Server](../server-api/overview.md).
+- Se agregó compatibilidad con el comando [`applyResponse`](/help/web-sdk/commands/applyresponse.md). Esto habilita la personalización híbrida mediante la [API de servidor de Edge Network](../server-api/overview.md).
 - Los vínculos del modo de control de calidad ahora funcionan en varias páginas.
 
 **Correcciones y mejoras**
@@ -200,7 +212,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 
 ## Versión 2.12.0: jueves, 29 de junio de 2022
 
-- Cambie las solicitudes al Edge Network para que use la sugerencia de ubicación de la cookie `cluster` como parte de la dirección URL. Esto garantiza que los usuarios que cambian de ubicación (por ejemplo, a través de una VPN o conduciendo con dispositivos móviles, etc.) a mitad de la sesión tengan el mismo perfil personalizado.
+- Cambie las solicitudes a Edge Network para que use la sugerencia de ubicación de la cookie `cluster` como parte de la dirección URL. Esto garantiza que los usuarios que cambian de ubicación (por ejemplo, a través de una VPN o conduciendo con dispositivos móviles, etc.) a mitad de la sesión tengan el mismo perfil personalizado.
 - Consolide las funciones configuradas en la respuesta del comando getLibraryInfo.
 
 ## Versión 2.11.0: martes, 13 de junio de 2022
@@ -215,7 +227,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 
 - Se ha actualizado la configuración de cookies para utilizar las marcas `sameSite="none"` y `secure` en las páginas [!DNL HTTPS].
 - Se corrigió un problema en el cual el contenido personalizado no se aplicaba correctamente al usar el pseudoselector `eq`.
-- Se corrigió un problema en el cual `localTimezoneOffset` podría fallar en la validación del Experience Platform.
+- Se corrigió un problema en el cual `localTimezoneOffset` podría fallar en la validación de Experience Platform.
 
 ## Versión 2.10.1: miércoles, 03 de mayo de 2022
 
@@ -244,11 +256,11 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 
 ## Versión 2.7.0: miércoles, 26 de octubre de 2021
 
-- Exponer información adicional del Edge Network en el valor devuelto de `sendEvent`, incluidos `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una Beta.
+- Exponer información adicional de Edge Network en el valor devuelto de `sendEvent`, incluidos `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una Beta.
 
 ## Versión 2.6.4: 7 de septiembre de 2021
 
-- Se corrigió un problema en el cual las acciones de set HTML Adobe Target aplicadas al elemento `head` reemplazaban todo el contenido de `head`. Ahora, las acciones del HTML set aplicadas al elemento `head` se cambian a anexar HTML.
+- Se corrigió un problema en el cual las acciones de set HTML Adobe Target aplicadas al elemento `head` reemplazaban todo el contenido de `head`. Ahora establezca que las acciones de HTML aplicadas al elemento `head` se cambiarán para anexar HTML.
 
 ## Versión 2.6.3: 16 de agosto de 2021
 
@@ -281,7 +293,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 - Ahora utiliza un grupo de campos de esquema XDM en lugar de `meta.personalization` al enviar eventos sobre el contenido personalizado que se procesa o en el que se hace clic.
 - El comando [`getIdentity`](/help/web-sdk/commands/getidentity.md) ahora devuelve el ID de región perimetral junto con la identidad.
 - Las advertencias y los errores recibidos del servidor se han mejorado y se gestionan de forma más adecuada.
-- Se agregó compatibilidad con el estándar Consentimiento de Adobe 2.0 para el comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
+- Se agregó compatibilidad con el estándar de Adobe Consent 2.0 para el comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
 - Cuando se reciben, las preferencias de consentimiento tienen un cifrado hash y se almacenan en el almacenamiento local para una integración optimizada entre CMP, Platform Web SDK y Platform Edge Network. Si está recopilando las preferencias de consentimiento, le recomendamos que llame a `setConsent` en cada carga de página.
 - Se han agregado dos [vínculos de supervisión](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` y `onCommandRejected`.
 - Corrección de errores: Los eventos de notificación de interacción de Personalization contendrían información duplicada sobre la misma actividad cuando un usuario navegaba a una nueva vista de aplicación de una sola página, volvía a la vista original y hacía clic en un elemento que cumplía los requisitos para la conversión.
@@ -295,7 +307,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 - Corrección de errores: `sendBeacon` no se estaba usando cuando `documentUnloading` se estableció en `true` o cuando se realizaba un seguimiento automático de los clics en los vínculos.
 - Corrección de errores: No se rastrearía automáticamente un vínculo si el elemento de anclaje contuviera contenido de HTML.
 - Corrección de errores: Algunos errores del explorador que contienen una propiedad de solo lectura `message` no se gestionaron correctamente, lo que dio como resultado que se expusiera un error diferente al cliente.
-- Corrección de errores: La ejecución de SDK dentro de un iframe produciría un error si la página del HTML del iframe era de un subdominio diferente a la página del HTML de la ventana principal.
+- Corrección de errores: La ejecución de SDK dentro de un iframe daría como resultado un error si la página de HTML del iframe era de un subdominio diferente a la página de HTML de la ventana principal.
 
 ## Versión 2.2.0: octubre de 2020
 

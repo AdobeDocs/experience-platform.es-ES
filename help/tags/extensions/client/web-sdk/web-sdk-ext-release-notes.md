@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Experience Platform Web SDK
 description: Extensión de etiqueta de Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 31%
+source-wordcount: '2580'
+ht-degree: 29%
 
 ---
 
@@ -13,15 +13,28 @@ ht-degree: 31%
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión de SDK, consulte las [notas de la versión de Platform Web SDK](/help/web-sdk/release-notes.md).
 
+## Versión 2.29.0: 5 de marzo de 2025
+
+**Nuevas funciones**
+
+- Ahora puede crear compilaciones personalizadas de Web SDK y elegir los componentes que necesita en la interfaz de usuario de la extensión de etiquetas. Esto puede generar compilaciones más pequeñas al excluir los componentes no utilizados. Consulte la documentación sobre [creación de una compilación personalizada de Web SDK](web-sdk-extension-configuration.md#custom-build).
+- Contiene [versión 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) de Adobe Experience Platform Web SDK.
+
+**Correcciones y mejoras**
+
+- Se ha agregado la administración correcta de los elementos de datos que faltan en las acciones [actualizar variable](action-types.md#update-variable). Anteriormente, la edición de una acción de variable de actualización con un elemento de datos que faltaba mostraba un mensaje de error. Ahora puede elegir un elemento de datos diferente y se seguirán aplicando todos los ajustes de la acción de actualización de variables. Es posible que falten elementos de datos si se eliminan o si está duplicada una propiedad Tags.
+- Se agregó compatibilidad para abrir una nueva pestaña con la acción [redirigir con identidad](action-types.md#redirect-with-identity). Ahora, al usar la acción, se usa el atributo `target` de la etiqueta de anclaje al redirigir el explorador.
+- Se ha corregido un problema en el cual Adobe Audience Manager no se podía deshabilitar en las anulaciones de configuración.
+
 ## Versión 2.28.0: viernes, 23 de enero de 2025
 
 **Correcciones y mejoras**
 
-- Se ha corregido un problema en el cual las anulaciones del contenedor de sincronización de ID no se podían establecer sin habilitar el Audience Manager.
+- Se ha corregido un problema en el cual las anulaciones del contenedor de sincronización de ID no se podían establecer sin habilitar Audience Manager.
 - Se ha corregido un problema en el cual las anulaciones de configuración de secuencia de datos se deshabilitaban al actualizar a la versión más reciente.
 - Se ha corregido un problema en el cual los usuarios no podían guardar la configuración de recopilación de clics automáticos de Target.
 
-**Nuevas características**
+**Nuevas funciones**
 
 - Se ha añadido una nueva función para alternar entre nombres técnicos y nombres para mostrar en el objeto XDM.
 - Contiene [versión 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) de Adobe Experience Platform Web SDK.
@@ -201,7 +214,7 @@ Contiene la versión 2.14.0 de Adobe Experience Platform Web SDK.
 
 ## Versión 2.14.1: viernes, 13 de octubre de 2022
 
-- Se ha corregido un problema en el cual Web SDK no respetaba el ID del servicio de ID de Experience Cloud.
+- Se ha corregido un problema en el cual Web SDK no respetaba el ID del servicio de Experience Cloud ID.
 
 Contiene la versión 2.13.1 de la biblioteca de Adobe Experience Platform Web SDK.
 
@@ -260,7 +273,7 @@ Contiene la versión 2.8.0 de la biblioteca del SDK web de Adobe Experience Plat
 
 Contiene la versión 2.7.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
-- Encontrará información adicional del Edge Network en el evento Enviar evento completado, incluidos `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una Beta.
+- Encontrará información adicional de Edge Network en el evento Enviar evento completado, incluidos `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una Beta.
 
 ## Versión 2.7.3: 7 de septiembre de 2021
 
@@ -310,7 +323,7 @@ Contiene la versión 2.4.0 de la biblioteca del SDK web de Adobe Experience Plat
 - Se agregó la casilla de verificación [&quot;Descarga de documento&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) a la interfaz de usuario de acción Enviar evento.
 - Se agregó compatibilidad con la opción `out` al [configurar el consentimiento predeterminado](/help/web-sdk/commands/configure/defaultconsent.md), que anula todos los eventos hasta que se reciba el consentimiento (la opción `pending` existente pone en cola los eventos y los envía una vez que se recibe el consentimiento).
 - Se ha añadido información de objeto al campo de consentimiento predeterminado.
-- Se agregó compatibilidad con el estándar Consentimiento de Adobe 2.0 al usar el comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
+- Se agregó compatibilidad con el estándar Consent 2.0 de Adobe al usar el comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
 - Ahora aparece un error mejor en la IU del elemento de datos Objeto XDM si el token de acceso del usuario no es válido o está aprovisionado incorrectamente.
 - Se ha corregido un error de origen cruzado (que no afecta al funcionamiento de la extensión) que se mostraba en la consola del desarrollador del explorador al ver un elemento de datos de objeto XDM.
 
