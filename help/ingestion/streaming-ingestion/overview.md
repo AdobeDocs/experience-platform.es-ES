@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;ingesta de datos;ingesta de datos;flujo continuo;información general;flujo continuo;ingesta;latencia;flujo continuo;
+keywords: Experience Platform;inicio;temas populares;ingesta de datos;ingesta de datos;transmisión;información general;transmisión de datos;latencia;transmisión de datos;
 solution: Experience Platform
 title: Resumen de ingesta de streaming
-description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor al Experience Platform en tiempo real.
+description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
+source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 2%
@@ -35,7 +35,7 @@ Una vez que sepa que los datos están limpios, puede habilitar los conjuntos de 
 
 Para obtener más información sobre cómo habilitar un conjunto de datos para [!DNL Profile] y [!DNL Identity Service], lea la guía [configurar un conjunto de datos](../../profile/tutorials/dataset-configuration.md).
 
-## ¿Cuál es la latencia esperada para la transmisión de la ingesta en Experience Platform?
+## ¿Cuál es la latencia esperada para la ingesta de transmisión en Experience Platform?
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ La tabla siguiente muestra instrucciones sobre los límites de solicitudes por s
 | Límite de RPS | Notas |
 | --- | --- |
 | 1000 solicitudes por segundo | Pueden contener varios mensajes al usar el extremo `/collection/batch`. |
-| 10000 mensajes individuales por segundo | Los mensajes se pueden agrupar en menos solicitudes reales cuando se usa el extremo `/collection/batch`. |
+| 10000 mensajes individuales por segundo | Los mensajes se pueden agrupar en menos solicitudes reales cuando se usa el extremo `/collection/`. |
 
 >[!IMPORTANT]
 >
