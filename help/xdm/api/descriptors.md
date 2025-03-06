@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;registro de esquemas;descriptor;Descriptor;descriptores;identity;nombre descriptivo;nombre descriptivo;alternatedisplayinfo;reference;Reference;relation;Relationship
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;registro de esquemas;descriptor;Descriptor;descriptores;Identity;nombre descriptivo;nombre descriptivo;alternatedisplayinfo;reference;Reference;relation;Relationship
 solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API de Registro de esquemas le permite administrar mediante programación descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
+source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 2%
+source-wordcount: '2192'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ El extremo utilizado en esta guía forma parte de la [[!DNL Schema Registry] API
 
 ## Recuperación de una lista de descriptores {#list}
 
-Puede enumerar todos los descriptores que ha definido su organización realizando una solicitud de GET a `/tenant/descriptors`.
+Puede enumerar todos los descriptores que ha definido su organización realizando una petición GET a `/tenant/descriptors`.
 
 **Formato de API**
 
@@ -139,7 +139,7 @@ Una respuesta correcta devuelve los detalles del descriptor, incluidos `@type` y
 
 ## Creación de un descriptor {#create}
 
-Puede crear un nuevo descriptor realizando una solicitud de POST al extremo `/tenant/descriptors`.
+Puede crear un nuevo descriptor realizando una petición POST al extremo `/tenant/descriptors`.
 
 >[!IMPORTANT]
 >
@@ -195,7 +195,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del d
 
 ## Actualización de un descriptor {#put}
 
-Puede actualizar un descriptor incluyendo su `@id` en la ruta de una solicitud de PUT.
+Puede actualizar un descriptor incluyendo su `@id` en la ruta de una petición PUT.
 
 **Formato de API**
 
@@ -215,7 +215,7 @@ Básicamente, esta solicitud reescribe el descriptor, por lo que el cuerpo de la
 
 >[!IMPORTANT]
 >
->Al igual que con la creación de descriptores mediante solicitudes de POST, cada tipo de descriptor requiere que se envíen sus propios campos específicos en las cargas útiles de solicitud de PUT. Consulte el [apéndice](#defining-descriptors) para obtener una lista completa de los descriptores y los campos necesarios para definirlos.
+>Al igual que con la creación de descriptores mediante solicitudes POST, cada tipo de descriptor requiere que se envíen sus propios campos específicos en las cargas útiles de solicitud de PUT. Consulte el [apéndice](#defining-descriptors) para obtener una lista completa de los descriptores y los campos necesarios para definirlos.
 
 En el siguiente ejemplo se actualiza un descriptor de identidad para que haga referencia a un(a) `xdm:sourceProperty` (`mobile phone`) diferente y cambie el(la) `xdm:namespace` a `Phone`.
 
@@ -248,11 +248,11 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y el `@id` del descr
 }
 ```
 
-Al realizar una [solicitud de búsqueda (GET)](#lookup) para ver el descriptor, se muestra que los campos se han actualizado para reflejar los cambios enviados en la solicitud del PUT.
+Al realizar una [solicitud de búsqueda (GET)](#lookup) para ver el descriptor, se muestra que los campos se han actualizado para reflejar los cambios enviados en la solicitud de PUT.
 
 ## Eliminación de un descriptor {#delete}
 
-En ocasiones, es posible que deba quitar un descriptor que haya definido del [!DNL Schema Registry]. Para ello, realice una solicitud de DELETE que haga referencia a `@id` del descriptor que desea eliminar.
+En ocasiones, es posible que deba quitar un descriptor que haya definido del [!DNL Schema Registry]. Para ello, realice una petición DELETE que haga referencia a `@id` del descriptor que desea eliminar.
 
 **Formato de API**
 
@@ -364,12 +364,12 @@ Los descriptores de nombres descriptivos permiten al usuario modificar los valor
 | `xdm:sourceProperty` | La ruta a la propiedad específica cuyos detalles desea modificar. La ruta de acceso debe comenzar con una barra diagonal (`/`) y no terminar con una. No incluya `properties` en la ruta (por ejemplo, use `/personalEmail/address` en lugar de `/properties/personalEmail/properties/address`). |
 | `xdm:title` | El nuevo título que desea mostrar para este campo, escrito en Mayúsculas y minúsculas. |
 | `xdm:description` | Se puede añadir una descripción opcional junto con el título. |
-| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` se puede usar para agregar valores sugeridos para el campo en la interfaz de usuario de la segmentación. Es importante tener en cuenta que `meta:enum` no declara una enumeración ni proporciona validación de datos para el campo XDM.<br><br>Esto solo debe usarse para campos XDM principales definidos por el Adobe. Si la propiedad de origen es un campo personalizado definido por su organización, debe editar la propiedad `meta:enum` del campo directamente mediante una solicitud del PATCH al recurso principal del campo. |
+| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` se puede usar para agregar valores sugeridos para el campo en la interfaz de usuario de la segmentación. Es importante tener en cuenta que `meta:enum` no declara una enumeración ni proporciona validación de datos para el campo XDM.<br><br>Esto solo debe usarse para los campos XDM principales definidos por Adobe. Si la propiedad de origen es un campo personalizado definido por su organización, debe editar la propiedad `meta:enum` del campo directamente a través de una petición PATCH al recurso principal del campo. |
 | `meta:excludeMetaEnum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena que tiene valores sugeridos existentes proporcionados bajo un campo `meta:enum`, puede incluir este objeto en un descriptor de nombre descriptivo para excluir algunos o todos estos valores de la segmentación. La clave y el valor de cada entrada deben coincidir con los incluidos en el `meta:enum` original del campo para que se excluya la entrada. |
 
 {style="table-layout:auto"}
 
-#### Descriptor de relación
+#### Descriptor de relación {#relationship-descriptor}
 
 Los descriptores de relación describen una relación entre dos esquemas diferentes, con claves en las propiedades descritas en `sourceProperty` y `destinationProperty`. Vea el tutorial sobre [definición de una relación entre dos esquemas](../tutorials/relationship-api.md) para obtener más información.
 
@@ -389,13 +389,49 @@ Los descriptores de relación describen una relación entre dos esquemas diferen
 
 | Propiedad | Descripción |
 | --- | --- |
-| `@type` | El tipo de descriptor que se define. Para un descriptor de relación, este valor debe establecerse en `xdm:descriptorOneToOne`. |
+| `@type` | El tipo de descriptor que se define. Para un descriptor de relación, este valor debe establecerse en `xdm:descriptorOneToOne`, a menos que tenga acceso a Real-Time CDP B2B edition. Con B2B edition tiene la opción de usar `xdm:descriptorOneToOne` o [`xdm:descriptorRelationship`](#b2b-relationship-descriptor). |
 | `xdm:sourceSchema` | URI `$id` del esquema donde se define el descriptor. |
 | `xdm:sourceVersion` | La versión principal del esquema de origen. |
-| `xdm:sourceProperty` | Ruta al campo en el esquema de origen donde se define la relación. Debe comenzar por &quot;/&quot; y no terminar con uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;). |
+| `xdm:sourceProperty` | Ruta al campo en el esquema de origen donde se define la relación. Debe comenzar por &quot;/&quot; y no terminar por &quot;/&quot;. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;). |
 | `xdm:destinationSchema` | URI `$id` del esquema de referencia con el que define una relación este descriptor. |
 | `xdm:destinationVersion` | La versión principal del esquema de referencia. |
-| `xdm:destinationProperty` | Ruta opcional a un campo de destino dentro del esquema de referencia. Si se omite esta propiedad, cualquier campo que contenga un descriptor de identidad de referencia coincidente deducirá el campo de destino (consulte a continuación). |
+| `xdm:destinationProperty` | (Opcional) Ruta a un campo de destino dentro del esquema de referencia. Si se omite esta propiedad, cualquier campo que contenga un descriptor de identidad de referencia coincidente deducirá el campo de destino (consulte a continuación). |
+
+{style="table-layout:auto"}
+
+##### Descriptor de relación B2B {#B2B-relationship-descriptor}
+
+Real-Time CDP B2B edition presenta una forma alternativa de definir relaciones entre esquemas, lo que permite relaciones varios a uno. Esta nueva relación debe tener el tipo `@type: xdm:descriptorRelationship` y la carga debe incluir más campos que la relación `@type: xdm:descriptorOneToOne`. Vea el tutorial sobre [definición de una relación de esquema para B2B edition](../tutorials/relationship-b2b.md) para obtener más información.
+
+```json
+{
+   "@type": "xdm:descriptorRelationship",
+   "xdm:sourceSchema" : "https://ns.adobe.com/{TENANT_ID}/schemas/9f2b2f225ac642570a110d8fd70800ac0c0573d52974fa9a",
+   "xdm:sourceVersion" : 1,
+   "xdm:sourceProperty" : "/person-ref",
+   "xdm:destinationSchema" : "https://ns.adobe.com/{TENANT_ID/schemas/628427680e6b09f1f5a8f63ba302ee5ce12afba8de31acd7",
+   "xdm:destinationVersion" : 1,
+   "xdm:destinationProperty": "/personId",
+   "xdm:destinationNamespace" : "People", 
+   "xdm:destinationToSourceTitle" : "Opportunity Roles",
+   "xdm:sourceToDestinationTitle" : "People",
+   "xdm:cardinality": "M:1"
+}
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `@type` | El tipo de descriptor que se define. Para usar los campos siguientes, el valor debe establecerse en `xdm:descriptorRelationship`. Para obtener información sobre tipos adicionales, consulte la sección [descriptores de relación](#relationship-descriptor). |
+| `xdm:sourceSchema` | URI `$id` del esquema donde se define el descriptor. |
+| `xdm:sourceVersion` | La versión principal del esquema de origen. |
+| `xdm:sourceProperty` | Ruta al campo en el esquema de origen donde se define la relación. Debe comenzar por &quot;/&quot; y no terminar por &quot;/&quot;. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;). |
+| `xdm:destinationSchema` | URI `$id` del esquema de referencia con el que define una relación este descriptor. |
+| `xdm:destinationVersion` | La versión principal del esquema de referencia. |
+| `xdm:destinationProperty` | (Opcional) Ruta a un campo de destino dentro del esquema de referencia, que debe ser el ID principal del esquema. Si se omite esta propiedad, cualquier campo que contenga un descriptor de identidad de referencia coincidente deducirá el campo de destino (consulte a continuación). |
+| `xdm:destinationNamespace` | El área de nombres del ID principal del esquema de referencia. |
+| `xdm:destinationToSourceTitle` | El nombre para mostrar de la relación del esquema de referencia al esquema de origen. |
+| `xdm:sourceToDestinationTitle` | El nombre para mostrar de la relación del esquema de origen al esquema de referencia. |
+| `xdm:cardinality` | La relación de unión entre los esquemas. Este valor debe establecerse en `M:1`, en referencia a una relación de varios a uno. |
 
 {style="table-layout:auto"}
 
