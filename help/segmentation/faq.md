@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4830'
+source-wordcount: '4832'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ La política de combinación predeterminada específica de la organización se a
 
 ### ¿Dónde puedo activar audiencias generadas externamente para?
 
-Una audiencia generada externamente se puede asignar a cualquier destino y se puede utilizar en campañas de Adobe Journey Optimizer.
+Una audiencia generada de forma externa se puede asignar a cualquier destino y se puede utilizar en campañas y recorridos de Adobe Journey Optimizer.
 
 ### ¿Puedo eliminar una audiencia generada externamente?
 
