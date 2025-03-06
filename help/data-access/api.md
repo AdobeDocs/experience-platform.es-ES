@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de API de acceso a datos
 description: La API de acceso a datos es compatible con Adobe Experience Platform al proporcionar a los desarrolladores una interfaz RESTful centrada en la detección y accesibilidad de conjuntos de datos ingeridos dentro de Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: 78dbb735bad70e2115cbbaabb6cf74bf38983460
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 5%
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 La API de acceso a datos admite Adobe Experience Platform al proporcionar a los usuarios una interfaz RESTful centrada en la detección y accesibilidad de conjuntos de datos ingeridos en [!DNL Experience Platform].
 
-![Diagrama de cómo el acceso a datos facilita la detección y accesibilidad de los conjuntos de datos ingeridos dentro de Experience Platform.](images/Data_Access_Experience_Platform.png)
+![Diagrama de cómo el acceso a datos facilita la detección y accesibilidad de los conjuntos de datos ingeridos en Experience Platform.](images/Data_Access_Experience_Platform.png)
 
 ## Referencia de especificación de API
 
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `data.name` | Nombre del archivo (por ejemplo, `profiles.csv`). |
+| `data.name` | Nombre del archivo (por ejemplo, `profiles.parquet`). |
 | `data.length` | El tamaño del archivo (en bytes). |
 | `data._links.self.href` | Dirección URL para descargar el archivo. |
 
@@ -201,7 +201,7 @@ Cuando se devuelve un directorio, contiene una matriz de todos los archivos del 
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `data.name` | Nombre del archivo (por ejemplo, `profiles.csv`). |
+| `data.name` | Nombre del archivo (por ejemplo, `profiles.parquet`). |
 | `data._links.self.href` | Dirección URL para descargar el archivo. |
 
 ## Acceder al contenido de un archivo {#access-file-contents}
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `{FILE_ID}` | ID del archivo dentro de un conjunto de datos. |
-| `{FILE_NAME}` | Nombre completo del archivo (por ejemplo, `profiles.csv`). |
+| `{FILE_NAME}` | Nombre completo del archivo (por ejemplo, `profiles.parquet`). |
 
 **Respuesta**
 
@@ -243,4 +243,4 @@ Para obtener más ejemplos, consulte el [tutorial de acceso a datos](tutorials/d
 
 ## Suscripción a eventos de ingesta de datos {#subscribe-to-data-ingestion-events}
 
-Puede suscribirse a eventos de alto valor específicos mediante [Adobe Developer Console](https://developer.adobe.com/console/). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a notificaciones de eventos de Adobe](../observability/alerts/subscribe.md) para obtener más información.
+Puede suscribirse a eventos de alto valor específicos mediante [Adobe Developer Console](https://developer.adobe.com/console/). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a las notificaciones de eventos de Adobe](../observability/alerts/subscribe.md) para obtener más información.
