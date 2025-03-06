@@ -3,9 +3,9 @@ title: 'Notas de la versión de Adobe Experience Platform: febrero de 2025'
 description: Las notas de la versión de febrero de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1628'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 - [Servicio de catálogo](#catalog-service)
 - [Preparación de los datos](#data-prep)
 - [Destinos](#destinations)
-- [Composición de audiencia federada](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes){target="_blank"}
+- [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [Orígenes](#sources)
 - [Servicio de segmentación](#segmentation)
 - [Actualizaciones de la documentación](#documentation-updates)
