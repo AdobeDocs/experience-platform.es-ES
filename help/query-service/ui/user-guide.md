@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El Editor de consultas es una herramienta interactiva proporcionada por el Servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
+source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2682'
 ht-degree: 0%
 
 ---
@@ -192,12 +192,7 @@ Si se programó una consulta, entonces la ficha [!UICONTROL Consultas programada
 >
 >El registro no guarda las consultas que no se ejecutan. Para que la consulta esté disponible en el servicio de consultas, debe ejecutarse o guardarse en el Editor de consultas.
 
-### [!BADGE Disponibilidad limitada]{type=Informative} Explorador de objetos {#object-browser}
-
->[!AVAILABILITY]
->
-El carril de navegación del conjunto de datos solo está disponible para los clientes de Data Distiller. Es posible que la IU de Platform no contenga el carril izquierdo de navegación del conjunto de datos. Otras imágenes de este documento pueden no reflejar el carril de navegación del conjunto de datos. Póngase en contacto con su representante de Adobe para obtener más información.<br>
-Actualmente, el Examinador de objetos sólo está disponible en **versión limitada**. Póngase en contacto con su representante de Adobe para obtener acceso anticipado a la versión.
+### Examinador de objetos {#object-browser}
 
 Utilice el explorador de objetos para buscar y filtrar conjuntos de datos fácilmente. El explorador de objetos reduce el tiempo empleado en buscar tablas y conjuntos de datos en entornos grandes con numerosos conjuntos de datos. Con un acceso optimizado a los datos y metadatos relevantes, puede centrarse más en la creación de consultas y menos en la navegación.
 
@@ -221,7 +216,7 @@ Además de las búsquedas rápidas, ahora puede acceder fácilmente a los metada
 
 #### Explorar tablas secundarias
 
-Para explorar tablas secundarias o vinculadas, seleccione la flecha desplegable junto al nombre de una tabla en la lista. Esto expande la tabla para mostrar cualquier tabla secundaria asociada, proporciona una vista clara de la estructura de datos y permite construcciones de consulta más complejas. El icono situado junto al nombre del campo indica el tipo de datos de la columna, to le ayudará a identificarlo durante consultas complejas.
+Para explorar tablas secundarias o vinculadas, seleccione la flecha desplegable junto al nombre de una tabla en la lista. Esto expande la tabla para mostrar cualquier tabla secundaria asociada, proporciona una vista clara de la estructura de datos y permite construcciones de consulta más complejas. El icono situado junto al nombre del campo indica el tipo de datos de la columna para ayudarle a identificarla durante consultas complejas.
 
 ![Editor de consultas que muestra la lista de tablas filtradas.](../images/ui/query-editor/child-table-list.png)
 
@@ -237,7 +232,7 @@ La consola proporciona información sobre el estado y el funcionamiento del serv
 
 >[!NOTE]
 >
-La consola solo muestra los errores resultantes de la ejecución de una consulta. No muestra los errores de validación de consultas que se producen antes de ejecutar una consulta.
+>La consola solo muestra los errores resultantes de la ejecución de una consulta. No muestra los errores de validación de consultas que se producen antes de ejecutar una consulta.
 
 ### Resultados de consulta {#query-results}
 
@@ -257,7 +252,7 @@ El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Exp
 
 >[!NOTE]
 >
-La interfaz de usuario que se muestra en el vídeo está obsoleta, pero la lógica utilizada en el flujo de trabajo sigue siendo la misma.
+>La interfaz de usuario que se muestra en el vídeo está obsoleta, pero la lógica utilizada en el flujo de trabajo sigue siendo la misma.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
@@ -119,10 +119,6 @@ Para obtener una descripción general de las alertas en Adobe Experience Platfor
 
 ### Definir parámetros para una consulta parametrizada programada {#set-parameters}
 
->[!IMPORTANT]
->
->La característica de IU de consulta parametrizada está disponible actualmente en **versión limitada solamente** y no está disponible para todos los clientes. Si no tiene acceso a consultas parametrizadas, continúe con la sección [eliminar o deshabilitar una programación](#delete-schedule).
-
 Si está creando una consulta programada para una consulta parametrizada, debe establecer los valores de parámetro para estas ejecuciones de consulta.
 
 ![La sección Detalles de programación del flujo de trabajo de creación de programación con la sección Parámetros de consulta resaltada.](../images/ui/query-schedules/scheduled-query-parameter.png)
@@ -147,7 +143,7 @@ Rastree las horas calculadas consumidas en el nivel de ejecución de consultas p
 
 >[!AVAILABILITY]
 >
->La funcionalidad Calcular horas es exclusiva para los usuarios que hayan adquirido el [SKU de Distiller de datos](../data-distiller/overview.md). Póngase en contacto con el representante del Adobe para obtener más información.
+>La funcionalidad Calcular horas es exclusiva para los usuarios que hayan adquirido el [SKU de Distiller de datos](../data-distiller/overview.md). Póngase en contacto con su representante de Adobe para obtener más información.
 
 ![La sección de detalles del área de trabajo Consultas programadas con una lista de ejecuciones de consulta resaltada para una consulta programada.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 

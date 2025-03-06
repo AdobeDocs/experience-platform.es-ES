@@ -3,9 +3,9 @@ keywords: Experience Platform;consulta;servicio de consultas;solución de proble
 title: Protecciones para el servicio de consultas
 description: Este documento proporciona información sobre los límites de uso de los datos del servicio de consultas para ayudarle a optimizar el uso de las consultas.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 23c7a4590b365a49edb066567b6ebe2ac08c67e8
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Antes de continuar con este documento, debe comprender bien las definiciones y c
 
 * **Consultas por lotes**: para ejecutar `INSERT TABLE AS SELECT` y `CREATE TABLE AS SELECT` consultas para limpiar, dar forma, manipular y enriquecer datos. Los resultados de estas consultas **se almacenan** en el lago de datos. La métrica para medir el consumo de esta funcionalidad es horas de cálculo.
 
-* **Usuarios del servicio de consultas**: Los usuarios del servicio de consultas proporcionados con la licencia actual para Customer Journey Analytics, Adobe Real-time Customer Data Platform o Adobe Journey Optimizer también se pueden usar con Data Distiller. Los usuarios del servicio de consultas se comparten entre las funciones.
+* **Usuarios del servicio de consultas**: Los usuarios del servicio de consultas proporcionados con la licencia actual para Customer Journey Analytics, Adobe Real-Time Customer Data Platform o Adobe Journey Optimizer también se pueden usar con Data Distiller. Los usuarios del servicio de consultas se comparten entre las funciones.
 
 * **Usuarios ad hoc**: Los usuarios ad hoc son los que ejecutan consultas ad hoc.
 
@@ -35,15 +35,13 @@ Antes de continuar con este documento, debe comprender bien las definiciones y c
 
 * **API de informes**: una API para realizar llamadas de captura de datos (interna o externamente). Los modelos de datos de creación de informes extendidos se derivan de los modelos de datos de creación de informes nativos de Adobe Experience Platform, como el modelo de datos de paneles de Real-Time CDP.
 
-La siguiente ilustración resume cómo se empaquetan y conceden licencias actualmente a las funciones del servicio de consultas:
-
 ## Tipos de protección
 
 Existen dos tipos de límites predeterminados en este documento:
 
 | Tipo de protección | Descripción |
 |----------|---------|
-| **Protección de rendimiento (límite leve)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. El Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
+| **Protección de rendimiento (límite leve)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
 | **Protecciones impuestas por el sistema (límite estricto)** | La interfaz de usuario o la API de Real-Time CDP aplican las protecciones impuestas por el sistema. Estos son límites que no se pueden superar, ya que la IU y la API le bloquearán el acceso o devolverán un error. |
 
 {style="table-layout:auto"}
@@ -105,6 +103,6 @@ Consulte la siguiente documentación para obtener más información sobre otras 
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-time Customer Data Platform (edición B2C - paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (paquetes B2B - Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

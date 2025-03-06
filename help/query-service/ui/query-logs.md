@@ -2,18 +2,14 @@
 title: Registros de consultas
 description: Los registros de consultas se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudar a solucionar problemas. Este documento describe cómo utilizar y navegar por la sección Registros del servicio de consulta de la interfaz de usuario.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
 # Registros de consultas
-
->[!IMPORTANT]
->
->Ciertas funciones de registros de consultas están actualmente en una versión limitada y no están disponibles para todos los clientes. La interfaz de usuario puede aparecer de forma ligeramente diferente sin un icono de edición. Además, es posible que el proceso de seleccionar un nombre de consulta requiera navegar al Editor de consultas en lugar de a la vista [!UICONTROL Detalles del registro de consultas].
 
 Adobe Experience Platform mantiene un registro de todos los eventos de consulta que se producen a través de la API y la interfaz de usuario. Esta información está disponible en la interfaz de usuario del servicio de consultas de la ficha [!UICONTROL Registros].
 
@@ -52,10 +48,6 @@ En el panel de detalles del registro, puede realizar diversas acciones. Puede ej
 >La opción [!UICONTROL Ejecutar como CTAS] solo está disponible para una consulta SELECT.
 
 ![El área de trabajo del registro de consultas con una fila seleccionada, Ejecutar como CTAS, Eliminar consulta y el icono de copiar SQL resaltado.](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->Ciertas funciones de registros de consultas están actualmente en una versión limitada y no están disponibles para todos los clientes.
 
 También puede seleccionar un nombre de plantilla de consulta de la columna [!UICONTROL Nombre] para navegar directamente a la vista [!UICONTROL Detalles del registro de consultas].
 
