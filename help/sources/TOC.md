@@ -5,22 +5,22 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
+source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1047'
 ht-degree: 30%
 
 ---
 
 
-# Fuentes {#sources}
+# Orígenes {#sources}
 
 - [Información general de fuentes](home.md)
 - Conectores de origen disponibles {#connectors}
-   - aplicaciones de Adobe {#adobe-applications}
+   - Aplicaciones de Adobe {#adobe-applications}
       - [Fuente de clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
       - [Origen de Analytics](connectors/adobe-applications/analytics.md)
-      - [origen del Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [fuente de Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [fuente de Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
       - [fuente de Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origen de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
@@ -29,11 +29,11 @@ ht-degree: 30%
          - [Asignaciones de campos de Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Asignaciones de campos de Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
-         - [Asignaciones de campo de Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
+         - [Asignaciones de campos de Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
          - [Asignaciones de campos de Salesforce](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
-         - [conector del Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
-         - [guía de autenticación del Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Conector de Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
+         - [Guía de autenticación de Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espacios de nombres y esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [Guía de migración de asignación ECID](connectors/adobe-applications/marketo/migration.md)
    - Advertising {#advertising}
@@ -75,8 +75,8 @@ ht-degree: 30%
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive en el conector de Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark en el conector Azure HDInsights](connectors/databases/spark.md)
-      - [Conector de Data Explorer de Azure](connectors/databases/data-explorer.md)
-      - [Conector de Azure synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [Conector de Azure Data Explorer](connectors/databases/data-explorer.md)
+      - [Conector de Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Azure Table Storage](connectors/databases/ats.md)
       - [Conector Couchbase](connectors/databases/couchbase.md)
       - [Conector de Google BigQuery](connectors/databases/bigquery.md)
@@ -86,12 +86,12 @@ ht-degree: 30%
       - [Conector MariaDB](connectors/databases/mariadb.md)
       - [Conector de Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Conector MySQL](connectors/databases/mysql.md)
-      - [conector de oracle](connectors/databases/oracle.md)
+      - [Conector de Oracle](connectors/databases/oracle.md)
       - [Conector Phoenix](connectors/databases/phoenix.md)
       - [Conector PostgreSQL](connectors/databases/postgres.md)
-      - [Conector de flujo del Snowflake](connectors/databases/snowflake-streaming.md)
-      - [conector del Snowflake](connectors/databases/snowflake.md)
-      - [Conector Vantage de teradata](connectors/databases/teradata-vantage.md)
+      - [Conector de flujo Snowflake](connectors/databases/snowflake-streaming.md)
+      - [Conector de Snowflake](connectors/databases/snowflake.md)
+      - [Conector Teradata Vantage](connectors/databases/teradata-vantage.md)
    - Socio de datos e identidad {#data-partner}
       - [Ingesta de datos de Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importación de datos de prospección de Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
@@ -108,15 +108,15 @@ ht-degree: 30%
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
       - [Conector de Mailchimp](connectors/marketing-automation/mailchimp.md)
-      - [Oracle Conector Eloqua](connectors/marketing-automation/oracle-eloqua.md)
+      - [Conector Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
-      - [Oracle Conector de Responsys](connectors/marketing-automation/oracle-responsys.md)
+      - [Conector de Oracle Responsys](connectors/marketing-automation/oracle-responsys.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Marketing Cloud de Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagos {#payments}
       - [Conector de PayPal](connectors/payments/paypal.md)
       - [Conector cuadrado](connectors/payments/square.md)
-      - [conector del Stripe](connectors/payments/stripe.md)
+      - [Conector de Stripe](connectors/payments/stripe.md)
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
       - [Conector de API REST genérico](connectors/protocols/generic-rest.md)
@@ -190,8 +190,8 @@ ht-degree: 30%
          - [Campaña de MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Miembros de MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
-         - [Actividades de oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
-         - [Entidades NetSuite de oracle](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
+         - [Actividades de Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Entidades de Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Marketing Cloud de Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -238,7 +238,7 @@ ht-degree: 30%
    - [Guardar un flujo de datos como borrador](tutorials/api/draft.md)
 - Tutoriales de IU {#ui-tutorials}
    - Crear una conexión de origen {#create}
-      - aplicaciones de Adobe {#adobe-applications}
+      - Aplicaciones de Adobe {#adobe-applications}
          - [Adobe Analytics (datos de grupos de informes)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (datos de clasificaciones)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -306,6 +306,8 @@ ht-degree: 30%
       - Socio de datos e identidad {#data-partner}
          - [Ingesta de datos de Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importación de datos de prospección de Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
+         - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Resolución de identidad de Merkury Enterprise](tutorials/ui/create/data-partners/merkury.md)
       - Comercio electrónico {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
@@ -321,8 +323,8 @@ ht-degree: 30%
          - [Campañas de Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Miembros de Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
-         - [Actividades de oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
-         - [Entidades NetSuite de oracle](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
+         - [Actividades de Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Entidades de Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Marketing Cloud de Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -379,8 +381,8 @@ ht-degree: 30%
       - [Utilice un editor de texto en el entorno local para crear una página de documentación de fuentes](sources-sdk/documentation/text-editor.md)
       - [Plantilla de API de autoservicio de documentación](sources-sdk/documentation/template.md)
       - [Plantilla de IU de autoservicio de documentación](sources-sdk/documentation/ui-template.md)
-   - SDK de streaming {#streaming-sdk}
-      - [Introducción a las fuentes de autoservicio (SDK de streaming)](sources-sdk/streaming/getting-started.md)
+   - Transmitiendo SDK {#streaming-sdk}
+      - [Introducción a las fuentes de autoservicio (streaming de SDK)](sources-sdk/streaming/getting-started.md)
       - [Creación de una especificación de conexión para un origen de flujo continuo](sources-sdk/streaming/create.md)
       - [Actualizar una especificación de conexión para un origen de flujo continuo](sources-sdk/streaming/update-connection-specs.md)
       - [Actualización de la especificación de flujo de flujo](sources-sdk/streaming/update-flow-specs.md)
