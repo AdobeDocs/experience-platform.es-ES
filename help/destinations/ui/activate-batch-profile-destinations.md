@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4374'
+source-wordcount: '4405'
 ht-degree: 12%
 
 ---
@@ -64,18 +64,18 @@ Para seleccionar las audiencias que desea activar en el destino, utilice las cas
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 * **[!UICONTROL Servicio de segmentación]**: Audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
-* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience). Al seleccionar audiencias que se originan en **[!UICONTROL cargas personalizadas]**, se habilita automáticamente el paso [Seleccionar atributos de enriquecimiento](#select-enrichment-attributes).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
+
+>[!IMPORTANT]
+>
+>Al activar audiencias de carga personalizadas en destinos basados en archivos por lotes, hay un límite de 10 de estas audiencias que puede activar en un flujo de datos.
 
 ![Casillas de verificación mostradas al seleccionar una o varias audiencias para activar.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->Al seleccionar audiencias que se originan en **[!UICONTROL cargas personalizadas]**, se habilita automáticamente el paso [Seleccionar atributos de enriquecimiento](#select-enrichment-attributes).
-
->[!TIP]
->
->Puede quitar audiencias de flujos de activación existentes desde la página **[!UICONTROL Datos de activación]**. Consulte la [documentación dedicada](../ui/destination-details-page.md#bulk-remove) para obtener detalles.
+>Para quitar audiencias de flujos de activación existentes, use la página **[!UICONTROL Datos de activación]**. Lea la sección sobre cómo [quitar varias audiencias de los flujos de activación](../ui/destination-details-page.md#bulk-remove) para obtener más información.
 
 ## Programar exportación de público {#scheduling}
 
