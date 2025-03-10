@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Crear una conexión de origen de Adobe Campaign Managed Cloud Services mediante la IU de Platform
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Adobe Campaign Managed Cloud Services mediante la interfaz de usuario de Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
+source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1233'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ Este tutorial proporciona pasos para crear una conexión de origen para llevar l
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
 * [Fuentes](../../../../home.md): Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [Zonas protegidas](../../../../../sandboxes/home.md): Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
@@ -136,6 +136,12 @@ Aparecerá la página de actividad del conjunto de datos. Aquí puede ver inform
 Esta página también le proporciona una interfaz para actualizar la descripción de metadatos del flujo de datos, habilitar la ingesta parcial y los diagnósticos de error, así como añadir nuevos datos al conjunto de datos.
 
 ![Interfaz con gráficos que representan la tasa de ingesta de un conjunto de datos seleccionado.](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>No puede rellenar los registros de eventos antiguos con el origen de Adobe Campaign Managed Cloud Services. Si se requiere relleno, utilice un flujo de trabajo personalizado o una implementación personalizada para exportar datos a Amazon S3 o Azure Blob, o de Amazon S3 o Azure Blob a un conjunto de datos de Adobe Experience Platform.
+
 
 ## Pasos siguientes
 
