@@ -5,10 +5,10 @@ breadcrumb-title: Manuales de tácticas de uso de Adobe Experience Platform
 user-guide-description: Utilice los manuales de tácticas de Adobe Experience Platform para generar recursos y empezar a usar varios casos prácticos de marketing.
 feature: Playbooks
 role: User
-source-git-commit: 2563e343270051642afc1eaa7af54d12483a1ce1
+source-git-commit: 875d3b97faeed03317309aae22bc975946d09f14
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 68%
+source-wordcount: '82'
+ht-degree: 60%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 68%
 
 * Manuales de tácticas {#playbooks}
    * [Información general](/help/use-case-playbooks/playbooks/overview.md)
+   * [Aproveche los casos de uso de la experiencia del cliente para impulsar los objetivos empresariales](/help/use-case-playbooks/playbooks/business-use-case-framework.md)
    * [Navegar a los manuales de casos de uso](/help/use-case-playbooks/playbooks/navigate.md)
    * [Introducción ](/help/use-case-playbooks/playbooks/get-started.md)
    * [Manuales de casos de uso disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md)
