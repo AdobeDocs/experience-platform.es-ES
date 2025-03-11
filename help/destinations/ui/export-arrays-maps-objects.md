@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 7%
+ht-degree: 15%
 
 ---
 
@@ -66,7 +66,7 @@ Además de las matrices, también puede exportar mapas y objetos de Experience P
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="Exportación de matrices, mapas y objetos"
->abstract="<p> Establezca esta configuración en <b>on</b> (activada) para habilitar la exportación de matrices, mapas y objetos a archivos JSON o Parquet. Puede seleccionar estos tipos de objeto en la vista del campo de origen del paso de asignación. Con la opción activada, no se puede utilizar la opción de campos calculados en el paso de asignación.</p><p>Con esta opción <b>desactivada</b>, puede usar la opción de campos calculados y aplicar varias funciones de transformación de datos al activar audiencias. Sin embargo, <i>no</i> puede exportar matrices, asignaciones y objetos a archivos JSON o Parquet y debe configurar un destino independiente para ese fin.</p>"
+>abstract="<p> Establezca esta configuración en <b>on</b> (activada) para habilitar la exportación de matrices, mapas y objetos a archivos JSON o Parquet. Puede seleccionar estos tipos de objeto en la vista del campo de origen del paso de asignación. Con la opción activada, no se puede utilizar la opción de campos calculados en el paso de asignación.</p><p>Si esta opción está <b>desactivada</b>, puede usar la opción de campos calculados y aplicar varias funciones de transformación de datos al activar públicos. Sin embargo, <i>no</i> puede exportar matrices, asignaciones y objetos a archivos JSON o Parquet y debe configurar un destino independiente para ese fin.</p>"
 
 Al conectarse a un destino de almacenamiento en la nube, puede activar o desactivar **[!UICONTROL Exportar matrices, mapas y objetos]**.
 
@@ -74,7 +74,7 @@ Al conectarse a un destino de almacenamiento en la nube, puede activar o desacti
 
 Establezca esta configuración en **on** (activada) para habilitar la exportación de matrices, mapas y objetos a archivos JSON o Parquet. Puede seleccionar estos tipos de objeto en la vista del campo de origen del [paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) al activar audiencias en destinos de almacenamiento en la nube. Sin embargo, con esta configuración activada, no se puede utilizar la opción de campos calculados para transformar los datos al activarlos.
 
-Con esta opción **desactivada**, puede usar la opción de campos calculados y aplicar varias funciones de transformación de datos al activar audiencias. Sin embargo, no puede exportar matrices, mapas y objetos a archivos JSON o Parquet y debe configurar un destino independiente para ese fin.
+Si esta opción está **desactivada**, puede usar la opción de campos calculados y aplicar varias funciones de transformación de datos al activar públicos. Sin embargo, no puede exportar matrices, mapas y objetos a archivos JSON o Parquet y debe configurar un destino independiente para ese fin.
 
 ## Exportar matrices, mapas, objetos, alternar *en* {#export-arrays-maps-objects-toggle-on}
 

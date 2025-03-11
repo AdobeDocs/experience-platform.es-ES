@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
 source-wordcount: '2344'
-ht-degree: 1%
+ht-degree: 16%
 
 ---
 
@@ -54,7 +54,7 @@ El lienzo de composición de audiencia consta de cuatro tipos diferentes de bloq
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
 >title="Tipos de combinación"
->abstract="Los tipos de combinación determinan cómo se combinan las subaudiencias seleccionadas. Los valores admitidos son Union, Intersection y Exclude overlap."
+>abstract="Los tipos de combinación determinan cómo se combinan las subaudiencias seleccionadas. Los valores admitidos son unión, intersección y superposición de exclusión."
 
 El tipo de bloque **[!UICONTROL Audiencia]** le permite agregar las subaudiencias que desee utilizar para crear su nueva audiencia mayor. De manera predeterminada, se incluye un bloque **[!UICONTROL Audience]** en la parte superior del lienzo de composición.
 
@@ -97,7 +97,7 @@ Las audiencias seleccionadas aparecerán ahora dentro del carril derecho cuando 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rule_builder"
 >title="Generador de segmentos"
->abstract="Puede usar el Generador de segmentos para agregar una regla personalizada para su composición."
+>abstract="Puede usar el Generador de segmentos para añadir una regla personalizada para su composición."
 
 Para agregar una regla personalizada al bloque Audiencia, seleccione **[!UICONTROL Generar regla]**.
 
@@ -116,7 +116,7 @@ Después de agregar una regla personalizada, selecciona **[!UICONTROL Guardar]**
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
 >title="Excluir bloque"
->abstract="El bloque Exclude permite excluir de la composición audiencias o atributos especificados."
+>abstract="El bloque Excluir permite excluir de la composición audiencias o atributos especificados."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
@@ -171,7 +171,7 @@ Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo que 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich"
 >title="Enriquecimiento del bloque"
->abstract="El bloque Enrich permite enriquecer la audiencia con atributos adicionales procedentes de conjuntos de datos de Adobe Experience Platform."
+>abstract="El bloque Enriquecer le permite enriquecer el público con atributos adicionales procedentes de los conjuntos de datos de Adobe Experience Platform."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dataset"
@@ -181,7 +181,7 @@ Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo que 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_criteria"
 >title="Criterios de enriquecimiento"
->abstract="Los criterios de enriquecimiento incluyen la clave de unión de Source y la clave de unión del conjunto de datos de enriquecimiento. Estas dos claves reconcilian el conjunto de datos de origen y el conjunto de datos de enriquecimiento."
+>abstract="Los criterios de enriquecimiento incluyen la clave de unión de origen y la clave de unión del conjunto de datos de enriquecimiento. Estas dos claves reconcilian el conjunto de datos de origen y el conjunto de datos de enriquecimiento."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_attributes"
@@ -258,17 +258,17 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
 
-## [!UICONTROL Rango] {#rank-block}
+## [!UICONTROL Clasificación] {#rank-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
 >title="Bloque de clasificación"
->abstract="El bloque Rank permite clasificar perfiles en función de un atributo específico e incluirlos en la composición."
+>abstract="El bloque Clasificación le permite clasificar perfiles según un atributo específico e incluirlos en su composición. "
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rank_profilelimit_text"
 >title="Añadir límite de perfil"
->abstract="La opción Add profile limit permite especificar un número máximo de perfiles que incluir como parte del proceso de clasificación."
+>abstract="La opción Añadir límite de perfil permite especificar un número máximo de perfiles que incluir como parte del proceso de clasificación."
 
 El tipo de bloque **[!UICONTROL Rank]** le permite clasificar y ordenar perfiles según un atributo especificado e incluir estos perfiles clasificados en la composición.
 
@@ -299,17 +299,17 @@ Además, puede limitar el número de perfiles devueltos habilitando la opción *
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
 >title="Bloque de división"
->abstract="El bloque Split permite dividir la composición en varios trazados."
+>abstract="El bloque División le permite dividir la composición en varias rutas. "
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_type"
 >title="Tipo de división"
->abstract="Puede dividir la composición por división de porcentaje o por división de atributo. La división porcentual divide aleatoriamente los perfiles en varias rutas. La división de atributos permite dividir perfiles en función de un atributo especificado."
+>abstract="Puede dividir la composición por división de porcentaje o de atributo. La división porcentual divide aleatoriamente los perfiles en varias rutas. La división Atributo le permite dividir los perfiles según un atributo específico."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Otros perfiles"
->abstract="La opción Other profiles permite crear una ruta adicional con los perfiles restantes que no coinciden con ninguna de las condiciones especificadas de las otras rutas."
+>abstract="La opción Otros perfiles le permite crear una ruta adicional con los perfiles restantes que no coinciden con ninguna de las condiciones especificadas de las otras rutas."
 
 El tipo de bloque **[!UICONTROL Split]** le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo.
 
@@ -329,7 +329,7 @@ Al dividir la audiencia, puede hacerlo por porcentaje o por atributo.
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="División persistente"
->abstract="Puede hacer que la división porcentual sea persistente habilitando esta opción y seleccionando un área de nombres de identidad."
+>abstract="Puede hacer que la división porcentual sea persistente habilitando esta opción y seleccionando un espacio de nombres de identidad."
 
 Al dividir por porcentaje, las audiencias se dividirán aleatoriamente en función del número de rutas y porcentajes proporcionados.
 
@@ -357,12 +357,12 @@ Además, puede habilitar la opción **[!UICONTROL Otros perfiles]** para crear u
 
 ![Se ha resaltado la opción Otros perfiles.](../images/ui/audience-composition/split-other-profiles.png)
 
-## Publicación de la audiencia {#publish}
+## Publicar la audiencia {#publish}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_publish"
->title="Publicar"
->abstract="Puede publicar la composición para crear la audiencia resultante en Adobe Experience Platform."
+>title="Publicación"
+>abstract="Puede publicar la composición para crear las audiencias resultantes en Adobe Experience Platform."
 
 >[!IMPORTANT]
 >

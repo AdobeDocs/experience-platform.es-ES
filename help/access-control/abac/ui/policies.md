@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '684'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -184,13 +184,13 @@ Aparecerá el cuadro de diálogo **[!UICONTROL Quitar]** que le pedirá que conf
 >
 >La zona protegida seleccionada se ha eliminado correctamente de la directiva.
 
-## Activar una directiva {#activate-policy}
+## Activar una política {#activate-policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="¿Qué son las directivas?"
 >abstract="Las directivas son declaraciones que reúnen atributos para establecer acciones permitidas y no permitidas. Cada organización viene con una directiva predeterminada que debe activar para comenzar a controlar el acceso a objetos específicos en función de las etiquetas. Las etiquetas aplicadas a los recursos deniegan el acceso a menos que se asigne a los usuarios una función con una etiqueta coincidente. Las directivas predeterminadas no se pueden editar ni eliminar, pero se pueden activar o desactivar."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Administrar etiquetas"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels?lang=es" text="Administrar etiquetas"
 
 Para activar una directiva existente, selecciónela en la ficha **[!UICONTROL Directivas]**.
 

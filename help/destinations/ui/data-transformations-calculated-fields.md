@@ -6,7 +6,7 @@ exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
 source-wordcount: '1595'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Añadir campos calculados"
->abstract="<p>Use el control **Agregar campo calculado** para realizar varias transformaciones de datos en los datos exportados a destinos de almacenamiento en la nube. Por ejemplo, puede aplicar la función hash a los datos, concatenar matrices en cadenas, etc."
+>abstract="<p>Use el control **Añadir campo calculado** para realizar varias transformaciones de datos en los datos exportados a destinos de almacenamiento en la nube. Por ejemplo, puede aplicar la función hash a los datos, concatenar matrices en cadenas, etc."
 
 <!--
 
@@ -42,16 +42,16 @@ Para utilizar campos calculados para transformaciones de datos:
 1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectar con el destino de nube deseado, desactiva la **[!UICONTROL opción [Exportar matrices, mapas, objetos]** y ](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Siga los [pasos de activación para los destinos de almacenamiento en la nube](/help/destinations/ui/activate-batch-profile-destinations.md) y vaya al paso [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
-## Cómo trabajar con campos calculados {#how-to-export-calculated-fields}
+## Trabajar con campos calculados {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Habilite el esquema de salida jerárquico"
->abstract="Active esta configuración para habilitar la exportación de matrices, mapas y objetos a archivos JSON o Parquet."
+>abstract="Active esta configuración para habilitar la exportación de matrices, mapas y objetos a archivos JSON o Parquet. "
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
->title="Añadir campos calculados deshabilitado"
+>title="Añadir campos calculados deshabilitados"
 >abstract="Este control está deshabilitado porque estableció la opción **Exportar matrices, asignaciones, objetos** en *on* (activada) al configurar esta conexión de destino. Para usar los campos calculados y las funciones disponibles, configure una nueva conexión de destino con la opción **Exportar matrices, mapas, objetos** en *off (desactivada).*"
 
 En el paso de asignación del flujo de trabajo de activación para los destinos de almacenamiento en la nube, seleccione **[!UICONTROL Agregar campo calculado]**.

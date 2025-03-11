@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 10%
+ht-degree: 16%
 
 ---
 
@@ -124,7 +124,7 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de un
 >id="platform_permissions_apicredentials_about"
 >title="¿Qué son las credenciales de API?"
 >abstract="Las credenciales de la API se asignan a funciones para conceder a los usuarios y desarrolladores acceso a las API de Platform. Con las API de Platform, puede realizar mediante programación operaciones básicas de CRUD (crear, leer, actualizar, eliminar) en los datos, como configurar atributos calculados, acceder a datos o entidades, exportar datos, eliminar datos o lotes innecesarios, etc."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Guía de API de Platform"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide?lang=es" text="Guía de API de Platform"
 
 >[!IMPORTANT]
 >
@@ -158,9 +158,9 @@ Se le devolverá a la ficha **[!UICONTROL Credenciales de API]**.
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_usergroups_about"
->title="¿Qué son los grupos de usuarios?"
+>title="¿Qué son los grupos de usuario?"
 >abstract="Los grupos de usuarios son colecciones de varios usuarios que comparten el acceso a las mismas funciones. El acceso a los recursos de una organización se administra mediante las funciones asignadas a los grupos de usuarios."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Administrar funciones"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles?lang=es" text="Administrar funciones"
 
 Los grupos de usuarios son varios usuarios que se han agrupado y tienen acceso para ejecutar las mismas funciones.
 
