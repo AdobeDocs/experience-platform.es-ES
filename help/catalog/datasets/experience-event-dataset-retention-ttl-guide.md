@@ -2,10 +2,10 @@
 title: Administrar la retención de conjuntos de datos de Experience Event en el lago de datos mediante TTL
 description: Obtenga información sobre cómo evaluar, establecer y administrar la retención de conjuntos de datos de evento de experiencia en el lago de datos mediante configuraciones de tiempo de vida (TTL) con API de Adobe Experience Platform. Esta guía explica cómo la caducidad a nivel de fila TTL admite políticas de retención de datos, optimiza la eficiencia del almacenamiento y garantiza una administración eficaz del ciclo de vida de los datos. También proporciona casos de uso y prácticas recomendadas para ayudarle a aplicar el TTL de forma eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
+source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
 workflow-type: tm+mt
-source-wordcount: '2196'
-ht-degree: 1%
+source-wordcount: '2336'
+ht-degree: 0%
 
 ---
 
@@ -416,6 +416,20 @@ Los informes de uso del conjunto de datos histórico no están disponibles actua
 
 +++Respuesta
 No, una vez aplicada una política de retención, los datos anteriores al período de retención se eliminan de forma permanente y no se pueden recuperar.
++++
+
+### ¿Cuál es el TTL mínimo que puedo configurar en un conjunto de datos de evento de experiencia de lago de datos?
+
++++Respuesta
+El TTL mínimo de un conjunto de datos de evento de experiencia de lago de datos es de 30 días. El lago de datos funciona como un sistema de copia de seguridad y recuperación de procesamiento durante la ingesta y el procesamiento iniciales. Como resultado, los datos deben permanecer en el lago de datos durante al menos 30 días después de la ingesta antes de que puedan caducar.
++++
+
+### ¿Qué sucede si necesito conservar algunos campos del lago de datos más tiempo del que permite mi política de TTL?
+
++++Respuesta
+Utilice Data Distiller para retener campos específicos que superen el TTL del conjunto de datos y, al mismo tiempo, no sobrepasen los límites de utilización. Cree un trabajo que escriba con regularidad solo los campos necesarios en un conjunto de datos derivado. Este flujo de trabajo garantiza el cumplimiento de un TTL más corto, al tiempo que conserva los datos esenciales para un uso prolongado.
+
+Para obtener más información, consulte la [Guía de creación de conjuntos de datos derivados con SQL](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md).
 +++
 
 ## Pasos siguientes {#next-steps}
