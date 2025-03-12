@@ -2,10 +2,10 @@
 title: Reglas de vinculación de gráfico de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 3%
+source-wordcount: '1449'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 3%
 
 Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona a través de un identificador de persona, como un CRMID. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de gráfico&quot;). Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios.
 
+Vea el siguiente vídeo para obtener información adicional sobre el uso de reglas de vinculación de gráficos de identidad:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
+
 ## Introducción 
 
 Los siguientes documentos son esenciales para comprender las reglas de vinculación de gráficos de identidad.
@@ -25,16 +29,16 @@ Los siguientes documentos son esenciales para comprender las reglas de vinculaci
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad de espacios de nombres](./namespace-priority.md)
+* [Prioridad del área de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)
 
-## Escenarios de contracción de gráficos {#graph-collapse-scenarios}
+## Contraer escenarios de gráfico {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Contraer escenarios de gráfico"
->abstract="Existen varias razones por las que los gráficos podrían “contraerse” o representar entidades de varias personas."
+>abstract="Existen varias razones por las que los gráficos pueden &quot;contraerse&quot; o representar entidades de varias personas."
 
 En esta sección se describen ejemplos de escenarios que se pueden tener en cuenta al configurar reglas de vinculación de gráficos de identidad.
 
@@ -93,11 +97,11 @@ Con las reglas de vinculación de gráficos de identidad puede:
 
 | Terminología | Descripción |
 | --- | --- |
-| Espacio de nombres único | Un área de nombres única es un área de nombres de identidad que se ha configurado para que sea distinta en el contexto de un gráfico de identidades. Puede configurar un área de nombres para que sea única mediante la interfaz de usuario. Una vez que un área de nombres se define como única, un gráfico solo puede tener una identidad que contenga ese área de nombres. |
-| Prioridad de espacios de nombres | La prioridad del área de nombres hace referencia a la importancia relativa de las áreas de nombres en comparación con otras. La prioridad del área de nombres se puede configurar a través de la IU. Puede clasificar las áreas de nombres en un gráfico de identidad determinado. Una vez habilitada, la prioridad de los nombres se utilizará en varios escenarios, como la entrada para el algoritmo de optimización de identidades y la determinación de la identidad principal para los fragmentos de eventos de experiencia. |
+| Área de nombres única | Un área de nombres única es un área de nombres de identidad que se ha configurado para que sea distinta en el contexto de un gráfico de identidades. Puede configurar un área de nombres para que sea única mediante la interfaz de usuario. Una vez que un área de nombres se define como única, un gráfico solo puede tener una identidad que contenga ese área de nombres. |
+| Prioridad del área de nombres | La prioridad del área de nombres hace referencia a la importancia relativa de las áreas de nombres en comparación con otras. La prioridad del área de nombres se puede configurar a través de la IU. Puede clasificar las áreas de nombres en un gráfico de identidad determinado. Una vez habilitada, la prioridad de los nombres se utilizará en varios escenarios, como la entrada para el algoritmo de optimización de identidades y la determinación de la identidad principal para los fragmentos de eventos de experiencia. |
 | Algoritmo de optimización de identidad | El algoritmo de optimización de identidad garantiza que las directrices creadas al configurar un área de nombres única y las prioridades de área de nombres se apliquen en un gráfico de identidad determinado. |
 
-### Espacio de nombres único {#unique-namespace}
+### Área de nombres única {#unique-namespace}
 
 Puede configurar un área de nombres para que sea única mediante el área de trabajo de IU de configuración de identidad. Al hacerlo, informa al algoritmo de optimización de identidad de que un gráfico determinado solo puede tener una identidad que contenga ese área de nombres única. Esto evita la combinación de dos identificadores de persona dispares dentro del mismo gráfico.
 
@@ -118,7 +122,7 @@ Si no configura un área de nombres única, puede terminar con combinaciones de 
 
 Debe configurar un área de nombres única para informar al algoritmo de optimización de identidad a fin de aplicar limitaciones a los datos de identidad que se incorporan en un gráfico de identidad determinado.
 
-### Prioridad de espacios de nombres {#namespace-priority}
+### Prioridad del área de nombres {#namespace-priority}
 
 La prioridad del área de nombres hace referencia a la importancia relativa de las áreas de nombres en comparación con otras. La prioridad del área de nombres se puede configurar a través de la interfaz de usuario y puede clasificar las áreas de nombres en un gráfico de identidad determinado.
 
@@ -128,8 +132,8 @@ Las áreas de nombres únicas y las prioridades de área de nombres se pueden co
 
 | | Servicio de identidad | Perfil del cliente en tiempo real |
 | --- | --- | --- |
-| Espacio de nombres único | En el servicio de identidad, el algoritmo de optimización de identidad hace referencia a áreas de nombres únicas para determinar los datos de identidad que se incorporan a un gráfico de identidad determinado. | Las áreas de nombres únicas no afectan al perfil del cliente en tiempo real. |
-| Prioridad de espacios de nombres | En el servicio de identidad, para los gráficos que tienen varias capas, la prioridad del área de nombres determinará que se eliminen los vínculos adecuados. | Cuando se incorpora un evento de experiencia en el perfil, el área de nombres con la prioridad más alta se convierte en la identidad principal del fragmento de perfil. |
+| Área de nombres única | En el servicio de identidad, el algoritmo de optimización de identidad hace referencia a áreas de nombres únicas para determinar los datos de identidad que se incorporan a un gráfico de identidad determinado. | Las áreas de nombres únicas no afectan al perfil del cliente en tiempo real. |
+| Prioridad del área de nombres | En el servicio de identidad, para los gráficos que tienen varias capas, la prioridad del área de nombres determinará que se eliminen los vínculos adecuados. | Cuando se incorpora un evento de experiencia en el perfil, el área de nombres con la prioridad más alta se convierte en la identidad principal del fragmento de perfil. |
 
 * La prioridad del área de nombres no afecta al comportamiento del gráfico cuando se alcanza el límite de 50 identidades por gráfico.
 * **La prioridad del área de nombres es un valor numérico** asignado a un área de nombres que indica su importancia relativa. Es una propiedad de un área de nombres.
@@ -148,6 +152,6 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad de espacios de nombres](./namespace-priority.md)
+* [Prioridad del área de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)

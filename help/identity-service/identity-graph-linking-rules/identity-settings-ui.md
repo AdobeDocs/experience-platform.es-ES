@@ -2,9 +2,9 @@
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
+source-git-commit: f2e2c094b42248369b4a59d0ad6f950e62e0a7c1
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '571'
 ht-degree: 4%
 
 ---
@@ -34,9 +34,9 @@ Lea los siguientes documentos antes de empezar a trabajar con la configuración 
 
 Para obtener acceso a la configuración de identidad, vaya al área de trabajo del servicio de identidad en la interfaz de usuario de Adobe Experience Platform y, a continuación, seleccione **[!UICONTROL Configuración]**.
 
-![Botón de configuración de identidad seleccionado.](../images/rules/identities-ui.png)
+![Interfaz del panel de identidad con el botón &quot;Configuración&quot; seleccionado.](../images/rules/dashboard.png)
 
-La página de configuración de identidad se divide en dos secciones: [!UICONTROL Áreas de nombres de persona] y [!UICONTROL Áreas de nombres de dispositivos o cookies]. Las áreas de nombres de persona son identificadores para individuos únicos. Pueden ser ID entre dispositivos, direcciones de correo electrónico y números de teléfono. Las áreas de nombres de dispositivos o cookies son identificadores para dispositivos y exploradores web y no se les puede dar una prioridad mayor que a las áreas de nombres de personas. Tampoco puede designar un dispositivo o espacio de nombres de cookie para que sea un espacio de nombres único.
+La página de configuración de identidad se divide en dos secciones: [!UICONTROL Áreas de nombres de persona] y [!UICONTROL Áreas de nombres de dispositivos o cookies]. Las áreas de nombres de persona son identificadores para individuos únicos. Pueden ser ID entre dispositivos, direcciones de correo electrónico y números de teléfono. Las áreas de nombres de dispositivos o cookies son identificadores para dispositivos y exploradores web y no se les puede dar una prioridad mayor que a las áreas de nombres de personas. Tampoco puede designar un dispositivo o espacio de nombres de cookie como un espacio de nombres único.
 
 ### Configurar prioridad de área de nombres
 
@@ -46,19 +46,25 @@ Para configurar la prioridad del área de nombres, seleccione un área de nombre
 
 ### Designar un área de nombres única
 
-Para designar un área de nombres única, active la casilla de verificación [!UICONTROL Único por gráfico] que corresponde a ese área de nombres. Puede seleccionar hasta tres áreas de nombres únicas para la configuración de la configuración de identidad.
-
-![Dos áreas de nombres seleccionadas y definidas como únicas.](../images/rules/unique-namespace.png)
+Para designar un área de nombres única, active la casilla de verificación [!UICONTROL Único por gráfico] que corresponde a ese área de nombres. Puede seleccionar **hasta un máximo de tres áreas de nombres únicas** para la configuración de la configuración de identidad.
 
 Una vez establecidas las áreas de nombres únicas, los gráficos ya no podrán tener varias identidades que contengan un área de nombres única. Por ejemplo, si ha designado CRMID como un área de nombres única, un gráfico solo puede tener una identidad con el área de nombres CRMID. Para obtener más información, lea la [descripción general del algoritmo de optimización de identidad](./identity-optimization-algorithm.md#unique-namespace).
 
-Cuando haya terminado con sus configuraciones, seleccione **[!UICONTROL Siguiente]**. Aparecerá un mensaje de confirmación, aprovecha esta oportunidad para comprobar que las configuraciones son correctas y, a continuación, selecciona **[!UICONTROL Finalizar]**.
+Cuando haya terminado con sus configuraciones, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![La página de validación con el estado Fin resaltado.](../images/rules/finish.png)
+![Dos áreas de nombres seleccionadas y definidas como únicas.](../images/rules/unique-namespace.png)
 
-Aparece un mensaje de advertencia que indica que los gráficos existentes solo se verán afectados por el algoritmo de gráficos si los gráficos se actualizan **después de guardar la configuración** y que la identidad principal de los fragmentos de evento en el Perfil del cliente en tiempo real no se actualizará incluso después de que cambie la prioridad del área de nombres. Además, se le notifica que su configuración nueva o actualizada tardará **seis horas** en surtir efecto. Para confirmar, escribe el nombre de tu zona protegida y selecciona **[!UICONTROL Confirmar]**.
+A partir de aquí, debe confirmar lo siguiente antes de continuar con el paso final:
 
-![Ventana de confirmación que muestra una advertencia sobre un retraso de seis horas antes de que se procesen las configuraciones.](../images/rules/confirm-settings.png)
+1. Las áreas de nombres únicas seleccionadas.
+2. La existencia de una identidad con el área de nombres única con mayor prioridad en cada perfil conocido.
+3. Orden de prioridad del área de nombres.
+
+![Ventana de confirmación con el botón &quot;confirmar&quot; seleccionado.](../images/rules/confirmation.png)
+
+El paso final es otro mensaje de confirmación que indica que los gráficos existentes solo se verán afectados por el algoritmo de gráficos **si los gráficos se actualizan después de guardar la configuración** y que la identidad principal de los fragmentos de evento en el Perfil del cliente en tiempo real no se actualizará incluso después de que cambie la prioridad del área de nombres. Además, se le notifica que su configuración nueva o actualizada tardará **seis horas** en surtir efecto. Para confirmar, escribe el nombre de tu zona protegida y selecciona **[!UICONTROL Confirmar]**.
+
+![Ventana de confirmación que muestra una advertencia sobre un retraso de seis horas antes de que se procesen las configuraciones.](../images/rules/complete.png)
 
 ## Pasos siguientes
 
