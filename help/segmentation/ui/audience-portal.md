@@ -2,7 +2,7 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
 workflow-type: tm+mt
 source-wordcount: '4609'
 ht-degree: 4%
@@ -114,7 +114,7 @@ Si se selecciona desglose, la pantalla muestra un gráfico de barras que indica 
 | Estado | Descripción |
 | ------ | ----------- |
 | [!UICONTROL Realizado] | Recuento de perfiles que **calificaron** para la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
-| [!UICONTROL Existente] | Recuento de perfiles que **permanecieron** en la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. Este campo es **calculado** y no aparece en el objeto `segmentMembership`. |
+| [!UICONTROL Existente] | Recuento de perfiles que **permanecieron** en la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. Este campo es **calculado** y no aparece en el objeto [`segmentMembership`](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Saliendo] | Recuento de perfiles que **abandonaron** la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
 
 Después de seleccionar los campos que desea mostrar, también puede cambiar el tamaño del ancho de las columnas mostradas. Para ello, arrastre el área entre las columnas o seleccione el ![icono de flecha](/help/images/icons/chevron-down.png) de la columna cuyo tamaño desea cambiar, seguido de **[!UICONTROL Cambiar tamaño de columna]**.
