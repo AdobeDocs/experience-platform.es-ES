@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: 'Asistente de IA para casos de uso: cree y comparta sus propios libros de reproducción.'
+title: Aprenda a crear y compartir sus propios libros de reproducción con el asistente de IA.
 description: Cómo crear y compartir sus propios libros de casos de uso.
 role: User
-source-git-commit: f813db7599409a8fc048480f7803ed86c9f397fe
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
+source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
 
-
 # Cree y comparta sus propios libros de reproducción
 
-El **módulo de creación de manuales**, con tecnología del Asistente de IA de Adobe, le permite crear, administrar y compartir libros de reproducción de manera eficiente en Adobe Experience Platform.
+[!DNL Playbook Authoring Framework], con tecnología de Asistente de IA en Adobe Experience Platform, le permite crear, administrar y compartir libros de reproducción de forma eficaz dentro de Adobe Experience Platform.
 
 El marco de trabajo sigue un proceso de tres pasos:
 
@@ -23,35 +23,33 @@ El marco de trabajo sigue un proceso de tres pasos:
 
 3. **Distribución de libros de reproducción**: Comparta libros de reproducción entre distintas organizaciones. Por ejemplo, el Centro de Excelencia Martech de ACME en Alemania puede crear un manual &quot;dorado&quot; y distribuirlo a organizaciones regionales en Tailandia, Australia, etc. para ayudar a estandarizar el caso de uso de marketing.
 
-## Creación de un manual con el asistente de IA de Adobe
+## Crear un libro de estrategias
+
+Puede crear un libro de reproducción de dos formas: mediante el asistente de IA o manualmente. Lea las secciones siguientes para aprender a hacerlo.
 
 ### Resumen del manual
 
-Puede crear un libro de reproducción de dos formas: mediante el asistente de IA de Adobe o manualmente.
+Siga estos pasos para crear un manual con el asistente de IA:
 
-Siga estos pasos para crear un manual con el asistente de IA de Adobe:
-
-1. En el panel de navegación izquierdo, seleccione **Libros de reproducción**.
+En el panel de navegación izquierdo, seleccione **[!UICONTROL Libros de reproducción]**.
 
 ![ &quot;Libros de reproducción&quot; resaltados en el panel de navegación izquierdo de la interfaz de usuario.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. Seleccione **Nuevo libro de estrategias** y luego seleccione **Generar libro de estrategias con el Asistente de IA**.
+Seleccione **[!UICONTROL Nuevo libro de estrategias]** y luego seleccione **Generar libro de estrategias con el Asistente de IA**.
 
-![Seleccione el botón &quot;Nuevo libro de estrategias&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![Interfaz de libro de reproducción con la opción &quot;Generar libro de reproducción con el asistente de IA&quot; seleccionada.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![Seleccione el botón &quot;Generar libro de reproducción con el asistente de IA&quot; resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. En el campo de solicitud, describa el caso de uso.
+En el campo de solicitud, describa el caso de uso.
 
 **Ejemplo**: &quot;Capte a los clientes de ACME que navegaron por las zapatillas pero no completaron la compra&quot;.
 
-![Seleccione el botón &quot;Generar libro de reproducción con el asistente de IA&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![Interfaz de libro de reproducción con área de formulario web resaltada.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. Seleccione **Generar** para crear los metadatos del libro de reproducción.
+Seleccione **[!UICONTROL Generar]** para crear los metadatos del libro de reproducción.
 
 ![Área de solicitud con el botón &quot;Generar&quot; del libro de reproducción resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. Una vez generado, seleccione **[!UICONTROL Editar]** para modificar el título, la descripción y los metadatos generados según sea necesario.
+Una vez generado, seleccione **[!UICONTROL Editar]** para modificar el título, la descripción y los metadatos generados según sea necesario.
 
 ![Libro de reproducción generado con el botón &quot;Editar&quot; resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -61,17 +59,15 @@ Para asegurarse de que los ingenieros de datos tengan todos los detalles necesar
 * **Público objetivo**
 * **Canal de marketing**
 
-![Sección de detalles del libro de estrategias con el botón &quot;Editar&quot; resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![La sección de detalles del libro de reproducción con el botón &quot;Editar&quot; resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-Una vez generados los metadatos, seleccione el botón **Editar mapa de recorrido** para ajustar los pasos de la asignación de recorrido según sea necesario.
+Una vez generados los metadatos, seleccione **[!UICONTROL Editar mapa de recorrido]** para ajustar los pasos del mapa de recorrido según sea necesario.
 
 ![Editar el botón de asignación de recorrido.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![Edite el mapa de recorrido una vez que capture los metadatos del manual.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-A continuación, asocie el manual con recursos técnicos.
-
-Para crear un libro de reproducción manualmente, seleccione **Crear libro de reproducción manualmente**.
+A continuación, proceda a asociar el manual de implementación con los recursos técnicos. Para crear un libro de reproducción manualmente, seleccione **[!UICONTROL Crear libro de reproducción manualmente]**.
 
 ![Crear libro de reproducción manualmente](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -79,13 +75,13 @@ Aparecerá una plantilla de libro de estrategias en blanco. Rellene detalles com
 
 ## Asociar el manual con los recursos técnicos
 
-Independientemente de si crea un libro de reproducción manualmente o con el asistente de IA, debe asociarlo a los activos técnicos necesarios. Vaya a la pestaña **[!UICONTROL Assets técnico]** y seleccione el producto requerido. Para este ejemplo, elige **[!UICONTROL Journey Optimizer]**.
+Independientemente de si crea un libro de reproducción manualmente o con el asistente de IA, debe asociarlo a los activos técnicos necesarios. Vaya a la pestaña **[!UICONTROL Assets técnico]** y seleccione el producto requerido. Para este ejemplo, seleccione **[!UICONTROL Journey Optimizer]**.
 
 >[!NOTE]
 >
-> En una versión futura se agregará compatibilidad con Real-Time Customer Data Platform.
+> En una versión futura se agregará compatibilidad con Real-Time CDP.
 
-![ pestaña &quot;Recursos técnicos&quot; y el botón &quot;Agregar producto requerido&quot; resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![Se resaltaron la ficha &quot;Recursos técnicos&quot; y el botón &quot;Agregar producto requerido&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Elija **[!UICONTROL Seleccionar un recurso]** para asociar este libro de reproducción con un recorrido como se muestra en la imagen siguiente. A continuación, seleccione **Publicar libro de reproducción** para finalizar el libro de reproducción.
 
@@ -162,4 +158,4 @@ Si un libro de reproducción está marcado por contenido inapropiado u ofensivo,
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y publicar libros de reproducción con el Asistente de IA de Adobe, aprenda a empezar con los libros de reproducción disponibles y elija el adecuado para su caso de uso en [Lista de libros de reproducción](/help/use-case-playbooks/playbooks/choose.md).
+Ahora que sabe cómo crear y publicar libros de reproducción con el Asistente de IA, aprenda a empezar con los libros de reproducción disponibles y elija el adecuado para su caso de uso en [Lista de libros de reproducción](/help/use-case-playbooks/playbooks/choose.md).
