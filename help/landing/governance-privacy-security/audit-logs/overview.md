@@ -4,10 +4,10 @@ description: Descubra cómo los registros de auditoría le permiten ver quién r
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
+source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 35%
+source-wordcount: '1466'
+ht-degree: 32%
 
 ---
 
@@ -46,7 +46,7 @@ La siguiente tabla indica qué acciones sobre qué recursos se registran en los 
 | --- | --- |
 | [Directiva de control de acceso (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Cuenta (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [instancia de Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar</li><li>Deshabilitar</li></ul> |
+| [Instancia de inteligencia artificial aplicada a la atribución](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar</li><li>Deshabilitar</li></ul> |
 | [Registros de auditoría](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportar</li></ul> |
 | [Clase](../../../xdm/schema/composition.md#class) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | Atributo calculado | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
@@ -83,11 +83,13 @@ Para ver y exportar los registros de auditoría, debe contar con el permiso de c
 >title="Instrucciones"
 >abstract="<ul><li>Seleccione <b>Auditorías</b> en la navegación izquierda. El espacio de trabajo Auditorías muestra una lista de los registros grabados, ordenados por defecto del más al menos reciente.</li>   <li> NOTA: Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminarán del sistema. Por lo tanto, solo podrá retroceder un máximo de 365 días. Si necesita consultar datos con más de 365 días de antigüedad, deberá exportar los registros con regularidad para cumplir los requisitos de su directiva interna. </li><li>Seleccione un evento de la lista para ver los detalles en el carril derecho. </li><li>Seleccione el icono de canal para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los filtros seleccionados. </li><li>Para exportar la lista actual de registros de auditoría, seleccione **Descargar registro**.</li><li>Para obtener más ayuda sobre esta función, consulte la <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=es">información general sobre registros de auditoría</a> en Experience League.</li></ul>"
 
-Puede ver los registros de auditoría de diferentes características de Experience Platform en el espacio de trabajo de **[!UICONTROL Auditorías]** en la interfaz de usuario de Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de más reciente a menos reciente.
+Puede ver los registros de auditoría de distintas características de Experience Platform en el espacio de trabajo **[!UICONTROL Auditorías]** de la interfaz de usuario de Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de más reciente a menos reciente.
 
 ![El panel Auditorías resalta las Auditorías en el menú de la izquierda.](../../images/audit-logs/audits.png)
 
-Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminan del sistema. Por lo tanto, solo podrá retroceder un máximo de 365 días. Si necesita datos de más de 365 días, debe exportar los registros a una cadencia regular para satisfacer los requisitos de directivas internas.
+Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminan del sistema. Si necesita datos de más de 365 días, debe exportar los registros a una cadencia regular para satisfacer los requisitos de directivas internas.
+
+El método que utiliza para solicitar los registros de auditoría cambia el período de tiempo permitido y el número de registros a los que tendrá acceso. [Exportar registros](#export-audit-logs) le permite retroceder 365 días (en intervalos de 90 días) a un máximo de 1000 registros, mientras que la [interfaz de usuario del registro de actividad](#filter-audit-logs) en Experience Platform muestra los últimos 90 días a un máximo de 1000 registros.
 
 Seleccione un evento de la lista para ver los detalles en el carril derecho.
 
@@ -95,12 +97,11 @@ Seleccione un evento de la lista para ver los detalles en el carril derecho.
 
 ### Filtrar registros de auditoría
 
+Seleccione el icono de canal (![Icono de filtro](/help/images/icons/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados.
+
 >[!NOTE]
 >
->Como es una función nueva, los datos mostrados solo se remontan a marzo de 2022. Según el recurso seleccionado, los datos anteriores podrían estar disponibles a partir de enero de 2022.
-
-
-Seleccione el icono de canal (![Icono de filtro](/help/images/icons/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los distintos filtros seleccionados.
+>La interfaz de usuario de Experience Platform solo muestra los últimos 90 días hasta un máximo de 1000 registros, independientemente de los filtros aplicados. Si necesita registrar más allá de eso (hasta un máximo de 365 días), necesitará [exportar los registros de auditoría](#export-audit-logs).
 
 ![Panel de auditorías con el registro de actividad filtrado resaltado.](../../images/audit-logs/filters.png)
 
@@ -130,9 +131,13 @@ Los datos de registro de auditoría devueltos contienen la siguiente informació
 
 ![Panel de auditorías con el registro de actividad filtrado resaltado.](../../images/audit-logs/filtered.png)
 
-### Exportar registros de auditoría
+### Exportar registros de auditoría {#export-audit-logs}
 
 Para exportar la lista actual de registros de auditoría, seleccione **[!UICONTROL Descargar registro]**.
+
+>[!NOTE]
+>
+>Los registros se pueden solicitar en intervalos de 90 días hasta 365 días antes. Sin embargo, la cantidad máxima de registros que se pueden devolver durante una sola exportación es de 10 000.
 
 ![Se ha resaltado el panel Auditorías con el [!UICONTROL registro de descargas].](../../images/audit-logs/download.png)
 
