@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
+source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
 workflow-type: tm+mt
-source-wordcount: '4597'
+source-wordcount: '4609'
 ht-degree: 4%
 
 ---
@@ -62,7 +62,7 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | [!UICONTROL Mover a la carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra a qué carpeta pertenece la audiencia. Para obtener más información sobre esta característica, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Copiar] | Servicio de segmentación | Duplica la audiencia seleccionada. Encontrará más información sobre esta función en [Preguntas frecuentes sobre la segmentación](../faq.md#copy). |
 | [!UICONTROL Aplicar etiquetas de acceso] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Publish] | Carga personalizada, servicio de segmentación | Publica la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las Preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-states). |
+| [!UICONTROL Publicar] | Carga personalizada, servicio de segmentación | Publica la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las Preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Desactivar] | Carga personalizada, servicio de segmentación | Desactiva la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las Preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. Las audiencias que se usan en destinos de flujo descendente o que dependen de otras audiencias **no se pueden** eliminar. Para obtener más información sobre la eliminación de audiencias, lea las [preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Agregar al paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Mueve la audiencia entre zonas protegidas. Para obtener más información sobre esta característica, lea la [guía de herramientas para zonas protegidas](../../sandboxes/ui/sandbox-tooling.md). |
@@ -113,9 +113,9 @@ Si se selecciona desglose, la pantalla muestra un gráfico de barras que indica 
 
 | Estado | Descripción |
 | ------ | ----------- |
-| [!UICONTROL Realizado] | Recuento de perfiles que **calificaron** para el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
-| [!UICONTROL Existente] | Recuento de perfiles que **permanecieron** en el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
-| [!UICONTROL Saliendo] | Recuento de perfiles que **abandonaron** el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
+| [!UICONTROL Realizado] | Recuento de perfiles que **calificaron** para la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
+| [!UICONTROL Existente] | Recuento de perfiles que **permanecieron** en la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. Este campo es **calculado** y no aparece en el objeto `segmentMembership`. |
+| [!UICONTROL Saliendo] | Recuento de perfiles que **abandonaron** la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
 
 Después de seleccionar los campos que desea mostrar, también puede cambiar el tamaño del ancho de las columnas mostradas. Para ello, arrastre el área entre las columnas o seleccione el ![icono de flecha](/help/images/icons/chevron-down.png) de la columna cuyo tamaño desea cambiar, seguido de **[!UICONTROL Cambiar tamaño de columna]**.
 
@@ -414,7 +414,7 @@ Si selecciona **[!UICONTROL Generar regla]**, accederá al Generador de segmento
 
 ### Composición de público federado {#fac}
 
-Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
+Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Adobe Federated Audience Composition para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenar esas audiencias en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
 
 ![Lista de audiencias creadas en la Composición de audiencias federadas para su organización.](../images/ui/overview/federated-audience-composition.png)
 
