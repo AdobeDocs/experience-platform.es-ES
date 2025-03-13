@@ -4,14 +4,15 @@ title: Aprenda a crear y compartir sus propios libros de reproducción con el as
 description: Cómo crear y compartir sus propios libros de casos de uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
+source-git-commit: aa1e155fb8d71497958d0de1f6c10cf47e58dbf0
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1113'
 ht-degree: 0%
 
 ---
 
-# Cree y comparta sus propios libros de reproducción
+
+# Cree y comparta sus propios libros de reproducción (Beta)
 
 [!DNL Playbook Authoring Framework], con tecnología de Asistente de IA en Adobe Experience Platform, le permite crear, administrar y compartir libros de reproducción de forma eficaz dentro de Adobe Experience Platform.
 
