@@ -4,9 +4,9 @@ title: LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura datos de Experience Platform a la instancia de extremo de la API HTTP REST, Amazon Kinesis o Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
+source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -57,12 +57,12 @@ Adobe recomienda añadir los siguientes intervalos de IP a una lista de permitid
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+<!-- 
+## VA6: US and Americas customers running on AWS {#aws}
 
-## VA6: clientes de EE. UU. y América que se ejecutan en AWS {#aws}
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
 
-El rango de IP siguiente se aplica a los clientes de Experience Platform que se ejecutan en Amazon Web Service (AWS). Consulte la [descripción general de Experience Platform Multi-Cloud](../../../landing/multi-cloud.md) para obtener más información.
-
-`66.117.18.0/24`
+`66.117.18.0/24` -->
 
 ## NLD2: Clientes de EMEA {#emea}
 
