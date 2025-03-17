@@ -4,7 +4,7 @@ description: Descubra cómo los registros de auditoría le permiten ver quién r
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 32%
@@ -89,7 +89,7 @@ Puede ver los registros de auditoría de distintas características de Experienc
 
 Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminan del sistema. Si necesita datos de más de 365 días, debe exportar los registros a una cadencia regular para satisfacer los requisitos de directivas internas.
 
-El método que utiliza para solicitar los registros de auditoría cambia el período de tiempo permitido y el número de registros a los que tendrá acceso. [Exportar registros](#export-audit-logs) le permite retroceder 365 días (en intervalos de 90 días) a un máximo de 1000 registros, mientras que la [interfaz de usuario del registro de actividad](#filter-audit-logs) en Experience Platform muestra los últimos 90 días a un máximo de 1000 registros.
+El método que utiliza para solicitar los registros de auditoría cambia el período de tiempo permitido y el número de registros a los que tendrá acceso. [Exportar registros](#export-audit-logs) le permite retroceder 365 días (en intervalos de 90 días) a un máximo de 10.000 registros, mientras que la [interfaz de usuario del registro de actividad](#filter-audit-logs) de Experience Platform muestra los últimos 90 días hasta un máximo de 1000 registros.
 
 Seleccione un evento de la lista para ver los detalles en el carril derecho.
 
