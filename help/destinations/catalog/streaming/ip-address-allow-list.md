@@ -2,11 +2,11 @@
 keywords: Dirección IP, intervalo de IP, destinos de lista de permitidos, lista de permitidos, destinos de flujo de lista de permitidos
 title: LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo
 type: Documentation
-description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura los datos de Experience Platform a la instancia de extremo de la API HTTP REST, Amazon Kinesis o Azure Event Hubs.
+description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura datos de Experience Platform a la instancia de extremo de la API HTTP REST, Amazon Kinesis o Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> * El Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. El Adobe no notifica nuevos intervalos de IP.
+> * Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. Adobe no notifica nuevos intervalos de IP.
 > * La lista de direcciones IP documentadas aquí *no* se aplica a ningún destino que usted genere con [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Información general {#overview}
@@ -28,11 +28,11 @@ Los intervalos de IP documentados aquí se aplican a los siguientes destinos:
 
 El tráfico saliente desde Experience Platform a estos destinos siempre pasa por las direcciones IP enumeradas en esta página.
 
-Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura los datos del Experience Platform al extremo HTTP, [!DNL Amazon Kinesis] o [!DNL Azure Event Hubs]. Esta funcionalidad es especialmente útil si el extremo HTTP se encuentra detrás de un cortafuegos empresarial o si los estándares de seguridad y conformidad de la empresa requieren que una lista de intervalos de IP esté incluida en la lista de permitidos.
+Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a su extremo HTTP, instancia [!DNL Amazon Kinesis] o instancia [!DNL Azure Event Hubs]. Esta funcionalidad es especialmente útil si el extremo HTTP se encuentra detrás de un cortafuegos empresarial o si los estándares de seguridad y conformidad de la empresa requieren que una lista de intervalos de IP esté incluida en la lista de permitidos.
 
 Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
 
-El Adobe recomienda añadir los siguientes intervalos de IP a una lista de permitidos antes de trabajar con los destinos mencionados anteriormente en esta página. Si no se añade el intervalo de IP específico de su región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar estos destinos de flujo continuo.
+Adobe recomienda añadir los siguientes intervalos de IP a una lista de permitidos antes de trabajar con los destinos mencionados en esta página. Si no se añade el intervalo de IP específico de su región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar estos destinos de flujo continuo.
 
 ## VA7: Clientes de EE. UU. y América {#us-americas}
 
@@ -57,6 +57,12 @@ El Adobe recomienda añadir los siguientes intervalos de IP a una lista de permi
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+
+## VA6: clientes de EE. UU. y América que se ejecutan en AWS {#aws}
+
+El rango de IP siguiente se aplica a los clientes de Experience Platform que se ejecutan en Amazon Web Service (AWS). Consulte la [descripción general de Experience Platform Multi-Cloud](../../../landing/multi-cloud.md) para obtener más información.
+
+`66.117.18.0/24`
 
 ## NLD2: Clientes de EMEA {#emea}
 

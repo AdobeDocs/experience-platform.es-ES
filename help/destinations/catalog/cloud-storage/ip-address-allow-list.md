@@ -3,9 +3,9 @@ title: LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en 
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a destinos de almacenamiento en la nube.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '299'
 ht-degree: 1%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> * El Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. El Adobe no notifica nuevos intervalos de IP.
-> * Aunque el Adobe admite la exportación de datos a servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar datos son [!DNL Amazon S3] y [!DNL Azure Blob].
+> * Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. Adobe no notifica nuevos intervalos de IP.
+> * Aunque Adobe admite la exportación de datos a servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar datos son [!DNL Amazon S3] y [!DNL Azure Blob].
 
 ## Aplicabilidad {#applicability}
 
@@ -35,11 +35,21 @@ Esta página proporciona rangos de IP que puede agregar a su lista de permitidos
 
 Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
 
-El Adobe recomienda agregar los siguientes rangos de IP a una lista de permitidos antes de trabajar con conexiones de destino de almacenamiento en la nube. Si no agrega el intervalo de IP específico de su región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar las conexiones de destino de almacenamiento en la nube.
+Adobe recomienda agregar los siguientes rangos de IP a una lista de permitidos antes de trabajar con conexiones de destino de almacenamiento en la nube. Si no agrega el intervalo de IP específico de su región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar las conexiones de destino de almacenamiento en la nube.
 
 ## Necesario para todos los clientes {#all-customers}
 
 * `52.247.108.70`
+
+## Clientes de EE. UU. que ejecutan AWS {#aws}
+
+El rango de IP siguiente se aplica a los clientes de Experience Platform que se ejecutan en Amazon Web Service (AWS). Consulte la [descripción general de Experience Platform Multi-Cloud](../../../landing/multi-cloud.md) para obtener más información.
+
+>[!NOTE]
+>
+>Este rango de IP no es compatible con los clientes que ejecutan AWS y que utilizan destinos basados en archivos para exportar datos a Amazon S3.
+
+* `66.117.18.0/24`
 
 ## clientes estadounidenses {#us-customers}
 
