@@ -2,7 +2,7 @@
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -128,7 +128,7 @@ Después de ejecutar la consulta, busque el registro de evento que esperaba para
 La prioridad del área de nombres desempeña un papel importante en la forma en que los fragmentos de evento determinan la identidad principal.
 
 * Una vez que haya configurado y guardado la [configuración de identidad](./identity-settings-ui.md) para una zona protegida determinada, el perfil usará [prioridad de área de nombres](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) para determinar la identidad principal. En el caso de identityMap, el perfil ya no usará el indicador `primary=true`.
-* Aunque el perfil ya no hará referencia a este indicador, es posible que otros servicios del Experience Platform sigan utilizando el indicador `primary=true`.
+* Aunque el perfil ya no hará referencia a este indicador, es posible que otros servicios de Experience Platform sigan utilizando el indicador `primary=true`.
 
 Para que [eventos de usuario autenticados](implementation-guide.md#ingest-your-data) se vinculen al área de nombres de persona, todos los eventos autenticados deben contener el área de nombres de persona (CRMID). Esto significa que, incluso después de que un usuario inicie sesión, el área de nombres de persona debe estar presente en cada evento autenticado.
 
@@ -250,7 +250,7 @@ WHERE identitymap['ECID'][0].id ='identity_value'
 ORDER BY timestamp desc 
 ```
 
-**Nota**: En este ejemplo se supone que `eVar10` está marcado como identidad. Para las configuraciones, debe cambiar el eVar en función de la implementación de su propia organización.
+**Nota**: En este ejemplo se supone que `eVar10` está marcado como identidad. Para las configuraciones, debe cambiar eVar en función de la implementación de su propia organización.
 
 >[!ENDTABS]
 
@@ -363,7 +363,7 @@ Los puntos clave a destacar son los siguientes:
 >* Los ECID y los áreas de nombres de correo electrónico/teléfono no únicos podrían moverse de una persona a otra.
 >* Si un recorrido tiene una condición de espera y si estas áreas de nombres no únicas se utilizan para buscar un perfil en un recorrido, el mensaje de recorrido se puede enviar a la persona incorrecta.
 
-## Prioridad de espacios de nombres
+## Prioridad del área de nombres
 
 Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca de [prioridad del área de nombres](./namespace-priority.md).
 

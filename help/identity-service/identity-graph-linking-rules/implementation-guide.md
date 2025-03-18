@@ -2,9 +2,9 @@
 title: Guía de implementación para reglas de vinculación de gráficos de identidad
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1688'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Descripción paso a paso:
 
 En esta sección se describen los pasos previos que debe llevar a cabo antes de implementar las reglas de vinculación de gráficos de identidad con los datos.
 
-### Espacio de nombres único
+### Área de nombres única
 
 #### Requisito de área de nombres de persona única {#single-person-namespace-requirement}
 
@@ -60,7 +60,7 @@ Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/cre
 
 ### Eventos de experiencia XDM
 
-Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará al Experience Platform siempre contengan un identificador de persona, como CRMID.
+Durante el proceso previo a la implementación, asegúrese de que los eventos autenticados que el sistema enviará a Experience Platform siempre contengan un identificador de persona, como CRMID.
 
 >[!BEGINTABS]
 
@@ -120,20 +120,22 @@ Durante el proceso previo a la implementación, debe asegurarse de que los event
 
 >[!ENDTABS]
 
-Debe asegurarse de tener una identidad completa al enviar eventos mediante eventos de experiencia XDM.
+Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform siempre contengan un identificador de persona **single**, como un CRMID.
 
-+++Seleccione esta opción para ver un ejemplo de un evento con una identidad completa
+* (Recomendado) Eventos autenticados con un identificador de persona.
+* (No recomendado) Eventos autenticados con dos identificadores de persona.
+* (No recomendado) Eventos autenticados sin identificadores de persona.
 
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
+Si el sistema envía dos identificadores de persona, la implementación puede fallar en el requisito del área de nombres de una sola persona. Por ejemplo, si identityMap en la implementación del SDK web contiene un CRMID, un customerID y un área de nombres ECID, entonces dos personas que comparten un dispositivo pueden asociarse incorrectamente con diferentes áreas de nombres.
+
+Dentro del servicio de identidad, esta implementación puede tener el siguiente aspecto:
+
+* `timestamp1` = John inicia sesión -> el sistema captura `CRMID: John, ECID: 111`.
+* `timestamp2` = Jane inicia sesión -> el sistema captura `customerID: Jane, ECID: 111`.
+
++++Vea cómo puede verse la implementación en la simulación de gráficos
+
+![Se representa la IU de simulación de gráficos con un gráfico de ejemplo.](../images/implementation/example-graph.png)
 
 +++
 
@@ -194,7 +196,7 @@ Una vez que tenga todos los elementos enumerados arriba, puede empezar a ingerir
 
 * [Ingesta por lotes y streaming](../../ingestion/home.md)
 * [Recopilación de datos en Experience Platform](../../collection/home.md)
-* [fuentes de Experience Platform](../../sources/home.md)
+* [Fuentes de Experience Platform](../../sources/home.md)
 
 >[!TIP]
 >
@@ -254,6 +256,6 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad de espacios de nombres](./namespace-priority.md)
+* [Prioridad del área de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)
