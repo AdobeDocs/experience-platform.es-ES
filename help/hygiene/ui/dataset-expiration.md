@@ -9,7 +9,7 @@ ht-degree: 18%
 
 ---
 
-# Caducidades automatizadas de conjuntos de datos {#dataset-expiration}
+# Caducidades de conjuntos de datos automatizados {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -26,7 +26,7 @@ Este documento explica cómo programar y automatizar las caducidades de los conj
 
 >[!NOTE]
 >
->La caducidad del conjunto de datos no elimina datos del Edge Network de Adobe Experience Platform en este momento. Sin embargo, no es posible que los datos permanezcan dentro del Edge Network después de que el conjunto de datos esté configurado para que caduque. Esto se debe a que el contrato de licencia de servicio de 15 días para la caducidad del conjunto de datos se superpone con el periodo de 14 días en el que los datos existen dentro del Edge Network antes de descartarse.
+>La caducidad del conjunto de datos no elimina actualmente datos de Adobe Experience Platform Edge Network. Sin embargo, no es posible que los datos permanezcan dentro de Edge Network después de que el conjunto de datos esté configurado para que caduque. Esto se debe a que el contrato de licencia de servicio de 15 días para la caducidad del conjunto de datos se superpone con el periodo de 14 días en el que los datos existen dentro de Edge Network antes de descartarse.
 
 La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el [extremo de caducidad del conjunto de datos](../api/dataset-expiration.md) y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](../api/workorder.md). También puede administrar la caducidad de los conjuntos de datos y [eliminaciones de registros](./record-delete.md) a través de la interfaz de usuario de Platform. Consulte la documentación vinculada para obtener más información.
 

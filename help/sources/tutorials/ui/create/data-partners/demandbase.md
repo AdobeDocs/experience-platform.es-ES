@@ -3,10 +3,11 @@ title: Conexión De Demandbase Intent A Experience Platform Mediante La IU
 description: Aprenda a conectar Demandbase Intent a Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 81a615b9826ed69bb050cae9c074a4e457ba128a
+exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
+source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 11%
+ht-degree: 36%
 
 ---
 
@@ -42,14 +43,14 @@ Seleccione **[!DNL Demandbase Intent]** en la categoría *[!UICONTROL B2B]* y lu
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_domain"
->title="Fuente de dominio"
->abstract="Aunque Adobe utiliza el sitio web accountOrganization.website de XDM, puede haber clientes que utilicen campos personalizados para sus respectivos sitios web. Por lo tanto, debe asegurarse de que el origen del dominio sea el campo dominio/sitio web que coincidirá con los registros de cuenta de Demandbase respecto a las cuentas de Experience Platform."
+>title="Origen del dominio"
+>abstract="Aunque Adobe utiliza el sitio web accountOrganization.website de XDM, puede haber clientes que utilicen campos personalizados para sus respectivos sitios web. Por lo tanto, debe asegurarse de que el origen del dominio sea el campo de dominio/sitio web que coincidirá con los registros de cuenta de Demandbase respecto a las cuentas de Experience Platform."
 
-## Programar flujo de datos {#schedule-dataflow}
+## Programación del flujo de datos {#schedule-dataflow}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_schedule"
->title="Programación del flujo de datos"
->abstract="Demandbase envía datos una vez a la semana el lunes por la mañana a las 17:00 UTC. Por lo tanto, debe configurar la hora de inicio de la ingesta después de las 17:00 UTC. Además, debe confirmar el tiempo de ingesta con Demandbase, ya que puede modificar su programación al soltar archivos en Adobe."
+>title="Programe su flujo de datos"
+>abstract="Demandbase envía datos una vez a la semana el lunes por la mañana a las 17:00 horas UTC. Por lo tanto, debe configurar la hora de inicio de la ingesta después de las 17:00 horas UTC. Además, debe confirmar la hora de ingesta con Demandbase, ya que pueden modificar su programación al soltar archivos en Adobe."
 
 ## Revisar flujo de datos {#review-dataflow}
