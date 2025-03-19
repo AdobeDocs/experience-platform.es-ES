@@ -2,7 +2,7 @@
 title: Principales consejos para maximizar el valor con Adobe Experience Platform Data Distiller - OS656
 description: Aprenda a maximizar el valor con Adobe Experience Platform Data Distiller enriqueciendo los datos del perfil del cliente en tiempo real y utilizando perspectivas de comportamiento para crear audiencias segmentadas. Este recurso incluye un conjunto de datos de muestra y un caso práctico que muestra cómo aplicar el modelo de actualización, frecuencia y monetario (RFM) para la segmentación de clientes.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
 workflow-type: tm+mt
 source-wordcount: '3657'
 ht-degree: 0%
@@ -328,11 +328,11 @@ El resultado es similar a la siguiente imagen, pero con un ID de vista diferente
 Con las puntuaciones de RFM calculadas, los clientes pueden clasificarse en los seis segmentos prioritarios siguientes:
 
 1. `Core`: Mejores clientes con un valor monetario, de actualización y de frecuencia elevado (Actualización = 1, Frecuencia = 1, Monetaria = 1).
-2. `Loyal`: clientes frecuentes que son consistentes pero no los que más gastan (Frecuencia = 1).
-3. `Whales`: Los que gastan más, independientemente de la actualización y la frecuencia (Monetaria = 1).
-4. `Promising`: Gastadores frecuentes pero menores (frecuencia = 1, 2, 3; monetario = 2, 3, 4).
-5. `Rookies`: clientes nuevos con baja frecuencia (Actualización = 1, Frecuencia = 4).
-6. `Slipping`: Clientes anteriormente leales con una actividad disminuida (Actualización = 2, 3, 4; Frecuencia = 4).
+1. `Loyal`: clientes frecuentes que son consistentes pero no los que más gastan (Frecuencia = 1).
+1. `Whales`: Los que gastan más, independientemente de la actualización y la frecuencia (Monetaria = 1).
+1. `Promising`: Gastadores frecuentes pero menores (frecuencia = 1, 2, 3; monetario = 2, 3, 4).
+1. `Rookies`: clientes nuevos con baja frecuencia (Actualización = 1, Frecuencia = 4).
+1. `Slipping`: Clientes anteriormente leales con una actividad disminuida (Actualización = 2, 3, 4; Frecuencia = 4).
 
 Para optimizar el acceso y la reutilización, cree un(a) `VIEW` que almacene los segmentos, puntuaciones y valores de RFM.
 
