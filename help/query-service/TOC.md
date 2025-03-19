@@ -5,9 +5,9 @@ breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 21%
 
 ---
@@ -23,7 +23,6 @@ ht-degree: 21%
 - Data Distiller {#data-distiller}
    - [Información general](data-distiller/overview.md)
    - [Uso de licencias](data-distiller/license-usage.md)
-   - [Sugerencias principales para maximizar el valor](data-distiller/top-tips-to-maximize-value.md)
    - Conjuntos de datos derivados {#derived-datasets}
       - [Información general](data-distiller/derived-datasets/overview.md)
       - [Crear conjuntos de datos derivados con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -40,6 +39,7 @@ ht-degree: 21%
       - [Funciones de ingeniero para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportación de datos a entornos XML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flujo de trabajo completo de enriquecimiento de la canalización de datos AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [Sesión de Summit de 2025](data-distiller/top-tips-to-maximize-value.md)
 - Estadísticas de Data Distiller y aprendizaje automático {#advanced-statistics}
    - [Información general](advanced-statistics/overview.md)
    - [Ingeniería de funciones](advanced-statistics/feature-engineering.md)
@@ -135,7 +135,7 @@ ht-degree: 21%
 - Referencia SQL {#sql}
    - [Resumen de SQL](sql/overview.md)
    - [Sintaxis SQL](sql/syntax.md)
-   - [Funciones definidas por el Adobe](sql/adobe-defined-functions.md)
+   - [Funciones definidas por Adobe](sql/adobe-defined-functions.md)
    - [Funciones de orden superior](sql/higher-order-functions.md)
    - [Funciones SQL de Spark](sql/spark-sql-functions.md)
    - [Comandos de metadatos](sql/metadata.md)

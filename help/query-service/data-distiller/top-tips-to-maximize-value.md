@@ -1,17 +1,15 @@
 ---
-title: Sugerencias principales para maximizar el valor con Adobe Experience Platform Data Distiller
+title: Principales consejos para maximizar el valor con Adobe Experience Platform Data Distiller - OS656
 description: Aprenda a maximizar el valor con Adobe Experience Platform Data Distiller enriqueciendo los datos del perfil del cliente en tiempo real y utilizando perspectivas de comportamiento para crear audiencias segmentadas. Este recurso incluye un conjunto de datos de muestra y un caso práctico que muestra cómo aplicar el modelo de actualización, frecuencia y monetario (RFM) para la segmentación de clientes.
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: c7a6a37679541dc37bdfed33b72d2396db7ce054
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
 
-# Sugerencias principales para maximizar el valor con Adobe Experience Platform Data Distiller
+# Principales sugerencias para maximizar el valor con Adobe Experience Platform Data Distiller - OS656
 
 Esta página contiene el conjunto de datos de ejemplo para que aplique lo que ha aprendido en la sesión de Adobe Summit &quot;OS656: consejos principales para maximizar el valor con Adobe Experience Platform Data Distiller&quot;. Aprenderá a acelerar las implementaciones de Adobe Real-Time Customer Data Platform y Journey Optimizer mediante la mejora de los datos del perfil del cliente en tiempo real. Este enriquecimiento aprovecha la perspectiva profunda de los patrones de comportamiento de los clientes para crear audiencias para la entrega y optimización de experiencias.
 
@@ -53,7 +51,7 @@ Siga estos pasos para cargar un archivo CSV en Adobe Experience Platform.
 
 #### Creación de un conjunto de datos a partir de un archivo CSV {#create-a-dataset}
 
-En la interfaz de usuario de Experience Platform, vaya a **[!UICONTROL Flujos de trabajo]** en el carril de navegación izquierdo y seleccione **[!UICONTROL Crear conjunto de datos a partir del archivo CSV]** de las opciones disponibles. Aparece una nueva barra lateral a la derecha de la pantalla, seleccione **[!UICONTROL Launch]**.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el carril de navegación izquierdo, seguido de **[!UICONTROL Crear conjunto de datos]**. A continuación, seleccione **[!UICONTROL Crear conjunto de datos a partir del archivo CSV]** entre las opciones disponibles.
 
 Aparecerá el panel [!UICONTROL Configurar conjunto de datos]. En el campo **[!UICONTROL Nombre]**, escriba el nombre del conjunto de datos como &quot;luma_web_data&quot; y seleccione **[!UICONTROL Siguiente]**.
 
@@ -135,7 +133,7 @@ Las siguientes consultas muestran cómo identificar y excluir pedidos cancelados
 Esta primera consulta selecciona todos los ID de compra no nulos asociados con una cancelación y los agrega mediante `GROUP BY`. Los ID de compra resultantes deben excluirse del conjunto de datos.
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -241,7 +239,7 @@ Los resultados se parecen a la imagen siguiente.
 Para mejorar la eficacia y reutilización de las consultas, cree un(a) `VIEW` para almacenar los valores RFM agregados.
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -258,7 +256,7 @@ El resultado es similar a la siguiente imagen, pero con un ID diferente.
 Una vez más, como práctica recomendada, ejecute una consulta de exploración sencilla para inspeccionar los datos de la vista. Utilice la siguiente instrucción.
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 La siguiente captura de pantalla muestra un resultado de muestra de la consulta, con los valores de RFM calculados para cada usuario. El resultado corresponde al ID de vista de la consulta `CREATE VIEW`.
@@ -289,7 +287,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 Los resultados se parecen a las imágenes de abajo.
@@ -320,6 +318,10 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+El resultado es similar a la siguiente imagen, pero con un ID de vista diferente.
+
+![Cuadro de diálogo de resultados de la consulta para la VISTA &#39;rfm_score&#39;.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### Segmentos del modelo RFM {#model-rfm-segments}
 
@@ -398,7 +400,7 @@ Las siguientes capturas de pantalla muestran un resultado de muestra de la consu
 
 ### Paso 4: Utilice SQL para introducir por lotes datos RFM en el Perfil del cliente en tiempo real {#sql-batch-ingest-rfm-data}
 
-El, ingesta por lotes de datos de clientes enriquecidos con RFM en el Perfil del cliente en tiempo real. Para empezar, cree un conjunto de datos con perfil habilitado e inserte los datos transformados mediante SQL.
+A continuación, introduzca por lotes datos de clientes enriquecidos con RFM en el Perfil del cliente en tiempo real. Para empezar, cree un conjunto de datos con perfil habilitado e inserte los datos transformados mediante SQL.
 
 #### Crear un conjunto de datos derivado para almacenar atributos RFM {#create-a-derived-dataset}
 
@@ -426,7 +428,13 @@ En esta instrucción SQL:
 >
 >Para obtener más información sobre la definición de campos de identidad y el trabajo con áreas de nombres de identidad, consulte la [documentación del servicio de identidad](../../identity-service/home.md) o la guía sobre la [definición de un campo de identidad en la interfaz de usuario de Adobe Experience Platform](../../xdm/ui/fields/identity.md).
 
-El siguiente SQL crea una tabla habilitada para perfiles para almacenar atributos RFM
+Dado que el Editor de consultas admite la ejecución secuencial, puede incluir las consultas de creación de tablas e inserción de datos en una sola sesión. El siguiente SQL crea primero una tabla habilitada para perfiles para almacenar atributos RFM. A continuación, inserta datos de clientes enriquecidos con RFM de `rfm_model_segment` en la tabla `adls_rfm_profile`, estructurando cada registro en el área de nombres específica del inquilino que es necesaria para la ingesta del Perfil del cliente en tiempo real.
+
+Dado que el Editor de consultas admite la ejecución secuencial, puede ejecutar las consultas de creación de tablas e inserción de datos en una sola sesión. El siguiente SQL crea primero una tabla habilitada para perfiles para almacenar atributos RFM. A continuación, inserta datos de clientes enriquecidos con RFM de `rfm_model_segment` en la tabla `adls_rfm_profile`, asegurándose de que cada registro esté correctamente estructurado en el espacio de nombres específico del inquilino (`_{TENANT_ID}`). Este área de nombres es esencial para la ingesta del perfil del cliente en tiempo real y la resolución precisa de identidades.
+
+>[!IMPORTANT]
+>
+>Reemplace `_{TENANT_ID}` con el espacio de nombres de inquilino de su organización. Este área de nombres es única para su organización y garantiza que todos los datos introducidos se asignen correctamente en Adobe Experience Platform.
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
@@ -439,11 +447,16 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
     monetization INTEGER, -- Monetary score
     rfm_model TEXT -- RFM segment classification
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 El resultado de esta consulta se parece a las creaciones de conjuntos de datos anteriores en este manual, pero con un ID diferente.
 
-Después de crear el conjunto de datos, vaya a Conjuntos de datos > Examinar > `adls_rfm_profile` para comprobar que el conjunto de datos está vacío.
+Después de crear el conjunto de datos, vaya a **[!UICONTROL Conjuntos de datos]** > **[!UICONTROL Examinar]** > `adls_rfm_profile` para comprobar que el conjunto de datos está vacío.
 
 ![Espacio de trabajo de conjuntos de datos con los detalles del conjunto de datos &#39;adls_rfm_profile&#39; mostrados y la opción habilitada para el perfil resaltada.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
@@ -464,7 +477,7 @@ Asegúrese de que el orden de los campos de la consulta `SELECT` de la instrucci
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -490,10 +503,10 @@ Para obtener más información sobre consultas de programación, consulte la [do
 
 Aparece la vista [!UICONTROL Detalles de programación]. Desde aquí, introduzca los siguientes detalles para configurar la programación:
 
-- **[!UICONTROL Frecuencia de ejecución]**: **Anual**
-- **[!UICONTROL Día de ejecución]**: **30 de abril**
-- **[!UICONTROL Hora de ejecución de horario]**: **11 PM UTC**
-- **[!UICONTROL Período Programado]**: **1 de abril a 31 de mayo de 2024**
+- **[!UICONTROL Frecuencia De Ejecución]**: **Semanal**
+- **[!UICONTROL Día de ejecución]**: **lunes y martes**
+- **[!UICONTROL Tiempo de ejecución de horario]**: **10:10 AM UTC**
+- **[!UICONTROL Período De Programación]**: **Del 17 De Marzo Al 30 De Abril De 2025**
 
 Seleccione **[!UICONTROL Guardar]** para confirmar la programación.
 
@@ -518,11 +531,11 @@ Elija el método que mejor se adapte a su flujo de trabajo.
 
 Utilice el comando `CREATE AUDIENCE AS SELECT` para definir una audiencia nueva. La audiencia creada se guardará en un conjunto de datos y se registrará en el espacio de trabajo de **[!UICONTROL Audiencias]** en **[!UICONTROL Data Distiller]**.
 
-Las audiencias creadas con la extensión SQL se registran automáticamente con el origen [!UICONTROL Data Distiller] en el espacio de trabajo [!UICONTROL Audiencias]. Desde la interfaz de usuario de [!UICONTROL Audiences], puede ver, administrar y activar las audiencias según sea necesario.
+Las audiencias creadas con la extensión SQL se registran automáticamente con el origen [!UICONTROL Data Distiller] en el espacio de trabajo [!UICONTROL Audiencias]. Desde [Audience Portal](../../segmentation/ui/audience-portal.md), puede ver, administrar y activar sus audiencias según sea necesario.
 
-![Espacio de trabajo de audiencias que muestra las audiencias disponibles.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![El portal de audiencias muestra las audiencias disponibles.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![Espacio de trabajo de audiencias que muestra las audiencias disponibles con la barra lateral de filtro y Data Distiller seleccionados.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![El portal de audiencias muestra las audiencias disponibles con la barra lateral de filtros y Data Distiller seleccionados.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
 Para obtener más información sobre las audiencias SQL, consulte la [Documentación de audiencias de Data Distiller](../data-distiller-audiences/overview.md). Para obtener información sobre cómo administrar audiencias en la interfaz de usuario, consulte la [descripción general del portal de audiencias](../../segmentation/ui/audience-portal.md#audience-list).
 
@@ -534,19 +547,19 @@ Para crear una audiencia, utilice los siguientes comandos SQL:
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -555,33 +568,33 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
 #### Insertar una audiencia {#insert-an-audience}
 
-Para agregar perfiles a una audiencia existente, use el comando `INSERT INTO`. Esto le permite agregar perfiles individuales o segmentos de audiencia completos a un conjunto de datos de audiencia existente.
+Para agregar perfiles a una audiencia existente, use el comando `INSERT INTO`. Esto le permite agregar perfiles individuales o audiencias completas a un conjunto de datos de audiencia existente.
 
 ```sql
 -- Insert profiles into the audience dataset
 INSERT INTO AUDIENCE adls_rfm_audience 
 SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
 FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
 #### Adición de perfiles a una audiencia {#add-profiles-to-audience}

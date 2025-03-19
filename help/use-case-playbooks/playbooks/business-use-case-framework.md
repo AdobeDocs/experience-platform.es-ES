@@ -3,9 +3,10 @@ title: Aproveche los casos prácticos de la experiencia del cliente para impulsa
 description: Descubra un marco práctico para conectar sus objetivos empresariales con experiencias reales de los clientes. Utilice las hojas de cálculo incluidas para crear estrategias, perfeccionar y aplicar casos de uso de forma eficaz en Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: d8cfbbf7482a6501a58dfde8c8c25ee8d46b06d8
+exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -20,3 +21,5 @@ Descubra un marco práctico para conectar sus objetivos empresariales con experi
 - Fomente la colaboración entre equipos para ofrecer resultados de casos de uso eficaces.
 - Aplique un marco de vencimientos para desarrollar casos de uso y lograr un mayor impacto en la empresa.
 - Utilice Adobe Experience Platform para acelerar la realización de valores.
+
+Descargue este [recurso de PDF](../assets/summit/20250110-summit-session-s651-leave-behind.pdf) para explorar un enfoque estructurado para definir, evaluar y desarrollar casos prácticos de experiencias del cliente. Aprenda a alinear los objetivos empresariales con el impacto mensurable, aprovechar los datos para la personalización y activar los casos de uso de forma eficaz dentro de Adobe Experience Platform.
