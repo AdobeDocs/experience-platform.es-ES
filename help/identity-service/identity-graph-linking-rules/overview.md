@@ -2,14 +2,19 @@
 title: Reglas de vinculación de gráfico de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 5%
+source-wordcount: '1476'
+ht-degree: 4%
 
 ---
 
-# Resumen de reglas de vinculación de gráficos de identidad
+# Resumen de reglas de vinculación de gráficos de identidad {#identity-graph-linking-rules-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_overview"
+>title="Reglas de vinculación de gráfico de identidad"
+>abstract="Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios."
 
 >[!AVAILABILITY]
 >
