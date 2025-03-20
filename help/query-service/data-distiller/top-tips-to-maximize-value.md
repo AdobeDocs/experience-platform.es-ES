@@ -2,9 +2,9 @@
 title: Principales consejos para maximizar el valor con Adobe Experience Platform Data Distiller - OS656
 description: Aprenda a maximizar el valor con Adobe Experience Platform Data Distiller enriqueciendo los datos del perfil del cliente en tiempo real y utilizando perspectivas de comportamiento para crear audiencias segmentadas. Este recurso incluye un conjunto de datos de muestra y un caso práctico que muestra cómo aplicar el modelo de actualización, frecuencia y monetario (RFM) para la segmentación de clientes.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
+source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3658'
 ht-degree: 0%
 
 ---
@@ -438,15 +438,15 @@ Dado que el Editor de consultas admite la ejecución secuencial, puede ejecutar 
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
 
 INSERT INTO adls_rfm_profile
 SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
@@ -578,28 +578,9 @@ WITH (
 );
 ```
 
-#### Insertar una audiencia {#insert-an-audience}
+#### Crear un conjunto de datos de audiencia vacío {#create-empty-audience-dataset}
 
-Para agregar perfiles a una audiencia existente, use el comando `INSERT INTO`. Esto le permite agregar perfiles individuales o audiencias completas a un conjunto de datos de audiencia existente.
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _{TENANT_ID}.userId, 
-    _{TENANT_ID}.days_since_last_purchase, 
-    _{TENANT_ID}.orders, 
-    _{TENANT_ID}.total_revenue, 
-    _{TENANT_ID}.recency, 
-    _{TENANT_ID}.frequency, 
-    _{TENANT_ID}.monetization 
-FROM adls_rfm_profile 
-WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### Adición de perfiles a una audiencia {#add-profiles-to-audience}
-
-Utilice los siguientes comandos SQL para crear y rellenar una audiencia:
+Antes de agregar perfiles, cree un conjunto de datos vacío para almacenar registros de audiencia.
 
 ```sql
 -- Create an empty audience dataset
@@ -620,11 +601,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### Inserción de perfiles en una audiencia existente {#insert-an-audience}
+
+Para añadir perfiles a una audiencia existente, utilice el comando INSERT INTO. Esto le permite agregar perfiles individuales o segmentos de audiencia completos a un conjunto de datos de audiencia existente.
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### Eliminar una audiencia {#delete-an-audience}
 
-Para eliminar una audiencia existente, use el comando `DROP AUDIENCE`. Si la audiencia no existe, se produce una excepción a menos que se especifique `IF EXISTS`.
-
-Utilice el siguiente comando SQL para eliminar una audiencia:
+Para eliminar una audiencia existente, utilice el comando DROP AUDIENCE. Si la audiencia no existe, se produce una excepción a menos que se especifique IF EXISTS.
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
