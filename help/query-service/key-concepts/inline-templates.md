@@ -2,7 +2,7 @@
 title: Plantillas en línea
 description: Aprenda a reutilizar varias condiciones en numerosas consultas con plantillas en línea.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Al ejecutar la consulta, el servicio de consultas reemplaza el nombre de la plan
 
 Puede utilizar plantillas para almacenar una o varias condiciones. No es necesario que sean una consulta completa por sí mismas. Si la plantilla contiene una consulta válida, puede ejecutarla simplemente llamando al nombre de la plantilla precedido de un símbolo hash. Por ejemplo, si almacenó `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` como una plantilla denominada `JUNE_2023_LOYALTY_MEMBERS`, el comando `#JUNE_2023_LOYALTY_MEMBERS;` ejecutaría la consulta válida contenida dentro de la plantilla.
 
->
+>[!NOTE]
 >
 >En la interfaz de usuario de Adobe Experience Platform, las plantillas en línea en forma de consultas parametrizadas solo se admiten en el nivel principal. Esto significa que las consultas parametrizadas solo funcionan cuando se utilizan en la plantilla original. La plantilla secundaria debe ser una plantilla estática y no puede tener parámetros dinámicos. Consulte la [documentación de consultas parametrizadas](../ui/parameterized-queries.md) para obtener más información.
 

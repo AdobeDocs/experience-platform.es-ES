@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Preguntas frecuentes sobre el servicio de consultas y Data Distiller
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas y Data Distiller. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5024'
 ht-degree: 0%
 
 ---
 
 # Preguntas frecuentes sobre el servicio de consultas y Data Distiller
 
-Este documento responde a las preguntas más frecuentes sobre el servicio de consultas y Data Distiller. También incluye códigos de error comúnmente vistos al utilizar el producto &quot;Consultas&quot; para la validación de datos o escribir datos transformados de nuevo en el lago de datos. Si tiene alguna pregunta o desea solucionar problemas de otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas para Experience Platform](../landing/troubleshooting.md).
+Este documento responde a las preguntas más frecuentes sobre el servicio de consultas y Data Distiller. También incluye códigos de error comúnmente vistos al utilizar el producto &quot;Consultas&quot; para la validación de datos o escribir datos transformados de nuevo en el lago de datos. Si tiene alguna pregunta o desea solucionar problemas con otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
 Para aclarar cómo Query Service y Data Distiller trabajan juntos en Adobe Experience Platform, aquí hay dos preguntas básicas.
 
@@ -25,38 +25,38 @@ En conjunto, Query Service facilita perspectivas rápidas, mientras que Data Dis
 
 ## ¿Cuál es la diferencia entre Query Service y Data Distiller?
 
-**Servicio** de consulta: se utiliza para consultas SQL centradas en la exploración, el validación y la experimentación de datos. Las salidas no se almacenan en el lago de datos y el tiempo de ejecución está limitado a 10 minutos. Las consultas ad hoc son adecuadas para realizar comprobaciones y análisis de datos ligeros e interactivos.
+**Servicio de consultas**: se usa para consultas SQL centradas en la exploración, validación y experimentación de datos. Las salidas no se almacenan en el lago de datos y el tiempo de ejecución está limitado a 10 minutos. Las consultas Ad hoc son adecuadas para comprobaciones y análisis de datos interactivos y ligeros.
 
-**Distiller** de datos: permite consultas por lotes que procesan, limpian y enriquecen datos, con resultados almacenados nuevamente en el lago de datos. Estas consultas admiten una ejecución más prolongada (hasta 24 horas) y funciones adicionales gustar programación, supervisión y sistema de informes acelerado. Data Distiller es ideal para la manipulación de datos en profundidad y tareas de procesamiento de datos programadas.
+**Data Distiller**: habilita consultas por lotes que procesan, limpian y enriquecen datos, con resultados almacenados de nuevo en el lago de datos. Estas consultas admiten una ejecución más larga (hasta 24 horas) y funciones adicionales como programación, monitorización y sistema de informes acelerado. Data Distiller es ideal para la manipulación de datos en profundidad y las tareas de procesamiento de datos programadas.
 
-Consulte el documento](./packaging.md) de empaquetado del [servicio de consultas para obtener información más detallada.
+Consulte el [documento de empaquetado del servicio de consultas](./packaging.md) para obtener información más detallada.
 
 ## Categorías de preguntas {#categories}
 
-El siguiente lista de respuestas a las preguntas más frecuentes se divide en las siguientes categorías:
+La siguiente lista de respuestas a las preguntas más frecuentes se divide en las siguientes categorías:
 
 - [General](#general)
 - [Data Distiller](#data-distiller)
-- [Consultas IU](#queries-ui)
+- [IU de consultas](#queries-ui)
 - [Ejemplos de conjuntos de datos](#dataset-samples)
 - [Exportación de datos](#exporting-data)
 - [Sintaxis SQL](#sql-syntax) 
-- [Consultas ITAS](#itas-queries)
+- [Consultas de ITAS](#itas-queries)
 - [Herramientas de terceros](#third-party-tools)
 - [Errores de API de PostgreSQL](#postgresql-api-errors)
 - [Errores de API de REST](#rest-api-errors)
 
-## Preguntas del Servicio de consulta general {#general}
+## Preguntas generales del servicio de consultas {#general}
 
-Esta sección incluye información sobre rendimiento, límites y procesos.
+Esta sección incluye información sobre el rendimiento, los límites y los procesos.
 
-### ¿Puedo desactivar la función de autocompletar en el editor del servicio de consultas?
+### ¿Puedo desactivar la función de autocompletar en el Editor del servicio de consultas?
 
 +++Respuesta
-No. Actualmente, el editor no admite la función de completado automático.
+No. El editor no admite actualmente la desactivación de la característica de autocompletar.
 +++
 
-### ¿Por qué el editor de consultas a veces se vuelve lento cuando escribo un consulta?
+### ¿Por qué el Editor de consultas a veces se vuelve lento cuando escribo en una consulta?
 
 +++Respuesta
 Una causa potencial es la función de autocompletar. La función procesa ciertos comandos de metadatos que ocasionalmente pueden ralentizar el editor durante la edición de consultas.
@@ -65,7 +65,7 @@ Una causa potencial es la función de autocompletar. La función procesa ciertos
 ### ¿Puedo usar [!DNL Postman] para la API del servicio de consultas?
 
 +++Respuesta
-Sí, puede visualizar e interactuar con todos los servicios API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### ¿Hay un límite en el número máximo de filas devueltas por una consulta a través de la interfaz de usuario?
@@ -84,17 +84,6 @@ En las consultas por lotes no se admite la actualización de una fila dentro del
 
 +++Respuesta
 No. No hay límite en el tamaño de los datos, pero hay un límite de tiempo de espera de consulta de 10 minutos desde una sesión interactiva. Si la consulta se ejecuta como un CTAS por lotes, no se aplica un tiempo de espera de 10 minutos. Consulte la guía sobre [ejecución interactiva de consultas](./best-practices/writing-queries.md#interactive-query-execution) para obtener más detalles.
-+++
-
-### ¿Cómo puedo evitar el límite en el número de filas de salida de una consulta SELECT?
-
-+++Respuesta
-Para evitar el límite de filas de salida, aplique &quot;LIMIT 0&quot; en la consulta. Por ejemplo:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
 +++
 
 ### ¿Cómo evito que mis consultas agoten el tiempo de espera en 10 minutos?
@@ -126,7 +115,7 @@ Hay ciertas palabras clave reservadas que no se pueden usar como nombre de colum
 +++Respuesta
 Los siguientes pasos describen cómo mostrar una vista tabular de un conjunto de datos a través de la interfaz de usuario, incluidos todos los campos y columnas anidados en un formulario aplanado.
 
-- Después de iniciar sesión en el Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en la navegación izquierda de la interfaz de usuario para navegar hasta el panel [!UICONTROL Conjuntos de datos].
+- Después de iniciar sesión en Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en la navegación izquierda de la interfaz de usuario para navegar hasta el panel [!UICONTROL Conjuntos de datos].
 - Se abre la pestaña [!UICONTROL Examinar] de conjuntos de datos. Puede utilizar la barra de búsqueda para restringir las opciones disponibles. Seleccione un conjunto de datos de la lista mostrada.
 
 ![Panel de conjuntos de datos en la interfaz de usuario de Platform con la barra de búsqueda y un conjunto de datos resaltados.](./images/troubleshooting/dataset-selection.png)
@@ -137,41 +126,41 @@ Los siguientes pasos describen cómo mostrar una vista tabular de un conjunto de
 
 - Seleccione cualquier campo del esquema para mostrar su contenido en una columna aplanada. El nombre de la columna se muestra encima de su contenido en el lado derecho de la página. Debe copiar este nombre para utilizarlo para consultar este conjunto de datos.
 
-![El XDM esquema y vista tabular de los datos acoplados. El nombre de columna de un conjunto de datos anidado se resalta en el IU.](./images/troubleshooting/column-name.png)
+![El esquema XDM y la vista tabular de los datos aplanados. El nombre de columna de un conjunto de datos anidado se resalta en la interfaz de usuario.](./images/troubleshooting/column-name.png)
 
-Consulte la documentación para obtener instrucciones completas sobre [cómo trabajar con estructuras](./key-concepts/nested-data-structures.md) de datos anidadas mediante el Editor de consultas o un cliente terceros.
+Consulte la documentación para obtener instrucciones completas sobre [cómo trabajar con estructuras de datos anidadas](./key-concepts/nested-data-structures.md) con el Editor de consultas o un cliente de terceros.
 +++
 
-### ¿Cómo puedo acelerar un consulta en un conjunto de datos que contiene matrices?
+### ¿Cómo acelero una consulta en un conjunto de datos que contiene matrices?
 
 +++Respuesta
-Para mejorar el rendimiento de las consultas en conjuntos de datos que contienen matrices, debe [explotar la matriz](https://spark.apache.org/docs/latest/api/sql/index.html#explode) como un [consulta](./sql/syntax.md#create-table-as-select) CTAS en tiempo de ejecución y, a continuación, explorarla en busca de oportunidades para mejorar su tiempo de procesamiento.
+Para mejorar el rendimiento de las consultas en conjuntos de datos que contienen matrices, debería [explorar la matriz](https://spark.apache.org/docs/latest/api/sql/index.html#explode) como una [consulta CTAS](./sql/syntax.md#create-table-as-select) en tiempo de ejecución y luego explorarla para encontrar más oportunidades que mejoren su tiempo de procesamiento.
 +++
 
-### ¿Por qué mi CTAS consulta sigue procesándose después de muchas horas solo para un pequeño número de filas?
+### ¿Por qué mi consulta CTAS sigue procesándose después de muchas horas para un pequeño número de filas?
 
 +++Respuesta
-Si el consulta ha tardado mucho tiempo en un conjunto de datos muy pequeño, póngase en contacto con el servicio de atención al cliente.
+Si la consulta ha tardado mucho tiempo en un conjunto de datos muy pequeño, póngase en contacto con el servicio de atención al cliente.
 
-Puede haber varias razones por las que un consulta atascado durante el procesamiento. Para determinar la causa exacta se requiere una análisis en profundidad caso por caso. [Póngase en contacto con Adobe Systems atención](#customer-support) al cliente para realizar este proceso.
+Puede haber varias razones para que una consulta se bloquee durante el procesamiento. Para determinar la causa exacta se requiere un análisis en profundidad caso por caso. [Póngase en contacto con el servicio de atención al cliente de Adobe](#customer-support) para iniciar este proceso.
 +++
 
-### ¿Cómo me pongo en contacto con Adobe Systems atención al cliente? {#customer-support}
+### ¿Cómo puedo ponerme en contacto con Atención al cliente de Adobe? {#customer-support}
 
 +++Respuesta
-[Una lista completa de Adobe Systems números](https://helpx.adobe.com/ca/contact/phone.html) de teléfono de atención al cliente está disponible en el Página de ayuda de Adobe Systems. Alternativamente, también puede encontrar ayuda en línea completando los siguientes pasos:
+[Encontrará una lista completa de los números de teléfono de asistencia al cliente de Adobe](https://helpx.adobe.com/ca/contact/phone.html) en la página de ayuda de Adobe. También puede encontrar ayuda en línea si completa los siguientes pasos:
 
-- Desplácese hasta [https://www.adobe.com/](https://www.adobe.com/) en su explorador web.
-- En el lado derecho de la barra de navegación superior, seleccione **[!UICONTROL Iniciar sesión]**.
+- Vaya a [https://www.adobe.com/](https://www.adobe.com/) en su explorador web.
+- En el lado derecho de la barra de navegación superior, selecciona **[!UICONTROL Iniciar sesión]**.
 
-![El sitio web Adobe Systems con Iniciar sesión resaltado.](./images/troubleshooting/adobe-sign-in.png)
+![El sitio web de Adobe con el inicio de sesión resaltado.](./images/troubleshooting/adobe-sign-in.png)
 
-- Utilice sus Adobe ID y contraseña registrados con su licencia Adobe Systems.
+- Utilice su Adobe ID y contraseña que estén registrados con su licencia de Adobe.
 - Seleccione **[!UICONTROL Ayuda y asistencia]** en la barra de navegación superior.
 
-![El menú desplegable de la barra navegación superior con Ayuda y soporte, Soporte para empresas y Contáctenos resaltado.](./images/troubleshooting/help-and-support.png)
+![Menú desplegable de la barra de navegación superior con Ayuda y soporte técnico, Soporte técnico para empresas y Contáctenos resaltados.](./images/troubleshooting/help-and-support.png)
 
-Aparece un banner desplegable que contiene la sección [!UICONTROL Ayuda y soporte técnico]. Seleccione **[!UICONTROL Póngase en contacto con nosotros]** para abrir el Asistente virtual del Servicio de atención al cliente de Adobe o seleccione **[!UICONTROL Soporte empresarial]** para obtener ayuda específica para organizaciones grandes.
+Aparece un banner desplegable que contiene la sección [!UICONTROL Ayuda y soporte técnico]. Seleccione **[!UICONTROL Póngase en contacto con nosotros]** para abrir el Asistente virtual del Servicio de atención al cliente de Adobe o seleccione **[!UICONTROL Soporte empresarial]** para obtener ayuda especializada para organizaciones grandes.
 +++
 
 ### ¿Cómo implemento una serie secuencial de trabajos, sin ejecutar trabajos subsiguientes si el trabajo anterior no se completa correctamente?
@@ -204,7 +193,7 @@ Para recuperar los registros de errores de una consulta específica, primero deb
 
 Utilice el comando GET para recuperar varias consultas. Encontrará información sobre cómo realizar una llamada a la API en [documentación de llamadas a la API de ejemplo](./api/queries.md#sample-api-calls).
 
-En la respuesta, identifique la GET que desee investigar y realice otra solicitud utilizando su valor `id`. Encontrará instrucciones completas en la documentación de [recuperación de una consulta mediante ID](./api/queries.md#retrieve-a-query-by-id).
+En la respuesta, identifique la consulta que desee investigar y realice otra petición GET utilizando su valor `id`. Encontrará instrucciones completas en la documentación de [recuperación de una consulta mediante ID](./api/queries.md#retrieve-a-query-by-id).
 
 Una respuesta correcta devuelve el estado HTTP 200 y contiene la matriz `errors`. La respuesta se ha abreviado para ser más breve.
 
@@ -307,26 +296,26 @@ Esta función está actualmente en curso. Los detalles estarán disponibles en [
 El servicio de consulta proporciona varias funciones de ayuda de SQL integradas para ampliar la funcionalidad de SQL. Consulte el documento para obtener una lista completa de las [funciones SQL admitidas por el servicio de consultas](./sql/spark-sql-functions.md).
 +++
 
-### ¿Se admiten todas las funciones nativas de [!DNL Spark SQL] o los usuarios están restringidos únicamente a las funciones de envoltorio [!DNL Spark SQL] proporcionadas por el Adobe?
+### ¿Se admiten todas las funciones nativas de [!DNL Spark SQL] o los usuarios están restringidos únicamente a las funciones de envoltorio [!DNL Spark SQL] proporcionadas por Adobe?
 
 +++Respuesta
 Hasta ahora, no todas las funciones de código abierto [!DNL Spark SQL] se han probado en los datos del lago de datos. Una vez probadas y confirmadas, se añadirán a la lista de admitidas. Consulte la [lista de [!DNL Spark SQL] funciones](./sql/spark-sql-functions.md) compatibles para buscar una función específica.
 +++
 
-### ¿Pueden los usuarios definir sus propias funciones definidas usuario (UDF) que se pueden utilizar en otras consultas?
+### ¿Pueden los usuarios definir sus propias funciones definidas por el usuario (UDF) que se pueden utilizar en otras consultas?
 
 +++Respuesta
-Debido a consideraciones de seguridad de datos, no se permite la definición personalizada de UDF.
+Debido a consideraciones de seguridad de los datos, no se permite la definición personalizada de FDU.
 +++
 
-### ¿Qué debo hacer si mi consulta programada falla?
+### ¿Qué debo hacer si falla mi consulta programada?
 
 +++Respuesta
-En primer lugar, compruebe los registros para averiguar los detalles del error. La sección de preguntas frecuentes sobre [la búsqueda de errores en los](#error-logs) registros proporciona más información sobre cómo hacerlo.
+En primer lugar, compruebe los registros para conocer los detalles del error. La sección de preguntas más frecuentes sobre [búsqueda de errores en los registros](#error-logs) proporciona más información sobre cómo hacerlo.
 
-También debe consultar la documentación para obtener orientación sobre cómo realizar [consultas programadas en el IU](./ui/user-guide.md#scheduled-queries) y a través [de la API](./api/scheduled-queries.md).
+También debería consultar la documentación para obtener instrucciones sobre cómo realizar [consultas programadas en la interfaz de usuario](./ui/user-guide.md#scheduled-queries) y a través de [la API](./api/scheduled-queries.md).
 
-Tenga en cuenta que, al utilizar el [!DNL Query Editor] solo puede agregar un programa a un consulta que ya se ha creado y guardado. Esto no se aplica a la [!DNL Query Service] API.
+Tenga en cuenta que al usar [!DNL Query Editor] solo puede agregar una programación a una consulta que ya se haya creado y guardado. Esto no se aplica a la API [!DNL Query Service].
 +++
 
 ### ¿Qué significa el error &quot;Límite de sesión alcanzado&quot;?
@@ -518,7 +507,7 @@ WHERE T2.ID IS NULL
 ### ¿Puedo crear un conjunto de datos utilizando una consulta CTAS con un nombre de guion bajo doble como los que se muestran en la interfaz de usuario? Por ejemplo: `test_table_001`.
 
 +++Respuesta
-No, se trata de una limitación intencionada entre Experience Platform que se aplica a todos los servicios de Adobe, incluido el servicio de consultas. Se acepta un nombre con dos guiones bajos como esquema y nombre de conjunto de datos, pero el nombre de tabla del conjunto de datos solo puede contener un guion bajo.
+No, se trata de una limitación intencionada en Experience Platform que se aplica a todos los servicios de Adobe, incluido el servicio de consultas. Se acepta un nombre con dos guiones bajos como esquema y nombre de conjunto de datos, pero el nombre de tabla del conjunto de datos solo puede contener un guion bajo.
 +++
 
 ### ¿Cuántas consultas simultáneas se pueden ejecutar a la vez?
@@ -765,7 +754,7 @@ Consulte la documentación para obtener más información sobre cómo [conectars
 Cualquier editor SQL de terceros compatible con PSQL o el cliente [!DNL Postgres] se puede conectar al Editor del servicio de consultas. Consulte la documentación de [conexión de clientes al servicio de consultas](./clients/overview.md) para obtener una lista de las instrucciones disponibles.
 +++
 
-### ¿Puedo conectar la herramienta de Power BI al servicio de consultas?
+### ¿Puedo conectar la herramienta Power BI al servicio de consultas?
 
 +++Respuesta
 Sí, puede conectar Power BI al servicio de consultas. Consulte la documentación de [instrucciones para conectar la aplicación de escritorio de Power BI al servicio de consultas](./clients/power-bi.md).
@@ -794,7 +783,7 @@ La siguiente tabla proporciona códigos de error PSQL y sus posibles causas.
 | Código de error | Estado de conexión | Descripción | Posible causa |
 |------------|---------------------------|-------------|----------------|
 | **08P01** | N/A | Tipo de mensaje no compatible | Tipo de mensaje no compatible |
-| **28P01** | Inicio-up: autenticación | Contraseña no válida | Token de autenticación no válido |
+| **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
 | **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
 | **42P12** | Inicio: autenticación | No se han encontrado tablas | No se han encontrado tablas para su uso |
 | **42601** | Consulta | Error de sintaxis | Error de comando o sintaxis no válido |
