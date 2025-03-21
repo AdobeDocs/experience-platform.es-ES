@@ -2,10 +2,10 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '4609'
-ht-degree: 4%
+source-wordcount: '4561'
+ht-degree: 3%
 
 ---
 
@@ -221,11 +221,6 @@ Cuando se aplican acciones masivas a las audiencias, se aplican las siguientes c
 - Si selecciona un filtro, las audiencias seleccionadas **se restablecerán**.
 
 #### [!BADGE Disponibilidad limitada]{type=Informative} Evaluación flexible de la audiencia {#flexible-audience-evaluation}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Límites flexibles de evaluación de público"
-abstract="Puede evaluar hasta 20 públicos en una sola ejecución flexible de evaluación de públicos.<br/><br/>Además, mientras el trabajo de evaluación se ejecuta lo antes posible, puede haber retrasos en el sistema, ya que las evaluaciones bajo demanda <b>no se pueden</b> ejecutar simultáneamente con otra evaluación bajo demanda o por lotes."
 
 La evaluación flexible de audiencias le permite ejecutar un trabajo de segmentación bajo demanda. Elija las audiencias que desea evaluar y seleccione **[!UICONTROL Evaluar audiencias]**.
 

@@ -5,9 +5,9 @@ breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree públicos a partir de los datos de su perfil del cliente en tiempo real utilizando definiciones de segmentos generadas por Adobe Experience Platform o fuentes externas.
 feature: Segments
 role: User
-source-git-commit: be480fee733eb786c5488a9a10d04a62ef845566
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '203'
 ht-degree: 40%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 40%
    - [Segmentación por lotes](methods/batch-segmentation.md)
    - [Segmentación de streaming](methods/streaming-segmentation.md)
    - [Segmentación de Edge](methods/edge-segmentation.md)
+   - [Evaluación flexible de audiencias](methods/flexible-audience-evaluation.md)
 - Tipos de audiencia {#types}
    - [Información general](types/overview.md)
    - [Audiencias de personas](types/people-audiences.md)
