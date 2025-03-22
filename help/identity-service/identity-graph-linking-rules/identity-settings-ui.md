@@ -2,9 +2,9 @@
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '641'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
->
->* Su cuenta debe tener el permiso **Ver gráfico de identidad** para tener acceso a la configuración de identidad en la interfaz de usuario. Para obtener más información, lea la [guía sobre permisos en el control de acceso basado en atributos](../../access-control/abac/ui/permissions.md).
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
 
 La configuración de identidad es una característica de la interfaz de usuario del servicio de identidad de Adobe Experience Platform que puede utilizar para designar áreas de nombres únicas y configurar la prioridad del área de nombres.
 
@@ -31,6 +29,15 @@ Lea los siguientes documentos antes de empezar a trabajar con la configuración 
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Prioridad del área de nombres](./namespace-priority.md)
 * [Simulación de gráfico](./graph-simulation.md)
+
+### Definición de permisos {#set-permissions}
+
+A continuación, debe asegurarse de que su cuenta esté aprovisionada con los siguientes permisos:
+
+* **[!UICONTROL Ver configuración de identidad]**: aplique este permiso para poder ver áreas de nombres únicas y su prioridad en la página de exploración del área de nombres de identidad.
+* **[!UICONTROL Editar configuración de identidad]**: aplique este permiso para poder editar y guardar la configuración de identidad.
+
+Póngase en contacto con el administrador si no tiene estos permisos. Para obtener más información, lea la [guía de permisos](../../access-control/abac/ui/permissions.md).
 
 ## Configuración de la identidad
 

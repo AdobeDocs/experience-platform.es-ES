@@ -2,9 +2,9 @@
 title: Guía de implementación para reglas de vinculación de gráficos de identidad
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1778'
 ht-degree: 2%
 
 ---
@@ -65,11 +65,16 @@ Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/cre
 >title="Asegúrese de tener un solo identificador de persona"
 >abstract="Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform siempre contengan un identificador de persona **single**, como un CRMID."
 
-Durante el proceso previo a la implementación, asegúrese de que los eventos autenticados que el sistema enviará a Experience Platform siempre contengan un identificador de persona, como CRMID.
+Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform siempre contengan un identificador de persona **single**, como un CRMID.
+
+* (Recomendado) Eventos autenticados con un identificador de persona.
+* (No recomendado) Eventos autenticados con dos identificadores de persona.
+* (No recomendado) Eventos autenticados sin identificadores de persona.
+
 
 >[!BEGINTABS]
 
->[!TAB Eventos autenticados con identificador de persona]
+>[!TAB Eventos autenticados con un identificador de persona]
 
 ```json
 {
@@ -98,8 +103,57 @@ Durante el proceso previo a la implementación, asegúrese de que los eventos au
 }
 ```
 
->[!TAB Eventos autenticados sin identificador de persona]
+>[!TAB Eventos autenticados con dos identificadores de persona]
 
+Si el sistema envía dos identificadores de persona, la implementación puede fallar en el requisito del área de nombres de una sola persona. Por ejemplo, si identityMap en la implementación del SDK web contiene un CRMID, un customerID y un área de nombres ECID, no hay garantía de que cada evento contenga CRMID y customerID.
+
+Lo ideal es enviar una carga útil similar a la siguiente:
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ],
+      "customerID": [
+          {
+            "id": "Jane",
+            "primary": false
+          }
+      ],
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+Sin embargo, es importante tener en cuenta que, aunque puede enviar dos identificadores de persona, no hay garantía de que se evite un colapso de gráfico no deseado debido a errores de implementación o datos. Considere el siguiente escenario:
+
+* `timestamp1` = John inicia sesión -> el sistema captura `CRMID: John, ECID: 111`. Sin embargo, `customerID: John` no está presente en esta carga útil de evento.
+* `timestamp2` = Jane inicia sesión -> el sistema captura `customerID: Jane, ECID: 111`. Sin embargo, `CRMID: Jane` no está presente en esta carga útil de evento.
+
+Por lo tanto, se recomienda enviar solo un identificador de persona con los eventos autenticados.
+
+En la simulación de gráficos, esta ingesta puede tener el siguiente aspecto:
+
+![Se representa la IU de simulación de gráficos con un gráfico de ejemplo.](../images/implementation/example-graph.png)
+
+>[!TAB Eventos autenticados sin identificadores de persona]
 
 ```json
 {
@@ -122,27 +176,7 @@ Durante el proceso previo a la implementación, asegúrese de que los eventos au
 }
 ```
 
-
 >[!ENDTABS]
-
-Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform siempre contengan un identificador de persona **single**, como un CRMID.
-
-* (Recomendado) Eventos autenticados con un identificador de persona.
-* (No recomendado) Eventos autenticados con dos identificadores de persona.
-* (No recomendado) Eventos autenticados sin identificadores de persona.
-
-Si el sistema envía dos identificadores de persona, la implementación puede fallar en el requisito del área de nombres de una sola persona. Por ejemplo, si identityMap en la implementación del SDK web contiene un CRMID, un customerID y un área de nombres ECID, entonces dos personas que comparten un dispositivo pueden asociarse incorrectamente con diferentes áreas de nombres.
-
-Dentro del servicio de identidad, esta implementación puede tener el siguiente aspecto:
-
-* `timestamp1` = John inicia sesión -> el sistema captura `CRMID: John, ECID: 111`.
-* `timestamp2` = Jane inicia sesión -> el sistema captura `customerID: Jane, ECID: 111`.
-
-+++Vea cómo puede verse la implementación en la simulación de gráficos
-
-![Se representa la IU de simulación de gráficos con un gráfico de ejemplo.](../images/implementation/example-graph.png)
-
-+++
 
 ## Definición de permisos {#set-permissions}
 
