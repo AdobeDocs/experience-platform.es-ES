@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
+source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1059'
 ht-degree: 30%
 
 ---
@@ -236,6 +236,7 @@ ht-degree: 30%
    - [Eliminar flujos de datos](tutorials/api/delete-dataflows.md)
    - [Introducir datos cifrados](tutorials/api/encrypt-data.md)
    - [Guardar un flujo de datos como borrador](tutorials/api/draft.md)
+   - [Aplicación de etiquetas de acceso a un flujo de datos](tutorials/api/labels.md)
 - Tutoriales de IU {#ui-tutorials}
    - Crear una conexión de origen {#create}
       - Aplicaciones de Adobe {#adobe-applications}
@@ -361,6 +362,7 @@ ht-degree: 30%
    - [Eliminar flujos de datos](tutorials/ui/delete.md)
    - [Suscripción a las alertas de fuentes](tutorials/ui/alerts.md)
    - [Guardar un flujo de datos como borrador](tutorials/ui/draft.md)
+   - [Aplicación de etiquetas de acceso a un flujo de datos](tutorials/ui/labels.md)
 - Fuentes de autoservicio (SDK por lotes) {#sdk}
    - [Información general](sources-sdk/overview.md)
    - Configure la especificación de conexión {#config}
