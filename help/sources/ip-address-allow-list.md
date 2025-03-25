@@ -2,9 +2,9 @@
 description: Obtenga información acerca de las direcciones IP que debe agregar a la lista de permitidos para utilizar correctamente las fuentes de Adobe Experience Platform.
 title: LISTA DE PERMITIDOS de direcciones IP para orígenes
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP de origen adecuado, puede permitir que el tráfico fluya para el servicio de transferencia de datos. Las siguientes direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes.
 
-## LISTA DE PERMITIDOS de direcciones IP para orígenes de lotes {#batch}
+## LISTA DE PERMITIDOS de direcciones IP para orígenes que se conectan a Experience Platform en [!DNL Azure] {#azure}
+
+### Orígenes de lotes en Experience Platform en [!DNL Azure] {#batch}
 
 Debe agregar las siguientes direcciones IP a la lista de permitidos para permitir que el tráfico fluya para el servicio de transferencia de datos para los orígenes de lotes.
 
@@ -21,7 +23,7 @@ Debe agregar las siguientes direcciones IP a la lista de permitidos para permiti
 
 >[!TAB VA7: América del Norte]
 
-### VA7: Norteamérica
+#### VA7: Norteamérica
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ Debe agregar las siguientes direcciones IP a la lista de permitidos para permiti
 
 >[!TAB NLD2: Europa]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ Debe agregar las siguientes direcciones IP a la lista de permitidos para permiti
 
 >[!TAB AUS5: Australia]
 
-### AUS5: Australia
+#### AUS5: Australia
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ Debe agregar las siguientes direcciones IP a la lista de permitidos para permiti
 
 >[!TAB CAN2: Canadá]
 
-### CAN2: Canadá
+#### CAN2: Canadá
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ Debe agregar las siguientes direcciones IP a la lista de permitidos para permiti
 
 >[!TAB IND2: India]
 
-### IND2: India
+#### IND2: India
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,7 +104,7 @@ Debe agregar las siguientes direcciones IP a la lista de permitidos para permiti
 
 >[!ENDTABS]
 
-## LISTA DE PERMITIDOS de direcciones IP para fuentes de flujo continuo {#streaming}
+### Transmitiendo orígenes en Experience Platform en [!DNL Azure] {#streaming}
 
 Debe agregar las siguientes direcciones IP a su lista de permitidos para permitir que el tráfico fluya para el servicio de transferencia de datos para orígenes de transmisión por secuencias como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) y [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
@@ -110,7 +112,7 @@ Debe agregar las siguientes direcciones IP a su lista de permitidos para permiti
 
 >[!TAB VA7: América del Norte]
 
-### VA7: Norteamérica
+#### VA7: Norteamérica
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ Debe agregar las siguientes direcciones IP a su lista de permitidos para permiti
 
 >[!TAB NLD2: Europa]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ Debe agregar las siguientes direcciones IP a su lista de permitidos para permiti
 
 >[!TAB AUS5: Australia]
 
-### AUS5: Australia
+#### AUS5: Australia
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ Debe agregar las siguientes direcciones IP a su lista de permitidos para permiti
 
 >[!TAB CAN2: Canadá]
 
-### CAN2: Canadá
+#### CAN2: Canadá
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ Debe agregar las siguientes direcciones IP a su lista de permitidos para permiti
 
 >[!TAB GBR9: Reino Unido]
 
-### GBR9: Reino Unido
+#### GBR9: Reino Unido
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ Debe agregar las siguientes direcciones IP a su lista de permitidos para permiti
 
 >[!TAB IND2: India]
 
-### IND2: India
+#### IND2: India
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ Debe agregar las siguientes direcciones IP a su lista de permitidos para permiti
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## Direcciones IP a la lista de permitidos para la conexión de orígenes a Experience Platform en [!DNL Amazon Web Services] (AWS) {#aws}
+
+Debe agregar la siguiente dirección IP a la lista de permitidos para conectar el origen a Experience Cloud en AWS:
+
+- `66.117.18.0/24`
