@@ -2,10 +2,10 @@
 title: Alojamientos de SFTP
 description: Obtenga información sobre cómo configurar Adobe Experience Platform para que entregue compilaciones de biblioteca a un servidor SFTP seguro y autoalojado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
+source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 38%
+source-wordcount: '875'
+ht-degree: 35%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 38%
 >
 >Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Experience Platform permite enviar compilaciones de biblioteca de etiquetas a un servidor SFTP protegido que aloje, lo que le proporciona un mayor control sobre cómo se almacenan y administran las compilaciones. Esta guía explica cómo configurar un host SFTP para una propiedad de etiquetas en la interfaz de usuario del Experience Platform o en la interfaz de usuario de recopilación de datos.
+Experience Platform permite enviar compilaciones de biblioteca de etiquetas a un servidor SFTP protegido que aloje, lo que le proporciona un mayor control sobre cómo se almacenan y administran las compilaciones. Esta guía explica cómo configurar un host SFTP para una propiedad de etiqueta en la IU de Experience Platform o en la IU de recopilación de datos.
 
 >[!NOTE]
 >
->También puede optar por utilizar un host administrado por Adobe en su lugar. Consulte la guía de [hosts administrados por Adobe](./managed-by-adobe-host.md) para obtener más información.
+>También puede optar por utilizar un host administrado por Adobe. Consulte la guía de [hosts administrados por Adobe](./managed-by-adobe-host.md) para obtener más información.
 >
 >Para obtener información sobre las ventajas y limitaciones de las bibliotecas de alojamiento propio, consulte la [guía de alojamiento propio](./self-hosting-libraries.md).
 
@@ -36,6 +36,22 @@ Debe tener un par de clave pública o privada instalado en el servidor SFTP. Pue
 La clave privada se utiliza para cifrar la clave pública. Debe proporcionar la clave privada durante el proceso de creación del host SFTP. Consulte la sección sobre [cifrado de valores](../../../api/guides/encrypting-values.md) en la guía de la API de Reactor para obtener instrucciones sobre el cifrado de claves públicas. Utilice la clave GPG del entorno de producción a menos que sepa que necesita una específica. Por último, puede cifrar la clave privada desde cualquier equipo, y no es necesario instalar GPG en el servidor para completar este paso.
 
 ### Direcciones IP de Lista de permitidos Platform
+
+>[!IMPORTANT]
+>
+> El 23 de junio de 2025, Adobe Launch actualizará las direcciones IP externas utilizadas para admitir el tipo de host SFTP y la funcionalidad de la API de devolución de llamada. Para seguir utilizando cualquiera de estas funciones, asegúrese de que las reglas del cortafuegos permitan el tráfico desde las nuevas direcciones IP.
+>
+> Para mantener el acceso ininterrumpido, recomendamos añadir las nuevas direcciones IP ahora y eliminar las antiguas después del 23 de junio de 2025.
+>
+>**Direcciones IP antiguas:**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**Nuevas direcciones IP:**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
 
 Es posible que deba aprobar un conjunto de direcciones IP para utilizarlo en el cortafuegos de su empresa a fin de permitir que Platform llegue al servidor SFTP y se conecte a él. Estas direcciones IP son:
 
