@@ -1,13 +1,13 @@
 ---
 title: Métodos de evaluación de públicos
 description: Obtenga información acerca de los distintos tipos de métodos de evaluación disponibles en Adobe Experience Platform.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 5%
+source-wordcount: '241'
+ht-degree: 4%
 
 ---
-
 
 # Métodos de evaluación de públicos
 
@@ -18,6 +18,10 @@ Adobe Experience Platform ofrece una variedad de métodos de evaluación para se
 La segmentación por lotes es un método de evaluación de la segmentación que puede utilizar para mover los datos de perfil de una sola vez y crear las audiencias correspondientes. Puede utilizar la segmentación por lotes para crear audiencias detalladas y enriquecidas para dirigirse a grupos grandes de perfiles.
 
 Para obtener más información sobre la segmentación por lotes, lea [descripción general de la segmentación por lotes](./batch-segmentation.md).
+
+### Evaluación flexible de audiencias
+
+La evaluación flexible de audiencias le permite ejecutar un trabajo de segmentación por lotes bajo demanda. Puede leer la [guía flexible de evaluación de audiencias](./flexible-audience-evaluation.md) para obtener más información.
 
 ## Segmentación de streaming
 

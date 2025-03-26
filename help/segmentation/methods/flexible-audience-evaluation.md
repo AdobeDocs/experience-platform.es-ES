@@ -2,12 +2,10 @@
 title: Guía flexible de evaluación de audiencias
 description: Aprenda a utilizar la evaluación de audiencia flexible para ejecutar trabajos de segmentación por lotes bajo demanda.
 role: Developer, User
-hide: true
-hidefromtoc: true
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 6%
+source-wordcount: '996'
+ht-degree: 5%
 
 ---
 
@@ -32,6 +30,10 @@ Cuando ejecute una evaluación de audiencia flexible, tenga en cuenta las siguie
 - Todas las audiencias **deben** evaluarse mediante la segmentación por lotes.
 - Todas las audiencias **deben** estar basadas en personas.
 - Solo puede seleccionar un máximo de 20 audiencias por ejecución de evaluación de audiencia flexible.
+
+>[!NOTE]
+>
+>Usted *puede* comprar ejecuciones de evaluación de audiencia flexibles adicionales por año. Para obtener más información, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
 ## Acceso {#access}
 
@@ -308,11 +310,17 @@ Después de confirmar que se enumeran las audiencias correctas, puede continuar 
 
 >[!NOTE]
 >
->Si ejecuta una evaluación de audiencia flexible, debe asegurarse de que la frecuencia esté configurada en **[!UICONTROL Después de la evaluación de segmentos]**. La ejecución de una evaluación de audiencia flexible en audiencias que ya están configuradas para activarse [después de la evaluación de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), activará las audiencias en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior.
+>El estado del trabajo del segmento puede informarse como en &quot;En cola&quot; en el panel de monitorización. Puede ver el estado más actualizado del trabajo del segmento realizando una petición GET al extremo `/segment/jobs`, proporcionando el ID del trabajo del segmento en la ruta de solicitud. Puede encontrar más información sobre el uso de este extremo en la pestaña API.
+>
+>Si ejecuta una evaluación de audiencia flexible y desea que la evaluación active la audiencia en un destino, debe asegurarse de que la frecuencia esté establecida en **[!UICONTROL Después de la evaluación del segmento]**. La ejecución de una evaluación de audiencia flexible en audiencias que ya están configuradas para activarse [después de la evaluación de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), activará las audiencias en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior.
 
 >[!ENDTABS]
 
-## Pasos siguientes {#next-steps}
+## Vídeo {#video}
+
+En el siguiente vídeo se muestra cómo acceder y utilizar la evaluación de audiencia flexible en Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Preguntas frecuentes {#faq}
 

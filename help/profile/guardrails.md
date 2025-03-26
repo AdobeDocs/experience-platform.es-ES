@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
+source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2611'
 ht-degree: 2%
 
 ---
@@ -127,6 +127,9 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 | Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | Puede crear un máximo de 50 audiencias de cuenta en una zona protegida. Después de llegar a 50 audiencias en una zona protegida, el control **[!UICONTROL Crear audiencia]** se deshabilita al intentar crear una nueva audiencia de cuenta. Más información sobre [audiencias de la cuenta](/help/segmentation/types/account-audiences.md). |
 | Composiciones publicadas por zona protegida | 10 | Protección de rendimiento | Puede tener un máximo de 10 composiciones publicadas en una zona protegida. Obtenga más información sobre [composición de audiencias en la guía de la interfaz de usuario](/help/segmentation/ui/audience-composition.md). |
 | Tamaño máximo de audiencia | 30 por ciento | Protección de rendimiento | La pertenencia máxima recomendada de una audiencia es del 30 % del número total de perfiles en el sistema. Es posible crear audiencias con más del 30 % de los perfiles como miembros o varias audiencias grandes, pero esto afectará al rendimiento del sistema. |
+| Ejecuciones flexibles de evaluación de audiencias | 50 por año (zona protegida de producción)<br/>100 por año (zona protegida de desarrollo) | Protección impuesta por el sistema | Tiene un máximo de 50 ejecuciones de evaluación de audiencia flexibles por año por cada zona protegida de **producción**. Tiene un máximo de 100 ejecuciones de evaluación de audiencia flexibles por año por cada zona protegida de **desarrollo**. |
+| Ejecuciones flexibles de evaluación de audiencias | 2 al día | Protección impuesta por el sistema | Tiene un máximo de 2 ejecuciones por día por zona protegida. |
+| Audiencias por ejecución flexible de evaluación de audiencias | 20 | Protección impuesta por el sistema | Puede tener un máximo de 20 audiencias por ejecución de evaluación de audiencia flexible. |
 
 {style="table-layout:auto"}
 
@@ -186,6 +189,6 @@ Consulte la siguiente documentación para obtener más información sobre otras 
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (edición B2C - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
