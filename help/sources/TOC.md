@@ -5,10 +5,10 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
+source-git-commit: 86f17ed4dc012481c2b4a7f1a40b492bfac5e137
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 30%
+source-wordcount: '1061'
+ht-degree: 29%
 
 ---
 
@@ -95,6 +95,7 @@ ht-degree: 30%
    - Socio de datos e identidad {#data-partner}
       - [Ingesta de datos de Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importación de datos de prospección de Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Bombora Intent](connectors/data-partners/bombora.md)
       - [Resolución de identidad de Merkury Enterprise](connectors/data-partners/merkury.md)
    - Comercio electrónico {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
