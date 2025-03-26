@@ -3,10 +3,10 @@ keywords: coincidencia de cliente de google;coincidencia de cliente de Google;co
 title: Conexión de Google Customer Match
 description: Customer Match de Google le permite utilizar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping y Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
+source-git-commit: 38c1020a7e7ff556ed16963239a30bf906ff79e7
 workflow-type: tm+mt
-source-wordcount: '2140'
-ht-degree: 3%
+source-wordcount: '2046'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,7 @@ Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Googl
 
 ### Caso de uso #1
 
-Una marca de ropa deportiva quiere llegar a los clientes existentes a través de [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM al Experience Platform y crear audiencias a partir de sus propios datos sin conexión. A continuación, puede enviar estas audiencias a [!DNL Google Customer Match] para que las usen en [!DNL Search] y [!DNL Shopping], con lo que se optimiza el gasto en publicidad.
+Una marca de ropa deportiva quiere llegar a los clientes existentes a través de [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Experience Platform y crear audiencias a partir de sus propios datos sin conexión. A continuación, puede enviar estas audiencias a [!DNL Google Customer Match] para que las usen en [!DNL Search] y [!DNL Shopping], con lo que se optimiza el gasto en publicidad.
 
 ### Caso de uso #2
 
@@ -50,7 +50,7 @@ Para promocionar la versión, cargan direcciones de correo electrónico desde su
 
 ## Gobernanza de datos para [!DNL Google Customer Match] destinos {#data-governance}
 
-Algunos destinos de Experience Platform tienen ciertas reglas y obligaciones para los datos enviados a, o recibidos de, la plataforma de destino. Usted es responsable de comprender las limitaciones y obligaciones de sus datos y de cómo los utiliza en Adobe Experience Platform y en la plataforma de destino. Adobe Experience Platform proporciona herramientas de control de datos para ayudarle a administrar algunas de estas obligaciones de uso de datos. [Más información](../../../data-governance/labels/overview.md) acerca de las herramientas y directivas de control de datos.
+Algunos destinos de Experience Platform tienen ciertas reglas y obligaciones para los datos enviados a la plataforma de destino o recibidos de ella. Usted es responsable de comprender las limitaciones y obligaciones de sus datos y de cómo los utiliza en Adobe Experience Platform y en la plataforma de destino. Adobe Experience Platform proporciona herramientas de control de datos para ayudarle a administrar algunas de estas obligaciones de uso de datos. [Más información](../../../data-governance/labels/overview.md) acerca de las herramientas y directivas de control de datos.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -72,8 +72,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -84,7 +84,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono y otros) utilizados en el destino [!DNL Google Customer Match]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ A continuación, asegúrese de que su cuenta de [!DNL Google] esté configurada 
 
 ### Lista de permitidos {#allowlist}
 
-Antes de crear el destino [!DNL Google Customer Match] en el Experience Platform, asegúrese de que su cuenta de [!DNL Google Ads] cumpla con la [[!DNL Google Customer Match] directiva](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Antes de crear el destino [!DNL Google Customer Match] en Experience Platform, asegúrese de que su cuenta de [!DNL Google Ads] cumpla con la [[!DNL Google Customer Match] directiva](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Google incluida en la lista de permitidos automáticamente a los clientes con cuentas compatibles.
 
@@ -119,7 +119,7 @@ Hay dos métodos para activar números de teléfono en [!DNL Google Customer Mat
 
 ### Requisitos de hash de correo electrónico {#hashing-requirements}
 
-Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o bien puede usar las direcciones de correo electrónico en borrar en el Experience Platform, y hacer que [!DNL Platform] las hash en la activación.
+Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede usar las direcciones de correo electrónico en borrar en Experience Platform y hacer que [!DNL Platform] las hash en la activación.
 
 Para obtener más información sobre los requisitos de hash de Google y otras restricciones en la activación, consulte las siguientes secciones en la documentación de Google:
 
@@ -227,16 +227,6 @@ Los datos de origen de los atributos no se cifran automáticamente. Si el campo 
 ## Supervisar destino {#monitor-destination}
 
 Después de conectarse al destino y establecer un flujo de datos de destino, puede usar la [funcionalidad de supervisión](/help/dataflows/ui/monitor-destinations.md) en Real-Time CDP para obtener información detallada acerca de los registros de perfil activados en el destino en cada ejecución de flujo de datos.
-
->[!IMPORTANT]
->
-> A partir de octubre de 2024, Adobe implementará gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre el Experience Platform y los informes de las plataformas de destino.
->
-> Antes de esta actualización, **[!UICONTROL Identidades con errores]** incluían todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total.
->
-> Esta mejora se aplica actualmente a [Google Customer Match destination](google-customer-match.md), pero se implementará gradualmente en otros destinos de streaming para Experience Platform.
-> Después de esta mejora, es posible que los usuarios de este destino vean una caída esperada en su recuento de **[!UICONTROL Identidades con errores]**.
-
 
 ## Compruebe que la activación de la audiencia se haya realizado correctamente {#verify-activation}
 

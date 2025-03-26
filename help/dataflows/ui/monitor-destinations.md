@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
+source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
 workflow-type: tm+mt
-source-wordcount: '3637'
-ht-degree: 10%
+source-wordcount: '3620'
+ht-degree: 9%
 
 ---
 
@@ -97,12 +97,12 @@ Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
   >[!IMPORTANT]
   >
-  > A partir de octubre de 2024, Adobe implementará gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre los informes de Experience Platform y de las plataformas de destino.
+  > A partir de marzo de 2025, Adobe implementará una actualización para aumentar la precisión de la creación de informes en los destinos de flujo continuo. Esta mejora garantiza una mejor alineación entre los informes de Experience Platform y las plataformas de destino.
   >
   > Antes de esta actualización, **[!UICONTROL Identidades con errores]** incluían todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total.
   > 
-  > Esta mejora se aplica actualmente a [Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md), pero se implementará gradualmente en otros destinos de flujo continuo de Experience Platform.
-  > Tras esta mejora, es posible que los usuarios del destino de [segmentación por lista de clientes de Google](../../destinations/catalog/advertising/google-customer-match.md) vean una caída esperada en su recuento de **[!UICONTROL Identities failed]**.
+  > Esta mejora se aplica a todos los destinos de flujo continuo.
+  > Tras esta mejora, es posible que los usuarios de destinos de streaming vean una caída esperada en su recuento de **[!UICONTROL Identidades con errores]**.
 
 
 - **[!UICONTROL Tasa de activación]**: El porcentaje de identidades recibidas que se activaron correctamente. La fórmula siguiente muestra cómo se calcula este valor:
