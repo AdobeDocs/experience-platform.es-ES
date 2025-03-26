@@ -1,10 +1,10 @@
 ---
 keywords: segmentación; segmentación rtcdp;segmentación de la plataforma de datos del cliente en tiempo real
-title: Servicio de segmentación en Real-time Customer Data Platform
-description: Adobe Real-time Customer Data Platform se basa en Adobe Experience Platform y utiliza muchos de los servicios y funciones de Experience Platform. Con el servicio de segmentación puede ofrecer marketing a medida dividiendo a sus clientes en grupos más pequeños con características similares.
+title: Servicio de segmentación en Real-Time Customer Data Platform
+description: Adobe Real-Time Customer Data Platform se basa en Adobe Experience Platform y utiliza muchos de los servicios y funcionalidades de Experience Platform. Con el servicio de segmentación puede ofrecer marketing a medida dividiendo a sus clientes en grupos más pequeños con características similares.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 96c5df4f172815d3b1904ab6614b1ce02d11dbaf
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 0%
@@ -21,13 +21,13 @@ Real-Time CDP se basa en Adobe Experience Platform y utiliza muchos de los servi
 
 La segmentación es el proceso de definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles para distinguir un grupo comercializable de personas de la base de clientes. Por ejemplo, en una campaña de correo electrónico llamada &quot;¿Se olvidó de comprar sus zapatillas de deporte?&quot;, es posible que desee una audiencia de todos los usuarios que buscaron zapatillas de running en los últimos 30 días, pero que no completaron una compra. Con diferentes definiciones de segmentos, puede centrarse en sus distintas audiencias y ofrecer una experiencia de marketing más personalizada.
 
-## [!DNL Segment Builder]
+## [!DNL Audience Builder]
 
-[!DNL Platform] le permite crear y acceder fácilmente a las definiciones de segmentos, así como utilizar diferentes componentes básicos para caracterizar aún más sus audiencias. Para obtener más información sobre cómo usar el Generador de segmentos, lea la [guía del Generador de segmentos](./segment-builder-guide.md).
+[!DNL Platform] le permite crear y acceder fácilmente a las definiciones de segmentos, así como utilizar diferentes componentes básicos para caracterizar aún más sus audiencias. Para obtener más información sobre cómo usar el Generador de audiencias, lea la [guía del Generador de audiencias](./audience-builder.md).
 
 ## Inteligencia artificial aplicada al cliente
 
-La inteligencia artificial aplicada al cliente, incluida con Real-time Customer Data Platform, le permite generar predicciones sobre los clientes a nivel individual con explicaciones.
+La inteligencia artificial aplicada al cliente, incluida con Real-Time Customer Data Platform, le permite generar predicciones sobre los clientes a nivel individual con explicaciones.
 
 Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, puede beneficiarse de las predicciones y perspectivas de la inteligencia artificial aplicada al cliente para personalizar las experiencias de los clientes y ofrecerles las ofertas y los mensajes más adecuados. La inteligencia artificial aplicada al cliente puede ayudarle con:
 
