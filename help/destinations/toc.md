@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
+source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1281'
 ht-degree: 5%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 5%
       * [Extensión de rama](./catalog/advertising/branch.md)
       * [Conexión de Criteo](./catalog/advertising/criteo.md)
       * [Conexión de Demandbase](./catalog/advertising/demandbase.md)
+      * [Conexión de Demandbase People](./catalog/advertising/demandbase-people.md)
       * [Extensión DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extensión de Facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Extensión OneTag de Flashtalk](./catalog/advertising/flashtalking.md)
