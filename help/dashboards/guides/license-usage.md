@@ -4,9 +4,9 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 7332b39b0e213632e595dc52eda390aa0b9a24ec
+source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
 workflow-type: tm+mt
-source-wordcount: '3483'
+source-wordcount: '3367'
 ht-degree: 16%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Público destinatario previsto"
->abstract="La Audiencia a la que se puede dirigir es el conjunto de perfiles de personas en el Perfil del cliente en tiempo real que su organización tiene derecho a incluir. Esto incluye perfiles directamente identificables y seudónimos.<br>Es posible que su uso alcance la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="La Audiencia a la que se puede dirigir es el conjunto de perfiles de personas en el Perfil del cliente en tiempo real que su organización tiene derecho a incluir. Esta métrica incluye perfiles directamente identificables y seudónimos.<br>Es posible que su uso alcance la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
@@ -134,7 +134,7 @@ ht-degree: 16%
 
 Puede ver información importante sobre el uso de licencias de su organización en el panel de control de Adobe Experience Platform [!UICONTROL Uso de licencias]. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
 
-Los informes de uso de licencias proporcionan un alto grado de granularidad sobre las métricas de uso de licencias. El panel proporciona métricas de uso para cada producto comprado (y complementos asociados), el uso consolidado de métricas en todas las zonas protegidas de producción o desarrollo y la métrica de uso de una zona protegida específica. Las siguientes aplicaciones de Experience Platform se pueden rastrear con métricas de uso: Real-Time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics.
+Los informes de uso de licencias proporcionan un alto grado de granularidad. La mayoría de las métricas se comparten en varios productos y reflejan el uso agregado en todos los productos que las utilizan, no los totales por producto. El tablero proporciona un uso consolidado de estas métricas en todos los entornos limitados de producción o desarrollo, así como la métrica de uso de un entorno limitado específico. Las siguientes aplicaciones de Experience Platform se pueden rastrear con métricas de uso: Real-Time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics.
 
 Esta guía describe cómo acceder y trabajar con el tablero de uso de licencias en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el tablero.
 
@@ -152,36 +152,87 @@ Los datos de este tablero se muestran exactamente como aparecen en el momento es
 
 ## Exploración del tablero de uso de licencias {#explore}
 
-Para navegar al panel de uso de licencias dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Uso de licencias]** en el carril izquierdo. Se abre la pestaña [!UICONTROL Información general], que muestra una lista de los productos disponibles.
+Para navegar al panel de uso de licencias dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Uso de licencias]** en el carril izquierdo. El tablero contiene dos fichas: **[!UICONTROL Métricas]** y **[!UICONTROL Productos]**.
 
 >[!NOTE]
 >
->El panel de uso de licencias no está habilitado de forma predeterminada. Los usuarios deben tener permiso para &quot;Ver tablero de uso de licencias&quot; para poder ver el tablero. Para obtener los pasos sobre la concesión de permisos de acceso para ver el tablero de uso de licencias, consulte la [guía de permisos de tablero](../permissions.md).
+>El panel de uso de licencias no está habilitado de forma predeterminada. Los usuarios deben tener permiso para &quot;Ver tablero de uso de licencias&quot; para ver el tablero. Para ver los pasos sobre la concesión de permisos de acceso, consulte la [guía de permisos de tablero](../permissions.md).
 
-![Pestaña Información general del tablero de uso de licencias, con uso de licencias resaltado en la barra lateral de navegación izquierda.](../images/license-usage/dashboard-overview.png)
+## Pestaña [!UICONTROL Métricas] {#metrics-tab}
 
-## [!UICONTROL Ficha Información general] {#overview-tab}
+La pestaña **[!UICONTROL Métricas]** proporciona una vista centralizada de todas las métricas de uso de licencias de su organización. Debido a que la mayoría de las métricas se comparten entre productos, no hay un desglose por producto independiente para estas métricas.
 
-El panel [!UICONTROL Uso de licencias] muestra dos tablas independientes: **Productos principales** y **Complementos**.
+La tabla de métricas incluye las siguientes columnas:
 
-- **[!UICONTROL Tabla de productos principales]**: Esta tabla enumera los principales productos de Adobe Experience Platform con licencia de su organización. Cada producto principal tiene sus propias métricas, seguimiento de uso y vistas de obtención de detalles a nivel de zona protegida. Estos productos principales proporcionan las métricas clave para el seguimiento y todos los complementos se incluyen en estas métricas.
+| Nombre de columna | Descripción |
+|---|---|
+| **[!UICONTROL Nombre de métrica]** | Nombre de la métrica de uso de licencias. Cada entrada incluye un icono de información (`ⓘ`) que muestra una descripción y una lista de productos asociados. |
+| **[!UICONTROL Con licencia]** | El número de unidades que puede utilizar su organización, tal como se define en el contrato. Esta métrica tiene el mismo valor que **Cantidad de licencia** en la ficha Productos. |
+| **[!UICONTROL Medido]** | Cantidad de la métrica que su organización utiliza actualmente. |
+| **[!UICONTROL Uso %]** | Porcentaje del valor de la licencia que está en uso actualmente. |
+| **[!UICONTROL Uso previsto %]** | El rango previsto de uso de métricas en las próximas 6 semanas. |
 
-- **[!UICONTROL Tabla de complementos]**: Esta tabla enumera productos adicionales cuyas cantidades de licencias se combinan con las métricas admitidas por los productos principales. Los complementos no tienen métricas independientes, pero mejoran el seguimiento de uso de los productos principales con los que están asociados.
+Utilice la opción de zona protegida **[!UICONTROL Production]** o **[!UICONTROL Development]** para filtrar las métricas que se muestran en las zonas protegidas.
+
+>[!NOTE]
+>
+>Los informes de consumo son acumulativos por tipo de zona protegida. Al seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo], se muestra el uso combinado en todas las zonas protegidas de ese tipo.
+
+![La pestaña Métricas del tablero de uso de licencias muestra una lista de métricas, cantidades de licencias y datos de uso.](../images/license-usage/metrics-tab.png)
+
+>[!WARNING]
+>
+>El permiso para ver el tablero de uso de licencias debe especificarse en el nivel de zona protegida. Añada permisos a cada zona protegida individual para verlos dentro del panel. Esta limitación se solucionará en una versión futura. Mientras tanto, está disponible la siguiente solución:
+>
+>1. Cree un perfil de producto en Adobe Admin Console.
+>2. En Permiso en la categoría Zona protegida, agregue todas las zonas protegidas que desee ver en el panel de uso de licencias.
+>3. En la categoría Permiso del tablero de usuarios, agregue el permiso &quot;Ver tablero de uso de licencias&quot;.
+
+### Ver detalles de métricas {#view-metric-details}
+
+Para ver los detalles de uso de una métrica específica, seleccione un nombre de métrica en la lista. Aparece una vista detallada de la métrica, que incluye:
+
+- Un gráfico de líneas histórico que muestra el uso a lo largo del tiempo
+- Una comparación de valores medidos y con licencia
+- Uso por zona protegida individual
+- Un selector de zona protegida para filtrar datos
+- Una opción de exportación para la descarga de CSV
+
+Esta visualización le permite realizar un seguimiento de las tendencias, comprender cómo contribuye cada zona protegida al uso general y exportar los datos para su análisis sin conexión.
+
+Cada gráfico incluye menús desplegables para filtrar los datos. Utilice el menú desplegable de intervalo de fechas para ajustar el período retrospectivo (predeterminado: últimos 30 días) o utilice el menú desplegable de zona protegida para ver el uso de una zona protegida de producción o desarrollo específica.
+
+![La vista de detalles de la métrica Audiencia direccionable con el gráfico de uso histórico, la tabla de espacio aislado y el botón de exportación.](../images/license-usage/metric-details-view.png)
+
+También puede seleccionar una **[!UICONTROL fecha personalizada]** para elegir el período de tiempo que se muestra.
+
+![Pestaña Información general del tablero de uso de licencias con las opciones de intervalo de fechas personalizadas resaltadas.](../images/license-usage/custom-date-range.png)
+
+### Exportación de CSV {#export-metric-usage-data}
+
+Puede exportar los datos de uso históricos de la métrica y la zona protegida seleccionadas como archivo CSV directamente desde la vista de detalles de métrica. Seleccione el icono **[!UICONTROL Exportar]** para descargar los datos del gráfico en formato tabular. El CSV exportado facilita el análisis de tendencias sin conexión o el uso compartido de perspectivas entre equipos.
+
+## Ficha [!UICONTROL Productos] {#products-tab}
+
+La ficha **[!UICONTROL Productos]** presenta los datos de uso de licencias agrupados por los productos comprados y los complementos asociados. La ficha [!UICONTROL Productos] contiene dos tablas:
+
+- **[!UICONTROL Tabla de productos principales]**: Esta tabla enumera los principales productos de Adobe Experience Platform con licencia de su organización. Cada producto enumera su métrica principal, seguimiento de uso y uso predicho.
+- **[!UICONTROL Tabla de complementos]**: Enumera elementos adicionales cuyas cantidades de licencias contribuyen a las métricas de productos principales. Los complementos no tienen métricas independientes, pero mejoran el seguimiento de uso de los productos principales con los que están asociados.
 
 | Nombre de columna | Descripción |
 |---|---|
 | **[!UICONTROL Producto]** | La solución de Adobe con licencia de su organización. |
 | **[!UICONTROL Métrica principal]** | La métrica principal utilizada para el seguimiento dentro de ese producto. |
-| **[!UICONTROL Importe de licencia]** | El valor contratado para la cantidad máxima de la métrica principal según lo acordado en el contrato de licencia del producto. |
-| **[!UICONTROL Uso]** | Cantidad de la métrica principal utilizada. Este valor proporciona el uso total de esa métrica en todas las zonas protegidas, ya sea de producción o desarrollo. |
+| **[!UICONTROL Importe de licencia]** | El valor contratado para la cantidad máxima de la métrica principal. |
+| **[!UICONTROL Uso]** | Cantidad de la métrica principal utilizada. |
 | **[!UICONTROL Uso %]** | El porcentaje de la métrica principal utilizado según la cantidad de licencia. |
-| **[!UICONTROL Uso de predicción]** | El porcentaje de uso previsto de la métrica principal según la cantidad de licencia. |
+| **[!UICONTROL Uso Predicho]** | El porcentaje de uso previsto de la métrica principal. |
 
 >[!NOTE]
 >
->Las cantidades de licencias para complementos se incluyen en [!UICONTROL Cantidad de licencias] de los productos principales. Por ejemplo, si compra un paquete de cinco zonas protegidas como complemento, la cantidad se agrega a la del producto base. La tabla de complementos muestra un [!UICONTROL Importe de licencia] específico del complemento, pero el uso real se rastrea a través del producto base.
+>El [!UICONTROL Importe de licencia] para complementos está incluido en el importe total de licencia del producto principal. Los complementos no se rastrean por separado, pero mejoran las capacidades de sus productos asociados. Por ejemplo, si compra un paquete de cinco zonas protegidas como complemento, la cantidad se agrega a la del producto base. La tabla de complementos muestra un [!UICONTROL Importe de licencia] específico del complemento, pero el uso real se rastrea a través del producto base.
 
-Las tablas indican la métrica principal de cada producto, ya que cada producto puede realizar el seguimiento de numerosas métricas.
+![Pestaña Productos del tablero de uso de licencias con tablas para productos principales y complementos.](../images/license-usage/products-tab.png)
 
 ### Uso previsto {#predicted-usage}
 
@@ -205,17 +256,13 @@ Administre y optimice de forma proactiva sus recursos de licencias con prediccio
 >
 >Las predicciones se actualizan semanalmente todos los viernes. La fecha de actualización se incluye en un icono de información (![Este icono de información.](../images/license-usage/info-icon.png)) sobre el título de columna.
 
-Para ver un resumen del uso de derechos de un producto, seleccione un producto de la tabla [!UICONTROL Productos principales].
+Vea un resumen del uso de derechos de un producto desde la ficha [!UICONTROL Producto] en la tabla [!UICONTROL Productos principales].
 
-![El [!UICONTROL uso de licencias] [!UICONTROL Información general] con un producto y la columna de uso previsto resaltada.](../images/license-usage/product-predicted-usage.png)
-
-Aparecerá la pestaña Resumen. Puede usar las predicciones detalladas disponibles en las pestañas [!UICONTROL Resumen] y [!UICONTROL Detalles] para garantizar una toma de decisiones informada y un uso eficiente de la licencia.
+![Se ha resaltado la ficha [!UICONTROL Uso de licencias] [!UICONTROL Producto] con un producto y la columna de uso previsto.](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
 >Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe.
-
-![Vista de resumen de un producto de Platform con la columna de uso previsto resaltada.](../images/license-usage/summary-predicted-usage.png)
 
 El porcentaje de uso previsto se determina de la siguiente manera:
 
@@ -236,73 +283,18 @@ La función de uso previsto admite las siguientes métricas:
 - [!UICONTROL Perfiles atractivos]
 - [!UICONTROL Volumen total de datos]
 
-## Pestaña [!UICONTROL Resumen] {#summary-tab}
-
-Para ver más métricas e información detallada sobre el uso de la licencia del producto, seleccione un nombre de producto de la lista. Aparece la vista [!UICONTROL Resumen] de ese producto. Todas las métricas disponibles se muestran en la ficha [!UICONTROL Resumen]. Las métricas disponibles dependen del producto con licencia. Esta vista proporciona **una vista consolidada de todas las métricas en todos los entornos limitados de producción o desarrollo**. El mismo nivel de análisis se proporciona para los entornos limitados de producción y desarrollo.
-
-![Vista de resumen de un producto de Platform que muestra todas las métricas disponibles para ese producto.](../images/license-usage/summary-tab.png)
-
-En la ficha Resumen, la tabla incluye la columna [!UICONTROL Métrica]. Estas descripciones legibles en lenguaje natural indican todas las métricas utilizadas para ese tipo de zona protegida.
-
-### Seleccionar una zona protegida {#select-sandbox}
-
-Para cambiar la vista entre los tipos de zonas protegidas de producción y desarrollo, seleccione [!UICONTROL zonas protegidas de producción] o [!UICONTROL zonas protegidas de desarrollo]. El tipo de zona protegida seleccionado se indica con el botón de opción situado junto al nombre de la zona protegida.
-
-Los informes de consumo para las zonas protegidas son acumulativos para todas las zonas protegidas del mismo tipo. En otras palabras, al seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] se proporcionan informes de consumo para todas las zonas protegidas de producción o desarrollo, respectivamente.
-
-![Vista de resumen de un producto de Platform con las zonas protegidas de producción y las de desarrollo resaltadas.](../images/license-usage/summary-tab-sandboxes.png)
-
->[!WARNING]
->
->El permiso para ver el tablero de uso de licencias debe especificarse en el nivel de zona protegida. Añada permisos a cada zona protegida individual para verlos dentro del panel. Esta limitación se solucionará en una versión futura. Mientras tanto, está disponible la siguiente solución:
->
->1. Cree un perfil de producto en Adobe Admin Console.
->2. En Permiso en la categoría Zona protegida, agregue todas las zonas protegidas que desee ver en el panel de uso de licencias.
->3. En la categoría Permiso del tablero de usuarios, agregue el permiso &quot;Ver tablero de uso de licencias&quot;.
-
-## Ficha [!UICONTROL Detalles] {#details-tab}
-
-Para ver **una métrica de uso en particular de una zona protegida específica**, vaya a la pestaña [!UICONTROL Detalles]. La pestaña [!UICONTROL Detalles] muestra todas las zonas protegidas disponibles en las zonas protegidas de producción o desarrollo.
-
-![Pestaña Detalles del tablero de uso de licencias.](../images/license-usage/details-tab.png)
-
-Desde esta vista, puede seleccionar ![El icono de inspección.](/help/images/icons/inspect.png) junto al nombre de una zona protegida para ver la visualización de esa métrica. Se abrirá un cuadro de diálogo con una visualización para esa métrica.
-
-### Visualizaciones {#visualizations}
-
-Cada widget de visualización incluye los siguientes aspectos:
-
-- Gráfico de líneas que registra el cambio de la métrica a lo largo del tiempo
-- Una clave para el gráfico de líneas
-- Nombre de la zona protegida
-- Menú desplegable para ajustar el período de tiempo del gráfico de líneas
-
-Los gráficos de líneas comparan los números de uso de su organización con el total disponible con las licencias de su organización y proporcionan un porcentaje del uso total.
-
-![Visualización de una métrica.](../images/license-usage/visualization.png)
-
-El periodo retrospectivo de análisis se puede ajustar desde el menú desplegable. El valor predeterminado de los últimos 30 días
-
-Para seleccionar un intervalo de fecha, puede utilizar la lista desplegable de intervalo de fecha para seleccionar el período de tiempo que se mostrará en el panel. Hay varias opciones disponibles, incluido el valor predeterminado de los últimos 30 días.
-
-![Se resaltó el cuadro de diálogo de visualización con la lista desplegable de intervalo de fechas.](../images/license-usage/date-range.png)
-
-También puede seleccionar **[!UICONTROL Fecha personalizada]** para elegir el período de tiempo que se muestra.
-
-![Pestaña Información general del tablero de uso de licencias con las opciones de intervalo de fechas personalizadas resaltadas.](../images/license-usage/custom-date-range.png)
-
 ## Métricas disponibles {#available-metrics}
 
 >[!IMPORTANT]
 >
->A partir del 20 de agosto, los clientes con derechos para &#39;[!UICONTROL Average Profile Richness]&#39; y &#39;[!UICONTROL Total Storage]&#39; vieron &#39;[!UICONTROL Total Data Volume]&#39; en el Tablero de uso de licencias. No se han realizado cambios en los derechos de los clientes, solo una simplificación de las métricas de seguimiento. [!UICONTROL Volumen total de datos] representa los datos disponibles en el Perfil del cliente en tiempo real para los flujos de trabajo de participación y personalización. Esta métrica simplificada mejoró la administración y la medición del uso del Perfil del cliente en tiempo real. Se animó a los clientes a ponerse en contacto con su representante de Adobe para obtener más aclaraciones sobre este cambio.
+>A partir del 20 de agosto, los clientes con derechos para &#39;[!UICONTROL Average Profile Richness]&#39; y &#39;[!UICONTROL Total Storage]&#39; vieron &#39;[!UICONTROL Total Data Volume]&#39; en el Tablero de uso de licencias. No se han realizado cambios en los derechos de los clientes, solo una simplificación de las métricas de seguimiento. [!UICONTROL Volumen total de datos] representa los datos disponibles en el Perfil del cliente en tiempo real para los flujos de trabajo de participación y personalización. Esta métrica simplificada mejoró la administración y la medición del uso del Perfil del cliente en tiempo real. Se recomienda a los clientes que se pongan en contacto con su representante de Adobe para obtener más aclaraciones sobre este cambio.
 
 El panel de uso de licencias informa sobre varias métricas únicas que se aplican a varios productos de la organización. Las métricas disponibles son:
 
 | Métrica | Descripción |
 |---|---|
 | [!UICONTROL Tamaño Audience Activation] | El tamaño total de los perfiles activados en cualquier destino basado en archivos en un año. Nota: Esto no incluye perfiles enviados a través de destinos de flujo continuo. |
-| [!UICONTROL Audiencia a la que se puede dirigir] | El conjunto de perfiles de personas en el Perfil del cliente en tiempo real al que puede acceder su organización, incluidos los perfiles directamente identificables y seudónimos. Estos perfiles pueden contener atributos, comportamientos y datos de abono a segmentos. Los volúmenes de perfil se calculan mediante el gráfico de identidad determinístico predeterminado de Adobe Experience Platform y se consideran una función compartida. |
+| [!UICONTROL Audiencia a la que se puede dirigir] | El conjunto de perfiles de personas en el Perfil del cliente en tiempo real al que puede acceder su organización, incluidos los perfiles directamente identificables y seudónimos. Estos perfiles pueden contener atributos, comportamientos y datos de abono a segmentos. Los volúmenes de perfil se calculan mediante el Identity Graph determinístico predeterminado de Adobe Experience Platform y se consideran una función compartida. |
 | [!UICONTROL Paquetes de usuarios de servicio de consultas ad hoc] | Un complemento para aumentar el derecho de los usuarios autorizados del servicio de consulta simultánea en cinco usuarios adicionales del servicio de consulta simultánea y una consulta ad hoc adicional que se ejecuta simultáneamente por paquete. Se pueden adquirir licencias para varios paquetes de usuarios de Ad Hoc Query adicionales. |
 | [!UICONTROL Promedio de riqueza de perfiles] | **Obsoleto**: la suma de todos los datos de producción almacenados en el servicio de perfil de concentrador en cualquier momento, dividida por cinco veces el número de perfiles de personas de negocios autorizados. [!UICONTROL Promedio de riqueza de perfiles] es una característica compartida. |
 | [!UICONTROL Filas CJA disponibles] | Las filas medias diarias de datos disponibles para su análisis en Customer Journey Analytics. |
@@ -321,14 +313,11 @@ El panel de uso de licencias informa sobre varias métricas únicas que se aplic
 | [!UICONTROL Volumen total de datos] | Cantidad total de datos disponibles para que el perfil del cliente en tiempo real los utilice en los flujos de trabajo de participación. Consulte las [preguntas más frecuentes acerca del volumen total de datos](../../landing/license-usage-and-guardrails/total-data-volume.md) para obtener más información. |
 | [!UICONTROL Volumen total de salida de datos] | El volumen anual acumulado de datos exportados de Adobe Experience Platform a almacenes de datos de terceros. |
 
-<!-- Approval needed on my revision above.
-Original PM version: | [!UICONTROL Total Volume of Data Egress] | The cumulative annual amount of data processed from third-party data warehouses. | -->
-
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
 >[!TIP]
 >
->Puede comprobar los derechos de licencia en su pedido de ventas para calcular métricas como la &quot;asignación de almacenamiento&quot;.<br>Por ejemplo,<ul><li>Asignación de Almacenamiento = El número de &quot;perfiles autorizados&quot; en su contrato X La riqueza promedio de perfiles</li></ul>
+>Puede comprobar los derechos de licencia en su pedido de ventas para calcular métricas como la &quot;Asignación de almacenamiento&quot;.<br>Por ejemplo,<ul><li>Asignación de Almacenamiento = El número de &quot;perfiles autorizados&quot; en su contrato X La riqueza promedio de perfiles</li></ul>
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían según la licencia que haya adquirido su organización. Para obtener definiciones detalladas de cada métrica, consulte la documentación de descripción del producto correspondiente:
 
