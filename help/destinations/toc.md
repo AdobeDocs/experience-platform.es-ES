@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 26125b0496b8b08443e9a1ccb13a384bf33ab4be
+source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1276'
 ht-degree: 5%
 
 ---
@@ -139,6 +139,7 @@ ht-degree: 5%
       * [Zona de aterrizaje de datos](./catalog/cloud-storage/data-landing-zone.md)
       * [Almacenamiento en la nube de Google](./catalog/cloud-storage/google-cloud-storage.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
+      * [Conexión de Snowflake](./catalog/cloud-storage/snowflake.md)
       * [LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube basados en archivos](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos de administración de la relación con los clientes (CRM) {#crm}
       * [Conexión Hubspot](./catalog/crm/hubspot.md)
