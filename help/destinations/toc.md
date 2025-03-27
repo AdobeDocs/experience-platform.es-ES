@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
+source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1278'
 ht-degree: 5%
 
 ---
@@ -78,6 +78,7 @@ ht-degree: 5%
       * [Extensión de etiqueta de conversión del anunciante Awin](./catalog/advertising/awin-conversiontag.md)
       * [Extensión Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extensión de seguimiento universal de eventos (UET) de Bing Ads](./catalog/advertising/bing-ads.md)
+      * [Conexión de Bombora](./catalog/advertising/bombora.md)
       * [Extensión de rama](./catalog/advertising/branch.md)
       * [Conexión de Criteo](./catalog/advertising/criteo.md)
       * [Conexión de Demandbase](./catalog/advertising/demandbase.md)
