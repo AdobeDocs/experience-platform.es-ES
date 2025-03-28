@@ -3,9 +3,9 @@ title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1590'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experie
 
 ## Recuperación de una lista de audiencias {#list}
 
-Puede recuperar una lista de todas las audiencias de su organización realizando una solicitud de GET al extremo `/audiences`.
+Puede recuperar una lista de todas las audiencias de su organización realizando una petición GET al extremo `/audiences`.
 
 **Formato de API**
 
@@ -202,7 +202,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
 
 ## Crear una audiencia nueva {#create}
 
-Puede crear una audiencia nueva realizando una solicitud de POST al extremo `/audiences`.
+Puede crear una audiencia nueva realizando una petición POST al extremo `/audiences`.
 
 **Formato de API**
 
@@ -325,7 +325,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 
 ## Búsqueda de una audiencia especificada {#get}
 
-Puede buscar información detallada sobre una audiencia específica realizando una solicitud de GET al extremo `/audiences` y proporcionando el ID de la audiencia que desea recuperar en la ruta de solicitud.
+Puede buscar información detallada sobre una audiencia específica realizando una petición GET al extremo `/audiences` y proporcionando el ID de la audiencia que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -422,9 +422,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 
 +++
 
-## Actualización de una audiencia {#put}
+## Sobrescribir una audiencia {#put}
 
-Puede actualizar (sobrescribir) una audiencia específica realizando una solicitud de PUT al extremo `/audiences` y proporcionando el ID de la audiencia que desea actualizar en la ruta de solicitud.
+Puede actualizar (sobrescribir) una audiencia específica realizando una petición PUT al extremo `/audiences` y proporcionando el ID de la audiencia que desea actualizar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -453,6 +453,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "namespace": "AEPSegments",
     "description": "Last 30 days",
     "type": "SegmentDefinition",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country=\"US\""
+    }
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -468,6 +473,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | El área de nombres de la audiencia. |
 | `description` | Una descripción de la audiencia. |
 | `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. Un `SegmentDefinition` hace referencia a una audiencia que se generó en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
+| `expression` | Un objeto que contiene la expresión PQL de la audiencia. |
 | `lifecycleState` | El estado de la audiencia. Los valores posibles incluyen `draft`, `published` y `inactive`. `draft` representa cuándo se creó la audiencia, `published` cuándo se publicó la audiencia y `inactive` cuándo la audiencia ya no está activa. |
 | `datasetId` | El ID del conjunto de datos en el que se pueden encontrar los datos de audiencia. |
 | `labels` | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
@@ -508,9 +514,84 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia 
 
 +++
 
+## Actualización de una audiencia {#patch}
+
+Puede actualizar una audiencia específica realizando una petición PATCH al extremo `/audiences` y proporcionando el ID de la audiencia que desea actualizar en la ruta de solicitud.
+
+**Formato de API**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | El ID de la audiencia que desea actualizar. Tenga en cuenta que este es el campo `id` y es **no** el campo `audienceId`. |
+
+**Solicitud**
+
++++ Una solicitud de ejemplo para actualizar una audiencia.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '[
+    {
+        "op": "add",
+        "path": "/lifecycleState",
+        "value": "inactive"
+    }
+ ]'
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `op` | Tipo de operación de PATCH realizada. Para este extremo, este valor es **always** `/add`. |
+| `path` | Ruta del campo que se va a actualizar. Los campos generados por el sistema, como `id`, `audienceId` y `namespace` **no se pueden** editar. |
+| `value` | El nuevo valor asignado a la propiedad especificada en `path`. |
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con la audiencia actualizada.
+
++++Una respuesta de ejemplo al aplicar parches a un campo en una audiencia.
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "SegmentDefinition",
+    "lifecycleState": "inactive",
+    "createdBy": "{CREATED_BY_ID}",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
++++
+
 ## Eliminar una audiencia {#delete}
 
-Puede eliminar una audiencia específica realizando una solicitud de DELETE al extremo `/audiences` y proporcionando el ID de la audiencia que desea eliminar en la ruta de solicitud.
+Puede eliminar una audiencia específica realizando una petición DELETE al extremo `/audiences` y proporcionando el ID de la audiencia que desea eliminar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -542,7 +623,7 @@ Una respuesta correcta devuelve el estado HTTP 204 sin mensaje.
 
 ## Recuperar varias audiencias {#bulk-get}
 
-Puede recuperar varias audiencias realizando una solicitud de POST al extremo `/audiences/bulk-get` y proporcionando los ID de las audiencias que desea recuperar.
+Puede recuperar varias audiencias realizando una petición POST al extremo `/audiences/bulk-get` y proporcionando los ID de las audiencias que desea recuperar.
 
 **Formato de API**
 
