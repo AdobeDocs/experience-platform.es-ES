@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Grupo de campos de esquema de consentimientos y preferencias
 description: Obtenga información acerca del grupo de campos Esquema de consentimientos y preferencias.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -169,7 +169,7 @@ El consentimiento de `adID` representa el consentimiento del cliente para saber 
 
 >[!NOTE]
 >
->No se espera que establezca este valor directamente, ya que el SDK de Adobe Experience Platform Mobile lo establece automáticamente cuando corresponde.
+>No se espera que establezca este valor directamente, ya que Adobe Experience Platform Mobile SDK lo establece automáticamente cuando corresponde.
 
 ## Ingesta de datos mediante el grupo de campos {#ingest}
 
@@ -185,7 +185,7 @@ Consulte el tutorial de [creación de un esquema en la interfaz de usuario](http
 
 ## Gestión de cambios de consentimiento y preferencia
 
-Cuando un cliente cambia sus consentimientos o preferencias en su sitio web, estos cambios deben recopilarse y aplicarse de inmediato mediante el [SDK web de Adobe Experience Platform](../../../web-sdk/commands/setconsent.md). Si un cliente se excluye de la recopilación de datos, toda la recopilación de datos debe interrumpirse inmediatamente. Si un cliente se excluye de la personalización, no debe haber ninguna personalización presente en la siguiente página que visite.
+Cuando un cliente cambia sus consentimientos o preferencias en su sitio web, estos cambios deben recopilarse y aplicarse de inmediato mediante [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Si un cliente se excluye de la recopilación de datos, toda la recopilación de datos debe interrumpirse inmediatamente. Si un cliente se excluye de la personalización, no debe haber ninguna personalización presente en la siguiente página que cargue.
 
 ## Pasos siguientes
 
