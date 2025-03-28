@@ -4,10 +4,10 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
+source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 16%
+source-wordcount: '3408'
+ht-degree: 15%
 
 ---
 
@@ -144,11 +144,11 @@ Para obtener una descripción general de la IU de Platform, consulte la [guía d
 
 El tablero [!UICONTROL Uso de licencias] muestra una lista de todos los productos de Experience Platform que ha comprado y los complementos de dichos productos. Desde este panel, puede encontrar una instantánea de los datos relacionados con las licencias de su organización para Experience Platform en cualquier zona protegida asociada.
 
-Los datos de este tablero se muestran exactamente como aparecen en el momento específico en el que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o una muestra de los datos y el panel no se actualiza en tiempo real.
+Los datos de este tablero se muestran exactamente como aparecían en el momento específico en el que se tomó la instantánea. No es una aproximación ni una muestra, pero el panel no se actualiza en tiempo real.
 
 >[!NOTE]
 >
->Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el tablero hasta que se tome la siguiente instantánea.
+>La mayoría de las métricas del tablero se actualizan a diario, según una instantánea de la instancia de Platform. [!UICONTROL Filas de CJA disponibles] son una excepción y se actualizan mensualmente. Las métricas etiquetadas con &quot;paquetes&quot;, como [!UICONTROL Paquetes de usuarios de Adhoc Query Service], [!UICONTROL No de paquetes de la riqueza de perfiles] y [!UICONTROL No de paquetes de segmentación de streaming], reflejan los derechos de licencia para ofertas de complementos y no rastrean el uso en curso. Los cambios realizados después de la instantánea no serán visibles hasta que se tome la siguiente instantánea.
 
 ## Exploración del tablero de uso de licencias {#explore}
 
