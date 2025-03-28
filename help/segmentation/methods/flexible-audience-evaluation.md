@@ -2,15 +2,19 @@
 title: Guía flexible de evaluación de audiencias
 description: Aprenda a utilizar la evaluación de audiencia flexible para ejecutar trabajos de segmentación por lotes bajo demanda.
 role: Developer, User
-source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1049'
 ht-degree: 5%
 
 ---
 
-
 # Guía flexible de evaluación de audiencias
+
+>[!AVAILABILITY]
+>
+>La evaluación de audiencia flexible está **solamente** disponible en las instancias de Experience Platform que se ejecutan en [!DNL Microsoft Azure]. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../landing/multi-cloud.md).
 
 La evaluación flexible de audiencias le permite ejecutar un trabajo de segmentación por lotes bajo demanda. Con la evaluación flexible de audiencias, puede ejecutar lanzamientos de campañas ad-hoc, comunicaciones puntuales u otras actividades en las que el tiempo sea un factor importante.
 
@@ -33,7 +37,7 @@ Cuando ejecute una evaluación de audiencia flexible, tenga en cuenta las siguie
 
 >[!NOTE]
 >
->Usted *puede* comprar ejecuciones de evaluación de audiencia flexibles adicionales por año. Para obtener más información, póngase en contacto con el Servicio de atención al cliente de Adobe.
+>Puede adquirir ejecuciones de evaluación de audiencia flexibles adicionales por año. Para obtener más información, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
 ## Acceso {#access}
 
@@ -326,6 +330,14 @@ En el siguiente vídeo se muestra cómo acceder y utilizar la evaluación de aud
 
 En la siguiente sección se enumeran las preguntas más frecuentes relacionadas con la evaluación flexible de audiencias.
 
+### ¿Con qué frecuencia puedo activar una audiencia mediante una evaluación de audiencia flexible?
+
++++ Respuesta
+
+Puede activar una audiencia utilizando una evaluación de audiencia flexible inmediatamente después de su creación.
+
++++
+
 ### ¿Puedo ejecutar la programación con una evaluación de audiencia flexible?
 
 +++ Respuesta
@@ -373,4 +385,3 @@ Para una evaluación de audiencia flexible, solo se admiten audiencias con el or
 Las ejecuciones de evaluación de audiencia flexibles que se crearon mediante la API o el recuento de IU hasta el límite máximo. Sin embargo, la ejecución diaria del trabajo de segmentación por lotes que se ejecuta todas las noches **no** contribuye a este límite.
 
 +++
-
