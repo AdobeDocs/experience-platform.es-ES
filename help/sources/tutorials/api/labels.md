@@ -1,9 +1,8 @@
 ---
 title: Aplique etiquetas de acceso para administrar el acceso de los usuarios a los flujos de datos de origen mediante la API
 description: Aprenda a utilizar la API de Flow Service para aplicar etiquetas de acceso y administrar el acceso de los usuarios a los flujos de datos de origen.
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 572d6838-3e4c-4fd5-89fa-32cad6280325
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 4%

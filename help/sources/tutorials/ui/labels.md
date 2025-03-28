@@ -1,9 +1,8 @@
 ---
 title: Aplicar etiquetas de acceso para administrar el acceso de los usuarios a los flujos de datos de origen en la IU
 description: Aprenda a utilizar la interfaz de usuario de Experience Platform para aplicar etiquetas de acceso y administrar el acceso de los usuarios a los flujos de datos de origen.
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 2%

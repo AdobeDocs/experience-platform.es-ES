@@ -1,20 +1,20 @@
 ---
-title: Creación de una conexión de Google Big Query Source en la interfaz de usuario
+title: Conectar  [!DNL Google BigQuery] A Experience Platform Mediante La Interfaz De Usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Google Big Query mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
+source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 1%
+source-wordcount: '796'
+ht-degree: 0%
 
 ---
 
-# Crear una conexión de origen [!DNL Google BigQuery] en la interfaz de usuario
+# Conectar [!DNL Google BigQuery] a Experience Platform mediante la interfaz de usuario
 
 >[!IMPORTANT]
 >
->El origen [!DNL Google BigQuery] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
+>El origen [!DNL Google BigQuery] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time Customer Data Platform Ultimate.
 
 Lea este tutorial para aprender a conectar su cuenta de [!DNL Google BigQuery] a Adobe Experience Platform mediante la interfaz de usuario.
 
@@ -22,7 +22,7 @@ Lea este tutorial para aprender a conectar su cuenta de [!DNL Google BigQuery] a
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -31,33 +31,37 @@ Si ya tiene una conexión [!DNL Google BigQuery] válida, puede omitir el resto 
 
 ### Recopilar credenciales necesarias
 
-Lea la [[!DNL Google BigQuery] guía de autenticación](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) para ver los pasos detallados sobre cómo recopilar las credenciales requeridas.
+Lea la [[!DNL Google BigQuery] guía de autenticación](../../../../connectors/databases/bigquery.md#prerequisites) para ver los pasos detallados sobre cómo recopilar las credenciales requeridas.
 
-## Conecte su cuenta de Google BigQuery
+## Navegar por el catálogo de fuentes {#navigate}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Fuentes]*. Puede seleccionar la categoría adecuada en el panel *[!UICONTROL Categorías]*. También puede utilizar la barra de búsqueda para desplazarse al origen específico que desee utilizar.
 
-En la categoría [!UICONTROL Bases de datos], seleccione **[!UICONTROL Google BigQuery]** y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
+Para usar [!DNL Google BigQuery], seleccione la tarjeta de origen **[!UICONTROL Google BigQuery]** en *[!UICONTROL Bases de datos]* y luego seleccione **[!UICONTROL Agregar datos]**.
 
 >[!TIP]
 >
->Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
+>Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez creada una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
 
 ![El catálogo de orígenes con Google BigQuery seleccionado.](../../../../images/tutorials/create/google-big-query/catalog.png)
 
-Aparecerá la página **[!UICONTROL Conectarse a Google Big Query]**. En esta página, puede usar credenciales nuevas o existentes.
+## Usar una cuenta existente {#existing}
 
-### Cuenta existente
-
-Para conectar una cuenta existente, seleccione la cuenta de [!DNL Google BigQuery] con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para usar una cuenta existente, selecciona la cuenta de [!DNL Google BigQuery] con la que deseas conectarte y, a continuación, selecciona **[!UICONTROL Siguiente]** para continuar.
 
 ![Página de la cuenta existente donde se presenta una lista de cuentas existentes.](../../../../images/tutorials/create/google-big-query/existing.png)
 
-### Nueva cuenta
+## Crear una nueva cuenta {#create}
 
-Si va a crear una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre y una descripción opcional para la nueva cuenta de [!DNL Google BigQuery].
+Si no tiene una cuenta existente, debe crear una nueva cuenta proporcionando las credenciales de autenticación necesarias que se correspondan con su origen.
+
+Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y, a continuación, proporciona un nombre y, opcionalmente, agrega una descripción para tu cuenta.
 
 ![La nueva interfaz de cuenta en el flujo de trabajo de orígenes.](../../../../images/tutorials/create/google-big-query/new.png)
+
+### Conectarse a Experience Platform en Azure {#azure}
+
+Puede conectar su cuenta de [!DNL Google BigQuery] a Experience Platform en Azure mediante la autenticación básica o de servicio.
 
 >[!BEGINTABS]
 
@@ -65,17 +69,31 @@ Si va a crear una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a co
 
 Para usar la autenticación básica, selecciona **[!UICONTROL Autenticación básica]** y proporciona valores para tu [proyecto, ID de cliente, secreto de cliente, token de actualización y (opcional) conjunto de datos de resultados grandes](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y espere unos momentos para que se establezca la conexión.
 
-![Interfaz de la nueva cuenta donde se ha seleccionado la autenticación básica.](../../../../images/tutorials/create/google-big-query/basic_auth.png)
+![Interfaz de la nueva cuenta donde se ha seleccionado la autenticación básica.](../../../../images/tutorials/create/google-big-query/basic-auth.png)
 
 >[!TAB Usar autenticación de servicio]
 
 Para usar la autenticación del servicio, selecciona **[!UICONTROL Autenticación del servicio]** y proporciona valores para tu [ID de proyecto, contenido de archivos de claves y (opcional) ID de conjuntos de datos de resultados grandes](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y espere unos momentos para que se establezca la conexión.
 
-![Interfaz de la nueva cuenta donde se ha seleccionado la autenticación del servicio.](../../../../images/tutorials/create/google-big-query/service_auth.png)
+![Interfaz de la nueva cuenta donde se ha seleccionado la autenticación del servicio.](../../../../images/tutorials/create/google-big-query/service-auth.png)
 
 >[!ENDTABS]
 
-### Omitir vista previa de datos de ejemplo {#skip-preview-of-sample-data}
+### Conexión a Experience Platform en Amazon Web Service (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Esta sección se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../../../landing/multi-cloud.md).
+
+Para crear una nueva cuenta de [!DNL Google BigQuery] y conectarse a Experience Platform en AWS, asegúrese de que se encuentra en una zona protegida de VA6 y, a continuación, proporcione las credenciales necesarias para la autenticación.
+
+* **Id. de proyecto**: El id. de proyecto que corresponde con su cuenta de [!DNL Google BigQuery].
+* **Contenido del archivo de clave**: El archivo de clave que se usa para autenticar la cuenta de servicio. Puede recuperar este valor del [[!DNL Google Cloud service accounts] tablero](https://console.cloud.google.com). El contenido del archivo de claves está en formato JSON. Debe codificar esto en [!DNL Base64] al autenticarse en Experience Platform.
+* **ID del conjunto de datos**: El ID del conjunto de datos [!DNL Google BigQuery]. Este ID representa dónde se encuentran las tablas de datos y debe crearse previamente para permitir conjuntos de resultados grandes.
+
+![Interfaz de la nueva cuenta para una conexión de AWS.](../../../../images/tutorials/create/google-big-query/aws.png)
+
+## Omitir vista previa de datos de ejemplo {#skip-preview-of-sample-data}
 
 Durante el paso de selección de datos, puede encontrar un tiempo de espera al ingerir tablas o archivos de datos grandes. Puede omitir la previsualización de datos para evitar el tiempo de espera y seguir viendo el esquema, aunque sin datos de ejemplo. Para omitir la vista previa de datos, active la opción **[!UICONTROL Omitir vista previa de datos de ejemplo]**.
 
