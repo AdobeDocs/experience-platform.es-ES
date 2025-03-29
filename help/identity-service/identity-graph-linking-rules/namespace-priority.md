@@ -2,7 +2,7 @@
 title: Prioridad del área de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -73,11 +73,11 @@ Actualmente, la prioridad del área de nombres influye en el comportamiento del 
 
 ![Un diagrama del ámbito de aplicación de prioridad de espacio de nombres](../images/namespace-priority/application-scope.png)
 
-### Servicio de identidad: algoritmo de optimización de identidad
+## Servicio de identidad: algoritmo de optimización de identidad
 
 Para estructuras de gráficos relativamente complejas, la prioridad del área de nombres desempeña un papel importante a la hora de garantizar que se eliminen los vínculos correctos cuando se producen escenarios de colapso de gráficos. Para obtener más información, lea la [descripción general del algoritmo de optimización de identidad](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
-### Perfil del cliente en tiempo real: determinación de identidad principal para eventos de experiencia
+## Perfil del cliente en tiempo real: determinación de identidad principal para eventos de experiencia
 
 * Una vez que haya configurado la configuración de identidad para una zona protegida determinada, la identidad principal de los eventos de experiencia se determinará mediante la prioridad de área de nombres más alta de la configuración.
    * Esto se debe a que los eventos de experiencia son de naturaleza dinámica. Un mapa de identidad puede contener tres o más identidades y la prioridad del área de nombres garantiza que el área de nombres más importante esté asociada al evento de experiencia.
@@ -122,7 +122,7 @@ Dadas las configuraciones descritas anteriormente, las acciones del usuario y la
 
 {style="table-layout:auto"}
 
-### Servicio de segmentación: almacenamiento de metadatos de pertenencia a segmentos
+## Servicio de segmentación: almacenamiento de metadatos de pertenencia a segmentos
 
 ![Un diagrama del almacenamiento de pertenencia a segmento](../images/namespace-priority/segment-membership-storage.png)
 
@@ -139,7 +139,7 @@ Por ejemplo, supongamos que hay dos perfiles:
 
 Si John y Jane comparten un dispositivo, el ECID (explorador web) se transfiere de una persona a otra. Sin embargo, esto no influye en la información de abono de segmentos almacenada en contra de John y Jane.
 
-Si los criterios de calificación de segmentos se basaran únicamente en eventos anónimos almacenados contra el ECID, Jane cumpliría los requisitos para ese segmento
+Si los criterios de calificación de segmentos se basaran únicamente en eventos anónimos almacenados contra el ECID, Jane cumpliría los requisitos para ese segmento.
 
 ## Implicaciones en otros servicios de Experience Platform {#implications}
 
