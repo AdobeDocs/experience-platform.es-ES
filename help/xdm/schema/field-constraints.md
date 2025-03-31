@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema;Esquema;grupo de campos;grupos de campos;grupos de campos;grupos de campos;tipo de datos;tipos de datos;Tipos de datos;Tipo de datos;Diseño de esquema;tipo de datos;Tipo de datos;Esquemas;Diseño de esquema;Mapa;Tipo de datos;Tipo de datos;Esquemas;
+keywords: Experience Platform;inicio;temas populares;esquema;esquema;grupo de campos;grupos de campos;grupos de campos;grupos de campos;tipo de datos;tipos de datos;Tipos de datos;Tipo de datos;Diseño de esquema;tipo de datos;Tipo de datos;esquemas;Diseño de esquema;Mapa;
 solution: Experience Platform
 title: Restricciones de tipo de campo XDM
 description: Una referencia para las restricciones de tipo de campo en el Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 2%
@@ -19,7 +19,7 @@ En esquemas XDM (Experience Data Model), el tipo de campo restringe el tipo de d
 
 Antes de usar esta guía, revise los [conceptos básicos de la composición de esquemas](./composition.md) para obtener una introducción a los esquemas XDM, las clases y los grupos de campos de esquema.
 
-Si planea definir sus propios tipos de campo en la API, se recomienda comenzar con la [Guía para desarrolladores de Schema Registry](../api/getting-started.md) para aprender a crear grupos de campos y tipos de datos para incluir sus campos personalizados en. Si utiliza la interfaz de usuario del Experience Platform para crear los esquemas, consulte la guía sobre [definición de campos en la interfaz de usuario](../ui/fields/overview.md) para obtener información sobre cómo implementar restricciones en campos que defina en grupos de campos personalizados y tipos de datos.
+Si planea definir sus propios tipos de campo en la API, se recomienda comenzar con la [Guía para desarrolladores de Schema Registry](../api/getting-started.md) para aprender a crear grupos de campos y tipos de datos para incluir sus campos personalizados en. Si está usando la interfaz de usuario de Experience Platform para crear los esquemas, consulte la guía sobre [definición de campos en la interfaz de usuario](../ui/fields/overview.md) para obtener información sobre cómo implementar restricciones en campos que defina dentro de grupos de campos personalizados y tipos de datos.
 
 ## Estructura base y ejemplos {#basic-types}
 
@@ -130,7 +130,7 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL Booleano]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "string"}</pre>
+{"type": "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
