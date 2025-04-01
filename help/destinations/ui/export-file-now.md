@@ -3,7 +3,7 @@ title: Exportar archivos bajo demanda a destinos por lotes mediante la interfaz 
 type: Tutorial
 description: Obtenga información sobre cómo exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: d3bd76f5b36b6a6afcb67fe923eb8e4f3d7a9415
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 9%
@@ -63,7 +63,7 @@ Para exportar archivos bajo demanda a destinos por lotes, debe haber [conectado 
 Tenga en cuenta las siguientes consideraciones al usar el control **[!UICONTROL Exportar archivo ahora]**:
 
 * **[!UICONTROL Exportar archivo ahora]** solo funciona para audiencias cuya programación en el flujo de datos de activación por lotes se superpone con la fecha actual. Esto incluye audiencias con programaciones que no tienen fecha de finalización (frecuencia de exportación de **[!UICONTROL Una vez]**) o en las que la fecha de finalización aún no ha pasado.
-* Al agregar una audiencia a un flujo de datos existente, espere al menos 15 minutos hasta usar el control **[!UICONTROL Exportar archivo ahora]**.
+* Al agregar una audiencia a un flujo de datos existente, espere al menos **una hora** antes de usar el control **[!UICONTROL Exportar archivo ahora]**.
 * Si cambia la política de combinación de una audiencia o crea una audiencia que usa una nueva política de combinación, espere 24 horas hasta usar el control **[!UICONTROL Exportar archivo ahora]**.
 
 ## Mensajes de error de IU {#ui-error-messages}

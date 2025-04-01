@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
-source-wordcount: '4405'
+source-wordcount: '4452'
 ht-degree: 12%
 
 ---
@@ -145,6 +145,10 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en décle
 Use la opción **[!UICONTROL Programado]** para que el trabajo de activación se ejecute a una hora fija. Esta opción garantiza que los datos de perfil de Experience Platform se exporten a la misma hora cada día. Sin embargo, es posible que los perfiles que exporte no estén los más actualizados, en función de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación.
 
    ![Imagen que resalta la opción Programado en el flujo de activación para destinos por lotes y muestra el selector de tiempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
+
+   >[!IMPORTANT]
+   >
+   >Al asignar una audiencia que se creó en las últimas 24 horas y evaluó mediante [segmentación por lotes](../../segmentation/methods/batch-segmentation.md), establezca la programación diaria de exportación para que comience el día siguiente como muy pronto. Esto garantiza que el trabajo de evaluación por lotes diario se ejecute primero y que se exporten los datos de audiencia completos.
 
 3. Utilice el selector **[!UICONTROL Fecha]** para elegir el día o el intervalo en el que debe realizarse la exportación. Para las exportaciones diarias, la práctica recomendada es establecer las fechas de inicio y finalización para que se alineen con la duración de las campañas en las plataformas de flujo descendente.
 

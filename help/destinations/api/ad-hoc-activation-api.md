@@ -5,7 +5,7 @@ title: Activar audiencias en destinos por lotes mediante la API de activación a
 description: Este artículo ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -30,13 +30,11 @@ El diagrama siguiente ilustra el flujo de trabajo completo para activar audienci
 
 ![activación-ad-hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
 ## Casos de uso {#use-cases}
 
-### Flashes de ventas o promociones
+### Ventas o promociones Flash
 
-Un minorista en línea está preparando una venta flash limitada y quiere avisar a los clientes con poco tiempo de antelación. A través de la API de activación ad hoc de Experience Platform, el equipo de marketing puede exportar audiencias bajo demanda y enviar rápidamente correos electrónicos promocionales a la base de clientes.
+Un retailer en línea está preparando una venta flash limitada y quiere notificar a los clientes con un breve aviso. A través de la API de activación ad-hoc de Experience Platform, el equipo de marketing puede exportar audiencias bajo demanda y enviar rápidamente correos electrónicos promocionales a la base de clientes.
 
 ### Eventos actuales o noticias de última hora
 
@@ -63,7 +61,7 @@ Adobe Experience Platform ejecuta trabajos de segmentación programados una vez 
 Para poder realizar llamadas a las API de Adobe Experience Platform, asegúrese de cumplir los siguientes requisitos previos:
 
 * Tiene una cuenta de organización con acceso a Adobe Experience Platform.
-* Su cuenta de Experience Platform tiene habilitados los roles `developer` y `user` para el perfil de producto de la API de Adobe Experience Platform. Póngase en contacto con el Admin Console de [](../../access-control/home.md) para habilitar estos roles en su cuenta.
+* Su cuenta de Experience Platform tiene habilitados los roles `developer` y `user` para el perfil de producto de la API de Adobe Experience Platform. Póngase en contacto con su administrador de [Admin Console](../../access-control/home.md) para habilitar estos roles en su cuenta.
 * Tiene un Adobe ID. Si no tienes un Adobe ID, ve a [Adobe Developer Console](https://developer.adobe.com/console) y crea una nueva cuenta.
 
 ## Paso 2: Recopilar credenciales {#credentials}
@@ -74,13 +72,13 @@ Para realizar llamadas a las API de Platform, primero debe completar el [tutoria
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Los recursos de Experience Platform se pueden aislar en zonas protegidas virtuales específicas. En las solicitudes a las API de Platform, puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
+Los recursos de Experience Platform se pueden aislar para crear zonas protegidas virtuales específicas. En las solicitudes a las API de Platform, puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en Experience Platform, consulte la [documentación general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en Experience Platform, consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medios adicional:
 
@@ -126,7 +124,7 @@ Adobe Experience Platform ejecuta trabajos de segmentación programados una vez 
 
 >[!IMPORTANT]
 >
->Tenga en cuenta la siguiente restricción de una sola vez: antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que hayan transcurrido al menos 20 minutos desde el momento en que la audiencia se activó por primera vez según la programación establecida en [Paso 3: Crear flujo de activación en la IU de Platform](#activation-flow).
+>Tenga en cuenta la siguiente restricción de una sola vez: antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que haya transcurrido al menos una hora desde el momento en que la audiencia se activó por primera vez según la programación establecida en [Paso 3: crear flujo de activación en la interfaz de usuario de Platform](#activation-flow).
 
 Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de audiencias programado para sus audiencias haya finalizado. Consulte [supervisión del flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo supervisar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra el estado **[!UICONTROL Procesando]**, espere a que finalice antes de ejecutar el trabajo de activación ad-hoc para exportar un archivo completo.
 
