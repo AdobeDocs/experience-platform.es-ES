@@ -5,7 +5,7 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
 source-wordcount: '1819'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -58,14 +58,14 @@ Dado un área de nombres única (en este caso, un CRMID en lugar de dos áreas d
 
 Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para la ingesta de datos, debe dar a sus ECID una prioridad mayor que la de Adobe Analytics ID (AAID), ya que el servicio de identidad bloquea la AAID. Al priorizar ECID, puede indicar al Perfil del cliente en tiempo real que almacene eventos no autenticados en ECID en lugar de AAID.
 
-### Eventos de experiencia XDM {#xdm-experience-events}
+### Eventos de experiencia de XDM {#xdm-experience-events}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
 >title="Asegúrese de tener un solo identificador de persona"
->abstract="Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform siempre contengan un identificador de persona **single**, como un CRMID."
+>abstract="Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform contengan siempre un **único** identificador de persona, como un CRMID."
 
-Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform siempre contengan un identificador de persona **single**, como un CRMID.
+Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform contengan siempre un **único** identificador de persona, como un CRMID.
 
 * (Recomendado) Eventos autenticados con un identificador de persona único.
 * (No recomendado) Eventos autenticados con dos identificadores de persona únicos. Si tiene más de un identificador de persona único, puede encontrar un colapso de gráfico no deseado.
@@ -290,7 +290,7 @@ Este ejemplo también muestra que Tom y Summer son dos entidades de persona dist
 
 Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
 
-* [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
+* [Información general sobre las reglas de vinculación de gráficos de identidad](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)

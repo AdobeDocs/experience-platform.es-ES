@@ -5,15 +5,15 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# Resumen de reglas de vinculación de gráficos de identidad {#identity-graph-linking-rules-overview}
+# Información general sobre las reglas de vinculación de gráficos de identidad {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
->title="Reglas de vinculación de gráfico de identidad"
+>title="Reglas de vinculación de gráficos de identidad"
 >abstract="Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios."
 
 >[!AVAILABILITY]
@@ -91,7 +91,7 @@ Estas identidades podrían resultar en los siguientes gráficos, donde varios CR
 
 Con las reglas de vinculación de gráficos de identidad, puede configurar el CRMID como identificador único para evitar que el perfil no deseado se contraiga debido a este tipo de datos.
 
-## Reglas de vinculación de gráfico de identidad {#identity-graph-linking-rules}
+## Reglas de vinculación de gráficos de identidad {#identity-graph-linking-rules}
 
 Con las reglas de vinculación de gráficos de identidad puede:
 
