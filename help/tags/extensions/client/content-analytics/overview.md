@@ -1,12 +1,10 @@
 ---
 title: Información general sobre la extensión Adobe Content Analytics
 description: Obtenga información acerca de la extensión de etiquetas Adobe Content Analytics en Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
+source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -78,7 +76,8 @@ En la sección **[!UICONTROL Captura y definición de experiencias]**, puede hab
 1. Habilitar **[!UICONTROL Incluir experiencias]**.
 1. Opcionalmente. especifique los parámetros de cómo se procesa el contenido en el sitio web. Los parámetros son cero o más combinaciones de una **[!UICONTROL expresión regular de dominio]** y **[!UICONTROL parámetros de consulta]**.
    1. Escriba una **[!UICONTROL expresión regular de dominio]**, por ejemplo `^(?!.*\b(store|help|admin)\b)`.
-   1. Especifique una lista separada por comas de **[!UICONTROL parámetros de consulta,]**; por ejemplo, `outdoors, patio, kitchen`.
+   1. Especifique una lista separada por comas de **[!UICONTROL parámetros de consulta]**, por ejemplo `outdoors, patio, kitchen`.
+Use ![Cerrar](./assets/CrossSize300.svg) para eliminar parámetros individuales o **[!UICONTROL Borrar todo]** para eliminar todos los parámetros.
 1. Seleccione **[!UICONTROL Remove]** si desea quitar una combinación de parámetros de consulta y expresión regular de dominio.
 1. Seleccione **[!UICONTROL Agregar regex]** si desea agregar otra combinación de una expresión regular y parámetros de consulta.
 
