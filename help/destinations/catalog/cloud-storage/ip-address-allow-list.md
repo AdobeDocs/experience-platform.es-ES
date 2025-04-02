@@ -3,9 +3,9 @@ title: LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en 
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a destinos de almacenamiento en la nube.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
+source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '299'
 ht-degree: 1%
 
 ---
@@ -40,14 +40,14 @@ Adobe recomienda agregar los siguientes rangos de IP a una lista de permitidos a
 ## Necesario para todos los clientes {#all-customers}
 
 * `52.247.108.70`
-<!-- 
-## US customers running on AWS {#aws}
 
-The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+## Clientes de EE. UU. que ejecutan AWS {#aws}
+
+El rango de IP siguiente se aplica a los clientes de Experience Platform que se ejecutan en Amazon Web Service (AWS). Consulte la [descripción general de Experience Platform Multi-Cloud](../../../landing/multi-cloud.md) para obtener más información.
 
 >[!NOTE]
 >
->This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
+>Este rango de IP no es compatible con los clientes que ejecutan AWS y que utilizan destinos basados en archivos para exportar datos a Amazon S3.
 
 * `66.117.18.0/24`
 
