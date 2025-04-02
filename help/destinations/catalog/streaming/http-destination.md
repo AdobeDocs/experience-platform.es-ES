@@ -4,9 +4,9 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
+source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2701'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El destino de la API HTTP es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 
@@ -35,8 +35,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -47,21 +47,21 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla de asignación de [flujo de trabajo de activación de destino](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Requisitos previos {#prerequisites}
 
-Para utilizar el destino de la API HTTP para exportar datos fuera de Experience Platform, debe cumplir los siguientes requisitos previos:
+Para utilizar el destino de la API HTTP para exportar datos desde Experience Platform, debe cumplir los siguientes requisitos previos:
 
 * Debe tener un extremo HTTP que admita la API de REST.
-* El extremo HTTP debe admitir el esquema de perfil del Experience Platform. No se admite ninguna transformación a un esquema de carga útil de terceros en el destino de la API HTTP. Consulte la sección [datos exportados](#exported-data) para ver un ejemplo del esquema de salida del Experience Platform.
+* El extremo HTTP debe admitir el esquema de perfil de Experience Platform. No se admite ninguna transformación a un esquema de carga útil de terceros en el destino de la API HTTP. Consulte la sección [datos exportados](#exported-data) para ver un ejemplo del esquema de salida de Experience Platform.
 * El extremo HTTP debe admitir encabezados.
 
 >[!TIP]
 >
-> También puede usar [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) para configurar una integración y enviar datos de perfil del Experience Platform a un extremo HTTP.
+> También puede usar [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) para configurar una integración y enviar datos de perfil de Experience Platform a un extremo HTTP.
 
 ## Compatibilidad con el protocolo mTLS y certificado {#mtls-protocol-support}
 
@@ -77,7 +77,7 @@ Si desea comprobar [!DNL Common Name] (CN) y [!DNL Subject Alternative Names] (S
 
 * [Certificado público mTLS de la API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
-También puede recuperar de forma segura certificados públicos realizando una solicitud de GET al extremo MTLS. Consulte la [documentación de extremo de certificado público](../../../data-governance/mtls-api/public-certificate-endpoint.md) para obtener más información.
+También puede recuperar de forma segura certificados públicos realizando una petición GET al extremo MTLS. Consulte la [documentación de extremo de certificado público](../../../data-governance/mtls-api/public-certificate-endpoint.md) para obtener más información.
 
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allowlist}
 
@@ -159,6 +159,10 @@ Si selecciona el tipo de autenticación **[!UICONTROL Credenciales del cliente d
 
 ![Imagen de la pantalla de la interfaz de usuario donde puede conectarse al destino de la API HTTP mediante OAuth 2 con autenticación de credenciales de cliente.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
+>[!WARNING]
+> 
+>Al usar la autenticación [!UICONTROL Credenciales del cliente de OAuth 2], la [!UICONTROL URL del token de acceso] puede tener un máximo de un parámetro de consulta. Si agrega una [!UICONTROL URL de token de acceso] con más parámetros de consulta, pueden surgir problemas al conectarse al punto de conexión.
+
 * **[!UICONTROL URL de token de acceso]**: URL del lado del usuario que emite tokens de acceso y, opcionalmente, tokens de actualización.
 * **[!UICONTROL ID de cliente]**: El [!DNL client ID] que su sistema asigna a Adobe Experience Platform.
 * **[!UICONTROL Secreto de cliente]**: El [!DNL client secret] que su sistema asigna a Adobe Experience Platform.
@@ -226,7 +230,7 @@ En el paso [[!UICONTROL Seleccionar atributos]](../../ui/activate-streaming-prof
 
 ## Comportamiento de exportación de perfil {#profile-export-behavior}
 
-Experience Platform optimiza el comportamiento de exportación de perfiles a su destino de API HTTP para exportar solo datos a su punto final de API cuando se han producido actualizaciones relevantes en un perfil tras la calificación de la audiencia u otros eventos significativos. Los perfiles se exportan al destino en las siguientes situaciones:
+Experience Platform optimiza el comportamiento de exportación de perfiles a su destino de API HTTP para exportar solo datos a su punto final de API cuando se han producido actualizaciones relevantes de un perfil tras la calificación de la audiencia u otros eventos significativos. Los perfiles se exportan al destino en las siguientes situaciones:
 
 * La actualización de perfil se determinó mediante un cambio en el abono a audiencia de al menos una de las audiencias asignadas al destino. Por ejemplo, el perfil cumple los requisitos de una de las audiencias asignadas al destino o ha salido de una de las audiencias asignadas al destino.
 * La actualización de perfil se determinó mediante un cambio en el [mapa de identidad](/help/xdm/field-groups/profile/identitymap.md). Por ejemplo, a un perfil que ya estaba cualificado para una de las audiencias asignadas al destino se le ha añadido una nueva identidad en el atributo del mapa de identidad.
@@ -242,7 +246,7 @@ Con respecto a los datos que se exportan para un perfil determinado, es importan
 
 | Qué determina una exportación de destino | Qué se incluye en la exportación de destino |
 |---------|----------|
-| <ul><li>Los atributos y audiencias asignados sirven de referencia para una exportación de destino. Esto significa que si alguna audiencia asignada cambia de estado (de `null` a `realized` o de `realized` a `exiting`) o si se actualiza algún atributo asignado, se iniciará una exportación de destino.</li><li>Dado que las identidades no se pueden asignar actualmente a destinos de API HTTP, los cambios en cualquier identidad de un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es el mismo valor o no. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>El objeto `segmentMembership` incluye la audiencia asignada en el flujo de datos de activación, para la cual el estado del perfil ha cambiado después de un evento de calificación o salida de audiencia. Tenga en cuenta que otras audiencias sin asignar para las que el perfil cumple los requisitos pueden formar parte de la exportación de destino, si estas audiencias pertenecen a la misma [política de combinación](/help/profile/merge-policies/overview.md) que la audiencia asignada en el flujo de datos de activación. </li><li>También se incluyen todas las identidades del objeto `identityMap` (actualmente, el Experience Platform no admite la asignación de identidades en el destino de la API HTTP).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
+| <ul><li>Los atributos y audiencias asignados sirven de referencia para una exportación de destino. Esto significa que si alguna audiencia asignada cambia de estado (de `null` a `realized` o de `realized` a `exiting`) o si se actualiza algún atributo asignado, se iniciará una exportación de destino.</li><li>Dado que las identidades no se pueden asignar actualmente a destinos de API HTTP, los cambios en cualquier identidad de un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es el mismo valor o no. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>El objeto `segmentMembership` incluye la audiencia asignada en el flujo de datos de activación, para la cual el estado del perfil ha cambiado después de un evento de calificación o salida de audiencia. Tenga en cuenta que otras audiencias sin asignar para las que el perfil cumple los requisitos pueden formar parte de la exportación de destino, si estas audiencias pertenecen a la misma [política de combinación](/help/profile/merge-policies/overview.md) que la audiencia asignada en el flujo de datos de activación. </li><li>También se incluyen todas las identidades en el objeto `identityMap` (Experience Platform no admite actualmente la asignación de identidades en el destino de la API HTTP).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -256,7 +260,7 @@ Desde el punto de vista de los atributos de perfil, cualquier cambio en los cuat
 
 ## Relleno de datos históricos {#historical-data-backfill}
 
-Cuando se añade una audiencia nueva a un destino existente o se crea un destino nuevo y se le asignan audiencias, Experience Platform exporta al destino los datos históricos de cualificación de audiencias. Los perfiles que cumplen los requisitos para la audiencia *antes de* que la audiencia se agregó al destino se exportan al destino en un plazo aproximado de una hora.
+Al agregar una audiencia nueva a un destino existente o al crear un destino nuevo y asignarle audiencias, Experience Platform exporta al destino los datos de calificación de audiencias históricas. Los perfiles que cumplen los requisitos para la audiencia *antes de* que la audiencia se agregó al destino se exportan al destino en un plazo aproximado de una hora.
 
 ## Datos exportados {#exported-data}
 
@@ -360,4 +364,4 @@ A continuación se muestran más ejemplos de datos exportados, según la configu
 
 En el 95 por ciento de los casos, Experience Platform intenta ofrecer una latencia de rendimiento de menos de 10 minutos para los mensajes enviados correctamente con una tasa de menos de 10 000 solicitudes por segundo para cada flujo de datos a un destino HTTP.
 
-En caso de solicitudes fallidas al destino de la API HTTP, el Experience Platform almacena las solicitudes fallidas y las reintenta dos veces para enviar las solicitudes al extremo.
+En caso de solicitudes fallidas al destino de la API HTTP, Experience Platform almacena las solicitudes fallidas y las reintenta dos veces para enviar las solicitudes al extremo.
