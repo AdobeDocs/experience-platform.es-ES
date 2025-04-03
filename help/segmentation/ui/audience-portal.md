@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
 workflow-type: tm+mt
-source-wordcount: '4310'
+source-wordcount: '4356'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,7 @@ En Audience Portal, puede realizar las siguientes tareas:
    - [Utilice el Generador de segmentos para crear una audiencia](#segment-builder)
    - [Usar Composición de audiencia para crear una audiencia](#audience-composition)
    - [Use la Composición de audiencia federada para crear una audiencia con los datos de su almacén de datos existente](#fac)
+   - [Uso de Data Distiller para crear una audiencia](#data-distiller)
 - [Importación de públicos generados externamente](#import-audience)
 
 Para abrir Audience Portal, seleccione la ficha **[!UICONTROL Examinar]** en la sección Segmentación.
@@ -57,7 +58,7 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | [!UICONTROL Editar] | Servicio de segmentación | Abre el Generador de segmentos para editar la audiencia. Tenga en cuenta que si la audiencia se creó mediante la API, **no** podrá editarla con el Generador de segmentos. Para obtener más información sobre el uso del Generador de segmentos, lea la [guía de la interfaz de usuario del Generador de segmentos](./segment-builder.md). |
 | [!UICONTROL Abrir composición] | Composición del público | Abre la composición Audiencia para ver su audiencia. Para obtener más información sobre la composición de audiencias, lea la [guía de interfaz de usuario sobre composición de audiencias](./audience-composition.md). |
 | [!UICONTROL Activar en destino] | Servicio de segmentación | Activa la audiencia en un destino. Para obtener información más detallada sobre cómo activar una audiencia en un destino, lea [información general de activación](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Comparte la audiencia con otros usuarios de Platform. Para obtener más información sobre esta característica, lea [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
+| [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Comparte la audiencia con otros usuarios de Experience Platform. Para obtener más información sobre esta característica, lea [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
 | [!UICONTROL Administrar etiquetas] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información sobre esta característica, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Mover a la carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra a qué carpeta pertenece la audiencia. Para obtener más información sobre esta característica, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Copiar] | Servicio de segmentación | Duplica la audiencia seleccionada. Encontrará más información sobre esta función en [Preguntas frecuentes sobre la segmentación](../faq.md#copy). |
@@ -274,7 +275,7 @@ Si selecciona **[!UICONTROL Editar propiedades]**, podrá editar los detalles b�
 
 ### Total de público {#audience-total}
 
-Para audiencias y composiciones generadas por Platform, la sección **[!UICONTROL Audiencia total]** muestra la cantidad total de perfiles aptos para la audiencia.
+Para audiencias y composiciones generadas por Experience Platform, la sección **[!UICONTROL Audiencia total]** muestra el número total de perfiles aptos para la audiencia.
 
 >[!NOTE]
 >
@@ -297,7 +298,7 @@ Para audiencias con un origen de **[!UICONTROL carga personalizada]**, la secci�
 | Recuento de perfiles | Número total de perfiles aptos para la audiencia. |
 | Nombre del conjunto de datos | Nombre del conjunto de datos en el que se ingirió la audiencia. Puede seleccionar el nombre del conjunto de datos para obtener más información sobre este. Para obtener más información sobre los conjuntos de datos, lea la [guía de la interfaz de usuario del conjunto de datos](../../catalog/datasets/user-guide.md). |
 | Lote de conjuntos de datos | El ID del conjunto de datos en el que se ingirió la audiencia. Puede seleccionar el ID del lote para obtener más información sobre el lote. Para obtener más información sobre los lotes, lea la [guía de supervisión de la ingesta de datos](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Lote de perfiles | El ID del lote que creó los perfiles en Platform. Puede seleccionar el ID del lote para obtener más información sobre el lote. Para obtener más información sobre los lotes, lea la [guía de supervisión de la ingesta de datos](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Lote de perfiles | El ID del lote que creó los perfiles en Experience Platform. Puede seleccionar el ID del lote para obtener más información sobre el lote. Para obtener más información sobre los lotes, lea la [guía de supervisión de la ingesta de datos](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Esquema | El nombre del esquema al que pertenece la audiencia. Puede seleccionar el nombre del esquema para ver información sobre la estructura del esquema y aplicar etiquetas de uso de datos. Para obtener más información, lea las [etiquetas de uso de datos administradas para una guía de esquema](../../xdm/tutorials/labels.md). |
 | Registros ingeridos | El número de registros ingeridos en el conjunto de datos. |
 | Error de registros | El número de registros que no se pudieron introducir en el conjunto de datos. |
@@ -385,9 +386,17 @@ Si selecciona **[!UICONTROL Generar regla]**, accederá al Generador de segmento
 
 ### Composición de público federado {#fac}
 
-Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Adobe Federated Audience Composition para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenar esas audiencias en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
+Puede utilizar la Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenar esas audiencias en Adobe Experience Platform Audience Portal.
+
+También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
 
 ![Lista de audiencias creadas en la Composición de audiencias federadas para su organización.](../images/ui/overview/federated-audience-composition.png)
+
+### Data Distiller {#data-distiller}
+
+Puede utilizar la extensión SQL de Data Distiller para crear audiencias a partir del lago de datos. Estos datos incluyen entidades de dimensión existentes, como atributos del cliente o información del producto.
+
+Encontrará más información sobre Data Distiller en [generación de audiencias con la guía SQL](../../query-service/data-distiller-audiences/overview.md).
 
 ## Importación de una audiencia {#import-audience}
 
@@ -446,7 +455,7 @@ Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL F
 >
 >Además, si la audiencia generada externamente contiene información confidencial o relacionada con la atención médica, **debe** aplicar las etiquetas de uso de datos necesarias antes de activarla en cualquier destino. Dado que las variables de audiencias generadas externamente se almacenan en el lago de datos en lugar de en el perfil del cliente en tiempo real, **no** debe incluir datos de consentimiento en su archivo CSV.
 >
->Para obtener más información sobre cómo aplicar etiquetas de uso de datos, lea la documentación de [administrar etiquetas](../../access-control/abac/ui/labels.md). Para obtener más información sobre las etiquetas de uso de datos en Platform en general, lea la [descripción general de las etiquetas de uso de datos](../../data-governance/labels/overview.md). Para obtener más información sobre cómo funciona el consentimiento en audiencias generadas externamente, lea las [preguntas frecuentes sobre audiencias](../faq.md#consent).
+>Para obtener más información sobre cómo aplicar etiquetas de uso de datos, lea la documentación de [administrar etiquetas](../../access-control/abac/ui/labels.md). Para obtener más información sobre las etiquetas de uso de datos en Experience Platform en general, lea [información general sobre las etiquetas de uso de datos](../../data-governance/labels/overview.md). Para obtener más información sobre cómo funciona el consentimiento en audiencias generadas externamente, lea las [preguntas frecuentes sobre audiencias](../faq.md#consent).
 
 ## Pasos siguientes
 

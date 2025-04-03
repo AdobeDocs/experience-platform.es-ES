@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de segmentación de streaming
 description: Obtenga información sobre la segmentación de flujo continuo, incluido qué es, cómo crear una audiencia evaluada mediante la segmentación de flujo y cómo ver las audiencias creadas mediante la segmentación de flujo.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 3f0cfd6c36344f481751bf05236df4fb288eab60
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1256'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 La segmentación por streaming es la capacidad de evaluar audiencias en Adobe Experience Platform en tiempo casi real, al tiempo que se centra en la riqueza de datos.
 
-Con la segmentación por streaming, la calificación de audiencia ahora se produce cuando los datos de streaming llegan a Platform, lo que alivia la necesidad de programar y ejecutar trabajos de segmentación. Esto le permite evaluar los datos a medida que se pasan a Platform, lo que permite mantener actualizada automáticamente la pertenencia a audiencias.
+Con la segmentación por streaming, la calificación de audiencia ahora se produce cuando los datos de streaming llegan a Experience Platform, lo que alivia la necesidad de programar y ejecutar trabajos de segmentación. Esto le permite evaluar los datos a medida que se pasan a Experience Platform, lo que permite mantener actualizada automáticamente la pertenencia a audiencias.
 
 ## Tipos de consulta aptos {#query-types}
 
@@ -312,7 +312,7 @@ Dentro de los filtros disponibles, ve a **[!UICONTROL Actualizar frecuencia]** y
 
 ![Se ha seleccionado la frecuencia Actualización de flujo continuo, que muestra todas las audiencias de la organización que se evalúan mediante la segmentación de flujo continuo.](../images/methods/streaming/filter-streaming.png)
 
-Para obtener más información acerca de cómo ver audiencias en Platform, lea la [guía de Audience Portal](../ui/audience-portal.md).
+Para obtener más información acerca de cómo ver audiencias en Experience Platform, lea la [guía de Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

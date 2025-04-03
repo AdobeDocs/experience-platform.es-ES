@@ -3,9 +3,9 @@ title: Audiencias potenciales
 description: Aprenda a crear y utilizar audiencias de clientes potenciales para dirigirse a clientes desconocidos mediante información de terceros.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ Para obtener más información sobre el uso del Generador de segmentos, lea la [
 
 ## Casos de uso sugeridos {#use-cases}
 
-Para obtener información sobre cómo puede utilizar la funcionalidad de audiencias de clientes potenciales en Experience Platform en combinación con otras funcionalidades de Platform, lea la siguiente documentación de caso de uso:
+Para obtener información sobre cómo puede utilizar la funcionalidad de audiencias de clientes potenciales en Experience Platform en combinación con otras funcionalidades de Experience Platform, lea la siguiente documentación de caso de uso:
 
 - [Capte y adquiera nuevos clientes a través de la funcionalidad de prospección](../../rtcdp/partner-data/prospecting.md)
 

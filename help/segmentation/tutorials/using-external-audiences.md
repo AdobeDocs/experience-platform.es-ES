@@ -5,9 +5,9 @@ description: Siga este tutorial para aprender a utilizar audiencias externas con
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1732'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Este tutorial requiere una comprensión práctica de los distintos servicios de 
 
 - [Servicio de segmentación](../home.md): permite crear audiencias a partir de los datos del perfil del cliente en tiempo real.
 - [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
-- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente. Para utilizar la segmentación de la mejor manera posible, asegúrate de que tus datos se incorporen como perfiles y eventos según las [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
-- [Conjuntos de datos](../../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en el Experience Platform.
+- [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco de trabajo estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente. Para utilizar la segmentación de la mejor manera posible, asegúrate de que tus datos se incorporen como perfiles y eventos según las [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
+- [Conjuntos de datos](../../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en Experience Platform.
 - [Ingesta de transmisión](../../ingestion/streaming-ingestion/overview.md): Cómo Experience Platform ingiere y almacena datos de dispositivos del lado del cliente y del lado del servidor en tiempo real.
 
 ### Audiencias o definiciones de segmentos
@@ -44,7 +44,7 @@ Las definiciones de segmentos incluyen información como el nombre, la descripci
 
 ## Crear un área de nombres de identidad para la audiencia externa
 
-El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten que Platform asocie el lugar desde el que se origina una audiencia.
+El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten que Experience Platform asocie el lugar desde el que se origina una audiencia.
 
 Para crear un área de nombres de identidad, siga las instrucciones de la [guía del área de nombres de identidad](../../identity-service/features/namespaces.md#manage-namespaces). Al crear el área de nombres de identidad, agregue los detalles de origen al área de nombres de identidad y marque su [!UICONTROL Tipo] como **[!UICONTROL Identificador de no personas]**.
 
@@ -70,7 +70,7 @@ Después de marcar el campo `_id` como identidad principal, seleccione el títul
 
 ![El conmutador para habilitar el esquema para el perfil está resaltado en el Editor de esquemas.](../images/tutorials/external-audiences/schema-profile.png)
 
-Ahora, este esquema está habilitado para el perfil, con la identificación principal asignada al área de nombres de identidad de no persona que ha creado. Como resultado, esto significa que los metadatos de segmento importados en Platform mediante este esquema se incorporarán en el perfil sin combinarse con otros datos de perfil relacionados con personas.
+Ahora, este esquema está habilitado para el perfil, con la identificación principal asignada al área de nombres de identidad de no persona que ha creado. Como resultado, esto significa que los metadatos de segmento importados en Experience Platform mediante este esquema se incorporarán en el perfil sin combinarse con otros datos de perfil relacionados con personas.
 
 ## Crear un conjunto de datos para el esquema
 
@@ -86,7 +86,7 @@ Después de crear el conjunto de datos, siga siguiendo las instrucciones de la [
 
 ## Configuración e importación de datos de audiencia
 
-Con el conjunto de datos habilitado, ahora los datos se pueden enviar a Platform a través de la interfaz de usuario o mediante las API de Experience Platform. Puede introducir estos datos mediante una conexión por lotes o de flujo continuo.
+Con el conjunto de datos habilitado, ahora los datos se pueden enviar a Experience Platform a través de la interfaz de usuario o mediante las API de Experience Platform. Puede introducir estos datos mediante una conexión por lotes o de flujo continuo.
 
 ### Ingesta de datos mediante una conexión por lotes
 
@@ -102,7 +102,7 @@ Una vez que haya creado su conexión de flujo continuo, tendrá acceso a su punt
 
 ## Estructura de metadatos de audiencia
 
-Después de crear una conexión, ahora puede introducir los datos en Platform.
+Después de crear una conexión, ahora puede introducir los datos en Experience Platform.
 
 A continuación se muestra una muestra de los metadatos de la carga útil de audiencia externa:
 
@@ -163,7 +163,7 @@ Ahora que puede usar audiencias externas en los segmentos, puede usar el Generad
 
 ## Apéndice
 
-Además de utilizar metadatos de audiencia externos importados y utilizarlos para crear segmentos, también puede importar suscripciones a segmentos externos a Platform.
+Además de utilizar metadatos de audiencia externos importados y utilizarlos para crear segmentos, también puede importar suscripciones a segmentos externos a Experience Platform.
 
 ### Configurar un esquema de destino de pertenencia a segmento externo
 
@@ -193,7 +193,7 @@ Después de crear el conjunto de datos, siga siguiendo las instrucciones de la [
 
 ## Configuración e importación de datos de pertenencia a audiencias externas
 
-Con el conjunto de datos habilitado, ahora los datos se pueden enviar a Platform a través de la interfaz de usuario o mediante las API de Experience Platform. Puede introducir estos datos mediante una conexión por lotes o de flujo continuo.
+Con el conjunto de datos habilitado, ahora los datos se pueden enviar a Experience Platform a través de la interfaz de usuario o mediante las API de Experience Platform. Puede introducir estos datos mediante una conexión por lotes o de flujo continuo.
 
 ### Ingesta de datos mediante una conexión por lotes
 
@@ -209,7 +209,7 @@ Una vez que haya creado su conexión de flujo continuo, tendrá acceso a su punt
 
 ## Estructura del abono de segmentos
 
-Después de crear una conexión, ahora puede introducir los datos en Platform.
+Después de crear una conexión, ahora puede introducir los datos en Experience Platform.
 
 A continuación se puede ver una muestra de la carga útil de pertenencia a audiencia externa:
 

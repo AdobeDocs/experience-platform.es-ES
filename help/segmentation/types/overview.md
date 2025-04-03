@@ -1,13 +1,13 @@
 ---
 title: Tipos de audiencia
 description: Obtenga información acerca de los distintos tipos de audiencias que puede crear en Adobe Experience Platform.
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '251'
 ht-degree: 2%
 
 ---
-
 
 # Tipos de audiencia
 
@@ -19,7 +19,7 @@ Una audiencia de personas es una audiencia que se crea con los datos de perfil d
 
 Para obtener información más detallada acerca de las audiencias de personas, lea [descripción general de la audiencia de personas](./people-audiences.md).
 
-## [!BADGE B2C Edition] audiencia de similitud
+## [!BADGE Audiencia de similitudes en B2C Edition]
 
 Una audiencia de similitud es una audiencia que se crea analizando una audiencia de alto valor con un modelo de aprendizaje automático de similitud. El modelo de similitud puede crear una audiencia que coincida con el umbral de similitud de la audiencia de alto valor analizada.
 
@@ -39,4 +39,4 @@ Para obtener información más detallada sobre las audiencias de clientes potenc
 
 ## Pasos siguientes
 
-Después de leer esta descripción general, ahora comprende mejor los distintos tipos of audiencias disponibles en Platform. Para obtener más información acerca de los distintos métodos de evaluación, lea la [descripción general del método de evaluación](../methods/overview.md).
+Después de leer esta descripción general, ahora comprende mejor los distintos tipos of audiencias disponibles en Experience Platform. Para obtener más información acerca de los distintos métodos de evaluación, lea la [descripción general del método de evaluación](../methods/overview.md).

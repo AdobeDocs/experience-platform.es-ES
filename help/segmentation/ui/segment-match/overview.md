@@ -2,18 +2,18 @@
 keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Coincidencia de segmentos;coincidencia de segmentos
 solution: Experience Platform
 title: Resumen de coincidencia de segmentos
-description: La coincidencia de segmentos es un servicio de uso compartido de segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad.
+description: La coincidencia de segmentos es un servicio de uso compartido de segmentos en Adobe Experience Platform que permite a dos o más usuarios de Experience Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 2%
+source-wordcount: '1978'
+ht-degree: 3%
 
 ---
 
 # Información general de [!DNL Segment Match]
 
-La coincidencia de segmentos de Adobe Experience Platform es un servicio de uso compartido de segmentos que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad. [!DNL Segment Match] usa estándares de privacidad de Platform e identificadores personales como correos electrónicos con hash, números de teléfono con hash e identificadores de dispositivo como IDFA y GAID.
+La coincidencia de segmentos de Adobe Experience Platform es un servicio de uso compartido de segmentos que permite a dos o más usuarios de Experience Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad. [!DNL Segment Match] usa estándares de privacidad de Experience Platform e identificadores personales como correos electrónicos con hash, números de teléfono con hash e identificadores de dispositivo como IDFA y GAID.
 
 Con [!DNL Segment Match] puede:
 
@@ -44,9 +44,9 @@ La lista de áreas de nombres admitidas es la siguiente:
 
 | Área de nombres | Descripción |
 | --------- | ----------- |
-| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Platform ofrece dos métodos para admitir la función hash en la recopilación de datos, a través de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) y a través de la [preparación de datos](../../../data-prep/functions.md#hashing). |
-| Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash con los formatos SHA256 y E.164. |
-| ECID | Un área de nombres que representa un valor de ID de Experience Cloud (ECID). Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte la [descripción general de ECID](../../../identity-service/features/ecid.md) para obtener más información. |
+| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Experience Platform ofrece dos métodos para admitir la función hash en la recopilación de datos, a través de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) y a través de la [preparación de datos](../../../data-prep/functions.md#hashing). |
+| Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben llevar un hash con los formatos SHA256 y E.164. |
+| ECID | Un área de nombres que representa un valor de Experience Cloud ID (ECID). Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte la [descripción general de ECID](../../../identity-service/features/ecid.md) para obtener más información. |
 | Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
 | ID de Google Ad | Un área de nombres que representa un Google Advertising ID. Consulte el siguiente documento sobre [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obtener más información. |
 
@@ -64,7 +64,7 @@ Para obtener más información sobre el atributo `share` utilizado para establec
 
 El último requisito previo que debe establecer es configurar una nueva etiqueta de uso de datos para evitar el uso compartido de datos. Mediante las etiquetas de uso de datos, puede administrar qué datos se pueden compartir a través de [!DNL Segment Match].
 
-Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas alientan el etiquetado de datos en cuanto se incorporan en Experience Platform o en cuanto los datos están disponibles para su uso en Platform.
+Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas recomiendan el etiquetado de los datos en cuanto se incorporan a Experience Platform o en cuanto los datos están disponibles para su uso en Experience Platform.
 
 [!DNL Segment Match] utiliza la etiqueta C11, una etiqueta de contrato específica de [!DNL Segment Match] que puede agregar manualmente a cualquier conjunto de datos o atributo para asegurarse de que se excluyen del proceso de uso compartido de socios de [!DNL Segment Match]. La etiqueta C11 indica datos que no deben usarse en [!DNL Segment Match] procesos. Después de determinar qué conjuntos de datos o campos desea excluir de [!DNL Segment Match] y agregar la etiqueta C11 en consecuencia, el flujo de trabajo [!DNL Segment Match] aplica automáticamente la etiqueta. [!DNL Segment Match] habilita automáticamente la directiva principal [!UICONTROL Restringir el uso compartido de datos]. Para obtener instrucciones específicas sobre cómo aplicar etiquetas de uso de datos a los conjuntos de datos, consulte el tutorial sobre [administración de etiquetas de uso de datos en la interfaz de usuario](../../../data-governance/labels/user-guide.md).
 
@@ -87,7 +87,7 @@ Una vez que haya configurado los datos de identidad y las áreas de nombres, la 
 
 ### Administrar socio
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Fuentes]** en el encabezado superior.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Fuentes]** en el encabezado superior.
 
 ![segment-feed.png](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ La página [!UICONTROL Fuentes] contiene una lista de las fuentes recibidas de l
 
 ![manage-partners.png](./images/manage-partners.png)
 
-Una conexión entre dos socios es un &quot;protocolo de enlace bidireccional&quot; que actúa como un método de autoservicio para que los usuarios conecten sus organizaciones de Platform a nivel de zona protegida. La conexión es necesaria para informar a Platform de que se ha establecido un acuerdo y de que Platform puede facilitar el uso compartido de servicios entre usted y sus socios.
+Una conexión entre dos socios es un &quot;protocolo de enlace bidireccional&quot; que actúa como un método de autoservicio para que los usuarios conecten sus organizaciones de Experience Platform a nivel de zona protegida. La conexión es necesaria para informar a Experience Platform de que se ha establecido un acuerdo y de que Experience Platform puede facilitar el uso compartido de servicios entre usted y sus socios.
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Para conectar a un socio con su [!UICONTROL identificador de conexión], escribe
 >abstract="Los casos de uso de marketing restringidos ayudan a proporcionar orientación a sus socios para garantizar que los segmentos compartidos se utilizan correctamente según las restricciones de gobernanza de datos."
 >text="Learn more in documentation"
 
-Una **fuente** es una agrupación de datos (segmentos), las reglas para exponer o utilizar esos datos y las configuraciones que determinan cómo se comparan los datos con los datos de sus socios. Una fuente se puede administrar de forma independiente e intercambiar con otros usuarios de Platform mediante [!DNL Segment Match].
+Una **fuente** es una agrupación de datos (segmentos), las reglas para exponer o utilizar esos datos y las configuraciones que determinan cómo se comparan los datos con los datos de sus socios. Una fuente se puede administrar de forma independiente e intercambiar con otros usuarios de Experience Platform mediante [!DNL Segment Match].
 
 Para crear una fuente nueva, selecciona **[!UICONTROL Crear fuente]** en el panel [!UICONTROL Fuentes].
 

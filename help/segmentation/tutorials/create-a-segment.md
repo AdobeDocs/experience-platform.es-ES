@@ -4,9 +4,9 @@ title: Creación de una definición de segmento mediante la API del servicio de 
 type: Tutorial
 description: Siga este tutorial para aprender a desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1067'
 ht-degree: 6%
 
 ---
@@ -23,9 +23,9 @@ Este tutorial requiere una comprensión práctica de los distintos servicios de 
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite crear audiencias utilizando definiciones de segmentos u otros orígenes externos a partir de datos del perfil del cliente en tiempo real.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar la segmentación de la mejor manera posible, asegúrate de que tus datos se incorporen como perfiles y eventos según las [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente. Para utilizar la segmentación de la mejor manera posible, asegúrate de que tus datos se incorporen como perfiles y eventos según las [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
-Las secciones siguientes proporcionan información adicional que necesitará conocer para realizar llamadas correctamente a las API de [!DNL Platform].
+Las secciones siguientes proporcionan información adicional que necesitará conocer para realizar llamadas correctamente a las API de [!DNL Experience Platform].
 
 ### Lectura de llamadas de API de muestra
 
@@ -33,19 +33,19 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -55,7 +55,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 El primer paso de la segmentación es definir una definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados de PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o dato de serie temporal que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas de PQL.
 
-Puede crear una nueva definición de segmento realizando una solicitud de POST al extremo `/segment/definitions` en la API [!DNL Segmentation]. En el siguiente ejemplo se describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que una definición de segmento se defina correctamente.
+Puede crear una nueva definición de segmento realizando una petición POST al extremo `/segment/definitions` en la API [!DNL Segmentation]. En el siguiente ejemplo se describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que una definición de segmento se defina correctamente.
 
 Para obtener una explicación detallada sobre cómo definir una definición de segmento, lea la [guía para desarrolladores de definiciones de segmento](../api/segment-definitions.md#create).
 
@@ -72,7 +72,7 @@ Existen dos pasos necesarios para obtener una vista previa o una estimación de 
 
 ### Cómo se generan las estimaciones
 
-A medida que los datos habilitados para Perfil del cliente en tiempo real se incorporan a Platform, se almacenan en el almacén de datos de perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. Si el recuento de perfiles no cambia en más del 5 %, el trabajo de muestreo se ejecutará automáticamente semanalmente.
+A medida que los datos habilitados para Perfil del cliente en tiempo real se incorporan a Experience Platform, se almacenan en el almacén de datos de perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. Si el recuento de perfiles no cambia en más del 5 %, el trabajo de muestreo se ejecutará automáticamente semanalmente.
 
 La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
 
@@ -91,7 +91,7 @@ Las estimaciones suelen durar entre 10 y 15 segundos, comenzando con una estimac
 
 ### Creación de un trabajo de vista previa
 
-Puede crear un nuevo trabajo de vista previa realizando una solicitud de POST al extremo `/preview`.
+Puede crear un nuevo trabajo de vista previa realizando una petición POST al extremo `/preview`.
 
 Encontrará instrucciones detalladas sobre la creación de un trabajo de vista previa en la [guía de vistas previas y estimaciones de extremos](../api/previews-and-estimates.md#create-preview).
 

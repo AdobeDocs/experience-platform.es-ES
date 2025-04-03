@@ -1,11 +1,11 @@
 ---
 title: Guía de segmentación de Edge
-description: Aprenda a utilizar la segmentación de Edge para evaluar audiencias en Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
+description: Aprenda a utilizar la segmentación de Edge para evaluar audiencias en Experience Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 7ed92ed7573f82a2da2fc96f0868fe6f97a61899
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 1%
+source-wordcount: '1154'
+ht-degree: 2%
 
 ---
 
@@ -302,7 +302,7 @@ Dentro de los filtros disponibles, ve a **Actualizar frecuencia** y selecciona &
 
 ![Se ha seleccionado la frecuencia de actualización de Edge, que muestra todas las audiencias de la organización que se evalúan mediante la segmentación de Edge.](../images/methods/edge/filter-edge.png)
 
-Para obtener más información acerca de cómo ver audiencias en Platform, lea la [guía de Audience Portal](../ui/audience-portal.md).
+Para obtener más información acerca de cómo ver audiencias en Experience Platform, lea la [guía de Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

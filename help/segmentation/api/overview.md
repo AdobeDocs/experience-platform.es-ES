@@ -3,9 +3,9 @@ title: Guía de API del servicio de segmentación
 description: La API del servicio de segmentación permite a los desarrolladores administrar mediante programación las operaciones de segmentación en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Para ver todos los extremos disponibles y las operaciones de CRUD, consulte la [
 
 ## Públicos
 
-Las audiencias son una colección de personas que comparten comportamientos o características similares. Se pueden generar mediante Platform o desde fuentes externas. Puede usar el extremo `/audiences` para recuperar todas las audiencias, crear una audiencia nueva, recuperar detalles de una audiencia específica, actualizar una audiencia específica o eliminar una audiencia específica.
+Las audiencias son una colección de personas que comparten comportamientos o características similares. Se pueden generar mediante Experience Platform o desde fuentes externas. Puede usar el extremo `/audiences` para recuperar todas las audiencias, crear una audiencia nueva, recuperar detalles de una audiencia específica, actualizar una audiencia específica o eliminar una audiencia específica.
 
 Para obtener más información sobre cómo usar este extremo, lea la [guía de extremo de audiencias](./audiences.md).
 
@@ -62,4 +62,4 @@ La búsqueda de segmentos se utiliza para buscar campos contenidos en varias fue
 
 ## Pasos siguientes
 
-Para empezar a usar la API [!DNL Segmentation Service], revise las distintas guías de extremos para ver los pasos detallados sobre cómo realizar llamadas a los distintos extremos del servicio. Para obtener más información sobre cómo trabajar con segmentos mediante la interfaz de usuario de [!DNL Platform], consulte la [Guía del usuario de segmentación](../ui/overview.md).
+Para empezar a usar la API [!DNL Segmentation Service], revise las distintas guías de extremos para ver los pasos detallados sobre cómo realizar llamadas a los distintos extremos del servicio. Para obtener más información sobre cómo trabajar con segmentos mediante la interfaz de usuario de [!DNL Experience Platform], consulte la [Guía del usuario de segmentación](../ui/overview.md).

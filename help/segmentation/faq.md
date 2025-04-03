@@ -2,16 +2,16 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4832'
+source-wordcount: '4842'
 ht-degree: 2%
 
 ---
 
 # Preguntas frecuentes
 
-Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estas audiencias se configuran de forma centralizada y se mantienen en Platform, y cualquier solución de Adobe puede acceder a ellas fácilmente. A continuación se muestra una lista de las preguntas más frecuentes sobre las audiencias y la segmentación.
+Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estas audiencias se configuran de forma centralizada y se mantienen en Experience Platform, y cualquier solución de Adobe puede acceder a ellas fácilmente. A continuación se muestra una lista de las preguntas más frecuentes sobre las audiencias y la segmentación.
 
 ## Audience Portal
 
@@ -35,7 +35,7 @@ Para cargar audiencias generadas externamente, debe tener los permisos de &quot;
 
 Al cargar una audiencia generada externamente, se crea un conjunto de datos y este se puede ver en el inventario de conjuntos de datos. El nombre del conjunto de datos será **igual** que el nombre de la audiencia generada externamente que usted subió.
 
-### ¿De qué se compone una audiencia generada externamente y qué sucede con estos datos cuando se importan en Platform?
+### ¿De qué se compone una audiencia generada externamente y qué sucede con estos datos cuando se importan a Experience Platform?
 
 Durante el flujo de trabajo de importación de audiencia externa, debe especificar qué columna del archivo CSV corresponde con la **Identidad principal**. Un ejemplo de identidad principal incluye una dirección de correo electrónico, un ECID o un área de nombres de identidad personalizada específica de la organización.
 
@@ -45,9 +45,9 @@ El resto de los datos de la audiencia generada externamente se consideran **atri
 
 Aunque se puede hacer referencia a la audiencia generada externamente al crear audiencias mediante el Generador de segmentos, no se pueden usar los atributos de perfil individuales **not**.
 
-### ¿Puedo reconciliar los datos de audiencia generados externamente con un perfil existente en Platform?
+### ¿Puedo reconciliar los datos de audiencia generados externamente con un perfil existente en Experience Platform?
 
-Sí, la audiencia generada de forma externa se combinará con el perfil existente en Platform si coinciden los identificadores principales. Estos datos pueden tardar hasta 24 horas en conciliarse. Si los datos del perfil no existen, se creará un nuevo perfil a medida que se incorporen los datos.
+Sí, la audiencia generada de forma externa se combinará con el perfil existente en Experience Platform si coinciden los identificadores principales. Estos datos pueden tardar hasta 24 horas en conciliarse. Si los datos del perfil no existen, se creará un nuevo perfil a medida que se incorporen los datos.
 
 ### ¿Cómo se respetan las preferencias de consentimiento del cliente para las audiencias generadas externamente que se importan en Audience Portal?{#consent}
 
@@ -135,7 +135,7 @@ El siguiente gráfico explica los diferentes estados del ciclo vital, qué repre
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Borrador | Una audiencia con el estado **Borrador** es una audiencia que aún está en desarrollo y no está lista para utilizarse en otros servicios. | Sí, pero se puede ocultar. | No | Sí | Se puede importar o actualizar durante el proceso de refinamiento. | Evaluado para obtener recuentos de publicación precisos. | Sí, pero no se recomienda su uso. | Sí |
 | Publicadas | Una audiencia con el estado **Publicado** es una audiencia lista para usar en todos los servicios descendentes. | Sí | Sí | Sí | Se puede importar o actualizar. | Se evalúa mediante segmentación por lotes, flujo continuo o de Edge. | Sí | Sí |
-| Inactivo | Una audiencia con el estado **Inactiva** es una audiencia que no está en uso actualmente. Sigue existiendo en Platform, pero **no** se podrá usar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Platform ya no lo evalúa ni actualiza. | No | Sí |
+| Inactivo | Una audiencia con el estado **Inactiva** es una audiencia que no está en uso actualmente. Sigue existiendo en Experience Platform, pero **no** se podrá usar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Experience Platform ya no lo evalúa ni actualiza. | No | Sí |
 | Eliminado | Una audiencia con el estado **Eliminado** es una audiencia que se ha eliminado. La eliminación real de los datos puede tardar hasta unos minutos en ejecutarse. | No | No | No | Se eliminan los datos subyacentes. | No se realiza ninguna evaluación ni ejecución de los datos una vez completada la eliminación. | No | No |
 
 ### ¿En qué estados puedo editar mis audiencias?
@@ -272,7 +272,7 @@ En la siguiente sección se enumeran las preguntas relacionadas con la Composici
 
 ### ¿Cuándo debo usar Composición de audiencia en lugar de usar el Generador de segmentos?
 
-Tanto la Composición de audiencias como el Generador de segmentos tienen una función importante en la creación de audiencias en Platform.
+Tanto la Composición de audiencias como el Generador de segmentos tienen una función importante en la creación de audiencias en Experience Platform.
 
 El Generador de segmentos es más adecuado para la audiencia **creación** (para crear una audiencia desde cero), mientras que la Composición de audiencias es más adecuada para la audiencia **depuración y personalización** (para crear nuevas audiencias basadas en una audiencia existente).
 
@@ -376,9 +376,9 @@ Como resultado, cuando se realizan cambios en el perfil, como combinar dos perfi
 
 Por ejemplo, supongamos que ha creado dos audiencias mutuamente exclusivas: la audiencia A es para personas que viven en Washington y la audiencia B es para personas que **no** viven en Washington. Existen dos perfiles: el perfil 1 de una persona que vive en Washington y el perfil 2 de una persona que vive en Oregón.
 
-Cuando se ejecute el trabajo de evaluación de segmentación por lotes, el perfil 1 irá a la Audiencia A, mientras que el perfil 2 irá a la Audiencia B. Más adelante, pero antes de que se ejecute el trabajo de evaluación de segmentación por lotes del día siguiente, entrará en Platform un evento que reconcilie los dos perfiles. Como resultado, se crea un único perfil combinado que contiene los perfiles 1 y 2.
+Cuando se ejecute el trabajo de evaluación de segmentación por lotes, el perfil 1 irá a la Audiencia A, mientras que el perfil 2 irá a la Audiencia B. Más adelante, pero antes de que se ejecute el trabajo de evaluación de segmentación por lotes del día siguiente, entrará en Experience Platform un evento que reconcilie los dos perfiles. Como resultado, se crea un único perfil combinado que contiene los perfiles 1 y 2.
 
-Hasta que se ejecute el siguiente trabajo de evaluación de segmentos por lotes, el nuevo perfil combinado tendrá pertenencia a audiencia en **tanto el perfil 1 como el perfil 2 de**. Como resultado, esto significa que será miembro de **tanto de** audiencia A como de la audiencia B, a pesar de que estas audiencias tienen definiciones contradictorias. Para el usuario final, esta es **exactamente la misma situación** que antes de que se conectaran los perfiles, ya que siempre había solo una persona involucrada y Platform simplemente **no** tenía suficiente información para conectar los dos perfiles.
+Hasta que se ejecute el siguiente trabajo de evaluación de segmentos por lotes, el nuevo perfil combinado tendrá pertenencia a audiencia en **tanto el perfil 1 como el perfil 2 de**. Como resultado, esto significa que será miembro de **tanto de** audiencia A como de la audiencia B, a pesar de que estas audiencias tienen definiciones contradictorias. Para el usuario final, esta es **exactamente la misma situación** que antes de que se conectaran los perfiles, ya que siempre había solo una persona involucrada y Experience Platform simplemente **no** tenía suficiente información para conectar los dos perfiles.
 
 Si usa la búsqueda de perfiles para recuperar el perfil recién creado y observar su pertenencia a audiencias, se mostrará que es miembro de **tanto de la audiencia A como de la audiencia B**, a pesar de que ambas audiencias tienen definiciones contradictorias. Una vez que se ejecute el trabajo diario de evaluación de segmentación por lotes, el abono a audiencia se actualizará para reflejar este estado actualizado de datos de perfil.
 
@@ -430,4 +430,4 @@ Una definición de segmento tarda hasta una hora en estar disponible.
 
 ### ¿Existen limitaciones a los datos que se transmiten en?
 
-Para que los datos transmitidos se usen en la segmentación de flujo continuo, **debe** haber un espacio entre los eventos transmitidos. Si se transmiten demasiados eventos en el mismo segundo, Platform los tratará como datos generados por bots y se descartarán. Como práctica recomendada, debe tener **al menos** cinco segundos entre los datos de evento para asegurarse de que los datos se utilizan correctamente.
+Para que los datos transmitidos se usen en la segmentación de flujo continuo, **debe** haber un espacio entre los eventos transmitidos. Si se transmiten demasiados eventos en el mismo segundo, Experience Platform tratará estos eventos como datos generados por bots y se descartarán. Como práctica recomendada, debe tener **al menos** cinco segundos entre los datos de evento para asegurarse de que los datos se utilizan correctamente.

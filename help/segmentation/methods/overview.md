@@ -2,9 +2,9 @@
 title: Métodos de evaluación de públicos
 description: Obtenga información acerca de los distintos tipos de métodos de evaluación disponibles en Adobe Experience Platform.
 exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ La evaluación flexible de audiencias le permite ejecutar un trabajo de segmenta
 
 ## Segmentación de streaming
 
-La segmentación por streaming es un método de evaluación de segmentación que puede utilizar para evaluar audiencias en tiempo casi real y, al mismo tiempo, centrarse en la riqueza de datos. Puede utilizar la segmentación de flujo continuo para segmentar rápidamente los datos de flujo continuo a medida que llegan a Platform.
+La segmentación por streaming es un método de evaluación de segmentación que puede utilizar para evaluar audiencias en tiempo casi real y, al mismo tiempo, centrarse en la riqueza de datos. Puede utilizar la segmentación de flujo continuo para segmentar rápidamente los datos de flujo continuo a medida que llegan a Experience Platform.
 
 Para obtener más información sobre la segmentación por transmisión, lea [información general sobre la segmentación por transmisión](./streaming-segmentation.md).
 

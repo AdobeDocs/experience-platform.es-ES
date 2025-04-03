@@ -3,9 +3,9 @@ title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
+source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1592'
 ht-degree: 3%
 
 ---
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | Nombre de la audiencia. |
 | `namespace` | El área de nombres de la audiencia. |
 | `description` | Una descripción de la audiencia. |
-| `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. Un `SegmentDefinition` hace referencia a una audiencia que se generó en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
+| `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. Un `SegmentDefinition` hace referencia a una audiencia que se generó en Experience Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Experience Platform. |
 | `expression` | Un objeto que contiene la expresión PQL de la audiencia. |
 | `lifecycleState` | El estado de la audiencia. Los valores posibles incluyen `draft`, `published` y `inactive`. `draft` representa cuándo se creó la audiencia, `published` cuándo se publicó la audiencia y `inactive` cuándo la audiencia ya no está activa. |
 | `datasetId` | El ID del conjunto de datos en el que se pueden encontrar los datos de audiencia. |
@@ -482,7 +482,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia recién actualizada. Tenga en cuenta que los detalles de la audiencia variarán según se trate de una audiencia generada por Platform o por un público generado externamente.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia recién actualizada. Tenga en cuenta que los detalles de la audiencia variarán según se trate de una audiencia generada por Experience Platform o de una audiencia generada externamente.
 
 +++Una respuesta de ejemplo al actualizar una audiencia completa.
 
@@ -490,7 +490,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia 
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -565,7 +565,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con la audiencia actualizada.
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

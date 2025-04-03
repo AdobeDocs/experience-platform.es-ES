@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Respeto del consentimiento en las definiciones de segmentos
 description: Aprenda a cumplir las preferencias de consentimiento del cliente para la recopilación de datos personales y el uso compartido en operaciones de segmentación.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Si un cliente ha retirado o retenido el consentimiento para que se compartan sus
 
 El cumplimiento de los valores de consentimiento del cliente requiere una comprensión de los distintos servicios de [!DNL Adobe Experience Platform] involucrados. Antes de iniciar este tutorial, asegúrese de estar familiarizado con los siguientes servicios:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite crear audiencias a partir de los datos de [!DNL Real-Time Customer Profile].
 
@@ -75,7 +75,7 @@ Con los valores de consentimiento de **[!UICONTROL Recopilación de datos]** y *
 
 Al seguir este tutorial, debería comprender mejor cómo cumplir los consentimientos y preferencias de los clientes al crear definiciones de segmentos en Experience Platform.
 
-Para obtener más información sobre la administración del consentimiento en Platform, consulte la siguiente documentación:
+Para obtener más información sobre la administración del consentimiento en Experience Platform, consulte la siguiente documentación:
 
 * [Procesamiento de consentimiento mediante el estándar de Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [Procesamiento de consentimiento mediante el estándar IAB TCF 2.0](../../landing/governance-privacy-security/consent/iab/overview.md)

@@ -4,7 +4,7 @@ title: Aplicar el cumplimiento de uso de datos para un segmento de audiencia med
 type: Tutorial
 description: Este tutorial cubre los pasos para aplicar definiciones de segmentos conformes con el uso de datos mediante API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 6%
@@ -19,16 +19,16 @@ Este tutorial cubre los pasos para aplicar el cumplimiento del uso de datos para
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] es un almacén de entidades de búsqueda genérico y se usa para administrar [!DNL Experience Data Model (XDM)] datos en [!DNL Platform]. El perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] es un almacén de entidades de búsqueda genérico y se usa para administrar [!DNL Experience Data Model (XDM)] datos en [!DNL Experience Platform]. El perfil combina datos en varios recursos de datos empresariales y proporciona acceso a esos datos en una presentación unificada.
    - [Políticas de combinación](../../profile/api/merge-policies.md): Reglas utilizadas por [!DNL Real-Time Customer Profile] para determinar qué datos se pueden combinar en una vista unificada en ciertas condiciones. Las políticas de combinación se pueden configurar para fines de control de datos.
 - [[!DNL Segmentation]](../home.md): cómo [!DNL Real-Time Customer Profile] divide un grupo grande de individuos contenidos en el almacén de perfiles en grupos más pequeños que comparten características similares y responderán de manera similar a las estrategias de marketing.
 - [Control de datos](../../data-governance/home.md): Control de datos proporciona la infraestructura para el etiquetado y la aplicación del uso de datos, utilizando los siguientes componentes:
    - [Etiquetas de uso de datos](../../data-governance/labels/user-guide.md): etiquetas utilizadas para describir conjuntos de datos y campos en términos del nivel de confidencialidad con el que se van a administrar sus datos respectivos.
    - [Políticas de uso de datos](../../data-governance/policies/overview.md): configuraciones que indican qué acciones de marketing se permiten en datos clasificados por etiquetas de uso de datos concretas.
    - [Aplicación de directivas](../../data-governance/enforcement/overview.md): permite aplicar directivas de uso de datos y evitar operaciones de datos que constituyen infracciones de directivas.
-- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que necesitará conocer para realizar llamadas correctamente a las API de [!DNL Platform].
+Las secciones siguientes proporcionan información adicional que necesitará conocer para realizar llamadas correctamente a las API de [!DNL Experience Platform].
 
 ### Lectura de llamadas de API de muestra
 
@@ -36,19 +36,19 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -187,7 +187,7 @@ Una respuesta correcta devuelve los detalles de la política de combinación.
 
 Una vez que haya obtenido los ID de los conjuntos de datos de origen de la política de combinación, puede usar la [API del servicio de políticas](https://www.adobe.io/experience-platform-apis/references/policy-service/) para evaluar esos conjuntos de datos con respecto a acciones de marketing específicas a fin de comprobar violaciones de la política de uso de datos.
 
-Para evaluar los conjuntos de datos, debe proporcionar el nombre de la acción de marketing en la ruta de una solicitud de POST, a la vez que proporciona los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
+Para evaluar los conjuntos de datos, debe proporcionar el nombre de la acción de marketing en la ruta de una petición POST, a la vez que proporciona los ID de conjuntos de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 
 **Formato de API**
 
@@ -198,7 +198,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | El nombre de la acción de marketing asociada con la política de uso de datos por la que está evaluando los conjuntos de datos. Dependiendo de si la directiva fue definida por el Adobe o por su organización, debe usar `/marketingActions/core` o `/marketingActions/custom`, respectivamente. |
+| `{MARKETING_ACTION_NAME}` | El nombre de la acción de marketing asociada con la política de uso de datos por la que está evaluando los conjuntos de datos. Dependiendo de si Adobe o su organización definieron la directiva, debe usar `/marketingActions/core` o `/marketingActions/custom`, respectivamente. |
 
 **Solicitud**
 

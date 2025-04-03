@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4976'
-ht-degree: 8%
+source-wordcount: '4980'
+ht-degree: 7%
 
 ---
 
@@ -76,11 +76,11 @@ De forma predeterminada, solo se muestran los campos de esquema rellenados del a
 
 Puede utilizar datos de uno o varios grupos de informes de Adobe Analytics como eventos dentro de la segmentación.
 
-Al utilizar datos de un único grupo de informes de Analytics, Platform agregará automáticamente descriptores y nombres descriptivos a las eVars, facilitando la búsqueda de esos campos dentro de [!DNL Segment Builder].
+Al utilizar datos de un único grupo de informes de Analytics, Experience Platform agregará automáticamente descriptores y nombres descriptivos a las eVars, facilitando la búsqueda de esos campos dentro de [!DNL Segment Builder].
 
 ![Imagen que muestra cómo se asignan las variables genéricas (eVars) con un nombre descriptivo.](../images/ui/segment-builder/single-report-suite.png)
 
-Cuando se usan datos de varios grupos de informes de Analytics, la plataforma **no puede** agregar automáticamente descriptores o nombres descriptivos a las eVars. Como resultado, antes de utilizar los datos de los grupos de informes de Analytics, debe asignar a campos XDM. Encontrará más información sobre la asignación de variables de Analytics a XDM en la [guía de conexión de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+Al usar datos de varios grupos de informes de Analytics, Experience Platform **no puede** agregar automáticamente descriptores o nombres descriptivos a las eVars. Como resultado, antes de utilizar los datos de los grupos de informes de Analytics, debe asignar a campos XDM. Encontrará más información sobre la asignación de variables de Analytics a XDM en la [guía de conexión de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 Por ejemplo, considere una situación en la que tenía dos grupos de informes con las siguientes variables:
 
@@ -119,7 +119,7 @@ Una vez asignados los grupos de informes, puede utilizar estos campos recién as
 
 >[!NOTE]
 >
->Para las audiencias creadas en Platform, solo se mostrarán las audiencias que tengan la política de combinación **same**.
+>Para las audiencias creadas en Experience Platform, solo se mostrarán las audiencias que tengan la política de combinación **same**.
 
 La ficha **[!UICONTROL Audiencias]** enumera todas las audiencias importadas desde fuentes externas, como Adobe Audience Manager o Customer Journey Analytics, así como las audiencias creadas dentro de [!DNL Experience Platform].
 
@@ -182,7 +182,7 @@ Tenga en cuenta que se permite un máximo de 250 valores. Si supera esta cantida
 
 Puede arrastrar y soltar una audiencia de la ficha **[!UICONTROL Audiencia]** en el lienzo del generador de reglas para hacer referencia a la pertenencia a la audiencia en la nueva definición de segmento. Esto le permite incluir o excluir la pertenencia a audiencias como atributo en las nuevas reglas de definición de segmentos.
 
-Para [!DNL Platform] audiencias creadas con [!DNL Segment Builder], se le da la opción de convertir la audiencia en el conjunto de reglas que se usaron en la definición del segmento para esa audiencia. Esta conversión realiza una copia de la lógica de la regla, que se puede modificar sin afectar a la definición del segmento original. Asegúrese de haber guardado los cambios recientes en la definición del segmento antes de convertirla en lógica de regla.
+Para [!DNL Experience Platform] audiencias creadas con [!DNL Segment Builder], se le da la opción de convertir la audiencia en el conjunto de reglas que se usaron en la definición del segmento para esa audiencia. Esta conversión realiza una copia de la lógica de la regla, que se puede modificar sin afectar a la definición del segmento original. Asegúrese de haber guardado los cambios recientes en la definición del segmento antes de convertirla en lógica de regla.
 
 >[!NOTE]
 >
@@ -349,11 +349,11 @@ Una vez que seleccione **[!UICONTROL Desenvolver contenedor]**, el contenedor se
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Combinar políticas"
->abstract="La política de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Platform proporciona una política de combinación predeterminada. También puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para este público."
+>abstract="La política de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Experience Platform proporciona una política de combinación predeterminada, o bien puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para este público."
 
-[!DNL Experience Platform] le permite reunir datos de varios orígenes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear un perfil.
+[!DNL Experience Platform] le permite reunir datos de varios orígenes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Experience Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear un perfil.
 
-Puede seleccionar una política de combinación que coincida con su propósito de marketing para esta audiencia o usar la política de combinación predeterminada proporcionada por [!DNL Platform]. Puede crear varias políticas de combinación exclusivas de su organización, incluida la creación de su propia política de combinación predeterminada. Para obtener instrucciones paso a paso sobre cómo crear directivas de combinación para su organización, comience por leer la [descripción general de las directivas de combinación](../../profile/merge-policies/overview.md).
+Puede seleccionar una política de combinación que coincida con su propósito de marketing para esta audiencia o usar la política de combinación predeterminada proporcionada por [!DNL Experience Platform]. Puede crear varias políticas de combinación exclusivas de su organización, incluida la creación de su propia política de combinación predeterminada. Para obtener instrucciones paso a paso sobre cómo crear directivas de combinación para su organización, comience por leer la [descripción general de las directivas de combinación](../../profile/merge-policies/overview.md).
 
 Para seleccionar una política de combinación para su definición de segmento, seleccione el icono de engranaje en la pestaña **[!UICONTROL Campos]** y, a continuación, utilice el menú desplegable **[!UICONTROL Política de combinación]** para seleccionar la política de combinación que desee utilizar.
 

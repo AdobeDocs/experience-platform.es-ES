@@ -4,9 +4,9 @@ description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perf
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -53,7 +53,7 @@ Para crear una audiencia de cuenta, selecciona **[!UICONTROL Crear audiencia]** 
 
 ![El botón [!UICONTROL Crear audiencia] está resaltado en la página de exploración de audiencias de la cuenta.](../images/types/account/select-create-audience.png)
 
-Aparecerá el Generador de segmentos. Los atributos y audiencias de la cuenta se muestran en la barra de navegación izquierda. En la ficha [!UICONTROL Atributos], puede agregar atributos creados y personalizados por Platform.
+Aparecerá el Generador de segmentos. Los atributos y audiencias de la cuenta se muestran en la barra de navegación izquierda. En la ficha [!UICONTROL Atributos], puede agregar atributos creados y personalizados por Experience Platform.
 
 ![Se muestra el Generador de segmentos. Observe que sólo se muestran los atributos y las audiencias.](../images/types/account/segment-builder.png)
 
@@ -116,7 +116,7 @@ Aparecerá la página [!UICONTROL Activar destino]. Para obtener más informaci�
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer esta guía, ahora tiene una mejor comprensión de cómo crear y utilizar las audiencias de la cuenta en Adobe Experience Platform. Para aprender a usar otros tipos de audiencias en Platform, lea la [descripción general del tipo de audiencia](./overview.md).
+Después de leer esta guía, ahora tiene una mejor comprensión de cómo crear y utilizar las audiencias de la cuenta en Adobe Experience Platform. Para aprender a usar otros tipos de audiencias en Experience Platform, lea la [descripción general del tipo de audiencia](./overview.md).
 
 ## Apéndice {#appendix}
 

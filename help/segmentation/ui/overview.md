@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ El trabajo con audiencias y definiciones de segmentos requiere una comprensión 
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] le permite segmentar en grupos más pequeños los datos almacenados en [!DNL Experience Platform] relacionados con personas (como clientes, clientes potenciales, usuarios u organizaciones).
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): habilita la creación de perfiles de clientes al unir identidades de distintos orígenes de datos que se están introduciendo en [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar la segmentación de la mejor manera posible, asegúrate de que tus datos se incorporen como perfiles y eventos según las [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): habilita la creación de perfiles de clientes al unir identidades de distintos orígenes de datos que se están introduciendo en [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente. Para utilizar la segmentación de la mejor manera posible, asegúrate de que tus datos se incorporen como perfiles y eventos según las [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
 También debe comprender los siguientes términos clave que se utilizan en este documento y la diferencia entre ellos:
 
-- **Audiencia**: Una colección de personas que comparten comportamientos o características similares. Adobe Experience Platform puede generar esta colección de personas mediante definiciones de segmento (audiencia generada por Platform), composición de audiencia o a partir de fuentes externas como cargas personalizadas (audiencia generada externamente).
+- **Audiencia**: Una colección de personas que comparten comportamientos o características similares. Adobe Experience Platform puede generar esta colección de personas mediante definiciones de segmento (audiencia generada por Experience Platform), composición de audiencia o a partir de fuentes externas como cargas personalizadas (audiencia generada externamente).
 - **Definición del segmento**: Las reglas que Adobe Experience Platform usa para describir las características clave o el comportamiento de una audiencia de destino.
 - **Segmento**: Acto de separar Perfiles en audiencias.
 
@@ -35,7 +35,7 @@ En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Audie
 
 >[!NOTE]
 >
->Si su organización es nueva en Platform y aún no ha creado conjuntos de datos de perfil o políticas de combinación activos, el panel [!UICONTROL Audiencias] no estará visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar a usar las audiencias.
+>Si su organización es nueva en Experience Platform y aún no ha creado conjuntos de datos de perfil o políticas de combinación activos, el panel [!UICONTROL Audiencias] no estará visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar a usar las audiencias.
 
 ### Panel [!UICONTROL Audiencias] {#segments-dashboard}
 
@@ -49,7 +49,7 @@ Para obtener más información, visita la [guía de panel de audiencias](../../d
 
 Seleccione la ficha **[!UICONTROL Examinar]** para ver Audience Portal. Audience Portal proporciona una lista de todas las audiencias que pertenecen a su organización y a la zona protegida e incluye detalles como el recuento de perfiles, el origen, la fecha de creación, la última modificación, las etiquetas y el desglose.
 
-Además, Audience Portal permite crear nuevas audiencias con el Generador de segmentos o la Composición de audiencias, así como importar audiencias generadas externamente en Platform.
+Además, Audience Portal permite crear nuevas audiencias con el Generador de segmentos o la Composición de audiencias, así como importar audiencias generadas externamente en Experience Platform.
 
 Para obtener más información sobre Audience Portal, lea la [descripción general de Audience Portal](./audience-portal.md).
 
@@ -98,7 +98,7 @@ Además de las composiciones de audiencias y las definiciones de segmentos, pued
 
 ## Segmentación de streaming {#streaming-segmentation}
 
-La segmentación por transmisión es la capacidad de segmentar [!DNL Platform] en tiempo casi real, al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación para la segmentación ahora se produce cuando los datos llegan a [!DNL Platform], lo que alivia la necesidad de programar y ejecutar trabajos de segmentación.
+La segmentación por transmisión es la capacidad de segmentar [!DNL Experience Platform] en tiempo casi real, al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación para la segmentación ahora se produce cuando los datos llegan a [!DNL Experience Platform], lo que alivia la necesidad de programar y ejecutar trabajos de segmentación.
 
 Encontrará más información sobre la segmentación de transmisión en la [guía del usuario de segmentación de transmisión](../methods/streaming-segmentation.md).
 
@@ -108,7 +108,7 @@ Encontrará más información sobre la segmentación de transmisión en la [guí
 
 ## Segmentación de Edge {#edge-segmentation}
 
-La segmentación de Edge es la capacidad de evaluar audiencias en Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
+La segmentación de Edge es la capacidad de evaluar audiencias en Experience Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 
 Encontrará más información sobre la segmentación de Edge en la [guía de la interfaz de usuario de segmentación de Edge](../methods/edge-segmentation.md)
 

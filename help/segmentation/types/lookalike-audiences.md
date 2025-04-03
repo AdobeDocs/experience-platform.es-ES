@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiencias con similitud
 description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experience Platform mediante audiencias de similitud.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -33,7 +33,7 @@ Antes de empezar a usar las audiencias de similitud, asegúrese de comprender lo
 
 Para usar perspectivas de similitud, la audiencia base **debe** cumplir con los siguientes criterios de elegibilidad:
 
-- La audiencia base **debe** crearse en Platform.
+- La audiencia base **debe** crearse en Experience Platform.
    - Las audiencias generadas externamente **no** cumplen los requisitos para obtener perspectivas de similitud.
 - La audiencia base **debe** estar en la política de combinación predeterminada.
 - La audiencia base **debe** no usar campos restringidos por el control de datos.

@@ -4,7 +4,7 @@ title: Evaluar y acceder a los resultados del segmento
 type: Tutorial
 description: Siga este tutorial para aprender a evaluar las definiciones de segmentos y acceder a los resultados de la segmentación mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 2%
@@ -22,23 +22,23 @@ Este tutorial requiere una comprensión práctica de los distintos servicios de 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite crear audiencias a partir de los datos de [!DNL Real-Time Customer Profile].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente. Para utilizar la segmentación de la mejor manera posible, asegúrate de que tus datos se incorporen como perfiles y eventos según las [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
-- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Encabezados obligatorios
 
-Este tutorial también requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar correctamente llamadas a las API de [!DNL Platform]. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Este tutorial también requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar correctamente llamadas a las API de [!DNL Experience Platform]. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Las solicitudes a las API [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes de POST, PUT y PATCH requieren un encabezado adicional:
 
@@ -62,19 +62,19 @@ Mediante la evaluación programada, su organización puede crear una programaci�
 
 ### Creación de una programación
 
-Al realizar una solicitud de POST al extremo `/config/schedules`, puede crear una programación e incluir la hora específica en que se debe activar la programación.
+Al realizar una petición POST al extremo `/config/schedules`, puede crear una programación e incluir la hora específica en que se debe activar la programación.
 
 Encontrará información más detallada sobre el uso de este extremo en la [guía de extremo de programaciones](../api/schedules.md#create)
 
 ### Habilitar una programación
 
-De manera predeterminada, una programación está inactiva cuando se crea a menos que la propiedad `state` se establezca en `active` en el cuerpo de la solicitud de creación (POST). Puede habilitar una programación (establecer `state` en `active`) realizando una solicitud de PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta de acceso.
+De manera predeterminada, una programación está inactiva cuando se crea a menos que la propiedad `state` se establezca en `active` en el cuerpo de la solicitud de creación (POST). Puede habilitar una programación (establecer `state` en `active`) realizando una petición PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
 
 Encontrará información más detallada sobre el uso de este extremo en la [guía de extremo de programaciones](../api/schedules.md#update-state)
 
 ### Actualizar la hora de programación
 
-El horario se puede actualizar realizando una solicitud del PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta de acceso.
+El tiempo de programación se puede actualizar realizando una petición PATCH al extremo `/config/schedules` e incluyendo el ID de la programación en la ruta.
 
 Encontrará información más detallada sobre el uso de este extremo en la [guía de extremo de programaciones](../api/schedules.md#update-schedule)
 
@@ -86,19 +86,19 @@ La evaluación bajo demanda le permite crear un trabajo de segmentación para ge
 
 Un trabajo de segmentación es un proceso asincrónico que crea un segmento de audiencia bajo demanda. Hace referencia a una definición de segmento, así como a cualquier política de combinación que controle cómo [!DNL Real-Time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmentación se completa correctamente, puede recopilar información diversa acerca de la definición del segmento, como los errores que se hayan podido producir durante el procesamiento y el tamaño final de la audiencia. Se debe ejecutar un trabajo de segmento cada vez que desee actualizar la audiencia a la que se clasifica actualmente la definición del segmento.
 
-Puede crear un nuevo trabajo de segmento realizando una solicitud de POST al extremo `/segment/jobs` en la API [!DNL Real-Time Customer Profile].
+Puede crear un nuevo trabajo de segmento realizando una petición POST al extremo `/segment/jobs` en la API [!DNL Real-Time Customer Profile].
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de [trabajos de segmentación](../api/segment-jobs.md#create)
 
 ### Búsqueda del estado del trabajo del segmento
 
-Puede utilizar `id` para un trabajo de segmento específico a fin de realizar una solicitud de búsqueda (GET) y ver el estado actual del trabajo.
+Puede utilizar `id` para un trabajo de segmento específico con el fin de realizar una solicitud de búsqueda (GET) y ver el estado actual del trabajo.
 
 Encontrará información más detallada sobre el uso de este extremo en la guía de extremo de [trabajos de segmentación](../api/segment-jobs.md#get)
 
 ## Interpretar resultados del trabajo del segmento
 
-Cuando se ejecutan correctamente los trabajos del segmento, el mapa `segmentMembership` se actualiza para cada perfil incluido en la definición del segmento. `segmentMembership` también almacena cualquier audiencia preevaluada que se haya introducido en [!DNL Platform], lo que permite la integración con otras soluciones como [!DNL Adobe Audience Manager].
+Cuando se ejecutan correctamente los trabajos del segmento, el mapa `segmentMembership` se actualiza para cada perfil incluido en la definición del segmento. `segmentMembership` también almacena cualquier audiencia preevaluada que se haya introducido en [!DNL Experience Platform], lo que permite la integración con otras soluciones como [!DNL Adobe Audience Manager].
 
 El ejemplo siguiente muestra el aspecto del atributo `segmentMembership` para cada registro de perfil individual:
 
@@ -212,13 +212,13 @@ Una respuesta correcta devuelve una matriz que contiene el ID único de solo lec
 
 ### Generar perfiles para los miembros de la audiencia {#generate-profiles}
 
-Una vez que tenga un conjunto de datos que persiste en la unión, puede crear un trabajo de exportación para mantener los miembros de la audiencia en el conjunto de datos realizando una solicitud del POST al extremo `/export/jobs` en la API [!DNL Real-Time Customer Profile] y proporcionando la información del ID del conjunto de datos y la definición del segmento para las definiciones de segmento que desea exportar.
+Una vez que tenga un conjunto de datos que persiste en la unión, puede crear un trabajo de exportación para mantener los miembros de la audiencia en el conjunto de datos realizando una petición POST al extremo `/export/jobs` en la API [!DNL Real-Time Customer Profile] y proporcionando la información del ID del conjunto de datos y la definición del segmento para las definiciones de segmento que desea exportar.
 
 Encontrará información más detallada sobre el uso de este extremo en la [guía de extremo de trabajos de exportación](../api/export-jobs.md#create)
 
 ### Monitorización del progreso de exportación
 
-Como procesos de trabajo de exportación, puede supervisar su estado realizando una solicitud de GET al extremo `/export/jobs` e incluyendo `id` del trabajo de exportación en la ruta. El trabajo de exportación se ha completado una vez que el campo `status` devuelve el valor &quot;CORRECTO&quot;.
+Como procesos de trabajo de exportación, puede supervisar su estado realizando una petición GET al extremo `/export/jobs` e incluyendo `id` del trabajo de exportación en la ruta. El trabajo de exportación se ha completado una vez que el campo `status` devuelve el valor &quot;CORRECTO&quot;.
 
 Encontrará información más detallada sobre el uso de este extremo en la [guía de extremo de trabajos de exportación](../api/export-jobs.md#get)
 

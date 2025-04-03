@@ -1,13 +1,13 @@
 ---
 title: Guía de segmentación por lotes
 description: Obtenga información sobre la segmentación por lotes, incluido qué es, cómo crear una audiencia evaluada mediante segmentación por lotes y cómo ver las audiencias creadas mediante segmentación por lotes.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
-
 
 # Guía de segmentación por lotes
 
@@ -279,7 +279,7 @@ Dentro de los filtros disponibles, ve a **[!UICONTROL Actualizar frecuencia]** y
 
 ![Se ha seleccionado la frecuencia de actualización por lotes para mostrar todas las audiencias de la organización que se evalúan mediante la segmentación por lotes.](../images/methods/batch/filter-batch.png)
 
-Para obtener más información acerca de cómo ver audiencias en Platform, lea la [guía de Audience Portal](../ui/audience-portal.md).
+Para obtener más información acerca de cómo ver audiencias en Experience Platform, lea la [guía de Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 
