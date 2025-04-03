@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;control de datos;guía del usuario sobre la política de uso de datos
 solution: Experience Platform
 title: Administrar las políticas de uso de datos en la IU
-description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el área de trabajo Directivas en la interfaz de usuario del Experience Platform.
+description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el área de trabajo Directivas en la interfaz de usuario de Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 16%
+source-wordcount: '1769'
+ht-degree: 15%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="Integración y aplicación del consentimiento del cliente en los datos de perfil"
->abstract="<h2>Descripción</h2><p>Platform le permite integrar los datos de consentimiento que ha recopilado de sus clientes en sus respectivos perfiles. A continuación, puede configurar directivas de consentimiento para determinar si estos datos se pueden incluir en segmentos activados en determinados destinos.</p>"
+>abstract="<h2>Descripción</h2><p>Experience Platform le permite integrar los datos de consentimiento que ha recopilado de sus clientes en sus respectivos perfiles. A continuación, puede configurar directivas de consentimiento para determinar si estos datos se pueden incluir en segmentos activados en determinados destinos.</p>"
 
 Este documento explica cómo usar el espacio de trabajo **[!UICONTROL Políticas]** en la interfaz de usuario de Adobe Experience Platform para crear y administrar políticas de uso de datos.
 
@@ -73,7 +73,7 @@ Con este comportamiento, puede configurar una combinación de directivas y regla
 
 ![Infografía que describe los pasos para usar directivas de gobernanza y consentimiento juntas a fin de crear reglas sólidas para las audiencias de administración.](../images/policies/governance-and-consent-policies-infographic.png)
 
-### Crear una política de gobernanza de datos {#create-governance-policy}
+### Creación de una política de gobernanza de datos {#create-governance-policy}
 
 Aparece el flujo de trabajo **[!UICONTROL Crear directiva]**. Comience proporcionando un nombre y una descripción para la nueva directiva.
 
@@ -181,7 +181,7 @@ Puede habilitar o deshabilitar directivas desde la ficha **[!UICONTROL Examinar]
 
 ## Ver acciones de marketing {#view-marketing-actions}
 
-En el área de trabajo **[!UICONTROL Políticas]**, seleccione la pestaña **[!UICONTROL Acciones de marketing]** para ver una lista de las acciones de marketing disponibles definidas por el Adobe y su propia organización.
+En el área de trabajo **[!UICONTROL Políticas]**, seleccione la pestaña **[!UICONTROL Acciones de marketing]** para ver una lista de las acciones de marketing disponibles definidas por Adobe y su propia organización.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -203,9 +203,9 @@ La acción recién creada aparece en la ficha **[!UICONTROL Acciones de marketin
 
 >[!NOTE]
 >
->Solo se pueden editar las acciones de marketing personalizadas definidas por su organización. Las acciones de marketing definidas por el Adobe no se pueden cambiar ni eliminar.
+>Solo se pueden editar las acciones de marketing personalizadas definidas por su organización. Las acciones de marketing definidas por Adobe no se pueden cambiar ni eliminar.
 
-En el área de trabajo **[!UICONTROL Políticas]**, seleccione la pestaña **[!UICONTROL Acciones de marketing]** para ver una lista de las acciones de marketing disponibles definidas por el Adobe y su propia organización. Seleccione una acción de marketing personalizada de la lista y, a continuación, utilice los campos proporcionados en la sección derecha para editar los detalles de la acción de marketing.
+En el área de trabajo **[!UICONTROL Políticas]**, seleccione la pestaña **[!UICONTROL Acciones de marketing]** para ver una lista de las acciones de marketing disponibles definidas por Adobe y su propia organización. Seleccione una acción de marketing personalizada de la lista y, a continuación, utilice los campos proporcionados en la sección derecha para editar los detalles de la acción de marketing.
 
 ![](../images/policies/edit-marketing-action.png)
 

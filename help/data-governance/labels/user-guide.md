@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la IU
 description: Esta guía describe los pasos para trabajar con las etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 17%
+source-wordcount: '1552'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 17%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Gobernanza del uso de datos en Platform"
+>title="Gestionar el uso de datos en Experience Platform"
 >abstract="<h2>Descripción</h2><p>El marco de Gobernanza de datos de Experience Platform le permite etiquetar atributos y conjuntos de datos según las restricciones de uso de datos, así como establecer directivas que identifiquen y apliquen estas limitaciones para acciones de marketing específicas.</p>"
 
 Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de [!DNL Experience Platform].
@@ -61,11 +61,11 @@ Aparece un cuadro de diálogo que le permite aplicar y administrar etiquetas de 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instrucciones"
->abstract="<ol><li>Seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=es">Conjuntos de datos</a> en la navegación de la izquierda y el conjunto de datos cuyos datos desee restringir.</li><li>En la vista de detalles del conjunto de datos, seleccione la pestaña <b>Gobernanza de datos</b>.</li><li>Seleccione los campos del conjunto de datos que desea limitar y, a continuación, <b>Editar etiquetas de gobernanza</b> para etiquetar los datos según las restricciones de uso.</li><li>Después de etiquetar los datos, seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=es">Directivas</a> en la navegación izquierda y <b>Crear directiva</b>.</li><li>Elija crear una <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=es#create-governance-policy">Directiva de gobernanza de datos</a> y, a continuación, las etiquetas de uso de datos que le aplicará.</li><li>Seleccione las acciones de marketing que denegará la directiva para los datos que contengan esas etiquetas. Una vez creada la directiva, selecciónela en la lista y habilítela con el botón de alternancia del carril derecho.</li><li>Para cada directiva habilitada, Platform evita que los datos que contienen las etiquetas especificadas se utilicen para las acciones de marketing definidas. Esta aplicación tiene lugar automáticamente cuando intenta activar datos etiquetados en un destino con acciones de marketing asociadas (casos de uso).</li></ol>"
+>abstract="<ol><li>Seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=es">Conjuntos de datos</a> en la navegación de la izquierda y el conjunto de datos cuyos datos desee restringir.</li><li>En la vista de detalles del conjunto de datos, seleccione la pestaña <b>Gobernanza de datos</b>.</li><li>Seleccione los campos del conjunto de datos que desea limitar y, a continuación, <b>Editar etiquetas de gobernanza</b> para etiquetar los datos según las restricciones de uso.</li><li>Después de etiquetar los datos, seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=es">Directivas</a> en la navegación izquierda y <b>Crear directiva</b>.</li><li>Elija crear una <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=es#create-governance-policy">Directiva de gobernanza de datos</a> y, a continuación, las etiquetas de uso de datos que le aplicará.</li><li>Seleccione las acciones de marketing que denegará la directiva para los datos que contengan esas etiquetas. Una vez creada la directiva, selecciónela en la lista y habilítela con el botón de alternancia del carril derecho.</li><li>Para cada directiva habilitada, Experience Platform evita que se utilicen los datos que contienen las etiquetas especificadas para las acciones de marketing definidas. Esta aplicación tiene lugar automáticamente cuando intenta activar datos etiquetados en un destino con acciones de marketing asociadas (casos de uso).</li></ol>"
 
 >[!IMPORTANT]
 >
->Las etiquetas ya no se pueden aplicar a campos de nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Cualquier etiqueta aplicada anteriormente en el nivel de objeto del conjunto de datos seguirá siendo compatible mediante la IU de Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
+>Las etiquetas ya no se pueden aplicar a campos de nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Cualquier etiqueta aplicada anteriormente en el nivel de objeto del conjunto de datos seguirá siendo compatible mediante la interfaz de usuario de Experience Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
 
 Las etiquetas se pueden aplicar a todo el conjunto de datos desde la pestaña **[!UICONTROL Control de datos]** del área de trabajo **[!UICONTROL Conjuntos de datos]**. El espacio de trabajo de le permite administrar etiquetas de uso de datos en el nivel de conjunto de datos.
 
@@ -120,7 +120,7 @@ La opción **[!UICONTROL Mostrar etiquetas heredadas]** está activada de forma 
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Creación de etiquetas"
->abstract="Las etiquetas permiten clasificar los conjuntos de datos y campos según las directivas de uso que se aplican a esos datos. Platform proporciona un conjunto estándar de etiquetas para su uso, pero también puede crear etiquetas personalizadas específicas de su organización."
+>abstract="Las etiquetas permiten clasificar los conjuntos de datos y campos según las directivas de uso que se aplican a esos datos. Experience Platform proporciona un conjunto estándar de etiquetas que puede utilizar, pero también puede crear etiquetas personalizadas específicas de su organización."
 
 Puede crear sus propias etiquetas de uso personalizadas en el área de trabajo **[!UICONTROL Políticas]** de la interfaz de usuario de [!DNL Experience Platform]. Seleccione **[!UICONTROL Directivas]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Etiquetas]** para ver una lista de etiquetas existentes. Aquí, seleccione **[!UICONTROL Crear etiqueta]**.
 

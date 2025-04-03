@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Crear una función
 description: Este documento proporciona información sobre la administración de funciones a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 23%
+source-wordcount: '619'
+ht-degree: 21%
 
 ---
 
@@ -19,7 +19,7 @@ Las funciones definen el acceso que un administrador, un especialista o un usuar
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Crear nueva función"
->abstract="Cree nuevas funciones para clasificar mejor a los usuarios que interactúan con la instancia de Platform. Por ejemplo, puede crear una función para un equipo interno de marketing y aplicar la etiqueta RHD (datos de salud regulados) a esa función, lo que permite que su equipo interno de marketing acceda a la información de salud protegida (PHI). Como alternativa, también puede crear una función para una agencia externa y denegar el acceso de esa función a los datos de PHI al no aplicar la etiqueta RHD a esa función."
+>abstract="Cree nuevas funciones para categorizar mejor a los usuarios que interactúan con la instancia de Experience Platform. Por ejemplo, puede crear una función para un equipo interno de marketing y aplicar la etiqueta RHD (datos de salud regulados) a esa función, lo que permite que su equipo interno de marketing acceda a la información de salud protegida (PHI). Como alternativa, también puede crear una función para una agencia externa y denegar el acceso de esa función a los datos de PHI al no aplicar la etiqueta RHD a esa función."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=es" text="Administrar una función"
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Aplicar etiquetas a una función"
 

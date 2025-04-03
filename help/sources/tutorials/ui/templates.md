@@ -1,12 +1,12 @@
 ---
 description: Aprenda a utilizar plantillas en la IU de Adobe Experience Platform para acelerar el proceso de ingesta de datos para los datos B2B.
 title: Creación de un flujo de datos de origen mediante plantillas en la IU
-badge1: "Beta"
+badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2241'
-ht-degree: 10%
+source-wordcount: '2250'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Plantillas para fuentes en la IU de Platform"
+>title="Plantillas para fuentes en la IU de Experience Platform"
 >abstract="Las plantillas incluyen archivos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a una Experience Platform. Puede actualizar los archivos generados automáticamente para personalizarlos según sus casos de uso."
 
 >[!IMPORTANT]
@@ -27,7 +27,7 @@ ht-degree: 10%
 >
 >La documentación y las funcionalidades están sujetas a cambios.
 
-Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de ingesta de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a un Experience Platform.
+Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de ingesta de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a Experience Platform.
 
 Con las plantillas, puede:
 
@@ -35,17 +35,17 @@ Con las plantillas, puede:
 * Minimice los errores que pueden producirse durante el proceso de ingesta manual de datos.
 * Actualice los recursos generados automáticamente en cualquier momento para adaptarlos a sus casos de uso.
 
-El siguiente tutorial proporciona pasos sobre cómo utilizar las plantillas en la interfaz de usuario de Platform.
+El siguiente tutorial proporciona pasos sobre cómo utilizar las plantillas en la interfaz de usuario de Experience Platform.
 
 ## Primeros pasos
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-## Uso de plantillas en la IU de Platform {#use-templates-in-the-platform-ui}
+## Uso de plantillas en la interfaz de usuario de Experience Platform {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -53,7 +53,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >abstract="Seleccione el tipo de negocio adecuado para su caso de uso. El acceso puede variar en función de la cuenta de suscripción a Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es" text="Información general sobre Real-Time CDP"
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources] y ver un catálogo de orígenes disponibles en el Experience Platform.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources] y ver un catálogo de orígenes disponibles en Experience Platform.
 
 Utilice el menú *[!UICONTROL Categorías]* para filtrar orígenes por categoría. También puede introducir un nombre de origen en la barra de búsqueda para buscar un origen específico del catálogo.
 
@@ -237,7 +237,7 @@ Puede utilizar la vista del editor de esquemas para realizar actualizaciones en 
 >
 >![Una lista de flujos de datos existentes en el catálogo de flujos de datos del área de trabajo de orígenes.](../../images/tutorials/templates/dataflows.png)
 
-### Publish su flujo de datos
+### Publicación del flujo de datos
 
 Inicie el proceso de publicación a través del flujo de trabajo de fuentes. Después de seleccionar [!UICONTROL Actualizar flujo de datos], se le redirigirá al paso *[!UICONTROL Agregar datos]* del flujo de trabajo. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
@@ -267,8 +267,8 @@ Al seguir este tutorial, ha creado flujos de datos, así como recursos como esqu
 
 Las plantillas son compatibles con las alertas de Adobe Experience Platform y puede utilizar el panel de notificaciones para recibir actualizaciones sobre el estado de los recursos y también para volver a la página de revisión.
 
-Seleccione el icono de notificación en el encabezado superior de la interfaz de usuario de Platform y, a continuación, seleccione la alerta de estado para ver los recursos que desea revisar.
+Seleccione el icono de notificación en el encabezado superior de la interfaz de usuario de Experience Platform y, a continuación, seleccione la alerta de estado para ver los recursos que desea revisar.
 
-![Se ha resaltado el panel de notificaciones en la interfaz de usuario de Platform con una notificación que alerta sobre un flujo de datos fallido.](../../images/tutorials/templates/notifications.png)
+![Se ha resaltado el panel de notificaciones en la interfaz de usuario de Experience Platform con una notificación que alerta de un flujo de datos con error.](../../images/tutorials/templates/notifications.png)
 
-Puede actualizar la configuración de alertas de las plantillas para recibir notificaciones por correo electrónico y en Platform sobre el estado de los flujos de datos. Para obtener más información sobre la configuración de alertas, lea la guía de [cómo suscribirse a alertas para orígenes y flujos de datos](../ui/alerts.md).
+Puede actualizar la configuración de alertas de las plantillas para recibir notificaciones por correo electrónico y en Experience Platform sobre el estado de los flujos de datos. Para obtener más información sobre la configuración de alertas, lea la guía de [cómo suscribirse a alertas para orígenes y flujos de datos](../ui/alerts.md).

@@ -4,10 +4,10 @@ description: Descubra cómo los registros de auditoría le permiten ver quién r
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 32%
+source-wordcount: '1476'
+ht-degree: 27%
 
 ---
 
@@ -16,19 +16,19 @@ ht-degree: 32%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Acciones principales"
->abstract="Este widget muestra los principales tipos de acciones que se han realizado en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación situado a la izquierda."
+>abstract="Este widget muestra los principales tipos de acciones que se han realizado en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Experience Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Usuarios principales"
->abstract="Este widget muestra los usuarios que ejecutaron la mayoría de las acciones en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Platform, seleccione **Auditorías** en el panel de navegación situado a la izquierda."
+>abstract="Este widget muestra los usuarios que ejecutaron la mayoría de las acciones en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Experience Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitorización de actividades de usuarios en Platform"
->abstract="<h2>Descripción</h2><p>Puede monitorizar la actividad de los usuarios para los distintos servicios y capacidades de Platform en forma de registros de auditoría. Estos registros forman una pista de auditoría que registra <b>quién</b> realizó <b>qué</b> acción y <b>cuándo</b>. Los registros de auditoría pueden ayudar a solucionar problemas en Platform y a que su empresa cumpla de manera eficaz con las políticas corporativas de administración de datos y los requisitos regulatorios.</p>"
+>title="Monitorización de actividades del usuario en Experience Platform"
+>abstract="<h2>Descripción</h2><p>Puede monitorizar la actividad del usuario para varios servicios y funcionalidades de Experience Platform en forma de registros de auditoría. Estos registros forman una pista de auditoría que registra <b>quién</b> realizó <b>qué</b> acción y <b>cuándo</b>. Los registros de auditoría pueden ayudar a solucionar problemas en Experience Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.</p>"
 
-Para aumentar la transparencia y la visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform le permite auditar la actividad del usuario para varios servicios y funcionalidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
+Para aumentar la transparencia y la visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform le permite auditar la actividad del usuario para varios servicios y funcionalidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Experience Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 
 En un sentido básico, un registro de auditoría indica a **quién** realizó **qué** acción y **cuándo**. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción.
 
@@ -36,7 +36,7 @@ En un sentido básico, un registro de auditoría indica a **quién** realizó **
 >
 > Los metadatos de las acciones **Agregar usuario** y **Quitar usuario** dentro del recurso **Rol** no contendrán el ID de correo electrónico del usuario que realizó la acción. En su lugar, los registros mostrarán el ID de correo electrónico generado por el sistema (system@adobe.com).
 
-Este documento cubre los registros de auditoría en Platform, incluido cómo verlos y administrarlos en la interfaz de usuario o la API.
+Este documento cubre los registros de auditoría en Experience Platform, incluido cómo verlos y administrarlos en la interfaz de usuario o la API.
 
 ## Tipos de eventos capturados por los registros de auditoría {#category}
 
@@ -74,7 +74,7 @@ La siguiente tabla indica qué acciones sobre qué recursos se registran en los 
 
 Cuando la función está habilitada para su organización, los registros de auditoría se recopilan automáticamente a medida que se produce la actividad. No es necesario habilitar manualmente la recopilación de registros.
 
-Para ver y exportar los registros de auditoría, debe contar con el permiso de control de acceso **[!UICONTROL Ver registro de actividad de usuario]** concedido (que se encuentra en la categoría [!UICONTROL Control de datos]). Para obtener información sobre cómo administrar permisos individuales para las características de Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
+Para ver y exportar los registros de auditoría, debe contar con el permiso de control de acceso **[!UICONTROL Ver registro de actividad de usuario]** concedido (que se encuentra en la categoría [!UICONTROL Control de datos]). Para obtener información sobre cómo administrar permisos individuales para funciones de Experience Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
 
 ## Administración de registros de auditoría en la interfaz de usuario {#managing-audit-logs-in-the-ui}
 
@@ -83,7 +83,7 @@ Para ver y exportar los registros de auditoría, debe contar con el permiso de c
 >title="Instrucciones"
 >abstract="<ul><li>Seleccione <b>Auditorías</b> en la navegación izquierda. El espacio de trabajo Auditorías muestra una lista de los registros grabados, ordenados por defecto del más al menos reciente.</li>   <li> NOTA: Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminarán del sistema. Por lo tanto, solo podrá retroceder un máximo de 365 días. Si necesita consultar datos con más de 365 días de antigüedad, deberá exportar los registros con regularidad para cumplir los requisitos de su directiva interna. </li><li>Seleccione un evento de la lista para ver los detalles en el carril derecho. </li><li>Seleccione el icono de canal para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los filtros seleccionados. </li><li>Para exportar la lista actual de registros de auditoría, seleccione **Descargar registro**.</li><li>Para obtener más ayuda sobre esta función, consulte la <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=es">información general sobre registros de auditoría</a> en Experience League.</li></ul>"
 
-Puede ver los registros de auditoría de distintas características de Experience Platform en el espacio de trabajo **[!UICONTROL Auditorías]** de la interfaz de usuario de Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de más reciente a menos reciente.
+Puede ver los registros de auditoría de distintas características de Experience Platform en el espacio de trabajo **[!UICONTROL Auditorías]** de la interfaz de usuario de Experience Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de más reciente a menos reciente.
 
 ![El panel Auditorías resalta las Auditorías en el menú de la izquierda.](../../images/audit-logs/audits.png)
 
@@ -171,7 +171,7 @@ Para obtener información sobre cómo administrar los registros de auditoría pa
 
 ## Pasos siguientes y recursos adicionales
 
-En esta guía se explica cómo administrar los registros de auditoría en Experience Platform. Para obtener más información sobre cómo monitorizar las actividades de Platform, consulte la documentación sobre [Observability Insights](../../../observability/home.md) y [supervisión de la ingesta de datos](../../../ingestion/quality/monitor-data-ingestion.md).
+En esta guía se explica cómo administrar los registros de auditoría en Experience Platform. Para obtener más información sobre cómo monitorizar las actividades de Experience Platform, consulte la documentación sobre [Observability Insights](../../../observability/home.md) y [supervisión de la ingesta de datos](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Para comprender mejor los registros de auditoría en Experience Platform, vea el siguiente vídeo:
 
