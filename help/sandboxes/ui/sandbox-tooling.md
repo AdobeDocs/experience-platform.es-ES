@@ -2,9 +2,9 @@
 title: Herramientas de zona protegida
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
+source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2485'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ Puede utilizar la función de herramientas de zona protegida para seleccionar di
 
 La característica de herramientas de zona protegida permite exportar objetos [!DNL Adobe Real-Time Customer Data Platform] y [!DNL Adobe Journey Optimizer] a un paquete.
 
-### Objetos Real-time Customer Data Platform {#real-time-cdp-objects}
+### Objetos de Real-time Customer Data Platform {#real-time-cdp-objects}
 
 En la tabla siguiente se enumeran [!DNL Adobe Real-Time Customer Data Platform] objetos que actualmente se admiten en las herramientas de zona protegida:
 
@@ -60,6 +60,7 @@ La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualment
 | [!DNL Adobe Journey Optimizer] |  Recorrido  | Si se añade un recorrido completo a un paquete, se copiarán la mayoría de los objetos de los que depende el recorrido, incluidas las audiencias, los esquemas, los eventos y las acciones. |
 | [!DNL Adobe Journey Optimizer] | Plantilla de contenido | Una plantilla de contenido se puede copiar como un objeto dependiente del objeto de recorrido. Las plantillas independientes le permiten reutilizar fácilmente contenido personalizado en todas las campañas y recorridos de Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragmento | Un fragmento se puede copiar como un objeto dependiente del objeto de recorrido. Los fragmentos son componentes reutilizables a los que se puede hacer referencia en uno o varios correos electrónicos en campañas y recorridos de Journey Optimizer. |
+| [!DNL Adobe Journey Optimizer] | Campañas | Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como los elementos de decisión, las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox). |
 
 Las superficies (por ejemplo, los ajustes preestablecidos) no se copian. El sistema selecciona automáticamente la coincidencia más cercana posible en la zona protegida de destino en función del tipo de mensaje y el nombre de la superficie. Si no se encuentran superficies en la zona protegida de destino, la copia de superficie fallará, lo que provocará que la copia del mensaje falle porque un mensaje requiere que haya una superficie disponible para la configuración. En este caso, es necesario crear al menos una superficie para el canal derecho del mensaje para que funcione la copia.
 
@@ -114,13 +115,13 @@ Aparecerá el cuadro de diálogo **[!UICONTROL Agregar al paquete]**. Seleccione
 
 Cuadro de diálogo ![[!UICONTROL Agregar al paquete], que muestra un paquete seleccionado del menú desplegable.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-Se muestra la lista de objetos añadidos al paquete. Para publicar el paquete y hacer que esté disponible para su importación en entornos limitados, seleccione **[!UICONTROL Publish]**.
+Se muestra la lista de objetos añadidos al paquete. Para publicar el paquete y hacer que esté disponible para su importación en entornos limitados, seleccione **[!UICONTROL Publicar]**.
 
-![Una lista de objetos en el paquete que resalta la opción [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package.png)
+![Una lista de objetos en el paquete, destacando la opción [!UICONTROL Publicar].](../images/ui/sandbox-tooling/publish-package.png)
 
-Seleccione **[!UICONTROL Publish]** para confirmar la publicación del paquete.
+Seleccione **[!UICONTROL Publicar]** para confirmar la publicación del paquete.
 
-![Cuadro de diálogo de confirmación de paquete de Publish, en el que se resalta la opción [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Cuadro de diálogo de confirmación de paquete de publicación, en el que se resalta la opción [!UICONTROL Publicar].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
