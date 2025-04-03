@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 95%
+ht-degree: 98%
 
 ---
 
@@ -47,8 +47,8 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 | Destino | Descripción |
 | --- | --- |
-| [Conexión Personas de Demandbase](/help/destinations/catalog/advertising/demandbase-people.md) | Utilice la conexión [!DNL Demandbase People] para activar perfiles para sus campañas de Demandbase para la segmentación, personalización y supresión de audiencias. |
-| [Conexión a cuenta de Bombora](/help/destinations/catalog/advertising/bombora.md) | Utilice la conexión [!DNL Bombora] para activar perfiles para sus campañas Bombora de segmentación, personalización y supresión de audiencias, según [audiencias de cuenta](/help/segmentation/types/account-audiences.md). |
+| [Conexión de Demandbase People](/help/destinations/catalog/advertising/demandbase-people.md) | Utilice la conexión de [!DNL Demandbase People] para activar perfiles para sus campañas de Demandbase para la segmentación, personalización y supresión de públicos. |
+| [Conexión a cuenta de Bombora](/help/destinations/catalog/advertising/bombora.md) | Utilice la conexión de [!DNL Bombora] para activar perfiles para sus campañas de Bombora para la segmentación, personalización y supresión de públicos basadas en los [públicos de la cuenta](/help/segmentation/types/account-audiences.md). |
 | Actualización de [Atributos de Airship](/help/destinations/catalog/mobile-engagement/airship-attributes.md) | Desde el 25 de marzo de 2025, puede ver dos tarjetas de **[!UICONTROL Atributos de Airship]** una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino existente **[!UICONTROL Atributos de Airship]** por el de **[!UICONTROL (Obsoleto) Atributos de Airship]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Atributos de Airship]**. <br> Use la conexión **[!UICONTROL Atributos de Airship]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino [!DNL (Deprecated) Airship Attributes], se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br> Si está creando flujos de datos a través de la [API del servicio de flujo](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar su [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores: <ul><li> ID de especificación de flujo: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> ID de especificación de conexión: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
