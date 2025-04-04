@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
+source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
 workflow-type: tm+mt
-source-wordcount: '4356'
+source-wordcount: '4371'
 ht-degree: 3%
 
 ---
@@ -98,7 +98,7 @@ Puede agregar campos adicionales al Portal de audiencias seleccionando ![el icon
 | ----- | ----------- |
 | [!UICONTROL Nombre] | Nombre de la audiencia. |
 | [!UICONTROL Recuento de perfiles] | Número total de perfiles aptos para la audiencia. |
-| [!UICONTROL Origen] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen Servicio de segmentación, Carga personalizada, Composición de audiencias y Audience Manager. |
+| [!UICONTROL Origen] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen [Servicio de segmentación](#segment-builder), [Carga personalizada](#import-audience), [Composición de audiencias](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audiencia similar](../types/lookalike-audiences.md), [Composición de audiencias federada](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller de datos](#data-distiller) y [AJO B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles de este campo incluyen `Draft`, `Inactive` y `Published`. Para obtener más información sobre los estados del ciclo vital, incluidos el significado de los distintos estados y cómo mover audiencias a diferentes estados del ciclo vital, lea la sección [estado del ciclo vital de las Preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-status). |
 | [!UICONTROL Frecuencia de actualización] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles para este campo incluyen [!UICONTROL Lote], [!UICONTROL Transmisión en línea], [!UICONTROL Edge] y [!UICONTROL No programado]. |
 | [!UICONTROL Última actualización por] | El nombre de la persona que actualizó la audiencia por última vez. |
