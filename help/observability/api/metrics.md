@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de métricas
 description: Aprenda a recuperar métricas de observabilidad en Experience Platform mediante la API de Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 3b217f7bcb60f762b5d380d82076cfb17d7a2d13
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1294'
 ht-degree: 4%
 
 ---
@@ -277,7 +277,7 @@ En la tabla siguiente se enumeran los diferentes códigos de error que puede dev
 
 | Código de error | Título | Descripción |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Carga útil de solicitud incorrecta | Error en la carga útil de la solicitud. Asegúrese de que coincide con el formato de la carga útil exactamente como se muestra [arriba](#v2). Cualquiera de las posibles razones puede almacenar en déclencheur este error:<ul><li>Faltan campos obligatorios como `aggregator`</li><li>Métricas no válidas</li><li>La solicitud contiene un acumulador no válido</li><li>La fecha de inicio es posterior a la de finalización</li></ul> |
+| `INSGHT-1000-400` | Carga útil de solicitud incorrecta | Error en la carga útil de la solicitud. Asegúrese de que coincide con el formato de la carga útil exactamente como se muestra [arriba](#v2). Cualquiera de las posibles razones puede almacenar en déclencheur este error:<ul><li>Faltan campos obligatorios como `aggregator`</li><li>Métricas no válidas</li><li>La solicitud contiene un acumulador no válido</li><li>La fecha de inicio es posterior a la de finalización</li><li>La solicitud tiene un intervalo de tiempo (entre las fechas de inicio y finalización) de más de 32 días</li></ul> |
 | `INSGHT-1001-400` | Error de consulta de métricas | Se ha producido un error al intentar consultar la base de datos de métricas debido a una solicitud incorrecta o a que la consulta en sí no se puede analizar. Asegúrese de que la solicitud tenga el formato correcto antes de intentarlo de nuevo. |
 | `INSGHT-1001-500` | Error de consulta de métricas | Se ha producido un error al intentar consultar la base de datos de métricas, debido a un error del servidor. Vuelva a intentar la solicitud y, si el problema persiste, póngase en contacto con el soporte de Adobe. |
 | `INSGHT-1002-500` | Error de servicio | La solicitud no se ha podido procesar debido a un error interno. Vuelva a intentar la solicitud y, si el problema persiste, póngase en contacto con el soporte de Adobe. |
