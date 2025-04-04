@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Modelo de datos del sector minorista
 description: Vea un modelo de datos estandarizado para el sector minorista, compatible con el modelo de datos de experiencia (XDM) para su uso en Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ El siguiente diagrama de relación de entidades (ERD) representa un modelo de da
 
 >[!NOTE]
 >
->El ERD tal como se describe es una recomendación sobre cómo debe modelar los datos para este caso de uso del sector. Para utilizar este modelo de datos en Platform, debe construir los esquemas recomendados y sus relaciones. Consulte las guías sobre la administración de [esquemas](../../ui/resources/schemas.md) y [relaciones](../../tutorials/relationship-ui.md) en la interfaz de usuario para obtener más información.
+>El ERD tal como se describe es una recomendación sobre cómo debe modelar los datos para este caso de uso del sector. Para utilizar este modelo de datos en Experience Platform, debe construir los esquemas recomendados y sus relaciones. Consulte las guías sobre la administración de [esquemas](../../ui/resources/schemas.md) y [relaciones](../../tutorials/relationship-ui.md) en la interfaz de usuario para obtener más información.
 
 Utilice la siguiente leyenda para interpretar este ERD:
 

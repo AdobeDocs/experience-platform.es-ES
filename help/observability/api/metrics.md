@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Punto final de API de métricas
 description: Aprenda a recuperar métricas de observabilidad en Experience Platform mediante la API de Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: bd5018a2d867d0483f3f2f0c45e356ea69a01801
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Extremo de métricas
 
-Las métricas de observabilidad proporcionan perspectivas sobre las estadísticas de uso, las tendencias históricas y los indicadores de rendimiento de varias funciones de Adobe Experience Platform. El extremo `/metrics` en [!DNL Observability Insights API] le permite recuperar mediante programación datos de métricas para la actividad de su organización en [!DNL Platform].
+Las métricas de observabilidad proporcionan perspectivas sobre las estadísticas de uso, las tendencias históricas y los indicadores de rendimiento de varias funciones de Adobe Experience Platform. El extremo `/metrics` en [!DNL Observability Insights API] le permite recuperar mediante programación datos de métricas para la actividad de su organización en [!DNL Experience Platform].
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ El extremo de API utilizado en esta guía forma parte de la [[!DNL Observability
 
 ## Recuperar métricas de observabilidad
 
-Puede recuperar datos de métricas realizando una solicitud de POST al extremo `/metrics`, especificando las métricas que desea recuperar en la carga útil.
+Puede recuperar datos de métricas realizando una petición POST al extremo `/metrics`, especificando las métricas que desea recuperar en la carga útil.
 
 **Formato de API**
 
@@ -175,7 +175,7 @@ Una respuesta correcta devuelve los puntos de datos resultantes para las métric
 | `metric` | El nombre de una de las métricas proporcionadas en la solicitud. |
 | `filters` | La configuración del filtro para la métrica especificada. |
 | `datapoints` | Matriz cuyos objetos representan los resultados de la métrica y los filtros especificados. El número de objetos de la matriz depende de las opciones de filtro proporcionadas en la solicitud. Si no se proporcionó ningún filtro, la matriz solo contendrá un único objeto que representa todos los conjuntos de datos. |
-| `groupBy` | Si se especificaron varios conjuntos de datos en la propiedad `filter` para una métrica y la opción `groupBy` se estableció en true en la solicitud, este objeto contendrá el ID del conjunto de datos al que se aplica la propiedad `dps` correspondiente.<br><br>Si este objeto aparece vacío en la respuesta, la propiedad `dps` correspondiente se aplica a todos los conjuntos de datos proporcionados en la matriz `filters` (o a todos los conjuntos de datos de [!DNL Platform] si no se proporcionaron filtros). |
+| `groupBy` | Si se especificaron varios conjuntos de datos en la propiedad `filter` para una métrica y la opción `groupBy` se estableció en true en la solicitud, este objeto contendrá el ID del conjunto de datos al que se aplica la propiedad `dps` correspondiente.<br><br>Si este objeto aparece vacío en la respuesta, la propiedad `dps` correspondiente se aplica a todos los conjuntos de datos proporcionados en la matriz `filters` (o a todos los conjuntos de datos de [!DNL Experience Platform] si no se proporcionaron filtros). |
 | `dps` | Los datos devueltos para la métrica, el filtro y el intervalo de tiempo dados. Cada clave de este objeto representa una marca de tiempo con un valor correspondiente para la métrica especificada. El período de tiempo entre cada punto de datos depende del valor `granularity` especificado en la solicitud. |
 
 {style="table-layout:auto"}
@@ -186,7 +186,7 @@ La siguiente sección contiene información adicional sobre cómo trabajar con e
 
 ### Métricas disponibles {#available-metrics}
 
-Las tablas siguientes enumeran todas las métricas expuestas por [!DNL Observability Insights], desglosadas por el servicio [!DNL Platform]. Cada métrica incluye una descripción y un parámetro de consulta de ID aceptado.
+Las tablas siguientes enumeran todas las métricas expuestas por [!DNL Observability Insights], desglosadas por el servicio [!DNL Experience Platform]. Cada métrica incluye una descripción y un parámetro de consulta de ID aceptado.
 
 >[!NOTE]
 >
@@ -279,8 +279,8 @@ En la tabla siguiente se enumeran los diferentes códigos de error que puede dev
 | --- | --- | --- |
 | `INSGHT-1000-400` | Carga útil de solicitud incorrecta | Error en la carga útil de la solicitud. Asegúrese de que coincide con el formato de la carga útil exactamente como se muestra [arriba](#v2). Cualquiera de las posibles razones puede almacenar en déclencheur este error:<ul><li>Faltan campos obligatorios como `aggregator`</li><li>Métricas no válidas</li><li>La solicitud contiene un acumulador no válido</li><li>La fecha de inicio es posterior a la de finalización</li></ul> |
 | `INSGHT-1001-400` | Error de consulta de métricas | Se ha producido un error al intentar consultar la base de datos de métricas debido a una solicitud incorrecta o a que la consulta en sí no se puede analizar. Asegúrese de que la solicitud tenga el formato correcto antes de intentarlo de nuevo. |
-| `INSGHT-1001-500` | Error de consulta de métricas | Se ha producido un error al intentar consultar la base de datos de métricas, debido a un error del servidor. Vuelva a intentar la solicitud y, si el problema persiste, póngase en contacto con el servicio de soporte técnico del Adobe. |
-| `INSGHT-1002-500` | Error de servicio | La solicitud no se ha podido procesar debido a un error interno. Vuelva a intentar la solicitud y, si el problema persiste, póngase en contacto con el servicio de soporte técnico del Adobe. |
+| `INSGHT-1001-500` | Error de consulta de métricas | Se ha producido un error al intentar consultar la base de datos de métricas, debido a un error del servidor. Vuelva a intentar la solicitud y, si el problema persiste, póngase en contacto con el soporte de Adobe. |
+| `INSGHT-1002-500` | Error de servicio | La solicitud no se ha podido procesar debido a un error interno. Vuelva a intentar la solicitud y, si el problema persiste, póngase en contacto con el soporte de Adobe. |
 | `INSGHT-1003-401` | Error de validación de zona protegida | La solicitud no se ha podido procesar debido a un error de validación de zona protegida. Asegúrese de que el nombre de la zona protegida que ha proporcionado en el encabezado `x-sandbox-name` represente una zona protegida válida y habilitada para su organización antes de volver a intentar la solicitud. |
 
 {style="table-layout:auto"}

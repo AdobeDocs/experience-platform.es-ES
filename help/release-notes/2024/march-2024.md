@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2024'
 description: Las notas de la versión de marzo de 2024 de Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
-workflow-type: ht
-source-wordcount: '1190'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1192'
+ht-degree: 97%
 
 ---
 
@@ -98,15 +98,15 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con tipos de datos de mapa de IU de Experience Platform | Personalice aún más la estructura de datos del Modelo de datos de experiencia (XDM) definiendo campos de asignación en la IU de Platform. Ahora puede crear campos de asignación en el Editor de esquemas para modelar estructuras de datos flexibles o almacenar de forma eficaz pares clave-valor. Seleccione “Asignar” en el menú desplegable Tipo al definir un nuevo campo para configurar subcampos y asignarlos a grupos de campos. Los tipos de valores de asignación admitidos son cadena y entero.<br>![Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados.](../2024/assets/march/maps.png "Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados."){width="100" zoomable="yes"}<br> Para obtener información sobre cómo [definir campos de asignación en la IU](../../xdm/ui/fields/map.md), consulte la guía de la IU. |
+| Compatibilidad con tipos de datos de mapa de IU de Experience Platform | Personalice aún más la estructura de datos del Modelo de datos de experiencia (XDM) definiendo campos de asignación en la IU de Experience Platform. Ahora puede crear campos de asignación en el Editor de esquemas para modelar estructuras de datos flexibles o almacenar de forma eficaz pares clave-valor. Seleccione “Asignar” en el menú desplegable Tipo al definir un nuevo campo para configurar subcampos y asignarlos a grupos de campos. Los tipos de valores de asignación admitidos son cadena y entero.<br>![Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados.](../2024/assets/march/maps.png "Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados."){width="100" zoomable="yes"}<br> Para obtener información sobre cómo [definir campos de asignación en la IU](../../xdm/ui/fields/map.md), consulte la guía de la IU. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, consulte la [descripción general del sistema XDM](../../xdm/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
+[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Experience Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
 **Nueva funcionalidad**
 

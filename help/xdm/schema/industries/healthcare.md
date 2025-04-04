@@ -2,9 +2,9 @@
 title: Modelo de datos de la industria sanitaria ERD
 description: Vea un diagrama de relación de entidades (ERD) que describe un modelo de datos estandarizado para el sector sanitario. Este modelo de datos es compatible con el Modelo de datos de experiencia (XDM) para su uso en Adobe Experience Platform.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ El siguiente diagrama de relación de entidades (ERD) representa un modelo de da
 
 >[!NOTE]
 >
->El ERD tal como se describe es una recomendación sobre cómo debe modelar los datos para este caso de uso del sector. Para utilizar este modelo de datos en Platform, debe construir los esquemas recomendados y sus relaciones. Consulte las guías sobre la administración de [esquemas](../../ui/resources/schemas.md) y [relaciones](../../tutorials/relationship-ui.md) en la interfaz de usuario para obtener más información.
+>El ERD tal como se describe es una recomendación sobre cómo debe modelar los datos para este caso de uso del sector. Para utilizar este modelo de datos en Experience Platform, debe construir los esquemas recomendados y sus relaciones. Consulte las guías sobre la administración de [esquemas](../../ui/resources/schemas.md) y [relaciones](../../tutorials/relationship-ui.md) en la interfaz de usuario para obtener más información.
 
 Utilice la siguiente leyenda para interpretar este ERD:
 

@@ -3,9 +3,9 @@ title: Activar audiencias en destinos depurados según identificadores de LiveRa
 type: Tutorial
 description: Aprenda a activar audiencias de Adobe Experience Platform en destinos de audio y TV conectados, y otras integraciones mediante LiveRamp RampID.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Use la integración de Adobe Real-Time CDP con [!DNL LiveRamp] para activar audi
 
 >[!IMPORTANT]
 >
->No es necesario ingerir ni trabajar de ninguna manera con LiveRamp RampIDs en la interfaz del Experience Platform.
+>No es necesario ingerir ni trabajar de ninguna manera con LiveRamp RampIDs en la interfaz de Experience Platform.
 >
 > Puede exportar identidades desde Real-Time CDP, como identificadores basados en PII, identificadores conocidos e ID personalizados, tal como se describe en la [documentación oficial de LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers). Estas identidades coinciden con [!DNL LiveRamp RampIDs] más abajo en el proceso de activación.
 
@@ -70,13 +70,13 @@ Lo primero que debe hacer para activar sus audiencias en destinos depurados basa
 
 Para ello, utilice el destino **[!DNL LiveRamp - Onboarding]**.
 
-![Imagen de la interfaz de usuario del Experience Platform que muestra LiveRamp: tarjeta de destino de incorporación](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra LiveRamp: tarjeta de destino de incorporación](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
 Para obtener información sobre cómo configurar el destino [!DNL LiveRamp - Onboarding] y exportar las audiencias desde Experience Platform, lea la documentación de destino [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md).
 
 >[!IMPORTANT]
 >
->Al exportar archivos al destino [!DNL LiveRamp - Onboarding], Platform genera un archivo CSV para cada [ID de política de combinación](../../profile/merge-policies/overview.md). Consulte la documentación de destino [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) para obtener información detallada sobre cómo validar la exportación de datos a LiveRamp.
+>Al exportar archivos al destino [!DNL LiveRamp - Onboarding], Experience Platform genera un archivo CSV para cada [ID de política de combinación](../../profile/merge-policies/overview.md). Consulte la documentación de destino [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) para obtener información detallada sobre cómo validar la exportación de datos a LiveRamp.
 
 
 Después de exportar correctamente las audiencias a LiveRamp, continúe con el [paso 2](#distribution).
@@ -91,7 +91,7 @@ Después de [validar](../catalog/advertising/liveramp-onboarding.md#exported-dat
 
 Las audiencias se activan (exportadas en [paso 1](#onboarding)) mediante el destino **[!DNL LiveRamp - Distribution]**.
 
-![Imagen de la interfaz de usuario del Experience Platform que muestra LiveRamp: tarjeta de destino de distribución](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra LiveRamp: tarjeta de destino de distribución](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
 Para obtener información sobre cómo configurar el destino **[!DNL LiveRamp - Distribution]** y activar las audiencias que exportó en el [paso 1](#onboarding), lea la documentación de destino [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md).
 
@@ -107,7 +107,7 @@ Al configurar el destino **[!DNL LiveRamp - Distribution]**, debe crear una cone
 ><br>
 >Ejemplo: `LiveRamp - Roku`.
 
-![Captura de pantalla de IU de Platform que muestra varios destinos de LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+![Captura de pantalla de la IU de Experience Platform que muestra varios destinos de LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 

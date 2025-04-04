@@ -2,9 +2,9 @@
 title: Autenticación y acceso a la API de Reactor
 description: Obtenga información sobre cómo empezar a usar la API de Reactor, incluidos los pasos para generar las credenciales de acceso necesarias.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '912'
 ht-degree: 47%
 
 ---
@@ -51,7 +51,7 @@ A continuación, seleccione el tipo de autenticación para generar tokens de acc
 
 >[!IMPORTANT]
 >
->Seleccione el método **[!UICONTROL OAuth Server-to-Server]**, ya que este será el único método admitido a partir de ahora. El método **[!UICONTROL Service Account (JWT)]** está obsoleto. Aunque las integraciones que utilizan el método de autenticación JWT seguirán funcionando hasta el 1 de enero de 2025, Adobe recomienda migrar las integraciones existentes al nuevo método de servidor a servidor OAuth antes de esa fecha. Obtenga más información en la sección [!BADGE Obsoleto]{type=negative}[Genere un token web JSON (JWT)](/help/landing/api-authentication.md#jwt) en el tutorial de autenticación de la API de Platform.
+>Seleccione el método **[!UICONTROL OAuth Server-to-Server]**, ya que este será el único método admitido a partir de ahora. El método **[!UICONTROL Service Account (JWT)]** está obsoleto. Aunque las integraciones que utilizan el método de autenticación JWT seguirán funcionando hasta el 1 de enero de 2025, Adobe recomienda migrar las integraciones existentes al nuevo método de servidor a servidor OAuth antes de esa fecha. Obtenga más información en la sección [!BADGE Obsoleto]{type=negative}[Genere un token web JSON (JWT)](/help/landing/api-authentication.md#jwt) en el tutorial de autenticación de la API de Experience Platform.
 
 Haga clic en **Siguiente** para continuar.
 
@@ -78,7 +78,7 @@ Una vez agregada la API al proyecto, la página **[!UICONTROL API de Experience 
 
 ### Generación de un token de acceso {#generate-access-token}
 
-El siguiente paso es generar una credencial `{ACCESS_TOKEN}` para usarla en llamadas a la API de Platform. A diferencia de los valores de `{API_KEY}` y `{ORG_ID}`, se debe generar un nuevo token cada 24 horas para seguir usando las API de Platform.
+El siguiente paso es generar una credencial `{ACCESS_TOKEN}` para usarla en llamadas a la API de Experience Platform. A diferencia de los valores de `{API_KEY}` y `{ORG_ID}`, se debe generar un nuevo token cada 24 horas para seguir usando las API de Experience Platform.
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ Se genera un nuevo token de acceso y se proporciona un botón para copiar el tok
 
 #### Automatización de la generación de tokens {#auto-token}
 
-También puede utilizar un entorno y una colección de Postman para generar tokens de acceso. Para obtener más información, lea la sección sobre [el uso de Postman para autenticar y probar las llamadas a la API](/help/landing/api-authentication.md#use-postman) en la guía de autenticación de la API del Experience Platform.
+También puede utilizar un entorno y una colección de Postman para generar tokens de acceso. Para obtener más información, lea la sección sobre [el uso de Postman para autenticar y probar las llamadas a la API](/help/landing/api-authentication.md#use-postman) en la guía de autenticación de la API de Experience Platform.
 
 ## Probar credenciales de API {#test-api-credentials}
 
@@ -115,7 +115,7 @@ Una vez que confirme que sus credenciales de acceso funcionan, siga explorando l
 
 ## Lectura de llamadas de API de muestra {#read-sample-api-calls}
 
-Cada guía de extremo proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción a las API de Platform.
+Cada guía de extremo proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción a las API de Experience Platform.
 
 ## Pasos siguientes {#next-steps}
 

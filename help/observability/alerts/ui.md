@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;inicio;temas populares;intervalo de fechas
 title: Guía de IU de alertas
-description: Obtenga información sobre cómo administrar alertas en la interfaz de usuario del Experience Platform.
+description: Obtenga información sobre cómo administrar alertas en la interfaz de usuario de Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 3%
+source-wordcount: '798'
+ht-degree: 7%
 
 ---
 
@@ -41,7 +41,7 @@ Seleccione los puntos suspensivos (**...**) junto al nombre de una regla y apare
 
 >[!NOTE]
 >
-> Para asignar una alerta a un ID de usuario de Adobe, una dirección de correo electrónico externa o una lista de grupos de correo electrónico, debe ser un administrador.
+> Para asignar una alerta a un ID de usuario de Adobe, una dirección de correo electrónico externa o una lista de grupos de correo electrónico, debe ser administrador.
 
 La ficha **[!UICONTROL Examinar]** enumera las reglas disponibles que pueden almacenar en déclencheur una alerta.
 
@@ -91,15 +91,15 @@ Los umbrales de alerta se pueden personalizar para los siguientes tipos de alert
 
 | Tipo de alerta | Parámetro personalizado |
 |---|---|
-| Retraso del trabajo del segmento | Umbral de retraso |
+| Retraso de trabajo de segmento | Umbral de retraso |
 | Retraso de exportación de segmentos | Umbral de retraso |
 | Retraso de ejecución de flujo de destino | Umbral de retraso |
-| Retraso de ejecución de flujo de servicio de identidad | Umbral de retraso |
-| Retraso de ejecución de flujo de perfil | Umbral de retraso |
+| Retraso de ejecución del flujo del servicio de identidad | Umbral de retraso |
+| Retraso de ejecución de flujo de perfiles | Umbral de retraso |
 | Retraso de ejecución de flujo de orígenes | Umbral de retraso |
 | Retraso de ejecución de consulta | Umbral de retraso |
-| Tasa de omisión de activación superada | Umbral de error |
-| Tasa de error de ingesta de fuentes superada | Umbral de error |
+| Tasa de activación omitida superada | Umbral de error |
+| Tasa de error de ingesta de orígenes superada | Umbral de error |
 
 Seleccione los puntos suspensivos (**...**) junto al nombre de una regla y aparecerá un menú desplegable con los controles. Seleccione **[!UICONTROL Editar]**.
 
@@ -125,4 +125,4 @@ Seleccione una alerta de la lista y aparecerán más detalles en el carril derec
 
 ## Pasos siguientes
 
-Este documento proporciona información general sobre cómo ver y administrar alertas en la IU de Platform. Consulte la descripción general de [Observability Insights](../home.md) para obtener más información sobre las capacidades del servicio.
+Este documento proporciona información general sobre cómo ver y administrar las alertas en la interfaz de usuario de Experience Platform. Consulte la descripción general de [Observability Insights](../home.md) para obtener más información sobre las capacidades del servicio.

@@ -3,9 +3,9 @@ title: Eliminar registros
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1574'
 ht-degree: 8%
 
 ---
@@ -25,17 +25,17 @@ Use el espacio de trabajo [[!UICONTROL Ciclo de vida de datos]](./overview.md) p
 
 La eliminación de registros requiere una comprensión práctica del funcionamiento de los campos de identidad en Experience Platform. Específicamente, debe conocer los valores del área de nombres de identidad de las entidades cuyos registros desea eliminar, según el conjunto de datos (o conjuntos de datos) desde el que los elimine.
 
-Consulte la siguiente documentación para obtener más información sobre las identidades en Platform:
+Consulte la siguiente documentación para obtener más información sobre las identidades en Experience Platform:
 
 * [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md): vincula identidades entre dispositivos y sistemas y vincula conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
 * [Áreas de nombres de identidad](../../identity-service/features/namespaces.md): Las áreas de nombres de identidad definen los diferentes tipos de información de identidad que se pueden relacionar con una sola persona y son un componente necesario para cada campo de identidad.
 * [Perfil del cliente en tiempo real](../../profile/home.md): Utiliza gráficos de identidad para proporcionar perfiles de consumidor unificados basados en datos agregados de varias fuentes, actualizados en tiempo casi real.
-* [Modelo de datos de experiencia (XDM)](../../xdm/home.md): Proporciona definiciones y estructuras estándar para los datos de Platform mediante el uso de esquemas. Todos los conjuntos de datos de Platform se ajustan a un esquema XDM específico y el esquema define qué campos son identidades.
+* [Modelo de datos de experiencia (XDM)](../../xdm/home.md): Proporciona definiciones y estructuras estándar para datos de Experience Platform mediante el uso de esquemas. Todos los conjuntos de datos de Experience Platform se ajustan a un esquema XDM específico y el esquema define qué campos son identidades.
 * [Campos de identidad](../../xdm/ui/fields/identity.md): Descubra cómo se define un campo de identidad en un esquema XDM.
 
 ## Creación de una solicitud {#create-request}
 
-Para iniciar el proceso, seleccione **[!UICONTROL Ciclo de vida de datos]** en la navegación izquierda de la interfaz de usuario de Platform. Aparece el área de trabajo [!UICONTROL Solicitudes del ciclo de vida de datos]. A continuación, seleccione **[!UICONTROL Crear solicitud]** de la página principal del área de trabajo.
+Para iniciar el proceso, seleccione **[!UICONTROL Ciclo de vida de datos]** en la navegación izquierda de la interfaz de usuario de Experience Platform. Aparece el área de trabajo [!UICONTROL Solicitudes del ciclo de vida de datos]. A continuación, seleccione **[!UICONTROL Crear solicitud]** de la página principal del área de trabajo.
 
 ![El espacio de trabajo [!UICONTROL Solicitudes del ciclo de vida de datos] con [!UICONTROL Crear solicitud] seleccionada.](../images/ui/record-delete/create-request-button.png)
 
@@ -75,13 +75,13 @@ Si desea eliminar registros de todos los conjuntos de datos, seleccione **[!UICO
 >title="Valor de identidad principal"
 >abstract="En esta columna, debe proporcionar el valor del espacio de nombres de identidad del registro, que debe corresponder con el tipo de identidad proporcionado en la columna izquierda. Si el tipo de espacio de nombres de identidad es `email`, el valor debe ser la dirección de correo electrónico del registro. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
-Al eliminar registros, debe proporcionar información de identidad para que el sistema pueda determinar qué registros se eliminarán. Para cualquier conjunto de datos en Platform, los registros se eliminan en función del campo **área de nombres de identidad** definido por el esquema del conjunto de datos.
+Al eliminar registros, debe proporcionar información de identidad para que el sistema pueda determinar qué registros se eliminarán. Para cualquier conjunto de datos en Experience Platform, los registros se eliminan en función del campo **área de nombres de identidad** definido por el esquema del conjunto de datos.
 
-Al igual que todos los campos de identidad de Platform, un área de nombres de identidad consta de dos cosas: un **tipo** (a veces denominado área de nombres de identidad) y un **valor**. El tipo de identidad proporciona contexto sobre cómo el campo identifica un registro (como una dirección de correo electrónico). El valor representa la identidad específica de un registro para ese tipo (por ejemplo, `jdoe@example.com` para el tipo de identidad `email`). Los campos comunes utilizados como identidades incluyen información de la cuenta, ID de dispositivo e ID de cookie.
+Al igual que todos los campos de identidad de Experience Platform, un área de nombres de identidad consta de dos cosas: un **tipo** (a veces denominado área de nombres de identidad) y un **valor**. El tipo de identidad proporciona contexto sobre cómo el campo identifica un registro (como una dirección de correo electrónico). El valor representa la identidad específica de un registro para ese tipo (por ejemplo, `jdoe@example.com` para el tipo de identidad `email`). Los campos comunes utilizados como identidades incluyen información de la cuenta, ID de dispositivo e ID de cookie.
 
 >[!TIP]
 >
->Si no conoce el área de nombres de identidad de un conjunto de datos concreto, puede encontrarla en la interfaz de usuario de Platform. En el área de trabajo **[!UICONTROL Conjuntos de datos]**, seleccione el conjunto de datos en cuestión en la lista. En la página de detalles del conjunto de datos, pase el ratón sobre el nombre del esquema del conjunto de datos en el carril derecho. El área de nombres de identidad se muestra junto con el nombre y la descripción del esquema.
+>Si no conoce el área de nombres de identidad de un conjunto de datos concreto, puede encontrarla en la interfaz de usuario de Experience Platform. En el área de trabajo **[!UICONTROL Conjuntos de datos]**, seleccione el conjunto de datos en cuestión en la lista. En la página de detalles del conjunto de datos, pase el ratón sobre el nombre del esquema del conjunto de datos en el carril derecho. El área de nombres de identidad se muestra junto con el nombre y la descripción del esquema.
 >
 >![El panel Conjuntos de datos con un conjunto de datos seleccionado y un cuadro de diálogo de esquema abierto desde el panel de detalles del conjunto de datos. El identificador principal del conjunto de datos está resaltado.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -140,7 +140,7 @@ Una vez que haya terminado de agregar identidades a la solicitud, en **[!UICONTR
 
 >[!IMPORTANT]
 > 
->Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform o Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Las organizaciones que hayan adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** pueden enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Una sola solicitud de eliminación de registro a través de la interfaz de usuario le permite enviar 10.000 ID al mismo tiempo. El método [API para eliminar registros](../api/workorder.md#create) permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
+>Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-Time Customer Data Platform o Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Las organizaciones que hayan adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** pueden enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Una sola solicitud de eliminación de registro a través de la interfaz de usuario le permite enviar 10.000 ID al mismo tiempo. El método [API para eliminar registros](../api/workorder.md#create) permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
 
 ![Los campos [!UICONTROL Nombre] y [!UICONTROL Descripción] de la configuración de la solicitud con [!UICONTROL Enviar] resaltados.](../images/ui/record-delete/submit.png)
 
@@ -158,6 +158,6 @@ Una vez enviada la solicitud, se crea una orden de trabajo que aparece en la pes
 
 ## Pasos siguientes
 
-Este documento explica cómo eliminar registros en la interfaz de usuario de Experience Platform. Para obtener información sobre cómo realizar otras tareas de administración del ciclo de vida de datos en la interfaz de usuario, consulte [Información general sobre la IU del ciclo de vida de datos](./overview.md).
+En este documento se explica cómo eliminar registros en la interfaz de usuario de Experience Platform. Para obtener información sobre cómo realizar otras tareas de administración del ciclo de vida de datos en la interfaz de usuario, consulte [Información general sobre la IU del ciclo de vida de datos](./overview.md).
 
 Para obtener información sobre cómo eliminar registros mediante la API de higiene de datos, consulte la [guía de extremo de orden de trabajo](../api/workorder.md).

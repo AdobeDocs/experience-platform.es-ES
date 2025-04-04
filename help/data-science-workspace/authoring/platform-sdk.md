@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;SDK;SDK de acceso a datos;Data Science Workspace;temas populares
+keywords: Experience Platform;guía para desarrolladores;SDK;SDK de acceso a datos;Workspace de ciencia de datos;temas populares
 solution: Experience Platform
-title: Creación de modelos mediante el SDK de la plataforma Adobe Experience Platform
+title: Creación de modelos con Adobe Experience Platform SDK
 description: Este tutorial le proporciona información sobre la conversión de data_access_sdk_python al nuevo Python platform_sdk en Python y R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '506'
 ht-degree: 3%
 
 ---
 
-# Creación de modelos mediante el SDK [!DNL Platform] de Adobe Experience Platform
+# Creación de modelos con Adobe [!DNL Experience Platform] SDK
 
 >[!NOTE]
 >
->La Espacio de trabajo de ciencia de datos ya no está disponible para su compra.
+>Data Science Workspace ya no se puede adquirir.
 >
 >Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
@@ -25,19 +25,19 @@ Este tutorial le proporciona información sobre la conversión de `data_access_s
 - [Lectura básica de los datos](#basic-reading-of-data)
 - [Escritura básica de datos](#basic-writing-of-data)
 
-## Generar autenticación {#build-authentication}
+## Autenticación de compilación {#build-authentication}
 
-Authentication es necesario para realizar llamadas a [!DNL Adobe Experience Platform], y se compone de una clave de API, un identificador de organización, un token de usuario y un token de servicio.
+Se requiere autenticación para realizar llamadas a [!DNL Adobe Experience Platform], y consta de clave de API, ID de organización, un token de usuario y un token de servicio.
 
 ### Python
 
-Si está utilizando Jupyter Notebook, utilice el siguiente código para versión el `client_context`:
+Si está usando Jupyter Notebook, utilice el siguiente código para compilar `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si no usa Jupyter Notebook o necesita cambiar la organización, use el siguiente ejemplo de código:
+Si no utiliza Jupyter Notebook o necesita cambiar la organización, utilice el siguiente ejemplo de código:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -49,7 +49,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Si está utilizando Jupyter Notebook, utilice el siguiente código para versión el `client_context`:
+Si está usando Jupyter Notebook, utilice el siguiente código para compilar `client_context`:
 
 ```r
 library(reticulate)
@@ -60,7 +60,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si no usa Jupyter Notebook o necesita cambiar de organización, use el siguiente ejemplo de código:
+Si no utiliza Jupyter Notebook o necesita cambiar de organización, utilice el siguiente ejemplo de código:
 
 ```r
 library(reticulate)
@@ -72,9 +72,9 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Lectura básica de datos {#basic-reading-of-data}
+## Lectura básica de los datos {#basic-reading-of-data}
 
-Con el nuevo [!DNL Platform] SDK, el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
+Con el nuevo SDK [!DNL Experience Platform], el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
 
 Si el tiempo de lectura está tardando demasiado, puede intentar utilizar una de las siguientes opciones de filtrado:
 
@@ -129,7 +129,7 @@ df
 
 ## Filtrar por fecha {#filter-by-date}
 
-La granularidad del filtro de fechas ahora se define por la marca de tiempo, en lugar de establecerse por día.
+La granularidad del filtrado de fechas ahora se define mediante la marca de tiempo, no por el día.
 
 ### Python
 
@@ -151,11 +151,11 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-El nuevo [!DNL Platform] SDK admite las siguientes operaciones:
+El nuevo SDK [!DNL Experience Platform] admite las siguientes operaciones:
 
 | Operación | Función |
 | --------- | -------- |
-| Es igual a (`=`) | `eq()` |
+| Igual a (`=`) | `eq()` |
 | Mayor que (`>`) | `gt()` |
 | Mayor o igual que (`>=`) | `ge()` |
 | Menor que (`<`) | `lt()` |
@@ -165,7 +165,7 @@ El nuevo [!DNL Platform] SDK admite las siguientes operaciones:
 
 ## Filtrar por columnas seleccionadas {#filter-by-selected-columns}
 
-Para refinar aún más la lectura de los datos, también puede filtrar por nombre de columna.
+Para restringir aún más la lectura de datos, también puede filtrar por nombre de columna.
 
 ### Python
 
@@ -181,9 +181,9 @@ df <- dataset_reader$select(c('column-a','column-b'))$read()
 
 ## Obtener resultados ordenados {#get-sorted-results}
 
-Los resultados recibidos se pueden ordenar por columnas especificadas del destino conjunto de datos y en su orden (asc/desc) respectivamente.
+Los resultados recibidos se pueden ordenar por columnas especificadas del conjunto de datos de destinatario y en su orden (asc/desc) respectivamente.
 
-En el ejemplo siguiente, el marco de datos se ordena primero por &quot;columna-a&quot; en orden ascendente. Las filas que tienen los mismos valores para &quot;columna-a&quot; se ordenan por &quot;columna-b&quot; en de bajada orden.
+En el ejemplo siguiente, dataframe se ordena por &quot;column-a&quot; primero en orden ascendente. Las filas que tienen los mismos valores para la columna a se ordenan por la columna b en orden descendente.
 
 ### Python
 
@@ -201,7 +201,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->La organización se establece en el `client_context`.
+>La organización se ha establecido en `client_context`.
 
 Para escribir datos en Python y R, utilice uno de los siguientes ejemplos:
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Pasos siguientes
 
-Una vez configurado el cargador de datos `platform_sdk`, los datos se preparan y se dividen en los conjuntos de datos `train` y `val`. Para obtener información sobre la preparación de datos y la ingeniería de características, visita la sección sobre [preparación de datos e ingeniería](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) de características en el tutorial para crear un fórmula usar [!DNL JupyterLab] blocs de notas.
+Una vez configurado el cargador de datos `platform_sdk`, los datos se preparan y se dividen en los conjuntos de datos `train` y `val`. Para obtener más información acerca de la preparación de datos y la ingeniería de características, visite la sección sobre [preparación de datos e ingeniería de características](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula con [!DNL JupyterLab] blocs de notas.

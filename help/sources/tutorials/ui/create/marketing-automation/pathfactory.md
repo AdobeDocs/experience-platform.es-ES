@@ -1,16 +1,16 @@
 ---
-title: Conecte su cuenta de PathFactory a Experience Platform a través de la interfaz de usuario de
+title: Conecte su cuenta de PathFactory a Experience Platform a través de la IU de
 description: Aprenda a conectar su cuenta de PathFactory a Experience Platform a través de la interfaz de usuario de.
 badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '572'
 ht-degree: 2%
 
 ---
 
-# Conecte su cuenta de [!DNL PathFactory] al Experience Platform mediante la interfaz de usuario
+# Conecte su cuenta de [!DNL PathFactory] a Experience Platform mediante la interfaz de usuario
 
 Este tutorial proporciona pasos sobre cómo conectar los datos de [!DNL PathFactory] visitantes, sesiones y vistas de página a Adobe Experience Platform a través de la interfaz de usuario.
 
@@ -23,11 +23,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
-Si ya tiene una cuenta de [!DNL PathFactory], puede omitir el resto de este documento y continuar con el tutorial de [introducción de datos de automatización de marketing al Experience Platform mediante la interfaz de usuario](../../dataflow/marketing-automation.md).
+Si ya tiene una cuenta de [!DNL PathFactory], puede omitir el resto de este documento y continuar con el tutorial de [introducción de datos de automatización de marketing en Experience Platform mediante la interfaz de usuario](../../dataflow/marketing-automation.md).
 
 ### Recopilar credenciales necesarias {#gather-credentials}
 
-Para acceder a su cuenta de PathFactory en Platform, debe proporcionar los siguientes valores:
+Para acceder a su cuenta de PathFactory en Experience Platform, debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -42,7 +42,7 @@ Para obtener instrucciones detalladas sobre cómo proteger y usar sus credencial
 
 ## Conectar su cuenta de [!DNL PathFactory]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. El [!UICONTROL catálogo] muestra una variedad de orígenes admitidos por el Experience Platform.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. El [!UICONTROL catálogo] muestra una variedad de orígenes admitidos por Experience Platform.
 
 Puede seleccionar la categoría adecuada de la lista de categorías. También puede utilizar la barra de búsqueda para filtrar por un origen específico.
 
@@ -68,4 +68,4 @@ Si ya tiene una cuenta, seleccione **[!UICONTROL Cuenta existente]** y luego sel
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión entre su cuenta de [!DNL PathFactory] y el Experience Platform. Ahora puede continuar con el siguiente tutorial y [crear un flujo de datos para llevar los datos de automatización de marketing al Experience Platform](../../dataflow/marketing-automation.md).
+Al seguir este tutorial, ha establecido una conexión entre su cuenta de [!DNL PathFactory] y Experience Platform. Ahora puede continuar con el siguiente tutorial y [crear un flujo de datos para introducir los datos de automatización de marketing en Experience Platform](../../dataflow/marketing-automation.md).

@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;inicio;temas populares;datos de almacenamiento en la nube;datos de flujo continuo;flujo continuo
+keywords: Experience Platform;inicio;temas populares;datos de almacenamiento en la nube;datos de streaming;streaming
 solution: Experience Platform
 title: Creación de un flujo de datos de streaming para datos sin procesar mediante la API de Flow Service
 type: Tutorial
-description: Este tutorial trata los pasos para recuperar los datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
+description: Este tutorial trata los pasos para recuperar los datos de flujo continuo y llevarlos a Experience Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1180'
 ht-degree: 3%
 
 ---
 
 # Crear un flujo de datos de flujo continuo para los datos sin procesar mediante la API [!DNL Flow Service]
 
-Este tutorial cubre los pasos para recuperar datos sin procesar de un conector de origen de flujo continuo y llevarlos al Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial trata los pasos para recuperar datos sin procesar de un conector de origen de flujo continuo y llevarlos a Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): el marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): el marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    - [Aspectos básicos de la composición de esquemas](../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    - [Guía para desarrolladores de Schema Registry](../../../../xdm/api/getting-started.md): Incluye información importante que necesita conocer para realizar correctamente llamadas a la API de Schema Registry. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados necesarios para realizar solicitudes (con especial atención al encabezado Aceptar y sus posibles valores).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): el catálogo es el sistema de registro para la ubicación de datos y el linaje dentro del Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): la transmisión por secuencias de ingesta para Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor al Experience Platform en tiempo real.
-- [Zonas protegidas](../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): el catálogo es el sistema de registro para la ubicación y el linaje de datos dentro de Experience Platform.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): la transmisión por secuencias de ingesta para Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.
+- [Zonas protegidas](../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../landing/api-guide.md).
 
 ### Crear una conexión de origen {#source}
 
@@ -41,9 +41,9 @@ Este tutorial también requiere que tenga un ID de conexión de origen válido p
 
 ## Creación de un esquema XDM de destino {#target-schema}
 
-Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se incluyen los datos de origen. Este esquema XDM de destino también amplía la clase XDM [!DNL Individual Profile].
+Para que los datos de origen se utilicen en Experience Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Experience Platform en el que se incluyen los datos de origen. Este esquema XDM de destino también amplía la clase XDM [!DNL Individual Profile].
 
-Para crear un esquema XDM de destino, realice una solicitud de POST al extremo `/schemas` de la [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Para crear un esquema XDM de destino, realice una petición POST al extremo `/schemas` de la [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Formato de API**
 
@@ -151,7 +151,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Crear un conjunto de datos de destinatario
 
-Con un esquema XDM de destino creado y su único `$id`, ahora puede crear un conjunto de datos de destino para contener los datos de origen. Para crear un conjunto de datos de destino, realice una solicitud de POST al extremo `dataSets` de la [API de servicio de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), al tiempo que proporciona el ID del esquema de destino dentro de la carga útil.
+Con un esquema XDM de destino creado y su único `$id`, ahora puede crear un conjunto de datos de destino para contener los datos de origen. Para crear un conjunto de datos de destinatario, realice una petición POST al extremo `dataSets` de la [API del servicio de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), al tiempo que proporciona el ID del esquema de destino en la carga.
 
 **Formato de API**
 
@@ -204,9 +204,9 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 
 ## Creación de una conexión de destino {#target-connection}
 
-Las conexiones de Target crean y administran una conexión de destino a Platform o a cualquier ubicación donde aterrizarán los datos transferidos. Las conexiones de destino contienen información sobre el destino de datos, el formato de datos y el ID de conexión de destino necesarios para crear un flujo de datos. Las instancias de conexión de destino son específicas de un inquilino y una organización.
+Las conexiones de Target crean y administran una conexión de destino a Experience Platform o a cualquier ubicación donde aterrizarán los datos transferidos. Las conexiones de destino contienen información sobre el destino de datos, el formato de datos y el ID de conexión de destino necesarios para crear un flujo de datos. Las instancias de conexión de destino son específicas de un inquilino y una organización.
 
-Para crear una conexión de destino, realice una solicitud de POST al extremo `/targetConnections` de la API [!DNL Flow Service]. Como parte de la solicitud, debe proporcionar el formato de datos, el `dataSetId` recuperado en el paso anterior y el identificador de especificación de conexión fija vinculado a [!DNL Data Lake]. Este identificador es `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Para crear una conexión de destino, realice una petición POST al extremo `/targetConnections` de la API [!DNL Flow Service]. Como parte de la solicitud, debe proporcionar el formato de datos, el `dataSetId` recuperado en el paso anterior y el identificador de especificación de conexión fija vinculado a [!DNL Data Lake]. Este identificador es `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato de API**
 
@@ -265,7 +265,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la nueva conex
 
 Para que los datos de origen se incorporen en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino.
 
-Para crear un conjunto de asignaciones, realice una solicitud de POST al extremo `mappingSets` de la [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) y proporcione el esquema XDM de destino `$id` y los detalles de los conjuntos de asignaciones que desee crear.
+Para crear un conjunto de asignaciones, realice una petición POST al extremo `mappingSets` de la [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) y proporcione el esquema XDM de destino `$id` y los detalles de los conjuntos de asignaciones que desee crear.
 
 **Formato de API**
 
@@ -325,7 +325,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ## Recuperación de una lista de especificaciones de flujo de datos {#specs}
 
-Un flujo de datos es responsable de recopilar datos de fuentes y llevarlos a Platform. GET Para crear un flujo de datos, primero debe obtener las especificaciones del flujo de datos realizando una solicitud a la API [!DNL Flow Service].
+Un flujo de datos es responsable de recopilar datos de fuentes y llevarlos a Experience Platform. Para crear un flujo de datos, primero debe obtener las especificaciones del flujo de datos realizando una petición GET a la API [!DNL Flow Service].
 
 **Formato de API**
 
@@ -422,7 +422,7 @@ El último paso para recopilar datos de flujo continuo es crear un flujo de dato
 - [ID de asignación](#mapping)
 - [ID de especificación de flujo de datos](#specs)
 
-Un flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
+Un flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una petición POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
 
 **Formato de API**
 
@@ -566,7 +566,7 @@ Los siguientes ejemplos se aplican a todos:
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un flujo de datos para recopilar datos de flujo continuo desde el conector de flujo continuo. Ahora, los servicios de la plataforma descendente como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ha creado un flujo de datos para recopilar datos de flujo continuo desde el conector de flujo continuo. Ahora los servicios de Experience Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
 
 - [Información general del perfil del cliente en tiempo real](../../../../profile/home.md)
 - [Información general del espacio de trabajo de ciencia de datos](../../../../data-science-workspace/home.md)

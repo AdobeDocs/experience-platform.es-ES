@@ -2,9 +2,9 @@
 title: Conexión SFTP
 description: Cree una conexión saliente activa a su servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1095'
 ht-degree: 8%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 ## Registro de cambios de destino {#changelog}
 
-Con la versión del Experience Platform de julio de 2023, el destino SFTP proporciona nuevas funciones, como se indica a continuación:
+Con la versión de Experience Platform de julio de 2023, el destino SFTP proporciona nuevas funciones, como se indica a continuación:
 
 * [Compatibilidad con la exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
 * [Opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) adicionales.
@@ -30,7 +30,7 @@ Cree una conexión saliente activa a su servidor SFTP para exportar periódicame
 
 ## Conectarse al SFTP mediante la API o la IU {#connect-api-or-ui}
 
-* Para conectarse a su ubicación de almacenamiento SFTP mediante la interfaz de usuario de Platform, lea las secciones [Conectarse al destino](#connect) y [Activar audiencias en este destino](#activate) a continuación.
+* Para conectarse a su ubicación de almacenamiento SFTP mediante la interfaz de usuario de Experience Platform, lea las secciones [Conectarse al destino](#connect) y [Activar audiencias en este destino](#activate) a continuación.
 * Para conectarse a su ubicación de almacenamiento SFTP mediante programación, lea [Activar audiencias en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiencias compatibles {#supported-audiences}
@@ -39,8 +39,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -61,14 +61,14 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
 
-* Cómo [exportar conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
+* Cómo [exportar conjuntos de datos mediante la interfaz de usuario de Experience Platform](/help/destinations/ui/export-datasets.md).
 * Cómo [exportar conjuntos de datos mediante programación usando la API de Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Formato de archivo de los datos exportados {#file-format}
 
-Al exportar *datos de audiencia*, Platform crea un archivo de `.csv`, `parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [formatos de archivo compatibles con la exportación](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) en el tutorial de activación de audiencia.
+Al exportar *datos de audiencia*, Experience Platform crea un archivo de `.csv`, `parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [formatos de archivo compatibles con la exportación](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) en el tutorial de activación de audiencia.
 
-Al exportar *conjuntos de datos*, Platform crea un archivo de `.parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [verificar la exportación correcta del conjunto de datos](../../ui/export-datasets.md#verify) en el tutorial exportar conjuntos de datos.
+Al exportar *conjuntos de datos*, Experience Platform crea un archivo de `.parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [verificar la exportación correcta del conjunto de datos](../../ui/export-datasets.md#verify) en el tutorial exportar conjuntos de datos.
 
 ## Conexión al destino {#connect}
 
@@ -121,11 +121,11 @@ Después de establecer la conexión de autenticación con la ubicación SFTP, pr
 
 ![Campos de detalles de destino para el destino SFTP.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Nombre]**: escriba un nombre que le ayude a identificar este destino en la interfaz de usuario del Experience Platform;
+* **[!UICONTROL Nombre]**: escriba un nombre que le ayude a identificar este destino en la interfaz de usuario de Experience Platform;
 * **[!UICONTROL Descripción]**: escriba una descripción para este destino;
 * **[!UICONTROL Ruta de la carpeta]**: escriba la ruta de acceso a la carpeta de la ubicación SFTP donde se exportarán los archivos.
-* **[!UICONTROL Tipo de archivo]**: seleccione el formato que el Experience Platform debe usar para los archivos exportados. Al seleccionar la opción [!UICONTROL CSV], también puede [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe usar para los archivos exportados.
+* **[!UICONTROL Tipo de archivo]**: seleccione el formato que Experience Platform debe usar para los archivos exportados. Al seleccionar la opción [!UICONTROL CSV], también puede [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que Experience Platform debe usar para los archivos exportados.
 * **[!UICONTROL Incluir archivo de manifiesto]**: Active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de la exportación, etc. Se ha asignado un nombre al manifiesto con el formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Ver [archivo de manifiesto de ejemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). El archivo de manifiesto incluye los campos siguientes:
    * `flowRunId`: la [ejecución de flujo de datos](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que generó el archivo exportado.
    * `scheduledTime`: la hora en UTC en que se exportó el archivo.

@@ -3,9 +3,9 @@ keywords: Experience Platform;servicio de consultas;servicio de consultas;consul
 title: Ejemplo de caso de uso para el servicio de consultas de Adobe Experience Platform
 description: Un ejemplo completo para demostrar la versatilidad y las ventajas del servicio de consultas de Adobe Experience Platform.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Esta demostración del flujo de trabajo se basa en varios servicios de Adobe Exp
 * [Segmentación](../../segmentation/home.md)
 * [Destinos](../../destinations/home.md)
 
-El ejemplo de abandono de exploración se centra en el uso de datos del Adobe [!DNL Analytics] para crear una audiencia procesable concreta. La audiencia se refina para incluir a todos los clientes que navegaron por el sitio web en los últimos cuatro días, pero que no realizaron una compra. A continuación, cada perfil de la audiencia se segmenta con el SKU de precio más alto resultante del patrón de comportamiento del cliente.
+El ejemplo de abandono de exploración se centra en el uso de datos de Adobe [!DNL Analytics] para crear una audiencia procesable concreta. La audiencia se refina para incluir a todos los clientes que navegaron por el sitio web en los últimos cuatro días, pero que no realizaron una compra. A continuación, cada perfil de la audiencia se segmenta con el SKU de precio más alto resultante del patrón de comportamiento del cliente.
 
 La propia consulta es muy prescriptiva y solo incluye datos que cumplen los criterios del caso de uso para la definición del segmento. Esto mejora el rendimiento al minimizar la cantidad de datos de [!DNL Analytics] que se están procesando. También ordena los datos por precio de mayor a menor y elige el SKU con precio más alto que el usuario estaba explorando.
 
@@ -57,7 +57,7 @@ order by price desc)D;
 
 ## [!DNL Query Service] ejemplo de abandono de exploración con adobe analytics {#video-example}
 
-La presentación en vídeo que se ve a continuación proporciona un caso de uso integral en el mundo real para los datos de sus Experience Platform centrados en [!DNL Query Service] y las integraciones de análisis de Adobe.
+La presentación de vídeo que se ve a continuación proporciona un caso de uso integral en el mundo real para sus datos de Experience Platform centrados en [!DNL Query Service] y las integraciones de análisis de Adobe.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
@@ -69,7 +69,7 @@ Las características proporcionadas por [!DNL Query Service] tienen muchos prop�
 
 Además, al incluir en la consulta lógica que cumpla cualquier condición recurrente o estática, [!DNL Query Service] extrae la carga de una segmentación detallada.
 
-Adobe Experience Platform proporciona un repositorio de datos y las herramientas necesarias para activar los datos de una manera eficiente y fiable. Al mantener los datos dentro de Platform, le permite derivar atributos mientras ejecuta otros procesos y elimina la necesidad de exportar datos a herramientas de terceros para su manipulación y procesamiento. Estos gastos generales de procesamiento pueden afectar en gran medida a la cronología de un proyecto al tratar con cientos de atributos o campañas. Esto proporciona a los especialistas en marketing una ubicación única para acceder a sus datos y crear campañas, así como un medio muy dinámico de segmentar y personalizar sus mensajes.
+Adobe Experience Platform proporciona un repositorio de datos y las herramientas necesarias para activar los datos de una manera eficiente y fiable. Al mantener los datos dentro de Experience Platform, le permite derivar atributos mientras ejecuta otros procesos y elimina la necesidad de exportar datos a herramientas de terceros para su manipulación y procesamiento. Estos gastos generales de procesamiento pueden afectar en gran medida a la cronología de un proyecto al tratar con cientos de atributos o campañas. Esto proporciona a los especialistas en marketing una ubicación única para acceder a sus datos y crear campañas, así como un medio muy dinámico de segmentar y personalizar sus mensajes.
 
 ## Pasos siguientes
 

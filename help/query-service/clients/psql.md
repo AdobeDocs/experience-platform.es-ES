@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conectar PSQL al servicio de consultas
 description: PSQL es una interfaz de línea de comandos que se proporciona al instalar PostgreSQL en el equipo. Puede instalarlo siguiendo estas instrucciones.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -19,7 +19,7 @@ PSQL es una interfaz de línea de comandos que se instala al instalar [!DNL Post
 >
 > En esta guía se da por hecho que ya tiene acceso a [!DNL PSQL] y que está familiarizado con su uso. Encontrará más información sobre [!DNL PSQL] en la [documentación oficial [!DNL PSQL] 3}.](https://www.postgresql.org/docs/current/app-psql.html)
 
-Después de instalar PSQL en el equipo, está listo para conectar PSQL con el servicio de consultas. Vuelva a la interfaz de usuario [!DNL Platform] y, a continuación, seleccione **[!UICONTROL Consultas]**, seguidas de **[!UICONTROL Credenciales]**.
+Después de instalar PSQL en el equipo, está listo para conectar PSQL con el servicio de consultas. Vuelva a la interfaz de usuario [!DNL Experience Platform] y, a continuación, seleccione **[!UICONTROL Consultas]**, seguidas de **[!UICONTROL Credenciales]**.
 
 En la sección **[!UICONTROL Comando PSQL]**, seleccione el icono **[!UICONTROL Copiar al portapapeles]** (![Icono Copiar](/help/images/icons/copy.png)) para copiar la cadena de comandos.
 

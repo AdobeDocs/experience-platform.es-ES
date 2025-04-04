@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Eliminación de flujos de datos en la IU
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 1%
@@ -22,12 +22,12 @@ Este tutorial proporciona pasos para eliminar flujos de datos mediante el área 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-- [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+- [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Eliminar flujos de datos
 
-En la [interfaz de usuario del Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo de [!UICONTROL Fuentes] y, a continuación, seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior.
+En la [interfaz de usuario de Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo de [!UICONTROL Fuentes] y, a continuación, seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior.
 
 ![catálogo](../../images/tutorials/delete/catalog.png)
 

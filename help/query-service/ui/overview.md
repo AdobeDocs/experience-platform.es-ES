@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;query;editor de consultas;Editor de consultas;editor de consultas;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consulta;editor de consultas;Editor de consultas;Editor de consultas;
 solution: Experience Platform
 title: Guía de IU del servicio de consultas
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ La página [!UICONTROL Información general] contiene varias secciones principal
 La sección [!UICONTROL Funciones de Data Distiller] proporciona vínculos de documentación a funciones de Data Distiller más avanzadas:
 
 - **[[!UICONTROL Exploración de datos]](../use-cases/data-exploration.md)**: Aprenda a explorar, solucionar problemas y comprobar datos ingeridos por lotes mediante SQL.
-- **[[!UICONTROL Conjuntos de datos derivados para aplicaciones de Experience Platform]](../data-distiller/derived-datasets/overview.md)**: Aprenda a crear conjuntos de datos derivados para admitir casos de uso complejos y diversos que maximicen su utilidad de datos.
+- **[[!UICONTROL Conjuntos de datos derivados para aplicaciones de Experience Platform]](../data-distiller/derived-datasets/overview.md)**: aprenda a crear conjuntos de datos derivados para admitir casos de uso complejos y diversos que maximicen su utilidad de datos.
 - **[[!UICONTROL Canalizaciones AI/ML]](../data-distiller/ml-feature-pipelines/overview.md)**: Obtenga información acerca de conceptos importantes detrás de sus herramientas de aprendizaje automático preferidas y cómo crear modelos personalizados que admitan sus casos prácticos de marketing. En esta serie de guías se describen los pasos necesarios para crear canalizaciones de funciones que preparen los datos de Experience Platform para alimentar los modelos personalizados en su entorno de aprendizaje automático.
 - **[[!UICONTROL Datos SQL]](../data-distiller/sql-insights/overview.md)**: Obtenga información acerca de las funcionalidades clave y los pasos necesarios para desarrollar un panel de datos desde SQL con Data Distiller.
 
@@ -62,7 +62,7 @@ Seleccione una tarjeta para abrir guías de documentación y ejemplos que le ayu
 - **[[!UICONTROL Valor de duración del cliente]](../use-cases/customer-lifetime-value.md)**: Aprenda a rastrear y visualizar el valor de duración del cliente con Real-Time CDP y los paneles personalizados. Utilice estas perspectivas para desarrollar estrategias para adquirir nuevos clientes, conservar los existentes y maximizar los márgenes de beneficio.
 - **[[!UICONTROL Puntuación de tendencia]](../use-cases/propensity-score.md)**: Aprenda a determinar las puntuaciones de tendencia mediante modelos predictivos de aprendizaje automático. Esta guía cubre el envío de datos para formación, la aplicación de modelos formados con SQL y la predicción de la probabilidad de compra de los clientes.
 - **[[!UICONTROL Análisis de consentimiento]](../../dashboards/insights-use-cases/consent-analysis.md)**: Obtenga información sobre cómo analizar y rastrear el consentimiento del cliente mediante Real-Time CDP, Query Service y Data Distiller. Esta guía cubre la creación de paneles de consentimiento, el refinamiento de la segmentación, el seguimiento de tendencias y la garantía del cumplimiento, lo que le ayuda a generar confianza y a ofrecer experiencias personalizadas.
-- **[[!UICONTROL Coincidencia aproximada]](../use-cases/fuzzy-match.md)**: Aprenda a hacer una coincidencia &quot;aproximada&quot; en los datos del Experience Platform para encontrar coincidencias aproximadas y analizar la similitud de cadenas en los conjuntos de datos. Siga esta guía para ahorrar tiempo y hacer que sus datos sean más accesibles. El ejemplo muestra cómo hacer coincidir los atributos de habitación de hotel entre dos conjuntos de datos de agencias de viajes, y cómo hacer coincidir, comparar y reconciliar de forma eficaz conjuntos de datos grandes y complejos para mantener la coherencia y la precisión.
+- **[[!UICONTROL Coincidencia difusa]](../use-cases/fuzzy-match.md)**: Aprenda a hacer una coincidencia &quot;difusa&quot; en los datos de Experience Platform para encontrar coincidencias aproximadas y analizar la similitud de cadenas en los conjuntos de datos. Siga esta guía para ahorrar tiempo y hacer que sus datos sean más accesibles. El ejemplo muestra cómo hacer coincidir los atributos de habitación de hotel entre dos conjuntos de datos de agencias de viajes, y cómo hacer coincidir, comparar y reconciliar de forma eficaz conjuntos de datos grandes y complejos para mantener la coherencia y la precisión.
 
 ![Se resaltó el área de trabajo del servicio de consultas con la sección de ejemplos de Data Distiller.](../images/ui/overview/data-distiller-examples.png)
 
@@ -142,7 +142,7 @@ La ficha **[!UICONTROL Plantillas]** muestra las consultas guardadas por los usu
 | **[!UICONTROL Modificado por]** | El último usuario que modificó la consulta. Cualquier usuario de la organización con acceso al servicio de consultas puede modificar las consultas. |
 | **[!UICONTROL Última modificación]** | La fecha y la hora de la última modificación de la consulta, en el huso horario del explorador. |
 
-Consulte la documentación de [plantillas de consulta](./query-templates.md) para obtener más información sobre las plantillas en la interfaz de usuario de Platform.
+Consulte la documentación de [plantillas de consulta](./query-templates.md) para obtener más información sobre las plantillas en la interfaz de usuario de Experience Platform.
 
 ## Registro {#log}
 
@@ -174,4 +174,4 @@ La ficha **[!UICONTROL Credenciales]** muestra tanto las credenciales que caduca
 
 ## Pasos siguientes
 
-Ahora que está familiarizado con la interfaz de usuario del Servicio de consultas en [!DNL Platform], puede acceder al Editor de consultas para empezar a crear sus propios proyectos de consultas y compartirlos con otros usuarios de su organización. Para obtener más información sobre la creación y ejecución de consultas en el Editor de consultas, consulte la [guía del usuario del Editor de consultas](./user-guide.md).
+Ahora que está familiarizado con la interfaz de usuario del Servicio de consultas en [!DNL Experience Platform], puede acceder al Editor de consultas para empezar a crear sus propios proyectos de consultas y compartirlos con otros usuarios de su organización. Para obtener más información sobre la creación y ejecución de consultas en el Editor de consultas, consulte la [guía del usuario del Editor de consultas](./user-guide.md).

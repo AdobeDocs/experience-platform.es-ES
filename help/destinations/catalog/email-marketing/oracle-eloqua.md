@@ -1,11 +1,11 @@
 ---
-keywords: correo electrónico;correo electrónico;e-mail;destinos de correo electrónico;oracle elocuente;oracle
+keywords: correo electrónico;Correo electrónico;correo electrónico;destinos de correo electrónico;oracle eloqua;oracle
 title: (Archivos) Conexión de Oracle Eloqua
 description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de marketing que ofrece Oracle y que tiene como objetivo ayudar a los especialistas en marketing y a las organizaciones a administrar las campañas de marketing y la generación de posibles clientes.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '719'
 ht-degree: 3%
 
 ---
@@ -22,8 +22,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -40,7 +40,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ## LISTA DE PERMITIDOS de direcciones IP {#allow-list}
 
-Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, el Adobe recomienda añadir determinados rangos de IP a la lista de permitidos.
+Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, Adobe recomienda añadir determinados rangos de IP a la lista de permitidos.
 
 Consulte la [lista de permitidos de direcciones IP para destinos SFTP](../cloud-storage/ip-address-allow-list.md) si necesita agregar direcciones IP de Adobe a la lista de permitidos.
 
@@ -75,14 +75,14 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 * Opcionalmente, puede adjuntar la clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Key]**. La clave pública debe escribirse como una cadena con codificación [!DNL Base64].
 * **[!UICONTROL Nombre]**: elige un nombre relevante para tu destino.
 * **[!UICONTROL Descripción]**: escribe una descripción para el destino.
-* **[!UICONTROL Ruta de carpeta]**: proporcione la ruta en su ubicación de almacenamiento donde Platform depositará los datos de exportación como archivos CSV.
+* **[!UICONTROL Ruta de la carpeta]**: proporcione la ruta en su ubicación de almacenamiento donde Experience Platform depositará los datos exportados como archivos CSV.
 * **[!UICONTROL Formato de archivo]**: seleccione **CSV** para exportar archivos CSV a su ubicación de almacenamiento.
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -107,8 +107,8 @@ Al activar audiencias en este destino, Adobe recomienda que seleccione un identi
 
 ## Datos exportados {#exported-data}
 
-Para [!DNL Oracle Eloqua] destinos, Platform crea un archivo de `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [comprobar la activación de la audiencia](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de audiencia.
+Para [!DNL Oracle Eloqua] destinos, Experience Platform crea un archivo de `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [comprobar la activación de la audiencia](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de audiencia.
 
 ## Configurar la importación de datos en [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-Después de conectar [!DNL Platform] a su almacenamiento de [!DNL SFTP], debe configurar la importación de datos desde su ubicación de almacenamiento en [!DNL Oracle Eloqua]. Para obtener información sobre cómo hacerlo, consulte [Importación de contactos o cuentas](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) en [!DNL Oracle Eloqua Help Center].
+Después de conectar [!DNL Experience Platform] a su almacenamiento de [!DNL SFTP], debe configurar la importación de datos desde su ubicación de almacenamiento en [!DNL Oracle Eloqua]. Para obtener información sobre cómo hacerlo, consulte [Importación de contactos o cuentas](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) en [!DNL Oracle Eloqua Help Center].

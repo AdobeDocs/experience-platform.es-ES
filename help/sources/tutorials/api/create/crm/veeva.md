@@ -5,9 +5,9 @@ title: Creación de una conexión base de Veeva CRM mediante la API de Flow Serv
 type: Tutorial
 description: Aprenda a conectar Adobe Experience Platform a Veeva CRM mediante la API de Flow Service.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 5%
 
 ---
@@ -22,8 +22,8 @@ Este tutorial lo guiará para crear una conexión base para [!DNL Veeva CRM] med
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que necesita conocer para conectarse correctamente a [!DNL Veeva CRM] mediante la API [!DNL Flow Service].
 
@@ -41,15 +41,15 @@ Para que [!DNL Flow Service] se conecte con [!DNL Veeva CRM], debe proporcionar 
 
 Para obtener más información sobre estos valores, consulte este [[!DNL Veeva CRM] documento](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
-Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL Veeva CRM] como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una petición POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Veeva CRM] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -117,4 +117,4 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 Siguiendo este tutorial, ha creado una conexión base [!DNL Veeva CRM] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar datos de CRM a Platform mediante la API  [!DNL Flow Service] ](../../collect/crm.md)
+* [Cree un flujo de datos para llevar datos de CRM a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/crm.md)

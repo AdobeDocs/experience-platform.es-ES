@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conectar el buscador al servicio de consultas
 description: Este documento explica los pasos para conectar Looker con el servicio de consultas de Adobe Experience Platform.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ Desde aquí, introduzca los detalles de la configuración de conexión que se in
 - **[!DNL Username and Password]:** Credenciales de inicio de sesión que se utilizarán. El nombre de usuario será `ORG_ID@AdobeOrg`.
 - **SSL**: habilite SSL para garantizar una conexión segura a través de la red.
 
-Para encontrar las credenciales necesarias para conectar el buscador con el servicio de consultas, inicie sesión en la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar las credenciales de **host**, **puerto**, **base de datos**, **nombre de usuario** y **contraseña**, lea la [guía de credenciales](../ui/credentials.md).
+Para encontrar las credenciales necesarias para conectar el buscador con el servicio de consultas, inicia sesión en la interfaz de usuario de Experience Platform y selecciona **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar las credenciales de **host**, **puerto**, **base de datos**, **nombre de usuario** y **contraseña**, lea la [guía de credenciales](../ui/credentials.md).
 
-![Se resaltaron la página Credenciales del área de trabajo Consultas de Experience Platform con las credenciales y las credenciales que caducan.](../images/clients/looker/query-service-credentials-page.png)
+![Se ha resaltado la página Credenciales del área de trabajo de consultas de Experience Platform con las credenciales y las credenciales que caducan.](../images/clients/looker/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >

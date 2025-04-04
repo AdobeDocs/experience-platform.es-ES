@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API
 title: Extremo de API de trabajos de exportación de perfiles
 type: Documentation
 description: El perfil del cliente en tiempo real permite crear una única vista de clientes individuales en Adobe Experience Platform, reuniendo datos de varias fuentes, incluidos datos de atributos y datos de comportamiento. A continuación, los datos de perfil se pueden exportar a un conjunto de datos para un procesamiento posterior.
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Al exportar [!DNL Profile] datos, primero se debe crear un conjunto de datos de 
 
 Una de las consideraciones clave es el esquema en el que se basa el conjunto de datos (`schemaRef.id` en la solicitud de muestra de API que aparece a continuación). Para exportar datos de perfil, el conjunto de datos debe estar basado en el esquema de unión [!DNL XDM Individual Profile] (`https://ns.adobe.com/xdm/context/profile__union`). Un esquema de unión es un esquema de solo lectura generado por el sistema que agrega los campos de esquemas que comparten la misma clase. En este caso, se trata de la clase [!DNL XDM Individual Profile]. Para obtener más información sobre los esquemas de vista de unión, consulte la sección [union en la guía de conceptos básicos de la composición de esquemas](../../xdm/schema/composition.md#union).
 
-Los pasos que siguen en este tutorial describen cómo crear un conjunto de datos que haga referencia al esquema de unión [!DNL XDM Individual Profile] mediante la API [!DNL Catalog]. También puede usar la interfaz de usuario [!DNL Platform] para crear un conjunto de datos que haga referencia al esquema de unión. Los pasos para usar la interfaz de usuario se describen en [este tutorial de la interfaz de usuario para exportar audiencias](../../segmentation/tutorials/create-dataset-export-segment.md), pero también son aplicables aquí. Una vez finalizado, puede volver a este tutorial para continuar con los pasos para [iniciar un nuevo trabajo de exportación](#initiate).
+Los pasos que siguen en este tutorial describen cómo crear un conjunto de datos que haga referencia al esquema de unión [!DNL XDM Individual Profile] mediante la API [!DNL Catalog]. También puede usar la interfaz de usuario [!DNL Experience Platform] para crear un conjunto de datos que haga referencia al esquema de unión. Los pasos para usar la interfaz de usuario se describen en [este tutorial de la interfaz de usuario para exportar audiencias](../../segmentation/tutorials/create-dataset-export-segment.md), pero también son aplicables aquí. Una vez finalizado, puede volver a este tutorial para continuar con los pasos para [iniciar un nuevo trabajo de exportación](#initiate).
 
 Si ya tiene un conjunto de datos compatible y conoce su ID, puede continuar directamente al paso para [iniciar un nuevo trabajo de exportación](#initiate).
 
@@ -85,7 +85,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID único de solo lec
 
 ### Iniciar trabajo de exportación {#initiate}
 
-Una vez que tenga un conjunto de datos que persiste en la unión, puede crear un trabajo de exportación para conservar los datos del perfil en el conjunto de datos realizando una solicitud del POST al extremo `/export/jobs` en la API del perfil del cliente en tiempo real y proporcionando los detalles de los datos que desea exportar en el cuerpo de la solicitud.
+Una vez que tenga un conjunto de datos que persista en la unión, puede crear un trabajo de exportación para conservar los datos del perfil en el conjunto de datos realizando una petición POST al extremo `/export/jobs` en la API del perfil del cliente en tiempo real y proporcionando los detalles de los datos que desea exportar en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -179,7 +179,7 @@ Una respuesta correcta devuelve un conjunto de datos rellenado con datos de perf
 
 ## Enumerar todos los trabajos de exportación
 
-Puede devolver una lista de todos los trabajos de exportación de una organización determinada realizando una solicitud de GET al extremo `export/jobs`. La solicitud también admite los parámetros de consulta `limit` y `offset`, como se muestra a continuación.
+Puede devolver una lista de todos los trabajos de exportación de una organización determinada realizando una petición GET al extremo `export/jobs`. La solicitud también admite los parámetros de consulta `limit` y `offset`, como se muestra a continuación.
 
 **Formato de API**
 
@@ -324,7 +324,7 @@ La respuesta incluye un objeto `records` que contiene los trabajos de exportaci�
 
 ## Monitorización del progreso de exportación
 
-Para ver los detalles de un trabajo de exportación específico o supervisar su estado mientras se procesa, puede realizar una solicitud de GET al extremo `/export/jobs` e incluir el `id` del trabajo de exportación en la ruta. El trabajo de exportación se ha completado una vez que el campo `status` devuelve el valor &quot;CORRECTO&quot;.
+Para ver los detalles de un trabajo de exportación específico o supervisar su estado mientras se procesa, puede realizar una petición GET al extremo `/export/jobs` e incluir el `id` del trabajo de exportación en la ruta. El trabajo de exportación se ha completado una vez que el campo `status` devuelve el valor &quot;CORRECTO&quot;.
 
 **Formato de API**
 
@@ -400,7 +400,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
 
 ## Cancelar un trabajo de exportación
 
-Experience Platform permite cancelar un trabajo de exportación existente, lo que puede resultar útil por varios motivos, incluso si el trabajo de exportación no se ha completado o se ha quedado atascado en la fase de procesamiento. Para cancelar un trabajo de exportación, puede realizar una solicitud de DELETE al extremo `/export/jobs` e incluir `id` del trabajo de exportación que desea cancelar en la ruta de solicitud.
+Experience Platform le permite cancelar un trabajo de exportación existente, lo que puede resultar útil por varios motivos, incluido si el trabajo de exportación no se completó o se quedó atascado en la fase de procesamiento. Para cancelar un trabajo de exportación, puede realizar una petición DELETE al extremo `/export/jobs` e incluir el `id` del trabajo de exportación que desea cancelar en la ruta de solicitud.
 
 **Formato de API**
 

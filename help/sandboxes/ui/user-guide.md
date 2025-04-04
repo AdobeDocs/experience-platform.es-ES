@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de Sandbox
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con los entornos limitados de la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -17,13 +17,13 @@ Este documento proporciona pasos sobre cómo realizar varias operaciones relacio
 
 ## Ver zonas protegidas
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Zonas protegidas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]** para abrir el panel [!UICONTROL Zonas protegidas]. El panel enumera todos los entornos limitados disponibles para su organización, incluidos sus respectivos tipos (producción o desarrollo).
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Zonas protegidas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]** para abrir el panel [!UICONTROL Zonas protegidas]. El panel enumera todos los entornos limitados disponibles para su organización, incluidos sus respectivos tipos (producción o desarrollo).
 
 ![Panel de zonas protegidas con la ficha de exploración seleccionada que muestra una lista de las zonas protegidas disponibles.](../images/ui/view-sandboxes.png)
 
 ## Cambiar entre zonas protegidas
 
-El indicador de zona protegida se encuentra en el encabezado superior de la interfaz de usuario de Platform y muestra el título de la zona protegida en la que se encuentra actualmente, su región y su tipo.
+El indicador de zona protegida se encuentra en el encabezado superior de la interfaz de usuario de Experience Platform y muestra el título de la zona protegida en la que se encuentra actualmente, su región y su tipo.
 
 ![Panel de zonas protegidas con el indicador de zona protegida resaltado.](../images/ui/sandbox-indicator.png)
 
@@ -51,7 +51,7 @@ Una vez seleccionada una zona protegida, la pantalla se actualiza y se actualiza
 >
 >La creación de una nueva zona protegida requiere que la agregue a una función en [[!UICONTROL Permisos]](../../access-control/abac/ui/permissions.md) para poder empezar a utilizarla. Para obtener información sobre cómo aprovisionar una zona protegida para una función, consulte la documentación de [administración de zonas protegidas para una función](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role).
 
-Utilice el siguiente vídeo para obtener una descripción general rápida sobre cómo utilizar entornos limitados en Experience Platform.
+Utilice el siguiente vídeo para obtener una descripción general rápida sobre cómo utilizar las zonas protegidas en Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 

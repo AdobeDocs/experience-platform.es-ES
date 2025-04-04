@@ -6,10 +6,10 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5e3f1517b321cab756305cd61ad5f1def93d3de7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 43%
+source-wordcount: '777'
+ht-degree: 44%
 
 ---
 
@@ -90,7 +90,7 @@ ht-degree: 43%
       * Capa de datos de cliente de Adobe {#client-data-layer}
          * [Información general](./extensions/client/client-data-layer/overview.md)
          * [Notas de la versión](./extensions/client/client-data-layer/release-notes.md)
-      * Análisis de contenido de Adobe {#content-analytics}
+      * Adobe Content Analytics {#content-analytics}
          * [Información general](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [Información general](./extensions/client/contexthub/overview.md)
@@ -329,5 +329,5 @@ ht-degree: 43%
 * [Preguntas frecuentes](./faq.md)
 * [Actualizaciones terminológicas](./term-updates.md)
 * [Compatibilidad en desuso con Internet Explorer 10 y 11](./ie-deprecation.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
+* [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
 

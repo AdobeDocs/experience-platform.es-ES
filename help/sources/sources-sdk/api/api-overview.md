@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
-title: Guía de API de fuentes de autoservicio (SDK por lotes)
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;fuentes sdk;sdk;SDK
+title: Guía de la API de fuentes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre el proceso de creación de un nuevo origen, incluidos los pasos sobre cómo recuperar, escribir y enviar una nueva especificación de conexión mediante la API de Flow Service.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
-# Guía de API de fuentes de autoservicio (SDK por lotes)
+# Guía de la API de fuentes de autoservicio (SDK por lotes)
 
 Este documento proporciona información general del proceso de creación de un nuevo origen, incluidos los pasos para escribir y enviar una nueva especificación de conexión mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-[!DNL Flow Service] se usa para recopilar y centralizar datos de clientes de distintos orígenes dentro de Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen a varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+[!DNL Flow Service] se usa para recopilar y centralizar datos de clientes de distintos orígenes dentro de Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen a varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 La API [!DNL Flow Service] proporciona varios extremos que le permiten administrar mediante programación las especificaciones de conexión y flujo para un nuevo origen que está integrando mediante fuentes de autoservicio (SDK por lotes).
 
@@ -36,11 +36,11 @@ Para obtener instrucciones detalladas, consulte la guía sobre [actualización d
 
 ## Actualizar la especificación de conexión
 
-Puede realizar actualizaciones en la especificación de conexión realizando una solicitud de PUT a la API [!DNL Flow Service]. Consulte la guía de [actualización de las especificaciones de conexión](./update-connection-specs.md) para obtener más información.
+Puede actualizar su especificación de conexión realizando una petición PUT a la API [!DNL Flow Service]. Consulte la guía de [actualización de las especificaciones de conexión](./update-connection-specs.md) para obtener más información.
 
 ## Enviar el origen
 
-Para enviar el origen para su integración al Experience Platform, primero debe completar todo el flujo de trabajo de la API [!DNL Flow Service] para los orígenes a fin de asegurarse de que el origen funciona correctamente. Si el origen se ejecuta correctamente, puede continuar y ponerse en contacto con el representante del Adobe para la verificación y la promoción. Consulte la guía sobre [probar y enviar el origen](./submit.md) para obtener más información
+Para enviar el origen para integrarlo en Experience Platform, primero debe completar todo el flujo de trabajo de la API [!DNL Flow Service] para que los orígenes funcionen correctamente. Si el origen se ejecuta correctamente, puede continuar y ponerse en contacto con el representante de Adobe para la verificación y la promoción. Consulte la guía sobre [probar y enviar el origen](./submit.md) para obtener más información
 
 ## Pasos siguientes
 

@@ -3,10 +3,10 @@ title: Conexión Google Customer Match + Display & Video 360
 description: Con el conector de destino Google Customer Match + Display & Video 360, puede utilizar los datos en línea y sin conexión de Experience Platform para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping, Gmail y YouTube.
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1999'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ Con la capacidad recién introducida de poder usar audiencias de [!DNL Customer 
 
 >[!IMPORTANT]
 >
->Este conector de destino está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso, póngase en contacto con el representante del Adobe.
+>Este conector de destino está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso, póngase en contacto con su representante de Adobe.
 
 ![Coincidencia de clientes de Google + destino DV360 en la interfaz de usuario de Adobe Experience Platform.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
@@ -28,9 +28,9 @@ Con la capacidad recién introducida de poder usar audiencias de [!DNL Customer 
 
 >[!IMPORTANT]
 >
-> Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_en) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
+> Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_es) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
 ><br/>
->Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según DMA en la Unión Europea.
+>Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.
 ><br/>
 >Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no tienen que realizar ninguna acción.
 ><br/>
@@ -50,7 +50,7 @@ Para comprender mejor cómo y cuándo utilizar este destino, aquí hay casos de 
 
 ### Caso de uso #1
 
-Una marca de ropa deportiva quiere llegar a los clientes existentes a través de [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM al Experience Platform y crear audiencias a partir de sus propios datos sin conexión. A continuación, puede enviar estas audiencias al destino [!DNL Google Customer Match + Display & Video 360] para su uso en [!DNL Google Display & Video 360] propiedades como [!DNL Search], [!DNL YouTube], [!DNL Gmail] y [!DNL Google Display Network].
+Una marca de ropa deportiva quiere llegar a los clientes existentes a través de [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Experience Platform y crear audiencias a partir de sus propios datos sin conexión. A continuación, puede enviar estas audiencias al destino [!DNL Google Customer Match + Display & Video 360] para su uso en [!DNL Google Display & Video 360] propiedades como [!DNL Search], [!DNL YouTube], [!DNL Gmail] y [!DNL Google Display Network].
 
 ### Caso de uso #2
 
@@ -64,8 +64,8 @@ Para promocionar la versión, cargan direcciones de correo electrónico desde su
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| phone_sha256_e.164 | Números de teléfono en formato E164, con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono con hash y texto sin formato, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para direcciones de correo electrónico de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| phone_sha256_e.164 | Números de teléfono en formato E164, con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono con hash y texto sin formato, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para direcciones de correo electrónico de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 
 {style="table-layout:auto"}
 
@@ -83,8 +83,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono y otros) utilizados en el destino [!DNL Google Customer Match]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ A continuación, asegúrese de que su cuenta de [!DNL Google] esté configurada 
 
 ### Lista de permitidos {#allowlist}
 
-Antes de crear el destino [!DNL Google Customer Match] en el Experience Platform, asegúrese de que su cuenta de [!DNL Google Ads] cumpla con la [[!DNL Google Customer Match] directiva](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Antes de crear el destino [!DNL Google Customer Match] en Experience Platform, asegúrese de que su cuenta de [!DNL Google Ads] cumpla con la [[!DNL Google Customer Match] directiva](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Google incluida en la lista de permitidos automáticamente a los clientes con cuentas compatibles.
 
@@ -121,8 +121,8 @@ Según el tipo de ID que introduzca en Adobe Experience Platform, debe cumplir c
 
 Hay dos métodos para activar números de teléfono en [!DNL Google Customer Match]:
 
-* **Ingesta de números de teléfono sin procesar**: puede ingerir números de teléfono sin procesar con el formato [!DNL E.164] en [!DNL Platform] y se aplicarán automáticamente hash a la activación. Si elige esta opción, asegúrese de introducir siempre los números de teléfono sin procesar en el área de nombres `Phone_E.164`.
-* **Ingesta de números de teléfono con hash**: puede prehash sus números de teléfono antes de ingerirlos en [!DNL Platform]. Si elige esta opción, asegúrese de introducir siempre los números de teléfono con hash en el área de nombres `PHONE_SHA256_E.164`.
+* **Ingesta de números de teléfono sin procesar**: puede ingerir números de teléfono sin procesar con el formato [!DNL E.164] en [!DNL Experience Platform] y se aplicarán automáticamente hash a la activación. Si elige esta opción, asegúrese de introducir siempre los números de teléfono sin procesar en el área de nombres `Phone_E.164`.
+* **Ingesta de números de teléfono con hash**: puede prehash sus números de teléfono antes de ingerirlos en [!DNL Experience Platform]. Si elige esta opción, asegúrese de introducir siempre los números de teléfono con hash en el área de nombres `PHONE_SHA256_E.164`.
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ Hay dos métodos para activar números de teléfono en [!DNL Google Customer Mat
 
 ### Requisitos de hash de correo electrónico {#hashing-requirements}
 
-Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o bien puede usar las direcciones de correo electrónico en borrar en el Experience Platform, y hacer que [!DNL Platform] las hash en la activación.
+Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede usar las direcciones de correo electrónico en borrar en Experience Platform y hacer que [!DNL Experience Platform] las hash en la activación.
 
 Para obtener más información sobre los requisitos de hash de Google y otras restricciones en la activación, consulte las siguientes secciones en la documentación de Google:
 
@@ -148,9 +148,9 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 
 Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. -->
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
 <!-- ## Configure destination - video walkthrough {#video}
@@ -206,9 +206,9 @@ Este es un ejemplo de asignación de identidad correcta al activar datos de audi
 Selección de campos de origen:
 
 * Seleccione el área de nombres `Email` como identidad de origen si las direcciones de correo electrónico que está utilizando no tienen hash.
-* Seleccione el área de nombres `Email_LC_SHA256` como identidad de origen si ha creado un hash de las direcciones de correo electrónico de los clientes al ingerir datos en [!DNL Platform], de acuerdo con [!DNL Google Customer Match] [los requisitos de hash de correo electrónico](#hashing-requirements).
-* Seleccione el área de nombres `PHONE_E.164` como identidad de origen si los datos constan de números de teléfono sin hash. [!DNL Platform] hará un hash de los números de teléfono para cumplir con los requisitos de [!DNL Google Customer Match].
-* Seleccione el área de nombres `Phone_SHA256_E.164` como identidad de origen si ha creado valores hash de números de teléfono en la ingesta de datos en [!DNL Platform], de acuerdo con [!DNL Facebook] [los requisitos de hash de números de teléfono](#phone-number-hashing-requirements).
+* Seleccione el área de nombres `Email_LC_SHA256` como identidad de origen si ha creado un hash de las direcciones de correo electrónico de los clientes al ingerir datos en [!DNL Experience Platform], de acuerdo con [!DNL Google Customer Match] [los requisitos de hash de correo electrónico](#hashing-requirements).
+* Seleccione el área de nombres `PHONE_E.164` como identidad de origen si los datos constan de números de teléfono sin hash. [!DNL Experience Platform] hará un hash de los números de teléfono para cumplir con los requisitos de [!DNL Google Customer Match].
+* Seleccione el área de nombres `Phone_SHA256_E.164` como identidad de origen si ha creado valores hash de números de teléfono en la ingesta de datos en [!DNL Experience Platform], de acuerdo con [!DNL Facebook] [los requisitos de hash de números de teléfono](#phone-number-hashing-requirements).
 
 Selección de campos de destino:
 
@@ -217,9 +217,9 @@ Selección de campos de destino:
 
 ![Asignación de identidad entre los campos de origen y destino mostrados en el paso Asignación del flujo de trabajo de activación.](../../assets/catalog/advertising/google-customer-match-dv360/identity-mapping-gcm-dv360.png)
 
-[!DNL Platform] crea automáticamente un hash de los datos de las áreas de nombres sin hash tras la activación.
+[!DNL Experience Platform] crea automáticamente un hash de los datos de las áreas de nombres sin hash tras la activación.
 
-Los datos de origen de los atributos no se cifran automáticamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación.
+Los datos de origen de los atributos no se cifran automáticamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación.
 
 ![Aplicar control de transformación resaltado en el paso Asignación del flujo de trabajo de activación.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
@@ -227,7 +227,7 @@ Los datos de origen de los atributos no se cifran automáticamente. Si el campo 
 
 Después de conectarse al destino y establecer un flujo de datos de destino, puede usar la [funcionalidad de supervisión](/help/dataflows/ui/monitor-destinations.md) en Real-Time CDP para obtener información detallada acerca de los registros de perfil activados en el destino en cada ejecución de flujo de datos.
 
-La información de supervisión de la conexión [!DNL Google Customer Match + Display & Video 360] incluye información de nivel de audiencia relacionada con identidades activadas, excluidas y fallidas en cada flujo de datos y ejecución de flujo de datos. [Más información](/help/dataflows/ui/monitor-destinations.md#segment-level-view) sobre la funcionalidad.
+La información de supervisión de la conexión [!DNL Google Customer Match + Display & Video 360] incluye información de nivel de audiencia relacionada con identidades activadas, excluidas y fallidas en cada flujo de datos y ejecución de flujo de datos. [Más información](/help/dataflows/ui/monitor-destinations.md#segment-level-view) sobre la nueva funcionalidad.
 
 ## Compruebe que la activación de la audiencia se haya realizado correctamente {#verify-activation}
 
@@ -235,7 +235,7 @@ Después de completar el flujo de activación, cambia a tu cuenta de **[!UICONTR
 
 ## Gobernanza de datos
 
-Algunos destinos de Experience Platform tienen ciertas reglas y obligaciones para los datos enviados a, o recibidos de, la plataforma de destino. Usted es responsable de comprender las limitaciones y obligaciones de sus datos y de cómo los utiliza en Adobe Experience Platform y en la plataforma de destino. Adobe Experience Platform proporciona herramientas de control de datos para ayudarle a administrar algunas de estas obligaciones de uso de datos. [Más información](../../../data-governance/labels/overview.md) acerca de las herramientas y directivas de control de datos.
+Algunos destinos de Experience Platform tienen ciertas reglas y obligaciones para los datos enviados a la plataforma de destino o recibidos de ella. Usted es responsable de comprender las limitaciones y obligaciones de sus datos y de cómo los utiliza en Adobe Experience Platform y en la plataforma de destino. Adobe Experience Platform proporciona herramientas de control de datos para ayudarle a administrar algunas de estas obligaciones de uso de datos. [Más información](../../../data-governance/labels/overview.md) acerca de las herramientas y directivas de control de datos.
 
 ## Resolución de problemas {#troubleshooting}
 

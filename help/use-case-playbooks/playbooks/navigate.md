@@ -4,9 +4,9 @@ title: Navegar a los manuales de casos de uso
 description: Aprenda a navegar por una galería de libros de reproducción y a empezar con una zona protegida inspiradora.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
@@ -67,8 +67,8 @@ Configure también canales para libros de reproducción que contengan mensajes t
 
 ### Superficie del canal push
 
-Confirme que las configuraciones de canal se hayan realizado desde la interfaz de Experience Platform o de Recopilación de datos. Este es el aspecto de las configuraciones de canal en el entorno de recopilación de datos.
+Confirme que las configuraciones de canal se hayan realizado desde la interfaz de Experience Platform o de Recopilaciones de datos. Este es el aspecto de las configuraciones de canal en el entorno de recopilación de datos.
 
 ## Pasos siguientes {#next-steps}
 
-Ahora que ha leído este documento, debe saber cómo configurar una zona protegida inspiradora y familiarizarse con las diferentes formas de acceder a los libros de casos de uso dentro de Platform. Como paso siguiente, lee cómo [elegir](/help/use-case-playbooks/playbooks/choose.md) el manual de instrucciones correcto.
+Ahora que ha leído este documento, debe saber cómo configurar una zona protegida inspiradora y familiarizarse con las diferentes formas de acceder a los libros de casos de uso dentro de Experience Platform. Como paso siguiente, lee cómo [elegir](/help/use-case-playbooks/playbooks/choose.md) el manual de instrucciones correcto.

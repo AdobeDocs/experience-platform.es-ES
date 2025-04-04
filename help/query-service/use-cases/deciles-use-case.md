@@ -2,16 +2,16 @@
 title: Caso de uso de conjuntos de datos derivados basados en deciles
 description: En esta guía se muestran los pasos necesarios para utilizar el servicio de consulta con el fin de crear conjuntos de datos derivados basados en deciles para utilizarlos con los datos del perfil.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
 
 # Caso de uso de conjuntos de datos derivados basados en deciles
 
-Los conjuntos de datos derivados facilitan casos de uso complicados para analizar datos del lago de datos que se pueden utilizar con otros servicios de Platform secundarios o publicar en los datos del perfil del cliente en tiempo real.
+Los conjuntos de datos derivados facilitan casos de uso complicados para analizar datos del lago de datos que se pueden utilizar con otros servicios de Experience Platform descendentes o publicar en los datos del perfil del cliente en tiempo real.
 
 Este ejemplo de caso de uso muestra cómo crear conjuntos de datos derivados basados en deciles para utilizarlos con los datos del perfil del cliente en tiempo real. Con un escenario de lealtad de las aerolíneas como ejemplo, esta guía le informa cómo crear un conjunto de datos que utilice deciles categóricos para segmentar y crear audiencias en función de atributos de clasificación.
 

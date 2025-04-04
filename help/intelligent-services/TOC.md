@@ -5,10 +5,10 @@ user-guide-title: Ayuda de Servicios inteligentes
 breadcrumb-title: Guía de servicios inteligentes
 user-guide-description: Utilice los servicios inteligentes de IA para generar puntuaciones, descubrir perspectivas y crear segmentos a partir de los datos de eventos de marketing.
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 34%
+source-wordcount: '137'
+ht-degree: 37%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 34%
 
 - [Información general sobre servicios inteligentes](home.md)
 - [Preparación de datos para utilizarlos en servicios inteligentes](data-preparation.md)
-- Attribution AI {#attribution-ai}
+- Inteligencia artificial aplicada a la atribución {#attribution-ai}
    - [Información general](attribution-ai/overview.md)
    - [Introducción a Attribution AI](attribution-ai/getting-started.md)
    - [Entrada y salida](attribution-ai/input-output.md)
@@ -55,4 +55,4 @@ ht-degree: 34%
       - [Claves gestionadas por el cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Gobernanza de datos](customer-ai/cai-data-governance/data-governance.md)
       - [Directivas de gobernanza](customer-ai/cai-data-governance/governance-policies.md)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
+- [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

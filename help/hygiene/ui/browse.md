@@ -2,9 +2,9 @@
 title: Examinar órdenes de trabajo del ciclo vital de datos
 description: Obtenga información sobre cómo ver y administrar las solicitudes de trabajo del ciclo vital de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '843'
 ht-degree: 27%
 
 ---
@@ -25,7 +25,7 @@ Esta guía explica cómo ver y administrar las órdenes de trabajo existentes en
 
 Cuando accede por primera vez al espacio de trabajo **[!UICONTROL Ciclo de vida de los datos]** en la interfaz de usuario, se muestra una lista de las órdenes de trabajo existentes junto con sus detalles básicos.
 
-![Imagen que muestra el espacio de trabajo [!UICONTROL Ciclo de vida de datos] en la IU de Platform](../images/ui/browse/work-order-list.png)
+![Imagen que muestra el área de trabajo [!UICONTROL Ciclo de vida de datos] en la interfaz de usuario de Experience Platform](../images/ui/browse/work-order-list.png)
 
 La lista sólo muestra las órdenes de trabajo de una categoría cada vez. Seleccione **[!UICONTROL Consumidor]** para ver una lista de tareas de eliminación de registros y **[!UICONTROL Conjunto de datos]** para ver una lista de caducidades programadas de conjuntos de datos.
 
@@ -97,7 +97,7 @@ La página de detalles de una caducidad del conjunto de datos proporciona inform
 
 ## Pasos siguientes
 
-En esta guía se explica cómo ver y administrar las solicitudes de trabajo del ciclo vital de datos existentes en la IU de Platform. Para obtener información sobre la creación de sus propias órdenes de trabajo, consulte la siguiente documentación:
+En esta guía se explica cómo ver y administrar las solicitudes de trabajo del ciclo vital de datos existentes en la interfaz de usuario de Experience Platform. Para obtener información sobre la creación de sus propias órdenes de trabajo, consulte la siguiente documentación:
 
 * [Administrar caducidades del conjunto de datos](./dataset-expiration.md)
 * [Administración de eliminaciones de registros](./record-delete.md)

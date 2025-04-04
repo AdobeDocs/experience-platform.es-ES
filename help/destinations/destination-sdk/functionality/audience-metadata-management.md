@@ -1,17 +1,17 @@
 ---
-description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, se utilizará por Adobe para estructurar las llamadas de API a su destino.
+description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, Adobe la utilizará para estructurar las llamadas de API a su destino.
 title: Gestión de metadatos de audiencia
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 0%
+source-wordcount: '1309'
+ht-degree: 2%
 
 ---
 
 # Gestión de metadatos de audiencia
 
-Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la configuración, se utilizará por Adobe para estructurar las llamadas de API a su destino.
+Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la configuración, Adobe la utilizará para estructurar las llamadas de API a su destino.
 
 Puede configurar la funcionalidad descrita en este documento mediante el extremo de la API `/authoring/audience-templates`. Lea [crear una plantilla de metadatos](../metadata-api/create-audience-template.md) para obtener una lista completa de las operaciones que puede realizar en el extremo.
 
@@ -23,21 +23,21 @@ Según la configuración de la API, puede que necesite o no utilizar el punto de
 
 ## Casos de uso admitidos por la gestión de metadatos de audiencia {#use-cases}
 
-Con la compatibilidad con los metadatos de audiencia en Destination SDK, al configurar el destino del Experience Platform, puede proporcionar a los usuarios de Platform una de las varias opciones al asignar y activar audiencias en el destino. Puede controlar las opciones disponibles para el usuario mediante los parámetros de la sección [Configuración de metadatos de audiencia](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuración de destino.
+Con la compatibilidad con los metadatos de audiencia en Destination SDK, al configurar el destino de Experience Platform, puede proporcionar a los usuarios de Experience Platform una de varias opciones al asignar y activar audiencias en el destino. Puede controlar las opciones disponibles para el usuario mediante los parámetros de la sección [Configuración de metadatos de audiencia](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuración de destino.
 
 ### Caso de uso 1: Tiene una API de terceros y los usuarios no necesitan introducir ID de asignación
 
-Si tiene un punto final de API para crear, actualizar o eliminar audiencias o audiencias, puede utilizar plantillas de metadatos de audiencia para configurar Destination SDK de modo que coincida con las especificaciones de su punto final de creación, actualización o eliminación de audiencia. El Experience Platform puede crear, actualizar o eliminar audiencias mediante programación y sincronizar los metadatos con el Experience Platform.
+Si tiene un punto final de API para crear, actualizar o eliminar audiencias o audiencias, puede utilizar plantillas de metadatos de audiencia para configurar Destination SDK de modo que coincida con las especificaciones del punto final de creación, actualización o eliminación de audiencias. Experience Platform puede crear, actualizar o eliminar audiencias mediante programación y sincronizar los metadatos con Experience Platform.
 
-Al activar audiencias en el destino en la interfaz de usuario (IU) de Experience Platform, los usuarios no necesitan rellenar manualmente un campo de ID de asignación de audiencia en el flujo de trabajo de activación.
+Al activar audiencias en su destino en la interfaz de usuario de Experience Platform, los usuarios no necesitan rellenar manualmente un campo de ID de asignación de audiencia en el flujo de trabajo de activación.
 
 ### Caso de uso 2: Los usuarios deben crear primero una audiencia en el destino y deben introducir manualmente el ID de asignación
 
-Si los socios o usuarios deben crear audiencias y otros metadatos manualmente en el destino, los usuarios deben rellenar manualmente el campo ID de asignación de audiencia en el flujo de trabajo de activación para sincronizar los metadatos de audiencia entre el destino y el Experience Platform.
+Si los socios o usuarios deben crear audiencias y otros metadatos manualmente en el destino, los usuarios deben rellenar manualmente el campo ID de asignación de audiencia en el flujo de trabajo de activación para sincronizar los metadatos de audiencia entre el destino y Experience Platform.
 
 ![Id. de asignación de entrada](../assets/functionality/input-mapping-id.png)
 
-### Caso de uso 3: Su destino acepta el ID de audiencia de Experience Platform, los usuarios no necesitan introducir manualmente el ID de asignación
+### Caso de uso 3: Su destino acepta el ID de audiencia de Experience Platform y los usuarios no necesitan introducir manualmente el ID de asignación
 
 Si el sistema de destino acepta el ID de audiencia de Experience Platform, puede configurarlo en la plantilla de metadatos de audiencia. Los usuarios no tienen que rellenar un ID de asignación de audiencia al activar un segmento.
 
@@ -51,7 +51,7 @@ Puede usar la plantilla genérica para [crear una nueva plantilla de audiencia](
 * Los tipos de autenticación: OAuth 1, OAuth 2 con token de actualización, OAuth 2 con token de portador
 * Las funciones: crear una audiencia, actualizar una audiencia, obtener una audiencia, eliminar una audiencia, validar credenciales
 
-El equipo de ingeniería de Adobes puede trabajar con usted para expandir la plantilla genérica con campos personalizados si sus casos de uso lo requieren.
+El equipo de ingeniería de Adobe puede trabajar con usted para expandir la plantilla genérica con campos personalizados si los casos de uso lo requieren.
 
 
 ## Eventos de plantilla admitidos {#supported-events}
@@ -551,15 +551,15 @@ Para pasar información como ID de audiencia, tokens de acceso, mensajes de erro
 | `{{segment.id}}` | Permite acceder al ID de audiencia en Experience Platform. |
 | `{{customerData.accountId}}` | Permite acceder al campo ID de cuenta que configuró en la configuración de destino. |
 | `{{oauth2ServiceAccessToken}}` | Permite generar dinámicamente un token de acceso basado en la configuración de OAuth 2. |
-| `{{authData.accessToken}}` | Permite pasar el token de acceso a su extremo de API. Use `{{authData.accessToken}}` si el Experience Platform debe usar tokens que no caduquen para conectarse a su destino; de lo contrario, use `{{oauth2ServiceAccessToken}}` para generar un token de acceso. |
+| `{{authData.accessToken}}` | Permite pasar el token de acceso a su extremo de API. Use `{{authData.accessToken}}` si Experience Platform debe usar tokens que no caduquen para conectarse a su destino; de lo contrario, use `{{oauth2ServiceAccessToken}}` para generar un token de acceso. |
 | `{{body.segments[0].segment.id}}` | Devuelve el identificador único de la audiencia creada, como el valor de la clave `externalAudienceId`. |
 | `{{error.message}}` | Devuelve un mensaje de error que se mostrará a los usuarios en la interfaz de usuario de Experience Platform. |
-| `{{{segmentEnrichmentAttributes}}}` | Permite acceder a todos los atributos de enriquecimiento de una audiencia específica.  Los eventos `create`, `update` y `delete` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [audiencias de carga personalizadas](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
+| `{{{segmentEnrichmentAttributes}}}` | Permite acceder a todos los atributos de enriquecimiento de una audiencia específica.  Los eventos `create`, `update` y `delete` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
 | `{{destination.name}}` | Devuelve el nombre del destino. |
 | `{{destination.sandboxName}}` | Devuelve el nombre de la zona protegida de Experience Platform donde está configurado el destino. |
 | `{{destination.id}}` | Devuelve el ID de la configuración de destino. |
 | `{{destination.imsOrgId}}` | Devuelve el ID de organización de IMS donde está configurado el destino. |
-| `{{destination.enrichmentAttributes}}` | Permite acceder a todos los atributos de enriquecimiento de todas las audiencias asignadas a un destino. Los eventos `createDestination`, `updateDestination` y `deleteDestination` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [audiencias de carga personalizadas](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Permite acceder a atributos de enriquecimiento para audiencias externas específicas asignadas a un destino. Los atributos de enriquecimiento solo están disponibles para [audiencias de carga personalizadas](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
+| `{{destination.enrichmentAttributes}}` | Permite acceder a todos los atributos de enriquecimiento de todas las audiencias asignadas a un destino. Los eventos `createDestination`, `updateDestination` y `deleteDestination` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Permite acceder a atributos de enriquecimiento para audiencias externas específicas asignadas a un destino. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
 
 {style="table-layout:auto"}

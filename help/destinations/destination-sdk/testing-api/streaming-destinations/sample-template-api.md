@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para generar una plantilla de transformación de mensaje de prueba para su destino.
 title: Generar una plantilla de transformación de mensaje de ejemplo
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Antes de continuar, revisa la [guía de introducción](../../getting-started.md)
 
 ## Obtener plantilla de muestra {#generate-sample-template}
 
-Puede obtener una plantilla de ejemplo realizando una solicitud de GET al extremo `authoring/testing/template/sample/` y proporcionando el identificador de destino de la configuración de destino en función de la cual está creando la plantilla.
+Puede obtener una plantilla de ejemplo realizando una petición GET al extremo `authoring/testing/template/sample/` y proporcionando el identificador de destino de la configuración de destino en función de la cual está creando la plantilla.
 
 >[!TIP]
 >
@@ -132,7 +132,7 @@ Si el id. de destino proporcionado corresponde a una plantilla de servidor de de
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes {#next-steps}
 

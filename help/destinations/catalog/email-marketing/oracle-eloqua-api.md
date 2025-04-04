@@ -1,11 +1,11 @@
 ---
 title: (API) Conexión de Oracle Eloqua
-description: El Oracle (API) Eloqua permite exportar los datos de la cuenta y activarlos dentro de Oracle Eloqua para satisfacer sus necesidades comerciales.
+description: El destino Oracle Eloqua (API) le permite exportar los datos de su cuenta y activarlos dentro de Oracle Eloqua para sus necesidades comerciales.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2044'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # [!DNL (API) Oracle Eloqua] conexión
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) permite a los especialistas en marketing planificar y ejecutar campañas a la vez que ofrecen una experiencia de cliente personalizada para sus posibles clientes. Con una administración de posibles clientes integrada y una creación de campañas sencilla, ayuda a los especialistas en marketing a atraer a la audiencia adecuada en el momento adecuado en el recorrido del comprador y se escala de forma elegante para llegar a audiencias de varios canales, incluidos correo electrónico, búsqueda en pantalla, vídeo y móvil. Los equipos de ventas pueden cerrar más acuerdos a una velocidad más rápida, lo que aumenta el retorno de la inversión de marketing a través de una perspectiva en tiempo real.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) permite a los especialistas en marketing planificar y ejecutar campañas a la vez que ofrecen una experiencia de cliente personalizada para sus posibles clientes. Con una administración de posibles clientes integrada y una creación de campañas sencilla, ayuda a los especialistas en marketing a atraer a la audiencia adecuada en el momento adecuado en el recorrido del comprador y se escala de forma elegante para llegar a audiencias de varios canales, incluidos correo electrónico, búsqueda en pantalla, vídeo y móvil. Los equipos de ventas pueden cerrar más acuerdos a una velocidad más rápida, lo que aumenta el retorno de la inversión de marketing a través de insight en tiempo real.
 
 Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha la operación [Actualizar un contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) de la API de REST [!DNL Oracle Eloqua], que le permite **actualizar identidades** dentro de una audiencia en [!DNL Oracle Eloqua].
 
@@ -25,15 +25,15 @@ El departamento de marketing de una plataforma en línea desea difundir una camp
 
 ## Requisitos previos {#prerequisites}
 
-### Requisitos previos del Experience Platform {#prerequisites-in-experience-platform}
+### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
 Antes de activar datos en el destino [!DNL Oracle Eloqua], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
-Consulte la documentación del Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
+Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
 ### [!DNL Oracle Eloqua] requisitos previos {#prerequisites-destination}
 
-Para exportar datos de Platform a su cuenta de [!DNL Oracle Eloqua], necesita tener una cuenta de [!DNL Oracle Eloqua].
+Para exportar datos de Experience Platform a su cuenta de [!DNL Oracle Eloqua], necesita tener una cuenta de [!DNL Oracle Eloqua].
 
 Además, necesita, como mínimo, los *&quot;Usuarios avanzados - Permisos de marketing&quot;* para su instancia de [!DNL Oracle Eloqua]. Consulte la sección *&quot;Grupos de seguridad&quot;* en la página [Acceso seguro de usuarios](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) para obtener instrucciones. El destino requiere acceso para [determinar mediante programación la dirección URL base](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) al invocar la API [!DNL Oracle Eloqua].
 
@@ -57,8 +57,8 @@ Consulte [Iniciar sesión en [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cl
 >* [!DNL Oracle Eloqua] campos de contacto personalizados se crean automáticamente con los nombres de las audiencias seleccionadas durante el paso **[!UICONTROL Seleccionar segmentos]**.
 
 * [!DNL Oracle Eloqua] tiene un límite máximo de 250 campos de contacto personalizados.
-* Antes de exportar nuevas audiencias, asegúrese de que el número de audiencias de Platform y el número de audiencias existentes dentro de [!DNL Oracle Eloqua] no superen este límite.
-* Si se supera este límite, se producirá un error en el Experience Platform. Esto se debe a que la API [!DNL Oracle Eloqua] no puede validar la solicitud y responde con un - *400: hubo un error de validación* - mensaje de error que describe el problema.
+* Antes de exportar nuevas audiencias, asegúrese de que el número de audiencias de Experience Platform y el número de audiencias existentes dentro de [!DNL Oracle Eloqua] no superen este límite.
+* Si se supera este límite, se producirá un error en Experience Platform. Esto se debe a que la API [!DNL Oracle Eloqua] no puede validar la solicitud y responde con un - *400: hubo un error de validación* - mensaje de error que describe el problema.
 * Si ha alcanzado el límite especificado anteriormente, debe quitar las asignaciones existentes del destino y eliminar los campos de contacto personalizados correspondientes de la cuenta de [!DNL Oracle Eloqua] para poder exportar más segmentos.
 
 * Consulte la página [[!DNL Oracle Eloqua] Creando campos de contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) para obtener información sobre los límites adicionales.
@@ -77,8 +77,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li>Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Para cada audiencia seleccionada en Platform, el estado del segmento [!DNL Oracle Eloqua] correspondiente se actualiza con su estado de audiencia de Platform.</li></ul> |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li>Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Para cada audiencia seleccionada en Experience Platform, el estado del segmento [!DNL Oracle Eloqua] correspondiente se actualiza con su estado de audiencia de Experience Platform.</li></ul> |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Rellene los campos obligatorios siguientes. Consulte la sección [Recopilar [!DN
 * **[!UICONTROL Nombre de usuario]**: Una cadena concatenada compuesta por el nombre de la compañía [!DNL Oracle Eloqua] y el nombre de usuario [!DNL Oracle Eloqua].<br>El valor concatenado adopta la forma de `{COMPANY_NAME}\{USERNAME}`.<br> Tenga en cuenta que no utilice llaves ni espacios y conserve `\`. <br>Por ejemplo, si el nombre de empresa de [!DNL Oracle Eloqua] es `MyCompany` y el nombre de usuario de [!DNL Oracle Eloqua] es `Username`, el valor concatenado que usará en el campo **[!UICONTROL Nombre de usuario]** es `MyCompany\Username`.
 
 Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
-![Captura de pantalla de IU de Platform que muestra cómo autenticarse.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo autenticarse.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el estado **[!UICONTROL Conectado]** con una marca de verificación verde. A continuación, puede continuar con el paso siguiente.
 
@@ -118,7 +118,7 @@ Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
-![Captura de pantalla de IU de Platform que muestra los detalles del destino.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra los detalles del destino.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
@@ -141,7 +141,7 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 ### Consideraciones sobre asignación y ejemplo {#mapping-considerations-example}
 
-Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL Oracle Eloqua], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino.
+Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL Oracle Eloqua], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Experience Platform y sus equivalentes correspondientes desde el destino de destino.
 
 Para asignar los campos XDM a los campos de destino [!DNL Oracle Eloqua], siga estos pasos:
 
@@ -165,7 +165,7 @@ Para asignar los campos XDM a los campos de destino [!DNL Oracle Eloqua], siga e
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * A continuación, se muestra un ejemplo con las asignaciones anteriores:
-     ![Ejemplo de captura de pantalla de IU de plataforma con asignaciones de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![Ejemplo de captura de pantalla de IU de Experience Platform con asignaciones de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -201,14 +201,14 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 
 1. Seleccione **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y vaya a la lista de destinos.
 1. A continuación, seleccione el destino y cambie a la ficha **[!UICONTROL Datos de activación]** y, a continuación, seleccione un nombre de audiencia.
-   ![Ejemplo de captura de pantalla de IU de Platform que muestra datos de activación de destinos.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
+   ![Ejemplo de captura de pantalla de la IU de Experience Platform que muestra datos de activación de destinos.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento dentro del segmento.
-   ![Ejemplo de captura de pantalla de IU de Platform que muestra el segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
+   ![Ejemplo de captura de pantalla de la IU de Experience Platform que muestra el segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
 1. Inicie sesión en el sitio web de [!DNL Oracle Eloqua] y luego vaya a la página **[!UICONTROL Información general de contactos]** para comprobar si se han agregado los perfiles de la audiencia. Para ver el estado de la audiencia, explore en profundidad una página de **[!UICONTROL Detalles de contacto]** y compruebe si se ha creado el campo de contacto con el nombre de audiencia seleccionado como prefijo.
 
-![Captura de pantalla de la interfaz de usuario de Eloqua de Oracle que muestra la página Detalles de contacto con el campo de contacto personalizado creado con el nombre de la audiencia.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![Captura de pantalla de la interfaz de usuario de Oracle Eloqua que muestra la página Detalles de contacto con el campo de contacto personalizado creado con el nombre de la audiencia.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
@@ -217,7 +217,7 @@ Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las política
 ## Errores y solución de problemas {#errors-and-troubleshooting}
 
 Al crear el destino, podría recibir uno de los siguientes mensajes de error: `400: There was a validation error` o `400 BAD_REQUEST`. Esto sucede cuando se supera el límite de 250 campos de contacto personalizados, tal como se describe en la sección [protecciones](#guardrails). Para corregir este error, asegúrese de no exceder el límite del campo de contacto personalizado en [!DNL Oracle Eloqua].
-![Captura de pantalla de IU de Platform que muestra error.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
+![Captura de pantalla de la IU de Experience Platform que muestra error.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
 
 Consulte las páginas [[!DNL Oracle Eloqua] Códigos de estado HTTP](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) y [[!DNL Oracle Eloqua] Errores de validación](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) para obtener una lista completa del estado y los códigos de error con explicaciones.
 
@@ -225,8 +225,8 @@ Consulte las páginas [[!DNL Oracle Eloqua] Códigos de estado HTTP](https://doc
 
 Para obtener más información, consulte la documentación de [!DNL Oracle Eloqua]:
 
-* [Automatización de mercadotecnia de Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
-* [API de REST para el servicio de Marketing Cloud de Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+* [Automatización de marketing Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
+* [API de REST para el servicio Oracle Eloqua Marketing Cloud](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
 ### Changelog
 
@@ -236,7 +236,7 @@ Esta sección recoge la funcionalidad y las actualizaciones significativas de la
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
-| Abril de 2023 | Actualización de documentación | <ul><li>Hemos actualizado la sección [casos de uso](#use-cases) con un ejemplo más claro de cuándo se beneficiarían los clientes de utilizar este destino.</li> <li>Hemos actualizado la sección [asignación](#mapping-considerations-example) con ejemplos claros de asignaciones obligatorias y opcionales.</li> <li>Actualizamos la sección [Conectarse al destino](#connect) con un ejemplo sobre cómo construir el valor concatenado para el campo **[!UICONTROL Nombre de usuario]** usando el Nombre de la compañía [!DNL Oracle Eloqua] y el Nombre de usuario [!DNL Oracle Eloqua]. (PLATIR-28343)</li><li>Actualizamos las secciones [Recopilar [!DNL Oracle Eloqua] credenciales](#gather-credentials) y [Rellenar detalles de destino](#destination-details) con instrucciones sobre la selección de [!DNL Oracle Eloqua] **[!UICONTROL Pod]**. El valor *&quot;Pod&quot;* lo usa el destino para construir la dirección URL base para las llamadas a la API. La sección [[!DNL Oracle Eloqua] requisitos previos](#prerequisites-destination) también se actualizó con instrucciones para asignar *&quot;Usuarios avanzados - Permisos de marketing&quot;* como *&quot;Grupos de seguridad&quot;* necesarios para su instancia de [!DNL Oracle Eloqua].</li></ul> |
+| Abril de 2023 | Actualización de documentación  | <ul><li>Hemos actualizado la sección [casos de uso](#use-cases) con un ejemplo más claro de cuándo se beneficiarían los clientes de utilizar este destino.</li> <li>Hemos actualizado la sección [asignación](#mapping-considerations-example) con ejemplos claros de asignaciones obligatorias y opcionales.</li> <li>Actualizamos la sección [Conectarse al destino](#connect) con un ejemplo sobre cómo construir el valor concatenado para el campo **[!UICONTROL Nombre de usuario]** usando el Nombre de la compañía [!DNL Oracle Eloqua] y el Nombre de usuario [!DNL Oracle Eloqua]. (PLATIR-28343)</li><li>Actualizamos las secciones [Recopilar [!DNL Oracle Eloqua] credenciales](#gather-credentials) y [Rellenar detalles de destino](#destination-details) con instrucciones sobre la selección de [!DNL Oracle Eloqua] **[!UICONTROL Pod]**. El valor *&quot;Pod&quot;* lo usa el destino para construir la dirección URL base para las llamadas a la API. La sección [[!DNL Oracle Eloqua] requisitos previos](#prerequisites-destination) también se actualizó con instrucciones para asignar *&quot;Usuarios avanzados - Permisos de marketing&quot;* como *&quot;Grupos de seguridad&quot;* necesarios para su instancia de [!DNL Oracle Eloqua].</li></ul> |
 | Marzo de 2023 | Versión inicial | Versión de destino inicial y publicación de documentación. |
 
 {style="table-layout:auto"}

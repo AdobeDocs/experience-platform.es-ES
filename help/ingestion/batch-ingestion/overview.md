@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;inicio;temas populares;ingesta de datos;lote;lote;habilitar conjunto de datos;introducción a la ingesta por lotes;descripción general;introducción a la ingesta por lotes;
+keywords: Experience Platform;inicio;temas populares;ingesta de datos;por lotes;habilitar conjunto de datos;introducción a la ingesta por lotes;información general;introducción a la ingesta por lotes;
 solution: Experience Platform
 title: Información general de API de ingesta por lotes
-description: La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser los datos de perfil de un archivo plano de un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
+description: La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Experience Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser los datos de perfil de un archivo plano de un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1390'
 ht-degree: 7%
 
 ---
 
 # Información general de API de ingesta por lotes
 
-La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser datos de perfil de un archivo plano (como un archivo Parquet) o datos que se ajusten a un esquema conocido en el registro [!DNL Experience Data Model] (XDM).
+La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Experience Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser datos de perfil de un archivo plano (como un archivo Parquet) o datos que se ajusten a un esquema conocido en el registro [!DNL Experience Data Model] (XDM).
 
 La [referencia de API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) proporciona información adicional sobre estas llamadas de API.
 
@@ -220,7 +220,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Carga de archivo grande: cargar partes posteriores
 
-Una vez creado el archivo, se pueden cargar todos los fragmentos posteriores realizando solicitudes repetidas al PATCH, una para cada sección del archivo.
+Una vez creado el archivo, se pueden cargar todos los fragmentos posteriores realizando repetidas solicitudes PATCH, una para cada sección del archivo.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}

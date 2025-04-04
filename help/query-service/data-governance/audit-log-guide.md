@@ -2,22 +2,22 @@
 title: Integración del registro de auditoría del servicio de consultas
 description: Los registros de auditoría del servicio de consultas mantienen registros de diversas acciones del usuario para formar una pista de auditoría para la resolución de problemas o el cumplimiento de las políticas de administración de datos corporativos y los requisitos regulatorios. Este tutorial proporciona información general sobre las funciones del registro de auditoría específicas del servicio de consultas.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
 
 # Integración del registro de auditoría [!DNL Query Service]
 
-La integración del registro de auditoría [!DNL Query Service] de Adobe Experience Platform proporciona registros de las acciones de usuario relacionadas con consultas. Los registros de auditoría son una herramienta esencial para solucionar problemas y cumplir con las políticas de administración de datos corporativos y los requisitos regulatorios. La capacidad permite devolver un registro de acciones para muchos tipos de eventos y filtrar y exportar los registros. Se puede acceder a los registros a través de la interfaz de usuario de Platform o de la [API de consulta de auditoría](https://www.adobe.io/experience-platform-apis/references/audit-query/) y descargarlos en los formatos de archivo CSV o JSON.
+La integración del registro de auditoría [!DNL Query Service] de Adobe Experience Platform proporciona registros de las acciones de usuario relacionadas con consultas. Los registros de auditoría son una herramienta esencial para solucionar problemas y cumplir con las políticas de administración de datos corporativos y los requisitos regulatorios. La capacidad permite devolver un registro de acciones para muchos tipos de eventos y filtrar y exportar los registros. Se puede acceder a los registros a través de la interfaz de usuario de Experience Platform o de la [API de consulta de auditoría](https://www.adobe.io/experience-platform-apis/references/audit-query/) y descargarlos en los formatos de archivo CSV o JSON.
 
-Para obtener más información sobre la interfaz de usuario de registros de auditoría, consulte el [documento de información general de registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md). Para obtener más información sobre cómo realizar llamadas a las API de Platform, consulte la [guía de API de registros de auditoría](../../landing/api-guide.md).
+Para obtener más información sobre la interfaz de usuario de registros de auditoría, consulte el [documento de información general de registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md). Para obtener más información sobre cómo realizar llamadas a las API de Experience Platform, consulte la [guía de API de registros de auditoría](../../landing/api-guide.md).
 
 ## Requisitos previos
 
-Debe tener el permiso [!DNL Data Governance] [!UICONTROL Ver registro de actividad de usuario] habilitado para ver el tablero de registro de auditoría en la interfaz de usuario de Platform. El permiso está habilitado a través del Adobe [Admin Console](https://adminconsole.adobe.com/). Póngase en contacto con el administrador de su organización si no tiene privilegios de administrador para habilitar este permiso. Consulte la documentación de control de acceso para obtener [instrucciones completas sobre cómo agregar permisos a través del Admin Console](../../access-control/home.md).
+Debe tener el permiso [!DNL Data Governance] [!UICONTROL Ver registro de actividad de usuario] habilitado para ver el tablero de registro de auditoría en la interfaz de usuario de Experience Platform. El permiso se habilita a través de Adobe [Admin Console](https://adminconsole.adobe.com/). Póngase en contacto con el administrador de su organización si no tiene privilegios de administrador para habilitar este permiso. Consulte la documentación de control de acceso para obtener [instrucciones completas sobre cómo agregar permisos a través de Admin Console](../../access-control/home.md).
 
 ## [!DNL Query Service] categorías de registros de auditoría {#audit-log-categories}
 
@@ -33,9 +33,9 @@ Las categorías de registro de auditoría proporcionadas por [!DNL Query Service
 
 Para realizar una auditoría de [!DNL Query Service] actividades, seleccione **[!UICONTROL Auditorías]** en el panel de navegación izquierdo, seguido del icono de embudo (![Un icono de filtro.](/help/images/icons/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados.
 
-![Panel de registro de auditoría de IU de Platform con &quot;Auditorías&quot; en los controles de navegación y filtro izquierdos resaltados.](../images/audit-log/filter-controls.png)
+![Panel de registro de auditoría de la interfaz de usuario de Experience Platform con &quot;Auditorías&quot; en los controles de filtro y navegación izquierdos resaltados.](../images/audit-log/filter-controls.png)
 
-Desde la pestaña [!UICONTROL Auditorías] del panel [!UICONTROL Registro de actividad], puede filtrar todas las acciones de la plataforma registradas por cualquiera de las [!DNL Query Service] categorías. Los resultados del registro se pueden filtrar aún más en función del período de tiempo en que se ejecutaron, la acción/función realizada o el usuario que implementó la consulta. Consulte la documentación del registro de auditoría para obtener [instrucciones completas sobre cómo filtrar los registros en función de la categoría, la acción, el usuario y el estado](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+Desde la pestaña [!UICONTROL Auditorías] del panel [!UICONTROL Registro de actividad], puede filtrar todas las acciones de Experience Platform registradas por cualquiera de las [!DNL Query Service] categorías. Los resultados del registro se pueden filtrar aún más en función del período de tiempo en que se ejecutaron, la acción/función realizada o el usuario que implementó la consulta. Consulte la documentación del registro de auditoría para obtener [instrucciones completas sobre cómo filtrar los registros en función de la categoría, la acción, el usuario y el estado](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 Los datos de registro de auditoría devueltos contienen la siguiente información sobre todas las consultas que cumplen los criterios de filtro seleccionados.
 

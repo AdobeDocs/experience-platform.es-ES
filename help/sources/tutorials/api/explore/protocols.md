@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Exploración de un sistema de protocolos mediante la API de Flow Service
 description: Este tutorial utiliza la API de Flow Service para explorar aplicaciones de protocolos.
 exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '586'
 ht-degree: 13%
 
 ---
@@ -21,14 +21,14 @@ Este tutorial utiliza la API [!DNL Flow Service] para explorar aplicaciones de p
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a una aplicación de protocolos mediante la API [!DNL Flow Service].
 
 ### Obtener una conexión base
 
-Para explorar el sistema de protocolos mediante las API de [!DNL Platform], debe poseer un identificador de conexión base válido. Si todavía no dispone de una conexión base para el sistema de protocolos con el que desea trabajar, puede crearla mediante el siguiente tutorial:
+Para explorar el sistema de protocolos mediante las API de [!DNL Experience Platform], debe poseer un identificador de conexión base válido. Si todavía no dispone de una conexión base para el sistema de protocolos con el que desea trabajar, puede crearla mediante el siguiente tutorial:
 
 * [OData genérico](../create/protocols/odata.md)
 
@@ -38,13 +38,13 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Exploración de las tablas de datos
 
-Con el id. de conexión para la aplicación de protocolos, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de acceso de la tabla que desea inspeccionar o introducir en [!DNL Platform].
+Con el id. de conexión para la aplicación de protocolos, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de acceso de la tabla que desea inspeccionar o introducir en [!DNL Experience Platform].
 
 **Formato de API**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de tablas desde la aplicación de protocolos. Busque la tabla que desea incluir en [!DNL Platform] y tome nota de su propiedad `path`, ya que debe proporcionarla en el siguiente paso para inspeccionar su estructura.
+Una respuesta correcta devuelve una matriz de tablas desde la aplicación de protocolos. Busque la tabla que desea incluir en [!DNL Experience Platform] y tome nota de su propiedad `path`, ya que debe proporcionarla en el siguiente paso para inspeccionar su estructura.
 
 ```json
 [
@@ -114,9 +114,9 @@ Una respuesta correcta devuelve una matriz de tablas desde la aplicación de pro
 ]
 ```
 
-## Inspect la estructura de una tabla
+## Inspeccionar la estructura de una tabla
 
-Para inspeccionar la estructura de una tabla desde la aplicación de protocolos, realice una solicitud de GET mientras especifica la ruta de una tabla como parámetro de consulta.
+Para inspeccionar la estructura de una tabla desde la aplicación de protocolos, realice una petición GET y especifique la ruta de una tabla como parámetro de consulta.
 
 **Formato de API**
 
@@ -188,4 +188,4 @@ Una respuesta correcta devuelve la estructura de la tabla especificada. Los deta
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha explorado la aplicación de protocolos, ha encontrado la ruta de acceso de la tabla que desea introducir en [!DNL Platform] y ha obtenido información sobre su estructura. Puede usar esta información en el siguiente tutorial para [recopilar datos de la aplicación de protocolos e introducirlos en Platform](../collect/protocols.md).
+Al seguir este tutorial, ha explorado la aplicación de protocolos, ha encontrado la ruta de acceso de la tabla que desea introducir en [!DNL Experience Platform] y ha obtenido información sobre su estructura. Puedes usar esta información en el siguiente tutorial para [recopilar datos de tu aplicación de protocolos e introducirlos en Experience Platform](../collect/protocols.md).

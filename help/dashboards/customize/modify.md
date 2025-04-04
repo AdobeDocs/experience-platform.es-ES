@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;segmentos;destinos;uso de licencias
-title: Modificación de los paneles de Platform en la IU
+title: Modificación de los paneles de Experience Platform en la IU
 description: Esta guía proporciona instrucciones paso a paso para personalizar cómo se muestran los datos de Adobe Experience Platform de su organización en los paneles.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ En la interfaz de usuario (IU) de Adobe Experience Platform, puede ver los datos
 >
 >Las actualizaciones realizadas en los paneles se realizan por organización y por zona protegida.
 
-Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos del panel en los paneles de [!UICONTROL Perfiles], [!UICONTROL Segmentos] y [!UICONTROL Destinos] de la interfaz de usuario de Platform.
+Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos del panel en los paneles de [!UICONTROL Perfiles], [!UICONTROL Segmentos] y [!UICONTROL Destinos] de la interfaz de usuario de Experience Platform.
 
 ## Introducción
 

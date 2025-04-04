@@ -1,18 +1,18 @@
 ---
 title: Cree Una Conexión De Flujo De Datos Y Un Flujo De Datos De Shopify En La IU
-description: Aprenda a crear una conexión de origen y un flujo de datos de Shopify Streaming mediante la interfaz de usuario de Platform
+description: Aprenda a crear una conexión de origen y un flujo de datos de Shopify Streaming mediante la interfaz de usuario de Experience Platform
 badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
 
 # Crear una conexión de origen y un flujo de datos para [!DNL Shopify Streaming] datos mediante la interfaz de usuario
 
-Este tutorial proporciona los pasos para crear una conexión de origen y un flujo de datos de [!DNL Shopify Streaming] mediante la interfaz de usuario de Platform.
+Este tutorial proporciona los pasos para crear una conexión de origen y un flujo de datos de [!DNL Shopify Streaming] mediante la interfaz de usuario de Experience Platform.
 
 ## Introducción {#getting-started}
 
@@ -29,17 +29,17 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ## Conectar su cuenta de [!DNL Shopify Streaming]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría **comercio electrónico**, seleccione [!DNL Shopify Streaming] y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
 
-![El catálogo de orígenes del Experience Platform](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![El catálogo de orígenes de Experience Platform](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## Seleccionar datos
 
-Aparecerá el paso **[!UICONTROL Seleccionar datos]**, que proporciona una interfaz para que pueda seleccionar los datos que trae a Platform.
+Aparecerá el paso **[!UICONTROL Seleccionar datos]**, que proporciona una interfaz para que pueda seleccionar los datos que trae a Experience Platform.
 
 * La parte izquierda de la interfaz es un explorador que le permite ver los flujos de datos disponibles en su cuenta;
 * La parte derecha de la interfaz de le permite previsualizar hasta 100 filas de datos de un archivo JSON.
@@ -66,7 +66,7 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 Aparecerá el paso [!UICONTROL Mapping], que le proporcionará una interfaz para asignar los campos de origen del esquema de origen a sus campos XDM de destino adecuados en el esquema de destino.
 
-Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino que seleccione. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino que seleccione. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
 
@@ -85,7 +85,7 @@ Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]
 
 ## Obtener la URL del extremo de flujo continuo
 
-Con el flujo de datos de flujo continuo creado, ahora puede recuperar la URL del extremo de flujo continuo. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de la transmisión se comunique con el Experience Platform.
+Con el flujo de datos de flujo continuo creado, ahora puede recuperar la URL del extremo de flujo continuo. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de flujo se comunique con Experience Platform.
 
 Para recuperar el extremo de flujo continuo, vaya a la página [!UICONTROL Actividad de flujo de datos] del flujo de datos que acaba de crear y copie el extremo desde la parte inferior del panel [!UICONTROL Propiedades].
 

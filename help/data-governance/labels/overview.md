@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de etiquetas de uso de datos
 description: Descubra cómo se utilizan las etiquetas de uso de datos para ayudar a aplicar el cumplimiento de la gobernanza de datos en Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '789'
 ht-degree: 16%
 
 ---
@@ -24,27 +24,27 @@ Este documento proporciona información general sobre las etiquetas de uso de da
 
 ## Explicación de las etiquetas de uso de datos
 
-Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de gobernanza que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas recomiendan etiquetar los datos en cuanto se introduzcan en [!DNL Experience Platform] o en cuanto estén disponibles los datos para su uso en [!DNL Platform].
+Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de gobernanza que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas recomiendan etiquetar los datos en cuanto se introduzcan en [!DNL Experience Platform] o en cuanto estén disponibles los datos para su uso en [!DNL Experience Platform].
 
 Las etiquetas de uso de datos que se aplican al nivel del conjunto de datos se propagan a todos los campos dentro del conjunto de datos. Las etiquetas también se pueden aplicar directamente a campos individuales (encabezados de columna) de un conjunto de datos, sin propagación.
 
-[!DNL Platform] proporciona varias etiquetas de uso de datos &quot;principales&quot; listas para usarse, que cubren una amplia variedad de restricciones comunes aplicables al control de datos. Para obtener más información sobre estas etiquetas y las políticas de gobernanza que representan, consulte la guía sobre [etiquetas de uso de datos principales](reference.md).
+[!DNL Experience Platform] proporciona varias etiquetas de uso de datos &quot;principales&quot; listas para usarse, que cubren una amplia variedad de restricciones comunes aplicables al control de datos. Para obtener más información sobre estas etiquetas y las políticas de gobernanza que representan, consulte la guía sobre [etiquetas de uso de datos principales](reference.md).
 
 Además de las etiquetas proporcionadas por Adobe, también puede definir sus propias etiquetas personalizadas para su organización. Consulte la sección sobre [administración de etiquetas](#manage-labels) para obtener más información.
 
 ## Herencia de etiquetas para segmentos de audiencia
 
-Todos los segmentos de audiencia creados por [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) heredan las etiquetas de uso de sus conjuntos de datos correspondientes. Esto permite al Experience Platform aplicar directivas automáticamente al activar segmentos en los destinos.
+Todos los segmentos de audiencia creados por [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) heredan las etiquetas de uso de sus conjuntos de datos correspondientes. Esto permite a Experience Platform aplicar directivas automáticamente al activar segmentos en los destinos.
 
 Además de heredar etiquetas de nivel de conjunto de datos, los segmentos heredan todas las etiquetas de nivel de campo de sus conjuntos de datos asociados de forma predeterminada. Por lo tanto, puede identificar más fácilmente qué atributos deben excluirse de los segmentos e impedir que hereden etiquetas de campos excluidos.
 
-Para obtener más información sobre cómo funciona la aplicación automática en Platform, consulte la descripción general de [aplicación automática de directivas](../enforcement/auto-enforcement.md).
+Para obtener más información sobre cómo funciona la aplicación automática en Experience Platform, consulte la descripción general de [aplicación automática de directivas](../enforcement/auto-enforcement.md).
 
 ### Herencia de los controles de exportación de datos de Adobe Audience Manager
 
-[!DNL Experience Platform] tiene la capacidad de compartir segmentos con Adobe Audience Manager. Los controles de exportación de datos que se hayan aplicado a los segmentos del Audience Manager se traducen en etiquetas y acciones de marketing equivalentes reconocidas por el control de datos de [!DNL Experience Platform].
+[!DNL Experience Platform] tiene la capacidad de compartir segmentos con Adobe Audience Manager. Cualquier control de exportación de datos que se haya aplicado a segmentos de Audience Manager se traduce en etiquetas equivalentes y acciones de marketing reconocidas por el control de datos de [!DNL Experience Platform].
 
-Para obtener información sobre cómo se asignan los controles de exportación de datos a las etiquetas de uso de datos de [!DNL Platform], consulte la [documentación del Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Para obtener información sobre cómo se asignan los controles de exportación de datos a las etiquetas de uso de datos de [!DNL Experience Platform], consulte la [documentación de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Administración de etiquetas de uso de datos en [!DNL Experience Platform] {#manage-labels}
 
@@ -61,7 +61,7 @@ El área de trabajo **[!UICONTROL Políticas]** de la interfaz de usuario de [!D
 
 >[!IMPORTANT]
 >
->Las etiquetas ya no se pueden aplicar a campos de nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Cualquier etiqueta aplicada anteriormente en el nivel de objeto del conjunto de datos seguirá siendo compatible mediante la IU de Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la sección sobre [migración de etiquetas aplicadas anteriormente](../e2e.md#migrate-labels) para obtener instrucciones sobre cómo hacerlo.
+>Las etiquetas ya no se pueden aplicar a campos de nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Cualquier etiqueta aplicada anteriormente en el nivel de objeto del conjunto de datos seguirá siendo compatible mediante la interfaz de usuario de Experience Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la sección sobre [migración de etiquetas aplicadas anteriormente](../e2e.md#migrate-labels) para obtener instrucciones sobre cómo hacerlo.
 
 ### Uso de API
 

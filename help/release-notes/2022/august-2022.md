@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
-description: Notas de la versión de agosto de 2022 de Adobe Experience Platform.
+description: Las notas de la versión de agosto de 2022 de Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2012'
 ht-degree: 26%
 
 ---
@@ -36,23 +36,23 @@ Attribution AI se utiliza para atribuir créditos a puntos de contacto que lleva
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con la privacidad | <ul><li> Attribution AI ahora admite la definición de funciones de usuario y directivas de acceso para administrar [permisos](../../../help/access-control/abac/ui/permissions.md) para características y objetos dentro de una aplicación de producto. </li><li>Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad.</li><li> Mediante el control de acceso basado en atributos [attribute-based access control](../../access-control/abac/overview.md), los administradores pueden controlar el acceso a objetos específicos y/o capacidades basadas en determinados atributos, que pueden ser metadatos agregados a un objeto, como etiquetas. Los administradores también pueden definir funciones de usuario que sólo tienen acceso a campos específicos y datos que corresponden a esos campos.</li><li>Attribution AI aprovecha los conjuntos de datos de Platform. Para admitir solicitudes de derechos de consumidor que una marca pueda recibir, las marcas deben utilizar Platform Privacy Service para enviar solicitudes de acceso y eliminación de consumidores con el fin de eliminar sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real.  </li><li>Todos los conjuntos de datos utilizados para la entrada/salida de modelos seguirán las directrices de Platform. El cifrado de datos de Platform se aplica a los datos en reposo y en tránsito. Consulte la documentación para obtener más información acerca del [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Compatibilidad con la privacidad | <ul><li> Inteligencia artificial aplicada a la atribución ahora admite la definición de funciones de usuario y directivas de acceso para administrar [permisos](../../../help/access-control/abac/ui/permissions.md) para características y objetos dentro de una aplicación de producto. </li><li>Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad.</li><li> Mediante el control de acceso basado en atributos [attribute-based access control](../../access-control/abac/overview.md), los administradores pueden controlar el acceso a objetos específicos y/o capacidades basadas en determinados atributos, que pueden ser metadatos agregados a un objeto, como etiquetas. Los administradores también pueden definir funciones de usuario que sólo tienen acceso a campos específicos y datos que corresponden a esos campos.</li><li>Inteligencia artificial aplicada a la atribución aprovecha los conjuntos de datos de Experience Platform. Para admitir solicitudes de derechos de consumidor que una marca pueda recibir, las marcas deben utilizar Experience Platform Privacy Service para enviar solicitudes de acceso y eliminación de consumidores con el fin de eliminar sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real.  </li><li>Todos los conjuntos de datos utilizados para la entrada/salida de modelos seguirán las directrices de Experience Platform. El cifrado de datos de Experience Platform se aplica a los datos en reposo y en tránsito. Consulte la documentación para obtener más información acerca del [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style="table-layout:auto"}
 
-**Nota**: el Attribution AI no estará disponible con los clientes existentes de Healthcare Shield hasta nuevo aviso.
+**Nota**: la inteligencia artificial aplicada a la atribución no estará disponible con los clientes existentes de Healthcare Shield hasta nuevo aviso.
 
-Para obtener más información sobre Attribution AI, consulte la [descripción general de Attribution AI](../../intelligent-services/attribution-ai/overview.md).
+Para obtener más información sobre la inteligencia artificial aplicada a la atribución, consulte la [descripción general de la inteligencia artificial aplicada a la atribución](../../intelligent-services/attribution-ai/overview.md).
 
 ### Inteligencia artificial aplicada al cliente
 
-La inteligencia artificial aplicada al cliente disponible en Real-time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
+La inteligencia artificial aplicada al cliente disponible en Real-Time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
 
 **Funciones actualizadas**
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con la privacidad | <ul><li> La inteligencia artificial aplicada al cliente ahora admite la definición de funciones de usuario y directivas de acceso para administrar [permisos](../../../help/access-control/abac/ui/permissions.md) para características y objetos dentro de una aplicación de producto. </li><li>Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad.</li><li> Mediante el control de acceso basado en atributos [attribute-based access control](../../access-control/abac/overview.md), los administradores pueden controlar el acceso a objetos específicos y/o capacidades basadas en determinados atributos. Estos atributos pueden ser metadatos añadidos a un objeto, como etiquetas. Los administradores también pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.</li><li>Customer AI aprovecha los conjuntos de datos de Platform. Para admitir solicitudes de derechos de consumidor que una marca pueda recibir, las marcas deben utilizar Platform Privacy Service para enviar solicitudes de acceso y eliminación de consumidores con el fin de eliminar sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real. </li><li>Todos los conjuntos de datos utilizados para la entrada/salida de modelos seguirán las directrices de Platform. El cifrado de datos de Platform se aplica a los datos en reposo y en tránsito. Consulte la documentación para obtener más información acerca del [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Compatibilidad con la privacidad | <ul><li> La inteligencia artificial aplicada al cliente ahora admite la definición de funciones de usuario y directivas de acceso para administrar [permisos](../../../help/access-control/abac/ui/permissions.md) para características y objetos dentro de una aplicación de producto. </li><li>Los recursos del registro de auditoría se registran automáticamente a medida que se produce la actividad.</li><li> Mediante el control de acceso basado en atributos [attribute-based access control](../../access-control/abac/overview.md), los administradores pueden controlar el acceso a objetos específicos y/o capacidades basadas en determinados atributos. Estos atributos pueden ser metadatos añadidos a un objeto, como etiquetas. Los administradores también pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.</li><li>La inteligencia artificial aplicada al cliente aprovecha los conjuntos de datos Experience Platform. Para admitir solicitudes de derechos de consumidor que una marca pueda recibir, las marcas deben utilizar Experience Platform Privacy Service para enviar solicitudes de acceso y eliminación de consumidores con el fin de eliminar sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real. </li><li>Todos los conjuntos de datos utilizados para la entrada/salida de modelos seguirán las directrices de Experience Platform. El cifrado de datos de Experience Platform se aplica a los datos en reposo y en tránsito. Consulte la documentación para obtener más información acerca del [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform proporciona varios(as) [!DNL dashboards] a través de 
 | --- | --- |
 | Widget de activaciones programadas | El widget [!UICONTROL Activaciones programadas] proporciona una vista tabularizada de los destinos activados más recientemente. Para cada segmento, incluye el nombre, la plataforma de destino y las fechas de inicio y finalización de la activación. Este widget le permite descubrir de un vistazo dónde y cuándo se está activando la audiencia, y hace que las activaciones duplicadas o innecesarias sean más transparentes. Esta información acumulada también resalta dónde se ha dejado de lado cualquier activación. |
 
-Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashboards] descripción general](../../dashboards/home.md).
+Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashboards] Información general](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -102,7 +102,7 @@ Para obtener más información acerca de [!DNL Data Prep], vea la [[!DNL Data Pr
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) es una plataforma de ejecución de ventas con la mayor cantidad de datos de interacción comprador-vendedor B2B en el mundo e inversiones significativas en tecnologías de IA propietarias para traducir datos de ventas en inteligencia. [!DNL Outreach] ayuda a las organizaciones a automatizar la participación en ventas y a actuar en base a la inteligencia de ingresos para mejorar su eficiencia, previsibilidad y crecimiento. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) es un Experience Platform de ejecución de ventas con la mayor cantidad de datos de interacción comprador-vendedor B2B en el mundo y con inversiones significativas en tecnologías de IA propietarias para traducir datos de ventas en inteligencia. [!DNL Outreach] ayuda a las organizaciones a automatizar la participación en ventas y a actuar en base a la inteligencia de ingresos para mejorar su eficiencia, previsibilidad y crecimiento. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, consulte la [descripción general del sistema XDM](../../xdm/home.md).
 
 ## Perfil del cliente en tiempo real {#profile}
 
@@ -145,7 +145,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 | Función | Descripción |
 | ------- | ----------- |
-| Límite estricto de políticas de combinación | Platform ahora aplicará un límite estricto de **cinco** políticas de combinación por zona protegida. Si la zona protegida tiene actualmente más de cinco políticas de combinación, **no** podrá crear nuevas políticas de combinación hasta que la zona protegida tenga menos de cinco políticas de combinación. |
+| Límite estricto de políticas de combinación | Experience Platform ahora aplicará un límite estricto de **cinco** políticas de combinación por zona protegida. Si la zona protegida tiene actualmente más de cinco políticas de combinación, **no** podrá crear nuevas políticas de combinación hasta que la zona protegida tenga menos de cinco políticas de combinación. |
 | Limpieza de atributo perimetral de perfil huérfano | Para todas las organizaciones, el servicio de perfiles ahora elimina diariamente los atributos de borde sobrantes de la región de actividad del usuario para proporcionar una representación más precisa de los perfiles en el sistema. Esta limpieza se produce después de que se eliminen todos los fragmentos de perfil de un perfil determinado y debería afectar a los perfiles que se combinan desde conjuntos de datos donde `com_adobe_aep_profile_region_dataset` está marcado como `true`. Esto puede mostrar una caída en la métrica &quot;Audiencia direccionable&quot; en el panel de uso de licencias y puede mostrar una caída en la métrica &quot;Recuento de perfiles&quot; en el panel de perfiles, ya que estas métricas incluían fragmentos de atributos de borde sobrantes antes antes de esta versión. |
 
 {style="table-layout:auto"}
@@ -160,13 +160,13 @@ Para obtener más información sobre el perfil del cliente en tiempo real, inclu
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con 4000 segmentos | Todas las organizaciones con Platform ahora admiten hasta 4000 definiciones de segmentos. Para obtener más información sobre cómo afecta este cambio a las API del trabajo de segmentación, lea la [guía de extremo del trabajo de segmentación](../../segmentation/api/segment-jobs.md) |
+| Compatibilidad con 4000 segmentos | Todas las organizaciones con Experience Platform ahora admiten hasta 4000 definiciones de segmentos. Para obtener más información sobre cómo afecta este cambio a las API del trabajo de segmentación, lea la [guía de extremo del trabajo de segmentación](../../segmentation/api/segment-jobs.md) |
 
 Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
@@ -174,9 +174,9 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
-| Disponibilidad general de orígenes de autoservicio (SDK por lotes) | Desarrolle, pruebe e integre su fuente de datos basada en la API de REST para introducir datos por lotes en Experience Platform mediante especificaciones de fuente fáciles de configurar. Con el SDK de fuentes puede: <ul><li>Configure una nueva fuente para el catálogo de Experience Platform.</li><li>Defina especificaciones para su fuente, incluida la información perteneciente a los tipos de autenticación admitidos, la programación y cómo se recuperan los datos de recursos.</li><li>Cree documentación orientada al usuario para la nueva fuente.</li></ul> Para obtener más información, lea la documentación sobre [Fuentes de autoservicio (SDK por lotes)](../../sources/sources-sdk/overview.md). |
-| Disponibilidad general del origen [!DNL Google BigQuery] | Utilice el origen [!DNL Google BigQuery] para ingerir datos de su almacén de datos [!DNL Google BigQuery] en el Experience Platform. Para obtener más información, lea la documentación de [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
-| [!DNL Teradata Vantage] origen (Beta) | Utilice el origen [!DNL Teradata Vantage] para introducir datos de entornos híbridos de varias nubes en el Experience Platform. Para obtener más información, lea la documentación de [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
+| Disponibilidad general de orígenes de autoservicio (SDK por lotes) | Desarrolle, pruebe e integre su fuente de datos basada en la API de REST para introducir datos por lotes en Experience Platform con especificaciones de fuente fáciles de configurar. Con Orígenes SDK, puede: <ul><li>Configure una nueva fuente en el catálogo de Experience Platform.</li><li>Defina especificaciones para su fuente, incluida la información perteneciente a los tipos de autenticación admitidos, la programación y cómo se recuperan los datos de recursos.</li><li>Cree documentación orientada al usuario para la nueva fuente.</li></ul> Para obtener más información, lea la documentación sobre [Fuentes de autoservicio (SDK por lotes)](../../sources/sources-sdk/overview.md). |
+| Disponibilidad general de la fuente [!DNL Google BigQuery] | Utilice el origen [!DNL Google BigQuery] para ingerir datos de su almacén de datos [!DNL Google BigQuery] en Experience Platform. Para obtener más información, lea la documentación de [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage] origen (Beta) | Utilice el origen [!DNL Teradata Vantage] para ingerir datos de entornos híbridos de varias nubes en Experience Platform. Para obtener más información, lea la documentación de [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
 | Compatibilidad entre regiones para orígenes de Adobe Analytics | Ahora puede introducir grupos de informes de cualquier región (Estados Unidos, Reino Unido o Singapur). Los grupos de informes deben asignarse a la misma organización que la instancia de zona protegida de Experience Platform en la que se está creando la conexión de origen en. Para obtener más información, lea la guía sobre [creación de una conexión de origen de Adobe Analytics en la interfaz de usuario](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 {style="table-layout:auto"}

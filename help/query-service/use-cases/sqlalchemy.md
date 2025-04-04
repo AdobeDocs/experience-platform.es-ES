@@ -1,27 +1,27 @@
 ---
-title: Administrar datos de plataforma mediante Python y SQLAlchemy
-description: Aprenda a utilizar SQLAlchemy para administrar los datos de la plataforma mediante Python en lugar de SQL.
+title: Administrar datos de Experience Platform mediante Python y SQLAlchemy
+description: Aprenda a utilizar SQLAlchemy para administrar los datos de Experience Platform mediante Python en lugar de SQL.
 exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
-source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
-# Administrar datos de Platform usando [!DNL Python] y [!DNL SQLAlchemy]
+# Administrar datos de Experience Platform mediante [!DNL Python] y [!DNL SQLAlchemy]
 
 Aprenda a utilizar SQLAlchemy para obtener una mayor flexibilidad en la administración de los datos de Adobe Experience Platform. Para aquellos que no están tan familiarizados con SQL, SQLAlchemy puede mejorar en gran medida el tiempo de desarrollo al trabajar con bases de datos relacionales. Este documento proporciona instrucciones y ejemplos para conectar [!DNL SQLAlchemy] al servicio de consultas y comenzar a usar Python para interactuar con las bases de datos.
 
-[!DNL SQLAlchemy] es un Object Relational Mapper (ORM) y una biblioteca de código [!DNL Python] que puede transferir datos almacenados en una base de datos SQL a objetos [!DNL Python]. A continuación, puede realizar operaciones de CRUD en datos mantenidos dentro del lago de datos de Platform mediante el código [!DNL Python]. Esto elimina la necesidad de administrar datos usando solo PSQL.
+[!DNL SQLAlchemy] es un Object Relational Mapper (ORM) y una biblioteca de código [!DNL Python] que puede transferir datos almacenados en una base de datos SQL a objetos [!DNL Python]. A continuación, puede realizar operaciones de CRUD en datos mantenidos dentro del lago de datos de Experience Platform mediante el código [!DNL Python]. Esto elimina la necesidad de administrar datos usando solo PSQL.
 
 ## Introducción
 
-Para adquirir las credenciales necesarias para conectar [!DNL SQLAlchemy] al Experience Platform, debe tener acceso al área de trabajo Consultas en la interfaz de usuario de Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo Consultas.
+Para adquirir las credenciales necesarias para conectar [!DNL SQLAlchemy] a Experience Platform, debe tener acceso al área de trabajo Consultas en la interfaz de usuario de Experience Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo Consultas.
 
 ## Credenciales de [!DNL Query Service] {#credentials}
 
-Para encontrar sus credenciales, inicie sesión en la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener instrucciones completas sobre cómo encontrar sus credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md).
+Para encontrar sus credenciales, inicie sesión en la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener instrucciones completas sobre cómo encontrar sus credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md).
 
 ![Se ha resaltado la ficha Credenciales con credenciales que caducan para el servicio de consultas.](../images/use-cases/credentials.png)
 
@@ -59,7 +59,7 @@ password = quote('''
 
 >[!NOTE]
 >
->La contraseña que proporcione para conectar a [!DNL SQLAlchemy] con el Experience Platform caducará si usa credenciales que caducan. Consulte la [sección de credenciales](#credentials) para obtener más información.
+>La contraseña que proporcione para conectar [!DNL SQLAlchemy] a Experience Platform caducará si usa credenciales que caduquen. Consulte la [sección de credenciales](#credentials) para obtener más información.
 
 ### Crear una instancia de motor [#create-engine]
 
@@ -69,7 +69,7 @@ Una vez creadas las variables, importe la función `create_engine` y cree una ca
 >
 >`create_engine` devuelve una instancia de un motor. Sin embargo, no abre la conexión al Servicio de consultas hasta que se llama a una consulta que requiere una conexión.
 
-SSL debe estar habilitado al acceder a Platform mediante clientes de terceros. Como parte del motor, use `connect_args` para escribir argumentos de palabras clave adicionales. Se recomienda establecer el modo SSL en `require`. Consulte la [documentación sobre los modos SSL](../clients/ssl-modes.md) para obtener más información sobre los valores aceptados.
+SSL debe estar habilitado al acceder a Experience Platform mediante clientes de terceros. Como parte del motor, use `connect_args` para escribir argumentos de palabras clave adicionales. Se recomienda establecer el modo SSL en `require`. Consulte la [documentación sobre los modos SSL](../clients/ssl-modes.md) para obtener más información sobre los valores aceptados.
 
 El ejemplo siguiente muestra el código [!DNL Python] necesario para inicializar un motor y una cadena de conexión.
 
@@ -89,9 +89,9 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 
 >[!NOTE]
 >
->La contraseña que proporcione para conectar a [!DNL SQLAlchemy] con el Experience Platform caducará si usa credenciales que caducan. Consulte la [sección de credenciales](#credentials) para obtener más información.
+>La contraseña que proporcione para conectar [!DNL SQLAlchemy] a Experience Platform caducará si usa credenciales que caduquen. Consulte la [sección de credenciales](#credentials) para obtener más información.
 
-Ya está listo para consultar los datos de Platform usando [!DNL Python]. El ejemplo que se muestra a continuación devuelve una matriz de nombres de tabla del servicio de consultas.
+Ya está listo para consultar los datos de Experience Platform mediante [!DNL Python]. El ejemplo que se muestra a continuación devuelve una matriz de nombres de tabla del servicio de consultas.
 
 ```python
 from sqlalchemy import inspect

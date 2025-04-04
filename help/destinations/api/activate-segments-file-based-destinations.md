@@ -4,16 +4,16 @@ title: Activar audiencias en destinos basados en archivos mediante la API de Flo
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4760'
+source-wordcount: '4763'
 ht-degree: 3%
 
 ---
 
 # Activar audiencias en destinos basados en archivos mediante la API de Flow Service
 
-Utilice las funciones mejoradas de exportación de archivos para acceder a la funcionalidad de personalización mejorada al exportar archivos fuera del Experience Platform:
+Utilice las funciones mejoradas de exportación de archivos para acceder a la funcionalidad de personalización mejorada al exportar archivos desde Experience Platform:
 
 * [Opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) adicionales.
 * Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través del [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
@@ -33,7 +33,7 @@ En este artículo se explica el flujo de trabajo necesario para usar la [API de 
 
 >[!TIP]
 >
->También puede utilizar la interfaz de usuario del Experience Platform para exportar perfiles a destinos de almacenamiento en la nube. Lea el tutorial [activar destinos basados en archivos](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener más información.
+>También puede utilizar la interfaz de usuario de Experience Platform para exportar perfiles a destinos de almacenamiento en la nube. Lea el tutorial [activar destinos basados en archivos](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener más información.
 
 <!--
 
@@ -51,9 +51,9 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite generar audiencias en [!DNL Adobe Experience Platform] a partir de sus datos de [!DNL Real-Time Customer Profile].
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que necesita conocer para activar datos en destinos basados en archivos en Platform.
+Las secciones siguientes proporcionan información adicional que necesita conocer para activar datos en destinos basados en archivos en Experience Platform.
 
 ### Permisos necesarios {#permissions}
 
@@ -67,13 +67,13 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilar valores para encabezados obligatorios y opcionales {#gather-values-headers}
 
-Para realizar llamadas a las API de [!DNL Platform], primero debe completar el tutorial de autenticación de Experience Platform [2}. ](https://www.adobe.com/go/platform-api-authentication-en) Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Los recursos de [!DNL Experience Platform] se pueden aislar en zonas protegidas virtuales específicas. En las solicitudes a las API de [!DNL Platform], puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
+Los recursos de [!DNL Experience Platform] se pueden aislar en zonas protegidas virtuales específicas. En las solicitudes a las API de [!DNL Experience Platform], puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -326,7 +326,7 @@ Siga los pasos a continuación para configurar un flujo de datos de exportación
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Después de decidir a qué destino están exportando las audiencias, debe crear una conexión de origen. La [conexión de origen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) representa la conexión con el almacén interno de [perfiles de Experience Platform](/help/profile/home.md#profile-data-store).
+Después de decidir a qué destino están exportando las audiencias, debe crear una conexión de origen. La [conexión de origen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) representa la conexión al almacén interno de [perfiles de Experience Platform](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -3477,7 +3477,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Ver las identidades disponibles para usar en el esquema de entrada
 
-La respuesta devuelve las identidades que puede utilizar al crear el esquema de entrada. Tenga en cuenta que esta respuesta devuelve las áreas de nombres de identidad [standard](/help/identity-service/features/namespaces.md#standard) y [custom](/help/identity-service/features/namespaces.md#manage-namespaces) que configuró en el Experience Platform.
+La respuesta devuelve las identidades que puede utilizar al crear el esquema de entrada. Tenga en cuenta que esta respuesta devuelve las áreas de nombres de identidad [standard](/help/identity-service/features/namespaces.md#standard) y [custom](/help/identity-service/features/namespaces.md#manage-namespaces) que configuró en Experience Platform.
 
 ```json
 [
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Respuesta con un esquema de ejemplo**
 
-Inspect devuelve la respuesta que obtiene al realizar la llamada anterior. Debe explorar en profundidad la respuesta para encontrar el objeto `targetSpec.attributes.partnerSchema.jsonSchema`
+Inspeccione la respuesta que obtenga al realizar la llamada anterior. Debe explorar en profundidad la respuesta para encontrar el objeto `targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ Respuesta para obtener el esquema de socio para el esquema de salida
 
@@ -4514,7 +4514,7 @@ Para agregar una [acción de marketing](/help/data-governance/api/marketing-acti
 >
 >Se requiere el encabezado `If-Match` al realizar una solicitud `PATCH`. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
 >
-> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
+> Para obtener la última versión del valor de etiqueta, realice una petición GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
 >
 > Asegúrese de encerrar el valor del encabezado `If-Match` entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
 
@@ -4583,7 +4583,7 @@ Para agregar una [clave obligatoria](/help/destinations/ui/activate-batch-profil
 >
 >Se requiere el encabezado `If-Match` al realizar una solicitud `PATCH`. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
 >
-> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
+> Para obtener la última versión del valor de etiqueta, realice una petición GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
 >
 > Asegúrese de encerrar el valor del encabezado `If-Match` entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
 
@@ -4662,7 +4662,7 @@ Para agregar una [clave de anulación de duplicación](/help/destinations/ui/act
 >
 >Se requiere el encabezado `If-Match` al realizar una solicitud `PATCH`. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
 >
-> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
+> Para obtener la última versión del valor de etiqueta, realice una petición GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
 >
 > Asegúrese de encerrar el valor del encabezado `If-Match` entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
 
@@ -4817,11 +4817,11 @@ Puede encontrar información sobre los [diversos parámetros devueltos por el fl
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de respuestas de error.
+Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform para obtener más información sobre cómo interpretar las respuestas de error.
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha conectado correctamente Platform a uno de los destinos de almacenamiento en la nube preferidos y ha configurado un flujo de datos en el destino correspondiente para exportar audiencias. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
+Al seguir este tutorial, ha conectado correctamente Experience Platform a uno de los destinos de almacenamiento en la nube preferidos y ha configurado un flujo de datos en el destino correspondiente para exportar audiencias. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
 
 * [Información general sobre los destinos](../home.md)
 * [Resumen del catálogo Destinos](../catalog/overview.md)

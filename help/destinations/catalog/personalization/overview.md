@@ -3,10 +3,10 @@ keywords: personalización;Personalization
 title: Información general sobre destinos Personalization
 description: Las plataformas Personalization recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en marketing a navegar por datos anónimos, ofrecer ofertas o anuncios a los posibles clientes en función de actividades anteriores o como parte de audiencias con hábitos similares.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 12%
+source-wordcount: '151'
+ht-degree: 11%
 
 ---
 
@@ -18,7 +18,7 @@ Las plataformas Personalization recopilan datos y perspectivas de comportamiento
 
 ## Destinos de personalización admitidos {#supported-destinations}
 
-Actualmente, Platform admite los destinos de personalización que se enumeran a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
+Actualmente, Experience Platform admite los destinos de personalización que se enumeran a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 
 **Conexiones**
 

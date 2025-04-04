@@ -2,9 +2,9 @@
 description: Aprenda a utilizar el tablero de monitorización para monitorizar los datos introducidos desde las fuentes.
 title: Monitorización de flujos de datos para fuentes en la IU
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1323'
 ht-degree: 11%
 
 ---
@@ -21,12 +21,12 @@ Lea este documento para aprender a utilizar el panel de monitorización para mon
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
+* [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
    * [Ejecuciones de flujo de datos](../../sources/notifications.md): Las ejecuciones de flujo de datos son los trabajos programados recurrentes en función de la configuración de frecuencia de los flujos de datos seleccionados.
-* [Fuentes](../../sources/home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Fuentes](../../sources/home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
 * [Servicio de identidad](../../identity-service/home.md): obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
 * [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
-* [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Monitorizar los datos de origen mediante el panel de monitorización
 
@@ -42,7 +42,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >abstract="El procesamiento de fuentes contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
-<!-- In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
 At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
@@ -112,13 +112,13 @@ Utilice esta página para ver las métricas y la información de la iteración d
 | Total de archivos | Número total de archivos en la ejecución del flujo de datos. |
 | Tamaño de los datos | El tamaño total de los datos contenidos en la ejecución del flujo de datos. |
 | ID de ejecución de flujo de datos | El ID de la iteración de ejecución del flujo de datos. |
-| ID de organización | El ID de la organización en la que se creó la ejecución del flujo de datos. |
+| ID de la organización | El ID de la organización en la que se creó la ejecución del flujo de datos. |
 | Estado | El estado de ejecución del flujo de datos. |
 | Inicio de ejecución de flujo de datos | Una marca de tiempo que indica cuándo se inició la ejecución del flujo de datos. |
 | Fin de ejecución de flujo de datos | Una marca de tiempo que indica cuándo terminó la ejecución del flujo de datos. |
 | Conjunto de datos | Conjunto de datos utilizado para crear el flujo de datos. |
 | Tipo de datos | El tipo de datos que se encontraban en el flujo de datos. |
-| Ingesta parcial | La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos precisos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos. Puede habilitar la ingesta parcial durante el proceso de creación del flujo de datos. |
+| Ingesta parcial | La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos. Puede habilitar la ingesta parcial durante el proceso de creación del flujo de datos. |
 | Diagnósticos de error | Error diagnostics indica a la fuente que produzca diagnósticos de error a los que puede hacer referencia posteriormente al monitorizar la actividad del conjunto de datos y el estado del flujo de datos. Puede habilitar diagnósticos de error durante el proceso de creación del flujo de datos. |
 | Resumen de errores | Ante una ejecución fallida del flujo de datos, el resumen del error muestra un código y una descripción de error para resumir por qué ha fallado la iteración de ejecución. |
 

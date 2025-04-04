@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;Power BI;power bi;conectarse al servicio de consultas;
 solution: Experience Platform
-title: Conectar la Power BI al servicio de consultas
+title: Conexión de Power BI al servicio de consultas
 description: Este documento explica los pasos para conectar Power BI con el servicio de consultas de Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Esta guía requiere que ya tenga acceso a la aplicación de escritorio [!DNL Pow
 >
 > La aplicación de escritorio [!DNL Power BI] es **solamente** disponible en dispositivos Windows.
 
-Para adquirir las credenciales necesarias para conectar [!DNL Power BI] al Experience Platform, debe tener acceso al área de trabajo Consultas en la interfaz de usuario de Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo de consultas.
+Para adquirir las credenciales necesarias para conectar [!DNL Power BI] a Experience Platform, debe tener acceso al área de trabajo Consultas en la interfaz de usuario de Experience Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo de consultas.
 
 ## Conectar [!DNL Power BI] al servicio de consultas {#connect-power-bi}
 
@@ -31,13 +31,13 @@ Para conectar a [!DNL Power BI] al servicio de consultas, abra [!DNL Power BI] y
 
 Aparecerá el cuadro de diálogo de la base de datos [!DNL PostgreSQL], en el que se solicitarán valores para el servidor y la base de datos. Encontrará instrucciones adicionales sobre cómo [conectarse a una base de datos PostgreSQL desde Power Query Desktop](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) en la documentación oficial de [!DNL PowerBI].
 
-Estos valores necesarios se toman de las credenciales de Adobe Experience Platform. Para encontrar sus credenciales, inicie sesión en la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md).
+Estos valores necesarios se toman de las credenciales de Adobe Experience Platform. Para encontrar sus credenciales, inicie sesión en la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md).
 
 >[!IMPORTANT]
 >
->Como usuario de Power BI o Tableau, puede conectarse con Customer Journey Analytics a sus herramientas de BI desde la pestaña de credenciales del servicio de consulta. Consulte la documentación de credenciales para obtener instrucciones sobre cómo [conectar las herramientas de BI al Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
+>Como usuario de Power BI o Tableau, puede conectar Customer Journey Analytics a sus herramientas de BI desde la pestaña Credenciales del servicio de consulta. Consulte la documentación de credenciales para obtener instrucciones sobre cómo [conectar las herramientas de BI a Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
-![El área de trabajo Consultas del Experience Platform con la ficha Credenciales y Credenciales que caducan resaltadas.](../images/clients/power-bi/query-service-credentials-page.png)
+![Área de trabajo de consultas de Experience Platform con la ficha Credenciales y las credenciales que caducan resaltadas.](../images/clients/power-bi/query-service-credentials-page.png)
 
 En el campo **[!DNL Server]** del cuadro de diálogo [!DNL PostgreSQL database], escriba el valor para el host encontrado en la sección [!UICONTROL Credenciales] del servicio de consulta. Para la producción, agregue el puerto `:80` al final de la cadena de host. Por ejemplo, `made-up.platform-query.adobe.io:80`.
 
@@ -75,7 +75,7 @@ Para importar una tabla, escriba los detalles del servidor y la base de datos [t
 
 ### Importar tablas mediante SQL personalizado
 
-[!DNL Power BI] y otras herramientas de terceros como [!DNL Tableau] no permiten actualmente a los usuarios importar objetos anidados, como objetos XDM en Platform. Para tener en cuenta esto, [!DNL Power BI] le permite utilizar SQL personalizado para acceder a estos campos anidados y crear una vista aplanada de los datos. [!DNL Power BI] carga esta vista aplanada de los datos anidados anteriormente como una tabla normal.
+[!DNL Power BI] y otras herramientas de terceros como [!DNL Tableau] no permiten actualmente a los usuarios importar objetos anidados, como objetos XDM en Experience Platform. Para tener en cuenta esto, [!DNL Power BI] le permite utilizar SQL personalizado para acceder a estos campos anidados y crear una vista aplanada de los datos. [!DNL Power BI] carga esta vista aplanada de los datos anidados anteriormente como una tabla normal.
 
 En el cuadro de diálogo [!DNL PostgreSQL database], seleccione **[!DNL Advanced options]** para introducir una consulta SQL personalizada en la sección **[!DNL SQL statement]**. Esta consulta personalizada debe utilizarse para acoplar los pares de nombre-valor de JSON a un formato de tabla. La documentación oficial también proporciona información sobre cómo [conectar PowerBI mediante una instrucción SQL en las opciones avanzadas](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options).
 

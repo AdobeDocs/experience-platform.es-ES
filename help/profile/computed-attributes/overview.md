@@ -2,9 +2,9 @@
 title: Resumen de atributos calculados
 description: Los atributos calculados son funciones para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1154'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ Personalization basado en el comportamiento del usuario es un requisito clave pa
 
 Los atributos calculados ayudan a convertir rápidamente los datos de comportamiento del perfil en valores agregados a nivel de perfil sin dependencia de los recursos de ingeniería para lo siguiente:
 
-- Habilitar la personalización personalizada o por lotes con objetivo mediante la activación de acumulados de comportamiento a destinos de Real-time Customer Data Platform y su uso en Adobe Journey Optimizer
+- Habilitar la personalización personalizada o por lotes con objetivo mediante la activación de acumulados de comportamiento a destinos de Real-Time Customer Data Platform y su uso en Adobe Journey Optimizer
 - Segmentación de audiencia simplificada con almacenamiento de agregados de comportamiento como atributos de perfil
 - Estandarización de los datos de comportamiento de perfil agregados para su uso en distintas plataformas y aplicaciones
 - Mejor administración de los datos con consolidación de datos de eventos de perfil antiguos en perspectivas de comportamiento significativas
@@ -32,13 +32,13 @@ Los casos de uso de ejemplo incluyen:
 - Contraer varias audiencias basadas en eventos en un grupo más condensado de atributos calculados
 - Redireccionamiento de usuarios no autenticados fuera del sitio mediante el uso de ID de socios recientes de eventos
 
-Esta guía le ayudará a comprender mejor la función de los atributos calculados dentro de Platform, además de explicar los conceptos básicos de los atributos calculados.
+Esta guía le ayudará a comprender mejor la función de los atributos calculados dentro de Experience Platform, además de explicar los conceptos básicos de los atributos calculados.
 
 ## Explicación de los atributos calculados
 
 Adobe Experience Platform permite importar y combinar fácilmente datos de varios orígenes para generar [!DNL Real-Time Customer Profiles]. Cada perfil contiene información importante relacionada con un individuo, como su información de contacto, preferencias e historial de compras, lo que proporciona una vista del cliente en 360 grados.
 
-Parte de la información recopilada en el perfil se entiende fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o depender de otros campos y valores para generar la información (por ejemplo, &quot;total de compra de por vida&quot;). Para facilitar la comprensión rápida de estos datos, [!DNL Platform] le permite crear atributos calculados que realicen automáticamente estas referencias y cálculos, devolviendo el valor en el campo correspondiente.
+Parte de la información recopilada en el perfil se entiende fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o depender de otros campos y valores para generar la información (por ejemplo, &quot;total de compra de por vida&quot;). Para facilitar la comprensión rápida de estos datos, [!DNL Experience Platform] le permite crear atributos calculados que realicen automáticamente estas referencias y cálculos, devolviendo el valor en el campo correspondiente.
 
 Los atributos calculados incluyen la creación de una expresión, o &quot;regla&quot;, que funciona en los datos entrantes y almacena el valor resultante en un atributo de perfil. Las expresiones se pueden definir de varias formas diferentes, lo que permite especificar en qué eventos se agregan, funciones de agregado o duraciones de retrospectiva.
 
@@ -50,8 +50,8 @@ Los atributos calculados permiten definir acumulados de evento de forma automát
 | -------- | ----------- | -------------------- | ------------- |
 | SUM | Una función que **resume** el valor especificado para eventos calificados. | Enteros, Números, Largos | Suma de todas las compras de los últimos 7 días |
 | RECUENTO | Una función que **cuenta** el número de eventos que se han producido para la regla dada. | N/A | Recuento de compras en los últimos 3 meses |
-| MÍN. | Una función que encuentra el valor **minimum** para los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la primera compra en los últimos 7 días<br/>Cantidad mínima del pedido en las últimas 4 semanas |
-| MÁX. | Una función que encuentra el valor **maximum** para los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la última compra en los últimos 7 días<br/>Cantidad máxima del pedido en las últimas 4 semanas |
+| MIN | Una función que encuentra el valor **minimum** para los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la primera compra en los últimos 7 días<br/>Cantidad mínima del pedido en las últimas 4 semanas |
+| MAX | Una función que encuentra el valor **maximum** para los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la última compra en los últimos 7 días<br/>Cantidad máxima del pedido en las últimas 4 semanas |
 | MÁS_RECIENTE | Una función que encuentra el valor de atributo especificado del evento cualificado más reciente. Esta función proporciona a **both** el valor y la marca de tiempo del atributo. | Todos los valores primitivos, Matrices de valores primitivos | Últimos productos vistos en los últimos 7 días |
 
 ### Períodos retroactivos

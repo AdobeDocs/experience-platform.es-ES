@@ -2,9 +2,9 @@
 title: Consultas con parámetros
 description: Aprenda a utilizar consultas parametrizadas en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '691'
 ht-degree: 11%
 
 ---
@@ -79,4 +79,4 @@ Los valores de parámetro se guardan al programar una consulta parametrizada. Pa
 
 Al leer este documento, ha aprendido a parametrizar consultas en la interfaz de usuario de Adobe Experience Platform y a utilizarlas en ejecuciones de consultas programadas. El documento también resaltaba cómo comprobar los registros para los valores de parámetro utilizados en las ejecuciones de consultas.
 
-A continuación, se recomienda leer la guía sobre [supervisión de consultas programadas](./monitor-queries.md) para comprender mejor el estado de todos los trabajos de consulta a través de la interfaz de usuario de Platform.
+A continuación, se recomienda leer la guía sobre [supervisión de consultas programadas](./monitor-queries.md) para comprender mejor el estado de todos los trabajos de consulta a través de la interfaz de usuario de Experience Platform.

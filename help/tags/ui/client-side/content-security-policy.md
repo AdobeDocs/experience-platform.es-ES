@@ -2,10 +2,10 @@
 title: Ayuda sobre Política de seguridad de contenido (CSP)
 description: Obtenga información sobre cómo lidiar con las restricciones de la Política de seguridad de contenido (CSP) al integrar su sitio web con etiquetas en Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 98%
+source-wordcount: '1076'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Una directiva de seguridad de contenido (CSP) es una función de seguridad que ayuda a evitar ataques de secuencias de comandos entre sitios (XSS). Esto sucede cuando se engaña al explorador para que ejecute contenido malicioso que parece provenir de una fuente de confianza, pero que realmente proviene de otro lugar. Los CSP permiten al navegador (en nombre del usuario) verificar que el script viene de una fuente de confianza.
 
@@ -82,7 +82,7 @@ CSP deshabilita los scripts en línea de forma predeterminada y, por lo tanto, d
 
 >[!NOTE]
 >
->La especificación CSP tiene detalles para una tercera opción mediante hashes, pero este método no es viable con sistemas de administración de etiquetas como las etiquetas. Para obtener más información sobre las limitaciones del uso de hashes con etiquetas en Platform, consulte la [guía de integridad de subrecursos (SRI)](./sri.md).
+>La especificación CSP tiene detalles para una tercera opción mediante hashes, pero este método no es viable con sistemas de administración de etiquetas como las etiquetas. Para obtener más información sobre las limitaciones del uso de hashes con etiquetas en Experience Platform, consulte la [guía de integridad de subrecursos (SRI)](./sri.md).
 
 ### Permitir a través de nonce {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Al leer este documento, debería haber comprendido cómo configurar el encabezado CSP para aceptar el archivo de biblioteca de etiquetas y los scripts en línea.
 
-Como medida de seguridad adicional, también puede optar por utilizar la integridad de los subrecursos (SRI) para validar las compilaciones de biblioteca recuperadas. Sin embargo, esta funcionalidad tiene algunas limitaciones importantes cuando se utiliza con sistemas de administración de etiquetas como las etiquetas. Consulte la guía sobre la [Compatibilidad con SRI en Platform](./sri.md) para obtener más información.
+Como medida de seguridad adicional, también puede optar por utilizar la integridad de los subrecursos (SRI) para validar las compilaciones de biblioteca recuperadas. Sin embargo, esta funcionalidad tiene algunas limitaciones importantes cuando se utiliza con sistemas de administración de etiquetas como las etiquetas. Consulte la guía sobre la compatibilidad con la SRI [en Experience Platform](./sri.md) para obtener más información.

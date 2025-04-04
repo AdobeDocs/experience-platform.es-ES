@@ -5,9 +5,9 @@ title: Activar audiencias en destinos por lotes mediante la API de activación a
 description: Este artículo ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1623'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ La API de activación ad-hoc permite a los especialistas en marketing activar au
 
 Utilice la API de activación ad-hoc para exportar archivos completos al sistema de recepción de archivos deseado. La activación de audiencias ad hoc solo es compatible con [destinos basados en archivos por lotes](../destination-types.md#file-based).
 
-El diagrama siguiente ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan en Platform cada 24 horas.
+El diagrama siguiente ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan en Experience Platform cada 24 horas.
 
 ![activación-ad-hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
@@ -66,13 +66,13 @@ Para poder realizar llamadas a las API de Adobe Experience Platform, asegúrese 
 
 ## Paso 2: Recopilar credenciales {#credentials}
 
-Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de Experience Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Los recursos de Experience Platform se pueden aislar para crear zonas protegidas virtuales específicas. En las solicitudes a las API de Platform, puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
+Los recursos de Experience Platform se pueden aislar para crear zonas protegidas virtuales específicas. En las solicitudes a las API de Experience Platform, puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -84,13 +84,13 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 * Tipo de contenido: `application/json`
 
-## Paso 3: Crear un flujo de activación en la interfaz de usuario de Platform {#activation-flow}
+## Paso 3: Crear un flujo de activación en la interfaz de usuario de Experience Platform {#activation-flow}
 
-Para poder activar audiencias a través de la API de activación ad-hoc, primero debe tener configurado un flujo de activación en la interfaz de usuario de Platform para el destino elegido.
+Para poder activar audiencias a través de la API de activación ad-hoc, primero debe tener un flujo de activación configurado en la interfaz de usuario de Experience Platform para el destino elegido.
 
 Esto incluye entrar en el flujo de trabajo de activación, seleccionar las audiencias, configurar una programación y activarlas. Puede utilizar la interfaz de usuario o la API de para crear un flujo de activación:
 
-* [Utilice la interfaz de usuario de Platform para crear un flujo de activación para los destinos de exportación de perfiles por lotes](../ui/activate-batch-profile-destinations.md)
+* [Utilice la interfaz de usuario de Experience Platform para crear un flujo de activación para los destinos de exportación de perfiles por lotes](../ui/activate-batch-profile-destinations.md)
 * [Utilice la API de Flow Service para conectarse a destinos de exportación de perfiles por lotes y activar datos](../api/connect-activate-batch-destinations.md)
 
 ## Paso 4: Obtener el ID de trabajo de exportación de audiencia más reciente (no obligatorio en la versión 2) {#segment-export-id}
@@ -124,7 +124,7 @@ Adobe Experience Platform ejecuta trabajos de segmentación programados una vez 
 
 >[!IMPORTANT]
 >
->Tenga en cuenta la siguiente restricción de una sola vez: antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que haya transcurrido al menos una hora desde el momento en que la audiencia se activó por primera vez según la programación establecida en [Paso 3: crear flujo de activación en la interfaz de usuario de Platform](#activation-flow).
+>Tenga en cuenta la siguiente restricción de una sola vez: antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que haya transcurrido al menos una hora desde el momento en que la audiencia se activó por primera vez según la programación establecida en [Paso 3: crear flujo de activación en la interfaz de usuario de Experience Platform](#activation-flow).
 
 Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de audiencias programado para sus audiencias haya finalizado. Consulte [supervisión del flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo supervisar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra el estado **[!UICONTROL Procesando]**, espere a que finalice antes de ejecutar el trabajo de activación ad-hoc para exportar un archivo completo.
 
@@ -164,8 +164,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos identificadores desde la interfaz de usuario de Platform; para ello, vaya a la pestaña **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haga clic en la fila de destino que desee para que aparezca el identificador de destino en el carril derecho. Para obtener más información, lea la [documentación del área de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Los ID de las audiencias que desea activar en el destino seleccionado. Puede utilizar la API específica para exportar audiencias generadas por Platform, así como audiencias externas (carga personalizada). Cuando active audiencias externas, utilice el ID generado por el sistema en lugar del ID de audiencia. Puede encontrar el ID generado por el sistema en la vista Resumen de audiencias de la interfaz de usuario de audiencias. <br> ![Vista del ID de audiencia que no debería estar seleccionado.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Vista del ID de audiencia que no debería seleccionarse."){width="100" zoomable="yes"} <br> ![Vista del ID de audiencia generado por el sistema que se debe usar.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Vista del ID de audiencia generado por el sistema que se debe usar."){width="100" zoomable="yes"} |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos identificadores desde la interfaz de usuario de Experience Platform: para ello, vaya a la pestaña **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haga clic en la fila de destino que desee para que aparezca el identificador de destino en el carril derecho. Para obtener más información, lea la [documentación del área de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Los ID de las audiencias que desea activar en el destino seleccionado. Puede utilizar la API específica para exportar audiencias generadas por Experience Platform, así como audiencias externas (carga personalizada). Cuando active audiencias externas, utilice el ID generado por el sistema en lugar del ID de audiencia. Puede encontrar el ID generado por el sistema en la vista Resumen de audiencias de la interfaz de usuario de audiencias. <br> ![Vista del ID de audiencia que no debería estar seleccionado.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Vista del ID de audiencia que no debería seleccionarse."){width="100" zoomable="yes"} <br> ![Vista del ID de audiencia generado por el sistema que se debe usar.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Vista del ID de audiencia generado por el sistema que se debe usar."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -205,7 +205,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos identificadores desde la interfaz de usuario de Platform; para ello, vaya a la pestaña **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haga clic en la fila de destino que desee para que aparezca el identificador de destino en el carril derecho. Para obtener más información, lea la [documentación del área de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos identificadores desde la interfaz de usuario de Experience Platform: para ello, vaya a la pestaña **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haga clic en la fila de destino que desee para que aparezca el identificador de destino en el carril derecho. Para obtener más información, lea la [documentación del área de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Los ID de las audiencias que desea activar en el destino seleccionado. |
 | <ul><li>`exportId1`</li></ul> | El identificador devuelto en la respuesta del trabajo [exportación de audiencia](../../segmentation/api/export-jobs.md#retrieve-list). Consulte [Paso 4: Obtenga la última ID de trabajo de exportación de audiencias](#segment-export-id) para obtener instrucciones sobre cómo encontrar esta ID. |
 
@@ -237,7 +237,7 @@ Una respuesta correcta devuelve el estado HTTP 200.
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ### Códigos de error de API y mensajes específicos de la API de activación ad hoc {#specific-error-messages}
 

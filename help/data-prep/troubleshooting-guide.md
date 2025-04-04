@@ -3,16 +3,16 @@ keywords: Experience Platform;inicio;temas populares;
 title: Guía de resolución de problemas de preparación de datos
 description: Este documento proporciona respuestas a las preguntas frecuentes acerca de la preparación de datos de Adobe Experience Platform.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: ff8f660c2b3a04d8b4b9d4f19891816a44069088
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Prep] guía de solución de problemas
 
-Este documento proporciona respuestas a las preguntas más frecuentes acerca de Adobe Experience Platform [!DNL Data Prep], así como una guía de solución de problemas para errores comunes. Si tiene preguntas e información de solución de problemas relacionados con las API de Platform en general, consulte la [Guía de solución de problemas de API de Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes acerca de Adobe Experience Platform [!DNL Data Prep], así como una guía de solución de problemas para errores comunes. Si tiene preguntas e información de solución de problemas relacionados con las API de Experience Platform en general, consulte la [Guía de solución de problemas de API de Adobe Experience Platform](../landing/troubleshooting.md).
 
 ## Preguntas frecuentes
 
@@ -58,7 +58,7 @@ Después de la ingesta, puede utilizar el destilador de datos para limpiar, dar 
 >
 >* Servicio de identidad: no se pueden eliminar registros directamente en el servicio de identidad. Tendrá que eliminar todo el perfil y volver a cargarlo con los registros correctos mediante la API de eliminación de perfiles.
 
-### ¿Cuál es la práctica recomendada para utilizar campos calculados en datos de GIF?
+### ¿Cuáles son las prácticas recomendadas para utilizar campos calculados en datos de GIF?
 
 Puede utilizar las funciones de asignación de preparación de datos durante el paso de asignación de datos de origen al esquema XDM para crear un nuevo campo calculado.
 
@@ -98,7 +98,7 @@ A continuación se describen ejemplos de cómo puede anidar las funciones de pre
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | --- | --- | --- | --- | --- | --- |
 | iif | Evalúa una expresión booleana determinada y devuelve el valor especificado en función del resultado. | <ul><li>EXPRESIÓN: **Requerida** La expresión booleana que se está evaluando.</li><li>TRUE_VALUE: **Requerido** El valor que se devuelve si la expresión se evalúa como true.</li><li>FALSE_VALUE: **Requerido** El valor que se devuelve si la expresión se evalúa como falsa.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| igual a | Compara dos cadenas para confirmar si son iguales. Esta función distingue entre mayúsculas y minúsculas. | <ul><li>CADENA1: **Requerida** La primera cadena que desea comparar.</li><li>CADENA2: **Requerida** La segunda cadena que desea comparar. | CADENA1.&#x200B;es igual a( CADENA2) | &quot;cadena1&quot;.&#x200B;igual a&#x200B;(&quot;STRING1&quot;) | false |
+| igual a | Compara dos cadenas para confirmar si son iguales. Esta función distingue entre mayúsculas y minúsculas. | <ul><li>CADENA1: **Requerida** La primera cadena que desea comparar.</li><li>CADENA2: **Requerida** La segunda cadena que desea comparar. | CADENA1.&#x200B;es igual a( CADENA2) | &quot;cadena1&quot;.&#x200B;igual a&#x200B;(&quot;STRING1&quot;) | falso |
 | anular | Establece el valor del atributo en null. Debe utilizarse cuando no desee copiar el campo en el esquema de destino. | | nullify() | nullify() | null |
 
 {style="table-layout:auto"}

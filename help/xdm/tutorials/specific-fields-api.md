@@ -2,16 +2,16 @@
 title: Agregar campos específicos a un esquema mediante la API de Registro de esquemas
 description: Aprenda a añadir campos individuales de grupos de campos preexistentes a un esquema del Modelo de datos de experiencia (XDM) mediante la API de Registro de esquemas.
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 2%
 
 ---
 
 # Añadir campos específicos a un esquema mediante la API de Registro de esquemas
 
-Los esquemas XDM (Experience Data Model) están compuestos por una clase base, con campos adicionales incluidos mediante el uso de grupos de campos estándar definidos por grupos de campos personalizados y de Adobe definidos por su organización.
+Los esquemas XDM (Experience Data Model) están compuestos por una clase base, con campos adicionales incluidos mediante el uso de grupos de campos estándar definidos por Adobe y grupos de campos personalizados definidos por su organización.
 
 Al crear un esquema, es posible que desee utilizar algunos campos de un grupo de campos determinado excluyendo otros del mismo grupo que no necesite. Este tutorial muestra cómo añadir campos individuales de un grupo de campos a un esquema mediante la API de Registro de esquemas.
 
@@ -99,7 +99,7 @@ Como alternativa, `meta:refProperty` se puede proporcionar como una matriz, lo q
 
 ## Añadir campos mediante una operación de PUT
 
-Puede usar una solicitud del PUT para reescribir un esquema completo y configurar los campos que desea incluir en `allOf`.
+Puede usar una petición PUT para reescribir un esquema completo y configurar los campos que desea incluir en `allOf`.
 
 **Formato de API**
 
@@ -194,7 +194,7 @@ Una respuesta correcta devuelve los detalles del esquema actualizado.
 
 ## Añadir campos mediante una operación de PATCH
 
-Puede utilizar una solicitud del PATCH para agregar campos individuales a un esquema sin sobrescribir otros. El Registro de esquemas admite todas las operaciones de parches de JSON estándar, incluidas `add`, `remove` y `replace`. Para obtener más información sobre el parche JSON, consulte la [guía de aspectos básicos de la API](../../landing/api-fundamentals.md#json-patch).
+Puede utilizar una solicitud de PATCH para agregar campos individuales a un esquema sin sobrescribir otros. El Registro de esquemas admite todas las operaciones de parches de JSON estándar, incluidas `add`, `remove` y `replace`. Para obtener más información sobre el parche JSON, consulte la [guía de aspectos básicos de la API](../../landing/api-fundamentals.md#json-patch).
 
 **Formato de API**
 
@@ -285,6 +285,6 @@ Una respuesta correcta devuelve los detalles del esquema actualizado.
 
 ## Pasos siguientes
 
-En esta guía se explica cómo utilizar las llamadas de API para añadir campos individuales de un grupo de campos existente a un esquema. Para obtener más información sobre cómo realizar tareas similares basadas en campos en la IU de Platform, consulte la guía sobre [flujos de trabajo basados en campos](../ui/field-based-workflows.md).
+En esta guía se explica cómo utilizar las llamadas de API para añadir campos individuales de un grupo de campos existente a un esquema. Para obtener más información sobre cómo realizar tareas similares basadas en campos en la interfaz de usuario de Experience Platform, consulte la guía sobre [flujos de trabajo basados en campos](../ui/field-based-workflows.md).
 
 Para obtener más información sobre las capacidades de la API de Registro de esquemas, consulte la [descripción general de la API](../api/overview.md) para obtener una lista completa de los extremos y los procesos.

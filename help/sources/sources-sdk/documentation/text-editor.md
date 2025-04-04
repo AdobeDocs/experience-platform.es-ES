@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;fuentes sdk;sdk;SDK
 solution: Experience Platform
 title: Uso de un editor de texto en el entorno local para crear una página de documentación de orígenes
 description: Este documento proporciona pasos sobre cómo utilizar el entorno local para crear documentación para el origen y enviar una solicitud de extracción (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ El primer paso para configurar el entorno de creación local es ir al [repositor
 
 ![platform-repo](../assets/platform-repo.png)
 
-En la página principal del repositorio de Platform GitHub, seleccione **Fork**.
+En la página principal del repositorio de GitHub de Experience Platform, seleccione **Fork**.
 
 ![bifurcación](../assets/fork.png)
 
@@ -53,7 +53,7 @@ En el panel emergente que aparece, escriba un nombre descriptivo para la rama y,
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
-A continuación, seleccione **rama de Publish**.
+A continuación, seleccione **Publicar rama**.
 
 ![rama de publicación](../assets/publish-branch.png)
 

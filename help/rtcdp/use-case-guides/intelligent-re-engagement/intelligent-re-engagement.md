@@ -3,9 +3,9 @@ title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a los clientes poco frecuentes.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3894'
+source-wordcount: '3896'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ Vuelva a atraer a los clientes que han abandonado una conversión de forma intel
 
 Utilice consideraciones en tiempo real, tenga en cuenta todas las cualidades y comportamientos de los consumidores y ofrezca una reclasificación rápida basada en eventos en línea y sin conexión.
 
-A continuación se muestra una vista de arquitectura de alto nivel de los distintos componentes de Real-Time CDP y Journey Optimizer. Este diagrama muestra cómo fluyen los datos entre las dos aplicaciones Experience Platform, desde la recopilación de datos hasta el punto en que se activan mediante recorridos o campañas hasta los destinos, para lograr el caso de uso descrito en esta página.
+A continuación se muestra una vista de arquitectura de alto nivel de los distintos componentes de Real-Time CDP y Journey Optimizer. Este diagrama muestra cómo fluyen los datos entre las dos aplicaciones de Experience Platform desde la recopilación de datos hasta el punto en que se activan mediante recorridos o campañas hasta los destinos, para lograr el caso de uso descrito en esta página.
 
 ![Información general visual de alto nivel sobre la renovación inteligente de la participación.](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -60,7 +60,7 @@ A continuación se ofrece una descripción general de alto nivel de los tres eje
 El escenario de exploración de productos abandonados se dirige a la exploración de productos abandonados tanto en el sitio web como en la aplicación móvil. Este escenario se activa cuando se ha visto un producto, pero no se ha comprado ni agregado al carro de compras. En este ejemplo, la participación de la marca se activa después de tres días si no hay adiciones de lista en las últimas 24 horas.<p>![Resumen visual de alto nivel del escenario de exploración de productos abandonados inteligente del cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Resumen visual de alto nivel del escenario de exploración de productos abandonados inteligente del cliente."){width="1920" zoomable="yes"}</p>
 
 1. Usted crea esquemas y conjuntos de datos y luego habilita para [!UICONTROL Perfil].
-2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector Source de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+2. Los datos se introducen en Experience Platform mediante SDK web, SDK móvil o API. El conector Source de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los datos adicionales habilitados para perfiles se introducen y se pueden vincular al visitante de la aplicación móvil y web autenticado mediante gráficos de identidad.
 4. Usted genera audiencias centradas a partir de la lista de perfiles para comprobar si un **cliente** ha realizado una participación en los últimos tres días.
 5. Crea un recorrido de exploración de producto abandonado en [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ El escenario de exploración de productos abandonados se dirige a la exploració
 El escenario de carro de compras abandonado se aplica cuando los productos se han colocado en el carro de compras, pero aún no se han comprado tanto en el sitio web como en la aplicación móvil. Además, las campañas de medios de pago se inician y se detienen mediante este método.<p>![Resumen visual de alto nivel del escenario de carro de compras abandonado por el cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Resumen visual de alto nivel del escenario de carro de compras abandonado por el cliente."){width="1920" zoomable="yes"}</p>
 
 1. Usted crea esquemas y conjuntos de datos, y habilita para [!UICONTROL Perfil].
-2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector Source de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+2. Los datos se introducen en Experience Platform mediante SDK web, SDK móvil o API. El conector Source de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los datos adicionales habilitados para perfiles se introducen y se pueden vincular al visitante de la aplicación móvil y web autenticado mediante gráficos de identidad.
 4. Puede generar audiencias enfocadas a partir de la lista de perfiles para comprobar si un **cliente** ha puesto un artículo en su carro de compras, pero no ha completado la compra. El evento **[!UICONTROL Agregar al carro]** inicia un temporizador que espera 30 minutos y luego comprueba la compra. Si no se ha realizado ninguna compra, entonces el **cliente** se agrega a las audiencias de **[!UICONTROL Abandonar carro]**.
 5. Usted crea un recorrido de carro de compras abandonado en [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ El escenario de carro de compras abandonado se aplica cuando los productos se ha
 El escenario de confirmación de pedido se centra en las compras de productos realizadas a través del sitio web y la aplicación móvil.<p>![Resumen visual de alto nivel del escenario de confirmación de pedido del cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Resumen visual de alto nivel del escenario de confirmación de pedido de cliente."){width="1920" zoomable="yes"}</p>
 
 1. Usted crea esquemas y conjuntos de datos y luego habilita para [!UICONTROL Perfil].
-2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector Source de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+2. Los datos se introducen en Experience Platform mediante SDK web, SDK móvil o API. El conector Source de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los datos adicionales habilitados para perfiles se introducen y se pueden vincular al visitante de la aplicación móvil y web autenticado mediante gráficos de identidad.
 4. Usted crea un recorrido de confirmación en [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] envía un mensaje de confirmación de pedido mediante el canal preferido.
@@ -147,7 +147,7 @@ Este grupo de campos le permite probar el recorrido antes de publicarlo, mediant
 
 #### Esquema de transacciones digitales del cliente
 
-Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en el sitio web o en las plataformas digitales asociadas. Estos datos se suelen ingerir en [!DNL Adobe Experience Platform] mediante [SDK web](/help/web-sdk/home.md) y son necesarios para hacer referencia a los distintos eventos de exploración y conversión que se utilizan para activar recorridos, análisis detallado de clientes en línea, funcionalidades de audiencia mejoradas y mensajes personalizados.
+Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en el sitio web o en las plataformas digitales asociadas. Estos datos generalmente se incorporan a [!DNL Adobe Experience Platform] a través de [Web SDK](/help/web-sdk/home.md) y son necesarios para hacer referencia a los distintos eventos de exploración y conversión que se utilizan para activar recorridos, análisis detallado de clientes en línea, funcionalidades de audiencia mejoradas y mensajes personalizados.
 
 El esquema de transacciones digitales del cliente está representado por una clase [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md).
 
@@ -172,9 +172,9 @@ El grupo de campos [Detalles del identificador de usuario final](/help/xdm/field
 | `endUserIDs._experience.emailid.authenticatedState` | Estado autenticado de ID de dirección de correo electrónico del usuario final. |
 | `endUserIDs._experience.emailid.id` | ID de dirección de correo electrónico del usuario final. |
 | `endUserIDs._experience.emailid.namespace.code` | Código de área de nombres de ID de dirección de correo electrónico del usuario final. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] estado autenticado de ID de Marketing Cloud (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] ID. DE Marketing Cloud (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] código de área de nombres de ID de Marketing Cloud (MCID). |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] estado autenticado de Marketing Cloud ID (MCID). El MCID ahora se conoce como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). El MCID ahora se conoce como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] código de área de nombres de Marketing Cloud ID (MCID). |
 
 +++
 
@@ -205,7 +205,7 @@ Los atributos de auditoría del sistema de Source externo son un tipo de datos e
 
 #### Esquema de transacciones sin conexión del cliente
 
-Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en plataformas fuera del sitio web. Estos datos se suelen ingerir en [!DNL Adobe Experience Platform] desde un POS (o sistema similar) y, con mayor frecuencia, se transmiten a Platform a través de una conexión API. Su propósito es hacer referencia a los distintos eventos de conversión sin conexión que se utilizan para activar recorridos, análisis de clientes en línea y sin conexión profundos, funcionalidades de audiencia mejoradas y mensajería personalizada.
+Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en plataformas fuera del sitio web. Estos datos generalmente se incorporan a [!DNL Adobe Experience Platform] desde un POS (o sistema similar) y, con mayor frecuencia, se transmiten a Experience Platform a través de una conexión API. Su propósito es hacer referencia a los distintos eventos de conversión sin conexión que se utilizan para activar recorridos, análisis de clientes en línea y sin conexión profundos, funcionalidades de audiencia mejoradas y mensajería personalizada.
 
 El esquema de transacciones sin conexión de cliente está representado por una clase [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md).
 
@@ -257,13 +257,13 @@ Los atributos de auditoría del sistema de Source externo son un tipo de datos e
 
 +++
 
-#### esquema del conector web de Adobe
+#### Esquema del conector web de Adobe
 
 >[!NOTE]
 >
 >Esta es una implementación opcional si está usando [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en el sitio web o en las plataformas digitales asociadas. Este esquema es similar al esquema de transacciones digitales del cliente, pero difiere en que está pensado para utilizarse cuando [SDK web](/help/web-sdk/home.md) no es una opción para la recopilación de datos; por lo tanto, este esquema es necesario cuando utiliza [!DNL Adobe Analytics Source Connector] para enviar los datos en línea a [!DNL Adobe Experience Platform] como un conjunto de datos principal o secundario.
+Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en el sitio web o en las plataformas digitales asociadas. Este esquema es similar al esquema de transacciones digitales del cliente, pero difiere en que está pensado para utilizarse cuando [Web SDK](/help/web-sdk/home.md) no es una opción para la recopilación de datos; por lo tanto, este esquema es necesario cuando se utiliza [!DNL Adobe Analytics Source Connector] para enviar los datos en línea a [!DNL Adobe Experience Platform] como un conjunto de datos principal o secundario.
 
 El esquema del conector web [!DNL Adobe] está representado por una clase [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md).
 
@@ -288,9 +288,9 @@ El grupo de campos [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/even
 | `endUserIDs._experience.emailid.authenticatedState` | Estado autenticado de ID de dirección de correo electrónico del usuario final. |
 | `endUserIDs._experience.emailid.id` | ID de dirección de correo electrónico del usuario final. |
 | `endUserIDs._experience.emailid.namespace.code` | Código de área de nombres de ID de dirección de correo electrónico del usuario final. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] estado autenticado de ID de Marketing Cloud (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] ID. DE Marketing Cloud (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] código de área de nombres de ID de Marketing Cloud (MCID). |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] estado autenticado de Marketing Cloud ID (MCID). El MCID ahora se conoce como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). El MCID ahora se conoce como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] código de área de nombres de Marketing Cloud ID (MCID). |
 
 +++
 
@@ -350,7 +350,7 @@ Para obtener más información sobre cómo crear una audiencia, lea la [guía de
 
 Para obtener más información sobre cómo componer directamente [Audiencias](/help/segmentation/home.md), lea la [guía de la interfaz de usuario de la composición de audiencias](/help/segmentation/ui/audience-composition.md).
 
-Para obtener más información sobre cómo generar audiencias mediante definiciones de audiencias derivadas de Platform, lea la [guía de la interfaz de usuario de Audience Builder](/help/segmentation/ui/segment-builder.md).
+Para obtener más información sobre cómo crear audiencias mediante definiciones de audiencia derivadas de Experience Platform, lea la [guía de la interfaz de usuario de Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -444,7 +444,7 @@ Este recorrido no requiere que se creen audiencias.
 
 El escenario de exploración de productos abandonados se dirige a la exploración de productos abandonados tanto en el sitio web como en la aplicación móvil.<p>![Resumen visual de alto nivel del escenario de exploración de productos abandonados por el cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Resumen visual de alto nivel del escenario de exploración de productos abandonados por el cliente."){width="1920" zoomable="yes"}</p>
 
-+++Events
++++Eventos
 
 Los eventos permiten activar sus recorridos de forma unitaria para enviar mensajes, en tiempo real, al particular que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
@@ -569,7 +569,7 @@ La lógica de clave de lienzo de recorrido requiere que identifique eventos espe
 
 El escenario de carro de compras abandonado se dirige a productos que se han colocado en el carro de compras, pero que aún no se han comprado tanto en el sitio web como en la aplicación móvil.<p>![Resumen visual de alto nivel del escenario de carro de compras abandonado por el cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Resumen visual de alto nivel del escenario de carro de compras abandonado por el cliente."){width="1920" zoomable="yes"}</p>
 
-+++Events
++++Eventos
 
 Los eventos permiten activar sus recorridos de forma unitaria para enviar mensajes, en tiempo real, al particular que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
@@ -702,7 +702,7 @@ La lógica de clave de lienzo de recorrido requiere que identifique eventos espe
 
 El escenario de confirmación de pedido se centra en las compras de productos realizadas a través del sitio web y la aplicación móvil.<p>![Resumen visual de alto nivel del escenario de confirmación de pedido del cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Resumen visual de alto nivel del escenario de confirmación de pedido de cliente."){width="1920" zoomable="yes"}</p>
 
-+++Events
++++Eventos
 
 Los eventos permiten activar sus recorridos de forma unitaria para enviar mensajes, en tiempo real, al particular que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
@@ -775,7 +775,7 @@ Puede activar la exploración de productos abandonados y las audiencias de aband
    * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Medios de pago y medios sociales](/help/destinations/catalog/social/overview.md)
    * [Dispositivo móvil](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destino de streaming](/help/destinations/catalog/streaming/http-destination.md)
-   * [Destino personalizado creado con el Destination SDK.](/help/destinations/destination-sdk/overview.md). Si es cliente de Real-Time CDP Ultimate, también puede crear un [destino personalizado privado con Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+   * [Destino personalizado creado mediante Destination SDK.](/help/destinations/destination-sdk/overview.md). Si es cliente de Real-Time CDP Ultimate, también puede crear un [destino personalizado con Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 
 ## Pasos siguientes {#next-steps}
 

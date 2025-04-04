@@ -3,7 +3,7 @@ title: Destino de Audience Analysis
 description: Vea las audiencias para las que los clientes cumplen los requisitos en Customer Journey Analytics.
 badgeLimitedAvailability: label="Disponibilidad limitada" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 3%
@@ -22,21 +22,21 @@ El destino [!UICONTROL Análisis de audiencia] le permite enriquecer los datos d
 
 Se requiere lo siguiente antes de utilizar este destino:
 
-* Debe estar aprovisionado para utilizar el destino de Análisis de audiencia. Si aún no se le ha proporcionado este destino, póngase en contacto con el equipo de cuenta de Adobe.
+* Debe estar aprovisionado para utilizar el destino de Análisis de audiencia. Si todavía no se le ha proporcionado este destino, póngase en contacto con su equipo de cuenta de Adobe.
 * Debe estar aprovisionado para utilizar Customer Journey Analytics.
 * Debe tener al menos una audiencia creada en Adobe Experience Platform.
 
 ## Identidades admitidas
 
-El análisis de audiencia admite la activación de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md). El ID del Experience Cloud (ECID) se suele utilizar.
+El análisis de audiencia admite la activación de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md). Normalmente, se utiliza un Experience Cloud ID (ECID).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
 | ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
 
 {style="table-layout:auto"}
@@ -47,8 +47,8 @@ Se admiten los siguientes tipos de audiencias al utilizar este destino:
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

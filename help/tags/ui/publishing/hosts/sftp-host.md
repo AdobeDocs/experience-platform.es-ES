@@ -2,10 +2,10 @@
 title: Alojamientos de SFTP
 description: Obtenga información sobre cómo configurar Adobe Experience Platform para que entregue compilaciones de biblioteca a un servidor SFTP seguro y autoalojado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 35%
+source-wordcount: '880'
+ht-degree: 34%
 
 ---
 
@@ -25,7 +25,7 @@ Experience Platform permite enviar compilaciones de biblioteca de etiquetas a un
 
 ## Configurar una clave de acceso para el servidor {#access-key}
 
-Platform se conecta al sitio SFTP mediante una clave cifrada. Debe seguir algunos pasos para configurar esto correctamente:
+Experience Platform se conecta al sitio SFTP mediante una clave cifrada. Debe seguir algunos pasos para configurar esto correctamente:
 
 ### Crear un par de claves pública y privada
 
@@ -35,7 +35,7 @@ Debe tener un par de clave pública o privada instalado en el servidor SFTP. Pue
 
 La clave privada se utiliza para cifrar la clave pública. Debe proporcionar la clave privada durante el proceso de creación del host SFTP. Consulte la sección sobre [cifrado de valores](../../../api/guides/encrypting-values.md) en la guía de la API de Reactor para obtener instrucciones sobre el cifrado de claves públicas. Utilice la clave GPG del entorno de producción a menos que sepa que necesita una específica. Por último, puede cifrar la clave privada desde cualquier equipo, y no es necesario instalar GPG en el servidor para completar este paso.
 
-### Direcciones IP de Lista de permitidos Platform
+### Lista de permitidos de direcciones IP de Experience Platform
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ La clave privada se utiliza para cifrar la clave pública. Debe proporcionar la 
 > * `44.194.43.191`
 > * `3.215.163.18`
 
-Es posible que deba aprobar un conjunto de direcciones IP para utilizarlo en el cortafuegos de su empresa a fin de permitir que Platform llegue al servidor SFTP y se conecte a él. Estas direcciones IP son:
+Es posible que deba aprobar un conjunto de direcciones IP para su uso dentro del cortafuegos de su empresa, de modo que Experience Platform pueda acceder al servidor SFTP y conectarse a él. Estas direcciones IP son:
 
 * `184.72.239.68`
 * `23.20.85.113`
@@ -94,7 +94,7 @@ Seleccione **[!UICONTROL Guardar]** para crear el host con la configuración sel
 
 ![Imagen que muestra el host SFTP que se está guardando](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-Al seleccionar **[!UICONTROL Guardar]**, se comprueba la conexión y la capacidad de enviar los archivos al servidor SFTP. Platform crea una carpeta, escribe un archivo dentro de esa carpeta, comprueba que el archivo esté allí y limpia la carpeta después. Si la cuenta de usuario del servidor SFTP (la que se adjunta al certificado seguro que ha proporcionado a Platform) no tiene los permisos necesarios para realizar esta acción, el host pasa a estar en estado &quot;failed&quot;.
+Al seleccionar **[!UICONTROL Guardar]**, se comprueba la conexión y la capacidad de enviar los archivos al servidor SFTP. Experience Platform crea una carpeta, escribe un archivo dentro de esa carpeta, comprueba que el archivo está allí y limpia la carpeta después. Si la cuenta de usuario del servidor SFTP (la que se adjunta al certificado seguro que ha proporcionado a Experience Platform) no tiene los permisos necesarios para realizar esta acción, el host pasa a estar en estado &quot;failed&quot;.
 
 ## Pasos siguientes
 

@@ -3,9 +3,9 @@ keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
 title: Extensión Awin Advertiser Mastertag
 description: La extensión Awin Advertiser Mastertag es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 99a9ea40-b89f-4503-91a7-60cc8e1cd6d3
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '482'
 ht-degree: 3%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 3%
 
 [!DNL Awin Advertiser Mastertag] es una extensión publicitaria en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html).
 
-Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones en Platform, consulte la [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
+Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
 ![Extensión Mastertag de Awin Advertiser en la interfaz de usuario](../../assets/catalog/advertising/awin-mastertag/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que han adquirido Platform.
+Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
 Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
@@ -32,7 +32,7 @@ Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experi
 
 Para instalar la extensión [!DNL Awin Advertiser Mastertag]:
 
-En la [interfaz de plataforma](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 

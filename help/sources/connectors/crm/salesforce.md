@@ -2,9 +2,9 @@
 title: Información general sobre el conector Salesforce Source
 description: Obtenga información sobre cómo conectar Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1593'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Ahora puede usar el origen [!DNL Salesforce] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 Experience Platform es compatible con la ingesta de datos desde un sistema CRM de terceros. La compatibilidad con proveedores CRM incluye [!DNL Salesforce].
 
@@ -29,9 +29,9 @@ Se debe agregar una lista de direcciones IP a una lista de permitidos antes de t
 
 ### Asignación de campos de [!DNL Salesforce] a XDM
 
-Para establecer una conexión de origen entre [!DNL Salesforce] y Platform, los campos de datos de origen de [!DNL Salesforce] deben asignarse a sus campos XDM de destino adecuados antes de introducirse en Platform.
+Para establecer una conexión de origen entre [!DNL Salesforce] y Experience Platform, los campos de datos de origen [!DNL Salesforce] deben asignarse a sus campos XDM de destino adecuados antes de introducirse en Experience Platform.
 
-Consulte lo siguiente para obtener información detallada sobre las reglas de asignación de campos entre [!DNL Salesforce] conjuntos de datos y Platform:
+Consulte lo siguiente para obtener información detallada sobre las reglas de asignación de campos entre [!DNL Salesforce] conjuntos de datos y Experience Platform:
 
 - [Contactos](../adobe-applications/mapping/salesforce.md#contact)
 - [Posibles clientes](../adobe-applications/mapping/salesforce.md#lead)
@@ -47,11 +47,11 @@ Consulte lo siguiente para obtener información detallada sobre las reglas de as
 Para usar el origen [!DNL Salesforce] como parte de [!DNL B2B-CDP], primero debe configurar una utilidad [!DNL Postman] para generar automáticamente los esquemas y áreas de nombres de [!DNL Salesforce]. La siguiente documentación proporciona información adicional sobre la configuración de la utilidad [!DNL Postman]:
 
 - Puede descargar la colección de utilidades de generación automática de esquemas y áreas de nombres desde este [repositorio de GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
-- Para obtener información sobre el uso de las API de Platform, incluidos detalles sobre cómo recopilar valores para los encabezados necesarios y leer llamadas de API de ejemplo, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
-- Para obtener información sobre cómo generar las credenciales de las API de Platform, consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md).
-- Para obtener información sobre cómo configurar [!DNL Postman] para las API de Platform, consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../landing/postman.md).
+- Para obtener información sobre el uso de las API de Experience Platform, incluidos detalles sobre cómo recopilar valores para los encabezados necesarios y leer llamadas de API de ejemplo, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
+- Para obtener información sobre cómo generar tus credenciales para las API de Experience Platform, consulta el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md).
+- Para obtener información sobre cómo configurar [!DNL Postman] para las API de Experience Platform, consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../landing/postman.md).
 
-Con una consola de desarrollador de Platform y [!DNL Postman] configuradas, ahora puede empezar a aplicar los valores de entorno apropiados a su entorno [!DNL Postman].
+Con una consola de desarrollador de Experience Platform y [!DNL Postman] configuradas, ahora puede empezar a aplicar los valores de entorno apropiados a su entorno [!DNL Postman].
 
 +++Ver la guía de tabla de variables
 
@@ -269,15 +269,15 @@ public class Main {
 
 Una vez que haya completado la configuración de los requisitos previos de su cuenta de [!DNL Salesforce], puede continuar con la conexión de su cuenta de [!DNL Salesforce] a Experience Platform e introducir los datos de CRM. Lea la documentación siguiente para obtener más información:
 
-### Conectar [!DNL Salesforce] a Platform mediante API
+### Conectar [!DNL Salesforce] a Experience Platform mediante API
 
-La siguiente documentación proporciona información sobre cómo conectar [!DNL Salesforce] a Platform mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Salesforce] a Experience Platform mediante API o la interfaz de usuario:
 
 - [Conexión de Salesforce a Experience Platform mediante la API de Flow Service](../../tutorials/api/create/crm/salesforce.md)
 - [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
 - [Crear un flujo de datos para una fuente CRM mediante la API de Flow Service](../../tutorials/api/collect/crm.md)
 
-### Conectar [!DNL Salesforce] a Platform mediante la interfaz de usuario
+### Conectar [!DNL Salesforce] a Experience Platform mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Salesforce en la interfaz de usuario](../../tutorials/ui/create/crm/salesforce.md)
 - [Crear un flujo de datos para una conexión CRM en la interfaz de usuario](../../tutorials/ui/dataflow/crm.md)

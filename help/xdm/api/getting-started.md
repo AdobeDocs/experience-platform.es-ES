@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción a la API de Registro de esquemas
 description: Este documento proporciona una introducción a los conceptos principales que necesita conocer antes de intentar realizar llamadas a la API de Registro de esquemas.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1364'
 ht-degree: 5%
 
 ---
@@ -22,29 +22,29 @@ El uso de la guía para desarrolladores requiere una comprensión práctica de l
 * [[!DNL Experience Data Model (XDM) System]](../home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../schema/composition.md): Obtenga información acerca de los componentes básicos de los esquemas XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 XDM utiliza el formato de esquema JSON para describir y validar la estructura de los datos de experiencia del cliente introducidos. Por lo tanto, se recomienda revisar la [documentación oficial del esquema JSON](https://json-schema.org/) para comprender mejor esta tecnología subyacente.
 
 ## Lectura de llamadas de API de muestra
 
-La documentación de la API [!DNL Schema Registry] proporciona ejemplos de llamadas a la API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+La documentación de la API [!DNL Schema Registry] proporciona ejemplos de llamadas a la API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de Experience Platform.
 
 ## Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de la zona protegida](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de la zona protegida](../../sandboxes/home.md).
 
 Todas las solicitudes de búsqueda (GET) a [!DNL Schema Registry] requieren un encabezado `Accept` adicional, cuyo valor determina el formato de la información devuelta por la API. Consulte la sección [Aceptar encabezado](#accept) a continuación para obtener más detalles.
 
@@ -54,7 +54,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Conozca su TENANT_ID {#know-your-tenant_id}
 
-A través de las guías de API verá referencias a un(a) `TENANT_ID`. Este ID se utiliza para garantizar que los recursos que crea tengan un espacio de nombres correcto y estén contenidos en su organización. Si no conoce su ID, puede acceder a él realizando la siguiente solicitud de GET:
+A través de las guías de API verá referencias a un(a) `TENANT_ID`. Este ID se utiliza para garantizar que los recursos que crea tengan un espacio de nombres correcto y estén contenidos en su organización. Si no conoce su ID, puede acceder a él realizando la siguiente petición GET:
 
 **Formato de API**
 
@@ -158,7 +158,7 @@ Las llamadas a la API [!DNL Schema Registry] requieren el uso de un `CONTAINER_I
 
 ### Contenedor global
 
-El contenedor `global` contiene todas las clases, los grupos de campos de esquema, los tipos de datos y los esquemas proporcionados por el Adobe estándar y el socio [!DNL Experience Platform]. Solo puede realizar solicitudes de lista y búsqueda (GET) en el contenedor `global`.
+El contenedor `global` contiene todas las clases, los grupos de campos de esquema, los tipos de datos y los esquemas proporcionados por los socios estándar de Adobe y [!DNL Experience Platform]. Solo puede realizar solicitudes de lista y búsqueda (GET) en el contenedor `global`.
 
 Un ejemplo de una llamada que utiliza el contenedor `global` tendría el siguiente aspecto:
 
@@ -216,13 +216,13 @@ La siguiente tabla enumera los valores de encabezado `Accept` compatibles, inclu
 
 >[!NOTE]
 >
->Actualmente, Platform solo admite una versión principal para cada esquema (`1`). Por lo tanto, el valor de `version` siempre debe ser `1` al realizar solicitudes de búsqueda para devolver la última versión secundaria del esquema. Consulte la subsección siguiente para obtener más información sobre el control de versiones de esquemas.
+>Actualmente, Experience Platform solo admite una versión principal para cada esquema (`1`). Por lo tanto, el valor de `version` siempre debe ser `1` al realizar solicitudes de búsqueda para devolver la última versión secundaria del esquema. Consulte la subsección siguiente para obtener más información sobre el control de versiones de esquemas.
 
 ### Versiones de esquema {#versioning}
 
-Los encabezados `Accept` hacen referencia a las versiones de esquema en la API del Registro de esquemas y en las propiedades `schemaRef.contentType` de las cargas de la API del servicio de Platform descendente.
+Los encabezados `Accept` hacen referencia a las versiones de esquema en la API del Registro de esquemas y en las propiedades `schemaRef.contentType` de las cargas útiles de la API del servicio Experience Platform descendente.
 
-Actualmente, Platform solo admite una única versión principal (`1`) para cada esquema. Según las [reglas de evolución de esquema](../schema/composition.md#evolution), cada actualización a un esquema debe ser no destructiva, lo que significa que las nuevas versiones secundarias de un esquema (`1.2`, `1.3`, etc.) siempre son compatibles con versiones anteriores o menores. Por lo tanto, al especificar `version=1`, el Registro de esquemas siempre devuelve la **última** versión principal `1` de un esquema, lo que significa que no se devuelven versiones secundarias anteriores.
+Actualmente, Experience Platform solo admite una única versión principal (`1`) para cada esquema. Según las [reglas de evolución de esquema](../schema/composition.md#evolution), cada actualización a un esquema debe ser no destructiva, lo que significa que las nuevas versiones menores de un esquema (`1.2`, `1.3`, etc.) siempre son compatibles con versiones menores anteriores. Por lo tanto, al especificar `version=1`, el Registro de esquemas siempre devuelve la **última** versión principal `1` de un esquema, lo que significa que no se devuelven versiones secundarias anteriores.
 
 >[!NOTE]
 >

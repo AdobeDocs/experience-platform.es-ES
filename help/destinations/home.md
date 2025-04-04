@@ -2,9 +2,9 @@
 title: Información general sobre los destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1368'
 ht-degree: 3%
 
 ---
@@ -24,11 +24,11 @@ ht-degree: 3%
 
 ## Destinos y fuentes {#destinations-and-sources}
 
-Una de las funcionalidades principales de Platform es la ingesta de datos de origen y su activación para satisfacer las necesidades de su empresa. Use [orígenes](../sources/home.md) para introducir datos en Platform y destinos para exportar datos desde Platform.
+Una de las funcionalidades principales de Experience Platform es la ingesta de datos de origen y su activación para satisfacer las necesidades de su empresa. Use [orígenes](../sources/home.md) para ingerir datos en Experience Platform y destinos para exportar datos desde Experience Platform.
 
 ## Pasos de destinos {#steps}
 
-* Elija entre un [catálogo de autoservicio](./catalog/overview.md) de todos los destinos disponibles en Platform.
+* Elija entre un [catálogo de autoservicio](./catalog/overview.md) de todos los destinos disponibles en Experience Platform.
 * Utilice destinos para enviar audiencias o conjuntos de datos a plataformas de automatización de marketing, plataformas de publicidad digital y mucho más.
 * Programe exportaciones de datos a sus destinos preferidos en horas regulares.
 
@@ -38,7 +38,7 @@ Los controles del área de trabajo [destinos](./ui/destinations-workspace.md) le
 
 * Examine el catálogo de plataformas de destino donde puede activar sus datos;
 * Crear, editar, activar y desactivar flujos de datos a los destinos del catálogo;
-* Crear una cuenta en una ubicación de almacenamiento o vincular Platform a la cuenta en la plataforma de destino.
+* Crear una cuenta en una ubicación de almacenamiento o vincular Experience Platform a la cuenta en la plataforma de destino.
 * Seleccione qué audiencias o conjuntos de datos deben activarse en los destinos;
 * Seleccione los [campos del modelo de datos de experiencia (XDM)](../xdm/home.md) que se exportarán al activar audiencias en determinados destinos como destinos de marketing por correo electrónico, plataformas CRM, ubicaciones de almacenamiento en la nube y más.
 * Active diferentes tipos de perfiles y audiencias en destinos: personas, cuentas y clientes potenciales.
@@ -55,7 +55,7 @@ En el caso de los conectores creados y mantenidos por el socio, esto significa q
 
 ## Destinos y controles de acceso {#access-controls}
 
-La funcionalidad de destinos de Platform funciona con permisos de control de acceso de Adobe Experience Platform. Según el nivel de permisos del usuario, puede ver, administrar y activar destinos. Para obtener información sobre los permisos individuales, ve a [control de acceso en Adobe Experience Platform](../access-control/home.md) y desplázate hacia abajo hasta la tabla en la parte inferior de la página.
+La funcionalidad de destinos de Experience Platform funciona con permisos de control de acceso de Adobe Experience Platform. Según el nivel de permisos del usuario, puede ver, administrar y activar destinos. Para obtener información sobre los permisos individuales, ve a [control de acceso en Adobe Experience Platform](../access-control/home.md) y desplázate hacia abajo hasta la tabla en la parte inferior de la página.
 
 En la tabla siguiente se describen los permisos y las combinaciones de permisos necesarias para realizar determinadas acciones en los destinos.
 
@@ -102,14 +102,14 @@ También puede validar si los datos llegan a su destino correctamente. La mayor�
 
 ## Restricciones de la gobernanza de datos al activar datos en destinos {#data-governance}
 
-La gobernanza de datos se aplica a los destinos de Platform mediante:
+La gobernanza de datos se aplica a los destinos de Experience Platform mediante:
 
 * *Acciones de marketing* que puede seleccionar en el flujo de trabajo Crear destinos;
 * *Políticas de uso de datos* que restringen la activación de datos que contienen determinadas etiquetas de uso a destinos con determinadas acciones de marketing.
 
-Consulte la Administración de datos en la documentación de Platform para obtener más información sobre [acciones de marketing](../data-governance/policies/overview.md) y [resolución de violaciones de políticas de datos](../data-governance/enforcement/auto-enforcement.md).
+Consulte la Administración de datos en la documentación de Experience Platform para obtener más información sobre [acciones de marketing](../data-governance/policies/overview.md) y [resolución de infracciones de directivas de datos](../data-governance/enforcement/auto-enforcement.md).
 
-Para obtener más información sobre la selección de acciones de marketing en el flujo de trabajo Crear destino, consulte las siguientes páginas para los distintos tipos de destino en Platform:
+Para obtener más información sobre la selección de acciones de marketing en el flujo de trabajo Crear destino, consulte las siguientes páginas para los distintos tipos de destino en Experience Platform:
 
 * [Destinos de Advertising: Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Destinos Advertising - Google Ads](./catalog/advertising/google-ads-destination.md)

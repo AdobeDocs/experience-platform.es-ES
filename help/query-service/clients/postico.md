@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;postico;postico;conectarse al servicio de consultas;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;postal;pórtico;conectarse al servicio de consultas;
 solution: Experience Platform
 title: Conectar Postico al servicio de consultas
 description: Este documento contiene el vínculo para instalar el cliente de copia de seguridad Postico para Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -28,14 +28,14 @@ Para conectar a [!DNL Postico] al servicio de consultas, abra [!DNL Postico] y s
 | **[!DNL Host]:** | Nombre de host del servidor PostgreSQL. |
 | **[!DNL Port]:** | El puerto de [!DNL Query Service]. Debe usar el puerto **80** o **5432** para conectarse con [!DNL Query Service]. |
 | **[!DNL User]** | Cree un nombre para la conexión específica. Deje el campo en blanco para utilizar el nombre de inicio de sesión de Mac. |
-| **[!DNL Password]** | Esta cadena alfanumérica es su credencial de Experience Platform **[!UICONTROL Password]**. Si desea utilizar credenciales que no caduquen, este valor son los argumentos concatenados de `technicalAccountID` y `credential` descargados en el archivo JSON de configuración. El valor de contraseña adopta la forma: {technicalAccountId}:{credential}. El archivo JSON de configuración para credenciales que no caducan es una descarga única durante su inicialización de la que la Adobe no conserva una copia. |
-| **[!DNL Database]** | Use su valor de credencial de Experience Platform **[!UICONTROL Database]**: `prod:all`. |
+| **[!DNL Password]** | Esta cadena alfanumérica es su credencial **[!UICONTROL Password]** de Experience Platform. Si desea utilizar credenciales que no caduquen, este valor son los argumentos concatenados de `technicalAccountID` y `credential` descargados en el archivo JSON de configuración. El valor de contraseña adopta la forma: {technicalAccountId}:{credential}. El archivo JSON de configuración para credenciales que no caducan es una descarga única durante la inicialización de la que Adobe no conserva una copia. |
+| **[!DNL Database]** | Use su valor de credencial **[!UICONTROL Database]** de Experience Platform: `prod:all`. |
 
-Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md). Para encontrar sus credenciales, inicie sesión en [!DNL Platform] y luego seleccione **[!UICONTROL Consultas]**, seguidas de **[!UICONTROL Credenciales]**.
+Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md). Para encontrar sus credenciales, inicie sesión en [!DNL Experience Platform] y luego seleccione **[!UICONTROL Consultas]**, seguidas de **[!UICONTROL Credenciales]**.
 
 Después de insertar las credenciales, seleccione **[!DNL Connect]** para conectarse al servicio de consultas.
 
-Después de conectarse a Platform, podrá ver una lista de todas las relaciones realizadas anteriormente con el servicio de consulta.
+Después de conectarse a Experience Platform, podrá ver una lista de todas las relaciones realizadas anteriormente con Query Service.
 
 ## Crear instrucciones SQL
 

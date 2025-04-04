@@ -1,21 +1,21 @@
 ---
 title: Referencia de prueba de coherencia de etiquetas
-description: Descubra cómo Auditor comprueba la coherencia de las etiquetas en Adobe Experience Platform Debugger.
+description: Descubra cómo la función auditor comprueba la coherencia de etiquetas en Adobe Experience Platform Debugger.
 exl-id: 642b0c49-a7c7-4142-8189-67f00ed50015
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '119'
 ht-degree: 38%
 
 ---
 
 # Referencia de prueba de coherencia de etiquetas
 
-Esta referencia proporciona más información sobre cómo funciona auditor en las pruebas de Adobe Experience Platform Debugger para mantener la coherencia de las etiquetas.
+Esta referencia proporciona más información sobre cómo auditor comprueba la coherencia de las etiquetas en Adobe Experience Platform Debugger.
 
 >[!NOTE]
 >
->Para obtener más información sobre las pruebas de auditor en Platform Debugger, consulte [descripción general de la función de auditor](./overview.md).
+>Para obtener más información sobre las pruebas de auditor en Experience Platform Debugger, consulte [descripción general de la función de auditor](./overview.md).
 
 Las pruebas de coherencia de etiquetas buscan incoherencias en todas las páginas digitalizadas. Son valores o configuraciones que deben ser iguales en todas las páginas del sitio para garantizar una recopilación de datos precisa.
 

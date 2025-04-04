@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;servi
 title: Opciones SSL del servicio de consultas
 description: Obtenga información sobre la compatibilidad SSL con conexiones de terceros al servicio Adobe Experience Platform Query y cómo conectarse mediante el modo de verificación SSL completo.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1011'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ Para aumentar la seguridad, Adobe Experience Platform [!DNL Query Service] propo
 
 ## Requisitos previos
 
-Este documento supone que ya ha descargado una aplicación cliente de escritorio de terceros para utilizarla con los datos de Platform. En la documentación de la guía de conexión correspondiente encontrará instrucciones específicas sobre cómo incorporar la seguridad SSL al conectarse con un cliente de terceros. Para obtener una lista de todos los [!DNL Query Service] clientes admitidos, consulte la [descripción general de las conexiones de cliente](./overview.md).
+Este documento supone que ya ha descargado una aplicación cliente de escritorio de terceros para usarla con sus datos de Experience Platform. En la documentación de la guía de conexión correspondiente encontrará instrucciones específicas sobre cómo incorporar la seguridad SSL al conectarse con un cliente de terceros. Para obtener una lista de todos los [!DNL Query Service] clientes admitidos, consulte la [descripción general de las conexiones de cliente](./overview.md).
 
 ## Opciones SSL disponibles {#available-ssl-options}
 
-Platform admite varias opciones SSL para satisfacer sus necesidades de seguridad de datos y equilibrar la sobrecarga de procesamiento del cifrado y el intercambio de claves.
+Experience Platform admite varias opciones SSL para adaptarse a sus necesidades de seguridad de datos y equilibrar la sobrecarga de procesamiento del cifrado y el intercambio de claves.
 
 Los diferentes valores de parámetro `sslmode` proporcionan niveles de protección diferentes. Al cifrar sus datos en movimiento con certificados SSL, ayuda a evitar ataques &quot;man-in-the-middle&quot; (MITM), escuchas y suplantación de identidad. La siguiente tabla proporciona un desglose de los diferentes modos SSL disponibles y el nivel de protección que proporcionan.
 
@@ -40,13 +40,13 @@ Los diferentes valores de parámetro `sslmode` proporcionan niveles de protecci�
 >
 >La diferencia entre `verify-ca` y `verify-full` depende de la directiva de la entidad emisora de certificados (CA) raíz. Si ha creado su propia CA local para emitir certificados privados para sus aplicaciones, el uso de `verify-ca` suele proporcionar suficiente protección. Si se usa una CA pública, `verify-ca` permite conexiones a un servidor que otra persona podría haber registrado con la CA. `verify-full` siempre debe usarse con una CA raíz pública.
 
-Al establecer una conexión de terceros con una base de datos de Platform, se recomienda usar `sslmode=require` como mínimo para garantizar una conexión segura para los datos en movimiento. Se recomienda el modo SSL `verify-full` para utilizarlo en la mayoría de los entornos confidenciales.
+Al establecer una conexión de terceros con una base de datos de Experience Platform, se recomienda usar `sslmode=require` como mínimo para garantizar una conexión segura para los datos en movimiento. Se recomienda el modo SSL `verify-full` para utilizarlo en la mayoría de los entornos confidenciales.
 
 ## Configurar un certificado raíz para la verificación del servidor {#root-certificate}
 
 >[!IMPORTANT]
 >
->Los certificados TLS/SSL en entornos de producción para la API interactiva de Postgres del servicio de consulta se actualizaron el miércoles, 24 de enero de 2024.<br>Aunque se trata de un requisito anual, en esta ocasión el certificado raíz de la cadena también ha cambiado porque el proveedor de certificados TLS/SSL de Adobe ha actualizado su jerarquía de certificados. Esto puede afectar a ciertos clientes de Postgres si a su lista de autoridades de certificación les falta el certificado raíz. Por ejemplo, un cliente CLI de PSQL puede necesitar que se agreguen los certificados raíz a un archivo explícito `~/postgresql/root.crt`; de lo contrario, esto puede provocar un error. Por ejemplo, `psql: error: SSL error: certificate verify failed`. Consulte la [documentación oficial de PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) para obtener más información sobre este problema.<br>El certificado raíz que desea agregar se puede descargar desde [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>Los certificados TLS/SSL en entornos de producción para la API interactiva de Postgres del servicio de consulta se actualizaron el miércoles, 24 de enero de 2024.<br>Aunque se trata de un requisito anual, en esta ocasión el certificado raíz de la cadena también ha cambiado, ya que el proveedor de certificados TLS/SSL de Adobe ha actualizado su jerarquía de certificados. Esto puede afectar a ciertos clientes de Postgres si a su lista de autoridades de certificación les falta el certificado raíz. Por ejemplo, un cliente CLI de PSQL puede necesitar que se agreguen los certificados raíz a un archivo explícito `~/postgresql/root.crt`; de lo contrario, esto puede provocar un error. Por ejemplo, `psql: error: SSL error: certificate verify failed`. Consulte la [documentación oficial de PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) para obtener más información sobre este problema.<br>El certificado raíz que desea agregar se puede descargar desde [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Para garantizar una conexión segura, el uso de SSL debe configurarse tanto en el cliente como en el servidor antes de establecer la conexión. Si SSL solo está configurado en el servidor, el cliente puede enviar información confidencial como contraseñas antes de que se establezca que el servidor requiere una alta seguridad.
 

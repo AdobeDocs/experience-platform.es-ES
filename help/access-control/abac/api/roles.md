@@ -5,10 +5,10 @@ title: Extremo de API de roles
 description: El extremo /roles de la API de control de acceso basado en atributos le permite administrar los roles mediante programación en Adobe Experience Platform.
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 6%
+source-wordcount: '1670'
+ht-degree: 7%
 
 ---
 
@@ -28,7 +28,7 @@ El extremo de API utilizado en esta guía forma parte de la API de control de ac
 
 ## Recuperación de una lista de funciones {#list}
 
-Puede enumerar todos los roles existentes que pertenecen a su organización realizando una solicitud de GET al extremo `/roles`.
+Puede enumerar todos los roles existentes que pertenecen a su organización realizando una petición GET al extremo `/roles`.
 
 **Formato de API**
 
@@ -108,12 +108,12 @@ Una respuesta correcta devuelve una lista de funciones de su organización, incl
 | `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
 | `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
 | `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
-| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
+| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Experience Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
 ## Búsqueda de un rol {#lookup}
 
-Puede buscar una función individual realizando una solicitud de GET que incluya el(la) `roleId` correspondiente en la ruta de solicitud.
+Puede buscar un rol individual realizando una petición GET que incluya el(la) `roleId` correspondiente en la ruta de solicitud.
 
 **Formato de API**
 
@@ -175,12 +175,12 @@ Una respuesta correcta devuelve detalles del ID de rol consultado, incluida info
 | `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
 | `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
 | `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
-| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
+| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Experience Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
 ## Búsqueda de asuntos por ID de función
 
-También puede recuperar sujetos realizando una solicitud de GET al extremo `/roles` mientras proporciona un {ROLE_ID}.
+También puede recuperar sujetos realizando una petición GET al extremo `/roles` mientras proporciona un {ROLE_ID}.
 
 **Formato de API**
 
@@ -256,7 +256,7 @@ Una respuesta correcta devuelve los asuntos asociados con el ID de rol consultad
 
 ## Crear una función {#create}
 
-Para crear una función nueva, realice una solicitud de POST al extremo `/roles` y proporcione valores para el nombre, la descripción y el tipo de función de la función.
+Para crear una función nueva, realice una petición POST al extremo `/roles` y proporcione valores para el nombre, la descripción y el tipo de función de la función.
 
 **Formato de API**
 
@@ -323,12 +323,12 @@ Una respuesta correcta devuelve la función recién creada, con su ID de funció
 | `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
 | `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
 | `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
-| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
+| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Experience Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
 ## Actualizar un rol {#patch}
 
-Puede actualizar las propiedades de un rol realizando una solicitud de PATCH al extremo `/roles` y proporcionando al mismo tiempo el identificador de rol y los valores correspondientes para las operaciones que desea aplicar.
+Puede actualizar las propiedades de un rol realizando una petición PATCH al extremo `/roles` y proporcionando al mismo tiempo el ID de rol y los valores correspondientes para las operaciones que desee aplicar.
 
 **Formato de API**
 
@@ -403,12 +403,12 @@ Una respuesta correcta devuelve la función actualizada, incluidos los nuevos va
 | `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
 | `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
 | `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
-| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
+| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Experience Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
 ## Actualizar un rol por identificador de rol {#put}
 
-Puede actualizar un rol realizando una solicitud de PUT al extremo `/roles` y especificando el identificador de rol que corresponde al rol que desea actualizar.
+Puede actualizar un rol realizando una petición PUT al extremo `/roles` y especificando el identificador de rol que corresponde al rol que desea actualizar.
 
 **Formato de API**
 
@@ -477,12 +477,12 @@ Una respuesta correcta devuelve la función actualizada, incluidos los nuevos va
 | `roleType` | El tipo designado de la función. Los valores posibles para el tipo de rol son: `user-defined` y `system-defined`. |
 | `permissionSets` | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
 | `sandboxes` | Esta propiedad muestra los entornos limitados de su organización que se han aprovisionado para una función concreta. |
-| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Platform a los que tienen acceso. |
+| `subjectAttributes` | Atributos que indican la correlación entre un asunto y los recursos de Experience Platform a los que tienen acceso. |
 | `subjectAttributes.labels` | Muestra las etiquetas de uso de datos aplicadas a la función consultada. |
 
 ## Actualizar asunto por ID de rol
 
-Para actualizar los asuntos asociados a un rol, realice una solicitud de PATCH al extremo `/roles` y proporcione el identificador de rol de los asuntos que desea actualizar.
+Para actualizar los asuntos asociados a un rol, realice una petición PATCH al extremo `/roles` y proporcione el identificador de rol de los asuntos que desea actualizar.
 
 **Formato de API**
 
@@ -552,7 +552,7 @@ Una respuesta correcta devuelve la función actualizada, incluidos los nuevos va
 
 ## Eliminar un rol {#delete}
 
-Para eliminar un rol, realice una solicitud de DELETE al extremo `/roles` mientras especifica el identificador del rol que desea eliminar.
+Para eliminar un rol, realice una petición DELETE al extremo `/roles` mientras especifica el identificador del rol que desea eliminar.
 
 **Formato de API**
 

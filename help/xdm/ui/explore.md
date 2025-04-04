@@ -5,22 +5,22 @@ title: Exploración de los recursos de esquema en la IU
 description: Aprenda a explorar esquemas, clases, grupos de campos de esquema y tipos de datos existentes en la interfaz de usuario de Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 # Exploración de recursos de esquema en la IU
 
-En Adobe Experience Platform, todos los recursos de esquema del Modelo de datos de experiencia (XDM) se almacenan en [!DNL Schema Library], incluidos los recursos estándar proporcionados por los recursos de Adobe y personalizados definidos por su organización. En la interfaz de usuario del Experience Platform, puede ver la estructura y los campos de cualquier esquema, clase, grupo de campos o tipo de datos existente en [!DNL Schema Library]. Esto resulta especialmente útil a la hora de planificar y preparar la ingesta de datos, ya que la interfaz de usuario proporciona información sobre los tipos de datos esperados y los casos de uso de cada campo proporcionado por estos recursos XDM.
+En Adobe Experience Platform, todos los recursos de esquema del Modelo de datos de experiencia (XDM) se almacenan en [!DNL Schema Library], incluidos los recursos estándar proporcionados por Adobe y los recursos personalizados definidos por su organización. En la interfaz de usuario de Experience Platform, puede ver la estructura y los campos de cualquier esquema, clase, grupo de campos o tipo de datos existente en [!DNL Schema Library]. Esto resulta especialmente útil a la hora de planificar y preparar la ingesta de datos, ya que la interfaz de usuario proporciona información sobre los tipos de datos esperados y los casos de uso de cada campo proporcionado por estos recursos XDM.
 
 Este tutorial explica los pasos para explorar los esquemas, las clases, los grupos de campos y los tipos de datos existentes en la interfaz de usuario de Experience Platform.
 
 ## Búsqueda de un recurso de esquema {#lookup}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. El área de trabajo [!UICONTROL Esquemas] proporciona una ficha **[!UICONTROL Examinar]** para explorar todos los esquemas de su organización, junto con fichas dedicadas adicionales para explorar **[!UICONTROL Clases]**, **[!UICONTROL Grupos de campos]**, **[!UICONTROL Tipos de datos]** y **[!UICONTROL Relaciones]** respectivamente.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. El área de trabajo [!UICONTROL Esquemas] proporciona una ficha **[!UICONTROL Examinar]** para explorar todos los esquemas de su organización, junto con fichas dedicadas adicionales para explorar **[!UICONTROL Clases]**, **[!UICONTROL Grupos de campos]**, **[!UICONTROL Tipos de datos]** y **[!UICONTROL Relaciones]** respectivamente.
 
 ![Espacio de trabajo de esquemas con varias fichas resaltadas.](../images/ui/explore/tabs.png)
 
@@ -63,7 +63,7 @@ Todos los campos de tipo de objeto que contienen subpropiedades se contraen de f
 
 ### Indicador de clase y grupo de campos estándar {#standard-class-and-field-group-indicator}
 
-En el Editor de esquemas, las clases y los grupos de campos estándar (generados por el Adobe) se indican con el icono de candado (![Icono de candado.](/help/images/icons/lock-closed.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
+Dentro del Editor de esquemas, las clases y los grupos de campos estándar (generados por Adobe) se indican con el icono de candado (![Un icono de candado.](/help/images/icons/lock-closed.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
 
 ![Editor de esquemas con el icono de candado resaltado](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -73,7 +73,7 @@ Consulte la documentación de [Agregar campos personalizados a grupos de campos 
 
 Algunos nombres de campo van precedidos de un guion bajo, como `_repo` y `_id`. Representan marcadores de posición para campos que el sistema generará y asignará automáticamente a medida que se incorporen los datos.
 
-Como tal, la mayoría de estos campos deben excluirse de la estructura de los datos al ingerirlos en Platform. La principal excepción a esta regla es el campo [`_{TENANT_ID}`](../api/getting-started.md#know-your-tenant_id), en el cual todos los campos XDM creados en su organización deben tener un espacio de nombres.
+Como tal, la mayoría de estos campos deben excluirse de la estructura de los datos al ingerirlos en Experience Platform. La principal excepción a esta regla es el campo [`_{TENANT_ID}`](../api/getting-started.md#know-your-tenant_id), en el cual todos los campos XDM creados en su organización deben tener un espacio de nombres.
 
 ### Tipos de datos {#data-types}
 
@@ -107,7 +107,7 @@ Los campos de identidad se resaltan en el lienzo con un icono de huella digital 
 
 >[!NOTE]
 >
->Consulte la guía de [definición de campos de identidad](./fields/identity.md) para obtener más información sobre los campos de identidad y su relación con los servicios de Platform secundarios.
+>Consulte la guía de [definición de campos de identidad](./fields/identity.md) para obtener más información sobre los campos de identidad y su relación con los servicios de Experience Platform descendentes.
 
 ### Campos de relación {#relationship}
 

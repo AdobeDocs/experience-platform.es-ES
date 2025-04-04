@@ -1,11 +1,11 @@
 ---
-keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;etiqueta de perspectiva;etiqueta de perspectiva
-title: Extensión de etiqueta de linkedIn Insight
-description: La extensión de etiquetas LinkedIn Insight es un destino de publicidad en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+keywords: LinkedIn;linkedin;LinkedIn;Insight Tag;insight tag;Insight Tag
+title: Extensión de etiquetas de Insight de LinkedIn
+description: La extensión de Insight Tag de LinkedIn es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '445'
 ht-degree: 4%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 4%
 
 Instale [!DNL LinkedIn Insight Tag] para usar las características de seguimiento de conversión, retargeting y demografía del sitio web.
 
-[!DNL LinkedIn Insight Tag] es una extensión publicitaria en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte [Etiqueta de información de LinkedIn](https://business.linkedin.com/marketing-solutions/insight-tag).
+[!DNL LinkedIn Insight Tag] es una extensión publicitaria en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte [Etiqueta LinkedIn de Insight](https://business.linkedin.com/marketing-solutions/insight-tag).
 
-Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
+Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
-![Extensión de etiqueta de LinkedIn Insight](../../assets/catalog/advertising/linkedin/catalog.png)
+![Extensión de etiqueta LinkedIn de Insight](../../assets/catalog/advertising/linkedin/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que han adquirido Platform.
+Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
 Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
@@ -32,7 +32,7 @@ Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experi
 
 Para instalar la extensión [!DNL LinkedIn Insight Tag]:
 
-En la [interfaz de plataforma](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
@@ -42,7 +42,7 @@ Seleccione la propiedad en la que desea instalar la extensión. También tiene l
 
 El flujo de trabajo le guía para completar la instalación.
 
-Para obtener información acerca de las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte [Etiqueta de LinkedIn Insight](https://business.linkedin.com/marketing-solutions/insight-tag).
+Para obtener información acerca de las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte [LinkedIn Insight Tag](https://business.linkedin.com/marketing-solutions/insight-tag).
 
 También puede instalar la extensión directamente en la [IU de recopilación de datos](https://experience.adobe.com/#/data-collection/). Para obtener más información, consulte la sección sobre [agregar una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) en la documentación de etiquetas.
 
@@ -58,6 +58,6 @@ Puede configurar, actualizar y eliminar extensiones en la IU de recopilación de
 
 >[!TIP]
 >
->Si la extensión ya está instalada en una de las propiedades, la interfaz de usuario de Platform aún mostrará **[!UICONTROL Instalar]** para la extensión. Inicie el flujo de trabajo de instalación como se describe en [Instalar extensión](#install-extension) para configurar o eliminar la extensión.
+>Si la extensión ya está instalada en una de las propiedades, la interfaz de usuario de Experience Platform seguirá mostrando **[!UICONTROL Install]** para la extensión. Inicie el flujo de trabajo de instalación como se describe en [Instalar extensión](#install-extension) para configurar o eliminar la extensión.
 
 Para actualizar la extensión, consulte la guía sobre el [proceso de actualización de la extensión](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) en la documentación de etiquetas.

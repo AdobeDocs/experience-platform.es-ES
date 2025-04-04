@@ -1,32 +1,32 @@
 ---
-description: Descubra cómo puede monitorizar los flujos de datos durante la segmentación mediante la interfaz de usuario del Experience Platform.
+description: Descubra cómo puede monitorizar los flujos de datos durante la segmentación mediante la interfaz de usuario de Experience Platform.
 title: Monitorización de flujos de datos para audiencias en la IU
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1864'
 ht-degree: 4%
 
 ---
 
 # Monitorización de flujos de datos para audiencias en la IU
 
-El servicio de segmentación le permite crear audiencias mediante definiciones de segmentos u otras fuentes a partir de los datos de [!DNL Real-Time Customer Profile]. Platform proporciona flujos de datos para rastrear de forma transparente este flujo de datos de fuentes a destinos.
+El servicio de segmentación le permite crear audiencias mediante definiciones de segmentos u otras fuentes a partir de los datos de [!DNL Real-Time Customer Profile]. Experience Platform proporciona flujos de datos para rastrear de forma transparente este flujo de datos de fuentes a destinos.
 
-Utilice el panel de monitorización para ver una representación visual de la actividad de los datos dentro de una audiencia, incluido el estado de la segmentación de los datos. Lea el tutorial para obtener instrucciones sobre cómo puede utilizar el panel de monitorización para monitorizar la segmentación de los datos mediante la interfaz de usuario del Experience Platform, lo que le permite rastrear el estado de los trabajos de activación, evaluación y exportación de audiencias.
+Utilice el panel de monitorización para ver una representación visual de la actividad de los datos dentro de una audiencia, incluido el estado de la segmentación de los datos. Lea el tutorial para obtener instrucciones sobre cómo puede utilizar el panel de monitorización para monitorizar la segmentación de los datos mediante la interfaz de usuario de Experience Platform, lo que le permite rastrear el estado de los trabajos de activación, evaluación y exportación de audiencias.
 
 ## Introducción {#getting-started}
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
+- [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
    - [Ejecuciones de flujo de datos](../../sources/notifications.md): Las ejecuciones de flujo de datos son los trabajos programados recurrentes en función de la configuración de frecuencia de los flujos de datos seleccionados.
 - [Segmentación](../../segmentation/home.md): la segmentación le permite crear audiencias a partir de los datos del perfil del cliente en tiempo real.
    - [Trabajos de activación](../../destinations/ui/activation-overview.md): se usa un trabajo de activación para activar la audiencia en un destino especificado.
    - [Trabajos de evaluación](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Un trabajo de evaluación es un proceso asincrónico que evalúa la audiencia.
    - [Trabajos de exportación](../../segmentation/api/export-jobs.md): un trabajo de exportación es un proceso asincrónico que se usa para mantener miembros de audiencia en conjuntos de datos.
-- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Panel de monitorización de públicos {#monitoring-audiences-dashboard}
 

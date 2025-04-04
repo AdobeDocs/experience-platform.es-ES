@@ -1,10 +1,10 @@
 ---
 title: Definición de campos de mapa en la IU
-description: Obtenga información sobre cómo definir un campo de asignación en la interfaz de usuario del Experience Platform.
+description: Obtenga información sobre cómo definir un campo de asignación en la interfaz de usuario de Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Adobe Experience Platform permite personalizar completamente la estructura de la
 
 También puede definir campos de asignación en el Editor de esquemas para modelar estructuras de datos flexibles y dinámicas o almacenar una colección de pares clave-valor.
 
-Al definir un nuevo campo en la interfaz de usuario (IU) de Platform, use la lista desplegable **[!UICONTROL Tipo]** y seleccione &quot;**[!UICONTROL Mapa]**&quot; de la lista.
+Al definir un nuevo campo en la interfaz de usuario (IU) de Experience Platform, utilice la lista desplegable **[!UICONTROL Tipo]** y seleccione &quot;**[!UICONTROL Mapa]**&quot; de la lista.
 
 ![Editor de esquemas con la lista desplegable Tipo y el valor de Mapa resaltados.](../../images/ui/fields/special/map.png)
 
@@ -44,10 +44,10 @@ Asegúrese de utilizar únicamente campos de tipo mapa cuando sea absolutamente 
 
 >[!NOTE]
 >
->La interfaz de usuario de Platform tiene limitaciones en la forma de extraer las claves de los campos de tipo mapa. Mientras que los campos de tipo objeto se pueden expandir, los mapas se muestran como un único campo. Los campos de asignación creados mediante la API de Registro de esquemas que no son tipos de datos de cadena o enteros se muestran como tipos de datos &quot;[!UICONTROL Complejos]&quot;.
+>La interfaz de usuario de Experience Platform tiene limitaciones en la forma de extraer las claves de los campos de tipo mapa. Mientras que los campos de tipo objeto se pueden expandir, los mapas se muestran como un único campo. Los campos de asignación creados mediante la API de Registro de esquemas que no son tipos de datos de cadena o enteros se muestran como tipos de datos &quot;[!UICONTROL Complejos]&quot;.
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora puede definir los campos de asignación en la interfaz de usuario de Platform. Recuerde que solo puede utilizar clases y grupos de campos para agregar campos a esquemas. Para obtener más información sobre cómo administrar estos recursos en la interfaz de usuario, consulte las guías sobre la creación y edición de [clases](../resources/classes.md) y [grupos de campos](../resources/field-groups.md).
+Después de leer este documento, ahora puede definir los campos de asignación en la interfaz de usuario de Experience Platform. Recuerde que solo puede utilizar clases y grupos de campos para agregar campos a esquemas. Para obtener más información sobre cómo administrar estos recursos en la interfaz de usuario, consulte las guías sobre la creación y edición de [clases](../resources/classes.md) y [grupos de campos](../resources/field-groups.md).
 
 Para obtener más información sobre las capacidades del área de trabajo [!UICONTROL Esquemas], consulte la descripción general del área de trabajo [[!UICONTROL Esquemas]](../overview.md).

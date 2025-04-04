@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares; alertas;destinos
 description: Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 title: Suscribirse a alertas de destino en contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '953'
 ht-degree: 8%
 
 ---
@@ -23,8 +23,8 @@ Este documento proporciona pasos sobre cómo suscribirse y recibir mensajes de a
 Este documento requiere un entendimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
 * [Destinos](../home.md): integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
-* [Observabilidad](../../observability/home.md): [!DNL Observability Insights] le permite supervisar las actividades de la plataforma mediante el uso de métricas estadísticas y notificaciones de eventos.
-   * [Alertas](../../observability/alerts/overview.md): Cuando se alcanza un conjunto determinado de condiciones en las operaciones de la plataforma (como un problema potencial cuando el sistema incumple un umbral), la plataforma puede enviar mensajes de alerta a cualquier usuario de la organización que se haya suscrito a ellos.
+* [Observabilidad](../../observability/home.md): [!DNL Observability Insights] le permite supervisar las actividades de Experience Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
+   * [Alertas](../../observability/alerts/overview.md): Cuando se alcanza un conjunto determinado de condiciones en las operaciones de Experience Platform (como un problema potencial cuando el sistema incumple un umbral), Experience Platform puede enviar mensajes de alerta a cualquier usuario de su organización que se haya suscrito a ellos.
 
 ## Suscripción a alertas en la IU {#subscribe-destination-alerts}
 
@@ -36,7 +36,7 @@ Este documento requiere un entendimiento práctico de los siguientes componentes
 
 >[!IMPORTANT]
 >
->Debe habilitar notificaciones instantáneas de correos electrónicos para su cuenta de Platform a fin de recibir notificaciones de alerta basadas en correo electrónico para sus flujos de datos.
+>Debe habilitar notificaciones instantáneas de correos electrónicos para su cuenta de Experience Platform a fin de recibir notificaciones de alerta basadas en correo electrónico para sus flujos de datos.
 
 Puede habilitar alertas para sus flujos de datos durante el paso [!UICONTROL Configurar nuevo destino] del flujo de trabajo [conexión de destino](connect-destination.md).
 
@@ -51,7 +51,7 @@ Las alertas disponibles para los flujos de datos de destino se describen en la s
 
 | Alertas | Descripción |
 | --- | --- |
-| Retraso de ejecución de flujo de destino | Esta alerta le notifica cuando una ejecución de flujo de destino tarda más de 150 minutos en activar una audiencia. |
+| Retraso de ejecución de flujo de destinos | Esta alerta le notifica cuando una ejecución de flujo de destino tarda más de 150 minutos en activar una audiencia. |
 | Error de ejecución de flujo de destino | Esta alerta le avisa cuando se produce un error al activar una audiencia en un destino. |
 | Ejecución correcta de flujo de destino | Esta alerta le notifica cuando una audiencia se activa correctamente en un destino. |
 | Inicio de ejecución de flujo de destino | Esta alerta le avisa cuando una ejecución de flujo de destino comienza a activar una audiencia. |
@@ -63,9 +63,9 @@ Una vez que se ejecute el flujo de datos de destino, puede recibir alertas a tra
 
 ### Recepción de alertas en la IU {#receiving-alerts-in-ui}
 
-Las alertas se representan en la interfaz de usuario mediante un icono de notificación en el encabezado superior de la interfaz de usuario de Platform. Seleccione el icono de notificación para ver mensajes de alerta específicos relacionados con los flujos de datos.
+Las alertas se representan en la interfaz de usuario mediante un icono de notificación en el encabezado superior de la interfaz de usuario de Experience Platform. Seleccione el icono de notificación para ver mensajes de alerta específicos relacionados con los flujos de datos.
 
-![Imagen de interfaz de usuario que muestra el icono de notificación en el Experience Platform](../assets/ui/alerts/notification.png)
+![Imagen de interfaz de usuario que muestra el icono de notificación en Experience Platform](../assets/ui/alerts/notification.png)
 
 Aparecerá el panel de notificaciones, que mostrará una lista de las actualizaciones de estado del flujo de datos que ha creado.
 

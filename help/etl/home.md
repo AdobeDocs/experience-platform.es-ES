@@ -2,18 +2,18 @@
 keywords: Experience Platform;inicio;temas populares;ETL;etl;integraciones de etl;integraciones de ETL
 solution: Experience Platform
 title: Desarrollo de integraciones de ETL para Adobe Experience Platform
-description: La guía de integración de ETL describe los pasos generales para crear conectores seguros de alto rendimiento para Experience Platform e ingerir datos en Platform.
+description: La guía de integración de ETL describe los pasos generales para crear conectores seguros de alto rendimiento para Experience Platform e ingerir datos en Experience Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3977'
+source-wordcount: '3978'
 ht-degree: 3%
 
 ---
 
 # Desarrollo de integraciones de ETL para Adobe Experience Platform
 
-La guía de integración de ETL describe los pasos generales para crear conectores seguros y de alto rendimiento para [!DNL Experience Platform] e ingerir datos en [!DNL Platform].
+La guía de integración de ETL describe los pasos generales para crear conectores seguros y de alto rendimiento para [!DNL Experience Platform] e ingerir datos en [!DNL Experience Platform].
 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
@@ -37,10 +37,10 @@ El siguiente diagrama de flujo de trabajo proporciona información general de al
 
 Hay varios componentes de Experience Platform involucrados en las integraciones del conector ETL. La siguiente lista describe varios componentes y funcionalidades clave:
 
-- **Sistema Identity Management de Adobe (IMS)**: proporciona el marco para la autenticación en los servicios de Adobe.
+- **Adobe Identity Management System (IMS)**: proporciona el marco para la autenticación en los servicios de Adobe.
 - **Organización de IMS**: una entidad corporativa que puede poseer o autorizar productos y servicios y permitir el acceso a sus miembros.
 - **Usuario de IMS** - Miembros de una organización IMS. La relación entre la organización y el usuario es de muchos a muchos.
-- **[!DNL Sandbox]**: partición virtual de una sola instancia de [!DNL Platform] para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- **[!DNL Sandbox]**: partición virtual de una sola instancia de [!DNL Experience Platform] para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 - **Detección de datos** - Registra los metadatos de los datos ingeridos y transformados en [!DNL Experience Platform].
 - **[!DNL Data Access]**: proporciona a los usuarios una interfaz para tener acceso a sus datos en [!DNL Experience Platform].
 - **[!DNL Data Ingestion]** - Inserta datos en [!DNL Experience Platform] con las API [!DNL Data Ingestion].
@@ -56,19 +56,19 @@ Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar format
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -78,7 +78,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Para empezar, un usuario de ETL inicia sesión en la interfaz de usuario (IU) de [!DNL Experience Platform] y crea conjuntos de datos para su ingesta mediante un conector estándar o un conector de servicio push.
 
-En la interfaz de usuario de, el usuario crea el conjunto de datos de salida seleccionando un esquema del conjunto de datos. La elección del esquema depende del tipo de datos (registro o serie temporal) que se están ingiriendo en [!DNL Platform]. Al hacer clic en la pestaña Esquemas dentro de la interfaz de usuario, el usuario puede ver todos los esquemas disponibles, incluido el tipo de comportamiento que admite el esquema.
+En la interfaz de usuario de, el usuario crea el conjunto de datos de salida seleccionando un esquema del conjunto de datos. La elección del esquema depende del tipo de datos (registro o serie temporal) que se están ingiriendo en [!DNL Experience Platform]. Al hacer clic en la pestaña Esquemas dentro de la interfaz de usuario, el usuario puede ver todos los esquemas disponibles, incluido el tipo de comportamiento que admite el esquema.
 
 En la herramienta ETL, el usuario empezará a diseñar sus transformaciones de asignación después de configurar la conexión adecuada (con sus credenciales). Se supone que la herramienta ETL ya tiene [!DNL Experience Platform] conectores instalados (proceso no definido en esta guía de integración).
 
@@ -168,7 +168,7 @@ La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene un URI que h
 
 El esquema XDM es el esquema que se utiliza cuando se necesita presentar al usuario una lista de todos los campos disponibles en los que se puede escribir.
 
-El primer valor &quot;schemaRef.id&quot; del objeto de respuesta anterior (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) es un URI que señala a un esquema XDM específico en [!DNL Schema Registry]. El esquema se puede recuperar realizando una solicitud de búsqueda (GET) a la API [!DNL Schema Registry].
+El primer valor &quot;schemaRef.id&quot; del objeto de respuesta anterior (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) es un URI que señala a un esquema XDM específico en [!DNL Schema Registry]. El esquema se puede recuperar realizando una solicitud de consulta (GET) a la API [!DNL Schema Registry].
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ El formato de respuesta depende del tipo de encabezado Aceptar enviado en la sol
 
 | Aceptar | Descripción |
 | ------ | ----------- |
-| `application/vnd.adobe.xed-id+json` | Enumeración de solicitudes, títulos, ID y versiones (GET) |
+| `application/vnd.adobe.xed-id+json` | Enumerar solicitudes, títulos, id y versiones de (GET) |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs y allOf resueltos, tiene títulos y descripciones |
 | `application/vnd.adobe.xed+json; version={major version}` | Raw con $ref y allOf, tiene títulos y descripciones |
 | `application/vnd.adobe.xed-notext+json; version={major version}` | Sin procesar con $ref y allOf, sin títulos ni descripciones |
@@ -217,7 +217,7 @@ Junto con esta tabla, la Guía para desarrolladores de [!DNL Schema Registry] co
 
 ### Propiedad &quot;schema&quot; del conjunto de datos (OBSOLETO: EOL 2019-05-30)
 
-Los conjuntos de datos pueden contener una propiedad &quot;schema&quot; que ya no se utiliza y que permanece disponible temporalmente para la compatibilidad con versiones anteriores. Por ejemplo, una solicitud de listado (GET) similar a la realizada anteriormente, donde &quot;schema&quot; se sustituyó por &quot;schemaRef&quot; en el parámetro query `properties`, podría devolver lo siguiente:
+Los conjuntos de datos pueden contener una propiedad &quot;schema&quot; que ya no se utiliza y que permanece disponible temporalmente para la compatibilidad con versiones anteriores. Por ejemplo, una solicitud de listado (GET) similar a la realizada anteriormente, donde &quot;schema&quot; se sustituyó por &quot;schemaRef&quot; en el parámetro de consulta `properties`, podría devolver lo siguiente:
 
 ```json
 {
@@ -392,7 +392,7 @@ La respuesta incluye el ID del archivo del conjunto de datos como propiedad de n
 
 ### Buscar detalles del archivo
 
-Los identificadores de archivo del conjunto de datos devueltos en la respuesta anterior se pueden usar en una solicitud de GET para obtener más detalles del archivo mediante la API [!DNL Data Access].
+Los identificadores de archivo del conjunto de datos devueltos en la respuesta anterior se pueden usar en una petición GET para obtener más detalles del archivo a través de la API [!DNL Data Access].
 
 La [descripción general del acceso a datos](../data-access/home.md) contiene detalles sobre cómo usar la API [!DNL Data Access].
 
@@ -674,7 +674,7 @@ Se pueden programar nuevas tareas si el valor del &quot;estado&quot; del lote an
 
 ### Obtener el último estado del lote por identificador
 
-Se puede recuperar un estado de lote individual a través de [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) emitiendo una solicitud de GET usando `{BATCH_ID}`. El `{BATCH_ID}` utilizado sería el mismo que el ID devuelto cuando se creó el lote.
+Se puede recuperar un estado de lote individual a través de [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) mediante la emisión de una petición GET usando `{BATCH_ID}`. El `{BATCH_ID}` utilizado sería el mismo que el ID devuelto cuando se creó el lote.
 
 **Solicitud**
 
@@ -759,7 +759,7 @@ Cuando se utilizan perfiles de instantánea, la herramienta ETL tendrá que eleg
 
 La reproducción por lotes y el reprocesamiento de datos pueden ser necesarios en casos en los que un cliente descubra que, durante los últimos &quot;n&quot; días, los datos que se están procesando ETL no se han producido como se esperaba o que los datos de origen en sí mismos pueden no haber sido correctos.
 
-Para ello, los administradores de datos del cliente utilizarán la interfaz de usuario de [!DNL Platform] para quitar los lotes que contienen datos dañados. A continuación, es probable que se tenga que volver a ejecutar el ETL, rellenando así con los datos correctos. Si la fuente en sí tenía datos dañados, el ingeniero/administrador de datos deberá corregir los lotes de origen y volver a ingerir los datos (ya sea en Adobe Experience Platform o a través de conectores ETL).
+Para ello, los administradores de datos del cliente utilizarán la interfaz de usuario de [!DNL Experience Platform] para quitar los lotes que contienen datos dañados. A continuación, es probable que se tenga que volver a ejecutar el ETL, rellenando así con los datos correctos. Si la fuente en sí tenía datos dañados, el ingeniero/administrador de datos deberá corregir los lotes de origen y volver a ingerir los datos (ya sea en Adobe Experience Platform o a través de conectores ETL).
 
 En función del tipo de datos que se genere, será la elección del ingeniero de datos eliminar un solo lote o todos los lotes de determinados conjuntos de datos. Los datos se eliminarán o archivarán según las directrices de [!DNL Experience Platform].
 
@@ -781,7 +781,7 @@ Para los lotes de origen, volverá a depender de las preferencias del cliente y 
 
 El aplazamiento es un proceso en el que los datos de entrada aún no están lo suficientemente completos para enviarse a procesos descendentes, pero que pueden utilizarse en el futuro. Los clientes determinarán su tolerancia individual con la limitación de datos para la confrontación futura en comparación con el coste de procesamiento para informar su decisión de dejar de lado los datos y volver a procesarlos en la siguiente ejecución de transformación, con la esperanza de que se puedan enriquecer, reconciliar o vincular en algún momento futuro dentro de la ventana de retención. Este ciclo está en curso hasta que la fila se procese lo suficiente o hasta que se considere demasiado antigua para seguir invirtiendo en. Cada iteración generará datos diferidos, que son un superconjunto de todos los datos diferidos de iteraciones anteriores.
 
-Adobe Experience Platform no identifica datos diferidos actualmente, por lo que las implementaciones de cliente deben basarse en las configuraciones manuales de ETL y Conjunto de datos para crear otro conjunto de datos en [!DNL Platform] que refleje el conjunto de datos de origen que se puede utilizar para mantener datos diferidos. En este caso, los datos diferidos serán similares a los datos de instantánea. En cada ejecución de la transformación de ETL, los datos de origen se unen con los datos diferidos y se envían para su procesamiento.
+Adobe Experience Platform no identifica datos diferidos actualmente, por lo que las implementaciones de cliente deben basarse en las configuraciones manuales de ETL y Conjunto de datos para crear otro conjunto de datos en [!DNL Experience Platform] que refleje el conjunto de datos de origen que se puede utilizar para mantener datos diferidos. En este caso, los datos diferidos serán similares a los datos de instantánea. En cada ejecución de la transformación de ETL, los datos de origen se unen con los datos diferidos y se envían para su procesamiento.
 
 ## Changelog
 

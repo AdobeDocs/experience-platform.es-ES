@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2023'
 description: Las notas de la versión de marzo de 2023 de Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 99%
+source-wordcount: '2081'
+ht-degree: 97%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| Nuevo flujo de trabajo de inicio rápido para la API de Conversiones de Meta (Beta) | Acceda a los nuevos flujos de trabajo de inicio rápido en “Introducción” desde la pantalla de inicio de la recopilación de datos. El [Flujo de trabajo de inicio rápido para la API de Conversiones de Meta](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) permite a los clientes recopilar y reenviar rápidamente datos de evento del lado del servidor a Meta para las conversiones de anuncios en solo unos sencillos pasos. |
+| Nuevo flujo de trabajo de inicio rápido para la API de Conversiones de Meta (Beta) | Acceda a los nuevos flujos de trabajo de inicio rápido en “Introducción” desde la pantalla de inicio de la recopilación de datos. El [Flujo de trabajo de inicio rápido para la API de Conversiones de Meta](https://experienceleague.adobe.com/es/docs/experience-platform/tags/extensions/server/meta/overview#quick-start) permite a los clientes recopilar y reenviar rápidamente datos de evento del lado del servidor a Meta para las conversiones de anuncios en solo unos sencillos pasos. |
 | Nuevo flujo de trabajo de inicio rápido para el SDK móvil (Beta) | Acceda a los nuevos flujos de trabajo de inicio rápido en “Introducción” desde la pantalla de inicio de la recopilación de datos. El [flujo de trabajo de inicio rápido para el SDK móvil](https://developer.adobe.com/client-sdks/documentation/) le permite implementar rápidamente el SDK móvil y validar eventos móviles básicos en solo unos sencillos pasos. |
 | Extensión de reenvío de eventos de [!DNL Braze] | La extensión de reenvío de eventos [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=es) permite aprovechar los datos capturados en la red perimetral de Adobe Experience Platform y enviarlos a [!DNL Braze] en forma de eventos del lado del servidor que utilizan las API de seguimiento de usuarios de [!DNL Braze]. |
 | Extensión de reenvío de eventos de [!DNL Epsilon] | La extensión [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=es) le permite aprovechar el reenvío de eventos para capturar información de eventos en la red perimetral de Adobe Experience Platform y enviarla a [!DNL Epsilon] usando la API de evento de [!DNL Epsilon]. |
@@ -147,7 +147,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Platform, lea la [Información general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, lea la [descripción general del sistema XDM](../../xdm/home.md).
 
 ## Servicio de consultas {#query-service}
 
@@ -193,7 +193,7 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [I
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

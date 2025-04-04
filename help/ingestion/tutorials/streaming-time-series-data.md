@@ -5,9 +5,9 @@ title: Transmitir datos de series temporales mediante las API de ingesta de tran
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1214'
 ht-degree: 2%
 
 ---
@@ -20,15 +20,15 @@ Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisió
 
 Este tutorial requiere un conocimiento práctico de varios servicios de Adobe Experience Platform. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado en tiempo real en función de los datos agregados de varios orígenes.
 - [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md): Una guía completa que cubre cada uno de los extremos disponibles de la API [!DNL Schema Registry] y cómo realizar llamadas a ellos. Esto incluye conocer su `{TENANT_ID}`, que aparece en las llamadas a través de este tutorial, así como saber cómo crear esquemas, que se utiliza en la creación de un conjunto de datos para la ingesta.
 
 Además, este tutorial requiere que ya haya creado una conexión de flujo continuo. Para obtener más información sobre cómo crear una conexión de flujo continuo, lea el [tutorial Crear una conexión de flujo continuo](./create-streaming-connection.md).
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../landing/api-guide.md).
 
 ## Componga un esquema basado en la clase XDM ExperienceEvent.
 
@@ -275,7 +275,7 @@ Para obtener más información sobre cómo crear una conexión de flujo continuo
 
 ## Ingesta de datos de series temporales en la conexión de flujo continuo
 
-Con el conjunto de datos, la conexión de flujo continuo y el flujo de datos creados, puede introducir registros JSON con formato XDM para introducir datos de series temporales dentro de [!DNL Platform].
+Con el conjunto de datos, la conexión de flujo continuo y el flujo de datos creados, puede introducir registros JSON con formato XDM para introducir datos de series temporales dentro de [!DNL Experience Platform].
 
 **Formato de API**
 
@@ -292,7 +292,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 La ingesta de datos de series temporales en una conexión de flujo continuo se puede realizar con o sin el nombre de origen.
 
-La solicitud de ejemplo siguiente ingiere datos de series temporales con un nombre de origen que falta en Platform. Si a los datos les falta el nombre de origen, agregarán el ID de origen de la definición de conexión de flujo continuo.
+La solicitud de ejemplo siguiente ingiere datos de series temporales a los que les falta un nombre de origen en Experience Platform. Si a los datos les falta el nombre de origen, agregarán el ID de origen de la definición de conexión de flujo continuo.
 
 Tanto `xdmEntity._id` como `xdmEntity.timestamp` son campos obligatorios para los datos de series temporales. El atributo `xdmEntity._id` representa un identificador único para el registro en sí, **no** un identificador único de la persona o dispositivo de cuyo registro se trate.
 
@@ -401,13 +401,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profil
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | El `inletId` de la conexión de flujo continuo creada anteriormente. |
-| `xactionId` | Identificador único generado del lado del servidor para el registro que acaba de enviar. Este ID ayuda al Adobe a rastrear el ciclo de vida de este registro a través de varios sistemas y con la depuración. |
+| `xactionId` | Identificador único generado del lado del servidor para el registro que acaba de enviar. Este ID ayuda a Adobe a rastrear el ciclo vital de este registro a través de varios sistemas y con la depuración. |
 | `receivedTimeMs`: marca de tiempo (epoch en milisegundos) que muestra a qué hora se recibió la solicitud. |
 | `syncValidation.status` | Dado que se agregó el parámetro de consulta `syncValidation=true`, este valor aparecerá. Si la validación se realizó correctamente, el estado será `pass`. |
 
 ## Recuperar los datos de series temporales recién introducidos
 
-Para validar los registros ingeridos anteriormente, puede utilizar [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede hacer usando una solicitud de GET al extremo `/access/entities` y usando parámetros de consulta opcionales. Se pueden utilizar varios parámetros, separados por el símbolo &amp;.&quot;
+Para validar los registros ingeridos anteriormente, puede utilizar [[!DNL Profile Access API]](../../profile/api/entities.md) para recuperar los datos de la serie temporal. Esto se puede hacer usando una petición GET al extremo `/access/entities` y usando parámetros de consulta opcionales. Se pueden utilizar varios parámetros, separados por el símbolo &amp;.&quot;
 
 >[!NOTE]
 >
@@ -509,6 +509,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de las entidades
 
 ## Pasos siguientes
 
-Al leer este documento, ahora comprende cómo ingerir datos de registro en [!DNL Platform] mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede empezar a monitorizar los datos ingeridos a través de la interfaz de usuario de [!DNL Platform]. Para obtener más información, lea la guía [supervisión de la ingesta de datos](../quality/monitor-data-ingestion.md).
+Al leer este documento, ahora comprende cómo ingerir datos de registro en [!DNL Experience Platform] mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede empezar a monitorizar los datos ingeridos a través de la interfaz de usuario de [!DNL Experience Platform]. Para obtener más información, lea la guía [supervisión de la ingesta de datos](../quality/monitor-data-ingestion.md).
 
 Para obtener más información sobre la ingesta de transmisión en general, lea [descripción general de la ingesta de transmisión](../streaming-ingestion/overview.md).

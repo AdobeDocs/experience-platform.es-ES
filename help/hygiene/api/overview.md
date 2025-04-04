@@ -3,9 +3,9 @@ title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '446'
 ht-degree: 6%
 
 ---
@@ -57,4 +57,4 @@ Su organización se limita a una cuota de trabajo mensual predeterminada para ca
 
 ## Pasos siguientes
 
-En esta guía se explica cómo administrar las solicitudes del ciclo vital de datos mediante llamadas a la API. Para obtener información sobre cómo realizar estas acciones en la interfaz de usuario de Platform, consulte la [guía de la interfaz de usuario del ciclo vital de datos](../ui/overview.md).
+En esta guía se explica cómo administrar las solicitudes del ciclo vital de datos mediante llamadas a la API. Para obtener información sobre cómo realizar estas acciones en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario del ciclo vital de datos](../ui/overview.md).

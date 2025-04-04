@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Guía de resolución de problemas del sistema XDM
 description: Encuentre respuestas a las preguntas frecuentes acerca del Modelo de datos de experiencia (XDM), incluidos pasos para resolver errores comunes de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2348'
 ht-degree: 0%
 
 ---
 
 # Guía de solución de problemas del sistema XDM
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre [!DNL Experience Data Model] (XDM) y el sistema XDM en Adobe Experience Platform, incluida una guía de solución de problemas para errores comunes. Si tiene preguntas o necesita solución de problemas en relación con otros servicios de Platform, consulte la [guía de solución de problemas para Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre [!DNL Experience Data Model] (XDM) y el sistema XDM en Adobe Experience Platform, incluida una guía de solución de problemas para errores comunes. Si tiene alguna pregunta o solución de problemas relacionada con otros servicios de Experience Platform, consulte la [Guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** es una especificación de código abierto que define esquemas estandarizados para la administración de experiencias del cliente. La metodología en la que se ha creado [!DNL Experience Platform], **Sistema XDM**, pone en funcionamiento [!DNL Experience Data Model] esquemas para que los usen los servicios de [!DNL Platform]. **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful para acceder a **[!DNL Schema Library]** en [!DNL Experience Platform]. Consulte la [documentación de XDM](home.md) para obtener más información.
+**[!DNL Experience Data Model](XDM)** es una especificación de código abierto que define esquemas estandarizados para la administración de experiencias del cliente. La metodología en la que se ha creado [!DNL Experience Platform], **Sistema XDM**, pone en funcionamiento [!DNL Experience Data Model] esquemas para que los usen los servicios de [!DNL Experience Platform]. **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful para acceder a **[!DNL Schema Library]** en [!DNL Experience Platform]. Consulte la [documentación de XDM](home.md) para obtener más información.
 
 ## Preguntas frecuentes
 
@@ -100,7 +100,7 @@ Los campos se pueden marcar como identidades mediante la API o la interfaz de us
 
 En la API, las identidades se establecen creando descriptores de identidad. Los descriptores de identidad indican que una propiedad particular de un esquema es un identificador único.
 
-Los descriptores de identidad se crean mediante una solicitud de POST al extremo /descriptors. Si se ejecuta correctamente, recibirá un estado HTTP 201 (Creado) y un objeto de respuesta que contiene los detalles del nuevo descriptor.
+Los descriptores de identidad se crean mediante una petición POST al extremo /descriptors. Si se ejecuta correctamente, recibirá un estado HTTP 201 (Creado) y un objeto de respuesta que contiene los detalles del nuevo descriptor.
 
 Para obtener más información sobre la creación de descriptores de identidad en la API, consulte el documento en la sección [descriptores](api/descriptors.md) en la guía para desarrolladores de [!DNL Schema Registry].
 
@@ -124,7 +124,7 @@ Los esquemas están habilitados para su uso en [[!DNL Real-Time Customer Profile
 
 ### Habilitando un esquema existente para [!DNL Profile] mediante la API
 
-Realice una solicitud del PATCH para actualizar el esquema y agregar el atributo `meta:immutableTags` como una matriz que contenga el valor &quot;union&quot;. Si la actualización se realiza correctamente, la respuesta mostrará el esquema actualizado que ahora contiene la etiqueta de unión.
+Realice una petición PATCH para actualizar el esquema y agregar el atributo `meta:immutableTags` como una matriz que contenga el valor &quot;union&quot;. Si la actualización se realiza correctamente, la respuesta mostrará el esquema actualizado que ahora contiene la etiqueta de unión.
 
 Para obtener más información sobre cómo usar la API para habilitar un esquema para utilizarlo en [!DNL Real-Time Customer Profile], consulte el documento [union](./api/unions.md) de la guía para desarrolladores de [!DNL Schema Registry].
 

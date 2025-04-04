@@ -3,7 +3,7 @@ keywords: plataforma;destinos;espacio de trabajo de destinos;espacio de trabajo;
 title: Espacio de trabajo Destinos
 description: El espacio de trabajo Destinos consta de cinco secciones, Información general, Catálogo, Examinar, Cuentas y Vista de sistema. Se describen en las secciones siguientes.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 0%
@@ -30,13 +30,13 @@ La pestaña **[!UICONTROL Información general]** muestra el panel [!UICONTROL D
 
 ## [!UICONTROL Catálogo] {#catalog}
 
-La ficha **[!UICONTROL Catálogo]** muestra una lista de todos los destinos disponibles en [!DNL Platform] a los que puede enviar datos.
+La ficha **[!UICONTROL Catálogo]** muestra una lista de todos los destinos disponibles en [!DNL Experience Platform] a los que puede enviar datos.
 
-La interfaz de usuario [!DNL Platform] proporciona varias opciones de búsqueda y filtrado en la página del catálogo de destinos:
+La interfaz de usuario [!DNL Experience Platform] proporciona varias opciones de búsqueda y filtrado en la página del catálogo de destinos:
 
 * Utilice la funcionalidad de búsqueda de la página para localizar un destino específico.
 * Filtrar destinos utilizando el control [!UICONTROL Categories].
-* Alternar entre [!UICONTROL Todos los destinos] y [!UICONTROL Mis destinos]. Al seleccionar **[!UICONTROL Todos los destinos]**, se muestran todos los destinos disponibles [!DNL Platform]. Al seleccionar **[!UICONTROL Mis destinos]**, solo podrá ver los destinos con los que estableció una conexión.
+* Alternar entre [!UICONTROL Todos los destinos] y [!UICONTROL Mis destinos]. Al seleccionar **[!UICONTROL Todos los destinos]**, se muestran todos los destinos disponibles [!DNL Experience Platform]. Al seleccionar **[!UICONTROL Mis destinos]**, solo podrá ver los destinos con los que estableció una conexión.
 * Seleccione para ver los tipos de **[!UICONTROL Conexiones]** y/o **[!UICONTROL Extensiones]**. Para comprender la diferencia entre las dos categorías, lea [Tipos de destino y Categorías](../destination-types.md).
 
 ![Catálogo de destinos que muestra algunos destinos de almacenamiento en la nube y publicidad.](../assets/ui/workspace/catalog.png)

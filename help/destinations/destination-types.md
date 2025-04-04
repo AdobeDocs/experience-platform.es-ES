@@ -3,9 +3,9 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -96,7 +96,7 @@ Obtenga más información sobre cómo [exportar conjuntos de datos](/help/destin
 
 ## Extensiones {#extensions}
 
-Platform aprovecha la potencia y flexibilidad de la administración de etiquetas, lo que le permite configurar las extensiones de etiquetas en la interfaz de usuario.
+Experience Platform aprovecha la potencia y flexibilidad de la administración de etiquetas, lo que le permite configurar las extensiones de etiquetas en la interfaz de usuario.
 
 >[!TIP]
 >

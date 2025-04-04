@@ -1,10 +1,11 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2024'
 description: Las notas de la versión de septiembre de 2024 de Adobe Experience Platform.
-source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
+exl-id: e5b40712-2a54-4c6f-a4a1-2f078305da59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2199'
-ht-degree: 100%
+source-wordcount: '2202'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +27,7 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 
 ## Alertas {#alerts}
 
-Experience Platform permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a diferentes reglas de alerta a través de la pestaña [!UICONTROL Alertas] de la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia IU o a través de notificaciones por correo electrónico.
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a distintas reglas de alerta a través de la ficha [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
 
 **Funciones nuevas o actualizadas**
 
@@ -49,7 +50,7 @@ Experience Platform proporciona varios paneles a través de los cuales puede ver
 
 | Función | Descripción |
 | ------- | ----------- |
-| Tabla de complementos de uso de licencias | Obtenga visibilidad granular sobre el uso de licencias y administre los recursos de la plataforma con tablas dedicadas para productos principales y complementos. Lleve el seguimiento y analice las métricas clave para cada producto principal con vistas de detalles por categoría en el nivel de zona protegida. Las métricas de complementos se integran perfectamente con las métricas de productos principales y ofrecen una vista completa del uso. La visibilidad mejorada le ayuda a optimizar la administración de licencias y a alinear los recursos con las necesidades de la organización. Consulte la [[!UICONTROL Guía de paneles para uso de licencias]](../../dashboards/guides/license-usage.md#overview-tab) para obtener más detalles. |
+| Tabla de complementos de uso de licencias | Obtenga visibilidad granular sobre el uso de licencias y administre sus recursos de Experience Platform con tablas dedicadas para productos principales y complementos. Lleve el seguimiento y analice las métricas clave para cada producto principal con vistas de detalles por categoría en el nivel de zona protegida. Las métricas de complementos se integran perfectamente con las métricas de productos principales y ofrecen una vista completa del uso. La visibilidad mejorada le ayuda a optimizar la administración de licencias y a alinear los recursos con las necesidades de la organización. Consulte la [[!UICONTROL Guía de paneles para uso de licencias]](../../dashboards/guides/license-usage.md#overview-tab) para obtener más detalles. |
 | Modo de consulta profesional: actualizaciones del filtro global | Mejore el análisis con el nuevo filtro de fechas del modo de consulta profesional. Refine la información con parámetros de fecha dinámicos en las consultas SQL y filtre los datos por periodos de tiempo específicos. Elija intervalos de fechas preestablecidos o personalizados con una interfaz de usuario intuitiva, para que los paneles sean relevantes para todos los usuarios. Simplifique los flujos de trabajo, mantenga la precisión y tome decisiones oportunas. Lea la [guía sobre la creación de filtros de fecha](../../dashboards/sql-insights-query-pro-mode/filters/global-filter.md) para obtener más información. |
 | Modos de consulta profesional: obtención de detalles | Desbloquee la información más detallada con la función de obtención de detalles del modo de consulta profesional y navegue sin problemas desde gráficos de alto nivel a paneles detallados. Utilice esta función para pasar sin esfuerzo de resúmenes a análisis en profundidad, y explore tendencias, comportamientos de clientes y KPI. Los traspasos de filtro automáticos y la obtención de detalles de varios niveles mantienen la coherencia de los datos, lo que garantiza una exploración sin problemas. Simplifique los flujos de trabajo, mantenga el contexto y acelere la toma de decisiones. Lea la [guía paso a paso sobre la creación de obtención de detalles](../../dashboards/sql-insights-query-pro-mode/drill-through.md) para obtener más información. |
 | Modos de consulta profesional: atributos de tabla avanzados | Utilice los atributos de tabla avanzados del modo de consulta profesional para optimizar la visualización de datos, mejorar la eficacia del flujo de trabajo y mejorar la claridad de los datos. Añada ordenación automática, cambio de tamaño y paginación a las tablas directamente desde los paneles personalizados. Ordene columnas para priorizar los datos clave, cambiar el tamaño para obtener una legibilidad óptima y navegar por conjuntos de datos grandes sin problemas sin modificar las consultas SQL. Lea la guía “[Ver más](../../dashboards/sql-insights-query-pro-mode/view-more.md)” para obtener información sobre cómo integrar estas funciones y mejorar la información de sus datos. |

@@ -2,7 +2,7 @@
 title: Asignación de un archivo CSV a un esquema XDM
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: b80ab18f-9f4d-4044-b11d-238e9a45710f
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Asignación de un archivo CSV a un esquema XDM
 
-Para ingerir datos CSV en [!DNL Adobe Experience Platform], los datos deben asignarse a un esquema [!DNL Experience Data Model] (XDM). Los siguientes tutoriales explican cómo asignar archivos CSV a esquemas XDM mediante la interfaz de usuario [!DNL Platform]:
+Para ingerir datos CSV en [!DNL Adobe Experience Platform], los datos deben asignarse a un esquema [!DNL Experience Data Model] (XDM). Los siguientes tutoriales explican cómo asignar archivos CSV a esquemas XDM mediante la interfaz de usuario [!DNL Experience Platform]:
 
 * [Asignar un archivo CSV a un esquema XDM existente](./existing-schema.md)
 * [Asignar un archivo CSV a un nuevo esquema XDM mediante recomendaciones generadas por IA](./recommendations.md)

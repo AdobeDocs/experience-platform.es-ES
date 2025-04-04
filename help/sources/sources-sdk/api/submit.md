@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;fuentes sdk;sdk;SDK
 title: Envíe su Source
-description: En el siguiente documento se proporcionan los pasos para probar y comprobar una nueva fuente mediante la API de Flow Service e integrar una nueva fuente mediante fuentes de autoservicio (SDK por lotes).
+description: El siguiente documento proporciona pasos sobre cómo probar y comprobar una nueva fuente mediante la API de Flow Service e integrar una nueva fuente mediante fuentes de autoservicio (SDK por lotes).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
 
 # Enviar el origen
 
-El paso final para integrar su nueva fuente en Adobe Experience Platform mediante fuentes de autoservicio (SDK por lotes) es probar la fuente para la verificación. Una vez que lo haya conseguido, puede enviar su nueva fuente poniéndose en contacto con su representante de Adobe.
+El paso final para integrar su nueva fuente en Adobe Experience Platform mediante fuentes de autoservicio (SDK por lotes) es probar la fuente para la verificación. Una vez realizado el proceso correctamente, puede enviar su nuevo origen poniéndose en contacto con su representante de Adobe.
 
 El siguiente documento proporciona pasos sobre cómo probar y depurar el origen mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introducción
 
-* Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
-* Para obtener información sobre cómo generar las credenciales de las API de Platform, consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md).
-* Para obtener información sobre cómo configurar [!DNL Postman] para las API de Platform, consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../landing/postman.md).
+* Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
+* Para obtener información sobre cómo generar tus credenciales para las API de Experience Platform, consulta el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md).
+* Para obtener información sobre cómo configurar [!DNL Postman] para las API de Experience Platform, consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../landing/postman.md).
 * Para facilitar el proceso de prueba y depuración, descargue la colección de verificación de [fuentes de autoservicio y el entorno aquí](../assets/sdk-verification.zip) y siga los pasos descritos a continuación.
 
 ## Prueba del origen
@@ -62,7 +62,7 @@ Una vez proporcionados los parámetros de autenticación y especificación de fu
 | `x-api-key` | Identificador único utilizado para autenticar llamadas a las API de Experience Platform. Consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md) para obtener información sobre cómo recuperar su `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Una entidad corporativa que puede poseer o licenciar productos y servicios y permitir el acceso a sus miembros. Consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../landing/postman.md) para obtener instrucciones sobre cómo recuperar la información de `x-gw-ims-org-id`. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `authorizationToken` | El token de autorización necesario para completar las llamadas a las API de Experience Platform. Consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md) para obtener información sobre cómo recuperar su `authorizationToken`. | `Bearer authorizationToken` |
-| `schemaId` | Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `schemaId` | Para que los datos de origen se utilicen en Experience Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | La versión única que se corresponde con el esquema. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | `meta:altId` que se devuelve junto con `schemaId` al crear un nuevo esquema. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -82,10 +82,10 @@ Aparecerá la interfaz [!DNL Runner], lo que le permitirá configurar el orden d
 
 >[!NOTE]
 >
->Puede deshabilitar **Eliminar flujo** de la lista de comprobación del orden de ejecución si prefiere usar el panel de supervisión de orígenes en la interfaz de usuario de Platform. Sin embargo, una vez que haya terminado con la prueba, debe asegurarse de que los flujos de prueba se eliminen.
+>Puede deshabilitar **Eliminar flujo** de la lista de comprobación del orden de ejecución si prefiere usar el panel de supervisión de orígenes en la interfaz de usuario de Experience Platform. Sin embargo, una vez que haya terminado con la prueba, debe asegurarse de que los flujos de prueba se eliminen.
 
 ![run-collection](../assets/run-collection.png)
 
 ## Enviar el origen
 
-Una vez que el origen pueda completar todo el flujo de trabajo, puede ponerse en contacto con el representante del Adobe y enviar el origen para que se integre.
+Una vez que el origen haya podido completar todo el flujo de trabajo, puede ponerse en contacto con el representante de Adobe y enviar el origen para que se integre.

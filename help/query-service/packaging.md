@@ -2,9 +2,9 @@
 title: Empaquetado de servicio de consultas
 description: En el siguiente documento se describe el empaquetado de las funciones y los productos disponibles para el servicio de consultas, y se destacan las diferencias entre las consultas ad hoc y por lotes.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -15,19 +15,19 @@ Este documento describe los diferentes tipos de empaquetado y las funciones de e
 
 Adobe Experience Platform Query Service se puede dividir en dos funcionalidades basadas en los patrones de consulta que se pueden ejecutar:
 
-- **Las consultas Ad hoc** son consultas SQL que se usan para explorar conjuntos de datos ingeridos con fines de verificación, validación, experimentación, etc. Estas consultas no escriben datos de nuevo en el lago de datos de Platform.
-- **Las consultas por lotes** son consultas SQL utilizadas para realizar el procesamiento posterior a la ingesta de conjuntos de datos ingeridos. Estas consultas limpian, modelan, manipulan y enriquecen los datos, cuyos resultados se escriben de nuevo en el lago de datos de Platform. Estas consultas se pueden programar, administrar y supervisar como trabajos por lotes.
+- **Las consultas Ad hoc** son consultas SQL que se usan para explorar conjuntos de datos ingeridos con fines de verificación, validación, experimentación, etc. Estas consultas no escriben datos de nuevo en el lago de datos de Experience Platform.
+- **Las consultas por lotes** son consultas SQL utilizadas para realizar el procesamiento posterior a la ingesta de conjuntos de datos ingeridos. Estas consultas limpian, modelan, manipulan y enriquecen los datos, cuyos resultados se escriben en el lago de datos de Experience Platform. Estas consultas se pueden programar, administrar y supervisar como trabajos por lotes.
 
 Las funcionalidades del servicio de consulta están empaquetadas con los siguientes productos y complementos:
 
-- **Aplicaciones basadas en la plataforma** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics y Adobe Journey Optimizer): el acceso al servicio de consultas para ejecutar consultas ad hoc se proporciona desde el principio con cada variación y nivel de las aplicaciones basadas en la plataforma.
+- **Aplicaciones basadas en Experience Platform** (Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics y Adobe Journey Optimizer): el acceso al servicio de consultas para ejecutar consultas ad hoc se proporciona desde el principio con cada variación y nivel de las aplicaciones basadas en Experience Platform.
 - **[!DNL Data Distiller]** (paquete de complementos que se puede comprar con Adobe Real-Time CDP, Customer Journey Analytics y Adobe Journey Optimizer): el acceso al servicio de consultas para ejecutar consultas por lotes se proporciona con [!DNL Data Distiller].
 
 ## Derechos {#entitlements}
 
 En la tabla siguiente se describen los derechos clave del servicio de consulta en función de cómo se empaquetan:
 
-| Derecho de servicio de consulta | Empaquetado con aplicaciones basadas en Platform | Empaquetado con [!DNL Data Distiller] |
+| Derecho de servicio de consulta | Empaquetado con aplicaciones basadas en Experience Platform | Empaquetado con [!DNL Data Distiller] |
 |---|---|---|
 | Patrón de consulta admitido | Solo consultas Ad hoc | Consulta por lotes |
 | Caso de uso admitido | <ul><li>Exploración&#x200B;</li><li>Detección de datos&#x200B;</li><li>Validación de datos</li><li>Experimentación</li></ul> | <ul><li>Limpieza</li><li>Forma</li><li>Manipulación</li><li>Enriquecimiento</li></ul> |
@@ -50,13 +50,13 @@ En la tabla siguiente se describen los derechos clave del servicio de consulta e
 
 ## Control de acceso {#access-control}
 
-El control de acceso para el Experience Platform se administra a través de [Adobe Admin Console](https://adminconsole.adobe.com/), donde los perfiles de producto vinculan a los usuarios con permisos y zonas protegidas. Consulte la [descripción general del control de acceso](../access-control/home.md) para obtener más información.
+El control de acceso para Experience Platform se administra a través de [Adobe Admin Console](https://adminconsole.adobe.com/), donde los perfiles de producto vinculan a los usuarios con permisos y zonas protegidas. Consulte la [descripción general del control de acceso](../access-control/home.md) para obtener más información.
 
 Consulte los documentos [Administrar permisos para un perfil de producto](../access-control/ui/permissions.md) y [Administrar usuarios para un perfil de producto](../access-control/ui/users.md) para obtener instrucciones detalladas sobre cómo solicitar acceso a los permisos del perfil de producto
 
 ### Permisos relevantes del servicio de consultas {#query-service-permissions}
 
-Para usar el servicio de consultas, el permiso **[!DNL Manage Queries]** debe estar habilitado en el Admin Console. Este permiso permite a los usuarios ejecutar consultas ad hoc y por lotes.
+Para usar el servicio de consultas, el permiso **[!DNL Manage Queries]** debe estar habilitado en Admin Console. Este permiso permite a los usuarios ejecutar consultas ad hoc y por lotes.
 
 En la tabla siguiente se describen los efectos del permiso [!DNL Manage Queries]:
 
@@ -69,7 +69,7 @@ En la tabla siguiente se describen los efectos del permiso [!DNL Manage Queries]
 
 ### Permisos relevantes de SQL Insights {#sql-insights-permissions}
 
-Para crear Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md) en los paneles, los siguientes permisos **deben** estar habilitados en el Admin Console.
+Para crear Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md) en los paneles, los siguientes permisos **deben** estar habilitados en Admin Console.
 
 | Permiso | Función |
 |---|---|
@@ -80,7 +80,7 @@ Para crear Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.
 
 ## Compatibilidad con zona protegida {#sandbox-support}
 
-Las zonas protegidas son particiones virtuales en una sola instancia de Experience Platform. Cada instancia de Platform admite varios entornos limitados de producción y sin producción, cada uno con su propia biblioteca de recursos de Platform. Los entornos limitados que no son de producción le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a los entornos limitados de producción. Para obtener más información sobre las zonas protegidas, consulte la [descripción general de las zonas protegidas](../sandboxes/home.md). Todos los derechos del servicio de consulta se comparten en todas las zonas protegidas.
+Las zonas protegidas son particiones virtuales en una sola instancia de Experience Platform. Cada instancia de Experience Platform admite varios entornos limitados de producción y sin producción, cada uno con su propia biblioteca de recursos de Experience Platform. Los entornos limitados que no son de producción le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a los entornos limitados de producción. Para obtener más información sobre las zonas protegidas, consulte la [descripción general de las zonas protegidas](../sandboxes/home.md). Todos los derechos del servicio de consulta se comparten en todas las zonas protegidas.
 
 ## Pasos siguientes
 

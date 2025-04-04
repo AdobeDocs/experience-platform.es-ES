@@ -2,9 +2,9 @@
 description: Esta página explica cómo utilizar el extremo de la API /testing/destinationInstance para ver los detalles completos de los resultados de las pruebas. Este extremo de API devuelve el mismo resultado que obtendría al utilizar la API de Flow Service para monitorizar flujos de datos.
 title: Ver resultados detallados de la activación
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '547'
 ht-degree: 2%
 
 ---
@@ -31,16 +31,16 @@ Antes de continuar, revisa la [guía de introducción](../../getting-started.md)
 
 Antes de usar el extremo `/testing/destinationInstance`, asegúrese de cumplir las siguientes condiciones:
 
-* Ya tiene un destino basado en archivos creado a través del Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Ya tiene un destino basado en archivos creado mediante Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
 * Ha creado al menos un flujo de activación para su destino en la interfaz de usuario de Experience Platform.
-* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
+* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada de API desde la dirección URL cuando busque una conexión con su destino en la interfaz de usuario de Experience Platform.
 
   ![Imagen de interfaz de usuario que muestra cómo obtener el identificador de instancia de destino de la dirección URL.](../../assets/testing-api/get-destination-instance-id.png)
 * Anteriormente [probó la configuración de destino](file-based-destination-testing-api.md) y recibió una respuesta de API válida, que incluye una propiedad de `results`. Utilizará este valor `results` para probar aún más su destino.
 
 ## Ver resultados detallados de las pruebas de destino {#test-activation-results}
 
-Una vez que haya [validado su configuración de destino](file-based-destination-testing-api.md), podrá ver los resultados detallados de la activación realizando una solicitud de GET al extremo `authoring/testing/destinationInstance/` y proporcionando el identificador de la instancia de destino del destino que está probando, así como los identificadores de ejecución de flujo de las audiencias activadas.
+Una vez que haya [validado su configuración de destino](file-based-destination-testing-api.md), puede ver los resultados detallados de la activación realizando una petición GET al extremo `authoring/testing/destinationInstance/` y proporcionando el ID de la instancia de destino del destino que está probando, así como los ID de ejecución de flujo de las audiencias activadas.
 
 Puede encontrar la dirección URL de API completa que necesita usar en la propiedad `results` devuelta en la [respuesta de la llamada de prueba de destino](file-based-destination-testing-api.md).
 
@@ -213,10 +213,10 @@ La respuesta contiene los detalles completos del flujo de activación. Puede obt
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes
 
 Después de leer este documento, ahora sabe cómo probar la configuración de destino basada en archivos y ver los detalles completos de los resultados de activación.
 
-Si estás creando un destino público, ahora puedes [enviar tu configuración de destino](../../guides/submit-destination.md) al Adobe para que la revisen.
+Si estás creando un destino público, ahora puedes [enviar tu configuración de destino](../../guides/submit-destination.md) a Adobe para que la revisen.

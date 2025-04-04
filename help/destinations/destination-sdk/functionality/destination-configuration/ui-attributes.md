@@ -2,26 +2,26 @@
 description: Obtenga información sobre cómo configurar los atributos de la interfaz de usuario, como el vínculo de documentación, la categoría de la tarjeta de destino, el tipo de conexión de destino y la frecuencia, para los destinos creados con Destination SDK.
 title: Atributos de IU
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
 
 # Atributos de IU
 
-Los atributos de la interfaz de usuario definen los elementos visuales que debe mostrar el Adobe para la tarjeta de destino en la interfaz de usuario de Adobe Experience Platform, como un logotipo, un vínculo a la página de documentación, una descripción del destino y su categoría y tipo.
+Los atributos de la interfaz de usuario definen los elementos visuales que Adobe debe mostrar para su tarjeta de destino en la interfaz de usuario de Adobe Experience Platform, como un logotipo, un vínculo a la página de documentación, una descripción del destino y su categoría y tipo.
 
 Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la documentación de [opciones de configuración](../configuration-options.md) o consulte las siguientes páginas de información general sobre la configuración de destino:
 
 * [Usar Destination SDK para configurar un destino de flujo continuo](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Usar Destination SDK para configurar un destino basado en archivos](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Al [crear un destino](../../authoring-api/destination-configuration/create-destination-configuration.md) mediante el Destination SDK, la sección `uiAttributes` define las siguientes propiedades visuales de la tarjeta de destino:
+Al [crear un destino](../../authoring-api/destination-configuration/create-destination-configuration.md) a través de Destination SDK, la sección `uiAttributes` define las siguientes propiedades visuales de la tarjeta de destino:
 
 * La dirección URL de su página de documentación de destino en el [catálogo de destino](../../../catalog/overview.md).
-* La categoría en la que se mostrará el destino en la interfaz de usuario de Platform.
+* La categoría en la que se mostrará el destino en la interfaz de usuario de Experience Platform.
 * Frecuencia de exportación de datos para el destino.
 * El tipo de conexión de destino, como Amazon S3, Azure Blob, etc.
 * Dirección URL donde alojó el icono que se mostrará en la tarjeta del catálogo de destinos.
@@ -31,13 +31,13 @@ Puede configurar atributos de interfaz de usuario a través del extremo `/author
 * [Crear una configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Actualizar una configuración de destino](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Este artículo describe todos los atributos de interfaz de usuario admitidos que puede utilizar para el destino y muestra lo que los clientes verán en la interfaz de usuario de Experience Platform.
+Este artículo describe todos los atributos de interfaz de usuario admitidos que puede utilizar para su destino y muestra lo que los clientes verán en la interfaz de usuario de Experience Platform.
 
-![Captura de pantalla de IU que muestra los atributos de IU en la interfaz del Experience Platform](../../assets/functionality/destination-configuration/ui-attributes.png)
+![Captura de pantalla de la IU que muestra los atributos de la IU en la interfaz de Experience Platform](../../assets/functionality/destination-configuration/ui-attributes.png)
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -72,7 +72,7 @@ Los usuarios pueden ver y visitar el vínculo de documentación desde la página
 
 >[!NOTE]
 >
->Este vínculo solo funciona después de que el Adobe active el destino y se publique la documentación.
+>Este vínculo solo funciona después de que Adobe active el destino y se publique la documentación.
 
 ### `category` {#category}
 
@@ -116,7 +116,7 @@ Para agregar un logotipo a tu tarjeta de destino, debes compartir la imagen dese
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este artículo, debería comprender mejor qué atributos de la interfaz de usuario puede configurar para su destino y dónde los verán los usuarios en la interfaz de usuario de Platform.
+Después de leer este artículo, debería comprender mejor qué atributos de la interfaz de usuario puede configurar para su destino y dónde los verán los usuarios en la interfaz de usuario de Experience Platform.
 
 Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 

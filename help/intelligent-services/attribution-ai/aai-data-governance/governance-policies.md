@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;guía del usuario;inteligencia artificial aplicada a la atribución;temas populares;controles de acceso;crear un modelo;
 feature: Attribution AI
-title: Políticas de gobernanza para el Attribution AI
+title: Políticas de gobernanza para la inteligencia artificial aplicada a la atribución
 description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados.
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
 
 # Políticas de gobernanza en Attribution AI
 
-Una vez que revise el flujo de trabajo para crear un modelo y enviar su configuración, [aplicación de políticas](../../../data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de directiva, aparece una ventana emergente que indica que se han infringido una o más directivas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing de Platform cumplan con las políticas de uso de datos.
+Una vez que revise el flujo de trabajo para crear un modelo y enviar su configuración, [aplicación de políticas](../../../data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de directiva, aparece una ventana emergente que indica que se han infringido una o más directivas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing de Experience Platform cumplan con las políticas de uso de datos.
 
 ## Ventana emergente de infracción de directiva
 

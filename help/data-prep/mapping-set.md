@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conjuntos de asignaciones
 description: Aprenda a utilizar conjuntos de asignaciones con la preparación de datos de Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Un conjunto de asignaciones es un conjunto de asignaciones que transforma los da
 Esta descripción general requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 - [Preparación de datos](./home.md): La preparación de datos permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de experiencia (XDM).
-- [Flujos de datos](../dataflows/home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
+- [Flujos de datos](../dataflows/home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): métodos mediante los cuales se pueden enviar datos a [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 

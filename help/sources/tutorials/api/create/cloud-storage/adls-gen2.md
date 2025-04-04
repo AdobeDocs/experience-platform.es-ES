@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Azure Data Lake Storage Gen2;Azure Data Lake Storage;Azure Data Lake Storage;Azure
+keywords: Experience Platform;inicio;temas populares;Azure Data Lake Storage Gen2;Azure Data Lake Storage;Azure Data Lake Storage
 solution: Experience Platform
 title: Crear una conexión base de Azure Data Lake Storage Gen2 mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Azure Data Lake Storage Gen2 mediante la API de Flow Service.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '507'
 ht-degree: 4%
 
 ---
@@ -22,8 +22,8 @@ Este tutorial lo guiará para crear una conexión base para [!DNL Azure Data Lak
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que necesitará conocer para crear correctamente una conexión de origen ADLS Gen2 mediante la API [!DNL Flow Service].
 
@@ -41,15 +41,15 @@ Para que [!DNL Flow Service] se conecte a ADLS Gen2, debe proporcionar valores p
 
 Para obtener más información sobre estos valores, consulte [este documento de ADLS Gen2](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
-Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación ADLS Gen2 como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una petición POST al extremo `/connections` y proporcione sus credenciales de autenticación ADLS Gen2 como parte de los parámetros de solicitud.
 
 **Formato de API**
 

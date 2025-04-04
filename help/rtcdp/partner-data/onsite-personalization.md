@@ -3,10 +3,10 @@ title: Personalice experiencias en el sitio para visitantes desconocidos mediant
 description: Aprenda a utilizar el reconocimiento de visitantes asistido por socios para ofrecer experiencias personalizadas en el sitio a sus visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 89%
+source-wordcount: '2676'
+ht-degree: 88%
 
 ---
 
@@ -42,7 +42,7 @@ Cuando planee utilizar atributos proporcionados por el socio para ofrecer experi
 * ¿Hasta qué punto se siente cómodo al ofrecer personalización en diferentes canales y para diferentes casos de uso basados en conjuntos de datos derivados probabilísticamente, en comparación con atributos confirmados determinísticamente?
 * ¿Cómo debería cambiar la experiencia de un visitante previamente autenticado pero reconocido al autenticarse?
 
-### Funcionalidad de la IU, componentes de Platform y productos de Experience Cloud que utilizará {#ui-functionality-and-elements}
+### Funcionalidad de la interfaz de usuario, componentes de Experience Platform y productos de Experience Cloud que utilizará {#ui-functionality-and-elements}
 
 Para implementar correctamente este caso de uso, debe utilizar varias áreas de Real-time Customer Data Platform y otras soluciones de Experience Cloud. Asegúrese de que dispone de los [permisos de control de acceso basados en atributos](/help/access-control/abac/overview.md) necesarios para todas estas áreas, o pídale al administrador del sistema que le conceda los permisos necesarios.
 
@@ -131,7 +131,7 @@ En primer lugar, utilice el conmutador de aplicaciones en la esquina superior de
 
 La sección **[!UICONTROL Recopilación de datos]** de la interfaz de usuario tiene un aspecto similar al de la siguiente imagen.
 
-![Sección de recopilación de datos de la IU de Platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Sección de recopilación de datos de la interfaz de usuario de Experience Platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Crear secuencia de datos
 
@@ -259,7 +259,7 @@ Ya está listo para crear y activar públicos para su personalización.
 
 #### Creación de audiencias y configuración de la segmentación de Edge
 
-En la interfaz de usuario de Platform, vaya a **[!UICONTROL Cliente]** > **[!UICONTROL Audiencias]** y cree una audiencia para capturar a los visitantes del sitio web.
+En la interfaz de usuario de Experience Platform, vaya a **[!UICONTROL Cliente]** > **[!UICONTROL Audiencias]** y cree una audiencia para capturar a los visitantes del sitio web.
 
 ![Vista de cómo navegar a las audiencias.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

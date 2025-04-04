@@ -5,16 +5,16 @@ title: Crear una conexión de Source de Azure Table Storage en la interfaz de us
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Azure Table Storage mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen [!DNL Azure Table Storage] en la interfaz de usuario
 
-Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen de [!DNL Azure Table Storage] (denominado en adelante &quot;ATS&quot;) mediante la interfaz de usuario [!DNL Platform].
+Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen de [!DNL Azure Table Storage] (denominado en adelante &quot;ATS&quot;) mediante la interfaz de usuario [!DNL Experience Platform].
 
 ## Introducción
 
@@ -29,7 +29,7 @@ Si ya tiene una conexión ATS válida, puede omitir el resto de este documento y
 
 ### Recopilar credenciales necesarias
 
-Para acceder a su cuenta ATS en [!DNL Platform], debe proporcionar los siguientes valores:
+Para acceder a su cuenta ATS en [!DNL Experience Platform], debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ Para obtener más información sobre cómo empezar, consulte [este [!DNL Azure T
 
 ## Conectar su cuenta de [!DNL Azure Table Storage]
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta ATS a [!DNL Platform].
+Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta ATS a [!DNL Experience Platform].
 
 Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de orígenes con los que puede crear una cuenta.
 
@@ -65,4 +65,4 @@ Para conectar una cuenta existente, selecciona la cuenta ATS con la que deseas c
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta ATS. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Platform]](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta ATS. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).

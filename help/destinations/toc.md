@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1282'
 ht-degree: 5%
 
 ---
@@ -94,7 +94,7 @@ ht-degree: 5%
       * [(Beta) Conexión Google Customer Match + DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Conexión de Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extensión gtag de Google](./catalog/advertising/gtag-advertising.md)
-      * [Extensión de etiqueta de LinkedIn Insight](./catalog/advertising/linkedin.md)
+      * [Extensión de etiquetas de Insight de LinkedIn](./catalog/advertising/linkedin.md)
       * [LiveRamp: conexión de incorporación](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp: conexión de distribución](./catalog/advertising/liveramp-distribution.md)
       * [Lote de Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
@@ -316,4 +316,4 @@ ht-degree: 5%
       * [Plantilla de autoservicio de documentación](./destination-sdk/docs-framework/self-service-template.md)
       * [Prácticas recomendadas de creación](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Preguntas frecuentes](./destinations-faq.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
+* [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

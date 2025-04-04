@@ -2,10 +2,10 @@
 title: Versiones
 description: Obtenga información acerca del concepto de las compilaciones y cómo funcionan en Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 97%
+source-wordcount: '791'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Una compilación es el conjunto de archivos que contiene todo el código que se ejecuta en el dispositivo cliente.
 
@@ -56,15 +56,15 @@ Para completar una versión, seleccione una biblioteca y haga clic en la opción
 
 La minificación reduce el consumo de ancho de banda y mejora la velocidad al eliminar los datos que son innecesarios para la ejecución desde un archivo.
 
-Para aumentar el rendimiento, Platform minifica todo, incluso:
+Para aumentar el rendimiento, Experience Platform minifica todo, incluso:
 
 * La biblioteca principal de etiquetas
 * El código de módulo proporcionado por los desarrolladores de extensiones como parte de una extensión
-* El código personalizado proporcionado por los usuarios de Platform 
+* El código personalizado proporcionado por los usuarios de Experience Platform
 
 >[!NOTE]
 >
->Si el código de módulo y el código personalizado ya se han minificado, Platform vuelve a minificarlos. Esta segunda minificación no ofrece beneficios adicionales, pero no causa ningún daño y hace que Platform sea menos complejo y fácil de mantener.
+>Si el código de módulo y el código personalizado ya se han minificado, Experience Platform vuelve a minificarlos. Esta segunda minificación no ofrece beneficios adicionales, pero no causa ningún daño y hace que Experience Platform sea menos complejo y fácil de mantener.
 
 Cualquier código del lado del cliente proporcionado señala a la versión minificada del código. Esto se ve en los nombres de archivo que siguen la convención de nomenclatura estándar para los archivos minificados:
 
@@ -74,7 +74,7 @@ Si desea ver el código no minificado, quite .min del nombre del archivo:
 
 `launch-%environment_id%.js`
 
-Si un desarrollador de extensiones proporciona código minificado con su extensión, Platform no proporciona código no minificado en la compilación no minificada. Del mismo modo, si un usuario de Platform coloca el código minificado en un cuadro de código personalizado, ese código también se minifica en compilaciones no minificadas. Platform no desminifica nada.
+Si un desarrollador de extensiones proporciona código minificado con su extensión, Experience Platform no proporciona código no minificado en la compilación no minificada. Del mismo modo, si un usuario de Experience Platform coloca el código minificado en un cuadro de código personalizado, ese código también se minifica en compilaciones no minificadas. Experience Platform no desminifica nada.
 
 Para obtener más información acerca de la minificación, consulte [este artículo de Stackpath](https://blog.stackpath.com/glossary/minification/).
 

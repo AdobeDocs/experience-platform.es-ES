@@ -1,9 +1,10 @@
 ---
 title: Configuración de AWS KMS para claves administradas por el cliente
 description: Obtenga información sobre cómo configurar el servicio de administración de claves de Amazon Web Service (KMS) para utilizarlo con claves administradas por el cliente en Adobe Experience Platform.
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -12,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Este documento se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Este documento se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 >
 >Las [claves gestionadas por el cliente](../overview.md) (CMK) en AWS son compatibles con Privacy Shield y Security Shield, pero no están disponibles para Healthcare Shield. CMK en Azure es compatible tanto con Privacy Shield como con Security Shield, así como con Healthcare Shield.
 
 Utilice esta guía para proteger los datos con el servicio de administración de claves (KMS) de Amazon Web Service (AWS) mediante la creación, administración y control de claves de cifrado para Adobe Experience Platform. Esta integración simplifica el cumplimiento normativo, optimiza las operaciones mediante la automatización y elimina la necesidad de mantener su propia infraestructura de administración de claves.
 
-Para obtener instrucciones específicas del Customer Journey Analytics, consulte la [documentación de Customer Journey Analytics CMK](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Para obtener instrucciones específicas de Customer Journey Analytics, consulte la [documentación de Customer Journey Analytics CMK](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -36,7 +37,7 @@ Antes de continuar con este documento, debe comprender bien los siguientes conce
    - Especifique qué acciones se permiten o deniegan a los usuarios.
    - Implemente un control de acceso específico asignando permisos mediante directivas de IAM.
 Consulte la [documentación oficial de directivas de IAM para AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) para obtener más información.
-- **Seguridad de datos en Experience Platform**: Descubra cómo Platform garantiza la seguridad de los datos e integra servicios externos como AWS KMS para el cifrado. Platform protege los datos con HTTPS TLS v1.2 para el tránsito, el cifrado del proveedor de la nube en reposo, el almacenamiento aislado y las opciones de autenticación y cifrado personalizables. Consulte [información general sobre administración, privacidad y seguridad](../overview.md) o el documento sobre el [cifrado de datos en Platform](../../encryption.md) para obtener más información sobre cómo se mantienen seguros sus datos.
+- **Seguridad de datos en Experience Platform**: Explore cómo Experience Platform garantiza la seguridad de los datos y se integra con servicios externos como AWS KMS para el cifrado. Experience Platform protege los datos con HTTPS TLS v1.2 para el tránsito, el cifrado del proveedor de la nube en reposo, el almacenamiento aislado y las opciones de autenticación y cifrado personalizables. Consulte [información general sobre administración, privacidad y seguridad](../overview.md) o el documento sobre el [cifrado de datos en Experience Platform](../../encryption.md) para obtener más información sobre cómo se mantienen seguros sus datos.
 - **Consola de administración de AWS**: Un concentrador central donde puede acceder y administrar todos los servicios de AWS desde una aplicación basada en web. Utilice la barra de búsqueda para buscar herramientas rápidamente, comprobar las notificaciones, administrar la cuenta y la facturación, y personalizar la configuración. Consulte la [documentación oficial de AWS management console](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) para obtener más información.
 
 ## Introducción  {#get-started}
@@ -73,7 +74,7 @@ Para comenzar a configurar y administrar la clave de cifrado, inicie sesión en 
 
 >[!IMPORTANT]
 >
->Asegúrese de que el almacenamiento, el acceso y la disponibilidad de las claves de cifrado sean seguros. Usted es responsable de administrar las claves y evitar interrupciones en las operaciones de Platform.
+>Asegúrese de que el almacenamiento, el acceso y la disponibilidad de las claves de cifrado sean seguros. Usted es responsable de administrar las claves y evitar interrupciones en las operaciones de Experience Platform.
 
 En el área de trabajo [!DNL Key Management Service (KMS)], seleccione **[!DNL Create a key]**.
 
@@ -95,7 +96,7 @@ A continuación, seleccione la configuración [!DNL Regionality], que especifica
 
 >[!IMPORTANT]
 >
->AWS aplica restricciones de región para las claves KMS. Esta restricción de región significa que la clave debe estar en la misma región que la cuenta de Adobe. El Adobe solo puede acceder a las claves KMS ubicadas dentro de la región de la cuenta. Asegúrese de que la región que seleccione coincida con la región de la cuenta de un solo inquilino de Adobe.
+>AWS aplica restricciones de región para las claves KMS. Esta restricción de región significa que la clave debe estar en la misma región que la cuenta de Adobe. Adobe solo puede acceder a las claves KMS ubicadas dentro de la región de la cuenta. Asegúrese de que la región seleccionada coincida con la región de la cuenta de un solo inquilino de Adobe.
 
 ![Paso uno del flujo de trabajo Configurar clave con las opciones avanzadas Región de AWS, KMS y Clave de una sola región resaltadas.](../../../images/governance-privacy-security/key-management-service/configure-key-advanced-options.png)
 
@@ -103,9 +104,9 @@ A continuación, seleccione la configuración [!DNL Regionality], que especifica
 
 Aparecerá la segunda fase [!DNL Add labels] del flujo de trabajo. Aquí puede configurar los campos [!DNL Alias] y [!DNL Tags] para que le ayuden a administrar y localizar la clave de cifrado desde la consola KMS de AWS.
 
-Escriba una etiqueta descriptiva para la clave en el campo de entrada **[!DNL Alias]**. El alias actúa como un identificador fácil de usar para localizar rápidamente la clave mediante la barra de búsqueda de la consola de AWS KMS. Para evitar confusiones, elija un nombre significativo que refleje el propósito de la clave, como &quot;Adobe-Plataforma-Clave&quot; o &quot;Cliente-Cifrado-Clave&quot;. También puede incluir una descripción de la clave si el alias de la clave no es suficiente para describir su propósito.
+Escriba una etiqueta descriptiva para la clave en el campo de entrada **[!DNL Alias]**. El alias actúa como un identificador fácil de usar para localizar rápidamente la clave mediante la barra de búsqueda de la consola de AWS KMS. Para evitar confusiones, elija un nombre significativo que refleje el propósito de la clave, como &quot;Adobe-Experience-Platform-Key&quot; o &quot;Customer-Encryption-Key&quot;. También puede incluir una descripción de la clave si el alias de la clave no es suficiente para describir su propósito.
 
-Por último, agregue pares de clave-valor en la sección [!DNL Tags] para asignar metadatos a la clave. Este paso es opcional, pero debe agregar etiquetas para categorizar y filtrar los recursos de AWS para facilitar la administración. Por ejemplo, si su organización utiliza varios recursos relacionados con el Adobe, puede etiquetarlos con &quot;Adobe&quot; o &quot;Experience Platform&quot;. Este paso adicional simplifica la búsqueda y administración de todos los recursos asociados en AWS Management Console. Seleccione **[!DNL Add tag]** para iniciar el proceso.
+Por último, agregue pares de clave-valor en la sección [!DNL Tags] para asignar metadatos a la clave. Este paso es opcional, pero debe agregar etiquetas para categorizar y filtrar los recursos de AWS para facilitar la administración. Por ejemplo, si su organización utiliza varios recursos relacionados con Adobe, puede etiquetarlos con Adobe o Experience Platform. Este paso adicional simplifica la búsqueda y administración de todos los recursos asociados en AWS Management Console. Seleccione **[!DNL Add tag]** para iniciar el proceso.
 
 <!-- I do not have an AWS account with which to document the Add tag process as yet. -->
 

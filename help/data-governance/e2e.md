@@ -2,9 +2,9 @@
 title: Guía completa de administración de datos
 description: Siga el proceso completo para aplicar restricciones de uso de datos para campos y conjuntos de datos en Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1885'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Para controlar qué acciones de marketing se pueden realizar en determinados con
 
 Una vez que haya terminado de configurar las etiquetas, las directivas de gobernanza y las acciones de marketing, puede [probar la aplicación de directivas](#test) para asegurarse de que funciona según lo esperado.
 
-Esta guía muestra el proceso completo de configuración y aplicación de una política de gobernanza de datos en la interfaz de usuario de Platform. Para obtener información más detallada sobre las funciones utilizadas en esta guía, consulte la documentación de información general sobre los siguientes temas:
+Esta guía muestra el proceso completo de configuración y aplicación de una política de gobernanza de datos en la interfaz de usuario de Experience Platform. Para obtener información más detallada sobre las funciones utilizadas en esta guía, consulte la documentación de información general sobre los siguientes temas:
 
 * [Gobernanza de datos de Adobe Experience Platform](./home.md)
 * [Etiquetas de uso de datos](./labels/overview.md)
@@ -28,13 +28,13 @@ Esta guía muestra el proceso completo de configuración y aplicación de una po
 
 >[!NOTE]
 >
->Esta guía se centra en cómo configurar y aplicar directivas sobre cómo se utilizan o activan los datos en Experience Platform. Si está intentando restringir el **acceso** a los datos para determinados usuarios de Platform de su organización, consulte la guía completa sobre el [control de acceso basado en atributos](../access-control/abac/end-to-end-guide.md) en su lugar. El control de acceso basado en atributos también utiliza etiquetas y directivas, pero para un caso de uso diferente al de la gobernanza de datos.
+>Esta guía se centra en cómo configurar y aplicar directivas sobre cómo se utilizan o activan los datos en Experience Platform. Si está intentando restringir el **acceso** a los datos en sí para ciertos usuarios de Experience Platform dentro de su organización, consulte la guía completa sobre [control de acceso basado en atributos](../access-control/abac/end-to-end-guide.md) en su lugar. El control de acceso basado en atributos también utiliza etiquetas y directivas, pero para un caso de uso diferente al de la gobernanza de datos.
 
 ## Aplicar etiquetas {#labels}
 
 >[!IMPORTANT]
 >
->Las etiquetas ya no se pueden aplicar a campos individuales en el nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Sin embargo, aún puede etiquetar un conjunto de datos completo. Cualquier etiqueta aplicada anteriormente a campos de conjuntos de datos individuales seguirá siendo compatible mediante la IU de Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la sección sobre [migración de etiquetas aplicadas anteriormente](#migrate-labels) para obtener instrucciones sobre cómo hacerlo.
+>Las etiquetas ya no se pueden aplicar a campos individuales en el nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Sin embargo, aún puede etiquetar un conjunto de datos completo. Cualquier etiqueta aplicada anteriormente a campos de conjuntos de datos individuales seguirá siendo compatible con la interfaz de usuario de Experience Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la sección sobre [migración de etiquetas aplicadas anteriormente](#migrate-labels) para obtener instrucciones sobre cómo hacerlo.
 
 Puede [aplicar etiquetas a un esquema](#schema-labels) para que todos los conjuntos de datos basados en ese esquema hereden las mismas etiquetas. Esto le permite administrar las etiquetas de control de datos, consentimiento y control de acceso en un solo lugar. Al aplicar restricciones de uso de datos en el nivel de esquema, el efecto se propaga de forma descendente a todos los conjuntos de datos basados en ese esquema. Las etiquetas aplicadas en el nivel de campo de esquema admiten casos de uso de control de datos y se pueden detectar en la pestaña [!UICONTROL Control de datos] del espacio de trabajo de conjuntos de datos en la columna [!UICONTROL Nombre de campo] como etiquetas de solo lectura.
 
@@ -109,7 +109,7 @@ Cuando haya migrado las etiquetas necesarias, asegúrese de que tiene habilitada
 
 Después de aplicar etiquetas a los esquemas o conjuntos de datos, puede crear políticas de gobernanza de datos que restrinjan las acciones de marketing para las que se pueden utilizar determinadas etiquetas.
 
-Seleccione **[!UICONTROL Directivas]** en el panel de navegación izquierdo para ver una lista de las directivas principales definidas por el Adobe, así como las directivas personalizadas creadas anteriormente por su organización.
+Seleccione **[!UICONTROL Directivas]** en el panel de navegación izquierdo para ver una lista de las directivas principales definidas por Adobe, así como las directivas personalizadas creadas anteriormente por su organización.
 
 Cada etiqueta principal tiene asociada una directiva principal que, cuando está habilitada, aplica las restricciones de activación adecuadas a cualquier dato que contenga esa etiqueta. Para habilitar una directiva principal, selecciónela en la lista y, a continuación, seleccione la opción **[!UICONTROL Estado de la directiva]** para **[!UICONTROL Habilitada]**.
 

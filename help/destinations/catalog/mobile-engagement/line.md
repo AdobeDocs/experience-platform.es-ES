@@ -1,12 +1,12 @@
 ---
 keywords: móvil;destinos de participación móvil;LINE;destino de participación móvil de LINE
 title: Conexión LINE
-description: El destino LINE le permite añadir perfiles a la audiencia de Platform y ofrecer experiencias personalizadas a los usuarios conectados.
+description: El destino LINE le permite añadir perfiles a la audiencia de Experience Platform y ofrecer experiencias personalizadas a los usuarios conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1198'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ Como especialista en marketing, puede segmentar usuarios en un destino de partic
 
 ### [!DNL LINE] requisitos previos {#prerequisites-destination}
 
-Tenga en cuenta los siguientes requisitos previos de [!DNL LINE] para exportar datos de Platform a su cuenta de [!DNL LINE]:
+Tenga en cuenta los siguientes requisitos previos de [!DNL LINE] para exportar datos de Experience Platform a su cuenta de [!DNL LINE]:
 
 #### Necesita tener una cuenta de [!DNL LINE] {#prerequisites-account}
 
@@ -40,7 +40,7 @@ Debe registrarse y crear una cuenta de [!DNL LINE], si todavía no la tiene. Par
 
 #### Reunir [!DNL LINE channel access token (long-lived)] de la consola para desarrolladores de [!DNL LINE] {#gather-credentials}
 
-Para permitir que Platform acceda a los recursos de [!DNL LINE], necesitará *[!DNL Channel access token (long-lived)]* del canal [!DNL LINE] *API de mensajería* deseado.
+Para permitir que Experience Platform acceda a los recursos de [!DNL LINE], necesitará *[!DNL Channel access token (long-lived)]* del canal [!DNL LINE] *API de mensajería* deseado.
 
 1. Inicie sesión con su cuenta de [!DNL LINE] en [[!DNL LINE] Developer Console](https://developers.line.biz/console).
 1. A continuación, accede a la lista *[!DNL Providers]*, selecciona *[!DNL Provider]* de interés y, finalmente, selecciona el canal *API de mensajería* para acceder a su configuración. Si accede a la consola de desarrolladores por primera vez, siga la [[!DNL LINE] documentación](https://developers.line.biz/en/docs/messaging-api/getting-started/) para completar los pasos necesarios para crear un proveedor.
@@ -68,7 +68,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino [!DNL LINE]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ En **[!UICONTROL destinos]** > **[!UICONTROL catálogo]**, busque [!DNL LINE]. T
 ### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
-![Captura de pantalla de IU de Platform que muestra cómo autenticarse.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo autenticarse.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Rellene los campos obligatorios siguientes.
 * **[!UICONTROL Token de portador]**: Su [!DNL LINE Channel access token (long-lived)] de la consola para desarrolladores de [!DNL LINE]. Consulte la sección [recopilar credenciales](#gather-credentials).
@@ -95,7 +95,7 @@ Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el
 ### Rellenar detalles de destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
-![Captura de pantalla de IU de Platform que muestra los detalles del destino.](../../assets/catalog/mobile-engagement/line/destination-details.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra los detalles del destino.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
@@ -118,7 +118,7 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 ### Asignar atributos e identidades {#map}
 
-Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL LINE], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL LINE], siga estos pasos:
+Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL LINE], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Experience Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL LINE], siga estos pasos:
 
 Según la identidad de origen, se deben asignar las siguientes áreas de nombres de identidad de destino:
 
@@ -128,14 +128,14 @@ Según la identidad de origen, se deben asignar las siguientes áreas de nombres
 | ID de usuario de LINE | `UserID` | `LineId` |
 
 Si sus identidades de destino son *ID de usuario de LINE*, necesitará lo siguiente:
-![Ejemplo de captura de pantalla de IU de Platform que muestra la asignación de destino al usar ID de usuario de LINE para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![Ejemplo de captura de pantalla de la IU de Experience Platform que muestra la asignación de destino al usar ID de usuario de LINE para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 Si su identidad de destino es *ID para anunciantes (IFA)*, necesitará lo siguiente:
-![Ejemplo de captura de pantalla de IU de Platform que muestra la asignación de Target al usar ID para anunciantes (IFA) para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![Ejemplo de captura de pantalla de la IU de Experience Platform que muestra la asignación de Target al usar la ID para anunciantes (IFA) para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Validar exportación de datos {#exported-data}
 
-Una vez que la exportación de datos del Experience Platform se ha realizado correctamente, el destino [!DNL LINE] crea una nueva audiencia dentro de [!DNL LINE] con el nombre de audiencia seleccionado.
+Tras una exportación de datos correcta desde Experience Platform, el destino [!DNL LINE] crea una nueva audiencia dentro de [!DNL LINE] con el nombre de audiencia seleccionado.
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 

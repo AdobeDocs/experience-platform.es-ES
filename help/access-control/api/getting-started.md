@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;control de acceso;api;introducción
 solution: Experience Platform
 title: Guía de API de control de acceso
-description: El control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para varias funcionalidades de Platform mediante Adobe Admin Console. Las secciones siguientes proporcionan información adicional que los desarrolladores deben conocer para realizar llamadas correctamente a la API de Registro de esquemas.
+description: El control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para varias funciones de Experience Platform mediante Adobe Admin Console. Las secciones siguientes proporcionan información adicional que los desarrolladores deben conocer para realizar llamadas correctamente a la API de Registro de esquemas.
 role: Developer
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '379'
 ht-degree: 21%
 
 ---
@@ -31,19 +31,19 @@ Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar format
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 

@@ -4,16 +4,16 @@ description: Obtenga información sobre cómo recuperar eventos de auditoría en
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
 
 # Extremo de eventos de auditoría
 
-Los registros de auditoría se utilizan para proporcionar detalles de la actividad del usuario para varios servicios y funcionalidades. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción. El extremo `/audit/events` de la API [!DNL Audit Query] le permite recuperar mediante programación los datos de evento de la actividad de su organización en [!DNL Platform].
+Los registros de auditoría se utilizan para proporcionar detalles de la actividad del usuario para varios servicios y funcionalidades. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción. El extremo `/audit/events` de la API [!DNL Audit Query] le permite recuperar mediante programación los datos de evento de la actividad de su organización en [!DNL Experience Platform].
 
 ## Introducción
 
@@ -21,7 +21,7 @@ El extremo de API utilizado en esta guía forma parte de la [[!DNL Audit Query] 
 
 ## Enumerar eventos de auditoría
 
-Puede recuperar datos de eventos realizando una solicitud de GET al extremo `/audit/events`, especificando los eventos que desea recuperar en la carga útil.
+Puede recuperar datos de eventos realizando una petición GET al extremo `/audit/events`, especificando los eventos que desea recuperar en la carga útil.
 
 **Formato de API**
 
@@ -152,9 +152,9 @@ Una respuesta correcta devuelve los puntos de datos resultantes para las métric
 | `imsOrgId` | El ID de la organización en la que se produjo el evento. |
 | `permissionResource` | El producto o la funcionalidad que proporcionó el permiso para realizar la acción. Un recurso puede ser cualquiera de los siguientes: <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | Tipo de permiso relacionado con la acción. |
-| `assetType` | El tipo de recurso de plataforma en el que se realizó la acción. |
-| `assetId` | Identificador único del recurso de plataforma en el que se realizó la acción. |
-| `assetName` | Nombre del recurso de plataforma en el que se realizó la acción. |
+| `assetType` | El tipo de recurso de Experience Platform en el que se realizó la acción. |
+| `assetId` | Identificador único del recurso de Experience Platform en el que se realizó la acción. |
+| `assetName` | Nombre del recurso de Experience Platform en el que se realizó la acción. |
 | `action` | El tipo de acción que se registró para el evento. Una acción puede ser cualquiera de las siguientes: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | El estado de la acción. Un estado puede ser cualquiera de los siguientes: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 

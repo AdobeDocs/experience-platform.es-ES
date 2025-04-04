@@ -1,11 +1,11 @@
 ---
-title: Información general sobre el conector Source de Amazon Kinesis
-description: Obtenga información sobre cómo conectar Amazon Kinesis a Adobe Experience Platform mediante API o la interfaz de usuario.
+title: Información general sobre el conector Source Kinesis de Amazon
+description: Aprenda a conectar Amazon Kinesis a Adobe Experience Platform mediante API o la interfaz de usuario.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 0%
 >
 >- El origen [!DNL Amazon Kinesis] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
 >
->- Ahora puede usar el origen [!DNL Amazon Kinesis] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
+>- Ahora puede usar el origen [!DNL Amazon Kinesis] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
 
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de la nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure]. Puede llevar los datos de estos sistemas a [!DNL Platform].
+Adobe Experience Platform proporciona conectividad nativa para proveedores de la nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure]. Puede llevar los datos de estos sistemas a [!DNL Experience Platform].
 
-Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL Platform] sin necesidad de descargarlos, formatearlos o cargarlos. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o estar delimitados. Cada paso del proceso se integra en el flujo de trabajo de orígenes. [!DNL Platform] le permite traer datos de [!DNL Amazon Kinesis] en tiempo real.
+Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL Experience Platform] sin necesidad de descargarlos, formatearlos o cargarlos. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o estar delimitados. Cada paso del proceso se integra en el flujo de trabajo de orígenes. [!DNL Experience Platform] le permite traer datos de [!DNL Amazon Kinesis] en tiempo real.
 
 >[!NOTE]
 >
->El factor de escala de [!DNL Kinesis] debe aumentarse si necesita ingerir datos de gran volumen. En la actualidad, el volumen máximo de datos que puede traer de su cuenta de [!DNL Kinesis] a Platform es de 4000 registros por segundo. Para ampliar e ingerir datos de mayor volumen, póngase en contacto con su representante de Adobe.
+>El factor de escala de [!DNL Kinesis] debe aumentarse si necesita ingerir datos de gran volumen. En la actualidad, el volumen máximo de datos que puede traer de su cuenta de [!DNL Kinesis] a Experience Platform es de 4000 registros por segundo. Para ampliar e introducir datos de mayor volumen, póngase en contacto con su representante de Adobe.
 
 ## Requisitos previos
 
@@ -40,7 +40,7 @@ Una secuencia [!DNL Kinesis] requiere los siguientes permisos para crear una con
 - `DescribeStream`
 - `ListStreams`
 
-Estos permisos se organizan a través de la consola [!DNL Kinesis] y Platform los comprueba cuando escribe sus credenciales y selecciona el flujo de datos.
+Estos permisos se organizan a través de la consola [!DNL Kinesis] y Experience Platform los comprueba cuando escribe sus credenciales y selecciona el flujo de datos.
 
 El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para crear una conexión de origen de [!DNL Kinesis].
 
@@ -85,13 +85,13 @@ Para obtener más información sobre el control del acceso a las secuencias de d
 | `TRIM_HORIZON` | Los datos se leen a partir del registro de datos más antiguo. |
 | `LATEST` | Los datos se leen a partir del registro de datos más reciente. |
 
-Actualmente, un origen de interfaz de usuario [!DNL Kinesis] solo admite `TRIM_HORIZON`, mientras que la API admite `TRIM_HORIZON` y `LATEST` como modos para obtener datos. El valor de iterador predeterminado que Platform usa para el origen [!DNL Kinesis] es `TRIM_HORIZON`.
+Actualmente, un origen de interfaz de usuario [!DNL Kinesis] solo admite `TRIM_HORIZON`, mientras que la API admite `TRIM_HORIZON` y `LATEST` como modos para obtener datos. El valor de iterador predeterminado que utiliza Experience Platform para el origen [!DNL Kinesis] es `TRIM_HORIZON`.
 
 Para obtener más información sobre los tipos de iterador, consulte el siguiente [[!DNL Kinesis] documento](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## Conectar [!DNL Amazon Kinesis] a [!DNL Platform]
+## Conectar [!DNL Amazon Kinesis] a [!DNL Experience Platform]
 
-La siguiente documentación proporciona información sobre cómo conectar [!DNL Amazon Kinesis] a [!DNL Platform] mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Amazon Kinesis] a [!DNL Experience Platform] mediante API o la interfaz de usuario:
 
 ### Uso de API
 

@@ -2,16 +2,16 @@
 title: Mensajes de error de Flow Service
 description: Obtenga información acerca de los mensajes de error que pueden surgir al utilizar Flow Service para las fuentes.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1668'
 ht-degree: 35%
 
 ---
 
 # Mensajes de error de Flow Service
 
-Flow Service se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen a varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+Flow Service se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen a varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 Este documento proporciona un catálogo de mensajes de error, descripciones y resoluciones sugeridas con respecto a Flow Service.
 

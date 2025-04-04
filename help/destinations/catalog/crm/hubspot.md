@@ -3,9 +3,9 @@ title: Conexión HubSpot
 description: El destino de HubSpot le permite administrar los registros de contacto en su cuenta de HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1557'
 ht-degree: 3%
 
 ---
@@ -26,21 +26,21 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL 
 
 ## Requisitos previos {#prerequisites}
 
-Consulte las secciones siguientes para conocer todos los requisitos previos que necesita configurar en Experience Platform y [!DNL HubSpot], así como la información que debe recopilar antes de trabajar con el destino [!DNL HubSpot].
+Consulte las secciones siguientes para conocer todos los requisitos previos que debe configurar en Experience Platform y [!DNL HubSpot] y para obtener información que debe recopilar antes de trabajar con el destino [!DNL HubSpot].
 
-### Requisitos previos del Experience Platform {#prerequisites-in-experience-platform}
+### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
 Antes de activar datos en el destino [!DNL HubSpot], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creados en [!DNL Experience Platform].
 
-Consulte la documentación del Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
+Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
 ### Requisitos previos para el destino [!DNL HubSpot] {#prerequisites-destination}
 
-Tenga en cuenta los siguientes requisitos previos para exportar datos de Platform a su cuenta de [!DNL HubSpot]:
+Tenga en cuenta los siguientes requisitos previos para exportar datos de Experience Platform a su cuenta de [!DNL HubSpot]:
 
 #### Debe tener una cuenta de [!DNL HubSpot] {#prerequisites-account}
 
-Para exportar datos de Platform a su cuenta de [!DNL Hubspot], necesita tener una cuenta de [!DNL HubSpot]. Si todavía no tiene una, visite la página [Configurar su cuenta de HubSpot](https://knowledge.hubspot.com/get-started/set-up-your-account) y siga las instrucciones para registrarse y crear su cuenta.
+Para exportar datos de Experience Platform a su cuenta de [!DNL Hubspot], necesita tener una cuenta de [!DNL HubSpot]. Si todavía no tiene una, visite la página [Configurar su cuenta de HubSpot](https://knowledge.hubspot.com/get-started/set-up-your-account) y siga las instrucciones para registrarse y crear su cuenta.
 
 #### Recopilar el token de acceso privado a la aplicación [!DNL HubSpot] {#gather-credentials}
 
@@ -74,13 +74,13 @@ Si no tiene una aplicación privada, siga la documentación para [Crear una apli
 
 Esta sección describe todas las audiencias que puede exportar a este destino.
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Este destino admite la activación de todas las audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform.
 
 Este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
 
 | Tipo de público | Descripción |
 |---------|----------|
-| Cargas personalizadas | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -90,8 +90,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li>Va a exportar todos los miembros de una audiencia, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Además, se crea una nueva propiedad en [!DNL HubSpot] con el nombre de audiencia y su valor se asigna con el estado de audiencia correspondiente de Platform, para cada una de las audiencias seleccionadas.</li></ul> |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li>Va a exportar todos los miembros de una audiencia, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Además, se crea una nueva propiedad en [!DNL HubSpot] con el nombre de audiencia y su valor se asocia con el estado de audiencia correspondiente de Experience Platform, para cada una de las audiencias seleccionadas.</li></ul> |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -111,14 +111,14 @@ Rellene los campos obligatorios siguientes. Consulte la sección [Recopilar el [
 * **[!UICONTROL Token de portador]**: El token de acceso para su aplicación privada [!DNL HubSpot].
 
 Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
-![Captura de pantalla de IU de Platform que muestra cómo autenticarse.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo autenticarse.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el estado **[!UICONTROL Conectado]** con una marca de verificación verde. A continuación, puede continuar con el paso siguiente.
 
 ### Rellenar detalles de destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
-![Captura de pantalla de IU de Platform que muestra los detalles del destino.](../../assets/catalog/crm/hubspot/destination-details.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra los detalles del destino.](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
@@ -139,7 +139,7 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 ### Asignar atributos e identidades {#map}
 
-Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL HubSpot], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino.
+Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL HubSpot], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Experience Platform y sus equivalentes correspondientes desde el destino de destino.
 
 Para asignar correctamente los campos XDM a los campos de destino [!DNL HubSpot], siga los pasos a continuación:
 
@@ -147,28 +147,28 @@ Para asignar correctamente los campos XDM a los campos de destino [!DNL HubSpot]
 
 La identidad `Email` es una asignación obligatoria para este destino. Siga los pasos a continuación para asignarlo:
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Ahora puede ver una nueva fila de asignación en la pantalla.
-   ![Captura de pantalla de la interfaz de usuario de Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad.
-   ![Captura de pantalla de la IU de Platform seleccionando correo electrónico como atributo de origen para asignar como identidad.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform seleccionando correo electrónico como atributo de origen para asignar como identidad.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de destino]**, elija **[!UICONTROL Seleccionar atributos]** y seleccione `email`.
-   ![Captura de pantalla de la IU de Platform seleccionando correo electrónico como atributo de destino para asignar como identidad.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform seleccionando correo electrónico como atributo de destino para asignar como identidad.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | Campo de origen | Campo de destino | Obligatorio |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | Sí |
 
 A continuación, se muestra un ejemplo con la asignación de identidad:
-![Ejemplo de captura de pantalla de IU de Platform con asignación de identidad de correo electrónico.](../../assets/catalog/crm/hubspot/mapping-identities.png)
+![Ejemplo de captura de pantalla de IU de Experience Platform con asignación de identidad de correo electrónico.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
 #### Asignando atributos **optional**
 
 Para agregar cualquier otro atributo que desee actualizar entre el esquema de perfil XDM y la cuenta [!DNL HubSpot], repita los pasos a continuación:
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Ahora puede ver una nueva fila de asignación en la pantalla.
-   ![Captura de pantalla de la interfaz de usuario de Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM.
-   ![Captura de pantalla de IU de Platform seleccionando Nombre como atributo de origen.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform seleccionando Nombre como atributo de origen.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de destino]**, elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione en la lista de atributos que se rellenan automáticamente desde su cuenta de [!DNL HubSpot]. El destino usa la API [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) para recuperar esta información. Se recuperarán [!DNL HubSpot] [propiedades predeterminadas](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) y todas las propiedades personalizadas para seleccionarlas como campos de destino.
-   ![Captura de pantalla de IU de Platform seleccionando Nombre como atributo de destino.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform seleccionando Nombre como atributo de destino.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 A continuación se muestran algunas asignaciones disponibles entre su esquema de perfil XDM y [!DNL Hubspot]:
 
@@ -181,7 +181,7 @@ A continuación se muestran algunas asignaciones disponibles entre su esquema de
 | `xdm: workAddress.country` | `Attribute: country` |
 
 A continuación, se muestra un ejemplo con estas asignaciones de atributos:
-![Ejemplo de captura de pantalla de IU de plataforma con asignaciones de atributos.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+![Ejemplo de captura de pantalla de IU de Experience Platform con asignaciones de atributos.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
 Cuando termine de proporcionar las asignaciones para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 

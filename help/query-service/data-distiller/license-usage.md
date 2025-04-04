@@ -2,9 +2,9 @@
 title: Monitorizar uso de licencia de consulta por lotes
 description: La interfaz de usuario de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre el uso de la licencia de Data Distiller de su organización.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 El panel de uso de licencias proporciona informes granulares sobre el uso de licencias del servicio de consultas de su organización y las métricas de uso de cada producto comprado. Para obtener más información acerca de las métricas disponibles que se muestran en el panel, visite la [guía del panel de uso de licencias](../../dashboards/guides/license-usage.md#available-metrics).
 
-El panel proporciona métricas de uso para cada producto comprado, el uso consolidado de métricas en todas las zonas protegidas de producción o desarrollo y las métricas de uso de una zona protegida específica. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
+El panel proporciona métricas de uso para cada producto comprado, el uso consolidado de métricas en todas las zonas protegidas de producción o desarrollo y las métricas de uso de una zona protegida específica. La información que se muestra aquí se captura durante una captura diaria de la instancia de Experience Platform.
 
 >[!NOTE]
 >

@@ -1,33 +1,33 @@
 ---
-title: ID de dispositivos de origen en el SDK web
-description: Obtenga información sobre cómo configurar los ID de dispositivos de origen (FPID) en el SDK web de Adobe Experience Platform.
+title: ID de dispositivos de origen en Web SDK
+description: Obtenga información sobre cómo configurar los ID de dispositivos de origen (FPID) en Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2058'
 ht-degree: 0%
 
 ---
 
 
-# ID de dispositivos de origen en el SDK web
+# ID de dispositivos de origen en Web SDK
 
-El SDK web de Adobe Experience Platform asigna [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=es) a los visitantes del sitio web mediante cookies para realizar un seguimiento del comportamiento del usuario. Para tener en cuenta las restricciones del explorador sobre la duración de las cookies, puede elegir establecer y administrar sus propios identificadores de dispositivo en su lugar. Estos se denominan ID de dispositivos de origen (`FPIDs`).
+Adobe Experience Platform Web SDK asigna [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=es) a los visitantes del sitio web mediante cookies para realizar un seguimiento del comportamiento del usuario. Para tener en cuenta las restricciones del explorador sobre la duración de las cookies, puede elegir establecer y administrar sus propios identificadores de dispositivo en su lugar. Estos se denominan ID de dispositivos de origen (`FPIDs`).
 
 >[!NOTE]
 >
->La compatibilidad con ID de dispositivos de origen solo está disponible al enviar datos al Edge Network del Experience Platform a través del SDK web.
+>La compatibilidad con ID de dispositivos de origen solo está disponible al enviar datos a Experience Platform Edge Network a través de Web SDK.
 
 >[!IMPORTANT]
 >
->Los ID de dispositivos de origen no son compatibles con la funcionalidad [cookies de terceros](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) del SDK web.
+>Los ID de dispositivos de origen no son compatibles con la funcionalidad [cookies de terceros](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) en Web SDK.
 >Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
 
-En este documento se explica cómo configurar los ID de dispositivos de origen para la implementación del SDK web.
+En este documento se explica cómo configurar los ID de dispositivos de origen para la implementación de Web SDK.
 
 ## Requisitos previos
 
-En esta guía se da por hecho que está familiarizado con el funcionamiento de los datos de identidad para el SDK web de Platform, incluida la función de los ECID y `identityMap`. Consulte la descripción general de [datos de identidad en el SDK web](./overview.md) para obtener más información.
+En esta guía se da por hecho que está familiarizado con el funcionamiento de los datos de identidad para Experience Platform Web SDK, incluida la función de los ECID y `identityMap`. Consulte la descripción general de [datos de identidad en Web SDK](./overview.md) para obtener más información.
 
 ## Uso de ID de dispositivos de origen (FPID) {#using-fpid}
 
@@ -35,13 +35,13 @@ Los identificadores de dispositivos de origen ([!DNL FPIDs]) rastrean visitantes
 
 >[!IMPORTANT]
 >
->[!DNL A] o [!DNL AAAA] registros solo se admiten para configurar y rastrear cookies. El método principal de recopilación de datos es a través de [!DNL DNS] [!DNL CNAME]. En otras palabras, [!DNL FPIDs] se establecen utilizando un registro [!DNL A] o un registro [!DNL AAAA], y luego se envían al Adobe utilizando un [!DNL CNAME].
+>[!DNL A] o [!DNL AAAA] registros solo se admiten para configurar y rastrear cookies. El método principal de recopilación de datos es a través de [!DNL DNS] [!DNL CNAME]. En otras palabras, [!DNL FPIDs] se establecen utilizando un registro [!DNL A] o un registro [!DNL AAAA], y luego se envían a Adobe utilizando un [!DNL CNAME].
 >
 >El [programa de certificados administrados por Adobe](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) también se admite para la recopilación de datos de origen.
 
-Una vez establecida una cookie [!DNL FPID], su valor se puede recuperar y enviar al Adobe a medida que se recopilan los datos del evento. Los [!DNL FPIDs] recopilados se utilizan como semillas para generar [!DNL ECIDs], que siguen siendo los identificadores principales en las aplicaciones de Adobe Experience Cloud.
+Una vez establecida una cookie [!DNL FPID], su valor se puede recuperar y enviar a Adobe a medida que se recopilan los datos del evento. Los [!DNL FPIDs] recopilados se utilizan como semillas para generar [!DNL ECIDs], que siguen siendo los identificadores principales en las aplicaciones de Adobe Experience Cloud.
 
-Para enviar un [!DNL FPID] para un visitante del sitio web al Edge Network, debe incluir el [!DNL FPID] en el `identityMap` para ese visitante. Vea la sección más abajo en este documento sobre [el uso de FPID en `identityMap`](#identityMap) para obtener más información.
+Para enviar un [!DNL FPID] para un visitante de un sitio web a Edge Network, debe incluir el [!DNL FPID] en el `identityMap` para ese visitante. Vea la sección más abajo en este documento sobre [el uso de FPID en `identityMap`](#identityMap) para obtener más información.
 
 ### Requisitos de formato de ID de dispositivo de origen {#formatting-requirements}
 
@@ -59,11 +59,11 @@ Puede especificar un nombre de cookie en la interfaz de usuario de flujos de dat
 
 Consulte la [documentación de flujos de datos](../../datastreams/configure.md) para obtener información detallada sobre cómo configurar un flujo de datos.
 
-Al configurar su secuencia de datos, habilite la opción **[!UICONTROL Cookie de ID de origen]**. Esta configuración indica al Edge Network que haga referencia a una cookie especificada cuando busque un ID de dispositivo de origen, en lugar de buscar este valor en el [mapa de identidad](#identityMap).
+Al configurar su secuencia de datos, habilite la opción **[!UICONTROL Cookie de ID de origen]**. Esta configuración indica a Edge Network que haga referencia a una cookie especificada cuando busque un ID de dispositivo de origen, en lugar de buscar este valor en el [mapa de identidad](#identityMap).
 
 Consulte la documentación de [cookies de origen](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=es) para obtener más información sobre cómo funcionan con Adobe Experience Cloud.
 
-![Imagen de la interfaz de usuario de la plataforma que muestra la configuración de secuencia de datos destacando la configuración de cookie de ID de origen](../assets/first-party-id-datastreams.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra la configuración de secuencia de datos destacando la configuración de cookie de ID de origen](../assets/first-party-id-datastreams.png)
 
 Al habilitar esta configuración, debe proporcionar el nombre de la cookie en la que se espera almacenar el ID.
 
@@ -86,7 +86,7 @@ Al configurar una cookie mediante un servidor de su propiedad, puede utilizar va
 
 ### Cuándo se establece la cookie {#when-to-set-cookie}
 
-Lo ideal es configurar la cookie [!DNL FPID] antes de realizar cualquier solicitud al Edge Network. Sin embargo, en los casos en los que esto no sea posible, [!DNL ECID] se seguirá generando utilizando los métodos existentes y actuará como identificador principal siempre que exista la cookie.
+Lo ideal es configurar la cookie [!DNL FPID] antes de realizar cualquier solicitud a Edge Network. Sin embargo, en los casos en los que esto no sea posible, [!DNL ECID] se seguirá generando utilizando los métodos existentes y actuará como identificador principal siempre que exista la cookie.
 
 Suponiendo que [!DNL ECID] se vea afectado finalmente por una directiva de eliminación de explorador, pero [!DNL FPID] no lo esté, [!DNL FPID] se convertirá en el identificador principal en la siguiente visita y se utilizará para inicializar [!DNL ECID] en cada visita posterior.
 
@@ -110,7 +110,7 @@ Existen varios indicadores de cookies que afectan a cómo se tratan las cookies 
 
 No se puede tener acceso a las cookies configuradas con el indicador `HTTPOnly` mediante scripts del lado del cliente. Esto significa que si establece un indicador `HTTPOnly` al configurar [!DNL FPID], debe usar un lenguaje de scripts del lado del servidor para leer el valor de la cookie para incluirlo en `identityMap`.
 
-Si elige que el Edge Network lea el valor de la cookie [!DNL FPID], establecer el indicador `HTTPOnly` garantiza que ningún script del lado del cliente pueda obtener acceso al valor, pero no tendrá ningún impacto negativo en la capacidad del Edge Network para leer la cookie.
+Si elige que Edge Network lea el valor de la cookie [!DNL FPID], establecer el indicador `HTTPOnly` garantiza que ningún script del lado del cliente pueda acceder al valor, pero no tendrá ningún impacto negativo en la capacidad de Edge Network para leer la cookie.
 
 >[!NOTE]
 >
@@ -167,7 +167,7 @@ Al igual que con otros tipos de identidad, puede incluir [!DNL FPID] con otras i
 }
 ```
 
-Si [!DNL FPID] está contenido en una cookie que está leyendo el Edge Network cuando la recopilación de datos de origen está habilitada, solo debe capturar el [!DNL CRM ID] autenticado:
+Si [!DNL FPID] está contenido en una cookie que está leyendo Edge Network cuando la recopilación de datos de origen está habilitada, solo debe capturar el [!DNL CRM ID] autenticado:
 
 ```json
 {
@@ -183,7 +183,7 @@ Si [!DNL FPID] está contenido en una cookie que está leyendo el Edge Network c
 }
 ```
 
-Los(as) siguientes `identityMap` resultarían en una respuesta de error del Edge Network ya que le falta el indicador `primary` para [!DNL FPID]. Al menos uno de los identificadores presentes en `identityMap` debe marcarse como `primary`.
+Los(as) siguientes `identityMap` resultarían en una respuesta de error de Edge Network, ya que le falta el indicador `primary` para [!DNL FPID]. Al menos uno de los identificadores presentes en `identityMap` debe marcarse como `primary`.
 
 ```json
 {
@@ -204,7 +204,7 @@ Los(as) siguientes `identityMap` resultarían en una respuesta de error del Edge
 }
 ```
 
-La respuesta de error devuelta por el Edge Network en este caso sería similar a la siguiente:
+La respuesta de error devuelta por Edge Network en este caso sería similar a la siguiente:
 
 ```json
 {
@@ -226,9 +226,9 @@ Además de establecer [!DNL FPID] en el mapa de identidad, puede establecer la c
 
 Cuando la recopilación de datos de origen se habilita mediante [!DNL CNAME], todas las cookies de su dominio se enviarán en solicitudes realizadas al extremo de recopilación de datos.
 
-Se perderán todas las cookies que no sean relevantes para los fines de recopilación de datos de los Adobes. Para [!DNL FPID], puede especificar el nombre de la cookie [!DNL FPID] en la configuración de la secuencia de datos. Cuando haga esto, el Edge Network leerá el contenido de la cookie [!DNL FPID] en lugar de buscar [!DNL FPID] en el mapa de identidad.
+Se perderán todas las cookies que no sean relevantes para los fines de recopilación de datos de Adobe. Para [!DNL FPID], puede especificar el nombre de la cookie [!DNL FPID] en la configuración de la secuencia de datos. Al hacerlo, Edge Network leerá el contenido de la cookie [!DNL FPID] en lugar de buscar [!DNL FPID] en el mapa de identidad.
 
-Para usar esta funcionalidad, debe establecer [!DNL FPID] en el nivel superior del dominio en lugar de un subdominio específico. Si lo establece en un subdominio, el valor de la cookie no se enviará al Edge Network y la solución [!DNL FPID] no funcionará como estaba previsto.
+Para usar esta funcionalidad, debe establecer [!DNL FPID] en el nivel superior del dominio en lugar de un subdominio específico. Si lo establece en un subdominio, el valor de la cookie no se enviará a Edge Network y la solución [!DNL FPID] no funcionará como estaba previsto.
 
 ## Jerarquía de ID {#id-hierarchy}
 
@@ -257,9 +257,9 @@ Para ilustrar este proceso, considere un escenario que involucre a un cliente qu
 | --- | --- |
 | Primera visita | Supongamos que aún no ha empezado a configurar la cookie [!DNL FPID]. El [!DNL ECID] contenido en la [cookie AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) será el identificador usado para identificar al visitante. |
 | Segunda visita | Se ha iniciado el despliegue de la solución [!DNL FPID]. El(la) [!DNL ECID] existente aún está presente y sigue siendo el identificador principal para la identificación del visitante. |
-| Tercera visita | Entre la segunda y la tercera visita, ha transcurrido tiempo suficiente como para que [!DNL ECID] se haya eliminado debido a la directiva del explorador. Sin embargo, debido a que [!DNL FPID] se estableció usando un registro [!DNL DNS] [!DNL A], el [!DNL FPID] persiste. [!DNL FPID] ahora se considera el ID principal y se usa para inicializar [!DNL ECID], que se escribe en el dispositivo del usuario final. Ahora se considerará al usuario como un nuevo visitante en las soluciones de Adobe Experience Platform y de Experience Cloud. |
+| Tercera visita | Entre la segunda y la tercera visita, ha transcurrido tiempo suficiente como para que [!DNL ECID] se haya eliminado debido a la directiva del explorador. Sin embargo, debido a que [!DNL FPID] se estableció usando un registro [!DNL DNS] [!DNL A], el [!DNL FPID] persiste. [!DNL FPID] ahora se considera el ID principal y se usa para inicializar [!DNL ECID], que se escribe en el dispositivo del usuario final. Ahora se considerará que el usuario es un nuevo visitante en las soluciones Adobe Experience Platform y Experience Cloud. |
 | Cuarta visita | Entre la tercera y la cuarta visita, ha transcurrido tiempo suficiente para que [!DNL ECID] se haya eliminado debido a la directiva del explorador. Al igual que la visita anterior, [!DNL FPID] se mantiene debido a la forma en que se configuró. Esta vez, se genera el mismo(a) [!DNL ECID] que la visita anterior. El usuario se ve en todas las soluciones de Experience Platform y Experience Cloud como el mismo usuario de la visita anterior. |
-| Quinta visita | Entre la cuarta y la quinta visita, el usuario final borró todas las cookies del explorador. Se genera un nuevo(a) [!DNL FPID] que se usa para inicializar la creación de un nuevo(a) [!DNL ECID]. Ahora se considerará al usuario como un nuevo visitante en las soluciones de Adobe Experience Platform y de Experience Cloud. |
+| Quinta visita | Entre la cuarta y la quinta visita, el usuario final borró todas las cookies del explorador. Se genera un nuevo(a) [!DNL FPID] que se usa para inicializar la creación de un nuevo(a) [!DNL ECID]. Ahora se considerará que el usuario es un nuevo visitante en las soluciones Adobe Experience Platform y Experience Cloud. |
 
 {style="table-layout:auto"}
 
@@ -269,16 +269,16 @@ A continuación se muestra una lista de respuestas a las preguntas frecuentes ac
 
 ### ¿En qué se diferencia sembrar un ID de simplemente generarlo?
 
-El concepto de inicialización es único en el sentido de que [!DNL FPID] pasado a Adobe Experience Cloud se convierte en un [!DNL ECID] mediante un algoritmo determinístico. Cada vez que se envíe el mismo(a) [!DNL FPID] al Edge Network, se sembrará(n) el mismo(a) [!DNL ECID] desde [!DNL FPID].
+El concepto de inicialización es único en el sentido de que [!DNL FPID] pasado a Adobe Experience Cloud se convierte en un [!DNL ECID] mediante un algoritmo determinístico. Cada vez que se envíe el mismo(a) [!DNL FPID] a Edge Network, se sembrará el mismo(a) [!DNL ECID] desde [!DNL FPID].
 
 ### ¿Cuándo se debe generar el ID del dispositivo de origen?
 
-Para reducir la inflación potencial de visitantes, [!DNL FPID] debe generarse antes de realizar la primera solicitud mediante el SDK web. Sin embargo, si no puede hacerlo, se generará un [!DNL ECID] para ese usuario y se utilizará como identificador principal. El [!DNL FPID] que se generó no se convertirá en el identificador principal hasta que el [!DNL ECID] ya no esté presente.
+Para reducir la inflación potencial de visitantes, [!DNL FPID] debe generarse antes de realizar la primera solicitud mediante Web SDK. Sin embargo, si no puede hacerlo, se generará un [!DNL ECID] para ese usuario y se utilizará como identificador principal. El [!DNL FPID] que se generó no se convertirá en el identificador principal hasta que el [!DNL ECID] ya no esté presente.
 
 ### ¿Qué métodos de recopilación de datos admiten los ID de dispositivos de origen?
 
-Actualmente, solo el SDK web admite ID de dispositivos de origen.
+Actualmente, solo Web SDK admite ID de dispositivos de origen.
 
-### ¿Los ID de dispositivo de origen se almacenan en alguna plataforma o solución de Experience Cloud?
+### ¿Los ID de dispositivo de origen se almacenan en alguna solución de Experience Platform o Experience Cloud?
 
-Una vez que [!DNL FPID] se ha utilizado para inicializar [!DNL ECID], se quita de `identityMap` y se reemplaza por [!DNL ECID] que se ha generado. [!DNL FPID] no está almacenado en ninguna solución de Adobe Experience Platform o de Experience Cloud.
+Una vez que [!DNL FPID] se ha utilizado para inicializar [!DNL ECID], se quita de `identityMap` y se reemplaza por [!DNL ECID] que se ha generado. [!DNL FPID] no está almacenado en ninguna solución de Adobe Experience Platform o Experience Cloud.

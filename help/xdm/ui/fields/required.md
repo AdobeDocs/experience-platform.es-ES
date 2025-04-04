@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;obligatorio;campo;
 title: Definición de campos obligatorios en la IU
-description: Obtenga información sobre cómo definir un campo XDM requerido en la interfaz de usuario del Experience Platform.
+description: Obtenga información sobre cómo definir un campo XDM requerido en la interfaz de usuario de Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ En el modelo de datos de experiencia (XDM), un campo obligatorio indica que se d
 
 >[!IMPORTANT]
 >
->Independientemente de si un campo de esquema es obligatorio o no, Platform no acepta `null` o valores vacíos para cualquier campo ingerido. Si no hay ningún valor para un campo en particular en un registro o evento, la clave de ese campo debe excluirse de la carga útil de ingesta.
+>Independientemente de si un campo de esquema es obligatorio o no, Experience Platform no acepta `null` o valores vacíos para ningún campo ingerido. Si no hay ningún valor para un campo en particular en un registro o evento, la clave de ese campo debe excluirse de la carga útil de ingesta.
 
 Al [definir un nuevo campo](./overview.md#define) en la interfaz de usuario de Adobe Experience Platform, puede establecerlo como un campo obligatorio si selecciona la casilla de verificación **[!UICONTROL Obligatorio]** en el carril derecho. Seleccione **[!UICONTROL Aplicar]** para aplicar el cambio al esquema.
 

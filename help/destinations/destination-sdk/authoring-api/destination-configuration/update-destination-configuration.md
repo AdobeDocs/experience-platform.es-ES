@@ -1,10 +1,10 @@
 ---
-description: Esta página ejemplifica la llamada de API utilizada para actualizar una configuración de destino existente a través del Adobe Experience Platform Destination SDK.
+description: Esta página ejemplifica la llamada de API utilizada para actualizar una configuración de destino existente a través de Adobe Experience Platform Destination SDK.
 title: Actualizar una configuración de destino
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '371'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar
 
 >[!TIP]
 >
->Cualquier operación de actualización en destinos públicos o de productos solo será visible después de usar la [API de publicación](../../publishing-api/create-publishing-request.md) y enviar la actualización para su revisión por parte del Adobe.
+>Cualquier operación de actualización en destinos públicos o producidos solo será visible después de usar la [API de publicación](../../publishing-api/create-publishing-request.md) y enviar la actualización para que la Adobe la revise.
 
 Para obtener una descripción detallada de las capacidades de una configuración de destino, lea los siguientes artículos:
 
@@ -34,7 +34,7 @@ Para obtener una descripción detallada de las capacidades de una configuración
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de la API de configuración de destino {#get-started}
 
@@ -207,11 +207,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la config
 
 ## Administración de errores de API {#error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cómo actualizar una configuración de destino a través del extremo de API del Destination SDK `/authoring/destinations`.
+Después de leer este documento, ahora sabe cómo actualizar una configuración de destino a través del extremo de la API de Destination SDK `/authoring/destinations`.
 
 Para obtener más información acerca de lo que puede hacer con este extremo, consulte los siguientes artículos:
 

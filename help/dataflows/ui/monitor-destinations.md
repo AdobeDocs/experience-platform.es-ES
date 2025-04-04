@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3620'
-ht-degree: 9%
+source-wordcount: '3626'
+ht-degree: 10%
 
 ---
 
 # Monitorización de flujos de datos para destinos en la IU
 
-Utilice los distintos destinos del catálogo de Experience Platform para activar los datos de Platform a innumerables socios externos. Platform facilita el proceso de seguimiento del flujo de datos a sus destinos al proporcionar transparencia con los flujos de datos.
+Utilice los distintos destinos del catálogo de Experience Platform para activar los datos de Experience Platform en innumerables socios externos. Experience Platform facilita el proceso de seguimiento del flujo de datos a sus destinos al proporcionar transparencia con los flujos de datos.
 
 El panel de monitorización le proporciona una representación visual del recorrido de un flujo de datos, incluido el destino al que se activan los datos, el tipo de datos que está viendo, los datos exportados por ejecución de flujo de datos y mucho más.
 
@@ -23,14 +23,14 @@ Este tutorial proporciona instrucciones sobre cómo puede supervisar los flujos 
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
+- [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
    - [Ejecuciones de flujo de datos](../../sources/notifications.md): Las ejecuciones de flujo de datos son los trabajos programados recurrentes en función de la configuración de frecuencia de los flujos de datos seleccionados.
-- [Destinos](../../destinations/home.md): los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación perfecta de datos de Platform para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
-- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Destinos](../../destinations/home.md): los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación perfecta de datos de Experience Platform para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Monitorización de flujos de datos en el espacio de trabajo Destinos {#monitor-dataflows-in-the-destinations-workspace}
 
-En el área de trabajo **[!UICONTROL Destinos]** dentro de la interfaz de usuario de Platform, vaya a la pestaña **[!UICONTROL Examinar]** y seleccione el nombre de un destino que desee ver.
+En el área de trabajo **[!UICONTROL Destinos]** de la interfaz de usuario de Experience Platform, vaya a la pestaña **[!UICONTROL Examinar]** y seleccione el nombre del destino que desee ver.
 
 ![Seleccionar vista de destino con una conexión de destino resaltada](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -97,7 +97,7 @@ Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
   >[!IMPORTANT]
   >
-  > A partir de marzo de 2025, Adobe implementará una actualización para aumentar la precisión de la creación de informes en los destinos de flujo continuo. Esta mejora garantiza una mejor alineación entre los informes de Experience Platform y las plataformas de destino.
+  > Desde marzo de 2025, Adobe está implementando gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre los informes de Experience Platform y las plataformas de destino.
   >
   > Antes de esta actualización, **[!UICONTROL Identidades con errores]** incluían todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total.
   > 
@@ -349,4 +349,4 @@ Cuando se selecciona **[!UICONTROL Audiencias]**, aparece una lista de las audie
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir esta guía, ahora sabe cómo monitorizar los flujos de datos tanto para los destinos por lotes como para los de flujo continuo, incluida toda la información relevante, como el tiempo de procesamiento, la tasa de activación y el estado. Para obtener más información sobre los flujos de datos en Platform, lea la [descripción general de los flujos de datos](../home.md). Para obtener más información acerca de los destinos, lea la [descripción general de los destinos](../../destinations/home.md).
+Al seguir esta guía, ahora sabe cómo monitorizar los flujos de datos tanto para los destinos por lotes como para los de flujo continuo, incluida toda la información relevante, como el tiempo de procesamiento, la tasa de activación y el estado. Para obtener más información sobre los flujos de datos en Experience Platform, lea la [descripción general de los flujos de datos](../home.md). Para obtener más información acerca de los destinos, lea la [descripción general de los destinos](../../destinations/home.md).

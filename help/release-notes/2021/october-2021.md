@@ -1,21 +1,21 @@
 ---
-title: Notas de la versión de Adobe Experience Platform de octubre de 2021
+title: 'Notas de la versión de Adobe Experience Platform: octubre de 2021'
 description: Las notas de la versión de octubre de 2021 de Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 24%
+source-wordcount: '463'
+ht-degree: 26%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 27 de octubre de 2021**
+**Fecha de la versión: jueves, 27 de octubre de 2021**
 
-## Actualizaciones para el Experience Platform
+## Actualizaciones en Experience Platform
 
-Actualizaciones en el Experience Platform.
+Actualizaciones en Experience Platform.
 
 ### Interfaz de usuario {#ui}
 
@@ -23,11 +23,11 @@ La interfaz de usuario de se ha actualizado con los siguientes cambios:
 
 | Función | Descripción |
 | --- | --- |
-| Tema oscuro | Utilice el conmutador Tema oscuro para alternar entre los temas claro y oscuro en la interfaz de Platform. El conmutador se encuentra en el perfil de usuario, debajo del nombre de usuario y el correo electrónico. |
-| Alternar navegación izquierda | Utilice la opción de navegación mejorada en la parte superior del encabezado de la aplicación para mostrar u ocultar el menú que muestra las funciones del Experience Platform. El sistema recuerda la última selección y muestra únicamente las funciones a las que tiene acceso. |
+| Tema oscuro | Utilice el conmutador Tema oscuro para alternar entre los temas claro y oscuro en la interfaz de Experience Platform. El conmutador se encuentra en el perfil de usuario, debajo del nombre de usuario y el correo electrónico. |
+| Alternar navegación izquierda | Utilice el conmutador de navegación mejorado en la parte superior del encabezado de la aplicación para mostrar u ocultar el menú que muestra las funciones de Experience Platform. El sistema recuerda la última selección y muestra únicamente las funciones a las que tiene acceso. |
 | Visibilidad de acceso | La barra de navegación izquierda muestra únicamente las funciones a las que puede acceder. En versiones anteriores de Adobe Experience Platform, los elementos no disponibles eran visibles, incluso si no podía acceder a ellos. |
 
-Consulte la [Guía de la interfaz de usuario de Platform](../../landing/ui-guide.md) para obtener más información.
+Consulte la [Guía de la interfaz de usuario de Experience Platform](../../landing/ui-guide.md) para obtener más información.
 
 ## Actualizaciones de funciones existentes
 
@@ -51,14 +51,14 @@ Consulte la [[!DNL Data Prep] descripción general](../../data-prep/home.md) par
 
 ### Fuentes {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 | Función | Descripción |
 | --- | --- |
-| [!DNL Amazon S3] mejoras de origen | Ahora puede usar el parámetro `s3SessionToken` para conectar su cuenta de [!DNL Amazon S3] a Platform mediante credenciales de seguridad temporales. Este token le permite proporcionar acceso temporal a corto plazo a sus recursos de [!DNL Amazon S3] a los usuarios que no se encuentren en entornos de confianza. Consulte la [[!DNL Amazon S3] documentación](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obtener más información. |
-| [!DNL Generic REST API] (Beta) | Ahora puede crear una conexión de origen [!DNL Generic REST API] mediante la [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para traer datos de una aplicación REST genérica a Platform. Consulte la [[!DNL Generic REST API] descripción general](../../sources/connectors/protocols/generic-rest.md) para obtener más información. |
-| [!DNL Zoho CRM] (Beta) | Ahora puede crear una conexión de origen de [!DNL Zoho CRM] mediante la [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/crm/zoho.md) para llevar los datos de su cuenta de [!DNL Zoho CRM] a Platform. Consulte la [[!DNL Zoho CRM] descripción general](../../sources/connectors/crm/zoho.md) para obtener más información. |
+| [!DNL Amazon S3] mejoras de origen | Ahora puede usar el parámetro `s3SessionToken` para conectar su cuenta de [!DNL Amazon S3] a Experience Platform mediante credenciales de seguridad temporales. Este token le permite proporcionar acceso temporal a corto plazo a sus recursos de [!DNL Amazon S3] a los usuarios que no se encuentren en entornos de confianza. Consulte la [[!DNL Amazon S3] documentación](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obtener más información. |
+| [!DNL Generic REST API] (Beta) | Ahora puede crear una conexión de origen [!DNL Generic REST API] mediante la [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para traer datos de una aplicación REST genérica a Experience Platform. Consulte la [[!DNL Generic REST API] descripción general](../../sources/connectors/protocols/generic-rest.md) para obtener más información. |
+| [!DNL Zoho CRM] (Beta) | Ahora puede crear una conexión de origen de [!DNL Zoho CRM] mediante la [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/crm/zoho.md) para llevar los datos de su cuenta de [!DNL Zoho CRM] a Experience Platform. Consulte la [[!DNL Zoho CRM] descripción general](../../sources/connectors/crm/zoho.md) para obtener más información. |
 
 Para obtener más información sobre las fuentes, consulte [descripción general de las fuentes](../../sources/home.md).

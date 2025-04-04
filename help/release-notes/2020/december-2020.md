@@ -5,16 +5,16 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 exl-id: 89d631f1-1b11-4a18-98e1-08e1d5bd8b0d
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 11%
+source-wordcount: '433'
+ht-degree: 13%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 9 de diciembre de 2020**
+**Fecha de la versión: jueves, 09 de diciembre de 2020**
 
 Nuevas funciones de Adobe Experience Platform:
 
@@ -27,7 +27,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 ## [!DNL Dataflows] {#dataflows}
 
-Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Estos flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de conectores de origen a conjuntos de datos de destino, al servicio de identidad y perfil y a destinos.
+Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Estos flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de conectores de origen a conjuntos de datos de destino, al servicio de identidad y perfil y a destinos.
 
 **Característica clave**
 
@@ -39,7 +39,7 @@ Para obtener más información sobre los flujos de datos, lea la [descripción g
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace utiliza aprendizaje automático e inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones utilizando su contenido y sus recursos de datos en soluciones de Adobe.
+Data Science Workspace utiliza aprendizaje automático e inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones utilizando sus activos de contenido y datos en todas las soluciones de Adobe.
 
 **Funciones principales**
 
@@ -51,7 +51,7 @@ Para obtener más información sobre el complemento del paquete Adobe Experience
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Experience Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

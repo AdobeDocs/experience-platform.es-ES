@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Teradata Vantage
-title: Creación de una conexión base del Vantage de Teradata mediante la API de Flow Service
-description: Aprenda a conectar Adobe Experience Platform al Vantage de Teradata mediante la API de Flow Service.
+title: Creación de una conexión de base de Teradata Vantage mediante la API de Flow Service
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a Teradata Vantage mediante la API de Flow Service.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '455'
 ht-degree: 5%
 
 ---
@@ -20,12 +20,12 @@ Este tutorial lo guiará para crear una conexión base para [!DNL Teradata Vanta
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
 La siguiente sección proporciona información adicional que necesitará conocer para conectarse correctamente a [!DNL Teradata Vantage] mediante la API [!DNL Flow Service].
 
@@ -42,9 +42,9 @@ Para obtener más información sobre cómo empezar, consulte este [[!DNL Teradat
 
 ## Crear una conexión base
 
-Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Teradata Vantage] como parte del cuerpo de la solicitud.
+Para crear un identificador de conexión base, realice una petición POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Teradata Vantage] como parte del cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -99,4 +99,4 @@ Una respuesta correcta devuelve la conexión recién creada, incluido su identif
 Siguiendo este tutorial, ha creado una conexión base [!DNL Teradata Vantage] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de la base de datos a Platform mediante la API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/database-nosql.md)

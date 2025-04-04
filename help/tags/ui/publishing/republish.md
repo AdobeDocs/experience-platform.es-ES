@@ -2,10 +2,10 @@
 title: Volver a publicar una biblioteca
 description: Obtenga información sobre cómo volver a publicar una biblioteca de etiquetas anterior en Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 93%
+source-wordcount: '651'
+ht-degree: 81%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las cinco bibliotecas más recientes publicadas en el entorno de producción en una propiedad web se conservan para recuperarlas más adelante. Esta función es útil cuando se encuentra un error en la biblioteca de producción y se necesita volver a un estado correcto anterior inmediatamente.
 
@@ -37,7 +37,7 @@ Cuando se crea en un entorno de ensayo o desarrollo, la compilación antigua se 
 
 Las cinco compilaciones más recientes de su entorno de producción son las que se pueden recuperar.
 
-Cuando vuelve a publicar una biblioteca anterior, Platform actualiza el vínculo de entorno para que indique una de estas compilaciones anteriores que aún no se han limpiado.  Platform también envía una solicitud de depuración a la caché de nodos perimetrales de la CDN para indicar que la biblioteca se ha actualizado y que se debe recuperar una copia nueva del origen.
+Cuando vuelve a publicar una biblioteca anterior, Experience Platform actualiza el vínculo de entorno para que indique una de estas compilaciones anteriores que aún no se han limpiado.  Experience Platform también envía una solicitud de depuración a la caché de nodos perimetrales de CDN para indicar que la biblioteca se ha actualizado y que se debe recuperar una copia nueva del origen.
 
 Esto significa que, cuando vuelve a publicar una biblioteca anterior:
 
@@ -47,7 +47,7 @@ Esto significa que, cuando vuelve a publicar una biblioteca anterior:
 
 Tenga en cuenta la situación específica cuando se restaure una versión anterior debido a un problema con una regla específica. La revisión de regla que está en proceso de producción podría, por ejemplo, tener tres revisiones anteriores. Cuando ve esa regla en la interfaz de usuario para corregirla, sigue mostrando los cambios guardados más recientes en lugar de los que están actualmente en producción.
 
-Por este motivo, Platform le notifica que una propiedad está en estado de republicación como recordatorio de que lo que está viendo en la interfaz de usuario de recopilación de datos está más alejado de la fase de producción de lo habitual. Esta notificación se puede omitir y aparece una vez por cada sesión de explorador la primera vez que se ve la propiedad.
+Por este motivo, Experience Platform le notifica que una propiedad está en estado de republicación como recordatorio de que lo que está viendo en la interfaz de usuario de recopilación de datos está más alejado de la fase de producción de lo habitual. Esta notificación se puede omitir y aparece una vez por cada sesión de explorador la primera vez que se ve la propiedad.
 
 ### Volver a publicar una biblioteca anterior
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Calidad de datos
 description: El siguiente documento proporciona un resumen de las comprobaciones y los comportamientos de validación admitidos para la ingesta por lotes y la transmisión en Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 5%
@@ -54,7 +54,7 @@ Se realizan las siguientes validaciones para la ingesta de transmisión:
 | Conjunto de datos | Garantiza que el conjunto de datos esté especificado, habilitado y no se haya eliminado. |
 | Encabezado | Garantiza que el encabezado esté especificado y sea válido. |
 
-Encontrará más información sobre cómo [!DNL Platform] supervisa y valida los datos en la [documentación sobre la supervisión de flujos de datos](./monitor-data-ingestion.md).
+Encontrará más información sobre cómo [!DNL Experience Platform] supervisa y valida los datos en la [documentación sobre la supervisión de flujos de datos](./monitor-data-ingestion.md).
 
 ## Validación del valor de identidad
 

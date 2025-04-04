@@ -2,9 +2,9 @@
 title: Crear una conexión de Microsoft SQL Server Source en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Microsoft SQL Server mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Lea este tutorial para aprender a conectar su cuenta de [!DNL Microsoft SQL Serv
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -26,7 +26,7 @@ Si ya tiene una conexión [!DNL SQL Server] válida, puede omitir el resto de es
 
 ### Recopilar credenciales necesarias
 
-Para conectarse a [!DNL SQL Server] en [!DNL Platform], debe proporcionar la siguiente propiedad de conexión:
+Para conectarse a [!DNL SQL Server] en [!DNL Experience Platform], debe proporcionar la siguiente propiedad de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -36,7 +36,7 @@ Para obtener más información sobre cómo empezar, consulte [este [!DNL SQL Ser
 
 ## Conectar su cuenta de [!DNL SQL Server]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría *Bases de datos*, seleccione **[!DNL Microsoft SQL Server]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
@@ -70,4 +70,4 @@ Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL SQL Server]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Platform]](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL SQL Server]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).

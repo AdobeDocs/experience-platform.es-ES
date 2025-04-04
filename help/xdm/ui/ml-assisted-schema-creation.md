@@ -2,9 +2,10 @@
 title: Creación de esquemas asistida por aprendizaje automático
 description: Aprenda a crear esquemas en la interfaz de usuario de Experience Platform.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
+exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '997'
 ht-degree: 2%
 
 ---
@@ -31,7 +32,7 @@ Esta guía explica cómo crear esquemas utilizando algoritmos de aprendizaje aut
 
 ## Vaya al flujo de trabajo Crear esquema {#navigate-to-schema-creation-workflow}
 
-En el panel de navegación izquierdo de la interfaz de usuario de Platform, seleccione el área de trabajo **[!UICONTROL Esquemas]**. Aparece el área de trabajo **[!UICONTROL Esquemas]**. Seleccione **[!UICONTROL Crear esquema]** para agregar un nuevo esquema e iniciar un flujo de trabajo de creación de esquemas.
+En el panel de navegación izquierdo de la interfaz de usuario de Experience Platform, seleccione el área de trabajo **[!UICONTROL Esquemas]**. Aparece el área de trabajo **[!UICONTROL Esquemas]**. Seleccione **[!UICONTROL Crear esquema]** para agregar un nuevo esquema e iniciar un flujo de trabajo de creación de esquemas.
 
 ![Espacio de trabajo de esquemas con esquema en la navegación izquierda y esquema de creación resaltado.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 

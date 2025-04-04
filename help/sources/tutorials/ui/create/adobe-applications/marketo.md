@@ -2,9 +2,9 @@
 title: Creación de una conexión y un flujo de datos de Marketo Engage Source en la IU
 description: Este tutorial proporciona pasos para crear una conexión de origen y un flujo de datos de Marketo Engage en la IU para introducir datos B2B en Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1836'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Antes de crear una conexión de origen y un flujo de datos de [!DNL Marketo Engage], primero debe asegurarse de que ha [asignado su identificador de organización de Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) en [!DNL Marketo]. Además, también debe asegurarse de haber completado [rellenar automáticamente [!DNL Marketo] esquemas y áreas de nombres B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) antes de crear una conexión de origen y un flujo de datos.
+>Antes de crear una conexión de origen y un flujo de datos de [!DNL Marketo Engage], primero debe asegurarse de que ha [asignado su ID de organización de Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) en [!DNL Marketo]. Además, también debe asegurarse de haber completado [rellenar automáticamente [!DNL Marketo] esquemas y áreas de nombres B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) antes de crear una conexión de origen y un flujo de datos.
 
 Este tutorial proporciona los pasos para crear un conector de origen [!DNL Marketo Engage] (denominado en adelante &quot;[!DNL Marketo]&quot;) en la interfaz de usuario para incorporar datos B2B a Adobe Experience Platform.
 
@@ -22,16 +22,16 @@ Este tutorial proporciona los pasos para crear un conector de origen [!DNL Marke
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Utilidad de generación automática de esquemas y áreas de nombres B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): La utilidad de generación automática de esquemas y áreas de nombres B2B le permite usar [!DNL Postman] para generar automáticamente valores para sus esquemas y áreas de nombres B2B. Primero debe completar los esquemas y áreas de nombres B2B antes de crear una conexión de origen y un flujo de datos de [!DNL Marketo].
-* [Fuentes](../../../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Modelo de datos de experiencia (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Modelo de datos de experiencia (XDM)](../../../../../xdm/home.md): El marco de trabajo estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Crear y editar esquemas en la interfaz de usuario](../../../../../xdm/ui/resources/schemas.md): Aprenda a crear y editar esquemas en la interfaz de usuario.
 * [Áreas de nombres de identidad](../../../../../identity-service/features/namespaces.md): Las áreas de nombres de identidad son un componente de [!DNL Identity Service] que sirven como indicadores del contexto al que se relaciona una identidad. Una identidad completa incluye un valor de ID y un área de nombres.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Recopilar credenciales necesarias
 
-Para acceder a su cuenta de [!DNL Marketo] en el Experience Platform, debe proporcionar los siguientes valores:
+Para tener acceso a su cuenta de [!DNL Marketo] en Experience Platform, debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | ---- | ---- |
@@ -45,7 +45,7 @@ Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos 
 
 ## Conectar su cuenta de [!DNL Marketo]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría *aplicaciones de Adobe*, seleccione **[!UICONTROL Marketo Engage]** y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
 
@@ -53,7 +53,7 @@ En la categoría *aplicaciones de Adobe*, seleccione **[!UICONTROL Marketo Engag
 >
 >Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
 
-![El catálogo de orígenes con el origen de Marketo Engage seleccionado.](../../../../images/tutorials/create/marketo/catalog.png)
+![Catálogo de orígenes con el origen de Marketo Engage seleccionado.](../../../../images/tutorials/create/marketo/catalog.png)
 
 Aparecerá la página **[!UICONTROL Conectar cuenta de Marketo Engage]**. En esta página, puede utilizar una cuenta nueva o acceder a una cuenta existente.
 
@@ -97,7 +97,7 @@ A continuación, debe proporcionar información sobre el conjunto de datos y el 
 
 ### Detalles del conjunto de datos {#dataset-details}
 
-Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente en Experience Platform se almacenan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
+Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente a Experience Platform se almacenan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
 
 >[!BEGINTABS]
 
@@ -124,7 +124,7 @@ Si ya tiene un conjunto de datos, seleccione **[!UICONTROL Conjunto de datos exi
 Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos de perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
 
 * **[!UICONTROL Diagnósticos de error]**: seleccione **[!UICONTROL Diagnósticos de error]** para indicar a la fuente que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
-* **[!UICONTROL Ingesta parcial]**: [La ingesta parcial por lotes](../../../../../ingestion/batch-ingestion/partial.md) es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos precisos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
+* **[!UICONTROL Ingesta parcial]**: [La ingesta parcial por lotes](../../../../../ingestion/batch-ingestion/partial.md) es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
 
 Durante este paso, puede habilitar **[!UICONTROL Flujo de datos de ejemplo]** para limitar la ingesta de datos y evitar costos adicionales que se producen con la ingesta de todos los datos históricos, incluidas las identidades de persona.
 
@@ -132,7 +132,7 @@ Durante este paso, puede habilitar **[!UICONTROL Flujo de datos de ejemplo]** pa
 
 **Guía rápida sobre el uso del flujo de datos de ejemplo**
 
-El flujo de datos de ejemplo es una configuración que puede establecer para su flujo de datos de [!DNL Marketo] a fin de limitar la tasa de ingesta y, a continuación, probar las funciones de Experience Platform sin tener que ingerir grandes cantidades de datos.
+El flujo de datos de ejemplo es una configuración que puede establecer para su flujo de datos de [!DNL Marketo] a fin de limitar la tasa de ingesta y, a continuación, probar las características de Experience Platform sin tener que ingerir grandes cantidades de datos.
 
 * Habilite el flujo de datos de ejemplo para limitar los datos históricos mediante la ingesta de hasta 100 000 registros (desde el ID de registro más grande) o hasta los últimos 10 días de actividad durante el trabajo de relleno.
 * Al utilizar la configuración de flujo de datos de ejemplo para todas las entidades B2B, debe tener en cuenta que es posible que falten algunos registros relacionados porque no se incorpora todo el historial de los datos de origen.
@@ -195,7 +195,7 @@ Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado i
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para introducir datos B2B de su origen de [!DNL Marketo Engage] en el Experience Platform.
+Al seguir este tutorial, ha creado correctamente un flujo de datos para introducir datos B2B de su origen de [!DNL Marketo Engage] en Experience Platform.
 
 ## Apéndice {#appendix}
 
@@ -203,11 +203,11 @@ Las secciones siguientes proporcionan directrices adicionales que puede seguir a
 
 ### Mensajes de error en la IU {#error-messages}
 
-Los siguientes mensajes de error se muestran en la interfaz de usuario cuando Platform detecta problemas con la configuración:
+Los siguientes mensajes de error se muestran en la interfaz de usuario cuando Experience Platform detecta problemas con la configuración:
 
 #### [!DNL Munchkin ID] no está asignado a la organización apropiada
 
-Se denegará la autenticación si [!DNL Munchkin ID] no está asignado a la organización de Platform que está utilizando. Configure la asignación entre su [!DNL Munchkin ID] y su organización mediante la [[!DNL Marketo] interfaz](https://app-sjint.marketo.com/#MM0A1).
+Se denegará la autenticación si [!DNL Munchkin ID] no está asignado a la organización de Experience Platform que está utilizando. Configure la asignación entre su [!DNL Munchkin ID] y su organización mediante la [[!DNL Marketo] interfaz](https://app-sjint.marketo.com/#MM0A1).
 
 ![Mensaje de error que muestra que la instancia de Marketo no está asignada correctamente a la organización de Adobe.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 

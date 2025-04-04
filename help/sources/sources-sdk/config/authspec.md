@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Configuración de las especificaciones de autenticación para orígenes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '772'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 Las especificaciones de autenticación definen cómo los usuarios de Adobe Experience Platform pueden conectarse a su origen.
 
-La matriz `authSpec` contiene información sobre los parámetros de autenticación necesarios para conectar un origen a Platform. Cualquier fuente determinada puede admitir varios tipos diferentes de autenticación.
+La matriz `authSpec` contiene información sobre los parámetros de autenticación necesarios para conectar un origen a Experience Platform. Cualquier fuente determinada puede admitir varios tipos diferentes de autenticación.
 
 ## Especificaciones de autenticación
 
@@ -340,4 +340,4 @@ A continuación se muestra un ejemplo de una especificación de autenticación c
 
 ## Pasos siguientes
 
-Una vez rellenadas las especificaciones de autenticación, puede continuar con la configuración de las especificaciones de origen para el origen que desea integrar en Platform. Consulte el documento sobre [configuración de especificaciones de origen](./sourcespec.md) para obtener más información.
+Una vez completadas las especificaciones de autenticación, puede configurar las especificaciones de origen para el origen que desea integrar en Experience Platform. Consulte el documento sobre [configuración de especificaciones de origen](./sourcespec.md) para obtener más información.

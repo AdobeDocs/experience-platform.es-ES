@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;aplicación de políticas;aplicación basada en API;control de datos
+keywords: Experience Platform;inicio;temas populares;aplicación de políticas;aplicación basada en API;gobernanza de datos
 solution: Experience Platform
 title: Punto final de API de políticas de gobernanza de datos
-description: Las políticas de gobernanza de datos son reglas que adopta su organización y que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform. El extremo /policies se utiliza para todas las llamadas a la API relacionadas con la visualización, creación, actualización o eliminación de directivas de control de datos.
+description: Las políticas de gobernanza de datos son reglas que su organización adopta y que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform. El extremo /policies se utiliza para todas las llamadas a la API relacionadas con la visualización, creación, actualización o eliminación de directivas de control de datos.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1864'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ Las directivas de gobernanza de datos son reglas que describen los tipos de acci
 
 >[!IMPORTANT]
 >
->Las políticas de gobernanza no se deben confundir con las políticas de control de acceso, que determinan los atributos de datos específicos a los que pueden acceder determinados usuarios de Platform en su organización. Consulte la guía de extremo `/policies` para la [API de control de acceso](../../access-control/abac/api/policies.md) para obtener detalles sobre cómo administrar mediante programación las directivas de control de acceso.
+>Las políticas de gobernanza no se deben confundir con las políticas de control de acceso, que determinan los atributos de datos específicos a los que pueden acceder determinados usuarios de Experience Platform de su organización. Consulte la guía de extremo `/policies` para la [API de control de acceso](../../access-control/abac/api/policies.md) para obtener detalles sobre cómo administrar mediante programación las directivas de control de acceso.
 
 ## Introducción
 
@@ -26,7 +26,7 @@ El extremo de API utilizado en esta guía forma parte de la [[!DNL Policy Servic
 
 ## Recuperación de una lista de directivas {#list}
 
-Puede enumerar todas las directivas de `core` o `custom` realizando una solicitud de GET a `/policies/core` o `/policies/custom`, respectivamente.
+Puede enumerar todas las directivas de `core` o `custom` realizando una petición GET a `/policies/core` o `/policies/custom`, respectivamente.
 
 **Formato de API**
 
@@ -152,7 +152,7 @@ Una respuesta correcta incluye una matriz `children` que enumera los detalles de
 
 ## Buscar una directiva {#look-up}
 
-Puede buscar una directiva específica incluyendo la propiedad `id` de esa directiva en la ruta de una solicitud de GET.
+Puede buscar una directiva específica incluyendo la propiedad `id` de esa directiva en la ruta de una petición GET.
 
 **Formato de API**
 
@@ -274,7 +274,7 @@ Por ejemplo, para definir una directiva que prohíba que se realice una acción 
 | `operands` | Matriz de objetos, cada uno de los cuales representa una sola etiqueta o un par adicional de propiedades `operator` y `operands`. La presencia de las etiquetas u operaciones en una matriz `operands` se resuelve en true o false según el valor de su propiedad `operator` del mismo nivel. |
 | `label` | El nombre de una sola etiqueta de uso de datos que se aplica a la directiva. |
 
-Puede crear una directiva personalizada nueva realizando una solicitud de POST al extremo `/policies/custom`.
+Puede crear una directiva personalizada nueva realizando una petición POST al extremo `/policies/custom`.
 
 **Formato de API**
 
@@ -378,7 +378,7 @@ Una respuesta correcta devuelve los detalles de la directiva recién creada, inc
 >
 >Solo puede actualizar las directivas personalizadas. Si desea habilitar o deshabilitar directivas principales, consulte la sección en [actualizar la lista de directivas principales habilitadas](#update-enabled-core).
 
-Puede actualizar una directiva personalizada existente proporcionando su ID en la ruta de una solicitud de PUT con una carga útil que incluya el formulario actualizado de la directiva en su totalidad. En otras palabras, la solicitud del PUT básicamente reescribe la directiva.
+Puede actualizar una directiva personalizada existente proporcionando su ID en la ruta de una petición PUT con una carga útil que incluya el formulario actualizado de la directiva en su totalidad. En otras palabras, la solicitud de PUT básicamente reescribe la directiva.
 
 >[!NOTE]
 >
@@ -478,7 +478,7 @@ Una respuesta correcta devuelve los detalles de la directiva actualizada.
 >
 >Solo puede actualizar las directivas personalizadas. Si desea habilitar o deshabilitar directivas principales, consulte la sección en [actualizar la lista de directivas principales habilitadas](#update-enabled-core).
 
-Una parte específica de una directiva se puede actualizar mediante una solicitud de PATCH. A diferencia de las solicitudes de PUT que reescriben la directiva, las solicitudes de PATCH actualizan únicamente las propiedades especificadas en el cuerpo de la solicitud. Esto es especialmente útil cuando desea habilitar o deshabilitar una directiva, ya que solo necesita proporcionar la ruta de acceso a la propiedad adecuada (`/status`) y su valor (`ENABLED` o `DISABLED`).
+Una parte específica de una directiva se puede actualizar mediante una petición PATCH. A diferencia de las solicitudes de PUT que reescriben la directiva, las solicitudes de PATCH solo actualizan las propiedades especificadas en el cuerpo de la solicitud. Esto es especialmente útil cuando desea habilitar o deshabilitar una directiva, ya que solo necesita proporcionar la ruta de acceso a la propiedad adecuada (`/status`) y su valor (`ENABLED` o `DISABLED`).
 
 >[!NOTE]
 >
@@ -502,7 +502,7 @@ La siguiente solicitud usa dos operaciones `replace` para cambiar el estado de l
 
 >[!IMPORTANT]
 >
->Cuando se envían varias operaciones de PATCH en una sola solicitud, se procesan en el orden en que aparecen en la matriz. Asegúrese de enviar las solicitudes en el orden correcto cuando sea necesario.
+>Al enviar varias operaciones de PATCH en una sola solicitud, se procesan en el orden en que aparecen en la matriz. Asegúrese de enviar las solicitudes en el orden correcto cuando sea necesario.
 
 ```SHELL
 curl -X PATCH \
@@ -576,7 +576,7 @@ Una respuesta correcta devuelve los detalles de la directiva actualizada.
 
 ## Eliminar una directiva personalizada {#delete}
 
-Puede eliminar una directiva personalizada incluyendo su `id` en la ruta de una solicitud de DELETE.
+Puede eliminar una directiva personalizada incluyendo su `id` en la ruta de una petición DELETE.
 
 >[!WARNING]
 >
@@ -611,7 +611,7 @@ Para confirmar la eliminación, intente buscar (GET) la directiva de nuevo. Debe
 
 ## Recuperar una lista de directivas principales habilitadas {#list-enabled-core}
 
-De forma predeterminada, solo las políticas de gobernanza de datos habilitadas participan en la evaluación. Puede recuperar una lista de directivas principales que su organización habilita actualmente realizando una solicitud de GET al extremo `/enabledCorePolicies`.
+De forma predeterminada, solo las políticas de gobernanza de datos habilitadas participan en la evaluación. Puede recuperar una lista de directivas principales que su organización habilita actualmente realizando una petición GET al extremo `/enabledCorePolicies`.
 
 **Formato de API**
 
@@ -663,7 +663,7 @@ Una respuesta correcta devuelve la lista de directivas principales habilitadas e
 
 ## Actualizar la lista de directivas principales habilitadas {#update-enabled-core}
 
-De forma predeterminada, solo las políticas de gobernanza de datos habilitadas participan en la evaluación. Al realizar una solicitud de PUT al extremo `/enabledCorePolicies`, puede actualizar la lista de directivas principales habilitadas para su organización mediante una sola llamada.
+De forma predeterminada, solo las políticas de gobernanza de datos habilitadas participan en la evaluación. Al realizar una petición PUT al extremo `/enabledCorePolicies`, puede actualizar la lista de directivas principales habilitadas para su organización mediante una sola llamada.
 
 >[!NOTE]
 >

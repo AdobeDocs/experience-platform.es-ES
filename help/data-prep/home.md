@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de preparación de datos
 description: Este documento presenta la preparación de datos en Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Para obtener más información sobre los conjuntos de asignaciones, incluido có
 
 ## Administración del formato de datos
 
-La preparación de datos puede gestionar de forma fiable diferentes formatos de datos introducidos en Platform. Para obtener más información sobre cómo la preparación de datos administra diferentes tipos de datos, lea la [descripción general de la administración del formato de datos](./data-handling.md).
+La preparación de datos puede gestionar de forma fiable diferentes formatos de datos introducidos en Experience Platform. Para obtener más información sobre cómo la preparación de datos administra diferentes tipos de datos, lea la [descripción general de la administración del formato de datos](./data-handling.md).
 
 ## Enviar actualizaciones parciales de fila utilizando [!DNL Data Prep]
 

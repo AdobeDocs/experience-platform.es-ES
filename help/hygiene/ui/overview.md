@@ -2,9 +2,9 @@
 title: Guía de IU del ciclo vital de datos
 description: Obtenga información sobre cómo administrar las tareas del ciclo vital de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '227'
 ht-degree: 36%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 36%
 
 El área de trabajo **[!UICONTROL Ciclo de vida de datos]** de la interfaz de usuario de Adobe Experience Platform le permite crear y supervisar diversas tareas de administración del ciclo de vida de datos, incluida la eliminación de registros y la programación de la caducidad del conjunto de datos.
 
-Esta guía explica cómo administrar las tareas del ciclo vital de los datos en la IU de Platform. Para obtener información sobre cómo realizar estas tareas mediante llamadas API, consulte la [Guía de API de higiene de datos](../api/overview.md).
+Esta guía explica cómo administrar las tareas del ciclo vital de los datos en la IU de Experience Platform. Para obtener información sobre cómo realizar estas tareas mediante llamadas API, consulte la [Guía de API de higiene de datos](../api/overview.md).
 
 Para acceder al espacio de trabajo, seleccione **Ciclo de vida de datos** en el panel de navegación izquierdo.
 
-![Espacio de trabajo de [!UICONTROL Ciclo de vida de datos] en la interfaz de usuario de Platform, con [!UICONTROL Ciclo de vida de datos] resaltado en la navegación izquierda.](../images/ui/overview/home.png)
+![Espacio de trabajo de [!UICONTROL Ciclo de vida de datos] en la interfaz de usuario de Experience Platform, con [!UICONTROL Ciclo de vida de datos] resaltado en la navegación izquierda.](../images/ui/overview/home.png)
 
 Desde aquí, puede examinar las órdenes de trabajo existentes y configurar nuevas operaciones del ciclo vital de datos. Consulte las secciones siguientes de esta guía para obtener más información:
 

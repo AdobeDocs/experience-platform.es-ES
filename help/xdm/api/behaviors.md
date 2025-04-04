@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;registro de esquemas;comportamiento;comportamientos;comportamientos;comportamientos;
+keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;registro de esquemas;registro de esquemas;comportamiento;comportamientos;comportamientos;
 solution: Experience Platform
 title: Extremo de API de comportamientos
 description: El extremo /behavior de la API de Registro de esquemas permite recuperar todos los comportamientos disponibles en el contenedor global.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '419'
 ht-degree: 3%
 
 ---
 
 # Extremo de comportamientos
 
-En el Modelo de datos de experiencia (XDM), los comportamientos definen la naturaleza de los datos que describe un esquema. Cada clase XDM debe hacer referencia a un comportamiento específico, que heredarán todos los esquemas que emplean esa clase. Para casi todos los casos de uso de Platform, hay dos comportamientos disponibles:
+En el Modelo de datos de experiencia (XDM), los comportamientos definen la naturaleza de los datos que describe un esquema. Cada clase XDM debe hacer referencia a un comportamiento específico, que heredarán todos los esquemas que emplean esa clase. Para casi todos los casos de uso en Experience Platform, hay dos comportamientos disponibles:
 
 * **[!UICONTROL Registro]**: proporciona información sobre los atributos de un asunto. Un sujeto podría ser una organización o un individuo.
 * **[!UICONTROL Serie temporal]**: proporciona una instantánea del sistema en el momento en que un sujeto de registro realizó una acción directa o indirecta.
 
 >[!NOTE]
 >
->Hay algunos casos de uso en Platform que requieren el uso de un esquema que no emplea ninguno de los comportamientos anteriores. Para estos casos, hay disponible un tercer comportamiento &quot;ad hoc&quot;. Consulte el tutorial sobre [creación de un esquema ad hoc](../tutorials/ad-hoc.md) para obtener más información.
+>Hay algunos casos de uso en Experience Platform que requieren el uso de un esquema que no emplea ninguno de los comportamientos anteriores. Para estos casos, hay disponible un tercer comportamiento &quot;ad hoc&quot;. Consulte el tutorial sobre [creación de un esquema ad hoc](../tutorials/ad-hoc.md) para obtener más información.
 >
 >Para obtener información más general sobre los comportamientos de datos en términos de cómo afectan a la composición de esquemas, consulte la guía de [conceptos básicos de la composición de esquemas](../schema/composition.md).
 
@@ -32,7 +32,7 @@ El extremo utilizado en esta guía forma parte de la [[!DNL Schema Registry] API
 
 ## Recuperación de una lista de comportamientos {#list}
 
-Puede recuperar una lista de todos los comportamientos disponibles realizando una solicitud de GET al extremo `/behaviors`.
+Puede recuperar una lista de todos los comportamientos disponibles realizando una petición GET al extremo `/behaviors`.
 
 **Formato de API**
 
@@ -89,7 +89,7 @@ curl -X GET \
 
 ## Búsqueda de un comportamiento {#lookup}
 
-Puede buscar un comportamiento específico proporcionando su ID en la ruta de una petición de GET al extremo `/behaviors`.
+Puede buscar un comportamiento específico proporcionando su ID en la ruta de una petición GET al extremo `/behaviors`.
 
 **Formato de API**
 

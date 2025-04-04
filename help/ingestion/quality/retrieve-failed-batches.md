@@ -5,7 +5,7 @@ title: Recuperación de lotes con errores mediante la API de acceso a datos
 type: Tutorial
 description: Este tutorial cubre los pasos para recuperar información sobre un lote fallido mediante las API de ingesta de datos.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 14%
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 # Recuperación de lotes con errores mediante la API de acceso a datos
 
-Adobe Experience Platform proporciona dos métodos para cargar e ingerir datos. Puede usar la ingesta por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingesta por transmisión, que le permite insertar sus datos en [!DNL Platform] mediante extremos de transmisión en tiempo real.
+Adobe Experience Platform proporciona dos métodos para cargar e ingerir datos. Puede usar la ingesta por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingesta por transmisión, que le permite insertar sus datos en [!DNL Experience Platform] mediante extremos de transmisión en tiempo real.
 
 Este tutorial cubre los pasos para recuperar información sobre un lote fallido mediante las API [!DNL Data Ingestion].
 
@@ -31,19 +31,19 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;flujo de datos;Flujo de dat
 title: Configuración de un flujo de datos para introducir datos por lotes desde un Source de almacenamiento en la nube en la IU
 description: Este tutorial proporciona pasos sobre cómo configurar un nuevo flujo de datos para la ingesta de datos por lotes desde una fuente de almacenamiento en la nube en la IU
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1929'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Este tutorial proporciona pasos sobre cómo configurar un flujo de datos para tr
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -38,7 +38,7 @@ Las fuentes de almacenamiento en la nube para datos por lotes admiten los siguie
 
 ## Adición de datos
 
-Después de crear la cuenta de almacenamiento en la nube, aparece el paso **[!UICONTROL Agregar datos]**, que proporciona una interfaz para explorar la jerarquía de archivos de almacenamiento en la nube y seleccionar la carpeta o el archivo específico que desea llevar a Platform.
+Después de crear la cuenta de almacenamiento en la nube, aparece el paso **[!UICONTROL Agregar datos]**, que proporciona una interfaz para explorar la jerarquía de archivos de almacenamiento en la nube y seleccionar la carpeta o el archivo específico que desea llevar a Experience Platform.
 
 * La parte izquierda de la interfaz es un explorador de directorios que muestra la jerarquía de archivos del almacenamiento en la nube.
 * La parte derecha de la interfaz permite obtener una vista previa de hasta 100 filas de datos desde una carpeta o archivo compatible.
@@ -83,7 +83,7 @@ En el paso [!UICONTROL Seleccionar datos], seleccione un archivo comprimido para
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-Para llevar un archivo específico a Platform, seleccione una carpeta y, a continuación, el archivo que desea introducir. Durante este paso, también puede obtener una vista previa del contenido de otros archivos de una carpeta determinada mediante el icono de vista previa junto a un nombre de archivo.
+Para llevar un archivo específico a Experience Platform, seleccione una carpeta y, a continuación, el archivo que desea introducir. Durante este paso, también puede obtener una vista previa del contenido de otros archivos de una carpeta determinada mediante el icono de vista previa junto a un nombre de archivo.
 
 Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
@@ -127,7 +127,7 @@ Cuando termine de proporcionar detalles al flujo de datos, seleccione **[!UICONT
 
 Aparecerá el paso [!UICONTROL Mapping], que le proporcionará una interfaz para asignar los campos de origen del esquema de origen a sus campos XDM de destino adecuados en el esquema de destino.
 
-Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
+Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
 
 Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
 
@@ -183,14 +183,14 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para introducir datos de un almacenamiento de nube externo y ha obtenido información sobre la monitorización de conjuntos de datos. Para obtener más información sobre la creación de flujos de datos, puede complementar su aprendizaje viendo el vídeo siguiente. Además, los servicios de flujo descendente [!DNL Platform], como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace], ahora pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ha creado correctamente un flujo de datos para introducir datos de un almacenamiento de nube externo y ha obtenido insight en la monitorización de conjuntos de datos. Para obtener más información sobre la creación de flujos de datos, puede complementar su aprendizaje viendo el vídeo siguiente. Además, los servicios de flujo descendente [!DNL Experience Platform], como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace], ahora pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
 
 * [Información general de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Información general de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> La interfaz de usuario [!DNL Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+> La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 

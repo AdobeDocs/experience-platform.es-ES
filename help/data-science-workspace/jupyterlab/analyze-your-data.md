@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; JupyterLab; Cuadernos; Data Science Espacio de trabajo; temas populares; Análisis de blocs de notas de datos
+keywords: Experience Platform;JupyterLab;blocs de notas;Workspace de ciencia de datos;temas populares;analizar blocs de notas de datos
 solution: Experience Platform
-title: Analizar los datos con blocs de notas
+title: Analizar los datos con Notebooks
 type: Tutorial
-description: Este tutorial se centra en cómo usar Jupyter Notebooks, integrados dentro de Data Science Espacio de trabajo, para acceder, explorar y visualizar sus datos.
+description: Este tutorial se centra en cómo utilizar Jupyter Notebooks, creados dentro de Data Science Workspace, para acceder, explorar y visualizar sus datos.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1730'
 ht-degree: 0%
 
 ---
 
-# Analice sus datos con blocs de notas
+# Analizar los datos con blocs de notas
 
 >[!NOTE]
 >
@@ -24,13 +24,13 @@ Este tutorial se centra en cómo utilizar Jupyter Notebooks, creados dentro de D
 
 Se introducen los siguientes conceptos:
 
-- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es la interfaz basada en web de próxima generación para Project Jupyter, y está estrechamente integrada en [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) es la interfaz basada en web de próxima generación para Project Jupyter y está totalmente integrada en [!DNL Adobe Experience Platform].
 - **Lotes:** Los conjuntos de datos están formados por lotes. Un lote es un conjunto de datos recopilados durante un período de tiempo y procesados juntos como una sola unidad. Los lotes nuevos se crean cuando se agregan datos a un conjunto de datos.
-- **SDK de acceso a datos (obsoleto):** El SDK de acceso a datos está en desuso. Utilice el [[!DNL Platform SDK]](../authoring/platform-sdk.md) guía.
+- **SDK de acceso a datos (obsoleto):** El SDK de acceso a datos ya no se utiliza. Utilice la guía [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md).
 
-## Explore los blocs de notas en Data Science Espacio de trabajo
+## Explorar portátiles en Data Science Workspace
 
-En esta sección, se exploran datos que anteriormente se ingirieron en el esquema de ventas minoristas.
+En esta sección, se exploran los datos que se han introducido anteriormente en el esquema de ventas minoristas.
 
 Data Science Workspace permite a los usuarios crear [!DNL Jupyter Notebooks] a través de la plataforma [!DNL JupyterLab], donde pueden crear y editar flujos de trabajo de aprendizaje automático. [!DNL JupyterLab] es una herramienta de colaboración cliente-servidor que permite a los usuarios editar documentos de bloc de notas a través de un explorador web. Estos blocs de notas pueden contener tanto elementos de código ejecutable como de texto enriquecido. Para nuestros fines, utilizaremos Markdown para la descripción del análisis y el código ejecutable [!DNL Python] para la exploración y el análisis de datos.
 
@@ -44,11 +44,11 @@ De forma predeterminada, la fórmula Tensorflow funciona en un clúster de GPU y
 
 ### Crear nuevo bloc de notas
 
-En la interfaz de usuario [!DNL Adobe Experience Platform], seleccione [!UICONTROL Ciencia de datos] en el menú superior para llevarlo al Workspace de ciencia de datos. Desde esta página, seleccione [!DNL JupyterLab] para abrir el lanzador [!DNL JupyterLab]. Debería ver un Página similar a este.
+En la interfaz de usuario [!DNL Adobe Experience Platform], seleccione [!UICONTROL Ciencia de datos] en el menú superior para llevarlo al Workspace de ciencia de datos. Desde esta página, seleccione [!DNL JupyterLab] para abrir el lanzador [!DNL JupyterLab]. Debería ver una página similar a esta.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
-En nuestro tutorial, usaremos [!DNL Python] 3 en Jupyter Notebook para mostrar cómo acceder y explorar los datos. En la página del lanzador, hay blocs de notas de ejemplo proporcionados. Se utilizará la fórmula de ventas minoristas de [!DNL Python] 3.
+En nuestro tutorial, utilizaremos [!DNL Python] 3 en Jupyter Notebook para mostrar cómo acceder a los datos y explorarlos. En la página del lanzador, hay blocs de notas de ejemplo proporcionados. Se utilizará la fórmula de ventas minoristas de [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -58,7 +58,7 @@ La fórmula de ventas minoristas es un ejemplo independiente que utiliza el mism
 
 >[!NOTE]
 >
->`data_access_sdk_python` está obsoleto y ya no se recomienda. Consulte el tutorial [convertir el SDK de acceso a datos al SDK de plataforma](../authoring/platform-sdk.md) para convertir su código. Los mismos pasos que se describen a continuación siguen siendo aplicables a este tutorial.
+>`data_access_sdk_python` está obsoleto y ya no se recomienda. Consulte el tutorial [convertir SDK de acceso a datos a Experience Platform SDK](../authoring/platform-sdk.md) para convertir su código. Los mismos pasos que se describen a continuación siguen siendo aplicables a este tutorial.
 
 Se pasará de acceder a los datos internamente desde [!DNL Adobe Experience Platform] y a los datos externamente. Utilizaremos la biblioteca `data_access_sdk_python` para acceder a datos internos como conjuntos de datos y esquemas XDM. Para datos externos, usaremos la biblioteca [!DNL Python] de pandas.
 
@@ -78,7 +78,7 @@ Por último, podemos echar un vistazo a la apariencia de nuestros datos. Podemos
 
 #### [!DNL Experience Platform] datos
 
-Ahora, repasaremos el acceso a [!DNL Experience Platform] los datos.
+Ahora, pasaremos a obtener acceso a [!DNL Experience Platform] datos.
 
 ##### Por ID de conjunto de datos
 
@@ -96,7 +96,7 @@ Ahora, podemos hacer clic con el botón derecho en el conjunto de datos `Retail-
 
 >[!TIP]
 >
->Consulte la guía [[!DNL Platform SDK]](../authoring/platform-sdk.md) para convertir su código.
+>Consulte la guía [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md) para convertir su código.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -117,9 +117,9 @@ Si reinicia el núcleo y vuelve a ejecutar todas las celdas, debería obtener la
 ![](../images/jupyterlab/analyze-data/restart_kernel_run.png)
 
 
-### Explorar datos
+### Exploración de los datos
 
-Ahora que podemos acceder a sus datos, enfocar en los datos mediante el uso de estadísticas y visualización. El conjunto de datos que estamos utilizando es un conjunto de datos minorista que brinda información diversa sobre 45 tiendas diferentes en un día determinado. Algunas características para un evento determinado `date` e `store` incluyen las siguientes:
+Ahora que podemos acceder a sus datos, vamos a centrarnos en los datos en sí mediante el uso de estadísticas y visualización. El conjunto de datos que estamos utilizando es un conjunto de datos de minoristas que proporciona información variada sobre 45 tiendas diferentes en un día determinado. Algunas características de un(a) `date` y `store` dado(a) incluyen las siguientes:
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -132,7 +132,7 @@ Ahora que podemos acceder a sus datos, enfocar en los datos mediante el uso de e
 
 #### Resumen estadístico
 
-Podemos impulsar [!DNL Python's] pandas biblioteca para obtener el tipo de datos de cada atributo. La salida de la siguiente llamada nos dará información sobre el número de entradas y el tipo de datos para cada una de las columnas:
+Podemos aprovechar la biblioteca pandas [!DNL Python's] para obtener el tipo de datos de cada atributo. El resultado de la siguiente llamada nos dará información sobre el número de entradas y el tipo de datos para cada una de las columnas:
 
 ```PYTHON
 df.info()
@@ -150,17 +150,17 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_describe.png)
 
-Con esto, podemos ver que hay 6435 instancias para cada característica. Además, se proporciona información estadística como la media, la desviación estándar (std), el mínimo, el máximo y los intercuartiles. Esto nos proporciona información sobre la desviación de los datos. En la siguiente sección, repasaremos la visualización que funciona junto con esta información para darnos una buena comprensión de nuestros datos.
+Con esto, podemos ver que hay 6435 instancias para cada característica. Además, se proporciona información estadística como la media, la desviación estándar (std), el mínimo, el máximo y los intercuartiles. Esto nos proporciona información sobre la desviación de los datos. En la siguiente sección, analizaremos la visualización que funciona junto con esta información para darnos una buena comprensión de nuestros datos.
 
-Si observamos los valores mínimos y máximos de `store`, podemos ver que hay 45 almacenes únicos que representan los datos. También existen `storeTypes` que diferencian lo que es una tienda. Podemos ver la distribución de `storeTypes` haciendo lo siguiente:
+Si observamos los valores mínimo y máximo de `store`, podemos ver que hay 45 almacenes únicos que representan los datos. También existen `storeTypes` que diferencian lo que es una tienda. Podemos ver la distribución de `storeTypes` haciendo lo siguiente:
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-Esto significa que 22 tiendas son de `storeType` `A`, 17 son `B``storeType` y 6 son `storeType` `C`.
+Esto significa que 22 tiendas son de `storeType` `A`, 17 son `storeType` `B` y 6 son `storeType` `C`.
 
 #### Visualización de datos
 
-Ahora que conocemos nuestros valores de marco de datos, queremos complementar esto con visualizaciones para hacer las cosas más claras y fáciles de identificar patrones. Los gráficos también son útiles cuando se transmiten resultados a un audiencia. Algunas [!DNL Python] bibliotecas que son útiles para la visualización incluyen:
+Ahora que conocemos los valores de nuestros marcos de datos, queremos complementarlos con visualizaciones para que las cosas sean más claras y fáciles de identificar. Los gráficos también son útiles para transmitir los resultados a una audiencia. Algunas bibliotecas de [!DNL Python] que son útiles para la visualización incluyen:
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [embarcar](https://seaborn.pydata.org/)
@@ -174,18 +174,18 @@ En esta sección, analizaremos rápidamente algunas ventajas de utilizar cada bi
 
 [seaborn](https://seaborn.pydata.org/) es un paquete compilado sobre matplotlib. Su objetivo principal es hacer que los gráficos predeterminados sean más atractivos visualmente y simplificar la creación de gráficos complicados.
 
-[gglot](https://ggplot2.tidyverse.org/) es un paquete que también se creó sobre matplotlib. Sin embargo, la principal diferencia es que el herramienta es un puerto de ggplot2 para R. Similar a Seaborn, el objetivo es mejorar matplotlib. Los usuarios que estén familiarizados con ggplot2 para R deberían considerar este biblioteca.
+[gglot](https://ggplot2.tidyverse.org/) es un paquete que también se creó sobre matplotlib. Sin embargo, la principal diferencia es que la herramienta es un puerto de gglot2 para R. Similar a seaborn, el objetivo es mejorar sobre matplotlib. Los usuarios que estén familiarizados con gplot2 para R deben considerar esta biblioteca.
 
 
-##### Gráficos univariados
+##### Gráficos univariables
 
-Los grafos univariados son diagramas de un variable individual. Un gráfico univariado común que se utiliza para visualizar sus datos es el diagrama de caja y bigotes.
+Los gráficos univariables son gráficos de una variable individual. Un gráfico univariado común se utiliza para visualizar sus datos es el gráfico de cajas y bigotes.
 
-Utilizando nuestros conjunto de datos minoristas de antes, podemos generar el diagrama de caja y bigotes para cada una de las 45 tiendas y sus ventas semanales. La gráfica se genera mediante la `seaborn.boxplot` función.
+Utilizando nuestro conjunto de datos de comercio minorista de antes, podemos generar la trama de cajas y bigotes para cada una de las 45 tiendas y sus ventas semanales. El diagrama se genera mediante la función `seaborn.boxplot`.
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
-Se utiliza un diagrama de caja y bigotes para mostrar la distribución de los datos. Las líneas exteriores del gráfico muestran los cuartiles superior e inferior, mientras que el cuadro abarca el intervalo intercuartil. La línea de la caja marca la mediana. Los puntos de datos que superen 1,5 veces el cuartil superior o inferior se marcan como un círculo. Estos puntos se consideran periféricos.
+Se utiliza un gráfico de cajas y bigotes para mostrar la distribución de los datos. Las líneas exteriores del gráfico muestran los cuartiles superior e inferior, mientras que el cuadro abarca el intervalo intercuartil. La línea de la caja marca la mediana. Los puntos de datos que superen 1,5 veces el cuartil superior o inferior se marcan como un círculo. Estos puntos se consideran periféricos.
 
 ##### Gráficos multivariable
 
@@ -200,8 +200,8 @@ Observe la diagonal de 1 en el centro. Esto muestra que, al comparar una variabl
 
 ## Pasos siguientes
 
-Este tutorial repasó cómo crear un nuevo Jupyter Notebook en el Espacio de trabajo de Ciencia de Datos y cómo acceder a los datos tanto externamente como desde [!DNL Adobe Experience Platform]. Específicamente, repasamos los siguientes pasos:
-- Crear un nuevo Jupyter Notebook
+Este tutorial explica cómo crear un nuevo Jupyter Notebook en el Workspace de ciencia de datos y cómo acceder a los datos de forma externa, así como desde [!DNL Adobe Experience Platform]. Específicamente, hemos seguido los siguientes pasos:
+- Crear nuevo Jupyter Notebook
 - Acceso a conjuntos de datos y esquemas
 - Explorar conjuntos de datos
 

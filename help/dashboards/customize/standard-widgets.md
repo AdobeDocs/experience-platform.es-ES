@@ -3,18 +3,18 @@ keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;s
 title: Widgets del panel estándar
 description: Esta guía proporciona instrucciones paso a paso para agregar widgets estándar a los paneles de Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
 
 # Añadir widgets estándar a los paneles
 
-En Adobe Experience Platform, puede ver los datos de su organización e interactuar con ellos mediante varios paneles. También puede actualizar ciertos tableros agregando nuevos widgets a la vista de tablero. El Adobe proporciona una selección de widgets estándar que puede elegir añadir a sus paneles.
+En Adobe Experience Platform, puede ver los datos de su organización e interactuar con ellos mediante varios paneles. También puede actualizar ciertos tableros agregando nuevos widgets a la vista de tablero. Adobe proporciona una selección de widgets estándar que puede elegir añadir a sus paneles.
 
-Los paneles de [[!UICONTROL Perfiles]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiencias]](../guides/audiences.md#default-widgets) y [[!UICONTROL Destinos]](../guides/destinations.md#default-widgets) tienen una carga de widget predeterminada cuando se crea una nueva instancia de Platform. Esta guía proporciona instrucciones paso a paso para agregar widgets estándar para personalizar los paneles de [!UICONTROL Perfiles], [!UICONTROL Audiencias] y [!UICONTROL Destinos] en la interfaz de usuario de Platform.
+Los paneles de [[!UICONTROL Perfiles]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiencias]](../guides/audiences.md#default-widgets) y [[!UICONTROL Destinos]](../guides/destinations.md#default-widgets) tienen una carga de widget predeterminada cuando se crea una nueva instancia de Experience Platform. Esta guía proporciona instrucciones paso a paso para agregar widgets estándar para personalizar los paneles de [!UICONTROL Perfiles], [!UICONTROL Audiencias] y [!UICONTROL Destinos] en la interfaz de usuario de Experience Platform.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Para obtener más información sobre widgets personalizados, consulta la guía p
 
 ## Biblioteca de widgets {#widget-library}
 
-Esta guía requiere acceso a la [!UICONTROL biblioteca de widgets] en el Experience Platform. Para obtener más información sobre la biblioteca de widgets y cómo acceder a ella desde la interfaz de usuario, lea la [descripción general de la biblioteca de widgets](widget-library.md).
+Esta guía requiere acceso a la [!UICONTROL biblioteca de widgets] en Experience Platform. Para obtener más información sobre la biblioteca de widgets y cómo acceder a ella desde la interfaz de usuario, lea la [descripción general de la biblioteca de widgets](widget-library.md).
 
 ## Introducción a los widgets estándar {#standard-widgets}
 

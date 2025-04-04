@@ -1,14 +1,14 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2021
-description: Notas de la versión de agosto de 2021 de Adobe Experience Platform.
+description: Las notas de la versión de agosto de 2021 de Adobe Experience Platform.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 35%
+source-wordcount: '719'
+ht-degree: 37%
 
 ---
 
@@ -35,27 +35,27 @@ Los destinos son integraciones prediseñadas con plataformas de destino que perm
 | [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | El destino Etiquetas de dirigibles, anteriormente en fase beta, ya está disponible de forma general. |
 | [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | El destino de Braze, que anteriormente estaba en fase beta, ya está disponible de forma general. |
 | [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | Con el destino Lista de clientes de Pinterest, puede crear audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest. |
-| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform. |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Dirija su actividad a sus seguidores y clientes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform. |
 | [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX es una infraestructura agregada de Verizon Media/Yahoo que aloja varios componentes que permiten a Verizon Media/Yahoo intercambiar datos con sus socios externos de una manera segura, automatizada y escalable. |
 
 **Nuevas funciones**
 
 | Función | Descripción |
 | --- | --- |
-| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDK es un conjunto de API de configuración que le permiten configurar patrones de integración de  para que Experience Platform envíe datos de audiencia y perfil a su punto final, en función de los datos y los formatos de autenticación de su elección. Las configuraciones se almacenan en el Experience Platform y se pueden recuperar mediante API para actualizaciones adicionales. |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDK es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que Experience Platform envíe datos de audiencia y perfil a su punto de conexión, en función de los datos y los formatos de autenticación de su elección. Las configuraciones se almacenan en Experience Platform y se pueden recuperar mediante API para actualizaciones adicionales. |
 | [Mejoras de uso en destinos](../../destinations/ui/activation-overview.md) | Las mejoras de uso en los destinos permiten a los especialistas en marketing activar segmentos sin problemas en destinos existentes. |
 
 Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Perspectivas de la capacidad de observación {#observability}
 
-Observability Insights le permite monitorizar las actividades de Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
+Observability Insights le permite monitorizar las actividades de Experience Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
 
 **Nuevas características**
 
 | Función | Descripción |
 | --- | --- |
-| Alertas | Ahora puede suscribirse a alertas importantes relacionadas con los flujos de trabajo que se ejecutan en Platform. Después de suscribirse a reglas de alerta específicas, recibirá notificaciones en la interfaz de usuario y correos electrónicos cuando se produzca un evento importante del ciclo vital (como una ingesta de datos correcta) o si hay problemas que requieren su atención (como un error en el flujo de ingesta o un trabajo de segmento que tarde más de lo esperado). Para obtener más información, consulte la [descripción general de las alertas](../../observability/alerts/overview.md). |
+| Alertas | Ahora puede suscribirse a alertas importantes relacionadas con los flujos de trabajo que se ejecutan en Experience Platform. Después de suscribirse a reglas de alerta específicas, recibirá notificaciones en la interfaz de usuario y correos electrónicos cuando se produzca un evento importante del ciclo vital (como una ingesta de datos correcta) o si hay problemas que requieren su atención (como un error en el flujo de ingesta o un trabajo de segmento que tarde más de lo esperado). Para obtener más información, consulte la [descripción general de las alertas](../../observability/alerts/overview.md). |
 
 Consulte la [descripción general de Observability Insights](../../observability/home.md) para obtener más información sobre el servicio.
 
@@ -71,12 +71,12 @@ Para obtener más información sobre el perfil del cliente en tiempo real, inclu
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 | Función | Descripción |
 | ------- | ----------- |
-| Conector de origen de carga de archivos locales | Se ha cambiado el nombre de la categoría de ingesta de archivos a sistema local, lo que permite llevar los archivos locales directamente a Platform mediante el conector de carga de archivos local. Los datos introducidos a través de este conector se pueden monitorizar mediante el panel de monitorización. Consulte la [descripción general del origen de carga de archivos locales](../../sources/connectors/local-system/local-file-upload.md) para obtener más información. |
+| Conector de origen de carga de archivos locales | Se ha cambiado el nombre de la categoría de ingesta de archivos a sistema local, lo que permite llevar los archivos locales directamente a Experience Platform mediante el conector de carga de archivos local. Los datos introducidos a través de este conector se pueden monitorizar mediante el panel de monitorización. Consulte la [descripción general del origen de carga de archivos locales](../../sources/connectors/local-system/local-file-upload.md) para obtener más información. |
 
 Para obtener más información sobre las fuentes, consulte [descripción general de las fuentes](../../sources/home.md).

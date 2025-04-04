@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 27%
 
 ---
@@ -68,7 +68,7 @@ Para obtener más información sobre el perfil del cliente en tiempo real, inclu
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
@@ -76,7 +76,7 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | ------- | ----------- |
-| Mejoras en el conector de origen de Adobe Audience Manager | Ahora puede filtrar y seleccionar segmentos de origen individuales del Audience Manager para introducirlos en Platform, así como filtrar los rasgos de origen. Consulte el tutorial sobre [creación de un conector de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
+| Mejoras en el conector de origen de Adobe Audience Manager | Ahora puede filtrar y seleccionar segmentos de origen individuales de Audience Manager para introducirlos en Experience Platform, así como filtrar los rasgos de origen. Consulte el tutorial sobre [creación de un conector de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
 | [!DNL Google BigQuery] mejoras en el conector de origen | Ahora puede ingerir archivos de más de 10 GB en una ejecución de flujo utilizando el conector de origen [!DNL BigQuery]. Consulte la [[!DNL BigQuery] descripción general del conector de origen](../../sources/connectors/databases/bigquery.md) para obtener más información. |
 | Compatibilidad con tipos de datos complejos para almacenamiento en la nube | Ahora puede introducir tipos de datos complejos, como matrices en archivos JSON, al utilizar un conector de origen de almacenamiento en la nube. Consulte los tutoriales sobre la creación de un flujo de datos de almacenamiento en la nube [en la interfaz de usuario](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) o [mediante la API [!DNL Flow Service] 4} para obtener más información.](../../sources/tutorials/api/collect/cloud-storage.md) |
 | Compatibilidad con la autenticación basada en claves principales de servicio para el origen [!DNL Microsoft Dynamics] | Ahora puede autenticarse en su cuenta de [!DNL Dynamics] mediante una clave principal de servicio como alternativa a la autenticación basada en contraseña. Consulte la [[!DNL Dynamics] descripción general del conector de origen](../../sources/connectors/crm/ms-dynamics.md) para obtener más información. |

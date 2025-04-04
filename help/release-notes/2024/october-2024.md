@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: octubre de 2024'
 description: Las notas de la versión de octubre de 2024 de Adobe Experience Platform.
 exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 100%
+source-wordcount: '1160'
+ht-degree: 97%
 
 ---
 
@@ -86,7 +86,7 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [I
 
 ## Zonas protegidas {#sandboxes}
 
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para responder a esta necesidad, Experience Platform proporciona zonas protegidas que dividen una única instancia de Platform en entornos virtuales separados para ayudar a desarrollar y evolucionar las aplicaciones de la experiencia digital.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar aplicaciones de experiencia digital y hacer que evolucionen.
 
 **Funciones nuevas o actualizadas**
 
@@ -99,7 +99,7 @@ Adobe Experience Platform está diseñado para enriquecer las aplicaciones de ex
 
 Para obtener más información sobre las zonas protegidas, lea la [información general sobre zonas protegidas](../../sandboxes/home.md).
 
-## Orígenes {#sources}
+## Fuentes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

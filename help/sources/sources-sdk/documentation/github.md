@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;fuentes sdk;sdk;SDK
 solution: Experience Platform
 title: Uso de la interfaz web de GitHub para crear una página de documentación de orígenes
 description: Este documento proporciona pasos sobre cómo utilizar la interfaz web de GitHub para crear documentación y enviar una solicitud de extracción (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Aparece una carpeta de orígenes de CRM existentes. Para agregar documentación 
 
 ![create-new-file](../assets/create-new-file.png)
 
-Asigne un nombre al archivo de origen `YOURSOURCE.md`, donde YOURSOURCE es el nombre del origen en Platform. Por ejemplo, si su empresa es ACME CRM, su nombre de archivo debe ser `acme-crm.md`.
+Asigne un nombre al archivo de origen `YOURSOURCE.md`, donde YOURSOURCE es el nombre del origen en Experience Platform. Por ejemplo, si su empresa es ACME CRM, su nombre de archivo debe ser `acme-crm.md`.
 
 ![interfaz de Git](../assets/git-interface.png)
 
@@ -75,7 +75,7 @@ Asegúrese de que las ramas base y de comparación son correctas. Agregue una no
 
 ![crear-pr](../assets/create-pr.png)
 
-En este punto, aparece una notificación que le solicita que firme el Acuerdo de licencia para colaboradores de Adobe (CLA). Este es un paso obligatorio. Después de firmar el CLA, actualice la página PR y envíe la solicitud de extracción.
+En este punto, aparece una notificación que le solicita que firme el Acuerdo de licencia para colaboradores (CLA) de Adobe. Este es un paso obligatorio. Después de firmar el CLA, actualice la página PR y envíe la solicitud de extracción.
 
 Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la pestaña solicitudes de extracción en https://github.com/AdobeDocs/experience-platform.en.
 

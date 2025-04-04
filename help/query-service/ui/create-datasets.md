@@ -5,9 +5,9 @@ title: Generar conjuntos de datos de salida a partir de resultados de consulta
 type: Tutorial
 description: El servicio de consulta de Adobe Experience Platform permite crear conjuntos de datos desde la interfaz de usuario. Una vez creado un conjunto de datos, se puede acceder a él como cualquier otro conjunto de datos del lago de datos y utilizarlo en una variedad de casos de uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Para crear conjuntos de datos desde la interfaz de usuario (IU) de Adobe Experie
 
 1. Cree una consulta con un cliente conectado y valide el resultado. Para aprender a escribir consultas con [!DNL Query Editor], lea la guía de la interfaz de usuario de [!DNL Query Editor] [sobre cómo escribir consultas](./user-guide.md#writing-queries).
 
-2. En la interfaz de usuario de Platform, vaya a **[!UICONTROL Consultas]** seguida de la pestaña **[!UICONTROL Plantillas]** y seleccione la consulta que ha creado. Para obtener más información sobre cómo ver las consultas que se crearon y guardaron para su organización en la interfaz de usuario de Platform, lea la [[!DNL Query Service] descripción general](./overview.md#browse).
+2. En la interfaz de usuario de Experience Platform, vaya a **[!UICONTROL Consultas]** seguida de la pestaña **[!UICONTROL Plantillas]** y seleccione la consulta que ha creado. Para obtener más información sobre cómo ver las consultas que se crearon y guardaron para su organización en la interfaz de usuario de Experience Platform, lea la [[!DNL Query Service] descripción general](./overview.md#browse).
 
 3. En el panel Detalles de la consulta, seleccione **[!UICONTROL Ejecutar como CTAS]**.
 
@@ -34,7 +34,7 @@ Para crear conjuntos de datos desde la interfaz de usuario (IU) de Adobe Experie
 
    ![Se ha resaltado el cuadro de diálogo Conjunto de datos de salida con los detalles del conjunto de datos y [!UICONTROL Ejecutar como CTAS]](../images/ui/create-datasets/run-query.png)
 
-6. Una vez finalizada la ejecución de la consulta, vaya a **[!UICONTROL Conjuntos de datos]** para ver el conjunto de datos que ha creado. Para obtener más información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Platform, consulte la [Guía de la interfaz de usuario de conjuntos de datos](../../catalog/datasets/user-guide.md).
+6. Una vez finalizada la ejecución de la consulta, vaya a **[!UICONTROL Conjuntos de datos]** para ver el conjunto de datos que ha creado. Para obtener más información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Experience Platform, consulte la [Guía de la interfaz de usuario de conjuntos de datos](../../catalog/datasets/user-guide.md).
 
 Una vez creado un conjunto de datos, se puede tener acceso a él como a cualquier otro conjunto de datos del [!DNL Data Lake] y utilizarlo en diversos casos de uso.
 
@@ -52,4 +52,4 @@ Los conjuntos de datos creados a través de esta funcionalidad se generan con un
 
 ## Pasos siguientes
 
-Después de leer este documento, debería saber cómo usar [!DNL Query Service] para generar conjuntos de datos desde la interfaz de usuario de Platform. Para obtener más información sobre cómo tener acceso, escribir y ejecutar consultas en la interfaz de usuario de Platform, consulte la [[!DNL Query Service] descripción general de la interfaz de usuario](./overview.md).
+Después de leer este documento, debería saber cómo usar [!DNL Query Service] para generar conjuntos de datos desde la interfaz de usuario de Experience Platform. Para obtener más información sobre cómo tener acceso, escribir y ejecutar consultas en la interfaz de usuario de Experience Platform, vea la [[!DNL Query Service] descripción general de la interfaz de usuario](./overview.md).

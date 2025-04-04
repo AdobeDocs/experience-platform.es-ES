@@ -3,16 +3,16 @@ title: Resumen de API de etiquetas unificadas
 description: Aprenda a utilizar la API de etiquetas unificadas para administrar las etiquetas y carpetas unificadas en Adobe Experience Platform.
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 1%
 
 ---
 
 # Resumen de API de etiquetas unificadas
 
-La API de etiquetas unificadas le permite categorizar y administrar sus objetos empresariales en Adobe Experience Platform. Puede crear carpetas y etiquetas que se pueden utilizar para organizar mejor objetos de Platform, como audiencias o conjuntos de datos, mediante puntos finales en esta API.
+La API de etiquetas unificadas le permite categorizar y administrar sus objetos empresariales en Adobe Experience Platform. Puede crear carpetas y etiquetas que se pueden utilizar para organizar mejor los objetos de Experience Platform, como audiencias o conjuntos de datos, mediante puntos finales en esta API.
 
 Antes de leer las guías de extremos individuales, consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados obligatorios, la lectura de llamadas de API de ejemplo y mucho más.
 

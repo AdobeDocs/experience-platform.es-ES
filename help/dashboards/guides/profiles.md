@@ -4,9 +4,9 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4997'
+source-wordcount: '5005'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los datos de [!DNL Real-Time Customer Profile], tal como se capturan durante una instantánea diaria. Esta guía describe cómo acceder al panel Perfiles de la interfaz de usuario y trabajar con él, y proporciona información sobre las métricas que se muestran en el panel.
 
-Consulte la [guía de la interfaz de usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md) para obtener una descripción general de las características del perfil en la interfaz de usuario del Experience Platform.
+Consulte la [guía de la interfaz de usuario del perfil del cliente en tiempo real](../../profile/ui/user-guide.md) para obtener una descripción general de las características del perfil en la interfaz de usuario de Experience Platform.
 
 ## Datos del panel de perfil
 
@@ -29,13 +29,13 @@ Los datos de atributos de la instantánea muestran los datos exactamente como ap
 
 ## Exploración del panel Perfiles {#explore-dashboard}
 
-Para ir al panel Perfiles dentro de la interfaz de usuario de Platform, selecciona **[!UICONTROL Perfiles]** en el carril izquierdo y, a continuación, selecciona la pestaña **[!UICONTROL Información general]** para mostrar el panel.
+Para ir al panel Perfiles en la interfaz de usuario de Experience Platform, selecciona **[!UICONTROL Perfiles]** en el carril izquierdo y, a continuación, selecciona la pestaña **[!UICONTROL Información general]** para mostrar el panel.
 
 >[!NOTE]
 >
->Si su organización es nueva en Platform y aún no ha creado conjuntos de datos de perfil o políticas de combinación activos, el panel Perfiles no estará visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con el Perfil del cliente en tiempo real.
+>Si su organización es nueva en Experience Platform y aún no ha creado conjuntos de datos de perfil o políticas de combinación activos, el panel Perfiles no está visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con el Perfil del cliente en tiempo real.
 
-![Panel de perfiles del Experience Platform con perfiles e información general resaltados.](../images/profiles/dashboard-overview.png)
+![Panel de perfiles de Experience Platform con perfiles e información general resaltados.](../images/profiles/dashboard-overview.png)
 
 ### Modificación del panel Perfiles {#modify-dashboard}
 
@@ -53,7 +53,7 @@ Desde la biblioteca de widgets, puede examinar la selección de widgets de audie
 
 ### Ver SQL {#view-sql}
 
-Puede ver el SQL que genera las perspectivas visualizadas en su panel con un conmutador en el espacio de trabajo [!UICONTROL Información general]. Puede inspirarse en el SQL de sus perspectivas existentes para crear nuevas consultas que deriven perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. Para obtener más información acerca de esta característica, consulte la [Guía de la interfaz de usuario de SQL de vista](../view-sql.md).
+Puede ver el SQL que genera las perspectivas visualizadas en su panel con un conmutador en el espacio de trabajo [!UICONTROL Información general]. Puede inspirarse en el SQL de sus perspectivas existentes para crear nuevas consultas que deriven perspectivas únicas de los datos de Experience Platform en función de sus necesidades comerciales. Para obtener más información acerca de esta característica, consulte la [Guía de la interfaz de usuario de SQL de vista](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -117,10 +117,10 @@ El widget de [!UICONTROL preferencias de canal] muestra los canales de comunicac
 
 El consentimiento del cliente y las preferencias de contacto son temas complejos. Para conocer cómo se pueden recopilar, procesar y filtrar las preferencias de consentimiento y contexto en Experience Platform, se recomienda leer los siguientes documentos:
 
-* Para obtener información acerca de los grupos de campos de esquema necesarios para [recopilar datos de consentimiento según el estándar de Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md), consulte la documentación sobre estos grupos de campos de esquema habilitados para perfiles.
+* Para obtener más información acerca de los grupos de campos de esquema necesarios para [recopilar datos de consentimiento según el estándar de Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md), consulte la documentación sobre estos grupos de campos de esquema habilitados para perfiles.
    * [[!UICONTROL Detalles de consentimiento y preferencia]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (necesario si se usa el SDK web o móvil de Platform para enviar señales de consentimiento)
-* Para obtener información sobre cómo procesar los datos de preferencias y el consentimiento del cliente mediante el estándar de Adobe, consulte la descripción general del procesamiento de [consentimiento en Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (necesario si se usa Experience Platform Web o Mobile SDK para enviar señales de consentimiento)
+* Para obtener información sobre cómo procesar los datos de preferencias y consentimiento del cliente mediante el estándar de Adobe, consulte la descripción general del procesamiento de [consentimiento en Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * Se puede utilizar una política de consentimiento y gobernanza de datos combinada para filtrar perfiles de segmentación en función de sus preferencias de consentimiento y las reglas organizativas establecidas. Para aprender a crear y utilizar estas directivas combinadas, consulte la guía del usuario sobre [administración de directivas de uso de datos](../../data-governance/policies/user-guide.md#combine-policies).
 
 ### Añadir widgets {#add-widgets}
@@ -149,7 +149,7 @@ En el lienzo se muestra una vista previa del widget completado. Una vez que est�
 
 ![El lienzo del creador de widgets con Guardar resaltado y mostrando la vista previa del widget.](../images/profiles/widget-preview.png)
 
-## Políticas de combinación {#merge-policies}
+## Combinar políticas {#merge-policies}
 
 Las métricas que se muestran en el panel Perfiles se basan en las políticas de combinación que se aplican a los datos del perfil del cliente en tiempo real. Cuando los datos se reúnen desde varias fuentes para crear el perfil del cliente, los datos pueden contener valores en conflicto. Por ejemplo, un conjunto de datos puede enumerar un cliente como &quot;único&quot;, mientras que otro conjunto de datos puede enumerar el cliente como &quot;casado&quot;. La tarea de determinar qué datos priorizar y mostrar como parte del perfil corresponde a la política de combinación.
 
@@ -169,7 +169,7 @@ El panel [!UICONTROL Esquema de unión] muestra el esquema de unión para una cl
 
 Los esquemas de unión están compuestos por varios esquemas que comparten la misma clase y que se han habilitado para Perfil. Permiten ver en una sola vista una amalgamación de todos los campos contenidos en cada esquema que comparte la misma clase.
 
-Para obtener más información sobre [ver esquemas de unión en la interfaz de usuario de Platform](../../profile/ui/union-schema.md#view-union-schemas), consulte la guía de la interfaz de usuario del esquema de unión.
+Para obtener más información sobre [ver esquemas de unión en la interfaz de usuario de Experience Platform](../../profile/ui/union-schema.md#view-union-schemas), consulte la guía de la interfaz de usuario del esquema de unión.
 
 ## Widgets y métricas
 
@@ -221,7 +221,7 @@ El modelo de IA que determina las puntuaciones de tendencia se elige del selecto
 
 Para ir a la página de detalles del modelo de inteligencia artificial aplicada al cliente seleccionado, seleccione **[!UICONTROL Ver detalles del modelo]**.
 
-![Se ha resaltado el panel Audiencias del Experience Platform con el widget [!UICONTROL Distribución de puntuaciones según la inteligencia artificial aplicada al cliente] y [!UICONTROL Ver detalles del modelo].](../images/segments/customer-ai-distribution-of-scores.png)
+![Se ha resaltado el panel Audiencias de Experience Platform con la distribución de puntuaciones] de la inteligencia artificial aplicada al cliente y el widget [!UICONTROL Ver detalles del modelo].](../images/segments/customer-ai-distribution-of-scores.png)[!UICONTROL 
 
 Aparecerá la página de información detallada del modelo.
 
@@ -248,7 +248,7 @@ El menú desplegable debajo del título del widget proporciona una lista de todo
 >
 >El número total de perfiles calculados depende de la política de combinación elegida. Para cambiar la política de combinación utilizada, seleccione el menú desplegable situado inmediatamente debajo de la pestaña de información general. Consulte la sección sobre [políticas de combinación](#merge-policies) para obtener una breve descripción o la [descripción general de la política de combinación](../../profile/merge-policies/overview.md) para obtener más detalles.
 
-![Panel de audiencias del Experience Platform con el widget de resumen de puntuación de inteligencia artificial aplicada al cliente resaltado.](../images/segments/customer-ai-scoring-summary.png)
+![Panel de audiencias de Experience Platform con el widget de resumen de puntuación de inteligencia artificial aplicada al cliente resaltado.](../images/segments/customer-ai-scoring-summary.png)
 
 Para ir a la página de detalles del modelo de inteligencia artificial aplicada al cliente seleccionado, seleccione **[!UICONTROL Ver detalles del modelo]**. Encontrará más información sobre inteligencia artificial aplicada al cliente en la [guía de la interfaz de usuario de Discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
@@ -314,7 +314,7 @@ El widget **[!UICONTROL Cambio de recuento de perfiles]** muestra el número de 
 >
 >El widget [!UICONTROL Cambio de recuento de perfiles] refleja el número de perfiles agregados **después de** la ingesta inicial de perfiles y la configuración del almacén de perfiles. En otras palabras, si su organización configura el almacén de perfiles e ingiere 4 000 000 de en el día 1, en un plazo de 24 horas el tablero estaría disponible, pero el widget [!UICONTROL Cambio de recuento de perfiles] se establecería en 0. Este método de contabilización se realiza para evitar un pico asociado con la ingesta inicial de perfiles en el sistema. En los próximos 30 días, su organización introducirá 1 000 000 de perfiles adicionales en el almacén de perfiles de. Después de tomar la siguiente instantánea, el widget [!UICONTROL Cambio de recuento de perfiles] mostraría un total de 1.000.000 de perfiles agregados, mientras que el widget [!UICONTROL Recuento de perfiles] mostraría 5.000.000 de perfiles totales.
 
-![Panel de perfiles de IU de Platform con el widget de cambio de recuento de perfiles resaltado.](../images/profiles/profile-count-change.png)
+![El panel Perfiles de la interfaz de usuario de Experience Platform con el widget de cambio de recuento de perfiles resaltado.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Tendencia de cambio de recuento de perfiles] {#profiles-count-change-trend}
 
@@ -323,7 +323,7 @@ El widget **[!UICONTROL Cambio de recuento de perfiles]** muestra el número de 
 >title="Tendencia de cambio de recuento de perfiles"
 >abstract="Este widget muestra el número de perfiles combinados que se han añadido al almacén de perfiles diariamente en los últimos 30 días, 90 días o 12 meses. El número también depende de las políticas de combinación seleccionadas que se apliquen a los datos de perfil."
 
-El widget **[!UICONTROL Tendencia de cambio de recuento de perfiles]** muestra el número total de perfiles combinados que se han agregado diariamente al almacén de perfiles en los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si tuviera que introducir perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
+El widget **[!UICONTROL Tendencia de cambio de recuento de perfiles]** muestra el número total de perfiles combinados que se han agregado diariamente al almacén de perfiles en los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si tuviera que introducir perfiles en Experience Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
 
 Para obtener más información, consulte la sección [sobre políticas de combinación anteriormente en este documento](#merge-policies).
 
@@ -478,7 +478,7 @@ Aparecerá el cuadro de diálogo [!UICONTROL Informe de superposición de audien
 >
 >Para cambiar la clasificación de resultados entre mayor a menor o menor a mayor, seleccione el encabezado de columna **[!UICONTROL Superposición]**.
 
-Para descargar todo el informe en formato de PDF, seleccione el menú de opciones (**`...`**) seguido de **[!UICONTROL Descargar]**.
+Para descargar todo el informe en formato PDF, seleccione el menú de opciones (**`...`**) seguido de **[!UICONTROL Descargar]**.
 
 ![Cuadro de diálogo del informe de superposición de audiencias con los puntos suspensivos y la opción de descarga resaltados.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
@@ -514,7 +514,7 @@ Este widget utiliza un diagrama de Venn para mostrar la superposición de dos au
 
 A medida que el widget muestra el cruce visual de las definiciones de segmentos, puede optimizar su estrategia de segmentación estudiando las similitudes entre las definiciones de segmentos.
 
-![Panel de perfiles de IU de Platform con la lista desplegable de políticas de combinación y los desplegables de audiencias de widget resaltados.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Se resaltaron el panel Perfiles de la interfaz de usuario de Experience Platform con la lista desplegable de la política de combinación y los desplegables de la audiencia del widget.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

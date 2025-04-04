@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1137'
-ht-degree: 22%
+source-wordcount: '1141'
+ht-degree: 23%
 
 ---
 
@@ -38,11 +38,11 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Perfiles, segmentos, destinos y tableros de uso de licencias (Beta) | **Nota: la funcionalidad del tablero está actualmente en versión beta y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.**<br/><br/> Los paneles proporcionan informes predeterminados sobre los datos de su organización y están integrados directamente en el flujo de trabajo del experto en marketing dentro de Platform. Estos paneles están disponibles sin necesidad de soporte de TI adicional ni el tiempo y esfuerzo que, de lo contrario, tomaría exportar y procesar los datos con el diseño y la implementación de almacenamiento de datos adicional. |
+| Perfiles, segmentos, destinos y tableros de uso de licencias (Beta) | **Nota: la funcionalidad del tablero está actualmente en versión beta y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.**<br/><br/> Los paneles proporcionan informes predeterminados sobre los datos de su organización y están integrados directamente en el flujo de trabajo del experto en marketing dentro de Experience Platform. Estos paneles están disponibles sin necesidad de soporte de TI adicional ni el tiempo y esfuerzo que, de lo contrario, tomaría exportar y procesar los datos con el diseño y la implementación de almacenamiento de datos adicional. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace utiliza aprendizaje automático e inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones utilizando su contenido y sus recursos de datos en soluciones de Adobe.
+Data Science Workspace utiliza aprendizaje automático e inteligencia artificial para crear perspectivas a partir de sus datos. Integrado en Adobe Experience Platform, Data Science Workspace le ayuda a hacer predicciones utilizando sus activos de contenido y datos en todas las soluciones de Adobe.
 
 **Nuevas funciones**
 
@@ -54,9 +54,9 @@ Para obtener información más general sobre Data Science Workspace, consulte la
 
 ## [!DNL Dataflows] {#dataflows}
 
-En Adobe Experience Platform, los datos se incorporan desde una amplia variedad de fuentes, se analizan dentro de Experience Platform y se activan en una amplia variedad de destinos. Platform facilita el proceso de seguimiento de este flujo de datos potencialmente no lineal al proporcionar transparencia a los flujos de datos.
+En Adobe Experience Platform, los datos se incorporan desde una amplia variedad de fuentes, se analizan dentro de Experience Platform y se activan en una amplia variedad de destinos. Experience Platform facilita el proceso de seguimiento de este flujo de datos potencialmente no lineal al proporcionar transparencia a los flujos de datos.
 
-Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Estos flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de conectores de origen a conjuntos de datos de destino, donde [!DNL Identity Service] y [!DNL Real-Time Customer Profile] los utilizan antes de activarse finalmente en [!DNL Destinations].
+Los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Estos flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de conectores de origen a conjuntos de datos de destino, donde [!DNL Identity Service] y [!DNL Real-Time Customer Profile] los utilizan antes de activarse finalmente en [!DNL Destinations].
 
 **Nuevas funciones**
 
@@ -80,7 +80,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
-La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
+La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 
 XDM es una especificación documentada públicamente y diseñada para mejorar la potencia de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación para comunicarse con servicios en Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
 
@@ -120,7 +120,7 @@ Para obtener más información sobre el perfil del cliente en tiempo real, inclu
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

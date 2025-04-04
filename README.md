@@ -1,8 +1,8 @@
 ---
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 98%
+source-wordcount: '470'
+ht-degree: 95%
 
 ---
 # Contenido de contribución
@@ -19,7 +19,7 @@ Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe
 
 La manera en que contribuye depende de quién es usted y del tipo de cambios con los que desee contribuir:
 
-### Cambios menores o solicitudes
+### Cambios o solicitudes menores
 
 Si desea enviar una solicitud, haga clic en el vínculo **Registrar un problema** de un artículo para crear un caso en GitHub. Especifique un título y una descripción y, a continuación, haga clic en **Enviar nuevo problema**.
 
@@ -43,7 +43,7 @@ Si es redactor técnico, administrador de programa o desarrollador del equipo de
 
 ## Contacto del equipo de documentación de Experience Platform
 
-Como se ha indicado anteriormente, los miembros de la comunidad de Adobe pueden enviar un problema, este se asignará al redactor correspondiente. Si es un empleado de Adobe, puede enviar un problema o ponerse en contacto directamente con el equipo de documentación de Experience Platform. Para buscar el redactor principal para un área de Platform específica, consulte la [Wiki de documentación de Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Como se ha indicado anteriormente, los miembros de la comunidad de Adobe pueden enviar un problema, este se asignará al redactor correspondiente. Si es un empleado de Adobe, puede enviar un problema o ponerse en contacto directamente con el equipo de documentación de Experience Platform. Para encontrar el redactor jefe de un área específica de Experience Platform, consulte [documentación de Adobe Experience Platform wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Herramientas y configuración
 

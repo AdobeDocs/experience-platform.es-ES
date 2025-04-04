@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API
 title: Guía de resolución de problemas del perfil del cliente en tiempo real
 type: Documentation
 description: Este documento proporciona respuestas a las preguntas frecuentes acerca del Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes al trabajar con datos de perfil mediante Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
 
 # Guía de solución de problemas del Perfil del cliente en tiempo real
 
-Este documento proporciona respuestas a las preguntas frecuentes acerca del Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes. Si tiene alguna pregunta o solución de problemas relacionada con otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas para Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas frecuentes acerca del Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes. Si tiene alguna pregunta o solución de problemas relacionada con otros servicios de Adobe Experience Platform, consulte la [guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
 Con [!DNL Real-Time Customer Profile], puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Esto permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes para los clientes en varios canales.
 
@@ -25,15 +25,15 @@ A continuación se muestra una lista de respuestas a las preguntas frecuentes ac
 
 El perfil acepta datos de **registro** y **series temporales**, siempre que los datos en cuestión contengan al menos un valor de identidad que asocie los datos con una persona individual única.
 
-Al igual que todos los servicios de Platform, Profile requiere que sus datos estén estructurados semánticamente bajo un esquema de Experience Data Model (XDM). A su vez, este esquema debe tener una **identidad principal** definida y habilitada para su uso en el perfil.
+Al igual que todos los servicios de Experience Platform, el perfil requiere que sus datos estén estructurados semánticamente con un esquema Experience Data Model (XDM). A su vez, este esquema debe tener una **identidad principal** definida y habilitada para su uso en el perfil.
 
 Si no está familiarizado con XDM, comience con la [descripción general de XDM](../xdm/home.md) para obtener más información. A continuación, consulte la guía del usuario de XDM para ver los pasos sobre cómo [establecer campos de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) y [habilitar un esquema para el perfil](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### ¿Dónde se almacenan los datos del perfil?
 
-El perfil del cliente en tiempo real mantiene su propio almacén de datos (denominado &quot;almacén de perfiles&quot;), independiente del lago de datos que contiene otros datos de Platform introducidos.
+El perfil del cliente en tiempo real mantiene su propio almacén de datos (denominado &quot;almacén de perfiles&quot;), independiente del lago de datos que contiene otros datos de Experience Platform ingeridos.
 
-### Si ya he introducido datos en Platform, ¿puedo ponerlos a disposición en el almacén de perfiles?
+### Si ya he introducido datos en Experience Platform, ¿puedo ponerlos a disposición en el almacén de perfiles?
 
 Si los datos se han introducido en un conjunto de datos que no es de perfil, debe volver a introducirlos en un conjunto de datos con perfil habilitado para que estén disponibles en el almacén de perfiles. Es posible habilitar un conjunto de datos existente para el perfil, pero los datos que se hayan introducido antes de esa configuración aún no aparecerán en el almacén de perfiles.
 
@@ -51,13 +51,13 @@ También puede utilizar la API del servicio de segmentación de Adobe Experience
 
 #### Uso de la IU
 
-En la interfaz de usuario del Experience Platform, la ficha **[!UICONTROL Examinar]** del área de trabajo **[!UICONTROL Perfiles]** le permite ver el recuento total de perfiles y buscar perfiles individuales por su valor de identidad. Consulte la [Guía de usuario de perfil](./ui/user-guide.md) para obtener más información.
+En la interfaz de usuario de Experience Platform, la pestaña **[!UICONTROL Examinar]** del área de trabajo **[!UICONTROL Perfiles]** le permite ver el recuento total de perfiles y buscar perfiles individuales por su valor de identidad. Consulte la [Guía de usuario de perfil](./ui/user-guide.md) para obtener más información.
 
 También puede ver una lista de sus audiencias en la ficha **[!UICONTROL Examinar]** del área de trabajo de **[!UICONTROL Audiencias]**. Después de seleccionar una audiencia, se muestra una muestra de perfiles cualificados para esa audiencia. A continuación, puede seleccionar cualquiera de estos perfiles para ver sus detalles. Consulte la [descripción general de la interfaz de usuario de segmentación](../segmentation/ui/overview.md) para obtener más información.
 
 ## Códigos de error
 
-A continuación se muestra una lista de mensajes de error que pueden surgir al trabajar con la API del perfil del cliente en tiempo real. Si el error que encuentra no aparece en la lista aquí, puede que lo encuentre en la [Guía general de solución de problemas de la plataforma](../landing/troubleshooting.md).
+A continuación se muestra una lista de mensajes de error que pueden surgir al trabajar con la API del perfil del cliente en tiempo real. Si el error que encuentra no aparece en la lista, puede encontrarlo en la [guía general de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
 ### No se pudo buscar el esquema del atributo calculado para la ruta proporcionada
 
@@ -133,7 +133,7 @@ Este error se produce cuando no se encuentra un lote válido al intentar crear u
 }
 ```
 
-Este error se produce al enviar una solicitud de POST o PUT con un encabezado de tipo de contenido no válido. Compruebe que está proporcionando un valor de Content-Type válido para el extremo que está utilizando.
+Este error se produce al enviar una petición POST o PUT con un encabezado de tipo de contenido no válido. Compruebe que está proporcionando un valor de Content-Type válido para el extremo que está utilizando.
 
 La mayoría de los extremos del perfil aceptan &quot;application/json&quot; para el encabezado Content-Type, con las siguientes excepciones:
 

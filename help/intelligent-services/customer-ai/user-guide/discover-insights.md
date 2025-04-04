@@ -5,9 +5,9 @@ feature: Customer AI
 title: Descubra perspectivas con la inteligencia artificial aplicada al cliente
 description: Este documento sirve como guía para interactuar con las perspectivas de la instancia de servicio en la interfaz de usuario de la inteligencia artificial aplicada al cliente de servicios inteligentes.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2099'
 ht-degree: 1%
 
 ---
@@ -164,7 +164,7 @@ El generador de segmentos se utiliza para definir un segmento. Al seleccionar **
 
 ![Relleno de segmento](../images/insights/segment-saving.png)
 
-Para ver el nuevo segmento en la interfaz de usuario de Platform, seleccione **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparecerá la página **[!UICONTROL Examinar]** y se mostrarán todos los segmentos disponibles.
+Para ver el nuevo segmento en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Segmentos]** en el panel de navegación izquierdo. Aparecerá la página **[!UICONTROL Examinar]** y se mostrarán todos los segmentos disponibles.
 
 ![Todos sus segmentos](../images/insights/Segments-dashboard.png)
 

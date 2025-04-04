@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Grupo de campos de esquema de consentimientos y preferencias
 description: Obtenga información acerca del grupo de campos Esquema de consentimientos y preferencias.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ El grupo de campos [!UICONTROL Consentimientos y preferencias] proporciona un ú
 
 >[!TIP]
 >
->Consulte la guía de [exploración de recursos XDM](../../ui/explore.md) para ver los pasos sobre cómo buscar cualquier recurso XDM e inspeccionar su estructura en la interfaz de usuario de Platform.
+>Consulte la guía de [exploración de recursos XDM](../../ui/explore.md) para ver los pasos sobre cómo buscar cualquier recurso XDM e inspeccionar su estructura en la interfaz de usuario de Experience Platform.
 
 El siguiente JSON muestra un ejemplo del tipo de datos que el grupo de campos [!UICONTROL Consentimientos y preferencias] puede procesar. Para obtener información sobre cómo usar la mayoría de los campos proporcionados por el grupo de campos, consulte la guía del tipo de datos [Consentimientos y preferencias](../../data-types/consents.md). Las subsecciones siguientes se centran en los atributos únicos que el grupo de campos añade al tipo de datos.
 

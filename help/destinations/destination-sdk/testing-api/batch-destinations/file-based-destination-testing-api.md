@@ -2,9 +2,9 @@
 description: En esta página se explica cómo utilizar el extremo de la API /testing/destinationInstance para probar si el destino basado en archivos está configurado correctamente y para comprobar la integridad de los flujos de datos al destino configurado.
 title: Prueba del destino basado en archivos con perfiles de muestra
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '831'
 ht-degree: 2%
 
 ---
@@ -27,9 +27,9 @@ Antes de continuar, revisa la [guía de introducción](../../getting-started.md)
 
 Antes de usar el extremo `/testing/destinationInstance`, asegúrese de cumplir las siguientes condiciones:
 
-* Ya tiene un destino basado en archivos creado a través del Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Ya tiene un destino basado en archivos creado mediante Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
 * Ha creado al menos un flujo de activación para su destino en la interfaz de usuario de Experience Platform.
-* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
+* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada de API desde la dirección URL cuando busque una conexión con su destino en la interfaz de usuario de Experience Platform.
 
   ![Imagen de interfaz de usuario que muestra cómo obtener el identificador de instancia de destino de la dirección URL.](../../assets/testing-api/get-destination-instance-id.png)
 * *Opcional*: Si desea probar la configuración de destino con un perfil de muestra agregado a la llamada de API, use el extremo [/sample-profiles](file-based-sample-profile-generation-api.md) para generar un perfil de muestra basado en el esquema de origen existente. Si no proporciona un perfil de muestra, la API generará uno y lo devolverá en la respuesta.
@@ -238,7 +238,7 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la carga útil de r
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes
 
@@ -246,4 +246,4 @@ Después de leer este documento, ahora sabe cómo probar la configuración de de
 
 Si ha recibido una respuesta de API válida, el destino funciona correctamente. Si desea ver información más detallada sobre el flujo de activación, puede usar la propiedad `results` de la respuesta a [ver resultados detallados de la activación](file-based-destination-results-api.md).
 
-Si estás creando un destino público, ahora puedes [enviar tu configuración de destino](../../guides/submit-destination.md) al Adobe para que la revisen.
+Si estás creando un destino público, ahora puedes [enviar tu configuración de destino](../../guides/submit-destination.md) a Adobe para que la revisen.

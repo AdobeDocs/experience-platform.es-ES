@@ -1,10 +1,10 @@
 ---
-description: Esta página ejemplifica la llamada de API utilizada para crear una plantilla de audiencia a través del Adobe Experience Platform Destination SDK.
+description: Esta página ejemplifica la llamada de API utilizada para crear una plantilla de audiencia a través de Adobe Experience Platform Destination SDK.
 title: Creación de una plantilla de audiencia
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '623'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Para obtener una descripción detallada de las funcionalidades que puede configu
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
@@ -256,7 +256,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | Propiedad | Tipo | Descripción |
 | -------- | ----------- | ----------- |
-| `name` | Cadena | Nombre de la plantilla de metadatos de audiencia del destino. Este nombre aparece en cualquier mensaje de error específico del socio en la interfaz de usuario del Experience Platform. |
+| `name` | Cadena | Nombre de la plantilla de metadatos de audiencia del destino. Este nombre aparece en cualquier mensaje de error específico del socio en la interfaz de usuario de Experience Platform. |
 | `url` | Cadena | La dirección URL y el punto final de su API, que se utiliza para crear, actualizar, eliminar o validar audiencias o flujos de datos en su plataforma. Dos ejemplos del sector son: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` y `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
 | `httpMethod` | Cadena | Método utilizado en el extremo para crear, actualizar, eliminar o validar la audiencia en el destino mediante programación. Por ejemplo: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Cadena | Especifica cualquier encabezado HTTP que deba agregarse a la llamada a su API. Por ejemplo, `"Content-Type"` |
@@ -265,7 +265,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `responseFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se le llama. Para ver un ejemplo, consulte [ejemplos de plantillas](../functionality/audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de Audiencia. |
 | `responseFields.value` | Cadena | Especifique el valor de los campos de respuesta que devuelve la API cuando se llama a. |
 | `responseErrorFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se le llama. Para ver un ejemplo, consulte [ejemplos de plantillas](../functionality/audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de Audiencia. |
-| `responseErrorFields.value` | Cadena | Analiza cualquier mensaje de error devuelto en las respuestas de llamadas de API desde su destino. Estos mensajes de error aparecerán a los usuarios en la interfaz de usuario del Experience Platform. |
+| `responseErrorFields.value` | Cadena | Analiza cualquier mensaje de error devuelto en las respuestas de llamadas de API desde su destino. Estos mensajes de error aparecerán a los usuarios en la interfaz de usuario de Experience Platform. |
 | `validations.field` | Cadena | Indica si se deben ejecutar las validaciones para algún campo antes de realizar llamadas de API al destino. Por ejemplo, puede usar `{{validations.accountId}}` para validar el identificador de cuenta del usuario. |
 | `validations.regex` | Cadena | Indica cómo se debe estructurar el campo para que se apruebe la validación. |
 
@@ -281,8 +281,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla 
 
 ## Administración de errores de API
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, sabe cuándo usar plantillas de audiencia y cómo configurar una plantilla de audiencia mediante el extremo de API `/authoring/audience-templates`. Lee [cómo usar el Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.
+Después de leer este documento, sabe cuándo usar plantillas de audiencia y cómo configurar una plantilla de audiencia mediante el extremo de API `/authoring/audience-templates`. Lee [cómo usar Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

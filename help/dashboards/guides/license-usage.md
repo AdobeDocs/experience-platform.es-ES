@@ -4,9 +4,9 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3408'
+source-wordcount: '3413'
 ht-degree: 15%
 
 ---
@@ -132,13 +132,13 @@ ht-degree: 15%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
-Puede ver información importante sobre el uso de licencias de su organización en el panel de control de Adobe Experience Platform [!UICONTROL Uso de licencias]. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
+Puede ver información importante sobre el uso de licencias de su organización en el panel de control de Adobe Experience Platform [!UICONTROL Uso de licencias]. La información que se muestra aquí se captura durante una captura diaria de la instancia de Experience Platform.
 
 Los informes de uso de licencias proporcionan un alto grado de granularidad. La mayoría de las métricas se comparten en varios productos y reflejan el uso agregado en todos los productos que las utilizan, no los totales por producto. El tablero proporciona un uso consolidado de estas métricas en todos los entornos limitados de producción o desarrollo, así como la métrica de uso de un entorno limitado específico. Las siguientes aplicaciones de Experience Platform se pueden rastrear con métricas de uso: Real-Time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics.
 
 Esta guía describe cómo acceder y trabajar con el tablero de uso de licencias en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el tablero.
 
-Para obtener una descripción general de la IU de Platform, consulte la [guía de la IU de Experience Platform](../../landing/ui-guide.md).
+Para obtener una descripción general de la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario de Experience Platform](../../landing/ui-guide.md).
 
 ## [!UICONTROL Uso de licencias] datos de tablero
 
@@ -148,11 +148,11 @@ Los datos de este tablero se muestran exactamente como aparecían en el momento 
 
 >[!NOTE]
 >
->La mayoría de las métricas del tablero se actualizan a diario, según una instantánea de la instancia de Platform. [!UICONTROL Filas de CJA disponibles] son una excepción y se actualizan mensualmente. Las métricas etiquetadas con &quot;paquetes&quot;, como [!UICONTROL Paquetes de usuarios de Adhoc Query Service], [!UICONTROL No de paquetes de la riqueza de perfiles] y [!UICONTROL No de paquetes de segmentación de streaming], reflejan los derechos de licencia para ofertas de complementos y no rastrean el uso en curso. Los cambios realizados después de la instantánea no serán visibles hasta que se tome la siguiente instantánea.
+>La mayoría de las métricas del tablero se actualizan a diario, según una instantánea de la instancia de Experience Platform. [!UICONTROL Filas de CJA disponibles] son una excepción y se actualizan mensualmente. Las métricas etiquetadas con &quot;paquetes&quot;, como [!UICONTROL Paquetes de usuarios de Adhoc Query Service], [!UICONTROL No de paquetes de la riqueza de perfiles] y [!UICONTROL No de paquetes de segmentación de streaming], reflejan los derechos de licencia para ofertas de complementos y no rastrean el uso en curso. Los cambios realizados después de la instantánea no serán visibles hasta que se tome la siguiente instantánea.
 
 ## Exploración del tablero de uso de licencias {#explore}
 
-Para navegar al panel de uso de licencias dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Uso de licencias]** en el carril izquierdo. El tablero contiene dos fichas: **[!UICONTROL Métricas]** y **[!UICONTROL Productos]**.
+Para navegar al panel de uso de licencias dentro de la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Uso de licencias]** en el carril izquierdo. El tablero contiene dos fichas: **[!UICONTROL Métricas]** y **[!UICONTROL Productos]**.
 
 >[!NOTE]
 >
@@ -338,4 +338,4 @@ La disponibilidad de estas métricas y la definición específica de cada una de
 
 Después de leer este documento, puede localizar el panel de uso de licencias y ver las métricas de uso de cada producto comprado, de todas las zonas protegidas de producción o desarrollo y de una zona protegida específica. Puede encontrar más información sobre las métricas disponibles para su organización, en función de las licencias que haya adquirido su organización.
 
-Para obtener más información acerca de otras características disponibles en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario de Platform](../../landing/ui-guide.md).
+Para obtener más información acerca de otras características disponibles en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario de Experience Platform](../../landing/ui-guide.md).

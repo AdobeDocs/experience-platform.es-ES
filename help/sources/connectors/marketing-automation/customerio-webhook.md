@@ -3,9 +3,9 @@ title: Información general sobre Customer.io Source
 description: Aprenda a conectar Customer.io a Adobe Experience Platform mediante API o la interfaz de usuario de aprovechando los webhooks
 badge: Beta
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >El origen [!DNL Customer.io] está en la versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 Experience Platform es compatible con la ingesta de datos desde aplicaciones de flujo continuo. La compatibilidad con los proveedores de streaming incluye [!DNL Customer.io].
 
@@ -45,16 +45,16 @@ Para poder crear una conexión de origen de [!DNL Customer.io], primero debe ase
 
 ### Configurar webhook de [!DNL Customer.io] {#set-up-webhook}
 
-Una vez que haya creado correctamente el flujo de datos, debe configurar un webhook de creación de informes para informar a Platform sobre [!DNL Customer.io] eventos. Los webhooks pueden notificarle inmediatamente cuando los atributos del cliente cambien o cuando las personas abran sus mensajes y enviarle esta información a su origen de [!DNL Customer.io]. Para obtener más información, lee los tutoriales sobre [cómo obtener la URL del extremo de streaming](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) y [cómo configurar un  [!DNL Customer.io] webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
+Una vez que haya creado correctamente su flujo de datos, debe configurar un webhook de informes para informar a Experience Platform sobre [!DNL Customer.io] eventos. Los webhooks pueden notificarle inmediatamente cuando los atributos del cliente cambien o cuando las personas abran sus mensajes y enviarle esta información a su origen de [!DNL Customer.io]. Para obtener más información, lee los tutoriales sobre [cómo obtener la URL del extremo de streaming](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) y [cómo configurar un  [!DNL Customer.io] webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
 
-## Conectando [!DNL Customer.io] a Platform {#connect-to-platform}
+## Conectando [!DNL Customer.io] a Experience Platform {#connect-to-platform}
 
-La siguiente documentación proporciona información sobre cómo crear una conexión de flujo continuo de [!DNL Customer.io] para conectarse con [!DNL Platform] mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo crear una conexión de flujo continuo de [!DNL Customer.io] para conectarse con [!DNL Experience Platform] mediante API o la interfaz de usuario:
 
-### Conectar [!DNL Customer.io] a Platform mediante API {#connect-to-platform-using-api}
+### Conectar [!DNL Customer.io] a Experience Platform mediante API {#connect-to-platform-using-api}
 
-* [Cree una conexión de origen y un flujo de datos para llevar  [!DNL Customer.io] datos a Platform mediante API.](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
+* [Cree una conexión de origen y un flujo de datos para llevar  [!DNL Customer.io] datos a Experience Platform mediante API.](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
 
-### Conectar [!DNL Customer.io] a Platform mediante la interfaz de usuario {#connect-to-platform-using-ui}
+### Conectar [!DNL Customer.io] a Experience Platform mediante la interfaz de usuario {#connect-to-platform-using-ui}
 
-* [Cree una conexión de origen y un flujo de datos para llevar  [!DNL Customer.io] datos a Platform mediante la interfaz de usuario](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
+* [Cree una conexión de origen y un flujo de datos para llevar  [!DNL Customer.io] datos a Experience Platform mediante la interfaz de usuario](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)

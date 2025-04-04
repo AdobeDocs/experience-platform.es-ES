@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 50d768eeb0dc8fa85af113db7790ad3e3258ea64
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3818'
 ht-degree: 0%
 
 ---
@@ -202,7 +202,7 @@ En la tabla siguiente se describen los permisos disponibles para Experience Plat
 | [!DNL Data Governance] | [!UICONTROL Administrar etiquetas de uso] | Acceso para leer, crear y eliminar etiquetas de uso. |
 | [!DNL Data Governance] | [!UICONTROL Administrar Políticas De Uso De Datos] | Acceso para leer, crear, editar y eliminar políticas de uso de datos. |
 | [!DNL Data Governance] | [!UICONTROL Ver directivas de uso de datos] | Acceso de solo lectura para directivas de uso de datos pertenecientes a su organización. |
-| [!DNL Data Governance] | [!UICONTROL Ver registro de actividad de usuario] | Acceso de solo lectura para ver [registros de auditoría](../landing/governance-privacy-security/audit-logs/overview.md) registrados de actividades de Platform. |
+| [!DNL Data Governance] | [!UICONTROL Ver registro de actividad de usuario] | Acceso de solo lectura para ver [registros de auditoría](../landing/governance-privacy-security/audit-logs/overview.md) registrados de actividades de Experience Platform. |
 | [!DNL Data Governance] | [!UICONTROL Ver consola de privacidad] | Acceso de solo lectura a las consolas de privacidad. |
 | [!DNL Data Ingestion] | [!UICONTROL Administrar orígenes] | Acceso para leer, crear, editar y deshabilitar orígenes. |
 | [!DNL Data Ingestion] | [!UICONTROL Ver orígenes] | Acceso de solo lectura a orígenes disponibles en la ficha **[!UICONTROL Catálogo]** y orígenes autenticados en la ficha **[!UICONTROL Examinar]**. |
@@ -281,7 +281,7 @@ En la tabla siguiente se describen los permisos disponibles para Experience Plat
 | [!DNL Profile Management] | [!UICONTROL Administrar configuración de perfil] | Acceso para leer y editar todas las configuraciones de perfil. |
 | [!DNL Prospects] | [!UICONTROL Ver clientes potenciales] | Acceso de solo lectura a esquemas, perfiles, audiencias y el acordeón del cliente potencial. |
 | [!DNL Prospects] | [!UICONTROL Administrar clientes potenciales] | Capacidad para crear y administrar esquemas, perfiles y audiencias de clientes potenciales. Acceso de solo lectura al acordeón del cliente potencial. |
-| [!DNL Query Service] | [!UICONTROL Administrar consultas] | Acceso para leer, crear, editar y eliminar consultas SQL estructuradas para datos de Platform. |
+| [!DNL Query Service] | [!UICONTROL Administrar consultas] | Acceso para leer, crear, editar y eliminar consultas SQL estructuradas para datos de Experience Platform. |
 | [!DNL Query Service] | [!UICONTROL Administrar integración del servicio de consultas] | Acceso para crear, actualizar y eliminar credenciales que no caducan para el acceso al servicio de consultas. |
 | [!DNL Query Service] | [!UICONTROL Administrar sesiones de consulta] | Capacidad para expulsar sesiones existentes. |
 | [!DNL Query Service] | [!UICONTROL Administrar Lista de permitidos] | Capacidad para administrar restricciones de IP para su organización. |

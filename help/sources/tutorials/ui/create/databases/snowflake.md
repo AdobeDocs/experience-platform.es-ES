@@ -4,9 +4,9 @@ type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Snowflake mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: cde31b692e9a11b15cf91a505133f75f69604cba
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1153'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Lea esta guía para obtener información sobre cómo conectar su cuenta de [!DNL
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
 * [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 >[!NOTE]
@@ -32,7 +32,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ## Navegar por el catálogo de fuentes {#navigate}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 Seleccione **[!DNL Snowflake]** en la categoría *[!UICONTROL Bases de datos]* y luego seleccione **[!UICONTROL Configurar]**.
 
@@ -71,8 +71,8 @@ Para usar la autenticación de clave de cuenta, selecciona **[!UICONTROL Autenti
 | Credencial | Descripción |
 | --- | --- |
 | Cuenta | Un nombre de cuenta identifica de forma exclusiva una cuenta de su organización. En este caso, debe identificar una cuenta de forma exclusiva en diferentes organizaciones de [!DNL Snowflake]. Para ello, debe anteponer el nombre de su organización al nombre de la cuenta. Por ejemplo: `orgname-account_name`. Lee la guía sobre [cómo recuperar tu [!DNL Snowflake] identificador de cuenta](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) para obtener instrucciones adicionales. Para obtener más información, consulte la [[!DNL Snowflake] documentación](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| Almacén | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Platform. |
-| Base de datos | La base de datos [!DNL Snowflake] contiene los datos que desea obtener de Platform. |
+| Almacén | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
+| Base de datos | La base de datos [!DNL Snowflake] contiene los datos que desea obtener de Experience Platform. |
 | Nombre de usuario | El nombre de usuario de la cuenta [!DNL Snowflake]. |
 | Contraseña | Contraseña de la cuenta de usuario [!DNL Snowflake]. |
 | Función | La función de control de acceso predeterminada que se usará en la sesión [!DNL Snowflake]. La función debe ser una función existente que ya se haya asignado al usuario especificado. La función predeterminada es `PUBLIC`. |
@@ -93,7 +93,7 @@ Con la autenticación de par clave, debe generar un par clave RSA de 2048 bits y
 | Clave privada | La clave privada codificada [!DNL Base64-] de su cuenta de [!DNL Snowflake]. Puede generar claves privadas cifradas o no cifradas. Si utiliza una clave privada cifrada, también debe proporcionar una frase de contraseña de clave privada al autenticarse con Experience Platform. Lee la guía sobre [recuperar tu [!DNL Snowflake] clave privada](../../../../connectors/databases/snowflake.md) para obtener más información. |
 | Frase de contraseña de clave privada | La frase de contraseña de clave privada es una capa adicional de seguridad que debe utilizar al autenticarse con una clave privada cifrada. No es necesario que proporcione la frase de contraseña si utiliza una clave privada no cifrada. |
 | Base de datos | La base de datos [!DNL Snowflake] que contiene los datos que desea introducir en Experience Platform. |
-| Almacén | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Platform. |
+| Almacén | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
 
 Para obtener más información sobre estos valores, consulte [este documento de Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
@@ -127,4 +127,4 @@ El resto del flujo de trabajo sigue siendo el mismo. La única advertencia es qu
 
 ## Pasos siguientes
 
-Con este tutorial ha establecido una conexión con su cuenta de Snowflake. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Platform]](../../dataflow/databases.md).
+Con este tutorial ha establecido una conexión con su cuenta de Snowflake. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).

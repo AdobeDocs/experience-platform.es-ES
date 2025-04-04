@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;guía de usuario;inteligencia artificial aplicada al cliente;temas populares;controles de acceso;crear modelo;
+keywords: Experience Platform;guía del usuario;inteligencia artificial aplicada al cliente;temas populares;controles de acceso;crear modelo;
 solution: Experience Platform
 feature: Customer AI
 title: Control de acceso para la inteligencia artificial aplicada al cliente
 description: Este documento proporciona información sobre el control de acceso basado en atributos para la inteligencia artificial aplicada al cliente.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 0%
+source-wordcount: '520'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir políticas de acceso alrededor de los campos de esquema XDM y administrar mejor el acceso dado a usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores gestionar el acceso a segmentos específicos.
 
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD) y a la información de identificación personal (PII) en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD) y a la información de identificación personal (PII) en todos los flujos de trabajo y recursos de Experience Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
 
 Debido al control de acceso basado en atributos, algunos campos y funcionalidades tendrían acceso restringido y no estarían disponibles para determinados modelos de servicio de inteligencia artificial aplicada al cliente. Algunos ejemplos son &quot;Identidad&quot;, &quot;Definición de puntuación&quot; y &quot;Clonar&quot;.
 
@@ -46,4 +46,4 @@ Consulte la documentación para obtener información sobre [asignación de permi
 
 ## Pasos siguientes
 
-Al leer esta guía, se le han presentado los principios principales del control de acceso en [!DNL Experience Platform]. Ahora puede continuar con la [guía del usuario de control de acceso](../overview.md) para ver los pasos detallados sobre cómo usar [!DNL Admin Console] para crear perfiles de producto y asignar permisos para [!DNL Platform].
+Al leer esta guía, se le han presentado los principios principales del control de acceso en [!DNL Experience Platform]. Ahora puede continuar con la [guía del usuario de control de acceso](../overview.md) para ver los pasos detallados sobre cómo usar [!DNL Admin Console] para crear perfiles de producto y asignar permisos para [!DNL Experience Platform].

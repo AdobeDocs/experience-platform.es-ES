@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conector de PayPal;PayPal;PayPal
+keywords: Experience Platform;inicio;temas populares;Conector de PayPal;PayPal;PayPal
 solution: Experience Platform
 title: Creación de una conexión base de PayPal mediante la API de Flow Service
 type: Tutorial
 description: Aprenda a conectar PayPal a Adobe Experience Platform mediante la API de Flow Service.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '472'
 ht-degree: 5%
 
 ---
@@ -26,8 +26,8 @@ Este tutorial lo guiará para crear una conexión base para [!DNL PayPal] median
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a [!DNL PayPal] mediante la API [!DNL Flow Service].
 
@@ -44,15 +44,15 @@ Para que [!DNL Flow Service] se conecte con [!DNL PayPal], debe proporcionar val
 
 Para obtener más información sobre cómo empezar, consulte [este documento de PayPal](https://developer.paypal.com/docs/api/overview/#get-credentials).
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
-Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL PayPal] como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una petición POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL PayPal] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -113,4 +113,4 @@ Una respuesta correcta devuelve la conexión recién creada, incluido su identif
 Siguiendo este tutorial, ha creado una conexión base [!DNL PayPal] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de pagos a Platform mediante la API  [!DNL Flow Service] ](../../collect/payments.md)
+* [Cree un flujo de datos para llevar los datos de pagos a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/payments.md)

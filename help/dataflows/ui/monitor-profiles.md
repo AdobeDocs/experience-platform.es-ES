@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;monitorizar perfiles;monitorizar flujos de datos;flujos de datos;perfil;perfil de cliente en tiempo real;
-description: El perfil del cliente en tiempo real permite ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Este tutorial proporciona instrucciones sobre cómo puede monitorizar los flujos de datos con Perfiles mediante la interfaz de usuario del Experience Platform.
+description: El perfil del cliente en tiempo real permite ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. Este tutorial proporciona instrucciones sobre cómo monitorizar los flujos de datos con perfiles mediante la interfaz de usuario de Experience Platform.
 title: Monitorización de flujos de datos para perfiles en la IU
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1077'
 ht-degree: 7%
 
 ---
@@ -15,16 +15,16 @@ ht-degree: 7%
 
 El perfil del cliente en tiempo real permite ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
 
-El panel de monitorización le proporciona una representación visual de la actividad de los datos dentro del perfil, incluido el estado de los perfiles de los datos. Este tutorial proporciona instrucciones sobre cómo puede utilizar el panel de monitorización para monitorizar los perfiles de los datos mediante la interfaz de usuario del Experience Platform, lo que le permite rastrear el estado del procesamiento de perfiles.
+El panel de monitorización le proporciona una representación visual de la actividad de los datos dentro del perfil, incluido el estado de los perfiles de los datos. Este tutorial proporciona instrucciones sobre cómo puede utilizar el panel de monitorización para monitorizar los perfiles de los datos mediante la interfaz de usuario de Experience Platform, lo que le permite rastrear el estado del procesamiento de perfiles.
 
 ## Introducción {#getting-started}
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
+- [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
    - [Ejecuciones de flujo de datos](../../sources/notifications.md): Las ejecuciones de flujo de datos son los trabajos programados recurrentes en función de la configuración de frecuencia de los flujos de datos seleccionados.
 - [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
-- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Panel de monitorización de perfiles {#profile-metrics}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen del servicio de identidad
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1556'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Puede solucionar estos desafíos con el servicio de identidad de Adobe Experienc
 * Cree un gráfico para el Perfil del cliente en tiempo real, que luego se utiliza para crear una vista completa del cliente combinando atributos y comportamientos.
 * Realice la validación y la depuración utilizando las distintas herramientas.
 
-Este documento proporciona información general sobre el servicio de ID y cómo puede utilizar sus funcionalidades en el contexto de Experience Platform.
+Este documento proporciona información general sobre el servicio de identidad y cómo puede utilizar sus funcionalidades en el contexto de Experience Platform.
 
 ## Terminología {#terminology}
 
@@ -32,11 +32,11 @@ Antes de sumergirse en los detalles del servicio de identidad, lea la siguiente 
 | Término | Definición |
 | --- | --- |
 | Identidad | Una identidad son datos que son únicos para una entidad. Normalmente, se trata de un objeto del mundo real, como una persona individual, un dispositivo de hardware o un explorador web (representado por una cookie). Una identidad completa consta de dos elementos: un **área de nombres de identidad** y un **valor de identidad**. |
-| Espacio de nombres de identidad | Un área de nombres de identidad es el contexto de una identidad determinada. Por ejemplo, un área de nombres de `Email` podría corresponder con el valor de identidad: **julien<span>@acme.com**. Del mismo modo, un espacio de nombres de `Phone` podría corresponder con el valor de identidad: `555-555-1234`. Para obtener más información, lea la [descripción general del área de nombres de identidad](./features/namespaces.md). |
+| Área de nombres de identidad | Un área de nombres de identidad es el contexto de una identidad determinada. Por ejemplo, un área de nombres de `Email` podría corresponder con el valor de identidad: **julien<span>@acme.com**. Del mismo modo, un espacio de nombres de `Phone` podría corresponder con el valor de identidad: `555-555-1234`. Para obtener más información, lea la [descripción general del área de nombres de identidad](./features/namespaces.md). |
 | Valor de identidad | Un valor de identidad es una cadena que representa una entidad del mundo real y que se clasifica dentro del servicio de identidad a través de un área de nombres. Por ejemplo, el valor de identidad (cadena) **julien<span>@acme.com** podría clasificarse como un área de nombres `Email`. |
 | Tipo de identidad | Un tipo de identidad es un componente de un área de nombres de identidad. El tipo de identidad designa si los datos de identidad están vinculados en un gráfico de identidad o no. |
 | Vínculo | Un vínculo o una vinculación es un método para establecer que dos identidades diferentes representan la misma entidad. Por ejemplo, un vínculo entre &quot;`Email` = julien<span>@acme.com&quot; y &quot;`Phone` = 555-555-1234&quot; significa que ambas identidades representan la misma entidad. Esto sugiere que el cliente que ha interactuado con su marca con la dirección de correo electrónico julien<span>@acme.com y el número de teléfono 555-555-1234 es el mismo. |
-| Servicio de identidad | El servicio de identidad es un servicio dentro de Experience Platform que vincula (o desvincula) identidades para mantener gráficos de identidad. |
+| Servicio de identidad | El servicio de identidad es un servicio de Experience Platform que vincula (o desvincula) identidades para mantener gráficos de identidad. |
 | Gráfico de identidad | El gráfico de identidad es una colección de identidades que representan a un solo cliente. Para obtener más información, lea la guía sobre [usando el visor de gráficos de identidad](./features/identity-graph-viewer.md). |
 | Perfil del cliente en tiempo real | El perfil del cliente en tiempo real es un servicio de Adobe Experience Platform que: <ul><li>Combina fragmentos de perfiles para crear un perfil basado en un gráfico de identidad.</li><li>Segmenta los perfiles para que luego se puedan enviar al destino para que los active.</li></ul> |
 | Perfil | Un perfil es una representación de un sujeto, una organización o un individuo. Un perfil se compone de cuatro elementos: <ul><li>Atributos: los atributos proporcionan información como nombre, edad o sexo.</li><li>Comportamiento: los comportamientos proporcionan información sobre las actividades de un perfil determinado. Por ejemplo, un comportamiento de perfil puede saber si un perfil determinado estaba &quot;buscando sandalias&quot; o &quot;pidiendo camisetas&quot;.</li><li>Identidades: Para un perfil combinado, proporciona información de todas las identidades asociadas con la persona. Las identidades se pueden clasificar en tres categorías: persona (CRMID, correo electrónico, teléfono), dispositivo (IDFA, GAID) y cookie (ECID, AAID).</li><li>Pertenencia a audiencias: Los grupos a los que pertenece el perfil (usuarios fieles, usuarios que viven en California, etc.)</li></ul> |
@@ -45,7 +45,7 @@ Antes de sumergirse en los detalles del servicio de identidad, lea la siguiente 
 
 ## ¿Qué es el servicio de identidad?
 
-![Vinculación de identidad en la plataforma](./images/identity-service-stitching.png)
+![Vinculación de identidad en Experience Platform](./images/identity-service-stitching.png)
 
 En un contexto de empresa a cliente (B2C), los clientes interactúan con su negocio y establecen una relación con su marca. Un cliente típico puede estar activo en cualquier sistema de la infraestructura de datos de su organización. Cualquier cliente dado puede estar activo dentro de sus sistemas de comercio electrónico, lealtad y servicio de asistencia. Ese mismo cliente también puede interactuar de forma anónima o a través de medios autenticados en cualquier número de dispositivos diferentes.
 
@@ -76,7 +76,7 @@ El servicio de identidad proporciona las siguientes operaciones para lograr su m
 
 Se establece un vínculo entre dos identidades cuando coinciden el área de nombres de identidad y los valores de identidad.
 
-Un evento de inicio de sesión típico **envía dos identidades** al Experience Platform:
+Un evento de inicio de sesión típico **envía dos identidades** a Experience Platform:
 
 * El identificador de persona (como un CRMID) que representa a un usuario autenticado.
 * El identificador del explorador (como un ECID) que representa el explorador web.
@@ -103,13 +103,13 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender las identidades y 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
-## Explicación de la función del servicio de identidad dentro de la infraestructura de Experience Platform
+## Explicación de la función que desempeña Identity Service en la infraestructura de Experience Platform
 
-El servicio de identidad desempeña un papel vital dentro del Experience Platform. Algunas de estas integraciones clave son las siguientes:
+El servicio de identidad desempeña una función vital en Experience Platform. Algunas de estas integraciones clave son las siguientes:
 
 * [Esquemas](../xdm/home.md): dentro de un esquema determinado, los campos de esquema marcados como identidad permiten crear gráficos de identidad.
 * [Conjuntos de datos](../catalog/datasets/overview.md): cuando un conjunto de datos está habilitado para su ingesta en el Perfil del cliente en tiempo real, los gráficos de identidad se generan a partir del conjunto de datos, dado que este tiene al menos dos campos marcados como identidad.
-* [SDK web](../web-sdk/home.md): el SDK web envía eventos de experiencia a Adobe Experience Platform y el servicio de identidad genera un gráfico cuando existen dos o más identidades en el evento.
+* [Web SDK](../web-sdk/home.md): Web SDK envía eventos de experiencia a Adobe Experience Platform y el servicio de identidad genera un gráfico cuando existen dos o más identidades en el evento.
 * [Perfil del cliente en tiempo real](../profile/home.md): antes de combinar atributos y eventos para un perfil determinado, el perfil del cliente en tiempo real podría hacer referencia al gráfico de identidad. Para obtener más información, lea la guía de [comprensión de la relación entre el servicio de identidad y el perfil del cliente en tiempo real](./identity-and-profile.md).
 * [Destinos](../destinations/home.md): los destinos pueden enviar información de perfil a otros sistemas según un área de nombres de identidad, como correo electrónico con hash.
 * [Coincidencia de segmento](../segmentation/ui/segment-match/overview.md): La coincidencia de segmento coincide con dos perfiles en dos zonas protegidas diferentes que tienen el mismo área de nombres de identidad y valor de identidad.

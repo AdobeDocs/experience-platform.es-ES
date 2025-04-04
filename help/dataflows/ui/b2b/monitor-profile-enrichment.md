@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Supervisión de trabajos de enriquecimiento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 
 Use el panel [!UICONTROL Enriquecimiento de perfil] para saber si los trabajos de enriquecimiento de perfil se ejecutaron y completaron correctamente, y para ver las métricas básicas y medir la efectividad de los enriquecimientos.
 
-En la [interfaz de usuario de la plataforma](https://platform.adobe.com), seleccione **[!UICONTROL Supervisión]** en el panel izquierdo para acceder al [!UICONTROL Supervisión]. En el selector de vista, seleccione **Flujo B2B** para ver los elementos de tablero específicos de [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  El panel [!UICONTROL Monitorización] incluye las métricas básicas de la última ejecución correcta y el estado diario de los trabajos hasta 90 días antes.
+En la [interfaz de usuario de Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Supervisión]** en el panel izquierdo para acceder al [!UICONTROL Control]. En el selector de vista, seleccione **Flujo B2B** para ver los elementos de tablero específicos de [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  El panel [!UICONTROL Monitorización] incluye las métricas básicas de la última ejecución correcta y el estado diario de los trabajos hasta 90 días antes.
 
 ## Enriquecimiento de perfil de cuentas relacionadas {#related-accounts}
 
 El panel [!UICONTROL Cuentas relacionadas] muestra métricas básicas y el estado del trabajo diario específico del enriquecimiento del perfil [Cuentas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
-![Indicación visual de cómo llegar a la pantalla de supervisión de trabajos de enriquecimiento de perfil en la interfaz de usuario del Experience Platform.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![Indicación visual de cómo llegar a la pantalla de supervisión de trabajos de enriquecimiento de perfil en la interfaz de usuario de Experience Platform.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
 Los datos de la tarjeta **[!UICONTROL Métricas]** incluyen las métricas básicas de la última ejecución correcta del trabajo Cuentas relacionadas.
 

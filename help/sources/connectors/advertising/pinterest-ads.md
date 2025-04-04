@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Pinterest Ads;
-title: Información general sobre pinterest Ads Source
+title: Información general sobre Pinterest Ads Source
 description: Obtenga información sobre cómo conectar Pinterest Ads a Adobe Experience Platform mediante API o la interfaz de usuario.
 badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 1%
 >
 >El origen [!DNL Pinterest Ads] está en la versión beta. Lea [Resumen de fuentes](../../home.md#terms-and-conditions) para obtener más información sobre cómo usar conectores con etiqueta beta.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-Experience Platform proporciona asistencia para la ingesta de datos desde un sistema de publicidad de terceros. Los proveedores de publicidad admiten [!DNL Pinterest Ads].
+Experience Platform es compatible con la ingesta de datos desde un sistema de publicidad de terceros. Los proveedores de publicidad admiten [!DNL Pinterest Ads].
 
 [[!DNL Pinterest]](https://www.pinterest.com) es un motor de descubrimiento visual que permite encontrar recetas, decoración del hogar, inspiración de estilos y otras ideas en la web. Se presentan a pequeña escala con imágenes, GIF animados y vídeos en formato de tablón. [[!DNL Pinterest Ads]](https://ads.pinterest.com/) le permite hacer crecer su negocio y llegar a los 400 millones de personas con [!DNL Pinterest].
 
@@ -35,7 +35,7 @@ El origen de [!DNL Pinterest Ads] aprovecha las API de [!DNL Pinterest] para rec
 * [Análisis de grupos de anuncios](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
 * [Análisis de anuncios](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
-Utilice el origen [!DNL Pinterest Ads] para llevar los datos de [!DNL Pinterest] al Experience Platform, donde podrá ejecutar el análisis de datos. Se devuelven datos a partir de la fecha de ingesta para un intervalo antedatado de 90 días. [!DNL Pinterest Ads] usa tokens de portador como mecanismo de autenticación para comunicarse con las API [!DNL Pinterest].
+Utilice el origen [!DNL Pinterest Ads] para llevar los datos de [!DNL Pinterest] a Experience Platform, donde podrá ejecutar el análisis de datos. Se devuelven datos a partir de la fecha de ingesta para un intervalo antedatado de 90 días. [!DNL Pinterest Ads] usa tokens de portador como mecanismo de autenticación para comunicarse con las API [!DNL Pinterest].
 
 ## Requisitos previos {#prerequisites}
 
@@ -51,7 +51,7 @@ Para generar tu token de acceso, lee las guías de [!DNL Pinterest] sobre [confi
 
 ### Recopilar credenciales necesarias {#gather-required-credentials}
 
-Para conectar [!DNL Pinterest Ads] a Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para conectar [!DNL Pinterest Ads] a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | --- | --- |
@@ -95,23 +95,23 @@ La API [!DNL Pinterest] admite diferentes tipos de granularidad de tiempo para l
 | **SEMANALMENTE** | Las métricas de datos se desglosan semanalmente. |
 | **MENSUALMENTE** | Las métricas de datos se desglosan mensualmente. |
 
-Para Platform, el origen de [!DNL Pinterest Ads] está configurado internamente en `Day`, lo que significa que los datos se agregarán diariamente. Por ejemplo, si usa `impressions recorded` como métrica, dado que la granularidad está configurada como `DAY`, obtendrá `xx` impresiones en `day 1`, `yy` impresiones en `day 2`, etc.
+Para Experience Platform, el origen [!DNL Pinterest Ads] está configurado internamente en `Day`, lo que significa que los datos se agregarán diariamente. Por ejemplo, si usa `impressions recorded` como métrica, dado que la granularidad está configurada como `DAY`, obtendrá `xx` impresiones en `day 1`, `yy` impresiones en `day 2`, etc.
 
 >[!IMPORTANT]
 >
 >Pinterest impone a su API un límite de 1000 llamadas a la API diarias para leer información de anuncios, grupos de anuncios o campañas de publicidad. Para obtener información sobre los límites de tasa aplicables a las llamadas a API subyacentes, consulte la [[!DNL Pinterest] documentación sobre límites de tasa](https://developers.pinterest.com/docs/reference/ratelimits/).
 
-## Conectar [!DNL Pinterest Ads] a Platform {#connect-to-platform}
+## Conectar [!DNL Pinterest Ads] a Experience Platform {#connect-to-platform}
 
-La siguiente documentación proporciona información sobre cómo conectar [!DNL Pinterest Ads] a Platform mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Pinterest Ads] a Experience Platform mediante API o la interfaz de usuario:
 
-### Conectar [!DNL Pinterest Ads] a Platform mediante API {#connect-to-platform-using-api}
+### Conectar [!DNL Pinterest Ads] a Experience Platform mediante API {#connect-to-platform-using-api}
 
 * [Crear una conexión base de Pinterest mediante la API de Flow Service](../../tutorials/api/create/advertising/pinterest-ads.md)
 * [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
 * [Creación de un flujo de datos para una fuente de publicidad mediante la API de Flow Service](../../tutorials/api/collect/advertising.md)
 
-### Conectar [!DNL Pinterest Ads] a Platform mediante la interfaz de usuario {#connect-to-platform-using-ui}
+### Conectar [!DNL Pinterest Ads] a Experience Platform mediante la interfaz de usuario {#connect-to-platform-using-ui}
 
 * [Crear una conexión de origen de Pinterest en la interfaz de usuario](../../tutorials/ui/create/advertising/pinterest-ads.md)
 * [Crear un flujo de datos para una conexión de origen de publicidad en la interfaz de usuario](../../tutorials/ui/dataflow/advertising.md)

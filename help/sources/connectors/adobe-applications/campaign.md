@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Adobe Campaign Managed Cloud Services;campaña;servicios administrados de campaña
 title: Adobe Campaign Managed Cloud Services
-description: Obtenga información sobre cómo conectar los Cloud Service administrados de Campaign a Platform mediante la interfaz de usuario
+description: Obtenga información sobre cómo conectar Campaign Managed Cloud Services a Experience Platform mediante la interfaz de usuario
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '747'
 ht-degree: 1%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 Adobe Campaign Managed Cloud Services ofrece una plataforma Managed Services para diseñar experiencias multicanal para los clientes y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal. Visite la [documentación de Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=es) para obtener más información.
 
@@ -20,7 +20,7 @@ La fuente de Adobe Campaign Managed Cloud Services le permite llevar los datos d
 
 ## Requisitos previos
 
-Antes de poder crear una conexión de origen para llevar la versión 8 de Campaign al Experience Platform, primero debe completar los siguientes requisitos previos:
+Antes de poder crear una conexión de origen para llevar la versión 8 de Campaign a Experience Platform, primero debe completar los siguientes requisitos previos:
 
 * [Configure la importación del registro de eventos mediante la consola del cliente de Adobe Campaign](#view-delivery-and-tracking-log-data)
 * [Creación de un esquema XDM ExperienceEvent](#create-a-schema)
@@ -70,14 +70,14 @@ Para obtener instrucciones detalladas sobre cómo crear un esquema, lea la guía
 
 Finalmente, debe crear un conjunto de datos para los esquemas. Para obtener instrucciones detalladas sobre cómo crear un conjunto de datos, lea la guía sobre [crear un conjunto de datos en la interfaz de usuario](../../../catalog/datasets/user-guide.md).
 
-## Creación de una conexión de origen de Adobe Campaign Managed Cloud Services mediante la IU de Platform
+## Crear una conexión de origen de Adobe Campaign Managed Cloud Services mediante la interfaz de usuario de Experience Platform
 
-Ahora que ha accedido a los registros de datos en la consola del cliente de Campaign, ha creado un esquema y un conjunto de datos, puede continuar con la creación de una conexión de origen para llevar los datos de Campaign Managed Services a Platform.
+Ahora que ha accedido a los registros de datos en la consola del cliente de Campaign, ha creado un esquema y un conjunto de datos, puede continuar con la creación de una conexión de origen para llevar los datos de Campaign Managed Services a Experience Platform.
 
 Para obtener instrucciones detalladas sobre cómo llevar los datos de registros de envío y registros de seguimiento de Campaign v8 a Experience Platform, lea la guía sobre [creación de una conexión de origen de Campaign Managed Services en la interfaz de usuario](../../tutorials/ui/create/adobe-applications/campaign.md).
 
 >[!IMPORTANT]
 >
->Existe un caso límite en el que la interacción de un destinatario de correo electrónico eliminado recientemente con un correo electrónico podría volver a introducir información personal en Experience Platform. En algunos casos, esto podría volver a habilitar el marketing para ese usuario.
+>Hay un caso límite en el que la interacción de un destinatario de correo electrónico eliminado recientemente con un correo electrónico podría volver a introducir información personal en Experience Platform. En algunos casos, esto podría volver a habilitar el marketing para ese usuario.
 >
 >* Este escenario solo está activo entre el momento en que se ha ejecutado una solicitud de privacidad en Experience Platform y el momento en que se ha ejecutado en Adobe Campaign Classic. Una vez que la solicitud se ejecuta en Campaign, se realiza una comprobación para asegurarse de que el registro no se exporta a Campaign. Vuelva a emitir una solicitud RGPD después de 72 horas de ejecución para resolverlo.

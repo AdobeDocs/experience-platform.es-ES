@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Actualización de los detalles de la cuenta de Source Connection en la IU
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '454'
 ht-degree: 1%
 
 ---
@@ -22,12 +22,12 @@ Este tutorial proporciona los pasos para actualizar los detalles y las credencia
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-- [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+- [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Actualización de cuentas
 
-Inicie sesión en la [interfaz de usuario del Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo de [!UICONTROL Fuentes]. Seleccione **[!UICONTROL Cuentas]** del encabezado superior para ver las cuentas existentes.
+Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo de [!UICONTROL Fuentes]. Seleccione **[!UICONTROL Cuentas]** del encabezado superior para ver las cuentas existentes.
 
 ![catálogo](../../images/tutorials/update/catalog.png)
 

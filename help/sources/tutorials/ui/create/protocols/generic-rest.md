@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;API REST genérica
 title: Crear una conexión de Source de la API de REST genérica en la interfaz de usuario
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de API REST genérica mediante la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '647'
 ht-degree: 3%
 
 ---
@@ -20,14 +20,14 @@ Este tutorial proporciona los pasos para crear un conector de origen [!DNL Gener
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Recopilar credenciales necesarias
 
-Para tener acceso a su cuenta de [!DNL Generic REST API] en Platform, debe proporcionar credenciales válidas para el tipo de autenticación que elija. La API REST genérica admite código de actualización OAuth 2 y autenticación básica. Consulte las siguientes tablas para obtener información sobre las credenciales de los dos tipos de autenticación admitidos.
+Para tener acceso a su cuenta de [!DNL Generic REST API] en Experience Platform, debe proporcionar credenciales válidas para el tipo de autenticación que elija. La API REST genérica admite código de actualización OAuth 2 y autenticación básica. Consulte las siguientes tablas para obtener información sobre las credenciales de los dos tipos de autenticación admitidos.
 
 #### Código de actualización de OAuth 2
 
@@ -53,7 +53,7 @@ Para tener acceso a su cuenta de [!DNL Generic REST API] en Platform, debe propo
 
 ## Conecte su cuenta de API de REST genérica
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
 
@@ -89,4 +89,4 @@ Para usar la autenticación básica, selecciona **[!UICONTROL Autenticación bá
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de API de REST genérica. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en la plataforma](../../dataflow/protocols.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de API de REST genérica. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/protocols.md).

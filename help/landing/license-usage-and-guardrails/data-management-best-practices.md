@@ -2,9 +2,9 @@
 title: Prácticas recomendadas de licencia de administración de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 1b8fd7671146519fa66768aab3fe081adb0bd6c6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2145'
+source-wordcount: '2154'
 ht-degree: 2%
 
 ---
@@ -13,18 +13,18 @@ ht-degree: 2%
 
 Adobe Experience Platform es un sistema abierto que transforma sus datos en perfiles de clientes sólidos que se actualizan en tiempo real y utiliza perspectivas impulsadas por IA para ayudarle a ofrecer las experiencias correctas en todos los canales. Puede introducir datos de distintos tipos, volúmenes e historiales en Experience Platform mediante fuentes y, a continuación, atender esos datos en casos de uso que van desde la segmentación y personalización hasta el análisis y el aprendizaje automático.
 
-Platform ofrece licencias que establecen la cantidad de perfiles que puede crear y la cantidad de datos que puede introducir. Dada la capacidad de incorporar cualquier fuente, volumen o historial de datos, es posible superar los derechos de licencia a medida que crezcan los volúmenes de datos.
+Experience Platform ofrece licencias que establecen la cantidad de perfiles que puede crear y la cantidad de datos que puede introducir. Dada la capacidad de incorporar cualquier fuente, volumen o historial de datos, es posible superar los derechos de licencia a medida que crezcan los volúmenes de datos.
 
 Este documento describe las prácticas recomendadas a seguir y las herramientas que puede utilizar para administrar mejor las autorizaciones de Adobe Experience Platform.
 
 ## Explicación del almacenamiento de datos de Adobe Experience Platform
 
-El Experience Platform está compuesto principalmente por dos repositorios de datos: el [!DNL data lake] y el almacén de perfiles.
+Experience Platform se compone principalmente de dos repositorios de datos: [!DNL data lake] y el almacén de perfiles.
 
 **[!DNL data lake]** sirve principalmente para los siguientes propósitos:
 
-* Actúa como zona de ensayo para la incorporación de datos en Experience Platform;
-* Actúa como almacenamiento de datos a largo plazo para todos los datos del Experience Platform;
+* Actúa como área de ensayo para la incorporación de datos en Experience Platform;
+* Actúa como almacenamiento de datos a largo plazo para todos los datos de Experience Platform;
 * Habilita casos de uso, como análisis de datos y ciencia de datos.
 
 El almacén de perfiles **Profile Store** es donde se crean los perfiles de cliente y sirve principalmente para los siguientes propósitos:
@@ -34,13 +34,13 @@ El almacén de perfiles **Profile Store** es donde se crean los perfiles de clie
 
 >[!NOTE]
 >
->Su acceso a [!DNL data lake] puede depender del SKU del producto que adquirió. Para obtener más información sobre los SKU de los productos, póngase en contacto con el representante del Adobe.
+>Su acceso a [!DNL data lake] puede depender del SKU del producto que adquirió. Para obtener más información sobre los SKU de productos, póngase en contacto con su representante de Adobe.
 
 ## Uso de licencias {#license-usage}
 
-Al otorgar la licencia al Experience Platform, se le otorgan derechos de uso de licencia que varían según el SKU:
+Al obtener la licencia de Experience Platform, se le otorgan derechos de uso de licencia que varían según el SKU:
 
-**[!DNL Addressable Audience]**: el número total de perfiles de clientes que están permitidos contractualmente en Experience Platform, incluidos los perfiles conocidos y seudónimos.
+**[!DNL Addressable Audience]**: el número total de perfiles de clientes que están permitidos por contrato en Experience Platform, incluidos los perfiles conocidos y seudónimos.
 
 **[!DNL Total Data Volume]**: cantidad total de datos disponibles para que el servicio de perfil de Adobe Experience Platform los use en los flujos de trabajo de participación.
 
@@ -48,9 +48,9 @@ La disponibilidad de estas métricas y la definición específica de cada una de
 
 ## Panel de uso de licencias
 
-La interfaz de usuario de Adobe Experience Platform proporciona un panel a través del cual puede ver una instantánea de los datos relacionados con las licencias de su organización para Platform. Los datos del tablero se muestran exactamente como aparecen en el momento específico en el que se tomó la instantánea. La instantánea no es una aproximación ni una muestra de datos y el panel no se actualiza en tiempo real.
+La interfaz de usuario de Adobe Experience Platform proporciona un panel a través del cual puede ver una instantánea de los datos relacionados con las licencias de su organización para Experience Platform. Los datos del tablero se muestran exactamente como aparecen en el momento específico en el que se tomó la instantánea. La instantánea no es una aproximación ni una muestra de datos y el panel no se actualiza en tiempo real.
 
-Para obtener más información, consulte la guía de [uso del panel de uso de licencias en la interfaz de usuario de Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+Para obtener más información, consulte la guía de [uso del panel de uso de licencias en la interfaz de usuario de Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
 ## Prácticas recomendadas de administración de datos
 
@@ -72,17 +72,17 @@ Hay tres dimensiones que se deben tener en cuenta para comprender el valor de lo
 
 Hay dos escenarios centrales que se deben tener en cuenta al garantizar que el uso de los datos se mantenga dentro de los límites de los derechos de licencia:
 
-### ¿Qué datos introducir en Platform?
+### ¿Qué datos introducir en Experience Platform?
 
-Los datos se pueden ingerir en uno o varios sistemas de Platform, a saber, [!DNL data lake] y/o el almacén de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee guardar los datos históricos en [!DNL data lake], pero no en el almacén de perfiles. Puede seleccionar qué datos enviar al almacén de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
+Los datos se pueden ingerir en uno o varios sistemas de Experience Platform, a saber, [!DNL data lake] y/o el almacén de perfiles. Esto significa que pueden existir diferentes datos en ambos sistemas para una variedad de casos de uso diferentes. Por ejemplo, es posible que desee guardar los datos históricos en [!DNL data lake], pero no en el almacén de perfiles. Puede seleccionar qué datos enviar al almacén de perfiles habilitando un conjunto de datos para la ingesta de perfiles.
 
 >[!NOTE]
 >
->Su acceso a [!DNL data lake] puede depender del SKU del producto que adquirió. Para obtener más información sobre los SKU de los productos, póngase en contacto con el representante del Adobe.
+>Su acceso a [!DNL data lake] puede depender del SKU del producto que adquirió. Para obtener más información sobre los SKU de productos, póngase en contacto con su representante de Adobe.
 
 ### ¿Qué datos se deben conservar?
 
-Puede aplicar filtros de ingesta de datos y reglas de caducidad para eliminar datos que hayan quedado obsoletos para sus casos de uso. Normalmente, los datos de comportamiento (como los datos de Analytics) consumen mucho más almacenamiento que los datos de registro (como los datos CRM). Por ejemplo, muchos usuarios de Platform tienen hasta el 90 % de perfiles que se rellenan con datos de comportamiento solos, en comparación con los datos de registro. Por lo tanto, la administración de los datos de comportamiento es crítica para garantizar el cumplimiento de los derechos de licencia.
+Puede aplicar filtros de ingesta de datos y reglas de caducidad para eliminar datos que hayan quedado obsoletos para sus casos de uso. Normalmente, los datos de comportamiento (como los datos de Analytics) consumen mucho más almacenamiento que los datos de registro (como los datos CRM). Por ejemplo, muchos usuarios de Experience Platform tienen hasta un 90 % de perfiles que se rellenan solo con datos de comportamiento, en comparación con los datos de registro. Por lo tanto, la administración de los datos de comportamiento es crítica para garantizar el cumplimiento de los derechos de licencia.
 
 Hay varias herramientas que puede aprovechar para no salirse de sus derechos de uso de licencias:
 
@@ -101,11 +101,11 @@ Los filtros de ingesta le permiten introducir únicamente los datos necesarios p
 
 | Filtro de ingesta | Descripción |
 | --- | --- |
-| Filtrado de origen de Adobe Audience Manager | Al crear una conexión de origen de Adobe Audience Manager, puede elegir qué segmentos y características incorporar al [!DNL data lake] y al Perfil del cliente en tiempo real, en lugar de ingerir los datos del Audience Manager en su totalidad. Consulte la guía de [creación de una conexión de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
-| Preparación de datos de Adobe Analytics | Puede utilizar las funcionalidades [!DNL Data Prep] al crear una conexión de origen de Analytics para filtrar los datos que no son necesarios para sus casos de uso. A través de [!DNL Data Prep], puede definir qué atributos/columnas se deben publicar en el perfil. También puede proporcionar afirmaciones condicionales para informar a Platform de si se espera que los datos se publiquen en el perfil o solo en [!DNL data lake]. Consulte la guía de [creación de una conexión de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
+| Filtrado de origen de Adobe Audience Manager | Al crear una conexión de origen de Adobe Audience Manager, puede elegir qué segmentos y características incorporar al [!DNL data lake] y al Perfil del cliente en tiempo real, en lugar de ingerir los datos de Audience Manager en su totalidad. Consulte la guía de [creación de una conexión de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
+| Preparación de datos de Adobe Analytics | Puede utilizar las funcionalidades [!DNL Data Prep] al crear una conexión de origen de Analytics para filtrar los datos que no son necesarios para sus casos de uso. A través de [!DNL Data Prep], puede definir qué atributos/columnas se deben publicar en el perfil. También puede proporcionar instrucciones condicionales para informar a Experience Platform de si se espera que los datos se publiquen en el perfil o solo en [!DNL data lake]. Consulte la guía de [creación de una conexión de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
 | Compatibilidad con habilitar/deshabilitar conjuntos de datos para el perfil | Para introducir datos en el Perfil del cliente en tiempo real, debe habilitar un conjunto de datos para su uso en el almacén de perfiles. Al hacerlo, agrega a sus derechos de [!DNL Addressable Audience] y [!DNL Total Data Volume]. Una vez que un conjunto de datos ya no es necesario para casos de uso de perfiles de clientes, puede deshabilitar la integración de ese conjunto de datos a Perfil para garantizar que los datos sigan siendo compatibles con la licencia. Consulte la guía sobre [habilitar y deshabilitar conjuntos de datos para el perfil](../../catalog/datasets/enable-for-profile.md) para obtener más información. |
-| Exclusión de datos de SDK web y SDK móvil | El SDK web y móvil recopilan dos tipos de datos: datos que se recopilan automáticamente y datos que el desarrollador recopila explícitamente. Para administrar mejor el cumplimiento de la licencia, puede deshabilitar la recopilación automática de datos en la configuración del SDK a través de la configuración de contexto. El desarrollador también puede eliminar o no definir datos personalizados. |
-| Exclusión de datos del reenvío del lado del servidor | Si está enviando datos a Platform mediante el reenvío del lado del servidor, puede excluir qué datos se envían eliminando la asignación en una acción de regla para excluirlos en todos los eventos o añadiendo condiciones a la regla para que los datos solo se activen para determinados eventos. Consulte la documentación sobre [eventos y condiciones](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if) para obtener más información. |
+| Exclusión de datos de Web SDK y Mobile SDK | Web y Mobile SDK recopilan dos tipos de datos: datos que se recopilan automáticamente y datos que recopila explícitamente su desarrollador. Para administrar mejor el cumplimiento de la licencia, puede deshabilitar la recopilación automática de datos en la configuración de SDK a través de la configuración de contexto. El desarrollador también puede eliminar o no definir datos personalizados. |
+| Exclusión de datos del reenvío del lado del servidor | Si está enviando datos a Experience Platform mediante el reenvío del lado del servidor, puede excluir qué datos se envían eliminando la asignación en una acción de regla para excluirlos en todos los eventos o añadiendo condiciones a la regla para que los datos solo se activen para determinados eventos. Consulte la documentación sobre [eventos y condiciones](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if) para obtener más información. |
 | Filtrado de datos en el nivel de origen | Puede utilizar operadores lógicos y de comparación para filtrar los datos de nivel de fila a partir de los orígenes antes de crear una conexión e introducir datos en Experience Platform. Para obtener más información, lea la guía sobre [filtrado de datos de nivel de fila para un origen mediante la [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
@@ -116,7 +116,7 @@ El almacén de perfiles está compuesto por los siguientes componentes:
 
 | Componente de almacén de perfiles | Descripción |
 | --- | --- |
-| Fragmentos de perfil | Cada perfil de cliente está compuesto por varios **fragmentos de perfil** que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios **fragmentos de perfil** relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Platform, se vinculan mediante el gráfico de identidad para crear un único perfil para ese cliente. **Los fragmentos de perfil** constan de un área de nombres de identidad como identificador, con datos de registro o datos de series temporales asociados. |
+| Fragmentos de perfil | Cada perfil de cliente está compuesto por varios **fragmentos de perfil** que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios **fragmentos de perfil** relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Experience Platform, se unen mediante el gráfico de identidades para crear un único perfil para ese cliente. **Los fragmentos de perfil** constan de un área de nombres de identidad como identificador, con datos de registro o datos de series temporales asociados. |
 | Registro de datos (Atributos) | Un perfil es una representación de un sujeto, una organización o un individuo, compuesta por muchos **Atributos** (también conocidos como **datos de registro**). Por ejemplo, el perfil de un producto puede incluir un SKU y una descripción, mientras que el perfil de una persona contiene información como nombre, apellidos y dirección de correo electrónico. **Registrar datos** suele tener un volumen bajo o moderado, pero es útil durante largos períodos de tiempo. |
 | Datos de series temporales (comportamiento) | **Los datos de series temporales** proporcionan información sobre el comportamiento de un usuario. Representados por la clase de esquema estándar Experience Data Model (XDM) [!DNL ExperienceEvent], los datos de series temporales pueden describir eventos como elementos que se agregan al carro de compras, vínculos en los que se hace clic y vídeos visualizados. El valor del comportamiento puede disminuir con el tiempo. |
 | Área de nombres de identidad (identidades) | A medida que los datos de los clientes se reúnen, se combinan en un único perfil mediante el uso de **áreas de nombres de identidad**, y la capacidad de unir estas identidades a medida que se conoce más información sobre el usuario. Vea la [descripción general de áreas de nombres de identidad](../../identity-service/features/namespaces.md) para obtener más información. |
@@ -136,7 +136,7 @@ Hay varios informes disponibles para ayudarle a comprender la composición del a
 
 Esta capacidad le permite eliminar automáticamente perfiles seudónimos antiguos del almacén de perfiles. Para obtener más información sobre esta característica, lea [Información general sobre la caducidad de los datos del perfil seudónimo](../../profile/pseudonymous-profiles.md).
 
-#### Caducidad de Experience Event {#event-expirations}
+#### Caducidades de eventos de experiencia {#event-expirations}
 
 Esta capacidad le permite eliminar automáticamente datos de comportamiento de un conjunto de datos con perfil habilitado que ya no es útil para sus casos de uso. Consulte la descripción general de [Caducidad de eventos de experiencia](../../profile/event-expirations.md) para obtener detalles sobre cómo funciona este proceso una vez que está habilitado para un conjunto de datos.
 
@@ -161,9 +161,9 @@ La siguiente tabla describe la lista de funciones disponibles actualmente para a
 | [Habilitar/deshabilitar conjuntos de datos para el perfil](../../catalog/datasets/user-guide.md) | Habilite o deshabilite la ingesta de conjuntos de datos en el Perfil del cliente en tiempo real. |
 | [Caducidad de evento de experiencia](../../profile/event-expirations.md) | Aplique una hora de caducidad para todos los eventos introducidos en un conjunto de datos con perfil habilitado. Póngase en contacto con el equipo de su cuenta de Adobe o con el Servicio de atención al cliente para habilitar esta función. |
 | [Filtros de preparación de datos de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Aplicar filtros [!DNL Kafka] para excluir la ingesta de datos innecesarios |
-| [Filtros del conector de origen de Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplicar filtros de conexión de origen del Audience Manager para excluir los datos innecesarios de la ingesta |
+| [Filtros del conector de origen de Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplicar filtros de conexión de origen de Audience Manager para excluir los datos innecesarios de la ingesta |
 | [Filtros de datos de reenvío de eventos](../../tags/ui/event-forwarding/overview.md) | Aplique filtros [!DNL Kafka] del lado del servidor para excluir la ingesta de datos innecesarios.  Consulte la documentación sobre [reglas de etiquetas](../../tags/ui/managing-resources/rules.md) para obtener más información. |
-| [IU del panel de uso de licencias](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Vea una instantánea de los datos de licencia de su organización para Experience Platform |
+| [IU del panel de uso de licencias](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Vea una instantánea de los datos relacionados con las licencias de su organización para Experience Platform |
 | [API de informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md) | Genera los conjuntos de datos que más contribuyen a su audiencia direccionable |
 | [API de informe de superposición de identidad](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Genera las áreas de nombres de identidad que más contribuyen a su audiencia direccionable |
 

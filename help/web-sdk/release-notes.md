@@ -1,11 +1,11 @@
 ---
 title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;notas de la versión;
+keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2288'
 ht-degree: 5%
 
 ---
@@ -294,7 +294,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 - El comando [`getIdentity`](/help/web-sdk/commands/getidentity.md) ahora devuelve el ID de región perimetral junto con la identidad.
 - Las advertencias y los errores recibidos del servidor se han mejorado y se gestionan de forma más adecuada.
 - Se agregó compatibilidad con el estándar de Adobe Consent 2.0 para el comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
-- Cuando se reciben, las preferencias de consentimiento tienen un cifrado hash y se almacenan en el almacenamiento local para una integración optimizada entre CMP, Platform Web SDK y Platform Edge Network. Si está recopilando las preferencias de consentimiento, le recomendamos que llame a `setConsent` en cada carga de página.
+- Cuando se reciben, las preferencias de consentimiento tienen un cifrado hash y se almacenan en el almacenamiento local para una integración optimizada entre CMP, Experience Platform Web SDK y Experience Platform Edge Network. Si está recopilando las preferencias de consentimiento, le recomendamos que llame a `setConsent` en cada carga de página.
 - Se han agregado dos [vínculos de supervisión](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` y `onCommandRejected`.
 - Corrección de errores: Los eventos de notificación de interacción de Personalization contendrían información duplicada sobre la misma actividad cuando un usuario navegaba a una nueva vista de aplicación de una sola página, volvía a la vista original y hacía clic en un elemento que cumplía los requisitos para la conversión.
 - Corrección de errores: Si el primer evento enviado por SDK tenía `documentUnloading` establecido en `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) se usaría para enviar el evento, lo que da como resultado un error con respecto a una identidad que no se está estableciendo.

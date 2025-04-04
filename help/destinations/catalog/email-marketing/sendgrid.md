@@ -3,7 +3,7 @@ keywords: correo electrónico;Correo electrónico;correo electrónico;destinos d
 title: Conexión de SendGrid
 description: El destino SendGrid le permite exportar los datos de origen y activarlos dentro de SendGrid para sus necesidades comerciales.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 3%
@@ -48,7 +48,7 @@ SendGrid admite la activación de identidades descritas en la tabla siguiente. M
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| email | Dirección de correo electrónico | Tenga en cuenta que [!DNL Adobe Experience Platform] admite las direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen de Experience Platform contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación.<br/><br/> Tenga en cuenta que **SendGrid** no admite direcciones de correo electrónico con hash, de modo que solo se envían al destino datos de texto sin transformar. |
+| email | Dirección de correo electrónico | Tenga en cuenta que [!DNL Adobe Experience Platform] admite las direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen de Experience Platform contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación.<br/><br/> Tenga en cuenta que **SendGrid** no admite direcciones de correo electrónico con hash, de modo que solo se envían al destino datos de texto sin transformar. |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

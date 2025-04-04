@@ -2,9 +2,9 @@
 title: Paneles estándar
 description: Obtenga información sobre cómo crear y administrar paneles personalizados, donde puede crear, añadir y editar widgets personalizados para visualizar métricas clave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Crear un tablero personalizado
 
-Para crear un tablero personalizado, primero, navegue hasta el inventario del tablero. Seleccione **[!UICONTROL Paneles]** de la navegación izquierda de la IU de Platform seguida de **[!UICONTROL Crear panel]**.
+Para crear un tablero personalizado, primero, navegue hasta el inventario del tablero. Seleccione **[!UICONTROL Paneles]** de la navegación izquierda de la interfaz de usuario de Experience Platform seguida de **[!UICONTROL Crear panel]**.
 
 ![Se resaltó el inventario de paneles con paneles en la navegación izquierda y &quot;Crear panel&quot;.](./images/standard-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ Aparecerá el espacio de trabajo del compositor de widgets. A continuación, sel
 
 #### Seleccionar modelo de datos {#select-data-model}
 
-Aparecerá el cuadro de diálogo [!UICONTROL Seleccionar modelo de datos]. Seleccione un modelo de datos de la columna izquierda para mostrar una lista de vista previa de todas las tablas disponibles. El modelo de datos preconfigurado para Real-time Customer Data Platform se llama [!UICONTROL CDPInsights].
+Aparecerá el cuadro de diálogo [!UICONTROL Seleccionar modelo de datos]. Seleccione un modelo de datos de la columna izquierda para mostrar una lista de vista previa de todas las tablas disponibles. El modelo de datos preconfigurado para Real-Time Customer Data Platform se llama [!UICONTROL CDPInsights].
 
 >[!TIP]
 >
@@ -152,7 +152,7 @@ Los widgets se pueden reorganizar y cambiar de tamaño en este espacio de trabaj
 
 ![Panel definido por el usuario con un widget personalizado y el botón Guardar resaltado.](./images/standard-dashboards/user-defined-dashboard.png)
 
-Para garantizar que cada consulta de un panel de perspectivas de Adobe Real-time Customer Data Platform tenga suficientes recursos para ejecutarse de forma eficaz, la API rastrea el uso de recursos asignando espacios de concurrencia a cada consulta. El sistema puede procesar hasta cuatro consultas simultáneas y, por lo tanto, hay cuatro ranuras de consulta simultáneas disponibles en cualquier momento. Las consultas se colocan en una cola basada en ranuras de concurrencia y, a continuación, espere en la cola hasta que haya suficientes ranuras de concurrencia disponibles.
+Para garantizar que cada consulta de un panel de perspectivas de Adobe Real-Time Customer Data Platform tenga suficientes recursos para ejecutarse de forma eficaz, la API rastrea el uso de recursos asignando espacios de concurrencia a cada consulta. El sistema puede procesar hasta cuatro consultas simultáneas y, por lo tanto, hay cuatro ranuras de consulta simultáneas disponibles en cualquier momento. Las consultas se colocan en una cola basada en ranuras de concurrencia y, a continuación, espere en la cola hasta que haya suficientes ranuras de concurrencia disponibles.
 
 ### Editar, duplicar o eliminar un widget {#duplicate}
 
@@ -172,7 +172,7 @@ A continuación, seleccione los puntos suspensivos en la parte superior derecha 
 
 >[!NOTE]
 >
->La duplicación le permite personalizar los atributos de una perspectiva para crear un widget único sin tener que empezar desde cero. Si duplica un widget, aparecerá en el panel personalizado. A continuación, puede seleccionar los puntos suspensivos del nuevo widget, seguido de **[!UICONTROL Editar]**, para personalizar su perspectiva.
+>La duplicación le permite personalizar los atributos de un insight para crear un widget único sin tener que empezar desde cero. Si duplica un widget, aparecerá en el panel personalizado. A continuación, puede seleccionar los puntos suspensivos del nuevo widget, seguido de **[!UICONTROL Editar]**, para personalizar su insight.
 
 ## Pasos siguientes y recursos adicionales
 
@@ -180,6 +180,6 @@ Al leer este documento, tiene una mejor comprensión de cómo crear un panel per
 
 Para descubrir las métricas y visualizaciones preconfiguradas disponibles para los paneles de [perfiles](./guides/profiles.md#standard-widgets), [segmentos](./guides/audiences.md#standard-widgets) y [destinos](./guides/destinations.md#standard-widgets), consulte la lista de widgets estándar en su documentación respectiva.
 
-Para reforzar su comprensión de los paneles de Experience Platform, vea el siguiente vídeo:
+Para comprender mejor los paneles de Experience Platform, vea el siguiente vídeo:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

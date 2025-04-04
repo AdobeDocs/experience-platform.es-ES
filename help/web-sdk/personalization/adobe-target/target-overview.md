@@ -1,23 +1,23 @@
 ---
-title: Uso de Adobe Target con SDK web para la personalización
-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Target
+title: Uso de Adobe Target con Web SDK para la personalización
+description: Obtenga información sobre cómo procesar contenido personalizado con Experience Platform Web SDK mediante Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 116db0808835c548c21635148b81b3e884b5cebd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1368'
 ht-degree: 3%
 
 ---
 
 # Usar [!DNL Adobe Target] y [!DNL Web SDK] para personalización
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] puede entregar y procesar experiencias personalizadas administradas en [!DNL Adobe Target] al canal web. Puede usar un editor WYSIWYG, llamado [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), o una interfaz no visual, [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), para crear, activar y entregar sus actividades y experiencias de personalización.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] puede entregar y procesar experiencias personalizadas administradas en [!DNL Adobe Target] al canal web. Puede usar un editor de WYSIWYG, llamado [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), o una interfaz no visual, [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), para crear, activar y entregar sus actividades y experiencias de personalización.
 
 >[!IMPORTANT]
 >
->Obtenga información sobre cómo migrar su implementación de Target al SDK web de Platform con el tutorial [Migrar Target de at.js 2.x al SDK web de Platform](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html).
+>Aprenda a migrar su implementación de Target a Experience Platform Web SDK con el tutorial [Migrar Target de at.js 2.x a Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html).
 >
->Aprenda a implementar Target por primera vez con el tutorial [Implementar Adobe Experience Cloud con SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es). Para obtener información específica de Target, consulte la sección del tutorial titulada [Configurar Target con el SDK web de Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Aprenda a implementar Target por primera vez con el tutorial [Implementar Adobe Experience Cloud con Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es). Para obtener información específica de Target, consulte la sección del tutorial titulada [Configurar Target con Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 
 Las siguientes características se han probado y actualmente son compatibles con [!DNL Target]:
@@ -35,18 +35,18 @@ Las siguientes características se han probado y actualmente son compatibles con
 
 El diagrama siguiente le ayuda a comprender el flujo de trabajo de [!DNL Target] y [!DNL Web SDK] Edge Decisioning.
 
-![Diagrama de la toma de decisiones perimetral de Adobe Target con el SDK web de Platform](assets/target-platform-web-sdk-new.png)
+![Diagrama de Adobe Target edge Decisioning con Experience Platform Web SDK](assets/target-platform-web-sdk-new.png)
 
 | Llamada | Detalles |
 | --- | --- |
-| 1 | El dispositivo carga [!DNL Web SDK]. [!DNL Web SDK] envía una solicitud al Edge Network con datos XDM, el ID de entorno de flujos de datos, los parámetros pasados y el ID de cliente (opcional). La página (o los contenedores) está oculta previamente. |
-| 2 | El Edge Network envía la solicitud a los servicios Edge para enriquecerla con el ID del visitante, el consentimiento y otra información de contexto del visitante, como la geolocalización y los nombres descriptivos del dispositivo. |
-| 3 | El Edge Network envía la solicitud de personalización enriquecida al perímetro de [!DNL Target] con el ID de visitante y los parámetros proporcionados. |
+| 1 | El dispositivo carga [!DNL Web SDK]. [!DNL Web SDK] envía una solicitud a Edge Network con datos XDM, el ID de entorno de flujos de datos, los parámetros pasados y el ID de cliente (opcional). La página (o los contenedores) está oculta previamente. |
+| 2 | Edge Network envía la solicitud a los servicios Edge para enriquecerla con el ID de visitante, el consentimiento y otra información de contexto del visitante, como la geolocalización y los nombres descriptivos del dispositivo. |
+| 3 | Edge Network envía la solicitud de personalización enriquecida al perímetro [!DNL Target] con el ID de visitante y los parámetros proporcionados. |
 | 4 | Se ejecutan los scripts de perfil y se incluyen en el almacenamiento de perfiles [!DNL Target]. El almacenamiento de perfiles recupera segmentos de la [!UICONTROL biblioteca de audiencias] (por ejemplo, segmentos compartidos de [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
-| 5 | En función de los parámetros de solicitud de URL y los datos de perfil, [!DNL Target] determina qué actividades y experiencias se mostrarán al visitante en la vista de página actual y en futuras vistas previamente recuperadas. [!DNL Target] devuelve esto al Edge Network. |
-| 6 | a. El Edge Network devuelve la respuesta de personalización a la página, incluyendo, de forma opcional, los valores de perfil para una personalización adicional. El contenido personalizado de la página actual se muestra lo más rápido posible y sin parpadeo del contenido predeterminado.<br>b. SPA El contenido personalizado para vistas que se muestran como resultado de acciones del usuario en una aplicación de una sola página () se almacena en caché para que se pueda aplicar instantáneamente sin una llamada al servidor adicional cuando se activan las vistas. <br>c. El Edge Network envía el ID de visitante y otros valores en cookies, como el consentimiento, el ID de sesión, la identidad, la comprobación de cookies y la personalización. |
-| 7 | El SDK web envía la notificación del dispositivo al Edge Network. |
-| 8 | El Edge Network reenvía detalles de [!UICONTROL Analytics for Target] (A4T) (metadatos de actividad, experiencia y conversión) al perímetro de [!DNL Analytics]. |
+| 5 | En función de los parámetros de solicitud de URL y los datos de perfil, [!DNL Target] determina qué actividades y experiencias se mostrarán al visitante en la vista de página actual y en futuras vistas previamente recuperadas. [!DNL Target] entonces envía esto de vuelta a Edge Network. |
+| 6 | a. Edge Network devuelve la respuesta de personalización a la página, incluyendo, de forma opcional, los valores de perfil para una personalización adicional. El contenido personalizado de la página actual se muestra lo más rápido posible y sin parpadeo del contenido predeterminado.<br>b. El contenido personalizado para vistas que se muestran como resultado de acciones del usuario en una aplicación de una sola página (SPA) se almacena en caché para que se pueda aplicar instantáneamente sin una llamada al servidor adicional cuando se activan las vistas. <br>c. Edge Network envía el ID de visitante y otros valores en las cookies, como el consentimiento, el ID de sesión, la identidad, la comprobación de cookies y la personalización. |
+| 7 | Web SDK envía la notificación desde el dispositivo a Edge Network. |
+| 8 | Edge Network reenvía los detalles de [!UICONTROL Analytics for Target] (A4T) (metadatos de actividad, experiencia y conversión) al perímetro de [!DNL Analytics]. |
 
 ## Habilitando [!DNL Adobe Target]
 
@@ -74,7 +74,7 @@ Consulte [Procesamiento de contenido personalizado](../rendering-personalization
 
 Al definir audiencias para las actividades [!DNL Target] que se entregan mediante [!DNL Web SDK], se debe definir y utilizar [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es). Después de definir esquemas XDM, clases y grupos de campos de esquema, puede crear una regla de audiencia [!DNL Target] definida por datos XDM para el direccionamiento. En [!DNL Target], los datos XDM se muestran en [!UICONTROL Generador de audiencias] como un parámetro personalizado. El XDM se serializa usando notación de puntos (por ejemplo, `web.webPageDetails.name`).
 
-Si tiene [!DNL Target] actividades con audiencias predefinidas que utilizan parámetros personalizados o un perfil de usuario, estos no se entregan correctamente a través del SDK. En lugar de utilizar parámetros personalizados o el perfil de usuario, debe utilizar XDM. Sin embargo, hay campos de segmentación de audiencia predeterminados admitidos a través de [!DNL Web SDK] que no requieren XDM. Estos campos están disponibles en la interfaz de usuario de [!DNL Target] que no requieren XDM:
+Si tiene [!DNL Target] actividades con audiencias predefinidas que utilizan parámetros personalizados o un perfil de usuario, no se entregan correctamente a través de SDK. En lugar de utilizar parámetros personalizados o el perfil de usuario, debe utilizar XDM. Sin embargo, hay campos de segmentación de audiencia predeterminados admitidos a través de [!DNL Web SDK] que no requieren XDM. Estos campos están disponibles en la interfaz de usuario de [!DNL Target] que no requieren XDM:
 
 * Biblioteca de objetivos
 * Geo
@@ -181,7 +181,7 @@ Para actualizar un perfil [!DNL Target], asegúrese de que los datos del perfil 
 | --- | --- | --- |
 | `renderDecisions` | Booleano | Indica al componente de personalización si debe interpretar las acciones del DOM |
 | `decisionScopes` | Matriz `<String>` | Una lista de ámbitos para los que recuperar decisiones |
-| `xdm` | Objeto | Datos con formato XDM que aterrizan en el SDK web como un evento de experiencia |
+| `xdm` | Objeto | Datos con formato XDM que aterrizan en Web SDK como un evento de experiencia |
 | `data` | Objeto | Pares arbitrarios de clave/valor enviados a [!DNL Target] soluciones bajo la clase de destino. |
 
 <!--Typical [!DNL Web SDK] code using this command looks like the following:-->
@@ -235,7 +235,7 @@ La tabla siguiente enumera [!DNL Recommendations] atributos y si cada uno de ell
 |  | entity.margin | Admitido |
 |  | entity.event.detailsOnly | Admitido |
 | Recommendations: atributos de entidad personalizados | entity.yourCustomAttributeName | Admitido |
-| Recommendations: parámetros de mbox/página reservados | excludedIds | Admitido |
+| Recommendations: parámetros reservados de mbox/página | excludedIds | Admitido |
 |  | cartIds | Admitido |
 |  | productPurchasedId | Admitido |
 | Categoría de página o elemento para la afinidad de la categoría | user.categoryId | Admitido |
@@ -286,7 +286,7 @@ alloy("sendEvent", {
 
 ## Depuración
 
-mboxTrace y mboxDebug han quedado obsoletos. En su lugar, use un método de [depuración del SDK web](/help/web-sdk/use-cases/debugging.md).
+mboxTrace y mboxDebug han quedado obsoletos. En su lugar, use un método de [depuración de Web SDK](/help/web-sdk/use-cases/debugging.md).
 
 ## Terminología
 

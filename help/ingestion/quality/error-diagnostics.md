@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Recuperación de diagnósticos de error de ingesta de datos
 description: Este documento proporciona información sobre la monitorización de la ingesta por lotes y la gestión de los errores de ingesta parcial por lotes, así como una referencia para los tipos de ingesta parcial por lotes.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 9%
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 # Recuperando diagnósticos de error de ingesta de datos
 
-Adobe Experience Platform proporciona dos métodos para cargar e ingerir datos. Puede usar la ingesta por lotes, que le permite insertar datos mediante varios tipos de archivo (como CSV), o la ingesta por transmisión, que le permite insertar sus datos en [!DNL Platform] mediante extremos de transmisión en tiempo real.
+Adobe Experience Platform proporciona dos métodos para cargar e ingerir datos. Puede usar la ingesta por lotes, que le permite insertar datos mediante varios tipos de archivo (como CSV), o la ingesta por transmisión, que le permite insertar sus datos en [!DNL Experience Platform] mediante extremos de transmisión en tiempo real.
 
 Este documento proporciona información sobre la monitorización de la ingesta por lotes y la gestión de los errores de ingesta parcial por lotes, así como una referencia para los tipos de ingesta parcial por lotes.
 
@@ -30,23 +30,23 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 ## Descargando diagnósticos de error {#download-diagnostics}
 
-Adobe Experience Platform permite a los usuarios descargar los diagnósticos de error de los archivos de entrada. Los diagnósticos se conservarán dentro de [!DNL Platform] por un máximo de 30 días.
+Adobe Experience Platform permite a los usuarios descargar los diagnósticos de error de los archivos de entrada. Los diagnósticos se conservarán dentro de [!DNL Experience Platform] por un máximo de 30 días.
 
 ### Lista de archivos de entrada {#list-files}
 
@@ -145,7 +145,7 @@ Si los lotes contienen errores, debe recuperar la información de error sobre es
 
 ### Comprobar estado {#check-status}
 
-Para comprobar el estado del lote introducido, debe proporcionar el ID del lote en la ruta de una solicitud de GET. Para obtener más información sobre cómo usar esta llamada de API, lea la [guía de extremo de catálogo](../../catalog/api/list-objects.md).
+Para comprobar el estado del lote introducido, debe proporcionar el ID del lote en la ruta de una petición GET. Para obtener más información sobre cómo usar esta llamada de API, lea la [guía de extremo de catálogo](../../catalog/api/list-objects.md).
 
 **Formato de API**
 

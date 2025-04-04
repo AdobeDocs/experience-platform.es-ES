@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;acceso a datos;sdk de python;spark sdk;api de acceso a datos
 solution: Experience Platform
 title: Información general de acceso a datos
-description: El acceso a datos es compatible con Adobe Experience Platform al proporcionar a los usuarios herramientas centradas en la detección y accesibilidad de conjuntos de datos de Platform ingeridos.
+description: El acceso a datos es compatible con Adobe Experience Platform al proporcionar a los usuarios herramientas centradas en la detección y accesibilidad de conjuntos de datos de Experience Platform ingeridos.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 [!DNL Data Access] admite Adobe Experience Platform al proporcionar a los usuarios herramientas centradas en la detección y accesibilidad de conjuntos de datos ingeridos en [!DNL Experience Platform].
 
-![Acceso de datos en el Experience Platform](images/Data_Access_Experience_Platform.png)
+![Acceso a datos en Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## API [!DNL Data Access]
 
-Encontrará información detallada sobre el uso de la API [!DNL Data Access] para conectarse con [!DNL Platform] en la [Guía para desarrolladores de acceso a datos](api.md).
+Encontrará información detallada sobre el uso de la API [!DNL Data Access] para conectarse con [!DNL Experience Platform] en la [Guía para desarrolladores de acceso a datos](api.md).
 
 ## Acceso a los datos en Data Science Workspace
 
@@ -29,4 +29,4 @@ Para obtener más información acerca de [!DNL Data Science Workspace], comience
 
 ## Suscripción a eventos de ingesta de datos
 
-[!DNL Platform] hace que ciertos eventos de alto valor estén disponibles para la suscripción a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a notificaciones de eventos de Adobe](../observability/alerts/subscribe.md) para obtener más información.
+[!DNL Experience Platform] hace que ciertos eventos de alto valor estén disponibles para la suscripción a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a las notificaciones de eventos de Adobe](../observability/alerts/subscribe.md) para obtener más información.

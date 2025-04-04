@@ -1,11 +1,11 @@
 ---
 title: Información general sobre el reenvío de eventos
-description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
+description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Experience Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1190'
 ht-degree: 7%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->El reenvío de eventos es una función de pago que se incluye como parte de las ofertas de Adobe Real-time Customer Data Platform Connections, Prime o Ultimate.
+>El reenvío de eventos es una función de pago que se incluye como parte de las ofertas de Adobe Real-Time Customer Data Platform Connections, Prime o Ultimate.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-El reenvío de eventos en Adobe Experience Platform permite enviar datos de evento recopilados a un destino para el procesamiento en el servidor. El reenvío de eventos reduce el peso de páginas web y aplicaciones mediante Adobe Experience Platform Edge Network para ejecutar tareas que se realizan normalmente en el cliente. Las reglas de reenvío de eventos se implementan de forma similar a las etiquetas y pueden transformar y enviar datos a nuevos destinos, pero en lugar de enviar estos datos desde una aplicación cliente como un explorador web, se envían desde los servidores de Adobe.
+El reenvío de eventos en Adobe Experience Platform permite enviar datos de evento recopilados a un destino para el procesamiento en el servidor. El reenvío de eventos reduce el peso de páginas web y aplicaciones mediante Adobe Experience Platform Edge Network para ejecutar tareas que se realizan normalmente en el cliente. Las reglas de reenvío de eventos se implementan de forma similar a las etiquetas y pueden transformar y enviar datos a nuevos destinos, pero en lugar de enviar estos datos desde una aplicación cliente, como un explorador web, se envían desde los servidores de Adobe.
 
-Este documento proporciona información general de alto nivel sobre el reenvío de eventos en Platform.
+Este documento proporciona información general de alto nivel sobre el reenvío de eventos en Experience Platform.
 
 ![Reenvío de eventos en el ecosistema de recopilación de datos.](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Platform, consulte la [descripción general de la recopilación de datos](../../../collection/home.md).
+>Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Experience Platform, consulte la [descripción general de la recopilación de datos](../../../collection/home.md).
 
-El reenvío de eventos combinado con el [SDK web](/help/web-sdk/home.md) de Adobe Experience Platform y el [SDK móvil](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
+El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
 
 **Rendimiento**:
 
@@ -46,14 +46,14 @@ El reenvío de eventos combinado con el [SDK web](/help/web-sdk/home.md) de Adob
 
 En cuanto a la configuración, el reenvío de eventos utiliza muchos de los conceptos que emplean las etiquetas, como [reglas](../managing-resources/rules.md), [elementos de datos](../managing-resources/data-elements.md) y [extensiones](../managing-resources/extensions/overview.md). La principal diferencia entre ambos puede resumirse de la siguiente manera:
 
-* Las etiquetas **recopila** datos de evento de un sitio web o aplicación móvil nativa y los envía al Edge Network de Platform.
-* El reenvío de eventos **envía** datos de evento entrantes del Edge Network de Platform a un extremo que representa un destino final o un extremo que proporciona datos con los que desea enriquecer la carga útil original.
+* Las etiquetas **recopila** datos de evento de un sitio web o aplicación móvil nativa y los envía a Experience Platform Edge Network.
+* El reenvío de eventos **envía** datos de evento entrantes desde Experience Platform Edge Network a un extremo que representa un destino final o un extremo que proporciona datos con los que desea enriquecer la carga útil original.
 
-Mientras que las etiquetas recopilan datos de evento directamente del sitio o de la aplicación móvil nativa mediante los SDK web y móvil de Platform, el reenvío de eventos requiere que los datos de evento ya se envíen a través del Edge Network de Platform para reenviarlos a los destinos. En otras palabras, debe implementar el SDK web o móvil de Platform en su propiedad digital (mediante etiquetas o mediante código sin procesar) para utilizar el reenvío de eventos.
+Mientras que las etiquetas recopilan datos de evento directamente desde el sitio o la aplicación móvil nativa mediante los SDK para móviles y web de Experience Platform, el reenvío de eventos requiere que los datos de evento ya se envíen a través de Experience Platform Edge Network para reenviarlos a los destinos. En otras palabras, debe implementar Experience Platform Web o Mobile SDK en su propiedad digital (mediante etiquetas o utilizando código sin procesar) para utilizar el reenvío de eventos.
 
 ### Propiedades {#properties}
 
-El reenvío de eventos mantiene su propio almacén de propiedades separadas de las etiquetas, que puede ver en la interfaz de usuario del Experience Platform o en la interfaz de usuario de recopilación de datos seleccionando **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo.
+El reenvío de eventos mantiene su propio almacén de propiedades separadas de las etiquetas, que puede ver en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos seleccionando **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo.
 
 >[!TIP]
 >
@@ -61,7 +61,7 @@ El reenvío de eventos mantiene su propio almacén de propiedades separadas de l
 
 ![Propiedades del reenvío de eventos en la IU de recopilación de datos.](../../images/ui/event-forwarding/overview/properties.png)
 
-Todas las propiedades del reenvío de eventos enumeran **[!UICONTROL Edge]** como su plataforma. No distinguen entre web o móvil porque solo procesan los datos recibidos de Platform Edge Network, que puede recibir datos de evento de plataformas web y móviles.
+Todas las propiedades del reenvío de eventos enumeran **[!UICONTROL Edge]** como su plataforma. No distinguen entre web o móvil porque solo procesan los datos recibidos de Experience Platform Edge Network, que a su vez puede recibir datos de eventos de plataformas web y móviles.
 
 ### Extensiones {#extensions}
 
@@ -75,11 +75,11 @@ Puede ver los recursos adicionales disponibles para obtener más información so
 
 Los tipos de elementos de datos disponibles en el reenvío de eventos se limitan al catálogo de [extensiones](#extensions) compatibles que los proporcionan.
 
-Aunque los elementos de datos se crean y configuran del mismo modo en el reenvío de eventos que para las etiquetas, existen algunas diferencias de sintaxis importantes en cuanto a cómo hacen referencia a los datos del Edge Network de Platform.
+Aunque los elementos de datos se crean y configuran del mismo modo en el reenvío de eventos que para las etiquetas, existen algunas diferencias de sintaxis importantes en cuanto a cómo hacen referencia a los datos de Experience Platform Edge Network.
 
-#### Datos de referencia del Edge Network de Platform {#data-element-path}
+#### Datos de referencia de Experience Platform Edge Network {#data-element-path}
 
-Para hacer referencia a datos de Platform Edge Network, debe crear un elemento de datos que proporcione una ruta válida a esos datos. Al crear el elemento de datos en la interfaz de usuario, seleccione **[!UICONTROL Core]** para la extensión y **[!UICONTROL Path]** para el tipo.
+Para hacer referencia a datos de Experience Platform Edge Network, debe crear un elemento de datos que proporcione una ruta válida a esos datos. Al crear el elemento de datos en la interfaz de usuario, seleccione **[!UICONTROL Core]** para la extensión y **[!UICONTROL Path]** para el tipo.
 
 El valor **[!UICONTROL Path]** para el elemento de datos debe seguir el patrón `arc.event.{ELEMENT}` (por ejemplo: `arc.event.xdm.web.webPageDetails.URL`). Esta ruta debe especificarse correctamente para que se envíen los datos.
 

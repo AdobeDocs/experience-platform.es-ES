@@ -1,20 +1,20 @@
 ---
-title: Registro del lado del servidor para datos de A4T en el SDK web de Platform
-description: Obtenga información sobre cómo habilitar el registro en el lado del servidor para Adobe Analytics for Target (A4T) mediante el SDK web de Experience Platform.
-seo-title: Server-side logging for A4T data in Platform Web SDK
+title: Registro del lado del servidor para datos de A4T en Experience Platform Web SDK
+description: Obtenga información sobre cómo habilitar el registro en el lado del servidor para Adobe Analytics for Target (A4T) mediante Experience Platform Web SDK.
+seo-title: Server-side logging for A4T data in Experience Platform Web SDK
 seo-description: Learn how to enable server-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: a4t;target;web;sdk;platform;registro;
 exl-id: 26c25f58-e43c-4147-8595-69ea85af561f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '166'
 ht-degree: 1%
 
 ---
 
-# Registro del lado del servidor para datos de A4T en el SDK web de Platform
+# Registro del lado del servidor para datos de A4T en Experience Platform Web SDK
 
-El SDK web de Adobe Experience Platform le permite implementar la funcionalidad de Adobe Analytics for Target (A4T) en Platform Edge Network. Cuando el registro del lado del servidor está habilitado, todas las visitas de Analytics enviadas a través del Edge Network se aumentan con detalles de Target en el lado del servidor, sin tener que pasar por el proceso de vinculación de visitas.
+Adobe Experience Platform Web SDK le permite implementar la funcionalidad de Adobe Analytics for Target (A4T) en Experience Platform Edge Network. Cuando el registro del lado del servidor está habilitado, todas las visitas de Analytics enviadas a través de Edge Network se aumentan con detalles de Target en el lado del servidor, sin tener que pasar por el proceso de vinculación de visitas.
 
 El registro del lado del servidor para Analytics está habilitado cuando Analytics está habilitado en la configuración del flujo de datos:
 
@@ -26,4 +26,4 @@ El diagrama siguiente muestra cómo fluyen los datos a través del sistema cuand
 
 ## Pasos siguientes
 
-En esta guía se describe el registro en el lado del servidor para datos de A4T en el SDK web. Consulte la guía de [registro en el lado del cliente](./client-side.md) para obtener más información sobre cómo administrar los datos de A4T en el lado del cliente.
+En esta guía se describe el registro en el lado del servidor para datos de A4T en Web SDK. Consulte la guía de [registro en el lado del cliente](./client-side.md) para obtener más información sobre cómo administrar los datos de A4T en el lado del cliente.

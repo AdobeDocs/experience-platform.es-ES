@@ -1,11 +1,11 @@
 ---
 title: Vistas en extensiones web
-description: Obtenga información sobre cómo definir vistas para módulos de biblioteca en las extensiones web de Adobe Experience Platform
+description: 'Obtenga información sobre cómo definir vistas para módulos de biblioteca en las extensiones web de Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 98%
+source-wordcount: '2063'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Cada tipo de evento, condición, acción o elemento de datos puede proporcionar una vista que permita al usuario proporcionar la configuración. La extensión también puede tener una [vista de configuración de extensión](../configuration.md) de nivel superior que permita a los usuarios proporcionar la configuración global de toda la extensión. El proceso de creación de una vista es idéntico en todos los tipos de vistas.
 
@@ -148,9 +148,9 @@ El objeto `options` debe contener una sola propiedad booleana, `tokenize`. Esta 
 
 Es probable que sus vistas tengan campos de formulario en los que los usuarios deseen utilizar elementos de datos. Por ejemplo, si la vista tiene un campo de texto en el que el usuario debe introducir un nombre de producto, puede que no tenga sentido que el usuario escriba un valor incrustado en el campo. En su lugar, es posible que deseen que el valor del campo sea dinámico (determinado en tiempo de ejecución) y utilizar un elemento de datos para ello.
 
-Como ejemplo, supongamos que vamos a crear una extensión que envía una señalización para rastrear una conversión. Supongamos también que uno de los datos que envía nuestra señalización es un nombre de producto. Es probable que nuestra vista de extensión que permite al usuario configurar la señalización tenga un campo de texto para el nombre del producto. Normalmente, no tendría mucho sentido que el usuario de Platform escribiese un nombre de producto estático como &quot;Calzone Oven XL&quot;, puesto que el nombre del producto probablemente dependa de la página desde la que se enviará la señalización. Este es un excelente caso para utilizar un elemento de datos.
+Como ejemplo, supongamos que vamos a crear una extensión que envía una señalización para rastrear una conversión. Supongamos también que uno de los datos que envía nuestra señalización es un nombre de producto. Es probable que nuestra vista de extensión que permite al usuario configurar la señalización tenga un campo de texto para el nombre del producto. Normalmente, no tendría mucho sentido que el usuario de Experience Platform escribiera un nombre de producto estático como &quot;Calzone Oven XL&quot;, ya que el nombre del producto probablemente dependa de la página desde la que se enviará la señalización. Este es un excelente caso para utilizar un elemento de datos.
 
-Si un usuario desea utilizar el elemento de datos denominado `productname` para el valor del nombre del producto, puede escribir el nombre del elemento de datos con símbolos de porcentaje a ambos lados (`%productname%`). Nos referimos al nombre del elemento de datos acortado con signos de porcentaje como un “token de elemento de datos”. Los usuarios de Platform suelen estar familiarizados con esta construcción. La extensión, a su vez, guardaría el token del elemento de datos dentro del objeto `settings` que exporta. El objeto de configuración puede tener el aspecto siguiente:
+Si un usuario desea utilizar el elemento de datos denominado `productname` para el valor del nombre del producto, puede escribir el nombre del elemento de datos con símbolos de porcentaje a ambos lados (`%productname%`). Nos referimos al nombre del elemento de datos acortado con signos de porcentaje como un “token de elemento de datos”. Los usuarios de Experience Platform suelen estar familiarizados con esta construcción. La extensión, a su vez, guardaría el token del elemento de datos dentro del objeto `settings` que exporta. El objeto de configuración puede tener el aspecto siguiente:
 
 ```js
 {
@@ -172,7 +172,7 @@ Para indicar a los dónde puede resultar útil utilizar elementos de datos y fac
 
 >[!NOTE]
 >
->Para descargar el ícono apropiado, vaya a la página [Icon en Espectro de Adobe](https://spectrum.adobe.com/page/icons/) y busque &quot;[!DNL Data]&quot;.
+>Para descargar el icono apropiado, vaya a la página [Icon en Adobe Spectrum](https://spectrum.adobe.com/page/icons/) y busque &quot;[!DNL Data]&quot;.
 
 Cuando un usuario selecciona el botón que se encuentra junto al campo de texto, se realiza una llamada a `window.extensionBridge.openDataElementSelector`, tal como se ha [descrito anteriormente](#open-data-element). Esto mostrará una lista de los elementos de datos del usuario entre los que el usuario puede elegir en lugar de obligarlos a recordar el nombre y los símbolos de porcentaje. Una vez que el usuario haya seleccionado un elemento de datos, recibirá el nombre del elemento de datos seleccionado escrito entre símbolos de porcentaje (a menos que haya configurado la opción `tokenize` como `false`). Se recomienda rellenar el campo de texto con el resultado.
 

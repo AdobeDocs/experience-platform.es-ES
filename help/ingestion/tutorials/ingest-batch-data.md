@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;inicio;temas populares;ingesta;ingesta por lotes de datos;tutorial;ingesta por lotes;tutorial;guía de iu;
+keywords: Experience Platform;inicio;temas populares;ingesta;ingesta por lotes de datos;tutorial;ingesta por lotes;tutorial;tutorial;guía de iu;
 solution: Experience Platform
-title: Ingesta De Datos En El Experience Platform
+title: Ingesta De Datos En Experience Platform
 type: Tutorial
 description: Adobe Experience Platform permite importar fácilmente datos como archivos por lotes en forma de archivos de Parquet o datos que se ajusten a un esquema conocido de Experience Data Model (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
 # Ingesta de datos en Adobe Experience Platform
 
-Adobe Experience Platform permite importar fácilmente datos en [!DNL Platform] como archivos por lotes. Algunos ejemplos de datos que se van a ingerir son los datos de perfil de un archivo plano de un sistema CRM (como un archivo de Parquet) o los datos que se ajustan a un esquema conocido de [!DNL Experience Data Model] (XDM) en el Registro de esquemas.
+Adobe Experience Platform permite importar fácilmente datos en [!DNL Experience Platform] como archivos por lotes. Algunos ejemplos de datos que se van a ingerir son los datos de perfil de un archivo plano de un sistema CRM (como un archivo de Parquet) o los datos que se ajustan a un esquema conocido de [!DNL Experience Data Model] (XDM) en el Registro de esquemas.
 
 ## Introducción
 
@@ -80,7 +80,7 @@ En la ficha Información también se encuentra la opción **[!UICONTROL Perfil]*
 
 ## Habilitar conjunto de datos para [!DNL Real-Time Customer Profile]
 
-Los conjuntos de datos se utilizan para la ingesta de datos en [!DNL Experience Platform], y en última instancia esos datos se utilizan para identificar a las personas y unir información proveniente de múltiples fuentes. Esa información unida se denomina [!DNL Real-Time Customer Profile]. Para que [!DNL Platform] sepa qué información debe incluirse en [!DNL Real-Time Profile], los conjuntos de datos se pueden marcar para su inclusión mediante la opción **[!UICONTROL Perfil]**.
+Los conjuntos de datos se utilizan para la ingesta de datos en [!DNL Experience Platform], y en última instancia esos datos se utilizan para identificar a las personas y unir información proveniente de múltiples fuentes. Esa información unida se denomina [!DNL Real-Time Customer Profile]. Para que [!DNL Experience Platform] sepa qué información debe incluirse en [!DNL Real-Time Profile], los conjuntos de datos se pueden marcar para su inclusión mediante la opción **[!UICONTROL Perfil]**.
 
 De forma predeterminada, esta opción está desactivada. Si elige activar [!DNL Profile], todos los datos introducidos en el conjunto de datos se utilizarán para ayudar a identificar a un individuo y unir sus [!DNL Real-Time Profile].
 
@@ -106,13 +106,13 @@ Para empezar a agregar datos al conjunto de datos, haga clic en la ficha **[!UIC
 
 >[!NOTE]
 >
->Platform admite dos tipos de archivos para la ingesta de datos: Parquet o JSON. Puede agregar hasta cinco archivos a la vez, con un tamaño máximo de archivo de 1 GB.
+>Experience Platform admite dos tipos de archivo para la ingesta de datos: Parquet o JSON. Puede agregar hasta cinco archivos a la vez, con un tamaño máximo de archivo de 1 GB.
 
 ![Agregar ficha de datos](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Cargar un archivo {#upload-file}
 
-Una vez que arrastre y suelte (o examine y seleccione) un archivo Parquet o JSON que desee cargar, [!DNL Platform] comenzará a procesar el archivo inmediatamente y aparecerá un cuadro de diálogo **[!UICONTROL Cargando]** en la ficha **[!UICONTROL Agregar datos]** que mostrará el progreso de la carga del archivo.
+Una vez que arrastre y suelte (o examine y seleccione) un archivo Parquet o JSON que desee cargar, [!DNL Experience Platform] comenzará a procesar el archivo inmediatamente y aparecerá un cuadro de diálogo **[!UICONTROL Cargando]** en la ficha **[!UICONTROL Agregar datos]** que mostrará el progreso de la carga del archivo.
 
 ![Cuadro de diálogo de carga](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -150,6 +150,6 @@ Para obtener más información sobre la ingesta por lotes, lea la [descripción 
 
 >[!WARNING]
 >
->La interfaz de usuario [!DNL Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+>La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

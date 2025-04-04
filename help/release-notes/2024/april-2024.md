@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2024'
 description: Las notas de la versión de abril de 2024 de Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
-workflow-type: ht
-source-wordcount: '1897'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1899'
+ht-degree: 97%
 
 ---
 
@@ -55,7 +55,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Secuencias de datos | [Detección de bots de Edge Network](../../datastreams/bot-detection.md) | El tráfico proveniente de entidades no humanas, como programas automatizados, rastreadores web, arañas web o escáneres de secuencias de comandos, puede dificultar la identificación de eventos que ocurren desde visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos. <br>La detección de bots le permite identificar eventos generados por el [SDK web](../../web-sdk/home.md), el [SDK móvil](https://developer.adobe.com/client-sdks/home/) y [[!DNL Server API]](../../server-api/overview.md) como generados por arañas web y bots conocidos. Al configurar la detección de bots para sus flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud que desee clasificar como eventos de bots. <br> La identificación del tráfico de bots puede proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil. |
 | SDK móvil | Lanzamiento de la versión principal | Se han lanzado nuevas versiones principales del SDK móvil para las plataformas siguientes: iOS Mobile Core 5.x y extensiones de iOS compatibles, Android Mobile Core 3.x y extensiones de Android compatibles, React Native Core 6.x y extensiones de React Native compatibles, Flutter Core 4.x y extensiones de Flutter compatibles. Estas versiones proporcionan varias funciones y mejoras nuevas, incluida la compatibilidad con el SDK de Android para Jetpack Compose, la compatibilidad con experiencias basadas en código de Adobe Journey Optimizer y la disponibilidad general de la extensión de mensajería de Adobe Journey Optimizer para Flutter. Para ver notas de la versión más detalladas, consulte [Notas de la versión del SDK móvil](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | SDK móvil | Privacidad | Debido a la actualización de la política de Apple, a partir del 1 de mayo de 2024, los desarrolladores deben implementar nuevas funciones de privacidad para enviarlas a App Store. Todos los clientes de Adobe que utilicen el SDK móvil deberán actualizar a la versión 5.x del SDK si desean recibir la aprobación de App Store después del 1 de mayo. |
-| SDK de Roku | SDK de Roku | La primera versión principal del SDK de Roku se ha lanzado con compatibilidad con medios de streaming para Edge Network de Platform. |
+| SDK de Roku | SDK de Roku | La primera versión principal de Roku SDK se ha lanzado con compatibilidad con medios de streaming para Experience Platform Edge Network. |
 | Reenvío de eventos y etiquetas | Guía interna del producto | Las [Etiquetas](../../tags/home.md) y el [Reenvío de eventos](../../tags/ui/event-forwarding/overview.md) de Experience Platform ofrecen una nueva gama de experiencias que pueden ayudarle rápidamente a comenzar y a aprovechar el valor. Estas experiencias incluyen nuevas pantallas de incorporación, tutoriales del producto y consejos sobre herramientas. <br>![Reenvío de eventos con la guía interna del producto resaltada.](../2024/assets/april/event-forwarding.png "Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados."){width="100" zoomable="yes"}<br> |
 | SDK web | Simplificación de la adopción del SDK web para clientes de Audience Manager | Varias actualizaciones del SDK web ahora simplifican la adopción del SDK web sin utilizar el modelo de datos de experiencia (XDM) para soluciones de Experience Cloud, como Audience Manager, Analytics y Target. Obtenga más información acerca de la adopción del SDK web de Audience Manager en las siguientes guías: <ul><li><a href="https://experienceleague.adobe.com/es/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Actualice la biblioteca de recopilación de datos para Audience Manager de la extensión de etiquetas de Audience Manager a la extensión de etiquetas del SDK web</li><li><a href="https://experienceleague.adobe.com/es/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Actualice la biblioteca de recopilación de datos para Audience Manager de la biblioteca JavaScript de AppMeasurement a la biblioteca JavaScript del SDK web</li></ul> |
 
@@ -130,7 +130,7 @@ Para obtener más información sobre los servicios de consulta, vea la [Informac
 
 ## Zonas protegidas {#sandboxes}
 
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para responder a esta necesidad, Experience Platform proporciona zonas protegidas que dividen una única instancia de Platform en entornos virtuales separados para ayudar a desarrollar y evolucionar las aplicaciones de la experiencia digital.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar aplicaciones de experiencia digital y hacer que evolucionen.
 
 **Funciones nuevas o actualizadas**
 
@@ -144,7 +144,7 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
+[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Experience Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
 **Característica actualizada**
 

@@ -5,10 +5,10 @@ title: Guía de la API de aprendizaje automático de Sensei
 description: La API de aprendizaje automático de Sensei permite a los desarrolladores realizar operaciones de CRUD en varios recursos de Workspace de ciencia de datos. Siga esta guía para aprender a realizar operaciones clave con la API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '255'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -32,11 +32,11 @@ Es necesario que haya completado el tutorial [authentication](https://www.adobe.
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -48,7 +48,7 @@ Una vez que haya recopilado las credenciales de autenticación necesarias, puede
 
 * [Motores](./engines.md)
 * [Experimentos](./experiments.md)
-* [Insights](./insights.md)
+* [Información](./insights.md)
 * [Instancias MLL (fórmulas)](./mlinstances.md)
 * [MLServices](./mlservices.md)
 * [Modelos](./models.md)

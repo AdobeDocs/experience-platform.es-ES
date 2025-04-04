@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;fuentes sdk;sdk;SDK
 title: Configuración de las especificaciones de origen para orígenes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2090'
 ht-degree: 1%
 
 ---
@@ -233,21 +233,21 @@ Consulte el [apéndice](#source-spec) para ver un ejemplo de una especificación
 | `sourceSpec.attributes.uiAttributes` | Muestra información sobre el origen específico de la interfaz de usuario. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Un atributo booleano que indica si el origen requiere más comentarios de los clientes para agregar a su funcionalidad. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Define la categoría del origen. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Define el icono utilizado para la renderización del origen en la interfaz de usuario de Platform. | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Define el icono utilizado para la renderización del origen en la interfaz de usuario de Experience Platform. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Muestra una breve descripción del origen. |
-| `sourceSpec.attributes.uiAttributes.label` | Muestra la etiqueta que se utilizará para la renderización del origen en la interfaz de usuario de Platform. |
+| `sourceSpec.attributes.uiAttributes.label` | Muestra la etiqueta que se utilizará para la renderización del origen en la interfaz de usuario de Experience Platform. |
 | `sourceSpec.attributes.spec.properties.urlParams` | Contiene información sobre la ruta de acceso del recurso de URL, el método y los parámetros de consulta admitidos. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Define la ruta del recurso desde la que se recuperan los datos. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Define el método HTTP que se utilizará para realizar la solicitud al recurso para recuperar los datos. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Define los parámetros de consulta admitidos que se pueden utilizar para anexar la dirección URL de origen al realizar una solicitud de obtención de datos. **Nota**: cualquier valor de parámetro proporcionado por el usuario debe tener el formato de marcador de posición. Por ejemplo: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` se anexará a la dirección URL de origen como: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Define los encabezados que deben proporcionarse en la solicitud HTTP a la URL de origen al recuperar los datos. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | Este atributo se puede configurar para enviar el cuerpo HTTP a través de una solicitud del POST. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Define el nodo que contiene la lista de elementos que se deben introducir en Platform. Este atributo debe seguir una sintaxis de ruta JSON válida y señalar a una matriz en particular. | Vea la sección [recursos adicionales](#content-path) para ver un ejemplo del recurso contenido en una ruta de contenido. |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | La ruta que señala a los registros de colección que se van a ingerir en Platform. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.bodyParams` | Este atributo se puede configurar para enviar el cuerpo HTTP a través de una petición POST. |
+| `sourceSpec.attributes.spec.properties.contentPath` | Define el nodo que contiene la lista de elementos que se deben ingerir en Experience Platform. Este atributo debe seguir una sintaxis de ruta JSON válida y señalar a una matriz en particular. | Vea la sección [recursos adicionales](#content-path) para ver un ejemplo del recurso contenido en una ruta de contenido. |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | La ruta que señala a los registros de colección que se van a ingerir en Experience Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Esta propiedad le permite identificar elementos específicos del recurso identificado en la ruta de contenido que se excluirán de la ingesta. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Esta propiedad permite especificar explícitamente los atributos individuales que desea conservar. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Esta propiedad le permite anular el valor del nombre de atributo especificado en `contentPath`. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Esta propiedad permite acoplar dos matrices y transformar los datos de recursos en un recurso de plataforma. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Esta propiedad permite acoplar dos matrices y transformar datos de recursos en recursos de Experience Platform. |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Ruta de acceso que señala a los registros de colección que desea acoplar. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Esta propiedad permite identificar elementos específicos del recurso identificado en la ruta de entidad que se excluirán de la ingesta. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Esta propiedad permite especificar explícitamente los atributos individuales que desea conservar. | `[total_items]` |
@@ -379,7 +379,7 @@ La siguiente es una especificación de origen completada usando [!DNL MailChimp 
 
 ### Configurar diferentes tipos de paginación para el origen {#pagination}
 
-A continuación se muestran ejemplos de otros tipos de paginación admitidos por las fuentes de autoservicio (SDK por lotes):
+A continuación se muestran ejemplos de otros tipos de paginación compatibles con orígenes de autoservicio (SDK por lotes):
 
 >[!BEGINTABS]
 
@@ -509,7 +509,7 @@ El tipo de paginación `PAGE` le permite recorrer los datos devueltos según el 
 
 >[!TAB Ninguno]
 
-El tipo de paginación `NONE` se puede usar para orígenes que no admiten ninguno de los tipos de paginación disponibles. Las fuentes que utilizan el tipo de paginación de `NONE` simplemente devuelven todos los registros recuperables cuando se realiza una solicitud de GET.
+El tipo de paginación `NONE` se puede usar para orígenes que no admiten ninguno de los tipos de paginación disponibles. Las fuentes que usan el tipo de paginación de `NONE` simplemente devuelven todos los registros recuperables cuando se realiza una solicitud de GET.
 
 ```json
 "paginationParams": {
@@ -556,7 +556,7 @@ Una vez configurada la programación avanzada, debe hacer referencia a `schedule
 
 ### Añada un esquema personalizado para definir los atributos dinámicos del origen
 
-Puede incluir un esquema personalizado en `sourceSpec` para definir todos los atributos necesarios para el origen, incluidos los atributos dinámicos que pueda necesitar. Puede actualizar la especificación de conexión correspondiente del origen realizando una solicitud del PUT al extremo `/connectionSpecs` de la API [!DNL Flow Service], al tiempo que proporciona el esquema personalizado en la sección `sourceSpec` de la especificación de conexión.
+Puede incluir un esquema personalizado en `sourceSpec` para definir todos los atributos necesarios para el origen, incluidos los atributos dinámicos que pueda necesitar. Puede actualizar la especificación de conexión correspondiente del origen realizando una petición PUT al extremo `/connectionSpecs` de la API [!DNL Flow Service], mientras proporciona el esquema personalizado en la sección `sourceSpec` de la especificación de conexión.
 
 A continuación se muestra un ejemplo de esquema personalizado que puede agregar a la especificación de conexión del origen:
 
@@ -659,4 +659,4 @@ A continuación se muestra un ejemplo de esquema personalizado que puede agregar
 
 ## Pasos siguientes
 
-Una vez rellenadas las especificaciones de origen, puede continuar con la configuración de las especificaciones de exploración del origen que desea integrar en Platform. Consulte el documento sobre [configuración de las especificaciones de exploración](./explorespec.md) para obtener más información.
+Una vez rellenadas las especificaciones de origen, puede configurar las especificaciones de exploración del origen que desee integrar en Experience Platform. Consulte el documento sobre [configuración de las especificaciones de exploración](./explorespec.md) para obtener más información.

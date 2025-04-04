@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;habilitar perfil;habilitar perfil
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API;habilitar perfil;Habilitar perfil
 title: Añadir datos al perfil del cliente en tiempo real
 type: Tutorial
 description: Este tutorial describe los pasos necesarios para agregar datos al Perfil del cliente en tiempo real.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Puede habilitar un esquema para utilizarlo en [!DNL Real-Time Customer Profile] 
 
 ## Añadir datos mediante la ingesta por lotes
 
-Todos los datos cargados a [!DNL Platform] mediante la ingesta por lotes se cargan en conjuntos de datos individuales. Para que [!DNL Real-Time Customer Profile] pueda usar estos datos, el conjunto de datos en cuestión debe configurarse específicamente. Para obtener instrucciones completas, consulte el tutorial sobre [configuración de un conjunto de datos para el perfil y el servicio de identidad](dataset-configuration.md).
+Todos los datos cargados a [!DNL Experience Platform] mediante la ingesta por lotes se cargan en conjuntos de datos individuales. Para que [!DNL Real-Time Customer Profile] pueda usar estos datos, el conjunto de datos en cuestión debe configurarse específicamente. Para obtener instrucciones completas, consulte el tutorial sobre [configuración de un conjunto de datos para el perfil y el servicio de identidad](dataset-configuration.md).
 
 Una vez configurado el conjunto de datos, puede empezar a introducir datos en él. Consulte la [guía para desarrolladores de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md) para ver los pasos detallados sobre cómo cargar archivos en diferentes formatos.
 

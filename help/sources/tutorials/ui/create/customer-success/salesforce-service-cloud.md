@@ -1,15 +1,15 @@
 ---
 title: Conectar su cuenta de Salesforce Service Cloud mediante la interfaz de usuario de Experience Platform
-description: Aprenda a conectar su cuenta de Salesforce Service Cloud y a llevar los datos de éxito de los clientes a Experience Platform mediante la interfaz de usuario.
+description: Obtenga información sobre cómo conectar su cuenta de Salesforce Service Cloud y llevar los datos de éxito de los clientes a Experience Platform mediante la interfaz de usuario.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '844'
 ht-degree: 3%
 
 ---
 
-# Conecte su cuenta de [!DNL Salesforce Service Cloud] al Experience Platform mediante la interfaz de usuario
+# Conecte su cuenta de [!DNL Salesforce Service Cloud] a Experience Platform mediante la interfaz de usuario
 
 Este tutorial proporciona pasos sobre cómo conectar su cuenta de [!DNL Salesforce Service Cloud] y llevar los datos de éxito de los clientes a Adobe Experience Platform mediante la interfaz de usuario de Experience Platform.
 
@@ -17,7 +17,7 @@ Este tutorial proporciona pasos sobre cómo conectar su cuenta de [!DNL Salesfor
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -40,7 +40,7 @@ Debe proporcionar valores para las siguientes credenciales a fin de conectar su 
 | Nombre de usuario | Nombre de usuario para la cuenta de usuario [!DNL Salesforce Service Cloud]. |
 | Contraseña | Contraseña de la cuenta de usuario [!DNL Salesforce Service Cloud]. |
 | Token de seguridad | Token de seguridad para la cuenta de usuario [!DNL Salesforce Service Cloud]. |
-| Versión de API | (Opcional) La versión de la API de REST de la instancia [!DNL Salesforce Service Cloud] que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si está usando la versión de API `52`, debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
+| Versión de API | (Opcional) La versión de la API de REST de la instancia [!DNL Salesforce Service Cloud] que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si está usando la versión de API `52`, debe introducir el valor como `52.0`. Si este campo se deja en blanco, Experience Platform utilizará automáticamente la última versión disponible. |
 
 Para obtener más información sobre la autenticación, consulte [esta [!DNL Salesforce Service Cloud] guía de autenticación](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
@@ -53,17 +53,17 @@ Debe proporcionar valores para las siguientes credenciales a fin de conectar su 
 | URL de entorno | Dirección URL de la instancia de origen [!DNL Salesforce Service Cloud]. |
 | ID de cliente | El ID de cliente se utiliza junto con el secreto de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación en [!DNL Salesforce Service Cloud]. |
 | Secreto del cliente | El secreto de cliente se utiliza junto con el ID de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación en [!DNL Salesforce Service Cloud]. |
-| Versión de API | La versión de la API de REST de la instancia [!DNL Salesforce Service Cloud] que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si está usando la versión de API `52`, debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
+| Versión de API | La versión de la API de REST de la instancia [!DNL Salesforce Service Cloud] que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si está usando la versión de API `52`, debe introducir el valor como `52.0`. Si este campo se deja en blanco, Experience Platform utilizará automáticamente la última versión disponible. |
 
 Para obtener más información sobre el uso de OAuth para [!DNL Salesforce Service Cloud], lea la [[!DNL Salesforce Service Cloud] guía sobre flujos de autorización de OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
 
 >[!ENDTABS]
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para conectar su cuenta de [!DNL Salesforce Service Cloud] al Experience Platform.
+Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para conectar su cuenta de [!DNL Salesforce Service Cloud] a Experience Platform.
 
 ## Conectar su cuenta de [!DNL Salesforce Service Cloud]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 Seleccione **[!DNL Salesforce Service Cloud]** en la categoría *[!UICONTROL Éxito del cliente]* y luego seleccione **[!UICONTROL Agregar datos]**.
 
@@ -73,13 +73,13 @@ Seleccione **[!DNL Salesforce Service Cloud]** en la categoría *[!UICONTROL Éx
 
 ![El catálogo de orígenes en la interfaz de usuario de Experience Platform con la tarjeta de origen de Salesforce Service Cloud seleccionada.](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
-Aparecerá la página **[!UICONTROL Conectar con Salesforce Service Cloud]**. En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá la página **[!UICONTROL Conectarse a Salesforce Service Cloud]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Usar una cuenta existente
 
 Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la cuenta que desee en la lista que aparece. Cuando termine, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![Una lista de cuentas autenticadas de Salesforce Cloud que ya existen en su organización.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
+![Una lista de cuentas autenticadas de Salesforce Service Cloud que ya existen en su organización.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
 ### Crear una nueva cuenta
 

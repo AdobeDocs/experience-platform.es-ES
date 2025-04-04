@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Guía de resolución de problemas del servicio de identidad
 description: Este documento proporciona respuestas a las preguntas frecuentes sobre el servicio de identidad de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
 
 # Guía de solución de problemas del servicio de identidad
 
-Este documento proporciona respuestas a las preguntas más frecuentes acerca de Adobe Experience Platform [!DNL Identity Service], así como una guía de solución de problemas para errores comunes. Si tiene alguna pregunta o solución de problemas relacionados con las API de [!DNL Platform] en general, consulte la [Guía de solución de problemas de la API de Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes acerca de Adobe Experience Platform [!DNL Identity Service], así como una guía de solución de problemas para errores comunes. Si tiene alguna pregunta o solución de problemas relacionados con las API de [!DNL Experience Platform] en general, consulte la [Guía de solución de problemas de la API de Adobe Experience Platform](../landing/troubleshooting.md).
 
 Los datos que identifican a un único cliente suelen estar fragmentados entre los distintos dispositivos y sistemas que utilizan para interactuar con su marca. [!DNL Identity Service] recopila estas identidades fragmentadas, lo que facilita una comprensión completa del comportamiento de los clientes para que pueda ofrecer experiencias digitales impactantes en tiempo real. Para obtener más información, consulte [Introducción al servicio de identidad](./home.md).
 
@@ -71,17 +71,17 @@ Los campos de identidad deben asociarse con un área de nombres de identidad exi
 
 Para obtener instrucciones paso a paso para definir un área de nombres al crear un descriptor de identidad mediante la API, consulte la sección sobre [creación de un descriptor](../xdm/tutorials/create-schema-ui.md) en la guía para desarrolladores de Schema Registry. Para marcar un campo de esquema como identidad en la interfaz de usuario, siga los pasos del [tutorial del editor de esquemas](../xdm/tutorials/create-schema-api.md).
 
-## ¿Cuáles son las áreas de nombres de identidad estándar proporcionadas por Experience Platform? {#standard-namespaces}
+## ¿Cuáles son las áreas de nombres de identidad estándar que proporciona Experience Platform? {#standard-namespaces}
 
 Las áreas de nombres de identidad estándar son áreas de nombres disponibles para todas las organizaciones. Vea la [descripción general de áreas de nombres de identidad](./features/namespaces.md) para obtener una lista completa de las áreas de nombres estándar disponibles.
 
 ## ¿Dónde puedo encontrar la lista de áreas de nombres de identidad disponibles para mi organización?
 
-Con la API del servicio de identidad [Identity](https://www.adobe.io/experience-platform-apis/references/identity-service), puede enumerar todas las áreas de nombres de identidad disponibles para su organización realizando una solicitud de GET al extremo `/idnamespace/identities`. Consulte la sección sobre [listar áreas de nombres disponibles](./api/list-namespaces.md) en la descripción general de la API del servicio de identidad para obtener más información.
+Con la API del servicio de identidad [Identity](https://www.adobe.io/experience-platform-apis/references/identity-service), puede enumerar todas las áreas de nombres de identidad disponibles para su organización realizando una petición GET al extremo `/idnamespace/identities`. Consulte la sección sobre [listar áreas de nombres disponibles](./api/list-namespaces.md) en la descripción general de la API del servicio de identidad para obtener más información.
 
 ## ¿Cómo se crea un área de nombres personalizada para la organización?
 
-Con la [API del servicio de identidad](https://www.adobe.io/experience-platform-apis/references/identity-service), puede crear un área de nombres de identidad personalizada para su organización realizando una solicitud de POST al extremo `/idnamespace/identities`. Consulte la sección sobre [creación de un área de nombres personalizada](./api/create-custom-namespace.md) en la descripción general de la API del servicio de identidad para obtener más información.
+Con la [API del servicio de identidad](https://www.adobe.io/experience-platform-apis/references/identity-service), puede crear un área de nombres de identidad personalizada para su organización realizando una petición POST al extremo `/idnamespace/identities`. Consulte la sección sobre [creación de un área de nombres personalizada](./api/create-custom-namespace.md) en la descripción general de la API del servicio de identidad para obtener más información.
 
 ## ¿Qué son las identidades compuestas y los XID?
 
@@ -89,7 +89,7 @@ En las llamadas a API se hace referencia a las identidades por su identidad comp
 
 ## ¿Cómo gestiona el servicio de identidad la información de identificación personal (PII)?
 
-El servicio de identidad tiene áreas de nombres estándar para admitir la ingesta de valores de identidad con hash para números de teléfono y correos electrónicos. Sin embargo, usted es responsable del hash de los valores. Para obtener más información sobre los datos hash que se incorporan en Platform, consulte la [[!DNL Data Prep] guía de funciones de asignación](../data-prep/functions.md#hashing).
+El servicio de identidad tiene áreas de nombres estándar para admitir la ingesta de valores de identidad con hash para números de teléfono y correos electrónicos. Sin embargo, usted es responsable del hash de los valores. Para obtener más información sobre los datos hash que se incorporan en Experience Platform, consulte la [[!DNL Data Prep] guía de funciones de asignación](../data-prep/functions.md#hashing).
 
 ## ¿Hay alguna consideración al hash de las identidades basadas en PII?
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## ¿Por qué no puedo acceder a la página o las API del gráfico de identidad?
 
-El administrador de Platform debe proporcionarle el permiso `view-identity-graph` para que pueda ver los datos del gráfico de identidad. Sin este permiso, recibirá un mensaje de permiso denegado en la página del visor de gráficos de identidades y al llamar a las API de Platform. Consulte la [descripción general del control de acceso](../access-control/home.md) para obtener más información sobre los permisos.
+El administrador de Experience Platform debe proporcionarle el permiso `view-identity-graph` para que pueda ver los datos del gráfico de identidades. Sin este permiso, recibirá un mensaje de permiso denegado en la página del visor de gráficos de identidades y al llamar a las API de Experience Platform. Consulte la [descripción general del control de acceso](../access-control/home.md) para obtener más información sobre los permisos.
 
 ## Resolución de problemas
 
@@ -216,7 +216,7 @@ Este mensaje de error se muestra cuando su organización no se ha aprovisionado 
 }
 ```
 
-En el caso de este error, el token de acceso no es válido. Los tokens de acceso caducan cada 24 horas y deben regenerarse para seguir usando las API [!DNL Platform]. Consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para obtener instrucciones sobre cómo generar nuevos tokens de acceso.
+En el caso de este error, el token de acceso no es válido. Los tokens de acceso caducan cada 24 horas y deben regenerarse para seguir usando las API [!DNL Experience Platform]. Consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para obtener instrucciones sobre cómo generar nuevos tokens de acceso.
 
 ### El token del servicio de autorización no es válido
 
@@ -228,7 +228,7 @@ En el caso de este error, el token de acceso no es válido. Los tokens de acceso
 }
 ```
 
-En el caso de este error, el token de acceso no es válido. Los tokens de acceso caducan cada 24 horas y deben regenerarse para seguir usando las API [!DNL Platform]. Consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para obtener instrucciones sobre cómo generar nuevos tokens de acceso.
+En el caso de este error, el token de acceso no es válido. Los tokens de acceso caducan cada 24 horas y deben regenerarse para seguir usando las API [!DNL Experience Platform]. Consulte el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para obtener instrucciones sobre cómo generar nuevos tokens de acceso.
 
 ### El token de usuario no tiene un contexto de producto válido
 
@@ -276,11 +276,11 @@ Este mensaje de error se muestra cuando su organización no se ha aprovisionado 
 }
 ```
 
-Este error se muestra cuando se produce una excepción inesperada en la ejecución de una llamada de servicio [!DNL Platform]. La práctica recomendada es programar las llamadas automatizadas para que reintenten sus solicitudes unas cuantas veces a intervalos cronometrados cuando reciban este error. Si el problema persiste, póngase en contacto con el administrador del sistema.
+Este error se muestra cuando se produce una excepción inesperada en la ejecución de una llamada de servicio [!DNL Experience Platform]. La práctica recomendada es programar las llamadas automatizadas para que reintenten sus solicitudes unas cuantas veces a intervalos cronometrados cuando reciban este error. Si el problema persiste, póngase en contacto con el administrador del sistema.
 
 ## Códigos de error de ingesta por lotes
 
-[!DNL Identity Service] ingiere datos de identidad a partir de datos de registros y series temporales que se han cargado a [!DNL Platform] mediante la ingesta por lotes. Como la ingesta por lotes es un proceso asincrónico, debe ver los detalles de un lote para ver los errores. Los errores se acumulan a medida que el lote progresa hasta que se complete.
+[!DNL Identity Service] ingiere datos de identidad a partir de datos de registros y series temporales que se han cargado a [!DNL Experience Platform] mediante la ingesta por lotes. Como la ingesta por lotes es un proceso asincrónico, debe ver los detalles de un lote para ver los errores. Los errores se acumulan a medida que el lote progresa hasta que se complete.
 
 A continuación se muestra una lista de mensajes de error relacionados con [!DNL Identity Service] que podría encontrar al usar la [API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 

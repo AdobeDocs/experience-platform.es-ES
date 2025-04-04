@@ -1,6 +1,6 @@
 ---
 title: Vídeo introductorio del perfil del cliente en tiempo real
-description: Este vídeo proporciona información básica sobre el Perfil del cliente en tiempo real de Adobe Experience Platform y describe cómo examinar los perfiles en la interfaz de usuario de Platform.
+description: Este vídeo proporciona información básica sobre el Perfil del cliente en tiempo real de Adobe Experience Platform y describe cómo examinar los perfiles en la interfaz de usuario de Experience Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,9 +9,9 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '118'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,6 @@ Este vídeo proporciona información básica sobre el perfil del cliente en tiem
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía de la interfaz de usuario del perfil](../ui/user-guide.md).
+>La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía de la interfaz de usuario del perfil](../ui/user-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

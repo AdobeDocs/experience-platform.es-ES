@@ -2,9 +2,9 @@
 title: Herramientas de zona protegida
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
+source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2486'
 ht-degree: 7%
 
 ---
@@ -252,7 +252,7 @@ El cuadro de diálogo **[!UICONTROL Resumen de importación]** muestra un desglo
 
 ![El cuadro de diálogo [!UICONTROL Importar detalles] muestra un desglose detallado de las importaciones.](../images/ui/sandbox-tooling/import-details.png)
 
-Cuando se completa la importación, se recibe una notificación en la interfaz de usuario de Platform. Puede acceder a estas notificaciones desde el icono de alertas. Puede navegar a la resolución de problemas desde aquí si un trabajo no se ha realizado correctamente.
+Cuando finaliza la importación, se recibe una notificación en la interfaz de usuario de Experience Platform. Puede acceder a estas notificaciones desde el icono de alertas. Puede navegar a la resolución de problemas desde aquí si un trabajo no se ha realizado correctamente.
 
 ## Tutorial de vídeo
 

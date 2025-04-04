@@ -2,9 +2,9 @@
 title: Creación de una conexión SFTP Source en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen SFTP mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '665'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ Este tutorial proporciona los pasos para crear una conexión de origen [!DNL SFT
 
 ## Introducción 
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -34,13 +34,13 @@ Lea la [[!DNL SFTP] guía de autenticación](../../../../connectors/cloud-storag
 
 ## Conectar con el servidor [!DNL SFTP]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría [!UICONTROL Almacenamiento en la nube], seleccione **[!UICONTROL SFTP]** y luego **[!UICONTROL Agregar datos]**.
 
-![El catálogo de orígenes de Experience Platform con el origen SFTP seleccionado.](../../../../images/tutorials/create/sftp/catalog.png)
+![Catálogo de orígenes de Experience Platform con el origen SFTP seleccionado.](../../../../images/tutorials/create/sftp/catalog.png)
 
 Aparecerá la página **[!UICONTROL Conectarse a SFTP]**. En esta página, puede usar credenciales nuevas o existentes.
 
@@ -48,7 +48,7 @@ Aparecerá la página **[!UICONTROL Conectarse a SFTP]**. En esta página, puede
 
 Para conectar una cuenta existente, selecciona la cuenta FTP o SFTP con la que quieras conectarte y, a continuación, selecciona **[!UICONTROL Siguiente]** para continuar.
 
-![Una lista de cuentas SFTP existentes en la interfaz de usuario del Experience Platform.](../../../../images/tutorials/create/sftp/existing.png)
+![Una lista de cuentas SFTP existentes en la interfaz de usuario de Experience Platform.](../../../../images/tutorials/create/sftp/existing.png)
 
 ### Nueva cuenta
 
@@ -101,4 +101,4 @@ Para obtener más información acerca de la autenticación, lea la guía sobre [
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta SFTP. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento en la nube a Platform](../../dataflow/batch/cloud-storage.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta SFTP. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento en la nube a Experience Platform](../../dataflow/batch/cloud-storage.md).

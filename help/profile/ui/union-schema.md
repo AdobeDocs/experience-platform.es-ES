@@ -2,26 +2,26 @@
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;perfil unificado;perfil unificado;perfil unificado;perfil unificado;rtcp;habilitar perfil;habilitar perfil;esquema de unión;UNION PROFILE;perfil de unión
 title: Guía de IU de Esquema de unión
 type: Documentation
-description: En la interfaz de usuario (IU) de Adobe Experience Platform puede ver fácilmente cualquier esquema de unión dentro de su organización y previsualizar los campos, identidades, relaciones y esquemas de contribución para una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la IU de Platform.
+description: En la interfaz de usuario (IU) de Adobe Experience Platform puede ver fácilmente cualquier esquema de unión dentro de su organización y previsualizar los campos, identidades, relaciones y esquemas de contribución para una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la interfaz de usuario de Experience Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
 
 # Guía de IU de [!UICONTROL Union schema]
 
-En la interfaz de usuario (IU) de Adobe Experience Platform puede ver fácilmente cualquier esquema de unión dentro de su organización y previsualizar los campos, identidades, relaciones y esquemas de contribución para una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la IU de Platform.
+En la interfaz de usuario (IU) de Adobe Experience Platform puede ver fácilmente cualquier esquema de unión dentro de su organización y previsualizar los campos, identidades, relaciones y esquemas de contribución para una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la interfaz de usuario de Experience Platform.
 
 ## Introducción
 
 Esta guía de interfaz de usuario requiere una comprensión de los distintos servicios de [!DNL Experience Platform] implicados en la administración de los datos del perfil del cliente en tiempo real. Antes de leer esta guía o de trabajar en la interfaz de usuario de, consulte la documentación de los siguientes servicios:
 
 * [[!DNL Real-Time Customer Profile]](../home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-* [[!DNL Identity Service]](../../identity-service/home.md): habilita [!DNL Real-Time Customer Profile] al unir identidades de orígenes de datos dispares a medida que se incorporan en [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Identity Service]](../../identity-service/home.md): habilita [!DNL Real-Time Customer Profile] al unir identidades de orígenes de datos dispares a medida que se incorporan en [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 
 ## Explicación de los esquemas de unión
 
@@ -33,7 +33,7 @@ El trabajo con esquemas de unión requiere una comprensión profunda de los esqu
 
 ## Ver esquemas de unión
 
-Para navegar a esquemas de unión dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Esquema de unión]**. Se abre la pestaña [!UICONTROL Esquema de unión] para mostrar el esquema de unión de la clase seleccionada actualmente.
+Para navegar a esquemas de unión en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Esquema de unión]**. Se abre la pestaña [!UICONTROL Esquema de unión] para mostrar el esquema de unión de la clase seleccionada actualmente.
 
 ![Se muestra la página Esquema de unión, con la ficha Perfil y Esquema de unión resaltadas.](../images/union-schema/landing.png)
 
@@ -63,7 +63,7 @@ Para obtener más información sobre los conjuntos de datos, incluida la visuali
 
 ## Ver esquemas colaboradores
 
-También puede ver qué esquemas específicos están contribuyendo al esquema de unión seleccionando **[!UICONTROL Todos los esquemas que contribuyen]** para expandir la lista de esquemas. Según la clase que haya seleccionado y el número de esquemas que su organización haya creado en Platform, puede ser una lista corta que contenga un solo esquema o una lista larga que contenga muchos esquemas.
+También puede ver qué esquemas específicos están contribuyendo al esquema de unión seleccionando **[!UICONTROL Todos los esquemas que contribuyen]** para expandir la lista de esquemas. Según la clase que haya seleccionado y el número de esquemas que su organización haya creado en Experience Platform, puede ser una lista corta que contenga un solo esquema o una lista larga que contenga muchos esquemas.
 
 ![Se resalta la lista de esquemas que contribuyen al esquema de unión.](../images/union-schema/contributing-schemas.png)
 
@@ -99,4 +99,4 @@ Si se selecciona un campo de relación de la lista, el esquema mostrado se actua
 
 ## Pasos siguientes
 
-Al leer esta guía, ahora sabe cómo ver y navegar por esquemas de unión mediante la interfaz de usuario de [!DNL Experience Platform]. Para obtener más información sobre los esquemas, incluido cómo se utilizan en Platform, comience por leer la [descripción general del sistema XDM](../../xdm/home.md).
+Al leer esta guía, ahora sabe cómo ver y navegar por esquemas de unión mediante la interfaz de usuario de [!DNL Experience Platform]. Para obtener más información sobre los esquemas, incluido cómo se utilizan en Experience Platform, comience por leer la [descripción general del sistema XDM](../../xdm/home.md).

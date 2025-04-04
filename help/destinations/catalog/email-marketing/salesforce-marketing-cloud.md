@@ -1,10 +1,10 @@
 ---
-title: Conexión de Marketing Cloud de Salesforce
-description: El Marketing Cloud de Salesforce es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
+title: Conexión de Salesforce Marketing Cloud
+description: Salesforce Marketing Cloud es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '801'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
 
-Para enviar datos de audiencia a [!DNL Salesforce Marketing Cloud], primero debe [conectarse al destino](#connect-destination) en Platform y luego [configurar una importación de datos](#import-data-into-salesforce) desde su ubicación de almacenamiento en [!DNL Salesforce Marketing Cloud].
+Para enviar datos de audiencia a [!DNL Salesforce Marketing Cloud], primero debe [conectarse al destino](#connect-destination) en Experience Platform y luego [configurar una importación de datos](#import-data-into-salesforce) desde su ubicación de almacenamiento en [!DNL Salesforce Marketing Cloud].
 
 ## Audiencias compatibles {#supported-audiences}
 
@@ -23,8 +23,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -41,7 +41,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ## LISTA DE PERMITIDOS de direcciones IP {#allow-list}
 
-Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, el Adobe recomienda añadir determinados rangos de IP a la lista de permitidos.
+Al configurar destinos de marketing por correo electrónico con almacenamiento SFTP, Adobe recomienda añadir determinados rangos de IP a la lista de permitidos.
 
 Consulte la [lista de permitidos de direcciones IP para destinos SFTP](../cloud-storage/ip-address-allow-list.md) si necesita agregar direcciones IP de Adobe a la lista de permitidos.
 
@@ -76,14 +76,14 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 * Opcionalmente, puede adjuntar la clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en la sección **[!UICONTROL Key]**. La clave pública debe escribirse como una cadena con codificación [!DNL Base64].
 * **[!UICONTROL Nombre]**: elige un nombre relevante para tu destino.
 * **[!UICONTROL Descripción]**: escribe una descripción para el destino.
-* **[!UICONTROL Ruta de carpeta]**: proporcione la ruta en su ubicación de almacenamiento donde Platform depositará los datos de exportación como archivos CSV.
+* **[!UICONTROL Ruta de la carpeta]**: proporcione la ruta en su ubicación de almacenamiento donde Experience Platform depositará los datos exportados como archivos CSV.
 * **[!UICONTROL Formato de archivo]**: seleccione **CSV** para exportar archivos CSV a su ubicación de almacenamiento.
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -108,8 +108,8 @@ Al activar audiencias en este destino, Adobe recomienda que seleccione un identi
 
 ## Datos exportados {#exported-data}
 
-Para [!DNL Salesforce Marketing Cloud] destinos, Platform crea un archivo de `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [comprobar la activación de la audiencia](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de audiencia.
+Para [!DNL Salesforce Marketing Cloud] destinos, Experience Platform crea un archivo de `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [comprobar la activación de la audiencia](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de audiencia.
 
 ## Configurar la importación de datos en [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Después de conectar [!DNL Platform] a su almacenamiento de [!DNL SFTP], debe configurar la importación de datos desde su ubicación de almacenamiento en [!DNL Salesforce Marketing Cloud]. Para obtener información sobre cómo hacerlo, consulte [Importación de suscriptores al Marketing Cloud desde un archivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) en [!DNL Salesforce Help Center].
+Después de conectar [!DNL Experience Platform] a su almacenamiento de [!DNL SFTP], debe configurar la importación de datos desde su ubicación de almacenamiento en [!DNL Salesforce Marketing Cloud]. Para obtener información sobre cómo hacerlo, consulte [Importación de suscriptores a Marketing Cloud desde un archivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) en [!DNL Salesforce Help Center].

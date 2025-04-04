@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Extremo de API de uniones
 description: El extremo /union de la API de Registro de esquemas le permite administrar mediante programación esquemas de unión XDM en la aplicación de experiencia.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -31,13 +31,13 @@ La matriz `timeSeriesEvents` es una lista de eventos de series temporales relaci
 
 ### Mapa de abono de segmento
 
-El mapa `segmentMembership` almacena los resultados de la evaluación de una definición de segmento. Cuando los trabajos de segmentación se ejecutan correctamente mediante la [API de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/), la asignación se actualiza. `segmentMembership` también almacena cualquier audiencia preevaluada que se incorpora en Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager. Consulte el tutorial sobre [creación de audiencias mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
+El mapa `segmentMembership` almacena los resultados de la evaluación de una definición de segmento. Cuando los trabajos de segmentación se ejecutan correctamente mediante la [API de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/), la asignación se actualiza. `segmentMembership` también almacena cualquier audiencia preevaluada que se haya introducido en Experience Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager. Consulte el tutorial sobre [creación de audiencias mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
 
 ## Recuperación de una lista de uniones {#list}
 
 Cuando establece la etiqueta `union` en un esquema, [!DNL Schema Registry] agrega automáticamente el esquema a la unión de la clase en la que se basa el esquema. Si no existe ninguna unión para la clase en cuestión, se crea automáticamente una nueva unión. El `$id` de la unión es similar al estándar `$id` de otros [!DNL Schema Registry] recursos, con la única diferencia de que se anexa mediante dos guiones bajos y la palabra &quot;unión&quot; (`__union`).
 
-Puede ver una lista de uniones disponibles realizando una solicitud de GET al extremo `/tenant/unions`.
+Puede ver una lista de uniones disponibles realizando una petición GET al extremo `/tenant/unions`.
 
 **Formato de API**
 
@@ -91,7 +91,7 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y una matriz `results` e
 
 ## Búsqueda de un sindicato {#lookup}
 
-Puede ver una unión específica realizando una solicitud de GET que incluya `$id` y, según el encabezado Aceptar, algunos o todos los detalles de la unión.
+Puede ver una unión específica realizando una petición GET que incluya `$id` y, según el encabezado Aceptar, algunos o todos los detalles de la unión.
 
 >[!NOTE]
 >
@@ -180,11 +180,11 @@ El formato de respuesta depende del encabezado Aceptar enviado en la solicitud. 
 
 ## Habilitar un esquema para la afiliación a una unión {#enable}
 
-Para que se incluya un esquema en la unión de su clase, se debe agregar una etiqueta `union` al atributo `meta:immutableTags` del esquema. Puede hacerlo realizando una solicitud de PATCH para agregar una matriz `meta:immutableTags` con un solo valor de cadena de `union` al esquema en cuestión. Consulte la [guía de extremo de esquemas](./schemas.md#union) para ver un ejemplo detallado.
+Para que se incluya un esquema en la unión de su clase, se debe agregar una etiqueta `union` al atributo `meta:immutableTags` del esquema. Puede hacerlo realizando una petición PATCH para agregar una matriz `meta:immutableTags` con un solo valor de cadena de `union` al esquema en cuestión. Consulte la [guía de extremo de esquemas](./schemas.md#union) para ver un ejemplo detallado.
 
 ## Enumeración de esquemas en una unión {#list-schemas}
 
-Para ver qué esquemas forman parte de una unión específica, puede realizar una solicitud de GET al extremo `/tenant/schemas`. Con el parámetro de consulta `property`, puede configurar la respuesta para que solo devuelva esquemas que contengan un campo `meta:immutableTags` y un `meta:class` igual a la clase a cuya unión está accediendo.
+Para ver qué esquemas forman parte de una unión específica, puede realizar una petición GET al extremo `/tenant/schemas`. Con el parámetro de consulta `property`, puede configurar la respuesta para que solo devuelva esquemas que contengan un campo `meta:immutableTags` y un `meta:class` igual a la clase a cuya unión está accediendo.
 
 **Formato de API**
 

@@ -1,21 +1,21 @@
 ---
-title: Configurar las claves administradas por el cliente de Azure mediante la interfaz de usuario de Platform
+title: Configurar las claves administradas por el cliente de Azure mediante la interfaz de usuario de Experience Platform
 description: Obtenga información sobre cómo configurar la aplicación CMK con el inquilino de Azure y enviar el ID de clave de cifrado a Adobe Experience Platform.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 58bc7a650ff58f877550fa8838c6f8e2908f0090
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
 
-# Configurar las claves administradas por el cliente de Azure mediante la interfaz de usuario de Platform
+# Configurar las claves administradas por el cliente de Azure mediante la interfaz de usuario de Experience Platform
 
-Este documento describe las instrucciones específicas de Azure para habilitar la función Claves administradas por el cliente (CMK) en Platform mediante la interfaz de usuario. Para obtener instrucciones específicas de AWS, consulte la [guía de configuración de AWS](../aws/ui-set-up.md).
+Este documento describe las instrucciones específicas de Azure para habilitar la función Claves administradas por el cliente (CMK) en Experience Platform mediante la interfaz de usuario. Para obtener instrucciones específicas de AWS, consulte la [guía de configuración de AWS](../aws/ui-set-up.md).
 
-Para obtener instrucciones sobre cómo completar este proceso para instancias de plataforma alojadas en Azure mediante la API, consulte el [documento de configuración de API CMK](./api-set-up.md).
+Para obtener instrucciones sobre cómo completar este proceso para instancias de Experience Platform alojadas en Azure mediante la API, consulte el [documento de configuración de API CMK](./api-set-up.md).
 
 ## Requisitos previos
 
@@ -50,13 +50,13 @@ Seleccione el icono de copia (![El icono de copia.](../../../../images/icons/cop
 
 ![Vista de la configuración de claves administradas por el cliente [!UICONTROL con la sección URL de autenticación de aplicación resaltada.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)]
 
-Copie y pegue la [!UICONTROL URL de autenticación de aplicación] en un explorador para abrir un cuadro de diálogo de autenticación. Seleccione **[!DNL Accept]** para agregar la entidad de seguridad del servicio de aplicaciones CMK a su inquilino [!DNL Azure]. Al confirmar la autenticación, se le redirige a la página de aterrizaje del Experience Cloud.
+Copie y pegue la [!UICONTROL URL de autenticación de aplicación] en un explorador para abrir un cuadro de diálogo de autenticación. Seleccione **[!DNL Accept]** para agregar la entidad de seguridad del servicio de aplicaciones CMK a su inquilino [!DNL Azure]. Al confirmar la autenticación, se le redirige a la página de aterrizaje de Experience Cloud.
 
 ![Cuadro de diálogo de solicitud de permiso de Microsoft con [!UICONTROL Aceptar] resaltado.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->Si tiene varias suscripciones de [!DNL Microsoft Azure], podría conectar la instancia de Platform al almacén de claves incorrecto. En este caso, debe intercambiar la sección `common` del nombre de URL de autenticación de la aplicación por el ID de directorio CMK.<br>Copie el Id. de directorio CMK de la página Configuración de portal, directorios y suscripciones de la aplicación [!DNL Microsoft Azure]<br>![La página Configuración de portal de aplicaciones, directorios y suscripciones de la aplicación [!DNL Microsoft Azure] con el Id. de directorio resaltado.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>A continuación, péguelo en la barra de direcciones del explorador.<br>![Página de explorador Google con la sección &#39;común&#39; de la dirección URL de autenticación de la aplicación resaltada.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>Si tiene varias suscripciones de [!DNL Microsoft Azure], podría conectar la instancia de Experience Platform al almacén de claves incorrecto. En este caso, debe intercambiar la sección `common` del nombre de URL de autenticación de la aplicación por el ID de directorio CMK.<br>Copie el Id. de directorio CMK de la página Configuración de portal, directorios y suscripciones de la aplicación [!DNL Microsoft Azure]<br>![La página Configuración de portal de aplicaciones, directorios y suscripciones de la aplicación [!DNL Microsoft Azure] con el Id. de directorio resaltado.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>A continuación, péguelo en la barra de direcciones del explorador.<br>![Página de explorador Google con la sección &#39;común&#39; de la dirección URL de autenticación de la aplicación resaltada.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Asignar la aplicación CMK a un rol {#assign-to-role}
 
@@ -82,11 +82,11 @@ Puede comprobar la aplicación comparando la [!UICONTROL ID de aplicación] prop
 
 ![Vista de la configuración de claves administradas por el cliente [!UICONTROL con el identificador de aplicación [!UICONTROL resaltado].](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)]
 
-Todos los detalles necesarios para verificar las herramientas de Azure se incluyen en la interfaz de usuario de Platform. Este nivel de granularidad se proporciona ya que muchos usuarios desean utilizar otras herramientas de Azure para mejorar su capacidad de monitorizar y registrar el acceso de estas aplicaciones a su almacén de claves. Comprender estos identificadores es fundamental para ese fin y para ayudar a los servicios de Adobe a acceder a la clave.
+Todos los detalles necesarios para comprobar las herramientas de Azure se incluyen en la interfaz de usuario de Experience Platform. Este nivel de granularidad se proporciona ya que muchos usuarios desean utilizar otras herramientas de Azure para mejorar su capacidad de monitorizar y registrar el acceso de estas aplicaciones a su almacén de claves. Comprender estos identificadores es fundamental para ese fin y para ayudar a los servicios de Adobe a acceder a la clave.
 
-## Habilitar la configuración de clave de cifrado en el Experience Platform {#send-to-adobe}
+## Habilitar la configuración de clave de cifrado en Experience Platform {#send-to-adobe}
 
-Después de instalar la aplicación CMK en [!DNL Azure], puede enviar su identificador de clave de cifrado al Adobe. Seleccione **[!DNL Keys]** en el panel de navegación izquierdo, seguido del nombre de la clave que desea enviar.
+Después de instalar la aplicación CMK en [!DNL Azure], puede enviar su identificador de clave de cifrado a Adobe. Seleccione **[!DNL Keys]** en el panel de navegación izquierdo, seguido del nombre de la clave que desea enviar.
 
 ![Panel de Microsoft Azure con el objeto [!DNL Keys] y el nombre de clave resaltados.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -110,11 +110,11 @@ Ha vuelto al [!UICONTROL tablero de configuraciones de cifrado]. El estado de la
 
 ## Verificar el estado de la configuración {#check-status}
 
-Conceda una cantidad de tiempo considerable para el procesamiento. Para comprobar el estado de la configuración, vuelva a la vista [!UICONTROL Configuración de claves gestionadas por el cliente] y desplácese hacia abajo hasta [!UICONTROL Estado de configuración]. La barra de progreso ha avanzado hasta el paso uno de tres y explica que el sistema está validando que Platform tiene acceso a la clave y al almacén de claves.
+Conceda una cantidad de tiempo considerable para el procesamiento. Para comprobar el estado de la configuración, vuelva a la vista [!UICONTROL Configuración de claves gestionadas por el cliente] y desplácese hacia abajo hasta [!UICONTROL Estado de configuración]. La barra de progreso ha avanzado hasta el paso uno de tres y explica que el sistema está validando que Experience Platform tiene acceso a la clave y al almacén de claves.
 
 Hay cuatro estados potenciales de la configuración de CMK. Son las siguientes:
 
-* Paso 1: Valida que Platform tenga la capacidad de acceder a la clave y al almacén de claves.
+* Paso 1: Valida que Experience Platform tenga la capacidad de acceder a la clave y al almacén de claves.
 * Paso 2: El almacén de claves y el nombre de clave están en proceso de añadirse a todos los almacenes de datos de su organización.
 * Paso 3: El almacén de claves y el nombre de clave se han añadido correctamente a los almacenes de datos.
 * `FAILED`: se produjo un problema, principalmente relacionado con la clave, el almacén de claves o la configuración de la aplicación de varios inquilinos.

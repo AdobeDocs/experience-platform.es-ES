@@ -1,16 +1,16 @@
 ---
-title: Conecte su cuenta de RainFocus a Experience Platform mediante la interfaz de usuario de
-description: Aprenda a conectar su cuenta de RainFocus a Experience Platform mediante la interfaz de usuario.
+title: Conectar su cuenta de RainFocus a Experience Platform mediante la interfaz de usuario
+description: Aprenda a conectar su cuenta de RainFocus a Experience Platform mediante la interfaz de usuario de.
 badge: Beta
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
 
-# Conecte su cuenta de [!DNL RainFocus] al Experience Platform mediante la interfaz de usuario
+# Conecte su cuenta de [!DNL RainFocus] a Experience Platform mediante la interfaz de usuario
 
 >[!NOTE]
 >
@@ -26,14 +26,14 @@ Este tutorial proporciona pasos sobre cómo conectar su cuenta de [!DNL RainFocu
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
 ### Requisitos previos
 
-Para poder conectar su cuenta de [!DNL RainFocus] al Experience Platform, primero debe completar las siguientes tareas previas necesarias:
+Para poder conectar su cuenta de [!DNL RainFocus] a Experience Platform, primero debe completar las siguientes tareas previas necesarias:
 
 * [Recopilar credenciales necesarias](../../../../connectors/analytics/rainfocus.md#gather-required-credentials)
 * [Creación de un esquema XDM y definición del campo de identidad](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
@@ -43,13 +43,13 @@ Una vez completada la configuración de requisitos previos, puede continuar con 
 
 ## Conecte su cuenta de RainFocus a Experience Platform
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo de sources. La pantalla *[!UICONTROL Catálogo]* muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de fuentes. La pantalla *[!UICONTROL Catálogo]* muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría *[!UICONTROL Analytics]*, seleccione **[!UICONTROL Experiencia con RainFocus]** y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
 
-![El catálogo de orígenes en la interfaz de usuario del Experience Platform con el origen RainFocus seleccionado.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![El catálogo de fuentes en la interfaz de usuario de Experience Platform con el origen RainFocus seleccionado.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## Seleccionar datos
 
@@ -101,7 +101,7 @@ Una vez que haya revisado el flujo de datos, seleccione **Finalizar** y espere u
 
 ## Obtener la URL del extremo de flujo continuo {#get-your-streaming-endpoint-url}
 
-Con el flujo de datos de flujo continuo creado, ahora puede recuperar la URL del extremo de flujo continuo. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de la transmisión se comunique con el Experience Platform.
+Con el flujo de datos de flujo continuo creado, ahora puede recuperar la URL del extremo de flujo continuo. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de flujo se comunique con Experience Platform.
 
 Para recuperar el extremo de flujo continuo, vaya a la página *[!UICONTROL Actividad de flujo de datos]* del flujo de datos que acaba de crear y copie el extremo desde la parte inferior del panel *[!UICONTROL Propiedades]*.
 
@@ -113,11 +113,11 @@ Una vez completado el flujo de datos y recuperada la dirección URL de extremo d
 
 * Inicie sesión en [[!DNL RainFocus] platform](https://app.rainfocus.com). En la navegación principal, seleccione **[!DNL Libraries]** y **[!DNL Integration Profiles]**
 * Abra [!DNL Integration Profile] que creó anteriormente como parte de los [requisitos previos](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus).
-* Pegue el **ID de flujo de datos** y el **extremo de streaming** copiados del flujo de datos en el Experience Platform y seleccione **Guardar**
+* Pegue el **ID de flujo de datos** y el **extremo de streaming** copiados del flujo de datos en Experience Platform y seleccione **Guardar**
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión para el origen de [!DNL RainFocus], lo que le permite transmitir los datos de análisis y administración de eventos al Experience Platform.
+Al seguir este tutorial, ha establecido una conexión para el origen de [!DNL RainFocus], lo que le permite transmitir los datos de análisis y administración de eventos a Experience Platform.
 
 ## Recursos adicionales
 

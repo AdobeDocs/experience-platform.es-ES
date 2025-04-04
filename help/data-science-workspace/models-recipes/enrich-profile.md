@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform; modelo de aprendizaje automático; Data Science Espacio de trabajo; Perfil del cliente en tiempo real; temas populares; Perspectivas de aprendizaje automático
+keywords: Experience Platform;modelo de aprendizaje automático;Workspace de ciencia de datos;Perfil del cliente en tiempo real;temas populares;perspectivas de aprendizaje automático
 solution: Experience Platform
-title: Enriquezca el perfil del cliente en tiempo real con Insights de aprendizaje automático
+title: Enriquezca el perfil del cliente en tiempo real con perspectivas de aprendizaje automático
 type: Tutorial
-description: Este documento proporciona una guía sobre cómo enriquecer el perfil del cliente en tiempo real con información de aprendizaje automático.
+description: Este documento proporciona una guía sobre cómo enriquecer el Perfil del cliente en tiempo real con perspectivas de aprendizaje automático.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
 
-# Enriquezca [!DNL Real-Time Customer Profile] con información sobre el aprendizaje automático
+# Enriquecer [!DNL Real-Time Customer Profile] con perspectivas de aprendizaje automático
 
 >[!NOTE]
 >
->La Espacio de trabajo de ciencia de datos ya no está disponible para su compra.
+>Data Science Workspace ya no se puede adquirir.
 >
 >Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
@@ -30,9 +30,9 @@ Este documento proporciona vínculos a tutoriales que le permiten enriquecer [!D
 
 Para completar los tutoriales siguientes, necesita tener conocimientos prácticos sobre la ingesta de datos de [!DNL Profile] y la creación de audiencias. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona una representación completa y unificada de cada cliente individual basada en datos agregados de múltiples fuentes.
-- [[!DNL Identity Service]](../../identity-service/home.md): Permite [!DNL Real-Time Customer Profile] unir identidades de orígenes de datos dispares que se ingieren en Platform.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco de trabajo estandarizado según el cual Platform organiza experiencia del cliente datos.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona una representación completa y unificada de cada cliente individual en función de los datos agregados de varias fuentes.
+- [[!DNL Identity Service]](../../identity-service/home.md): habilita [!DNL Real-Time Customer Profile] al unir identidades de distintos orígenes de datos en Experience Platform.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
 
 Además de los documentos mencionados anteriormente, es muy recomendable que también revise las siguientes guías sobre esquemas y el Editor de esquemas:
 
@@ -43,11 +43,11 @@ Además de los documentos mencionados anteriormente, es muy recomendable que tam
 
 El primer paso para enriquecer a [!DNL Real-Time Customer Profile] con perspectivas de puntuación es saber qué objeto del mundo real (como una persona) definen sus datos. Comprender los datos le permite describir y diseñar una estructura para agregar significado, como diseñar una base de datos relacional.
 
-La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrán los esquema (registro o series temporales). Para empezar a crear sus propios esquemas, siga los pasos del tutorial sobre [creación de un esquema con el Editor de esquemas](../../xdm/tutorials/create-schema-ui.md). Tenga en cuenta que antes de poder activar un conjunto de datos para [!DNL Profile], debe configurar el esquema del conjunto de datos para que tenga un campo de identidad principal y, a continuación, habilitar el esquema para [!DNL Profile]. Cuando los datos se ingieren en un [!DNL Profile]conjunto de datos habilitado, esos mismos datos también se ingieren como [!DNL Profile] registros.
+La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). Para empezar a crear sus propios esquemas, siga los pasos del tutorial sobre [creación de un esquema con el Editor de esquemas](../../xdm/tutorials/create-schema-ui.md). Tenga en cuenta que para poder habilitar un conjunto de datos para [!DNL Profile], debe configurar el esquema del conjunto de datos para que tenga un campo de identidad principal y, a continuación, habilitar el esquema para [!DNL Profile]. Cuando los datos se incorporan en un conjunto de datos habilitado para [!DNL Profile], esos mismos datos también se incorporan como [!DNL Profile] registros.
 
-Si prefiere redactar una esquema usando la [!DNL Schema Registry] API en su lugar, inicio leyendo el [[!DNL Schema Registry] guía](../../xdm/api/getting-started.md) para desarrolladores antes de intentar la tutorial para [crear una esquema con la API](../../xdm/tutorials/create-schema-api.md).
+Si prefiere componer un esquema utilizando la API [!DNL Schema Registry], comience por leer la [[!DNL Schema Registry] guía para desarrolladores](../../xdm/api/getting-started.md) antes de intentar el tutorial sobre [crear un esquema con la API](../../xdm/tutorials/create-schema-api.md).
 
-Una vez que su esquema y conjunto de datos estén preparados, puede generar e ingerir datos de puntuación al conjunto de datos realizando carreras de puntuación utilizando un modelo apropiado.
+Una vez que el esquema y el conjunto de datos estén preparados, puede generar e introducir datos de puntuación en el conjunto de datos realizando ejecuciones de puntuación utilizando un modelo adecuado.
 
 ## Crear audiencias con [!DNL Segment Builder] {#create-audiences-using-the-segment-builder}
 
@@ -58,11 +58,11 @@ Después de generar e ingerir sus datos de puntuación en el conjunto de datos h
 - Creación de definiciones de segmentos utilizando una combinación de atributos, eventos y audiencias existentes como componentes básicos.
 - Uso del lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de audiencia.
 - Visualizar estimaciones de su audiencia potencial, lo que le permite ajustar sus definiciones de segmentos según sea necesario.
-- Habilitación de todas las definiciones de segmento para segmentación programados.
-- Habilitación de definiciones de segmento especificadas para el flujo continuo de segmentación.
+- Habilitando todas las definiciones de segmentos para la segmentación programada.
+- Habilitando definiciones de segmento especificadas para la segmentación de streaming.
 
 ## Pasos siguientes {#next-steps}
 
-Para obtener más información sobre las audiencias y el [!DNL Segment Builder], lea la información general](../../segmentation/home.md) del [servicio de segmentación.
+Para obtener más información acerca de las audiencias y [!DNL Segment Builder], lea la [Descripción general del servicio de segmentación](../../segmentation/home.md).
 
 Para obtener más información acerca de [!DNL Real-Time Customer Profile], lea la [Descripción general del perfil del cliente en tiempo real](../../profile/home.md)

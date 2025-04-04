@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Resumen de modelos de datos del sector
 description: Obtenga información acerca de los modelos de datos estandarizados para varias verticales del sector que se pueden construir con componentes estándar del Modelo de datos de experiencia (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Con el fin de guiar su estrategia de modelado de datos en función de su sector,
 
 ## Requisitos previos
 
-Para leer los ERD a los que se hace referencia en esta guía, debe tener una comprensión práctica de cómo interactúan los componentes XDM con los esquemas de formulario y cómo funcionan los esquemas XDM en Experience Platform como un todo. Asegúrese de leer la siguiente documentación general antes de continuar:
+Para leer los ERD a los que se hace referencia en esta guía, debe tener una comprensión práctica de cómo interactúan los componentes XDM con los esquemas de formulario y cómo funcionan los esquemas XDM en Experience Platform en su conjunto. Asegúrese de leer la siguiente documentación general antes de continuar:
 
-* [Información general del sistema XDM](../../home.md): Descubra cómo funciona XDM en el ecosistema de Platform.
+* [Información general del sistema XDM](../../home.md): Descubra cómo funciona XDM en el ecosistema de Experience Platform.
 * [Aspectos básicos de la composición de esquemas](../../schema/composition.md): descubra cómo los componentes XDM (como los grupos de campos de esquema, las clases y los tipos de datos) contribuyen a la estructura de un esquema, así como a la función de los campos de identidad.
 
 También se recomienda revisar la [guía de prácticas recomendadas de modelado de datos](../../schema/best-practices.md) para obtener directrices generales sobre cómo asignar los datos al XDM.

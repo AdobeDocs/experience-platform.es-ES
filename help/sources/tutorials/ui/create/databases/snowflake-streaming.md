@@ -1,15 +1,15 @@
 ---
-title: Transmita datos de la base de datos de Snowflake a Experience Platform mediante la interfaz de usuario
+title: Transmitir datos de la base de datos de Snowflake a Experience Platform mediante la interfaz de usuario
 description: Aprenda a transmitir datos de su base de datos de Snowflake a Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
 
-# Transmitir datos de la base de datos [!DNL Snowflake] al Experience Platform mediante la interfaz de usuario
+# Transmitir datos de su base de datos [!DNL Snowflake] a Experience Platform mediante la interfaz de usuario
 
 Aprenda a utilizar la interfaz de usuario para transmitir datos de la base de datos [!DNL Snowflake] a Adobe Experience Platform siguiendo esta guía.
 
@@ -24,11 +24,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ### Autenticación
 
-Lea la guía sobre la configuración de [requisitos previos para [!DNL Snowflake] datos de transmisión](../../../../connectors/databases/snowflake-streaming.md) para obtener información sobre los pasos que debe completar antes de poder ingerir datos de transmisión de [!DNL Snowflake] a Experience Platform.
+Lea la guía sobre la configuración de [requisitos previos para [!DNL Snowflake] datos de streaming](../../../../connectors/databases/snowflake-streaming.md) para obtener información sobre los pasos que debe completar antes de poder ingerir datos de streaming de [!DNL Snowflake] a Experience Platform.
 
-## Usar el origen [!DNL Snowflake Streaming] para transmitir datos de [!DNL Snowflake] al Experience Platform
+## Usar el origen [!DNL Snowflake Streaming] para transmitir datos de [!DNL Snowflake] a Experience Platform
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría *Bases de datos*, seleccione **[!DNL Snowflake Streaming]** y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
 
@@ -36,9 +36,9 @@ En la categoría *Bases de datos*, seleccione **[!DNL Snowflake Streaming]** y, 
 >
 >Las fuentes que no tienen una cuenta autenticada en el catálogo de fuentes muestran la opción **[!UICONTROL Configurar]**. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
 
-![El catálogo de orígenes en la interfaz de usuario de Experience Platform, con la tarjeta de origen de flujo de Snowflake seleccionada.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![Catálogo de orígenes en la interfaz de usuario de Experience Platform, con la tarjeta de origen de Snowflake Streaming seleccionada.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
-Aparecerá la página **[!UICONTROL Conectar cuenta de flujo de Snowflake]**. En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá la página **[!UICONTROL Conectar cuenta de streaming de Snowflake]**. En esta página, puede usar credenciales nuevas o existentes.
 
 >[!BEGINTABS]
 
@@ -53,8 +53,8 @@ Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un
 | Credencial | Descripción |
 | --- | --- |
 | Cuenta | El nombre de su cuenta de [!DNL Snowflake]. Para conocer las convenciones sobre los nombres de cuenta, lea la [[!DNL Snowflake Streaming] guía de autenticación](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
-| Almacén | Nombre de su almacén de [!DNL Snowflake]. Los almacenes administran la ejecución de consultas en [!DNL Snowflake]. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe tener acceso a él de forma individual para llevar los datos al Experience Platform. |
-| Base de datos | Nombre de su base de datos [!DNL Snowflake]. La base de datos contiene los datos que desea llevar al Experience Platform. |
+| Almacén | Nombre de su almacén de [!DNL Snowflake]. Los almacenes administran la ejecución de consultas en [!DNL Snowflake]. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual para llevar los datos a Experience Platform. |
+| Base de datos | Nombre de su base de datos [!DNL Snowflake]. La base de datos contiene los datos que desea llevar a Experience Platform. |
 | Esquema | (Opcional) El esquema de base de datos asociado con su cuenta de [!DNL Snowflake]. |
 | Nombre de usuario | El nombre de usuario de su cuenta de [!DNL Snowflake]. |
 | Contraseña | Contraseña de su cuenta de [!DNL Snowflake]. |
@@ -76,13 +76,13 @@ Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 >[!IMPORTANT]
 >
->* Debe existir una columna de marca de tiempo en la tabla de origen para poder crear un flujo de datos de flujo continuo. La marca de tiempo es necesaria para que el Experience Platform sepa cuándo se incorporarán los datos y cuándo se transmitirán los datos incrementales. Puede agregar de forma retroactiva una columna de marca de tiempo para una conexión existente y crear un nuevo flujo de datos.
+>* Debe existir una columna de marca de tiempo en la tabla de origen para poder crear un flujo de datos de flujo continuo. La marca de tiempo es necesaria para que Experience Platform sepa cuándo se incorporarán los datos y cuándo se transmitirán los datos incrementales. Puede agregar de forma retroactiva una columna de marca de tiempo para una conexión existente y crear un nuevo flujo de datos.
 >
 >* Asegúrese de que las mayúsculas y minúsculas de los campos de datos del archivo de datos de origen de ejemplo cumplan las directrices de [!DNL Snowflake] sobre la resolución de mayúsculas y minúsculas para los identificadores. Lea el [[!DNL Snowflake] documento sobre el uso de mayúsculas y minúsculas en el identificador](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) para obtener más información.
 
 Aparecerá el paso [!UICONTROL Seleccionar datos]. En este paso, debe seleccionar los datos que desea importar en Experience Platform, configurar las marcas de tiempo y las zonas horarias, y proporcionar un archivo de datos de origen de muestra para la ingesta de datos sin procesar.
 
-Utilice el directorio de base de datos de la izquierda de la pantalla y seleccione la tabla que desea importar al Experience Platform.
+Utilice el directorio de base de datos que encontrará a la izquierda de la pantalla y seleccione la tabla que desea importar a Experience Platform.
 
 ![Interfaz de datos de selección con una tabla de base de datos seleccionada.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
@@ -106,7 +106,7 @@ A continuación, debe proporcionar información sobre el conjunto de datos y el 
 
 ### Detalles del conjunto de datos {#dataset-details}
 
-Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente al Experience Platform se conservan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
+Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente a Experience Platform se conservan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
 
 >[!BEGINTABS]
 
@@ -135,7 +135,7 @@ Si ya tiene un conjunto de datos, seleccione **[!UICONTROL Conjunto de datos exi
 Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos de perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
 
 * **[!UICONTROL Diagnósticos de error]**: seleccione **[!UICONTROL Diagnósticos de error]** para indicar a la fuente que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
-* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos precisos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
+* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
 
 +++
 
@@ -149,13 +149,13 @@ Una vez configurado el conjunto de datos, debe proporcionar detalles sobre el fl
 | --- | --- |
 | Nombre de flujo de datos | Nombre del flujo de datos.  De forma predeterminada, se utiliza el nombre del archivo que se está importando. |
 | Descripción | (Opcional) Una breve descripción del flujo de datos. |
-| Alertas | El Experience Platform puede generar alertas basadas en eventos a las que los usuarios pueden suscribirse. Estas opciones requieren un flujo de datos en ejecución para almacenarlas en déclencheur. Para obtener más información, lea la [descripción general de las alertas](../../alerts.md) <ul><li>**Inicio de ejecución del flujo de datos de origen**: seleccione esta alerta para recibir una notificación cuando comience la ejecución del flujo de datos.</li><li>**Ejecución correcta del flujo de datos de origen**: seleccione esta alerta para recibir una notificación si el flujo de datos termina sin errores.</li><li>**Error al ejecutar el flujo de datos de origen**: seleccione esta alerta para recibir una notificación si la ejecución del flujo de datos termina con errores.</li></ul> |
+| Alertas | Experience Platform puede generar alertas basadas en eventos a las que los usuarios pueden suscribirse. Estas opciones requieren un flujo de datos en ejecución para almacenarlas en déclencheur. Para obtener más información, lea la [descripción general de las alertas](../../alerts.md) <ul><li>**Inicio de ejecución del flujo de datos de origen**: seleccione esta alerta para recibir una notificación cuando comience la ejecución del flujo de datos.</li><li>**Ejecución correcta del flujo de datos de origen**: seleccione esta alerta para recibir una notificación si el flujo de datos termina sin errores.</li><li>**Error al ejecutar el flujo de datos de origen**: seleccione esta alerta para recibir una notificación si la ejecución del flujo de datos termina con errores.</li></ul> |
 
 Cuando termine, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ## Asignación de campos a un esquema XDM {#mapping}
 
-Aparecerá el paso [!UICONTROL Mapping]. Use la interfaz de asignación para asignar los datos de origen a los campos de esquema adecuados antes de ingerir esos datos en el Experience Platform y, a continuación, seleccione **[!UICONTROL Siguiente]**. Para obtener una guía detallada sobre cómo usar la interfaz de asignación, lee la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md) para obtener más información.
+Aparecerá el paso [!UICONTROL Mapping]. Use la interfaz de asignación para asignar los datos de origen a los campos de esquema adecuados antes de ingerir esos datos en Experience Platform y, a continuación, seleccione **[!UICONTROL Siguiente]**. Para obtener una guía detallada sobre cómo usar la interfaz de asignación, lee la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md) para obtener más información.
 
 ![Interfaz de asignación del flujo de trabajo de orígenes.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
 

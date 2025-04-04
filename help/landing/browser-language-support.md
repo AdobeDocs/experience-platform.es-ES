@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Compatibilidad con el explorador y el idioma para la IU de Experience Platform
 description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Experience Platform permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '253'
 ht-degree: 10%
 
 ---
@@ -16,7 +16,7 @@ La interfaz de usuario (IU) de Adobe Experience Platform está diseñada para ad
 
 ## Compatibilidad con navegadores
 
-La IU de Platform está diseñada para funcionar de manera óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los exploradores.
+La interfaz de usuario de Experience Platform está diseñada para funcionar de manera óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los exploradores.
 
 | Sistema operativo | Navegadores admitidos |
 |---|---|
@@ -32,7 +32,7 @@ No se admiten los siguientes sistemas operativos y exploradores:
 
 ## Idiomas de soporte
 
-Actualmente, la interfaz de usuario de Platform está disponible en los siguientes idiomas:
+Actualmente, la interfaz de usuario de Experience Platform está disponible en los siguientes idiomas:
 
 * Inglés
 * Francés

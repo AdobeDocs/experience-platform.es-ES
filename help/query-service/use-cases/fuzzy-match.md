@@ -1,10 +1,10 @@
 ---
 title: Coincidencia aproximada en el servicio de consultas
-description: Aprenda a hacer una coincidencia en los datos de Platform que combina los resultados de varios conjuntos de datos haciendo coincidir aproximadamente una cadena de su elección.
+description: Aprenda a hacer una coincidencia en los datos de Experience Platform que combina los resultados de varios conjuntos de datos haciendo coincidir aproximadamente una cadena de su elección.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ cur = conn.cursor()
 
 Su instancia de [!DNL Jupyter Notebook] ahora está conectada al servicio de consultas. Si la conexión se realiza correctamente, no aparecerá ningún mensaje. Si la conexión falla, se mostrará un error.
 
-### Datos de Draw del conjunto de datos de Luma {#luma-dataset}
+### Extraer datos del conjunto de datos de Luma {#luma-dataset}
 
 Los datos para el análisis se extraen del primer conjunto de datos con los siguientes comandos. Para ser breves, los ejemplos se han limitado a los 10 primeros resultados de la columna.
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Datos de Draw del conjunto de datos de Acme {#acme-dataset}
+### Extraer datos del conjunto de datos de Acme {#acme-dataset}
 
 Los datos para el análisis ahora se extraen del segundo conjunto de datos con los siguientes comandos. De nuevo, para ser breves, los ejemplos se han limitado a los 10 primeros resultados de la columna.
 
@@ -350,7 +350,7 @@ Seleccione **Output** para ver los resultados de esta unión.
 
 +++
 
-### Guardar resultados de coincidencias aproximadas en Platform {#save-to-platform}
+### Guardar resultados de coincidencias aproximadas en Experience Platform {#save-to-platform}
 
 Por último, los resultados de la coincidencia aproximada se pueden guardar como un conjunto de datos para su uso en Adobe Experience Platform mediante SQL.
 

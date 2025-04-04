@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo crear una conexión de origen de r
 last-substantial-update: 2023-12=12
 badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2143'
+source-wordcount: '2146'
 ht-degree: 1%
 
 ---
@@ -23,14 +23,14 @@ Este tutorial proporciona los pasos para crear una conexión de origen y un fluj
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
 ### Recopilar credenciales necesarias
 
-Para acceder al bloque en Experience Platform, debe proporcionar valores válidos para las siguientes credenciales:
+Para acceder a su bloque en Experience Platform, debe proporcionar valores válidos para las siguientes credenciales:
 
 | Credencial | Descripción |
 | --- | --- |
@@ -42,7 +42,7 @@ Para obtener más información sobre la configuración de [!DNL Merkury] y otros
 
 ## Conecta tu cuenta de Merkury
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
@@ -79,7 +79,7 @@ Puede ingerir los siguientes formatos de archivo con el origen [!DNL Merkury]:
 
 ## Adición de datos
 
-Después de crear la cuenta de [!DNL Merkury], aparece el paso **[!UICONTROL Agregar datos]**, que proporciona una interfaz para explorar la jerarquía de archivos de [!DNL Merkury] y seleccionar la carpeta o el archivo específico que desea llevar al Experience Platform.
+Después de crear la cuenta de [!DNL Merkury], aparece el paso **[!UICONTROL Agregar datos]**, que proporciona una interfaz para explorar la jerarquía de archivos de [!DNL Merkury] y seleccionar la carpeta o el archivo específico que desea llevar a Experience Platform.
 
 * La parte izquierda de la interfaz es un explorador de directorios que muestra la jerarquía de archivos de [!DNL Merkury].
 * La parte derecha de la interfaz permite obtener una vista previa de hasta 100 filas de datos desde una carpeta o archivo compatible.
@@ -121,7 +121,7 @@ También puede introducir archivos JSON comprimidos o delimitados especificando 
 
 En el paso [!UICONTROL Seleccionar datos], seleccione un archivo comprimido para su ingesta y, a continuación, seleccione su tipo de archivo adecuado, y si es compatible con XDM o no. A continuación, seleccione **[!UICONTROL Tipo de compresión]** y, a continuación, seleccione el tipo de archivo comprimido apropiado para los datos de origen.
 
-Para llevar un archivo específico a Platform, seleccione una carpeta y, a continuación, el archivo que desea introducir. Durante este paso, también puede obtener una vista previa del contenido de otros archivos de una carpeta determinada mediante el icono de vista previa junto a un nombre de archivo.
+Para llevar un archivo específico a Experience Platform, seleccione una carpeta y, a continuación, el archivo que desea introducir. Durante este paso, también puede obtener una vista previa del contenido de otros archivos de una carpeta determinada mediante el icono de vista previa junto a un nombre de archivo.
 
 Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
@@ -167,7 +167,7 @@ Cuando termine de proporcionar detalles al flujo de datos, seleccione **[!UICONT
 
 Aparecerá el paso [!UICONTROL Mapping], que le proporcionará una interfaz para asignar los campos de origen del esquema de origen a sus campos XDM de destino adecuados en el esquema de destino.
 
-Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
+Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
 
 Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
 
@@ -216,7 +216,7 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos por lotes de su origen de [!DNL Merkury] al Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
+Al seguir este tutorial, ha creado correctamente un flujo de datos para traer datos por lotes de su origen de [!DNL Merkury] a Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
 
 ### Monitorización del flujo de datos
 

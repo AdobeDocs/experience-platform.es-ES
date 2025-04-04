@@ -1,10 +1,10 @@
 ---
-description: Esta página ejemplifica la llamada de API utilizada para recuperar una configuración de destino a través del Adobe Experience Platform Destination SDK.
+description: Esta página ejemplifica la llamada de API utilizada para recuperar una configuración de destino a través de Adobe Experience Platform Destination SDK.
 title: Recuperación de una configuración de destino
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '368'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de la API de configuración de destino {#get-started}
 
@@ -306,11 +306,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la config
 
 ## Administración de errores de API {#error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cómo recuperar una configuración de destino a través del extremo de API del Destination SDK `/authoring/destinations`.
+Después de leer este documento, ahora sabe cómo recuperar una configuración de destino a través del extremo de la API de Destination SDK `/authoring/destinations`.
 
 Para obtener más información acerca de lo que puede hacer con este extremo, consulte los siguientes artículos:
 

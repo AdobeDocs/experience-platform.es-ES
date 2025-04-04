@@ -2,9 +2,9 @@
 title: Crear una conexión de Zendesk Source en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de Zendesk mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '746'
 ht-degree: 7%
 
 ---
@@ -24,20 +24,20 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ### Recopilar credenciales necesarias
 
-Para tener acceso a su cuenta de [!DNL Zendesk] en Platform, debe proporcionar valores para las siguientes credenciales:
+Para tener acceso a su cuenta de [!DNL Zendesk] en Experience Platform, debe proporcionar los valores de las siguientes credenciales:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
-| Subdomain | El dominio único específico de su cuenta creado durante el proceso de registro. | `yoursubdomain` |
+| Subdominio | El dominio único específico de su cuenta creado durante el proceso de registro. | `yoursubdomain` |
 | Token de acceso | Token de API de Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Para obtener más información sobre cómo autenticar el origen de [!DNL Zendesk], consulte la [[!DNL Zendesk] descripción general del origen](../../../../connectors/customer-success/zendesk.md).
 
 ![Token de API de Zendesk](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### Crear un esquema de plataforma para [!DNL Zendesk]
+### Crear un esquema de Experience Platform para [!DNL Zendesk]
 
-Antes de crear una conexión de origen de [!DNL Zendesk], también debe asegurarse de crear primero un esquema de Platform para utilizarlo en el origen. Consulte el tutorial de [creación de un esquema de Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
+Antes de crear una conexión de origen de [!DNL Zendesk], también debe asegurarse de crear primero un esquema de Experience Platform para utilizarlo en el origen. Consulte el tutorial de [creación de un esquema de Experience Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
 
 Para obtener instrucciones adicionales sobre el esquema [!DNL Zendesk] necesario para [!DNL Zendesk Search API], consulte la sección [límites](#limits) a continuación.
 
@@ -45,7 +45,7 @@ Para obtener instrucciones adicionales sobre el esquema [!DNL Zendesk] necesario
 
 ## Conectar su cuenta de [!DNL Zendesk]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
@@ -75,7 +75,7 @@ Una vez autenticado el origen, la página se actualiza a un árbol de esquema in
 
 ## Pasos siguientes
 
-Al seguir este tutorial, se ha autenticado y creado una conexión de origen entre su cuenta de [!DNL Zendesk] y Platform. Ahora puede continuar con el siguiente tutorial y [crear un flujo de datos para llevar los datos de éxito de los clientes a la plataforma](../../dataflow/customer-success.md).
+Siguiendo este tutorial, ha autenticado y creado una conexión de origen entre su cuenta de [!DNL Zendesk] y Experience Platform. Ahora puede continuar con el siguiente tutorial y [crear un flujo de datos para llevar los datos de éxito de los clientes a Experience Platform](../../dataflow/customer-success.md).
 
 ## Recursos adicionales
 
@@ -83,9 +83,9 @@ Las secciones siguientes proporcionan recursos adicionales a los que puede hacer
 
 ### Validación {#validation}
 
-A continuación se describen los pasos que puede seguir para comprobar que ha conectado correctamente el origen de [!DNL Zendesk] y que los perfiles de [!DNL Zendesk] se están ingiriendo en Platform.
+A continuación se describen los pasos que puede seguir para comprobar que ha conectado correctamente el origen de [!DNL Zendesk] y que los perfiles de [!DNL Zendesk] se están ingiriendo en Experience Platform.
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para acceder al área de trabajo de [!UICONTROL Conjuntos de datos]. La pantalla [!UICONTROL Actividad de conjunto de datos] muestra los detalles de las ejecuciones.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Conjuntos de datos]. La pantalla [!UICONTROL Actividad de conjunto de datos] muestra los detalles de las ejecuciones.
 
 ![Página de actividades](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -97,7 +97,7 @@ Finalmente, seleccione **[!UICONTROL Previsualizar conjunto de datos]** para mos
 
 ![Conjunto de datos de Zendesk](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-También puede comprobar los datos de Platform con los datos de la página [!DNL Zendesk] > [!DNL Customers].
+También puede comprobar los datos de Experience Platform con los datos de su página [!DNL Zendesk] > [!DNL Customers].
 
 ![clientes de zendesk](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 

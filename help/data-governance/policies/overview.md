@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre políticas de uso de datos
 description: Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1213'
 ht-degree: 17%
 
 ---
@@ -27,7 +27,7 @@ Hay dos tipos de directivas disponibles:
 
 >[!NOTE]
 >
->Las políticas de uso de datos no se deben confundir con las [políticas de control de acceso](../../access-control/abac/end-to-end-guide.md#policy), que determinan si ciertos usuarios de Platform de su organización pueden acceder a ciertos campos de datos y se configuran a través de la pestaña [!UICONTROL Permisos].
+>Las políticas de uso de datos no se deben confundir con las [políticas de control de acceso](../../access-control/abac/end-to-end-guide.md#policy), que determinan si ciertos usuarios de Experience Platform de su organización pueden acceder a ciertos campos de datos y se configuran a través de la pestaña [!UICONTROL Permisos].
 
 Este documento proporciona información general de alto nivel sobre las políticas de uso de datos y proporciona vínculos a documentación adicional para trabajar con políticas en la interfaz de usuario o la API.
 
@@ -50,14 +50,14 @@ Cuando el uso de datos se produce en el servicio de su organización, se deben i
 >
 >Puede configurar casos de uso de marketing en destinos para automatizar la aplicación de políticas. Consulte la [documentación de destinos](../../destinations/home.md) para obtener más información sobre las opciones de configuración de un destino en particular.
 
-Consulte el apéndice de este documento para obtener una lista de [acciones de marketing disponibles definidas por el Adobe](#core-actions). También puede definir sus propias acciones de marketing personalizadas mediante la API [!DNL Policy Service] o la interfaz de usuario [!DNL Experience Platform]. En la siguiente sección se proporciona más información sobre cómo trabajar con acciones y políticas de marketing.
+Consulte el apéndice de este documento para obtener una lista de [acciones de marketing definidas por Adobe disponibles](#core-actions). También puede definir sus propias acciones de marketing personalizadas mediante la API [!DNL Policy Service] o la interfaz de usuario [!DNL Experience Platform]. En la siguiente sección se proporciona más información sobre cómo trabajar con acciones y políticas de marketing.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Administración de políticas de uso de datos {#manage}
@@ -70,7 +70,7 @@ Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pu
 
 Para obtener instrucciones paso a paso sobre cómo trabajar con acciones de marketing y políticas de uso de datos en la API, consulte el tutorial de [creación y evaluación de políticas de uso de datos](create.md). Para obtener más información sobre las operaciones clave proporcionadas por la API [!DNL Policy Service], consulte la [Guía para desarrolladores de Policy Service](../api/getting-started.md).
 
-Para obtener información sobre cómo trabajar con acciones y directivas de marketing en la interfaz de usuario de [!DNL Platform], consulte la [guía del usuario sobre la directiva de uso de datos](./user-guide.md).
+Para obtener información sobre cómo trabajar con acciones y directivas de marketing en la interfaz de usuario de [!DNL Experience Platform], consulte la [guía del usuario sobre la directiva de uso de datos](./user-guide.md).
 
 ## Pasos siguientes
 
@@ -80,9 +80,9 @@ Este documento proporciona una introducción a las políticas de uso de datos de
 
 La siguiente sección proporciona información adicional sobre las políticas de uso de datos.
 
-### acciones de marketing definidas por el Adobe {#core-actions}
+### Acciones de marketing definidas por Adobe {#core-actions}
 
-En la tabla siguiente se describen las acciones de marketing principales que se proporcionan de forma predeterminada por Adobe.
+En la tabla siguiente se describen las acciones de marketing principales que proporciona Adobe de forma predeterminada.
 
 >[!NOTE]
 >
@@ -94,10 +94,10 @@ En la tabla siguiente se describen las acciones de marketing principales que se 
 | Combinación con datos directamente identificables | Una acción que combina cualquier información de identificación personal (PII) con datos anónimos. Los contratos para datos procedentes de redes de publicidad, servidores de publicidad y proveedores de datos de terceros suelen incluir prohibiciones contractuales específicas sobre el uso de dichos datos con datos directamente identificables. |
 | Segmentación entre sitios | Una acción que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos in situ y datos externos o una combinación de datos de varias fuentes externas, se denomina datos entre sitios. Los datos entre sitios generalmente se recopilan y procesan para hacer deducciones sobre los intereses de los usuarios. |
 | Ciencia de datos | Una acción que utiliza datos para flujos de trabajo de ciencia de datos. Algunos contratos incluyen prohibiciones explícitas sobre el uso de datos para la ciencia de datos. A veces se formulan en términos que prohíben el empleo de datos para inteligencia artificial (IA), aprendizaje automático (ML) o modelado. |
-| Exportación de datos | Una acción que exporta datos a cualquier ubicación o destino fuera de los productos y servicios de Adobe. Por ejemplo: descargar datos en el equipo local, copiar datos de la pantalla, programar el envío de datos a una ubicación fuera del Adobe, proyectos programados por el Customer Journey Analytics, descargar informes, API de informes, etc. |
+| Exportación de datos | Una acción que exporta datos a cualquier ubicación o destino fuera de los productos y servicios de Adobe. Por ejemplo: descargar datos en el equipo local, copiar datos de la pantalla, programar el envío de datos a una ubicación fuera de Adobe, Proyectos programados de Customer Journey Analytics, Descargar informes, API de informes, etc. |
 | Segmentación por correo electrónico | Una acción que utiliza datos en campañas de direccionamiento de correo electrónico. |
 | Exportar a terceros | Una acción que exporta datos a procesadores y entidades que no tienen relaciones directas con los clientes. Muchos proveedores de datos tienen condiciones en los contratos que prohíben la exportación de datos desde el lugar donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales suelen restringir la transferencia de los datos que se reciben de ellas. |
 | Advertising in situ | Una acción que utiliza datos para anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, o para medir el envío y la eficacia de dichos anuncios. |
 | Personalization in situ | Una acción que utiliza datos para la personalización de contenido en el sitio. La personalización en el sitio es cualquier dato que se utiliza para hacer deducciones sobre los intereses de los usuarios, y se utiliza para seleccionar qué contenido o anuncios se muestran en función de esas deducciones. |
-| Coincidencia de segmento | Una acción que utiliza datos para la coincidencia de segmentos de Adobe Experience Platform, lo que permite a dos o más usuarios de Platform intercambiar datos de audiencia. Al habilitar las directivas que hacen referencia a esta acción, puede restringir qué datos se utilizan para la coincidencia de segmentos. Por ejemplo, si la directiva principal &quot;Restringir el uso compartido de datos&quot; está habilitada, no se podrá usar ningún dato con una etiqueta [C11](../labels/reference.md#c11) para la coincidencia de segmentos. |
+| Coincidencia de segmento | Una acción que utiliza datos para la coincidencia de segmentos de Adobe Experience Platform, lo que permite a dos o más usuarios de Experience Platform intercambiar datos de audiencia. Al habilitar las directivas que hacen referencia a esta acción, puede restringir qué datos se utilizan para la coincidencia de segmentos. Por ejemplo, si la directiva principal &quot;Restringir el uso compartido de datos&quot; está habilitada, no se podrá usar ningún dato con una etiqueta [C11](../labels/reference.md#c11) para la coincidencia de segmentos. |
 | Personalization de identidad única | Una acción que requiere que se utilice una sola identidad con fines de personalización en lugar de vincular identidades de varias fuentes. |

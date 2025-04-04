@@ -4,9 +4,9 @@ description: Utilice la Ingesta de datos de Acxiom para introducir datos de Acxi
 last-substantial-update: 2024-03-19T00:00:00Z
 badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1839'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >El origen [!DNL Acxiom Data Ingestion] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
 
-Utilice el origen [!DNL Acxiom Data Ingestion] para introducir datos de [!DNL Acxiom] en Real-time Customer Data Platform y enriquecer perfiles de origen. A continuación, puede usar sus perfiles de origen enriquecidos con [!DNL Acxiom] para mejorar las audiencias y activarlos en todos los canales de marketing.
+Utilice el origen [!DNL Acxiom Data Ingestion] para introducir datos de [!DNL Acxiom] en Real-Time Customer Data Platform y enriquecer perfiles de origen. A continuación, puede usar sus perfiles de origen enriquecidos con [!DNL Acxiom] para mejorar las audiencias y activarlos en todos los canales de marketing.
 
 Lea este tutorial para aprender a crear una conexión de origen y un flujo de datos de [!DNL Acxiom Data Ingestion] mediante la interfaz de usuario de Adobe Experience Platform. El origen [!DNL Acxiom Data Ingestion] se usa para recuperar y asignar la respuesta del servicio de mejora [!DNL Acxiom] mediante Amazon S3 como punto de colocación.
 
@@ -25,14 +25,14 @@ Lea este tutorial para aprender a crear una conexión de origen y un flujo de da
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
 ### Recopilar credenciales necesarias
 
-Para acceder al bloque en Experience Platform, debe proporcionar valores válidos para las siguientes credenciales:
+Para acceder a su bloque en Experience Platform, debe proporcionar valores válidos para las siguientes credenciales:
 
 | Credencial | Descripción |
 | --- | --- |
@@ -43,11 +43,11 @@ Para acceder al bloque en Experience Platform, debe proporcionar valores válido
 
 >[!IMPORTANT]
 >
->Debe tener los permisos para **[!UICONTROL Ver fuentes]** y **[!UICONTROL Administrar fuentes]** habilitados en su cuenta para conectar su cuenta de [!DNL Acxiom] al Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../../../access-control/ui/overview.md).
+>Debe tener los permisos para **[!UICONTROL Ver fuentes]** y **[!UICONTROL Administrar fuentes]** habilitados en su cuenta para conectar su cuenta de [!DNL Acxiom] a Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../../../access-control/ui/overview.md).
 
 ## Conectar su cuenta de [!DNL Acxiom]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
@@ -105,7 +105,7 @@ A continuación, debe proporcionar información sobre el conjunto de datos y el 
 
 >[!TAB Usar un nuevo conjunto de datos]
 
-Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente al Experience Platform se conservan dentro del lago de datos como conjuntos de datos. Para usar un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]**.
+Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente a Experience Platform se conservan dentro del lago de datos como conjuntos de datos. Para usar un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]**.
 
 ![La nueva interfaz del conjunto de datos.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-new-dataset.png)
 
@@ -130,7 +130,7 @@ Puede seleccionar **[!UICONTROL Búsqueda avanzada]** para ver una ventana de to
 Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos de perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
 
 * **[!UICONTROL Diagnósticos de error]**: seleccione **[!UICONTROL Diagnósticos de error]** para indicar a la fuente que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
-* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos precisos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
+* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
 
 +++
 
@@ -144,11 +144,11 @@ Una vez configurado el conjunto de datos, debe proporcionar detalles sobre el fl
 | --- | --- |
 | Nombre de flujo de datos | Nombre del flujo de datos.  De forma predeterminada, se utiliza el nombre del archivo que se está importando. |
 | Descripción | (Opcional) Una breve descripción del flujo de datos. |
-| Alertas | El Experience Platform puede generar alertas basadas en eventos a las que los usuarios pueden suscribirse; todas estas opciones incluyen un flujo de datos en ejecución para almacenarlas en déclencheur.  Para obtener más información, lea la [descripción general de las alertas](../../alerts.md) <ul><li>**Inicio de ejecución del flujo de datos de origen**: seleccione esta alerta para recibir una notificación cuando comience la ejecución del flujo de datos.</li><li>**Ejecución correcta del flujo de datos de origen**: seleccione esta alerta para recibir una notificación si el flujo de datos termina sin errores.</li><li>**Error al ejecutar el flujo de datos de origen**: seleccione esta alerta para recibir una notificación si la ejecución del flujo de datos termina con errores.</li></ul> |
+| Alertas | Experience Platform puede producir alertas basadas en eventos a las que los usuarios pueden suscribirse; todas estas opciones incluyen un flujo de datos en ejecución para almacenarlas en déclencheur.  Para obtener más información, lea la [descripción general de las alertas](../../alerts.md) <ul><li>**Inicio de ejecución del flujo de datos de origen**: seleccione esta alerta para recibir una notificación cuando comience la ejecución del flujo de datos.</li><li>**Ejecución correcta del flujo de datos de origen**: seleccione esta alerta para recibir una notificación si el flujo de datos termina sin errores.</li><li>**Error al ejecutar el flujo de datos de origen**: seleccione esta alerta para recibir una notificación si la ejecución del flujo de datos termina con errores.</li></ul> |
 
 ## Asignación
 
-Utilice la interfaz de asignación para asignar los datos de origen a los campos de esquema adecuados antes de introducir datos en el Experience Platform.  Para obtener más información, lea la guía de asignación [en la interfaz de usuario](../../../../../data-prep/ui/mapping.md)
+Utilice la interfaz de asignación para asignar los datos de origen a los campos de esquema adecuados antes de introducir datos en Experience Platform.  Para obtener más información, lea la guía de asignación [en la interfaz de usuario](../../../../../data-prep/ui/mapping.md)
 
 ![Interfaz de asignación.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-mapping.png)
 
@@ -178,7 +178,7 @@ Una vez que haya revisado el flujo de datos, haga clic en Finalizar y espere un 
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos por lotes de su origen de [!DNL Acxiom] al Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
+Al seguir este tutorial, ha creado correctamente un flujo de datos para traer datos por lotes de su origen de [!DNL Acxiom] a Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
 
 ### Monitorización del flujo de datos
 

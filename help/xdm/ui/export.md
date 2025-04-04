@@ -4,9 +4,9 @@ title: Exportación de esquemas XDM en la IU
 description: Obtenga información sobre cómo exportar un esquema existente a una zona protegida u organización diferente en la interfaz de usuario de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 11%
 
 ---
@@ -28,11 +28,11 @@ Para resolver esta necesidad, el área de trabajo [!UICONTROL Schemas] de la int
 
 ## Requisitos previos
 
-Aunque la IU de Platform le permite exportar recursos XDM, debe utilizar la API de Registro de esquemas para importar esos recursos en otras zonas protegidas u organizaciones para completar el flujo de trabajo. Consulte la guía sobre [introducción a la API de Registro de esquemas](../api/getting-started.md) para obtener información importante sobre los encabezados de autenticación requeridos antes de seguir esta guía.
+Aunque la IU de Experience Platform permite exportar recursos XDM, debe utilizar la API de Registro de esquemas para importar esos recursos en otras zonas protegidas u organizaciones para completar el flujo de trabajo. Consulte la guía sobre [introducción a la API de Registro de esquemas](../api/getting-started.md) para obtener información importante sobre los encabezados de autenticación requeridos antes de seguir esta guía.
 
 ## Generación de una carga útil de exportación {#generate-export-payload}
 
-Las cargas útiles de exportación se pueden generar en la interfaz de usuario de Platform desde el panel de detalles de la pestaña [!UICONTROL Examinar] o directamente desde el lienzo del esquema en el Editor de esquemas.
+Las cargas útiles de exportación se pueden generar en la interfaz de usuario de Experience Platform desde el panel de detalles de la pestaña [!UICONTROL Examinar] o directamente desde el lienzo del esquema en el Editor de esquemas.
 
 Para generar una carga útil de exportación, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. En el área de trabajo [!UICONTROL Esquemas], seleccione la fila del esquema que desea exportar para mostrar los detalles del esquema en la barra lateral derecha.
 
@@ -226,7 +226,7 @@ Tenga en cuenta que cada instancia del ID de inquilino de su organización apare
 
 ## Importe el recurso mediante la API {#import-resource-with-api}
 
-Una vez que haya copiado el JSON de exportación para el esquema, puede utilizarlo como carga para una solicitud de POST al extremo `/rpc/import` en la API de Registro de esquemas. Consulte la [guía de extremo de importación](../api/import.md) para obtener detalles sobre cómo configurar la llamada para enviar el esquema a la organización y zona protegida deseadas.
+Una vez que haya copiado el JSON de exportación para el esquema, puede utilizarlo como carga para una petición POST al extremo `/rpc/import` en la API del Registro de esquemas. Consulte la [guía de extremo de importación](../api/import.md) para obtener detalles sobre cómo configurar la llamada para enviar el esquema a la organización y zona protegida deseadas.
 
 ## Pasos siguientes
 

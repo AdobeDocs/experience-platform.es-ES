@@ -2,9 +2,9 @@
 title: Caducidad automatizada de conjuntos de datos
 description: Obtenga información sobre cómo programar la caducidad de un conjunto de datos en la IU de Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '873'
 ht-degree: 18%
 
 ---
@@ -22,13 +22,13 @@ El espacio de trabajo [[!UICONTROL Ciclo de vida de datos]](./overview.md) de la
 >
 >Si un conjunto de datos está configurado para caducar, debe cambiar manualmente los flujos de datos que puedan estar introduciendo datos en ese conjunto de datos para que los flujos de trabajo descendentes no se vean afectados negativamente.
 
-Este documento explica cómo programar y automatizar las caducidades de los conjuntos de datos en la IU de Platform.
+Este documento explica cómo programar y automatizar las caducidades de los conjuntos de datos en la interfaz de usuario de Experience Platform.
 
 >[!NOTE]
 >
 >La caducidad del conjunto de datos no elimina actualmente datos de Adobe Experience Platform Edge Network. Sin embargo, no es posible que los datos permanezcan dentro de Edge Network después de que el conjunto de datos esté configurado para que caduque. Esto se debe a que el contrato de licencia de servicio de 15 días para la caducidad del conjunto de datos se superpone con el periodo de 14 días en el que los datos existen dentro de Edge Network antes de descartarse.
 
-La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el [extremo de caducidad del conjunto de datos](../api/dataset-expiration.md) y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](../api/workorder.md). También puede administrar la caducidad de los conjuntos de datos y [eliminaciones de registros](./record-delete.md) a través de la interfaz de usuario de Platform. Consulte la documentación vinculada para obtener más información.
+La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el [extremo de caducidad del conjunto de datos](../api/dataset-expiration.md) y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](../api/workorder.md). También puede administrar las caducidades del conjunto de datos y las [eliminaciones de registros](./record-delete.md) a través de la interfaz de usuario de Experience Platform. Consulte la documentación vinculada para obtener más información.
 
 >[!NOTE]
 >

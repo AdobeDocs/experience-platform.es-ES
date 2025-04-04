@@ -1,9 +1,9 @@
 ---
-title: Creación de una conexión de Source de Amazon Kinesis en la IU
+title: Creación de una conexión de Amazon Kinesis Source en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Amazon Kinesis mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 2%
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->El origen [!DNL Amazon Kinesis] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
+>El origen [!DNL Amazon Kinesis] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time Customer Data Platform Ultimate.
 
-Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para autenticar un conector de origen [!DNL Amazon Kinesis] (en adelante denominado [!DNL "Kinesis"]) mediante la interfaz de usuario [!DNL Platform].
+Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para autenticar un conector de origen [!DNL Amazon Kinesis] (en adelante denominado [!DNL "Kinesis"]) mediante la interfaz de usuario [!DNL Experience Platform].
 
 ## Introducción
 
@@ -43,7 +43,7 @@ Para obtener más información sobre estos valores, consulte [este [!DNL Kinesis
 
 ## Conectar su cuenta de [!DNL Kinesis]
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Kinesis] a [!DNL Platform].
+Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Kinesis] a [!DNL Experience Platform].
 
 Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de orígenes con los que puede crear una cuenta.
 
@@ -69,4 +69,4 @@ Para conectar una cuenta existente, seleccione la cuenta de [!DNL Kinesis] con l
 
 ## Pasos siguientes
 
-Siguiendo este tutorial, se ha conectado a su cuenta de [!DNL Kinesis] a [!DNL Platform]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento en la nube a [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
+Siguiendo este tutorial, se ha conectado a su cuenta de [!DNL Kinesis] a [!DNL Experience Platform]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento en la nube a [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

@@ -2,10 +2,10 @@
 title: Manifiesto de extensión
 description: Obtenga información sobre cómo configurar un archivo de manifiesto JSON que informe a Adobe Experience Platform sobre cómo utilizar correctamente su extensión.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2591'
-ht-degree: 98%
+source-wordcount: '2606'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En el directorio base de la extensión debe crear un archivo llamado `extension.json`. Contiene detalles esenciales sobre su extensión que permiten a Adobe Experience Platform consumirla correctamente. Algunos de los contenidos se forman siguiendo [npm `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -26,12 +26,12 @@ Un manifiesto de extensión debe constar de lo siguiente:
 | `name` | El nombre de la extensión. Debe ser único para todas las demás extensiones y debe cumplir con [reglas de nomenclatura](#naming-rules). **Las etiquetas lo utilizan como identificador y no debe cambiarse después de publicar la extensión.** |
 | `platform` | La plataforma para la extensión. El único valor aceptado en este momento es `web`. |
 | `version` | La versión de la extensión. Debe seguir el formato de versión [semver](https://semver.org/). Esto es coherente con [npm version field](https://docs.npmjs.com/files/package.json#version). |
-| `displayName` | El nombre legible en lenguaje natural de su extensión. Esto se mostrará a los usuarios de Platform. No es necesario mencionar “etiquetas” ni “extensión”, pues los usuarios ya sabrán que están viendo una extensión de etiqueta. |
-| `description` | La descripción de la extensión. Esto se mostrará a los usuarios de Platform. Si la extensión permite a los usuarios implementar el producto en su sitio web, describa lo que hace el producto. No es necesario mencionar “etiquetas” ni “extensión”, pues los usuarios ya sabrán que están viendo una extensión de etiqueta. |
-| `iconPath` *(Opcional)* | La ruta relativa al icono que se mostrará para la extensión. No debe comenzar con una barra oblicua. Debe hacer referencia a un archivo SVG con una extensión `.svg`. El SVG debe ser cuadrado y escalable por Platform. |
+| `displayName` | El nombre legible en lenguaje natural de su extensión. Esto se mostrará a los usuarios de Experience Platform. No es necesario mencionar “etiquetas” ni “extensión”, pues los usuarios ya sabrán que están viendo una extensión de etiqueta. |
+| `description` | La descripción de la extensión. Esto se mostrará a los usuarios de Experience Platform. Si la extensión permite a los usuarios implementar el producto en su sitio web, describa lo que hace el producto. No es necesario mencionar “etiquetas” ni “extensión”, pues los usuarios ya sabrán que están viendo una extensión de etiqueta. |
+| `iconPath` *(Opcional)* | La ruta relativa al icono que se mostrará para la extensión. No debe comenzar con una barra oblicua. Debe hacer referencia a un archivo SVG con una extensión `.svg`. La SVG debe ser cuadrada y Experience Platform puede escalarla. |
 | `author` | El autor es un objeto que debe estructurarse de la siguiente manera: <ul><li>`name`: nombre del autor de la extensión. También puede utilizar el nombre de la compañía aquí.</li><li>`url` *(opcional)*: dirección URL donde puede obtener más información sobre el autor de la extensión.</li><li>`email` *(opcional)*: dirección de correo electrónico del autor de la extensión.</li></ul>Esto es coherente con las reglas de [npm author field](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
 | `exchangeUrl` *(necesario para extensiones públicas)* | Dirección URL del listado de la extensión en Adobe Exchange. Debe coincidir con el patrón `https://www.adobeexchange.com/experiencecloud.details.######.html`. |
-| `viewBasePath` | La ruta relativa al subdirectorio que contiene todas las vistas y los recursos relacionados con la vista (HTML, JavaScript, CSS e imágenes). Platform alojará este directorio en un servidor web y cargará contenido de iframe desde él. Este campo es obligatorio y no debe comenzar con una barra oblicua. Por ejemplo, si todas sus vistas están contenidas en `src/view/`, el valor de `viewBasePath` sería `src/view/`. |
+| `viewBasePath` | La ruta relativa al subdirectorio que contiene todas las vistas y los recursos relacionados con la vista (HTML, JavaScript, CSS e imágenes). Experience Platform alojará este directorio en un servidor web y cargará contenido de iframe desde él. Este campo es obligatorio y no debe comenzar con una barra oblicua. Por ejemplo, si todas sus vistas están contenidas en `src/view/`, el valor de `viewBasePath` sería `src/view/`. |
 | `hostedLibFiles` *(Opcional)* | Muchos de nuestros usuarios prefieren alojar todos los archivos relacionados con etiquetas en su propio servidor. Esto proporciona a los usuarios un mayor nivel de certeza con respecto a la disponibilidad de archivos en tiempo de ejecución y pueden analizar fácilmente el código para detectar vulnerabilidades de seguridad. Si la parte de biblioteca de la extensión necesita cargar archivos JavaScript en tiempo de ejecución, se recomienda utilizar esta propiedad para la lista de dichos archivos. Los archivos enumerados se alojarán con la biblioteca de tiempo de ejecución de la etiqueta. La extensión puede cargar los archivos mediante una URL recuperada mediante el método [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file).<br><br>Esta opción contiene una matriz con rutas relativas de archivos de biblioteca de terceros que deben alojarse. |
 | `main` *(Opcional)* | La ruta relativa de un módulo de biblioteca que debe ejecutarse en tiempo de ejecución.<br><br>Este módulo siempre se incluirá en la biblioteca de tiempo de ejecución y se ejecutará. Debido a que el módulo siempre se incluye en la biblioteca de tiempo de ejecución, recomendamos utilizar únicamente un módulo &quot;principal&quot; cuando sea absolutamente necesario y mantener un código mínimo.<br><br>No se garantiza que este módulo se ejecute primero, ya que otros módulos pueden ejecutarse antes. |
 | `configuration` *(Opcional)* | Esto describe la sección [configuración de la extensión](./configuration.md) de la extensión. Es necesario si necesita que los usuarios proporcionen una configuración global para la extensión. Consulte el [apéndice](#config-object) para obtener información sobre cómo se debe estructurar este campo. |
@@ -72,7 +72,7 @@ El objeto de configuración debe estructurarse de la siguiente manera:
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto válido que se está guardando desde la vista de configuración de la extensión. Dado que usted es el desarrollador de la vista de configuración, es su responsabilidad asegurarse de que cualquier objeto de configuración guardado coincida con este esquema. Este esquema también se utilizará para la validación cuando los usuarios intenten guardar datos mediante los servicios de Platform <br><br>A continuación, se muestra un objeto de esquema de ejemplo:
+      <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto válido que se está guardando desde la vista de configuración de la extensión. Dado que usted es el desarrollador de la vista de configuración, es su responsabilidad asegurarse de que cualquier objeto de configuración guardado coincida con este esquema. Este esquema también se utilizará para la validación cuando los usuarios intenten guardar datos mediante los servicios de Experience Platform.<br><br>A continuación, se muestra un objeto de esquema de ejemplo:
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -128,11 +128,11 @@ Una definición de tipo es un objeto que se utiliza para describir un evento, un
     </tr>
     <tr>
       <td><code>viewPath</code> <em>(Opcional)</em></td>
-      <td>La dirección URL relativa a la vista del tipo. Debe ser relativa a <code>viewBasePath</code> y no debe comenzar con una barra oblicua. Debe hacer referencia a un archivo HTML con una extensión <code>.html</code>. Se aceptan cadenas de consulta e identificadores de fragmento (hashes). Si el módulo de biblioteca del tipo no utiliza ninguna configuración de usuario, puede excluir esta propiedad y, en su lugar, Platform mostrará un marcador de posición que indique que no es necesaria ninguna configuración.</td>
+      <td>La dirección URL relativa a la vista del tipo. Debe ser relativa a <code>viewBasePath</code> y no debe comenzar con una barra oblicua. Debe hacer referencia a un archivo HTML con una extensión <code>.html</code>. Se aceptan cadenas de consulta e identificadores de fragmento (hashes). Si el módulo de biblioteca del tipo no utiliza ninguna configuración de usuario, puede excluir esta propiedad y, en su lugar, Experience Platform mostrará un marcador de posición que indique que no es necesaria ninguna configuración.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto de configuración válido que el usuario puede guardar. Por lo general, el usuario configura y guarda la configuración a través de la interfaz de usuario de recopilación de datos. En estos casos, la vista de la extensión puede realizar los pasos necesarios para validar la configuración proporcionada por el usuario. Por otro lado, algunos usuarios eligen utilizar API de etiquetas directamente sin la ayuda de ninguna interfaz de usuario. El propósito de este esquema es permitir que Platform valide correctamente que los objetos de configuración guardados por los usuarios, independientemente de si se utiliza una interfaz de usuario, están en un formato compatible con el módulo de biblioteca que actuará en el objeto de configuración durante la ejecución.<br><br>A continuación, se muestra un objeto de esquema de ejemplo:<br>
+      <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto de configuración válido que el usuario puede guardar. Por lo general, el usuario configura y guarda la configuración a través de la interfaz de usuario de recopilación de datos. En estos casos, la vista de la extensión puede realizar los pasos necesarios para validar la configuración proporcionada por el usuario. Por otro lado, algunos usuarios eligen utilizar API de etiquetas directamente sin la ayuda de ninguna interfaz de usuario. El propósito de este esquema es permitir que Experience Platform valide correctamente que los objetos de configuración guardados por los usuarios, independientemente de si se utiliza una interfaz de usuario, están en un formato compatible con el módulo de biblioteca que actuará en el objeto de configuración durante la ejecución.<br><br>A continuación, se muestra un objeto de esquema de ejemplo:<br>
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -160,9 +160,9 @@ Una definición de tipo es un objeto que se utiliza para describir un evento, un
 
 ### Transforms {#transforms}
 
-En el caso de determinados casos de uso específicos, las extensiones necesitan que Platform transforme los objetos de configuración guardados desde una vista antes de emitirse en la biblioteca de tiempo de ejecución de etiqueta. Puede solicitar que una o más de estas transformaciones se realicen configurando la propiedad `transforms` al definir una definición de tipo dentro de su `extension.json`. La propiedad `transforms` es una matriz de objetos en la que cada objeto representa una transformación que debe tener lugar.
+En el caso de determinados casos de uso específicos, las extensiones necesitan que Experience Platform transforme los objetos de configuración guardados desde una vista antes de emitirse en la biblioteca de tiempo de ejecución de etiqueta. Puede solicitar que una o más de estas transformaciones se realicen configurando la propiedad `transforms` al definir una definición de tipo dentro de su `extension.json`. La propiedad `transforms` es una matriz de objetos en la que cada objeto representa una transformación que debe tener lugar.
 
-Todas las transformaciones requieren un `type` y una `propertyPath`. El `type` debe ser una `function`, un `remove` y un `file`, y describir qué Platform de transformación debe aplicarse al objeto de configuración. La propiedad `propertyPath` es una cadena delimitada por puntos que indica a las etiquetas dónde encontrar la propiedad que debe modificarse en el objeto de configuración. Este es un objeto de configuración de ejemplo y `propertyPath`:
+Todas las transformaciones requieren un `type` y una `propertyPath`. `type` debe ser uno de `function`, `remove` y `file`, y describe qué Experience Platform de transformación debe aplicarse al objeto de configuración. La propiedad `propertyPath` es una cadena delimitada por puntos que indica a las etiquetas dónde encontrar la propiedad que debe modificarse en el objeto de configuración. Este es un objeto de configuración de ejemplo y `propertyPath`:
 
 ```js
 {
@@ -191,7 +191,7 @@ Las secciones siguientes describen las transformaciones disponibles y cómo util
 
 #### Transformación de funciones
 
-La transformación de funciones permite que el código escrito por los usuarios de Platform lo ejecute un módulo de biblioteca dentro de la biblioteca de tiempo de ejecución de la etiqueta emitida.
+La transformación de funciones permite que el código escrito por los usuarios de Experience Platform lo ejecute un módulo de biblioteca dentro de la biblioteca de tiempo de ejecución de etiqueta emitida.
 
 Supongamos que queremos proporcionar un tipo de acción de &quot;secuencia de comandos personalizada&quot;. La vista de acción &quot;script personalizado&quot; puede proporcionar un área de texto en la que el usuario puede introducir código. Supongamos que un usuario ha introducido el siguiente código en el área de texto:
 
@@ -211,7 +211,7 @@ Cuando una regla que utiliza nuestra acción se activa dentro de la biblioteca d
 
 En el momento en que el objeto de configuración se guarda desde la vista del tipo de acción, el código del usuario es simplemente una cadena. Esto es positivo porque se puede serializar correctamente desde JSON y hacia JSON; sin embargo, también es malo porque, por lo general, se emitiría en la biblioteca de tiempo de ejecución de etiqueta como cadena, en lugar de como función ejecutable. Aunque podría intentar ejecutar el código en el módulo de biblioteca del tipo de acción mediante [`eval`](https://developer.mozilla.org/es-ES/docs/Web/JavaScript/Reference/Global_Objects/eval) o un [constructor de funciones](https://developer.mozilla.org/es-ES/docs/Web/JavaScript/Referencia/Objetos_globales/Function), se desaconseja porque las [políticas de seguridad de contenido](https://developer.mozilla.org/es-ES/docs/Web/HTTP/CSP) podrían bloquear la ejecución.
 
-Como solución alternativa a esta situación, el uso de la transformación de funciones indica a Platform que ajuste el código del usuario en una función ejecutable cuando se emite en la biblioteca de tiempo de ejecución de etiqueta. Para solucionar el problema del ejemplo, definiríamos la transformación de la definición de tipo en `extension.json` de la siguiente manera:
+Como solución alternativa a esta situación, el uso de la transformación de funciones indica a Experience Platform que ajuste el código del usuario en una función ejecutable cuando se emite en la biblioteca de tiempo de ejecución de etiqueta. Para solucionar el problema del ejemplo, definiríamos la transformación de la definición de tipo en `extension.json` de la siguiente manera:
 
 ```json
 {
@@ -226,7 +226,7 @@ Como solución alternativa a esta situación, el uso de la transformación de fu
 ```
 
 * `type` define el tipo de transformación que debe aplicarse al objeto de configuración.
-* `propertyPath` es una cadena delimitada por puntos que indica a Platform dónde encontrar la propiedad que debe modificarse dentro del objeto de configuración.
+* `propertyPath` es una cadena delimitada por puntos que indica a Experience Platform dónde encontrar la propiedad que debe modificarse en el objeto de configuración.
 * `parameters` es una matriz de nombres de parámetros que deben incluirse en la firma de la función de ajuste.
 
 Cuando el objeto de configuración se emite en la biblioteca de tiempo de ejecución de etiqueta, se transforma en lo siguiente:
@@ -245,7 +245,7 @@ El módulo de biblioteca puede, así, llamar a la función que contiene el códi
 
 #### Transformación de archivos
 
-La transformación de archivos permite que el código escrito por los usuarios de Platform se emita en un archivo independiente de la biblioteca de tiempo de ejecución de etiqueta. El archivo se alojará junto a la biblioteca de tiempo de ejecución de etiqueta y, a continuación, se podrá cargar según sea necesario en la extensión durante el tiempo de ejecución.
+La transformación de archivos permite que el código escrito por los usuarios de Experience Platform se emita en un archivo independiente de la biblioteca de tiempo de ejecución de etiquetas. El archivo se alojará junto a la biblioteca de tiempo de ejecución de etiqueta y, a continuación, se podrá cargar según sea necesario en la extensión durante el tiempo de ejecución.
 
 Supongamos que queremos proporcionar un tipo de acción de &quot;secuencia de comandos personalizada&quot;. La vista del tipo de acción puede proporcionar un área de texto donde el usuario puede introducir código. Supongamos que un usuario ha introducido el siguiente código en el área de texto:
 
@@ -275,7 +275,7 @@ Queremos que el código del usuario se coloque en un archivo independiente en lu
 ```
 
 * `type` define el tipo de transformación que debe aplicarse al objeto de configuración.
-* `propertyPath` es una cadena delimitada por puntos que indica a Platform dónde encontrar la propiedad que debe modificarse dentro del objeto de configuración.
+* `propertyPath` es una cadena delimitada por puntos que indica a Experience Platform dónde encontrar la propiedad que debe modificarse en el objeto de configuración.
 
 Cuando el objeto de configuración se emite en la biblioteca de tiempo de ejecución de etiqueta, se transforma en lo siguiente:
 
@@ -321,7 +321,7 @@ No queremos incluir la propiedad `bar` en la biblioteca de tiempo de ejecución 
 ```
 
 * `type` define el tipo de transformación que debe aplicarse al objeto de configuración.
-* `propertyPath` es una cadena delimitada por puntos que indica a Platform dónde encontrar la propiedad que debe modificarse dentro del objeto de configuración.
+* `propertyPath` es una cadena delimitada por puntos que indica a Experience Platform dónde encontrar la propiedad que debe modificarse en el objeto de configuración.
 
 Cuando el objeto de configuración se emite en la biblioteca de tiempo de ejecución de etiqueta, se transforma en lo siguiente:
 

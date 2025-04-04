@@ -2,9 +2,9 @@
 title: Preguntas frecuentes sobre Adobe Experience Platform Web SDK
 description: Obtenga respuestas a las preguntas frecuentes sobre Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2082'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Actualmente, debe implementar diferentes bibliotecas de JavaScript basadas en ca
 * Ninguna de estas bibliotecas se creó para funcionar entre sí.
 * Los casos de uso entre soluciones y Adobe Experience Platform requieren que estas bibliotecas dispares sean interdependientes, lo que provoca fricciones en la implementación.
 
-Aunque las etiquetas en Platform facilitan al máximo la implementación y administración de estas bibliotecas, aún hay problemas con:
+Aunque las etiquetas en Experience Platform facilitan al máximo la implementación y administración de estas bibliotecas, aún existen problemas con:
 
 * Tamaño de la biblioteca (demasiado código Adobe en una página)
 * Rendimiento (los sitios tardan demasiado en cargarse)
@@ -124,7 +124,7 @@ En otras palabras, si decide utilizar Adobe Experience Platform Web SDK para cas
 
 ## ¿Puedo migrar los ECID cuando empiece a utilizar Web SDK para que los visitantes de mi sitio web no empiecen a mostrarse como nuevos visitantes?
 
-Sí, Adobe Experience Platform Web SDK proporciona una función de migración de identidad. Siga las instrucciones para la migración de ID en [Documentación de identidad de Platform Web SDK](/help/web-sdk/identity/overview.md#id-migration) para obtener más información.
+Sí, Adobe Experience Platform Web SDK proporciona una función de migración de identidad. Siga las instrucciones para la migración de ID en [Documentación de identidad de Experience Platform Web SDK](/help/web-sdk/identity/overview.md#id-migration) para obtener más información.
 
 ## ¿En qué se diferencia Web SDK de las etiquetas?
 

@@ -2,9 +2,9 @@
 title: Creación de una conexión de flujo HTTP API mediante la IU
 description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo mediante Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1003'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ## Creación de una conexión de flujo continuo
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
@@ -66,7 +66,7 @@ Con los datos cargados, puede utilizar el lado derecho de la interfaz para obten
 
 ## Asignación de campos de datos a un esquema XDM
 
-Aparecerá el paso [!UICONTROL Mapping], que proporciona una interfaz para asignar los datos de origen a un conjunto de datos de Platform.
+Aparecerá el paso [!UICONTROL Mapping], que proporciona una interfaz para asignar los datos de origen a un conjunto de datos de Experience Platform.
 
 El origen [!DNL HTTP API] admite la ingesta de archivos JSON. Los archivos JSON no requieren configuración manual si están marcados como quejas de XDM. Si no es así, debe configurar explícitamente la asignación.
 
@@ -141,4 +141,4 @@ Con la conexión creada, aparecerá la página de detalles de orígenes. Esta p�
 
 Al seguir este tutorial, ha creado una conexión HTTP de flujo continuo que le permite utilizar el extremo de flujo continuo para acceder a una variedad de API de [!DNL Data Ingestion]. Para obtener instrucciones para crear una conexión de flujo continuo en la API, lea el [tutorial sobre la creación de una conexión de flujo continuo](../../../api/create/streaming/http.md).
 
-Para aprender a transmitir datos a Platform, lea el tutorial sobre [transmisión de datos de series temporales](../../../../../ingestion/tutorials/streaming-time-series-data.md) o el tutorial sobre [transmisión de datos de registros](../../../../../ingestion/tutorials/streaming-record-data.md).
+Para aprender a transmitir datos a Experience Platform, lea el tutorial sobre [transmisión de datos de series temporales](../../../../../ingestion/tutorials/streaming-time-series-data.md) o el tutorial sobre [transmisión de datos de registros](../../../../../ingestion/tutorials/streaming-record-data.md).

@@ -5,16 +5,16 @@ title: Crear una conexión de Source de GreenPlum en la interfaz de usuario
 type: Tutorial
 description: Aprenda a crear una conexión de origen de GreenPlum mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '452'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen [!DNL GreenPlum] en la interfaz de usuario
 
-Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL GreenPlum] mediante la interfaz de usuario [!DNL Platform].
+Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL GreenPlum] mediante la interfaz de usuario [!DNL Experience Platform].
 
 ## Introducción
 
@@ -39,7 +39,7 @@ Para obtener más información sobre cómo empezar, consulte [este documento de 
 
 ## Conectar su cuenta de [!DNL GreenPlum]
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL GreenPlum] a [!DNL Platform].
+Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL GreenPlum] a [!DNL Experience Platform].
 
 Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de orígenes con los que puede crear una cuenta.
 
@@ -65,4 +65,4 @@ Para conectar una cuenta existente, selecciona la cuenta de [!DNL GreenPlum] con
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL GreenPlum]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Platform]](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL GreenPlum]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).

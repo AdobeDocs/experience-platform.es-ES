@@ -2,9 +2,9 @@
 title: Clasificación y filtrado de respuestas en la API de Flow Service
 description: Este tutorial cubre la sintaxis para ordenar y filtrar mediante parámetros de consulta en la API de Flow Service, incluidos algunos casos de uso avanzados.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 2%
 
 ---
@@ -197,7 +197,7 @@ Según la entidad de Flow Service que esté recuperando, se pueden utilizar dist
 
 ## Casos de uso {#use-cases}
 
-Lea esta sección para ver algunos ejemplos específicos de cómo puede utilizar el filtrado y la ordenación para devolver información sobre determinados conectores o para ayudarle en los problemas de depuración. Adobe Si desea agregar algún caso de uso adicional, use las **[!UICONTROL Opciones de comentarios detalladas]** de la página para enviar una solicitud.
+Lea esta sección para ver algunos ejemplos específicos de cómo puede utilizar el filtrado y la ordenación para devolver información sobre determinados conectores o para ayudarle en los problemas de depuración. Adobe Si desea agregar algún caso de uso adicional, use **[!UICONTROL Opciones de comentarios detalladas]** en la página para enviar una solicitud.
 
 **Filtro para devolver conexiones a un destino determinado solamente**
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Pasos siguientes
 
-En esta guía se explica cómo utilizar los parámetros de consulta `orderby` y `property` para ordenar y filtrar las respuestas en la API de Flow Service. Para obtener guías paso a paso sobre cómo utilizar la API para flujos de trabajo comunes en Platform, consulte los tutoriales de API contenidos en la documentación de [orígenes](../../sources/home.md) y [destinos](../../destinations/home.md).
+En esta guía se explica cómo utilizar los parámetros de consulta `orderby` y `property` para ordenar y filtrar las respuestas en la API de Flow Service. Para obtener guías paso a paso sobre cómo utilizar la API para flujos de trabajo comunes en Experience Platform, consulte los tutoriales de API contenidos en la documentación de [orígenes](../../sources/home.md) y [destinos](../../destinations/home.md).

@@ -5,9 +5,9 @@ title: Crear y editar tipos de datos mediante la interfaz de usuario
 type: Tutorial
 description: Obtenga información sobre cómo crear y editar tipos de datos en la interfaz de usuario de Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -27,17 +27,17 @@ Adobe Experience Platform proporciona muchos tipos de datos estándar que se pue
 >
 >Si un campo está definido como un tipo de datos específico, no se puede crear el mismo campo con un tipo de datos diferente en otro esquema. Esta restricción se aplica a todo el inquilino de la organización.
 
-Este tutorial trata los pasos para crear y editar tipos de datos personalizados en la interfaz de usuario de Platform.
+Este tutorial trata los pasos para crear y editar tipos de datos personalizados en la interfaz de usuario de Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
-Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para ver una introducción al papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para ver cómo los tipos de datos contribuyen a los esquemas XDM.
+Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para obtener una introducción del papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para ver cómo los tipos de datos contribuyen a los esquemas XDM.
 
 Aunque no es necesario para esta guía, se recomienda que también siga el tutorial sobre [maquetar un esquema en la interfaz de usuario](../../tutorials/create-schema-ui.md) para familiarizarse con las diversas funcionalidades de [!DNL Schema Editor].
 
 ## Abrir [!DNL Schema Editor] para un tipo de datos {#data-type}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el área de trabajo [!UICONTROL Esquemas] y, a continuación, seleccione la pestaña **[!UICONTROL Tipos de datos]**. Se muestra una lista de los tipos de datos disponibles. La lista de tipos de datos se filtra automáticamente en función de cómo se crearon. La configuración predeterminada muestra los tipos de datos definidos por el Adobe. También puede filtrar la lista para mostrar los que ha creado su organización.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el área de trabajo [!UICONTROL Esquemas] y, a continuación, seleccione la pestaña **[!UICONTROL Tipos de datos]**. Se muestra una lista de los tipos de datos disponibles. La lista de tipos de datos se filtra automáticamente en función de cómo se crearon. La configuración predeterminada muestra los tipos de datos definidos por Adobe. También puede filtrar la lista para mostrar los que ha creado su organización.
 
 ![Espacio de trabajo de [!UICONTROL Esquemas] con [!UICONTROL Esquemas] en la navegación izquierda y [!UICONTROL Tipos de datos] resaltados.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -125,6 +125,6 @@ El lienzo actualiza el tipo de datos del campo de &quot;[!UICONTROL Objeto]&quot
 
 ## Pasos siguientes {#next-steps}
 
-En esta guía se explica cómo crear y editar tipos de datos mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades del área de trabajo [!UICONTROL Esquemas], consulte la descripción general del área de trabajo [[!UICONTROL Esquemas]](../overview.md).
+En esta guía se explica cómo crear y editar tipos de datos mediante la interfaz de usuario de Experience Platform. Para obtener más información sobre las capacidades del área de trabajo [!UICONTROL Esquemas], consulte la descripción general del área de trabajo [[!UICONTROL Esquemas]](../overview.md).
 
 Para obtener información sobre cómo administrar los tipos de datos mediante la API [!DNL Schema Registry], consulte la [guía de extremo de tipos de datos](../../api/data-types.md).

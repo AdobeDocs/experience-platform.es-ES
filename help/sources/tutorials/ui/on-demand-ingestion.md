@@ -2,9 +2,9 @@
 title: Ingesta bajo demanda de flujos de datos de origen en la interfaz de usuario
 description: Obtenga información sobre cómo crear flujos de datos bajo demanda para las conexiones de origen mediante la interfaz de usuario de Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ Las ejecuciones de flujo representan una instancia de ejecución de flujo de dat
 
 Este documento requiere un entendimiento práctico de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Flujos de datos](../../../dataflows/home.md): un flujo de datos es una representación de trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, al servicio de identidad y al perfil del cliente en tiempo real, y a los destinos.
-* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Flujos de datos](../../../dataflows/home.md): un flujo de datos es una representación de trabajos de datos que mueven datos a través de Experience Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, al servicio de identidad y al perfil del cliente en tiempo real, y a los destinos.
+* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Creación de un flujo de datos bajo demanda {#create-a-dataflow-on-demand}
 

@@ -1,15 +1,15 @@
 ---
-title: Activación de un centro de excelencia mediante herramientas de zona protegida
+title: Habilitación de un centro de excelencia mediante herramientas de zona protegida
 description: Habilite un centro de excelencia con las herramientas de zona protegida creando un paquete de "zona protegida dorada" para estandarizar las prácticas recomendadas en varias zonas protegidas.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '882'
+ht-degree: 8%
 
 ---
 
-# Activación de un centro de excelencia mediante herramientas de zona protegida
+# Habilitación de un centro de excelencia mediante herramientas de zona protegida
 
 Habilite un centro de excelencia con las herramientas de zona protegida creando un paquete de &quot;zona protegida dorada&quot; para estandarizar las prácticas recomendadas en varias zonas protegidas.
 
@@ -37,7 +37,7 @@ Cuando planee crear su propio centro de excelencia dentro de su organización, t
 - Cree una zona protegida con todas las configuraciones relevantes y validadas que se establecerán como zona protegida principal.
 - Si es necesario, obtenga la información y el acuerdo de las partes interesadas sobre sus estándares de línea de base.
 
-### Funcionalidad de la IU, componentes de Platform y productos de Experience Cloud que utilizará {#ui-functionality-and-elements}
+### Funcionalidad de la interfaz de usuario, componentes de Experience Platform y productos de Experience Cloud que utilizará {#ui-functionality-and-elements}
 
 Para implementar correctamente este caso de uso, debe utilizar varias áreas de Adobe Experience Platform. Asegúrese de que tiene los [permisos de control de acceso basados en atributos](../../access-control/abac/overview.md) necesarios para todas estas áreas, o bien pídale al administrador del sistema que le conceda los permisos necesarios.
 
@@ -63,7 +63,7 @@ Lea las secciones siguientes, que incluyen vínculos a documentación adicional,
 
 ### Cree su zona protegida dorada
 
-El primer paso para habilitar su centro de excelencia es crear su zona protegida dorada. Esta zona protegida debe contener las configuraciones de línea de base que representan las prácticas recomendadas. Para crear esta zona protegida dorada, sigue la guía de [creación de una nueva zona protegida](../ui/user-guide.md#create-a-new-sandbox) en el Experience Platform.
+El primer paso para habilitar su centro de excelencia es crear su zona protegida dorada. Esta zona protegida debe contener las configuraciones de línea de base que representan las prácticas recomendadas. Para crear esta zona protegida dorada, sigue la guía de [creación de una nueva zona protegida](../ui/user-guide.md#create-a-new-sandbox) en Experience Platform.
 
 Una vez creada la zona protegida, empiece a crear las configuraciones del objeto de línea de base, como [esquemas](../../xdm/ui/resources/schemas.md#create-a-new-schema), [conjuntos de datos](../../catalog/datasets/user-guide.md#create-a-dataset) o [audiencias](../../segmentation/ui/segment-builder.md). Asegúrese de revisar las configuraciones antes de continuar.
 
@@ -81,7 +81,7 @@ Las herramientas de zona protegida le permiten compartir paquetes que ha creado 
 
 ### Monitorización de importaciones y exportaciones mediante registros de auditoría
 
-Al importar o exportar el paquete, puede supervisar el estado de los trabajos mediante el panel **[!UICONTROL Jobs]** en Experience Platform. Para obtener más información acerca de la supervisión de trabajos, lea la guía de [supervisión de detalles de importación](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
+Al importar o exportar el paquete, puede supervisar el estado de los trabajos mediante el panel **[!UICONTROL Trabajos]** en Experience Platform. Para obtener más información acerca de la supervisión de trabajos, lea la guía de [supervisión de detalles de importación](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
 
 ### Actualizar regularmente la zona protegida dorada
 

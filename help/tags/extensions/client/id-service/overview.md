@@ -2,10 +2,10 @@
 title: Información general sobre la extensión del servicio de identidad de Adobe Experience Cloud
 description: Obtenga información acerca de la extensión de etiquetas del servicio de identidad de Adobe Experience Cloud en Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 97%
+source-wordcount: '793'
+ht-degree: 95%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información acerca de cómo configurar la extensión del Adobe Experience Cloud ID y las opciones disponibles al utilizar esta extensión para generar una regla.
 
@@ -49,7 +49,7 @@ Seleccione **[!UICONTROL Añadir]** para excluir otra ruta.
 
 Utilice las opciones de inclusión Opt-in para determinar si se requiere que los visitantes acepten los servicios de Adobe en su sitio, incluido si se crean cookies que realizan un seguimiento de la actividad del visitante.
 
-La opción Opt-in es el punto de referencia centralizado de todas las bibliotecas de soluciones del lado del cliente de Platform para determinar si las cookies se pueden crear en un dispositivo o explorador del usuario al visitar el sitio. La opción Opt In no proporciona asistencia para recopilar o almacenar las preferencias de consentimiento de usuario.
+La opción Opt-in es el punto de referencia centralizado de todas las bibliotecas de soluciones del lado del cliente de Experience Platform para determinar si las cookies se pueden crear en un dispositivo o explorador del usuario al visitar el sitio. La opción Opt In no proporciona asistencia para recopilar o almacenar las preferencias de consentimiento de usuario.
 
 **¿Desea habilitar la opción Opt In?**
 

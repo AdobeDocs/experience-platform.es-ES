@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;fuentes sdk;sdk;SDK
 solution: Experience Platform
-title: Información general sobre las fuentes de autoservicio (SDK por lotes)
-description: Fuentes de autoservicio de Adobe Experience Platform (SDK por lotes) es un conjunto de API de configuración que le permiten integrar una fuente basada en la API de REST mediante la API de Flow Service para llevar los datos al Experience Platform.
+title: Resumen de Fuentes de Autoservicio (SDK por Lotes)
+description: Fuentes de autoservicio de Adobe Experience Platform (SDK por lotes) es un conjunto de API de configuración que le permiten integrar una fuente basada en la API de REST mediante la API de Flow Service para llevar los datos a Experience Platform.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 3%
@@ -13,15 +13,15 @@ ht-degree: 3%
 
 # Resumen de fuentes de autoservicio (SDK por lotes)
 
-El SDK por lotes de fuentes de autoservicio de Adobe Experience Platform es un módulo que le permite integrar una fuente basada en la API de REST en el catálogo de fuentes de Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). El SDK por lotes de fuentes de autoservicio proporciona un conjunto de API de configuración para crear su propia fuente y llevar los datos por lotes al Experience Platform.
+Fuentes de autoservicio de Adobe Experience Platform (SDK por lotes) es un módulo que le permite integrar una fuente basada en API de REST en el catálogo de fuentes de Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Fuentes de autoservicio (SDK por lotes) proporciona un conjunto de API de configuración para crear su propia fuente y llevar los datos por lotes a Experience Platform.
 
-Con los orígenes de autoservicio (SDK por lotes), puede:
+Con las fuentes de autoservicio (SDK por lotes), puede:
 
 * Configure e integre un nuevo origen al catálogo de Experience Platform mediante la API [!DNL Flow Service].
 * Defina especificaciones para su fuente, incluida la información perteneciente a los tipos de autenticación admitidos y cómo se recuperan los datos de recursos.
 * Cree documentación orientada al usuario para la nueva fuente.
 
-La documentación de fuentes de autoservicio proporciona instrucciones para configurar, probar y publicar una integración de fuentes basada en la API de REST con Experience Platform, y hacer que su fuente forme parte del creciente catálogo de fuentes.
+La documentación de fuentes de autoservicio proporciona instrucciones para configurar, probar y publicar una integración de fuente basada en la API de REST con Experience Platform, y hacer que su fuente forme parte del creciente catálogo de fuentes.
 
 ![catálogo](./assets/catalog.png)
 
@@ -29,13 +29,13 @@ La documentación de fuentes de autoservicio proporciona instrucciones para conf
 
 Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Para obtener más información sobre las fuentes y ver una lista de las diferentes fuentes admitidas actualmente en Experience Platform, consulte [descripción general de las fuentes](../home.md).
+Para obtener más información sobre las fuentes y ver una lista de las diferentes fuentes admitidas actualmente en Experience Platform, consulte la [descripción general de las fuentes](../home.md).
 
 ## Crear un origen
 
-A través de las fuentes de autoservicio, puede integrar su propia fuente basada en la API de REST y llevar sus datos al Experience Platform con [!DNL Flow Service]. Puede integrar un origen al catálogo de orígenes de Experience Platform creando, configurando y enviando una nueva especificación de conexión mediante la API [!DNL Flow Service].
+A través de las fuentes de autoservicio, puede integrar su propia fuente basada en la API de REST y llevar sus datos a Experience Platform con [!DNL Flow Service]. Puede integrar un origen al catálogo de orígenes de Experience Platform creando, configurando y enviando una nueva especificación de conexión mediante la API [!DNL Flow Service].
 
-Consulte la guía sobre [creación de una nueva especificación de conexión](./api/api-overview.md) para obtener información sobre cómo integrar una nueva fuente al Experience Platform.
+Consulte la guía sobre [creación de una nueva especificación de conexión](./api/api-overview.md) para obtener información sobre cómo integrar una nueva fuente en Experience Platform.
 
 ## Documente su origen
 

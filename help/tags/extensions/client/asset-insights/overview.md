@@ -2,9 +2,9 @@
 title: Información general sobre la extensión de AEM Asset Insights
 description: Obtenga información acerca de la extensión de etiqueta de AEM Asset Insights en Adobe Experience Platform.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1063'
 ht-degree: 98%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Esta extensión está diseñada para utilizarse junto con [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=es). Más específicamente, reemplaza el proceso pageTracker y el código incrustado. Cuando se configura, esta extensión envía métricas de *impresión* y *clics* de recursos a Adobe Analytics, tras lo cual se importarán en los informes de Insights de AEM Asset. Las métricas de recursos se pueden registrar mediante AEM Asset Insights o Adobe Analytics Project Workspaces.
 
@@ -53,7 +53,7 @@ En esta sección se describe cómo configurar AEM con etiquetas en Adobe Experie
 
 ### Integración de AEM con etiquetas
 
-La integración recomendada de [Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=es) con Adobe Experience Manager se realiza mediante Adobe I/O.
+La integración recomendada de [Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=es) con Adobe Experience Manager se realiza mediante Adobe I/O.
 
 1. [Conexión de AEM con etiquetas mediante Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=es).
 

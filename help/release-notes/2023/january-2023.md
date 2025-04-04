@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, enero de 2023
 description: Las notas de la versión de enero de 2023 de Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 99%
+source-wordcount: '2227'
+ht-degree: 97%
 
 ---
 
@@ -163,7 +163,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, consulte la [descripción general del sistema XDM](../../xdm/home.md).
 
 ## Perfil del cliente en tiempo real {#profile}
 
@@ -189,7 +189,7 @@ Para obtener más información sobre el perfil del cliente en tiempo real, inclu
 | ------- | ----------- |
 | Importación por lotes de los valores en el Generador de segmentos | El generador de segmentos ahora admite la importación de varios valores, ya sea cargando un archivo CSV o TSV o insertando manualmente valores separados por comas. Encontrará más información en la [Guía del generador de segmentos](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Caducidad del abono a público externo | De forma predeterminada, los abonos a públicos externos se conservan durante 30 días. Para conservarlos durante más tiempo, utilice el campo `validUntil` durante la ingesta de datos de público. |
-| Caducidad del abono al segmento generado por Platform | Cualquier abono a segmento que esté en el estado `Exited` durante más de 30 días, según el campo `lastQualificationTime` estará sujeto a eliminación. |
+| Caducidad de abono de segmento generada por Experience Platform | Cualquier abono a segmento que esté en el estado `Exited` durante más de 30 días, según el campo `lastQualificationTime` estará sujeto a eliminación. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [I
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API
 title: Punto final de API de trabajos del sistema de perfiles
 type: Documentation
 description: Adobe Experience Platform permite eliminar un conjunto de datos o un lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no se necesitan o que se añadieron por error. Para ello, es necesario utilizar la API de perfil para crear un trabajo del sistema de perfiles o eliminar una solicitud.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Los siguientes extremos pueden diferir entre las implementaciones de Adobe Experience Platform que se ejecutan en Microsoft Azure y Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Los siguientes extremos pueden diferir entre las implementaciones de Adobe Experience Platform que se ejecutan en Microsoft Azure y Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Adobe Experience Platform le permite introducir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Los datos ingeridos en [!DNL Platform] se almacenan en [!DNL Data Lake], y si los conjuntos de datos se han habilitado para el perfil, esos datos también se almacenan en el almacén de datos [!DNL Real-Time Customer Profile]. En ocasiones, puede ser necesario eliminar datos de perfil asociados con un conjunto de datos del almacén de perfiles para eliminar datos que ya no son necesarios o que se añadieron por error. Esto requiere usar la API [!DNL Real-Time Customer Profile] para crear un trabajo del sistema de [!DNL Profile] o una &quot;solicitud de eliminación&quot;.
+Adobe Experience Platform le permite introducir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Los datos ingeridos en [!DNL Experience Platform] se almacenan en [!DNL Data Lake], y si los conjuntos de datos se han habilitado para el perfil, esos datos también se almacenan en el almacén de datos [!DNL Real-Time Customer Profile]. En ocasiones, puede ser necesario eliminar datos de perfil asociados con un conjunto de datos del almacén de perfiles para eliminar datos que ya no son necesarios o que se añadieron por error. Esto requiere usar la API [!DNL Real-Time Customer Profile] para crear un trabajo del sistema de [!DNL Profile] o una &quot;solicitud de eliminación&quot;.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ El extremo de API utilizado en esta guía forma parte de [[!DNL Real-Time Custom
 
 ## Ver solicitudes de eliminación {#view}
 
-Una solicitud de eliminación es un proceso asincrónico de larga duración, lo que significa que su organización puede estar ejecutando varias solicitudes de eliminación a la vez. Para ver todas las solicitudes de eliminación que su organización está ejecutando actualmente, puede realizar una solicitud de GET al extremo `/system/jobs`.
+Una solicitud de eliminación es un proceso asincrónico de larga duración, lo que significa que su organización puede estar ejecutando varias solicitudes de eliminación a la vez. Para ver todas las solicitudes de eliminación que su organización está ejecutando actualmente, puede realizar una solicitud GET al extremo `/system/jobs`.
 
 También puede utilizar parámetros de consulta opcionales para filtrar la lista de solicitudes de eliminación devueltas en la respuesta. Para usar varios parámetros, separe cada parámetro con un signo &amp; (`&`).
 
@@ -38,7 +38,7 @@ También puede utilizar parámetros de consulta opcionales para filtrar la lista
 
 >[!AVAILABILITY]
 >
->Los siguientes parámetros de consulta están **solamente** disponibles cuando se usa Platform en Microsoft Azure.
+>Los siguientes parámetros de consulta están **solamente** disponibles cuando se usa Experience Platform en Microsoft Azure.
 >
 >Al utilizar este extremo en AWS, los primeros 100 trabajos del sistema se devuelven en orden descendente, según su fecha de creación.
 
@@ -208,11 +208,11 @@ Una respuesta correcta devuelve una matriz que contiene un objeto para cada una 
 
 ## Crear una solicitud de eliminación {#create-a-delete-request}
 
-El inicio de una nueva solicitud de eliminación se realiza mediante una solicitud de POST al extremo `/systems/jobs`, donde el identificador del conjunto de datos o del lote que se va a eliminar se proporciona en el cuerpo de la solicitud.
+El inicio de una nueva solicitud de eliminación se realiza mediante una petición POST al extremo `/systems/jobs`, donde el identificador del conjunto de datos o del lote que se va a eliminar se proporciona en el cuerpo de la solicitud.
 
 ### Eliminar un conjunto de datos y los datos de perfil asociados
 
-Para eliminar un conjunto de datos y todos los datos de perfil asociados con él del almacén de perfiles, el ID del conjunto de datos debe incluirse en el cuerpo de la solicitud del POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. [!DNL Experience Platform] le permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
+Para eliminar un conjunto de datos y todos los datos de perfil asociados con él del almacén de perfiles, el ID del conjunto de datos debe incluirse en el cuerpo de la petición POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. [!DNL Experience Platform] le permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
 
 **Formato de API**
 
@@ -309,7 +309,7 @@ Una respuesta correcta devuelve los detalles de la solicitud de eliminación rec
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `id` | El ID único, generado por el sistema y de solo lectura de la solicitud de eliminación. |
-| `dataSetId` | El ID del conjunto de datos, tal como se especifica en la solicitud del POST. |
+| `dataSetId` | El ID del conjunto de datos, tal como se especifica en la petición POST. |
 
 +++
 
@@ -351,7 +351,7 @@ Una respuesta correcta devuelve los detalles de la solicitud del sistema recién
 
 ### Eliminar un lote
 
-Para eliminar un lote, se debe incluir el ID del lote en el cuerpo de la solicitud del POST. Tenga en cuenta que no puede eliminar lotes para conjuntos de datos basados en esquemas de registros. Solo se pueden eliminar los lotes de conjuntos de datos basados en esquemas de series temporales.
+Para eliminar un lote, el ID de lote debe incluirse en el cuerpo de la petición POST. Tenga en cuenta que no puede eliminar lotes para conjuntos de datos basados en esquemas de registros. Solo se pueden eliminar los lotes de conjuntos de datos basados en esquemas de series temporales.
 
 >[!NOTE]
 >
@@ -460,7 +460,7 @@ Una respuesta correcta devuelve los detalles de la solicitud de eliminación rec
 | -------- | ----------- |
 | `id` | El ID único, generado por el sistema y de solo lectura de la solicitud de eliminación. |
 | `datasetId` | El ID del conjunto de datos especificado. |
-| `batchId` | El ID del lote, tal como se especifica en la solicitud del POST. |
+| `batchId` | El ID del lote, tal como se especifica en la petición POST. |
 
 +++
 
@@ -502,7 +502,7 @@ Una respuesta correcta devuelve los detalles de la solicitud del sistema recién
 
 >[!AVAILABILITY]
 >
->La siguiente característica está **solamente** disponible cuando se usa Platform en Microsoft Azure.
+>La siguiente característica está **solamente** disponible cuando se usa Experience Platform en Microsoft Azure.
 
 Si intenta iniciar una solicitud de eliminación para un lote del conjunto de datos de Record, se producirá un error de nivel 400, similar al siguiente:
 
@@ -656,7 +656,7 @@ Una vez que el estado de la solicitud de eliminación sea `"COMPLETED"`, puede c
 >
 >Este extremo **solo** es compatible con la instancia de Azure de Adobe Experience Platform y **no** es compatible con la instancia de AWS.
 
-[!DNL Experience Platform] le permite eliminar una solicitud anterior, lo que puede resultar útil por varios motivos, incluso si el trabajo de eliminación no se completó o se quedó atascado en la fase de procesamiento. Para quitar una solicitud de eliminación, puede realizar una solicitud de DELETE al extremo `/system/jobs` e incluir el identificador de la solicitud de eliminación que desea quitar en la ruta de acceso de la solicitud.
+[!DNL Experience Platform] le permite eliminar una solicitud anterior, lo que puede resultar útil por varios motivos, incluso si el trabajo de eliminación no se completó o se quedó atascado en la fase de procesamiento. Para quitar una solicitud de eliminación, puede realizar una solicitud DELETE al extremo `/system/jobs` e incluir el identificador de la solicitud de eliminación que desea quitar en la ruta de acceso de la solicitud.
 
 **Formato de API**
 
@@ -680,7 +680,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-4
 
 **Respuesta**
 
-Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta vacío. Puede confirmar que la solicitud se eliminó realizando una solicitud de GET para ver la solicitud de eliminación por su ID. Esto debería devolver un estado HTTP 404 (no encontrado), que indica que se eliminó la solicitud de eliminación.
+Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta vacío. Puede confirmar que la solicitud se eliminó realizando una petición GET para ver la solicitud de eliminación por su ID. Esto debería devolver un estado HTTP 404 (no encontrado), que indica que se eliminó la solicitud de eliminación.
 
 ## Pasos siguientes
 

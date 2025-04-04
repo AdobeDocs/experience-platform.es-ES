@@ -2,9 +2,9 @@
 title: Definir identidades principales en un conjunto de datos ad hoc
 description: Adobe Experience Platform Query Service permite establecer una identidad o una identidad principal para los campos de conjuntos de datos de esquemas ad hoc directamente mediante el comando SQL ALTER TABLE. El documento explica cómo utilizar el comando ALTER TABLE para establecer una identidad principal o secundaria.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Para etiquetar columnas de conjuntos de datos como identidad principal o secunda
 
 ## Añadir restricciones {#add-constraints}
 
-El comando `ALTER TABLE` le permite etiquetar una columna de conjunto de datos como identidad de una persona y luego utilizar esa etiqueta como identidad principal al actualizar los metadatos asociados mediante SQL. Esto resulta especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la IU de Platform. El comando se puede utilizar para garantizar que las operaciones de datos en Platform sean compatibles con las políticas de uso de datos.
+El comando `ALTER TABLE` le permite etiquetar una columna de conjunto de datos como identidad de una persona y luego utilizar esa etiqueta como identidad principal al actualizar los metadatos asociados mediante SQL. Esto resulta especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la interfaz de usuario de Experience Platform. El comando se puede utilizar para garantizar que las operaciones de datos en Experience Platform sean compatibles con las políticas de uso de datos.
 
 **Ejemplos**
 

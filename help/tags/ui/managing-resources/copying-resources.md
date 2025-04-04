@@ -2,10 +2,10 @@
 title: Copiar recursos
 description: Aprenda a crear un nuevo recurso de etiquetas con la configuración de un recurso de etiquetas existente en Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 94%
+source-wordcount: '781'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 A veces, es conveniente crear un nuevo recurso con la configuración de un recurso existente. En estos casos, puede hacer una copia.
 
@@ -60,7 +60,7 @@ Al copiar una extensión a otra propiedad, hay que tener en cuenta determinados 
 
 ## Copia de reglas y elementos de datos
 
-Una extensión es la encargada de proporcionar todas las reglas y los elementos de datos, por lo que al realizar copias entre las propiedades, Platform debe tener en cuenta estas extensiones subyacentes.
+Una extensión es la encargada de proporcionar todas las reglas y los elementos de datos, por lo que al realizar copias entre las propiedades, Experience Platform debe tener en cuenta estas extensiones subyacentes.
 
 ![Copia de una regla a mi propiedad de muestra](../../images/copy-rules-dialog1.png)
 

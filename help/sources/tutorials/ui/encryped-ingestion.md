@@ -3,9 +3,9 @@ title: Ingesta de datos cifrados en la IU de fuentes de Workspace
 description: Aprenda a introducir datos cifrados en el espacio de trabajo de la interfaz de usuario de fuentes.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1457'
 ht-degree: 6%
 
 ---
@@ -22,15 +22,15 @@ Lea esta guía para obtener información sobre cómo ingerir datos cifrados con 
 
 ## Introducción 
 
-Antes de continuar con este tutorial, lea los siguientes documentos para comprender mejor las siguientes funciones y conceptos del Experience Platform.
+Antes de continuar con este tutorial, lea los siguientes documentos para comprender mejor las siguientes funciones y conceptos de Experience Platform.
 
-* [Fuentes](../../home.md): Use fuentes en Experience Platform para introducir datos de una aplicación de Adobe o de una fuente de datos de terceros.
-* [Flujos de datos](../../../dataflows/home.md): los flujos de datos son representaciones de trabajos de datos que mueven datos a través del Experience Platform. Puede utilizar el espacio de trabajo de fuentes para crear flujos de datos que introduzcan datos de una fuente determinada en el Experience Platform.
-* [Zonas protegidas](../../../sandboxes/home.md): utilice las zonas protegidas en Experience Platform para crear particiones virtuales entre las instancias de Experience Platform y crear entornos dedicados al desarrollo o la producción.
+* [Fuentes](../../home.md): Use fuentes en Experience Platform para ingerir datos de una aplicación de Adobe o de una fuente de datos de terceros.
+* [Flujos de datos](../../../dataflows/home.md): Los flujos de datos son representaciones de trabajos de datos que mueven datos a través de Experience Platform. Puede utilizar el espacio de trabajo de fuentes para crear flujos de datos que introduzcan datos de una fuente determinada en Experience Platform.
+* [Zonas protegidas](../../../sandboxes/home.md): Use zonas protegidas en Experience Platform para crear particiones virtuales entre las instancias de Experience Platform y crear entornos dedicados al desarrollo o la producción.
 
 ### Esquema de alto nivel
 
-* Cree un par de claves de cifrado con el espacio de trabajo de orígenes en la interfaz de usuario de Experience Platform.
+* Cree un par de claves de cifrado con el espacio de trabajo de fuentes en la interfaz de usuario de Experience Platform.
    * Opcionalmente, también puede crear su propio par de claves de verificación de firma para proporcionar una capa adicional de seguridad a los datos cifrados.
 * Utilice la clave pública del par de claves de cifrado para cifrar los datos.
 * Coloque los datos cifrados en su almacenamiento en la nube. Durante este paso, también debe asegurarse de que tiene un archivo de muestra de los datos en el almacenamiento en la nube que se puede utilizar como referencia para asignar los datos de origen a un esquema Experience Data Model (XDM).
@@ -52,11 +52,11 @@ Antes de continuar con este tutorial, lea los siguientes documentos para compren
 
 Un par de claves de cifrado es un mecanismo de criptografía asimétrico que consta de una clave pública y una clave privada. La clave pública se utiliza para cifrar datos y la clave privada se utiliza para descifrar dichos datos.
 
-Puede crear el par de claves de cifrado a través de la interfaz de usuario de Experience Platform. Cuando se genere, recibirá una clave pública y un ID de clave correspondiente. Utilice la clave pública para cifrar los datos y, a continuación, utilice el ID de clave para confirmar la identidad cuando esté ingiriendo los datos cifrados. La clave privada se envía automáticamente al Experience Platform, donde se almacena en un almacén seguro, y solo se utilizará una vez que los datos estén listos para descifrarse.
+Puede crear el par de claves de cifrado a través de la interfaz de usuario de Experience Platform. Cuando se genere, recibirá una clave pública y un ID de clave correspondiente. Utilice la clave pública para cifrar los datos y, a continuación, utilice el ID de clave para confirmar la identidad cuando esté ingiriendo los datos cifrados. La clave privada se envía automáticamente a Experience Platform, donde se almacena en un almacén seguro, y solo se utilizará una vez que los datos estén listos para descifrarse.
 
 >[!ENDSHADEBOX]
 
-En la interfaz de usuario de Platform, vaya al área de trabajo de orígenes y, a continuación, seleccione [!UICONTROL Pares de claves] en el encabezado superior.
+En la interfaz de usuario de Experience Platform, vaya al área de trabajo de orígenes y, a continuación, seleccione [!UICONTROL Pares de claves] en el encabezado superior.
 
 ![El catálogo de orígenes con el encabezado &quot;Pares de claves&quot; seleccionado.](../../images/tutorials/edi/catalog.png)
 
@@ -68,7 +68,7 @@ A continuación, elija el tipo de clave que desea crear. Para crear una clave de
 
 ![Ventana de creación de claves, con la clave de cifrado seleccionada.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-Proporcione un título y una frase de contraseña para la clave de cifrado. La frase de contraseña es una capa adicional de protección para las claves de cifrado. Una vez creada, el Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. Cuando termine, seleccione **[!UICONTROL Crear]**.
+Proporcione un título y una frase de contraseña para la clave de cifrado. La frase de contraseña es una capa adicional de protección para las claves de cifrado. Una vez creada, Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. Cuando termine, seleccione **[!UICONTROL Crear]**.
 
 ![Ventana de creación de clave de cifrado, donde se proporciona un título y una frase de contraseña.](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -91,7 +91,7 @@ Para ver información sobre una clave de cifrado existente, seleccione los punto
 
 **¿Qué es una clave de verificación de firma?**
 
-Una clave de verificación de firma es otro mecanismo de cifrado que implica una clave privada y una clave pública. En este caso, puede crear el par de claves de verificación de firma y utilizar la clave privada para firmar y proporcionar una capa adicional de cifrado a los datos. A continuación, compartirá la clave pública correspondiente con Experience Platform. Durante la ingesta, Experience Platform utiliza la clave pública para comprobar la firma asociada a la clave privada.
+Una clave de verificación de firma es otro mecanismo de cifrado que implica una clave privada y una clave pública. En este caso, puede crear el par de claves de verificación de firma y utilizar la clave privada para firmar y proporcionar una capa adicional de cifrado a los datos. A continuación, compartirá la clave pública correspondiente con Experience Platform. Durante la ingesta, Experience Platform utilizará la clave pública para comprobar la firma asociada a la clave privada.
 
 >[!ENDSHADEBOX]
 
@@ -165,4 +165,4 @@ Puede seguir [haciendo actualizaciones en su flujo de datos](../ui/update-datafl
 
 ## Pasos siguientes
 
-Al leer este documento, ahora puede ingerir datos cifrados de su origen de lote de almacenamiento en la nube en el Experience Platform. Para obtener información sobre cómo ingerir datos cifrados mediante las API, lea la guía sobre [ingesta de datos cifrados mediante la [!DNL Flow Service] API](../api/encrypt-data.md). Para obtener información general acerca de las fuentes de Experience Platform, lea [descripción general de las fuentes](../../home.md).
+Al leer este documento, ahora puede ingerir datos cifrados de su fuente por lotes de almacenamiento en la nube en Experience Platform. Para obtener información sobre cómo ingerir datos cifrados mediante las API, lea la guía sobre [ingesta de datos cifrados mediante la [!DNL Flow Service] API](../api/encrypt-data.md). Para obtener información general acerca de las fuentes en Experience Platform, lea [descripción general de las fuentes](../../home.md).

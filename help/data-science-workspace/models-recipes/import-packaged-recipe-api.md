@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;importar fórmula empaquetada;Workspace de ciencia de datos;temas populares;recetas;api;aprendizaje automático de sensei;crear motor
+keywords: Experience Platform;importar fórmula empaquetada;Data Science Workspace;temas populares;recetas;api;aprendizaje automático de sensei;crear motor
 solution: Experience Platform
 title: Importar una fórmula empaquetada mediante la API de aprendizaje automático de Sensei
 type: Tutorial
 description: Este tutorial utiliza la API de aprendizaje automático de Sensei para crear un motor, también conocido como Fórmula en la interfaz de usuario.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Este tutorial usa [[!DNL Sensei Machine Learning API]](https://developer.adobe.c
 
 Antes de comenzar, es importante tener en cuenta que Adobe Experience Platform [!DNL Data Science Workspace] utiliza términos diferentes para hacer referencia a elementos similares dentro de la API y la interfaz de usuario. Los términos de la API se utilizan en este tutorial y la siguiente tabla describe los términos correlacionados:
 
-| Término de IU | Término de API |
+| Término IU | Término de API |
 | ---- | ---- |
 | Fórmula | [Motor](../api/engines.md) |
 | Modelo | [MLInstance](../api/mlinstances.md) |
@@ -41,7 +41,7 @@ Este tutorial requiere un archivo de fórmula empaquetado en forma de URL de Doc
 
 - `{DOCKER_URL}`: una dirección URL a una imagen Docker de un servicio inteligente.
 
-Este tutorial requiere que haya completado el tutorial [Autenticación en Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas correctamente a las API [!DNL Platform]. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Este tutorial requiere que haya completado el tutorial [Autenticación en Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas correctamente a las API [!DNL Experience Platform]. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.
 - `{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.
@@ -49,9 +49,9 @@ Este tutorial requiere que haya completado el tutorial [Autenticación en Adobe 
 
 ## Crear un motor
 
-Los motores se pueden crear realizando una solicitud del POST al extremo /engines. El motor creado se configura en función del formulario del archivo de fórmula empaquetado que debe incluirse como parte de la solicitud de API.
+Los motores se pueden crear realizando una petición POST al extremo /engines. El motor creado se configura según el formulario del archivo de recetas empaquetado que debe incluirse como parte del solicitud API.
 
-### Creación de un motor con una URL de Docker {#create-an-engine-with-a-docker-url}
+### Crear un motor con un Docker URL {#create-an-engine-with-a-docker-url}
 
 Para crear un motor con un archivo de fórmula empaquetado almacenado en un contenedor de Docker, debe proporcionar la URL de Docker al archivo de fórmula empaquetado.
 
@@ -93,12 +93,12 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------  | ----------- |
-| `engine.name` | El nombre deseado para el motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario [!DNL Data Science Workspace] como el nombre de la fórmula. |
-| `engine.description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario [!DNL Data Science Workspace] como la descripción de la fórmula. No elimine esta propiedad, deje que este valor sea una cadena vacía si decide no proporcionar una descripción. |
+| `engine.name` | El nombre deseado para el motor. La Fórmula correspondiente a este Motor heredará este valor para ser mostrada en [!DNL Data Science Workspace] usuario interfaz como el nombre de la Fórmula. |
+| `engine.description` | Una descripción opcional del motor. La Fórmula correspondiente a este Motor heredará este valor para ser mostrada en [!DNL Data Science Workspace] usuario interfaz como descripción de la Fórmula. No elimine esta propiedad, deje que este valor sea una cadena vacía si decide no proporcionar una descripción. |
 | `engine.type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se desarrolla la imagen Docker. Cuando se proporciona una URL de Docker para crear un motor, `type` es `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
 | `artifacts.default.image.location` | Su `{DOCKER_URL}` se va aquí. Una dirección URL de Docker completa tiene la siguiente estructura: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Un nombre adicional para el archivo de imagen Docker. No elimine esta propiedad, deje que este valor sea una cadena vacía si decide no proporcionar un nombre de archivo de imagen Docker adicional. |
-| `artifacts.default.image.executionType` | El tipo de ejecución de este motor. Este valor corresponde al idioma en el que se desarrolla la imagen Docker. Cuando se proporciona una URL de Docker para crear un motor, `executionType` es `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
+| `artifacts.default.image.executionType` | Tipo de ejecución de este motor. Este valor corresponde al idioma en el que se desarrolla la imagen de Docker. Cuando se proporciona un URL de Docker para crear un motor, `executionType` es , `Python``R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
 
 **Solicitar PySpark**
 
@@ -131,8 +131,8 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | El nombre deseado para el motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como el nombre de la fórmula. |
-| `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta propiedad es obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
-| `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker sobre &quot;PySpark&quot;. |
+| `description` | Una descripción opcional del motor. La Fórmula correspondiente a este Motor heredará este valor para ser mostrada en IU como la descripción de la Fórmula. Esta Propiedad es obligatoria. Si no desea proporcionar una descripción, defina su valor para que sea una cadena vacía. |
+| `type` | Tipo de ejecución del motor. Este valor corresponde al idioma en el que la imagen de Docker se basa en &quot;PySpark&quot;. |
 | `mlLibrary` | Campo obligatorio al crear motores para las recetas PySpark y Scala. |
 | `artifacts.default.image.location` | La ubicación de la imagen de Docker a la que está vinculado una URL de Docker. |
 | `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker sobre &quot;Spark&quot;. |
@@ -169,8 +169,8 @@ curl -X POST \
 | --- | --- |
 | `name` | El nombre deseado para el motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como el nombre de la fórmula. |
 | `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta propiedad es obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
-| `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker sobre &quot;Spark&quot;. |
-| `mlLibrary` | Campo obligatorio al crear motores para las recetas PySpark y Scala. |
+| `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que la imagen de Docker se basa en &quot;Spark&quot;. |
+| `mlLibrary` | Campo necesario al crear motores para recetas de PySpark y Scala. |
 | `artifacts.default.image.location` | La ubicación de la imagen de Docker a la que está vinculado una URL de Docker. |
 | `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker sobre &quot;Spark&quot;. |
 
@@ -203,8 +203,8 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 }
 ```
 
-Una respuesta correcta muestra una carga útil JSON con información sobre el motor recién creado. La clave `id` representa el identificador de motor único y se requiere en el siguiente tutorial para crear una instancia de MLI. Asegúrese de que el identificador del motor se guarde antes de continuar con los pasos siguientes.
+Una respuesta correcta muestra una carga útil JSON con información sobre el motor recién creado. La `id` clave representa el identificador de motor único y se requiere en los tutorial siguientes para crear una MLInstance. Asegúrese de guardar el identificador del motor antes de continuar con los siguientes pasos.
 
 ## Pasos siguientes {#next-steps}
 
-Ha creado un motor mediante la API y se ha obtenido un identificador de motor único como parte del cuerpo de respuesta. Puede usar este identificador de motor en el siguiente tutorial mientras aprende a [crear, entrenar y evaluar un modelo mediante la API](./train-evaluate-model-api.md).
+Ha creado un motor utilizando la API y se ha obtenido un identificador de motor único como parte del cuerpo de la respuesta. Puede usar este identificador de motor en el siguiente tutorial mientras aprende a [crear, entrenar y evaluar un modelo mediante la API](./train-evaluate-model-api.md).

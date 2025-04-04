@@ -3,16 +3,16 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;interfaz d
 title: Personalización de los detalles del perfil en la IU de
 description: Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos del perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
 
 # Personalización de detalles de [!DNL Real-Time Customer Profile] {#profile-detail-customization}
 
-En la interfaz de usuario de Adobe Experience Platform, puede ver datos de [!DNL Real-Time Customer Profile] e interactuar con ellos en forma de perfiles de clientes. La información de perfil mostrada en la interfaz de usuario de se ha combinado a partir de varios fragmentos de perfil para formar una sola vista de cada cliente individual. Esto incluye detalles como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados que se muestran en los perfiles también se pueden cambiar en el nivel organizativo para mostrar los atributos preferidos de [!DNL Profile]. Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos de [!DNL Profile] en la interfaz de usuario de Platform.
+En la interfaz de usuario de Adobe Experience Platform, puede ver datos de [!DNL Real-Time Customer Profile] e interactuar con ellos en forma de perfiles de clientes. La información de perfil mostrada en la interfaz de usuario de se ha combinado a partir de varios fragmentos de perfil para formar una sola vista de cada cliente individual. Esto incluye detalles como atributos básicos, identidades vinculadas y preferencias de canal. Los campos predeterminados que se muestran en los perfiles también se pueden cambiar en el nivel organizativo para mostrar los atributos preferidos de [!DNL Profile]. Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos de [!DNL Profile] en la interfaz de usuario de Experience Platform.
 
 Para obtener una guía completa de la interfaz de usuario de perfiles, visite la [guía de la interfaz de usuario del perfil](user-guide.md).
 

@@ -3,9 +3,9 @@ title: Perfiles de clientes potenciales
 description: Aprenda a crear y utilizar perfiles de clientes potenciales para recopilar información sobre clientes desconocidos mediante información de terceros.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '401'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Aparecerá el cuadro de diálogo [!UICONTROL Ver JSON]. Los atributos del perfil
 
 ## Casos de uso sugeridos {#use-cases}
 
-Para obtener información sobre cómo puede utilizar la funcionalidad de perfiles de clientes potenciales en Experience Platform en combinación con otras funcionalidades de Platform, lea la siguiente documentación de caso de uso:
+Para obtener información sobre cómo puede utilizar la funcionalidad de perfiles de clientes potenciales en Experience Platform en combinación con otras funcionalidades de Experience Platform, lea la siguiente documentación de caso de uso:
 
 - [Capte y adquiera nuevos clientes a través de la funcionalidad de prospección](../../rtcdp/partner-data/prospecting.md)
 

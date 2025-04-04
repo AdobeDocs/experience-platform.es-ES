@@ -1,11 +1,11 @@
 ---
 keywords: etiquetas de dirigible;destino de dirigible
 title: Conexión de etiquetas de dirigible
-description: Transfiera sin problemas los datos de audiencias de Adobe al dirigible como etiquetas de audiencia para segmentar dentro del dirigible.
+description: Pase sin problemas los datos de audiencia de Adobe al dirigible como etiquetas de audiencia para segmentar dentro del dirigible.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '972'
 ht-degree: 2%
 
 ---
@@ -42,8 +42,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -54,13 +54,13 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores utilizados en el destino de Etiquetas de dirigibles. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Grupos de etiquetas
 
-El concepto de audiencias en Adobe Experience Platform es similar a [Etiquetas](https://docs.airship.com/guides/audience/tags/) en Airship, con ligeras diferencias en la implementación. Esta integración asigna el estado de la [pertenencia de un usuario a un segmento de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) a la presencia o no presencia de una etiqueta [!DNL Airship]. Por ejemplo, en una audiencia de Platform donde `xdm:status` cambia a `realized`, la etiqueta se agrega al canal [!DNL Airship] o al usuario con nombre al que se asigna este perfil. Si `xdm:status` cambia a `exited`, se quita la etiqueta.
+El concepto de audiencias en Adobe Experience Platform es similar a [Etiquetas](https://docs.airship.com/guides/audience/tags/) en Airship, con ligeras diferencias en la implementación. Esta integración asigna el estado de la [pertenencia de un usuario a un segmento de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) a la presencia o no presencia de una etiqueta [!DNL Airship]. Por ejemplo, en una audiencia de Experience Platform donde `xdm:status` cambia a `realized`, la etiqueta se agrega al canal [!DNL Airship] o al usuario con nombre al que se asigna este perfil. Si `xdm:status` cambia a `exited`, se quita la etiqueta.
 
 Para habilitar esta integración, cree un *grupo de etiquetas* en [!DNL Airship] denominado `adobe-segments`.
 
@@ -76,7 +76,7 @@ Vaya a **[!UICONTROL Configuración]**&quot; **[!UICONTROL API e integraciones]*
 
 Haga clic en **[!UICONTROL Crear token]**.
 
-Proporcione un nombre descriptivo para el token, por ejemplo, &quot;Adobe Tags Destination&quot; y seleccione &quot;Todos los accesos&quot; para la función.
+Proporcione un nombre descriptivo para el token, por ejemplo, &quot;Destino de etiquetas de Adobe&quot;, y seleccione &quot;Todo el acceso&quot; para el rol.
 
 Haga clic en **[!UICONTROL Crear token]** y guarde los detalles como confidenciales.
 
@@ -92,7 +92,7 @@ Los minoristas o las plataformas de entretenimiento pueden crear perfiles de usu
 
 Almacene en déclencheur mensajes uno a uno en tiempo real cuando los usuarios entren o salgan de audiencias específicas dentro de Adobe Experience Platform.
 
-Por ejemplo, un minorista configura una audiencia específica de marca de jeans en Platform. Ese minorista ahora puede almacenar en déclencheur un mensaje móvil en cuanto alguien establece su preferencia de pantalones vaqueros para una marca específica.
+Por ejemplo, un retailer configura una audiencia específica de marca de jeans en Experience Platform. Que retailer ahora puede almacenar en déclencheur un mensaje móvil en cuanto alguien establece su preferencia de vaqueros para una marca específica.
 
 ## Conexión al destino {#connect}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Espaciado de nombres en el modelo de datos de experiencia (XDM)
 description: Descubra cómo el espacio de nombres en el Modelo de datos de experiencia (XDM) le permite ampliar los esquemas y evitar conflictos de campos a medida que se reúnen distintos componentes de esquema.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Todos los campos de los esquemas XDM (Experience Data Model) tienen un área de nombres asociada. Estas áreas de nombres le permiten ampliar los esquemas y evitar conflictos de campos a medida que se reúnen distintos componentes de esquema. Este documento proporciona información general sobre los espacios de nombres en XDM y cómo se representan en la [API de Registro de esquemas](../api/overview.md).
 
-El espacio de nombres permite definir un campo en un área de nombres para que signifique algo diferente que el mismo campo en una área de nombres diferente. En la práctica, el área de nombres de un campo indica quién creó el campo (como un XDM estándar (Adobe), un proveedor o su organización).
+El espacio de nombres permite definir un campo en un área de nombres para que signifique algo diferente que el mismo campo en una área de nombres diferente. En la práctica, el área de nombres de un campo indica quién creó el campo (como XDM estándar (Adobe), un proveedor o su organización).
 
 Por ejemplo, considere un esquema XDM que use el grupo de campos [[!UICONTROL Datos personales de contacto]](../field-groups/profile/demographic-details.md), que tiene un campo `mobilePhone` estándar que existe en el área de nombres `xdm`. En el mismo esquema, también puede crear un campo `mobilePhone` independiente en un área de nombres diferente (su [ID de inquilino](../api/getting-started.md#know-your-tenant_id)). Ambos campos pueden coexistir juntos mientras tienen diferentes significados o restricciones subyacentes.
 
@@ -29,7 +29,7 @@ Las secciones siguientes muestran cómo se asignan los espacios de nombres en la
 
 ### XDM estándar {#standard}
 
-La sintaxis XDM estándar proporciona una perspectiva de cómo se representan los espacios de nombres en los esquemas (incluido [cómo se traducen en Adobe Experience Platform](#compatibility)).
+La sintaxis XDM estándar proporciona insight sobre cómo se representan los espacios de nombres en los esquemas (incluido [cómo se traducen en Adobe Experience Platform](#compatibility)).
 
 El XDM estándar utiliza la sintaxis [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) para asignar áreas de nombres a los campos. Este espacio de nombres se presenta en forma de URI (como `https://ns.adobe.com/xdm` para el espacio de nombres `xdm`) o como prefijo abreviado que se configura en el atributo `@context` de un esquema.
 
@@ -89,7 +89,7 @@ El siguiente es un esquema de ejemplo para un producto con sintaxis XDM estánda
 
 ### Modo de compatibilidad {#compatibility}
 
-En Adobe Experience Platform, los esquemas XDM se representan con la sintaxis [Modo de compatibilidad](../api/appendix.md#compatibility), que no utiliza la sintaxis JSON-LD para representar áreas de nombres. En su lugar, Platform convierte el área de nombres en un campo principal (que comienza con un guion bajo) y anida los campos en él.
+En Adobe Experience Platform, los esquemas XDM se representan con la sintaxis [Modo de compatibilidad](../api/appendix.md#compatibility), que no utiliza la sintaxis JSON-LD para representar áreas de nombres. En su lugar, Experience Platform convierte el área de nombres en un campo principal (que comienza con un guion bajo) y anida los campos en él.
 
 Por ejemplo, el XDM estándar `repo:createdDate` se convierte a `_repo.createdDate` y aparecería en la siguiente estructura en el modo de compatibilidad:
 

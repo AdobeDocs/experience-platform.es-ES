@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Marketo Engage;marketo engage;Marketo;asignación
 solution: Experience Platform
-title: Asignación de campos para el Source de Marketo Engage
+title: Asignación de campos para Marketo Engage Source
 description: Las siguientes tablas contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -21,13 +21,13 @@ Las tablas siguientes contienen las asignaciones entre los campos de los nueve c
 
 ## Actividades {#activities}
 
-El origen [!DNL Marketo] ahora admite actividades estándar adicionales. Para usar actividades estándar, debe actualizar el esquema con la [utilidad de generación automática de esquemas](../marketo/marketo-namespaces.md), porque si crea un nuevo flujo de datos de `activities` sin actualizar el esquema, las plantillas de asignación fallarán, ya que los nuevos campos de destino no estarán presentes en el esquema. Si decide no actualizar el esquema, aún puede crear un nuevo flujo de datos y descartar cualquier error. Sin embargo, los campos nuevos o actualizados no se incorporarán en Platform.
+El origen [!DNL Marketo] ahora admite actividades estándar adicionales. Para usar actividades estándar, debe actualizar el esquema con la [utilidad de generación automática de esquemas](../marketo/marketo-namespaces.md), porque si crea un nuevo flujo de datos de `activities` sin actualizar el esquema, las plantillas de asignación fallarán, ya que los nuevos campos de destino no estarán presentes en el esquema. Si decide no actualizar el esquema, aún puede crear un nuevo flujo de datos y descartar cualquier error. Sin embargo, los campos nuevos o actualizados no se incorporarán en Experience Platform.
 
 Lea la documentación sobre [clase de evento de experiencia XDM](../../../../xdm/classes/experienceevent.md) para obtener más información sobre la clase XDM y los grupos de campos XDM.
 
 >[!NOTE]
 >
->El campo de origen `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` es un campo calculado que debe agregarse usando la opción **[!UICONTROL Agregar campo calculado]** en la interfaz de usuario del Experience Platform. Lea el tutorial sobre [agregar campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
+>El campo de origen `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` es un campo calculado que debe agregarse usando la opción **[!UICONTROL Agregar campo calculado]** en la interfaz de usuario de Experience Platform. Lea el tutorial sobre [agregar campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
 
 | Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -415,4 +415,4 @@ Lea la [descripción general del perfil individual de XDM](../../../../xdm/class
 
 ## Pasos siguientes
 
-Al leer este documento, ha obtenido información sobre la relación de asignación entre sus conjuntos de datos [!DNL Marketo] y sus campos XDM correspondientes. Vea el tutorial sobre [creación de una [!DNL Marketo] conexión de origen](../../../tutorials/ui/create/adobe-applications/marketo.md) para completar su flujo de datos de [!DNL Marketo].
+Al leer este documento, ha obtenido insight en la relación de asignación entre sus [!DNL Marketo] conjuntos de datos y sus campos XDM correspondientes. Vea el tutorial sobre [creación de una [!DNL Marketo] conexión de origen](../../../tutorials/ui/create/adobe-applications/marketo.md) para completar su flujo de datos de [!DNL Marketo].

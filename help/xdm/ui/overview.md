@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de IU de esquemas
 description: Esta descripción general cubre las principales funcionalidades del espacio de trabajo Esquemas en Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '310'
 ht-degree: 9%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 9%
 
 El área de trabajo [!UICONTROL Esquemas] de la interfaz de usuario de Adobe Experience Platform le permite administrar recursos del Modelo de datos de experiencia (XDM), incluidos esquemas, clases, grupos de campos de esquema y tipos de datos. Puede ver y explorar los recursos principales proporcionados por Adobe y crear esquemas y recursos personalizados para su organización.
 
-Para tener acceso al área de trabajo en la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el carril izquierdo.
+Para acceder al espacio de trabajo en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Esquemas]** en el carril izquierdo.
 
-![Espacio de trabajo de esquemas con esquemas resaltados en la navegación izquierda de la interfaz de usuario de Platform.](../images/ui/overview/schemas-tab.png)
+![Espacio de trabajo de esquemas con esquemas resaltados en la navegación izquierda de la interfaz de usuario de Experience Platform.](../images/ui/overview/schemas-tab.png)
 
 ## Introducción
 
@@ -40,4 +40,4 @@ Las clases, los grupos de campos y los tipos de datos contribuyen todos a los ca
 
 ## Pasos siguientes
 
-Este documento proporciona una introducción al área de trabajo [!UICONTROL Schemas] en la interfaz de usuario de Platform. Consulte la documentación vinculada a través de esta descripción general para obtener más información sobre cómo administrar los esquemas y otros recursos XDM.
+Este documento proporciona una introducción al área de trabajo [!UICONTROL Schemas] en la interfaz de usuario de Experience Platform. Consulte la documentación vinculada a través de esta descripción general para obtener más información sobre cómo administrar los esquemas y otros recursos XDM.

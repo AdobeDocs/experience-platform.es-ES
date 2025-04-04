@@ -2,10 +2,10 @@
 keywords: Experience Platform;inicio;temas populares;preparación de datos;guía de api;esquemas;
 solution: Experience Platform
 title: Extremo de API de esquemas
-description: Puede utilizar el extremo /schemas en la API de Adobe Experience Platform para recuperar, crear y actualizar esquemas mediante programación para utilizarlos con Mapper en Platform.
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: Puede utilizar el extremo /schemas en la API de Adobe Experience Platform para recuperar, crear y actualizar esquemas mediante programación para utilizarlos con Mapper en Experience Platform.
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '619'
 ht-degree: 4%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 4%
 
 # Extremo de esquemas
 
-Los esquemas se pueden utilizar con Mapper para asegurarse de que los datos que ha introducido en Adobe Experience Platform coinciden con los que desea introducir. Puede usar el extremo `/schemas` para crear, enumerar y obtener esquemas personalizados mediante programación para usarlos con Mapper en Platform.
+Los esquemas se pueden utilizar con Mapper para asegurarse de que los datos que ha introducido en Adobe Experience Platform coinciden con los que desea introducir. Puede usar el extremo `/schemas` para crear, enumerar y obtener esquemas personalizados mediante programación para usarlos con Mapper en Experience Platform.
 
 >[!NOTE]
 >
->Los esquemas creados con este extremo se utilizan exclusivamente con conjuntos de asignaciones y asignadores. Para crear esquemas accesibles por otros servicios de Platform, lea la [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md).
+>Los esquemas creados con este extremo se utilizan exclusivamente con conjuntos de asignaciones y asignadores. Para crear esquemas accesibles desde otros servicios de Experience Platform, lea la [Guía para desarrolladores de Schema Registry](../../xdm/api/schemas.md).
 
 ## Obtener todos los esquemas
 
-Puede recuperar una lista de todos los esquemas de asignador disponibles para su organización realizando una solicitud de GET al extremo `/schemas`.
+Puede recuperar una lista de todos los esquemas de asignador disponibles para su organización realizando una petición GET al extremo `/schemas`.
 
 **Formato de API**
 
@@ -132,7 +132,7 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de los esquemas
 
 ## Creación de un esquema
 
-Puede crear un esquema para validar realizando una solicitud de POST al extremo `/schemas`. Existen tres formas de crear un esquema: enviar un [esquema JSON](https://json-schema.org/), usar datos de ejemplo o hacer referencia a un esquema XDM existente.
+Puede crear un esquema para validar realizando una petición POST al extremo `/schemas`. Existen tres formas de crear un esquema: enviar un [esquema JSON](https://json-schema.org/), usar datos de ejemplo o hacer referencia a un esquema XDM existente.
 
 ```http
 POST /schemas
@@ -334,7 +334,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el esq
 
 ## Recuperación de un esquema específico
 
-Puede recuperar información sobre un esquema específico realizando una solicitud de GET al extremo `/schemas` y proporcionando el ID del esquema que desea recuperar en la ruta de solicitud.
+Puede recuperar información sobre un esquema específico realizando una petición GET al extremo `/schemas` y proporcionando el ID del esquema que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 

@@ -3,9 +3,9 @@ title: Punto final de API de caducidad del conjunto de datos
 description: El extremo /ttl de la API de higiene de datos le permite programar la caducidad de los conjuntos de datos en Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1966'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ La caducidad de un conjunto de datos es solo una operación de eliminación con 
 
 >[!NOTE]
 >
->Aunque la caducidad se especifica como un instante de tiempo específico, puede haber hasta 24 horas de retraso después de la caducidad antes de que se inicie la eliminación real. Una vez iniciada la eliminación, pueden pasar hasta siete días antes de que se hayan eliminado todos los seguimientos del conjunto de datos de los sistemas de Platform.
+>Aunque la caducidad se especifica como un instante de tiempo específico, puede haber hasta 24 horas de retraso después de la caducidad antes de que se inicie la eliminación real. Una vez iniciada la eliminación, pueden pasar hasta siete días antes de que se hayan eliminado todos los seguimientos del conjunto de datos de los sistemas Experience Platform.
 
 En cualquier momento antes de que se inicie realmente la eliminación del conjunto de datos, puede cancelar la caducidad o modificar su hora de déclencheur. Después de cancelar la caducidad de un conjunto de datos, puede volver a abrirlo estableciendo una nueva caducidad.
 
@@ -28,7 +28,7 @@ Una vez iniciada la eliminación del conjunto de datos, su trabajo de caducidad 
 >
 >Si un conjunto de datos está configurado para caducar, debe cambiar manualmente los flujos de datos que puedan estar introduciendo datos en ese conjunto de datos para que los flujos de trabajo descendentes no se vean afectados negativamente.
 
-La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el extremo de caducidad del conjunto de datos y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](./workorder.md). También puede administrar [caducidades de conjuntos de datos](../ui/dataset-expiration.md) y [eliminaciones de registros](../ui/record-delete.md) a través de la interfaz de usuario de Platform. Consulte la documentación vinculada para obtener más información.
+La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el extremo de caducidad del conjunto de datos y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](./workorder.md). También puede administrar [caducidades de conjuntos de datos](../ui/dataset-expiration.md) y [eliminaciones de registros](../ui/record-delete.md) a través de la interfaz de usuario de Experience Platform. Consulte la documentación vinculada para obtener más información.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ El extremo utilizado en esta guía forma parte de la API de higiene de datos. An
 
 ## Enumerar caducidades del conjunto de datos {#list}
 
-Puede enumerar todas las caducidades de los conjuntos de datos de su organización realizando una solicitud de GET. Los parámetros de consulta se pueden utilizar para filtrar la respuesta y obtener los resultados adecuados.
+Puede enumerar todas las caducidades de los conjuntos de datos de su organización realizando una petición GET. Los parámetros de consulta se pueden utilizar para filtrar la respuesta y obtener los resultados adecuados.
 
 **Formato de API**
 
@@ -107,7 +107,7 @@ Una respuesta correcta enumera las caducidades resultantes del conjunto de datos
 
 ## Búsqueda de una caducidad del conjunto de datos {#lookup}
 
-Para buscar la caducidad de un conjunto de datos, realice una solicitud de GET con `{DATASET_ID}` o `{DATASET_EXPIRATION_ID}`.
+Para buscar la caducidad de un conjunto de datos, realice una petición GET con `{DATASET_ID}` o `{DATASET_EXPIRATION_ID}`.
 
 >[!IMPORTANT]
 >
@@ -202,11 +202,11 @@ El siguiente JSON representa una respuesta truncada para los detalles de un conj
 
 Para garantizar que los datos se eliminen del sistema después de un periodo especificado, programe una caducidad para un conjunto de datos específico proporcionando el ID del conjunto de datos y la fecha y hora de caducidad en formato ISO 8601.
 
-Para crear una caducidad del conjunto de datos, realice una solicitud de POST como se muestra a continuación y proporcione los valores mencionados a continuación dentro de la carga útil.
+Para crear una caducidad del conjunto de datos, realice una petición POST como se muestra a continuación y proporcione los valores mencionados a continuación dentro de la carga útil.
 
 >[!NOTE]
 >
->Si recibe un error 404, asegúrese de que la solicitud no tenga barras diagonales adicionales. Una barra diagonal puede provocar un error en la solicitud del POST.
+>Si recibe un error 404, asegúrese de que la solicitud no tenga barras diagonales adicionales. Una barra diagonal puede provocar el fallo de una petición POST.
 
 **Formato de API**
 
@@ -276,7 +276,7 @@ Se produce un estado HTTP 400 (Solicitud incorrecta) si ya existe una caducidad 
 
 ## Actualizar la caducidad de un conjunto de datos {#update}
 
-Para actualizar una fecha de caducidad para un conjunto de datos, use una solicitud del PUT y `ttlId`. Puede actualizar la información de `displayName`, `description` o `expiry`.
+Para actualizar una fecha de caducidad para un conjunto de datos, use una petición PUT y `ttlId`. Puede actualizar la información de `displayName`, `description` o `expiry`.
 
 >[!NOTE]
 >
@@ -353,7 +353,7 @@ Una respuesta incorrecta devolverá un estado HTTP 404 (no encontrado) si no exi
 
 ## Cancelar una caducidad del conjunto de datos {#delete}
 
-Puede cancelar la caducidad de un conjunto de datos realizando una solicitud al DELETE.
+Puede cancelar la caducidad de un conjunto de datos realizando una petición DELETE.
 
 >[!NOTE]
 >

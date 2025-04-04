@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para validar la salida en el destino de flujo continuo, en función de la plantilla de transformación de mensajes.
 title: Validar estructura de perfil exportada
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Antes de continuar, revisa la [guía de introducción](../../getting-started.md)
 
 ## Procesar perfiles exportados basados en la plantilla de transformación de mensajes {#render-exported-data}
 
-Puede procesar perfiles exportados realizando una solicitud de POST al extremo `authoring/testing/template/render` y proporcionando el ID de destino de la configuración de destino y la plantilla que creó mediante el [extremo de API de plantilla de ejemplo](sample-template-api.md).
+Puede procesar perfiles exportados realizando una petición POST al extremo `authoring/testing/template/render` y proporcionando el ID de destino de la configuración de destino y la plantilla que creó mediante el [extremo de API de plantilla de ejemplo](sample-template-api.md).
 
 Puede empezar por utilizar una plantilla sencilla que exporte los perfiles sin procesar sin aplicar ninguna transformación y, a continuación, pasar a una plantilla más compleja que aplique transformaciones a los perfiles. La sintaxis de la plantilla simple es: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
@@ -1066,8 +1066,8 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo utilizar la plantilla de transformación de mensajes para generar perfiles exportados que coincidan con el formato de datos esperado del destino. Lee [cómo usar el Destination SDK para configurar tu destino](../../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.
+Después de leer este documento, ahora sabe cómo utilizar la plantilla de transformación de mensajes para generar perfiles exportados que coincidan con el formato de datos esperado del destino. Lee [cómo usar Destination SDK para configurar tu destino](../../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

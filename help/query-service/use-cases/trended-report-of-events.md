@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;servi
 title: Creación de un informe de tendencias de eventos
 description: Obtenga información sobre cómo escribir consultas que utilizan eventos de experiencia para crear un informe de tendencias de eventos en un intervalo de fechas especificado, agrupados por fecha.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Este documento proporciona un ejemplo del SQL necesario para crear un informe de tendencias de eventos por día en un intervalo de fechas específico. Con Adobe Experience Platform Query Service, puede escribir consultas que utilicen [!DNL Experience Events] para capturar una variedad de casos de uso. Los eventos de experiencia se representan mediante la clase ExperienceEvent del Modelo de datos de experiencia (XDM), que captura una instantánea del sistema inmutable y no agregada cuando un usuario interactúa con un sitio web o servicio. Los Eventos de experiencia incluso se pueden utilizar para el análisis de dominio de tiempo. Consulte la sección [pasos siguientes](#next-steps) para ver más casos de uso que implican que [!DNL Experience Events] genere informes de visitantes.
 
-Los informes le permiten acceder a los datos de su plataforma para beneficiarse de las perspectivas comerciales estratégicas de su organización. Con estos informes, puede examinar los datos de Platform de varias formas, mostrar métricas clave en formatos fáciles de entender y compartir las perspectivas resultantes.
+Los informes le permiten acceder a los datos de Experience Platform para sacar el máximo partido a las perspectivas comerciales estratégicas de su organización. Con estos informes, puede examinar los datos de Experience Platform de varias formas, mostrar métricas clave en formatos fáciles de entender y compartir las perspectivas resultantes.
 
 Encontrará más información sobre XDM y [!DNL Experience Events] en la [[!DNL XDM System] descripción general](../../xdm/home.md). Al combinar el servicio de consultas con [!DNL Experience Events], puede realizar un seguimiento efectivo de las tendencias de comportamiento entre los usuarios. El siguiente documento proporciona ejemplos de consultas que involucran a [!DNL Experience Events].
 

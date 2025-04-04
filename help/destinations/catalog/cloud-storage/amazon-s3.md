@@ -2,10 +2,10 @@
 title: Conexión de Amazon S3
 description: Cree una conexión saliente activa a su almacenamiento de Amazon Web Service (AWS) S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios contenedores de S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 17%
+source-wordcount: '1503'
+ht-degree: 16%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 17%
 
 ## Conectar con su almacenamiento de [!DNL Amazon S3] mediante API o IU {#connect-api-or-ui}
 
-* Para conectarse a su ubicación de almacenamiento [!DNL Amazon S3] mediante la interfaz de usuario de Platform, lea las secciones [Conectarse al destino](#connect) y [Activar audiencias en este destino](#activate) a continuación.
+* Para conectarse a su ubicación de almacenamiento [!DNL Amazon S3] mediante la interfaz de usuario de Experience Platform, lea las secciones [Conectarse al destino](#connect) y [Activar audiencias en este destino](#activate) a continuación.
 * Para conectarse mediante programación a la ubicación de almacenamiento [!DNL Amazon S3], lea la guía sobre cómo [activar audiencias en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiencias compatibles {#supported-audiences}
@@ -58,14 +58,14 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
 
-* Cómo [exportar conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
+* Cómo [exportar conjuntos de datos mediante la interfaz de usuario de Experience Platform](/help/destinations/ui/export-datasets.md).
 * Cómo [exportar conjuntos de datos mediante programación usando la API de Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Formato de archivo de los datos exportados {#file-format}
 
-Al exportar *datos de audiencia*, Platform crea un archivo de `.csv`, `parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [formatos de archivo compatibles con la exportación](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) en el tutorial de activación de audiencia.
+Al exportar *datos de audiencia*, Experience Platform crea un archivo de `.csv`, `parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [formatos de archivo compatibles con la exportación](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) en el tutorial de activación de audiencia.
 
-Al exportar *conjuntos de datos*, Platform crea un archivo de `.parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [verificar la exportación correcta del conjunto de datos](../../ui/export-datasets.md#verify) en el tutorial exportar conjuntos de datos.
+Al exportar *conjuntos de datos*, Experience Platform crea un archivo de `.parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [verificar la exportación correcta del conjunto de datos](../../ui/export-datasets.md#verify) en el tutorial exportar conjuntos de datos.
 
 ## Conexión al destino {#connect}
 
@@ -93,7 +93,7 @@ Utilice este método de autenticación cuando desee introducir la clave de acces
 
 ![Imagen de los campos requeridos al seleccionar la clave de acceso y la autenticación de clave secreta.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
-* **[!DNL Amazon S3]clave de acceso** y **[!DNL Amazon S3]clave secreta**: en [!DNL Amazon S3], genere un par de `access key - secret access key` para conceder acceso de plataforma a su cuenta de [!DNL Amazon S3]. Obtenga más información en la [documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]clave de acceso** y **[!DNL Amazon S3]clave secreta**: en [!DNL Amazon S3], genere un par de `access key - secret access key` para conceder acceso a Experience Platform a su cuenta de [!DNL Amazon S3]. Obtenga más información en la [documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Clave de cifrado]**: de forma opcional, puede adjuntar la clave pública con formato RSA para agregar el cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
 
   ![Imagen que muestra un ejemplo de una clave PGP correctamente formateada en la interfaz de usuario.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -154,7 +154,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 ### Permisos necesarios de [!DNL Amazon S3] {#required-s3-permission}
 
-Para conectar y exportar datos correctamente a la ubicación de almacenamiento [!DNL Amazon S3], cree un usuario de Identity and Access Management (IAM) para [!DNL Platform] en [!DNL Amazon S3] y asigne permisos para las siguientes acciones:
+Para conectar y exportar datos correctamente a la ubicación de almacenamiento [!DNL Amazon S3], cree un usuario de Identity and Access Management (IAM) para [!DNL Experience Platform] en [!DNL Amazon S3] y asigne permisos para las siguientes acciones:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -201,7 +201,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 

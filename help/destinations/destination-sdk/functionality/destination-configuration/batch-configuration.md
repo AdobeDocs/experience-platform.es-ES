@@ -2,38 +2,38 @@
 description: Obtenga información sobre cómo configurar los ajustes de exportación de archivos para destinos creados con Destination SDK.
 title: Configuración por lotes
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1058'
 ht-degree: 2%
 
 ---
 
 # Configuración por lotes {#batch-configuration}
 
-Utilice las opciones de configuración por lotes en Destination SDK para permitir a los usuarios personalizar los nombres de archivo exportados y configurar la programación de exportación según sus preferencias.
+Utilice las opciones de configuración por lotes de Destination SDK para permitir a los usuarios personalizar los nombres de archivo exportados y configurar la programación de exportación según sus preferencias.
 
-Al crear destinos basados en archivos mediante Destination SDK, puede configurar los nombres de archivo predeterminados y las programaciones de exportación, o puede dar a los usuarios la opción de configurar estos ajustes desde la interfaz de usuario de Platform. Por ejemplo, puede configurar comportamientos como:
+Al crear destinos basados en archivos a través de Destination SDK, puede configurar programaciones predeterminadas de nomenclatura y exportación de archivos, o puede dar a los usuarios la opción de configurar estas opciones desde la interfaz de usuario de Experience Platform. Por ejemplo, puede configurar comportamientos como:
 
 * Incluir información específica en el nombre del archivo, como ID de audiencia, ID de destino o información personalizada.
-* Permite a los usuarios personalizar el nombre de archivo desde la interfaz de usuario de Platform.
+* Permite a los usuarios personalizar el nombre de archivo desde la interfaz de usuario de Experience Platform.
 * Configure las exportaciones de archivos para que se produzcan a intervalos de tiempo establecidos.
-* Defina las opciones de nomenclatura de archivos y de personalización de programación de exportación que los usuarios pueden ver en la IU de Platform.
+* Defina las opciones de nomenclatura de archivos y de personalización de programación de exportación que los usuarios pueden ver en la interfaz de usuario de Experience Platform.
 
 Los ajustes de configuración por lotes forman parte de la configuración de destino para destinos basados en archivos.
 
-Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la documentación de [opciones de configuración](../configuration-options.md) o consulte la guía sobre cómo [usar Destination SDK para configurar un destino basado en archivos](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la documentación de [opciones de configuración](../configuration-options.md) o vea la guía sobre cómo [usar Destination SDK para configurar un destino basado en archivos](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Puede configurar la nomenclatura de archivos y exportar la configuración de programación a través del extremo `/authoring/destinations`. Consulte las siguientes páginas de referencia de la API para ver ejemplos detallados de llamadas de la API donde puede configurar los componentes que se muestran en esta página.
 
 * [Crear una configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Actualizar una configuración de destino](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Este artículo describe todas las opciones de configuración por lotes admitidas que puede utilizar para su destino y muestra lo que los clientes verán en la interfaz de usuario de Platform.
+Este artículo describe todas las opciones de configuración por lotes admitidas que puede utilizar para su destino y muestra lo que los clientes verán en la interfaz de usuario de Experience Platform.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -95,7 +95,7 @@ Los valores que configuró aquí aparecen en el paso [Programar exportación de 
 | `allowedScheduleFrequency` | Lista | Define la frecuencia de exportación de archivos disponible para los clientes. Valores compatibles:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Enumeración | Define la frecuencia predeterminada de exportación de archivos. Valores compatibles:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> El valor predeterminado es `DAILY`. |
 | `defaultStartTime` | Cadena | Define la hora de inicio predeterminada para la exportación de archivos. Utiliza el formato de archivo de 24 horas. El valor predeterminado es 00:00. |
-| `filenameConfig.allowedFilenameAppendOptions` | Cadena | *Requerido*. Lista de macros de nombre de archivo disponibles para que los usuarios elijan. Esto determina qué elementos se anexan a los nombres de archivo exportados (ID de audiencia, nombre de organización, fecha y hora de exportación, etc.). Al establecer `defaultFilename`, asegúrese de evitar la duplicación de macros. <br><br>Valores compatibles: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Independientemente del orden en el que defina las macros, la interfaz de usuario de Experience Platform siempre las mostrará en el orden presentado aquí. <br><br> Si `defaultFilename` está vacío, la lista `allowedFilenameAppendOptions` debe contener al menos una macro. |
+| `filenameConfig.allowedFilenameAppendOptions` | Cadena | *Requerido*. Lista de macros de nombre de archivo disponibles para que los usuarios elijan. Esto determina qué elementos se anexan a los nombres de archivo exportados (ID de audiencia, nombre de organización, fecha y hora de exportación, etc.). Al establecer `defaultFilename`, asegúrese de evitar la duplicación de macros. <br><br>Valores compatibles: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Independientemente del orden en que defina las macros, la interfaz de usuario de Experience Platform siempre las mostrará en el orden presentado aquí. <br><br> Si `defaultFilename` está vacío, la lista `allowedFilenameAppendOptions` debe contener al menos una macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | Cadena | *Requerido*. Macros de nombre de archivo predeterminado preseleccionadas que los usuarios pueden desmarcar.<br><br> Las macros de esta lista son un subconjunto de las definidas en `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Cadena | *Opcional*. Define las macros de nombre de archivo predeterminadas para los archivos exportados. Los usuarios no pueden sobrescribirlos. <br><br>Cualquier macro definida por `allowedFilenameAppendOptions` se anexará después de las macros `defaultFilename`. <br><br>Si `defaultFilename` está vacío, debe definir al menos una macro en `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | Booleano | Define si las audiencias activadas deben exportarse en un solo archivo o en varios, según la audiencia [política de combinación](../../../../profile/merge-policies/overview.md). Valores compatibles: <ul><li>`true`: exporta un archivo por política de combinación.</li><li>`false`: exporta un archivo por audiencia, independientemente de la política de combinación. Este es el comportamiento predeterminado. Puede lograr el mismo resultado omitiendo este parámetro por completo.</li></ul> |
@@ -113,9 +113,9 @@ Utilice macros de configuración de nombres de archivo para definir qué nombres
 | Macro | Etiqueta de IU | Descripción | Ejemplo |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destino] | Nombre del destino en la interfaz de usuario. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL ID de segmento] | ID de audiencia único y generado por la plataforma | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Nombre del segmento] | Nombre de audiencia definido por el usuario | VIP suscriptor del servicio de asistencia |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL ID de destino] | ID único y generado por Platform de la instancia de destino | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `SEGMENT_ID` | [!UICONTROL ID de segmento] | ID único de audiencia generado por Experience Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Nombre del segmento] | Nombre de audiencia definido por el usuario | suscriptor de VIP |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL ID de destino] | ID único de la instancia de destino generado por Experience Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nombre de destino] | Nombre definido por el usuario de la instancia de destino. | Mi destino de Advertising 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Nombre de la organización] | Nombre de la organización del cliente en Adobe Experience Platform. | Nombre de mi organización |
 | `SANDBOX_NAME` | [!UICONTROL Nombre de zona protegida] | Nombre de la zona protegida utilizada por el cliente. | picar |

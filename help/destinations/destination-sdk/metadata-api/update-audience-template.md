@@ -1,10 +1,10 @@
 ---
-description: Esta página ejemplifica la llamada de API utilizada para actualizar una plantilla de audiencia a través del Adobe Experience Platform Destination SDK.
+description: Esta página ejemplifica la llamada de API utilizada para actualizar una plantilla de audiencia a través de Adobe Experience Platform Destination SDK.
 title: Actualización de una plantilla de audiencia
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
-source-git-commit: 1784dd955c959fe8cd7b6241ed79943786db4f98
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '321'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Para obtener una descripción detallada de las funcionalidades que puede configu
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
@@ -270,8 +270,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla 
 
 ## Administración de errores de API
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, sabe cuándo usar plantillas de audiencia y cómo actualizar una plantilla de audiencia mediante el punto de conexión de API `/authoring/audience-templates`. Lee [cómo usar el Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.
+Después de leer este documento, sabe cuándo usar plantillas de audiencia y cómo actualizar una plantilla de audiencia mediante el punto de conexión de API `/authoring/audience-templates`. Lee [cómo usar Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

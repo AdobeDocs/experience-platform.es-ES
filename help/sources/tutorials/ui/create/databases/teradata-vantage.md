@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Teradata Vantage
-title: Creación de una conexión de Teradata Vantage Source en la interfaz de usuario
+title: Creación de una conexión del Teradata Vantage Source en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Teradata Vantage mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '418'
 ht-degree: 2%
 
 ---
@@ -16,14 +16,14 @@ Este tutorial proporciona los pasos para crear un conector de origen [!DNL Terad
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../../home.md): el Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
-* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Recopilar credenciales necesarias
 
-Para acceder a su cuenta de [!DNL Teradata Vantage] en Platform, debe proporcionar el siguiente valor de autenticación:
+Para acceder a su cuenta de [!DNL Teradata Vantage] en Experience Platform, debe proporcionar el siguiente valor de autenticación:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -33,15 +33,15 @@ Para obtener más información sobre cómo empezar, consulte este [[!DNL Teradat
 
 ## Conectar su cuenta de [!DNL Teradata Vantage]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En la categoría [!UICONTROL Bases de datos], seleccione **[!UICONTROL Ventaja de Teradata]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
+En la categoría [!UICONTROL Bases de datos], seleccione **[!UICONTROL Teradata Vantage]** y luego seleccione **[!UICONTROL Configurar]**.
 
 >[!TIP]
 >
 >Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
 
-![El catálogo de orígenes con el origen Vantage de Teradata seleccionado.](../../../../images/tutorials/create/teradata/catalog.png)
+![El catálogo de orígenes con el origen Teradata Vantage seleccionado.](../../../../images/tutorials/create/teradata/catalog.png)
 
 Aparecerá la página **[!UICONTROL Conectar con Teradata Vantage]**. En esta página, puede usar credenciales nuevas o existentes.
 
@@ -59,4 +59,4 @@ Si está usando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. E
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de Teradata Vantage. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en la plataforma](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de Teradata Vantage. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/databases.md).

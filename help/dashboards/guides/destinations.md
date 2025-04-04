@@ -4,9 +4,9 @@ title: Tablero de destinos
 description: Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3243'
+source-wordcount: '3246'
 ht-degree: 19%
 
 ---
@@ -27,7 +27,7 @@ El panel Destinos muestra una instantánea de los destinos que su organización 
 
 ## Explorar el panel [!UICONTROL Destinos] {#explore}
 
-Para ir al panel de destinos en la interfaz de usuario de Platform, selecciona **[!UICONTROL Destinos]** en el carril izquierdo y, a continuación, selecciona la pestaña **[!UICONTROL Información general]** para mostrar el panel.
+Para ir al panel de destinos en la interfaz de usuario de Experience Platform, selecciona **[!UICONTROL Destinos]** en el carril izquierdo y, a continuación, selecciona la pestaña **[!UICONTROL Información general]** para mostrar el panel.
 
 La fecha y la hora de la instantánea más reciente se muestran en la parte superior de [!UICONTROL Información general] junto al menú desplegable de destino. Todos los datos del widget son precisos a partir de esa fecha y hora. La marca de tiempo de la instantánea se proporciona en formato UTC; no se encuentra en la zona horaria del usuario u organización individual.
 
@@ -35,7 +35,7 @@ La fecha y la hora de la instantánea más reciente se muestran en la parte supe
 >
 >Si su organización es nueva en Experience Platform y aún no tiene destinos activos, el panel Destinos y la pestaña [!UICONTROL Información general] no serán visibles. En su lugar, al seleccionar [!UICONTROL Destinos] en el panel de navegación izquierdo, se muestra la ficha [!UICONTROL Catálogo]. Para obtener más información sobre la ficha [!UICONTROL Catálogo], consulte la guía del área de trabajo [[!UICONTROL Destinos]](../../destinations/ui/destinations-workspace.md).
 
-![Información general sobre destinos de IU de Platform con la instantánea más reciente resaltada.](../images/destinations/snapshot-timestamp.png)
+![Información general sobre los destinos de la interfaz de usuario de Experience Platform con la instantánea más reciente resaltada.](../images/destinations/snapshot-timestamp.png)
 
 ### Modificar el panel [!UICONTROL Destinos] {#modify}
 
@@ -53,7 +53,7 @@ Desde la biblioteca de widgets, puede examinar la selección de widgets de audie
 
 ### Ver SQL {#view-sql}
 
-Puede ver el SQL que genera las perspectivas visualizadas en su panel con un conmutador en el espacio de trabajo [!UICONTROL Información general]. Puede inspirarse en el SQL de sus perspectivas existentes para crear nuevas consultas que deriven perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. Para obtener más información acerca de esta característica, consulte la [Guía de la interfaz de usuario de SQL de vista](../view-sql.md).
+Puede ver el SQL que genera las perspectivas visualizadas en su panel con un conmutador en el espacio de trabajo [!UICONTROL Información general]. Puede inspirarse en el SQL de sus perspectivas existentes para crear nuevas consultas que deriven perspectivas únicas de los datos de Experience Platform en función de sus necesidades comerciales. Para obtener más información acerca de esta característica, consulte la [Guía de la interfaz de usuario de SQL de vista](../view-sql.md).
 
 ## Widgets predeterminados {#default-widgets}
 
@@ -70,7 +70,7 @@ Se proporciona una carga de widget predeterminada para todas las instancias nuev
 
 ## Widgets estándar {#standard-widgets}
 
-Adobe proporciona varios widgets estándar que puede utilizar para visualizar diferentes métricas relacionadas con los  y evaluar la integridad de las audiencias disponibles para el análisis de datos. También puede crear widgets personalizados para compartirlos con su organización mediante la [!UICONTROL biblioteca de widgets]. Para obtener más información sobre cómo crear widgets personalizados, empieza por leer la [descripción general de la biblioteca de widgets](../customize/widget-library.md).
+Adobe proporciona varios widgets estándar que puede utilizar para visualizar diferentes métricas relacionadas con sus destinos y evaluar la integridad de las audiencias disponibles para el análisis de datos. También puede crear widgets personalizados para compartirlos con su organización mediante la [!UICONTROL biblioteca de widgets]. Para obtener más información sobre cómo crear widgets personalizados, empieza por leer la [descripción general de la biblioteca de widgets](../customize/widget-library.md).
 
 ### Requisitos previos {#prerequisites}
 
@@ -80,7 +80,7 @@ Antes de continuar con las descripciones de los widgets estándar, asegúrese de
 * **Público**: conjunto de personas, cuentas, hogares u otras entidades que comparten características y comportamientos comunes.
 * **Asignado / Asignación**: la asignación de datos es el proceso de asignación de campos de datos de origen a campos de destino relacionados en un destino.
 * **Identidad**: una identidad es un identificador que representa exclusivamente a un cliente individual, como un ID de cookie, ID de dispositivo o ID de correo electrónico.
-* **Activar**: Activar es la acción realizada por un usuario para asignar una audiencia o perfiles a un destino como Oracle Eloqua, Google o Marketing Cloud de Salesforce.
+* **Activar**: Activar es la acción realizada por un usuario para asignar una audiencia o perfiles a un destino como Oracle Eloqua, Google o Salesforce Marketing Cloud.
 
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
@@ -107,7 +107,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >title="Destinos más utilizados"
 >abstract="Este widget muestra los destinos más activos de su organización según el número de públicos asignados. Estos números son precisos en el momento de la última instantánea. Esta clasificación proporciona una perspectiva sobre los destinos que se utilizan más actualmente, al tiempo que resalta los que pueden estar infrautilizados."
 
-El widget **[!UICONTROL destinos más utilizados]** muestra los destinos principales de su organización según el número de audiencias asignadas, a partir de la última instantánea. Esta clasificación proporciona una perspectiva de los destinos que se están utilizando, pero también muestra potencialmente aquellos que pueden estar infrautilizados.
+El widget **[!UICONTROL destinos más utilizados]** muestra los destinos principales de su organización según el número de audiencias asignadas, a partir de la última instantánea. Esta clasificación proporciona a insight los destinos que se están utilizando, pero también muestra potencialmente los que pueden estar infrautilizados.
 
 Por ejemplo, si configuró un destino ayer pero no le ha asignado ninguna audiencia, podrá ver que el destino está actualmente infrautilizado.
 
@@ -253,7 +253,7 @@ Todos los tamaños de audiencia del sistema se ordenan de alto a bajo, tal como 
 
 Si el recuento de perfiles de audiencia asignados está fuera de una desviación estándar del tamaño promedio de perfil asignado en los últimos 30 días, esto indica una anomalía en el sistema y debe investigarse.
 
-Si una audiencia dentro del widget [!UICONTROL Estado de la audiencia asignada] se desvía por un amplio margen, debe consultar el gráfico de tendencias de tamaño de audiencia y localizar la audiencia anómala. La tendencia puede proporcionar más información sobre el estado de la audiencia.
+Si una audiencia dentro del widget [!UICONTROL Estado de la audiencia asignada] se desvía por un amplio margen, debe consultar el gráfico de tendencias de tamaño de audiencia y localizar la audiencia anómala. La tendencia puede proporcionar más insight sobre el estado de su audiencia.
 
 >[!NOTE]
 >

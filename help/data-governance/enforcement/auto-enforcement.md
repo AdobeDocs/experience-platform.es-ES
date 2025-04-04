@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicación automática de políticas
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar audiencias en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2126'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Las etiquetas y políticas de uso de datos están disponibles para todos los usuarios de Adobe Experience Platform. Defina políticas de uso de datos y aplique etiquetas de uso de datos para garantizar que los datos confidenciales, identificables o contractuales se gestionen con precisión. Estas medidas ayudan a aplicar las reglas de control de datos de su organización sobre cómo se pueden acceder, procesar, almacenar y compartir los datos.
 
-Para ayudar a proteger su organización de posibles riesgos y responsabilidades, Platform aplica automáticamente las políticas de uso en caso de que se produzcan violaciones al activar audiencias en los destinos.
+Para ayudar a proteger su organización de posibles riesgos y responsabilidades, Experience Platform aplica automáticamente las políticas de uso en caso de que se produzcan infracciones al activar audiencias en destinos.
 
 >[!IMPORTANT]
 >
@@ -25,12 +25,12 @@ Este documento se centra en la aplicación de la gobernanza de datos y las polí
 
 ## Requisitos previos
 
-Esta guía requiere una comprensión práctica de los servicios de Platform implicados en la aplicación automática. Consulte la siguiente documentación para obtener más información antes de continuar con esta guía:
+Esta guía requiere una comprensión práctica de los servicios de Experience Platform implicados en la aplicación automática. Consulte la siguiente documentación para obtener más información antes de continuar con esta guía:
 
-* [Administración de datos de Adobe Experience Platform](../home.md): El marco por el cual Platform aplica el cumplimiento del uso de datos mediante el uso de etiquetas y directivas.
+* [Administración de datos de Adobe Experience Platform](../home.md): El marco por el cual Experience Platform aplica el cumplimiento del uso de datos mediante el uso de etiquetas y directivas.
 * [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
-* [Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md): El motor de segmentación de [!DNL Platform] se usa para crear audiencias a partir de los perfiles de clientes en función de los comportamientos y atributos de los clientes.
-* [Destinos](../../destinations/home.md): los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación perfecta de datos de Platform para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
+* [Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md): El motor de segmentación de [!DNL Experience Platform] se usa para crear audiencias a partir de los perfiles de clientes en función de los comportamientos y atributos de los clientes.
+* [Destinos](../../destinations/home.md): los destinos son integraciones prediseñadas con aplicaciones de uso común que permiten la activación perfecta de datos de Experience Platform para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 
 ## Flujo de aplicación {#flow}
 
@@ -41,25 +41,25 @@ El diagrama siguiente ilustra cómo la aplicación de directivas está integrada
 Cuando se activa una audiencia por primera vez, [!DNL Policy Service] comprueba las directivas aplicables en función de los siguientes factores:
 
 * Las etiquetas de uso de datos aplicadas a campos y conjuntos de datos dentro de la audiencia que se va a activar.
-* La marketing finalidad del destino.
-* Los perfiles que han dado su consentimiento para su inclusión en la audiencia activación, en función de las políticas de consentimiento configuradas.
+* El propósito de marketing del destino.
+* Los perfiles que han aceptado ser incluidos en la activación de audiencia, en función de las políticas de consentimiento configuradas.
 
 >[!NOTE]
 >
->Si hay etiquetas de uso de datos que solo se han aplicado a determinados campos, el cumplimiento de esas etiquetas de nivel de campo en activación solo se produce si se cumple al menos una de las siguientes condiciones:
+>Si hay etiquetas de uso de datos que solo se hayan aplicado a determinados campos, la aplicación de esas etiquetas de nivel de campo en la activación solo se produce si se cumple al menos una de las siguientes condiciones:
 >
 >* Los campos se utilizan en la audiencia.
 >* Los campos se configuran como atributos proyectados para el destino final.
 
 ## Linaje de datos {#lineage}
 
-El linaje de datos juega un función clave en la forma en que se aplican las políticas en Platform. En términos generales, el linaje de datos se refiere a la origen de un conjunto de datos y lo que le sucede (o hacia dónde se mueve) con el tiempo.
+El linaje de datos desempeña un papel clave en la forma en que se aplican las políticas en Experience Platform. En términos generales, el linaje de datos hace referencia al origen de un conjunto de datos y a lo que le sucede (o a dónde se mueve) a lo largo del tiempo.
 
-En el contexto de la gobernanza de datos, el linaje permite que las etiquetas de uso de datos se propaguen desde esquemas a servicios posteriores que consumen sus datos, como el perfil del cliente en tiempo real y los destinos. Esto permite que las políticas se evalúen y apliquen en varios puntos clave en el viaje de los datos a través de Platform, y proporciona contexto a los consumidores de datos sobre por qué ocurrió una violación directiva.
+En el contexto de la gobernanza de datos, el linaje permite que las etiquetas de uso de datos se propaguen desde esquemas a servicios descendentes que consumen sus datos, como el perfil del cliente en tiempo real y los destinos. Esto permite evaluar y aplicar las políticas en varios puntos clave del recorrido de los datos a través de Experience Platform y proporciona contexto a los consumidores de datos para saber por qué se ha producido una infracción de política.
 
-En Experience Platform, directiva aplicación se refiere al siguiente linaje:
+En Experience Platform, la aplicación de políticas se refiere al siguiente linaje:
 
-1. Los datos se ingieren en Platform y se almacenan en **conjuntos de datos**.
+1. Los datos se han introducido en Experience Platform y se han almacenado en **conjuntos de datos**.
 1. Los perfiles de cliente se identifican y construyen a partir de esos conjuntos de datos combinando fragmentos de datos de acuerdo con la **política de combinación**.
 1. Los grupos de perfiles se dividen en **audiencias** según atributos comunes.
 1. Las audiencias se han activado para los **destinos** descendentes.
@@ -69,7 +69,7 @@ Cada etapa de la cronología anterior representa una entidad que puede contribui
 | Fase de linaje de datos | Función en la aplicación de políticas |
 | --- | --- |
 | Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de campo de esquema o en todo el nivel de conjunto de datos) que definen para qué casos de uso se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directivas si se utiliza un conjunto de datos o un campo que contenga determinadas etiquetas para un fin restringido por una directiva.<br><br>Todos los atributos de consentimiento recopilados de sus clientes también se almacenan en conjuntos de datos. Si tiene acceso a las políticas de consentimiento, los perfiles que no cumplan los requisitos de atributo de consentimiento de las políticas se excluirán de las audiencias activadas en un destino. |
-| Política de combinación | Las políticas de combinación son las reglas que utiliza Platform para determinar la prioridad que se dará a los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directivas si las políticas de combinación se configuran de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la [descripción general de las políticas de combinación](../../profile/merge-policies/overview.md) para obtener más información. |
+| Política de combinación | Las políticas de combinación son las reglas que utiliza Experience Platform para determinar la prioridad que se dará a los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directivas si las políticas de combinación se configuran de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la [descripción general de las políticas de combinación](../../profile/merge-policies/overview.md) para obtener más información. |
 | Público | Las reglas de segmentación definen qué atributos se deben incluir desde los perfiles del cliente. Según los campos que incluya una definición de segmento, la audiencia heredará las etiquetas de uso aplicadas a esos campos. Se producirán infracciones de directivas si intenta activar una audiencia cuyas etiquetas heredadas estén restringidas por las directivas aplicables del destino de destino, según su caso de uso de marketing. |
 | Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una directiva. En otras palabras, la acción de marketing que defina para un destino determina qué políticas de uso de datos y políticas de consentimiento son aplicables a ese destino.<br><br>Se producen violaciones de la directiva de uso de datos si intenta activar una audiencia cuyas etiquetas de uso estén restringidas para la acción de marketing del destino de destino.<br><br>(Beta) Cuando se activa una audiencia, los perfiles que no contienen los atributos de consentimiento necesarios para la acción de marketing (según se definen en las directivas de consentimiento) se excluyen de la audiencia activada. |
 
@@ -83,7 +83,7 @@ Cuando se producen violaciones de directivas, los mensajes resultantes que apare
 
 ## Mensajes de aplicación de políticas {#enforcement}
 
-Las secciones siguientes describen los diferentes mensajes de aplicación de políticas que aparecen en la IU de Platform:
+Las secciones siguientes describen los diferentes mensajes de aplicación de políticas que aparecen en la interfaz de usuario de Experience Platform:
 
 * [Infracción de directiva de uso de datos](#data-usage-violation)
 * [Evaluación de directiva de consentimiento](#consent-policy-evaluation)
@@ -122,31 +122,31 @@ Utilice el diagrama de linaje de datos para comprender qué otros cambios de con
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
-Al activar un audiencia a un destino, puede ver cómo sus [políticas](../policies/user-guide.md) de consentimiento afectan el alcance de su audiencia durante la [fase de revisión del [!UICONTROL flujo de trabajo](#pre-activation-evaluation) Activar destinos].
+Al activar una audiencia en un destino, puedes ver cómo tus [políticas de consentimiento](../policies/user-guide.md) afectan el alcance de tu audiencia durante la [etapa de revisión del flujo de trabajo [!UICONTROL Activar destinos]](#pre-activation-evaluation).
 
 >[!NOTE]
 >
->Las políticas de consentimiento solo están disponibles para organizaciones que han comprado Adobe Systems Healthcare Shield o Adobe Systems Privacy &amp; Security Shield.
+>Las políticas de consentimiento solo están disponibles para organizaciones que han adquirido Adobe Healthcare Shield o Adobe Privacy &amp; Security Shield.
 
-#### Mejora de la directiva de consentimiento para medios de pago {#consent-policy-enhancement}
+#### Mejora de la política de consentimiento para medios de pago {#consent-policy-enhancement}
 
 Se ha realizado una mejora en la aplicación de la política de consentimiento en los destinos [batch](../../destinations/destination-types.md#file-based) y [streaming](../../destinations/destination-types.md#streaming-destinations), incluidas las activaciones de medios pagados. Esta mejora está disponible para los clientes de Privacy and Security Shield o Healthcare Shield, y elimina de forma proactiva los perfiles de los destinos de lote y de flujo continuo a medida que cambia el estado del consentimiento. También garantiza que los cambios de consentimiento se propaguen inmediatamente para que la audiencia adecuada siempre esté segmentada.
 
-Estas mejoras garantizan una mayor confianza en la estrategia de marketing, ya que eliminan la necesidad de que los especialistas en marketing agreguen manualmente atributos de consentimiento a su expresión de segmento. Esto garantiza que ningún perfil sea segmentado inadvertidamente para ninguna marketing experiencias una vez que se haya retirado el consentimiento o ya no haya sido calificado para un directiva de consentimiento. Las políticas de consentimiento marketing que establecen reglas sobre cómo se deben administrar los datos de consentimiento o preferencias en varios flujos de trabajo marketing ahora se aplican automáticamente en activación flujos de trabajo en las soluciones posteriores.
+Estas mejoras garantizan una mayor confianza en la estrategia de marketing, ya que eliminan la necesidad de que los especialistas en marketing agreguen manualmente atributos de consentimiento a su expresión de segmento. Esto garantiza que no se segmenten perfiles de forma involuntaria para ninguna experiencia de marketing una vez que se haya retirado el consentimiento o ya no se cumpla la política de consentimiento. Las políticas de consentimiento de marketing que establecen reglas sobre cómo se deben administrar los datos de consentimiento o preferencia en varios flujos de trabajo de marketing ahora se aplican automáticamente en los flujos de trabajo de activación en las soluciones descendentes.
 
 >[!NOTE]
 >
->Como resultado de esta mejora, no se producen cambios en el IU.
+>No hay cambios en la interfaz de usuario como resultado de esta mejora.
 
-#### Evaluación previa al activación {#pre-activation-evaluation}
+#### Evaluación previa a la activación {#pre-activation-evaluation}
 
-Una vez que llegue al paso Revisar **** al [activar un destino](../../destinations/ui/activation-overview.md), seleccione **[!UICONTROL Ver políticas]** aplicadas.
+Cuando llegue al paso **[!UICONTROL Revisar]** al [activar un destino](../../destinations/ui/activation-overview.md), seleccione **[!UICONTROL Ver directivas aplicadas]**.
 
-![Ver políticas aplicadas botón en el flujo de trabajo de destino de activación](../images/enforcement/view-applied-policies.png)
+![Botón Ver directivas aplicadas en el flujo de trabajo de activación de destino](../images/enforcement/view-applied-policies.png)
 
 Aparece un cuadro de diálogo de comprobación de directivas que muestra una previsualización de cómo las políticas de consentimiento afectan a la audiencia de consentimiento de las audiencias que se van a activar.
 
-![Cuadro de diálogo de comprobación de directivas de consentimiento en la IU de Platform](../images/enforcement/consent-policy-check.png)
+![Cuadro de diálogo de comprobación de directivas de consentimiento en la IU de Experience Platform](../images/enforcement/consent-policy-check.png)
 
 El cuadro de diálogo muestra la audiencia consentida para una audiencia a la vez. Para ver la evaluación de directivas para una audiencia diferente, utilice el menú desplegable situado encima del diagrama para seleccionar una de la lista.
 
@@ -158,21 +158,21 @@ Utilice el carril izquierdo para cambiar entre las políticas de consentimiento 
 
 El diagrama muestra la superposición entre tres grupos de perfiles:
 
-1. Perfiles aptos para el audiencia seleccionado
+1. Perfiles aptos para la audiencia seleccionada
 1. Perfiles aptos para la política de consentimiento seleccionada
 1. Perfiles que cumplen los requisitos para las demás directivas de consentimiento aplicables a la audiencia (denominadas &quot;[!UICONTROL Otras directivas]&quot; en el diagrama)
 
 Los perfiles que cumplen los tres grupos anteriores representan la audiencia consentida, resumida en el carril derecho.
 
-![Sección Resumen del cuadro de diálogo de comprobación de directiva](../images/enforcement/summary.png)
+![Sección de resumen en el diálogo de comprobación de directivas](../images/enforcement/summary.png)
 
 Pase el ratón sobre una de las audiencias del diagrama para ver el número de perfiles que contiene.
 
-![Resaltado de una sección de diagrama en el cuadro de diálogo de comprobación de directiva](../images/enforcement/highlight-segment.png)
+![Resaltar una sección de diagrama en el cuadro de diálogo de comprobación de directivas](../images/enforcement/highlight-segment.png)
 
-La audiencia consentida está representada por la superposición central del diagrama y puede destacarse gustar las otras secciones.
+La audiencia consentida se representa mediante la superposición central del diagrama y se puede resaltar como las otras secciones.
 
-![Resaltado de los audiencia consentidos en el diagrama](../images/enforcement/consented-audience.png)
+![Resaltar la audiencia con consentimiento en el diagrama](../images/enforcement/consented-audience.png)
 
 #### Ejecución de ejecución de flujo
 

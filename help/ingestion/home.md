@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;ingesta de datos;ubicación de datos;ubicación de datos;administración de datos;administración de datos;linaje;linaje;lote;lote;datos ingeridos
+keywords: Experience Platform;inicio;temas populares;ingesta de datos;ubicación de datos;ubicación de datos;administración de datos;administración de datos;linaje;linaje;lote;lotes;datos ingeridos
 solution: Experience Platform
 title: Resumen de ingesta de datos
-description: Este documento presenta las tres formas principales de introducir los datos en Platform, con vínculos a su documentación general respectiva para obtener información más detallada.
+description: Este documento presenta las tres formas principales de introducir los datos en Experience Platform, con vínculos a su documentación general respectiva para obtener información más detallada.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Consulte la [descripción general de la ingesta por lotes](./batch-ingestion/ove
 
 ## Ingesta por streaming
 
-La introducción por transmisión le permite enviar datos desde dispositivos del cliente y del lado del servidor a [!DNL Experience Platform] en tiempo real. Experience Platform admite el uso de entradas de datos para transmitir datos de experiencia entrantes, que se conservan en conjuntos de datos habilitados para flujo continuo dentro del lago de datos. Las entradas de datos se pueden configurar para autenticar automáticamente los datos que recopilan, asegurándose de que los datos provengan de una fuente de confianza.
+La introducción por transmisión le permite enviar datos desde dispositivos del cliente y del lado del servidor a [!DNL Experience Platform] en tiempo real. Experience Platform admite el uso de entradas de datos para transmitir datos de experiencia entrantes, que persisten en conjuntos de datos habilitados para flujo continuo dentro del lago de datos. Las entradas de datos se pueden configurar para autenticar automáticamente los datos que recopilan, asegurándose de que los datos provengan de una fuente de confianza.
 
 Consulte la [descripción general de la ingesta de transmisión](./streaming-ingestion/overview.md) para obtener más información.
 

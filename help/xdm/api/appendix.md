@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apéndice de la Guía de API de Registro de esquemas
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API de Registro de esquemas.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 0%
@@ -57,9 +57,9 @@ Puede filtrar los resultados utilizando el parámetro `property`, que se utiliza
 
 ## Modo de compatibilidad {#compatibility}
 
-[!DNL Experience Data Model] (XDM) es una especificación documentada públicamente, impulsada por el Adobe para mejorar la interoperabilidad, la expresividad y la potencia de las experiencias digitales. El Adobe mantiene el código fuente y las definiciones XDM formales en un [proyecto de código abierto en GitHub](https://github.com/adobe/xdm/). Estas definiciones se escriben en notación estándar XDM, utilizando JSON-LD (notación de objetos de JavaScript para datos vinculados) y el esquema JSON como gramática para definir esquemas XDM.
+[!DNL Experience Data Model] (XDM) es una especificación documentada públicamente, impulsada por Adobe para mejorar la interoperabilidad, expresividad y potencia de las experiencias digitales. Adobe mantiene el código fuente y las definiciones XDM formales en un [proyecto de código abierto en GitHub](https://github.com/adobe/xdm/). Estas definiciones se escriben en notación estándar XDM, utilizando JSON-LD (notación de objetos de JavaScript para datos vinculados) y el esquema JSON como gramática para definir esquemas XDM.
 
-Al consultar las definiciones de XDM formales en el repositorio público, puede ver que el XDM estándar difiere de lo que se ve en Adobe Experience Platform. Lo que está viendo en [!DNL Experience Platform] se llama Modo de compatibilidad y proporciona una asignación sencilla entre el XDM estándar y la forma en que se utiliza en [!DNL Platform].
+Al consultar las definiciones de XDM formales en el repositorio público, puede ver que el XDM estándar difiere de lo que se ve en Adobe Experience Platform. Lo que está viendo en [!DNL Experience Platform] se llama Modo de compatibilidad y proporciona una asignación sencilla entre el XDM estándar y la forma en que se utiliza en [!DNL Experience Platform].
 
 ### Funcionamiento del modo de compatibilidad
 
@@ -132,6 +132,6 @@ Adobe Experience Platform está diseñado para trabajar con varias soluciones y 
 
 La mayoría de los servicios de [!DNL Experience Platform], incluidos [!DNL Catalog], [!DNL Data Lake] y [!DNL Real-Time Customer Profile], utilizan [!DNL Compatibility Mode] en lugar del XDM estándar. La API [!DNL Schema Registry] también usa [!DNL Compatibility Mode], y los ejemplos de este documento se muestran usando [!DNL Compatibility Mode].
 
-Vale la pena saber que se produce una asignación entre el XDM estándar y la forma en que se pone en funcionamiento en [!DNL Experience Platform], pero no debería afectar a su uso de los servicios de [!DNL Platform].
+Vale la pena saber que se produce una asignación entre el XDM estándar y la forma en que se pone en funcionamiento en [!DNL Experience Platform], pero no debería afectar a su uso de los servicios de [!DNL Experience Platform].
 
 El proyecto de código abierto está disponible, pero cuando se trata de interactuar con recursos a través de [!DNL Schema Registry], los ejemplos de API de este documento proporcionan las prácticas recomendadas que debe conocer y seguir.

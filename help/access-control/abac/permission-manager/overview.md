@@ -1,9 +1,10 @@
 ---
 title: Información general del Administrador de permisos
 description: Descubra cómo el Administrador de permisos de Adobe Experience Platform puede ayudarle a generar informes en varios flujos de trabajo.
-source-git-commit: d70e105e801ebc663cabba468f4efa863e5cd478
+exl-id: 807297e2-f06e-4b1c-92f7-b42a53c934b7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '293'
 ht-degree: 1%
 
 ---
@@ -23,13 +24,13 @@ Con [!UICONTROL Administrador de permisos], puede buscar según lo siguiente:
 
 Puede limitar la búsqueda mediante la selección de recursos, acciones y zonas protegidas específicos.
 
-Para obtener acceso al [!UICONTROL Administrador de permisos] para [!DNL Experience Platform], debe ser administrador de una organización que tenga acceso a Platform. Aunque el Adobe permite jerarquías de administración personalizables dentro de la organización, debe ser administrador de producto de [!DNL Adobe Experience Platform]. Para obtener más información, consulte el artículo de Adobe Help Center sobre [funciones de administración](https://helpx.adobe.com/enterprise/using/admin-roles.html).
+Para obtener acceso al [!UICONTROL Administrador de permisos] para [!DNL Experience Platform], debe ser administrador de una organización que tenga acceso a Experience Platform. Aunque Adobe permite jerarquías de administrador personalizables dentro de la organización, debe ser administrador de producto de [!DNL Adobe Experience Platform]. Para obtener más información, consulte el artículo del Centro de ayuda de Adobe sobre [funciones de administración](https://helpx.adobe.com/enterprise/using/admin-roles.html).
 
 Inicie sesión en [Adobe Experience Platform](https://experience.adobe.com/) con sus credenciales de [!DNL Adobe].  Después de iniciar sesión, verá la página **[!UICONTROL Información general]** para su organización. Esta página muestra los productos a los que está suscrita su organización. Para iniciar el área de trabajo de control de acceso basado en atributos para la integración de la plataforma, seleccione **[!UICONTROL Permisos]**.
 
 ![Permisos para resaltar información general de Adobe Experience Platform.](../../images/flac-ui/flac-select-product.png)
 
-Aparece el área de trabajo de control de acceso basado en atributos para Platform, que se abre en la página **[!UICONTROL Información general]**. Esta página le permite ver todas las funciones y administrar varias configuraciones tal como se describe en este documento.
+Aparece el área de trabajo de control de acceso basado en atributos para Experience Platform, que se abre en la página **[!UICONTROL Información general]**. Esta página le permite ver todas las funciones y administrar varias configuraciones tal como se describe en este documento.
 
 Seleccione **[!UICONTROL Administrador de permisos]** en el panel de navegación izquierdo.
 

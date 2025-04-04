@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; inicio; temas populares; tutoriales de API; API de destinos de streaming; Platform
+keywords: Experience Platform; inicio; temas populares; tutoriales de API; API de destinos de streaming; Experience Platform
 solution: Experience Platform
 title: Conéctese a destinos de flujo continuo y active los datos mediante la API de Flow Service en Adobe Experience Platform
 description: Este documento cubre la creación de destinos de flujo continuo mediante la API de Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2219'
 ht-degree: 3%
 
 ---
@@ -28,17 +28,17 @@ Este tutorial utiliza el destino [!DNL Amazon Kinesis] en todos los ejemplos, pe
 
 ![Información general: los pasos para crear un destino de flujo continuo y activar audiencias](../assets/api/streaming-destination/overview.png)
 
-Si prefiere usar la interfaz de usuario de Platform para conectarse a un destino y activar datos, consulte los tutoriales [Conectar un destino](../ui/connect-destination.md) y [Activar datos de audiencia en destinos de exportación de audiencias de streaming](../ui/activate-segment-streaming-destinations.md).
+Si prefiere usar la interfaz de usuario de Experience Platform para conectarse a un destino y activar datos, consulte los tutoriales [Conectar un destino](../ui/connect-destination.md) y [Activar datos de audiencia en destinos de exportación de audiencias de streaming](../ui/activate-segment-streaming-destinations.md).
 
 ## Introducción 
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): el marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] es el sistema de registro para la ubicación y el linaje de datos dentro del Experience Platform.
-* [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): el marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] es el sistema de registro para la ubicación y el linaje de datos dentro de Experience Platform.
+* [Zonas protegidas](../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que necesitará conocer para activar los datos en los destinos de flujo continuo en Platform.
+Las secciones siguientes proporcionan información adicional que deberá conocer para activar datos en destinos de flujo continuo en Experience Platform.
 
 ### Recopilar credenciales necesarias
 
@@ -49,23 +49,23 @@ Para completar los pasos de este tutorial, debe tener las siguientes credenciale
 
 ### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de Experience Platform.
 
 ### Recopilar valores para encabezados obligatorios y opcionales {#gather-values}
 
-Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de Experience Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Los recursos de Experience Platform se pueden aislar en zonas protegidas virtuales específicas. En las solicitudes a las API de Platform, puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
+Los recursos de Experience Platform se pueden aislar para crear zonas protegidas virtuales específicas. En las solicitudes a las API de Experience Platform, puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en Experience Platform, consulte la [documentación general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en Experience Platform, consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medios adicional:
 
@@ -79,7 +79,7 @@ Puede encontrar la documentación de referencia adjunta para todas las llamadas 
 
 ![Pasos de destino: paso 1](../assets/api/streaming-destination/step1.png)
 
-Como primer paso, debe decidir a qué destino de flujo continuo activar los datos. Para empezar, realice una llamada a para solicitar una lista de destinos disponibles a los que pueda conectar y activar audiencias. Realice la siguiente solicitud de GET al extremo `connectionSpecs` para devolver una lista de destinos disponibles:
+Como primer paso, debe decidir a qué destino de flujo continuo activar los datos. Para empezar, realice una llamada a para solicitar una lista de destinos disponibles a los que pueda conectar y activar audiencias. Realice la siguiente petición GET al extremo `connectionSpecs` para devolver una lista de destinos disponibles:
 
 **Formato de API**
 
@@ -119,14 +119,14 @@ Una respuesta correcta contiene una lista de destinos disponibles y sus identifi
 }
 ```
 
-## Conexión a los datos del Experience Platform {#connect-to-your-experience-platform-data}
+## Conexión a los datos de Experience Platform {#connect-to-your-experience-platform-data}
 
 ![Pasos de destino: paso 2](../assets/api/streaming-destination/step2.png) de información general
 
-A continuación, debe conectarse a los datos del Experience Platform para poder exportar datos de perfil y activarlos en su destino preferido. Consta de dos subpasos que se describen a continuación.
+A continuación, debe conectarse a los datos de Experience Platform para poder exportar datos de perfil y activarlos en su destino preferido. Consta de dos subpasos que se describen a continuación.
 
 1. En primer lugar, debe realizar una llamada para autorizar el acceso a los datos en Experience Platform, configurando una conexión base.
-2. A continuación, utilizando el ID de conexión base, realizará otra llamada en la que creará una conexión de origen, que establece la conexión con los datos del Experience Platform.
+2. A continuación, utilizando el ID de conexión base, realizará otra llamada en la que creará una conexión de origen, que establece la conexión con los datos de Experience Platform.
 
 
 ### Autorizar el acceso a los datos en Experience Platform
@@ -169,7 +169,7 @@ Una respuesta correcta contiene el identificador único de la conexión base (`i
 }
 ```
 
-### Conexión a los datos del Experience Platform {#connect-to-platform-data}
+### Conexión a los datos de Experience Platform {#connect-to-platform-data}
 
 **Formato de API**
 
@@ -206,7 +206,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada al servicio de perfil. Esto confirma que se ha conectado correctamente a los datos del Experience Platform. Almacene este valor tal como se requiere en un paso posterior.
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada al servicio de perfil. Esto confirma que se ha conectado correctamente a los datos de Experience Platform. Almacene este valor tal como se requiere en un paso posterior.
 
 ```json
 {
@@ -271,11 +271,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{CONNECTION_SPEC_ID}`: use el id. de especificación de conexión que obtuvo en el paso [Obtener la lista de destinos disponibles](#get-the-list-of-available-destinations).
 * `{AUTHENTICATION_CREDENTIALS}`: indique el nombre de su destino de flujo continuo: `Aws Kinesis authentication credentials` o `Azure EventHub authentication credentials`.
 * `{ACCESS_ID}`: *Para [!DNL Amazon Kinesis] conexiones.*: su ID de acceso para su ubicación de almacenamiento de Amazon Kinesis.
-* `{SECRET_KEY}`: *Para [!DNL Amazon Kinesis] conexiones.*: clave secreta para la ubicación de almacenamiento de Amazon Kinesis.
-* `{REGION}`: *Para [!DNL Amazon Kinesis] conexiones.* Región de su cuenta de [!DNL Amazon Kinesis] en la que Platform transmitirá sus datos.
+* `{SECRET_KEY}`: *Para [!DNL Amazon Kinesis] conexiones.*: su clave secreta para su ubicación de almacenamiento de Amazon Kinesis.
+* `{REGION}`: *Para [!DNL Amazon Kinesis] conexiones.* Región de su cuenta de [!DNL Amazon Kinesis] en la que Experience Platform transmitirá sus datos.
 * `{SAS_KEY_NAME}`: *Para [!DNL Azure Event Hubs] conexiones.* Rellene el nombre de clave SAS. Obtenga información acerca de la autenticación en [!DNL Azure Event Hubs] con claves SAS en la [documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * `{SAS_KEY}`: *Para [!DNL Azure Event Hubs] conexiones.* Rellene la clave SAS. Obtenga información acerca de la autenticación en [!DNL Azure Event Hubs] con claves SAS en la [documentación de Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{EVENT_HUB_NAMESPACE}`: *Para [!DNL Azure Event Hubs] conexiones.* Rellene el área de nombres [!DNL Azure Event Hubs] donde Platform transmitirá los datos. Para obtener más información, consulte [Crear un espacio de nombres de Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) en la documentación de [!DNL Microsoft].
+* `{EVENT_HUB_NAMESPACE}`: *Para [!DNL Azure Event Hubs] conexiones.* Rellene el área de nombres [!DNL Azure Event Hubs] donde Experience Platform transmitirá los datos. Para obtener más información, consulte [Crear un espacio de nombres de Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) en la documentación de [!DNL Microsoft].
 
 **Respuesta**
 
@@ -330,9 +330,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: use el identificador de conexión base que obtuvo en el paso anterior.
 * `{CONNECTION_SPEC_ID}`: use la especificación de conexión que obtuvo en el paso [Obtener la lista de destinos disponibles](#get-the-list-of-available-destinations).
-* `{NAME_OF_DATA_STREAM}`: *Para [!DNL Amazon Kinesis] conexiones.* Proporcione el nombre del flujo de datos existente en su cuenta de [!DNL Amazon Kinesis]. Platform exportará datos a este flujo.
-* `{REGION}`: *Para [!DNL Amazon Kinesis] conexiones.* La región de su cuenta de Amazon Kinesis donde Platform transmitirá sus datos.
-* `{EVENT_HUB_NAME}`: *Para [!DNL Azure Event Hubs] conexiones.* Rellene el nombre de [!DNL Azure Event Hub] donde Platform transmitirá los datos. Para obtener más información, consulte [Crear un centro de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) en la documentación de [!DNL Microsoft].
+* `{NAME_OF_DATA_STREAM}`: *Para [!DNL Amazon Kinesis] conexiones.* Proporcione el nombre del flujo de datos existente en su cuenta de [!DNL Amazon Kinesis]. Experience Platform exportará datos a este flujo.
+* `{REGION}`: *Para [!DNL Amazon Kinesis] conexiones.* Región de la cuenta de Amazon Kinesis en la que Experience Platform transmitirá los datos.
+* `{EVENT_HUB_NAME}`: *Para [!DNL Azure Event Hubs] conexiones.* Rellene el nombre de [!DNL Azure Event Hub] donde Experience Platform transmitirá los datos. Para obtener más información, consulte [Crear un centro de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) en la documentación de [!DNL Microsoft].
 
 **Respuesta**
 
@@ -348,11 +348,11 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ![Pasos de destino: paso de información general 4](../assets/api/streaming-destination/step4.png)
 
-Con los ID que obtuvo en los pasos anteriores, ahora puede crear un flujo de datos entre los datos del Experience Platform y el destino al que activará los datos. Piense en este paso como si construyera la canalización, a través de la cual fluirán los datos posteriormente, entre Experience Platform y el destino deseado.
+Con los ID que obtuvo en los pasos anteriores, ahora puede crear un flujo de datos entre los datos de Experience Platform y el destino en el que activará los datos. Piense en este paso como si construyera la canalización, a través de la cual fluirán los datos posteriormente, entre Experience Platform y el destino deseado.
 
-Para crear un flujo de datos, realice una solicitud de POST como se muestra a continuación, proporcionando los valores mencionados a continuación dentro de la carga útil.
+Para crear un flujo de datos, realice una petición POST como se muestra a continuación y proporcione los valores mencionados a continuación en la carga útil.
 
-Realice la siguiente solicitud del POST para crear un flujo de datos.
+Realice la siguiente petición POST para crear un flujo de datos.
 
 **Formato de API**
 
@@ -425,7 +425,7 @@ Una respuesta correcta devuelve el identificador (`id`) del flujo de datos reci�
 
 Una vez creadas todas las conexiones y el flujo de datos, ahora puede activar los datos de perfil en la plataforma de flujo continuo. En este paso, se selecciona qué audiencias y qué atributos de perfil se envían al destino y se pueden programar y enviar datos al destino.
 
-Para activar audiencias en su nuevo destino, debe realizar una operación de PATCH de JSON, similar al ejemplo siguiente. Puede activar varias audiencias y atributos de perfil en una llamada. Para obtener más información acerca del PATCH JSON, consulte la [especificación RFC](https://tools.ietf.org/html/rfc6902).
+Para activar audiencias en su nuevo destino, debe realizar una operación de PATCH JSON, similar al ejemplo siguiente. Puede activar varias audiencias y atributos de perfil en una llamada. Para obtener más información acerca de JSON PATCH, consulte la [especificación RFC](https://tools.ietf.org/html/rfc6902).
 
 **Formato de API**
 
@@ -492,7 +492,7 @@ Busque una respuesta 202 OK. No se devuelve ningún cuerpo de respuesta. Para co
 
 Como último paso del tutorial, debe validar que las audiencias y los atributos de perfil se hayan asignado correctamente al flujo de datos.
 
-Para validar esto, realice la siguiente solicitud de GET:
+Para validarlo, realice la siguiente petición GET:
 
 **Formato de API**
 
@@ -630,11 +630,11 @@ Para conectarse correctamente a los destinos mediante las colecciones [!DNL Post
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de respuestas de error.
+Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform para obtener más información sobre cómo interpretar las respuestas de error.
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha conectado correctamente Platform a uno de sus destinos de flujo continuo preferidos y ha configurado un flujo de datos en el destino correspondiente. Los datos salientes ahora se pueden utilizar en el destino para el análisis de clientes o cualquier otra operación de datos que desee realizar. Consulte las siguientes páginas para obtener más información:
+Al seguir este tutorial, ha conectado correctamente Experience Platform a uno de sus destinos de flujo continuo preferidos y ha configurado un flujo de datos en el destino correspondiente. Los datos salientes ahora se pueden utilizar en el destino para el análisis de clientes o cualquier otra operación de datos que desee realizar. Consulte las siguientes páginas para obtener más información:
 
 * [Información general sobre los destinos](../home.md)
 * [Resumen del catálogo Destinos](../catalog/overview.md)

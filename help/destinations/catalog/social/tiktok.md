@@ -3,9 +3,9 @@ title: Conexión de TikTok
 description: Cree audiencias personalizadas en TikTok con sus datos para segmentar con sus campañas publicitarias. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1079'
 ht-degree: 3%
 
 ---
@@ -42,8 +42,8 @@ TikTok admite la activación de las identidades que se describen en la tabla sig
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
-| Número de teléfono | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform y deben estar en formato E.164. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
-| Correo electrónico | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| Número de teléfono | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform y deben estar en formato E.164. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| Correo electrónico | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
 | Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
-| [!DNL Federated Audience Composition] | ✓ | Audiencias importadas en Experience Platform mediante [Composición de audiencias federada](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+| [!DNL Federated Audience Composition] | ✓ | Audiencias importadas en Experience Platform mediante [Composición de audiencias federada](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Para autenticarse en el destino, se le redirigirá para que inicie sesión en su
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-![Detalles de conexión de destino](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Imagen de la interfaz de usuario de Platform, que muestra los detalles de conexión de destino que se van a rellenar")
+![Detalles de conexión de destino](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Imagen de la interfaz de usuario de Experience Platform, que muestra los detalles de conexión de destino que se van a rellenar")
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
@@ -123,7 +123,7 @@ Selección de campos de destino:
 
 * Seleccione el área de nombres de correo electrónico como identidad de destino.
 
-![Asignación de identidad](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Imagen de la interfaz de usuario de Platform, asignación de identidades")
+![Asignación de identidad](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Imagen de la interfaz de usuario de Experience Platform, asignación de identidades")
 
 ## Datos exportados {#exported-data}
 

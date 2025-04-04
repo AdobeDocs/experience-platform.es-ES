@@ -3,7 +3,7 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -18,13 +18,13 @@ En la interfaz de usuario de Adobe Experience Platform, puede ver y monitorizar 
 
 >[!NOTE]
 >
->La página de detalles de destinos forma parte del área de trabajo [!UICONTROL Destinos] en [!DNL Platform] [!DNL UI]. Consulte la [[!UICONTROL Descripción general del área de trabajo de destinos]](./destinations-workspace.md) para obtener más información.
+>La página de detalles de destinos forma parte del área de trabajo [!UICONTROL Destinos] en [!DNL Experience Platform] [!DNL UI]. Consulte la [[!UICONTROL Descripción general del área de trabajo de destinos]](./destinations-workspace.md) para obtener más información.
 
 ## Ver detalles de destino {#view-details}
 
 Siga los pasos a continuación para ver más detalles sobre un destino existente. Puede averiguar el ID de destino de un destino, el usuario que lo creó, cuándo se creó y otra información.
 
-1. Inicie sesión en la [interfaz de usuario del Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Examinar]** en el encabezado superior para ver los destinos existentes.
+1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Examinar]** en el encabezado superior para ver los destinos existentes.
 
    ![Destinos de exploración](../assets/ui/details-page/browse-destinations.png)
 
@@ -82,7 +82,7 @@ La ficha [!UICONTROL Ejecuciones de flujo de datos] proporciona datos de métric
 
 >[!NOTE]
 >
->* Actualmente, la funcionalidad de supervisión de destinos es compatible con todos los destinos del Experience Platform *excepto*: [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) y [Audiencias de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
+>* Actualmente, la funcionalidad de supervisión de destinos es compatible con todos los destinos de Experience Platform *excepto*: [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) y [Audiencias de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
 >* Para los destinos [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) y [HTTP API](/help/destinations/catalog/streaming/http-destination.md), se estiman las métricas relacionadas con identidades excluidas, con errores y activadas. Los volúmenes más altos de datos de activación conducen a una mayor precisión de las métricas.
 
 ![Flujo de datos ejecuta la vista](../assets/ui/details-page/dataflow-runs.png)
@@ -93,7 +93,7 @@ Hay una diferencia en la duración mostrada de las ejecuciones de flujo de datos
 
 ### Destinos de streaming {#streaming}
 
-Aunque la **[!UICONTROL duración de procesamiento]** indicada para la mayoría de las ejecuciones de flujo de datos de streaming es de unas cuatro horas, como se muestra en la imagen siguiente, el tiempo de procesamiento real de cualquier ejecución de flujo de datos es mucho más corto. Las ventanas de ejecución de flujo de datos permanecen abiertas durante más tiempo en el caso de que el Experience Platform necesite volver a intentar realizar llamadas al destino y también asegurarse de que no se pierda ningún dato que llegue tarde para la misma ventana de tiempo.
+Aunque la **[!UICONTROL duración de procesamiento]** indicada para la mayoría de las ejecuciones de flujo de datos de streaming es de unas cuatro horas, como se muestra en la imagen siguiente, el tiempo de procesamiento real de cualquier ejecución de flujo de datos es mucho más corto. Las ventanas de ejecución de flujo de datos permanecen abiertas durante más tiempo en el caso de que Experience Platform necesite volver a intentar realizar llamadas al destino y también asegurarse de que no se pierda ningún dato que llegue tarde para la misma ventana de tiempo.
 
 ![Imagen de la página de ejecuciones de flujo de datos con la columna Tiempo de procesamiento resaltada para un destino de flujo continuo.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Exploración de un sistema CRM mediante la API de Flow Service
 description: Este tutorial utiliza la API de Flow Service para explorar los sistemas CRM.
 exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '587'
 ht-degree: 13%
 
 ---
@@ -21,14 +21,14 @@ Este tutorial utiliza la API [!DNL Flow Service] para explorar sistemas CRM.
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a un sistema CRM mediante la API [!DNL Flow Service].
 
 ### Crear un ID de conexión
 
-Para explorar el sistema CRM mediante las API de [!DNL Platform], debe poseer un identificador de conexión válido. Si todavía no tiene una conexión para el sistema CRM con el que desea trabajar, puede crearla mediante los siguientes tutoriales:
+Para explorar el sistema CRM mediante las API de [!DNL Experience Platform], debe poseer un identificador de conexión válido. Si todavía no tiene una conexión para el sistema CRM con el que desea trabajar, puede crearla mediante los siguientes tutoriales:
 
 * [Microsoft Dynamics](../create/crm/ms-dynamics.md)
 * [Salesforce](../create/crm/salesforce.md)
@@ -39,13 +39,13 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Exploración de las tablas de datos
 
-Con el ID de conexión para su sistema CRM, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de acceso de la tabla que desea inspeccionar o introducir en [!DNL Platform].
+Con el ID de conexión para su sistema CRM, puede explorar las tablas de datos realizando solicitudes de GET. Utilice la siguiente llamada para encontrar la ruta de acceso de la tabla que desea inspeccionar o introducir en [!DNL Experience Platform].
 
 **Formato de API**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta es una matriz de tablas desde al sistema CRM. Busque la tabla que desea incluir en [!DNL Platform] y tome nota de su propiedad `path`, ya que debe proporcionarla en el siguiente paso para inspeccionar su estructura.
+Una respuesta correcta es una matriz de tablas desde al sistema CRM. Busque la tabla que desea incluir en [!DNL Experience Platform] y tome nota de su propiedad `path`, ya que debe proporcionarla en el siguiente paso para inspeccionar su estructura.
 
 ```json
 [
@@ -108,9 +108,9 @@ Una respuesta correcta es una matriz de tablas desde al sistema CRM. Busque la t
 ]
 ```
 
-## Inspect la estructura de una tabla
+## Inspeccionar la estructura de una tabla
 
-Para inspeccionar la estructura de una tabla desde el sistema CRM, realice una solicitud de GET y especifique la ruta de una tabla como parámetro de consulta.
+Para inspeccionar la estructura de una tabla desde el sistema CRM, realice una petición GET y especifique la ruta de una tabla como parámetro de consulta.
 
 **Formato de API**
 
@@ -171,4 +171,4 @@ Una respuesta correcta devuelve la estructura de una tabla. Los detalles relativ
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha explorado su sistema CRM, ha encontrado la ruta de acceso de la tabla que desea incluir en [!DNL Platform] y ha obtenido información sobre su estructura. Puede usar esta información en el siguiente tutorial para [recopilar datos de su sistema CRM e introducirlos en Platform](../collect/crm.md).
+Al seguir este tutorial, ha explorado su sistema CRM, ha encontrado la ruta de acceso de la tabla que desea incluir en [!DNL Experience Platform] y ha obtenido información sobre su estructura. Puedes usar esta información en el siguiente tutorial para [recopilar datos de tu sistema CRM e introducirlos en Experience Platform](../collect/crm.md).

@@ -2,9 +2,9 @@
 title: Perspectivas de perfil
 description: Descubra el SQL que alimenta las perspectivas de perfil y utilice estas consultas para generar perspectivas personalizadas que exploren aún más a sus clientes y sus experiencias como consumidores.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1660'
 ht-degree: 3%
 
 ---
@@ -15,19 +15,19 @@ Las perspectivas derivadas del análisis del modelo de datos hacen que los datos
 
 Comprenda sus perspectivas de perfil accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más a sus clientes y a sus experiencias de consumidor que conforman sus perfiles. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 
-Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la interfaz de usuario de Platform.
+Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la interfaz de usuario de Experience Platform.
 
 Las siguientes perspectivas están disponibles para que las use como parte del [panel de perfiles](../guides/profiles.md) o un [panel personalizado definido por el usuario](../standard-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../standard-dashboards.md#create-widget).
 
 ## Superposición de público por política de combinación {#audience-overlap-by-merge-policy}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Qué perfiles son comunes a ambas audiencias?
 - ¿Cómo afecta la superposición a las tasas de participación o conversión?
 - ¿Cómo se pueden adaptar las estrategias de marketing al segmento superpuesto?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -64,17 +64,17 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte la [documentación del widget de política de combinación que se superpone con la audiencia](../guides/profiles.md#audience-overlap-by-merge-policy) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de políticas de combinación que superpone audiencias](../guides/profiles.md#audience-overlap-by-merge-policy) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Informe de superposición de público {#audience-overlap-report}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuáles son las 50 audiencias más superpuestas?
 - ¿Cuáles son las 50 audiencias menos superpuestas?
 - ¿Cómo cambia el patrón superpuesto según la política de combinación?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT source_segment_name,
@@ -131,17 +131,17 @@ SELECT source_segment_name,
 
 +++
 
-Consulte la [documentación del widget de informe de superposición de audiencias](../guides/profiles.md#audience-overlap-report) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de informe de superposición de audiencias](../guides/profiles.md#audience-overlap-report) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Audiencias (recuento) {#audiences}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Qué política de combinación se utiliza predominantemente para la segmentación?
 - ¿Cuál es la distribución de audiencias entre políticas de combinación?
 - ¿Hay algún cambio significativo en los números de audiencia para las políticas de combinación específicas a lo largo del tiempo?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT count(DISTINCT a.segment_id) count_of_segments
@@ -159,18 +159,18 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Consulte la [documentación del widget de audiencias](../guides/profiles.md#audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias](../guides/profiles.md#audiences) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Público asignado al estado de destino {#audiences-mapped-to-destination-status}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la distribución general de audiencias entre destinos asignados y no asignados?
 - ¿Qué destinos específicos tienen el número más alto de audiencias asignadas?
 - ¿Qué proporción del total de audiencias permanece sin asignar?
 - De estas audiencias sin asignar, ¿hay patrones o tendencias asociadas?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
@@ -191,17 +191,17 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Consulte la [documentación de audiencias asignadas al widget de estado de destino](../guides/profiles.md#audiences-mapped-to-destination-status) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación de audiencias asignadas al widget de estado de destino](../guides/profiles.md#audiences-mapped-to-destination-status) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Tamaño de público {#audiences-size}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Qué segmento de audiencia tiene el tamaño más grande?
 - ¿Cuáles son las cinco audiencias más grandes?
 - ¿Cómo cambia la distribución del tamaño de la audiencia con el paso del tiempo para la audiencia principal?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
@@ -224,17 +224,17 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Consulte la [documentación del widget de tamaño de audiencias](../guides/profiles.md#audiences-size) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tamaño de audiencia](../guides/profiles.md#audiences-size) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Distribución de puntuaciones de inteligencia artificial aplicada al cliente {#customer-ai-distribution-of-scores}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la distribución de puntuaciones entre bloques para cada uno de mis modelos de inteligencia artificial aplicada al cliente?
 - ¿Cuál es la distribución de las puntuaciones por puntuación alta, media y baja?
 - ¿Cuál es el desglose de la distribución de puntuación por política de combinación?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT b.model_name,
@@ -361,17 +361,17 @@ SELECT b.model_name,
 
 +++
 
-Consulte la [documentación del widget de distribución de puntuaciones de inteligencia artificial aplicada al cliente](../guides/profiles.md#customer-ai-distribution-of-scores) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de distribución de puntuaciones de inteligencia artificial aplicada al cliente](../guides/profiles.md#customer-ai-distribution-of-scores) para obtener información sobre la apariencia y la funcionalidad de este insight.
 
 ## Resumen de puntuaciones de la inteligencia artificial aplicada al cliente {#customer-ai-scoring-summary}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es el resumen de puntuación para cada uno de mis modelos de inteligencia artificial aplicada al cliente?
 - ¿Cómo cambian mis puntuaciones de tendencia de inteligencia artificial aplicada al cliente para diferentes audiencias?
 - ¿Cómo cambia mi resumen de puntuación en comparación con otros KPI en la descripción general de los perfiles?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT model_name,
@@ -402,18 +402,18 @@ SELECT model_name,
 
 +++
 
-Consulte la [documentación del widget de resumen de puntuación de inteligencia artificial aplicada al cliente](../guides/profiles.md#customer-ai-scoring-summary) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de resumen de puntuación de inteligencia artificial aplicada al cliente](../guides/profiles.md#customer-ai-scoring-summary) para obtener información sobre el aspecto y la funcionalidad de esta insight.
 
 ## Superposición de identidad {#identity-overlap}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la intersección común entre [!UICONTROL Tipo de identidad A] y [!UICONTROL Tipo de identidad B]?
 - ¿Cómo puedo refinar las audiencias de los clientes en función de la superposición de tipos de identidad específicos para mejorar las estrategias de marketing dirigidas?
 - ¿Qué perspectivas se pueden obtener de la evaluación del rendimiento de la campaña dentro de las áreas de intersección?
-- Con esta perspectiva del rendimiento de la campaña, ¿cómo se pueden optimizar los esfuerzos de marketing futuros?
+- Con esta insight de rendimiento de campaña, ¿cómo se pueden optimizar los esfuerzos de marketing futuros?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -459,13 +459,13 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte la [documentación del widget de superposición de identidad](../guides/profiles.md#identity-overlap) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de superposición de identidades](../guides/profiles.md#identity-overlap) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Recuento de perfiles {#profile-count}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
-- ¿Cuál es el recuento general de perfiles en Adobe Real-time Customer Data Platform?
+- ¿Cuál es el recuento general de perfiles en Adobe Real-Time Customer Data Platform?
 - ¿Cómo se distribuyen los perfiles en función de las políticas de combinación?
 - ¿Qué política de combinación tiene el recuento de perfiles más alto?
 
@@ -481,19 +481,19 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Encontrará información completa sobre el aspecto y la funcionalidad de esta perspectiva en la [guía del widget de recuento de perfiles](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Encontrará información completa sobre el aspecto y la funcionalidad de este insight en la [guía del widget de recuento de perfiles](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
-Consulte la [documentación del widget de recuento de perfiles](../guides/profiles.md#profile-count) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de recuento de perfiles](../guides/profiles.md#profile-count) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Cambio de recuento de perfiles {#profile-count-change}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la tendencia de los cambios generales de recuento de perfiles?
 - ¿Qué causó picos o caídas significativos en el recuento de perfiles?
 - ¿Existen políticas de combinación específicas que impulsan el cambio en el recuento de perfiles?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
@@ -528,17 +528,17 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Consulte la [documentación del widget de cambio de recuento de perfiles](../guides/profiles.md#profile-count-change) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [Documentación del widget para cambiar el recuento de perfiles](../guides/profiles.md#profile-count-change) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Tendencia de cambio de recuento de perfiles {#profile-count-change-trend}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la tendencia general del cambio en el recuento de perfiles en los últimos 12 meses en función de la política de combinación?
 - ¿Hay patrones específicos o fluctuaciones en el cambio del recuento de perfiles en los últimos 30 días que requieren atención?
 - ¿En qué se diferencia el recuento de perfiles de los últimos 90 días de la tendencia general?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT date_key,
@@ -562,18 +562,18 @@ SELECT date_key,
 
 +++
 
-Consulte la [documentación del widget de tendencia de cambio de recuento de perfiles](../guides/profiles.md#profile-count-change-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de cambio de recuento de perfiles](../guides/profiles.md#profile-count-change-trend) para obtener información sobre la apariencia y la funcionalidad de este insight.
 
 ## Tendencia de recuento de perfiles {#profile-count-trend}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la tendencia general en el recuento de perfiles en función de la política de combinación durante los últimos 30 días?
 - En base a esta tendencia, ¿cómo se compara con las tendencias a largo plazo (por ejemplo, 90 días y 12 meses)?
 - ¿Qué política de combinación contribuye más al aumento o la disminución del recuento de perfiles en los periodos de tiempo especificados (30 días, 90 días y 12 meses)?
 - ¿Hay algún pico o caída específicos en el recuento de perfiles que se correlacionan con determinados eventos o periodos dentro del periodo de tiempo de 30 días?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT date_key,
@@ -593,18 +593,18 @@ SELECT date_key,
 
 +++
 
-Consulte la [documentación del widget de tendencia de recuento de perfiles](../guides/profiles.md#profile-count-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de recuento de perfiles](../guides/profiles.md#profile-count-trend) para obtener información sobre la apariencia y la funcionalidad de este insight.
 
 ## Perfiles por identidad {#profiles-by-identity}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - Entre el recuento total de perfiles, ¿qué tipo de identidad tiene una proporción más alta?
 - ¿Existen diferencias significativas entre los tipos de identidad?
 - ¿Cuál es la distribución general de los tipos de identidad?
 - ¿Existen disparidades o anomalías significativas en los recuentos de identidad?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -622,17 +622,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte la [documentación del widget Perfiles por identidad](../guides/profiles.md#profiles-by-identity) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación de perfiles por widget de identidad](../guides/profiles.md#profiles-by-identity) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Tendencia de cambio de recuento de perfiles {#profiles-count-change-trend}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la tendencia general en el cambio del recuento de perfiles en los últimos 12 meses, según la política de combinación?
 - ¿Hay patrones específicos o fluctuaciones en el cambio del recuento de perfiles en los últimos 30 días que requieren atención?
 - ¿En qué se diferencia el cambio en el recuento de perfiles durante los últimos 90 días de la tendencia general?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT date_key,
@@ -656,17 +656,17 @@ SELECT date_key,
 
 +++
 
-Consulte la [documentación del widget de tendencia de cambio de recuento de perfiles](../guides/profiles.md#profiles-count-change-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
+Consulte la [Documentación del widget de tendencia de cambio de recuento de perfiles](../guides/profiles.md#profiles-count-change-trend) para obtener información sobre la apariencia y la funcionalidad de este insight.
 
 ## Tendencia de cambio de recuento de perfiles por identidad {#profiles-count-change-trend-by-identity}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la tendencia general en el cambio del recuento de perfiles en diferentes identidades durante los últimos 12 meses?
 - ¿Existen tendencias de identidad específicas que muestren cambios significativos en los últimos 30 días?
 - ¿En qué se diferencian los cambios en el recuento de perfiles al comparar las tendencias de 30 días, 90 días y 12 meses para una identidad particular?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT date_key,
@@ -697,18 +697,18 @@ SELECT date_key,
 
 +++
 
-Consulte la [Tendencia de cambio de recuento de perfiles por documentación del widget de identidad](../guides/profiles.md#profiles-count-change-trend-by-identity) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
+Consulte la [Tendencia de cambio de recuento de perfiles por documentación del widget de identidad](../guides/profiles.md#profiles-count-change-trend-by-identity) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Perfiles de identidad únicos {#single-identity-profiles}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Mis datos de identidad de clientes se representan de forma coherente con identidades únicas?
 - ¿Qué porcentaje de mi base de usuarios consta de perfiles con un solo tipo de identidad?
 - De los perfiles con un solo tipo de identidad, ¿cómo afecta esto a la integridad del perfil?
 - ¿Existe una correlación entre el tipo de identidad más común y el recuento de perfiles de identidad único?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -722,17 +722,17 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulte la [documentación del widget de perfiles de identidad única](../guides/profiles.md#single-identity-profiles) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de perfiles de identidad única](../guides/profiles.md#single-identity-profiles) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Perfiles de identidad únicos por identidad {#single-identity-profiles-by-identity}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántos clientes únicos se han registrado con una sola identidad (por ejemplo, correo electrónico o número de teléfono)?
 - ¿Cuál es la distribución de perfiles de identidad única entre diferentes tipos de identidad, como correo electrónico o números de teléfono?
 - ¿Hay patrones de identidad emergentes o cambios dentro de los perfiles de identidad únicos?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -749,17 +749,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte la [documentación del widget de identidad ](../guides/profiles.md#single-identity-profiles-by-identity) con perfiles de identidad únicos para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación de perfiles de identidad única por widget de identidad](../guides/profiles.md#single-identity-profiles-by-identity) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Perfiles no segmentados {#unsegmented-profiles}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántos perfiles no forman parte de una audiencia?
 - ¿Qué porcentaje de la audiencia total está representado por perfiles no segmentados?
 - ¿Contribuye alguna política de combinación a un gran número de perfiles no segmentados?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -773,7 +773,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulte la [documentación del widget de perfiles no segmentados](../guides/profiles.md#unsegmented-profiles) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de perfiles no segmentados](../guides/profiles.md#unsegmented-profiles) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Pasos siguientes
 

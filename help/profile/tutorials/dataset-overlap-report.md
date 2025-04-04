@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API;informes;informe de superposición de conjuntos de datos;datos de perfil
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;informes;informe de superposición de conjuntos de datos;datos de perfil
 title: Generar el informe de superposición de conjuntos de datos
 type: Tutorial
 description: Este tutorial describe los pasos necesarios para generar el informe de superposición de conjuntos de datos mediante la API de perfil del cliente en tiempo real.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Este tutorial describe los pasos necesarios para generar el informe de superposi
 
 ## Introducción
 
-Para usar las API de Adobe Experience Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para recopilar los valores que necesita para los encabezados requeridos. Para obtener más información sobre las API de Experience Platform, consulte la [documentación sobre cómo empezar a usar las API de plataforma](../../landing/api-guide.md).
+Para usar las API de Adobe Experience Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para recopilar los valores que necesita para los encabezados requeridos. Para obtener más información sobre las API de Experience Platform, consulte la [documentación sobre cómo empezar a usar las API de Experience Platform](../../landing/api-guide.md).
 
 Los encabezados necesarios para todas las llamadas de API de este tutorial son:
 
@@ -33,7 +33,7 @@ Después de completar el tutorial de autenticación y recopilar los valores de l
 
 ## Generar informe de superposición de conjuntos de datos mediante la línea de comandos
 
-GET Si está familiarizado con el uso de la línea de comandos, puede utilizar la siguiente solicitud cURL para generar el informe de superposición de conjuntos de datos realizando una solicitud a `/previewsamplestatus/report/dataset/overlap`.
+Si está familiarizado con el uso de la línea de comandos, puede utilizar la siguiente solicitud cURL para generar el informe de superposición de conjuntos de datos realizando una solicitud GET a `/previewsamplestatus/report/dataset/overlap`.
 
 **Solicitud**
 
@@ -132,4 +132,4 @@ Este informe proporciona la siguiente información:
 
 ## Pasos siguientes
 
-Después de completar este tutorial, ahora puede generar el informe de superposición de conjuntos de datos mediante la API de perfil del cliente en tiempo real. Para obtener más información sobre cómo trabajar con los datos de perfil en la API y en la interfaz de usuario del Experience Platform, lea la [documentación de descripción general del perfil](../home.md).
+Después de completar este tutorial, ahora puede generar el informe de superposición de conjuntos de datos mediante la API de perfil del cliente en tiempo real. Para obtener más información sobre cómo trabajar con los datos de perfil en la API y en la interfaz de usuario de Experience Platform, lea la [documentación de información general de perfil](../home.md).

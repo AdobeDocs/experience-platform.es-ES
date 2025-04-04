@@ -5,9 +5,9 @@ feature: Customer AI
 title: Creación de segmentos de clientes con puntuaciones previstas
 description: Cuando se completa una ejecución de predicción, los perfiles consumen automáticamente las puntuaciones de tendencia predichas. El enriquecimiento de perfiles con puntuaciones de inteligencia artificial aplicada al cliente permite crear segmentos de clientes para encontrar audiencias en función de sus puntuaciones de tendencia. En esta sección se proporcionan los pasos para crear segmentos mediante el Generador de segmentos.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Cuando se completa una ejecución de predicción, los perfiles consumen automát
 >
 >Para utilizar este método, el perfil del cliente en tiempo real debe estar habilitado para el conjunto de datos.
 
-En la interfaz de usuario de Platform, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y luego haga clic en **[!UICONTROL Crear segmento]**.
+En la interfaz de usuario de Experience Platform, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y luego haga clic en **[!UICONTROL Crear segmento]**.
 
 ![](../images/user-guide/segments_new.png)
 

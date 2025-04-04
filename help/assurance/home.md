@@ -2,10 +2,10 @@
 title: Información general sobre Adobe Experience Platform Assurance
 description: Adobe Experience Platform Assurance le permite inspeccionar, comprobar, simular y validar cómo recopila datos o sirve experiencias en sus aplicaciones móviles.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 100%
+source-wordcount: '809'
+ht-degree: 95%
 
 ---
 
@@ -43,7 +43,7 @@ Empiece con unas pocas líneas de código. En el caso de las aplicaciones móvil
 
 ### Conexión sin complicaciones
 
-Con Assurance, la conexión de la aplicación con Platform es sencilla y fiable. No es necesario que utilice proxies de red ([MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) u otras gimnasias de red: conectar la aplicación a Assurance es tan fácil como escanear un código QR o pulsar un botón.
+Con Assurance, conectar la aplicación con Experience Platform es sencillo y fiable. No es necesario que utilice proxies de red ([MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) u otras gimnasias de red: conectar la aplicación a Assurance es tan fácil como escanear un código QR o pulsar un botón.
 
 ![](./images/index/no-hassle-connection.png)
 
@@ -67,7 +67,7 @@ Assurance le ayuda a inspeccionar los eventos de SDK sin procesar generados por 
 
 ### Adobe Analytics
 
-La vista Adobe Analytics > Eventos de Analytics es una vista centrada que muestra eventos relacionados con la implementación de Adobe Analytics Mobile. La vista de lista muestra los eventos de ciclo vital o acción/estado, el “estado” posterior al procesamiento, junto con los detalles de evento necesarios en una vista con formato especial. El estado Posterior al procesamiento muestra cómo Adobe Analytics ha procesado el evento después de aplicar las reglas de procesamiento al evento.
+La vista Adobe Analytics > Eventos de Analytics es una vista centrada que muestra eventos relacionados con la implementación de Adobe Analytics Mobile. La vista de lista muestra los eventos de ciclo vital o acción/estado, el &quot;estado&quot; posterior al procesamiento, junto con los detalles de evento necesarios en una vista con formato especial. El estado Posterior al procesamiento muestra cómo Adobe Analytics ha procesado el evento después de aplicar las reglas de procesamiento al evento.
 
 ### Adobe Analytics para medios de streaming
 

@@ -1,16 +1,16 @@
 ---
-title: Ingesta de datos de pagos de su cuenta de Stripe a Experience Platform mediante la interfaz de usuario de.
-description: Aprenda a introducir datos de pagos de su cuenta de Stripe a Experience Platform mediante la interfaz de usuario.
+title: Ingesta de datos de pagos desde su cuenta de Stripe a Experience Platform mediante la interfaz de usuario de.
+description: Aprenda a introducir datos de pagos de su cuenta de Stripe en Experience Platform mediante la interfaz de usuario.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: dd9afe650f4c83b3877f980acac66e703e9ae5d8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1658'
 ht-degree: 3%
 
 ---
 
-# Ingresar datos de pagos de su cuenta de [!DNL Stripe] al Experience Platform mediante la interfaz de usuario
+# Ingresar datos de pagos de su cuenta de [!DNL Stripe] en Experience Platform mediante la interfaz de usuario
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Lea la [[!DNL Stripe] descripción general](../../../../connectors/payments/stri
 
 ## Conectar su cuenta de [!DNL Stripe] {#connect}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría *Pagos*, seleccione **[!DNL Stripe]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
@@ -41,7 +41,7 @@ En la categoría *Pagos*, seleccione **[!DNL Stripe]** y, a continuación, selec
 >
 >Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
 
-![El catálogo de orígenes en la interfaz de usuario del Experience Platform, con la tarjeta de origen del Stripe seleccionada.](../../../../images/tutorials/create/stripe/catalog.png)
+![Catálogo de orígenes en la interfaz de usuario de Experience Platform, con la tarjeta de origen de Stripe seleccionada.](../../../../images/tutorials/create/stripe/catalog.png)
 
 Aparecerá la página **[!UICONTROL Conectar cuenta de Stripe]**. En esta página, puede usar credenciales nuevas o existentes.
 
@@ -84,7 +84,7 @@ Ahora que tiene acceso a su cuenta, debe identificar la ruta adecuada a los dato
 
 Una vez seleccionado el punto de conexión, la interfaz se actualiza a una pantalla de vista previa que muestra la estructura de datos del punto de conexión [!DNL Stripe] que ha seleccionado. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![Ventana de vista previa de los datos del Stripe.](../../../../images/tutorials/create/stripe/preview.png)
+![Ventana de vista previa de los datos de Stripe.](../../../../images/tutorials/create/stripe/preview.png)
 
 ## Proporcionar detalles del conjunto de datos y flujo de datos {#provide-dataset-and-dataflow-details}
 
@@ -92,7 +92,7 @@ A continuación, debe proporcionar información sobre el conjunto de datos y el 
 
 ### Detalles del conjunto de datos {#dataset-details}
 
-Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente en Experience Platform se almacenan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
+Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente a Experience Platform se almacenan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
 
 >[!BEGINTABS]
 
@@ -121,7 +121,7 @@ Si ya tiene un conjunto de datos, seleccione **[!UICONTROL Conjunto de datos exi
 Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos de perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
 
 * **[!UICONTROL Diagnósticos de error]**: seleccione **[!UICONTROL Diagnósticos de error]** para indicar a la fuente que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
-* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos precisos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
+* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
 
 +++
 
@@ -135,7 +135,7 @@ Una vez configurado el conjunto de datos, debe proporcionar detalles sobre el fl
 | --- | --- |
 | Nombre de flujo de datos | Nombre del flujo de datos.  De forma predeterminada, se utiliza el nombre del archivo que se está importando. |
 | Descripción | (Opcional) Una breve descripción del flujo de datos. |
-| Alertas | El Experience Platform puede generar alertas basadas en eventos a las que los usuarios pueden suscribirse. Todas estas opciones requieren un flujo de datos en ejecución para almacenarlas en déclencheur.  Para obtener más información, lea la [descripción general de las alertas](../../alerts.md) <ul><li>**Inicio de ejecución del flujo de datos de origen**: seleccione esta alerta para recibir una notificación cuando comience la ejecución del flujo de datos.</li><li>**Ejecución correcta del flujo de datos de origen**: seleccione esta alerta para recibir una notificación si el flujo de datos termina sin errores.</li><li>**Error al ejecutar el flujo de datos de origen**: seleccione esta alerta para recibir una notificación si la ejecución del flujo de datos termina con errores.</li></ul> |
+| Alertas | Experience Platform puede generar alertas basadas en eventos a las que los usuarios pueden suscribirse. Todas estas opciones requieren un flujo de datos en ejecución para almacenarlas en déclencheur.  Para obtener más información, lea la [descripción general de las alertas](../../alerts.md) <ul><li>**Inicio de ejecución del flujo de datos de origen**: seleccione esta alerta para recibir una notificación cuando comience la ejecución del flujo de datos.</li><li>**Ejecución correcta del flujo de datos de origen**: seleccione esta alerta para recibir una notificación si el flujo de datos termina sin errores.</li><li>**Error al ejecutar el flujo de datos de origen**: seleccione esta alerta para recibir una notificación si la ejecución del flujo de datos termina con errores.</li></ul> |
 
 Cuando termine, seleccione **[!UICONTROL Siguiente]** para continuar.
 
@@ -182,7 +182,7 @@ Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de pagos de su origen de [!DNL Stripe] al Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
+Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de pagos de su origen de [!DNL Stripe] a Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
 
 ### Monitorización del flujo de datos
 

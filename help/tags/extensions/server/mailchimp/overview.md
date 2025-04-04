@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1267'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obtener una referencia consolidada de los cambios terminológicos.
 
 La extensión de Mailchimp [reenvío de eventos](../../../ui/event-forwarding/overview.md) envía eventos a la API de marketing de Mailchimp que puede almacenar en déclencheur correos electrónicos para campañas, recorridos o transacciones de marketing de Mailchimp.
 
@@ -103,17 +103,17 @@ La extensión de ya está instalada y configurada para su uso en la propiedad.
 
 ## Recopilación de datos
 
-Al usar esta extensión en una [regla](../../../ui/managing-resources/rules.md), hay varios valores de datos que la extensión envía a Mailchimp con cada evento. Para una implementación típica, puede configurar la [extensión del SDK web de Adobe Experience Platform](../../client/web-sdk/overview.md) para enviar esos datos a [!DNL Platform Edge Network] para que la utilice la extensión en la propiedad de reenvío de eventos.
+Al usar esta extensión en una [regla](../../../ui/managing-resources/rules.md), hay varios valores de datos que la extensión envía a Mailchimp con cada evento. Para una implementación típica, puede configurar la [extensión de Adobe Experience Platform Web SDK](../../client/web-sdk/overview.md) para enviar esos datos a [!DNL Experience Platform Edge Network] para que la utilice la extensión en la propiedad de reenvío de eventos.
 
-Los datos requeridos por esta extensión se pueden enviar desde el SDK web como datos XDM (con el objeto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md)) o como datos que no sean XDM (con el objeto [`data`](/help/web-sdk/commands/sendevent/data.md)).
+Los datos requeridos por esta extensión se pueden enviar desde Web SDK como datos XDM (con el objeto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md)) o como datos que no sean XDM (con el objeto [`data`](/help/web-sdk/commands/sendevent/data.md)).
 
-Por ejemplo, si un cliente realiza una compra o se registra para un evento en su sitio, puede enviar un correo electrónico de confirmación a través de Mailchimp con esta extensión. Una vez que se envía la información necesaria desde el SDK web al Edge Network, la extensión almacena en déclencheur el correo electrónico con Mailchimp.
+Por ejemplo, si un cliente realiza una compra o se registra para un evento en su sitio, puede enviar un correo electrónico de confirmación a través de Mailchimp con esta extensión. Una vez que envía la información necesaria desde Web SDK a Edge Network, la extensión almacena en déclencheur el correo electrónico con Mailchimp.
 
 ![Agregar configuración de acción de evento](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### Elementos de datos
 
-La captura de pantalla de la sección anterior muestra los datos que puedes enviar con cada evento de esta extensión a Mailchimp. Una vez configurado el SDK web para enviar estos datos al Edge Network, puede crear elementos de datos en la propiedad de reenvío de eventos para que la extensión pueda acceder a esos valores.
+La captura de pantalla de la sección anterior muestra los datos que puedes enviar con cada evento de esta extensión a Mailchimp. Una vez configurado Web SDK para enviar estos datos a Edge Network, puede crear elementos de datos en la propiedad de reenvío de eventos para que la extensión pueda acceder a esos valores.
 
 La tabla siguiente proporciona más detalles para cada valor posible.
 
@@ -130,7 +130,7 @@ La tabla siguiente proporciona más detalles para cada valor posible.
 
 >[!IMPORTANT]
 >  
->Los valores de **Ejemplo de ruta** anteriores son solo ejemplos. Los nombres de campo y las [rutas](../../../ui/event-forwarding/overview.md#data-element-path) a las que se hace referencia en esos elementos de datos pueden ser diferentes en su propiedad, según la forma en que haya asignado nombre y configurado el SDK web en los pasos anteriores.
+>Los valores de **Ejemplo de ruta** anteriores son solo ejemplos. Los nombres de campo y las [rutas](../../../ui/event-forwarding/overview.md#data-element-path) a las que se hace referencia en esos elementos de datos pueden ser diferentes en su propiedad, según cómo haya asignado nombre y configurado Web SDK en los pasos anteriores.
 
 En la propiedad de reenvío de eventos puede crear un elemento de datos para cada uno de los campos descritos anteriormente. Una vez creada, puede hacer referencia a los elementos de datos en la acción [!UICONTROL Agregar evento] de esta extensión.
 
@@ -140,7 +140,7 @@ Ahora puede utilizar esta extensión y la acción Añadir evento para almacenar 
 
 ## Validación de datos
 
-Al trabajar con extensiones de reenvío de eventos, el [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) es muy útil. En la sección Registros, en Registros de Edge puede ver las solicitudes realizadas por las reglas de reenvío de eventos una vez activadas. Las siguientes capturas de pantalla muestran una solicitud a la API de Mailchimp realizada por la extensión.
+Al trabajar con extensiones de reenvío de eventos, [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) resulta muy útil. En la sección Registros, en Registros de Edge puede ver las solicitudes realizadas por las reglas de reenvío de eventos una vez activadas. Las siguientes capturas de pantalla muestran una solicitud a la API de Mailchimp realizada por la extensión.
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 

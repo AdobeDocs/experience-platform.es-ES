@@ -3,11 +3,11 @@ keywords: Experience Platform;inicio;temas populares;streaming;conector de almac
 solution: Experience Platform
 title: Cree un flujo de datos de flujo continuo para una fuente de almacenamiento en la nube en la IU
 type: Tutorial
-description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector de base de almacenamiento en la nube.
+description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Experience Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector de base de almacenamiento en la nube.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1078'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Adobe Experience Platform. Este tutorial proporciona pasos para crear un flujo de datos de flujo continuo para una fuente de almacenamiento en la nube en la interfaz de usuario.
 
-Antes de intentar realizar este tutorial, primero debe establecer una conexión válida y autenticada entre su cuenta de almacenamiento en la nube y Platform. Si aún no tiene una conexión autenticada, consulte uno de los siguientes tutoriales para obtener información sobre la autenticación de las cuentas de almacenamiento de nube de streaming:
+Antes de intentar realizar este tutorial, primero debe establecer una conexión válida y autenticada entre su cuenta de almacenamiento en la nube y Experience Platform. Si aún no tiene una conexión autenticada, consulte uno de los siguientes tutoriales para obtener información sobre la autenticación de las cuentas de almacenamiento de nube de streaming:
 
 - [[!DNL Amazon Kinesis]](../../../ui/create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
@@ -26,7 +26,7 @@ Antes de intentar realizar este tutorial, primero debe establecer una conexión 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [Flujos de datos](../../../../../dataflows/home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, desde las fuentes hasta [!DNL Identity Service], hasta [!DNL Profile] y hasta [!DNL Destinations].
+- [Flujos de datos](../../../../../dataflows/home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Los flujos de datos se configuran en diferentes servicios, desde las fuentes hasta [!DNL Identity Service], hasta [!DNL Profile] y hasta [!DNL Destinations].
 - [Preparación de datos](../../../../../data-prep/home.md): La preparación de datos permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de experiencia (XDM). La preparación de datos aparece como un paso de &quot;mapa&quot; en los procesos de ingesta de datos, incluido el flujo de trabajo de ingesta de CSV.
 - [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco de trabajo estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de la experiencia del cliente.
    - [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
@@ -39,7 +39,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >
 >Solo puede crear un flujo de datos de origen por grupo de consumidores para un centro de eventos determinado.
 
-Después de crear la autenticación de su cuenta de almacenamiento de nube de streaming, aparece el paso **[!UICONTROL Seleccionar datos]**, que proporciona una interfaz para que seleccione el flujo de datos que llevará a Platform.
+Después de crear la cuenta de autenticación de almacenamiento de nube de streaming, aparece el paso **[!UICONTROL Seleccionar datos]**, que proporciona una interfaz para que seleccione el flujo de datos que llevará a Experience Platform.
 
 - La parte izquierda de la interfaz es un explorador que le permite ver los flujos de datos disponibles en su cuenta;
 - La parte derecha de la interfaz de le permite previsualizar hasta 100 filas de datos de un archivo JSON.
@@ -62,7 +62,7 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 ## Asignación
 
-Aparecerá el paso **[!UICONTROL Mapping]**, que proporciona una interfaz para asignar los datos de origen a un conjunto de datos de Platform.
+Aparecerá el paso **[!UICONTROL Mapping]**, que proporciona una interfaz para asignar los datos de origen a un conjunto de datos de Experience Platform.
 
 Elija un conjunto de datos para los datos de entrada que se van a introducir en. Puede utilizar un conjunto de datos existente o crear uno nuevo.
 
@@ -106,7 +106,7 @@ Con el conjunto de datos y el esquema establecidos, aparece la interfaz **[!UICO
 
 >[!TIP]
 >
->Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
+>Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
 
 En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
 
@@ -139,7 +139,7 @@ Una vez creado el flujo de datos del almacenamiento en la nube de streaming, pue
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para transmitir datos desde una fuente de almacenamiento en la nube. Ahora, los servicios de la plataforma descendente como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ha creado correctamente un flujo de datos para transmitir datos desde una fuente de almacenamiento en la nube. Ahora los servicios de Experience Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
 
 - [Información general de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 - [Información general de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

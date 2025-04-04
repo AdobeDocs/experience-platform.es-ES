@@ -3,9 +3,9 @@ title: Creación De Una Conexión De Source De Flujo Y Un Flujo De Datos Para Lo
 description: Aprenda a crear una conexión de origen de flujo continuo y un flujo de datos para los datos de Shopify mediante la API de Flow Service.
 badge: Beta
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1432'
 ht-degree: 2%
 
 ---
@@ -22,20 +22,20 @@ El siguiente tutorial proporciona pasos sobre cómo crear una conexión de orige
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../../home.md): el Experience Platform permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
-## Transmitir datos de [!DNL Shopify] a Platform mediante la API de Flow Service
+## Transmitir datos de [!DNL Shopify] a Experience Platform mediante la API de Flow Service
 
-A continuación se describen los pasos que debe seguir para crear una conexión de origen y un flujo de datos para transmitir los datos de [!DNL Shopify] a Platform.
+A continuación se describen los pasos que debe seguir para crear una conexión de origen y un flujo de datos para transmitir los datos de [!DNL Shopify] a Experience Platform.
 
 ### Crear una conexión de origen {#source-connection}
 
-Cree una conexión de origen realizando una solicitud de POST a la API [!DNL Flow Service], al mismo tiempo que proporciona el ID de especificación de conexión de su origen, detalles como el nombre y la descripción y el formato de sus datos.
+Cree una conexión de origen realizando una petición POST a la API [!DNL Flow Service], al tiempo que proporciona el ID de especificación de conexión de su origen, detalles como el nombre y la descripción y el formato de sus datos.
 
 **Formato de API**
 
@@ -89,15 +89,15 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ### Creación de un esquema XDM de destino {#target-schema}
 
-Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se incluyen los datos de origen.
+Para que los datos de origen se utilicen en Experience Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Experience Platform en el que se incluyen los datos de origen.
 
-Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API de Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Se puede crear un esquema XDM de destino realizando una petición POST a la [API del Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../../../xdm/api/schemas.md).
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), que proporcione el ID del esquema de destino en la carga útil.
+Se puede crear un conjunto de datos de destino realizando una petición POST en la [API del servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), que proporcione el ID del esquema de destino en la carga útil.
 
 Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
 
@@ -152,7 +152,7 @@ curl -X POST \
 | `name` | Nombre de la conexión de destino. Asegúrese de que el nombre de la conexión de destino sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de destino. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de destino. |
 | `connectionSpec.id` | ID de especificación de conexión que corresponde al lago de datos. Este identificador fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Formato de los datos de [!DNL Shopify] que desea llevar a Platform. |
+| `data.format` | Formato de los datos de [!DNL Shopify] que desea llevar a Experience Platform. |
 | `params.dataSetId` | ID del conjunto de datos de destino recuperado en un paso anterior. |
 
 
@@ -169,7 +169,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la nueva conex
 
 ### Creación de una asignación {#mapping}
 
-Para que los datos de origen se incorporen en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se logra realizando una solicitud de POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
+Para que los datos de origen se incorporen en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se logra realizando una petición POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
 
 **Formato de API**
 
@@ -232,13 +232,13 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ### Creación de un flujo {#flow}
 
-El último paso para llevar datos de [!DNL Shopify] a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
+El último paso para llevar datos de [!DNL Shopify] a Experience Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
 * [ID de conexión de Source](#source-connection)
 * [ID de conexión de destino](#target-connection)
 * [ID de asignación](#mapping)
 
-Un flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
+Un flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una petición POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
 
 **Formato de API**
 
@@ -288,7 +288,7 @@ curl -X POST \
 | `flowSpec.version` | La versión correspondiente del ID de especificación de flujo. El valor predeterminado es `1.0`. |
 | `sourceConnectionIds` | [Id. de conexión de origen](#source-connection) generado en un paso anterior. |
 | `targetConnectionIds` | [Id. de conexión de destino](#target-connection) generado en un paso anterior. |
-| `transformations` | Esta propiedad contiene las distintas transformaciones necesarias para aplicarse a los datos. Esta propiedad es necesaria al llevar datos no compatibles con XDM a Platform. |
+| `transformations` | Esta propiedad contiene las distintas transformaciones necesarias para aplicarse a los datos. Esta propiedad es necesaria al llevar datos no compatibles con XDM a Experience Platform. |
 | `transformations.name` | El nombre asignado a la transformación. |
 | `transformations.params.mappingId` | [ID de asignación](#mapping) generado en un paso anterior. |
 | `transformations.params.mappingVersion` | La versión correspondiente del ID de asignación. El valor predeterminado es `0`. |
@@ -306,9 +306,9 @@ Una respuesta correcta devuelve el identificador (`id`) del flujo de datos reci�
 
 ### Obtener la URL del extremo de flujo continuo
 
-Con el flujo de datos creado, ahora puede recuperar la URL del extremo de flujo continuo. Utilizará esta URL de punto de conexión para suscribir su origen a un webhook, lo que permite que su origen se comunique con el Experience Platform.
+Con el flujo de datos creado, ahora puede recuperar la URL del extremo de flujo continuo. Utilizará esta dirección URL de extremo para suscribir el origen a un webhook, lo que permitirá al origen comunicarse con Experience Platform.
 
-Para recuperar la dirección URL del extremo de flujo continuo, realice una solicitud de GET al extremo `/flows` y proporcione el ID del flujo de datos.
+Para recuperar la dirección URL del extremo de flujo continuo, realice una petición GET al extremo `/flows` y proporcione el ID del flujo de datos.
 
 **Formato de API**
 
@@ -659,16 +659,16 @@ Una vez creado el flujo de datos, puede monitorizar los datos que se están intr
 
 ### Actualizar el flujo de datos
 
-Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados, realizando una solicitud del PATCH al extremo `/flows` de la API [!DNL Flow Service], proporcionando al mismo tiempo el ID del flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único del flujo de datos en el encabezado `If-Match`. Para ver ejemplos completos de la API, lea la guía sobre [actualización de flujos de datos de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados, realizando una petición PATCH al extremo `/flows` de la API [!DNL Flow Service], proporcionando al mismo tiempo el ID del flujo de datos. Al realizar una solicitud PATCH, debe proporcionar el `etag` único del flujo de datos en el encabezado `If-Match`. Para ver ejemplos completos de la API, lea la guía sobre [actualización de flujos de datos de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Actualice su cuenta
 
-Actualice el nombre, la descripción y las credenciales de su cuenta de origen realizando una solicitud de PATCH a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único de su cuenta de origen en el encabezado `If-Match`. Para ver ejemplos completos de API, lee la guía de [actualización de tu cuenta de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Actualice el nombre, la descripción y las credenciales de su cuenta de origen realizando una petición PATCH a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único de su cuenta de origen en el encabezado `If-Match`. Para ver ejemplos completos de API, lee la guía de [actualización de tu cuenta de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Eliminar el flujo de datos
 
-Elimine el flujo de datos realizando una solicitud de DELETE a la API [!DNL Flow Service] mientras proporciona el ID del flujo de datos que desea eliminar como parte del parámetro query. Para ver ejemplos completos de API, lea la guía sobre [eliminación de flujos de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Elimine el flujo de datos realizando una petición DELETE a la API [!DNL Flow Service] y proporcionando al mismo tiempo el ID del flujo de datos que desea eliminar como parte del parámetro query. Para ver ejemplos completos de API, lea la guía sobre [eliminación de flujos de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Eliminar su cuenta
 
-Elimine la cuenta realizando una solicitud de DELETE a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de API, lee la guía sobre [eliminar tu cuenta de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Elimine la cuenta realizando una petición DELETE a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de API, lee la guía sobre [eliminar tu cuenta de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

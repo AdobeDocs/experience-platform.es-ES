@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;fuentes sdk;sdk;SDK
 solution: Experience Platform
-title: Creación de una conexión de origen de MailChimp Campaigns mediante la IU de Platform
-description: Aprenda a conectar Adobe Experience Platform a campañas de MailChimp mediante la IU de Platform.
+title: Crear una conexión de origen de MailChimp Campaigns mediante la interfaz de usuario de Experience Platform
+description: Aprenda a conectar Adobe Experience Platform a campañas de MailChimp mediante la interfaz de usuario de Experience Platform.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '697'
 ht-degree: 4%
 
 ---
 
-# Crear una conexión de origen [!DNL Mailchimp Campaigns] mediante la interfaz de usuario de Platform
+# Crear una conexión de origen [!DNL Mailchimp Campaigns] mediante la interfaz de usuario de Experience Platform
 
 Este tutorial proporciona los pasos para crear un conector de origen [!DNL Mailchimp] para la ingesta de datos de [!DNL Mailchimp Campaigns] en Adobe Experience Platform mediante la interfaz de usuario.
 
@@ -19,12 +19,12 @@ Este tutorial proporciona los pasos para crear un conector de origen [!DNL Mailc
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../../sandboxes/home.md): Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Recopilar credenciales necesarias
 
-Para poder llevar los datos de [!DNL Mailchimp Campaigns] a Platform, primero debe proporcionar las credenciales de autenticación adecuadas que se correspondan con la cuenta de [!DNL Mailchimp].
+Para poder llevar los datos de [!DNL Mailchimp Campaigns] a Experience Platform, primero debe proporcionar las credenciales de autenticación adecuadas que se correspondan con la cuenta de [!DNL Mailchimp].
 
 El origen [!DNL Mailchimp Campaigns] admite código de actualización OAuth 2 y autenticación básica. Consulte las tablas siguientes para obtener más información sobre estos tipos de autenticación.
 
@@ -33,10 +33,10 @@ El origen [!DNL Mailchimp Campaigns] admite código de actualización OAuth 2 y 
 | Credenciales | Descripción |
 | --- | --- |
 | Dominio | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
-| URL de prueba de autorización | La dirección URL de prueba de autorización se usa para validar credenciales al conectar [!DNL Mailchimp] a Platform. Si no se proporciona, las credenciales se comprueban automáticamente durante el paso de creación de la conexión de origen. |
+| URL de prueba de autorización | La dirección URL de prueba de autorización se usa para validar credenciales al conectar [!DNL Mailchimp] a Experience Platform. Si no se proporciona, las credenciales se comprueban automáticamente durante el paso de creación de la conexión de origen. |
 | Token de acceso | El token de acceso correspondiente utilizado para autenticar el origen. Esto es necesario para la autenticación basada en OAuth. |
 
-Para obtener más información sobre el uso de OAuth 2 para autenticar su cuenta de [!DNL Mailchimp] en Platform, consulte este [[!DNL Mailchimp] documento sobre el uso de OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
+Para obtener más información sobre el uso de OAuth 2 para autenticar su cuenta de [!DNL Mailchimp] en Experience Platform, consulte este [[!DNL Mailchimp] documento sobre el uso de OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
 
 ### Autenticación básica
 
@@ -46,9 +46,9 @@ Para obtener más información sobre el uso de OAuth 2 para autenticar su cuenta
 | Nombre de usuario | El nombre de usuario que corresponde con su cuenta de MailChimp. Esto es necesario para la autenticación básica. |
 | Contraseña | La contraseña que corresponde a su cuenta de MailChimp. Esto es necesario para la autenticación básica. |
 
-## Conectar su cuenta de [!DNL Mailchimp Campaigns] a Platform
+## Conecte su cuenta de [!DNL Mailchimp Campaigns] a Experience Platform
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
@@ -96,4 +96,4 @@ La página se actualiza en un árbol de esquema interactivo que le permite explo
 
 ## Pasos siguientes
 
-Con la cuenta [!DNL Mailchimp] autenticada y los datos [!DNL Mailchimp Campaigns] seleccionados, ahora puede empezar a crear un flujo de datos para llevar los datos a Platform. Para ver los pasos detallados sobre cómo crear un flujo de datos, consulte la documentación de [creación de un flujo de datos para llevar los datos de automatización de marketing a la plataforma](../../dataflow/marketing-automation.md).
+Con la cuenta de [!DNL Mailchimp] autenticada y los datos de [!DNL Mailchimp Campaigns] seleccionados, ahora puede empezar a crear un flujo de datos para llevar los datos a Experience Platform. Para ver los pasos detallados sobre cómo crear un flujo de datos, consulte la documentación de [creación de un flujo de datos para llevar los datos de automatización de marketing a Experience Platform](../../dataflow/marketing-automation.md).

@@ -3,9 +3,9 @@ keywords: extensión de adform;adform
 title: Extensión de seguimiento de sitio web de Adobe
 description: La extensión de Adobe Forms es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: f616ecbf-6833-40cd-86be-7c13afe31180
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '447'
 ht-degree: 3%
 
 ---
@@ -18,13 +18,13 @@ La extensión de seguimiento de sitios web de Adobe permite a los anunciantes im
 
 [!DNL Adform] es una extensión de analytics en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html)
 
-Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
+Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
 ![Extensión Adform](../../assets/catalog/analytics/adform/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que han adquirido Platform.
+Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
 Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
@@ -32,7 +32,7 @@ Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experi
 
 Para instalar la extensión Adform:
 
-En la [interfaz de plataforma](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
@@ -42,7 +42,7 @@ Seleccione la propiedad en la que desea instalar la extensión. También tiene l
 
 El flujo de trabajo le guía para completar la instalación.
 
-Para obtener información acerca de las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la [página Adform en el Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html).
+Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la [página de Adobe Form en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html).
 
 También puede instalar la extensión directamente en la [IU de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía de [adición de una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 

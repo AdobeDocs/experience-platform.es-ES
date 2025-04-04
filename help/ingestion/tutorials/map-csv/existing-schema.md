@@ -5,7 +5,7 @@ title: Asignar un archivo CSV a un esquema XDM existente
 type: Tutorial
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM existente mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 1%
@@ -18,14 +18,14 @@ ht-degree: 1%
 >
 >Este documento explica cómo asignar un archivo CSV a un esquema XDM existente. Para obtener información sobre cómo utilizar la herramienta de recomendación de esquemas generados por IA (actualmente en fase beta), consulte el documento sobre [asignación de un archivo CSV mediante recomendaciones de aprendizaje automático](./recommendations.md).
 
-Para ingerir datos CSV en [!DNL Adobe Experience Platform], los datos deben asignarse a un esquema [!DNL Experience Data Model] (XDM). Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario [!DNL Platform].
+Para ingerir datos CSV en [!DNL Adobe Experience Platform], los datos deben asignarse a un esquema [!DNL Experience Data Model] (XDM). Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante la interfaz de usuario [!DNL Experience Platform].
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de [!DNL Platform]:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de [!DNL Experience Platform]:
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
-- [Ingesta por lotes](../../batch-ingestion/overview.md): Método mediante el cual [!DNL Platform] ingiere datos de archivos de datos proporcionados por el usuario.
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [Ingesta por lotes](../../batch-ingestion/overview.md): Método mediante el cual [!DNL Experience Platform] ingiere datos de archivos de datos proporcionados por el usuario.
 - [Preparación de datos de Adobe Experience Platform](../../batch-ingestion/overview.md): Un conjunto de funcionalidades que le permiten asignar y transformar datos ingeridos para que se ajusten a esquemas XDM. La documentación de [funciones de preparación de datos](../../../data-prep/functions.md) es especialmente relevante para la asignación de esquemas.
 
 Este tutorial también requiere que ya haya creado un conjunto de datos para introducir los datos CSV en. Para ver los pasos para crear un conjunto de datos en la interfaz de usuario, consulte el [tutorial de ingesta de datos](../ingest-batch-data.md).
@@ -64,7 +64,7 @@ La sección **[!UICONTROL Datos de ejemplo]** aparece una vez cargado el archivo
 
 Aparecerá el paso **[!UICONTROL Mapping]**. Las columnas del archivo CSV se enumeran en **[!UICONTROL Campo de Source]**, con sus campos de esquema XDM correspondientes en **[!UICONTROL Campo de destino]**.
 
-[!DNL Platform] proporciona automáticamente recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
+[!DNL Experience Platform] proporciona automáticamente recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino que haya seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -120,7 +120,7 @@ Una vez asignado y creado el archivo CSV, puede monitorizar los datos que se est
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha asignado correctamente un archivo CSV sin formato a un esquema XDM y lo ha introducido en [!DNL Platform]. Estos datos ahora pueden ser utilizados por servicios de flujo descendente [!DNL Platform] como [!DNL Real-Time Customer Profile]. Vea la descripción general de [[!DNL Real-Time Customer Profile]](../../../profile/home.md) para obtener más información.
+Al seguir este tutorial, ha asignado correctamente un archivo CSV sin formato a un esquema XDM y lo ha introducido en [!DNL Experience Platform]. Estos datos ahora pueden ser utilizados por servicios de flujo descendente [!DNL Experience Platform] como [!DNL Real-Time Customer Profile]. Vea la descripción general de [[!DNL Real-Time Customer Profile]](../../../profile/home.md) para obtener más información.
 
 >[!TIP]
 >

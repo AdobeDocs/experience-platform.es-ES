@@ -5,10 +5,10 @@ title: Creación de una conexión de Apache Spark en Azure HDInsights Source en 
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Apache Spark en Azure HDInsights mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 1%
 >
 > El conector [!DNL Apache Spark] de [!DNL Azure HDInsights] está en versión beta. Consulte [Resumen de fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un [!DNL Apache Spark] en el conector de origen [!DNL Azure HDInsights] mediante la interfaz de usuario [!DNL Platform].
+Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un [!DNL Apache Spark] en el conector de origen [!DNL Azure HDInsights] mediante la interfaz de usuario [!DNL Experience Platform].
 
 ## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* Sistema [Experience Data Model (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+* Sistema [Experience Data Model (XDM)](../../../../../xdm/home.md): El marco de trabajo estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [Perfil del cliente en tiempo real](../../../../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
@@ -33,7 +33,7 @@ Si ya tiene una conexión [!DNL Spark] válida, puede omitir el resto de este do
 
 ### Recopilar credenciales necesarias
 
-Para tener acceso a su cuenta de [!DNL Spark] en [!DNL Platform], debe proporcionar los siguientes valores:
+Para tener acceso a su cuenta de [!DNL Spark] en [!DNL Experience Platform], debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Para obtener más información sobre cómo empezar, consulte [este documento de 
 
 ## Conectar su cuenta de [!DNL Spark]
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Spark] y conectarse a [!DNL Platform].
+Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Spark] y conectarse a [!DNL Experience Platform].
 
 Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de orígenes con los que puede crear una cuenta.
 
@@ -71,4 +71,4 @@ Para conectar una cuenta existente, seleccione la cuenta de [!DNL Spark] con la 
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Spark]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Platform]](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Spark]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).

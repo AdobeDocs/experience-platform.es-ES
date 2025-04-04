@@ -3,9 +3,9 @@ keywords: extensión de destino;destino
 title: Extensión de Adobe Target
 description: La extensión de Adobe Target es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 62f8c641-7942-41d5-bd86-681c2c5efa6c
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '472'
 ht-degree: 13%
 
 ---
@@ -18,13 +18,13 @@ Adobe Target es la solución de Adobe Experience Cloud que proporciona todo lo n
 
 Adobe Target es una extensión de personalización en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html).
 
-Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
+Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
 ![Extensión de Adobe Target](../../assets/catalog/personalization/adobe-target/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que han adquirido Platform.
+Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
 Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
@@ -32,7 +32,7 @@ Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experi
 
 Para instalar la extensión de Adobe Target:
 
-En la [interfaz de plataforma](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 

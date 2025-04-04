@@ -5,9 +5,9 @@ title: Directrices generales para la ejecución de consultas en el servicio de c
 type: Tutorial
 description: Este documento describe los detalles importantes que deben conocerse al escribir consultas en Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Para tener acceso a un campo de un objeto de la consulta, puede usar la notació
 
 >[!NOTE]
 >
->El ID del Experience Cloud (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
+>El Experience Cloud ID (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -201,7 +201,7 @@ Las comillas invertidas son **no** necesarias si usa notación de corchetes.
 
 ## Visualización de información de tabla
 
-Después de conectarse al servicio de consultas, puede ver todas las tablas disponibles en Platform mediante los comandos `\d` o `SHOW TABLES`.
+Después de conectarse al servicio de consultas, puede ver todas las tablas disponibles en Experience Platform mediante los comandos `\d` o `SHOW TABLES`.
 
 ### Vista de tabla estándar
 
@@ -309,7 +309,7 @@ LIMIT 50;
 | Windows Phone 7.5 | 11054,0 |
 | Android 4.3 | 9221,0 |
 
-## Anulación de duplicación
+## Deduplicación
 
 El servicio de consulta admite la anulación de duplicación de datos o la eliminación de filas duplicadas de los datos. Para obtener más información sobre la anulación de duplicación, lea la [guía de anulación de duplicación del servicio de consultas](../key-concepts/deduplication.md).
 

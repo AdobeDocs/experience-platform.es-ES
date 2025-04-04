@@ -3,9 +3,9 @@ title: Guía de API de autorización de Data Distiller
 description: Aprenda a utilizar la API de autorización de Data Distiller para aplicar restricciones IP basadas en la red para conexiones seguras a través de SQL. Utilice esta API para mejorar el control de acceso a los datos de Adobe Experience Platform.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '425'
 ht-degree: 2%
 
 ---
@@ -24,13 +24,13 @@ Con esta API, puede configurar, aplicar y supervisar restricciones IP para acced
 
 Las siguientes funciones permiten definir restricciones de acceso basadas en IP, supervisar intentos de acceso y personalizar la configuración de seguridad de red para el servicio de consultas:
 
-- **Definir controles de acceso a datos basados en la red**: especifique los intervalos de IP permitidos para el acceso al Servicio de consultas. Esta restricción se aplica específicamente a las conexiones a bases de datos SQL, incluidas las realizadas mediante herramientas de Business Intelligence (BI), clientes de base de datos o interfaces de programación como JDBC.
+- **Definir controles de acceso a datos basados en la red**: especifique los intervalos de IP permitidos para el acceso al Servicio de consultas. Esta restricción se aplica específicamente a las conexiones a bases de datos SQL, incluidas las realizadas a través de herramientas de Business Intelligence (BI), clientes de bases de datos o interfaces de programación como JDBC.
 - **Habilitar alertas y supervisión exhaustivas**: todos los intentos de acceso, incluidas las conexiones denegadas, se registran y se envían a los [Registros de auditoría de Adobe Experience Platform](../../landing/governance-privacy-security/audit-logs/overview.md) para su seguimiento en tiempo real. Utilice esta capacidad para supervisar los patrones de acceso y detectar posibles brechas de seguridad.
 - **Configurar restricciones de IP flexibles**: especifique las IP permitidas en los formatos de bloque CIDR e IP individuales. Esta configuración se aplica por zona protegida, lo que le permite adaptar las restricciones de red a sus necesidades de seguridad específicas.
 
 ## Funciones de auditoría y supervisión
 
-Para admitir prácticas de acceso a datos seguras, el servicio de consultas registra todas las IP de cliente que acceden o intentan acceder al Experience Platform. Los eventos de auditoría, incluidas las conexiones denegadas, se envían a los registros de auditoría de Platform. Esto permite:
+Para admitir las prácticas de acceso seguro a los datos, el servicio de consultas registra todas las IP de cliente que acceden o intentan acceder a Experience Platform. Los eventos de auditoría, incluidas las conexiones denegadas, se envían a los registros de auditoría de Experience Platform. Esto permite:
 
 - **Supervisión en tiempo real**: haga un seguimiento de los patrones de acceso basados en IP para garantizar el cumplimiento.
 - **Alerta de acceso no autorizado**: identifique y responda a los intentos de acceso de direcciones IP no autorizadas.

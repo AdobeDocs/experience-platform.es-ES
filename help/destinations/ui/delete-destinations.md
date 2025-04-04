@@ -4,7 +4,7 @@ title: Eliminar destinos
 type: Tutorial
 description: Este tutorial enumera los pasos para eliminar un destino existente en la interfaz de usuario de Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -19,7 +19,7 @@ En la interfaz de usuario de Adobe Experience Platform, puede eliminar las conex
 
 Al eliminar un destino, se eliminan los flujos de datos existentes en ese destino. Todas las audiencias activadas en los destinos que elimine se desasignan antes de que se elimine el flujo de datos.
 
-Existen dos maneras de eliminar destinos de [!DNL Platform] [!DNL UI]. Puede hacer lo siguiente:
+Existen dos maneras de eliminar destinos de [!DNL Experience Platform] [!DNL UI]. Puede hacer lo siguiente:
 
 * [Eliminar destinos de la ficha [!UICONTROL Examinar]](#delete-browse-tab)
 * [Eliminar destinos de la página de detalles de destino](#delete-destination-details-page)
@@ -28,7 +28,7 @@ Existen dos maneras de eliminar destinos de [!DNL Platform] [!DNL UI]. Puede hac
 
 Siga los pasos a continuación para eliminar un destino de la ficha [!UICONTROL Examinar].
 
-1. Inicie sesión en la [interfaz de usuario del Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Para ver los destinos existentes, selecciona **[!UICONTROL Examinar]** en el encabezado superior.
+1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Para ver los destinos existentes, selecciona **[!UICONTROL Examinar]** en el encabezado superior.
 
    ![Destinos de exploración](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -47,7 +47,7 @@ Siga los pasos a continuación para eliminar un destino de la ficha [!UICONTROL 
 
 Siga los pasos a continuación para eliminar un destino de la página de detalles de destino.
 
-1. Inicie sesión en la [interfaz de usuario del Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Para ver los destinos existentes, selecciona **[!UICONTROL Examinar]** en el encabezado superior.
+1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Para ver los destinos existentes, selecciona **[!UICONTROL Examinar]** en el encabezado superior.
 
    ![Destinos de exploración](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -77,4 +77,4 @@ Siga los pasos a continuación para eliminar un destino de la página de detalle
 
    >[!NOTE]
    >
-   >Según la carga del servidor, [!DNL Platform] puede tardar unos minutos en eliminar el destino.
+   >Según la carga del servidor, [!DNL Experience Platform] puede tardar unos minutos en eliminar el destino.

@@ -4,9 +4,9 @@ title: Guía de la API del perfil del cliente en tiempo real
 description: La API de perfil del cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos los perfiles de vista, crear y actualizar políticas de combinación, exportar o muestrear datos de perfil y eliminar datos de perfil que ya no sean necesarios o que se hayan añadido por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 2%
 
 ---
@@ -31,25 +31,25 @@ Puede crear, ver, editar y eliminar atributos calculados mediante el extremo `ca
 
 ## Entidades (acceso de [!DNL Profile]) {#entities}
 
-A través de Adobe Experience Platform, puede acceder a los datos de [!DNL Real-Time Customer Profile] mediante las API de RESTful o la interfaz de usuario de. Para obtener información sobre cómo acceder a entidades, más conocidas como &quot;perfiles&quot;, mediante la API, siga los pasos descritos en la guía de extremo de [entidades](entities.md). Para obtener acceso a los perfiles mediante la interfaz de usuario de [!DNL Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
+A través de Adobe Experience Platform, puede acceder a los datos de [!DNL Real-Time Customer Profile] mediante las API de RESTful o la interfaz de usuario de. Para obtener información sobre cómo acceder a entidades, más conocidas como &quot;perfiles&quot;, mediante la API, siga los pasos descritos en la guía de extremo de [entidades](entities.md). Para obtener acceso a los perfiles mediante la interfaz de usuario de [!DNL Experience Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
 
 ## Trabajos de exportación ([!DNL Profile] exportar) {#profile-export}
 
 Los datos de [!DNL Real-Time Customer Profile] se pueden exportar a un conjunto de datos para un procesamiento posterior, como la exportación de audiencias para su activación o de atributos de perfil para la creación de informes. Los trabajos de exportación para audiencias forman parte de la API [!DNL Adobe Experience Platform Segmentation Service]. Lea la [guía de extremo de trabajos de exportación de segmentación](../../profile/api/export-jobs.md) para obtener más información. Para obtener instrucciones paso a paso acerca de cómo crear y administrar trabajos de exportación para atributos de perfil, visite la [guía de extremo de trabajos de exportación](export-jobs.md).
 
-## Políticas de combinación {#merge-policies}
+## Combinar políticas {#merge-policies}
 
-Al unir datos de varias fuentes en [!DNL Experience Platform], las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear perfiles de clientes individuales. Con la API [!DNL Real-Time Customer Profile], puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una política de combinación predeterminada para su organización. Para trabajar con políticas de combinación mediante la API, visite la [guía de extremo de políticas de combinación](merge-policies.md).
+Al unir datos de varias fuentes en [!DNL Experience Platform], las políticas de combinación son las reglas que [!DNL Experience Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear perfiles de clientes individuales. Con la API [!DNL Real-Time Customer Profile], puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una política de combinación predeterminada para su organización. Para trabajar con políticas de combinación mediante la API, visite la [guía de extremo de políticas de combinación](merge-policies.md).
 
-Para obtener más información sobre las políticas de combinación y su función en Platform, lea la [descripción general de las políticas de combinación](../merge-policies/overview.md).
+Para obtener más información acerca de las políticas de combinación y su función en Experience Platform, lea la [descripción general de las políticas de combinación](../merge-policies/overview.md).
 
 ## Previsualizar estado de muestra ([!DNL Profile] vista previa) {#profile-preview}
 
-A medida que los datos se incorporan a Platform, se ejecuta un trabajo de muestra para actualizar el recuento de perfiles y otras métricas relacionadas con los datos del perfil del cliente en tiempo real. Los resultados de este trabajo de ejemplo se pueden ver mediante el extremo `/previewsamplestatus`, parte de la API del perfil del cliente en tiempo real. Este extremo también se puede utilizar para enumerar distribuciones de perfil por conjunto de datos y área de nombres de identidad, así como para generar varios informes con el fin de obtener visibilidad sobre la composición del almacén de perfiles de su organización.  Para empezar a usar el extremo `/profilepreviewstatus`, consulte la [guía de extremo de estado de muestra de vista previa](preview-sample-status.md).
+A medida que los datos se incorporan a Experience Platform, se ejecuta un trabajo de ejemplo para actualizar el recuento de perfiles y otras métricas relacionadas con los datos del perfil del cliente en tiempo real. Los resultados de este trabajo de ejemplo se pueden ver mediante el extremo `/previewsamplestatus`, parte de la API del perfil del cliente en tiempo real. Este extremo también se puede utilizar para enumerar distribuciones de perfil por conjunto de datos y área de nombres de identidad, así como para generar varios informes con el fin de obtener visibilidad sobre la composición del almacén de perfiles de su organización.  Para empezar a usar el extremo `/profilepreviewstatus`, consulte la [guía de extremo de estado de muestra de vista previa](preview-sample-status.md).
 
 ## Trabajos del sistema de perfil {#profile-system-jobs}
 
-Los datos con perfil habilitado que se han ingerido en [!DNL Platform] se almacenan en [!DNL Data Lake] y en el almacén de datos de [!DNL Real-Time Customer Profile]. En ocasiones, puede ser necesario eliminar datos de perfil asociados con un conjunto de datos del almacén de perfiles para eliminar datos que ya no son necesarios o que se añadieron por error. Esto requiere el uso de la API para crear un(a) [!DNL Profile System Job], también conocido como &quot;[!DNL delete request]&quot;, que se puede modificar, supervisar o eliminar si es necesario. Para obtener información sobre cómo trabajar con solicitudes de eliminación mediante el extremo `/system/jobs` en la API [!DNL Real-Time Customer Profile], siga los pasos descritos en la [guía de extremo de trabajos del sistema de perfiles](profile-system-jobs.md).
+Los datos con perfil habilitado que se han ingerido en [!DNL Experience Platform] se almacenan en [!DNL Data Lake] y en el almacén de datos de [!DNL Real-Time Customer Profile]. En ocasiones, puede ser necesario eliminar datos de perfil asociados con un conjunto de datos del almacén de perfiles para eliminar datos que ya no son necesarios o que se añadieron por error. Esto requiere el uso de la API para crear un(a) [!DNL Profile System Job], también conocido como &quot;[!DNL delete request]&quot;, que se puede modificar, supervisar o eliminar si es necesario. Para obtener información sobre cómo trabajar con solicitudes de eliminación mediante el extremo `/system/jobs` en la API [!DNL Real-Time Customer Profile], siga los pasos descritos en la [guía de extremo de trabajos del sistema de perfiles](profile-system-jobs.md).
 
 ## Actualización de atributos de perfiles {#update-profile}
 

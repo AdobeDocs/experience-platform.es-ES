@@ -3,32 +3,32 @@ title: Utilice la encuesta de autoidentificación para crear su perfil personal 
 description: Aprenda a utilizar la interfaz de usuario de las encuestas de autoidentificación para recibir contenido relevante en función de sus funciones laborales y objetivos relacionados.
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '569'
 ht-degree: 16%
 
 ---
 
-# Utilice la encuesta de autoidentificación para crear su perfil personal de Experience Platform
+# Utilice el encuesta de autoidentificación para versión su Experience Platform perfil personal
 
 >[!NOTE]
 >
->La encuesta de autoidentificación está en versión beta. Sus funciones y documentación están sujetas a cambios.
+>El encuesta de autoidentificación está en versión beta. Sus funciones y documentación están sujetas a cambios.
 
 La encuesta de autoidentificación es un breve cuestionario que se presenta en la página de inicio de la interfaz de usuario de Adobe Experience Platform. Puede completar la encuesta para proporcionar información sobre sus funciones y objetivos generales. A continuación, esta información se utiliza para alinear mejor las guías del producto y, finalmente, entregar contenido que sea más relevante para sus objetivos.
 
-Este documento proporciona información sobre cómo puede utilizar la encuesta de autoidentificación en la IU de Platform para recibir contenido relevante en función de sus objetivos y tareas, así como cómo reconfigurar los atributos de perfil personales mediante la IU de.
+Este documento proporciona información sobre cómo puede utilizar la encuesta de autoidentificación en la IU de Experience Platform para recibir contenido relevante en función de sus objetivos y tareas, así como cómo reconfigurar los atributos de perfil personales mediante la IU de.
 
-Para obtener más información acerca de Adobe Experience Platform, lea la [descripción general del Experience Platform](home.md).
+Para obtener más información sobre Adobe Experience Platform, lea [Información general de Experience Platform](home.md).
 
-## Encuesta de autoidentificación en la IU de Platform
+## Encuesta de autoidentificación en la interfaz de usuario de Experience Platform
 
-El mensaje de la encuesta de autoidentificación aparece en la parte inferior derecha de la página principal de la interfaz de usuario de Platform al iniciar sesión.
+El mensaje de la encuesta de autoidentificación aparece en la parte inferior derecha de la página de inicio de la interfaz de usuario de Experience Platform al iniciar sesión.
 
 Para comenzar la encuesta, selecciona **[!UICONTROL Iniciar]**.
 
-![Página de inicio de la interfaz de usuario de Platform con el mensaje de mensaje que le solicita que inicie la encuesta de autoidentificación.](./images/survey/survey-prompt.png)
+![Página de inicio de la interfaz de usuario de Experience Platform con el mensaje de mensaje que le solicita que inicie la encuesta de autoidentificación.](./images/survey/survey-prompt.png)
 
 Para la primera pregunta de la encuesta, seleccione la función que mejor describa su trabajo.
 
@@ -48,9 +48,9 @@ Para continuar, selecciona la(s) función(es) que mejor describa tu trabajo actu
 
 ![Encuesta de autoidentificación con dos funciones de trabajo seleccionadas.](./images/survey/select-functions.png)
 
-A continuación, seleccione el objetivo u objetivos específicos que mejor se apliquen a su trabajo.
+Siguiente, seleccione los objetivos específicos que mejor se apliquen a su trabajo.
 
-La lista de objetivos disponibles incluye:
+Los lista de objetivos disponibles incluyen:
 
 * Crear y administrar usuarios
 * Asignar funciones, permisos y perfiles de producto
@@ -79,18 +79,18 @@ Una vez completada la encuesta de autoidentificación, seleccione **[!UICONTROL 
 
 ## Actualizar las respuestas a la encuesta
 
-Actualice las funciones y los objetos del trabajo mediante el menú de preferencias del Experience Cloud. Para acceder al menú de preferencias, selecciona el icono de perfil en la barra de navegación superior y, a continuación, selecciona **[!UICONTROL Preferencias]**.
+Actualice las funciones y los objetos de trabajo mediante el menú de preferencias de Experience Cloud. Para acceder al menú de preferencias, seleccione el icono de su perfil en la parte superior navegación y luego seleccione **[!UICONTROL Preferencias]**.
 
-![Página de inicio de la interfaz de usuario de Platform con el icono de perfil y los botones de preferencias seleccionados.](./images/survey/preferences.png)
+![La IU Experience Platform página de inicio con el icono perfil y los botones de preferencias seleccionados.](./images/survey/preferences.png)
 
-A continuación, en la sección [!UICONTROL General] del menú de preferencias de perfil, selecciona **[!UICONTROL Actualizar las funciones y objetivos del trabajo]**.
+Siguiente, en la [!UICONTROL sección General] del menú de preferencias de perfil, seleccione **[!UICONTROL Actualizar funciones y objetivos]** de trabajo.
 
-![La sección general de la página de preferencias de perfil de la IU de Platform](./images/survey/update.png)
+![La sección general del Experience Platform IU perfil preferencias Página](./images/survey/update.png)
 
 Aparece la encuesta de autoidentificación, que le permite reconfigurar sus respuestas y actualizar su perfil.
 
-![La página de preferencias de perfil de la interfaz de usuario de Platform que muestra la encuesta de autoidentificación para permitir que un usuario actualice su perfil personal.](./images/survey/new-survey.png)
+![La página de preferencias de perfil de la interfaz de usuario de Experience Platform muestra la encuesta de autoidentificación para permitir que un usuario actualice su perfil personal.](./images/survey/new-survey.png)
 
 ## Pasos siguientes
 
-Al leer este documento, ha enviado y actualizado información sobre las funciones y objetivos de su trabajo para recibir contenido más relevante al utilizar la interfaz de usuario de Platform. Para obtener más información sobre la interfaz de usuario de Platform, lea la [descripción general del Experience Platform](home.md).
+Al leer este documento, ahora ha enviado y actualizado información sobre sus funciones y objetivos laborales para recibir contenido más relevantes al usar el Experience Platform IU. Para obtener más información sobre la interfaz de usuario de Experience Platform, lea la [descripción general de Experience Platform](home.md).

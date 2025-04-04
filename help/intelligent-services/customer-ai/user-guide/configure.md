@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;guía de usuario;inteligencia artificial aplicada al cliente;temas populares;configurar instancia;crear instancia;
+keywords: Experience Platform;guía del usuario;inteligencia artificial aplicada al cliente;temas populares;configurar instancia;crear instancia;
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Configuración de una instancia de Customer AI
 description: Los servicios de inteligencia artificial aplicada al cliente proporcionan inteligencia artificial aplicada al cliente como un servicio de Adobe Sensei fácil de usar que se puede configurar para diferentes casos de uso. En las secciones siguientes se proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Los servicios de inteligencia artificial aplicada al cliente proporcionan inteli
 
 ## Creación de una instancia {#set-up-your-instance}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Services]** en el panel de navegación izquierdo. Aparece el explorador **[!UICONTROL Services]** y muestra todos los servicios disponibles a su disposición. En el contenedor de inteligencia artificial aplicada al cliente, seleccione **[!UICONTROL Abrir]**.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Servicios]** en el panel de navegación izquierdo. Aparece el explorador **[!UICONTROL Services]** y muestra todos los servicios disponibles a su disposición. En el contenedor de inteligencia artificial aplicada al cliente, seleccione **[!UICONTROL Abrir]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -35,7 +35,7 @@ Las instancias de servicio se pueden editar, clonar y eliminar mediante los cont
 
 - **[!UICONTROL Editar]**: seleccionar **[!UICONTROL Editar]** le permite modificar una instancia de servicio existente. Puede editar el nombre, la descripción y la frecuencia de puntuación de la instancia.
 - **[!UICONTROL Clonar]**: al seleccionar **[!UICONTROL Clonar]** se copia la configuración de la instancia de servicio seleccionada actualmente. A continuación, puede modificar el flujo de trabajo para realizar ajustes menores y cambiarle el nombre como una nueva instancia.
-- **[!UICONTROL Eliminar]**: puede eliminar una instancia de servicio que incluya ejecuciones históricas. El conjunto de datos de salida correspondiente se eliminará de Platform. Sin embargo, las puntuaciones sincronizadas con el perfil del cliente en tiempo real no se eliminan.
+- **[!UICONTROL Eliminar]**: puede eliminar una instancia de servicio que incluya ejecuciones históricas. El conjunto de datos de salida correspondiente se eliminará de Experience Platform. Sin embargo, las puntuaciones sincronizadas con el perfil del cliente en tiempo real no se eliminan.
 - **[!UICONTROL Origen de datos]**: vínculo al conjunto de datos utilizado por esta instancia. Si se utilizan varios conjuntos de datos, al seleccionar el texto del hipervínculo se abre la ventana emergente de vista previa del conjunto de datos.
 - **[!UICONTROL Detalles de la última ejecución]**: Esto solo se muestra cuando falla una ejecución. Aquí se muestra información sobre por qué falló la ejecución, como códigos de error.
 - **[!UICONTROL Definición de puntuación]**: Una breve descripción general del objetivo que configuró para esta instancia.

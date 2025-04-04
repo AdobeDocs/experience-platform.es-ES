@@ -2,9 +2,9 @@
 title: Información general sobre el desarrollo de extensiones
 description: Obtenga información acerca de los componentes principales de los distintos tipos de extensión de etiquetas y el proceso de desarrollo de extensión en Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '938'
 ht-degree: 23%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Uno de los objetivos principales de las etiquetas en Adobe Experience Platform es crear un ecosistema abierto en el que los ingenieros que no estén en Adobe puedan exponer las funcionalidades adicionales de sus sitios web y aplicaciones móviles. Esto se logra mediante las extensiones de etiquetas. Una vez instalada una extensión en una propiedad de etiqueta, la funcionalidad de dicha extensión queda disponible para que la utilicen todos los usuarios de la propiedad.
+Uno de los objetivos principales de las etiquetas en Adobe Experience Platform es crear un ecosistema abierto en el que los ingenieros que no pertenezcan a Adobe puedan exponer las funcionalidades adicionales de sus sitios web y aplicaciones móviles. Esto se logra mediante las extensiones de etiquetas. Una vez instalada una extensión en una propiedad de etiqueta, la funcionalidad de dicha extensión queda disponible para que la utilicen todos los usuarios de la propiedad.
 
 Este documento describe los componentes principales de una extensión y proporciona vínculos a documentación adicional que le ayudará a guiarse en el proceso de desarrollo de la extensión.
 
@@ -37,13 +37,13 @@ Puede colocar los archivos del módulo de biblioteca en cualquier lugar que dese
 
 ### Vistas
 
-Una vista es un archivo HTML que se puede cargar en un elemento [`iframe` ](https://developer.mozilla.org/es-ES/docs/Web/HTML/Element/iframe) de la aplicación de etiquetas, específicamente a través de la interfaz de usuario de Platform y la interfaz de usuario de la recopilación de datos. La vista debe incluir una secuencia de comandos proporcionada por la extensión y ajustarse a una pequeña API para poder comunicarse con la aplicación.
+Una vista es un archivo HTML que se puede cargar en un elemento [`iframe`](https://developer.mozilla.org/es-ES/docs/Web/HTML/Element/iframe) de la aplicación de etiquetas, específicamente a través de la interfaz de usuario de Experience Platform y la interfaz de usuario de la recopilación de datos. La vista debe incluir una secuencia de comandos proporcionada por la extensión y ajustarse a una pequeña API para poder comunicarse con la aplicación.
 
 El archivo de vista más importante para cualquier extensión es su configuración. Consulte la sección sobre [configuraciones de extensión](#configuration) para obtener más información.
 
 No hay restricciones en cuanto a las bibliotecas que se utilizan en sus vistas. En otras palabras, puede utilizar jQuery, Underscore, React, Angular, Bootstrap u otros. Sin embargo, se recomienda hacer que la extensión tenga una apariencia similar a la de la interfaz de usuario.
 
-Se recomienda colocar todos los archivos relacionados con la vista (HTML, CSS, JavaScript) en un único subdirectorio aislado de los archivos del módulo de biblioteca. En `extension.json`, puede describir dónde se encuentra este subdirectorio de vista. Entonces, Platform servirá dicho subdirectorio (y solo ese subdirectorio) desde sus servidores web.
+Se recomienda colocar todos los archivos relacionados con la vista (HTML, CSS, JavaScript) en un único subdirectorio aislado de los archivos del módulo de biblioteca. En `extension.json`, puede describir dónde se encuentra este subdirectorio de vista. A continuación, Experience Platform servirá este subdirectorio (y solo este subdirectorio) desde sus servidores web.
 
 ## Componentes de biblioteca {#components}
 
@@ -55,7 +55,7 @@ Dependiendo de si está desarrollando una extensión web o una extensión Edge, 
 
 En las extensiones web, las reglas se activan mediante eventos que pueden ejecutar acciones específicas si se cumple un conjunto determinado de condiciones. Consulte la descripción general del [flujo de módulos en extensiones web](./web/flow.md) para obtener más información.
 
-Además de los [módulos principales](./web/core.md) que proporciona el Adobe, puede definir los siguientes componentes de biblioteca en sus extensiones web:
+Además de los [módulos principales](./web/core.md) que proporciona Adobe, puede definir los siguientes componentes de biblioteca en sus extensiones web:
 
 * [Eventos](./web/event-types.md)
 * [Condiciones](./web/condition-types.md)
@@ -93,4 +93,4 @@ Para obtener más información, consulte la guía de [configuraciones de extensi
 
 ## Envío de extensiones
 
-Una vez que haya terminado de crear la extensión, puede enviarla para que aparezca en el catálogo de extensiones en Platform. Consulte la [descripción general del proceso de envío de la extensión](./submit/overview.md) para obtener más información.
+Una vez que haya terminado de crear la extensión, puede enviarla para que aparezca en el catálogo de extensiones en Experience Platform. Consulte la [descripción general del proceso de envío de la extensión](./submit/overview.md) para obtener más información.

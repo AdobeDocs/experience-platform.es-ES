@@ -2,9 +2,9 @@
 title: Compatibilidad con el control de acceso basado en atributos para esquemas ad hoc
 description: Una guía para restringir el acceso a los campos de datos en esquemas ad hoc generados mediante Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1020'
 ht-degree: 2%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 Cualquier dato introducido en Adobe Experience Platform se encapsula mediante esquemas XDM (Experience Data Model) y puede estar sujeto a restricciones de uso definidas por su organización o por regulaciones legales.
 
-Al ejecutar una consulta CTAS a través del servicio de consulta cuando no se especifica ningún esquema, se genera automáticamente un esquema ad hoc. A menudo es necesario restringir el uso de ciertos campos o conjuntos de datos de esquemas ad hoc para controlar el acceso a datos personales confidenciales y a información de identificación personal. Adobe Experience Platform facilita este control de acceso al permitirle etiquetar campos de esquema a través de la IU de Platform mediante la capacidad de control de acceso basado en atributos.
+Al ejecutar una consulta CTAS a través del servicio de consulta cuando no se especifica ningún esquema, se genera automáticamente un esquema ad hoc. A menudo es necesario restringir el uso de ciertos campos o conjuntos de datos de esquemas ad hoc para controlar el acceso a datos personales confidenciales y a información de identificación personal. Adobe Experience Platform facilita este control de acceso al permitirle etiquetar campos de esquema a través de la interfaz de usuario de Experience Platform mediante la capacidad de control de acceso basado en atributos.
 
-Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Sin embargo, se recomienda etiquetar los datos en cuanto se introduzcan en Platform o en cuanto los datos estén disponibles para su uso en Platform.
+Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Aunque se recomienda etiquetar los datos en cuanto se introduzcan en Experience Platform o en cuanto los datos estén disponibles para su uso en Experience Platform.
 
 El etiquetado basado en esquemas es un componente importante del control de acceso basado en atributos para administrar mejor el acceso dado a usuarios o grupos de usuarios. Adobe Experience Platform permite restringir el acceso a cualquier campo de un esquema ad hoc mediante la creación y aplicación de etiquetas.
 
@@ -25,8 +25,8 @@ Este documento proporciona un tutorial para administrar el acceso a los datos co
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* Sistema [Experience Data Model (XDM)](../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Aprenda a crear y administrar esquemas y otros recursos en la interfaz de usuario de Platform.
+* Sistema [Experience Data Model (XDM)](../../xdm/home.md): El marco de trabajo estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): aprenda a crear y administrar esquemas y otros recursos en la interfaz de usuario de Experience Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): descubra cómo [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos.
 * [Control de acceso basado en atributos](../../access-control/abac/overview.md): El control de acceso basado en atributos es una capacidad de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funcionalidades basadas en atributos. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo de esquema ad hoc o normal. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios.
 
@@ -34,15 +34,15 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 Una vez que se ha ejecutado la consulta y se han generado los resultados, se genera automáticamente un esquema ad hoc que se añade al inventario de esquemas.
 
-Para agregar una etiqueta de datos, vaya a la pestaña de exploración del panel [!UICONTROL Esquemas] seleccionando [!UICONTROL Esquemas] en el carril izquierdo de la interfaz de usuario de Platform. Se muestra el inventario de esquemas.
+Para agregar una etiqueta de datos, vaya a la pestaña de exploración del panel [!UICONTROL Esquemas] seleccionando [!UICONTROL Esquemas] en el carril izquierdo de la interfaz de usuario de Experience Platform. Se muestra el inventario de esquemas.
 
 >[!NOTE]
 >
 >Los esquemas ad hoc no se muestran de forma predeterminada en el inventario de esquemas.
 
-## Descubra esquemas ad hoc en el inventario de esquemas de la IU de Platform {#discover-ad-hoc-schemas}
+## Descubra esquemas ad hoc en el inventario de esquemas de la IU de Experience Platform {#discover-ad-hoc-schemas}
 
-Para habilitar la visualización de esquemas ad hoc en la interfaz de usuario de Platform, seleccione el icono de filtro (![Un icono de filtro.](/help/images/icons/filter.png)) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas ad hoc] en el carril izquierdo que aparece.
+Para habilitar la visualización de esquemas ad hoc en la interfaz de usuario de Experience Platform, seleccione el icono de filtro (![Icono de filtro.](/help/images/icons/filter.png)) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas ad hoc] en el carril izquierdo que aparece.
 
 ![El carril izquierdo de las opciones de filtro del panel de esquemas tiene habilitada la opción &#39;Mostrar esquema ad hoc&#39;.](../images/data-governance/adhoc-schema-toggle.png)
 

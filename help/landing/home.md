@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descripción general de Adobe Experience Platform
 description: Adobe Experience Platform permite a las organizaciones centralizar y estandarizar los datos de los clientes antes de aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 2%
 
 ---
@@ -28,9 +28,9 @@ Compilado en las API de RESTful, [!DNL Experience Platform] expone toda la funci
 
 ## Documentación de [!DNL Experience Platform]
 
-La documentación de [!DNL Experience Platform] se proporciona en varios formatos para diversas características y aplicaciones. Para obtener más información acerca de los tipos de documentación disponibles, visite la [descripción general de la documentación de Platform](documentation/overview.md).
+La documentación de [!DNL Experience Platform] se proporciona en varios formatos para diversas características y aplicaciones. Para obtener más información acerca de los tipos de documentación disponibles, visite la [descripción general de la documentación de Experience Platform](documentation/overview.md).
 
-Para empezar a obtener más información sobre un servicio [!DNL Platform] específico, vuelva a la [página de aterrizaje de documentación](https://experienceleague.adobe.com/docs/experience-platform.html) y seleccione la guía adecuada.
+Para empezar a obtener más información sobre un servicio [!DNL Experience Platform] específico, vuelva a la [página de aterrizaje de documentación](https://experienceleague.adobe.com/docs/experience-platform.html) y seleccione la guía adecuada.
 
 ### Documentación para aplicaciones generadas en [!DNL Experience Platform]
 
@@ -49,17 +49,17 @@ En el siguiente vídeo se describen los casos de uso de cada aplicación creada 
 
 ## [!DNL Experience Platform] tutoriales
 
-Puede empezar a usar [!DNL Platform] rápida y fácilmente siguiendo los tutoriales paso a paso que cubren todo, desde la preparación de los datos para su ingesta hasta los algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación de [!DNL Experience Platform], de modo que, para obtener los mejores resultados, mantenga la documentación disponible mientras completa los tutoriales.
+Puede empezar a usar [!DNL Experience Platform] rápida y fácilmente siguiendo los tutoriales paso a paso que cubren todo, desde la preparación de los datos para su ingesta hasta los algoritmos avanzados de aprendizaje automático. Estos tutoriales se han diseñado para complementar la información que se encuentra en la documentación de [!DNL Experience Platform], de modo que, para obtener los mejores resultados, mantenga la documentación disponible mientras completa los tutoriales.
 
-Visite la página de aterrizaje de [tutoriales del Experience Platform](https://www.adobe.com/go/platform-tutorials-home-en) para comenzar.
+Visite la página de aterrizaje [tutoriales de Experience Platform](https://www.adobe.com/go/platform-tutorials-home-en) para comenzar.
 
 ## Documentos y recursos de referencia
 
 * [**Aspectos básicos de API**](api-fundamentals.md)\
-  Conozca los conceptos básicos para trabajar con las API de [!DNL Platform].
+  Conozca los conceptos básicos para trabajar con las API de [!DNL Experience Platform].
 
 * [**documentos de referencia de API**](https://www.adobe.com/go/platform-api-reference-en)\
-  Descubra las API [!DNL Experience Platform], incluidos encabezados, parámetros, solicitudes de muestra y respuestas.<br/>*Estos documentos están hospedados en el Adobe I/O.*
+  Descubra las API [!DNL Experience Platform], incluidos encabezados, parámetros, solicitudes de muestra y respuestas.<br/>*Estos documentos se hospedan en Adobe I/O.*
 
 * [**Glosario**](glossary.md)\
   Revise la terminología de Adobe Experience Platform.

@@ -1,18 +1,18 @@
 ---
 title: 'LiveRamp: conexión de incorporación'
-description: Aprenda a utilizar el conector LiveRamp para incorporar audiencias de Adobe Real-time Customer Data Platform a LiveRamp Connect.
+description: Aprenda a utilizar el conector LiveRamp para incorporar audiencias de Adobe Real-Time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1948'
 ht-degree: 4%
 
 ---
 
 # [!DNL LiveRamp - Onboarding] conexión {#liveramp-onboarding}
 
-Utilice la conexión [!DNL LiveRamp - Onboarding] para incorporar audiencias de Adobe Real-time Customer Data Platform a [!DNL LiveRamp Connect].
+Utilice la conexión [!DNL LiveRamp - Onboarding] para incorporar audiencias de Adobe Real-Time Customer Data Platform a [!DNL LiveRamp Connect].
 
 ## Casos de uso {#use-cases}
 
@@ -24,7 +24,7 @@ Como especialista en marketing, quiero enviar audiencias de Adobe Experience Pla
 
 La conexión [!DNL LiveRamp - Onboarding] exporta archivos mediante el almacenamiento SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) de [LiveRamp.
 
-Para poder enviar datos del Experience Platform a [!DNL LiveRamp - Onboarding], necesita las credenciales de [!DNL LiveRamp]. Póngase en contacto con su representante de [!DNL LiveRamp] para obtener sus credenciales, si aún no las tiene.
+Para poder enviar datos de Experience Platform a [!DNL LiveRamp - Onboarding], necesita sus credenciales de [!DNL LiveRamp]. Póngase en contacto con su representante de [!DNL LiveRamp] para obtener sus credenciales, si aún no las tiene.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -38,8 +38,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino [!DNL LiveRamp - Onboarding]. |
-| Frecuencia de exportación | **[!UICONTROL Lote diario]** | A medida que los perfiles se actualizan en Experience Platform según la evaluación de audiencias, los perfiles (identidades) se actualizan una vez al día de forma descendente a la plataforma de destino. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+| Frecuencia de exportación | **[!UICONTROL Lote diario]** | A medida que los perfiles se actualizan en Experience Platform en función de la evaluación de audiencias, los perfiles (identidades) se actualizan una vez al día de forma descendente a la plataforma de destino. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -104,14 +104,14 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-![Captura de pantalla de la interfaz de usuario de Platform que muestra cómo rellenar los detalles de tu destino](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo rellenar los detalles del destino](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL Región]**: Región geográfica de la instancia del almacenamiento SFTP de LiveRamp.
 * **[!UICONTROL Ruta de acceso a la carpeta]**: La ruta de acceso a la subcarpeta [!DNL LiveRamp] `uploads` que alojará los archivos exportados. El prefijo `uploads` se agrega automáticamente a la ruta de la carpeta. [!DNL LiveRamp] recomienda crear una subcarpeta específica para las entregas de Adobe Real-Time CDP a fin de mantener los archivos separados de cualquier otra fuente existente y garantizar que toda la automatización se ejecute sin problemas.
    * Por ejemplo, si desea exportar los archivos a `uploads/my_export_folder`, escriba `my_export_folder` en el campo **[!UICONTROL Ruta de la carpeta]**.
-* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe usar para los archivos exportados. Las opciones disponibles son **[!UICONTROL GZIP]** o **[!UICONTROL None]**.
+* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que Experience Platform debe usar para los archivos exportados. Las opciones disponibles son **[!UICONTROL GZIP]** o **[!UICONTROL None]**.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -135,13 +135,13 @@ En el paso [!UICONTROL Programación], cree una programación de exportación pa
 * **[!UICONTROL Frecuencia]**: [!UICONTROL Diaria]
 * **[!UICONTROL Fecha]**: seleccione las horas de inicio y finalización de la exportación como desee.
 
-![Captura de pantalla de IU de Platform que muestra el paso de programación de audiencias.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra el paso de programación de audiencias.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 El nombre del archivo exportado no se puede configurar por el usuario en este momento. Todos los archivos exportados al destino [!DNL LiveRamp - Onboarding] reciben automáticamente un nombre basado en la siguiente plantilla:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Captura de pantalla de IU de Platform que muestra la plantilla de nombre de archivo exportada.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la plantilla de nombre de archivo exportada.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 Por ejemplo, el nombre de un archivo exportado para una organización denominada [!DNL Luma] podría tener un aspecto similar al siguiente:
 
@@ -165,19 +165,19 @@ En el paso **[!UICONTROL Mapping]**, la asignación de **[!UICONTROL Target fiel
 
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform que muestra la pantalla Asignación.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la pantalla Asignación.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
 
 2. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM que desee asignar, o bien elija la categoría **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad para asignar a su destino.
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform que muestra la pantalla de asignación de origen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la pantalla de asignación de origen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
 
 3. En la ventana **[!UICONTROL Seleccionar campo de destino]**, escriba el nombre de atributo al que desea asignar el campo de origen seleccionado. El nombre del atributo definido aquí se reflejará en el archivo CSV exportado como un encabezado de columna.
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform que muestra la pantalla Asignación de destino.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la pantalla Asignación de destino.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
 
    También puede escribir el nombre del atributo directamente en el **[!UICONTROL campo de destino]**.
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform que muestra la pantalla Asignación de destino.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la pantalla Asignación de destino.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
 
 Una vez que haya agregado todas las asignaciones deseadas, seleccione **[!UICONTROL Siguiente]** y finalice el flujo de trabajo de activación.
 
@@ -187,7 +187,7 @@ Los datos se exportan a la ubicación de almacenamiento [!DNL LiveRamp - Onboard
 
 Los archivos exportados tienen un tamaño máximo de 10 millones de filas. Experience Platform genera varios archivos por envío si las audiencias seleccionadas superan los 10 millones de filas. Si espera exceder el límite de un solo archivo, comuníquese con el representante de [!DNL LiveRamp] y pídale que configure la ingesta por lotes.
 
-Al exportar archivos al destino [!DNL LiveRamp - Onboarding], Platform genera un archivo CSV para cada [ID de política de combinación](../../../profile/merge-policies/overview.md).
+Al exportar archivos al destino [!DNL LiveRamp - Onboarding], Experience Platform genera un archivo CSV para cada [ID de política de combinación](../../../profile/merge-policies/overview.md).
 
 Por ejemplo, consideremos las siguientes audiencias:
 
@@ -196,7 +196,7 @@ Por ejemplo, consideremos las siguientes audiencias:
 * Audiencia C (política de combinación 1)
 * Audience D (política de combinación 1)
 
-Platform exportará dos archivos CSV a [!DNL LiveRamp - Onboarding]:
+Experience Platform exportará dos archivos CSV a [!DNL LiveRamp - Onboarding]:
 
 * Un archivo CSV que contiene las audiencias A, C y D;
 * Un archivo CSV que contiene la audiencia B.
@@ -211,7 +211,7 @@ Los perfiles incluidos en los archivos exportados pueden coincidir con uno de lo
 * `Expired`: el perfil ya no está cualificado para la audiencia, pero ha cumplido los requisitos.
 * `""`(cadena vacía): el perfil nunca cumplió los requisitos para la audiencia.
 
-Por ejemplo, un archivo CSV exportado con un atributo `email`, dos audiencias que se originan del Experience Platform [Servicio de segmentación](../../../segmentation/home.md) y una audiencia externa [importada](../../../segmentation/ui/audience-portal.md#import-audience) podría tener este aspecto:
+Por ejemplo, un archivo CSV exportado con un atributo `email`, dos audiencias que se originan del servicio de segmentación [Experience Platform](../../../segmentation/home.md) y una audiencia externa [importada](../../../segmentation/ui/audience-portal.md#import-audience) podría tener el siguiente aspecto:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,15 +223,15 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-En el ejemplo anterior, las secciones `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` y `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` describen audiencias que se originan del servicio de segmentación, mientras que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` describe una audiencia importada en Platform como una [carga personalizada](../../../segmentation/ui/audience-portal.md#import-audience).
+En el ejemplo anterior, las secciones `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` y `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` describen audiencias que se originan del servicio de segmentación, mientras que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` describe una audiencia importada en Experience Platform como una [carga personalizada](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Dado que Platform genera un archivo CSV para cada [ID de política de combinación](../../../profile/merge-policies/overview.md), también genera una ejecución de flujo de datos independiente para cada ID de política de combinación.
+Dado que Experience Platform genera un archivo CSV para cada [ID de política de combinación](../../../profile/merge-policies/overview.md), también genera una ejecución de flujo de datos independiente para cada ID de política de combinación.
 
 Esto significa que las métricas **[!UICONTROL Identidades activadas]** y **[!UICONTROL Perfiles recibidos]** en la página [ejecuciones de flujo de datos](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) se agregan para cada grupo de audiencias que usa la misma política de combinación, en lugar de mostrarse para cada audiencia.
 
 Como consecuencia de que se generan ejecuciones de flujo de datos para un grupo de audiencias que utilizan la misma política de combinación, los nombres de audiencia no se muestran en el [panel de monitorización](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
-Captura de pantalla de la interfaz de usuario del Experience Platform ![que muestra la métrica de identidades activadas.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
+![Captura de pantalla de la IU de Experience Platform que muestra la métrica de identidades activadas.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
 
 ## Cargar datos exportados a LiveRamp {#upload-to-liveramp}
 

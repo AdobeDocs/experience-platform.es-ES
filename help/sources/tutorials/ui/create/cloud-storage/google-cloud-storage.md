@@ -2,9 +2,9 @@
 title: Crear una conexión de Source de Google Cloud Storage en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Google Cloud Storage mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: 7181cb92dd44d8005fe1054020ffeb36c309b42e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '616'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Este tutorial proporciona los pasos para crear una conexión de origen de [!DNL 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -34,28 +34,28 @@ Si ya tiene una conexión [!DNL Google Cloud Storage] válida, puede omitir el r
 
 ### Recopilar credenciales necesarias
 
-Para tener acceso a los datos de [!DNL Google Cloud Storage] en Platform, debe proporcionar los siguientes valores:
+Para tener acceso a los datos de [!DNL Google Cloud Storage] en Experience Platform, debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| ID de clave de acceso | Cadena alfanumérica de 61 caracteres usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Platform. |
-| Clave de acceso secreta | Cadena de 40 caracteres codificada en base 64 que se usa para autenticar la cuenta de [!DNL Google Cloud Storage] en Platform. |
+| ID de clave de acceso | Cadena alfanumérica de 61 caracteres usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Experience Platform. |
+| Clave de acceso secreta | Cadena de 40 caracteres codificada en base 64 que se usa para autenticar la cuenta de [!DNL Google Cloud Storage] en Experience Platform. |
 | Nombre del segmento | Nombre de su cubo de [!DNL Google Cloud Storage]. Debe especificar un nombre de bloque si desea proporcionar acceso a una subcarpeta específica del almacenamiento en la nube. |
 | Ruta de carpeta | La ruta a la carpeta a la que desea proporcionar acceso. |
 
 Para obtener más información sobre estos valores, consulte la guía [Claves HMAC de Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para ver los pasos sobre cómo generar tu propio identificador de clave de acceso y clave de acceso secreta, consulta la [[!DNL Google Cloud Storage] descripción general](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
-Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Google Cloud Storage] a Platform.
+Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Google Cloud Storage] a Experience Platform.
 
 ## Conectar su cuenta de [!DNL Google Cloud Storage]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría [!UICONTROL Almacenamiento en la nube], seleccione **[!UICONTROL Almacenamiento en la nube de Google]** y luego seleccione **[!UICONTROL Agregar datos]**.
 
-![Pantalla de IU de Platform que muestra la página del catálogo de orígenes.](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
+![La pantalla de la interfaz de usuario de Experience Platform muestra la página del catálogo de orígenes.](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
 Aparecerá la página **[!UICONTROL Conectar con Google Cloud Storage]**. En esta página, puede usar credenciales nuevas o existentes.
 
@@ -63,7 +63,7 @@ Aparecerá la página **[!UICONTROL Conectar con Google Cloud Storage]**. En est
 
 Para conectar una cuenta existente, seleccione la cuenta de [!DNL Google Cloud Storage] con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![La pantalla de la interfaz de usuario de Platform muestra la página de la cuenta existente para un origen de Google Cloud Storage](../../../../images/tutorials/create/google-cloud-storage/existing.png)
+![La pantalla de la interfaz de usuario de Experience Platform muestra la página de la cuenta existente para un origen de Google Cloud Storage](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ### Nueva cuenta
 
@@ -71,9 +71,9 @@ Si está usando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. E
 
 Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
-![La pantalla de IU de Platform muestra la nueva página de cuenta para un origen de Google Cloud Storage.](../../../../images/tutorials/create/google-cloud-storage/new.png)
+![La pantalla de la interfaz de usuario de Experience Platform muestra la nueva página de cuenta para un origen de Google Cloud Storage.](../../../../images/tutorials/create/google-cloud-storage/new.png)
 
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Google Cloud Storage]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento en la nube a Platform](../../dataflow/batch/cloud-storage.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Google Cloud Storage]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento en la nube a Experience Platform](../../dataflow/batch/cloud-storage.md).

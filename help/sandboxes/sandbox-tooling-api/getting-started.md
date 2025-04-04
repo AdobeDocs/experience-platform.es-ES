@@ -2,9 +2,9 @@
 title: Introducción a la API de herramientas de espacio aislado
 description: Utilice la API de herramientas de entorno limitado para examinar artefactos, exportar e importar una instantánea de las configuraciones de los entornos limitados entre entornos limitados. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '312'
 ht-degree: 15%
 
 ---
@@ -15,11 +15,11 @@ Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la AP
 
 ## Lectura de llamadas de API de muestra {#api-calls}
 
-Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporcionan los datos JSON de muestra devueltos a la respuesta de la API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](/help/landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporcionan los datos JSON de muestra devueltos a la respuesta de la API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](/help/landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de Experience Platform.
 
 ## Recopilación de valores para los encabezados obligatorios {#headers}
 
-Esta guía requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar correctamente llamadas a las API de Platform. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
+Esta guía requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para poder realizar correctamente llamadas a las API de Experience Platform. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

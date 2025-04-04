@@ -2,16 +2,16 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 59%
+source-wordcount: '1203'
+ht-degree: 53%
 
 ---
 
 # Preparación de datos para la recopilación de datos
 
-La preparación de datos es un servicio de Adobe Experience Platform que le permite asignar, transformar y validar datos desde y hacia el [Modelo de datos de experiencia (XDM)](../xdm/home.md). Al configurar una [secuencia de datos](./overview.md) habilitada para Platform, puede utilizar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Platform Edge Network.
+La preparación de datos es un servicio de Adobe Experience Platform que le permite asignar, transformar y validar datos desde y hacia el [Modelo de datos de experiencia (XDM)](../xdm/home.md). Al configurar una secuencia de datos [habilitada para Experience Platform](./overview.md), puede usar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Experience Platform Edge Network.
 
 Todos los datos enviados desde una página web deben aterrizar en Experience Platform como XDM. Existen tres formas de traducir datos de una capa de datos en la página al XDM aceptado por Experience Platform:
 
@@ -52,7 +52,7 @@ Para obtener una demostración rápida del proceso de preparación de datos para
 
 ## [!UICONTROL Seleccionar datos] {#select-data}
 
-Seleccione **[!UICONTROL Guardar y añadir asignación]** después de completar la configuración básica de una secuencia de datos y aparece el paso **[!UICONTROL Seleccionar datos]**. Desde aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que tiene previsto enviar a Platform.
+Seleccione **[!UICONTROL Guardar y añadir asignación]** después de completar la configuración básica de una secuencia de datos y aparece el paso **[!UICONTROL Seleccionar datos]**. Desde aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que planea enviar a Experience Platform.
 
 Para capturar propiedades directamente desde la capa de datos, el objeto JSON debe tener una sola propiedad raíz `data`. Las subpropiedades del objeto `data` deben construirse de manera que se asignen a las propiedades de la capa de datos que desee capturar. Seleccione la sección siguiente para ver un ejemplo de un objeto JSON con formato correcto con una raíz `data`.
 
@@ -162,7 +162,7 @@ Puede seleccionar la opción para cargar el objeto como un archivo o pegar el ob
 
 ## [!UICONTROL Asignación]
 
-Aparece el paso **[!UICONTROL Asignación]**, lo que le permite asignar los campos de los datos de origen a los del esquema de evento de destino en Platform. Desde aquí, puede configurar la asignación de dos formas:
+Aparece el paso **[!UICONTROL Mapping]**, que le permite asignar los campos de los datos de origen al esquema de evento de destino en Experience Platform. Desde aquí, puede configurar la asignación de dos formas:
 
 * [Cree reglas de asignación](#create-mapping) para este conjunto de datos mediante un proceso manual.
 * [Importar reglas de asignación](#import-mapping) de una secuencia de datos existente.

@@ -4,13 +4,13 @@ description: Exporte datos a su cuenta de Snowflake mediante anuncios privados.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2893356e36fde4759ffe76e01296fcb8811ab8e7
+exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '676'
 ht-degree: 7%
 
 ---
-
 
 # Conexión de Snowflake {#snowflake-destination}
 
@@ -99,7 +99,7 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 El destino de Snowflake admite la asignación de atributos de perfil a atributos personalizados.
 
-![Imagen de la interfaz de usuario de Platform que muestra la pantalla de asignación del destino de Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra la pantalla de asignación del destino de Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
 
 Los atributos de destino se crean automáticamente en Snowflake utilizando el nombre de atributo proporcionado en el campo **[!UICONTROL Nombre de atributo]**.
 

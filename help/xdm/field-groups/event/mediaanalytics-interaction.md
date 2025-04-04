@@ -2,9 +2,9 @@
 title: Grupo de campos de esquema de detalles de interacción de Media Analytics
 description: Obtenga información acerca del grupo de campos de esquema Detalles de interacción de Media Analytics.
 exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
-source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Puede ocultar campos que no utilice la API de Media Edge. Al ocultar estos campos, el esquema es más fácil de leer y comprender, pero no es obligatorio. Estos campos solo hacen referencia a los del grupo de campos [!UICONTROL Detalles de interacción de MediaAnalytics]. Para mejorar la legibilidad en la interfaz de usuario de Platform, siga las instrucciones de la [documentación de Media Analytics sobre cómo ocultar campos sin usar](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+>Puede ocultar campos que no utilice la API de Media Edge. Al ocultar estos campos, el esquema es más fácil de leer y comprender, pero no es obligatorio. Estos campos solo hacen referencia a los del grupo de campos [!UICONTROL Detalles de interacción de MediaAnalytics]. Para mejorar la legibilidad en la interfaz de usuario de Experience Platform, siga las instrucciones de la [documentación de Media Analytics sobre cómo ocultar campos sin usar](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
 
 <!-- 
 >[!NOTE]

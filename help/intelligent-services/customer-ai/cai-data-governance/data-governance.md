@@ -5,9 +5,9 @@ feature: Customer AI
 title: Administración de datos en Customer AI
 description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados para cumplir con las prácticas comerciales, las obligaciones legales y el proceso de desarrollo.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '280'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 Cualquier configuración relacionada con la gobernanza de datos en la inteligencia artificial aplicada al cliente se hereda de Adobe Experience Platform.
 
-## Control de datos {#governance}
+## Gobernanza de datos {#governance}
 
-La integración entre la inteligencia artificial aplicada al cliente y la gobernanza de datos de Adobe Experience Platform le permite controlar y comprender los datos a través de su recorrido mediante Platform. Esto implica mantener la calidad de los datos, el linaje, la catalogación y mucho más.
+La integración entre la inteligencia artificial aplicada al cliente y la gobernanza de datos de Adobe Experience Platform le permite controlar y comprender los datos a través de su recorrido mediante Experience Platform. Esto implica mantener la calidad de los datos, el linaje, la catalogación y mucho más.
 
-Las etiquetas y políticas de uso de datos creadas en conjuntos de datos consumidos por Platform se pueden ver en el flujo de trabajo de configuración de la inteligencia artificial aplicada al cliente. Estas etiquetas detienen o advierten a los usuarios que utilizan campos etiquetados.
+Las etiquetas y políticas de uso de datos creadas en conjuntos de datos consumidos por Experience Platform se pueden ver en el flujo de trabajo de configuración de la inteligencia artificial aplicada al cliente. Estas etiquetas detienen o advierten a los usuarios que utilizan campos etiquetados.
 
 Esta integración le permite administrar el cumplimiento de normas de forma más eficiente. Los administradores de datos de su organización pueden establecer políticas para restringir el uso. Como resultado, puede utilizar datos que cumplan con las directivas definidas por los administradores de datos. Lea la documentación de [Etiquetas y directivas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) para obtener más información.
 

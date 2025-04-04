@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar el destino para las configuraciones de asignación de atributos e identidad admitidas.
 title: Configuraciones de asignación compatibles
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '670'
 ht-degree: 3%
 
 ---
@@ -17,22 +17,22 @@ Este artículo describe todas las configuraciones de asignación admitidas que p
 
 >[!WARNING]
 >
->El Destination SDK no admite ninguna configuración de asignación que no se describa en este artículo.
+>Destination SDK no admite ninguna configuración de asignación que no se describa en este artículo.
 
 Al crear el destino, configure el esquema y las áreas de nombres de identidad según una de las configuraciones de asignación descritas en esta página.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Asignaciones compatibles con destinos de flujo continuo {#streaming-mappings}
 
-Los destinos en tiempo real (streaming) creados con Destination SDK admiten las configuraciones de asignación que se describen en la siguiente tabla.
+Los destinos en tiempo real (streaming) creados con Destination SDK admiten las configuraciones de asignación que se describen en la tabla siguiente.
 
 | Campo de origen | Campo de destino |
 | --- | --- |
 | Atributo XDM | Atributo personalizado |
-| Espacio de nombres de identidad | Espacio de nombres de identidad |
+| Área de nombres de identidad | Área de nombres de identidad |
 
 El ejemplo de configuración siguiente permite a los clientes utilizar ambas asignaciones en la tabla anterior.
 
@@ -64,19 +64,19 @@ Los usuarios pueden asignar atributos de su perfil XDM de origen a atributos per
 
 Los usuarios deben introducir manualmente el nombre del atributo personalizado de destino al seleccionar la asignación del campo de destino.
 
-![Captura de pantalla de IU de Platform que muestra la selección personalizada de atributos.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![Captura de pantalla de la IU de Experience Platform que muestra la selección personalizada de atributos.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 La experiencia de IU resultante se muestra en la siguiente imagen.
 
-![Captura de pantalla de la IU de Platform que muestra la asignación de atributos XDM a atributos personalizados para destinos de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![Captura de pantalla de la IU de Experience Platform que muestra la asignación de atributos XDM a atributos personalizados para destinos de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### Asignar áreas de nombres de identidad a áreas de nombres de identidad de socio {#streaming-identity-to-identity}
 
-Los usuarios pueden asignar áreas de nombres de identidad personalizadas o globales desde Platform a las áreas de nombres de identidad que haya definido.
+Los usuarios pueden asignar áreas de nombres de identidad personalizadas o globales desde Experience Platform a las áreas de nombres de identidad que haya definido.
 
 La experiencia de IU resultante se muestra en la siguiente imagen.
 
-![Captura de pantalla de IU de Platform que muestra la asignación de identidad a la identidad para los destinos de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la asignación de identidad a destinos de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## Asignaciones compatibles con destinos basados en archivos {#batch-mappings}
 
@@ -85,8 +85,8 @@ Los destinos basados en archivos creados con Destination SDK admiten las configu
 | Campo de origen | Campo de destino |
 | --- | --- |
 | Atributo XDM | Atributo / Atributo personalizado |
-| Espacio de nombres de identidad | Atributo / Atributo personalizado |
-| Espacio de nombres de identidad | Espacio de nombres de identidad |
+| Área de nombres de identidad | Atributo / Atributo personalizado |
+| Área de nombres de identidad | Área de nombres de identidad |
 
 El ejemplo de configuración siguiente permite a los clientes utilizar todas las asignaciones de la tabla anterior.
 
@@ -118,33 +118,33 @@ Para los destinos basados en archivos, el campo de destino se rellena automátic
 
 La experiencia de IU resultante se muestra en la siguiente imagen.
 
-![Captura de pantalla de IU de Platform que muestra la asignación XDM a atributos personalizados para destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la asignación XDM a atributos personalizados para destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 Los usuarios pueden dejar el nombre predeterminado en su lugar o introducir un nombre de atributo personalizado en la pantalla de selección del campo de destino.
 
-![Captura de pantalla de IU de Platform que muestra la selección personalizada de atributos de destino para destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la selección personalizada de atributos de destino para destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### Asignar áreas de nombres de identidad a atributos personalizados {#batch-identity-to-custom}
 
-Los usuarios pueden asignar áreas de nombres de identidad personalizadas o globales de Platform a atributos personalizados del lado del destino.
+Los usuarios pueden asignar áreas de nombres de identidad personalizadas o globales desde Experience Platform a atributos personalizados del lado del destino.
 
 Al seleccionar un área de nombres de identidad como campo de origen, el campo de destino se rellena automáticamente con un área de nombres de identidad equivalente. Para reemplazar el campo de destino con un atributo personalizado, los usuarios deben introducir un nombre de atributo personalizado en la pantalla de selección de campo de destino.
 
-![Captura de pantalla de IU de Platform que muestra la selección personalizada de atributos de destino para destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la selección personalizada de atributos de destino para destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 La experiencia de IU resultante se muestra en la siguiente imagen.
 
-![Captura de pantalla de IU de Platform que muestra la asignación de identidad a atributos personalizados para destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la asignación de identidades a atributos personalizados para destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### Asignar áreas de nombres de identidad a áreas de nombres de identidad de socio {#batch-identity-to-identity}
 
-Los usuarios pueden asignar áreas de nombres de identidad personalizadas o globales de Platform a áreas de nombres de identidad equivalentes.
+Los usuarios pueden asignar áreas de nombres de identidad personalizadas o globales desde Experience Platform a áreas de nombres de identidad equivalentes.
 
 Al seleccionar un área de nombres de identidad como campo de origen, el campo de destino se rellena automáticamente con un área de nombres de identidad equivalente.
 
 La experiencia de IU resultante se muestra en la siguiente imagen.
 
-![Captura de pantalla de la interfaz de usuario de Platform que muestra la asignación de identidad a destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la asignación de identidad a destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## Pasos siguientes {#next-steps}

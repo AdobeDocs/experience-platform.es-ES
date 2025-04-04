@@ -1,11 +1,11 @@
 ---
 title: Probar Y Enviar Su Source
-description: El siguiente documento proporciona pasos sobre cómo probar y verificar una nueva fuente mediante la API de Flow Service e integrar una nueva fuente mediante fuentes de autoservicio (SDK de streaming).
+description: El siguiente documento proporciona pasos sobre cómo probar y comprobar una nueva fuente mediante la API de Flow Service e integrar una nueva fuente mediante fuentes de autoservicio (Streaming SDK).
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El SDK de flujo de fuentes de autoservicio está en versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
+>Fuentes de autoservicio Streaming SDK está en versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
-Los pasos finales para integrar su nueva fuente en Adobe Experience Platform mediante fuentes de autoservicio (SDK de streaming) son probar y enviar la nueva fuente. Una vez que haya completado la especificación de conexión y haya actualizado la especificación de flujo de flujo de flujo, puede comenzar a probar la funcionalidad del origen a través de la API o la IU. Si lo consigue, puede enviar la nueva fuente poniéndose en contacto con el representante de Adobe.
+Los pasos finales para integrar su nueva fuente en Adobe Experience Platform mediante fuentes de autoservicio (Streaming de SDK) son probar y enviar la nueva fuente. Una vez que haya completado la especificación de conexión y haya actualizado la especificación de flujo de flujo de flujo, puede comenzar a probar la funcionalidad del origen a través de la API o la IU. Si lo consigue, puede enviar su nuevo origen poniéndose en contacto con su representante de Adobe.
 
 El siguiente documento proporciona pasos sobre cómo probar y depurar el origen mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introducción
 
-* Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
-* Para obtener información sobre cómo generar las credenciales de las API de Platform, consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md).
-* Para obtener información sobre cómo configurar [!DNL Postman] para las API de Platform, consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../landing/postman.md).
+* Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
+* Para obtener información sobre cómo generar tus credenciales para las API de Experience Platform, consulta el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md).
+* Para obtener información sobre cómo configurar [!DNL Postman] para las API de Experience Platform, consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../landing/postman.md).
 * Para facilitar el proceso de prueba y depuración, descargue la colección de verificación de [fuentes de autoservicio y el entorno aquí](../assets/sdk-verification.zip) y siga los pasos descritos a continuación.
 
 ## Prueba de la fuente mediante la API
@@ -42,7 +42,7 @@ Para iniciar la prueba, primero debe configurar la colección y el entorno en [!
 | `x-api-key` | Identificador único utilizado para autenticar llamadas a las API de Experience Platform. Consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md) para obtener información sobre cómo recuperar su `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Una entidad corporativa que puede poseer o licenciar productos y servicios y permitir el acceso a sus miembros. Consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../landing/postman.md) para obtener instrucciones sobre cómo recuperar la información de `x-gw-ims-org-id`. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `authorizationToken` | El token de autorización necesario para completar las llamadas a las API de Experience Platform. Consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md) para obtener información sobre cómo recuperar su `authorizationToken`. | `Bearer authorizationToken` |
-| `schemaId` | Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `schemaId` | Para que los datos de origen se utilicen en Experience Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | La versión única que se corresponde con el esquema. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | `meta:altId` que se devuelve junto con `schemaId` al crear un nuevo esquema. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -62,13 +62,13 @@ Aparecerá la interfaz [!DNL Runner], lo que le permitirá configurar el orden d
 
 >[!NOTE]
 >
->Puede deshabilitar **Eliminar flujo** de la lista de comprobación del orden de ejecución si prefiere usar el panel de supervisión de orígenes en la interfaz de usuario de Platform. Sin embargo, una vez que haya terminado con la prueba, debe asegurarse de que los flujos de prueba se eliminen.
+>Puede deshabilitar **Eliminar flujo** de la lista de comprobación del orden de ejecución si prefiere usar el panel de supervisión de orígenes en la interfaz de usuario de Experience Platform. Sin embargo, una vez que haya terminado con la prueba, debe asegurarse de que los flujos de prueba se eliminen.
 
 ![run-collection](../assets/run-collection.png)
 
 ## Prueba del origen mediante la interfaz de usuario
 
-Para probar la fuente en la interfaz de usuario de, vaya al catálogo de fuentes de la zona protegida de su organización en la interfaz de usuario de Platform. Aquí debería ver su nuevo origen en la categoría *Transmisión*.
+Para probar la fuente en la interfaz de usuario de, vaya al catálogo de fuentes de la zona protegida de su organización en la interfaz de usuario de Experience Platform. Aquí debería ver su nuevo origen en la categoría *Transmisión*.
 
 Ahora que la nueva fuente está disponible en la zona protegida, debe seguir el flujo de trabajo de fuentes para probar las funcionalidades. Para empezar, seleccione **[!UICONTROL Configurar]**.
 
@@ -88,7 +88,7 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 Aparecerá el paso [!UICONTROL Mapping], que le proporcionará una interfaz para asignar los campos de origen del esquema de origen a sus campos XDM de destino adecuados en el esquema de destino.
 
-Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../data-prep/ui/mapping.md)
+Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../data-prep/ui/mapping.md)
 
 Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
 
@@ -103,10 +103,10 @@ Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]
 
 ![Paso de revisión del flujo de trabajo de orígenes.](../assets/testing/review-test.png)
 
-Finalmente, debe recuperar el punto final de flujo de datos. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de la transmisión se comunique con el Experience Platform. Para recuperar el extremo de flujo continuo, vaya a la página [!UICONTROL Actividad de flujo de datos] del flujo de datos que acaba de crear y copie el extremo desde la parte inferior del panel [!UICONTROL Propiedades].
+Finalmente, debe recuperar el punto final de flujo de datos. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de flujo se comunique con Experience Platform. Para recuperar el extremo de flujo continuo, vaya a la página [!UICONTROL Actividad de flujo de datos] del flujo de datos que acaba de crear y copie el extremo desde la parte inferior del panel [!UICONTROL Propiedades].
 
 ![Punto final de flujo continuo en la actividad del flujo de datos.](../assets/testing/endpoint-test.png)
 
 ## Enviar el origen
 
-Una vez que el origen pueda completar todo el flujo de trabajo, puede ponerse en contacto con el Adobe y enviar el origen para que se integre en otras organizaciones de Experience Platform.
+Una vez que el origen pueda completar todo el flujo de trabajo, puede ponerse en contacto con el representante de Adobe y enviar el origen para que se integre en otras organizaciones de Experience Platform.

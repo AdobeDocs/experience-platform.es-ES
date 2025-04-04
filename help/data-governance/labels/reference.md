@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de etiquetas de uso de datos
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform en la actualidad.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2254'
+source-wordcount: '2257'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según [políticas de gobernanza](../policies/overview.md) y [políticas de control de acceso](../../access-control/abac/overview.md) que se aplican a esos datos. Adobe Experience Platform proporciona varias etiquetas de uso de datos principales listas para usarse que puede utilizar para categorizar los datos.
 
-Este documento describe las etiquetas de uso de datos principales que proporciona actualmente el Experience Platform.
+Este documento describe las etiquetas de uso de datos principales que proporciona actualmente Experience Platform.
 
 ## Etiquetas de contrato {#contract}
 
@@ -44,7 +44,7 @@ Las etiquetas del contrato &quot;C&quot; se utilizan para categorizar los datos 
 
 ## Etiquetas de identidad {#identity}
 
-Las etiquetas de identidad “I” se utilizan para categorizar los datos que permiten identificar a una persona específica o ponerse en contacto con ella.
+Las etiquetas de identidad “I” se utilizan para categorizar datos que pueden identificar o usarse para contactar a una persona específica.
 
 | Etiqueta | Definición |
 | --- | --- |
@@ -61,8 +61,8 @@ Un tipo de datos que puede considerar confidencial puede ser un tipo diferente d
 | --- | --- |
 | **S1** | Datos que especifican la latitud y longitud que pueden utilizarse para determinar la ubicación exacta de un dispositivo. |
 | **S2** | Datos que pueden utilizarse para determinar un área de geovalla definida en sentido amplio. |
-| **PSPD** | Los datos personales confidenciales permitidos (PSPD) se refieren a datos que el Adobe le permite cargar de forma contractual y que se consideran &quot;confidenciales&quot;, &quot;categoría especial de datos&quot; o un término similar utilizado por las leyes aplicables. Esto excluye específicamente la información médica protegida (PHI) y otros datos de salud regulados. |
-| **RHD** | Datos que hacen referencia a información médica protegida (PHI) o información sobre un paciente que el Adobe le permite cargar. |
+| **PSPD** | Los datos personales confidenciales permitidos (PSPD) se refieren a datos que Adobe le permite cargar de forma contractual y que se consideran &quot;confidenciales&quot;, &quot;categoría especial de datos&quot; o un término similar utilizado por las leyes aplicables. Esto excluye específicamente la información médica protegida (PHI) y otros datos de salud regulados. |
+| **RHD** | Datos que hacen referencia a información médica protegida (PHI) o información sobre un paciente que Adobe le permite cargar de forma contractual. |
 
 ## Etiquetas de Partner Ecosystem {#partner}
 
@@ -72,7 +72,7 @@ Esta etiqueta se utiliza para regular el uso de los datos de clientes potenciale
 
 | Etiqueta | Definición |
 | --- | --- |
-| **Terceros** | Los datos de terceros son datos que le proporciona un proveedor de datos de terceros. Un proveedor de datos de terceros es una entidad que ha celebrado un acuerdo con su organización que le autoriza a acceder, utilizar, mostrar y transmitir los datos de terceros junto con Platform. |
+| **Terceros** | Los datos de terceros son datos que le proporciona un proveedor de datos de terceros. Un proveedor de datos de terceros es una entidad que ha celebrado un acuerdo con su organización que le autoriza a acceder, utilizar, mostrar y transmitir los datos de terceros junto con Experience Platform. |
 | **Enriquecimiento De Terceros** | Datos recopilados por una organización de terceros que no esté directamente relacionada con el interesado. La etiqueta debe aplicarse a datos de terceros que se utilizan para enriquecer perfiles de origen. |
 | **Prospección de terceros** | Datos recopilados por una organización de terceros que no esté directamente relacionada con el interesado. La etiqueta debe aplicarse a los datos de terceros utilizados para la parte superior de la prospección del canal para los clientes nuevos netos. |
 
@@ -110,31 +110,31 @@ Es probable que el uso de datos externos únicamente para la segmentación tambi
 
 Sin embargo, segmentar contenido o anuncios que solo utilicen datos en el sitio no suele considerarse una segmentación basada en intereses. La segmentación en el sitio que, de lo contrario, no cumple los requisitos para considerarse una segmentación basada en intereses se trata como dos etiquetas distintas. Específicamente, Label C6 se dirige a la segmentación y creación de informes de anuncios en el sitio y habla específicamente de la selección de anuncios, la entrega y la creación de informes, y Label C7 se dirige a la selección de contenido en el sitio, la entrega y la creación de informes (segmentación de contenido en el sitio).
 
-En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. A continuación se proporcionan los marcos de la IAB y los DAA como referencia:
+En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. Como referencia, los marcos de IAB y DAA se proporcionan a continuación:
 
 IAB: Personalization. La recopilación y el procesamiento de información sobre su uso de este servicio para posteriormente personalizar la publicidad y / o el contenido para usted en otros contextos, como en otros sitios web o aplicaciones, a lo largo del tiempo. Normalmente, el contenido del sitio o aplicación se utiliza para hacer deducciones sobre sus intereses que informan la futura selección de publicidad o contenido.
 
-Datos: Publicidad de comportamiento en línea. Recopilar datos de un equipo o dispositivo determinado sobre los comportamientos de visualización web a lo largo del tiempo y en sitios web no afiliados con el fin de utilizar dichos datos para predecir las preferencias o intereses del usuario y ofrecer publicidad a ese equipo o dispositivo en función de las preferencias o intereses deducidos de dichos comportamientos de visualización web.
+DAA: publicidad en línea basada en el comportamiento. Recopilar datos de un equipo o dispositivo determinado sobre los comportamientos de visualización web a lo largo del tiempo y en sitios web no afiliados con el fin de utilizar dichos datos para predecir las preferencias o intereses del usuario y ofrecer publicidad a ese equipo o dispositivo en función de las preferencias o intereses deducidos de dichos comportamientos de visualización web.
 
 #### C6 {#c6}
 
 Los anuncios son mensajes o notificaciones, incluidos texto e imágenes, que aparecen en un sitio web o aplicación y que están destinados principalmente a promover la venta de bienes o servicios. Depende de usted determinar el propósito de dichos mensajes o notificaciones. Los anuncios son independientes del contenido del sitio y están cubiertos por la etiqueta [C7](#c7). Los datos con una etiqueta C6 no se pueden utilizar para la segmentación de anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, ni para medir el envío y la eficacia de dichos anuncios. Esto incluye el uso de datos en el sitio recopilados anteriormente sobre los intereses de los usuarios para seleccionar anuncios, procesar datos sobre qué anuncios se mostraron, cuándo y dónde se mostraron y si los usuarios tomaron alguna acción relacionada con el anuncio, como seleccionar un anuncio o realizar una compra. Normalmente, hacer deducciones sobre las preferencias de un usuario en función de las actividades en el sitio de ese usuario y luego usar esas preferencias en la segmentación de anuncios en el sitio no calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Vea la etiqueta C5 para conocer estos requisitos.](#c5)*
 
-En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. A continuación se proporcionan los marcos de la IAB y los DAA como referencia:
+En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. Como referencia, los marcos de IAB y DAA se proporcionan a continuación:
 
 IAB: 3. Selección de anuncios, envío, creación de informes: recopilación de información y combinación con información recopilada anteriormente, para seleccionar y enviar anuncios para usted y para medir el envío y la eficacia de dichos anuncios. Esto incluye el uso de información recopilada anteriormente sobre sus intereses para seleccionar anuncios, el procesamiento de datos sobre qué anuncios se mostraron, con qué frecuencia se mostraron, cuándo y dónde se mostraron y si realizó alguna acción relacionada con el anuncio, incluida, por ejemplo, la selección de un anuncio o la realización de una compra. Esto no incluye Personalization, que es la recopilación y el procesamiento de información sobre su uso de este servicio para posteriormente personalizar la publicidad y / o el contenido para usted en otros contextos, como sitios web o aplicaciones, a lo largo del tiempo.
 
-Datos: La publicidad basada en el comportamiento en línea no incluye las actividades de Primeras partes, Entrega de publicidad o Creación de informes de publicidad, ni la publicidad contextual (es decir, la publicidad basada en el contenido de la página web que se está visitando, la visita actual de un consumidor a una página web o una consulta de búsqueda).
+DAA: La publicidad basada en el comportamiento en línea no incluye las actividades de Primeras partes, Entrega de publicidad o Creación de informes de publicidad, ni la publicidad contextual (es decir, la publicidad basada en el contenido de la página web que se está visitando, la visita actual de un consumidor a una página web o una consulta de búsqueda).
 
 #### C7 {#c7}
 
 El contenido del sitio es texto e imágenes que están diseñados para informar, educar o entretener, y no se crean para promover la venta de bienes o servicios. Depende de usted determinar el propósito del contenido, incluso si el contenido podría calificarse como publicidad nativa. La etiqueta C7 no pretende cubrir los anuncios en el sitio, que están cubiertos por la etiqueta [C6](#c6). Los datos con una etiqueta C7 no se pueden utilizar para la segmentación de contenido en el sitio, incluida la selección y entrega de contenido en los sitios web o las aplicaciones de la organización, ni para medir la entrega y la eficacia de dicho contenido. Esto incluye información recopilada anteriormente sobre los intereses de los usuarios en el contenido seleccionado, el procesamiento de datos sobre qué contenido se mostró, con qué frecuencia o durante cuánto tiempo, cuándo y dónde se mostró y si los usuarios realizaron alguna acción relacionada con el contenido, incluida la selección de contenido, por ejemplo. Normalmente, hacer deducciones sobre las preferencias de un usuario en función de las actividades en el sitio de ese usuario y luego usar esas preferencias en la segmentación de contenido en el sitio no calificaría como segmentación basada en intereses (también denominada personalización), ya que no cumpliría los tres requisitos necesarios para la segmentación basada en intereses. *[Vea la etiqueta C5 para conocer estos requisitos.](#c5)*
 
-En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. A continuación se proporcionan los marcos de la IAB y los DAA como referencia:
+En última instancia, la interpretación de la etiqueta y cómo se aplica el uso de los datos con esa etiqueta depende de usted. Como referencia, los marcos de IAB y DAA se proporcionan a continuación:
 
 IAB: 4. Selección de contenido, envío, creación de informes: Recopilación de información y, en combinación con la información recopilada anteriormente, para seleccionar y enviar contenido para usted y para medir la entrega y la eficacia de dicho contenido. Esto incluye el uso de información recopilada anteriormente sobre sus intereses para seleccionar contenido, el procesamiento de datos sobre qué contenido se mostró, con qué frecuencia o durante cuánto tiempo, cuándo y dónde se mostró y si realizó alguna acción relacionada con el contenido, incluida, por ejemplo, la selección de contenido. Esto no incluye Personalization, que es la recopilación y el procesamiento de información sobre su uso de este servicio para posteriormente personalizar el contenido y/o la publicidad para usted en otros contextos, como sitios web o aplicaciones, a lo largo del tiempo.
 
-Datos: La publicidad basada en el comportamiento en línea no incluye las actividades de Primeras partes, Entrega de publicidad o Creación de informes de publicidad, ni la publicidad contextual (es decir, la publicidad basada en el contenido de la página web que está visitando, la visita actual de un consumidor a una página web o una consulta de búsqueda).
+DAA: La publicidad basada en el comportamiento en línea no incluye las actividades de Primeras partes, Entrega de publicidad o Creación de informes de publicidad, ni la publicidad contextual (es decir, la publicidad basada en el contenido de la página web que está visitando, la visita actual de un consumidor a una página web o una consulta de búsqueda).
 
 #### C8 {#c8}
 
@@ -150,8 +150,8 @@ Algunas políticas de gobernanza de datos restringen el uso de datos de identida
 
 #### C11 {#c11}
 
-La coincidencia de segmentos de Adobe Experience Platform le permite hacer coincidir audiencias generadas por Platform con preferencias de privacidad y consentimiento, lo que facilita la obtención de perfiles enriquecidos y perspectivas descendentes. La etiqueta C11 indica datos que no deben usarse en [!DNL Segment Match] procesos. Después de determinar qué conjuntos de datos o campos desea excluir de Coincidencia de segmentos y agregar la etiqueta C11 en consecuencia, el flujo de trabajo de Coincidencia de segmentos aplica automáticamente la etiqueta.
+La coincidencia de segmentos de Adobe Experience Platform le permite hacer coincidir audiencias generadas por Experience Platform con preferencias de privacidad y consentimiento, lo que facilita la obtención de perfiles enriquecidos y perspectivas descendentes. La etiqueta C11 indica datos que no deben usarse en [!DNL Segment Match] procesos. Después de determinar qué conjuntos de datos o campos desea excluir de Coincidencia de segmentos y agregar la etiqueta C11 en consecuencia, el flujo de trabajo de Coincidencia de segmentos aplica automáticamente la etiqueta.
 
 #### C12 {#c12}
 
-Los datos con esta etiqueta no se pueden exportar desde Platform de ninguna manera. Los campos etiquetados con C12 se excluyen de las descargas de CSV, el consumo de API y los flujos de trabajo de activación.
+Los datos con esta etiqueta no se pueden exportar desde Experience Platform de ninguna manera. Los campos etiquetados con C12 se excluyen de las descargas de CSV, el consumo de API y los flujos de trabajo de activación.

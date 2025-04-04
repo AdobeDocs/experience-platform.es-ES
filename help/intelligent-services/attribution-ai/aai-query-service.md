@@ -2,11 +2,11 @@
 keywords: perspectivas;inteligencia artificial aplicada a la atribución;perspectivas de inteligencia artificial aplicada a la atribución;servicio de consultas de AAI;consultas de atribución;puntuaciones de atribución
 feature: Attribution AI
 title: Análisis de puntuaciones de atribución mediante el servicio de consulta
-description: Aprenda a utilizar el servicio de consultas de Adobe Experience Platform para analizar las puntuaciones de Attribution AI.
+description: Aprenda a utilizar el servicio de consulta de Adobe Experience Platform para analizar las puntuaciones de inteligencia artificial aplicada a la atribución.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Cada fila de los datos representa una conversión, en la que la información de 
 
 ## Búsqueda de rutas de datos
 
-En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo. Aparecerá la página **[!UICONTROL Conjuntos de datos]**. A continuación, seleccione la pestaña **[!UICONTROL Examinar]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo. Aparecerá la página **[!UICONTROL Conjuntos de datos]**. A continuación, seleccione la pestaña **[!UICONTROL Examinar]** y busque el conjunto de datos de salida para sus puntuaciones de inteligencia artificial aplicada a la atribución.
 
 ![Accediendo a su modelo](./images/aai-query/datasets_browse.png)
 
@@ -45,7 +45,7 @@ Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez sele
 
 ## Acceso al servicio de consultas
 
-Para acceder al servicio de consultas desde la interfaz de usuario de Platform, comience seleccionando **[!UICONTROL Consultas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]**. Se carga una lista de las consultas guardadas anteriormente.
+Para acceder al servicio de consultas desde la interfaz de usuario de Experience Platform, comience seleccionando **[!UICONTROL Consultas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]**. Se carga una lista de las consultas guardadas anteriormente.
 
 ![examinar servicio de consulta](./images/aai-query/query_tab.png)
 
@@ -153,7 +153,7 @@ Las consultas siguientes se pueden utilizar como plantilla para diferentes escen
         conversionName, tp_count DESC
 ```
 
-### Ejemplos de generación de Insight
+### Ejemplos de generación de insight
 
 **Desglose de unidades incrementales por punto de contacto y fecha de conversión (en una ventana de conversión)**
 
@@ -305,7 +305,7 @@ Esta consulta aplana la columna struct en varias columnas singulares y explosion
 
 >[!TIP]
 >
-> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. La variable `COLUMN_NAME` puede tomar los valores de los nombres de columna de paso a través opcionales (columnas de informes) que se agregaron durante la configuración del modelo de Attribution AI. Revise el esquema de salida de puntuación para encontrar los `{COLUMN_NAME}` valores necesarios para completar esta consulta.
+> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. La variable `COLUMN_NAME` puede tomar los valores de los nombres de columna de paso opcional (columnas de informes) que se agregaron durante la configuración del modelo de inteligencia artificial aplicada a la atribución. Revise el esquema de salida de puntuación para encontrar los `{COLUMN_NAME}` valores necesarios para completar esta consulta.
 
 ```sql
 SELECT 

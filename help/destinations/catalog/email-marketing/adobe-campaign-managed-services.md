@@ -2,7 +2,7 @@
 title: Conexión de Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 299868e5ca1b8fde667c4c0ec9a7435634a1717d
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1633'
 ht-degree: 2%
@@ -70,8 +70,8 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Ado
 |---|---|---|
 | external_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. Se recomienda utilizar esta identidad y asignarla al ID en la instancia de Campaign que representa al cliente (loyalty_ID, account_ID, customer_ID...) |
 | ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 | GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
 
@@ -174,7 +174,7 @@ Vaya al menú **[!UICONTROL Administración]** > **[!UICONTROL Auditoría]** > *
 
 ### Acceso a datos exportados {#data}
 
-Para la **[!UICONTROL sincronización de audiencias]**, puede comprobar la audiencia exportada si navega hasta el menú **[!UICONTROL Perfil y destino]** > **[!UICONTROL Lista]** > **[!UICONTROL Audiencias de AEP]**.
+Para la **[!UICONTROL sincronización de audiencias]**, puede comprobar la audiencia exportada si navega al menú **[!UICONTROL Perfil y destino]** > **[!UICONTROL Lista]** > **[!UICONTROL Audiencias de AEP]**.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 

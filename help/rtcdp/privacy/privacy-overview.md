@@ -4,9 +4,9 @@ title: Privacidad en Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform le permite agilizar el proceso de cumplimiento de las normas de privacidad en sus operaciones de datos.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ La mayoría de las [!DNL Real-Time CDP] funcionalidades están impulsadas por Ad
 
 ## Respeto de las solicitudes de acceso y eliminación de clientes
 
-Las regulaciones legales de privacidad, como el [!DNL General Data Protection Regulation] (RGPD) y el [!DNL California Consumer Privacy Act] (CCPA), otorgan a los clientes el derecho de solicitar acceso a los datos personales que recopile de ellos o de eliminarlos. Dado que [!DNL Real-Time CDP] aprovecha las capacidades de [!DNL Experience Platform] para la recopilación y el almacenamiento de datos, las solicitudes de los clientes para acceder y eliminar sus datos personales deben administrarse en [!DNL Platform]. Consulte la descripción general de [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) para obtener más información.
+Las regulaciones legales de privacidad, como el [!DNL General Data Protection Regulation] (RGPD) y el [!DNL California Consumer Privacy Act] (CCPA), otorgan a los clientes el derecho de solicitar acceso a los datos personales que recopile de ellos o de eliminarlos. Dado que [!DNL Real-Time CDP] aprovecha las capacidades de [!DNL Experience Platform] para la recopilación y el almacenamiento de datos, las solicitudes de los clientes para acceder y eliminar sus datos personales deben administrarse en [!DNL Experience Platform]. Consulte la descripción general de [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) para obtener más información.
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Consulte el documento [Respeto de las solicitudes de exclusión](../../segmentat
 
 ## Compatibilidad con IAB TCF 2.0
 
-[!DNL Real-Time CDP] se ha creado en Adobe Experience Platform, que forma parte de la [lista de proveedores](https://iabeurope.eu/vendor-list-tcf/) registrados para [!DNL Transparency & Consent Framework (TCF)], como se describe en [!DNL Interactive Advertising Bureau (IAB)]. En cumplimiento con los requisitos de TCF 2.0, Platform le permite recopilar datos detallados del consentimiento del cliente e integrarlos en sus perfiles de cliente almacenados. Estos datos de consentimiento se pueden tener en cuenta en si ciertos perfiles se incluyen en las audiencias exportadas, según su caso de uso.
+[!DNL Real-Time CDP] se ha creado en Adobe Experience Platform, que forma parte de la [lista de proveedores](https://iabeurope.eu/vendor-list-tcf/) registrados para [!DNL Transparency & Consent Framework (TCF)], como se describe en [!DNL Interactive Advertising Bureau (IAB)]. De conformidad con los requisitos de TCF 2.0, Experience Platform le permite recopilar datos detallados del consentimiento del cliente e integrarlos en sus perfiles de cliente almacenados. Estos datos de consentimiento se pueden tener en cuenta en si ciertos perfiles se incluyen en las audiencias exportadas, según su caso de uso.
 
 Consulte la descripción general del [soporte de IAB TCF 2.0 en Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información.
 

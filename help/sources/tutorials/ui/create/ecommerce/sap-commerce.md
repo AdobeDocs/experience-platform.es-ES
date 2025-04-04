@@ -3,10 +3,10 @@ title: Crear una conexión de origen de SAP Commerce en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de SAP Commerce mediante la interfaz de usuario de Adobe Experience Platform.
 badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 3%
+source-wordcount: '976'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ Si ya tiene una cuenta de [!DNL SAP Commerce] válida, puede omitir el resto de 
 
 ### Recopilar credenciales necesarias {#gather-credentials}
 
-Para conectar [!DNL SAP Commerce] al Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para conectar [!DNL SAP Commerce] a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | --- | --- |
@@ -42,9 +42,9 @@ Para conectar [!DNL SAP Commerce] al Experience Platform, debe proporcionar valo
 
 Para obtener más información, consulte la [[!DNL SAP Commerce] documentación](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-### Creación de un esquema de Platform {#create-platform-schema}
+### Creación de un esquema de Experience Platform {#create-platform-schema}
 
-Antes de crear una conexión de origen de [!DNL SAP Commerce], también debe asegurarse de crear primero un esquema de Experience Platform para utilizarlo en el origen. Consulte el tutorial de [creación de un esquema de Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
+Antes de crear una conexión de origen de [!DNL SAP Commerce], también debe asegurarse de crear primero un esquema de Experience Platform para utilizarlo en el origen. Consulte el tutorial de [creación de un esquema de Experience Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
 
 Expanda la siguiente sección para ver un esquema de ejemplo.
 
@@ -143,13 +143,13 @@ Expanda la siguiente sección para ver un esquema de ejemplo.
 
 ## Conectar su cuenta de [!DNL SAP Commerce] {#connect-account}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría *eCommerce*, seleccione **[!UICONTROL SAP Commerce]** y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
 
-![Captura de pantalla de IU de Platform para el catálogo con la tarjeta SAP Commerce](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform para el catálogo con tarjeta SAP Commerce](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
 Aparecerá la página **[!UICONTROL Conectar cuenta de SAP Commerce]**. En esta página, puede usar credenciales nuevas o existentes.
 
@@ -157,17 +157,17 @@ Aparecerá la página **[!UICONTROL Conectar cuenta de SAP Commerce]**. En esta 
 
 Para usar una cuenta existente, seleccione la cuenta de [!DNL SAP Commerce] con la que desee crear un nuevo flujo de datos y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![Captura de pantalla de la IU de Platform para conectar la cuenta de SAP Commerce con una cuenta existente](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+![Captura de pantalla de la IU de Experience Platform para conectar la cuenta de SAP Commerce con una cuenta existente](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### Nueva cuenta {#new-account}
 
 Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
-![Captura de pantalla de la IU de Platform para conectar la cuenta de SAP Commerce con una nueva cuenta](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+![Captura de pantalla de la IU de Experience Platform para conectar la cuenta de SAP Commerce con una nueva cuenta](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### Seleccionar datos {#select-data}
 
-Finalmente, debe seleccionar el tipo de objeto que desea introducir en Platform.
+Finalmente, debe seleccionar el tipo de objeto que desea introducir en Experience Platform.
 
 | Tipo de objeto | Descripción |
 | --- | --- |
@@ -180,19 +180,19 @@ Finalmente, debe seleccionar el tipo de objeto que desea introducir en Platform.
 
 Para introducir datos de clientes, selecciona **[!UICONTROL Clientes]** como tipo de objeto y, a continuación, selecciona **[!UICONTROL Siguiente]**.
 
-![Captura de pantalla de IU de Platform para SAP Commerce que muestra la configuración con la opción Customers seleccionada](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform para SAP Commerce que muestra la configuración con la opción Customers seleccionada](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Contactos]
 
 Para introducir datos de contacto, selecciona **[!UICONTROL Contactos]** como tipo de objeto y, a continuación, selecciona **[!UICONTROL Siguiente]**.
 
-![Captura de pantalla de IU de Platform para SAP Commerce que muestra la configuración con la opción Contactos seleccionada](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+![Captura de pantalla de la IU de Experience Platform para SAP Commerce que muestra la configuración con la opción Contactos seleccionada](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL SAP Commerce]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en la plataforma](../../dataflow/ecommerce.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL SAP Commerce]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/ecommerce.md).
 
 ## Recursos adicionales {#additional-resources}
 
@@ -200,7 +200,7 @@ Las secciones siguientes proporcionan recursos adicionales a los que puede hacer
 
 ### Asignación {#mapping}
 
-Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
+Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
 
 Las configuraciones de asignación para el flujo de datos variarán según el esquema y el tipo de objeto que seleccione para la ingesta.
 

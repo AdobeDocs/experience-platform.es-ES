@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de API de Registro de esquemas
 description: La API de Registro de esquemas permite a los desarrolladores administrar mediante programación todos los esquemas y los recursos del Modelo de datos de experiencia (XDM) relacionados dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1144'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!DNL Schema Registry] se usa para obtener acceso a la biblioteca de esquemas en Adobe Experience Platform, lo que proporciona una interfaz de usuario y una API RESTful desde las cuales se puede obtener acceso a todos los recursos de biblioteca disponibles.
 
-La API de Registro de esquemas proporciona varios extremos que le permiten administrar mediante programación todos los esquemas y los recursos del Modelo de datos de experiencia (XDM) relacionados disponibles en Platform. Esto incluye los definidos por el Adobe, los socios de [!DNL Experience Platform] y los proveedores cuyas aplicaciones utilice.
+La API de Registro de esquemas proporciona varios extremos que le permiten administrar mediante programación todos los esquemas y los recursos del Modelo de datos de experiencia (XDM) relacionados disponibles en Experience Platform. Esto incluye los definidos por Adobe, [!DNL Experience Platform] socios y proveedores cuyas aplicaciones utilice.
 
 Estos extremos se describen a continuación. Visite las guías de extremos individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados obligatorios, la lectura de llamadas de API de muestra y mucho más.
 
@@ -27,7 +27,7 @@ Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [Re
 
 ## Esquemas
 
-Los esquemas XDM representan y validan la estructura y el formato de los datos introducidos en Platform. Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Puede crear, ver, editar y eliminar esquemas utilizando el extremo `/schemas`. Para aprender a utilizar este extremo, consulte la [guía de extremo de esquemas](./schemas.md).
+Los esquemas XDM representan y validan la estructura y el formato de los datos introducidos en Experience Platform. Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Puede crear, ver, editar y eliminar esquemas utilizando el extremo `/schemas`. Para aprender a utilizar este extremo, consulte la [guía de extremo de esquemas](./schemas.md).
 
 Para obtener una guía paso a paso sobre cómo crear manualmente un esquema completo en la API del Registro de esquemas, incluida la creación y adición de grupos de campos y tipos de datos, consulte el [tutorial de creación de esquemas de API](../tutorials/create-schema-api.md).
 
@@ -59,7 +59,7 @@ Los descriptores son conjuntos de metadatos que se asignan a campos específicos
 
 ## Uniones
 
-Aunque Platform le permite componer esquemas para casos de uso específicos, también le permite componer una &quot;unión&quot; de esquemas pertenecientes a una clase específica. Un esquema de unión agrega los campos de todos los esquemas que comparten la misma clase en una sola representación. Al habilitar un esquema para usarlo con [Perfil del cliente en tiempo real](../../profile/home.md), ese esquema se incluye en la unión de su clase particular. Como tal, los esquemas de unión no se pueden editar directamente y solo se pueden ver afectados por la inclusión o exclusión de esquemas para su uso en el perfil.
+Aunque Experience Platform le permite crear esquemas para casos de uso específicos, también le permite crear una &quot;unión&quot; de esquemas pertenecientes a una clase específica. Un esquema de unión agrega los campos de todos los esquemas que comparten la misma clase en una sola representación. Al habilitar un esquema para usarlo con [Perfil del cliente en tiempo real](../../profile/home.md), ese esquema se incluye en la unión de su clase particular. Como tal, los esquemas de unión no se pueden editar directamente y solo se pueden ver afectados por la inclusión o exclusión de esquemas para su uso en el perfil.
 
 Para obtener información sobre cómo ver uniones en la API de Registro de esquemas, consulte la [guía de extremo de uniones](./unions.md).
 
@@ -93,7 +93,7 @@ Consulte la [guía de extremo de datos de ejemplo](./sample-data.md) para obtene
 
 ## Registro de auditoría
 
-El Registro de esquemas mantiene un registro de todos los cambios que se han producido en un recurso (clase, grupo de campos, tipo de datos o esquema) entre diferentes actualizaciones. Puede recuperar el registro de un recurso en particular proporcionando su `$id` o `meta:altId` en la ruta de una solicitud de GET a este extremo.
+El Registro de esquemas mantiene un registro de todos los cambios que se han producido en un recurso (clase, grupo de campos, tipo de datos o esquema) entre diferentes actualizaciones. Puede recuperar el registro de un recurso en particular proporcionando su `$id` o `meta:altId` en la ruta de una petición GET a este extremo.
 
 Consulte la [guía de extremo de registro de auditoría](./audit-log.md) para obtener más información sobre el uso de este extremo.
 

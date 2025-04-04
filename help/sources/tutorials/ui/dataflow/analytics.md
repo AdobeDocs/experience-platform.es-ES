@@ -2,18 +2,18 @@
 keywords: Experience Platform;inicio;temas populares;analytics;mixpanel
 solution: Experience Platform
 title: Creación de un flujo de datos con una Source de Analytics en la IU
-description: Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de análisis mediante la interfaz de usuario de Platform.
+description: Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de análisis mediante la interfaz de usuario de Experience Platform.
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1459'
 ht-degree: 1%
 
 ---
 
 # Creación de un flujo de datos mediante una fuente de análisis en la IU
 
-Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos en Adobe Experience Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de análisis mediante la IU de Platform.
+Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos en Adobe Experience Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de análisis mediante la interfaz de usuario de Experience Platform.
 
 >[!NOTE]
 >
@@ -21,10 +21,10 @@ Un flujo de datos es una tarea programada que recupera e ingiere datos de un ori
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../home.md): Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [Fuentes](../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -83,11 +83,11 @@ Cuando termine de proporcionar detalles al flujo de datos, seleccione **[!UICONT
 
 >[!IMPORTANT]
 >
->No puede asignar ningún valor de par de claves dinámicas como objeto de [!DNL OneTrust] a Platform y debe especificar esas claves en el esquema de destino para asignar los datos durante la ingesta.
+>No puede asignar ningún valor de par de claves dinámicas como objeto de [!DNL OneTrust] a Experience Platform y debe especificar esas claves en el esquema de destino para asignar los datos durante la ingesta.
 
 Aparecerá el paso [!UICONTROL Mapping], que le proporcionará una interfaz para asignar los campos de origen del esquema de origen a sus campos XDM de destino adecuados en el esquema de destino.
 
-Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../data-prep/ui/mapping.md).
+Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../data-prep/ui/mapping.md).
 
 Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
 
@@ -141,7 +141,7 @@ Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado i
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de su fuente de análisis a Platform. Los datos entrantes ahora pueden ser utilizados por servicios de flujo descendente [!DNL Platform] como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de su fuente de análisis a Experience Platform. Los datos entrantes ahora pueden ser utilizados por servicios de flujo descendente [!DNL Experience Platform] como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
 * [Información general de [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
 * [Información general de [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
@@ -149,6 +149,6 @@ Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar l
 
 >[!WARNING]
 >
-> La interfaz de usuario de Platform que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+> La interfaz de usuario de Experience Platform que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

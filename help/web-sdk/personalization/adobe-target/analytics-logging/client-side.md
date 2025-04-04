@@ -1,42 +1,42 @@
 ---
-title: Registro del lado del cliente para datos de A4T en el SDK web de Platform
-description: Obtenga información sobre cómo habilitar el registro en el lado del cliente para Adobe Analytics for Target (A4T) mediante el SDK web de Experience Platform.
-seo-title: Client-side logging for A4T data in the Platform Web SDK
+title: Registro del lado del cliente para datos de A4T en Experience Platform Web SDK
+description: Obtenga información sobre cómo habilitar el registro en el lado del cliente para Adobe Analytics for Target (A4T) mediante Experience Platform Web SDK.
+seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;registro;sdk web;experiencia;plataforma;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
 
-# Registro del lado del cliente para datos de A4T en el SDK web de Platform
+# Registro del lado del cliente para datos de A4T en Experience Platform Web SDK
 
 ## Información general {#overview}
 
-El SDK web de Adobe Experience Platform le permite recopilar datos de [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) en el lado del cliente de la aplicación web.
+Adobe Experience Platform Web SDK le permite recopilar datos de [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) en el lado del cliente de la aplicación web.
 
 El registro en el lado del cliente significa que se devuelven datos relevantes de [!DNL Target] en el lado del cliente, lo que le permite recopilarlos y compartirlos con Analytics. Esta opción debería habilitarse si desea enviar manualmente datos a Analytics mediante la [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
 
 >[!NOTE]
 >
->Un método para realizar esto usando [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es) está actualmente en desarrollo y estará disponible en un futuro próximo.
+>Actualmente se está desarrollando un método para realizar esto usando [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es), que estará disponible en un futuro próximo.
 
-Este documento describe los pasos para configurar el registro de A4T en el lado del cliente para el SDK web y proporciona algunos ejemplos de implementación para casos de uso comunes.
+Este documento describe los pasos para configurar el registro de A4T del lado del cliente para Web SDK y proporciona algunos ejemplos de implementación para casos de uso comunes.
 
 ## Requisitos previos {#prerequisites}
 
-En este tutorial se da por hecho que está familiarizado con los conceptos y procesos fundamentales relacionados con el uso del SDK web para fines de personalización. Consulte la siguiente documentación si necesita una introducción:
+En este tutorial se da por hecho que está familiarizado con los conceptos y procesos fundamentales relacionados con el uso de Web SDK con fines de personalización. Consulte la siguiente documentación si necesita una introducción:
 
-* [Configuración del SDK web](/help/web-sdk/commands/configure/overview.md)
+* [Configuración de Web SDK](/help/web-sdk/commands/configure/overview.md)
 * [Envío de eventos](/help/web-sdk/commands/sendevent/overview.md)
 * [Representación de contenido de personalización](../../rendering-personalization-content.md)
 
 ## Configuración del registro en el lado del cliente de Analytics {#set-up-client-side-logging}
 
-Las siguientes subsecciones describen cómo habilitar el registro en el lado del cliente de Analytics para la implementación del SDK web.
+Las siguientes subsecciones describen cómo habilitar el registro en el lado del cliente de Analytics para la implementación de Web SDK.
 
 ### Habilitar el registro en el lado del cliente de Analytics {#enable-analytics-client-side-logging}
 
@@ -44,7 +44,7 @@ Para considerar el registro del lado del cliente de Analytics habilitado para la
 
 ![Configuración del flujo de datos de Analytics deshabilitada](../assets/disable-analytics-datastream.png)
 
-### Recuperar [!DNL A4T] datos del SDK y enviarlos a Analytics {#a4t-to-analytics}
+### Recuperar [!DNL A4T] datos de SDK y enviarlos a Analytics {#a4t-to-analytics}
 
 Para que este método de generación de informes funcione correctamente, debe enviar los datos relacionados con [!DNL A4T] recuperados del comando [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) en la visita de Analytics.
 
@@ -227,9 +227,9 @@ Las siguientes subsecciones muestran cómo implementar el registro del lado del 
 
 ### Actividades del Compositor de experiencias basadas en formularios {#form-based-composer}
 
-Puede usar el SDK web para controlar la ejecución de propuestas desde [actividades del Compositor de experiencias basadas en formularios de Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+Puede usar Web SDK para controlar la ejecución de propuestas desde las actividades de [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
-Cuando se solicitan propuestas para un ámbito de decisión específico, la propuesta devuelta contiene el token de Analytics correspondiente. La práctica recomendada es encadenar el comando `sendEvent` del SDK web de Platform e iterar en las propuestas devueltas para ejecutarlas mientras se recopilan los tokens de Analytics al mismo tiempo.
+Cuando se solicitan propuestas para un ámbito de decisión específico, la propuesta devuelta contiene el token de Analytics correspondiente. La práctica recomendada es encadenar el comando `sendEvent` de Experience Platform Web SDK e iterar por las propuestas devueltas para ejecutarlas mientras se recopilan los tokens de Analytics al mismo tiempo.
 
 Puede almacenar en déclencheur un comando `sendEvent` para un ámbito de actividad del Compositor de experiencias basadas en formularios de esta manera:
 
@@ -421,12 +421,12 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Resumen de implementación {#implementation-summary}
 
-En resumen, los siguientes pasos deben ejecutarse al aplicar actividades del Compositor de experiencias basadas en formularios con el SDK web de Platform:
+En resumen, los siguientes pasos deben ejecutarse al aplicar actividades del Compositor de experiencias basadas en formularios con Experience Platform Web SDK:
 
 1. Envíe un evento que obtenga ofertas de actividad del Compositor de experiencias basadas en formularios;
 1. Aplicar los cambios de contenido a la página;
 1. Enviar el evento de notificación `decisioning.propositionDisplay`;
-1. Recopilar los tokens de visualización de Analytics de la respuesta del SDK y construir una carga útil para la visita de Analytics.
+1. Recopile los tokens de visualización de Analytics de la respuesta de SDK y construya una carga útil para la visita de Analytics;
 1. Enviar la carga útil a Analytics mediante la [API de inserción de datos](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 1. Si hay métricas de clics en las propuestas enviadas, los oyentes de clics deben configurarse para que cuando se realice un clic, envíe el evento de notificación `decisioning.propositionInteract`. El controlador `onBeforeEventSend` debe configurarse para que al interceptar `decisioning.propositionInteract` eventos, se produzcan las siguientes acciones:
    1. Recopilando los tokens de Click Analytics de `xdm._experience.decisioning.propositions`
@@ -467,13 +467,13 @@ alloy("sendEvent", {
 
 ### Actividades del Compositor de experiencias visuales {#visual-experience-composer-acitivties}
 
-El SDK web le permite administrar ofertas creadas con [Compositor de experiencias visuales (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+Web SDK le permite gestionar ofertas creadas con [Compositor de experiencias visuales (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 
 >[!NOTE]
 >
 >Los pasos para implementar este caso de uso son muy similares a los pasos para [actividades del Compositor de experiencias basadas en formularios](#form-based-composer). Consulte la sección anterior para obtener más información.
 
-Cuando se habilita el procesamiento automático, puede recopilar los tokens de Analytics de las propuestas que se ejecutaron en la página. La práctica recomendada es encadenar el comando `sendEvent` del SDK web de Platform e iterar en las propuestas devueltas para filtrar las que el SDK web ha intentado procesar.
+Cuando se habilita el procesamiento automático, puede recopilar los tokens de Analytics de las propuestas que se ejecutaron en la página. La práctica recomendada es encadenar el comando `sendEvent` de Experience Platform Web SDK e iterar en las propuestas devueltas para filtrar las que Web SDK ha intentado procesar.
 
 **Ejemplo**
 
@@ -513,7 +513,7 @@ alloy("sendEvent", {
 
 Con las actividades de Adobe Target, puede configurar diferentes métricas en la página, ya sea manualmente adjuntas al DOM o automáticamente adjuntas al DOM (actividades creadas por VEC). Ambos tipos son una interacción retrasada del usuario final en la página web.
 
-Para tener en cuenta esto, la práctica recomendada es recopilar cargas útiles de Analytics mediante el vínculo `onBeforeEventSend` del SDK web de Adobe Experience Platform. El vínculo `onBeforeEventSend` debe configurarse con el comando `configure` y se reflejará en todos los eventos que se envíen a través de la secuencia de datos.
+Para tener en cuenta esto, la práctica recomendada es recopilar cargas útiles de Analytics mediante el vínculo `onBeforeEventSend` de Adobe Experience Platform Web SDK. El vínculo `onBeforeEventSend` debe configurarse con el comando `configure` y se reflejará en todos los eventos que se envíen a través de la secuencia de datos.
 
 A continuación se muestra un ejemplo de cómo se puede configurar `onBeforeEventSent` para almacenar en déclencheur las visitas de Analytics:
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## Pasos siguientes {#next-steps}
 
-En esta guía se describe el registro en el lado del cliente de datos de A4T en el SDK web. Consulte la guía sobre [registro en el lado del servidor](server-side.md) para obtener más información sobre cómo administrar los datos de A4T en el Edge Network.
+En esta guía se describe el registro en el lado del cliente de datos de A4T en Web SDK. Consulte la guía sobre [registro en el lado del servidor](server-side.md) para obtener más información sobre cómo administrar los datos de A4T en Edge Network.

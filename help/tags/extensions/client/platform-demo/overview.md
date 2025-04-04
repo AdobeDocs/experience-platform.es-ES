@@ -2,10 +2,10 @@
 title: Información general sobre la extensión de demostración de Adobe Experience Platform
 description: Obtenga más información sobre la extensión de demostración de Adobe Experience Platform en Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 98%
+source-wordcount: '1071'
+ht-degree: 99%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 98%
 
 Las características de esta extensión se transfieren a la nueva. Aquí tiene una rápida comparación de las funciones actuales.
 
-| Extensión de demostración de Platform | SDK web de Platform |
+| Extensión de la demostración de Experience Platform | SDK web de Experience Platform |
 | ------------------ | ----------- |
 | Compatibilidad con ID de cliente personalizados | Compatibilidad con ID de cliente personalizados |
 | IU de asignación del lado del cliente para XDM | Generar en ECID (no es necesario usar visitor.js) |

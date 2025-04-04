@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Envío De Actualizaciones Parciales De Fila Al Perfil Del Cliente En Tiempo Real Mediante La Preparación De Datos
 description: Obtenga información sobre cómo enviar actualizaciones parciales de fila al perfil del cliente en tiempo real mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* La ingesta de mensajes de actualización de entidad del modelo de datos de experiencia (XDM) (con operaciones de PATCH de JSON) para actualizaciones de perfil a través de la entrada DCS ha quedado obsoleta. Siga los pasos descritos en esta guía como alternativa.
+>* La ingesta de mensajes de actualización de entidad del modelo de datos de experiencia (XDM) (con operaciones de PATCH JSON) para actualizaciones de perfil a través de la entrada DCS ha quedado obsoleta. Siga los pasos descritos en esta guía como alternativa.
 >
 >* También puede usar el origen de la API HTTP para [introducir datos sin procesar en la entrada del DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) y especificar las asignaciones de datos necesarias para transformar los datos en mensajes compatibles con XDM para las actualizaciones de perfil.
 >
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Use actualizaciones de flujo continuo en [!DNL Data Prep] para enviar actualizaciones de fila parciales a los datos de [!DNL Real-Time Customer Profile], a la vez que crea y establece nuevos vínculos de identidad con una sola solicitud de API.
 
-Al transmitir las actualizaciones, puede conservar el formato de los datos mientras los traduce a [!DNL Real-Time Customer Profile] solicitudes de PATCH durante la ingesta. En función de las entradas que proporcione, [!DNL Data Prep] le permite enviar una sola carga útil de API y traducir los datos tanto a [!DNL Real-Time Customer Profile] PATCH como a [!DNL Identity Service] solicitudes CREATE.
+Al transmitir las actualizaciones, puede conservar el formato de los datos mientras los traduce a [!DNL Real-Time Customer Profile] solicitudes de PATCH durante la ingesta. En función de las entradas que proporcione, [!DNL Data Prep] le permite enviar una sola carga útil de API y traducir los datos a [!DNL Real-Time Customer Profile] solicitudes de PATCH y [!DNL Identity Service] CREATE.
 
 [!DNL Data Prep] usa parámetros de encabezado para distinguir entre inserciones y actualizaciones. Todas las filas que utilicen actualizaciones deben tener un encabezado. Puede utilizar actualizaciones con o sin descriptores de identidad. Si usa actualizaciones con identidades, debe seguir los pasos de configuración descritos en la sección de [configuración del conjunto de datos de identidad](#configure-the-identity-dataset). Si utiliza actualizaciones sin identidades, no necesita proporcionar configuraciones de identidad en la solicitud. Lea la sección sobre [actualizaciones de transmisión sin identidades](#payload-without-identity-configuration) para obtener más información.
 
@@ -39,7 +39,7 @@ Esta descripción general requiere una comprensión práctica de los siguientes 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de experiencia (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
 * [Perfil del cliente en tiempo real](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de múltiples fuentes.
-* [Fuentes](../sources/home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Fuentes](../sources/home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
 
 ## Usar actualizaciones de flujo continuo en [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 

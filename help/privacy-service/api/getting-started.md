@@ -3,9 +3,9 @@ title: Autenticación y acceso a la API de Privacy Service
 description: Obtenga información sobre cómo autenticarse en la API de Privacy Service y cómo interpretar las llamadas de API de ejemplo en la documentación.
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '852'
 ht-degree: 15%
 
 ---
@@ -18,7 +18,7 @@ Esta guía proporciona una introducción a los conceptos principales que debe co
 
 Esta guía requiere una comprensión práctica de [Privacy Service](../home.md) y de cómo le permite administrar las solicitudes de acceso y eliminación de sus interesados (clientes) en las aplicaciones de Adobe Experience Cloud.
 
-Para crear credenciales de acceso para la API, un administrador de su organización debe haber configurado previamente perfiles de producto para un Privacy Service en Adobe Admin Console. El perfil de producto que asigna a una integración de API determina qué permisos tiene la integración al acceder a las funciones de Privacy Service. Consulte la guía sobre [administración de permisos de Privacy Service](../permissions.md) para obtener más información.
+Para crear credenciales de acceso para la API, un administrador de su organización debe haber configurado previamente perfiles de producto para Privacy Service en Adobe Admin Console. El perfil de producto que asigna a una integración de API determina qué permisos tiene esa integración al acceder a las funciones de Privacy Service. Consulte la guía sobre [administración de permisos de Privacy Service](../permissions.md) para obtener más información.
 
 ## Recopilación de valores para los encabezados obligatorios {#gather-values-required-headers}
 
@@ -42,13 +42,13 @@ Una vez que haya creado un nuevo proyecto, seleccione **[!UICONTROL Agregar al p
 
 #### Seleccione la API de Privacy Service {#select-privacy-service-api}
 
-Aparece la pantalla **[!UICONTROL Añadir una API]**. Seleccione **[!UICONTROL Experience Cloud]** para reducir la lista de API disponibles y, a continuación, seleccione la tarjeta de **[!UICONTROL API de Privacy Service]** antes de seleccionar **[!UICONTROL Siguiente]**.
+Aparece la pantalla **[!UICONTROL Añadir una API]**. Seleccione **[!UICONTROL Experience Cloud]** para reducir la lista de las API disponibles y, a continuación, seleccione la tarjeta de **[!UICONTROL Privacy Service API]** antes de seleccionar **[!UICONTROL Siguiente]**.
 
 ![Se está seleccionando la tarjeta de API de Privacy Service de la lista de API disponibles](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->Seleccione la opción **[!UICONTROL Ver documentos]** para navegar en una ventana separada del explorador a la [documentación de referencia de la API del Privacy Service](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) completa.
+>Seleccione la opción **[!UICONTROL Ver documentos]** para navegar en una ventana separada del explorador a la [documentación de referencia de la API de Privacy Service](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) completa.
 
 A continuación, seleccione el tipo de autenticación para generar tokens de acceso y acceder a la API de Privacy Service.
 
@@ -96,11 +96,11 @@ Se genera un nuevo token de acceso y se proporciona un botón para copiar el tok
 
 #### Automatización de la generación de tokens {#auto-token}
 
-También puede utilizar un entorno y una colección de Postman para generar tokens de acceso. Para obtener más información, lea la sección sobre [el uso de Postman para autenticar y probar las llamadas a la API](/help/landing/api-authentication.md#use-postman) en la guía de autenticación de la API del Experience Platform.
+También puede utilizar un entorno y una colección de Postman para generar tokens de acceso. Para obtener más información, lea la sección sobre [el uso de Postman para autenticar y probar las llamadas a la API](/help/landing/api-authentication.md#use-postman) en la guía de autenticación de la API de Experience Platform.
 
 ## Lectura de llamadas de API de muestra {#read-sample-api-calls}
 
-Cada guía de extremo proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción a las API de Platform.
+Cada guía de extremo proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción a las API de Experience Platform.
 
 ## Pasos siguientes {#next-steps}
 

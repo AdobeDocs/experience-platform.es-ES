@@ -3,16 +3,16 @@ title: Ejemplos de Luma de renovación de participación inteligente
 description: Vídeos de ejemplo para el caso de uso de renovación de participación inteligente.
 feature: Use Cases
 exl-id: 635ac7ce-2059-4fed-8a4a-e32b2cd7ceea
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '61'
 ht-degree: 1%
 
 ---
 
 # Vuelva a atraer a sus clientes de forma inteligente: ejemplos de Luma
 
-Aprenda cómo Adobe adaptó el caso de uso de renovación inteligente de la participación para trabajar con el sitio de demostración de Luma, basándose en la implementación de base documentada en el tutorial de arquitecto de datos e ingeniero de datos y en el tutorial de SDK web de Platform.
+Descubra cómo Adobe adaptó el caso de uso de renovación inteligente de la participación para trabajar con el sitio de demostración de Luma, basándose en la implementación de base documentada en el tutorial de arquitecto de datos e ingeniero de datos y en el tutorial de SDK web de Experience Platform.
 
 ## Implementación
 

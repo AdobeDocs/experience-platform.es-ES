@@ -4,7 +4,7 @@ title: Conexión de Braze
 description: Braze es una plataforma completa de participación del cliente que potencia experiencias relevantes y memorables entre los clientes y las marcas que aman.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 3%
@@ -51,8 +51,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos) o identidades, según la asignación de campos.Las audiencias de [!DNL Adobe Experience Platform] se han exportado a [!DNL Braze] con el atributo `AdobeExperiencePlatformSegments`. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Consulte [Activar datos de audiencia en destinos de exportación de audiencia de
 
 Para enviar correctamente los datos de audiencia de [!DNL Adobe Experience Platform] al destino [!DNL Braze], debe pasar por el paso de asignación de campos.
 
-La asignación consiste en crear un vínculo entre los campos de esquema [!DNL Experience Data Model] (XDM) de la cuenta [!DNL Platform] y sus equivalentes correspondientes del destino.
+La asignación consiste en crear un vínculo entre los campos de esquema [!DNL Experience Data Model] (XDM) de la cuenta [!DNL Experience Platform] y sus equivalentes correspondientes del destino.
 
 Para asignar correctamente los campos XDM a los campos de destino [!DNL Braze], siga estos pasos:
 
@@ -125,7 +125,7 @@ En la ventana [!UICONTROL Seleccionar campo de origen], puede elegir entre dos c
 
 ![Atributo Source de asignación de destino de Braze](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Seleccionar área de nombres de identidad]: utilice esta opción para asignar un área de nombres de identidad [!DNL Platform] a un área de nombres [!DNL Braze].
+* [!UICONTROL Seleccionar área de nombres de identidad]: utilice esta opción para asignar un área de nombres de identidad [!DNL Experience Platform] a un área de nombres [!DNL Braze].
 
 ![Espacio de nombres de Source de asignación de destino de Braze](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -136,7 +136,7 @@ En la sección [!UICONTROL Campo de destino], haga clic en el icono de asignaci�
 ![Asignar Destino De Destino De Braze](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 En la ventana [!UICONTROL Seleccionar campo de destino], puede elegir entre dos categorías de campos de destino:
-* [!UICONTROL Seleccionar área de nombres de identidad]: utilice esta opción para asignar [!DNL Platform] áreas de nombres de identidad a [!DNL Braze] áreas de nombres de identidad.
+* [!UICONTROL Seleccionar área de nombres de identidad]: utilice esta opción para asignar [!DNL Experience Platform] áreas de nombres de identidad a [!DNL Braze] áreas de nombres de identidad.
 * [!UICONTROL Seleccionar atributos personalizados]: utilice esta opción para asignar atributos XDM a atributos personalizados [!DNL Braze] que haya definido en su cuenta de [!DNL Braze]. <br> También puede utilizar esta opción para cambiar el nombre de los atributos XDM existentes a [!DNL Braze]. Por ejemplo, si se asigna un atributo XDM `lastName` a un atributo `Last_Name` personalizado en [!DNL Braze], se creará el atributo `Last_Name` en [!DNL Braze], si aún no existe, y se le asignará el atributo XDM `lastName`.
 
 ![Campos de asignación de destino de destino de Braze](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)

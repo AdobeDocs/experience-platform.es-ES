@@ -4,9 +4,9 @@ title: Reglas de alerta estándar
 description: Este documento describe las reglas de alerta predefinidas que proporciona Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4279'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 Adobe Experience Platform proporciona varias reglas de alerta predefinidas que puede habilitar para su organización. Este documento describe los detalles de estas reglas de alerta proporcionadas por Adobe. Para obtener información más general sobre las alertas en Experience Platform, consulte la [descripción general de las alertas](./overview.md).
 
-Al [ver las reglas de alerta en la interfaz de usuario de Platform](./ui.md), puede suscribirse a cada regla de forma individual. Sin embargo, al suscribirse a alertas mediante [notificaciones de eventos de E/S](./subscribe.md), las reglas de alerta se organizan en diferentes paquetes de suscripción. En las tablas siguientes, cada regla se muestra con su nombre de suscripción de evento de E/S correspondiente.
+Al [ver las reglas de alerta en la interfaz de usuario de Experience Platform](./ui.md), puede suscribirse a cada regla de forma individual. Sin embargo, al suscribirse a alertas mediante [notificaciones de eventos de E/S](./subscribe.md), las reglas de alerta se organizan en diferentes paquetes de suscripción. En las tablas siguientes, cada regla se muestra con su nombre de suscripción de evento de E/S correspondiente.
 
-## Orígenes {#sources}
+## Fuentes {#sources}
 
 Las siguientes reglas de alerta son específicas de [Ingesta de datos](../../ingestion/home.md) y [orígenes](../../sources/home.md):
 
@@ -36,7 +36,7 @@ Si se ha suscrito anteriormente al siguiente tipo de alerta, ya no recibirá ale
 
 | Suscripción a evento de E/S | Regla de alerta | Descripción |
 | --- | --- | --- |
-| Retrasos, errores y errores de ejecución de flujo de Source | Falta de ingesta | Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se incorporan datos en Platform. |
+| Retrasos, errores y errores de ejecución de flujo de Source | Falta de ingesta | Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se incorporan datos en Experience Platform. |
 
 {style="table-layout:auto"}
 

@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; Tutorial; canalización de características; Data Science Espacio de trabajo; Temas populares
-title: Crear una canalización de funciones mediante el SDK de creación de modelos
+keywords: Experience Platform;Tutorial;canalización de características;Workspace de ciencia de datos;temas populares
+title: Creación de una canalización de funciones mediante la SDK de creación de modelos
 type: Tutorial
-description: Adobe Experience Platform le permite versión y crear canalizaciones de características personalizadas para realizar ingeniería de características a escala a través del Sensei Machine Learning Framework Runtime. Este documento describe las distintas clases que se encuentran en una canalización de funciones y proporciona un tutorial paso a paso para crear una canalización de funciones personalizada mediante el SDK de creación de modelos en PySpark.
+description: Adobe Experience Platform le permite crear canalizaciones de funciones personalizadas para realizar ingeniería de funciones a escala a través del tiempo de ejecución de Sensei Machine Learning Framework. En este documento se describen las distintas clases que se encuentran en una canalización de funciones y se proporciona un tutorial paso a paso para crear una canalización de funciones personalizada mediante la SDK de creación de modelos en PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%
 
 ---
 
-# Creación de una canalización de funciones mediante el SDK de creación de modelos
+# Creación de una canalización de funciones mediante la SDK de creación de modelos
 
 >[!NOTE]
 >
@@ -25,27 +25,27 @@ ht-degree: 0%
 
 Adobe Experience Platform le permite crear canalizaciones de funciones personalizadas para realizar ingeniería de funciones a escala a través del tiempo de ejecución de Sensei Machine Learning Framework (en adelante, &quot;tiempo de ejecución&quot;).
 
-Este documento describe las distintas clases que se encuentran en una canalización de características y proporciona un tutorial paso a paso para crear una canalización de características personalizada mediante el [SDK](./sdk.md) de creación de modelos en PySpark.
+En este documento se describen las distintas clases que se encuentran en una canalización de características y se proporciona un tutorial paso a paso para crear una canalización de características personalizada mediante [Model Authoring SDK](./sdk.md) en PySpark.
 
-La siguiente flujo de trabajo tiene lugar cuando se ejecuta una canalización de características:
+El siguiente flujo de trabajo tiene lugar cuando se ejecuta una canalización de funciones:
 
-1. El fórmula carga el conjunto de datos en una canalización.
-2. El transformación de características se realiza en la conjunto de datos y se vuelve a escribir en Adobe Experience Platform.
-3. Los datos transformados se cargan para aprendizaje.
-4. La canalización de características define las etapas con el regresor de aumento de gradiente como el modelo elegido.
-5. La canalización se utiliza para adaptarse al datos de capacitación y se crea el modelo entrenado.
+1. La fórmula carga el conjunto de datos en una canalización.
+2. La transformación de funciones se realiza en el conjunto de datos y se vuelve a escribir en Adobe Experience Platform.
+3. Los datos transformados se cargan para la formación.
+4. La tubería de funciones define las etapas con el Regresor de ampliación de degradado como modelo elegido.
+5. La canalización se utiliza para ajustar los datos de formación y se crea el modelo entrenado.
 6. El modelo se transforma con el conjunto de datos de puntuación.
-7. Las columnas interesantes de la salida se seleccionan y se guardan de nuevo [!DNL Experience Platform] con los datos asociados.
+7. A continuación, se seleccionan y se guardan en [!DNL Experience Platform] columnas interesantes de la salida con los datos asociados.
 
 ## Introducción
 
-Para ejecutar un fórmula en cualquier organización, se requiere lo siguiente:
+Para ejecutar una fórmula en cualquier organización, se requiere lo siguiente:
 - Un conjunto de datos de entrada.
 - El esquema del conjunto de datos.
 - Un esquema transformado y un conjunto de datos vacío basado en ese esquema.
-- Un esquema de salida y un conjunto de datos vacío basados en ese esquema.
+- Un esquema de salida y un conjunto de datos vacío basado en ese esquema.
 
-Todos los conjuntos de datos anteriores deben cargarse en la [!DNL Platform] IU. Para configurarlo, utilice el script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap) de arranque proporcionado por [Adobe Systems.
+Todos los conjuntos de datos anteriores deben cargarse en la interfaz de usuario de [!DNL Experience Platform]. Para configurarlo, use el [script de bootstrap](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap) proporcionado por Adobe.
 
 ## Clases de canalización de funciones
 
@@ -56,26 +56,26 @@ En la tabla siguiente se describen las principales clases abstractas que se debe
 | DataLoader | Una clase DataLoader proporciona implementación para la recuperación de datos de entrada. |
 | DatasetTransformer | Una clase DatasetTransformer proporciona implementaciones para transformar el conjunto de datos de entrada. Puede optar por no proporcionar una clase DatasetTransformer e implementar la lógica de ingeniería de características en la clase FeaturePipelineFactory. |
 | FeaturePipelineFactory | Una clase FeaturePipelineFactory crea una canalización de chispa que consta de una serie de transformadores de chispa para realizar ingeniería de funciones. Puede optar por no proporcionar una clase FeaturePipelineFactory e implementar la lógica de ingeniería de características dentro de la clase DatasetTransformer en su lugar. |
-| Protector de datos | Una clase DataSaver proporciona la lógica para el almacenamiento de un conjunto de datos de entidades. |
+| DataSaver | Una clase DataSaver proporciona la lógica para el almacenamiento de un conjunto de datos de características. |
 
-Cuando se inicia un trabajo de canalización de características, el motor en tiempo de ejecución ejecuta primero el DataLoader para cargar los datos de entrada como un DataFrame y, a continuación, modifica el DataFrame ejecutando DatasetTransformer, FeaturePipelineFactory o ambos. Por último, el conjunto de datos de características resultante se almacena a través de DataSaver.
+Cuando se inicia un trabajo de canalización de características, el motor en tiempo de ejecución ejecuta primero DataLoader para cargar datos de entrada como DataFrame y, a continuación, modifica DataFrame ejecutando DatasetTransformer, FeaturePipelineFactory o ambos. Por último, el conjunto de datos de características resultante se almacena mediante DataSaver.
 
-El siguiente diagrama de flujo muestra el orden de ejecución del tiempo de ejecución:
+El siguiente diagrama de flujo muestra el orden de ejecución de Runtime:
 
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Implementar las clases de canalización de entidades {#implement-your-feature-pipeline-classes}
+## Implementación de las clases de canalización de funciones {#implement-your-feature-pipeline-classes}
 
 En las secciones siguientes se proporcionan detalles y ejemplos sobre la implementación de las clases necesarias para una canalización de funciones.
 
 ### Defina las variables en el archivo JSON de configuración {#define-variables-in-the-configuration-json-file}
 
-El archivo JSON de configuración consta de pares clave-valor y está diseñado para que especifique cualquier variable que deba definirse posteriormente durante el tiempo de ejecución. Estos pares clave-valor pueden definir propiedades como la ubicación del conjunto de datos de entrada, el ID del conjunto de datos de salida, el ID de inquilino, los encabezados de columna, etc.
+El archivo JSON de configuración consta de pares clave-valor y está diseñado para que especifique cualquier variable que se defina posteriormente durante el tiempo de ejecución. Estos pares clave-valor pueden definir propiedades como la ubicación del conjunto de datos de entrada, el ID del conjunto de datos de salida, el ID de inquilino, los encabezados de columna, etc.
 
-El ejemplo siguiente muestra los pares clave-valor encontrados dentro de un archivo de configuración:
+En el siguiente ejemplo se muestran pares de clave-valor encontrados en un archivo de configuración:
 
-**Ejemplo de JSON de configuración**
+**Ejemplo de configuración JSON**
 
 ```json
 [
@@ -101,19 +101,19 @@ El ejemplo siguiente muestra los pares clave-valor encontrados dentro de un arch
 
 Puede acceder al JSON de configuración a través de cualquier método de clase que defina `config_properties` como parámetro. Por ejemplo:
 
-**Chispa PySpark**
+**PySpark**
 
 ```python
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-Consulte el archivo pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) proporcionado por el [Espacio de trabajo de ciencia de datos para obtener un ejemplo de configuración más detallado.
+Consulte el archivo [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) proporcionado por Data Science Workspace para ver un ejemplo de configuración más detallado.
 
 ### Preparar los datos de entrada con DataLoader {#prepare-the-input-data-with-dataloader}
 
-DataLoader es responsable de la recuperación y el filtrado de los datos de entrada. Su implementación de DataLoader debe extender la clase `DataLoader` abstracta y anular el método `load`abstracto.
+DataLoader es responsable de la recuperación y el filtrado de los datos de entrada. La implementación de DataLoader debe extender la clase abstracta `DataLoader` y reemplazar el método abstracto `load`.
 
-En el ejemplo siguiente se recupera un [!DNL Platform] conjunto de datos por ID y se devuelve como DataFrame, donde el conjunto de datos ID (`dataset_id`) es un Propiedad definido en el archivo de configuración.
+El ejemplo siguiente recupera un conjunto de datos [!DNL Experience Platform] por identificador y lo devuelve como un DataFrame, donde el identificador del conjunto de datos (`dataset_id`) es una propiedad definida en el archivo de configuración.
 
 **Ejemplo de PySpark**
 
@@ -164,7 +164,7 @@ class MyDataLoader(DataLoader):
 
 ### Transformar un conjunto de datos con DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
-Un DatasetTransformer proporciona la lógica para transformar un DataFrame de entrada y devuelve un nuevo DataFrame derivado. Esta clase se puede implementar para trabajar de forma cooperativa con una FeaturePipelineFactory, trabajar como el único componente de ingeniería de características o puede optar por no implementar esta clase.
+Un DataSetTransformer proporciona la lógica para transformar un DataFrame de entrada y devuelve un nuevo DataFrame derivado. Esta clase se puede implementar para trabajar conjuntamente con FeaturePipelineFactory, como el único componente de ingeniería de funciones o puede optar por no implementar esta clase.
 
 El ejemplo siguiente amplía la clase DatasetTransformer:
 
@@ -222,11 +222,11 @@ class MyDatasetTransformer(DatasetTransformer):
         return pd
 ```
 
-### Diseñe funciones de datos con FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
+### Funciones de datos de ingeniero con FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
-Un FeaturePipelineFactory le permite implementar su lógica de ingeniería de características definiendo y encadenando una serie de Spark Transformers a través de un Spark Pipeline. Esta clase se puede implementar para trabajar en cooperación con un DatasetTransformer, trabajar como el único componente de ingeniería de características o puede optar por no implementar esta clase.
+FeaturePipelineFactory permite implementar la lógica de ingeniería de funciones definiendo y encadenando una serie de transformadores de chispa a través de una canalización de chispa. Esta clase se puede implementar para trabajar de forma cooperativa con DatasetTransformer, como el único componente de ingeniería de características o puede optar por no implementar esta clase.
 
-En el ejemplo siguiente se amplía la clase FeaturePipelineFactory:
+El ejemplo siguiente amplía la clase FeaturePipelineFactory:
 
 **Ejemplo de PySpark**
 
@@ -291,7 +291,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 DataSaver es responsable de almacenar los conjuntos de datos de características resultantes en una ubicación de almacenamiento. La implementación de DataSaver debe extender la clase abstracta `DataSaver` y reemplazar el método abstracto `save`.
 
-El ejemplo siguiente amplía la clase DataSaver, que almacena datos en un conjunto de datos [!DNL Platform] por identificador, donde el identificador del conjunto de datos (`featureDatasetId`) y el identificador de inquilino (`tenantId`) son propiedades definidas en la configuración.
+El ejemplo siguiente amplía la clase DataSaver, que almacena datos en un conjunto de datos [!DNL Experience Platform] por identificador, donde el identificador del conjunto de datos (`featureDatasetId`) y el identificador de inquilino (`tenantId`) son propiedades definidas en la configuración.
 
 **Ejemplo de PySpark**
 
@@ -355,11 +355,11 @@ class MyDataSaver(DataSaver):
 ```
 
 
-### Especifique los nombres de las clases implementadas en el archivo de aplicación {#specify-your-implemented-class-names-in-the-application-file}
+### Especifique los nombres de clase implementados en el archivo de aplicación {#specify-your-implemented-class-names-in-the-application-file}
 
-Ahora que las clases de canalización de entidades están definidas e implementadas, debe especificar los nombres de las clases en el archivo YAML de aplicación.
+Ahora que las clases de canalización de funciones están definidas e implementadas, debe especificar los nombres de las clases en el archivo YAML de la aplicación.
 
-En los ejemplos siguientes se especifican los nombres de clase implementados:
+Los ejemplos siguientes especifican nombres de clase implementados:
 
 **Ejemplo de PySpark**
 
@@ -390,41 +390,41 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## Crear motor de canalización de características mediante la API {#create-feature-pipeline-engine-api}
+## Cree su motor de canalización de funciones mediante la API {#create-feature-pipeline-engine-api}
 
-Ahora que ha creado su canalización de características, debe crear una imagen de Docker para realizar una llamada a los puntos finales de canalización de características en la [!DNL Sensei Machine Learning] API. Necesita un URL de imagen de Docker para realizar una llamada a los puntos finales de canalización de características.
+Ahora que ha creado su canalización de características, debe crear una imagen Docker para realizar una llamada a los extremos de la canalización de características en la API [!DNL Sensei Machine Learning]. Necesita una URL de imagen de Docker para realizar una llamada a los extremos de la canalización de funciones.
 
 >[!TIP]
 >
->Si no tiene un URL de Docker, visita los archivos de origen del [paquete en una tutorial de fórmula](../models-recipes/package-source-files-recipe.md) para obtener un tutorial paso a paso sobre la creación de un host URL de Docker.
+>Si no tiene una URL de Docker, visite el tutorial [Empaquetar archivos de origen en una fórmula](../models-recipes/package-source-files-recipe.md) para ver un tutorial paso a paso sobre la creación de una URL de host de Docker.
 
-Opcionalmente, también puede usar la siguiente colección de Postman para ayudar a completar el flujo de trabajo de API de canalización de características:
+De forma opcional, también puede utilizar la siguiente colección de Postman para ayudarle a completar el flujo de trabajo de la API de la canalización de funciones:
 
 https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
-### Crear un motor de canalización de características {#create-engine-api}
+### Creación de un motor de canalización de funciones {#create-engine-api}
 
-Una vez que tenga la ubicación de la imagen de Docker, puede [crear un motor](../api/engines.md#feature-pipeline-docker) de canalización de características mediante la [!DNL Sensei Machine Learning] API realizando un POST a `/engines`. Si crea correctamente un motor de canalización de características, recibirá un identificador único de motor (`id`). Asegúrese de guardar este valor antes de continuar.
+Una vez que tenga la ubicación de la imagen Docker, podrá [crear un motor de canalización de características](../api/engines.md#feature-pipeline-docker) mediante la API [!DNL Sensei Machine Learning] realizando una PUBLICACIÓN en `/engines`. Si crea correctamente un motor de canalización de características, recibirá un identificador único de motor (`id`). Asegúrese de guardar este valor antes de continuar.
 
 ### Crear una instancia de MLI {#create-mlinstance}
 
-Con su `engineID` recién creada, debe [crear una MLIstance](../api/mlinstances.md#create-an-mlinstance) realizando una solicitud de POST al extremo `/mlInstance`. Una respuesta correcta devuelve una carga útil que contiene los detalles de la MLInstance recién creada, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
+Con su `engineID` recién creada, debe [crear una MLIstance](../api/mlinstances.md#create-an-mlinstance) realizando una petición POST al extremo `/mlInstance`. Una respuesta correcta devuelve una carga útil que contiene los detalles de la MLInstance recién creada, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
 
 ### Crear un experimento {#create-experiment}
 
-Siguiente, debe [crear un Experimento](../api/experiments.md#create-an-experiment). Para crear un experimento, necesita tener su identificador único de MLIstance (`id`) y realizar una solicitud de POST al extremo `/experiment`. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento recién creado, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
+A continuación, debe [crear un experimento](../api/experiments.md#create-an-experiment). Para crear un experimento, necesita tener su identificador único de MLIstance (`id`) y realizar una petición POST al extremo `/experiment`. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento recién creado, incluido su identificador único (`id`) utilizado en la siguiente llamada de API.
 
 ### Especifique la tarea de canalización de la función de ejecución del experimento {#specify-feature-pipeline-task}
 
-Después de crear un experimento, debe cambiar el modo del experimento a `featurePipeline`. Para cambiar el modo, haga un POST adicional a [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con su `EXPERIMENT_ID` y envíe `{ "mode":"featurePipeline"}` en el cuerpo para especificar una ejecución del experimento de canalización de características.
+Después de crear un experimento, debe cambiar el modo del experimento a `featurePipeline`. Para cambiar el modo, realice una PUBLICACIÓN adicional en [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con su `EXPERIMENT_ID` y envíe `{ "mode":"featurePipeline"}` en el cuerpo para especificar una ejecución del experimento de canalización de características.
 
-Una vez finalizado, realice una solicitud de GET a `/experiments/{EXPERIMENT_ID}` para [recuperar el estado del experimento](../api/experiments.md#retrieve-specific) y espere a que se complete la actualización del estado del experimento.
+Una vez finalizado, realice una petición GET a `/experiments/{EXPERIMENT_ID}` para [recuperar el estado del experimento](../api/experiments.md#retrieve-specific) y espere a que se complete la actualización del estado del experimento.
 
 ### Especifique la tarea de formación Ejecución del experimento {#training}
 
-Siguiente, debe [especificar la aprendizaje ejecutar tarea](../api/experiments.md#experiment-training-scoring). Haga una POST y `experiments/{EXPERIMENT_ID}/runs` en el cuerpo establezca el modo y `train` envíe una matriz de tareas que contengan sus parámetros aprendizaje. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento solicitado.
+A continuación, debe [especificar la tarea de ejecución de formación](../api/experiments.md#experiment-training-scoring). Realice una PUBLICACIÓN en `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo establezca el modo en `train` y envíe una matriz de tareas que contengan los parámetros de formación. Una respuesta correcta devuelve una carga útil que contiene los detalles del experimento solicitado.
 
-Una vez finalizado, realice una solicitud de GET a `/experiments/{EXPERIMENT_ID}` para [recuperar el estado del experimento](../api/experiments.md#retrieve-specific) y espere a que se complete la actualización del estado del experimento.
+Una vez finalizado, realice una petición GET a `/experiments/{EXPERIMENT_ID}` para [recuperar el estado del experimento](../api/experiments.md#retrieve-specific) y espere a que se complete la actualización del estado del experimento.
 
 ### Especificar la tarea de puntuación de ejecución de experimento {#scoring}
 
@@ -432,9 +432,9 @@ Una vez finalizado, realice una solicitud de GET a `/experiments/{EXPERIMENT_ID}
 >
 > Para completar este paso, debe tener al menos una ejecución de formación correcta asociada a su experimento.
 
-Después de una ejecución de aprendizaje correcta, debe [especificar el tarea](../api/experiments.md#experiment-training-scoring) de ejecución de puntuación. Realice una POST y `experiments/{EXPERIMENT_ID}/runs` en el cuerpo establezca el `mode` atributo en &quot;puntuación&quot;. Esto inicia la ejecución del experimento de puntuación.
+Después de una ejecución de formación correcta, debe [especificar la tarea de ejecución de puntuación](../api/experiments.md#experiment-training-scoring). Realice una PUBLICACIÓN en `experiments/{EXPERIMENT_ID}/runs` y en el cuerpo establezca el atributo `mode` en &quot;puntuación&quot;. Esto inicia la ejecución del experimento de puntuación.
 
-Una vez finalizado, realice una solicitud de GET a `/experiments/{EXPERIMENT_ID}` para [recuperar el estado del experimento](../api/experiments.md#retrieve-specific) y espere a que se complete la actualización del estado del experimento.
+Una vez finalizado, realice una petición GET a `/experiments/{EXPERIMENT_ID}` para [recuperar el estado del experimento](../api/experiments.md#retrieve-specific) y espere a que se complete la actualización del estado del experimento.
 
 Una vez finalizada la puntuación, la canalización de funciones debe estar operativa.
 
@@ -442,4 +442,4 @@ Una vez finalizada la puntuación, la canalización de funciones debe estar oper
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Al leer este documento, ha creado una canalización de funciones mediante el SDK de creación de modelos, ha creado una imagen de Docker y ha utilizado la URL de imagen de Docker para crear un modelo de canalización de funciones mediante la API [!DNL Sensei Machine Learning]. Ya está listo para continuar transformando conjuntos de datos y extrayendo características de datos a escala mediante [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+Al leer este documento, ha creado una canalización de funciones mediante Model Authoring SDK, ha creado una imagen Docker y ha utilizado la URL de imagen Docker para crear un modelo de canalización de funciones mediante la API [!DNL Sensei Machine Learning]. Ya está listo para continuar transformando conjuntos de datos y extrayendo características de datos a escala mediante [[!DNL Sensei Machine Learning API]](../api/getting-started.md).

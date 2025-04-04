@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3224'
 ht-degree: 1%
 
 ---
@@ -28,24 +28,24 @@ Como esta guía se centra exclusivamente en consideraciones clave relacionadas c
 El método recomendado para diseñar el modelo de datos para utilizarlo en Experience Platform se puede resumir de la siguiente manera:
 
 1. Comprenda los casos de uso empresariales de sus datos.
-1. Identifique las fuentes de datos principales que deben introducirse en Platform para abordar esos casos de uso.
-1. Identifique cualquier fuente de datos secundaria que también pueda ser de interés. Por ejemplo, si actualmente solo una unidad comercial de su organización está interesada en trasladar sus datos a Platform, una unidad comercial similar también podría estar interesada en trasladar datos similares en el futuro. Tener en cuenta estas fuentes secundarias ayuda a estandarizar el modelo de datos en toda la organización.
+1. Identifique las fuentes de datos principales que deben introducirse en Experience Platform para solucionar estos casos de uso.
+1. Identifique cualquier fuente de datos secundaria que también pueda ser de interés. Por ejemplo, si actualmente solo una unidad comercial de su organización está interesada en transferir sus datos a Experience Platform, una unidad comercial similar también podría estar interesada en transferir datos similares en el futuro. Tener en cuenta estas fuentes secundarias ayuda a estandarizar el modelo de datos en toda la organización.
 1. Cree un diagrama de relación de entidades de alto nivel (ERD) para las fuentes de datos que se han identificado.
-1. Convertir el ERD de alto nivel en un ERD centrado en Platform (incluidos perfiles, eventos de experiencia y entidades de búsqueda).
+1. Convertir el ERD de alto nivel en un ERD centrado en Experience Platform (incluidos perfiles, eventos de experiencia y entidades de búsqueda).
 
-Los pasos relacionados con la identificación de las fuentes de datos aplicables necesarias para llevar a cabo los casos de uso empresarial varían de una organización a otra. Mientras que el resto de las secciones de este documento se centran en los últimos pasos de la organización y construcción de una ERD después de que se hayan identificado las fuentes de datos, las explicaciones de los distintos componentes del diagrama pueden informar sus decisiones sobre cuál de sus fuentes de datos debe migrarse a Platform.
+Los pasos relacionados con la identificación de las fuentes de datos aplicables necesarias para llevar a cabo los casos de uso empresarial varían de una organización a otra. Mientras que el resto de las secciones de este documento se centran en los últimos pasos de la organización y construcción de un ERD después de que se hayan identificado las fuentes de datos, las explicaciones de los distintos componentes del diagrama pueden informar sus decisiones sobre cuál de sus fuentes de datos debe migrarse a Experience Platform.
 
 ## Crear un ERD de alto nivel {#create-an-erd}
 
-Una vez que haya determinado las fuentes de datos que desea introducir en Platform, cree un ERD de alto nivel para guiar el proceso de asignación de los datos a esquemas XDM.
+Una vez que haya determinado las fuentes de datos que desea introducir en Experience Platform, cree un ERD de alto nivel para guiar el proceso de asignación de los datos a esquemas XDM.
 
-El ejemplo siguiente representa un ERD simplificado para una empresa que desea introducir datos en Platform. El diagrama destaca las entidades esenciales que deben ordenarse en clases XDM, incluidas las cuentas de clientes, los hoteles y varios eventos de comercio electrónico comunes.
+El ejemplo siguiente representa un ERD simplificado para una empresa que desea introducir datos en Experience Platform. El diagrama destaca las entidades esenciales que deben ordenarse en clases XDM, incluidas las cuentas de clientes, los hoteles y varios eventos de comercio electrónico comunes.
 
 ![Diagrama relacional de entidades que resalta las entidades esenciales que deben ordenarse en clases XDM para la ingesta de datos.](../images/best-practices/erd.png)
 
 ## Ordenar entidades en categorías de perfil, búsqueda y evento {#sort-entities}
 
-Una vez creado un ERD para identificar las entidades esenciales que desea introducir en Platform, estas entidades deben ordenarse en categorías de perfil, búsqueda y evento:
+Una vez creado un ERD para identificar las entidades esenciales que desea introducir en Experience Platform, estas entidades deben ordenarse en categorías de perfil, búsqueda y evento:
 
 | Categoría | Descripción |
 | --- | --- |
@@ -79,7 +79,7 @@ Si una entidad contiene atributos relacionados con un cliente individual, lo má
 
 #### Seguimiento de datos con el tiempo {#track-data}
 
-Si desea analizar cómo cambian ciertos atributos dentro de una entidad con el paso del tiempo, lo más probable es que sea una entidad de evento. Por ejemplo, añadir elementos de producto a un carro de compras se puede rastrear como eventos de complemento al carro de compras en Platform:
+Si desea analizar cómo cambian ciertos atributos dentro de una entidad con el paso del tiempo, lo más probable es que sea una entidad de evento. Por ejemplo, añadir elementos de producto a un carro de compras se puede rastrear como eventos de complemento al carro de compras en Experience Platform:
 
 | ID de cliente | Tipo | ID del producto | Cantidad | Marca de tiempo |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Por ejemplo: una empresa desea crear una audiencia basada en el número de compr
 
 >[!CAUTION]
 >
->Experience Platform no realiza actualmente la agregación automática de valores, aunque esto está planificado para futuras versiones. Si decide utilizar valores agregados, debe realizar los cálculos externamente antes de enviar los datos a Platform.
+>Experience Platform no realiza actualmente la agregación automática de valores, aunque esto está planificado para futuras versiones. Si decide utilizar valores agregados, debe realizar los cálculos externamente antes de enviar los datos a Experience Platform.
 
 #### Cardinalidad {#cardinality}
 
@@ -208,7 +208,7 @@ En Experience Platform, los campos XDM marcados como identidades se utilizan par
 
 Al diseñar los esquemas, cualquier clave principal de las tablas de bases de datos relacionales es probablemente candidata para identidades principales. Otros ejemplos de campos de identidad aplicables son las direcciones de correo electrónico de los clientes, los números de teléfono, los ID de cuenta y [ECID](../../identity-service/features/ecid.md).
 
-### grupos de campos de esquema de aplicación de Adobe {#adobe-application-schema-field-groups}
+### Grupos de campos de esquema de aplicación de Adobe {#adobe-application-schema-field-groups}
 
 Experience Platform proporciona varios grupos de campos de esquema XDM predeterminados para capturar datos relacionados con las siguientes aplicaciones de Adobe:
 
@@ -217,7 +217,7 @@ Experience Platform proporciona varios grupos de campos de esquema XDM predeterm
 * Adobe Campaign
 * Adobe Target
 
-Por ejemplo, puede utilizar la [[!UICONTROL plantilla de Adobe Analytics ExperienceEvent] grupo de campos](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) para asignar campos específicos de [!DNL Analytics] a sus esquemas XDM. Según las aplicaciones de Adobe con las que trabaje, debe utilizar estos grupos de campos proporcionados por el Adobe en los esquemas.
+Por ejemplo, puede utilizar la [[!UICONTROL plantilla de Adobe Analytics ExperienceEvent] grupo de campos](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) para asignar campos específicos de [!DNL Analytics] a sus esquemas XDM. Según las aplicaciones de Adobe con las que trabaje, debe utilizar estos grupos de campos proporcionados por Adobe en los esquemas.
 
 ![Diagrama de esquema de la [!UICONTROL plantilla de Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
 
@@ -231,7 +231,7 @@ Para Adobe Analytics, ECID es la identidad principal predeterminada. Si un clien
 
 ## Campos de validación de datos {#data-validation-fields}
 
-Cuando se introducen datos en el lago de datos, la validación de datos solo se impone en el caso de campos restringidos. Para validar un campo determinado durante una ingesta por lotes, debe marcar el campo como restringido en el esquema XDM. Para evitar que se ingieran datos incorrectos en Platform, se recomienda definir los criterios de validación de nivel de campo al crear los esquemas.
+Cuando se introducen datos en el lago de datos, la validación de datos solo se impone en el caso de campos restringidos. Para validar un campo determinado durante una ingesta por lotes, debe marcar el campo como restringido en el esquema XDM. Para evitar que se ingieran datos incorrectos en Experience Platform, se recomienda definir los criterios de validación de nivel de campo al crear los esquemas.
 
 >[!IMPORTANT]
 >
@@ -249,7 +249,7 @@ A continuación se muestra una colección de sugerencias para mantener la integr
 * **Asegúrese de que `_id` no se use como identidad**: el campo `_id` de los esquemas de Experience Event no se puede usar como identidad porque está pensado para la exclusividad de los registros.
 * **Establecer restricciones de longitud**: se recomienda establecer longitudes mínimas y máximas en los campos marcados como identidades. Se muestra un déclencheur de advertencia si intenta asignar un área de nombres personalizada a un campo de identidad sin cumplir las restricciones de longitud mínima y máxima. Estas limitaciones ayudan a mantener la coherencia y la calidad de los datos.
 * **Aplicar patrones para valores coherentes**: Si los valores de identidad siguen un patrón específico, debe usar la configuración **[!UICONTROL Patrón]** para aplicar esta restricción. Esta configuración puede incluir reglas como solo dígitos, mayúsculas o minúsculas, o combinaciones de caracteres específicas. Utilice expresiones regulares para hacer coincidir patrones en las cadenas.
-* **Limitar eVars en esquemas de Analytics**: normalmente, un esquema de Analytics solo debe tener un eVar designado como identidad. Si tiene intención de utilizar más de un eVar como identidad, debe comprobar si la estructura de datos se puede optimizar.
+* **Limitar eVars en esquemas de Analytics**: normalmente, un esquema de Analytics solo debe tener una eVar designada como identidad. Si tiene intención de utilizar más de una eVar como identidad, debe comprobar si la estructura de datos se puede optimizar.
 * **Asegúrese de que un campo seleccionado sea único**: el campo elegido debe ser único en comparación con la identidad principal del esquema. Si no es así, no la marque como identidad. Por ejemplo, si varios clientes pueden proporcionar la misma dirección de correo electrónico, ese área de nombres no es una identidad adecuada. Este principio también se aplica a otras áreas de nombres de identidad, como los números de teléfono. Marcar un campo no único como identidad podría provocar el colapso no deseado del perfil.
 * **Verificar la longitud mínima de las cadenas**: todos los campos de cadena deben tener al menos un carácter, ya que los valores de cadena nunca deben estar vacíos. Sin embargo, se aceptan valores nulos para los campos no obligatorios.
 

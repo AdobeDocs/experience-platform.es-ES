@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '890'
-ht-degree: 13%
+ht-degree: 25%
 
 ---
 
@@ -25,7 +25,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 ## Sistema [!DNL Experience Data Model] (XDM) {#xdm}
 
-La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
+La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 
 XDM es una especificación documentada públicamente y diseñada para mejorar la potencia de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación para comunicarse con servicios en Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
 
@@ -44,27 +44,27 @@ Para obtener más información sobre cómo trabajar con XDM mediante la API [!DN
 
 ## [!DNL Privacy Service] {#privacy}
 
-Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derecho de acceder o eliminar sus datos personales de sus almacenes de datos si así lo solicitan. Adobe Experience Platform [!DNL Privacy Service] proporciona una API RESTful y una interfaz de usuario para ayudarle a administrar estas solicitudes de datos de sus clientes. Con [!DNL Privacy Service], puede enviar solicitudes para acceder a datos de clientes privados o personales y eliminarlos de aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las regulaciones de privacidad legales y organizativas.
+Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derecho de acceder o eliminar sus datos personales de sus almacenes de datos si así lo solicitan. Adobe Experience Platform [!DNL Privacy Service] proporciona una API de RESTful y una interfaz de usuario para ayudarle a administrar estas solicitudes de datos de los clientes. Con [!DNL Privacy Service], puede enviar solicitudes para acceder a datos personales de clientes y eliminarlos de aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las regulaciones de privacidad legales y organizativas.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 |--- | ---|
-| [!DNL Privacy Service] cambio de marca | El anteriormente denominado &quot;Servicio de RGPD&quot; se ha cambiado a [!DNL Privacy Service] a medida que el servicio ha crecido para admitir otras regulaciones además del RGPD. |
-| Nuevos extremos de API | La ruta de acceso base para la API [!DNL Privacy Service] se ha actualizado de `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
-| Nueva propiedad `regulation` requerida | Al crear nuevos trabajos en la API [!DNL Privacy Service], se debe proporcionar una propiedad `regulation` en la carga de la solicitud para indicar en qué regulación se debe realizar el seguimiento del trabajo. Los valores aceptados son `gdpr` y `ccpa`. |
-| Compatibilidad con [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ahora acepta solicitudes de acceso o eliminación del Adobe [!DNL Primetime Authentication], usando `primetimeAuthentication` como valor de producto. |
+| Cambio de marca de [!DNL Privacy Service] | El anteriormente denominado “Servicio de RGPD” se ha cambiado a [!DNL Privacy Service] porque el servicio ha crecido para admitir otras regulaciones, además del RGPD. |
+| Nuevos puntos finales de API | La ruta de acceso base para la API [!DNL Privacy Service] se ha actualizado de `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
+| Nueva propiedad de `regulation` requerida | Al crear nuevos trabajos en la API de [!DNL Privacy Service], se debe proporcionar una propiedad de `regulation` en la carga útil de la solicitud para indicar en qué regulación se debe realizar el seguimiento del trabajo. Los valores aceptados son `gdpr` y `ccpa`. |
+| Compatibilidad con [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ahora acepta solicitudes de acceso o eliminación de Adobe [!DNL Primetime Authentication], usando `primetimeAuthentication` como valor de producto. |
 | Mejoras en la IU de Privacy Service | Páginas de seguimiento de trabajos independientes para las regulaciones del RGPD y CCPA. Nuevo menú desplegable **Tipo de regulación** para cambiar entre los datos de seguimiento para el RGPD y la CCPA. |
 
 **Problemas conocidos**
 
 * Ninguna
 
-Para obtener más información acerca de [!DNL Privacy Service], comience por leer la [descripción general del Privacy Service](../../privacy-service/home.md).
+Para obtener más información acerca de [!DNL Privacy Service], comience por leer la [descripción general de Privacy Service](../../privacy-service/home.md).
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Experience Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

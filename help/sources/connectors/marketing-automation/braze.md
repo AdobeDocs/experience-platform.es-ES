@@ -3,10 +3,10 @@ title: Resumen de Source de Braze Currents
 description: Aprenda a transmitir datos de Braze Currents a Experience Platform.
 badge: Beta
 exl-id: dd304e10-26e5-4586-ab39-8fe3294b19c9
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 3%
+source-wordcount: '359'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >El origen [!DNL Braze Currents] está en la versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 Experience Platform es compatible con la ingesta de datos desde aplicaciones de streaming. La compatibilidad con los proveedores de streaming incluye [!DNL Braze Currents].
 
@@ -31,19 +31,19 @@ Para completar los pasos de esta guía, necesitará lo siguiente:
 
 ### Recopilar credenciales necesarias
 
-Para enviar correctamente los datos de [!DNL Braze Currents] al Experience Platform, debe escribir las siguientes credenciales de Experience Platform en el panel de interfaz de usuario de [!DNL Braze].
+Para enviar correctamente los datos de [!DNL Braze Currents] a Experience Platform, debe escribir las siguientes credenciales de Experience Platform en el panel de interfaz de usuario de [!DNL Braze].
 
 | Campo | Descripción |
 | --- | --- |
-| ID de cliente | El ID de cliente asociado con el origen del Experience Platform. |
-| Secreto del cliente | El secreto de cliente asociado con el origen del Experience Platform. |
-| ID de inquilino | El ID de inquilino asociado con el origen del Experience Platform. |
-| Nombre de la zona protegida | La zona protegida asociada a la fuente del Experience Platform. |
-| ID de flujo de datos | El ID de flujo de datos asociado con el origen del Experience Platform. |
-| Punto final de streaming | El extremo de flujo continuo asociado con el origen del Experience Platform. **Nota**: [!DNL Braze] convierte automáticamente esto en el extremo de flujo continuo por lotes. |
+| ID de cliente | El ID de cliente asociado con el origen de Experience Platform. |
+| Secreto del cliente | El secreto de cliente asociado con el origen de Experience Platform. |
+| ID de inquilino | El ID de inquilino asociado con el origen de Experience Platform. |
+| Nombre de la zona protegida | La zona protegida asociada a su origen de Experience Platform. |
+| ID de flujo de datos | El ID de flujo de datos asociado con el origen de Experience Platform. |
+| Punto final de streaming | Punto final de flujo continuo asociado a la fuente de Experience Platform. **Nota**: [!DNL Braze] convierte automáticamente esto en el extremo de flujo continuo por lotes. |
 
-Para obtener información sobre cómo recuperar estos valores, lea la guía sobre [introducción a las API de Platform](../../../landing/api-authentication.md). Para obtener información sobre cómo usar el panel [!DNL Braze], lea la guía [!DNL Braze] sobre cómo [navegar a las corrientes](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Para obtener información sobre cómo recuperar estos valores, lea la guía sobre [introducción a las API de Experience Platform](../../../landing/api-authentication.md). Para obtener información sobre cómo usar el panel [!DNL Braze], lea la guía [!DNL Braze] sobre cómo [navegar a las corrientes](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 ## Pasos siguientes
 
-Al leer este documento, ha completado la configuración de requisitos previos necesaria para transmitir los datos de su cuenta de [!DNL Braze Currents] al Experience Platform. Ahora puede continuar con la guía de [conexión [!DNL Braze Currents] al Experience Platform mediante la interfaz de usuario](../../tutorials/ui/create/marketing-automation/braze.md).
+Al leer este documento, ha completado la configuración de requisitos previos necesaria para transmitir datos de su cuenta de [!DNL Braze Currents] a Experience Platform. Ahora puede continuar con la guía de [conexión [!DNL Braze Currents] a Experience Platform mediante la interfaz de usuario](../../tutorials/ui/create/marketing-automation/braze.md).

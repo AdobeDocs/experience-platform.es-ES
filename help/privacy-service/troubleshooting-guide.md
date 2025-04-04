@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Guía de resolución de problemas del Privacy Service
-description: Este documento proporciona respuestas a las preguntas frecuentes sobre Privacy Service, así como información sobre los errores más comunes encontrados en la API.
+title: Guía de resolución de problemas de Privacy Service
+description: Este documento proporciona respuestas a las preguntas más frecuentes acerca de Privacy Service, así como información sobre los errores más comunes encontrados en la API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 4%
@@ -63,9 +63,9 @@ La matriz contiene dos objetos que representan a los usuarios individuales ident
 Para obtener más información sobre cómo proporcionar información de identidad de usuario, consulte la guía sobre [datos de identidad para solicitudes de privacidad](identity-data.md).
 
 
-## ¿Puedo usar [!DNL Privacy Service] para limpiar datos que se enviaron accidentalmente a [!DNL Platform]?
+## ¿Puedo usar [!DNL Privacy Service] para limpiar datos que se enviaron accidentalmente a [!DNL Experience Platform]?
 
-El Adobe no admite el uso de [!DNL Privacy Service] para borrar datos que se hayan enviado accidentalmente a un producto. [!DNL Privacy Service] se ha diseñado para ayudarle a cumplir con sus obligaciones en relación con las solicitudes de acceso o eliminación de los interesados (o consumidores). No se admite ni permite ningún otro uso de Privacy Service para la limpieza o el mantenimiento de datos.
+Adobe no admite el uso de [!DNL Privacy Service] para borrar datos que se hayan enviado accidentalmente a un producto. [!DNL Privacy Service] se ha diseñado para ayudarle a cumplir con sus obligaciones en relación con las solicitudes de acceso o eliminación de los interesados (o consumidores). No se admite ni permite ningún otro uso de Privacy Service para la limpieza o el mantenimiento de datos.
 
 Las solicitudes de privacidad son sensibles al tiempo y se completan en relación con la ley de privacidad aplicable. el envío de solicitudes que no son solicitudes de eliminación o de acceso del sujeto de datos/consumidor afecta a todos los clientes de [!DNL Privacy Service] y a la capacidad de [!DNL Privacy Service] de admitir los plazos legales adecuados. Ahora se establece un límite diario de carga estricto para ayudar a evitar el abuso del servicio.
 
@@ -81,7 +81,7 @@ Para recuperar el estado de un trabajo en particular mediante la API [!DNL Priva
 
 ### Uso de la IU
 
-Todas las solicitudes de trabajo activas se enumeran en el widget **[!UICONTROL Solicitudes de trabajo]** del panel de interfaz de usuario [!DNL Privacy Service]. El estado de cada solicitud de trabajo se muestra en la columna **[!UICONTROL Estado]**. Para obtener más información sobre la visualización de solicitudes de trabajo en la interfaz de usuario, consulte la [guía de usuario para Privacy Service](ui/user-guide.md).
+Todas las solicitudes de trabajo activas se enumeran en el widget **[!UICONTROL Solicitudes de trabajo]** del panel de interfaz de usuario [!DNL Privacy Service]. El estado de cada solicitud de trabajo se muestra en la columna **[!UICONTROL Estado]**. Para obtener más información sobre la visualización de solicitudes de trabajo en la interfaz de usuario, consulte la [guía del usuario de Privacy Service](ui/user-guide.md).
 
 ## ¿Cómo puedo descargar los resultados de mis trabajos de privacidad completados?
 
@@ -95,7 +95,7 @@ Para obtener más información, consulte la sección sobre [buscar un trabajo po
 
 ### Uso de la IU
 
-En el panel de la interfaz de usuario [!DNL Privacy Service], busque el trabajo que desee descargar del widget **Solicitudes de trabajo**. Seleccione el ID del trabajo para abrir la página Detalles del trabajo. Aquí, selecciona **Descargar** en la esquina superior derecha para descargar el archivo ZIP. Consulte la [guía de usuario para Privacy Service](ui/user-guide.md) para ver pasos más detallados.
+En el panel de la interfaz de usuario [!DNL Privacy Service], busque el trabajo que desee descargar del widget **Solicitudes de trabajo**. Seleccione el ID del trabajo para abrir la página Detalles del trabajo. Aquí, selecciona **Descargar** en la esquina superior derecha para descargar el archivo ZIP. Consulte la [guía del usuario de Privacy Service](ui/user-guide.md) para ver los pasos más detallados.
 
 ## Mensajes de error comunes {#common-error-messages}
 
@@ -111,4 +111,4 @@ En la tabla siguiente se describen algunos errores comunes de [!DNL Privacy Serv
 | El acceso y los permisos son obligatorios. | El acceso y los permisos son necesarios para poder usar [!DNL Privacy Service]. Póngase en contacto con el administrador para obtener acceso. |
 | Error al cargar y archivar los datos de acceso. | Cuando se produzca este error, vuelva a cargar los datos de acceso e inténtelo de nuevo. |
 | Se ha superado la carga de trabajo para el límite actual de tasa de documentos. | Cuando se produzca este error, reduzca la tasa de envío e inténtelo de nuevo. |
-| Demasiadas solicitudes<br> (errores HTTP 429) | Si los patrones de envío superan el límite monitorizado de trabajos de sujetos de datos permitidos, recibirá un error HTTP 429 en respuesta al tráfico continuo de su organización. Privacy Service está diseñado para el procesamiento de las solicitudes de privacidad de los sujetos de datos. No debe utilizarse para la limpieza de datos. Si recibe errores HTTP 429, se implementan límites de restricción y solicitud para proteger el Adobe de abusos que podrían poner en riesgo el trabajo de conformidad legítimo.<br>La configuración de las programaciones de caducidad de los conjuntos de datos](../hygiene/ui/dataset-expiration.md) y el uso de la [característica de eliminación de registros](../hygiene/ui/record-delete.md) proporcionan métodos alternativos para minimizar los datos. [ Consulte su documentación correspondiente para obtener más información sobre cómo aplicar estas funcionalidades. |
+| Demasiadas solicitudes<br> (errores HTTP 429) | Si los patrones de envío superan el límite monitorizado de trabajos de sujetos de datos permitidos, recibirá un error HTTP 429 en respuesta al tráfico continuo de su organización. Privacy Service está diseñado para el procesamiento de las solicitudes de privacidad de los interesados. No debe utilizarse para la limpieza de datos. Si recibe errores HTTP 429, se implementan límites de restricción y solicitud para proteger Adobe de abusos que podrían poner en riesgo el trabajo de conformidad legítimo.<br>La configuración de las programaciones de caducidad de los conjuntos de datos](../hygiene/ui/dataset-expiration.md) y el uso de la [característica de eliminación de registros](../hygiene/ui/record-delete.md) proporcionan métodos alternativos para minimizar los datos. [ Consulte su documentación correspondiente para obtener más información sobre cómo aplicar estas funcionalidades. |

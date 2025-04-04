@@ -1,22 +1,22 @@
 ---
-title: Protecciones de rendimiento para la API de Edge Network Server
+title: Protecciones de rendimiento para la API de servidor de Edge Network
 description: Aprenda a utilizar la API de servidor dentro de protecciones de rendimiento óptimas.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
 
 
-# Protecciones de rendimiento para la API de Edge Network Server
+# Protecciones de rendimiento para la API de servidor de Edge Network
 
 ## Información general {#overview}
 
 Las protecciones de rendimiento definen los límites de uso relacionados con los casos de uso de la API de servidor. Si se superan las barreras de rendimiento descritas en este artículo, podría producirse una degradación del rendimiento.
 
-El Adobe de no es responsable de la degradación del rendimiento causada por los límites de uso excedidos. Los clientes que superan de forma consistente las barreras de rendimiento pueden solicitar capacidad de procesamiento adicional para evitar una degradación del rendimiento.
+Adobe no se responsabiliza de la degradación del rendimiento causada por los límites de uso excedidos. Los clientes que superan de forma consistente las barreras de rendimiento pueden solicitar capacidad de procesamiento adicional para evitar una degradación del rendimiento.
 
 >[!IMPORTANT]
 >
@@ -26,12 +26,12 @@ Todas las protecciones de rendimiento descritas en esta página se aplican al ni
 
 ## Definiciones
 
-* **Disponibilidad** se calcula para cada intervalo de cinco minutos como el porcentaje de solicitudes procesadas por el Edge Network Experience Platform que no generan errores y que se relacionan únicamente con las API de Edge Network aprovisionadas. Si un inquilino no realizó ninguna solicitud en un intervalo determinado de cinco minutos, ese intervalo se considera disponible al 100 %.
+* **Disponibilidad** se calcula para cada intervalo de cinco minutos como el porcentaje de solicitudes procesadas por Experience Platform Edge Network que no generan errores y que se relacionan únicamente con las API de Edge Network aprovisionadas. Si un inquilino no realizó ninguna solicitud en un intervalo determinado de cinco minutos, ese intervalo se considera disponible al 100 %.
 * **El porcentaje de tiempo de actividad mensual** de una región determinada se calcula como el promedio de la disponibilidad para todos los intervalos de cinco minutos de un mes.
-* Un **flujo ascendente** es un servicio detrás del Edge Network, habilitado para una secuencia de datos específica, como el reenvío del lado del servidor de Adobe, la segmentación de Adobe Edge o Adobe Target.
+* Un **flujo ascendente** es un servicio detrás de Edge Network, habilitado para un conjunto de datos específico, como el reenvío del lado del servidor de Adobe, la segmentación de Adobe Edge o Adobe Target.
 * Una **unidad de solicitud** corresponde a un fragmento de 8 KB de una solicitud y un flujo ascendente configurado para una secuencia de datos.
 * Una **solicitud** es un solo mensaje enviado por una aplicación propiedad del cliente a [!DNL Server API]. Una solicitud puede contener una o más unidades de solicitud.
-* Un **error** es cualquier solicitud que falla debido a un [error de servicio interno](error-handling.md) del Edge Network.
+* Un **error** es cualquier solicitud que falla debido a un [error de servicio interno](error-handling.md) de Edge Network.
 
 ## Límites de servicio
 
@@ -45,10 +45,10 @@ Todos los límites se aplican y normalizan en una **unidad de solicitud (RU)**, 
 
 | Flujos ascendentes configurados por flujo de datos | Tamaño promedio de la solicitud | Solicitar unidades |
 | --- | --- | --- |
-| 1 (Plataforma de Adobe) | 8 KB (1 fragmento) | 1 |
-| 2 (Plataforma de Adobe, Adobe Target) | 8 KB (1 fragmento) | 2 |
-| 2 (Plataforma de Adobe, Adobe Target) | 16 KB (2 fragmentos) | 4 |
-| 2 (Plataforma de Adobe, Adobe Target) | 64 KB (8 fragmentos) | 16 |
+| 1 (Adobe Experience Platform) | 8 KB (1 fragmento) | 1 |
+| 2 (Adobe Experience Platform, Adobe Target) | 8 KB (1 fragmento) | 2 |
+| 2 (Adobe Experience Platform, Adobe Target) | 16 KB (2 fragmentos) | 4 |
+| 2 (Adobe Experience Platform, Adobe Target) | 64 KB (8 fragmentos) | 16 |
 
 ### Límites de unidades de solicitud
 
@@ -76,6 +76,6 @@ Consulte la siguiente documentación para obtener más información sobre otras 
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-time Customer Data Platform (edición B2C - paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (paquetes B2B - Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -1,8 +1,8 @@
 ---
-title: Conexión de Audiencias personalizadas de twitter
-description: Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform
+title: Conexión de Audiencias personalizadas de Twitter
+description: Dirija su actividad a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: ba9b59a24079b61a0f5d6076f3acfd83fc8f4092
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 ## Información general {#overview}
 
-Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform.
+Dirija su actividad a sus seguidores y clientes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
@@ -29,7 +29,7 @@ Antes de configurar el destino [!DNL Twitter Custom Audiences], asegúrese de re
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
 | device_id | IDFA/AdID/Android ID | Google Advertising ID (GAID) y Apple ID para anunciantes (IDFA) son compatibles con Adobe Experience Platform. Asigne estas áreas de nombres o atributos desde el esquema de origen según corresponda en el [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación de destino. |
-| email | Direcciones de correo electrónico del usuario | Asigne sus direcciones de correo electrónico de texto sin formato y sus direcciones de correo electrónico con hash SHA256 a este campo. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. Si escribe hash las direcciones de correo electrónico de los clientes antes de cargarlas en Adobe Experience Platform, tenga en cuenta que estas identidades deben tener un cifrado hash con SHA256, sin formato. |
+| email | Direcciones de correo electrónico del usuario | Asigne sus direcciones de correo electrónico de texto sin formato y sus direcciones de correo electrónico con hash SHA256 a este campo. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. Si escribe hash las direcciones de correo electrónico de los clientes antes de cargarlas en Adobe Experience Platform, tenga en cuenta que estas identidades deben tener un cifrado hash con SHA256, sin formato. |
 
 {style="table-layout:auto"}
 
@@ -39,8 +39,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -50,8 +50,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores utilizados en el destino Twitter de audiencias personalizadas. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores utilizados en el destino de Audiencias personalizadas de Twitter. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL 
 
 ### #1 de casos de uso
 
-Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform como [!DNL List Custom Audiences] en Twitter.
+Dirija su actividad a sus seguidores y clientes actuales en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform como [!DNL List Custom Audiences] en Twitter.
 
 ## Conectar con destino {#connect}
 
@@ -93,7 +93,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 >[!IMPORTANT]
 >
->No utilice caracteres especiales (+ &amp; , % : ; @ / = ? $ \n) en los nombres de asignación de audiencia, descripción y audiencia. Si el nombre de la audiencia del Experience Platform contiene estos caracteres, elimínelos antes de asignar la audiencia a un destino de Twitter.
+>No utilice caracteres especiales (+ &amp; , % : ; @ / = ? $ \n) en los nombres de asignación de audiencia, descripción y audiencia. Si el nombre de la audiencia de Experience Platform contiene estos caracteres, elimínelos antes de asignar la audiencia a un destino de Twitter.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -112,7 +112,7 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 ### Consideraciones de asignación {#mapping-considerations}
 
-Al asignar audiencias al Twitter, proporcione nombres de asignación de audiencias legibles por humanos. Se recomienda utilizar el mismo nombre que utilizó para los segmentos del Experience Platform.
+Al asignar audiencias a Twitter, proporcione nombres de asignación de audiencias legibles por humanos. Se recomienda utilizar el mismo nombre que utilizó para los segmentos de Experience Platform.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
@@ -120,4 +120,4 @@ Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las política
 
 ## Recursos adicionales {#additional-resources}
 
-Encontrará más información sobre [!DNL List Custom Audiences] en el Twitter en la [documentación del Twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+Encontrará más información sobre [!DNL List Custom Audiences] en Twitter en la [documentación de Twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

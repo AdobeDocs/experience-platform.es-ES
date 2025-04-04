@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Adobe Experience Platform;guía de api;guía de api de platform;introducción a platform;guía para desarrolladores
+keywords: Experience Platform;inicio;temas populares;Adobe Experience Platform;guía de api;guía de api de plataforma;introducción a platform;guía para desarrolladores
 solution: Experience Platform
 title: Postman en Adobe Experience Platform
-description: Este documento contiene pasos en los que se describe cómo configurar un entorno de Postman, importar colecciones de Postman y una lista de colecciones disponibles para cada servicio de Platform.
+description: Este documento contiene los pasos necesarios para configurar un entorno de Postman, importar colecciones de Postman y una lista de colecciones disponibles para cada servicio de Experience Platform.
 role: Developer
 feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 # Postman en Adobe Experience Platform
 
-Postman es una plataforma de colaboración para el desarrollo de API que le permite configurar entornos con variables preestablecidas, compartir colecciones de API, optimizar solicitudes de CRUD y mucho más. La mayoría de los servicios de API de Platform tienen colecciones de Postman que se pueden utilizar para ayudar a realizar llamadas de API.
+Postman es una plataforma de colaboración para el desarrollo de API que le permite configurar entornos con variables preestablecidas, compartir colecciones de API, optimizar solicitudes de CRUD y mucho más. La mayoría de los servicios de API de Experience Platform tienen colecciones Postman que se pueden utilizar para ayudar a realizar llamadas de API.
 
-## Cómo configurar un entorno de Postman para Experience Platform
+## Configuración de un entorno de Postman para Experience Platform
 
 La siguiente guía de vídeo describe la creación y configuración de su entorno de Postman. Un entorno de Postman contiene todos los encabezados necesarios para realizar llamadas de API a las distintas colecciones que se proporcionan a continuación. Una vez configurado, cada vez que caduca un valor (como un `ACCESS_TOKEN`), puede actualizar el valor actual en el entorno y este nuevo valor se utilizará en todas las colecciones.
 
@@ -25,7 +25,7 @@ La siguiente guía de vídeo describe la creación y configuración de su entorn
 
 ## Colecciones de Postman {#collections}
 
-Encontrará una carpeta con todas las colecciones de Postman disponibles en, visitando el [repositorio de GitHub de muestras de Postman de Experience Platform](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Como alternativa, se puede encontrar un vínculo de colección Postman en cada archivo swagger individual en la [documentación de referencia de API](https://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
+Para encontrar una carpeta que contenga todas las colecciones de Postman disponibles, visite el [repositorio de GitHub de muestras de Experience Platform Postman](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Como alternativa, se puede encontrar un vínculo de colección de Postman en cada archivo swagger individual en la [documentación de referencia de API](https://www.adobe.com/go/platform-api-reference-en) en Adobe I/O.
 
 Para descargar una colección de Postman, seleccione **[!DNL Raw]** de la página de GitHub para cargar el archivo JSON sin procesar en una nueva pestaña. A continuación, haga clic con el botón derecho y seleccione **[!DNL Save as]** para guardar el archivo en un destino local de su elección.
 
@@ -53,7 +53,7 @@ Para obtener más información acerca de la interfaz de usuario de Postman y sus
 
 >[!WARNING]
 >
->Como se indica en la colección Postman del servicio Identity Management (IMS), los métodos de generación indicados son adecuados para **uso que no sea de producción**. La firma local carga una biblioteca de JavaScript desde un host de terceros y la firma remota envía la clave privada a un servicio web que es propiedad de Adobe y que administra. Aunque la Adobe de no almacena esta clave privada, las claves de producción nunca deben compartirse con nadie.
+>Como se indica en la colección Postman del servicio Identity Management (IMS), los métodos de generación indicados son adecuados para **uso que no sea de producción**. La firma local carga una biblioteca de JavaScript desde un host de terceros y la firma remota envía la clave privada a un servicio web que es propiedad de Adobe y que administra. Aunque Adobe no almacena esta clave privada, las claves de producción nunca deben compartirse con nadie.
 
 El siguiente vídeo utiliza la [colección Postman del servicio Identity Management (IMS)](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) que se puede descargar del repositorio público de GitHub.
 
@@ -61,4 +61,4 @@ El siguiente vídeo utiliza la [colección Postman del servicio Identity Managem
 
 ## Pasos siguientes
 
-Este documento presentaba entornos, colecciones y cómo importar colecciones de Postman. Ahora que Postman está listo, visite la [Guía de introducción a la plataforma](api-guide.md) para obtener información sobre los encabezados, ejemplos y una lista de [guías de API](api-guide.md#api-guides) necesarias disponibles para cada servicio de Platform.
+Este documento presentaba entornos, colecciones y cómo importar colecciones de Postman. Ahora que Postman está listo, visite la [Guía de introducción de Experience Platform](api-guide.md) para obtener información sobre los encabezados, ejemplos y una lista de [guías de API](api-guide.md#api-guides) disponibles para cada servicio de Experience Platform.

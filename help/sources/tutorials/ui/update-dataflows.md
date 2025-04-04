@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo actualizar un flujo de datos de fuentes existente en la interfaz de usuario de Experience Platform.
 title: Actualización de un flujo de datos de conexión de Source en la IU
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 8%
 
 ---
@@ -17,8 +17,8 @@ Lea este tutorial para ver los pasos sobre cómo actualizar un flujo de datos ex
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Actualizar flujos de datos {#update-dataflows}
 
@@ -27,7 +27,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >title="Caducidad del conjunto de datos"
 >abstract="Esta columna indica el número de días que le quedan al conjunto de datos de destinatario antes de que caduque automáticamente.<br>Un flujo de datos fallará si caduca el conjunto de datos de destino. Para evitar que un flujo de datos falle, asegúrese de que un conjunto de datos de destinatario esté configurado para que caduque en la fecha correcta. Consulte la documentación para obtener información sobre cómo actualizar las fechas de caducidad."
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Orígenes]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Orígenes]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior.
 
 ![Catálogo de orígenes con la ficha de encabezado de flujos de datos seleccionada.](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -79,7 +79,7 @@ A continuación, seleccione [!UICONTROL Deshabilitar] en la ventana emergente qu
 
 ![Ventana emergente en la que debe confirmar que desea deshabilitar el flujo de datos.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
-Si más tarde vuelve a habilitar este flujo de datos y, posteriormente, Experience Platform programará automáticamente ejecuciones de relleno para cubrir el período durante el cual se desactivó el flujo de datos. Por ejemplo, si el flujo de datos se configuró para ejecutarse cada hora y se deshabilitó durante 48 horas, al volver a habilitar este flujo de datos, el Experience Platform creará 48 ejecuciones de relleno para procesar los intervalos perdidos.
+Si más tarde vuelve a habilitar este flujo de datos y cuando lo hace, Experience Platform programará automáticamente ejecuciones de relleno para cubrir el período durante el cual se deshabilitó el flujo de datos. Por ejemplo, si el flujo de datos se configuró para ejecutarse cada hora y se deshabilitó durante 48 horas, al volver a habilitar este flujo de datos, Experience Platform creará 48 ejecuciones de relleno para procesar los intervalos perdidos.
 
 ## Pasos siguientes
 

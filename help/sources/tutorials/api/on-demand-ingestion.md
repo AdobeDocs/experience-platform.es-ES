@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;servicio de flujo;
 title: Creación de una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 description: Obtenga información sobre cómo crear una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '801'
 ht-degree: 2%
 
 ---
@@ -26,16 +26,16 @@ Este tutorial explica los pasos para usar la ingesta bajo demanda y crear una ej
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ## Crear una ejecución de flujo para un origen basado en tablas
 
-Para crear un flujo para un origen basado en tablas, realice una solicitud de POST a la API [!DNL Flow Service] y proporcione al mismo tiempo el ID del flujo con el que desea crear la ejecución, así como los valores de las columnas hora de inicio, hora de finalización y delta.
+Para crear un flujo para un origen basado en tablas, realice una petición POST a la API [!DNL Flow Service] proporcionando al mismo tiempo el ID del flujo con el que desea crear la ejecución, así como los valores de las columnas hora de inicio, hora de finalización y delta.
 
 >[!TIP]
 >
@@ -125,7 +125,7 @@ Una respuesta correcta devuelve los detalles de la ejecución de flujo recién c
 
 ## Crear una ejecución de flujo para un origen basado en archivos
 
-Para crear un flujo para un origen basado en archivos, realice una solicitud de POST a la API [!DNL Flow Service] y proporcione al mismo tiempo el ID del flujo con el que desea crear la ejecución y los valores para la hora de inicio y la hora de finalización.
+Para crear un flujo para un origen basado en archivos, realice una petición POST a la API [!DNL Flow Service] y proporcione el ID del flujo con el que desea crear la ejecución y los valores para la hora de inicio y la hora de finalización.
 
 >[!TIP]
 >
@@ -189,4 +189,4 @@ Una respuesta correcta devuelve los detalles de la ejecución de flujo recién c
 
 ## Monitorice las ejecuciones de flujo
 
-Una vez creada la ejecución de flujo, puede monitorizar los datos que se están introduciendo a través de ella para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para supervisar las ejecuciones de flujo mediante la API, consulte el tutorial sobre [supervisión de flujos de datos en la API](./monitor.md). Para supervisar las ejecuciones de flujo mediante la interfaz de usuario de Platform, consulte la guía de [supervisión de orígenes y flujos de datos mediante el panel de supervisión](../../../dataflows/ui/monitor-sources.md).
+Una vez creada la ejecución de flujo, puede monitorizar los datos que se están introduciendo a través de ella para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para supervisar las ejecuciones de flujo mediante la API, consulte el tutorial sobre [supervisión de flujos de datos en la API](./monitor.md). Para supervisar las ejecuciones de flujo mediante la interfaz de usuario de Experience Platform, consulte la guía sobre [supervisión de orígenes y flujos de datos mediante el panel de supervisión](../../../dataflows/ui/monitor-sources.md).

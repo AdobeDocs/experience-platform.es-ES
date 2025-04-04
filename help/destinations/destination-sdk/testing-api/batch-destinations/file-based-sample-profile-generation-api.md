@@ -1,10 +1,10 @@
 ---
-description: En esta página se explica cómo utilizar el extremo de la API /sample-profiles del Destination SDK para generar perfiles de muestra basados en un esquema de origen. Puede utilizar estos perfiles de muestra para probar la configuración de destino basada en archivos.
+description: En esta página se explica cómo utilizar el extremo de API /sample-profiles de Destination SDK para generar perfiles de muestra basados en un esquema de origen. Puede utilizar estos perfiles de muestra para probar la configuración de destino basada en archivos.
 title: Generar perfiles de muestra basados en un esquema de origen
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '654'
 ht-degree: 2%
 
 ---
@@ -24,15 +24,15 @@ Antes de continuar, revisa la [guía de introducción](../../getting-started.md)
 
 Antes de usar el extremo `/sample-profiles`, asegúrese de cumplir las siguientes condiciones:
 
-* Ya tiene un destino basado en archivos creado a través del Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Ya tiene un destino basado en archivos creado mediante Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
 * Ha creado al menos un flujo de activación para su destino en la interfaz de usuario de Experience Platform. El extremo `/sample-profiles` crea los perfiles en función del esquema de origen definido en el flujo de activación. Consulte el [tutorial de activación](../../../ui/activate-batch-profile-destinations.md) para obtener información sobre cómo crear un flujo de activación.
-* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
+* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada de API desde la dirección URL cuando busque una conexión con su destino en la interfaz de usuario de Experience Platform.
 
   ![Imagen de interfaz de usuario que muestra cómo obtener el identificador de instancia de destino de la dirección URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Generar perfiles de muestra para las pruebas de destino {#generate-sample-profiles}
 
-Puede generar perfiles de muestra basados en el esquema de origen realizando una solicitud de GET al extremo `/sample-profiles` con el ID de instancia de destino del destino que desea probar.
+Puede generar perfiles de muestra basados en el esquema de origen realizando una petición GET al extremo `/sample-profiles` con el ID de instancia de destino del destino que desea probar.
 
 **Formato de API**
 
@@ -114,7 +114,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes
 

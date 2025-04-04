@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2028'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ En la tabla siguiente se explican los tipos de alertas de consulta admitidos:
 
 >[!NOTE]
 >
->Si decide establecer una alerta [!UICONTROL Retraso en la ejecución de la consulta], debe establecer el tiempo de retraso deseado en minutos en la interfaz de usuario de Platform. Introduzca la duración en minutos. El retraso máximo es de 24 horas (1440 minutos).
+>Si decide establecer una alerta [!UICONTROL Retraso en la ejecución de la consulta], debe establecer el tiempo de retraso deseado en minutos en la interfaz de usuario de Experience Platform. Introduzca la duración en minutos. El retraso máximo es de 24 horas (1440 minutos).
 
 Para obtener una descripción general de las alertas en Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta, consulte la [descripción general de las alertas](../../observability/alerts/overview.md). Para obtener instrucciones sobre la administración de alertas y reglas de alerta en la interfaz de usuario de Adobe Experience Platform, consulte la [Guía de la interfaz de usuario de alertas](../../observability/alerts/ui.md).
 
@@ -153,7 +153,7 @@ En la tabla siguiente se describen las columnas disponibles en la sección de de
 |---------------------|----------------------------------|
 | [!UICONTROL ID de ejecución de consulta] | Muestra un identificador único para cada ejecución de consulta, lo que permite realizar un seguimiento y hacer referencia a ejecuciones individuales de consultas programadas. |
 | [!UICONTROL Inicio de ejecución de consulta] | Indica la fecha y hora de inicio de la ejecución de la consulta para ayudarle a monitorizar cuándo comenzó cada ejecución. |
-| [!UICONTROL Ejecución de consulta completa] | Muestra la fecha y hora de finalización de la ejecución de la consulta para proporcionar información sobre la duración y el estado de la ejecución. |
+| [!UICONTROL Ejecución de consulta completa] | Muestra la fecha y hora de finalización de la ejecución de la consulta para proporcionar a insight la duración y el estado de ejecución. |
 | [!UICONTROL Estado] | Muestra el estado actual de la ejecución de la consulta, como `Completed,` `Running,` o `Failed,` para evaluar el resultado rápidamente. |
 | [!UICONTROL Conjuntos de datos] | Enumera los conjuntos de datos utilizados en la ejecución de la consulta para mostrar qué fuentes de datos participaron en la ejecución. |
 | [!UICONTROL Calcular horas] | Muestra el tiempo de cálculo utilizado para cada ejecución de consulta, medido en horas. Esto ayuda a realizar un seguimiento del uso de los recursos y optimizar el rendimiento de las consultas. |

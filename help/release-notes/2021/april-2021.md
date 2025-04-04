@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 33%
 
 ---
@@ -51,12 +51,12 @@ Los servicios inteligentes permiten a los analistas y profesionales de marketing
 
 ### Inteligencia artificial aplicada al cliente
 
-La inteligencia artificial aplicada al cliente disponible en Real-time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
+La inteligencia artificial aplicada al cliente disponible en Real-Time Customer Data Platform se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 
 | Función | Descripción |
 | ------- | ----------- |
 | Compatibilidad con datos de Adobe Analytics | Funcionalidad actualizada para admitir conjuntos de datos de Adobe Analytics a través del conector de origen de Analytics sin necesidad de extraer los datos para cumplir con el esquema de Evento de experiencia del consumidor (CEE). |
-| Compatibilidad con datos de Adobe Audience Manager | Funcionalidad actualizada para admitir conjuntos de datos de Adobe Audience Manager a través del conector de origen del Audience Manager sin necesidad de extraer los datos para cumplir con el esquema de Evento de experiencia del consumidor (CEE). |
+| Compatibilidad con datos de Adobe Audience Manager | Funcionalidad actualizada para admitir conjuntos de datos de Adobe Audience Manager a través del conector de origen de Audience Manager sin necesidad de extraer los datos para cumplir con el esquema de Evento de experiencia del consumidor (CEE). |
 | Resumen de rendimiento del modelo | La inteligencia artificial aplicada al cliente ahora tiene una [pestaña de resumen de rendimiento del modelo](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) en la página de perspectivas de la instancia de servicio. La pestaña de rendimiento del modelo muestra todas las tasas de conversión y de pérdida reales. Esto le permite descifrar y comprender qué está pasando en cada uno de sus bloques de tendencia. |
 
 Para obtener más información sobre los conjuntos de datos admitidos, consulte la [[!DNL Intelligent Services] documentación de preparación de datos](../../intelligent-services/data-preparation.md).
@@ -73,7 +73,7 @@ Para obtener más información sobre los conjuntos de datos admitidos, consulte 
 
 ## Servicio de segmentación {#segmentation}
 
-El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API RESTful que le permiten generar segmentos y audiencias a partir de los datos de [!DNL Real-Time Customer Profile]. Estos segmentos se configuran y mantienen de forma centralizada en Platform, lo que hace que cualquier aplicación de Adobe pueda acceder fácilmente a ellos.
+El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API RESTful que le permiten generar segmentos y audiencias a partir de los datos de [!DNL Real-Time Customer Profile]. Estos segmentos se configuran y mantienen de forma centralizada en Experience Platform, lo que facilita el acceso a ellos a cualquier aplicación de Adobe.
 
 [!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
 
@@ -87,13 +87,13 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [I
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 | Función | Descripción |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | Ahora puede crear una conexión de origen [!DNL Marketo Engage] mediante la interfaz de usuario para llevar los datos B2B a Platform y mantenerlos actualizados mediante aplicaciones conectadas a Platform. Para obtener más información, consulte la [[!DNL Marketo Engage] documentación del conector de origen](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+| [!DNL Marketo Engage] (Beta) | Ahora puede crear una conexión de origen [!DNL Marketo Engage] mediante la interfaz de usuario para llevar los datos B2B a Experience Platform y mantenerlos actualizados mediante aplicaciones conectadas a Experience Platform. Para obtener más información, consulte la [[!DNL Marketo Engage] documentación del conector de origen](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 | Fuentes de Beta que se trasladan a GA | Las siguientes fuentes se han promocionado de beta a GA: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 Para obtener más información sobre las fuentes, consulte [descripción general de las fuentes](../../sources/home.md).

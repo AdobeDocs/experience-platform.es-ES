@@ -3,9 +3,9 @@ title: Conexión de SAP Commerce
 description: Utilice el conector de destino de SAP Commerce para actualizar los registros de clientes en su cuenta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2268'
 ht-degree: 3%
 
 ---
@@ -22,29 +22,29 @@ Las instrucciones para autenticarse en su instancia de [!DNL SAP Commerce] se en
 
 Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL SAP Commerce], aquí tiene un ejemplo de uso que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
 
-[!DNL SAP Commerce] clientes almacenan información sobre personas o entidades organizativas que interactúan con su negocio. Su equipo usa los clientes existentes en [!DNL SAP Commerce] para generar las audiencias de Experience Platform. Después de enviar estas audiencias a [!DNL SAP Commerce], su información se actualiza y a cada cliente se le asigna una propiedad con su valor como nombre de audiencia que indica a qué audiencia pertenece el cliente.
+[!DNL SAP Commerce] clientes almacenan información sobre personas o entidades organizativas que interactúan con su negocio. Su equipo usa los clientes existentes en [!DNL SAP Commerce] para crear las audiencias de Experience Platform. Después de enviar estas audiencias a [!DNL SAP Commerce], su información se actualiza y a cada cliente se le asigna una propiedad con su valor como nombre de audiencia que indica a qué audiencia pertenece el cliente.
 
 ## Requisitos previos {#prerequisites}
 
 Consulte las secciones siguientes para conocer los requisitos previos que debe configurar en Experience Platform y [!DNL SAP Commerce] y para obtener información que debe recopilar antes de trabajar con el destino [!DNL SAP Commerce].
 
-### Requisitos previos del Experience Platform {#prerequisites-in-experience-platform}
+### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
 Antes de activar datos en el destino [!DNL SAP Commerce], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creados en [!DNL Experience Platform].
 
-Consulte la documentación del Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
+Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
 ### Requisitos previos para el destino [!DNL SAP Commerce] {#prerequisites-destination}
 
-Tenga en cuenta los siguientes requisitos previos para exportar datos de Platform a su cuenta de [!DNL SAP Commerce]:
+Tenga en cuenta los siguientes requisitos previos para exportar datos de Experience Platform a su cuenta de [!DNL SAP Commerce]:
 
 #### Debe tener una cuenta de [!DNL SAP Subscription Billing] {#prerequisites-account}
 
-Para exportar datos de Platform a su cuenta de [!DNL SAP Commerce], necesita tener una cuenta de [!DNL SAP Subscription Billing]. Si no tiene una cuenta de facturación válida, comuníquese con el administrador de cuentas de [!DNL SAP]. Consulte el documento [[!DNL SAP] Configuración de la plataforma](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) para obtener más información.
+Para exportar datos de Experience Platform a su cuenta de [!DNL SAP Commerce], necesita tener una cuenta de [!DNL SAP Subscription Billing]. Si no tiene una cuenta de facturación válida, comuníquese con el administrador de cuentas de [!DNL SAP]. Consulte el documento [[!DNL SAP] Configuración de la plataforma](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) para obtener más información.
 
 #### Generación de una clave de servicio {#prerequisites-service-key}
 
-* La clave de servicio [!DNL SAP Commerce] le permite acceder a la API [!DNL SAP Subscription Billing] a través del Experience Platform. Consulte [!DNL SAP Commerce] [crear una clave de servicio con el identificador de cliente y el secreto de cliente](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) para crear una clave de servicio. [!DNL SAP Commerce] requiere lo siguiente:
+* La clave de servicio [!DNL SAP Commerce] le permite acceder a la API [!DNL SAP Subscription Billing] a través de Experience Platform. Consulte [!DNL SAP Commerce] [crear una clave de servicio con el identificador de cliente y el secreto de cliente](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) para crear una clave de servicio. [!DNL SAP Commerce] requiere lo siguiente:
    * ID de cliente
    * Secreto del cliente
    * URL. El patrón de la dirección URL es el siguiente: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Este valor se utilizará más adelante para obtener los valores de `Region` y `Endpoint`.
@@ -79,9 +79,9 @@ Para exportar datos de Platform a su cuenta de [!DNL SAP Commerce], necesita ten
 
 #### Crear referencias personalizadas en [!DNL SAP Subscription Billing] {#prerequisites-custom-reference}
 
-Para actualizar el estado de audiencia del Experience Platform en [!DNL SAP Subscription Billing], necesita un campo de referencia personalizado para cada audiencia seleccionada en Platform.
+Para actualizar el estado de audiencia de Experience Platform en [!DNL SAP Subscription Billing], necesita un campo de referencia personalizado para cada audiencia seleccionada en Experience Platform.
 
-Para crear las referencias personalizadas, inicia sesión en tu cuenta de [!DNL SAP Subscription Billing] y navega a la página **[Datos maestros y configuración]** > **[Referencias personalizadas]**. A continuación, seleccione **[!UICONTROL Crear]** para agregar una nueva referencia a cada audiencia seleccionada en Platform. Necesitará estos nombres de campo de referencia en el siguiente paso [Programar exportación de audiencias y ejemplo](#schedule-segment-export-example).
+Para crear las referencias personalizadas, inicia sesión en tu cuenta de [!DNL SAP Subscription Billing] y navega a la página **[Datos maestros y configuración]** > **[Referencias personalizadas]**. A continuación, seleccione **[!UICONTROL Crear]** para agregar una nueva referencia a cada audiencia seleccionada en Experience Platform. Necesitará estos nombres de campo de referencia en el siguiente paso [Programar exportación de audiencias y ejemplo](#schedule-segment-export-example).
 
 A continuación se muestra un ejemplo de cómo crear un **[!UICONTROL Tipo de referencia]** personalizado en [!DNL SAP Subscription Billing]:
 ![Imagen que muestra dónde crear una referencia personalizada en la facturación de suscripción a SAP.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
@@ -90,7 +90,7 @@ Para obtener instrucciones adicionales, consulte la documentación de [!DNL SAP 
 
 ### Recopilar credenciales necesarias {#gather-credentials}
 
-Para conectar [!DNL SAP Commerce] al Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para conectar [!DNL SAP Commerce] a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | --- | --- |
@@ -115,14 +115,14 @@ Las solicitudes de API para [!DNL SAP Cloud Management service] están sujetas a
 
 Esta sección describe todas las audiencias que puede exportar a este destino.
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Este destino admite la activación de todas las audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform.
 
 Este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
 
 | Tipo de público | Admitido | Descripción |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li>Va a exportar todos los miembros de una audiencia, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Para cada audiencia seleccionada en Platform, el atributo adicional correspondiente [!DNL SAP Commerce] se actualiza con su estado de audiencia de Platform.</li></ul> |
+| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li>Va a exportar todos los miembros de una audiencia, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Para cada audiencia seleccionada en Experience Platform, el atributo adicional correspondiente [!DNL SAP Commerce] se actualiza con su estado de audiencia de Experience Platform.</li></ul> |
 | Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Cuando se actualiza un perfil en Experience Platform en función de la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -159,14 +159,14 @@ Rellene los campos obligatorios siguientes. Consulte la sección [Generar una cl
 | **[!UICONTROL Región]** | Su ubicación del centro de datos. La región está presente en `url` y tiene un valor similar a `eu10` o `us10`. Por ejemplo, si `url` es `https://eu10.revenue.cloud.sap/api`, necesita `eu10`. |
 
 Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
-![Imagen de la interfaz de usuario de Platform que muestra cómo autenticarse en el destino.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra cómo autenticarse en el destino.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
 Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el estado **[!UICONTROL Conectado]** con una marca de verificación verde. A continuación, puede continuar con el paso siguiente.
 
 ### Rellenar detalles de destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
-![Imagen de la interfaz de usuario de Platform que muestra los detalles de destino que se deben rellenar después de la autenticación.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra los detalles de destino que se deben rellenar después de la autenticación.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
@@ -189,36 +189,36 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 ### Asignar atributos e identidades {#map}
 
-Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL SAP Commerce], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL SAP Commerce], siga los pasos a continuación:
+Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL SAP Commerce], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Experience Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL SAP Commerce], siga los pasos a continuación:
 
 #### Asignar la identidad `customerNumberSAP`
 
 La identidad `customerNumberSAP` es una asignación obligatoria para este destino. Siga los pasos a continuación para asignarlo:
 
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Ahora puede ver una nueva fila de asignación en la pantalla.
-   ![Captura de pantalla de la interfaz de usuario de Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione `customerNumberSAP`.
-   ![Captura de pantalla de la IU de Platform seleccionando correo electrónico como atributo de origen para asignar como identidad.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform seleccionando correo electrónico como atributo de origen para asignar como identidad.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de destino]**, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione la identidad `customerNumber`.
-   ![Captura de pantalla de la IU de Platform seleccionando correo electrónico como atributo de destino para asignar como identidad.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform seleccionando correo electrónico como atributo de destino para asignar como identidad.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
 | Campo de origen | Campo de destino | Obligatorio |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Sí |
 
 A continuación, se muestra un ejemplo con la asignación de identidad:
-![Imagen de la interfaz de usuario de Platform que muestra un ejemplo de asignación de identidad customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra un ejemplo de asignación de identidad customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
 #### Atributos de asignación
 
 Para agregar cualquier otro atributo que desee actualizar entre el esquema de perfil XDM y la cuenta [!DNL SAP Subscription Billing], repita los pasos a continuación:
 
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Ahora puede ver una nueva fila de asignación en la pantalla.
-   ![Captura de pantalla de la interfaz de usuario de Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM.
-   ![Captura de pantalla de IU de Platform seleccionando Apellidos como atributo de origen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform seleccionando Apellidos como atributo de origen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de destino]**, elija la categoría **[!UICONTROL Seleccionar atributos personalizados]** y escriba el nombre del atributo [!DNL SAP Subscription Billing] de la lista de atributos del cliente [schema](https://api.sap.com/api/BusinessPartner_APIs/schema).
-   ![Captura de pantalla de IU de Platform donde lastName se define como el atributo objetivo.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform donde lastName se define como el atributo objetivo.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
 
 >[!IMPORTANT]
 >
@@ -261,7 +261,7 @@ A continuación, puede agregar cualquier asignación adicional entre su esquema 
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
 A continuación se muestra un ejemplo con asignaciones de atributos obligatorias y opcionales en las que el cliente es un individuo:
-![Imagen de la interfaz de usuario de Platform que muestra un ejemplo con asignaciones de atributos obligatorias y opcionales donde el cliente es un individuo.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra un ejemplo con asignaciones de atributos obligatorias y opcionales donde el cliente es un individuo.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
 >[!TAB Cliente corporativo]
 
@@ -271,7 +271,7 @@ A continuación se muestra un ejemplo con asignaciones de atributos obligatorias
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
 A continuación se muestra un ejemplo con asignaciones de atributos obligatorias y opcionales en las que el cliente es una empresa:
-![Imagen de la interfaz de usuario de Platform que muestra un ejemplo con asignaciones de atributos obligatorias y opcionales donde el cliente es una empresa.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra un ejemplo con asignaciones de atributos obligatorias y opcionales donde el cliente es una empresa.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
 
 >[!ENDTABS]
 
@@ -279,10 +279,10 @@ Cuando termine de proporcionar las asignaciones para la conexión de destino, se
 
 ### Programar exportación de audiencias y ejemplo {#schedule-segment-export-example}
 
-Al realizar el paso [Programar exportación de audiencias](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), debe asignar manualmente las audiencias de Platform a los [atributos](#prerequisites-attribute) en [!DNL SAP Subscription Billing].
+Al realizar el paso [Programar exportación de audiencias](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), debe asignar manualmente las audiencias de Experience Platform a los [atributos](#prerequisites-attribute) en [!DNL SAP Subscription Billing].
 
 A continuación se muestra un ejemplo del paso de exportación Programar audiencia con la ubicación de [!DNL SAP Commerce] **[!UICONTROL ID de asignación]** resaltada:
-![Imagen de Platform que muestra la exportación de audiencia programada con identificadores de asignación rellenados.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
+![Imagen de Experience Platform que muestra la exportación de audiencia programada con identificadores de asignación rellenados.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 Para ello, seleccione cada segmento y, a continuación, introduzca el nombre de la referencia personalizada de [!DNL SAP Subscription Billing] en el campo [!DNL SAP Commerce] **[!UICONTROL ID de asignación]** del conector de destino. Para obtener instrucciones sobre cómo crear referencias personalizadas, consulte la sección [Crear referencias personalizadas en [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
 
@@ -297,11 +297,11 @@ A continuación se muestra un ejemplo **[!UICONTROL Tipo de referencia]** de [!D
 ![Imagen que muestra dónde crear una referencia personalizada en la facturación de suscripción a SAP.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
 A continuación se muestra un ejemplo del paso Programar exportación de audiencias, con una audiencia seleccionada y su correspondiente [!DNL SAP Commerce] **[!UICONTROL ID. de asignación]** resaltado:
-![Imagen de Platform que muestra la exportación de audiencia programada con identificadores de asignación rellenados.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
+![Imagen de Experience Platform que muestra la exportación de audiencia programada con identificadores de asignación rellenados.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
 Como se muestra, el valor dentro del campo **[!UICONTROL ID de asignación]** debe coincidir exactamente con el valor [!DNL SAP Subscription Billing] **[!UICONTROL Tipo de referencia]**
 
-Repita esta sección para cada audiencia de Platform activada.
+Repita esta sección para cada audiencia de Experience Platform activada.
 
 En función de la imagen que se muestra arriba, donde ha seleccionado dos audiencias, la asignación sería la siguiente:
 

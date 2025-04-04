@@ -2,18 +2,18 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consulta
 solution: Experience Platform
 title: Introducción al servicio de consultas
-description: Obtenga información acerca de la función del servicio de consultas dentro del Experience Platform.
+description: Obtenga información acerca de la función que desempeña el servicio de consultas en Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 # Introducción al servicio de consultas
 
-Adobe Experience Platform ingiere datos de una amplia variedad de fuentes. Un desafío importante para los especialistas en marketing es dar sentido a estos datos para obtener perspectivas sobre sus clientes. Para consultar datos en Platform, puede utilizar SQL estándar y Adobe Experience Platform Query Service. Puede usar el Servicio de consultas para unirse a cualquier conjunto de datos del lago de datos y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, el aprendizaje automático o para su inserción en [!DNL Real-Time Customer Profile]. Este documento proporciona información general sobre la función que desempeña el servicio de consultas dentro del Experience Platform.
+Adobe Experience Platform ingiere datos de una amplia variedad de fuentes. Un desafío importante para los especialistas en marketing es dar sentido a estos datos para obtener perspectivas sobre sus clientes. Para consultar datos en Experience Platform, puede utilizar SQL estándar y Adobe Experience Platform Query Service. Puede usar el Servicio de consultas para unirse a cualquier conjunto de datos del lago de datos y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, el aprendizaje automático o para su inserción en [!DNL Real-Time Customer Profile]. Este documento proporciona información general sobre la función que desempeña el servicio de consultas en Experience Platform.
 
 Puede utilizar el servicio de consultas para conectar el recorrido del cliente con conexión y comprender la atribución omnicanal de su marca. El siguiente vídeo muestra cómo una empresa de experiencia puede utilizar el servicio de consultas para tratar casos de uso clave y cómo funciona el servicio de consultas.
 
@@ -34,7 +34,7 @@ Para empezar a utilizar rápidamente las funciones del servicio de consultas, se
 
 ## Servicio de consultas y servicios de Experience Platform {#experience-platform-services}
 
-El servicio de consulta interactúa y se puede utilizar con varios servicios de Experience Platform. Para sacar el máximo partido a las capacidades del servicio de consultas, debe familiarizarse con estos servicios y con cómo interactúan con él. La [página de aterrizaje de documentación del Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html) proporciona resúmenes y vínculos a las capacidades de la plataforma.
+El servicio de consulta interactúa y se puede utilizar con varios servicios de Experience Platform. Para sacar el máximo partido a las capacidades del servicio de consultas, debe familiarizarse con estos servicios y con cómo interactúan con él. La [página de aterrizaje de documentación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html) proporciona resúmenes y vínculos a las capacidades de la plataforma.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
@@ -50,15 +50,15 @@ El servicio de consultas ofrece un enfoque flexible para el procesamiento de dat
 
 ### Abandono de exploración de Adobe Analytics {#abandon-browse}
 
-Este ejemplo de abandono de [exploración se centra en el uso de datos de Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) para crear una audiencia procesable en particular. El servicio de consulta admite una lógica compleja para la segmentación a fin de calcular varios atributos personalizados para su uso descendente o para simplificar en gran medida la forma en que se crean las audiencias.
+Este ejemplo de [abandono de exploración se centra en el uso de datos de Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) para crear una audiencia procesable en particular. El servicio de consulta admite una lógica compleja para la segmentación a fin de calcular varios atributos personalizados para su uso descendente o para simplificar en gran medida la forma en que se crean las audiencias.
 
 ## Generación de perspectivas con paneles personalizados {#custom-dashboards}
 
-Con Adobe Experience Platform, puede ingerir, almacenar, estructurar y extraer todos los conjuntos de datos almacenados, incluidos los datos de comportamiento, CRM y de punto de venta. Con [!DNL Experience Platform's Query Service], puede consultar estos conjuntos de datos y responder preguntas específicas sobre la empresa y, a continuación, empezar a generar perspectivas impactantes. Aprenda a crear y administrar paneles personalizados, donde puede crear, agregar y editar widgets personalizados para visualizar métricas clave con [paneles definidos por el usuario](../dashboards/standard-dashboards.md). Incluso puede [personalizar sus propios informes de Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) para los casos de uso de KPI y marketing mediante consultas SQL con los modelos de datos de Real-time Customer Data Platform Insights.
+Con Adobe Experience Platform, puede ingerir, almacenar, estructurar y extraer todos los conjuntos de datos almacenados, incluidos los datos de comportamiento, CRM y de punto de venta. Con [!DNL Experience Platform's Query Service], puede consultar estos conjuntos de datos y responder preguntas específicas sobre la empresa y, a continuación, empezar a generar perspectivas impactantes. Aprenda a crear y administrar paneles personalizados, donde puede crear, agregar y editar widgets personalizados para visualizar métricas clave con [paneles definidos por el usuario](../dashboards/standard-dashboards.md). Incluso puede [personalizar sus propios informes de Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) para los casos de uso de KPI y marketing mediante consultas SQL con los modelos de datos de Real-Time Customer Data Platform Insights.
 
 ## Pasos siguientes y recursos adicionales
 
-Al leer este documento, se le ha presentado el Servicio de consultas y cómo funciona dentro del ámbito más amplio de Experience Platform. Para continuar aprendiendo sobre las funciones del servicio de consultas, se recomienda leer los siguientes documentos:
+Al leer este documento, se le ha presentado el Servicio de consultas y cómo funciona dentro del ámbito general de Experience Platform. Para continuar aprendiendo sobre las funciones del servicio de consultas, se recomienda leer los siguientes documentos:
 
 - La [guía para desarrolladores de Query Service](api/getting-started.md): Para obtener más información sobre cómo interactuar con varios extremos dentro de la API de Query Service.
 - La [guía de interfaz de usuario del servicio de consultas](ui/overview.md): Para obtener más información sobre cómo usar el Editor de consultas y la interfaz de usuario.

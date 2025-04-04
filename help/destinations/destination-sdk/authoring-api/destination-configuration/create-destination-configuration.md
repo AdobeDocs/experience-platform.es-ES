@@ -1,10 +1,10 @@
 ---
-description: Aprenda a estructurar una llamada de API para crear una configuración de destino a través del Adobe Experience Platform Destination SDK.
+description: Obtenga información sobre cómo estructurar una llamada de API para crear una configuración de destino a través de Adobe Experience Platform Destination SDK.
 title: Crear una configuración de destino
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1199'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Para obtener una descripción detallada de las capacidades que puede configurar 
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de la API de configuración de destino {#get-started}
 
@@ -38,7 +38,7 @@ Antes de continuar, revisa la [guía de introducción](../../getting-started.md)
 
 ## Crear una configuración de destino {#create}
 
-Puede crear una nueva configuración de destino realizando una solicitud de POST al extremo `/authoring/destinations`.
+Puede crear una nueva configuración de destino realizando una petición POST al extremo `/authoring/destinations`.
 
 >[!TIP]
 >
@@ -191,37 +191,37 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `name` | Cadena | Indica el título del destino en el catálogo del Experience Platform. |
-| `description` | Cadena | Proporcione una descripción que el Adobe utilizará en el catálogo de destinos de Experience Platform para la tarjeta de destino. Apunte a no más de 4-5 oraciones. ![Imagen de IU de Platform que muestra la descripción del destino.](../../assets/authoring-api/destination-configuration/destination-description.png "Descripción del destino"){width="100" zoomable="yes"} |
+| `name` | Cadena | Indica el título del destino en el catálogo de Experience Platform. |
+| `description` | Cadena | Proporcione una descripción que Adobe utilizará en el catálogo de destinos de Experience Platform para la tarjeta de destino. Apunte a no más de 4-5 oraciones. ![Imagen de la interfaz de usuario de Experience Platform que muestra la descripción del destino.](../../assets/authoring-api/destination-configuration/destination-description.png "Descripción del destino"){width="100" zoomable="yes"} |
 | `status` | Cadena | Indica el estado del ciclo vital de la tarjeta de destino. Los valores aceptados son `TEST`, `PUBLISHED` y `DELETED`. Use `TEST` la primera vez que configure el destino. |
-| `customerAuthenticationConfigurations.authType` | Cadena | Indica la configuración utilizada para autenticar a los clientes Experience Platform en el servidor de destino. Consulte [configuración de autenticación de cliente](../../functionality/destination-configuration/customer-authentication.md) para obtener información detallada sobre los tipos de autenticación admitidos. |
-| `customerDataFields.name` | Cadena | Proporcione un nombre para el campo personalizado que está introduciendo. <br/><br/> Consulte [Campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. ![Imagen de IU de Platform que muestra campos de datos de clientes.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "Campo de datos del cliente"){width="100" zoomable="yes"} |
+| `customerAuthenticationConfigurations.authType` | Cadena | Indica la configuración utilizada para autenticar clientes de Experience Platform en el servidor de destino. Consulte [configuración de autenticación de cliente](../../functionality/destination-configuration/customer-authentication.md) para obtener información detallada sobre los tipos de autenticación admitidos. |
+| `customerDataFields.name` | Cadena | Proporcione un nombre para el campo personalizado que está introduciendo. <br/><br/> Consulte [Campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. ![Imagen de la interfaz de usuario de Experience Platform que muestra campos de datos del cliente.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "Campo de datos del cliente"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | Cadena | Indica qué tipo de campo personalizado está introduciendo. Los valores aceptados son `string`, `object`, `integer`. <br/><br/> Consulte [Campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. |
-| `customerDataFields.title` | Cadena | Indica el nombre del campo tal como lo ven los clientes en la interfaz de usuario del Experience Platform. <br/><br/> Consulte [Campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. |
+| `customerDataFields.title` | Cadena | Indica el nombre del campo tal como lo ven los clientes en la interfaz de usuario de Experience Platform. <br/><br/> Consulte [Campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. |
 | `customerDataFields.description` | Cadena | Proporcione una descripción para el campo personalizado. Consulte [Campos de datos de clientes](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. |
 | `customerDataFields.isRequired` | Booleano | Indica si este campo es necesario en el flujo de trabajo de configuración de destino. <br/><br/> Consulte [Campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. |
 | `customerDataFields.enum` | Cadena | Procesa el campo personalizado como un menú desplegable y enumera las opciones disponibles para el usuario. <br/><br/> Consulte [Campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. |
 | `customerDataFields.default` | Cadena | Define el valor predeterminado de una lista `enum`. |
 | `customerDataFields.pattern` | Cadena | Aplica un motivo al campo personalizado, si es necesario. Utilice expresiones regulares para aplicar un patrón. Por ejemplo, si los ID de cliente no incluyen números ni guiones bajos, escriba `^[A-Za-z]+$` en este campo. <br/><br/> Consulte [Campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) para obtener información detallada sobre esta configuración. |
-| `uiAttributes.documentationLink` | Cadena | Hace referencia a la página de documentación del [catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog) para su destino. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre de su destino. Para un destino llamado Moviestar, utilizaría `https://www.adobe.com/go/destinations-moviestar-en`. Tenga en cuenta que este vínculo solo funciona después de que el Adobe active el destino y se publique la documentación. <br/><br/> Consulte [atributos de interfaz de usuario](../../functionality/destination-configuration/ui-attributes.md) para obtener información detallada sobre esta configuración. ![Imagen de IU de Platform que muestra el enlace de documentación.](../../assets/authoring-api/destination-configuration/documentation-url.png "URL de documentación"){width="100" zoomable="yes"} |
+| `uiAttributes.documentationLink` | Cadena | Hace referencia a la página de documentación del [catálogo de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog) para su destino. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre de su destino. Para un destino llamado Moviestar, utilizaría `https://www.adobe.com/go/destinations-moviestar-en`. Tenga en cuenta que este vínculo solo funciona después de que Adobe active el destino y se publique la documentación. <br/><br/> Consulte [atributos de interfaz de usuario](../../functionality/destination-configuration/ui-attributes.md) para obtener información detallada sobre esta configuración. ![Imagen de la interfaz de usuario de Experience Platform que muestra el vínculo de documentación.](../../assets/authoring-api/destination-configuration/documentation-url.png "URL de documentación"){width="100" zoomable="yes"} |
 | `uiAttributes.category` | Cadena | Se refiere a la categoría asignada a su destino en Adobe Experience Platform. Para obtener más información, lea [Categorías de destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories). Use uno de los siguientes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Consulte [atributos de interfaz de usuario](../../functionality/destination-configuration/ui-attributes.md) para obtener información detallada sobre esta configuración. |
 | `uiAttributes.connectionType` | Cadena | El tipo de conexión, según el destino. Valores compatibles: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | Cadena | Se refiere al tipo de exportación de datos compatible con el destino. Se establece en `Streaming` para integraciones basadas en API o en `Batch` al exportar archivos a sus destinos. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica si los clientes pueden asignar atributos de perfil estándar a la identidad que está configurando. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica si los clientes pueden asignar identidades que pertenecen a [áreas de nombres personalizadas](/help/identity-service/features/namespaces.md#manage-namespaces) a la identidad que está configurando. |
-| `identityNamespaces.externalId.transformation` | Cadena | _No se muestra en la configuración de ejemplo_. Se utiliza, por ejemplo, cuando el cliente [!DNL Platform] tiene direcciones de correo electrónico sin formato como atributo y la plataforma solo acepta correos electrónicos con hash. Aquí es donde proporcionaría la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico a minúsculas y, a continuación, a hash). |
+| `identityNamespaces.externalId.transformation` | Cadena | _No se muestra en la configuración de ejemplo_. Se utiliza, por ejemplo, cuando el cliente [!DNL Experience Platform] tiene direcciones de correo electrónico sin formato como atributo y la plataforma solo acepta correos electrónicos con hash. Aquí es donde proporcionaría la transformación que debe aplicarse (por ejemplo, transformar el correo electrónico a minúsculas y, a continuación, a hash). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Indica qué [áreas de nombres de identidad estándar](/help/identity-service/features/namespaces.md#standard) (por ejemplo, IDFA) los clientes pueden asignar a la identidad que está configurando. <br> Si usa `acceptedGlobalNamespaces`, puede usar `"requiredTransformation":"sha256(lower($))"` para escribir direcciones de correo electrónico o números de teléfono en minúsculas y hash. |
-| `destinationDelivery.authenticationRule` | Cadena | Indica cómo se conectan los clientes de [!DNL Platform] a su destino. Los valores aceptados son `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` si los clientes de Platform inician sesión en el sistema con un nombre de usuario y una contraseña, un token de portador u otro método de autenticación. Por ejemplo, seleccionaría esta opción si también seleccionara `authType: OAUTH2` o `authType:BEARER` en `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` si existe un sistema de autenticación global entre el Adobe y el destino y el cliente [!DNL Platform] no necesita proporcionar credenciales de autenticación para conectarse al destino. En este caso, debe crear un objeto de credenciales con la configuración de la API [credentials](../../credentials-api/create-credential-configuration.md). </li><li>Use `NONE` si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
+| `destinationDelivery.authenticationRule` | Cadena | Indica cómo se conectan los clientes de [!DNL Experience Platform] a su destino. Los valores aceptados son `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` si los clientes de Experience Platform inician sesión en el sistema con un nombre de usuario y una contraseña, un token de portador u otro método de autenticación. Por ejemplo, seleccionaría esta opción si también seleccionara `authType: OAUTH2` o `authType:BEARER` en `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` si existe un sistema de autenticación global entre Adobe y su destino y el cliente [!DNL Experience Platform] no necesita proporcionar credenciales de autenticación para conectarse a su destino. En este caso, debe crear un objeto de credenciales con la configuración de la API [credentials](../../credentials-api/create-credential-configuration.md). </li><li>Use `NONE` si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
 | `destinationDelivery.destinationServerId` | Cadena | `instanceId` de la [plantilla de servidor de destino](../destination-server/create-destination-server.md) utilizada para este destino. |
 | `backfillHistoricalProfileData` | Booleano | Controla si los datos de perfil históricos se exportan cuando las audiencias se activan en el destino. Establezca siempre esto en `true`. |
 | `segmentMappingConfig.mapUserInput` | Booleano | Controla si el usuario introduce el ID de asignación de audiencia en el flujo de trabajo de activación de destino. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Booleano | Controla si el ID de asignación de audiencia en el flujo de trabajo de activación de destino es el ID de audiencia de Experience Platform. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controla si el ID de asignación de audiencia en el flujo de trabajo de activación de destino es el nombre de audiencia del Experience Platform. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controla si el ID de asignación de audiencia en el flujo de trabajo de activación de destino es el nombre de audiencia de Experience Platform. |
 | `segmentMappingConfig.audienceTemplateId` | Cadena | `instanceId` de la [plantilla de metadatos de audiencia](../../metadata-api/create-audience-template.md) utilizada para este destino. |
 | `schemaConfig.profileFields` | Matriz | Cuando agregue `profileFields` predefinido como se muestra en la configuración anterior, los usuarios tendrán la opción de asignar atributos de Experience Platform a los atributos predefinidos del lado del destino. |
-| `schemaConfig.profileRequired` | Booleano | Utilice `true` si los usuarios deben poder asignar atributos de perfil de Experience Platform a atributos personalizados del lado del destino, como se muestra en la configuración de ejemplo anterior. |
+| `schemaConfig.profileRequired` | Booleano | Use `true` si los usuarios deben poder asignar atributos de perfil de Experience Platform a atributos personalizados del lado del destino, como se muestra en el ejemplo de configuración anterior. |
 | `schemaConfig.segmentRequired` | Booleano | Usar siempre `segmentRequired:true`. |
-| `schemaConfig.identityRequired` | Booleano | Use `true` si los usuarios deben poder asignar áreas de nombres de identidad del Experience Platform al esquema deseado. |
+| `schemaConfig.identityRequired` | Booleano | Use `true` si los usuarios deben poder asignar áreas de nombres de identidad de Experience Platform al esquema deseado. |
 
 {style="table-layout:auto"}
 
@@ -235,11 +235,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 ## Administración de errores de API
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cómo crear una nueva configuración de destino a través del extremo de API del Destination SDK `/authoring/destinations`.
+Después de leer este documento, ahora sabe cómo crear una nueva configuración de destino a través del extremo de la API de Destination SDK `/authoring/destinations`.
 
 Para obtener más información acerca de lo que puede hacer con este extremo, consulte los siguientes artículos:
 

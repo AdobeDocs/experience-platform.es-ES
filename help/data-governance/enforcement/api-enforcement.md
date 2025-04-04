@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;aplicación de políticas;aplicación automática;aplicación basada en API;gobernanza de datos;prueba
+keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;Aplicación automática;Aplicación basada en API;Gobernanza de datos;Pruebas
 solution: Experience Platform
 title: Aplicar directivas de uso de datos mediante la API del servicio de directivas
 type: Tutorial
 description: Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de marketing contra esas etiquetas, puede utilizar la API del servicio de políticas para evaluar si una acción de marketing realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para gestionar las infracciones de directivas en función de la respuesta de la API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 2%
 
 ---
@@ -26,10 +26,10 @@ Este documento proporciona pasos sobre cómo usar la API [!DNL Policy Service] p
 
 Este tutorial requiere una comprensión práctica de los siguientes conceptos clave implicados en la aplicación de las políticas de uso de datos:
 
-* [Control de datos](../home.md): El marco por el cual [!DNL Platform] aplica el cumplimiento del uso de datos.
+* [Control de datos](../home.md): El marco por el cual [!DNL Experience Platform] aplica el cumplimiento del uso de datos.
    * [Etiquetas de uso de datos](../labels/overview.md): Las etiquetas de uso de datos se aplican a conjuntos de datos (y/o campos individuales dentro de esos conjuntos de datos), especificando restricciones sobre cómo se pueden utilizar esos datos.
    * [Políticas de uso de datos](../policies/overview.md): Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing permitidas o restringidas para determinados conjuntos de etiquetas de uso de datos.
-* [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Antes de comenzar este tutorial, revisa la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API de [!DNL Policy Service] correctamente, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
@@ -132,7 +132,7 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
 
 ## Evaluar mediante conjuntos de datos
 
-Puede evaluar una política de uso de datos probando una acción de marketing con uno o más conjuntos de datos de los que se pueden recopilar etiquetas. Para ello, realice una solicitud de POST a `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` y proporcione los identificadores del conjunto de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
+Puede evaluar una política de uso de datos probando una acción de marketing con uno o más conjuntos de datos de los que se pueden recopilar etiquetas. Para ello, realice una petición POST a `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` y proporcione los ID del conjunto de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 
 **Formato de API**
 
@@ -376,4 +376,4 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
 
 Al leer este documento, ha comprobado correctamente las infracciones de directivas al realizar una acción de marketing en un conjunto de datos o en un conjunto de etiquetas de uso de datos. Con los datos devueltos en las respuestas de API, puede configurar protocolos dentro de su aplicación de experiencia para aplicar correctamente infracciones de directivas cuando se producen.
 
-Para obtener información sobre cómo Platform proporciona automáticamente la aplicación de directivas para los segmentos activados, consulte la guía sobre [aplicación automática](./auto-enforcement.md).
+Para obtener información sobre cómo Experience Platform aplica automáticamente las directivas a los segmentos activados, consulte la guía sobre [aplicación automática](./auto-enforcement.md).

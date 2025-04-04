@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en el lago de datos
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según lo establecido por las regulaciones de privacidad legales y organizativas. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad de datos de clientes almacenados en el lago de datos.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1430'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 >
 >Esta guía solo explica cómo realizar solicitudes de privacidad para el lago de datos en Experience Platform. Si también planea realizar solicitudes de privacidad para el almacén de datos del perfil del cliente en tiempo real, consulte la guía sobre procesamiento de [solicitudes de privacidad para el perfil](../profile/privacy.md) además de este tutorial.
 >
->Para obtener información sobre cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Para ver los pasos de cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [documentación de Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Introducción
 
@@ -34,7 +34,7 @@ Se recomienda tener una comprensión práctica de los siguientes [!DNL Experienc
 
 ## Explicación de los espacios de nombres de identidad {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] vincula los datos de identidad de los clientes entre sistemas y dispositivos. [!DNL Identity Service] utiliza áreas de nombres de identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Un área de nombres puede representar un concepto genérico como una dirección de correo electrónico (&quot;correo electrónico&quot;) o asociar la identidad a una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o Adobe Target ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] vincula los datos de identidad de los clientes entre sistemas y dispositivos. [!DNL Identity Service] utiliza áreas de nombres de identidad para proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Un área de nombres puede representar un concepto genérico, como una dirección de correo electrónico (&quot;correo electrónico&quot;) o asociar la identidad a una aplicación específica, como un ID de Adobe Advertising Cloud (&quot;AdCloud&quot;) o un ID de Adobe Target (&quot;TNTID&quot;).
 
 [!DNL Identity Service] mantiene un almacén de áreas de nombres de identidad definidas globalmente (estándar) y definidas por el usuario (personalizadas). Las áreas de nombres estándar están disponibles para todas las organizaciones (por ejemplo, &quot;correo electrónico&quot; y &quot;ECID&quot;), mientras que su organización también puede crear áreas de nombres personalizadas para adaptarlas a sus necesidades particulares.
 
@@ -73,7 +73,7 @@ Una vez que haya establecido los campos apropiados dentro del esquema como campo
 >
 >En esta sección también se da por hecho que sabe cómo realizar llamadas a la API de Registro de esquemas. Para obtener información importante relacionada con el uso de la API, incluido el conocimiento de `{TENANT_ID}` y el concepto de contenedores, consulte la sección [introducción](../xdm/api/getting-started.md) de la guía de la API.
 
-Puede agregar un descriptor de identidad al esquema XDM de un conjunto de datos realizando una solicitud del POST al extremo `/descriptors` en la API [!DNL Schema Registry].
+Puede agregar un descriptor de identidad al esquema XDM de un conjunto de datos realizando una petición POST al extremo `/descriptors` en la API [!DNL Schema Registry].
 
 **Formato de API**
 
@@ -147,7 +147,7 @@ En la siguiente sección se describe cómo realizar solicitudes de privacidad pa
 
 ### Uso de la IU
 
-Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Lago de datos de AEP]** en **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en el lago de datos.
+Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL AEP Data Lake]** en **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en el lago de datos.
 
 ![Imagen que muestra el producto del lago de datos seleccionado en el cuadro de diálogo de creación de solicitud de privacidad](./images/privacy/product-value.png)
 
@@ -200,11 +200,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform procesa las solicitudes de privacidad en todas las [zonas protegidas](../sandboxes/home.md) que pertenecen a su organización. Como resultado, el sistema ignora cualquier encabezado `x-sandbox-name` incluido en la solicitud.
+>Experience Platform procesa las solicitudes de privacidad en todas las [zonas protegidas](../sandboxes/home.md) que pertenecen a su organización. Como resultado, el sistema ignora cualquier encabezado `x-sandbox-name` incluido en la solicitud.
 
 ## Eliminar procesamiento de solicitudes
 
-Cuando [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Platform] envía una confirmación a [!DNL Privacy Service] de que la solicitud se ha recibido y de que los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del lago de datos en un plazo de siete días. Durante ese período de siete días, los datos se eliminan de forma suave y, por lo tanto, ningún servicio de [!DNL Platform] puede obtener acceso a ellos.
+Cuando [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Experience Platform] envía una confirmación a [!DNL Privacy Service] de que la solicitud se ha recibido y de que los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del lago de datos en un plazo de siete días. Durante ese período de siete días, los datos se eliminan de forma suave y, por lo tanto, ningún servicio de [!DNL Experience Platform] puede obtener acceso a ellos.
 
 Si también incluyó `ProfileService` o `identity` en la solicitud de privacidad, sus datos asociados se administran por separado. Consulte la sección sobre [eliminar el procesamiento de solicitudes para el perfil](../profile/privacy.md#delete) para obtener más información.
 

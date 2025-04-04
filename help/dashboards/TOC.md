@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 41%
+source-wordcount: '143'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 41%
 * [Permisos de acceso del panel](permissions.md)
 * [Inventario de paneles](inventory.md)
 * [Paneles estándar](standard-dashboards.md)
-* [Descargar tableros para el PDF](download.md)
+* [Descargar tableros en PDF](download.md)
 * Datos de SQL: query pro mode {#sql-insights-query-pro-mode}
    * [Información general](sql-insights-query-pro-mode/overview.md)
    * Plantillas de Distiller de datos {#templates}
@@ -57,10 +57,10 @@ ht-degree: 41%
 * Casos de uso de perspectivas {#insights-use-cases}
    * [Análisis de consentimiento](insights-use-cases/consent-analysis.md)
 * Modelos de datos disponibles {#data-models}
-   * [B2B edition del modelo de datos de Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
-   * [Edición B2C del modelo de datos de Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
+   * [B2B edition del modelo de datos de Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
+   * [Edición B2C del modelo de datos de Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Integraciones de aplicaciones {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Conjuntos de datos del panel de consultas](query.md)
-* [Ver SQL de perspectiva](view-sql.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
+* [Ver insight SQL](view-sql.md)
+* [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

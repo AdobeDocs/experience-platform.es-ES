@@ -3,10 +3,10 @@ title: Crear una conexión de Azure Event Hubs con Source en la interfaz de usua
 description: Obtenga información sobre cómo crear una conexión de origen de Azure Event Hubs mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 2%
+source-wordcount: '1098'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->El origen [!DNL Azure Event Hubs] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
+>El origen [!DNL Azure Event Hubs] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time Customer Data Platform Ultimate.
 
 Lea este tutorial para aprender a crear una cuenta de [!DNL Azure Event Hubs] mediante la interfaz de usuario de Adobe Experience Platform.
 
@@ -77,11 +77,11 @@ Para obtener más información sobre [!DNL Azure Active Directory], lea la guía
 
 >[!ENDTABS]
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Event Hubs] al Experience Platform.
+Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Event Hubs] a Experience Platform.
 
 ## Conectar su cuenta de [!DNL Event Hubs]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
@@ -142,4 +142,4 @@ Para crear una cuenta de [!DNL Event Hubs] con la autenticación de Azure Active
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha conectado su cuenta de [!DNL Event Hubs] al Experience Platform. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento en la nube al Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+Al seguir este tutorial, ha conectado su cuenta de [!DNL Event Hubs] a Experience Platform. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para traer datos de su almacenamiento en la nube a Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).

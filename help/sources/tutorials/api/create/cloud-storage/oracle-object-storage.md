@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Almacenamiento de objetos de Oracle;almacenamiento de objetos de oracle
+keywords: Experience Platform;inicio;temas populares;Oracle Object Storage;oracle object storage
 solution: Experience Platform
-title: Creación de una conexión base de almacenamiento de objetos de Oracle mediante la API de Flow Service
+title: Creación de una conexión base de Oracle Object Storage mediante la API de Flow Service
 type: Tutorial
-description: Obtenga información sobre cómo conectar Adobe Experience Platform al almacenamiento de objetos de Oracle mediante la API de Flow Service.
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a Oracle Object Storage mediante la API de Flow Service.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 4%
 
 ---
@@ -22,8 +22,8 @@ Este tutorial lo guiará para crear una conexión base para [!DNL Oracle Object 
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a [!DNL Oracle Object Storage] mediante la API [!DNL Flow Service].
 
@@ -40,17 +40,17 @@ Para que [!DNL Flow Service] se conecte a [!DNL Oracle Object Storage], debe pro
 | `folderPath` | La ruta de carpeta permitida requerida si el usuario tiene acceso restringido. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL Oracle Object Storage] es: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
-Para obtener más información sobre cómo obtener estos valores, consulte la [guía de autenticación de almacenamiento de objetos de Oracle](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Para obtener más información sobre cómo obtener estos valores, consulte la [guía de autenticación de Oracle Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
-Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL Oracle Object Storage] como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una petición POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Oracle Object Storage] como parte de los parámetros de solicitud.
 
 **Formato de API**
 

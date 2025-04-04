@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;iab;tcf;consentimiento;
+keywords: Experience Platform;inicio;temas populares;esquema;XDM;perfil individual;campos;esquemas;Diseño de esquema;grupo de campos;grupo de campos;iab;tcf;consentimiento;
 solution: Experience Platform
 title: Grupo de campos de consentimiento de IAB TCF 2.0 para esquemas de perfil
 description: Obtenga información acerca del grupo de campos Esquema de consentimiento TCF 2.0 de IAB para la clase Perfil individual de XDM.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ El siguiente JSON muestra la estructura del mapa `identityPrivacyInfo`.
 }
 ```
 
-Como se muestra en el ejemplo, cada clave de nivel raíz de `xdm:identityPrivacyInfo` corresponde a un área de nombres de identidad reconocida por el servicio de identidad. A su vez, cada propiedad de área de nombres debe tener al menos una subpropiedad cuya clave coincida con el valor de identidad correspondiente del cliente para ese área de nombres. En este ejemplo, el cliente se identifica con un valor de ID de Experience Cloud (`ECID`) de `13782522493631189`.
+Como se muestra en el ejemplo, cada clave de nivel raíz de `xdm:identityPrivacyInfo` corresponde a un área de nombres de identidad reconocida por el servicio de identidad. A su vez, cada propiedad de área de nombres debe tener al menos una subpropiedad cuya clave coincida con el valor de identidad correspondiente del cliente para ese área de nombres. En este ejemplo, el cliente se identifica con un valor de Experience Cloud ID (`ECID`) de `13782522493631189`.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Como se muestra en el ejemplo, cada clave de nivel raíz de `xdm:identityPrivacy
 
 Para cada valor de identidad, se debe proporcionar una propiedad `identityIABConsent`, que proporciona el valor de consentimiento TCF para la identidad. El valor de esta propiedad debe ajustarse al tipo de datos [[!UICONTROL Cadena de consentimiento]](../../data-types/consent-string.md).
 
-Consulte la guía sobre la compatibilidad con [IAB TCF 2.0 en Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información sobre el caso de uso de este grupo de campos. Para obtener más información sobre el propio grupo de campos, consulte el repositorio XDM público:
+Consulte la guía sobre la compatibilidad con [IAB TCF 2.0 en Experience Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información sobre el caso de uso de este grupo de campos. Para obtener más información sobre el propio grupo de campos, consulte el repositorio XDM público:
 
 * [Ejemplo completado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

@@ -5,9 +5,9 @@ title: Monitorización de flujos de datos de origen mediante la API de Flow Serv
 type: Tutorial
 description: Este tutorial cubre los pasos para monitorizar los datos de ejecución de flujo en busca de integridad, errores y métricas mediante la API de Flow Service.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '411'
 ht-degree: 2%
 
 ---
@@ -24,16 +24,16 @@ Este tutorial cubre los pasos para supervisar los datos de ejecución de flujo e
 
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ## Monitorización de flujos de datos
 
-Para ver el estado del flujo de datos, realice una solicitud de GET a la API [!DNL Flow Service], proporcionando al mismo tiempo el ID de flujo correspondiente del flujo de datos.
+Para ver el estado del flujo de datos, realice una petición GET a la API [!DNL Flow Service], proporcionando al mismo tiempo el ID de flujo correspondiente del flujo de datos.
 
 **Formato de API**
 

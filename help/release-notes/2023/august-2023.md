@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2023
 description: Las notas de la versión de agosto de 2023 de Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1741'
-ht-degree: 43%
+source-wordcount: '1743'
+ht-degree: 40%
 
 ---
 
@@ -46,9 +46,9 @@ Para obtener más información, lea la [descripción general de Real-Time CDP](.
 
 ## Control de acceso basado en atributos {#abac}
 
-El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
+El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Experience Platform específicos de su organización.
 
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y otro tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y otros tipos personalizados de datos en todos los flujos de trabajo y recursos de Experience Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
 
 **Funciones nuevas o actualizadas**
 
@@ -142,7 +142,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Tipo de componente | Nombre | Actualizar descripción |
 | --- | --- | --- |
 | Extensión ([!UICONTROL Adobe Analytics ExperienceEvent Full Extension]) | [[!UICONTROL Datos de contexto]](https://github.com/adobe/xdm/pull/1761/files) | Se agregó el objeto de asignación [!UICONTROL Datos de contexto] a [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] para proporcionar datos de contexto para Adobe Analytics. |
-| Grupo de campo | Múltiple | Se agregaron varios campos a [[!UICONTROL Detalles del segmento de evento enriquecido]](https://github.com/adobe/xdm/pull/1760/files). |
+| Grupo de campo | Múltiples | Se agregaron varios campos a [[!UICONTROL Detalles del segmento de evento enriquecido]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}
 
@@ -162,7 +162,7 @@ Para obtener más información, lea la [descripción general del servicio de ide
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
+[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Experience Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
 **Funciones nuevas o actualizadas**
 

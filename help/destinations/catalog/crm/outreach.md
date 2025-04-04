@@ -3,9 +3,9 @@ keywords: crm;CRM;destinos de crm;Divulgación;Destino de crm de divulgación
 title: Conexión de divulgación
 description: El destino de Divulgación le permite exportar los datos de su cuenta y activarlos dentro de Divulgación para sus necesidades comerciales.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1698'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Como experto en marketing, puede ofrecer experiencias personalizadas a sus posib
 
 ## Requisitos previos {#prerequisites}
 
-### Requisitos previos del Experience Platform {#prerequisites-in-experience-platform}
+### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
 Antes de activar datos en el destino [!DNL Outreach], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
@@ -34,7 +34,7 @@ Consulte la documentación de Adobe para el [grupo de campos de esquema Detalles
 
 ### Requisitos previos de divulgación {#prerequisites-destination}
 
-Tenga en cuenta los siguientes requisitos previos de [!DNL Outreach] para exportar datos de Platform a su cuenta de [!DNL Outreach]:
+Tenga en cuenta los siguientes requisitos previos de [!DNL Outreach] para exportar datos de Experience Platform a su cuenta de [!DNL Outreach]:
 
 #### Necesita tener una cuenta de Outreach {#prerequisites-account}
 
@@ -83,8 +83,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li> Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Cada estado de segmento de [!DNL Outreach] se actualiza con el estado de audiencia correspondiente de Platform, según el valor de [!UICONTROL ID de asignación] proporcionado durante el paso [programación de audiencia](#schedule-segment-export-example).</li></ul> |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li> Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li> Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Cada estado de segmento de [!DNL Outreach] se actualiza con el estado de audiencia correspondiente de Experience Platform, según el valor de [!UICONTROL ID de asignación] proporcionado durante el paso [programación de audiencias](#schedule-segment-export-example).</li></ul> |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li> Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ En **[!UICONTROL destinos]** > **[!UICONTROL catálogo]**, busque [!DNL Outreach
 
 Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
 
-![Captura de pantalla de la interfaz de usuario de Platform que muestra cómo autenticarse en Outreach.](../../assets/catalog/crm/outreach/authenticate-destination.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo autenticarse en Outreach.](../../assets/catalog/crm/outreach/authenticate-destination.png)
 
 Se le mostrará la página de inicio de sesión [!DNL Outreach]. Proporcione su correo electrónico.
 
@@ -120,7 +120,7 @@ Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el
 ### Rellenar detalles de destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
-![Captura de pantalla de la interfaz de usuario de Platform que muestra cómo rellenar los detalles del destino de la divulgación.](../../assets/catalog/crm/outreach/destination-details.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo rellenar los detalles del destino de la divulgación.](../../assets/catalog/crm/outreach/destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
@@ -142,17 +142,17 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 ### Consideraciones sobre asignación y ejemplo {#mapping-considerations-example}
 
-Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL Outreach], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL Outreach], siga estos pasos:
+Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL Outreach], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Experience Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL Outreach], siga estos pasos:
 
 1. En el paso [!UICONTROL Asignación], haga clic en **[!UICONTROL Agregar nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
-   ![Captura de pantalla de la IU que muestra cómo agregar nueva asignación](../../assets/catalog/crm/outreach/add-new-mapping.png)
+   ![Captura de pantalla de la IU de Experience Platform que muestra cómo agregar nueva asignación](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. En la ventana [!UICONTROL Seleccionar campo de origen], elija la categoría **[!UICONTROL Seleccionar área de nombres de identidad]** y agregue las asignaciones que desee.
-   ![Captura de pantalla de IU que muestra la asignación de Source](../../assets/catalog/crm/outreach/source-mapping.png)
+   ![Captura de pantalla de IU de Experience Platform que muestra la asignación de Source](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. En la ventana [!UICONTROL Seleccionar campo de destino], seleccione el tipo de campo de destino al que desea asignar el campo de origen.
    * **[!UICONTROL Seleccionar área de nombres de identidad]**: seleccione esta opción para asignar el campo de origen a un área de nombres de identidad de la lista.
-     ![Captura de pantalla de la IU de Platform que muestra la asignación de Target mediante OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
+     ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la asignación de destino mediante OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Agregue la siguiente asignación entre su esquema de perfil XDM y su instancia [!DNL Outreach]:
 
@@ -161,7 +161,7 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
      | `Oid` | `OutreachId` | Sí |
 
    * **[!UICONTROL Seleccionar atributos personalizados]**: seleccione esta opción para asignar el campo de origen a un atributo personalizado que defina en el campo [!UICONTROL Nombre de atributo]. Consulte la [[!DNL Outreach] documentación del cliente potencial](https://api.outreach.io/api/v2/docs#prospect) para obtener una lista completa de los atributos admitidos.
-     ![Captura de pantalla de IU de Platform que muestra la asignación de destino con LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+     ![Captura de pantalla de la IU de Experience Platform que muestra la asignación de destino con LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Por ejemplo, según los valores que desee actualizar, agregue la siguiente asignación entre el esquema de perfil XDM y la instancia [!DNL Outreach]:
 
@@ -171,11 +171,11 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
      | `person.name.lastName` | `lastName` |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
-     ![Ejemplo de captura de pantalla de IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/outreach/mappings.png)
+     ![Ejemplo de captura de pantalla de IU de Experience Platform que muestra asignaciones de destino.](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Programar exportación de audiencias y ejemplo {#schedule-segment-export-example}
 
-* Al realizar el paso [Programar exportación de audiencias](../../ui/activate-segment-streaming-destinations.md), debe asignar manualmente las audiencias de Platform al atributo de campo personalizado en [!DNL Outreach].
+* Al realizar el paso [Programar exportación de audiencias](../../ui/activate-segment-streaming-destinations.md), debe asignar manualmente las audiencias de Experience Platform al atributo de campo personalizado en [!DNL Outreach].
 
 * Para ello, seleccione cada segmento e introduzca el valor numérico correspondiente que corresponde al campo *Campo personalizado `N` Etiqueta* de [!DNL Outreach] en el campo **[!UICONTROL ID de asignación]**.
 
@@ -188,29 +188,29 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
 
    * Por ejemplo:
 
-     | Campo [!DNL Outreach] | ID de asignación de plataforma |
+     | Campo [!DNL Outreach] | ID de asignación de Experience Platform |
      |---|---|
      | Etiqueta de campo personalizado `4` | `4` |
 
-     ![Captura de pantalla de la IU de Platform que muestra un ejemplo de ID de asignación durante la exportación de audiencia de Horario.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra un ejemplo de ID de asignación durante la exportación de audiencia de programación.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## Validar exportación de datos {#exported-data}
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
 1. Seleccione **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** para navegar a la lista de destinos.
-   ![Captura de pantalla de IU que muestra destinos de exploración.](../../assets/catalog/crm/outreach/browse-destinations.png)
+   ![Captura de pantalla de la IU de Experience Platform que muestra destinos de exploración.](../../assets/catalog/crm/outreach/browse-destinations.png)
 
 1. Seleccione el destino y valide que el estado es **[!UICONTROL enabled]**.
-   ![Captura de pantalla de IU de Platform que muestra la ejecución del flujo de datos de destinos para el destino seleccionado.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la ejecución del flujo de datos de destinos para el destino seleccionado.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
 1. Cambie a la ficha **[!DNL Activation data]** y, a continuación, seleccione un nombre de audiencia.
-   ![Captura de pantalla de IU de Platform que muestra datos de activación de destinos.](../../assets/catalog/crm/outreach/destinations-activation-data.png)
+   ![Captura de pantalla de la IU de Experience Platform que muestra datos de activación de destinos.](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro del segmento.
-   ![Captura de pantalla de IU de Platform que muestra el resumen del segmento.](../../assets/catalog/crm/outreach/segment.png)
+   ![Captura de pantalla de la IU de Experience Platform que muestra el resumen del segmento.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Inicie sesión en el sitio web de [!DNL Outreach], luego vaya a la página [!DNL Apps] > [!DNL Contacts] y compruebe si se han agregado los perfiles de la audiencia. Puede ver que cada estado de audiencia en [!DNL Outreach] se actualizó con el estado de audiencia correspondiente de Platform, según el valor de [!UICONTROL ID de asignación] proporcionado durante el paso [programación de audiencia](#schedule-segment-export-example).
+1. Inicie sesión en el sitio web de [!DNL Outreach], luego vaya a la página [!DNL Apps] > [!DNL Contacts] y compruebe si se han agregado los perfiles de la audiencia. Puede ver que cada estado de audiencia en [!DNL Outreach] se actualizó con el estado de audiencia correspondiente de Experience Platform, según el valor de [!UICONTROL ID de asignación] proporcionado durante el paso [programación de audiencia](#schedule-segment-export-example).
 
 ![Captura de pantalla de la interfaz de usuario de Outreach que muestra la página de Prospects de Outreach con los estados de audiencia actualizados.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
@@ -222,9 +222,9 @@ Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las política
 
 Al comprobar la ejecución de un flujo de datos, es posible que vea el siguiente mensaje de error: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![Captura de pantalla de IU de Platform que muestra el error de solicitud incorrecto.](../../assets/catalog/crm/outreach/error.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra el error de solicitud incorrecto.](../../assets/catalog/crm/outreach/error.png)
 
-Para corregir este error, compruebe que la [!UICONTROL ID de asignación] proporcionada en Platform para la audiencia [!DNL Outreach] sea válida y exista en [!DNL Outreach].
+Para corregir este error, compruebe que la [!UICONTROL ID de asignación] proporcionada en Experience Platform para la audiencia [!DNL Outreach] sea válida y exista en [!DNL Outreach].
 
 ## Recursos adicionales {#additional-resources}
 

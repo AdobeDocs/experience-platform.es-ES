@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Solución de problemas de orígenes
 description: Este documento proporciona respuestas a las preguntas frecuentes acerca de las fuentes de Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # Guía de resolución de problemas de orígenes
 
-Este documento proporciona respuestas a las preguntas frecuentes acerca de las fuentes de Adobe Experience Platform. Para preguntas y solucionar problemas relacionados con otros servicios de [!DNL Platform], incluidos los que se encuentran en todas las API de [!DNL Platform], consulte la [guía de solución de problemas para Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas frecuentes acerca de las fuentes de Adobe Experience Platform. Para obtener información y resolver problemas relacionados con otros servicios de [!DNL Experience Platform], incluidos los que se encuentran en todas las API de [!DNL Experience Platform], consulte la [guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
 ## Preguntas frecuentes
 
@@ -67,7 +67,7 @@ Todas las fuentes de ingesta por lotes admiten la ingesta parcial. Sin embargo, 
 
 ### ¿Cuándo debo usar la ingesta parcial?
 
-La ingesta parcial debería usarse si **no** tiene restricciones, como que todo el archivo se ingrese en Platform. Alternativamente, se debe utilizar la ingesta parcial si no le importa ingerir datos que puedan contener errores dentro de ella.
+La ingesta parcial debería usarse si **no** tiene restricciones, como que todo el archivo se ingrese en Experience Platform. Alternativamente, se debe utilizar la ingesta parcial si no le importa ingerir datos que puedan contener errores dentro de ella.
 
 ### ¿Cuál es el umbral de error típico de ingesta parcial?
 

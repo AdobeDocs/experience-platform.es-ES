@@ -3,9 +3,9 @@ title: La conexión de Trade Desk con CRM
 description: Active los perfiles en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos de CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1122'
 ht-degree: 5%
 
 ---
@@ -95,9 +95,9 @@ Para poder enviar o activar datos de audiencia a un destino, debe configurar una
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL ID del anunciante]**: tu [!DNL Trade Desk Advertiser ID], que puede compartir el administrador de cuentas de [!DNL Trade Desk] o que se encuentra en [!DNL Advertiser Preferences] en la interfaz de usuario de [!DNL Trade Desk].
 
-![Captura de pantalla de la interfaz de usuario de Platform que muestra cómo rellenar los detalles de destino.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo rellenar los detalles de destino.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Al conectarse al destino, la configuración de una directiva de control de datos es completamente opcional. Consulte la [descripción general del control de datos](/help/data-governance/policies/overview.md) del Experience Platform para obtener más detalles.
+Al conectarse al destino, la configuración de una directiva de control de datos es completamente opcional. Consulte la [descripción general del control de datos](/help/data-governance/policies/overview.md) de Experience Platform para obtener más información.
 
 ## Activar públicos en este destino {#activate}
 
@@ -110,17 +110,17 @@ Lea [activar datos de audiencia en destinos de exportación de perfiles por lote
 
 En la página **[!UICONTROL Programación]**, puede configurar la programación y los nombres de archivo para cada audiencia que esté exportando. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
 
-![Captura de pantalla de la IU de Platform para programar la activación de audiencias.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Captura de pantalla de la IU de Experience Platform para programar la activación de audiencias.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >Todas las audiencias activadas en [!DNL The Trade Desk] destino de CRM se establecen automáticamente en una frecuencia diaria y exportación de archivos completa.
 
-![Captura de pantalla de la IU de Platform para programar la activación de audiencias.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Captura de pantalla de la IU de Experience Platform para programar la activación de audiencias.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 En la página **[!UICONTROL Mapping]**, debe seleccionar atributos o áreas de nombres de identidad de la columna de origen y asignarlos a la columna de destino.
 
-![Captura de pantalla de la IU de Platform para asignar la activación de audiencia.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Captura de pantalla de la IU de Experience Platform para asignar la activación de audiencia.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 A continuación se muestra un ejemplo de asignación de identidad correcta al activar audiencias en [!DNL The Trade Desk] destino de CRM.
 
@@ -131,7 +131,7 @@ A continuación se muestra un ejemplo de asignación de identidad correcta al ac
 Selección de campos de origen:
 
 * Seleccione el área de nombres o atributo `Email` como identidad de origen si utiliza la dirección de correo electrónico sin procesar al ingerir datos.
-* Seleccione el área de nombres o el atributo `Email_LC_SHA256` como identidad de origen si ha creado un hash de las direcciones de correo electrónico de los clientes al ingerir datos en Platform.
+* Seleccione el área de nombres o el atributo `Email_LC_SHA256` como identidad de origen si ha creado un hash de las direcciones de correo electrónico de los clientes al ingerir datos en Experience Platform.
 
 Selección de campos de destino:
 
@@ -140,12 +140,12 @@ Selección de campos de destino:
 
 ## Validar exportación de datos {#validate}
 
-Para validar que los datos se exportan correctamente fuera del Experience Platform y en [!DNL The Trade Desk], busque las audiencias en el mosaico de datos de Adobe 1PD en [!DNL The Trade Desk] Data Management Platform (DMP). Estos son los pasos para encontrar el ID correspondiente en la interfaz de usuario de [!DNL Trade Desk]:
+Para validar que los datos se exportan correctamente desde Experience Platform a [!DNL The Trade Desk], busque las audiencias en el mosaico de datos de Adobe 1PD en [!DNL The Trade Desk] Data Management Platform (DMP). Estos son los pasos para encontrar el ID correspondiente en la interfaz de usuario de [!DNL Trade Desk]:
 
 1. En primer lugar, seleccione la ficha **[!UICONTROL Datos]** y revise la sección **[!UICONTROL Datos de origen]**.
 2. Desplácese hacia abajo en la página, en **[!UICONTROL Datos importados]**, encontrará el **[!UICONTROL Mosaico 1PD de Adobe]**.
 3. Haga clic en el mosaico**[!UICONTROL Adobe 1PD]** y se enumerarán todas las audiencias activadas en el destino [!DNL Trade Desk] para su anunciante. También puede utilizar la función de búsqueda.
-4. El ID de segmento # del Experience Platform aparecerá como el Nombre del segmento en la interfaz de usuario de [!DNL Trade Desk].
+4. El ID de segmento # de Experience Platform aparecerá como el nombre del segmento en la interfaz de usuario de [!DNL Trade Desk].
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

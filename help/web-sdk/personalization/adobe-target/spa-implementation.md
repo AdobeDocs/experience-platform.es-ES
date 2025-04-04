@@ -1,11 +1,11 @@
 ---
-title: Implementación de aplicaciones de una sola página para el SDK web de Adobe Experience Platform
-description: SPA Obtenga información sobre cómo crear una implementación de aplicación de una sola página () del SDK web de Adobe Experience Platform mediante Adobe Target.
-keywords: SPA SPA target;adobe target;vistas de xdm; vistas;aplicaciones de una sola página;ciclo de vida de la;prueba AB;prueba AB;segmentación de experiencias;XT;VEC
+title: Implementación de aplicaciones de una sola página para Adobe Experience Platform Web SDK
+description: Obtenga información sobre cómo crear una implementación de aplicación de una sola página (SPA) de Adobe Experience Platform Web SDK mediante Adobe Target.
+keywords: target;adobe target;vistas xdm; vistas;aplicaciones de una sola página;SPA;ciclo de vida de SPA;lado del cliente;prueba AB;segmentación de experiencias;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -13,25 +13,25 @@ ht-degree: 0%
 
 # Implementación de aplicación de una sola página
 
-El SDK web de Adobe Experience Platform SPA proporciona funciones enriquecidas que permiten a su empresa ejecutar personalizaciones en tecnologías de próxima generación del lado del cliente, como aplicaciones de una sola página ().
+Adobe Experience Platform Web SDK proporciona funciones enriquecidas que permiten a su empresa personalizar tecnologías de próxima generación del lado del cliente, como aplicaciones de una sola página (SPA).
 
 Los sitios web tradicionales funcionaban en modelos de navegación &quot;página a página&quot;, conocidos como aplicaciones de varias páginas, en las que los diseños de sitios web se asociaban perfectamente a direcciones URL y transiciones de una página web a otra requerida para la carga de páginas.
 
 Las aplicaciones web modernas, como las aplicaciones de una sola página, han adoptado un modelo que impulsa el uso rápido de la representación de la interfaz de usuario del explorador, que a menudo es independiente de las recargas de página. Estas experiencias se pueden activar mediante interacciones de clientes, como desplazamientos, clics y movimientos del cursor. A medida que los paradigmas de la web moderna evolucionan, la importancia de los eventos genéricos tradicionales, como la carga de páginas, para implementar la personalización y la experimentación, ya no es tanta.
 
-SPA ![Diagrama que muestra el ciclo de vida de la página comparado con el ciclo de vida de la página tradicional.](assets/spa-vs-traditional-lifecycle.png)
+![Diagrama que muestra el ciclo de vida de la SPA comparado con el ciclo de vida de la página tradicional.](assets/spa-vs-traditional-lifecycle.png)
 
-## SPA Ventajas del SDK web de Platform para la creación de informes de
+## Ventajas de Experience Platform Web SDK para SPA
 
-Estas son algunas ventajas de utilizar el SDK web de Adobe Experience Platform para aplicaciones de una sola página:
+Estas son algunas ventajas de utilizar Adobe Experience Platform Web SDK para aplicaciones de una sola página:
 
 * Capacidad de almacenar en caché todas las ofertas al cargar la página para reducir el número de llamadas al servidor a una sola llamada.
 * Enorme mejora de la experiencia del usuario en su sitio porque las ofertas se muestran inmediatamente a través de la caché sin agotar el tiempo introducido por las llamadas tradicionales al servidor.
-* SPA Una sola línea de código y una configuración de desarrollador única permiten a los especialistas en marketing crear y ejecutar actividades A/B y de segmentación de experiencias (XT) a través del Compositor de experiencias visuales (VEC) en su.
+* Una sola línea de código y configuración de desarrollador único permite a los especialistas en marketing crear y ejecutar actividades A/B y de segmentación de experiencias (XT) a través del Compositor de experiencias visuales (VEC) en su SPA.
 
 ## Vistas de XDM y aplicaciones de una sola página
 
-El VEC de Adobe Target SPA SPA para la visualización de datos se basa en un concepto llamado Vistas: un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de. Por lo tanto, una aplicación de una sola página puede considerarse como una transición entre vistas (en lugar de las direcciones URL) según las interacciones del usuario. Una vista suele representar un sitio completo o elementos visuales agrupados dentro de un sitio.
+El VEC de Adobe Target para SPA aprovecha un concepto llamado Vistas: un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de SPA. Por lo tanto, una aplicación de una sola página puede considerarse como una transición entre vistas (en lugar de las direcciones URL) según las interacciones del usuario. Una vista suele representar un sitio completo o elementos visuales agrupados dentro de un sitio.
 
 Para explicar más en detalle cuáles son las vistas, el siguiente ejemplo utiliza un sitio hipotético de comercio electrónico en línea implementado en React para explorar las vistas de ejemplo.
 
@@ -59,9 +59,9 @@ El concepto de Vistas puede ampliarse mucho más. Estos son solo algunos ejemplo
 
 ## Implementación de vistas XDM
 
-Las vistas XDM se pueden aprovechar en Adobe Target SPA para que los especialistas en marketing puedan ejecutar pruebas A/B y XT en los usuarios a través del Compositor de experiencias visuales (VEC). Esto requiere realizar los siguientes pasos para completar una configuración de desarrollador única:
+Las vistas XDM se pueden aprovechar en Adobe Target para que los especialistas en marketing puedan ejecutar pruebas A/B y XT en SPA a través del Compositor de experiencias visuales. Esto requiere realizar los siguientes pasos para completar una configuración de desarrollador única:
 
-1. Instalar [SDK web de Adobe Experience Platform](/help/web-sdk/install/overview.md)
+1. Instalar [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)
 2. Determine todas las vistas XDM de la aplicación de una sola página que desee personalizar.
 3. Después de definir las vistas XDM, para entregar actividades AB o XT VEC, implemente la función `sendEvent()` con `renderDecisions` establecido en `true` y la vista XDM correspondiente en la aplicación de una sola página. Se debe pasar la vista XDM en `xdm.web.webPageDetails.viewName`. Este paso permite a los especialistas en marketing aprovechar el Compositor de experiencias visuales para iniciar pruebas A/B y XT para esos XDM.
 
@@ -84,7 +84,7 @@ Las vistas XDM se pueden aprovechar en Adobe Target SPA para que los especialist
 
 ## `sendEvent()` ejemplos de funciones
 
-SPA En esta sección se describen tres ejemplos que muestran cómo invocar la función `sendEvent()` en React para un hipotético servicio de comercio electrónico
+En esta sección se describen tres ejemplos que muestran cómo invocar la función `sendEvent()` en React para un SPA de comercio electrónico hipotético.
 
 ### Ejemplo 1: página principal de la prueba A/B
 
@@ -215,13 +215,13 @@ class Checkout extends Component {
 } 
 ```
 
-## SPA Uso del Compositor de experiencias visuales para una experiencia de usuario
+## Uso del Compositor de experiencias visuales para una SPA
 
 Cuando haya terminado de definir las vistas XDM e implementado `sendEvent()` con esas vistas XDM pasadas, el VEC podrá detectar estas vistas y permitir a los usuarios crear acciones y modificaciones para actividades A/B o XT.
 
 >[!NOTE]
 >
->SPA Para usar el VEC para tu, debes instalar y activar la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o la extensión [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper.
+>Para usar el VEC para tu SPA, debes instalar y activar la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper.
 
 ### Panel de modificaciones
 
@@ -243,7 +243,7 @@ Al hacer clic en una acción se resalta el elemento del sitio donde se aplicará
 | Mover | Mueve la acción a un Evento de carga de página o a cualquier otra Vista que ya exista en el panel Modificaciones.<br/><br/>**Evento de carga de página:** Todas las acciones correspondientes al evento de carga de página se aplican en la carga inicial de la página web. <br/><br/>**Nota:** Después de realizar una operación de movimiento, debe navegar a la vista en el VEC a través de Examinar para ver si el movimiento era una operación válida. Si la acción no se puede aplicar a la vista, aparecerá un error. |
 | Eliminar | Elimina la acción. |
 
-## SPA Uso del VEC para ver ejemplos de la
+## Uso del VEC para ejemplos de SPA
 
 En esta sección se describen tres ejemplos de cómo usar el Compositor de experiencias visuales para crear acciones y modificaciones para actividades A/B o XT.
 

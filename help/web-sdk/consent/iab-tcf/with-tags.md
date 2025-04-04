@@ -1,25 +1,25 @@
 ---
-title: Integración de la compatibilidad con IAB TCF 2.0 mediante etiquetas y la extensión SDK para web de Platform
-description: Obtenga información sobre cómo configurar el consentimiento IAB TCF 2.0 con etiquetas y la extensión SDK para web de Adobe Experience Platform.
+title: Integración de la compatibilidad con IAB TCF 2.0 mediante etiquetas y la extensión Experience Platform Web SDK
+description: Obtenga información sobre cómo configurar el consentimiento IAB TCF 2.0 con etiquetas y la extensión Adobe Experience Platform Web SDK.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
 
-# Integración de la compatibilidad con IAB TCF 2.0 mediante etiquetas y la extensión SDK para web de Platform
+# Integración de la compatibilidad con IAB TCF 2.0 mediante etiquetas y la extensión Experience Platform Web SDK
 
-El SDK web de Adobe Experience Platform es compatible con el marco interactivo de transparencia y consentimiento de Advertising Bureau, versión 2.0 (IAB TCF 2.0). Esta guía muestra cómo configurar una propiedad de etiqueta para enviar información de consentimiento IAB TCF 2.0 al Adobe mediante la extensión de etiqueta SDK para web de Adobe Experience Platform.
+Adobe Experience Platform Web SDK es compatible con el marco interactivo de transparencia y consentimiento de Advertising Bureau, versión 2.0 (IAB TCF 2.0). Esta guía muestra cómo configurar una propiedad de etiquetas para enviar información de consentimiento IAB TCF 2.0 a Adobe mediante la extensión de etiquetas Adobe Experience Platform Web SDK.
 
 Si no desea utilizar etiquetas, consulte la guía sobre [uso de IAB TCF 2.0 sin etiquetas](./without-tags.md).
 
 ## Introducción
 
-Para utilizar IAB TCF 2.0 con etiquetas y la extensión SDK para web de Platform, debe tener disponibles un esquema XDM y un conjunto de datos.
+Para utilizar IAB TCF 2.0 con etiquetas y la extensión Experience Platform Web SDK, debe tener disponibles un esquema XDM y un conjunto de datos.
 
-Además, esta guía requiere tener una comprensión práctica del SDK web de Adobe Experience Platform. Para obtener un repaso rápido, lea la [descripción general del SDK web de Adobe Experience Platform](../../home.md) y la [documentación de preguntas más frecuentes](../../faq.md).
+Además, esta guía requiere que tenga una comprensión práctica de Adobe Experience Platform Web SDK. Para obtener un repaso rápido, lea la [descripción general de Adobe Experience Platform Web SDK](../../home.md) y la [documentación de preguntas más frecuentes](../../faq.md).
 
 ## Configuración del consentimiento predeterminado
 
@@ -66,7 +66,7 @@ Este código personalizado hace dos cosas:
 
 >[!IMPORTANT]
 >
->No puede elegir estos elementos de datos mediante el selector de elementos de datos porque se crearon mediante código personalizado. Debe escribir el nombre del elemento de datos con los símbolos de porcentaje. Este código actualiza el perfil del cliente con sus nuevas preferencias de consentimiento cada vez que cambian. Además, el servidor devuelve un valor de cookie que podría evitar que el SDK web de Adobe Experience Platform registre eventos de experiencia.
+>No puede elegir estos elementos de datos mediante el selector de elementos de datos porque se crearon mediante código personalizado. Debe escribir el nombre del elemento de datos con los símbolos de porcentaje. Este código actualiza el perfil del cliente con sus nuevas preferencias de consentimiento cada vez que cambian. Además, el servidor devuelve un valor de cookie que podría evitar que Adobe Experience Platform Web SDK registre eventos de experiencia.
 
 ## Creación de un elemento de datos XDM para eventos de experiencia
 
@@ -113,7 +113,7 @@ addEventListener();
 
 Este código es idéntico al código personalizado anterior, excepto que se controlan los eventos `useractioncomplete` y `tcloaded`. El [código personalizado anterior](#consent-code-1) solo genera un déclencheur cuando el cliente elige sus preferencias por primera vez. Este código también déclencheur cuando el cliente ya ha elegido sus preferencias. Por ejemplo, en la segunda carga de página.
 
-Añada una acción &quot;Enviar evento&quot; desde la extensión del SDK web de Platform. En el campo XDM, elija el elemento de datos XDM que ha creado en la sección anterior.
+Añada una acción &quot;Enviar evento&quot; desde la extensión Experience Platform Web SDK. En el campo XDM, elija el elemento de datos XDM que ha creado en la sección anterior.
 
 ## Envío de otros eventos con información de consentimiento de IAB TCF 2.0
 
@@ -121,4 +121,4 @@ Cuando los eventos se activan después del evento de experiencia inicial, los do
 
 ## Pasos siguientes
 
-Ahora que ha aprendido a utilizar IAB TCF 2.0 con la extensión del SDK web de Platform, también puede optar por integrar con otras soluciones de Adobe como Adobe Analytics o Adobe Real-time Customer Data Platform. Consulte la [Información general sobre el marco de transparencia y consentimiento IAB 2.0](./overview.md) para obtener más información.
+Ahora que ha aprendido a utilizar IAB TCF 2.0 con la extensión Experience Platform Web SDK, también puede optar por integrar con otras soluciones de Adobe, como Adobe Analytics o Adobe Real-Time Customer Data Platform. Consulte la [Información general sobre el marco de transparencia y consentimiento IAB 2.0](./overview.md) para obtener más información.

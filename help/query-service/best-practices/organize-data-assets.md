@@ -2,9 +2,9 @@
 title: Prácticas recomendadas para la organización de recursos de datos en el servicio de consultas
 description: Este documento describe un medio lógico de organizar los datos para facilitar su uso con el servicio de consultas.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Este documento proporciona instrucciones sobre las prácticas recomendadas para organizar recursos de datos, incluidos conjuntos de datos, vistas y tablas temporales, para utilizarlos con el servicio de consultas de Adobe Experience Platform. Explica cómo estructurar los datos, así como la información sobre cómo acceder, actualizar y eliminar esta información.
 
-Es importante organizar lógicamente los recursos de datos dentro de la plataforma [!DNL Data Lake] a medida que crezcan. El servicio de consultas amplía las construcciones SQL que permiten agrupar lógicamente los recursos de datos en una zona protegida. Este método de organización permite compartir recursos de datos entre esquemas sin necesidad de moverlos físicamente.
+Es importante organizar lógicamente los recursos de datos dentro de Experience Platform [!DNL Data Lake] a medida que crezcan. El servicio de consultas amplía las construcciones SQL que permiten agrupar lógicamente los recursos de datos en una zona protegida. Este método de organización permite compartir recursos de datos entre esquemas sin necesidad de moverlos físicamente.
 
 ## Introducción
 

@@ -1,11 +1,11 @@
 ---
-title: Información general sobre la extensión de Adobe Medium Analytics (3.x SDK) para audio y vídeo
+title: Información general sobre la extensión de Adobe Media Analytics (3.x SDK) para audio y vídeo
 description: Obtenga información acerca de la extensión de etiqueta de Adobe Media Analytics (SDK 3.x) para audio y vídeo en Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 94%
+source-wordcount: '708'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta documentación para obtener información sobre la instalación, configuración y implementación de la extensión de audio y vídeo de Adobe Media Analytics (3.x SDK) (extensión Media Analytics). Se incluyen las opciones disponibles al utilizar esta extensión para generar una regla, así como ejemplos y vínculos a muestras.
 
@@ -110,4 +110,4 @@ La extensión de MA expone `media` como módulo compartido a otras extensiones. 
 
 >[!NOTE]
 >
->**Prueba:** En esta versión, para probar la extensión debe cargarla en [Platform](../../../extension-dev/submit/upload-and-test.md), donde tiene acceso a todas las extensiones dependientes.
+>**Pruebas:** En esta versión, para probar la extensión debe cargarla en [Experience Platform](../../../extension-dev/submit/upload-and-test.md), donde tiene acceso a todas las extensiones dependientes.

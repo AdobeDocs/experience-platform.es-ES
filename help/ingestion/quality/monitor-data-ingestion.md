@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorización de la ingesta de datos
 description: Esta guía del usuario proporciona información sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Monitorización de la ingesta de datos
 
-La ingesta de datos le permite introducir sus datos en Adobe Experience Platform. Puede utilizar la ingesta por lotes, que le permite insertar los datos mediante varios tipos de archivo (como CSV), o la ingesta por transmisión continua, que le permite introducir los datos en [!DNL Platform] mediante los extremos de transmisión en tiempo real.
+La ingesta de datos le permite introducir sus datos en Adobe Experience Platform. Puede utilizar la ingesta por lotes, que le permite insertar los datos mediante varios tipos de archivo (como CSV), o la ingesta por transmisión continua, que le permite introducir los datos en [!DNL Experience Platform] mediante los extremos de transmisión en tiempo real.
 
 Esta guía del usuario proporciona pasos sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 
@@ -30,9 +30,9 @@ Esta guía del usuario proporciona pasos sobre cómo monitorizar los datos en la
 >
 >Para calcular el total de eventos en una fecha determinada, utilice la expresión de: `total events / day = ingestion rate * 60 * 60 * 24`.
 
-En la [interfaz de usuario del Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Supervisión]** en el menú de navegación izquierdo, seguido de **[!UICONTROL Transmisión de extremo a extremo]**.
+En la [IU de Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Supervisión]** en el menú de navegación de la izquierda, seguido de **[!UICONTROL Transmisión de extremo a extremo]**.
 
-Aparecerá la página de monitorización **[!UICONTROL Streaming end-to-end]**. Esta área de trabajo proporciona un gráfico que muestra la velocidad de los eventos transmitidos recibidos por [!DNL Platform], un gráfico que muestra la velocidad de los eventos transmitidos que [[!DNL Real-Time Customer Profile]](../../profile/home.md) procesó correctamente, así como una lista detallada de los datos entrantes.
+Aparecerá la página de monitorización **[!UICONTROL Streaming end-to-end]**. Esta área de trabajo proporciona un gráfico que muestra la velocidad de los eventos transmitidos recibidos por [!DNL Experience Platform], un gráfico que muestra la velocidad de los eventos transmitidos que [[!DNL Real-Time Customer Profile]](../../profile/home.md) procesó correctamente, así como una lista detallada de los datos entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

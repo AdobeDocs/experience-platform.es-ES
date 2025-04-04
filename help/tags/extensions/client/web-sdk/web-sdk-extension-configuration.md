@@ -2,9 +2,9 @@
 title: Configuración de la extensión de etiquetas Web SDK
 description: Obtenga información sobre cómo configurar la extensión de etiquetas Experience Platform Web SDK en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2875'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 La extensión de etiquetas [!DNL Web SDK] envía datos a Adobe Experience Cloud desde las propiedades web a través de Experience Platform Edge Network.
 
-La extensión de le permite transmitir datos a Platform, sincronizar identidades, procesar señales de consentimiento de clientes y recopilar automáticamente datos de contexto.
+La extensión de le permite transmitir datos a Experience Platform, sincronizar identidades, procesar señales de consentimiento de clientes y recopilar automáticamente datos de contexto.
 
 En este documento se explica cómo configurar la extensión de etiqueta en la interfaz de usuario de Etiquetas.
 

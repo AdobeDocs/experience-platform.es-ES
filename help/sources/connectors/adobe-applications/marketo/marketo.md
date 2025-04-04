@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Marketo Engage;marketo engage;marketo
 solution: Experience Platform
-title: conector del Marketo Engage
-description: Este documento proporciona información general sobre el conector de origen del Marketo Engage, incluida la información sobre su autenticación, asignación y latencia de datos.
+title: Conector de Marketo Engage
+description: Este documento proporciona información general sobre el conector de origen de Marketo Engage, incluida la información sobre su autenticación, asignación y latencia de datos.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 37e23b060c34c628b2be80256cffd1480c899ce7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
@@ -15,47 +15,47 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Ahora puede usar el origen [!DNL Marketo Engage] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../../landing/multi-cloud.md).
+>Ahora puede usar el origen [!DNL Marketo Engage] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../../landing/multi-cloud.md).
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) es una solución completa para la administración de posibles clientes y para los especialistas en marketing B2B que buscan transformar las experiencias de los clientes al interactuar en todas las etapas de los recorridos de compra complejos.
 
-Con el conector de origen [!DNL Marketo Engage], puede llevar los datos B2B de [!DNL Marketo Engage] a Platform y mantenerlos actualizados mediante aplicaciones conectadas a Platform.
+Con el conector de origen [!DNL Marketo Engage], puede llevar los datos B2B de [!DNL Marketo Engage] a Experience Platform y mantenerlos actualizados mediante aplicaciones conectadas a Experience Platform.
 
 >[!IMPORTANT]
 >
->Debe tener acceso a [Adobe Real-time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) para usar todos los conjuntos de datos de Marketo para la segmentación con el [perfil del cliente en tiempo real](../../../../profile/home.md). Sin Real-Time CDP B2B edition, aún puede utilizar la fuente de Marketo para llevar los datos de los conjuntos de datos de personas y actividades al Perfil del cliente en tiempo real para la segmentación.
+>Debe tener acceso a [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) para usar todos los conjuntos de datos de Marketo para la segmentación con el [perfil del cliente en tiempo real](../../../../profile/home.md). Sin Real-Time CDP B2B edition, aún puede utilizar la fuente de Marketo para llevar los datos de los conjuntos de datos de personas y actividades al Perfil del cliente en tiempo real para la segmentación.
 
 Este documento proporciona información general sobre el conector de origen [!DNL Marketo Engage], incluida información sobre cómo autenticar el conector, cómo asignar campos de [!DNL Marketo Engage] al modelo de datos de experiencia (XDM) y la latencia de datos del conector.
 
-## Configurar asignación de organización de Adobe
+## Configuración de la asignación de organización de Adobe
 
-Para poder establecer conjuntos de asignaciones para [!DNL Marketo Engage], primero debe configurar la asignación de organización de Adobe. Para ver los pasos detallados sobre cómo completar esto, consulte la guía de [configuración de la asignación de organización de Adobe para [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+Para poder establecer conjuntos de asignaciones para [!DNL Marketo Engage], primero debe configurar Adobe Organization Mapping. Para ver los pasos detallados sobre cómo completar esto, consulte la guía sobre [configuración de la asignación de organización de Adobe para [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## Autenticar el conector [!DNL Marketo Engage]
 
-Para conectar [!DNL Marketo Engage] a Platform, primero debe recuperar los valores de `munchkinId`, `clientId` y `clientSecret`.
+Para conectar [!DNL Marketo Engage] a Experience Platform, primero debe recuperar los valores de `munchkinId`, `clientId` y `clientSecret`.
 
 Consulte los pasos descritos en el documento [Autenticar el conector de origen de Marketo](./marketo-auth.md) para recuperar sus credenciales.
 
 ## Configurar áreas de nombres B2B y la utilidad de generación automática de esquemas
 
-A continuación, utilice el área de nombres B2B y la utilidad de generación automática de esquemas para configurar la consola del desarrollador de Platform y el entorno de Postman. Esto le permite rellenar automáticamente los espacios de nombres y esquemas B2B. Para obtener instrucciones detalladas, consulte la guía sobre [configuración de las áreas de nombres B2B y la utilidad de generación automática de esquemas](./marketo-namespaces.md)
+A continuación, utilice el área de nombres B2B y la utilidad de generación automática de esquemas para configurar la consola del desarrollador de Experience Platform y el entorno de Postman. Esto le permite rellenar automáticamente los espacios de nombres y esquemas B2B. Para obtener instrucciones detalladas, consulte la guía sobre [configuración de las áreas de nombres B2B y la utilidad de generación automática de esquemas](./marketo-namespaces.md)
 
 ## Modelo de datos de experiencia (XDM)
 
-XDM es una especificación documentada públicamente que proporciona estructuras y definiciones comunes que le permiten introducir datos de fuentes de terceros para utilizarlos en servicios de Platform secundarios.
+XDM es una especificación documentada públicamente que proporciona estructuras y definiciones comunes que le permiten introducir datos de fuentes de terceros para utilizarlos en servicios de Experience Platform descendentes.
 
-El cumplimiento de los estándares XDM permite que los datos se incorporen de manera uniforme al ecosistema de Platform, lo que facilita la entrega de datos y la recopilación de información.
+El cumplimiento de los estándares XDM permite que los datos se incorporen de forma uniforme al ecosistema de Experience Platform, lo que facilita la entrega de datos y la recopilación de información.
 
-Para obtener más información sobre XDM y su función en Platform, consulte la [descripción general del sistema XDM](../../../../xdm/home.md).
+Para obtener más información sobre XDM y su función en Experience Platform, consulte la [descripción general del sistema XDM](../../../../xdm/home.md).
 
 ## Asignación de campos de [!DNL Marketo Engage] a XDM
 
-Para establecer una conexión de origen entre [!DNL Marketo Engage] y Platform, los campos de datos de origen de Marketo deben asignarse a sus campos XDM de destino adecuados antes de introducirse en Platform.
+Para establecer una conexión de origen entre [!DNL Marketo Engage] y Experience Platform, los campos de datos de origen de Marketo deben asignarse a sus campos XDM de destino adecuados antes de introducirse en Experience Platform.
 
-Consulte lo siguiente para obtener información detallada sobre las reglas de asignación de campos entre [!DNL Marketo Engage] conjuntos de datos y Platform:
+Consulte lo siguiente para obtener información detallada sobre las reglas de asignación de campos entre [!DNL Marketo Engage] conjuntos de datos y Experience Platform:
 
 * [Actividades](../mapping/marketo.md#activities)
 * [Programas](../mapping/marketo.md#programs)
@@ -68,9 +68,9 @@ Consulte lo siguiente para obtener información detallada sobre las reglas de as
 * [Funciones de contacto de oportunidad](../mapping/marketo.md#opportunity-contact-roles)
 * [Personas](../mapping/marketo.md#persons)
 
-## Latencia esperada de [!DNL Marketo Engage] datos en la plataforma
+## Latencia esperada de [!DNL Marketo Engage] datos en Experience Platform
 
-En la tabla siguiente se describe la latencia esperada para llevar los datos de [!DNL Marketo Engage] a Platform, según la naturaleza de la ingesta y el destino deseado:
+En la tabla siguiente se describe la latencia esperada para llevar los datos de [!DNL Marketo Engage] a Experience Platform, según la naturaleza de la ingesta y el destino deseado:
 
 | Destino | Latencia esperada |
 | ----------- | ---------------- |
@@ -85,7 +85,7 @@ En la tabla siguiente se describe la latencia esperada para llevar los datos de 
 
 La siguiente documentación proporciona más información sobre cómo crear una conexión de origen de [!DNL Marketo Engage]:
 
-* Para obtener información sobre cómo conectar tus datos de [!DNL Marketo Engage] a Platform, lee el tutorial sobre [creación de una conexión de origen en la interfaz de usuario [!DNL Marketo Engage] .](../../../tutorials/ui/create/adobe-applications/marketo.md)
+* Para obtener información sobre cómo conectar tus datos de [!DNL Marketo Engage] a Experience Platform, lee el tutorial sobre [creación de una conexión de origen en la interfaz de usuario [!DNL Marketo Engage] .](../../../tutorials/ui/create/adobe-applications/marketo.md)
    * Para obtener información sobre cómo configurar los esquemas e ingerir datos de actividad personalizados, lea el tutorial sobre [creación de una conexión de origen y un flujo de datos para [!DNL Marketo Engage] datos de actividad personalizados](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
    * Para obtener información sobre cómo migrar su asignación ECID del conjunto de datos [!DNL Person] al conjunto de datos [!DNL Activity], lea la [guía de migración de asignación ECID](./migration.md).
 * Para obtener información sobre la configuración subyacente de los esquemas y áreas de nombres B2B utilizados con [!DNL Marketo Engage], lea la documentación de [esquemas y áreas de nombres B2B](./marketo-namespaces.md).

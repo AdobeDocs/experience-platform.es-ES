@@ -1,11 +1,11 @@
 ---
 Keywords: ECID;ecid
 title: Extensión de Experience Cloud ID Service
-description: La extensión del Servicio de ID de Experience Cloud es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+description: La extensión del Servicio de Experience Cloud ID es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
@@ -16,23 +16,23 @@ ht-degree: 4%
 
 Esta extensión implementa el servicio de ID [!DNL Experience Cloud], que identifica a los visitantes en todas las soluciones de [!DNL Experience Cloud].
 
-El servicio de ID [!DNL Experience Cloud] es una extensión de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de extensión, consulte la [página de extensión del servicio de ID de Experience Cloud](../../../tags/extensions/client/id-service/overview.md) en la documentación de etiquetas.
+El servicio de ID [!DNL Experience Cloud] es una extensión de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la [página de extensión del Servicio de Experience Cloud ID](../../../tags/extensions/client/id-service/overview.md) en la documentación de etiquetas.
 
-Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
+Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
-![extensión ECID de Adobe](../../assets/catalog/personalization/adobe-ecid/catalog.png)
+![Extensión ECID de Adobe](../../assets/catalog/personalization/adobe-ecid/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo de destinos para todos los clientes que han adquirido Platform.
+Esta extensión está disponible en el catálogo de destinos para todos los clientes que han adquirido Experience Platform.
 
-Para utilizar esta extensión, debe acceder a las etiquetas en Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a la interfaz de usuario de recopilación de datos y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
+Para utilizar esta extensión, debe tener acceso a las etiquetas en Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a la interfaz de usuario de recopilación de datos y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
 ## Instalar extensión {#install-extension}
 
 Para instalar la extensión del servicio de ID [!DNL Experience Cloud]:
 
-En la [interfaz de plataforma](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
@@ -42,7 +42,7 @@ Seleccione la propiedad de etiqueta en la que desea instalar la extensión. Tamb
 
 El flujo de trabajo le lleva a la IU de recopilación de datos para completar la instalación.
 
-Para obtener información sobre las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la [página de extensión del servicio de ID de Experience Cloud](../../../tags/extensions/client/id-service/overview.md) en la documentación de etiquetas.
+Para obtener información acerca de las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la [página de extensión del Servicio de Experience Cloud ID](../../../tags/extensions/client/id-service/overview.md) en la documentación de etiquetas.
 
 También puede instalar la extensión directamente en la [IU de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía de [adición de una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 

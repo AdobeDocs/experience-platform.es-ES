@@ -2,9 +2,9 @@
 title: Actualización de cuentas mediante la API de Flow Service
 description: Este tutorial cubre los pasos para actualizar los detalles y las credenciales de una cuenta mediante la API de Flow Service.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '544'
 ht-degree: 3%
 
 ---
@@ -25,16 +25,16 @@ Este tutorial requiere que tenga una conexión existente y un ID de conexión v�
 
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ## Búsqueda de detalles de conexión
 
-El primer paso para actualizar la conexión es recuperar sus detalles con el ID de conexión. Para recuperar los detalles actuales de la conexión, realice una solicitud de GET a la API [!DNL Flow Service], proporcionando al mismo tiempo el ID de conexión de la conexión que desea actualizar.
+El primer paso para actualizar la conexión es recuperar sus detalles con el ID de conexión. Para recuperar los detalles actuales de la conexión, realice una petición GET a la API [!DNL Flow Service], proporcionando al mismo tiempo el ID de conexión de la conexión que desea actualizar.
 
 **Formato de API**
 
@@ -99,11 +99,11 @@ Una respuesta correcta devuelve los detalles actuales de la conexión, incluidas
 
 ## Actualizar conexión
 
-Para actualizar el nombre, la descripción y las credenciales de la conexión, realice una solicitud de PATCH a la API [!DNL Flow Service] y proporcione el identificador de conexión, la versión y la nueva información que desee utilizar.
+Para actualizar el nombre, la descripción y las credenciales de la conexión, realice una petición PATCH a la API [!DNL Flow Service] y proporcione el identificador de conexión, la versión y la nueva información que desee utilizar.
 
 >[!IMPORTANT]
 >
->Se requiere el encabezado `If-Match` al realizar una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar.
+>Se requiere el encabezado `If-Match` al realizar una petición PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar.
 
 **Formato de API**
 
@@ -158,7 +158,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de conexión y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión.
+Una respuesta correcta devuelve su ID de conexión y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión.
 
 ```json
 {

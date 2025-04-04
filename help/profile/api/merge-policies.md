@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API
 title: Extremo de API de políticas de combinación
 type: Documentation
-description: Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
+description: Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que utiliza Experience Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2468'
 ht-degree: 2%
 
 ---
 
 # Extremo de políticas de combinación
 
-Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
+Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Experience Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 
-Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Platform, se combinan para crear un único perfil para ese cliente. Cuando los datos de varias fuentes entran en conflicto (por ejemplo, un fragmento enumera al cliente como &quot;único&quot;, mientras que el otro indica al cliente como &quot;casado&quot;), la política de combinación determina qué información se incluye en el perfil de la persona.
+Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Experience Platform, se combinan para crear un único perfil para ese cliente. Cuando los datos de varias fuentes entran en conflicto (por ejemplo, un fragmento enumera al cliente como &quot;único&quot;, mientras que el otro indica al cliente como &quot;casado&quot;), la política de combinación determina qué información se incluye en el perfil de la persona.
 
 Mediante las API de RESTful o la interfaz de usuario de, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una política de combinación predeterminada para su organización. Esta guía proporciona los pasos para trabajar con las políticas de combinación mediante la API.
 
-Para trabajar con políticas de combinación mediante la interfaz de usuario, consulte la [guía de la interfaz de usuario de las políticas de combinación](../merge-policies/ui-guide.md). Para obtener más información sobre las políticas de combinación en general y su función dentro del Experience Platform, lea la [descripción general de las políticas de combinación](../merge-policies/overview.md).
+Para trabajar con políticas de combinación mediante la interfaz de usuario, consulte la [guía de la interfaz de usuario de las políticas de combinación](../merge-policies/ui-guide.md). Para obtener más información sobre las políticas de combinación en general y su función en Experience Platform, lea la [descripción general de las políticas de combinación](../merge-policies/overview.md).
 
 ## Introducción
 
@@ -28,7 +28,7 @@ El extremo de API utilizado en esta guía forma parte de [[!DNL Real-Time Custom
 
 ## Componentes de las políticas de combinación {#components-of-merge-policies}
 
-Las políticas de combinación son privadas para su organización, lo que le permite crear diferentes políticas para combinar esquemas de las formas específicas que necesite. Cualquier API que acceda a datos de [!DNL Profile] requiere una política de combinación, aunque se usará una predeterminada si no se proporciona una de forma explícita. [!DNL Platform] proporciona a las organizaciones una política de combinación predeterminada, o bien puede crear una política de combinación para una clase de esquema Experience Data Model (XDM) específica y marcarla como predeterminada para su organización.
+Las políticas de combinación son privadas para su organización, lo que le permite crear diferentes políticas para combinar esquemas de las formas específicas que necesite. Cualquier API que acceda a datos de [!DNL Profile] requiere una política de combinación, aunque se usará una predeterminada si no se proporciona una de forma explícita. [!DNL Experience Platform] proporciona a las organizaciones una política de combinación predeterminada, o bien puede crear una política de combinación para una clase de esquema Experience Data Model (XDM) específica y marcarla como predeterminada para su organización.
 
 Aunque cada organización puede tener potencialmente varias políticas de combinación por clase de esquema, cada clase solo puede tener una política de combinación predeterminada. Cualquier política de combinación establecida como predeterminada se utilizará en los casos en que se proporcione el nombre de la clase de esquema y se requiera una política de combinación, pero no se proporcione.
 
@@ -73,7 +73,7 @@ El objeto de política de combinación completo representa un conjunto de prefer
 | `name` | Nombre descriptivo con el que se puede identificar la política de combinación en las vistas de lista. |
 | `imsOrgId` | ID de organización al que pertenece esta política de combinación |
 | `schema.name` | Como parte del objeto [`schema`](#schema), el campo `name` contiene la clase de esquema XDM con la que se relaciona la política de combinación. Para obtener más información sobre esquemas y clases, lea la [documentación de XDM](../../xdm/home.md). |
-| `version` | [!DNL Platform] mantuvo la versión de la política de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una política de combinación. |
+| `version` | [!DNL Experience Platform] mantuvo la versión de la política de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una política de combinación. |
 | `identityGraph` | [Objeto de gráfico de identidad](#identity-graph) que indica el gráfico de identidad del que se obtendrán las identidades relacionadas. Se combinarán los fragmentos de perfil encontrados para todas las identidades relacionadas. |
 | `attributeMerge` | [Combinación de atributos](#attribute-merge) que indica la forma en que la política de combinación dará prioridad a los atributos de perfil en caso de conflictos de datos. |
 | `isActiveOnEdge` | Valor booleano que indica si esta política de combinación se puede utilizar en Edge. De manera predeterminada, este valor es `false`. |
@@ -198,7 +198,7 @@ Con la API [!DNL Real-Time Customer Profile], el extremo `/config/mergePolicies`
 
 ### Acceso a una única política de combinación por ID
 
-GET Puede acceder a una única política de combinación por su ID realizando una solicitud al extremo `/config/mergePolicies` e incluyendo `mergePolicyId` en la ruta de solicitud.
+Puede acceder a una única política de combinación por su ID realizando una petición GET al extremo `/config/mergePolicies` e incluyendo `mergePolicyId` en la ruta de solicitud.
 
 **Formato de API**
 
@@ -249,7 +249,7 @@ Consulte la sección [componentes de políticas de combinación](#components-of-
 
 ### Recuperar varias políticas de combinación por sus ID
 
-Puede recuperar varias políticas de combinación realizando una solicitud de POST al extremo `/config/mergePolicies/bulk-get` e incluyendo los ID de las políticas de combinación que desee recuperar en el cuerpo de la solicitud.
+Puede recuperar varias políticas de combinación realizando una petición POST al extremo `/config/mergePolicies/bulk-get` e incluyendo los ID de las políticas de combinación que desea recuperar en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -283,7 +283,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 207 (varios estados) y los detalles de las políticas de combinación cuyos ID se proporcionaron en la solicitud del POST.
+Una respuesta correcta devuelve el estado HTTP 207 (varios estados) y los detalles de las políticas de combinación cuyos ID se proporcionaron en la solicitud POST.
 
 ```json
 { 
@@ -348,7 +348,7 @@ Consulte la sección [componentes de políticas de combinación](#components-of-
 
 ### Enumerar varias políticas de combinación por criterios
 
-Puede enumerar varias directivas de combinación dentro de su organización emitiendo una solicitud de GET al extremo `/config/mergePolicies` y utilizando parámetros de consulta opcionales para filtrar, ordenar y paginar la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;). Realizar una llamada a este extremo sin parámetros recuperará todas las políticas de combinación disponibles para su organización.
+Puede enumerar varias directivas de combinación dentro de su organización emitiendo una solicitud GET al extremo `/config/mergePolicies` y utilizando parámetros de consulta opcionales para filtrar, ordenar y paginar la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;). Realizar una llamada a este extremo sin parámetros recuperará todas las políticas de combinación disponibles para su organización.
 
 **Formato de API**
 
@@ -462,7 +462,7 @@ Una respuesta correcta devuelve una lista paginada de directivas de combinación
 
 ## Crear una política de combinación
 
-Puede crear una nueva política de combinación para su organización realizando una solicitud de POST al extremo `/config/mergePolicies`.
+Puede crear una nueva política de combinación para su organización realizando una petición POST al extremo `/config/mergePolicies`.
 
 **Formato de API**
 
@@ -555,7 +555,7 @@ Puede modificar una política de combinación existente editando atributos indiv
 
 ### Editar campos de políticas de combinación individuales
 
-Puede editar campos individuales para una política de combinación realizando una solicitud del PATCH al extremo `/config/mergePolicies/{mergePolicyId}`:
+Puede editar campos individuales para una política de combinación realizando una petición PATCH al extremo `/config/mergePolicies/{mergePolicyId}`:
 
 **Formato de API**
 
@@ -632,7 +632,7 @@ Una respuesta correcta devuelve los detalles de la política de combinación rec
 
 ### Sobrescribir una política de combinación
 
-Otra forma de modificar una política de combinación es utilizar una solicitud de PUT, que sobrescribe toda la política de combinación.
+Otra forma de modificar una política de combinación es utilizar una petición PUT, que sobrescribe toda la política de combinación.
 
 **Formato de API**
 
@@ -727,7 +727,7 @@ Una respuesta correcta devuelve los detalles de la política de combinación act
 
 ## Eliminar una política de combinación
 
-Se puede eliminar una política de combinación realizando una solicitud de DELETE al extremo `/config/mergePolicies` e incluyendo el identificador de la política de combinación que desea eliminar en la ruta de solicitud.
+Se puede eliminar una política de combinación realizando una petición DELETE al extremo `/config/mergePolicies` e incluyendo el ID de la política de combinación que desea eliminar en la ruta de solicitud.
 
 >[!NOTE]
 >
@@ -758,10 +758,10 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta vacío. Para confirmar que la eliminación se ha realizado correctamente, puede realizar una solicitud de GET para ver la política de combinación por su ID. Si se ha eliminado la política de combinación, recibirá un error de estado HTTP 404 (no encontrado).
+Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta vacío. Para confirmar que la eliminación se ha realizado correctamente, puede realizar una petición GET para ver la política de combinación por su ID. Si se ha eliminado la política de combinación, recibirá un error de estado HTTP 404 (no encontrado).
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de clientes dentro de Platform y para crear audiencias a partir de los datos de [!DNL Real-Time Customer Profile].
+Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de clientes en Experience Platform y para crear audiencias a partir de los datos de [!DNL Real-Time Customer Profile].
 
 Consulte la [documentación del servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con audiencias.

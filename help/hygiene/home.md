@@ -2,9 +2,9 @@
 title: Información general sobre Advanced Data Lifecycle Management
 description: La administración avanzada del ciclo de vida de los datos permite administrar el ciclo de vida de los datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '832'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Adobe Experience Platform proporciona un conjunto sólido de herramientas para administrar operaciones de datos grandes y complicadas a fin de organizar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, es cada vez más importante administrar los almacenes de datos para que se utilicen según lo esperado, se actualicen cuando sea necesario corregir datos incorrectos y se eliminen cuando las políticas de la organización lo consideren necesario.
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -26,11 +26,11 @@ Estas actividades se pueden realizar usando el [[!UICONTROL Ciclo de vida de los
 
 >[!NOTE]
 >
->La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el [extremo de caducidad del conjunto de datos](./api/dataset-expiration.md) y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](./api/workorder.md). También puede administrar [caducidades de conjuntos de datos](./ui/dataset-expiration.md) y [eliminaciones de registros](./ui/record-delete.md) a través de la interfaz de usuario de Platform. Consulte la documentación vinculada para obtener más información. Tenga en cuenta que el ciclo de vida de datos no admite la eliminación por lotes.
+>La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el [extremo de caducidad del conjunto de datos](./api/dataset-expiration.md) y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](./api/workorder.md). También puede administrar [caducidades de conjuntos de datos](./ui/dataset-expiration.md) y [eliminaciones de registros](./ui/record-delete.md) a través de la interfaz de usuario de Experience Platform. Consulte la documentación vinculada para obtener más información. Tenga en cuenta que el ciclo de vida de datos no admite la eliminación por lotes.
 
 ## [!UICONTROL Ciclo de vida de datos] área de trabajo de IU {#ui}
 
-El área de trabajo [!UICONTROL Ciclo de vida de datos] de la interfaz de usuario de Platform le permite configurar y programar operaciones del ciclo de vida de datos, lo que le ayuda a garantizar que los registros se mantengan según lo esperado.
+El área de trabajo [!UICONTROL Ciclo de vida de datos] de la interfaz de usuario de Experience Platform le permite configurar y programar operaciones del ciclo de vida de datos, lo que le ayuda a garantizar que los registros se mantengan según lo esperado.
 
 Para ver los pasos detallados sobre la administración de tareas de ciclo de vida de datos en la interfaz de usuario, consulte la [guía de IU de ciclo de vida de datos](./ui/overview.md).
 
@@ -58,7 +58,7 @@ Lo siguiente ocurre cuando se crea una [solicitud de caducidad del conjunto de d
 
 >[!IMPORTANT]
 >
->Las eliminaciones de conjuntos de datos en Amazon Web Service (AWS) están sujetas a una latencia de unas tres horas antes de que los cambios se apliquen completamente. Esto incluye hasta dos horas para que el conjunto de datos se marque para su eliminación, seguidas de una hora adicional antes de que se elimine completamente del sistema. Por el contrario, las solicitudes de eliminación para instancias de Platform que utilizan el lago de datos de Azure producen cambios inmediatos en las funciones empresariales.
+>Las eliminaciones de conjuntos de datos en Amazon Web Service (AWS) están sujetas a una latencia de unas tres horas antes de que los cambios se apliquen completamente. Esto incluye hasta dos horas para que el conjunto de datos se marque para su eliminación, seguidas de una hora adicional antes de que se elimine completamente del sistema. Por el contrario, las solicitudes de eliminación para instancias de Experience Platform que utilizan el lago de datos de Azure producen cambios inmediatos en las funciones empresariales.
 >
 >Para los usuarios de AWS, este retraso puede afectar a la segmentación por lotes, la segmentación por flujo continuo, las vistas previas, las estimaciones, las exportaciones y el acceso a los datos. Esta latencia solo afecta a los clientes que utilizan AWS, ya que los usuarios del lago de datos de Azure experimentan actualizaciones inmediatas. Para los usuarios de AWS, las solicitudes de eliminación pueden tardar hasta tres horas en propagarse completamente a través de todos los sistemas afectados. Ajuste sus expectativas en consecuencia.
 
@@ -80,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Pasos siguientes
 
-Este documento proporciona una descripción general de las capacidades del ciclo vital de datos de Platform. Para empezar a realizar solicitudes de higiene de datos en la interfaz de usuario, consulte la [guía de la interfaz de usuario](./ui/overview.md). Para aprender a crear trabajos del ciclo de vida de datos mediante programación, consulte la [Guía de API de higiene de datos](./api/overview.md)
+Este documento proporciona una descripción general de las funciones del ciclo vital de datos de Experience Platform. Para empezar a realizar solicitudes de higiene de datos en la interfaz de usuario, consulte la [guía de la interfaz de usuario](./ui/overview.md). Para aprender a crear trabajos del ciclo de vida de datos mediante programación, consulte la [Guía de API de higiene de datos](./api/overview.md)

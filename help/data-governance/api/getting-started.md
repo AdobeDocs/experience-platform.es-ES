@@ -5,7 +5,7 @@ title: Introducción a la API del servicio de directivas
 description: La API del servicio de políticas le permite crear y administrar varios recursos relacionados con la administración de datos de Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que necesita conocer antes de intentar realizar llamadas a la API del servicio de directivas.
 role: Developer
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 8%
@@ -23,7 +23,7 @@ El uso de la guía para desarrolladores requiere una comprensión práctica de l
 * [Control de datos](../home.md): El marco por el cual [!DNL Experience Platform] aplica el cumplimiento del uso de datos.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-* [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Lectura de llamadas de API de muestra
 
@@ -31,19 +31,19 @@ La documentación de la API [!DNL Policy Service] proporciona ejemplos de llamad
 
 ## Encabezados obligatorios
 
-La documentación de la API también requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas correctamente a [!DNL Platform] extremos. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
+La documentación de la API también requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas correctamente a [!DNL Experience Platform] extremos. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a Control de datos, están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a Control de datos, están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -53,7 +53,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Dentro de la API [!DNL Policy Service], todas las políticas y acciones de marketing se denominan recursos `core` o `custom`.
 
-`core` recursos son los definidos y mantenidos por el Adobe, mientras que `custom` recursos son los creados y mantenidos por su organización y, por lo tanto, son únicos y visibles únicamente para su organización. De este modo, las operaciones de listado y búsqueda (`GET`) son las únicas permitidas en `core` recursos, mientras que las operaciones de listado, búsqueda y actualización (`POST`, `PUT`, `PATCH` y `DELETE`) están disponibles para `custom` recursos.
+`core` recursos son los definidos y mantenidos por Adobe, mientras que `custom` recursos son los creados y mantenidos por su organización y, por lo tanto, son únicos y visibles únicamente para su organización. De este modo, las operaciones de listado y búsqueda (`GET`) son las únicas permitidas en `core` recursos, mientras que las operaciones de listado, búsqueda y actualización (`POST`, `PUT`, `PATCH` y `DELETE`) están disponibles para `custom` recursos.
 
 ## Pasos siguientes
 

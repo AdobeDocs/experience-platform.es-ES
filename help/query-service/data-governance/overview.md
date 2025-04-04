@@ -1,10 +1,10 @@
 ---
 title: Administración de datos en Query Service
-description: Esta descripción general abarca los principales elementos del control de datos en el servicio de consultas de Experience Platform.
+description: Esta descripción general abarca los principales elementos del control de datos en Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3129'
+source-wordcount: '3142'
 ht-degree: 0%
 
 ---
@@ -29,12 +29,12 @@ Este documento examina cada una de las diferentes áreas de gobernanza y muestra
 
 ## Seguridad {#security}
 
-La seguridad de los datos es el proceso de proteger los datos contra el acceso no autorizado y garantizar un acceso seguro durante todo su ciclo de vida. El acceso seguro se mantiene en Experience Platform mediante la aplicación de funciones y permisos mediante funciones como el control de acceso basado en funciones y el control de acceso basado en atributos. Las credenciales, SSL y el cifrado de datos también se utilizan para garantizar la protección de datos en Platform.
+La seguridad de los datos es el proceso de proteger los datos contra el acceso no autorizado y garantizar un acceso seguro durante todo su ciclo de vida. El acceso seguro se mantiene en Experience Platform mediante la aplicación de funciones y permisos mediante funciones como el control de acceso basado en funciones y el control de acceso basado en atributos. Las credenciales, SSL y el cifrado de datos también se utilizan para garantizar la protección de datos en Experience Platform.
 
 La seguridad con respecto al servicio de consultas se divide en las siguientes categorías:
 
 * [Control de acceso](#access-control): el acceso se controla mediante funciones y permisos que incluyen permisos de nivel de columna y conjunto de datos.
-* Proteger datos mediante [conectividad](#connectivity): Los datos se protegen mediante Platform y clientes externos si se logra una conexión limitada con credenciales que caducan o credenciales que no caducan.
+* Proteger datos mediante [conectividad](#connectivity): Los datos se protegen mediante Experience Platform y clientes externos si se logra una conexión limitada con credenciales que caducan o credenciales que no caducan.
 * Protección de datos mediante [cifrado y claves administradas por el cliente (CMK)](#encryption-and-customer-managed-keys): el acceso se controla mediante cifrado cuando los datos están en reposo.
 
 ### Control de acceso {#access-control}
@@ -103,7 +103,7 @@ El acceso de los usuarios a columnas individuales se puede controlar mediante la
 
 ### Conectividad {#connectivity}
 
-Se puede acceder al servicio de consultas a través de la interfaz de usuario de Platform o formando una conexión con clientes compatibles externos. El acceso a todos los frentes disponibles se controla mediante un conjunto de credenciales.
+Se puede acceder al servicio de consultas a través de la interfaz de usuario de Experience Platform o formando una conexión con clientes compatibles externos. El acceso a todos los frentes disponibles se controla mediante un conjunto de credenciales.
 
 #### Conectividad a través de clientes externos
 
@@ -127,7 +127,7 @@ Una vez completado el flujo de trabajo de requisitos previos, los usuarios autor
 
 #### Cifrado de datos SSL
 
-Para aumentar la seguridad, el servicio de consultas proporciona compatibilidad nativa con conexiones SSL para cifrar las comunicaciones cliente/servidor. Platform admite varias opciones SSL para satisfacer sus necesidades de seguridad de datos y equilibrar la sobrecarga de procesamiento del cifrado y el intercambio de claves.
+Para aumentar la seguridad, el servicio de consultas proporciona compatibilidad nativa con conexiones SSL para cifrar las comunicaciones cliente/servidor. Experience Platform admite varias opciones SSL para adaptarse a sus necesidades de seguridad de datos y equilibrar la sobrecarga de procesamiento del cifrado y el intercambio de claves.
 
 Consulte la guía sobre las [opciones SSL disponibles para conexiones de clientes de terceros al servicio de consultas](../clients/ssl-modes.md) para obtener más información, incluido cómo conectarse mediante el valor del parámetro SSL `verify-full`.
 
@@ -144,13 +144,13 @@ Los datos en tránsito siempre son compatibles con HTTPS y, de manera similar, c
 
 El servicio de consulta registra la actividad del usuario y clasifica esa actividad en diferentes tipos de registro. Los registros proporcionan información sobre **quién** realizó **qué** acción y **cuándo**. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción.
 
-Un usuario de Platform puede solicitar cualquiera de las categorías de registro. Esta sección proporciona detalles sobre el tipo de información capturada para el servicio de consultas y dónde se puede acceder a esta información.
+Un usuario de Experience Platform puede solicitar cualquiera de las categorías de registro. Esta sección proporciona detalles sobre el tipo de información capturada para el servicio de consultas y dónde se puede acceder a esta información.
 
 ### Registros de consultas {#query-logs}
 
 La interfaz de usuario de registros de consultas permite supervisar y revisar los detalles de ejecución de todas las consultas que se han ejecutado mediante el Editor de consultas o la API del servicio de consultas. Esto aporta transparencia a las actividades del Servicio de consultas, lo que le permite comprobar los metadatos de **todas** las consultas que se han ejecutado en el Servicio de consultas. Incluye todos los tipos de consultas, ya sean exploratorias, por lotes o programadas.
 
-Se puede acceder a los registros de consultas a través de la IU de Platform en la pestaña [!UICONTROL Registros] del área de trabajo [!UICONTROL Consultas].
+Se puede acceder a los registros de consultas a través de la interfaz de usuario de Experience Platform en la pestaña [!UICONTROL Registros] del área de trabajo [!UICONTROL Consultas].
 
 ![Pestaña Registro de consultas con el panel de detalles resaltado.](../images/data-governance/overview/queries-log.png)
 
@@ -158,7 +158,7 @@ Se puede acceder a los registros de consultas a través de la IU de Platform en 
 
 Los registros de auditoría contienen información más detallada que los registros de consulta y permiten filtrar registros en función de atributos como usuario, fecha, tipo de consulta, etc. Más allá de los detalles disponibles en la IU del registro de consultas, los registros de auditoría almacenan detalles de usuarios individuales junto con sus datos de sesión o conectividad con un cliente de terceros.
 
-Al proporcionar un registro exacto de las acciones de los usuarios, una pista de auditoría puede ayudar a solucionar problemas y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios. Los registros de auditoría proporcionan un registro de todas las actividades de la plataforma. Mediante los registros de auditoría puede auditar las acciones de los usuarios relacionadas con la ejecución de consultas, las plantillas y las consultas programadas para aumentar la transparencia y la visibilidad de las acciones realizadas por los usuarios en el servicio de consultas.
+Al proporcionar un registro exacto de las acciones de los usuarios, una pista de auditoría puede ayudar a solucionar problemas y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios. Los registros de auditoría proporcionan un registro de todas las actividades de Experience Platform. Mediante los registros de auditoría puede auditar las acciones de los usuarios relacionadas con la ejecución de consultas, las plantillas y las consultas programadas para aumentar la transparencia y la visibilidad de las acciones realizadas por los usuarios en el servicio de consultas.
 
 La siguiente tabla indica las categorías de consultas capturadas por los registros de auditoría y los tipos de acciones que registran:
 
@@ -178,7 +178,7 @@ Consulte la [descripción general de los registros de auditoría](../../landing/
 
 ## Uso de datos {#data-usage}
 
-El marco de trabajo de control de datos de Platform proporciona una forma uniforme de utilizar los datos de forma responsable en todas las soluciones de Adobe, servicios y plataformas. Coordina el enfoque sistémico para capturar, comunicar y utilizar metadatos en toda la Adobe Experience Cloud. Esto, a su vez, ayuda a los responsables del tratamiento de datos a etiquetar los datos según las acciones de marketing necesarias y las restricciones impuestas a esos datos por estas acciones de marketing previstas. Consulte la descripción general de [etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener más información sobre cómo el control de datos le permite aplicar etiquetas de uso de datos a conjuntos de datos y campos.
+El marco de trabajo de control de datos de Experience Platform proporciona una forma uniforme de utilizar los datos de forma responsable en todas las soluciones, servicios y plataformas de Adobe. Coordina el enfoque sistémico para capturar, comunicar y utilizar metadatos en toda la Adobe Experience Cloud. Esto, a su vez, ayuda a los responsables del tratamiento de datos a etiquetar los datos según las acciones de marketing necesarias y las restricciones impuestas a esos datos por estas acciones de marketing previstas. Consulte la descripción general de [etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener más información sobre cómo el control de datos le permite aplicar etiquetas de uso de datos a conjuntos de datos y campos.
 
 Se recomienda trabajar para que los datos cumplan los requisitos en cada fase del recorrido de los datos. Para ello, los conjuntos de datos derivados que utilizan esquemas ad hoc deben etiquetarse adecuadamente como parte del marco de trabajo de control de datos. Existen dos tipos de conjuntos de datos derivados formados por el servicio de consulta: conjuntos de datos que utilizan un esquema estándar y conjuntos de datos que utilizan un esquema ad hoc.
 
@@ -186,7 +186,7 @@ Se recomienda trabajar para que los datos cumplan los requisitos en cada fase de
 >
 >Los conjuntos de datos que se crean mediante el servicio de consultas se denominan &quot;conjuntos de datos derivados&quot;.
 
-Dado que un usuario individual crea esquemas ad hoc para un propósito específico, los campos de esquema XDM tienen un espacio de nombres para ese conjunto de datos en particular y no están pensados para su uso en diferentes conjuntos de datos. Como resultado, los esquemas ad hoc no son visibles de forma predeterminada en la interfaz de usuario de Experience Platform. Aunque no hay diferencia en la aplicación de etiquetas de uso de datos entre esquemas estándar y ad hoc, los esquemas ad hoc creados por el servicio de consultas con el fin de etiquetar deben hacerse visibles primero en la interfaz de usuario de Platform. Consulte la guía sobre [descubrimiento de esquemas ad hoc en la interfaz de usuario de Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) para obtener más información.
+Dado que un usuario individual crea esquemas ad hoc para un propósito específico, los campos de esquema XDM tienen un espacio de nombres para ese conjunto de datos en particular y no están pensados para su uso en diferentes conjuntos de datos. Como resultado, los esquemas ad hoc no están visibles de forma predeterminada en la interfaz de usuario de Experience Platform. Aunque no hay diferencia en la aplicación de etiquetas de uso de datos entre esquemas estándar y ad hoc, los esquemas ad hoc creados por el servicio de consultas para etiquetar deben hacerse visibles primero en la interfaz de usuario de Experience Platform. Consulte la guía sobre [descubrimiento de esquemas ad hoc en la interfaz de usuario de Experience Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) para obtener más información.
 
 Una vez que haya obtenido acceso al esquema, puede [aplicar etiquetas a campos individuales](../../xdm/tutorials/labels.md). Una vez etiquetado un esquema, todos los conjuntos de datos que se derivan de él heredan esas etiquetas. Desde aquí, puede configurar políticas de uso de datos que puedan restringir la activación de datos con determinadas etiquetas a determinados destinos. Para obtener más información, consulte la descripción general de [políticas de uso de datos](../../data-governance/policies/overview.md).
 
@@ -196,17 +196,17 @@ Una vez que haya obtenido acceso al esquema, puede [aplicar etiquetas a campos i
 
 Las solicitudes de privacidad se pueden enviar al lago de datos o al almacén de datos de perfil. Los registros eliminados del lago de datos no provocan la eliminación de perfiles realizados desde esos registros. Además, un trabajo de privacidad para eliminar información personal del lago de datos no elimina su perfil, por lo que cualquier información (que contenga ese ID de perfil) ingerida después de la finalización del trabajo de privacidad actualiza ese perfil con normalidad. Esto reafirma la necesidad de identificar correctamente los datos utilizados en esquemas específicos.
 
-Consulte la documentación del Privacy Service para obtener más información sobre [datos de identidad para solicitudes de privacidad](../../privacy-service/identity-data.md) y cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad del cliente.
+Consulte la documentación de Privacy Service para obtener más información sobre [datos de identidad para solicitudes de privacidad](../../privacy-service/identity-data.md) y cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad de los clientes.
 
 Las funciones del servicio de consulta para el control de datos simplifican y optimizan el proceso de categorización de datos y el cumplimiento de las regulaciones de uso de datos. Una vez identificados los datos, el servicio de consultas permite asignar la identidad principal en todos los conjuntos de datos de salida. Usted **debe** agregar identidades al conjunto de datos para facilitar las solicitudes de privacidad de datos y trabajar en pos del cumplimiento de los datos.
 
-Los campos de datos de esquema se pueden establecer como un campo de identidad a través de la interfaz de usuario de Platform y el servicio de consulta también le permite [marcar las identidades principales mediante el comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). La configuración de una identidad mediante el comando `ALTER TABLE` resulta especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la IU de Platform. Consulte la documentación para obtener instrucciones sobre cómo [definir campos de identidad en la interfaz de usuario](../../xdm/ui/fields/identity.md) al utilizar esquemas estándar.
+Los campos de datos de esquema se pueden establecer como un campo de identidad a través de la interfaz de usuario de Experience Platform y el servicio de consultas también le permite [marcar las identidades principales mediante el comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). La configuración de una identidad mediante el comando `ALTER TABLE` resulta especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la interfaz de usuario de Experience Platform. Consulte la documentación para obtener instrucciones sobre cómo [definir campos de identidad en la interfaz de usuario](../../xdm/ui/fields/identity.md) al utilizar esquemas estándar.
 
 ## Higiene de datos {#data-hygiene}
 
-La &quot;higiene de los datos&quot; se refiere al proceso de reparación o eliminación de datos que pueden estar obsoletos, ser inexactos, tener un formato incorrecto, estar duplicados o ser incompletos. Estos procesos garantizan que los conjuntos de datos sean precisos y coherentes en todos los sistemas. Es importante garantizar una higiene de los datos adecuada en cada paso del recorrido de los datos e incluso desde la ubicación inicial de almacenamiento de datos. En el servicio de consultas de Experience Platform, se trata del lago de datos o del almacén acelerado.
+La &quot;higiene de los datos&quot; se refiere al proceso de reparación o eliminación de datos que pueden estar obsoletos, ser inexactos, tener un formato incorrecto, estar duplicados o ser incompletos. Estos procesos garantizan que los conjuntos de datos sean precisos y coherentes en todos los sistemas. Es importante garantizar una higiene de los datos adecuada en cada paso del recorrido de los datos e incluso desde la ubicación inicial de almacenamiento de datos. En Experience Platform Query Service, se trata del lago de datos o del almacén acelerado.
 
-Puede asignar una identidad a un conjunto de datos derivado para permitir su administración de datos siguiendo los servicios centralizados de higiene de datos de Platform.
+Puede asignar una identidad a un conjunto de datos derivado para permitir su administración de datos siguiendo los servicios centralizados de higiene de datos de Experience Platform.
 
 Por el contrario, cuando se crea un conjunto de datos agregado en el almacén acelerado, los datos agregados no se pueden utilizar para derivar los datos originales. Como resultado de esta agregación de datos, se elimina la necesidad de aumentar las solicitudes de higiene de los datos.
 

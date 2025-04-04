@@ -5,10 +5,10 @@ title: Guía de API de control de acceso basado en atributos
 description: La API de control de acceso basada en atributos le permite administrar mediante programación las funciones y las directivas de acceso dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 8%
+source-wordcount: '451'
+ht-degree: 11%
 
 ---
 
@@ -20,7 +20,7 @@ La API de control de acceso basada en atributos se utiliza para acceder a funcio
 
 >[!IMPORTANT]
 >
->El control de acceso basado en atributos no se debe confundir con las capacidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y directivas para controlar cómo se utilizan los datos en Platform en lugar de qué usuarios de su organización tienen acceso a ellos. Consulte la [guía de API del servicio de directivas](../../../data-governance/api/overview.md) para ver los pasos que debe seguir para aprovechar estas capacidades mediante programación.
+>El control de acceso basado en atributos no se debe confundir con las funcionalidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y políticas para controlar cómo se utilizan los datos en Experience Platform en lugar de qué usuarios de su organización tienen acceso a ellos. Consulte la [guía de API del servicio de directivas](../../../data-governance/api/overview.md) para ver los pasos que debe seguir para aprovechar estas capacidades mediante programación.
 
 Estos extremos se describen a continuación. Visite las guías de extremos individuales para obtener más información y consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados obligatorios, la lectura de llamadas de API de muestra y mucho más.
 

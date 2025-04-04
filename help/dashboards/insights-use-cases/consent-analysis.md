@@ -2,9 +2,9 @@
 title: Análisis de consentimiento y seguimiento
 description: Obtenga información sobre cómo crear un panel de análisis de consentimiento para rastrear las tendencias del consentimiento del usuario a lo largo del tiempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Los casos de uso cubiertos en esta guía son las tendencias de consentimiento y 
 
 ## Creación de audiencias consentidas {#create-consent-audiences}
 
-Para crear un panel de consentimiento, primero debe crear una audiencia de todos los perfiles que han aceptado contactar. Para ir al Generador de segmentos de Real-Time Customer Data Platform, seleccione **[!UICONTROL Audiencias]** en el panel de navegación izquierdo de la interfaz de usuario de Platform. En la ficha [!UICONTROL Cliente] del panel de [!UICONTROL Audiencias], seleccione **[!UICONTROL Crear audiencia]** en la parte superior derecha de la vista y luego **[!UICONTROL Generar reglas]**.
+Para crear un panel de consentimiento, primero debe crear una audiencia de todos los perfiles que han aceptado contactar. Para ir al Generador de segmentos de Real-Time Customer Data Platform, seleccione **[!UICONTROL Audiencias]** en el panel de navegación izquierdo de la interfaz de usuario de Experience Platform. En la ficha [!UICONTROL Cliente] del panel de [!UICONTROL Audiencias], seleccione **[!UICONTROL Crear audiencia]** en la parte superior derecha de la vista y luego **[!UICONTROL Generar reglas]**.
 
 ![Se ha resaltado el panel [!UICONTROL Audiencias] con [!UICONTROL Cliente], [!UICONTROL Audiencias] y [!UICONTROL Crear segmento].](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -70,9 +70,9 @@ Después de crear las audiencias necesarias, se enumeran en la pestaña [!UICONT
 
 Adobe ha creado varias perspectivas que están disponibles automáticamente en los paneles Perfiles, Audiencias y Destinos. Cualquier audiencia que cree se puede utilizar automáticamente con estas perspectivas preconfiguradas. Consulte la documentación del widget estándar para obtener una lista de las perspectivas disponibles en los paneles de [Perfiles](../guides/profiles.md#standard-widgets), [Audiencias](../guides/audiences.md#standard-widgets) y [Destinos](../guides/destinations.md).
 
-## Superposición de público {#audience-overlap}
+## Solapamiento de público {#audience-overlap}
 
-Para revisar la superposición entre dos audiencias de consentimiento cualesquiera, agregue la [!UICONTROL superposición de audiencias mediante la política de combinación] a su panel Perfiles y seleccione las audiencias que desee en los menús desplegables. Consulte la documentación para obtener instrucciones sobre cómo agregar un widget al tablero sobre la [*superposición de audiencias mediante la política de combinación*](../guides/profiles.md#audience-overlap-by-merge-policy) para obtener más información sobre la perspectiva.
+Para revisar la superposición entre dos audiencias de consentimiento cualesquiera, agregue la [!UICONTROL superposición de audiencias mediante la política de combinación] a su panel Perfiles y seleccione las audiencias que desee en los menús desplegables. Consulte la documentación para obtener instrucciones sobre cómo agregar un widget al tablero sobre la [*superposición de audiencias mediante la política de combinación*](../guides/profiles.md#audience-overlap-by-merge-policy) para obtener más información sobre insight.
 
 <!-- Image needs updating to night mode -->
 

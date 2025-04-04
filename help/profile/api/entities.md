@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform le permite acceder a los datos del perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como "perfiles", mediante la API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 >
 >La búsqueda de ExperienceEvent mediante la API de acceso al perfil quedará obsoleta. Utilice funciones como atributos calculados para casos de uso que requieran la búsqueda de ExperienceEvents. Para obtener más información sobre este cambio, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
-Adobe Experience Platform le permite acceder a los datos de [!DNL Real-Time Customer Profile] mediante las API RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a los perfiles mediante la interfaz de usuario de [!DNL Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
+Adobe Experience Platform le permite acceder a los datos de [!DNL Real-Time Customer Profile] mediante las API RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a los perfiles mediante la interfaz de usuario de [!DNL Experience Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
 
 ## Introducción
 
@@ -1223,7 +1223,7 @@ Una respuesta correcta devuelve el estado HTTP 202 con un cuerpo de respuesta va
 
 ## Pasos siguientes
 
-Al seguir esta guía, ha accedido correctamente a [!DNL Real-Time Customer Profile] campos de datos, perfiles y datos de series temporales. Para obtener información sobre cómo tener acceso a otros recursos de datos almacenados en [!DNL Platform], vea la [descripción general del acceso a datos](../../data-access/home.md).
+Al seguir esta guía, ha accedido correctamente a [!DNL Real-Time Customer Profile] campos de datos, perfiles y datos de series temporales. Para obtener información sobre cómo tener acceso a otros recursos de datos almacenados en [!DNL Experience Platform], vea la [descripción general del acceso a datos](../../data-access/home.md).
 
 ## Apéndice {#appendix}
 

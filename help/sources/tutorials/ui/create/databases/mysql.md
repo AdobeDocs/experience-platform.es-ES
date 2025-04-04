@@ -5,7 +5,7 @@ title: Crear una conexión de Source MySQL en la interfaz de usuario
 type: Tutorial
 description: Aprenda a crear una conexión de origen MySQL mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Los conectores de Source en Adobe Experience Platform permiten introducir datos 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -29,7 +29,7 @@ Si ya tiene una conexión de [!DNL MySQL], puede omitir el resto de este documen
 
 ### Recopilar credenciales necesarias
 
-Para tener acceso a su cuenta de [!DNL MySQL] en [!DNL Platform], debe proporcionar el siguiente valor:
+Para tener acceso a su cuenta de [!DNL MySQL] en [!DNL Experience Platform], debe proporcionar el siguiente valor:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -37,7 +37,7 @@ Para tener acceso a su cuenta de [!DNL MySQL] en [!DNL Platform], debe proporcio
 
 ## Conectar su cuenta de [!DNL MySQL]
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL MySQL] a [!DNL Platform].
+Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL MySQL] a [!DNL Experience Platform].
 
 Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de orígenes con los que puede crear una cuenta.
 
@@ -61,4 +61,4 @@ Para conectar una cuenta existente, seleccione la cuenta de [!DNL MySQL] con la 
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta MySQL. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Platform]](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta MySQL. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).

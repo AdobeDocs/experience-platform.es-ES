@@ -3,9 +3,9 @@ title: Exportación de matrices, mapas y objetos desde Real-Time CDP
 type: Tutorial
 description: Obtenga información sobre cómo exportar matrices, mapas y objetos de Real-Time CDP a destinos de almacenamiento en la nube.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 13%
 
 ---
@@ -42,7 +42,7 @@ Obtenga la información más importante acerca de la funcionalidad de esta secci
 * Puede exportar matrices, asignaciones y objetos a destinos de almacenamiento en la nube en `JSON` y `Parquet` archivos. Para los destinos de personalización de empresa y Edge, el tipo de datos exportado es `JSON`. Se admiten las audiencias de personas y clientes potenciales, pero no las de cuenta.
 * Para los destinos de almacenamiento en la nube basados en archivos, *puede* exportar matrices, asignaciones y objetos a archivos CSV, pero solo mediante la funcionalidad de campos calculados y concatenándolos en una cadena mediante la función `array_to_string`.
 
-## Matrices y otros tipos de objetos en Platform {#arrays-strings-other-objects}
+## Matrices y otros tipos de objetos en Experience Platform {#arrays-strings-other-objects}
 
 En Experience Platform, puede usar [esquemas XDM](/help/xdm/home.md) para administrar diferentes tipos de campos. Antes de añadir compatibilidad con las exportaciones de matrices, podía exportar campos de tipo de par clave-valor simples, como cadenas, desde Experience Platform a los destinos deseados. Un ejemplo de un campo de este tipo que se admitía para la exportación anteriormente es `personalEmail.address`:`johndoe@acme.org`.
 

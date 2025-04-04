@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares
 title: Procesamiento de solicitudes de privacidad en Identity Service
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para Identity Service.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1005'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 
 >[!NOTE]
 >
->Esta guía solo explica cómo realizar solicitudes de privacidad para el almacén de datos de identidad en Experience Platform. Si también planea realizar solicitudes de privacidad para el lago de datos de Platform o [!DNL Real-Time Customer Profile], consulte la guía sobre [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md) y la guía sobre [procesamiento de solicitudes de privacidad para el perfil](../profile/privacy.md), además de este tutorial.
+>Esta guía solo explica cómo realizar solicitudes de privacidad para el almacén de datos de identidad en Experience Platform. Si también planea realizar solicitudes de privacidad para el lago de datos de Experience Platform o [!DNL Real-Time Customer Profile], consulte la guía sobre [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md) y la guía sobre [procesamiento de solicitudes de privacidad para el perfil](../profile/privacy.md), además de este tutorial.
 >
 >Para ver los pasos de cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [documentación de Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -104,16 +104,16 @@ Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de selecci
 
 ## Eliminar procesamiento de solicitudes
 
-Cuando [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Platform] envía una confirmación a [!DNL Privacy Service] de que la solicitud se ha recibido y de que los datos afectados se han marcado para su eliminación. La eliminación de la identidad individual se basa en el área de nombres o el valor de ID proporcionados. Además, la eliminación se realiza para todas las zonas protegidas asociadas a una organización determinada.
+Cuando [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL Privacy Service], [!DNL Experience Platform] envía una confirmación a [!DNL Privacy Service] de que la solicitud se ha recibido y de que los datos afectados se han marcado para su eliminación. La eliminación de la identidad individual se basa en el área de nombres o el valor de ID proporcionados. Además, la eliminación se realiza para todas las zonas protegidas asociadas a una organización determinada.
 
 Dependiendo de si también incluyó el Perfil del cliente en tiempo real (`ProfileService`) y el lago de datos (`aepDataLake`) como productos en su solicitud de privacidad para el servicio de identidad (`identity`), se quitarán del sistema diferentes conjuntos de datos relacionados con la identidad en momentos potencialmente diferentes:
 
 | Productos incluidos | Efectos |
 | --- | --- |
-| Solo `identity` | La identidad proporcionada se elimina en cuanto Platform envía la confirmación de que se ha recibido la solicitud de eliminación. El perfil construido a partir de ese gráfico de identidad aún se mantiene, pero no se actualizará a medida que se incorporen nuevos datos, ya que las asociaciones de identidad ahora se eliminan. Los datos asociados con el perfil también permanecen en el lago de datos. |
-| `identity` y `ProfileService` | La identidad proporcionada se elimina en cuanto Platform envía la confirmación de que se ha recibido la solicitud de eliminación. Los datos asociados con el perfil permanecen en el lago de datos. |
-| `identity` y `aepDataLake` | La identidad proporcionada se elimina en cuanto Platform envía la confirmación de que se ha recibido la solicitud de eliminación. El perfil construido a partir de ese gráfico de identidad aún se mantiene, pero no se actualizará a medida que se incorporen nuevos datos, ya que las asociaciones de identidad ahora se eliminan.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan en blanco y, por lo tanto, ningún servicio de [!DNL Platform] puede obtener acceso a ellos. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
-| `identity`, `ProfileService` y `aepDataLake` | La identidad proporcionada se elimina en cuanto Platform envía la confirmación de que se ha recibido la solicitud de eliminación.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan en blanco y, por lo tanto, ningún servicio de [!DNL Platform] puede obtener acceso a ellos. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
+| Solo `identity` | La identidad proporcionada se elimina en cuanto Experience Platform envía la confirmación de que se ha recibido la solicitud de eliminación. El perfil construido a partir de ese gráfico de identidad aún se mantiene, pero no se actualizará a medida que se incorporen nuevos datos, ya que las asociaciones de identidad ahora se eliminan. Los datos asociados con el perfil también permanecen en el lago de datos. |
+| `identity` y `ProfileService` | La identidad proporcionada se elimina en cuanto Experience Platform envía la confirmación de que se ha recibido la solicitud de eliminación. Los datos asociados con el perfil permanecen en el lago de datos. |
+| `identity` y `aepDataLake` | La identidad proporcionada se elimina en cuanto Experience Platform envía la confirmación de que se ha recibido la solicitud de eliminación. El perfil construido a partir de ese gráfico de identidad aún se mantiene, pero no se actualizará a medida que se incorporen nuevos datos, ya que las asociaciones de identidad ahora se eliminan.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan en blanco y, por lo tanto, ningún servicio de [!DNL Experience Platform] puede obtener acceso a ellos. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
+| `identity`, `ProfileService` y `aepDataLake` | La identidad proporcionada se elimina en cuanto Experience Platform envía la confirmación de que se ha recibido la solicitud de eliminación.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan en blanco y, por lo tanto, ningún servicio de [!DNL Experience Platform] puede obtener acceso a ellos. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
 
 Consulte la [[!DNL Privacy Service] documentación](../privacy-service/home.md#monitor) para obtener más información sobre el seguimiento de estados de trabajos.
 

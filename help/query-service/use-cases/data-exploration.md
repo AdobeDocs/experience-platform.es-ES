@@ -2,9 +2,9 @@
 title: Explorar, solucionar problemas y comprobar la ingesta por lotes con SQL
 description: Aprenda a comprender y administrar el proceso de ingesta de datos en Adobe Experience Platform. Este documento incluye cómo verificar lotes y consultar datos ingeridos.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ En este documento se explica cómo comprobar y validar registros en lotes ingeri
 
 Para facilitar su comprensión de los conceptos mencionados en este documento, debe conocer los siguientes temas:
 
-- **Ingesta de datos**: consulte la [descripción general de la ingesta de datos](../../ingestion/home.md) para conocer los conceptos básicos de cómo se incorporan los datos en la plataforma, incluidos los diferentes métodos y procesos involucrados.
-- **Ingesta por lotes**: Consulte la [descripción general de la API de ingesta por lotes](../../ingestion/batch-ingestion/overview.md) para conocer los conceptos básicos de la ingesta por lotes. En concreto, qué es un &quot;lote&quot; y cómo funciona dentro del proceso de ingesta de datos de Platform.
+- **Ingesta de datos**: consulte la [descripción general de la ingesta de datos](../../ingestion/home.md) para conocer los conceptos básicos de cómo se incorporan los datos en Experience Platform, incluidos los diferentes métodos y procesos involucrados.
+- **Ingesta por lotes**: Consulte la [descripción general de la API de ingesta por lotes](../../ingestion/batch-ingestion/overview.md) para conocer los conceptos básicos de la ingesta por lotes. En concreto, qué es un &quot;lote&quot; y cómo funciona dentro del proceso de ingesta de datos de Experience Platform.
 - **Metadatos del sistema en conjuntos de datos**: consulte la [descripción general del servicio de catálogo](../../catalog/home.md) para obtener información sobre cómo se utilizan los campos de metadatos del sistema para realizar el seguimiento y consultar los datos ingeridos.
-- **Modelo de datos de experiencia (XDM)**: Consulte la [descripción general de la interfaz de usuario de esquemas](../../xdm/ui/overview.md) y los [&#39;conceptos básicos de la composición de esquemas&#39;](../../xdm/schema/composition.md) para obtener información sobre los esquemas XDM y cómo representan y validan la estructura y el formato de los datos ingeridos en Platform.
+- **Modelo de datos de experiencia (XDM)**: Consulte la [descripción general de la interfaz de usuario de esquemas](../../xdm/ui/overview.md) y los [&#39;conceptos básicos de la composición de esquemas&#39;](../../xdm/schema/composition.md) para obtener información sobre los esquemas XDM y cómo representan y validan la estructura y el formato de los datos ingeridos en Experience Platform.
 
 ## Acceder a metadatos por lotes {#access-dataset-batch-metadata}
 
@@ -37,7 +37,7 @@ A continuación, para ver los campos del sistema del conjunto de datos, ejecute 
 
 ![Interfaz de usuario de DBVisualizer con la tabla movie_data y sus columnas de metadatos mostradas y resaltadas.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Cuando se incorporan datos en Platform, se les asigna una partición lógica basada en los datos entrantes. Esta partición lógica está representada por `_acp_system_metadata.sourceBatchId`. Este ID ayuda a agrupar e identificar los lotes de datos de forma lógica antes de procesarlos y almacenarlos.
+Cuando se incorporan datos en Experience Platform, se les asigna una partición lógica basada en los datos entrantes. Esta partición lógica está representada por `_acp_system_metadata.sourceBatchId`. Este ID ayuda a agrupar e identificar los lotes de datos de forma lógica antes de procesarlos y almacenarlos.
 
 Una vez que los datos se procesan e incorporan en el lago de datos, se les asigna una partición física representada por `_ACP_BATCHID`. Este ID refleja la partición de almacenamiento real del lago de datos en el que residen los datos introducidos.
 
@@ -56,7 +56,7 @@ Los resultados de esta consulta se muestran en la siguiente imagen.
 
 Estos resultados demuestran que el número de lotes de entrada no coincide necesariamente con el número de lotes de salida, ya que el sistema determina la forma más eficaz de procesar por lotes y almacenar los datos en el lago de datos.
 
-Para el propósito de este ejemplo, se da por hecho que ha ingerido un archivo CSV en Platform y ha creado un conjunto de datos denominado `drug_checkout_data`.
+Para el propósito de este ejemplo, se supone que ha ingerido un archivo CSV en Experience Platform y ha creado un conjunto de datos denominado `drug_checkout_data`.
 
 El archivo `drug_checkout_data` es un conjunto de 35.000 registros profundamente anidados. Utilice la instrucción SQL `SELECT * FROM drug_orders;` para obtener una vista previa del primer conjunto de registros en el conjunto de datos `drug_orders` basado en JSON.
 
@@ -92,19 +92,19 @@ A continuación, valide y compruebe los registros que se han introducido en el c
 
 >[!TIP]
 >
->Para recuperar el ID de lote y los registros de consulta asociados a dicho ID de lote, primero debe crear un lote en Platform. Si desea probar el proceso usted mismo, puede introducir datos CSV en Platform. Lea la guía sobre cómo [asignar un archivo CSV a un esquema XDM existente mediante recomendaciones generadas por IA](../../ingestion/tutorials/map-csv/recommendations.md).
+>Para recuperar el ID de lote y los registros de consulta asociados a dicho ID de lote, primero debe crear un lote en Experience Platform. Si desea probar el proceso usted mismo, puede introducir datos CSV en Experience Platform. Lea la guía sobre cómo [asignar un archivo CSV a un esquema XDM existente mediante recomendaciones generadas por IA](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Una vez que haya ingerido un lote, debe navegar a la [!UICONTROL pestaña de actividad Conjuntos de datos] para el conjunto de datos en el que ha ingerido los datos.
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en la navegación izquierda para abrir el panel [!UICONTROL Conjuntos de datos]. A continuación, seleccione el nombre del conjunto de datos en la pestaña [!UICONTROL Examinar] para acceder a la pantalla [!UICONTROL Actividad del conjunto de datos].
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir el panel [!UICONTROL Conjuntos de datos]. A continuación, seleccione el nombre del conjunto de datos en la pestaña [!UICONTROL Examinar] para acceder a la pantalla [!UICONTROL Actividad del conjunto de datos].
 
-![Panel de conjuntos de datos de IU de Platform con conjuntos de datos resaltados en la navegación izquierda.](../images/use-cases/datasets-workspace.png)
+![Panel de conjuntos de datos de IU de Experience Platform con conjuntos de datos resaltados en la navegación izquierda.](../images/use-cases/datasets-workspace.png)
 
 Aparece la vista [!UICONTROL Actividad del conjunto de datos]. Esta vista contiene detalles del conjunto de datos seleccionado. Incluye todos los lotes introducidos que se muestran en formato de tabla.
 
 Seleccione un lote de la lista de lotes disponibles y copie el [!UICONTROL ID de lote] en el panel de detalles de la derecha.
 
-![La interfaz de usuario de los conjuntos de datos del Experience Platform muestra los registros ingeridos con un identificador de lote resaltado.](../images/use-cases/batch-id.png)
+![La interfaz de usuario de los conjuntos de datos de Experience Platform muestra los registros ingeridos con un identificador de lote resaltado.](../images/use-cases/batch-id.png)
 
 A continuación, utilice la siguiente consulta para recuperar todos los registros incluidos en el conjunto de datos como parte de ese lote:
 
@@ -124,8 +124,8 @@ Al ejecutar esta consulta en el Editor de consultas, los resultados se truncan a
 
 ## Pasos siguientes {#next-steps}
 
-Al leer este documento, ha aprendido los aspectos básicos de la verificación y validación de registros en lotes ingeridos como parte del proceso de ingesta de datos. También obtuvo información sobre el acceso a los metadatos por lotes del conjunto de datos, la comprensión de las particiones lógicas y físicas y la consulta de lotes específicos mediante comandos SQL. Este conocimiento puede ayudarle a garantizar la integridad de los datos y optimizar su almacenamiento de datos en Platform.
+Al leer este documento, ha aprendido los aspectos básicos de la verificación y validación de registros en lotes ingeridos como parte del proceso de ingesta de datos. También obtuvo información sobre el acceso a los metadatos por lotes del conjunto de datos, la comprensión de las particiones lógicas y físicas y la consulta de lotes específicos mediante comandos SQL. Estos conocimientos pueden ayudarle a garantizar la integridad de los datos y optimizar su almacenamiento de datos en Experience Platform.
 
-A continuación, debe practicar la ingesta de datos para aplicar los conceptos aprendidos. Introduzca un conjunto de datos de ejemplo en Platform con los archivos de ejemplo proporcionados o con sus propios datos. Si aún no lo ha hecho, lea el tutorial sobre cómo [introducir datos en Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+A continuación, debe practicar la ingesta de datos para aplicar los conceptos aprendidos. Introduzca un conjunto de datos de ejemplo en Experience Platform con los archivos de ejemplo proporcionados o con sus propios datos. Si aún no lo ha hecho, lea el tutorial sobre cómo [introducir datos en Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
 Como alternativa, podría aprender a [conectar y verificar el servicio de consultas con diversas aplicaciones cliente de escritorio](../clients/overview.md) para mejorar sus capacidades de análisis de datos.

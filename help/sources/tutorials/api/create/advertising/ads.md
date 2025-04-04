@@ -2,9 +2,9 @@
 title: Conexión de Google Ads a Experience Platform mediante API
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Google Ads mediante la API de Flow Service.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
@@ -28,9 +28,9 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a [!DNL Google Ads] mediante la API [!DNL Flow Service].
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
 ### Recopilar credenciales necesarias
 
@@ -38,7 +38,7 @@ Para obtener información sobre la autenticación, lea la [[!DNL Google Ads] des
 
 ## Crear una conexión base
 
-Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
 Para crear un identificador de conexión base, realice una petición POST al extremo `/connections` y proporcione las credenciales de autenticación de Google Ads como parte de los parámetros de la solicitud.
 
@@ -110,4 +110,4 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 Siguiendo este tutorial, ha creado una conexión base [!DNL Google Ads] mediante la API [!DNL Flow Service] y ha conectado su cuenta de [!DNL Google Ads] a Experience Platform. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de publicidad a Platform mediante la API  [!DNL Flow Service] B](../../collect/advertising.md)
+* [Cree un flujo de datos para llevar los datos de publicidad a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/advertising.md)

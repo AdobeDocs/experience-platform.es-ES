@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
+keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;fuentes sdk;sdk;SDK
 title: Plantilla de documentación de autoservicio para la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen YOURSOURCE mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 *Comience por actualizar los metadatos (título y descripción) en la parte superior de la página. Ignore todas las instancias de UICONTROL en esta página. Esta es una etiqueta que ayuda a nuestros procesos de traducción automática a traducir correctamente la página a los múltiples idiomas que admitimos. Agregaremos etiquetas a su documentación después de que la envíe.*
 
-Este tutorial proporciona los pasos para crear un conector de origen *YOURSOURCE* mediante la interfaz de usuario de Platform.
+Este tutorial proporciona los pasos para crear un conector de origen *YOURSOURCE* mediante la interfaz de usuario de Experience Platform.
 
 ## Información general
 
@@ -37,7 +37,7 @@ Este tutorial proporciona los pasos para crear un conector de origen *YOURSOURCE
 
 ### Recopilar credenciales necesarias
 
-Para conectar *YOURSOURCE* a Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para conectar *YOURSOURCE* a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ Para obtener más información sobre estas credenciales, consulte la documentaci
 
 ## Conecta tu cuenta de *YOURSOURCE*
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
@@ -57,7 +57,7 @@ En la categoría *CATEGORÍA DE TU FUENTE*, selecciona *TU FUENTE* y, a continua
 
 >[!TIP]
 >
->Las capturas de pantalla utilizadas a continuación son ejemplos. Al crear su documentación, reemplace las imágenes por capturas de pantalla de su origen real. Puede utilizar la misma trama de marcado y el mismo color, así como los mismos nombres de archivo. Asegúrese de que la captura de pantalla capture toda la pantalla de la interfaz de usuario de Platform. Para obtener información sobre cómo cargar tus capturas de pantalla, consulta la guía sobre [enviar tu documentación para revisión](./github.md).
+>Las capturas de pantalla utilizadas a continuación son ejemplos. Al crear su documentación, reemplace las imágenes por capturas de pantalla de su origen real. Puede utilizar la misma trama de marcado y el mismo color, así como los mismos nombres de archivo. Asegúrese de que la captura de pantalla capture toda la pantalla de la interfaz de usuario de Experience Platform. Para obtener información sobre cómo cargar tus capturas de pantalla, consulta la guía sobre [enviar tu documentación para revisión](./github.md).
 
 ![catálogo](../assets/ui/catalog.png)
 
@@ -79,7 +79,7 @@ Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a co
 
 *Los flujos de trabajo para los pasos restantes de la creación de un flujo de datos están modularizados. Si desea realizar alguna llamada específica con respecto a su origen, consulte la sección de recursos adicionales a continuación.*
 
-Siguiendo este tutorial, ha establecido una conexión con su cuenta de *YOURSOURCE*. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en la plataforma](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta de *YOURSOURCE*. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Recursos adicionales
 

@@ -4,9 +4,9 @@ description: El servicio de identidad de Adobe Experience Platform le ofrece una
 title: Monitorización de flujos de datos para identidades en la IU
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1155'
 ht-degree: 9%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 9%
 
 El servicio de identidad de Adobe Experience Platform le ofrece una vista completa de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 
-El panel de monitorización le proporciona una representación visual de la actividad de los datos dentro de las identidades, incluido el estado de las identidades de los datos. Este tutorial proporciona instrucciones sobre cómo puede utilizar el panel de monitorización para monitorizar las identidades de los datos mediante la interfaz de usuario del Experience Platform, lo que le permite rastrear el estado del procesamiento de identidades.
+El panel de monitorización le proporciona una representación visual de la actividad de los datos dentro de las identidades, incluido el estado de las identidades de los datos. Este tutorial proporciona instrucciones sobre cómo puede utilizar el panel de monitorización para monitorizar las identidades de los datos mediante la interfaz de usuario de Experience Platform, lo que le permite rastrear el estado del procesamiento de identidades.
 
 ## Introducción {#getting-started}
 
-- [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
+- [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Experience Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
    - [Ejecuciones de flujo de datos](../../sources/notifications.md): Las ejecuciones de flujo de datos son los trabajos programados recurrentes en función de la configuración de frecuencia de los flujos de datos seleccionados.
 - [Servicio de identidad](../../identity-service/home.md): obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
-- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Panel de monitorización de identidades {#identity-metrics}
 
@@ -54,7 +54,7 @@ Las siguientes métricas están disponibles para esta vista de panel:
 | Métricas de identidad | Descripción |
 | ---------------- | ----------- |
 | **[!UICONTROL Registros recibidos]** | El número de registros recibidos del lago de datos. |
-| **[!UICONTROL Error en los registros]** | El número de registros que no se ingirieron en Platform debido a errores en los datos. |
+| **[!UICONTROL Error en los registros]** | El número de registros que no se ingirieron en Experience Platform debido a errores en los datos. |
 | **[!UICONTROL Registros omitidos]** | El número de registros que se ingerieron, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registros. |
 | **[!UICONTROL Registros ingeridos]** | El número de registros ingeridos en [!DNL Identity Service]. |
 | **[!UICONTROL Identidades agregadas]** | Número de identificadores nuevos de red agregados a [!DNL Identity Service]. |
@@ -78,7 +78,7 @@ Las siguientes métricas están disponibles para esta vista de panel:
 | **[!UICONTROL Conjunto de datos]** | Nombre del conjunto de datos en el que se inserta el flujo de datos. |
 | **[!UICONTROL Nombre de Source]** | Nombre de la fuente a la que pertenece el flujo de datos. |
 | **[!UICONTROL Registros recibidos]** | El número de registros recibidos del lago de datos. |
-| **[!UICONTROL Error en los registros]** | El número de registros que no se ingirieron en Platform debido a errores en los datos. |
+| **[!UICONTROL Error en los registros]** | El número de registros que no se ingirieron en Experience Platform debido a errores en los datos. |
 | **[!UICONTROL Registros omitidos]** | El número de registros que se ingerieron, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registros. |
 | **[!UICONTROL Registros ingeridos]** | El número de registros ingeridos en [!DNL Identity Service]. |
 | **[!UICONTROL Registros totales]** | Recuento total de todos los registros, incluidos los registros con errores, los registros omitidos, las identidades agregadas y los registros duplicados. |
@@ -100,7 +100,7 @@ Las siguientes métricas están disponibles para esta vista de panel:
 | Métrica | Descripción |
 | -------| ----------- |
 | **[!UICONTROL Registros recibidos]** | El número de registros recibidos del lago de datos. |
-| **[!UICONTROL Error en los registros]** | El número de registros que no se ingirieron en Platform debido a errores en los datos. |
+| **[!UICONTROL Error en los registros]** | El número de registros que no se ingirieron en Experience Platform debido a errores en los datos. |
 | **[!UICONTROL Registros omitidos]** | El número de registros que se ingerieron, pero no en [!DNL Identity Service] porque solo había un identificador en la fila de registros. |
 | **[!UICONTROL Registros ingeridos]** | El número de registros ingeridos en [!DNL Identity Service]. |
 | **[!UICONTROL Identidades agregadas]** | Número de identificadores nuevos de red agregados a [!DNL Identity Service]. |

@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4452'
+source-wordcount: '4454'
 ht-degree: 12%
 
 ---
@@ -64,7 +64,7 @@ Para seleccionar las audiencias que desea activar en el destino, utilice las cas
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 * **[!UICONTROL Servicio de segmentación]**: Audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
-* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience). Al seleccionar audiencias que se originan en **[!UICONTROL cargas personalizadas]**, se habilita automáticamente el paso [Seleccionar atributos de enriquecimiento](#select-enrichment-attributes).
+* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience). Al seleccionar audiencias que se originan en **[!UICONTROL cargas personalizadas]**, se habilita automáticamente el paso [Seleccionar atributos de enriquecimiento](#select-enrichment-attributes).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
 >[!IMPORTANT]
@@ -133,7 +133,7 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en décle
 
 2. Use el conmutador **[!UICONTROL Tiempo]** para seleccionar si la exportación debe realizarse inmediatamente después de la evaluación de la audiencia o de forma programada a una hora especificada. Al seleccionar la opción **[!UICONTROL Programado]**, puede utilizar el selector para elegir la hora del día, en formato [!DNL UTC], en la que debe realizarse la exportación.
 
-   Utilice la opción **[!UICONTROL Después de la evaluación del segmento]** para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esta opción garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino. Esto puede hacer que la audiencia se exporte varias veces al día según las acciones que realice.
+   Utilice la opción **[!UICONTROL Después de la evaluación del segmento]** para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Experience Platform. Esta opción garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino. Esto puede hacer que la audiencia se exporte varias veces al día según las acciones que realice.
 
    >[!IMPORTANT]
    >
@@ -293,7 +293,7 @@ En este paso, debe seleccionar los atributos de perfil que desea añadir a los a
 
 Un atributo obligatorio es una casilla de verificación activada por el usuario que garantiza que todos los registros de perfil contengan el atributo seleccionado. Por ejemplo: todos los perfiles exportados contienen una dirección de correo electrónico&#x200B;
 
-Puede marcar los atributos como obligatorios para asegurarse de que [!DNL Platform] exporta únicamente los perfiles que incluyen el atributo específico. Como resultado, se puede utilizar como una forma adicional de filtrado. Marcar un atributo como obligatorio es **no** obligatorio.
+Puede marcar los atributos como obligatorios para asegurarse de que [!DNL Experience Platform] exporta únicamente los perfiles que incluyen el atributo específico. Como resultado, se puede utilizar como una forma adicional de filtrado. Marcar un atributo como obligatorio es **no** obligatorio.
 
 Al no seleccionar un atributo obligatorio, se exportan todos los perfiles cualificados independientemente de sus atributos.
 
@@ -310,7 +310,7 @@ Una clave de anulación de duplicación es una clave principal definida por el u
 
 Las claves de deduplicación eliminan la posibilidad de tener varios registros del mismo perfil en un archivo de exportación.
 
-Hay tres formas de usar claves de anulación de duplicación en [!DNL Platform]:
+Hay tres formas de usar claves de anulación de duplicación en [!DNL Experience Platform]:
 
 * Usando un área de nombres de identidad única como [!UICONTROL clave de anulación de duplicación]
 * Usando un único atributo de perfil de un perfil [!DNL XDM] como [!UICONTROL clave de anulación de duplicación]

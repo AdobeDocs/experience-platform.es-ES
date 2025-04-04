@@ -5,16 +5,16 @@ title: Actualización de flujos de datos de destino mediante la API de Flow Serv
 type: Tutorial
 description: Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante la API de Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2410'
 ht-degree: 4%
 
 ---
 
 # Actualización de flujos de datos de destino mediante la API de Flow Service
 
-Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obtener información sobre cómo editar flujos de datos de destino mediante la interfaz de usuario del Experience Platform, lea [Editar flujos de activación](/help/destinations/ui/edit-activation.md).
+Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obtener información sobre cómo editar flujos de datos de destino mediante la interfaz de usuario de Experience Platform, lea [Editar flujos de activación](/help/destinations/ui/edit-activation.md).
 
 ## Introducción {#get-started}
 
@@ -27,23 +27,23 @@ Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un identifi
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Destinos](../home.md): [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
-* [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante la API [!DNL Flow Service].
 
 ### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de Experience Platform.
 
 ### Recopilación de valores para los encabezados obligatorios {#gather-values-for-required-headers}
 
-Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de Experience Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos del Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de Experience Platform requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -57,7 +57,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Búsqueda de detalles de flujo de datos {#look-up-dataflow-details}
 
-El primer paso para actualizar el flujo de datos de destino es recuperar los detalles del flujo de datos con el ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una solicitud de GET al extremo `/flows`.
+El primer paso para actualizar el flujo de datos de destino es recuperar los detalles del flujo de datos con el ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una petición GET al extremo `/flows`.
 
 **Formato de API**
 
@@ -345,11 +345,11 @@ Una respuesta correcta devuelve los detalles actuales del flujo de datos, inclui
 
 ## Actualizar nombre y descripción del flujo de datos {#update-dataflow}
 
-Para actualizar el nombre y la descripción del flujo de datos, realice una solicitud de PATCH a la API [!DNL Flow Service] y proporcione el identificador de flujo, la versión y los nuevos valores que desee utilizar.
+Para actualizar el nombre y la descripción del flujo de datos, realice una petición PATCH a la API [!DNL Flow Service] y proporcione el identificador de flujo, la versión y los nuevos valores que desee utilizar.
 
 >[!IMPORTANT]
 >
->Se requiere el encabezado `If-Match` al realizar una solicitud de PATCH. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de un flujo de datos.
+>Se requiere el encabezado `If-Match` al realizar una petición PATCH. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de un flujo de datos.
 
 **Formato de API**
 
@@ -391,7 +391,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {
@@ -404,7 +404,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 Cuando se habilita, un flujo de datos exporta perfiles al destino. Los flujos de datos están habilitados de forma predeterminada, pero se pueden deshabilitar para pausar las exportaciones de perfil.
 
-Puede habilitar o deshabilitar un flujo de datos de destino existente realizando una solicitud de POST a la API [!DNL Flow Service] y proporcionando el estado en el que desea actualizar el flujo.
+Puede habilitar o deshabilitar un flujo de datos de destino existente realizando una petición POST a la API [!DNL Flow Service] y proporcionando el estado al que desea actualizar el flujo.
 
 **Formato de API**
 
@@ -438,7 +438,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {
@@ -449,7 +449,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Añadir una audiencia a un flujo de datos {#add-segment}
 
-Para agregar una audiencia al flujo de datos de destino, realice una solicitud de PATCH a la API [!DNL Flow Service] y proporcione el ID de flujo, la versión y la audiencia que desee agregar.
+Para agregar una audiencia al flujo de datos de destino, realice una petición PATCH a la API [!DNL Flow Service] y proporcione el ID de flujo, la versión y la audiencia que desee agregar.
 
 **Formato de API**
 
@@ -499,17 +499,17 @@ curl -X PATCH \
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 | `id` | Especifique el ID de la audiencia que está agregando al flujo de datos de destino. |
 | `name` | **(Opcional)**. Especifique el nombre de la audiencia que está agregando al flujo de datos de destino. Tenga en cuenta que este campo no es obligatorio y puede añadir correctamente una audiencia al flujo de datos de destino sin proporcionar su nombre. |
-| `filenameTemplate` | Solo para *destinos por lotes*. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Este campo determina el formato de nombre de archivo de los archivos que se exportan al destino. <br> Las siguientes opciones están disponibles: <br> <ul><li>`%DESTINATION_NAME%`: obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: obligatorio. Los archivos exportados contienen el ID de la audiencia exportada.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Los archivos exportados contienen el nombre de la audiencia exportada.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(opcional)**. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que los genera el Experience Platform.</li><li>`custom-text`: **(Opcional)**. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre cómo configurar nombres de archivo, consulte la sección [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) en el tutorial de activación de destinos por lotes. |
+| `filenameTemplate` | Solo para *destinos por lotes*. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Este campo determina el formato de nombre de archivo de los archivos que se exportan al destino. <br> Las siguientes opciones están disponibles: <br> <ul><li>`%DESTINATION_NAME%`: obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: obligatorio. Los archivos exportados contienen el ID de la audiencia exportada.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Los archivos exportados contienen el nombre de la audiencia exportada.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(opcional)**. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que Experience Platform los genera.</li><li>`custom-text`: **(Opcional)**. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre cómo configurar nombres de archivo, consulte la sección [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) en el tutorial de activación de destinos por lotes. |
 | `exportMode` | Solo para *destinos por lotes*. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> obligatorio. Seleccione `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Para obtener más información sobre las dos opciones, consulte [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) en el tutorial de activación de destinos por lotes. |
 | `startDate` | Seleccione la fecha en la que la audiencia debe comenzar a exportar perfiles a su destino. |
 | `frequency` | Solo para *destinos por lotes*. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> obligatorio. <br> <ul><li>Para el modo de exportación `"DAILY_FULL_EXPORT"`, puede seleccionar `ONCE` o `DAILY`.</li><li>Para el modo de exportación `"FIRST_FULL_THEN_INCREMENTAL"`, puede seleccionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `triggerType` | Solo para *destinos por lotes*. Este campo solo es necesario al seleccionar el modo `"DAILY_FULL_EXPORT"` en el selector `frequency`. <br> obligatorio. <br> <ul><li>Seleccione `"AFTER_SEGMENT_EVAL"` para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esto garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino.</li><li>Seleccione `"SCHEDULED"` para que el trabajo de activación se ejecute a una hora fija. Esto garantiza que los datos de perfil del Experience Platform se exporten a la misma hora cada día, pero es posible que los perfiles exportados no estén los más actualizados, en función de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación. Al seleccionar esta opción, también debe agregar un `startTime` para indicar a qué hora en UTC se deben producir las exportaciones diarias.</li></ul> |
+| `triggerType` | Solo para *destinos por lotes*. Este campo solo es necesario al seleccionar el modo `"DAILY_FULL_EXPORT"` en el selector `frequency`. <br> obligatorio. <br> <ul><li>Seleccione `"AFTER_SEGMENT_EVAL"` para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Experience Platform. Esto garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino.</li><li>Seleccione `"SCHEDULED"` para que el trabajo de activación se ejecute a una hora fija. Esto garantiza que los datos de perfil de Experience Platform se exporten a la misma hora cada día, pero es posible que los perfiles exportados no estén los más actualizados, en función de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación. Al seleccionar esta opción, también debe agregar un `startTime` para indicar a qué hora en UTC se deben producir las exportaciones diarias.</li></ul> |
 | `endDate` | Solo para *destinos por lotes*. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> No aplicable al seleccionar `"exportMode":"DAILY_FULL_EXPORT"` y `"frequency":"ONCE"`. <br>: establece la fecha en la que los miembros de la audiencia dejan de exportarse al destino. |
 | `startTime` | Solo para *destinos por lotes*. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> obligatorio. Seleccione el momento en que se deben generar y exportar al destino los archivos que contienen miembros de la audiencia. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {
@@ -520,7 +520,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Eliminación de una audiencia de un flujo de datos {#remove-segment}
 
-Para quitar una audiencia de un flujo de datos de destino existente, realice una solicitud de PATCH a la API [!DNL Flow Service] y proporcione el ID de flujo, la versión y el selector de índice de la audiencia que desee quitar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que se muestra más abajo elimina la primera y la segunda audiencia del flujo de datos.
+Para quitar una audiencia de un flujo de datos de destino existente, realice una petición PATCH a la API [!DNL Flow Service] y proporcione el ID de flujo, la versión y el selector de índice de la audiencia que desee quitar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que se muestra más abajo elimina la primera y la segunda audiencia del flujo de datos.
 
 **Formato de API**
 
@@ -565,12 +565,12 @@ curl -X PATCH \
 | Propiedad | Descripción |
 | --------- | ----------- |
 | `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace` y `remove`. Para quitar una audiencia de un flujo de datos, use la operación `remove`. |
-| `path` | Especifica qué audiencia existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de las audiencias en un flujo de datos, realice una llamada de GET al extremo `/flows` e inspeccione la propiedad `transformations.segmentSelectors`. Para eliminar la primera audiencia en el flujo de datos, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
+| `path` | Especifica qué audiencia existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de las audiencias en un flujo de datos, realice una llamada GET al extremo `/flows` e inspeccione la propiedad `transformations.segmentSelectors`. Para eliminar la primera audiencia en el flujo de datos, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {
@@ -581,7 +581,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Actualización de componentes de una audiencia en un flujo de datos {#update-segment}
 
-Puede actualizar los componentes de una audiencia en un flujo de datos de destino existente. Por ejemplo, puede cambiar la frecuencia de exportación o editar la plantilla de nombre de archivo. Para ello, realice una solicitud de PATCH a la API [!DNL Flow Service] y proporcione el ID de flujo, la versión y el selector de índice de la audiencia que desea actualizar. La indexación comienza en `0`. Por ejemplo, la solicitud siguiente actualiza la novena audiencia de un flujo de datos.
+Puede actualizar los componentes de una audiencia en un flujo de datos de destino existente. Por ejemplo, puede cambiar la frecuencia de exportación o editar la plantilla de nombre de archivo. Para ello, realice una petición PATCH a la API [!DNL Flow Service] y proporcione el ID de flujo, la versión y el selector de índice de la audiencia que desea actualizar. La indexación comienza en `0`. Por ejemplo, la solicitud siguiente actualiza la novena audiencia de un flujo de datos.
 
 **Formato de API**
 
@@ -631,7 +631,7 @@ Para obtener descripciones de las propiedades de la carga útil, consulte la sec
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {
@@ -644,7 +644,7 @@ Consulte los ejemplos siguientes para ver más ejemplos de componentes de audien
 
 ## Actualizar el modo de exportación de una audiencia de programada a después de la evaluación de audiencia {#update-export-mode}
 
-+++ Haga clic para ver un ejemplo en el que una exportación de audiencia se actualiza desde que se activa todos los días a una hora especificada a que se activa todos los días después de que se complete el trabajo de segmentación por lotes de Platform.
++++ Haga clic para ver un ejemplo en el que una exportación de audiencia se actualiza de activarse todos los días a una hora especificada a activarse todos los días después de que se complete el trabajo de segmentación por lotes de Experience Platform.
 
 La audiencia se exporta todos los días a las 16:00 UTC.
 
@@ -697,7 +697,7 @@ La audiencia se exporta todos los días después de que se complete el trabajo d
 
 +++ Haga clic para ver un ejemplo en el que la plantilla de nombre de archivo se actualiza para incluir campos adicionales en el nombre del archivo
 
-Los archivos exportados contienen el nombre de destino y el ID de audiencia del Experience Platform
+Los archivos exportados contienen el nombre de destino y el ID de audiencia de Experience Platform
 
 ```json
 {
@@ -720,7 +720,7 @@ Los archivos exportados contienen el nombre de destino y el ID de audiencia del 
 }
 ```
 
-Los archivos exportados contienen el nombre de destino, el ID de audiencia del Experience Platform, la fecha y la hora en que el Experience Platform generó el archivo y el texto personalizado anexado al final de los archivos.
+Los archivos exportados contienen el nombre de destino, el ID de audiencia de Experience Platform, la fecha y la hora en que Experience Platform generó el archivo y el texto personalizado anexado al final de los archivos.
 
 
 ```json
@@ -748,7 +748,7 @@ Los archivos exportados contienen el nombre de destino, el ID de audiencia del E
 
 ## Añadir un atributo de perfil a un flujo de datos {#add-profile-attribute}
 
-Para agregar un atributo de perfil al flujo de datos de destino, realice una solicitud de PATCH a la API [!DNL Flow Service] y proporcione el identificador de flujo, la versión y el atributo de perfil que desee agregar.
+Para agregar un atributo de perfil al flujo de datos de destino, realice una petición PATCH a la API [!DNL Flow Service] y proporcione el identificador de flujo, la versión y el atributo de perfil que desee agregar.
 
 **Formato de API**
 
@@ -790,7 +790,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {
@@ -801,7 +801,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Eliminación de un atributo de perfil de un flujo de datos {#remove-profile-attribute}
 
-Para quitar un atributo de perfil de un flujo de datos de destino existente, realice una solicitud de PATCH a la API [!DNL Flow Service] y proporcione el identificador de flujo, la versión y el selector de índice del atributo de perfil que desee quitar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que se muestra más abajo elimina el quinto atributo de perfil del flujo de datos.
+Para quitar un atributo de perfil de un flujo de datos de destino existente, realice una petición PATCH a la API [!DNL Flow Service] y proporcione el identificador de flujo, la versión y el selector de índice del atributo de perfil que desee quitar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que se muestra más abajo elimina el quinto atributo de perfil del flujo de datos.
 
 
 **Formato de API**
@@ -839,12 +839,12 @@ curl -X PATCH \
 | Propiedad | Descripción |
 | --------- | ----------- |
 | `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace` y `remove`. Para quitar una audiencia de un flujo de datos, use la operación `remove`. |
-| `path` | Especifica qué atributo de perfil existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de los atributos de perfil en un flujo de datos, realice una llamada de GET al extremo `/flows` e inspeccione la propiedad `transformations.profileSelectors`. Para eliminar la primera audiencia en el flujo de datos, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `path` | Especifica qué atributo de perfil existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de los atributos de perfil en un flujo de datos, realice una llamada GET al extremo `/flows` e inspeccione la propiedad `transformations.profileSelectors`. Para eliminar la primera audiencia en el flujo de datos, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {
@@ -855,7 +855,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de respuestas de error.
+Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform para obtener más información sobre cómo interpretar las respuestas de error.
 
 ## Pasos siguientes {#next-steps}
 

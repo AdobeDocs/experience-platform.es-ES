@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;resolución de problemas;Data Science Workspace;temas populares
 solution: Experience Platform
-title: Guía de solución de problemas de Data Science Espacio de trabajo
-description: Este documento proporciona respuestas a las preguntas más frecuentes sobre Adobe Experience Platform Espacio de trabajo de ciencia de datos.
+title: Guía de resolución de problemas de Data Science Workspace
+description: Este documento proporciona respuestas a las preguntas frecuentes sobre Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 0%
 
 ---
 
-# [!DNL Data Science Workspace] Solución de problemas de guía
+# [!DNL Data Science Workspace] guía de solución de problemas
 
 >[!NOTE]
 >
@@ -19,23 +19,23 @@ ht-degree: 0%
 >
 >Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
-Este documento proporciona respuestas a las preguntas más frecuentes acerca de Adobe Experience Platform [!DNL Data Science Workspace]. Si tiene alguna pregunta o solución de problemas relacionados con las API de [!DNL Platform] en general, consulte la [Guía de solución de problemas de la API de Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes acerca de Adobe Experience Platform [!DNL Data Science Workspace]. Si tiene alguna pregunta o solución de problemas relacionados con las API de [!DNL Experience Platform] en general, consulte la [Guía de solución de problemas de la API de Adobe Experience Platform](../landing/troubleshooting.md).
 
 ## Estado de la consulta de JupyterLab Notebook atascado en estado de ejecución
 
-Un JupyterLab Notebook puede indicar que una celda está en estado de ejecución, indefinidamente, en algunas condiciones de falta de memoria. Por ejemplo, al consultar una conjunto de datos grande o realizar varias consultas posteriores, JupyterLab Notebook puede quedarse sin memoria disponible para tienda el objeto de marco de datos resultante. Hay algunos indicadores que se pueden ver en esta situación. Primero, el núcleo entra en el estado inactivo igualado aunque la celda se muestra como en ejecución indicada por el [`*`] icono junto a la celda. Además, la barra inferior indica la cantidad de RAM utilizada/disponible.
+Un JupyterLab Notebook puede indicar que una celda está en estado de ejecución, indefinidamente, en algunas condiciones de falta de memoria. Por ejemplo, al consultar un conjunto de datos grande o realizar varias consultas subsiguientes, JupyterLab Notebook puede quedarse sin memoria disponible para almacenar el objeto de marco de datos resultante. Hay algunos indicadores que se pueden ver en esta situación. En primer lugar, el núcleo entra en estado inactivo aunque la celda se muestre como ejecutándose, tal como indica el icono [`*`] situado junto a la celda. Además, la barra inferior indica la cantidad de RAM utilizada/disponible.
 
 ![RAM disponible](./images/jupyterlab/user-guide/allocate-ram.png)
 
-Durante la lectura de datos, la memoria puede crecer hasta alcanzar la cantidad máxima de memoria asignada. La memoria se libera tan pronto como se alcanza la memoria máxima y el núcleo se reinicia. Esto significa que la memoria utilizada en este escenario puede mostrarse como muy baja debido al reinicio del kernel, mientras que justo antes del reinicio, la memoria habría estado muy cerca de la RAM máxima asignada.
+Durante la lectura de datos, la memoria puede crecer hasta alcanzar la cantidad máxima de memoria asignada. La memoria se libera tan pronto como se alcanza la memoria máxima y el núcleo se reinicia. Esto significa que la memoria utilizada en este escenario puede mostrarse muy baja debido al reinicio del núcleo, mientras que justo antes del reinicio, la memoria habría estado muy cerca de la RAM máxima asignada.
 
-Para resolver este problema, seleccione el icono de engranaje en la parte superior derecha de JupyterLab y diapositiva el regulador a la derecha seguido de seleccionar **[!UICONTROL Actualizar configuraciones]** para asignar más RAM. Además, si está ejecutando varias consultas y el valor de RAM se acerca a la cantidad máxima asignada, a menos que necesite los resultados de consultas anteriores, reinicie el kernel para restablecer la cantidad disponible de RAM. Esto garantiza que tenga la máxima cantidad de RAM disponible para el consulta actual.
+Para resolver este problema, seleccione el icono de engranaje en la parte superior derecha de JupyterLab y deslice el control deslizante hacia la derecha seguido de **[!UICONTROL Actualizar configuraciones]** para asignar más RAM. Además, si está ejecutando varias consultas y el valor de RAM se acerca a la cantidad máxima asignada, a menos que necesite los resultados de consultas anteriores, reinicie el núcleo para restablecer la cantidad de RAM disponible. Esto garantiza que tiene la máxima cantidad de RAM disponible para la consulta actual.
 
-![asignar más RAM](./images/jupyterlab/user-guide/notebook-gpu-config.png)
+![asignar más ram](./images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-En el evento está asignando la cantidad máxima de memoria (RAM) y sigue encontrando este problema, puede modificar su consulta para operar en un tamaño de conjunto de datos más pequeño reduciendo las columnas o el rango de datos. Para usar la cantidad completa de datos, se recomienda impulsar un bloc de notas Spark.
+Si asigna la cantidad máxima de memoria (RAM) y sigue teniendo este problema, puede modificar la consulta para que funcione en un tamaño de conjunto de datos más pequeño reduciendo las columnas o el intervalo de datos. Para utilizar toda la cantidad de datos, se recomienda utilizar un portátil Spark.
 
-## [!DNL JupyterLab] entorno no se carga en [!DNL Google Chrome]
+## El entorno [!DNL JupyterLab] no se está cargando en [!DNL Google Chrome]
 
 >[!IMPORTANT]
 >
@@ -77,11 +77,11 @@ Para Safari 12, debe cambiar el agente de usuario a &#39;[!DNL Chrome]&#39; o &#
 
 ![Preferencias de Safari](./images/faq/preferences.png)
 
-Dentro de la ventana de preferencias de Safari, seleccione **Avanzadas**. Luego marque el menú Desarrollo de Mostrar en la *barra de menús* . Puede cerrar la ventana de preferencias una vez completado este paso.
+En la ventana Preferencias de Safari, seleccione **Avanzadas**. A continuación, marque la casilla *Mostrar menú de desarrollo en la barra de menús*. Una vez completado este paso, puede cerrar la ventana de preferencias.
 
 ![Safari avanzado](./images/faq/advanced.png)
 
-Siguiente, desde la barra navegación superior seleccione el **menú Desarrollar** . En el menú desplegable Desarrollar **, pase el ratón sobre** Agente **** de usuario. Puede seleccionar la cadena del agente de usuario **[!DNL Chrome]** o **[!DNL Firefox]** que desee utilizar.
+A continuación, en la barra de navegación superior, seleccione el menú **Desarrollar**. En el menú desplegable **Desarrollar**, pase el ratón sobre **Agente de usuario**. Puede seleccionar la cadena del agente de usuario **[!DNL Chrome]** o **[!DNL Firefox]** que desee utilizar.
 
 ![Menú de desarrollo](./images/faq/user-agent.png)
 
@@ -107,11 +107,11 @@ Para obtener una lista completa de las bibliotecas preinstaladas de [!DNL Python
 
 ## ¿Puedo instalar bibliotecas PySpark personalizadas?
 
-Desafortunadamente, no puede instalar bibliotecas adicionales para el kernel de PySpark. Sin embargo, puede ponerse en contacto con el servicio de atención al cliente de Adobe para que le instalen bibliotecas PySpark personalizadas.
+Desafortunadamente, no se pueden instalar bibliotecas adicionales para el núcleo PySpark. Sin embargo, puede ponerse en contacto con el representante del servicio de atención al cliente de Adobe para que le instalen bibliotecas PySpark personalizadas.
 
-Para obtener una lista de bibliotecas de PySpark preinstalados, consulte la [sección del apéndice del Guía del usuario](./jupyterlab/overview.md#supported-libraries) de JupyterLab.
+Para obtener una lista de las bibliotecas PySpark preinstaladas, consulte la sección [apéndice de la Guía del usuario de JupyterLab](./jupyterlab/overview.md#supported-libraries).
 
-## ¿Es posible configurar [!DNL Spark] los recursos del clúster o [!DNL JupyterLab] [!DNL Spark] el kernel de PySpark?
+## ¿Es posible configurar [!DNL Spark] recursos de clúster para [!DNL JupyterLab] [!DNL Spark] o el núcleo PySpark?
 
 Puede configurar los recursos agregando el siguiente bloque a la primera celda del bloc de notas:
 
@@ -139,19 +139,19 @@ Además, al escribir grandes conjuntos de datos de Spark/PySpark, el almacenamie
 
 <!-- remove this paragraph at a later date once the sdk is updated -->
 
-Si experimenta problema al leer datos y les está aplicando transformaciones, intente almacenamiento en caché los datos antes de las transformaciones. El almacenamiento en caché de los datos evita que se realicen múltiples lecturas en la red. Inicio leyendo los datos. Siguiente, almacene en caché (`df.cache()`) los datos. Por último, realiza tus transformaciones.
+Si tiene problemas al leer datos y está aplicando transformaciones a los datos, intente almacenar en caché los datos antes de las transformaciones. El almacenamiento en caché de los datos impide que se realicen varias lecturas en la red. Comience por leer los datos. A continuación, almacene en caché (`df.cache()`) los datos. Por último, realice las transformaciones que desee.
 
-## ¿Por qué mis blocs de notas Spark/PySpark tardan tanto en leer y escribir datos?
+## ¿Por qué mis portátiles Spark/PySpark tardan tanto en leer y escribir datos?
 
-Si está realizando transformaciones en datos, como `fit()`usar , las transformaciones pueden ejecutarse varias veces. Para aumentar el rendimiento, almacene en caché los datos utilizando `df.cache()` antes de realizar el `fit()`archivo . Esto garantiza que las transformaciones se ejecuten una sola vez y evita múltiples lecturas en la red.
+Si está realizando transformaciones en los datos, como por ejemplo al usar `fit()`, es posible que las transformaciones se estén ejecutando varias veces. Para aumentar el rendimiento, almacene en caché los datos usando `df.cache()` antes de realizar `fit()`. Esto garantiza que las transformaciones se ejecuten solo una vez y evita que se lean varias veces en la red.
 
-**Orden recomendado:** Inicio leyendo los datos. Siguiente, realice transformaciones seguidas de almacenamiento en caché (`df.cache()`) los datos. Por último, realice un `fit()`archivo .
+**Pedido recomendado:** Comience por leer los datos. A continuación, realice transformaciones seguidas de almacenar en caché (`df.cache()`) los datos. Por último, realice un `fit()`.
 
-## ¿Por qué mis blocs de notas Spark/PySpark no se pueden ejecutar?
+## ¿Por qué no se pueden ejecutar mis portátiles Spark/PySpark?
 
-Si recibe alguno de los siguientes errores:
+Si recibe cualquiera de los siguientes errores:
 
-- Se ha anulado el trabajo debido a un error fase... Solo se pueden comprimir RDD con el mismo número de elementos en cada partición.
+- Se ha anulado el trabajo debido a un error de fase... Solo puede comprimir RDD con el mismo número de elementos en cada partición.
 - Cliente RPC remoto desasociado y otros errores de memoria.
 - Rendimiento deficiente al leer y escribir conjuntos de datos.
 

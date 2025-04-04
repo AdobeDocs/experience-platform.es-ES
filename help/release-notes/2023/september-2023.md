@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2023'
 description: Las notas de la versión de septiembre de 2023 de Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2265'
-ht-degree: 31%
+source-wordcount: '2269'
+ht-degree: 28%
 
 ---
 
@@ -37,7 +37,7 @@ Los atributos calculados permiten resumir fácilmente los datos de evento en atr
 
 ## Alertas {#alerts}
 
-Experience Platform permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a diferentes reglas de alerta a través de la pestaña [!UICONTROL Alertas] de la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia IU o a través de notificaciones por correo electrónico.
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a distintas reglas de alerta a través de la ficha [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
 
 **Funciones nuevas o actualizadas**
 
@@ -103,7 +103,7 @@ Experience Platform proporciona un conjunto de funciones de higiene de los datos
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre las capacidades de higiene de datos de Platform, consulte la [descripción general de higiene de datos](../../hygiene/home.md).
+Para obtener más información sobre las capacidades de higiene de datos de Experience Platform, consulte la [descripción general de higiene de datos](../../hygiene/home.md).
 
 ## Destinos {#destinations}
 
@@ -180,7 +180,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Platform, consulte la [información general del sistema XDM](../../xdm/home.md)
+Para obtener más información sobre XDM en Experience Platform, consulte la [descripción general del sistema XDM](../../xdm/home.md)
 
 ## Servicio de identidad {#identity-service}
 
@@ -214,7 +214,7 @@ Para obtener más información sobre los servicios de consulta, vea la [Informac
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
+[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Experience Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
 **Funciones nuevas o actualizadas**
 
@@ -225,7 +225,7 @@ Para obtener más información sobre los servicios de consulta, vea la [Informac
 
 Para obtener más información sobre el servicio de segmentación, lea la [descripción general del servicio de segmentación](../../segmentation/home.md).
 
-## Orígenes {#sources}
+## Fuentes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

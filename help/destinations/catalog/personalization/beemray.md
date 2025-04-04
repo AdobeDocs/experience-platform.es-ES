@@ -3,9 +3,9 @@ keywords: beemray,extensión de beemray
 title: Extensión de Beemray
 description: La extensión de Bemray es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 5bb639f5-42b5-48ae-a3e9-7585595ab925
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '487'
 ht-degree: 3%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 3%
 
 ## Información general {#overview}
 
-[!DNL Beemray] le ayuda a acelerar su producto con contexto situacional. Le permite obtener perspectivas, crear nuevas experiencias, impulsar interacciones y participar en momentos que realmente importan. Bemray automatiza la inteligencia contextual mediante el aprendizaje automático. Beemray se conecta a Adobe Experience Cloud y al resto de sus socios tecnológicos. Todo sucede en tiempo real. Esta extensión instala el SDK [!DNL Beemray] en el sitio.
+[!DNL Beemray] le ayuda a acelerar su producto con contexto situacional. Le permite obtener perspectivas, crear nuevas experiencias, impulsar interacciones y participar en momentos que realmente importan. Bemray automatiza la inteligencia contextual mediante el aprendizaje automático. Beemray se conecta a Adobe Experience Cloud y al resto de sus socios tecnológicos. Todo sucede en tiempo real. Esta extensión instala [!DNL Beemray] SDK en el sitio.
 
 Bemray es una extensión de personalización en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
-Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
+Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
 ![Extensión de Bemray](../../assets/catalog/personalization/beemray/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que han adquirido Platform.
+Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
 Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
@@ -32,7 +32,7 @@ Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experi
 
 Para instalar la extensión [!DNL Beemray]:
 
-En la [interfaz de plataforma](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
@@ -42,7 +42,7 @@ Seleccione la propiedad de etiqueta en la que desea instalar la extensión. Tamb
 
 El flujo de trabajo le lleva a la IU de recopilación de datos para completar la instalación.
 
-Para obtener información acerca de las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la [página de Bemray en el Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Para obtener información acerca de las opciones de configuración de la extensión y la compatibilidad con la instalación, consulte la [página Bemray en Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 También puede instalar la extensión directamente en la [IU de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía de [adición de una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 

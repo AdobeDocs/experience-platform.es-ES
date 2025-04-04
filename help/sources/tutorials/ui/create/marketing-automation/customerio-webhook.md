@@ -3,9 +3,9 @@ title: Crear una conexión de Source de Customer.io y un flujo de datos en la IU
 description: Obtenga información sobre cómo crear una conexión de origen Customer.io mediante la interfaz de usuario de Adobe Experience Platform.
 badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -53,25 +53,25 @@ Antes de crear una conexión de origen de [!DNL Customer.io], necesitará que se
 }
 ```
 
-### Crear un esquema de plataforma para [!DNL Customer.io] {#create-platform-schema}
+### Crear un esquema de Experience Platform para [!DNL Customer.io] {#create-platform-schema}
 
-También debe asegurarse de crear un esquema de Platform para utilizarlo con el origen. Consulte el tutorial de [creación de un esquema de Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
+También debe asegurarse de crear un esquema de Experience Platform para utilizarlo en el origen. Consulte el tutorial de [creación de un esquema de Experience Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
 
-![Captura de pantalla de la IU de Platform que muestra un esquema de ejemplo para Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
+![Captura de pantalla de la IU de Experience Platform que muestra un esquema de ejemplo para Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ## Conectar su cuenta de [!DNL Customer.io] {#connect-account}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources] y ver un catálogo de orígenes disponibles en el Experience Platform.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources] y ver un catálogo de orígenes disponibles en Experience Platform.
 
 Utilice el menú *[!UICONTROL Categorías]* para filtrar orígenes por categoría. También puede introducir un nombre de origen en la barra de búsqueda para buscar un origen específico del catálogo.
 
 Vaya a la categoría [!UICONTROL Automatización de marketing] para ver la tarjeta de origen [!DNL Customer.io]. Para empezar, seleccione **[!UICONTROL Agregar datos]**.
 
-![Captura de pantalla de la IU de Platform para el catálogo con la tarjeta Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
+![Captura de pantalla de la IU de Experience Platform para el catálogo con la tarjeta Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Seleccionar datos {#select-data}
 
-Aparecerá el paso **[!UICONTROL Seleccionar datos]**, que proporciona una interfaz para que pueda seleccionar los datos que desea llevar a Platform.
+Aparecerá el paso **[!UICONTROL Seleccionar datos]**, que proporciona una interfaz para que pueda seleccionar los datos que desea llevar a Experience Platform.
 
 * La parte izquierda de la interfaz es un explorador que le permite ver los flujos de datos disponibles en su cuenta;
 * La parte derecha de la interfaz de le permite previsualizar hasta 100 filas de datos de un archivo JSON.
@@ -98,7 +98,7 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 Aparecerá el paso [!UICONTROL Mapping], que le proporcionará una interfaz para asignar los campos de origen del esquema de origen a sus campos XDM de destino adecuados en el esquema de destino.
 
-Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o el conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
+Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
 
 Todas las asignaciones enumeradas a continuación son obligatorias y deben configurarse antes de continuar con la fase [!UICONTROL Revisar].
 
@@ -133,7 +133,7 @@ Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]
 
 ## Obtener la URL del extremo de flujo continuo {#get-streaming-endpoint}
 
-Con el flujo de datos de flujo continuo creado, ahora puede recuperar la URL del extremo de flujo continuo. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de la transmisión se comunique con el Experience Platform.
+Con el flujo de datos de flujo continuo creado, ahora puede recuperar la URL del extremo de flujo continuo. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de flujo se comunique con Experience Platform.
 
 Para construir la dirección URL utilizada para configurar el webhook en [!DNL Customer.io], debe recuperar lo siguiente:
 
@@ -156,11 +156,11 @@ En la interfaz de usuario [!DNL Customer.io], escriba la [URL de gancho web](#ge
 
 >[!TIP]
 >
->Puede suscribirse a una variedad de eventos diferentes para su webhook de informes. El mensaje de cada evento se incorporará a Platform cuando se cumpla un criterio de déclencheur de evento de acción [!DNL Customer.io]. Para obtener más información sobre los diferentes eventos, consulte la [[!DNL Customer.io] documentación de eventos](https://customer.io/docs/webhooks/#events).
+>Puede suscribirse a una variedad de eventos diferentes para su webhook de informes. El mensaje de cada evento se incorporará a Experience Platform cuando se cumpla un criterio de déclencheur de evento de acción [!DNL Customer.io]. Para obtener más información sobre los diferentes eventos, consulte la [[!DNL Customer.io] documentación de eventos](https://customer.io/docs/webhooks/#events).
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, configuró correctamente un flujo de datos de flujo continuo para llevar los datos de [!DNL Customer.io] al Experience Platform. Para supervisar los datos que se están ingiriendo, consulte la guía sobre [supervisión de flujos de datos de flujo continuo mediante la interfaz de usuario de Platform](../../monitor-streaming.md).
+Al seguir este tutorial, configuró correctamente un flujo de datos de streaming para llevar los datos de [!DNL Customer.io] a Experience Platform. Para supervisar los datos que se están ingiriendo, consulte la guía sobre [supervisión de flujos de datos de flujo continuo mediante la interfaz de usuario de Experience Platform](../../monitor-streaming.md).
 
 ## Recursos adicionales {#additional-resources}
 
@@ -178,6 +178,6 @@ Para comprobar que ha configurado correctamente el origen y que se están introd
 
 ![Captura de pantalla de la IU de Customer.io que muestra registros de actividad](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
-* En la interfaz de usuario de Platform, seleccione **[!UICONTROL Ver flujos de datos]** junto al menú de tarjeta [!DNL Customer.io] en el catálogo de fuentes. A continuación, seleccione **[!UICONTROL Vista previa del conjunto de datos]** para comprobar los datos introducidos para los eventos seleccionados en [!DNL Customer.io].
+* En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Ver flujos de datos]** junto al menú de tarjeta [!DNL Customer.io] en el catálogo de fuentes. A continuación, seleccione **[!UICONTROL Vista previa del conjunto de datos]** para comprobar los datos introducidos para los eventos seleccionados en [!DNL Customer.io].
 
-![Captura de pantalla de IU que muestra eventos ingeridos](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
+![Captura de pantalla de IU de Experience Platform que muestra eventos ingeridos](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)

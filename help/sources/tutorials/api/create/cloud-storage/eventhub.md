@@ -3,9 +3,9 @@ title: Crear una conexión de Azure Event Hubs con Source mediante la API de Flo
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Azure Event Hubs mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1496'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->El origen [!DNL Azure Event Hubs] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
+>El origen [!DNL Azure Event Hubs] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time Customer Data Platform Ultimate.
 
-Lea este tutorial para aprender a conectar [!DNL Azure Event Hubs] (denominado en adelante &quot;[!DNL Event Hubs]&quot;) al Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lea este tutorial para aprender a conectar [!DNL Azure Event Hubs] (denominado en adelante &quot;[!DNL Event Hubs]&quot;) a Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-- [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+- [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que necesitará conocer para conectar correctamente [!DNL Event Hubs] a Platform mediante la API [!DNL Flow Service].
+Las secciones siguientes proporcionan información adicional que necesitará conocer para conectar correctamente [!DNL Event Hubs] a Experience Platform mediante la API [!DNL Flow Service].
 
 ### Recopilar credenciales necesarias
 
@@ -79,9 +79,9 @@ Para obtener más información sobre [!DNL Azure Active Directory], lea la guía
 
 Para obtener más información sobre estos valores, consulte [este documento de Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
@@ -91,7 +91,7 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 El primer paso para crear una conexión de origen es autenticar el origen de [!DNL Event Hubs] y generar un identificador de conexión base. Un ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar elementos específicos que desee introducir, incluida información sobre sus tipos de datos y formatos.
 
-Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL Event Hubs] como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una petición POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Event Hubs] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -103,7 +103,7 @@ POST /connections
 
 >[!TAB Autenticación estándar]
 
-Para crear una cuenta con autenticación estándar, realice una solicitud de POST al extremo `/connections` y proporcione los valores para `sasKeyName`, `sasKey` y `namespace`.
+Para crear una cuenta con autenticación estándar, realice una petición POST al extremo `/connections` y proporcione los valores para `sasKeyName`, `sasKey` y `namespace`.
 
 +++Solicitud
 
@@ -157,7 +157,7 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 >[!TAB Autenticación SAS]
 
-Para crear una cuenta con autenticación SAS, realice una solicitud de POST al extremo `/connections` y proporcione los valores para `sasKeyName`, `sasKey`, `namespace` y `eventHubName`.
+Para crear una cuenta con autenticación SAS, realice una petición POST al extremo `/connections` y proporcione los valores para `sasKeyName`, `sasKey`, `namespace` y `eventHubName`.
 
 +++Solicitud
 
@@ -213,7 +213,7 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 >[!TAB Autenticación de Active Directory de Azure del centro de eventos]
 
-Para crear una cuenta mediante la autenticación de Azure Active Directory, realice una solicitud de POST al extremo `/connections` y proporcione los valores para `tenantId`, `clientId`, `clientSecretValue` y `namespace`.
+Para crear una cuenta mediante la autenticación de Azure Active Directory, realice una petición POST al extremo `/connections` y proporcione los valores para `tenantId`, `clientId`, `clientSecretValue` y `namespace`.
 
 +++Solicitud
 
@@ -269,7 +269,7 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 >[!TAB Autenticación de Azure Active Directory con ámbito de concentrador de eventos]
 
-Para crear una cuenta mediante la autenticación de Azure Active Directory, realice una solicitud de POST al extremo `/connections` y proporcione los valores para `tenantId`, `clientId`, `clientSecretValue`, `namespace` y `eventHubName`.
+Para crear una cuenta mediante la autenticación de Azure Active Directory, realice una petición POST al extremo `/connections` y proporcione los valores para `tenantId`, `clientId`, `clientSecretValue`, `namespace` y `eventHubName`.
 
 +++Solicitud
 
@@ -335,7 +335,7 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 Una conexión de origen crea y administra la conexión con el origen externo desde el que se incorporan los datos. Una conexión de origen consta de información como el origen de datos, el formato de datos y un ID de conexión de origen necesario para crear un flujo de datos. Una instancia de conexión de origen es específica de un inquilino y una organización.
 
-Para crear una conexión de origen, realice una solicitud de POST al extremo `/sourceConnections` de la API [!DNL Flow Service].
+Para crear una conexión de origen, realice una petición POST al extremo `/sourceConnections` de la API [!DNL Flow Service].
 
 **Formato de API**
 

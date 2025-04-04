@@ -4,10 +4,10 @@ user-guide-title: Guía de preparación de datos
 user-guide-description: Prepare sus datos para la ingesta en Adobe Experience Platform y descubra cómo la preparación de datos puede ayudarle a asignar, transformar y validar datos hoy mismo.
 feature: Data Prep
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 60%
+source-wordcount: '62'
+ht-degree: 66%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 60%
 - [Conjuntos de asignaciones](mapping-set.md)
 - [Actualizaciones de flujo](upserts.md)
 - [Guía de resolución de problemas](troubleshooting-guide.md)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
+- [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

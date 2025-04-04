@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;enum;campo;
 solution: Experience Platform
 title: Definición de campos de enumeración y valores sugeridos en la IU
-description: Obtenga información sobre cómo definir enumeraciones y valores sugeridos para campos de cadena en la interfaz de usuario del Experience Platform.
+description: Obtenga información sobre cómo definir enumeraciones y valores sugeridos para campos de cadena en la interfaz de usuario de Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 8%
 
 ---
@@ -86,7 +86,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## Reglas de evolución para enumeraciones y valores sugeridos {#evolution}
 
-Después de utilizar un esquema con un campo enum para introducir datos en Platform, cualquier cambio adicional realizado en la definición del esquema debe cumplir con los datos que ya están en el sistema. En general, los cambios realizados en un campo existente solo pueden hacer que el campo **less** sea restrictivo. Un campo no puede ser más restrictivo de lo que ya es.
+Después de utilizar un esquema con un campo enum para introducir datos en Experience Platform, cualquier cambio adicional realizado en la definición del esquema debe cumplir con los datos que ya están en el sistema. En general, los cambios realizados en un campo existente solo pueden hacer que el campo **less** sea restrictivo. Un campo no puede ser más restrictivo de lo que ya es.
 
 Cuando se trata de enumeraciones y valores sugeridos, las siguientes reglas se aplican después de la ingesta:
 

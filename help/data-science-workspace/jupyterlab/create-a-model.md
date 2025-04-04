@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;JupyterLab;fórmula;blocs de notas;Workspace de ciencia de datos;temas populares;crear fórmula
 solution: Experience Platform
-title: Crear un modelo con JupyterLab Notebooks
+title: Creación de un modelo con JupyterLab Notebooks
 type: Tutorial
-description: Este tutorial le guía por los pasos necesarios para crear un fórmula mediante el plantilla generador de fórmula de blocs de notas de JupyterLab.
+description: Este tutorial le guiará por los pasos necesarios para crear una fórmula con la plantilla de creador de fórmulas de cuadernos de JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2108'
 ht-degree: 0%
 
 ---
 
-# Crear un modelo con JupyterLab Notebooks
+# Creación de un modelo con JupyterLab Notebooks
 
 >[!NOTE]
 >
->La Espacio de trabajo de ciencia de datos ya no está disponible para su compra.
+>Data Science Workspace ya no se puede adquirir.
 >
->Esta documentación está destinada a clientes existentes con derechos previos a Data Science Espacio de trabajo.
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
-Este tutorial le guía por los pasos necesarios para crear un modelo mediante el plantilla generador de fórmula de blocs de notas de JupyterLab.
+Este tutorial le guiará por los pasos necesarios para crear un modelo con la plantilla de creador de fórmulas de JupyterLab Notebooks.
 
 ## Conceptos introducidos:
 
-- **Fórmulas:** Una fórmula es el término del Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo de IA o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarios para generar y ejecutar un modelo entrenado.
+- **Fórmulas:** Una fórmula es el término de Adobe para una especificación de modelo y es un contenedor de nivel superior que representa un aprendizaje automático específico, un algoritmo de IA o un conjunto de algoritmos, una lógica de procesamiento y una configuración necesarios para generar y ejecutar un modelo entrenado.
 - **Modelo:** Un modelo es una instancia de una fórmula de aprendizaje automático que se ha entrenado con datos históricos y configuraciones para resolver un caso de uso empresarial.
 - **Formación:** La formación es el proceso de aprendizaje de patrones y perspectivas a partir de datos etiquetados.
-- **Puntuación:** La puntuación es el proceso de generar información a partir de los datos utilizando un modelo entrenado.
+- **Puntuación:** La puntuación es el proceso de generar perspectivas a partir de datos usando un modelo entrenado.
 
 ## Descargar los recursos necesarios {#assets}
 
@@ -51,20 +51,20 @@ En la nueva pestaña del bloc de notas de la parte superior, se carga una barra 
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Introducción al bloc de notas del [!UICONTROL Generador] de recetas
+## Introducción al bloc de notas [!UICONTROL Generador de fórmulas]
 
-En la carpeta de activos proporcionada hay un modelo `propensity_model.ipynb`de tendencia de Luma. Con la opción cargar bloc de notas de JupyterLab, cargar el modelo proporcionado y abra el bloc de notas.
+En la carpeta de recursos proporcionada hay un modelo de tendencia de Luma `propensity_model.ipynb`. Con la opción Cargar bloc de notas en JupyterLab, cargue el modelo proporcionado y abra el bloc de notas.
 
-![cargar cuaderno](../images/jupyterlab/create-recipe/upload_notebook.png)
+![cargar bloc de notas](../images/jupyterlab/create-recipe/upload_notebook.png)
 
-El resto de este tutorial cubre los archivos siguientes predefinidos en el bloc de notas del modelo de propensión:
+El resto de este tutorial abarca los siguientes archivos predefinidos en el bloc de notas del modelo de tendencia:
 
 - [Archivo de requisitos](#requirements-file)
 - [Archivos de configuración](#configuration-files)
-- [Cargador de datos de capacitación](#training-data-loader)
+- [Cargador de datos de formación](#training-data-loader)
 - [Cargador de datos de puntuación](#scoring-data-loader)
 - [Archivo de canalización](#pipeline-file)
-- [Archivo de evaluador](#evaluator-file)
+- [Archivo del evaluador](#evaluator-file)
 - [Archivo de Data Saver](#data-saver-file)
 
 El siguiente tutorial de vídeo explica el portátil del modelo de tendencia de Luma:
@@ -85,23 +85,23 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->Las bibliotecas o versiones específicas que agregue pueden ser incompatibles con los bibliotecas anteriores. Además, si elige crear un archivo de entorno manualmente, no se permite que se sobrescriba el `name` campo.
+>Las bibliotecas o las versiones específicas que agregue pueden ser incompatibles con las bibliotecas anteriores. Además, si elige crear un archivo de entorno manualmente, no se permite anular el campo `name`.
 
-Para el portátil del modelo de propensión de Luma, no es necesario actualizar los requisitos.
+Para el portátil del modelo de tendencia de Luma, no es necesario actualizar los requisitos.
 
 ### Archivos de configuración {#configuration-files}
 
-Los archivos de configuración, y `scoring.conf`, se utilizan para especificar los conjuntos de datos que desea utilizar para aprendizaje y puntuación, `training.conf` así como para agregar hiperparámetros. Existen configuraciones independientes para la aprendizaje y la puntuación.
+Los archivos de configuración `training.conf` y `scoring.conf` se utilizan para especificar los conjuntos de datos que desea utilizar para aprendizaje y puntuación, así como para agregar hiperparámetros. Existen configuraciones independientes para la formación y la puntuación.
 
-Para que un modelo ejecute aprendizaje, debe proporcionar los elementos , `trainingDataSetId``ACP_DSW_TRAINING_XDM_SCHEMA`, y `tenantId`. Además, para la puntuación, debe proporcionar el `scoringDataSetId`, `tenantId`, y `scoringResultsDataSetId `.
+Para que un modelo ejecute la formación, debe proporcionar `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` y `tenantId`. Además, para la puntuación, debe proporcionar `scoringDataSetId`, `tenantId` y `scoringResultsDataSetId `.
 
-Para buscar los ID de conjunto de datos y esquema, vaya a la pestaña Datos de pestaña ![](../images/jupyterlab/create-recipe/dataset-tab.png) datos de los blocs de notas en la barra de navegación izquierda (debajo del icono de carpeta). Deben proporcionarse tres ID de conjunto de datos diferentes. Se `scoringResultsDataSetId` utiliza para tienda los resultados de la puntuación del modelo y debe ser un conjunto de datos vacío. Estos conjuntos de datos se realizaron anteriormente en el [paso activos](#assets) requerido.
+Para encontrar los ID de esquema y conjunto de datos, vaya a la pestaña de datos ![Data tab](../images/jupyterlab/create-recipe/dataset-tab.png) en blocs de notas en la barra de navegación izquierda (debajo del icono de la carpeta). Se deben proporcionar tres ID de conjunto de datos diferentes. `scoringResultsDataSetId` se usa para almacenar los resultados de puntuación del modelo y debe ser un conjunto de datos vacío. Estos conjuntos de datos se crearon anteriormente en el paso [Recursos necesarios](#assets).
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-La misma información se puede encontrar en [Adobe Experience Platform en las pestañas Esquema y **[Conjuntos](https://platform.adobe.com/dataset/overview)](https://platform.adobe.com/schema)****de**[ datos.](https://platform.adobe.com/)
+Encontrará la misma información en [Adobe Experience Platform](https://platform.adobe.com/) en las fichas **[Esquema](https://platform.adobe.com/schema)** y **[Conjuntos de datos](https://platform.adobe.com/dataset/overview)**.
 
-Una vez que compita, su configuración de aprendizaje y puntuación debe ser similar a la siguiente captura de pantalla:
+Una vez finalizada, la configuración de la formación y la puntuación debería ser similar a la siguiente captura de pantalla:
 
 ![configuración](../images/jupyterlab/create-recipe/config.png)
 
@@ -116,29 +116,29 @@ De forma predeterminada, se establecen los siguientes parámetros de configuraci
 
 El propósito del cargador de datos de formación es crear una instancia de los datos utilizados para crear el modelo de aprendizaje automático. Normalmente, el cargador de datos de formación realiza dos tareas:
 
-- Cargando datos de [!DNL Platform]
-- Preparación de datos e ingeniería de características
+- Cargando datos de [!DNL Experience Platform]
+- Preparación de datos e ingeniería de funciones
 
 Las dos secciones siguientes se sobrecargarán al cargar datos y preparar datos.
 
 ### Cargando datos {#loading-data}
 
-Este paso usa el marco de datos [pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Los datos se pueden cargar desde archivos de [!DNL Adobe Experience Platform] mediante el SDK [!DNL Platform] (`platform_sdk`) o desde fuentes externas mediante las funciones `read_csv()` o `read_json()` de los pandas.
+Este paso usa el marco de datos [pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Los datos se pueden cargar desde archivos de [!DNL Adobe Experience Platform] mediante el SDK [!DNL Experience Platform] (`platform_sdk`) o desde orígenes externos mediante las funciones `read_csv()` o `read_json()` de los pandas.
 
-- [[!DNL Platform SDK]](#platform-sdk)
+- [[!DNL Experience Platform SDK]](#platform-sdk)
 - [Fuentes externas](#external-sources)
 
 >[!NOTE]
 >
->En el bloc de notas del Generador de recetas, los datos se cargan a través del cargador de `platform_sdk` datos.
+>En el bloc de notas del Generador de fórmulas, los datos se cargan mediante el cargador de datos `platform_sdk`.
 
-### SDK de [!DNL Platform] {#platform-sdk}
+### SDK de [!DNL Experience Platform] {#platform-sdk}
 
-Para obtener una tutorial detallada sobre el uso del cargador de `platform_sdk` datos, visita el guía del SDK de [Platform](../authoring/platform-sdk.md). Este tutorial proporciona información sobre la autenticación versión, la lectura básica de datos y la escritura básica de datos.
+Para obtener un tutorial detallado sobre el uso del cargador de datos `platform_sdk`, visite la [guía de Experience Platform SDK](../authoring/platform-sdk.md). Este tutorial proporciona información sobre la autenticación de la versión, la lectura básica de datos y la escritura básica de datos.
 
 ### Fuentes externas {#external-sources}
 
-En esta sección se muestra cómo importar un archivo JSON o CSV a un objeto pandas. La documentación oficial de la biblioteca de pandas se puede encontrar aquí:
+Esta sección muestra cómo importar un archivo JSON o CSV a un objeto pandas. La documentación oficial de la biblioteca de pandas se puede encontrar aquí:
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -158,7 +158,7 @@ Ahora sus datos se encuentran en el objeto dataframe y se pueden analizar y mani
 
 ## Archivo de cargador de datos de formación
 
-En este ejemplo, los datos se cargan mediante el SDK de Platform. La biblioteca se puede importar en la parte superior de la página incluyendo la línea:
+En este ejemplo, los datos se cargan mediante Experience Platform SDK. La biblioteca se puede importar en la parte superior de la página incluyendo la línea:
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
@@ -177,7 +177,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->Como se menciona en la [sección del archivo de configuración](#configuration-files), se establecen los siguientes parámetros de configuración al obtener acceso a los datos del Experience Platform mediante `client_context = get_client_context(config_properties)`:
+>Como se menciona en la [sección del archivo de configuración](#configuration-files), se establecen los siguientes parámetros de configuración al obtener acceso a los datos de Experience Platform mediante `client_context = get_client_context(config_properties)`:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -187,15 +187,15 @@ Ahora que tiene los datos, puede empezar con la preparación de datos y la ingen
 
 ### Preparación de datos e ingeniería de funciones {#data-preparation-and-feature-engineering}
 
-Una vez cargados los datos, deben limpiarse y prepararse para su uso. En este ejemplo, el objetivo del modelo es predecir si un cliente va a pedir un producto o no. Como el modelo no está mirando productos específicos, no necesita `productListItems` y, por lo tanto, se suelta la columna. A continuación, se sueltan columnas adicionales que solo contienen un valor único o dos valores en una sola columna. Al aprendizaje un modelo, es importante mantener solo datos útiles que ayuden a predecir su objetivo.
+Una vez cargados los datos, deben limpiarse y prepararse para su uso. En este ejemplo, el objetivo del modelo es predecir si un cliente va a pedir un producto o no. Como el modelo no está mirando productos específicos, no necesita `productListItems` y, por lo tanto, se suelta la columna. A continuación, se sueltan columnas adicionales que solo contienen un valor único o dos valores en una sola columna. Al entrenar un modelo, es importante mantener solo datos útiles que ayuden a predecir su objetivo.
 
-![Ejemplo de preparación de datos](../images/jupyterlab/create-recipe/data_prep.png)
+![ejemplo de preparación de datos](../images/jupyterlab/create-recipe/data_prep.png)
 
-Una vez que haya eliminado los datos innecesarios, puede comenzar la ingeniería de características. Los datos de demostración utilizados en este ejemplo no contienen ninguna información de sesión. Normalmente, querría tener datos sobre las sesiones actuales y pasadas para un cliente en particular. Debido a la falta de información de la sesión, este ejemplo imita las sesiones actuales y pasadas a través de la demarcación del recorrido.
+Una vez que haya descartado datos innecesarios, puede comenzar con la ingeniería de funciones. Los datos de demostración utilizados para este ejemplo no contienen información de sesión. Por lo general, le gustaría tener datos sobre las sesiones actuales y pasadas de un cliente en particular. Debido a la falta de información de sesión, este ejemplo imita las sesiones actuales y pasadas a través de la delimitación de recorridos.
 
-![Demarcación del trayecto](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![demarcación de Recorrido](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
-Una vez completada la demarcación, los datos se etiquetan y se crea un recorrido.
+Una vez finalizada la demarcación, los datos se etiquetan y se crea un recorrido.
 
 ![etiquetar los datos](../images/jupyterlab/create-recipe/label_data.png)
 
@@ -213,21 +213,21 @@ Si desea utilizar diferentes archivos de datos para la formación y la puntuaci�
 
 El archivo `pipeline.py` incluye lógica para aprendizaje y puntuación.
 
-El propósito de aprendizaje es crear un modelo utilizando características y etiquetas en su aprendizaje conjunto de datos. Después de elegir su modelo aprendizaje, debe ajustar sus aprendizaje conjunto de datos x e y al modelo y la función devuelve el modelo entrenado.
+El propósito de la formación es crear un modelo con funciones y etiquetas en el conjunto de datos de aprendizaje. Después de elegir el modelo de aprendizaje, debe ajustar el conjunto de datos de aprendizaje x e y al modelo, y la función devolverá el modelo entrenado.
 
 >[!NOTE]
 > 
->Las características hacen referencia a los variable de entrada utilizados por el modelo de aprendizaje automático para predecir las etiquetas.
+>Las funciones hacen referencia a la variable de entrada que utiliza el modelo de aprendizaje automático para predecir las etiquetas.
 
-![Tren DEF](../images/jupyterlab/create-recipe/def_train.png)
+![tren def](../images/jupyterlab/create-recipe/def_train.png)
 
-La `score()` función debe contener el algoritmo de puntuación y devolver una medición para indicar el éxito del modelo. La `score()` función utiliza las etiquetas de puntuación conjunto de datos y el modelo entrenado para generar un conjunto de entidades previstas. Estos valores de predicción se comparan con las características reales del conjunto de datos de puntuación. En este ejemplo, la `score()` función utiliza el modelo entrenado para predecir entidades mediante las etiquetas del conjunto de datos de puntuación. Se devuelven las características previstas.
+La función `score()` debe contener el algoritmo de puntuación y devolver una medición para indicar el rendimiento correcto del modelo. La función `score()` utiliza las etiquetas del conjunto de datos de puntuación y el modelo entrenado para generar un conjunto de características predichas. Estos valores predichos se comparan entonces con las funciones reales del conjunto de datos de puntuación. En este ejemplo, la función `score()` utiliza el modelo entrenado para predecir características mediante las etiquetas del conjunto de datos de puntuación. Se devuelven las funciones previstas.
 
 ![puntuación def](../images/jupyterlab/create-recipe/def_score.png)
 
-## Archivo de evaluador {#evaluator-file}
+## Archivo del evaluador {#evaluator-file}
 
-El `evaluator.py` archivo contiene lógica sobre cómo desea evaluar su fórmula entrenado, así como cómo se debe dividir su datos de capacitación.
+El archivo `evaluator.py` contiene lógica sobre cómo desea evaluar la fórmula entrenada, así como sobre cómo se deben dividir los datos de entrenamiento.
 
 ### Dividir el conjunto de datos {#split-the-dataset}
 
@@ -239,27 +239,27 @@ Esta sección muestra la función `split()` que carga datos en el bloc de notas 
 
 ### Evaluar el modelo entrenado {#evaluate-the-trained-model}
 
-La `evaluate()` función se realiza después de entrenar el modelo y devuelve un Métrica para indicar el éxito del modelo. La `evaluate()` función utiliza las etiquetas de conjunto de datos de prueba y el modelo entrenado para predecir un conjunto de características. Estos valores predichos se comparan entonces con las funciones reales del conjunto de datos de prueba. En este ejemplo, las métricas utilizadas son `precision`, `recall`, `f1` y `accuracy`. Observe que la función devuelve un objeto `metric` que contiene una matriz de métricas de evaluación. Estas métricas se utilizan para evaluar el rendimiento del modelo entrenado.
+La función `evaluate()` se realiza después de que el modelo se haya entrenado y devuelve una métrica para indicar el éxito del modelo. La función `evaluate()` utiliza las etiquetas del conjunto de datos de prueba y el modelo entrenado para predecir un conjunto de características. Estos valores predichos se comparan entonces con las funciones reales del conjunto de datos de prueba. En este ejemplo, las métricas utilizadas son `precision`, `recall`, `f1` y `accuracy`. Observe que la función devuelve un objeto `metric` que contiene una matriz de métricas de evaluación. Estas métricas se utilizan para evaluar el rendimiento del modelo entrenado.
 
 ![evaluar](../images/jupyterlab/create-recipe/evaluate.png)
 
 Agregar `print(metric)` le permite ver los resultados de las métricas.
 
-![Métrica resultados](../images/jupyterlab/create-recipe/evaluate_metric.png)
+![resultados de métricas](../images/jupyterlab/create-recipe/evaluate_metric.png)
 
-## Archivo de ahorro de datos {#data-saver-file}
+## Archivo de Data Saver {#data-saver-file}
 
-El `datasaver.py` archivo contiene la función y se utiliza para guardar la predicción mientras se prueba la `save()` puntuación. La `save()` función toma su predicción y, mediante [!DNL Experience Platform Catalog] API, escribe los datos en el `scoringResultsDataSetId` archivo especificado `scoring.conf` . Usted puede
+El archivo `datasaver.py` contiene la función `save()` y se usa para guardar la predicción al probar la puntuación. La función `save()` toma su predicción y, mediante las API [!DNL Experience Platform Catalog], escribe los datos en el archivo `scoringResultsDataSetId` especificado en su archivo `scoring.conf`. Puede
 
-![Ahorro de datos](../images/jupyterlab/create-recipe/data_saver.png)
+![Protector de datos](../images/jupyterlab/create-recipe/data_saver.png)
 
-## Entrenamiento y puntuación {#training-and-scoring}
+## Formación y puntuación {#training-and-scoring}
 
 Cuando haya terminado de realizar cambios en el bloc de notas y desee entrenar la fórmula, puede seleccionar los botones asociados en la parte superior de la barra para crear una ejecución de formación en la celda. Al seleccionar el botón, aparece un registro de comandos y salidas del script de formación en el bloc de notas (en la celda `evaluator.py`). Conda instala primero todas las dependencias y, a continuación, se inicia la formación.
 
 Tenga en cuenta que debe ejecutar la formación al menos una vez antes de poder ejecutar la puntuación. Si se selecciona el botón **[!UICONTROL Ejecutar puntuación]**, se puntuará el modelo entrenado que se generó durante la formación. El script de puntuación aparece en `datasaver.py`.
 
-Para fines de depuración, si desea ver el resultado oculta, agréguelo `debug` al final de la celda de salida y vuelva a ejecutarlo.
+Para fines de depuración, si desea ver el resultado oculto, agregue `debug` al final de la celda de salida y vuelva a ejecutarlo.
 
 ![entrenar y calificar](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -269,22 +269,22 @@ Cuando haya terminado de editar la fórmula y esté satisfecho con la salida de 
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Después de seleccionar **[!UICONTROL Crear fórmula]**, se le pedirá que escriba un nombre de fórmula. Este nombre representa la fórmula real creada en [!DNL Platform].
+Después de seleccionar **[!UICONTROL Crear fórmula]**, se le pedirá que escriba un nombre de fórmula. Este nombre representa la fórmula real creada en [!DNL Experience Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Una vez que seleccione **[!UICONTROL Ok]**, comienza el proceso de creación de fórmula. Esto puede tardar algún tiempo y se muestra una barra de progreso en lugar del botón Crear fórmula. Una vez finalizado, puede seleccionar el botón **[!UICONTROL Ver fórmulas]** para llevarlo a la ficha **[!UICONTROL Recetas]** en **[!UICONTROL Modelos ML]**
+Una vez que selecciones **[!UICONTROL Ok]**, comienza el proceso de creación de la fórmula. Esto puede tardar algún tiempo y se muestra una barra de progreso en lugar del botón Crear fórmula. Una vez finalizado, puede seleccionar el botón **[!UICONTROL Ver fórmulas]** para llevarlo a la ficha **[!UICONTROL Recetas]** en **[!UICONTROL Modelos ML]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
 >[!CAUTION]
 >
 > - No elimine ninguna de las celdas del archivo
-> - No edite la línea situada en la `%%writefile` parte superior de las celdas del archivo
-> - No cree recetas en diferentes blocs de notas al mismo tiempo
+> - No edite la línea `%%writefile` en la parte superior de las celdas del archivo
+> - No cree fórmulas en distintos blocs de notas al mismo tiempo
 
 ## Pasos siguientes {#next-steps}
 
-Al completar este tutorial, habrá aprendido a crear un modelo de aprendizaje automático en el bloc de notas Generador  de recetas. También ha aprendido a ejercitar el cuaderno para fórmula flujo de trabajo.
+Al completar este tutorial, ha aprendido a crear un modelo de aprendizaje automático en el bloc de notas [!UICONTROL Creador de fórmulas]. También ha aprendido a utilizar el bloc de notas en el flujo de trabajo de fórmulas.
 
 Para continuar aprendiendo a trabajar con recursos dentro de [!DNL Data Science Workspace], visite la lista desplegable de fórmulas y modelos de [!DNL Data Science Workspace].

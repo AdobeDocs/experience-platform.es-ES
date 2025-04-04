@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Caducidad de evento de experiencia
 description: Este documento proporciona instrucciones generales para configurar los tiempos de caducidad de los eventos de experiencia individuales dentro de un conjunto de datos de Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
 
-# Caducidad de Experience Event
+# Caducidades de eventos de experiencia
 
 En Adobe Experience Platform, puede configurar los tiempos de caducidad para todos los eventos de experiencia que se incorporan a un conjunto de datos habilitado para [Perfil del cliente en tiempo real](./home.md). Esto permite eliminar automáticamente los datos del almacén de perfiles que ya no son válidos o útiles para sus casos de uso.
 
-Las caducidades de Experience Event no se pueden configurar a través de la IU o las API de Platform. En su lugar, debe ponerse en contacto con el servicio de asistencia para habilitar la caducidad de los eventos de experiencia en los conjuntos de datos necesarios.
+Las caducidades de los eventos de experiencia no se pueden configurar mediante la interfaz de usuario o las API de Experience Platform. En su lugar, debe ponerse en contacto con el servicio de asistencia para habilitar la caducidad de los eventos de experiencia en los conjuntos de datos necesarios.
 
 >[!IMPORTANT]
 >
@@ -23,7 +23,7 @@ Las caducidades de Experience Event no se pueden configurar a través de la IU o
 
 ## Proceso de caducidad automatizado
 
-Una vez habilitadas las caducidades de los eventos de experiencia en un conjunto de datos con perfil habilitado, Platform aplica automáticamente los valores de caducidad de cada evento capturado en un proceso de dos pasos:
+Una vez habilitada la caducidad de los eventos de experiencia en un conjunto de datos con perfil habilitado, Experience Platform aplica automáticamente los valores de caducidad para cada evento capturado en un proceso de dos pasos:
 
 1. Todos los datos nuevos que se incorporan al conjunto de datos tienen el valor de caducidad aplicado en el momento de la ingesta en función de la marca de tiempo del evento.
 1. Todos los datos existentes en el conjunto de datos tienen el valor de caducidad aplicado de forma retroactiva como un trabajo de sistema de relleno único. Una vez que el valor de caducidad se haya colocado en el conjunto de datos, los eventos anteriores al valor de caducidad se perderán inmediatamente en cuanto se ejecute el trabajo del sistema. Todos los demás eventos se eliminarán en cuanto alcancen sus valores de caducidad desde la marca de tiempo del evento. Cuando se hayan eliminado todos los eventos de experiencia, si el perfil ya no tiene atributos de perfil, este ya no existirá.
@@ -76,4 +76,4 @@ La caducidad de datos de perfil seudónimo y la caducidad de datos de evento de 
 
 **siempre** debe configurar la caducidad de datos del Evento de experiencia en sus conjuntos de datos, según sus necesidades de retener datos sobre sus clientes conocidos. Una vez configurada la caducidad de datos del Evento de experiencia, puede utilizar la caducidad de datos del Perfil seudónimo para eliminar automáticamente los Perfiles seudónimos. Normalmente, el periodo de caducidad de los datos de los perfiles seudónimos es menor que el periodo de caducidad de los datos de los eventos de experiencia.
 
-En un caso de uso típico, puede establecer la caducidad de los datos de Experience Event en función de los valores de los datos de usuario conocidos y puede establecer la caducidad de los datos del perfil seudónimo en una duración mucho más corta para limitar el impacto de los perfiles seudónimos en el cumplimiento de la licencia de Platform.
+En un caso de uso típico, puede establecer la caducidad de los datos de Experience Event en función de los valores de los datos de usuario conocidos y puede establecer la caducidad de los datos del perfil seudónimo a una duración mucho más corta para limitar el impacto de los perfiles seudónimos en el cumplimiento de la licencia de Experience Platform.

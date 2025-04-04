@@ -2,10 +2,10 @@
 title: Notas de la versión para etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: e300e57df998836a8c388511b446e90499185705
-workflow-type: ht
-source-wordcount: '771'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 93%
 
 ---
 
@@ -54,13 +54,13 @@ Se han publicado nuevas extensiones:
 
 ## 26 de octubre de 2022
 
-* **Administración de datos confidenciales para secuencias de datos**: las secuencias de datos ahora aprovechan varias tecnologías de Platform para administrar correctamente los datos confidenciales, tal como lo exigen regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, Health Insurance Portability and Accountability Act). Consulte la sección sobre [administración de datos confidenciales en las secuencias de datos](../../datastreams/overview.md#sensitive) para obtener más información.
+* **Administración de datos confidenciales para flujos de datos**: Los flujos de datos ahora aprovechan varias tecnologías de Experience Platform para administrar correctamente los datos confidenciales, tal como se exige en regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, Health Insurance Portability and Accountability Act). Consulte la sección sobre [administración de datos confidenciales en las secuencias de datos](../../datastreams/overview.md#sensitive) para obtener más información.
 * Extensión **[!DNL Splunk]para el reenvío de eventos**: ahora puede enviar datos a [!DNL Splunk] mediante una extensión de [reenvío de eventos](../ui/event-forwarding/overview.md). Consulte la [[!DNL Splunk] información general sobre las extensiones](../extensions/server/splunk/overview.md) para obtener más detalles.
 * Extensión **[!DNL Zendesk]para el reenvío de eventos**: ahora puede enviar datos a [!DNL Zendesk] mediante una extensión de [reenvío de eventos](../ui/event-forwarding/overview.md). Consulte la [[!DNL Zendesk] información general sobre las extensiones](../extensions/server/zendesk/overview.md) para obtener más detalles.
 
 ## 28 de septiembre de 2022
 
-* **Integración de navegación izquierda de Adobe Experience Platform**: todas las capacidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas y el reenvío de eventos) ahora también están disponibles a través del panel de navegación izquierdo en la IU del Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre interfaces de usuario cuando se trabaja con las capacidades de recopilación de datos en Platform.
+* **Integración de navegación izquierda de Adobe Experience Platform**: todas las capacidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas y el reenvío de eventos) ahora también están disponibles a través del panel de navegación izquierdo en la IU del Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre IU al trabajar con funciones de recopilación de datos en Experience Platform.
 * **Atribución de usuario en etiquetas y reenvío de eventos**: al enumerar propiedades disponibles en las etiquetas y el reenvío de eventos, cada propiedad enumerada ahora muestra cuándo se actualizó por última vez y quién lo hizo.
 * Extensión **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) para el reenvío de eventos**: ahora puede enviar datos a [!DNL Snapchat Conversions API] mediante una extensión de [reenvío de eventos](../../tags/ui/event-forwarding/overview.md). Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html).
 

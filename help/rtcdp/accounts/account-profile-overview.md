@@ -5,9 +5,9 @@ description: Descubra cómo Adobe Real-time Customer Data Platform B2B Edition l
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '306'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ Al unir datos de cuentas de diferentes fuentes, puede empezar a ver una imagen c
 
 ## Visualizador de perfiles de cuenta
 
-Con Real-Time CDP, B2B edition, puede utilizar la interfaz de usuario de Experience Platform para ver perfiles de cuenta y buscar cuentas específicas mediante un ID de cuenta de una fuente empresarial conectada o introduciendo directamente detalles de fuente. Para obtener más información sobre cómo ver los perfiles de cuenta en la interfaz de usuario de Platform, consulte la [guía de la interfaz de usuario del perfil de cuenta](account-profile-ui-guide.md).
+Con Real-Time CDP, B2B edition, puede utilizar la interfaz de usuario de Experience Platform para ver perfiles de cuenta y buscar cuentas específicas mediante un ID de cuenta de una fuente empresarial conectada o introduciendo directamente detalles de fuente. Para obtener más información sobre cómo ver los perfiles de cuenta en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario del perfil de cuenta](account-profile-ui-guide.md).
 
 ## Crear y activar audiencias de cuenta
 

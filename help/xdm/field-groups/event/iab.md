@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;iab;tcf;consentimiento;
+keywords: Experience Platform;inicio;temas populares;esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;iab;tcf;consentimiento;
 solution: Experience Platform
 title: Grupo de campos de consentimiento de IAB TCF 2.0 para esquemas de eventos
 description: Obtenga información acerca del grupo de campos Esquema de consentimiento TCF 2.0 de IAB para la clase XDM ExperienceEvent.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ El consentimiento [!UICONTROL IAB TCF 2.0] es un grupo de campos de esquema est�
 
 {style="table-layout:auto"}
 
-Consulte la guía sobre la compatibilidad con [IAB TCF 2.0 en Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información sobre el caso de uso de este grupo de campos. Para obtener más información sobre el propio grupo de campos, consulte el repositorio XDM público:
+Consulte la guía sobre la compatibilidad con [IAB TCF 2.0 en Experience Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información sobre el caso de uso de este grupo de campos. Para obtener más información sobre el propio grupo de campos, consulte el repositorio XDM público:
 
 * [Ejemplo completado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

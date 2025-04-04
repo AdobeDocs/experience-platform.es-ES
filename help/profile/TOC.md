@@ -4,10 +4,10 @@ user-guide-title: Guía de perfil del cliente en tiempo real
 user-guide-description: Combine datos de clientes para crear una vista unificada de las interacciones de clientes entre canales.
 feature: Profiles
 role: User
-source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 27%
+source-wordcount: '133'
+ht-degree: 33%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 27%
 * [[!DNL Profile] y protecciones de segmentación](guardrails.md)
 * [[!DNL Profile] panel](ui/profile-dashboard.md)
 * [Perfiles de Edge](edge-profiles.md)
-* [Caducidad de Experience Event](event-expirations.md)
+* [Caducidades de eventos de experiencia](event-expirations.md)
 * [Caducidad de perfil seudónimo](pseudonymous-profiles.md)
 * [Solicitud de marca de tiempo del cliente](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
@@ -30,7 +30,7 @@ ht-degree: 27%
    * [Previsualizar estado de muestra ([!DNL Profile] vista previa)](api/preview-sample-status.md)
    * [[!DNL Profile] trabajos del sistema (Eliminar solicitudes)](api/profile-system-jobs.md)
 * IU de perfil {#ui}
-   * [Guía de la interfaz de usuario [!DNL Profile]](ui/user-guide.md)
+   * [Guía de la interfaz de usuario de [!DNL Profile]](ui/user-guide.md)
    * [Personalización de detalles de [!DNL Profile]](ui/profile-customization.md)
    * [Perfiles de clientes potenciales](ui/prospect-profile.md)
 * Atributos calculados {#computed-attributes}
@@ -54,4 +54,4 @@ ht-degree: 27%
 * [Procesamiento de solicitud de privacidad](privacy.md)
 * [[!DNL Profile] guía de solución de problemas](troubleshooting.md)
 * [Referencia de API de perfil](https://www.adobe.com/go/profile-apis-en)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
+* [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

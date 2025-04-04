@@ -2,9 +2,9 @@
 title: Filtrado de datos de nivel de fila para una Source mediante la API de Flow Service
 description: Este tutorial trata los pasos sobre cómo filtrar datos en el nivel de origen mediante la API de Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1823'
 ht-degree: 5%
 
 ---
@@ -27,12 +27,12 @@ Lea esta guía para ver los pasos sobre cómo filtrar los datos de nivel de fila
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ## Filtrar datos de origen {#filter-source-data}
 
@@ -42,7 +42,7 @@ A continuación se describen los pasos que se deben seguir para filtrar los dato
 
 El primer paso para filtrar los datos de nivel de fila para el origen es recuperar las especificaciones de conexión del origen y determinar los operadores y el idioma que admite el origen.
 
-Para recuperar la especificación de conexión de un origen determinado, realice una solicitud de GET al extremo `/connectionSpecs` de la API [!DNL Flow Service] y proporcione el nombre de propiedad del origen como parte de los parámetros de consulta.
+Para recuperar la especificación de conexión de un origen determinado, realice una petición GET al extremo `/connectionSpecs` de la API [!DNL Flow Service] y proporcione el nombre de la propiedad de su origen como parte de los parámetros de consulta.
 
 **Formato de API**
 
@@ -155,7 +155,7 @@ En el ejemplo siguiente, las condiciones se aplican solo a los datos de selecci�
 
 ### Previsualización de los datos {#preview-your-data}
 
-Puede obtener una vista previa de los datos realizando una solicitud de GET al extremo `/explore` de la API [!DNL Flow Service], proporcionando `filters` como parte de los parámetros de consulta y especificando las condiciones de entrada de PQL en [!DNL Base64].
+Puede obtener una vista previa de los datos realizando una petición GET al extremo `/explore` de la API [!DNL Flow Service], proporcionando `filters` como parte de los parámetros de consulta y especificando las condiciones de entrada PQL en [!DNL Base64].
 
 **Formato de API**
 
@@ -334,7 +334,7 @@ Una respuesta correcta devuelve el contenido y la estructura de los datos.
 
 ### Crear una conexión de origen para los datos filtrados
 
-Para crear una conexión de origen e introducir datos filtrados, realice una solicitud de POST al extremo `/sourceConnections` y proporcione las condiciones de filtrado en los parámetros del cuerpo de la solicitud.
+Para crear una conexión de origen e introducir datos filtrados, realice una petición POST al extremo `/sourceConnections` y proporcione las condiciones de filtrado en los parámetros del cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -460,7 +460,7 @@ En la interfaz de usuario, vaya al catálogo de fuentes y luego seleccione **[!U
 
 ### Recuperación de detalles del flujo de datos
 
-A continuación, debe recuperar los detalles del flujo de datos, especialmente el ID de conexión de origen asociado al flujo de datos. Para recuperar los detalles del flujo de datos, realice una solicitud de GET al extremo `/flows` y proporcione el ID del flujo de datos como parámetro de ruta.
+A continuación, debe recuperar los detalles del flujo de datos, especialmente el ID de conexión de origen asociado al flujo de datos. Para recuperar los detalles del flujo de datos, realice una petición GET al extremo `/flows` y proporcione el ID del flujo de datos como parámetro de ruta.
 
 **Formato de API**
 
@@ -591,7 +591,7 @@ Una respuesta correcta devuelve los detalles del flujo de datos, incluida la inf
 
 ### Recuperar los detalles de la conexión de origen
 
-A continuación, use el identificador de conexión de origen y realice una solicitud de GET al extremo `/sourceConnections` para recuperar los detalles de conexión de origen.
+A continuación, use el identificador de conexión de origen y realice una petición GET al extremo `/sourceConnections` para recuperar los detalles de conexión de origen.
 
 **Formato de API**
 
@@ -676,13 +676,13 @@ Una respuesta correcta devuelve los detalles de la conexión de origen. Tome not
 
 ### Actualizar la conexión de origen con las condiciones de filtrado
 
-Ahora que tiene el ID de conexión de origen y su versión correspondiente, puede realizar una solicitud de PATCH con las condiciones de filtrado que especifican los tipos de actividad estándar.
+Ahora que tiene el ID de conexión de origen y su versión correspondiente, puede realizar una petición PATCH con las condiciones de filtro que especifican los tipos de actividad estándar.
 
-Para actualizar la conexión de origen, realice una solicitud de PATCH al extremo `/sourceConnections` y proporcione el identificador de conexión de origen como parámetro de consulta. Además, debe proporcionar un parámetro de encabezado `If-Match`, con la versión correspondiente de la conexión de origen.
+Para actualizar la conexión de origen, realice una petición PATCH al extremo `/sourceConnections` y proporcione el identificador de conexión de origen como parámetro de consulta. Además, debe proporcionar un parámetro de encabezado `If-Match`, con la versión correspondiente de la conexión de origen.
 
 >[!TIP]
 >
->Se requiere el encabezado `If-Match` al realizar una solicitud de PATCH. El valor de este encabezado es la versión/etiqueta única del flujo de datos que desea actualizar. El valor de versión/etiqueta se actualiza con cada actualización correcta de un flujo de datos.
+>Se requiere el encabezado `If-Match` al realizar una petición PATCH. El valor de este encabezado es la versión/etiqueta única del flujo de datos que desea actualizar. El valor de versión/etiqueta se actualiza con cada actualización correcta de un flujo de datos.
 
 **Formato de API**
 
@@ -747,9 +747,9 @@ Una respuesta correcta devuelve el ID de conexión de origen y la etiqueta (vers
 
 +++
 
-### Publish su conexión de origen
+### Publicación de la conexión de origen
 
-Con la conexión de origen actualizada con las condiciones de filtrado, ahora puede pasar del estado de borrador y publicar la conexión de origen. Para ello, realice una solicitud de POST al extremo `/sourceConnections` y proporcione el ID de la conexión de origen de borrador, así como una operación de acción para la publicación.
+Con la conexión de origen actualizada con las condiciones de filtrado, ahora puede pasar del estado de borrador y publicar la conexión de origen. Para ello, realice una petición POST al extremo `/sourceConnections` y proporcione el ID de la conexión de origen de borrador, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -791,9 +791,9 @@ Una respuesta correcta devuelve el ID de conexión de origen y la etiqueta (vers
 
 +++
 
-### Publish su conexión de destino
+### Publicación de la conexión de destino
 
-Al igual que en el paso anterior, también debe publicar la conexión de destino para continuar y publicar el flujo de datos de borrador. Realice una solicitud de POST al extremo `/targetConnections` y proporcione el identificador de la conexión de destino de borrador que desea publicar, así como una operación de acción para la publicación.
+Al igual que en el paso anterior, también debe publicar la conexión de destino para continuar y publicar el flujo de datos de borrador. Realice una petición POST al extremo `/targetConnections` y proporcione el identificador de la conexión de destino de borrador que desea publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -836,9 +836,9 @@ Una respuesta correcta devuelve el ID y la etiqueta correspondiente para la cone
 +++
 
 
-### Publish su flujo de datos
+### Publicación del flujo de datos
 
-Con las conexiones de origen y destino publicadas, ahora puede continuar con el paso final y publicar el flujo de datos. Para publicar el flujo de datos, realice una solicitud de POST al extremo `/flows` y proporcione el ID del flujo de datos y una operación de acción para la publicación.
+Con las conexiones de origen y destino publicadas, ahora puede continuar con el paso final y publicar el flujo de datos. Para publicar el flujo de datos, realice una petición POST al extremo `/flows` y proporcione el ID del flujo de datos y una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -880,7 +880,7 @@ Una respuesta correcta devuelve el ID y el `etag` correspondiente del flujo de d
 
 +++
 
-Puede utilizar la interfaz de usuario del Experience Platform para comprobar que se ha publicado el flujo de datos de borrador. Vaya a la página de flujos de datos en el catálogo de fuentes y haga referencia al **[!UICONTROL estado]** del flujo de datos. Si se ejecuta correctamente, el estado debería establecerse en **Enabled**.
+Puede utilizar la interfaz de usuario de Experience Platform para comprobar que se ha publicado el flujo de datos de borrador. Vaya a la página de flujos de datos en el catálogo de fuentes y haga referencia al **[!UICONTROL estado]** del flujo de datos. Si se ejecuta correctamente, el estado debería establecerse en **Enabled**.
 
 >[!TIP]
 >

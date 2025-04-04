@@ -1,11 +1,11 @@
 ---
 title: Amazon Ads
-description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido el Amazon DSP (ADSP). Con el destino de Amazon Ads en Adobe Experience Platform Amazon DSP, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en la interfaz de usuario de.
+description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido Amazon DSP (ADSP). Con el destino Amazon Ads en Adobe Experience Platform, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en Amazon DSP.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1820'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 [!DNL Amazon Ads] ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias.
 
-La integración de [!DNL Amazon Ads] con Adobe Experience Platform proporciona una integración llave en mano con [!DNL Amazon Ads] productos, incluidos el Amazon DSP (ADSP) y el Amazon Marketing Cloud (AMC).
+La integración de [!DNL Amazon Ads] con Adobe Experience Platform proporciona integración llave en mano a [!DNL Amazon Ads] productos, incluidos Amazon DSP (ADSP) y Amazon Marketing Cloud (AMC).
 
-Si usan el destino [!DNL Amazon Ads] en Adobe Experience Platform, los usuarios podrán definir audiencias de anunciante para el direccionamiento y la activación en la interfaz de usuario de AmazonDSP  Además, los usuarios pueden cargar sus datos en [!DNL Amazon Marketing Cloud] para comprender el rendimiento por audiencia, las dimensiones proporcionadas por el anunciante, la pertenencia a segmentos de Amazon u otras señales disponibles en AMC. Después de cargar audiencias de anunciante en AMC, los usuarios pueden usar [!DNL Amazon Marketing Cloud] para modificar, mejorar o anexar a los miembros de la audiencia señales de Amazon desde [!DNL Amazon Marketing Cloud].
+Si usan el destino [!DNL Amazon Ads] en Adobe Experience Platform, los usuarios podrán definir audiencias de anunciante para el direccionamiento y la activación en Amazon DSP.  Además, los usuarios pueden cargar sus datos en [!DNL Amazon Marketing Cloud] para comprender el rendimiento por audiencia, las dimensiones proporcionadas por el anunciante, la pertenencia a segmentos de Amazon u otras señales disponibles en AMC. Después de cargar audiencias de anunciante en AMC, los usuarios pueden usar [!DNL Amazon Marketing Cloud] para modificar, mejorar o anexar a los miembros de la audiencia señales de Amazon desde [!DNL Amazon Marketing Cloud].
 
 AMC reúne señales únicas de todas las propiedades de Amazon y operadas, abarcando todos los medios, incluyendo pantalla, vídeo, streaming de TV, audio y anuncios patrocinados. Los usuarios pueden enviar fácilmente segmentos depurados de Adobe Experience Platform a AMC para mejorar el aprendizaje, como grupos de mercado de audiencias, cohortes de estilo de vida y patrones de participación de la marca. Los segmentos aumentados se pueden utilizar para optimizar las activaciones de medios en Amazon DSP.
 
@@ -32,7 +32,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino *[!DNL
 
 ### Activación y direccionamiento {#activation-and-targeting}
 
-Esta integración con Amazon DSP permite a los anunciantes de [!DNL Amazon Ads] pasar audiencias de CDP del anunciante de Adobe Experience Platform a Amazon DSP, con el fin de crear audiencias de anunciante para la segmentación de anuncios. Las audiencias pueden seleccionarse dentro de la Amazon DSP para la segmentación positiva, así como para la segmentación negativa (supresión).
+Esta integración con Amazon DSP permite que los anunciantes de [!DNL Amazon Ads] pasen audiencias CDP del anunciante de Adobe Experience Platform a DSP de Amazon para crear audiencias de anunciante para la segmentación de anuncios. Las audiencias pueden seleccionarse dentro del DSP de Amazon para fines de segmentación positiva y negativa (supresión).
 
 ### Analytics y medición {#analytics-and-measurement}
 
@@ -40,23 +40,23 @@ Esta integración con [!DNL Amazon Marketing Cloud] (AMC) permite que los anunci
 
 ### Optimización de Advertising
 
-Esta integración con [!DNL Amazon Marketing Cloud] (AMC) permite a los anunciantes cargar sus propias listas de clientes y, mediante [!DNL Amazon Marketing Cloud] SQL, realizar análisis de superposición, supresiones, adiciones u optimizaciones a las audiencias de forma recurrente antes de crear una audiencia lista para la activación en Amazon DSP para la segmentación.
+Esta integración con [!DNL Amazon Marketing Cloud] (AMC) permite a los anunciantes cargar sus propias listas de clientes y, mediante [!DNL Amazon Marketing Cloud] SQL, realizar análisis de superposición, supresiones, adiciones u optimizaciones a las audiencias de forma recurrente antes de crear una audiencia lista para la activación en Amazon DSP para el direccionamiento.
 
 ## Requisitos previos {#prerequisites}
 
-Para usar la conexión [!DNL Amazon Ads] con Adobe Experience Platform, los usuarios deben tener acceso primero a una cuenta de anunciante de Amazon DSP o a una instancia de [!DNL Amazon Marketing Cloud]. Para aprovisionar estas instancias, visite la siguiente página en el sitio web [!DNL Amazon Ads]:
+Para usar la conexión [!DNL Amazon Ads] con Adobe Experience Platform, los usuarios deben tener acceso primero a una cuenta del anunciante de Amazon DSP o a una instancia de [!DNL Amazon Marketing Cloud]. Para aprovisionar estas instancias, visite la siguiente página en el sitio web [!DNL Amazon Ads]:
 
-* [Introducción a AmazonDSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
-* [Introducción al Marketing Cloud de Amazon](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
+* [Introducción a Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
+* [Introducción a Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Identidades admitidas {#supported-identities}
 
-La conexión *[!DNL Amazon Ads]* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service//features/namespaces.md). Para obtener más información sobre las identidades admitidas por [!DNL Amazon Ads], visite el [Centro de soporte técnico de AmazonDSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+La conexión *[!DNL Amazon Ads]* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service//features/namespaces.md). Para obtener más información sobre las identidades admitidas por [!DNL Amazon Ads], visite el [Centro de soporte técnico de Amazon DSP](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino *[!DNL Amazon Ads]*. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -126,7 +126,7 @@ La conexión [!DNL Amazon Ads] admite direcciones de correo electrónico con has
 
 * Para asignar direcciones de correo electrónico con hash, seleccione el área de nombres de identidad `Email_LC_SHA256` como campo de origen.
 * Para asignar números de teléfono con hash, seleccione el área de nombres de identidad `Phone_SHA256` como campo de origen.
-* Para asignar direcciones de correo electrónico o números de teléfono sin hash, seleccione las áreas de nombres de identidad correspondientes como campos de origen y marque la opción `Apply Transformation` para que Platform hash las identidades en la activación.
+* Para asignar direcciones de correo electrónico o números de teléfono sin hash, seleccione las áreas de nombres de identidad correspondientes como campos de origen y marque la opción `Apply Transformation` para que Experience Platform aplique hash a las identidades en la activación.
 * *NUEVO a partir de la versión de septiembre de 2024*: Amazon Ads requiere que asigne un campo que contenga un valor `countryCode` en el formato ISO de 2 caracteres para facilitar el proceso de resolución de identidades (por ejemplo: EE. UU., GB, MX, CA, etc.). Las conexiones sin asignaciones de `countryCode` tendrán un impacto negativo en las tasas de coincidencia de identidad.
 
 Solo se selecciona un campo de destino determinado una vez en una configuración de destino del conector [!DNL Amazon Ads].  Por ejemplo, si envía un correo electrónico empresarial, no puede asignar también un correo electrónico personal en la misma configuración de destino.
@@ -137,11 +137,11 @@ Se recomienda encarecidamente que asigne tantos campos como tenga disponibles. S
 
 Una vez que la audiencia se ha cargado, puede validar que se ha creado y cargado correctamente siguiendo los pasos siguientes:
 
-**Para AmazonDSP**
+**Para Amazon DSP**
 
 Vaya a **[!UICONTROL ID del anunciante]** > **[!UICONTROL Audiencias]** > **[!UICONTROL Audiencias del anunciante]**. Si la audiencia se creó correctamente y cumple la cantidad mínima de miembros, verá un estado de `Active`. Encontrará más detalles sobre el tamaño y el alcance de su audiencia en el panel Alcance previsto a la derecha de la interfaz de usuario de Amazon DSP.
 
-![Validación de creación de audiencia de AmazonDSP](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
+![Validación de creación de audiencia de Amazon DSP](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **Para[!DNL Amazon Marketing Cloud]**
 
@@ -149,7 +149,7 @@ En el explorador de esquemas de la izquierda, busque su audiencia en **[!UICONTR
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Validación de creación de audiencia de Marketing Cloud de Amazon](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![Validación de creación de audiencia de Amazon Marketing Cloud](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

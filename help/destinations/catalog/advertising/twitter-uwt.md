@@ -1,11 +1,11 @@
 ---
-keywords: twitter;Twitter;etiqueta universal de sitio web de twitter;etiqueta universal de sitio web de Twitter;etiqueta UWT de Twitter;Twitter uwt;twitter uwt
-title: Twitter Extensión de etiquetas de sitios web universales
-description: La extensión de Twitter de etiquetas de sitio web universal es un destino de publicidad en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+keywords: twitter;Twitter;etiqueta universal de sitio web de twitter;etiqueta universal de sitio web de Twitter;etiqueta UWT de Twitter;etiqueta UWT de Twitter;uwt de Twitter
+title: Extensión de etiqueta de sitio web universal de Twitter
+description: La extensión de etiquetas de sitios web universales de Twitter es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '441'
 ht-degree: 4%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 4%
 
 [!DNL Twitter Universal Website Tag] proporciona acciones para enviar señalizaciones a la etiqueta UWT de Twitter.
 
-[!DNL Twitter Universal Website Tag] es una extensión publicitaria en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte [Seguimiento de conversiones](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) en la documentación de Twitter.
+[!DNL Twitter Universal Website Tag] es una extensión publicitaria en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte [Seguimiento de conversión](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) en la documentación de Twitter.
 
-Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
+Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
-![Extensión universal de etiquetas para sitios web de Twitter](../../assets/catalog/advertising/twitter-uwt/catalog.png)
+![Extensión de etiqueta de sitio web universal de Twitter](../../assets/catalog/advertising/twitter-uwt/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que han adquirido Platform.
+Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
 Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
@@ -32,7 +32,7 @@ Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experi
 
 Para instalar la extensión [!DNL Twitter Universal Website Tag]:
 
-En la [interfaz de plataforma](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
@@ -56,6 +56,6 @@ Puede configurar, actualizar y eliminar extensiones en la IU de recopilación de
 
 >[!TIP]
 >
->Si la extensión ya está instalada en una de las propiedades, la interfaz de usuario de Platform aún mostrará **[!UICONTROL Instalar]** para la extensión. Inicie el flujo de trabajo de instalación como se describe en [Instalar extensión](#install-extension) para configurar o eliminar la extensión.
+>Si la extensión ya está instalada en una de las propiedades, la interfaz de usuario de Experience Platform seguirá mostrando **[!UICONTROL Install]** para la extensión. Inicie el flujo de trabajo de instalación como se describe en [Instalar extensión](#install-extension) para configurar o eliminar la extensión.
 
 Para actualizar la extensión, consulte la guía sobre el [proceso de actualización de la extensión](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) en la documentación de etiquetas.

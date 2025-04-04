@@ -2,9 +2,9 @@
 title: Registros de consultas
 description: Los registros de consultas se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudar a solucionar problemas. Este documento describe cómo utilizar y navegar por la sección Registros del servicio de consulta de la interfaz de usuario.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Para comprobar los registros de consultas, seleccione [!UICONTROL Consultas] par
 >
 >Tanto las consultas del sistema como las consultas del panel se excluyen de forma predeterminada. Consulte la sección [filtros](#filter-logs) para obtener información sobre cómo restringir los registros mostrados en función de su configuración.
 
-![Interfaz de usuario de Platform con consultas y registro resaltados.](../images/ui/query-log/logs.png)
+![Interfaz de usuario de Experience Platform con consultas y registro resaltados.](../images/ui/query-log/logs.png)
 
 ## Personalizar y buscar {#customize-and-search}
 

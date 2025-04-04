@@ -3,7 +3,7 @@ keywords: conexión de linkedin;conexión de linkedin;destinos de linkedin;linke
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para la segmentación, personalización y supresión de audiencias, en función de los correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 4%
@@ -32,7 +32,7 @@ Una empresa de software organiza una conferencia y desea mantenerse en contacto 
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Seleccione esta identidad de destino cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres IDFA. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para los correos electrónicos de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para los correos electrónicos de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 
 {style="table-layout:auto"}
 
@@ -42,8 +42,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -54,11 +54,11 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono y otros) utilizados en el destino [!DNL LinkedIn Matched Audiences]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Requisitos previos de cuenta de linkedIn {#LinkedIn-account-prerequisites}
+## Requisitos previos de cuenta de LinkedIn {#LinkedIn-account-prerequisites}
 
 Antes de usar el destino [!UICONTROL Audiencia coincidente de LinkedIn], asegúrate de que tu cuenta de [!DNL LinkedIn Campaign Manager] tenga el nivel de permiso de [!DNL Creative Manager] o superior.
 
@@ -72,7 +72,7 @@ Según el tipo de ID que introduzca en Adobe Experience Platform, debe cumplir c
 
 ## Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
-Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o bien puede usar las direcciones de correo electrónico en borrar en el Experience Platform, y hacer que [!DNL Platform] las hash en la activación.
+Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede usar las direcciones de correo electrónico en borrar en Experience Platform y hacer que [!DNL Experience Platform] las hash en la activación.
 
 Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la [descripción general de la ingesta por lotes](/help/ingestion/batch-ingestion/overview.md) y la [descripción general de la ingesta por transmisión](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -87,10 +87,10 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 
 >[!NOTE]
 >
->[!DNL Platform] crea automáticamente un hash de los datos de las áreas de nombres sin hash tras la activación.
+>[!DNL Experience Platform] crea automáticamente un hash de los datos de las áreas de nombres sin hash tras la activación.
 > Los datos de origen de los atributos no se cifran automáticamente.
 > 
-> Durante el paso de [Asignación de identidad](../../ui/activate-segment-streaming-destinations.md#mapping), cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente hash a los datos durante la activación.
+> Durante el paso de [Asignación de identidad](../../ui/activate-segment-streaming-destinations.md#mapping), cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente hash a los datos durante la activación.
 > 
 > La opción **[!UICONTROL Aplicar transformación]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir áreas de nombres.
 
@@ -110,7 +110,7 @@ El siguiente vídeo también muestra los pasos para configurar un destino [!DNL 
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte el [tutorial de configuración de destino](../../ui/connect-destination.md).
+>La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
 ### Autenticarse en el destino {#authenticate}
 
@@ -121,7 +121,7 @@ El siguiente vídeo también muestra los pasos para configurar un destino [!DNL 
 
 ### Actualizar credenciales de autenticación {#refresh-authentication-credentials}
 
-Los tokens de linkedIn caducan cada 60 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
+Los tokens de LinkedIn caducan cada 60 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
 
 1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]**
 2. (Opcional) Utilice los filtros disponibles en la página para mostrar solo las cuentas de LinkedIn.

@@ -3,31 +3,31 @@ keywords: Experience Platform;inicio;temas populares;sistema local;carga de arch
 solution: Experience Platform
 title: Creación de un conector de Source de carga de archivos locales en la IU
 type: Tutorial
-description: Obtenga información sobre cómo crear una conexión de origen para el sistema local para llevar archivos locales a Platform
+description: Obtenga información sobre cómo crear una conexión de origen para el sistema local para llevar archivos locales a Experience Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '777'
 ht-degree: 0%
 
 ---
 
 # Crear un conector de origen de carga de archivos local en la interfaz de usuario
 
-Este tutorial proporciona los pasos para crear un conector de origen de carga de archivos local para introducir archivos locales en Platform mediante la interfaz de usuario.
+Este tutorial proporciona los pasos para crear un conector de origen de carga de archivos local para introducir archivos locales en Experience Platform mediante la interfaz de usuario.
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
-## Carga de archivos locales en Platform
+## Carga de archivos locales en Experience Platform
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes para los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes para los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
@@ -91,4 +91,4 @@ Una vez asignado y creado el archivo CSV, puede monitorizar los datos que se est
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha asignado correctamente un archivo CSV sin formato a un esquema XDM y lo ha introducido en Platform. Estos datos ahora pueden ser utilizados por servicios de flujo descendente [!DNL Platform] como [!DNL Real-Time Customer Profile]. Vea la descripción general de [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) para obtener más información.
+Al seguir este tutorial, ha asignado correctamente un archivo CSV sin formato a un esquema XDM y lo ha introducido en Experience Platform. Estos datos ahora pueden ser utilizados por servicios de flujo descendente [!DNL Experience Platform] como [!DNL Real-Time Customer Profile]. Vea la descripción general de [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) para obtener más información.

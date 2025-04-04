@@ -2,9 +2,9 @@
 title: Creación de borradores de la API de entidades de Flow Service
 description: Obtenga información sobre cómo crear borradores de la conexión base, la conexión de origen, la conexión de destino y el flujo de datos mediante la API de Flow Service
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1193'
 ht-degree: 5%
 
 ---
@@ -21,12 +21,12 @@ Este tutorial proporciona pasos sobre cómo establecer las entidades de [!DNL Fl
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ### Compruebe la compatibilidad con el modo de borrador
 
@@ -571,7 +571,7 @@ Una respuesta correcta devuelve la información de especificación de flujo del 
 
 ## Crear una conexión base de borrador {#create-a-draft-base-connection}
 
-Para crear una conexión base de borrador, realice una solicitud de POST al extremo `/connections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
+Para crear una conexión base de borrador, realice una petición POST al extremo `/connections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
 
 **Formato de API**
 
@@ -624,9 +624,9 @@ Una respuesta correcta devuelve el ID de conexión base y la etiqueta correspond
 }
 ```
 
-## Publish su conexión base de borrador {#publish-your-draft-base-connection}
+## Publicar el borrador de la conexión base {#publish-your-draft-base-connection}
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al extremo `/connections` y proporcione el identificador de la conexión base de borrador que desee publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una petición POST al extremo `/connections` y proporcione el identificador de la conexión base de borrador que desea publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -665,7 +665,7 @@ Una respuesta correcta devuelve el ID y la etiqueta correspondiente para la cone
 
 ## Crear una conexión de origen de borrador {#create-a-draft-source-connection}
 
-Para crear una conexión de origen de borrador, realice una solicitud de POST al extremo `/sourceConnections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
+Para crear una conexión de origen de borrador, realice una petición POST al extremo `/sourceConnections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
 
 **Formato de API**
 
@@ -716,13 +716,13 @@ Una respuesta correcta devuelve el ID de conexión de origen y la etiqueta corre
 }
 ```
 
-## Publish su conexión de origen de borrador {#publish-your-draft-source-connection}
+## Publicar la conexión de origen de borrador {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >No puede publicar una conexión de origen si su conexión base asociada sigue en estado de borrador. Asegúrese de que la conexión base se publique primero, antes de publicar la conexión de origen.
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al extremo `/sourceConnections` y proporcione el identificador de la conexión de origen de borrador que desee publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una petición POST al extremo `/sourceConnections` y proporcione el identificador de la conexión de origen de borrador que desee publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -761,7 +761,7 @@ Una respuesta correcta devuelve el ID y la etiqueta correspondiente para la cone
 
 ## Crear una conexión de destino de borrador {#create-a-draft-target-connection}
 
-Para crear una conexión de destino de borrador, realice una solicitud de POST al extremo `/targetConnections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
+Para crear una conexión de destino de borrador, realice una petición POST al extremo `/targetConnections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
 
 **Formato de API**
 
@@ -813,13 +813,13 @@ Una respuesta correcta devuelve el ID de conexión de destino y la etiqueta corr
 }
 ```
 
-## Publish su conexión de destino de borrador {#publish-your-draft-target-connection}
+## Publicación del borrador de la conexión de destino {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >No puede publicar una conexión de destino si su conexión base asociada sigue en estado de borrador. Asegúrese de que la conexión base se publique primero, antes de publicar la conexión de destino.
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al extremo `/targetConnections` y proporcione el identificador de la conexión de destino de borrador que desee publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una petición POST al extremo `/targetConnections` y proporcione el ID de la conexión de destino de borrador que desee publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -858,7 +858,7 @@ Una respuesta correcta devuelve el ID y la etiqueta correspondiente para la cone
 
 ## Crear un flujo de datos de borrador {#create-a-draft-dataflow}
 
-Para establecer un flujo de datos como borrador, realice una solicitud de POST al extremo `/flows` al agregar `mode=draft` como parámetro de consulta. Esto le permite crear un flujo de datos y guardarlo como borrador.
+Para establecer un flujo de datos como borrador, realice una petición POST al extremo `/flows` al agregar `mode=draft` como parámetro de consulta. Esto le permite crear un flujo de datos y guardarlo como borrador.
 
 **Formato de API**
 
@@ -908,13 +908,13 @@ Una respuesta correcta devuelve el ID de flujo y la etiqueta correspondiente par
 }
 ```
 
-## Publish el flujo de datos de borrador {#publish-your-draft-dataflow}
+## Publicación del flujo de datos de borrador {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
 >No puede publicar un flujo de datos si sus conexiones de origen y destino asociadas siguen en estado de borrador. Asegúrese de que las conexiones de origen y destino se publiquen primero antes de publicar el flujo de datos.
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al extremo `/flows`, proporcionando al mismo tiempo el ID del flujo de datos de borrador que desee publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una petición POST al extremo `/flows` y proporcione el ID del flujo de datos de borrador que desea publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 

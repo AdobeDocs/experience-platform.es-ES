@@ -2,18 +2,18 @@
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;políticas de combinación;IU;interfaz de usuario;marca de tiempo ordenada;prioridad de conjuntos de datos
 title: Resumen de políticas de combinación
 type: Documentation
-description: Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada cliente. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear la vista unificada.
+description: Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada cliente. Al unir estos datos, las políticas de combinación son las reglas que utiliza Experience Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear la vista unificada.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1289'
 ht-degree: 1%
 
 ---
 
 # Información general de las políticas de combinación
 
-Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
+Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Experience Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 
 Mediante las API de RESTful o la interfaz de usuario de, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una política de combinación predeterminada para su organización. Este documento proporciona información general sobre las políticas de combinación y la función que desempeñan en Experience Platform.
 
@@ -22,14 +22,14 @@ Mediante las API de RESTful o la interfaz de usuario de, puede crear nuevas pol�
 Esta guía requiere una comprensión práctica de varias características importantes de [!DNL Experience Platform]. Antes de seguir esta guía y trabajar con las políticas de combinación, revise la documentación de los siguientes servicios:
 
 * [Perfil del cliente en tiempo real](../home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
-* [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md): habilita el perfil del cliente en tiempo real al unir identidades de diferentes fuentes de datos que se están ingiriendo en [!DNL Platform].
-* [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco de trabajo estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md): habilita el perfil del cliente en tiempo real al unir identidades de diferentes fuentes de datos que se están ingiriendo en [!DNL Experience Platform].
+* [Modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco de trabajo estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 
 ## Explicación de las políticas de combinación
 
-Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa y unificada de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada.
+Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa y unificada de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que utiliza Experience Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada.
 
-Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Platform, se combinan para crear un único perfil para ese cliente.
+Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Experience Platform, se combinan para crear un único perfil para ese cliente.
 
 Cuando los datos de varias fuentes entran en conflicto (por ejemplo, un fragmento enumera al cliente como &quot;único&quot;, mientras que el otro indica al cliente como &quot;casado&quot;), la política de combinación determina qué información se incluye en el perfil de la persona.
 
@@ -54,7 +54,7 @@ Para crear una política de combinación con **[!UICONTROL Prioridad de conjunto
 
 ### Marca de tiempo solicitada {#timestamp-ordered}
 
-A medida que los registros de perfil se incorporan a Experience Platform, se obtiene una marca de tiempo del sistema en el momento de la ingesta y se añade al registro. Cuando se selecciona **[!UICONTROL Marca de tiempo solicitada]** como método de combinación para una política de combinación, los perfiles se combinan según la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo del momento en el que se incorporó el registro en Platform.
+A medida que los registros de perfil se incorporan a Experience Platform, se obtiene una marca de tiempo del sistema en el momento de la ingesta y se añade al registro. Cuando se selecciona **[!UICONTROL Marca de tiempo solicitada]** como método de combinación para una política de combinación, los perfiles se combinan según la marca de tiempo del sistema. En otras palabras, la combinación se realiza en función de la marca de tiempo del momento en el que se incorporó el registro en Experience Platform.
 
 ## Vinculación de identidad {#id-stitching}
 
@@ -79,4 +79,4 @@ Si crea una nueva política de combinación y la establece como predeterminada, 
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora sabe qué son las políticas de combinación y la función que desempeñan dentro del Experience Platform. Para empezar a trabajar con políticas de combinación en la interfaz de usuario del Experience Platform, consulte la [guía de la interfaz de usuario de las políticas de combinación](ui-guide.md). Para trabajar con políticas de combinación mediante la API, visite la [guía de extremo de API de políticas de combinación](../api/merge-policies.md).
+Después de leer esta guía, ahora sabe qué son las políticas de combinación y la función que desempeñan dentro de Experience Platform. Para empezar a trabajar con políticas de combinación en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario de las políticas de combinación](ui-guide.md). Para trabajar con políticas de combinación mediante la API, visite la [guía de extremo de API de políticas de combinación](../api/merge-policies.md).

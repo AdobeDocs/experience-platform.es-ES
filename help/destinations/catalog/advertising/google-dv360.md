@@ -2,10 +2,10 @@
 title: Conexión de Google Display & Video 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager es una herramienta utilizada para ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeos y móviles.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 2%
+source-wordcount: '1158'
+ht-degree: 4%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-> Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_en) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
+> Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_es) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
 ><br/>
->Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según DMA en la Unión Europea.
+>Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.
 ><br/>
 >Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no tienen que realizar ninguna acción.
 ><br/>
@@ -32,7 +32,7 @@ Tenga en cuenta los siguientes detalles que son específicos de [!DNL Google Dis
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino con Google Display &amp; Video 360 y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud anteriormente (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar la sincronización de ID. Si ya había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que configuró se transfieren a Platform.
+>Si desea crear su primer destino con Google Display &amp; Video 360 y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio Experience Cloud ID en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar la sincronización de ID. Si ya había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que configuró se transfieren a Experience Platform.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -42,7 +42,7 @@ Tenga en cuenta los siguientes detalles que son específicos de [!DNL Google Dis
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] |  |
 | IDFA | [!DNL Apple ID for Advertisers] |  |
-| AAM UUID DE USUARIO | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), también conocido como [!DNL Device ID]. Un ID de dispositivo numérico de 38 dígitos que el Audience Manager asocia a cada dispositivo con el que interactúa. | Google AAM usa [UUID de](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) para segmentar usuarios en California y el ID de cookie de Google para todos los demás usuarios. |
+| UUID DE AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), también conocido como [!DNL Device ID]. Un ID de dispositivo numérico de 38 dígitos que Audience Manager asocia a cada dispositivo con el que interactúa. | Google usa [UUID de AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) para segmentar usuarios en California y el ID de cookie de Google para todos los demás usuarios. |
 | ID de cookie [!DNL Google] | ID de cookie [!DNL Google] | [!DNL Google] usa este identificador para dirigirse a usuarios fuera de California. |
 | RIDA | ID de Roku para Advertising. Este ID identifica de forma exclusiva los dispositivos Roku. |  |
 | CRIADA | ID de Microsoft Advertising. Este ID identifica de forma exclusiva los dispositivos que ejecutan Windows 10. |  |
@@ -54,8 +54,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia al destino de Google. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Requisitos previos {#prerequisites}
 
@@ -74,10 +74,10 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!NOTE]
 >
->La inclusión en la lista de permitidos es obligatoria antes de configurar su primer destino de [!DNL Google Display & Video 360] en Platform. Asegúrese de que el proceso de inclusión en la lista de permitidos descrito a continuación haya sido completado por [!DNL Google] antes de crear un destino.
+>La inclusión en la lista de permitidos es obligatoria antes de configurar su primer destino de [!DNL Google Display & Video 360] en Experience Platform. Asegúrese de que el proceso de inclusión en la lista de permitidos descrito a continuación haya sido completado por [!DNL Google] antes de crear un destino.
 >La excepción a esta regla es para clientes de [Audience Manager](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html). Si ya ha creado una conexión con este destino de Google en Audience Manager, no es necesario volver a pasar por el proceso de inclusión en la lista de permitidos y puede continuar con los siguientes pasos.
 
-Antes de crear el destino [!DNL Google Display & Video 360] en Platform, debe ponerse en contacto con Google para solicitar que el Adobe se incluya en la lista de proveedores de datos permitidos y que se agregue su cuenta a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
+Antes de crear el destino [!DNL Google Display & Video 360] en Experience Platform, debe ponerse en contacto con Google para solicitar que Adobe se incluya en la lista de proveedores de datos permitidos y que se agregue su cuenta a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
 
 * **ID de cuenta**: ID de cuenta de Adobe con Google. ID de cuenta: 87933855.
 * **ID de cliente**: ID de cuenta de cliente de Adobe con Google. ID de cliente: 89690775.
@@ -104,7 +104,7 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
 >[!NOTE]
 >
->Al configurar un destino de [!DNL Google Display & Video 360], colabore con su representante de [!DNL Google Account Manager] o de Adobe para saber qué tipo de cuenta tiene.
+>Al configurar un destino de [!DNL Google Display & Video 360], colabore con su representante de [!DNL Google Account Manager] o Adobe para saber qué tipo de cuenta tiene.
 
 ### Habilitar alertas {#enable-alerts}
 

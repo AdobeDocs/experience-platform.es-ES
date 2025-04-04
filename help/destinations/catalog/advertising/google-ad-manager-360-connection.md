@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexión
 description: Google Ad Manager 360 es una plataforma de servicio de anuncios de Google que ofrece a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1221'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,7 @@ Para obtener más información sobre cómo funcionan los identificadores proporc
 
 >[!IMPORTANT]
 >
->Actualmente, este destino está en Beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a la conexión de [!DNL Google Ad Manager 360], póngase en contacto con el representante del Adobe y proporcione su [!DNL organization ID].
+>Actualmente, este destino está en Beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a la conexión de [!DNL Google Ad Manager 360], póngase en contacto con su representante de Adobe y proporcione su [!DNL organization ID].
 
 El destino [!DNL Google Ad Manager 360] exporta [!DNL CSV] archivos a su bloque [!DNL Google Cloud Storage]. Una vez exportados los archivos de [!DNL CSV], debe importarlos a su cuenta de [!DNL Google Ad Manager 360].
 
@@ -54,8 +54,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ### Lista de permitidos {#allow-listing}
 
-La inclusión en la lista de permitidos es obligatoria antes de configurar su primer destino de [!DNL Google Ad Manager 360] en Platform. Asegúrese de completar el proceso de inclusión en la lista de permitidos que se describe a continuación antes de crear su destino.
+La inclusión en la lista de permitidos es obligatoria antes de configurar su primer destino de [!DNL Google Ad Manager 360] en Experience Platform. Asegúrese de completar el proceso de inclusión en la lista de permitidos que se describe a continuación antes de crear su destino.
 
 >[!NOTE]
 >
@@ -96,8 +96,8 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
-* **[!UICONTROL Id. de clave de acceso]**: cadena alfanumérica de 61 caracteres usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Platform.
-* **[!UICONTROL Clave de acceso secreta]**: cadena de 40 caracteres codificada en Base64 que se usa para autenticar la cuenta de [!DNL Google Cloud Storage] en Platform.
+* **[!UICONTROL Id. de clave de acceso]**: cadena alfanumérica de 61 caracteres usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Experience Platform.
+* **[!UICONTROL Clave de acceso secreta]**: cadena de 40 caracteres codificada en Base64 que se usa para autenticar su cuenta de [!DNL Google Cloud Storage] en Experience Platform.
 
 Para obtener más información sobre estos valores, consulte la guía [Claves HMAC de Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para ver los pasos sobre cómo generar tu propio identificador de clave de acceso y clave de acceso secreta, consulta la [[!DNL Google Cloud Storage] descripción general de origen](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
@@ -118,7 +118,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Tipo de cuenta]**: selecciona una opción, según tu cuenta de [!DNL Google]:
    * Usar `AdX buyer` para [!DNL Google AdX]
    * Usar `DFP by Google` para [!DNL DoubleClick] para editores
-* **[!UICONTROL Anexar ID de audiencia al nombre de audiencia]**: seleccione esta opción para que el nombre de audiencia en Google Ad Manager 360 incluya el ID de audiencia del Experience Platform, de esta manera: `Audience Name (Audience ID)`.
+* **[!UICONTROL Anexar ID de audiencia al nombre de audiencia]**: seleccione esta opción para que el nombre de audiencia en Google Ad Manager 360 incluya el ID de audiencia de Experience Platform, de esta manera: `Audience Name (Audience ID)`.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -139,8 +139,8 @@ En el paso de asignación de identidad, puede ver las siguientes asignaciones re
 
 | Asignación rellenada previamente | Descripción |
 |---------|----------|
-| `ECID` -> `ppid` | Esta es la única asignación rellenada previamente que puede editar el usuario. Puede seleccionar cualquiera de sus atributos o áreas de nombres de identidad de Platform y asignarlos a `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Asigna nombres de audiencia de Experience Platform a ID de audiencia en la plataforma de Google. |
+| `ECID` -> `ppid` | Esta es la única asignación rellenada previamente que puede editar el usuario. Puede seleccionar cualquiera de sus atributos o áreas de nombres de identidad de Experience Platform y asignarlos a `ppid`. |
+| `metadata.segment.alias` -> `list_id` | Asigna nombres de audiencias de Experience Platform a ID de audiencia en la plataforma de Google. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Indica a la plataforma Google cuándo quitar usuarios no cualificados de los segmentos. |
 
 Estas asignaciones son requeridas por [!DNL Google Ad Manager 360] y Adobe Experience Platform las crea automáticamente para las [!DNL Google Ad Manager 360] conexiones.

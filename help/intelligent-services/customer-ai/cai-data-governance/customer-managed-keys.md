@@ -3,9 +3,9 @@ keywords: perspectivas;inteligencia artificial aplicada al cliente;perspectivas 
 title: Claves administradas por el cliente en Customer AI.
 description: Obtenga información sobre cómo configurar claves administradas por el cliente para la inteligencia artificial aplicada al cliente.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: 1a7babf104b2146bad4a336b9e0abd5a32c88999
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -20,4 +20,4 @@ Puede leer la documentación sobre [Claves administradas por el cliente en Adobe
 >
 >Actualmente, [!DNL Customer Managed Keys] solo están disponibles para las organizaciones que han comprado la oferta de complementos de [!DNL Healthcare Shield or Privacy & Security Shield].
 
-Todos los datos utilizados por Platform se cifran en tránsito y en reposo para mantener sus datos seguros, con o sin CMK. Para obtener información sobre el cifrado de Adobe Experience Platform, lea la documentación sobre el [cifrado de datos](../../../landing/governance-privacy-security/encryption.md).
+Todos los datos utilizados por Experience Platform se cifran en tránsito y en reposo para mantener sus datos seguros, con o sin CMK. Para obtener información sobre el cifrado de Adobe Experience Platform, lea la documentación sobre el [cifrado de datos](../../../landing/governance-privacy-security/encryption.md).

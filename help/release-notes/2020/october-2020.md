@@ -1,20 +1,20 @@
 ---
-title: Notas de la versión de Adobe Experience Platform de octubre de 2020
+title: 'Notas de la versión de Adobe Experience Platform: octubre de 2020'
 description: Las notas de la versión de octubre de 2020 de Adobe Experience Platform.
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 14 de octubre de 2020**
+**Fecha de la versión: jueves, 14 de octubre de 2020**
 
 - [Preparación de los datos](#data-prep)
 - [Perfil del cliente en tiempo real](#profile)
@@ -42,13 +42,13 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 | Función | Descripción |
 | ------- | ----------- |
 | Adiciones a API de previsualización de perfil | La API de vista previa de perfil (`/previewsamplestatus`) ahora incluye la capacidad de ver un desglose del total de fragmentos de perfil en su organización, así como la distribución de fragmentos de perfil en áreas de nombres de identidad. |
-| Actualizaciones de vista de esquema de unión | En la IU de Experience Platform, los usuarios pueden encontrar más fácilmente información sobre todos los esquemas y conjuntos de datos que contribuyen al esquema de unión, así como atributos de clave de superficie como los campos de identidad y relación. Estas actualizaciones mejoran la capacidad de solucionar problemas y validar que los perfiles están correctamente configurados, las identidades están correctamente vinculadas y los datos se han introducido correctamente. |
+| Actualizaciones de vista de esquema de unión | En la interfaz de usuario de Experience Platform, los usuarios pueden encontrar más fácilmente información sobre todos los esquemas y conjuntos de datos que contribuyen al esquema de unión, así como atributos de clave de superficie como campos de identidad y relación. Estas actualizaciones mejoran la capacidad de solucionar problemas y validar que los perfiles están correctamente configurados, las identidades están correctamente vinculadas y los datos se han introducido correctamente. |
 
 Para obtener más información sobre [!DNL Real-Time Customer Profile], incluidos tutoriales y prácticas recomendadas para trabajar con datos de [!DNL Profile], lea la [descripción general del perfil del cliente en tiempo real](../../profile/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
-El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API RESTful que le permiten generar segmentos y audiencias a partir de los datos de [!DNL Real-Time Customer Profile]. Estos segmentos se configuran centralmente y se mantienen en [!DNL Platform], lo que hace que cualquier aplicación de Adobe pueda acceder a ellos fácilmente.
+El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario y una API RESTful que le permiten generar segmentos y audiencias a partir de los datos de [!DNL Real-Time Customer Profile]. Estos segmentos se configuran centralmente y se mantienen en [!DNL Experience Platform], lo que hace que cualquier aplicación de Adobe pueda acceder a ellos fácilmente.
 
 [!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
 
@@ -62,7 +62,7 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte [Resu
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Experience Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
@@ -70,7 +70,7 @@ Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo 
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con autenticación SSH para SFTP | Puede conectar su cuenta SFTP a [!DNL Platform] mediante claves SSH abiertas RSA/DSA. Consulte la [descripción general de SFTP](../../sources/connectors/cloud-storage/sftp.md) para obtener más información. |
+| Compatibilidad con autenticación SSH para SFTP | Puede conectar su cuenta SFTP a [!DNL Experience Platform] mediante claves SSH abiertas RSA/DSA. Consulte la [descripción general de SFTP](../../sources/connectors/cloud-storage/sftp.md) para obtener más información. |
 | Mejoras de UX | Puede habilitar su conjunto de datos para [!DNL Profile] durante el proceso de ingesta de datos. Consulte el tutorial de [flujo de trabajo de flujo de datos de almacenamiento en la nube](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obtener más información. |
 
 Para obtener más información sobre las fuentes, consulte [descripción general de las fuentes](../../sources/home.md).
@@ -85,7 +85,7 @@ Adobe Experience Platform permite a los equipos de Operaciones de marketing obte
 
 #### Esquema
 
-Actualiza la capacidad de uso y el flujo de trabajo, y proporciona perspectivas, estandarización y transparencia predeterminadas de campos clave dentro de composiciones de esquema. Expone el linaje de datos para la combinación de modelos de datos individuales representados como el &quot;esquema de unión&quot;, lo que proporciona una perspectiva de la estructura y los ingredientes al Perfil del cliente en tiempo real.
+Actualiza la capacidad de uso y el flujo de trabajo, y proporciona perspectivas, estandarización y transparencia predeterminadas de campos clave dentro de composiciones de esquema. Expone el linaje de datos para la combinación de modelos de datos individuales representados como el &quot;esquema de unión&quot;, lo que proporciona insight en la estructura y los ingredientes del perfil del cliente en tiempo real.
 
 - Actualización del flujo de trabajo del esquema
    - Utilice métodos abreviados para el tipo más común de esquemas XDM, con configuración automatizada en el editor de esquemas y recomendaciones de grupos de campos de esquema en función de sus objetivos
@@ -111,8 +111,8 @@ El visualizador de perfiles fácil de personalizar le ayuda a comprender la comp
 - Personalice widgets con atributos del perfil del cliente en tiempo real, utilizando el selector de esquema de unión. El esquema de unión se deriva de los modelos de datos subyacentes utilizados dentro de la ingesta de datos de perfil.
 
 
-#### Monitoreo
+#### Monitorización
 
-Garantiza la transparencia del flujo de datos y proporciona una perspectiva sobre el estado del tráfico de datos en el sistema desde los conectores de origen, lo que proporciona un autoservicio más rápido y una capacidad de acción más rápida para solucionar situaciones.
+Garantiza la transparencia del flujo de datos y proporciona a insight información sobre el estado del tráfico de datos en el sistema desde los conectores de origen, lo que proporciona un autoservicio más rápido y una capacidad de acción más rápida para solucionar situaciones.
 
 - Supervise todas las ejecuciones de flujo y vea una vista detallada de cada ejecución, incluido el estado de finalización, la duración de la ejecución, la lista de archivos procesados, los errores y los diagnósticos procesables

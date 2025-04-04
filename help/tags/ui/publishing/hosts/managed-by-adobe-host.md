@@ -2,10 +2,10 @@
 title: Información general sobre alojamientos administrados por Adobe
 description: Obtenga información acerca de la opción de alojamiento predeterminada para implementar compilaciones de biblioteca de etiquetas en Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 88%
+source-wordcount: '1181'
+ht-degree: 82%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Los hosts administrados por Adobe son la configuración de host predeterminada para implementar las compilaciones de biblioteca de etiquetas en Adobe Experience Platform. Al crear una nueva propiedad a través de la interfaz de usuario de recopilación de datos, se crea un host predeterminado administrado por Adobe.
 
-Con los hosts administrados por Adobe, las versiones de biblioteca se entregan a una red de distribución de contenido (CDN) de terceros con la que Adobe ha firmado un contrato. Estas CDN funcionan de forma independiente del Adobe, por lo que, incluso cuando Platform se esté manteniendo o no funcione, el código implementado seguirá funcionando normalmente en sus sitios y aplicaciones. El código incrustado de un host administrado por Adobe hace referencia al archivo de biblioteca principal en la CDN para que un dispositivo cliente pueda recuperar los archivos en tiempo de ejecución.
+Con los hosts administrados por Adobe, las versiones de biblioteca se entregan a una red de distribución de contenido (CDN) de terceros con la que Adobe ha firmado un contrato. Estas CDN funcionan de forma independiente del Adobe, por lo que, incluso cuando Experience Platform se esté manteniendo o no funcione, el código implementado seguirá funcionando normalmente en sus sitios y aplicaciones. El código incrustado de un host administrado por Adobe hace referencia al archivo de biblioteca principal en la CDN para que un dispositivo cliente pueda recuperar los archivos en tiempo de ejecución.
 
-Este documento proporciona información general sobre los hosts administrados por Adobe en Platform y proporciona los pasos para crear un nuevo host administrado por Adobe en la IU.
+Este documento proporciona información general sobre los hosts administrados por Adobe en Experience Platform y proporciona los pasos para crear un nuevo host administrado por Adobe en la interfaz de usuario.
 
 ## Akamai
 
@@ -33,7 +33,7 @@ Los archivos alojados en Akamai tienen un dominio de `assets.adobedtm.com`. Se p
 
 >[!WARNING]
 >
->Si la biblioteca no está disponible en la red de Akamai, Platform no puede evitar errores que puedan surgir como consecuencia de ella.
+>Si la biblioteca no está disponible en la red de Akamai, Experience Platform no puede evitar errores que puedan surgir como consecuencia de ella.
 
 ## Caché de versión de la biblioteca
 
@@ -88,9 +88,9 @@ Como se indica en la tabla anterior, el almacenamiento en caché del navegador n
 
 Los encabezados de control de caché solo se aplican a la compilación de la biblioteca principal. Los recursos secundarios debajo de la biblioteca principal siempre se consideran nuevos y, por lo tanto, no es necesario almacenarlos en caché en el explorador.
 
-## Uso del hosting gestionado por Adobe en la IU de
+## Uso del hosting gestionado por Adobe en la IU
 
-La primera vez que se crea una propiedad en la IU de Platform o en la IU de recopilación de datos, se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
+La primera vez que se crea una propiedad en la IU de Experience Platform o en la IU de recopilación de datos, se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
 
 >[!NOTE]
 >

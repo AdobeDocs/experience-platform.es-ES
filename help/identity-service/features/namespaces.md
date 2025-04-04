@@ -2,10 +2,10 @@
 title: Información general de área de nombres
 description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1858'
-ht-degree: 16%
+source-wordcount: '1860'
+ht-degree: 17%
 
 ---
 
@@ -37,7 +37,7 @@ Lea el siguiente documento para obtener más información sobre lo que puede hac
 
 Una identidad completa incluye dos componentes: un **valor de identidad** y un **área de nombres de identidad**. Por ejemplo, si el valor de una identidad es `scott@acme.com`, un área de nombres proporciona contexto a este valor distinguiéndolo como una dirección de correo electrónico. Del mismo modo, un área de nombres puede distinguir `555-123-456` como número de teléfono y `3126ABC` como CRMID. Básicamente, **un área de nombres proporciona contexto a una identidad determinada**. Al hacer coincidir datos de registro en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] combina datos de perfil, tanto el valor de identidad como el área de nombres deben coincidir.
 
-Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el área de nombres &quot;Correo electrónico&quot;, por lo que Experience Platform puede ver que estos fragmentos son realmente la misma persona y reúne los datos en el gráfico de identidades para la persona.
+Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el área de nombres &quot;Correo electrónico&quot;, por lo que Experience Platform puede ver que estos fragmentos son en realidad la misma persona y reúne los datos en el gráfico de identidades de dicha persona.
 
 >[!BEGINSHADEBOX]
 
@@ -85,20 +85,20 @@ Los siguientes tipos de identidad están disponibles en Experience Platform:
 | ID de dispositivo | Los ID de dispositivo identifican dispositivos de hardware, como IDFA (iPhone y iPad), GAID (Android) y RIDA (Roku), y pueden compartirse por varias personas en hogares. |
 | Dirección de correo electrónico | Las direcciones de correo electrónico suelen estar asociadas a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen información de identificación personal (PII). Esto es una indicación para que [!DNL Identity Service] gestione el valor de forma confidencial. |
 | Identificador de no personas | Los ID que no son personas se utilizan para almacenar identificadores que requieren espacios de nombres, pero no están conectados a un clúster de personas. Por ejemplo, un SKU de producto, datos relacionados con productos, organizaciones o tiendas. |
-| ID de socio | <ul><li>Los ID de socio son identificadores utilizados por los socios de datos para representar a personas. Los ID de socio suelen ser seudónimos para no revelar la verdadera identidad de una persona y pueden ser probabilísticos. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para ampliar la activación de audiencias y el enriquecimiento de datos, y no para crear vínculos de gráficos de identidad.</li><li>Los gráficos de identidad no se generan al ingerir una identidad que incluye un área de nombres de identidad especificada como tipo de ID de socio.</li><li>Si no se incorporan datos del socio mediante el tipo de identidad del ID de socio, podrían alcanzarse las limitaciones del gráfico del sistema en el servicio de identidad, así como la combinación no deseada de perfiles.</li><ul> |
+| ID de socio | <ul><li>Los ID de socio son identificadores utilizados por los socios de datos para representar a personas. Los ID de socio suelen ser seudónimos para no revelar la verdadera identidad de una persona y pueden ser probabilísticos. En Real-Time Customer Data Platform, los ID de socio se utilizan principalmente para ampliar la activación de audiencias y el enriquecimiento de datos, y no para crear vínculos de gráficos de identidad.</li><li>Los gráficos de identidad no se generan al ingerir una identidad que incluye un área de nombres de identidad especificada como tipo de ID de socio.</li><li>Si no se incorporan datos del socio mediante el tipo de identidad del ID de socio, podrían alcanzarse las limitaciones del gráfico del sistema en el servicio de identidad, así como la combinación no deseada de perfiles.</li><ul> |
 | Número de teléfono | Los números de teléfono suelen estar asociados a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen PII. Esto es una indicación para que [!DNL Identity Service] gestione el valor de forma confidencial. |
 
 {style="table-layout:auto"}
 
 ### Áreas de nombres estándar {#standard}
 
-Experience Platform proporciona varias áreas de nombres de identidad disponibles para todas las organizaciones. Se conocen como áreas de nombres estándar y son visibles mediante la API [!DNL Identity Service] o a través de la interfaz de usuario de Platform.
+Experience Platform proporciona varias áreas de nombres de identidad disponibles para todas las organizaciones. Se conocen como áreas de nombres estándar y son visibles mediante la API [!DNL Identity Service] o a través de la interfaz de usuario de Experience Platform.
 
-Se proporcionan las siguientes áreas de nombres estándar para su uso por todas las organizaciones dentro de Platform:
+Se proporcionan las siguientes áreas de nombres estándar para su uso por todas las organizaciones dentro de Experience Platform:
 
 | Nombre para mostrar | Descripción |
 | ------------ | ----------- |
-| Adcloud | Un área de nombres que representa el Adobe de AdCloud. |
+| Adcloud | Un área de nombres que representa Adobe AdCloud. |
 | Adobe Analytics (ID heredado) | Un área de nombres que representa Adobe Analytics. Consulte el siguiente documento sobre [Áreas de nombres de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) para obtener más información. |
 | Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
 | Servicio de notificaciones push de Apple | Un área de nombres que representa las identidades recopiladas mediante el servicio de notificaciones push de Apple. Consulte el siguiente documento en [Servicio de notificaciones push de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obtener más información. |
@@ -110,7 +110,7 @@ Se proporcionan las siguientes áreas de nombres estándar para su uso por todas
 | Teléfono | Área de nombres que representa un número de teléfono. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
 | Teléfono (E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash en formato E.164. El formato E.164 incluye un signo más (`+`), un código de llamada de país internacional, un código de área local y un número de teléfono. Por ejemplo: `(+)(country code)(area code)(phone number)`. |
 | Teléfono (SHA256) | Un área de nombres que representa los números de teléfono que deben tener un cifrado hash con SHA256. Debe quitar los símbolos, las letras y los ceros a la izquierda. También debe agregar el código de llamada de país como prefijo. |
-| Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash con los formatos SHA256 y E.164. |
+| Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben llevar un hash con los formatos SHA256 y E.164. |
 | TNTID | Un área de nombres que representa Adobe Target. Consulte el siguiente documento sobre [Target](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) para obtener más información. |
 | Windows AID | Área de nombres que representa un Advertising ID de Windows. Consulte el siguiente documento en [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obtener más información. |
 

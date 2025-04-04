@@ -1,12 +1,12 @@
 ---
 keywords: extensión de reenvío de eventos;mixpanel;extensión de reenvío de eventos de mixpanel
 title: Extensión de reenvío de eventos API de seguimiento de eventos de Mixpanel
-description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos del Edge Network a Mixpanel.
+description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Edge Network a Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Casos de uso
 
-Debe usar esta extensión si desea usar datos del Edge Network en [!DNL Mixpanel] para aprovechar las capacidades de análisis de productos.
+Esta extensión debe usarse si desea usar datos de Edge Network en [!DNL Mixpanel] para aprovechar las capacidades de análisis de productos.
 
 Por ejemplo, considere una organización minorista que tenga presencia multicanal (sitio web y móvil). La organización captura los datos de entrada transaccionales o conversacionales como datos de evento de sus plataformas y los carga en [!DNL Mixpanel] mediante la extensión de reenvío de eventos.
 
@@ -47,7 +47,7 @@ En [!DNL Mixpanel], un clúster de identidad contiene una colección de `distinc
 
 [!DNL Mixpanel] resuelve los clústeres de identidad mediante dos métodos:
 
-* **Identificar** : [!DNL Mixpanel] conecta el identificador seleccionado con un `distinct_id` anónimo. Si el sitio web tiene habilitado el SDK [!DNL Mixpanel], Platform usará el(la) `distinct_id` asignado(a) al usuario que ha iniciado sesión actualmente.
+* **Identificar** : [!DNL Mixpanel] conecta el identificador seleccionado con un `distinct_id` anónimo. Si el sitio web tiene habilitado el SDK [!DNL Mixpanel], Experience Platform usará el `distinct_id` asignado al usuario que ha iniciado sesión en ese momento.
 * **Alias**: [!DNL Mixpanel] combina dos `distinct id`s no anónimos si se cumplen criterios de combinación adicionales.
 
 >[!NOTE]
@@ -58,7 +58,7 @@ En [!DNL Mixpanel], un clúster de identidad contiene una colección de `distinc
 
 ### Recopilar detalles de configuración necesarios {#configuration-details}
 
-Para conectar el Experience Platform a [!DNL Mixpanel], debe tener las siguientes entradas:
+Para conectar Experience Platform a [!DNL Mixpanel], debe contar con las siguientes entradas:
 
 | Tipo de clave | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ Una vez que la acción [!UICONTROL Track Event] se agregue a la regla, puede con
 
 >[!IMPORTANT]
 >
->Si su sitio web usa el SDK [!DNL Mixpanel], puede continuar con el siguiente paso de [validación de los datos en [!DNL Mixpanel]](#validate). Si no usa el SDK [!DNL Mixpanel], debe [crear una regla de seguimiento de identidad](#create-an-identity-tracking-rule) independiente para asegurarse de que los eventos apropiados y los valores de `distinct_id` se envíen a [!DNL Mixpanel] cuando se produzca un evento de identificación de usuario.
+>Si su sitio web usa el SDK [!DNL Mixpanel], puede continuar con el siguiente paso de [validación de los datos en [!DNL Mixpanel]](#validate). Si no usa el SDK [!DNL Mixpanel], debe [crear una regla de seguimiento de identidad](#create-an-identity-tracking-rule) independiente para asegurarse de que los eventos apropiados y los valores `distinct_id` se envíen a [!DNL Mixpanel] cuando se produzca un evento de identificación de usuario.
 
 ## Validar datos dentro de [!DNL Mixpanel] {#validate}
 
@@ -105,7 +105,7 @@ Compruebe si [!DNL Mixpanel] ha combinado los eventos posteriores al inicio de s
 
 ## Pasos siguientes
 
-En esta guía se explica cómo enviar eventos de conversión a [!DNL Mixpanel] mediante el reenvío de eventos. Esta extensión de reenvío de eventos aprovecha el SDK [!DNL Mixpanel] y la API de JavaScript. Para obtener más información sobre estas tecnologías subyacentes, consulte la documentación oficial:
+En esta guía se explica cómo enviar eventos de conversión a [!DNL Mixpanel] mediante el reenvío de eventos. Esta extensión de reenvío de eventos aprovecha [!DNL Mixpanel] la API de SDK y JavaScript. Para obtener más información sobre estas tecnologías subyacentes, consulte la documentación oficial:
 
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] API de JavaScript](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)

@@ -5,9 +5,9 @@ title: Ver datos del conjunto de datos mediante la API de acceso a datos
 type: Tutorial
 description: Obtenga información sobre cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos en Adobe Experience Platform. Este documento presenta algunas de las características únicas de la API de acceso a datos, como la paginación y las descargas parciales.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 9144a5f4cce88fc89973a7fea6d69384cc5f4ba1
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 8%
 
 ---
@@ -20,7 +20,7 @@ Utilice este tutorial paso a paso para aprender a localizar, acceder y descargar
 
 Este tutorial requiere una comprensión práctica sobre cómo crear y rellenar un conjunto de datos. Consulte el [tutorial de creación de conjuntos de datos](../../catalog/datasets/create.md) para obtener más información.
 
-Las secciones siguientes proporcionan información adicional que necesita saber para realizar llamadas correctamente a las API de Platform.
+Las secciones siguientes proporcionan información adicional que necesita saber para realizar llamadas correctamente a las API de Experience Platform.
 
 ### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
@@ -28,19 +28,19 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](../../landing/api-authentication.md). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](../../landing/api-authentication.md). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realiza la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realiza la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -355,7 +355,7 @@ Esta respuesta devuelve un directorio que contiene dos archivos independientes, 
 
 ## Recuperación de los metadatos de un archivo
 
-Puede recuperar los metadatos de un archivo realizando una solicitud al HEAD. Devuelve los encabezados de metadatos del archivo, incluido su tamaño en bytes y formato de archivo.
+Puede recuperar los metadatos de un archivo realizando una petición HEAD. Devuelve los encabezados de metadatos del archivo, incluido su tamaño en bytes y formato de archivo.
 
 **Formato de API**
 
@@ -418,7 +418,7 @@ Una respuesta correcta devuelve el contenido del archivo.
 
 Para descargar un intervalo específico de bytes de un archivo, especifique un encabezado de intervalo durante una solicitud `GET /files/{FILE_ID}` a la API [!DNL Data Access]. Si no se especifica el intervalo, la API descarga todo el archivo de forma predeterminada.
 
-El ejemplo del HEAD en la [sección anterior](#retrieve-the-metadata-of-a-file) proporciona el tamaño de un archivo específico en bytes.
+El ejemplo de HEAD en la [sección anterior](#retrieve-the-metadata-of-a-file) proporciona el tamaño de un archivo específico en bytes.
 
 **Formato de API**
 

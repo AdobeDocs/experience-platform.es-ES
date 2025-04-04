@@ -3,7 +3,7 @@ title: Destino de identidad empresarial de Merkury
 description: Obtenga información sobre cómo crear una conexión de destino de Enterprise Identity de Mercury mediante la interfaz de usuario de Adobe Experience Platform.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: a5452183-289c-49c3-9574-e09b0153dc00
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 Utilice el destino [!DNL Merkury Enterprise Identity] para generar perfiles de consumidores más precisos, completos y perspicaces. Con los datos de perfil mejorados, los especialistas en marketing pueden obtener mejores perspectivas, segmentos y modelos, lo que da como resultado una segmentación y un modelado predictivo más precisos.
 
-![Diagrama que muestra la interconexión entre Merkury y el Experience Platform, incluida la ingesta y la activación](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
+![Diagrama que muestra la interconexión entre Merkury y Experience Platform, incluida la ingesta y la activación](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
 Siga los pasos de esta página de documentación para crear una conexión de destino [!DNL Merkury Identity] y activar audiencias para su identificación y enriquecimiento mediante la interfaz de usuario de Adobe Experience Platform.
 
@@ -56,8 +56,8 @@ El destino [!DNL Merkury Enterprise Identity] proporciona la capacidad de transf
 | GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
 | ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
 
 {style="table-layout:auto"}
@@ -68,8 +68,8 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | **Audiencia** | **Compatible** | **Descripción** | **origen** |
 |---|---|---|---|
-| Servicio de segmentación | ✓ | Audiencias generadas a través del Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
-| Cargas personalizadas | x | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en el Experience Platform desde archivos CSV. |
+| Servicio de segmentación | ✓ | Audiencias generadas a través de Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
+| Cargas personalizadas | x | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -79,8 +79,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | **Audiencia** | **Compatible** | **Origen de la descripción** |
 |---|---|---|      
-| Servicio de segmentación | ✓ | Audiencias generadas a través del Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
-| Cargas personalizadas | X | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en el Experience Platform desde archivos CSV. |
+| Servicio de segmentación | ✓ | Audiencias generadas a través de Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
+| Cargas personalizadas | X | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -119,7 +119,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **Descripción** - Breve explicación del propósito del destino
 * **Nombre del contenedor (obligatorio)** - Nombre del contenedor de Amazon S3 configurado en S3
 * **Ruta de acceso a la carpeta (obligatoria)**: si se usan subdirectorios en un bloque, se debe definir una ruta de acceso o &#39;/&#39; para hacer referencia a la ruta de acceso raíz.
-* **Tipo de archivo**: seleccione el formato que el Experience Platform debe usar para los archivos exportados. Consulte con su equipo de Mercury el tipo de archivo esperado para su cuenta.
+* **Tipo de archivo**: seleccione el formato que Experience Platform debe usar para los archivos exportados. Consulte con su equipo de Mercury el tipo de archivo esperado para su cuenta.
 
 >[!NOTE]
 >
@@ -157,14 +157,14 @@ Las sugerencias de asignación se proporcionan en la tabla siguiente, que enumer
 
 | Campo de destino | Descripción de Source |
 |---|---|
-| Identificación | Campo de identidad que se utilizará para asignar datos de [!DNL Merkury] al Experience Platform a través del conector de Source [!DNL Merkury Enterprise Identity] |
-| Input_First_Name | El valor `person.name.firstName` en el Experience Platform. |
-| Input_Last_Name | El valor `person.name.lastName` en el Experience Platform. |
-| Input_Address_Line_1 | El valor `mailingAddress.street` en el Experience Platform. |
-| Input_City | El valor `mailingAddress.city` en el Experience Platform. |
-| Input_State_Province_Code | El valor `mailingAddress.state` en el Experience Platform. Utilícelo si el estado está en el formulario de código de dos caracteres. |
-| Input_State_Province_Name | El valor `mailingAddress.state` en el Experience Platform. Utilícelo si el estado es el nombre completo del estado |
-| Input_Postal_Code | El valor `mailingAddress.postalCode` en el Experience Platform. |
+| Identificación | Campo de identidad que se utilizará para asignar datos de [!DNL Merkury] a Experience Platform a través del conector de Source [!DNL Merkury Enterprise Identity] |
+| Input_First_Name | El valor `person.name.firstName` en Experience Platform. |
+| Input_Last_Name | El valor `person.name.lastName` en Experience Platform. |
+| Input_Address_Line_1 | El valor `mailingAddress.street` en Experience Platform. |
+| Input_City | El valor `mailingAddress.city` en Experience Platform. |
+| Input_State_Province_Code | El valor `mailingAddress.state` en Experience Platform. Utilícelo si el estado está en el formulario de código de dos caracteres. |
+| Input_State_Province_Name | El valor `mailingAddress.state` en Experience Platform. Utilícelo si el estado es el nombre completo del estado |
+| Input_Postal_Code | El valor `mailingAddress.postalCode` en Experience Platform. |
 | Input_Email_Address | El valor que desea asignar como dirección de correo electrónico de perfiles. |
 | Input_Phone | El valor que desea asignar como número de teléfono de los perfiles. |
 
@@ -180,4 +180,4 @@ Todos los destinos de Adobe Experience Platform cumplen con las políticas de us
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para exportar datos de perfil del Experience Platform a su ubicación de S3 administrada de [!DNL Merkury]. A continuación, debe ponerse en contacto con su representante de [!DNL Merkury] y proporcionarle el nombre de la cuenta, los nombres de archivo y la ruta de acceso del bloque para que se pueda configurar el procesamiento.
+Al seguir este tutorial, ha creado correctamente un flujo de datos para exportar datos de perfil de Experience Platform a su ubicación de S3 administrada de [!DNL Merkury]. A continuación, debe ponerse en contacto con su representante de [!DNL Merkury] y proporcionarle el nombre de la cuenta, los nombres de archivo y la ruta de acceso del bloque para que se pueda configurar el procesamiento.

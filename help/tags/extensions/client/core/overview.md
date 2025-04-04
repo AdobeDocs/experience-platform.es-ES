@@ -2,9 +2,9 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5445'
+source-wordcount: '5447'
 ht-degree: 82%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 La extensión de etiquetas Core es la extensión predeterminada lanzada con Adobe Experience Platform.
 
@@ -106,7 +106,7 @@ Se activa el evento si se selecciona el elemento especificado (al hacer clic). T
 >
 >Esta opción debe utilizarse con extrema precaución debido a las posibles consecuencias negativas que puede tener para la experiencia del usuario si se utiliza incorrectamente.
 
-Cuando se retrasa el vínculo, Platform impide que el explorador salga de la página. A continuación, realiza una redirección de JavaScript al destino original después del tiempo de espera especificado. Esto es especialmente peligroso cuando el marcado de la página tiene etiquetas `<a>` donde la funcionalidad deseada no aleja al usuario de la página. Si no puede resolver el problema de ninguna otra manera, debe ser extremadamente preciso en la definición del selector para que este evento se active exactamente donde lo necesita y no en otro lugar.
+Cuando se retrasa el vínculo, Experience Platform impide que el explorador salga de la página. A continuación, realiza una redirección de JavaScript al destino original después del tiempo de espera especificado. Esto es especialmente peligroso cuando el marcado de la página tiene etiquetas `<a>` donde la funcionalidad deseada no aleja al usuario de la página. Si no puede resolver el problema de ninguna otra manera, debe ser extremadamente preciso en la definición del selector para que este evento se active exactamente donde lo necesita y no en otro lugar.
 
 El valor de retraso del vínculo predeterminado es 100 milisegundos. Tenga en cuenta que las etiquetas siempre esperarán la cantidad de tiempo especificada y no está conectado a la ejecución de las acciones de la regla de ninguna manera. Es posible que el retraso obligue al usuario a esperar más tiempo del necesario, y también que el retraso no sea lo suficientemente largo como para que todas las acciones de la regla se completen correctamente. Los retrasos más largos proporcionan más tiempo para la ejecución de reglas, pero también empeoran la experiencia del usuario.
 
@@ -838,7 +838,7 @@ El almacenamiento de sesión es similar al almacenamiento local, excepto que los
 
 ### Comportamiento de los visitantes
 
-De manera similar a Información de página, este elemento de datos utiliza tipos de comportamiento comunes para enriquecer la lógica dentro de las reglas y otras soluciones de Platform.
+De forma similar a Información de página, este elemento de datos utiliza tipos de comportamiento comunes para enriquecer la lógica dentro de las reglas y otras soluciones de Experience Platform.
 
 Seleccione uno de los siguientes atributos de comportamiento del visitante:
 

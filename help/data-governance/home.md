@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre gobernanza de datos
 description: Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1624'
 ht-degree: 9%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=es" text="Información general de gobernanza de datos"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es" text="Información general sobre etiquetas de gobernanza de datos"
 
-Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capturen clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por la normativa legal. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] cumplen con las directivas de uso de datos.
+Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capturen clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por la normativa legal. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Experience Platform] cumplen con las directivas de uso de datos.
 
-Administre los datos de los clientes y garantice el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos con el control de datos de Adobe Experience Platform. La gobernanza de datos desempeña un papel clave dentro del Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de marketing.
+Administre los datos de los clientes y garantice el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos con el control de datos de Adobe Experience Platform. La gobernanza de datos desempeña un papel clave dentro de Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de marketing.
 
 >[!NOTE]
 >
->En Experience Platform, el control de datos solo afecta a cómo se utilizan o activan los datos, independientemente de si el usuario realiza la acción. Para obtener información sobre cómo controlar el acceso a campos de datos específicos para determinados usuarios de Platform de su organización, consulte la documentación sobre [control de acceso basado en atributos](../access-control/abac/overview.md) en su lugar.
+>En Experience Platform, el control de datos solo afecta a cómo se utilizan o activan los datos, independientemente de si el usuario realiza la acción. Para obtener información sobre cómo controlar el acceso a campos de datos específicos para determinados usuarios de Experience Platform de su organización, consulte la documentación sobre [control de acceso basado en atributos](../access-control/abac/overview.md).
 
 ## Funciones de gobernanza de datos {#data-governance-roles}
 
@@ -77,7 +77,7 @@ El marco de trabajo de control de datos incluye etiquetas de uso de datos predef
 >
 >Consulte la guía de [etiquetas de uso de datos compatibles](labels/reference.md) para obtener una lista completa de las etiquetas disponibles y las definiciones de cada tipo de etiqueta.
 
-Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Una práctica recomendada recomienda etiquetar los datos cuando se ingieren en Experience Platform o en cuanto estén disponibles los datos en [!DNL Platform].
+Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Una práctica recomendada recomienda etiquetar los datos cuando se incorporan en Experience Platform o en cuanto los datos están disponibles en [!DNL Experience Platform].
 
 Consulte la descripción general de [etiquetas de uso de datos](./labels/overview.md) para obtener más información sobre cómo se utilizan las etiquetas de uso de datos para ayudar a aplicar el cumplimiento de la gobernanza de datos.
 
@@ -93,7 +93,7 @@ Hay dos tipos de directivas disponibles:
 * **[!UICONTROL Política de control de datos]**: Restrinja la activación de datos en función de la acción de marketing que se esté realizando y de las etiquetas de uso de datos que lleven los datos en cuestión.
 * **[!UICONTROL Política de consentimiento]**: filtre los perfiles que se pueden activar a [destinos](../destinations/home.md) según las preferencias o el consentimiento de sus clientes.
 
-Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear directivas mediante la API del servicio de directivas o la interfaz de usuario del Experience Platform. Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la [descripción general de las políticas](./policies/overview.md).
+Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear directivas mediante la API del servicio de directivas o la interfaz de usuario de Experience Platform. Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la [descripción general de las políticas](./policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -121,9 +121,9 @@ En la tabla siguiente se describen los términos clave relacionados con la gober
 | **Etiquetas de conjuntos de datos** | Las etiquetas se pueden añadir a un esquema. Todos los campos de un conjunto de datos heredan las etiquetas del esquema. |
 | **Etiquetas de campo** | Las etiquetas de campo son etiquetas de control de datos que se heredan de un esquema o se aplican directamente a un campo. Las etiquetas de gobernanza de datos aplicadas a un campo no se heredan hasta el nivel de esquema. |
 | **Geoperímetro** | Una geovalla es un límite geográfico virtual, definido por la tecnología GPS o RFID, que permite al software almacenar en déclencheur una respuesta cuando un dispositivo móvil entra o sale de una zona en particular. |
-| **Etiquetas de identidad** | Las etiquetas de identidad “I” se utilizan para categorizar los datos que permiten identificar a una persona específica o ponerse en contacto con ella. |
+| **Etiquetas de identidad** | Las etiquetas de identidad “I” se utilizan para categorizar datos que pueden identificar o usarse para contactar a una persona específica. |
 | **Direccionamiento basado en intereses** | La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes:<br>Los datos recopilados en el sitio son,<br><ul><li>Se utiliza para hacer deducciones sobre los intereses de un usuario,</li><li>Se utiliza en otro contexto, como en otro sitio o aplicación (fuera del sitio)</li><li>Se utiliza para seleccionar qué contenido o anuncios se muestran en función de esas deducciones.</li></ul> |
-| **Acción de marketing** | Una acción de marketing, en el contexto del marco de trabajo de control de datos, es una acción que realiza un consumidor de datos Experience Platform, para la que es necesario comprobar si se han infringido las políticas de uso de datos |
+| **Acción de marketing** | Una acción de marketing, en el contexto del marco de trabajo de control de datos, es una acción que realiza un consumidor de datos de Experience Platform, para la que es necesario comprobar si se han infringido las políticas de uso de datos |
 | **Directiva** | En el marco de trabajo de gobernanza de datos, una política es una regla que describe qué tipos de acciones de marketing se permiten o no en datos específicos. |
 | **Etiquetas de esquema** | Administre las etiquetas para la gobernanza de datos, el consentimiento y el control de acceso en el nivel de esquema. Esto propaga las etiquetas a cada conjunto de datos que utiliza ese esquema. |
 | **Etiquetas confidenciales** | Las etiquetas confidenciales &quot;S&quot; se utilizan para categorizar los datos que usted y su organización consideran confidenciales. |

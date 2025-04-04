@@ -2,10 +2,10 @@
 title: Administración de permisos para la recopilación de datos en Experience Platform
 description: Una descripción general de alto nivel de cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 26%
+source-wordcount: '1358'
+ht-degree: 28%
 
 ---
 
@@ -28,7 +28,7 @@ En esta guía se asume que está familiarizado con los conceptos básicos de Adm
 
 ## Permisos disponibles
 
-Los permisos relevantes para la recopilación de datos se proporcionan mediante dos designaciones de productos en el Admin Console: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**. Las secciones siguientes describen los permisos proporcionados en relación con cada producto, así como las descripciones de las capacidades específicas a las que otorgan acceso.
+Los permisos relevantes para la recopilación de datos se proporcionan mediante dos designaciones de productos en Admin Console: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**. Las secciones siguientes describen los permisos proporcionados en relación con cada producto, así como las descripciones de las capacidades específicas a las que otorgan acceso.
 
 ### Permisos de Adobe Experience Platform
 
@@ -36,7 +36,7 @@ Los permisos de Adobe Experience Platform incluyen el acceso a flujos de datos, 
 
 | Categoría | Permiso | Descripción |
 | --- | --- | --- |
-| Zonas protegidas | (N/D) | Según las [zonas protegidas](../sandboxes/home.md) que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console. |
+| Zonas protegidas | (N/D) | Según las [zonas protegidas](../sandboxes/home.md) que se hayan creado en su organización, puede controlar el acceso a cada una de ellas mediante esta categoría de permisos en Admin Console. |
 | Modelado de datos | Administrar esquemas | Concede la capacidad de ver, crear y editar [esquemas XDM (Experience Data Model)](../xdm/home.md). |
 | Modelado de datos | Esquemas de vista | Otorga acceso de solo lectura a los esquemas. |
 | Identity Management | Administrar áreas de nombres de identidad | Concede la capacidad de ver, crear y editar [áreas de nombres de identidad](../identity-service/features/namespaces.md). |
@@ -61,7 +61,7 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 | Derechos de propiedad | Editar propiedad | Concede la capacidad de editar la configuración básica de las propiedades a las que un usuario tiene acceso. |
 | Derechos de propiedad | Administrar entornos | Concede la capacidad de administrar los [entornos](../tags/ui/publishing/environments.md) para las propiedades a las que un usuario tiene acceso. |
 | Derechos de propiedad | Administración de extensiones | Concede la capacidad de administrar las [extensiones](../tags/ui/managing-resources/extensions/overview.md) para las propiedades a las que un usuario tiene acceso. |
-| Derechos de propiedad | Publicar | Concede la capacidad de publicar una compilación de biblioteca como parte del [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
+| Derechos de propiedad | Publicación | Concede la capacidad de publicar una compilación de biblioteca como parte del [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de compañía | Desarrollo de extensiones | Concede la capacidad de crear y modificar paquetes de extensión que sean propiedad de su organización, incluidas versiones privadas y solicitudes de lanzamiento público. |
 | Derechos de compañía | Administrar configuraciones de aplicación | Este permiso solo es aplicable si tiene una licencia para Adobe Journey Optimizer u otra solución que conceda acceso a la mensajería móvil en la aplicación y a la mensajería push. Esto le permite administrar las aplicaciones que Adobe Experience Cloud conoce, así como las credenciales push necesarias para comunicarse con el servicio Firebase Cloud Messaging y el servicio de notificaciones push de Apple. |
 | Derechos de compañía | Administrar propiedades | Concede la capacidad de crear y administrar etiquetas (propiedad web), reenvío de eventos (propiedad edge) y propiedades móviles. |
@@ -87,7 +87,7 @@ Consulte las subsecciones siguientes para ver los pasos sobre cómo administrar 
 >
 >Para administrar permisos para una función, necesitará derechos de administrador. Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema.
 
-La sección **[!UICONTROL Permisos]** del Experience Cloud le permite definir roles de usuario y directivas para administrar el acceso a características y objetos dentro de una aplicación de producto.
+La sección **[!UICONTROL Permisos]** de Experience Cloud le permite definir roles de usuario y directivas para administrar el acceso a características y objetos dentro de una aplicación de producto.
 
 Mediante [!UICONTROL Permisos], puede crear y administrar roles y asignar los permisos de recursos deseados para estos roles.
 
@@ -97,15 +97,15 @@ Para tener acceso a las características de recopilación de datos, debe habilit
 
 ![Imagen que muestra la tarjeta de producto de recopilación de datos en Admin Console](./images/permissions/platform-permission-card.png)
 
-Consulte la [guía de la interfaz de usuario de control de acceso](../access-control/ui/overview.md) para obtener instrucciones detalladas sobre la administración de permisos de Platform.
+Consulte la [guía de la interfaz de usuario de control de acceso](../access-control/ui/overview.md) para obtener instrucciones detalladas sobre la administración de permisos de Experience Platform.
 
 >[!NOTE]
 >
->Según los SKU de producto a los que tenga acceso su organización, es posible que no tenga todos los permisos de plataforma disponibles para usted.
+>Según los SKU de producto a los que tenga acceso su organización, es posible que no tenga todos los permisos de Experience Platform disponibles para usted.
 
 ### Administración de permisos en Recopilación de datos de Adobe Experience Platform {#manage-collection}
 
-Para administrar estos permisos, inicia sesión en el Admin Console, selecciona **[!UICONTROL Productos]** en la barra de navegación superior y luego selecciona **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**.
+Para administrar estos permisos, inicia sesión en Admin Console, selecciona **[!UICONTROL Productos]** en la barra de navegación superior y luego selecciona **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**.
 
 ![Imagen que muestra la tarjeta de producto de recopilación de datos en Admin Console](./images/permissions/data-collection-card.png)
 
@@ -147,4 +147,4 @@ Para obtener más información sobre la administración de usuarios para un perf
 
 ## Pasos siguientes
 
-Esta guía abarcaba los permisos disponibles para la recopilación de datos y cómo administrarlos mediante Admin Console. Para obtener más información sobre la administración de permisos para otras funcionalidades de Adobe Experience Platform, consulte la [documentación de control de acceso](../access-control/home.md).
+En esta guía se explican los permisos disponibles para la recopilación de datos y cómo administrarlos a través de Admin Console. Para obtener más información sobre la administración de permisos para otras funcionalidades de Adobe Experience Platform, consulte la [documentación de control de acceso](../access-control/home.md).

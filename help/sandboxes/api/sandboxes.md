@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;inicio;temas populares;guía para desarrolladores de espacios aislados
+keywords: Experience Platform;inicio;temas populares;guía para desarrolladores de zonas protegidas
 solution: Experience Platform
 title: Punto final de API de administración de zona protegida
 description: El extremo /sandboxes de la API de espacio aislado le permite administrar mediante programación los espacios aislados en Adobe Experience Platform.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1477'
 ht-degree: 4%
 
 ---
 
 # Extremo de administración de zona protegida
 
-Los entornos limitados de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno de producción. El extremo `/sandboxes` de la API [!DNL Sandbox] le permite administrar mediante programación las zonas protegidas en Platform.
+Los entornos limitados de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno de producción. El extremo `/sandboxes` de la API [!DNL Sandbox] le permite administrar mediante programación las zonas protegidas en Experience Platform.
 
 ## Introducción
 
@@ -22,7 +22,7 @@ El extremo de API utilizado en esta guía forma parte de la [[!DNL Sandbox] API]
 
 ## Recuperación de una lista de zonas protegidas {#list}
 
-Puede enumerar todas las zonas protegidas que pertenecen a su organización (activas o de otro tipo), realizando una solicitud de GET al extremo `/sandboxes`.
+Puede enumerar todas las zonas protegidas que pertenecen a su organización (activas o de otro tipo), realizando una petición GET al extremo `/sandboxes`.
 
 **Formato de API**
 
@@ -136,7 +136,7 @@ Una respuesta correcta devuelve una lista de zonas protegidas que pertenecen a s
 
 ## Búsqueda de una zona protegida {#lookup}
 
-Puede buscar una zona protegida individual realizando una solicitud de GET que incluya la propiedad `name` de la zona protegida en la ruta de solicitud.
+Puede buscar una zona protegida individual realizando una petición GET que incluya la propiedad `name` de la zona protegida en la ruta de solicitud.
 
 **Formato de API**
 
@@ -195,7 +195,7 @@ Una respuesta correcta devuelve los detalles de la zona protegida, incluidos sus
 >
 >Cuando se cree una nueva zona protegida, primero debe agregarla al perfil del producto en [Adobe Admin Console](https://adminconsole.adobe.com/) para poder empezar a usarla. Consulte la documentación sobre [administración de permisos para un perfil de producto](../../access-control/ui/permissions.md) para obtener información sobre cómo aprovisionar una zona protegida en un perfil de producto.
 
-Puede crear una nueva zona protegida de desarrollo o producción realizando una solicitud de POST al extremo `/sandboxes`.
+Puede crear una nueva zona protegida de desarrollo o producción realizando una petición POST al extremo `/sandboxes`.
 
 ### Creación de una zona protegida de desarrollo
 
@@ -228,7 +228,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | El identificador que se utilizará para acceder a la zona protegida en solicitudes futuras. Este valor debe ser único, y se recomienda hacerlo lo más descriptivo posible. Este valor no puede contener espacios ni caracteres especiales. |
-| `title` | Un nombre legible en lenguaje natural que se utiliza con fines de visualización en la interfaz de usuario de Platform. |
+| `title` | Un nombre legible en lenguaje natural que se utiliza con fines de visualización en la interfaz de usuario de Experience Platform. |
 | `type` | Tipo de zona protegida que se va a crear. Para una zona protegida que no sea de producción, este valor debe ser `development`. |
 
 **Respuesta**
@@ -281,7 +281,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | El identificador que se utilizará para acceder a la zona protegida en solicitudes futuras. Este valor debe ser único, y se recomienda hacerlo lo más descriptivo posible. Este valor no puede contener espacios ni caracteres especiales. |
-| `title` | Un nombre legible en lenguaje natural que se utiliza con fines de visualización en la interfaz de usuario de Platform. |
+| `title` | Un nombre legible en lenguaje natural que se utiliza con fines de visualización en la interfaz de usuario de Experience Platform. |
 | `type` | Tipo de zona protegida que se va a crear. Para una zona protegida de producción, este valor debe ser `production`. |
 
 **Respuesta**
@@ -304,7 +304,7 @@ Una respuesta correcta devuelve los detalles de la zona protegida recién creada
 
 ## Actualización de una zona protegida {#put}
 
-Puede actualizar uno o varios campos de una zona protegida realizando una solicitud al PATCH que incluya `name` de la zona protegida en la ruta de solicitud y la propiedad que se actualizará en la carga útil de la solicitud.
+Puede actualizar uno o más campos de una zona protegida realizando una petición PATCH que incluya `name` de la zona protegida en la ruta de solicitud y la propiedad que se actualizará en la carga útil de la solicitud.
 
 >[!NOTE]
 >
@@ -352,7 +352,7 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) con los detalles de la z
 
 ## Restablecer una zona protegida {#reset}
 
-Las zonas protegidas tienen una función de &quot;restablecimiento de fábrica&quot; que elimina todos los recursos no predeterminados de una zona protegida. Puede restablecer una zona protegida realizando una solicitud de PUT que incluya la zona protegida `name` en la ruta de solicitud.
+Las zonas protegidas tienen una función de &quot;restablecimiento de fábrica&quot; que elimina todos los recursos no predeterminados de una zona protegida. Puede restablecer una zona protegida realizando una petición PUT que incluya la zona protegida `name` en la ruta de solicitud.
 
 **Formato de API**
 
@@ -481,7 +481,7 @@ Una respuesta correcta devuelve los detalles de la zona protegida actualizada, l
 >
 >No se puede eliminar la zona protegida de producción predeterminada.
 
-Puede eliminar una zona protegida realizando una solicitud de DELETE que incluya la zona protegida `name` en la ruta de solicitud.
+Puede eliminar una zona protegida realizando una petición DELETE que incluya la zona protegida `name` en la ruta de solicitud.
 
 >[!NOTE]
 >

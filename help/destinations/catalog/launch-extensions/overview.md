@@ -1,27 +1,27 @@
 ---
 keywords: extensiones de etiquetas;extensión de etiquetas;destinos de launch; extensiones de etiquetas de platform;extensión de etiquetas de platform;destinos de platform launch
 title: Extensiones de etiquetas en Adobe Experience Platform
-description: Adobe Experience Platform proporciona la siguiente generación de funcionalidades de administración de etiquetas desde el Adobe. Platform le ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes.
+description: Adobe Experience Platform proporciona la siguiente generación de funcionalidades de administración de etiquetas de Adobe. Experience Platform ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '493'
 ht-degree: 2%
 
 ---
 
 # Extensiones de etiquetas en Adobe Experience Platform
 
-Adobe Experience Platform proporciona la siguiente generación de funcionalidades de administración de etiquetas desde el Adobe. Platform le ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para ofrecer al cliente experiencias más relevantes. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor.
+Adobe Experience Platform proporciona la siguiente generación de funcionalidades de administración de etiquetas de Adobe. Experience Platform ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor.
 
 Para ver una introducción a las etiquetas, consulte los recursos siguientes:
 
 - [Información general sobre etiquetas](../../../tags/home.md)
 - [Guía de inicio rápido](../../../tags/quick-start/quick-start.md)
 
-## Cómo encontrar extensiones de etiquetas en la interfaz de Platform {#how-to-find-extensions-in-interface}
+## Búsqueda de extensiones de etiquetas en la interfaz de Experience Platform {#how-to-find-extensions-in-interface}
 
-Para encontrar las extensiones en la interfaz de Platform, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** y seleccione **[!UICONTROL Extensiones]** en el filtro **[!UICONTROL Tipos]**.
+Para encontrar las extensiones en la interfaz de Experience Platform, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** y seleccione **[!UICONTROL Extensiones]** en el filtro **[!UICONTROL Tipos]**.
 
 ![Filtro de extensiones en la interfaz](../../assets/catalog/launch-extensions/filter.png)
 
@@ -29,7 +29,7 @@ Para encontrar las extensiones en la interfaz de Platform, vaya a **[!UICONTROL 
 
 Una [extensión de etiqueta](../../../tags/home.md#extensions) es un paquete de código que mejora la funcionalidad de un sitio web o aplicación móvil. Esto podría incluir el envío de datos de evento sin procesar a un destino como [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), pero también pueden servir para otras funciones.
 
-Es importante diferenciar entre extensiones de etiqueta y de reenvío de eventos. Las extensiones que aparecen en la interfaz de usuario de destinos de Platform son *extensiones de etiqueta*. Consulte la descripción general del reenvío de eventos para obtener más información sobre las [diferencias entre las etiquetas y el reenvío de eventos](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
+Es importante diferenciar entre extensiones de etiqueta y de reenvío de eventos. Las extensiones que aparecen en la interfaz de usuario de destinos de Experience Platform son *extensiones de etiqueta*. Consulte la descripción general del reenvío de eventos para obtener más información sobre las [diferencias entre las etiquetas y el reenvío de eventos](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
 
 
@@ -45,7 +45,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## Ventajas de utilizar extensiones de etiquetas {#extensions-benefits}
 
-Las funciones de etiquetas de Platform son gratuitas para los clientes Experience Cloud existentes. El sistema simplifica la implementación de etiquetas en el sitio web mediante extensiones fáciles de usar que se pueden instalar, configurar, actualizar y eliminar. Las etiquetas dejan un pequeño espacio en el sitio web y le permiten mantener las páginas cargadas rápidamente.
+Las funciones de etiquetas de Experience Platform son gratuitas para los clientes de Experience Cloud existentes. El sistema simplifica la implementación de etiquetas en el sitio web mediante extensiones fáciles de usar que se pueden instalar, configurar, actualizar y eliminar. Las etiquetas dejan un pequeño espacio en el sitio web y le permiten mantener las páginas cargadas rápidamente.
 
 Aunque no puede activar audiencias para etiquetar extensiones, puede configurar reglas para reenviar solo datos de evento en determinadas situaciones. Esta potente funcionalidad le permite reenviar datos de evento solo en determinadas situaciones, en lugar de enviar datos de evento en cada interacción. Para obtener más información, lea acerca de las reglas en la [documentación de etiquetas](../../../tags/ui/managing-resources/rules.md).
 
@@ -53,13 +53,13 @@ Aunque no puede activar audiencias para etiquetar extensiones, puede configurar 
 
 Las extensiones permiten satisfacer varios casos de uso de clientes. Algunos casos de uso de ejemplo para el uso de extensiones son:
 
-- Puede enviar datos de sitios web o aplicaciones nativas a Facebook mediante la extensión de píxeles de Facebook. Píxel de facebook indica a qué partes del sitio o aplicación navegó un visitante, reenvía esa información a Facebook y puede redireccionar al visitante a través de Facebook.
-- Puede reenviar datos de eventos de sus sitios web y aplicaciones a los Google Analytics para analizar y tomar decisiones basadas en esos datos.
+- Puede enviar datos de sitios web o aplicaciones nativas a Facebook mediante la extensión de píxeles de Facebook. Píxel de Facebook indica a qué partes del sitio o aplicación navegó un visitante, reenvía esa información a Facebook y puede redireccionar al visitante a través de Facebook.
+- Puede reenviar datos de eventos de sus sitios web y aplicaciones a Google Analytics para analizar y tomar decisiones basadas en esos datos.
 - Puede activar una aplicación de chat del lado del cliente en el momento adecuado en función de cómo interactúen los usuarios con las páginas, según las reglas que configure.
 
 ## Categorías de extensión {#extension-categories}
 
-Las extensiones pueden clasificarse en las siguientes categorías en Platform:
+Las extensiones pueden clasificarse en las siguientes categorías en Experience Platform:
 
 - [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)

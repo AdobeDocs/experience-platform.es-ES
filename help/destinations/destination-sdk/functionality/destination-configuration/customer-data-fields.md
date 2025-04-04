@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo crear campos de entrada en la interfaz de usuario de Experience Platform que permitan a los usuarios especificar información diversa relevante para conectarse y exportar datos a su destino.
 title: Campos de datos del cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1750'
 ht-degree: 1%
 
 ---
@@ -32,11 +32,11 @@ Puede configurar los campos de datos del cliente mediante el extremo `/authoring
 * [Crear una configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Actualizar una configuración de destino](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Este artículo describe todos los tipos de configuración de campos de datos del cliente admitidos que puede utilizar para el destino y muestra lo que los clientes verán en la interfaz de usuario de Experience Platform.
+Este artículo describe todos los tipos de configuración de campos de datos del cliente admitidos que puede utilizar para su destino y muestra lo que los clientes verán en la interfaz de usuario de Experience Platform.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -53,10 +53,10 @@ Al crear sus propios campos de datos de cliente, puede utilizar los parámetros 
 
 | Parámetro | Tipo | Obligatorio/Opcional | Descripción |
 |---------|----------|------|---|
-| `name` | Cadena | Requerido | Proporcione un nombre para el campo personalizado que está introduciendo. Este nombre no está visible en la interfaz de usuario de Platform, a menos que el campo `title` esté vacío o falte. |
+| `name` | Cadena | Requerido | Proporcione un nombre para el campo personalizado que está introduciendo. Este nombre no está visible en la interfaz de usuario de Experience Platform, a menos que el campo `title` esté vacío o falte. |
 | `type` | Cadena | Requerido | Indica el tipo de campo personalizado que está introduciendo. Valores aceptados: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | Cadena | Opcional | Indica el nombre del campo, tal como lo ven los clientes en la interfaz de usuario de Platform. Si este campo está vacío o falta, la interfaz de usuario hereda el nombre del campo del valor `name`. |
-| `description` | Cadena | Opcional | Proporcione una descripción para el campo personalizado. Esta descripción no es visible en la interfaz de usuario de Platform. |
+| `title` | Cadena | Opcional | Indica el nombre del campo tal como lo ven los clientes en la interfaz de usuario de Experience Platform. Si este campo está vacío o falta, la interfaz de usuario hereda el nombre del campo del valor `name`. |
+| `description` | Cadena | Opcional | Proporcione una descripción para el campo personalizado. Esta descripción no es visible en la interfaz de usuario de Experience Platform. |
 | `isRequired` | Booleano | Opcional | Indica si los usuarios deben proporcionar un valor para este campo en el flujo de trabajo de configuración de destino. |
 | `pattern` | Cadena | Opcional | Aplica un motivo al campo personalizado, si es necesario. Utilice expresiones regulares para aplicar un patrón. Por ejemplo, si los ID de cliente no incluyen números ni guiones bajos, escriba `^[A-Za-z]+$` en este campo. |
 | `enum` | Cadena | Opcional | Procesa el campo personalizado como un menú desplegable y enumera las opciones disponibles para el usuario. |
@@ -67,7 +67,7 @@ Al crear sus propios campos de datos de cliente, puede utilizar los parámetros 
 
 {style="table-layout:auto"}
 
-En el ejemplo siguiente, la sección `customerDataFields` define dos campos que los usuarios deben introducir en la interfaz de usuario de Platform al conectarse al destino:
+En el ejemplo siguiente, la sección `customerDataFields` define dos campos que los usuarios deben introducir en la interfaz de usuario de Experience Platform al conectarse al destino:
 
 * `Account ID`: ID de cuenta de usuario para la plataforma de destino.
 * `Endpoint region`: el extremo regional de la API a la que se conectarán. La sección `enum` crea un menú desplegable con los valores definidos dentro de disponibles para que los usuarios los seleccionen.
@@ -103,7 +103,7 @@ La experiencia de IU resultante se muestra en la siguiente imagen.
 
 ## Nombres y descripciones de las conexiones de destino {#names-description}
 
-Al crear un nuevo destino, el Destination SDK agrega automáticamente los campos **[!UICONTROL Nombre]** y **[!UICONTROL Descripción]** a la pantalla de conexión de destino en la interfaz de usuario de Platform. Como puede ver en el ejemplo anterior, los campos **[!UICONTROL Name]** y **[!UICONTROL Description]** se representan en la interfaz de usuario sin que se incluyan en la configuración de los campos de datos del cliente.
+Al crear un nuevo destino, Destination SDK agrega automáticamente los campos **[!UICONTROL Nombre]** y **[!UICONTROL Descripción]** a la pantalla de conexión de destino en la interfaz de usuario de Experience Platform. Como puede ver en el ejemplo anterior, los campos **[!UICONTROL Name]** y **[!UICONTROL Description]** se representan en la interfaz de usuario sin que se incluyan en la configuración de los campos de datos del cliente.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ Al crear un nuevo destino, el Destination SDK agrega automáticamente los campos
 
 ## Ordenar campos de datos de clientes {#ordering}
 
-El orden en que se agregan los campos de datos del cliente en la configuración de destino se refleja en la interfaz de usuario de Platform.
+El orden en que se agregan los campos de datos del cliente en la configuración de destino se refleja en la interfaz de usuario de Experience Platform.
 
 Por ejemplo, la configuración siguiente se refleja en consecuencia en la interfaz de usuario, y las opciones aparecen en el orden **[!UICONTROL Nombre]**, **[!UICONTROL Descripción]**, **[!UICONTROL Nombre del contenedor]**, **[!UICONTROL Ruta de acceso a la carpeta]**, **[!UICONTROL Tipo de archivo]**, **[!UICONTROL Formato de compresión]**.
 
@@ -169,7 +169,7 @@ Por ejemplo, la configuración siguiente se refleja en consecuencia en la interf
 ]
 ```
 
-![Imagen que muestra el orden de las opciones de formato de archivo en la interfaz de usuario del Experience Platform.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
+![Imagen que muestra el orden de las opciones de formato de archivo en la interfaz de usuario de Experience Platform.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
 
 ## Agrupar campos de datos de clientes {#grouping}
 
@@ -559,7 +559,7 @@ A continuación, puede ver la pantalla de la interfaz de usuario resultante, en 
 
 ## Acceso a campos de datos de clientes con plantillas {#accessing-templatized-fields}
 
-Cuando el destino requiera la entrada del usuario, debe proporcionar una selección de campos de datos de clientes a los usuarios, que pueden rellenar a través de la interfaz de usuario de Platform. A continuación, debe configurar el servidor de destino para que lea correctamente los datos introducidos por el usuario en los campos de datos del cliente. Esto se realiza mediante campos con plantillas.
+Cuando el destino requiera la entrada del usuario, debe proporcionar una selección de campos de datos de clientes a los usuarios, que pueden rellenar a través de la interfaz de usuario de Experience Platform. A continuación, debe configurar el servidor de destino para que lea correctamente los datos introducidos por el usuario en los campos de datos del cliente. Esto se realiza mediante campos con plantillas.
 
 Los campos con plantilla utilizan el formato `{{customerData.fieldName}}`, donde `fieldName` es el nombre del campo de datos del cliente desde el que está leyendo la información. Todos los campos de datos de clientes con plantilla van precedidos de `customerData.` y encerrados entre llaves dobles `{{ }}`.
 
@@ -592,7 +592,7 @@ Por ejemplo, consideremos la siguiente configuración de destino de Amazon S3:
 
 Esta configuración solicita a los usuarios que especifiquen su nombre de contenedor y ruta de carpeta [!DNL Amazon S3] en los campos de datos de clientes respectivos.
 
-Para que el Experience Platform se conecte correctamente a [!DNL Amazon S3], su servidor de destino debe estar configurado para leer los valores de estos dos campos de datos de clientes, como se muestra a continuación:
+Para que Experience Platform se conecte correctamente a [!DNL Amazon S3], el servidor de destino debe estar configurado para leer los valores de estos dos campos de datos de clientes, como se muestra a continuación:
 
 ```json
  "fileBasedS3Destination":{
@@ -607,13 +607,13 @@ Para que el Experience Platform se conecte correctamente a [!DNL Amazon S3], su 
    }
 ```
 
-Los valores con plantilla `{{customerData.bucketName}}` y `{{customerData.path}}` leen los valores proporcionados por el usuario para que el Experience Platform pueda conectarse correctamente a la plataforma de destino.
+Los valores con plantilla `{{customerData.bucketName}}` y `{{customerData.path}}` leen los valores proporcionados por el usuario para que Experience Platform pueda conectarse correctamente a la plataforma de destino.
 
 Para obtener más información acerca de cómo configurar el servidor de destino para que lea campos con plantillas, consulte la documentación sobre [campos con código y con plantilla](../destination-server/server-specs.md#templatized-fields).
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este artículo, debería comprender mejor cómo puede permitir a los usuarios introducir información en la interfaz de usuario de Experience Platform a través de los campos de datos de los clientes. Ahora también sabe cómo seleccionar el campo de datos del cliente adecuado para su caso de uso y configurar, ordenar y agrupar campos de datos de clientes en la interfaz de usuario de Platform.
+Después de leer este artículo, debería comprender mejor cómo puede permitir a los usuarios introducir información en la interfaz de usuario de Experience Platform a través de los campos de datos de los clientes. Ahora también sabe cómo seleccionar el campo de datos del cliente adecuado para su caso de uso y configurar, ordenar y agrupar campos de datos de cliente en la IU de Experience Platform.
 
 Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 

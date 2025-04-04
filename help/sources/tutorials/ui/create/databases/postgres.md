@@ -5,7 +5,7 @@ title: Crear una conexión de Source con PostgreSQL en la interfaz de usuario
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen PostgreSQL mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Crear una conexión de origen [!DNL PostgreSQL] en la interfaz de usuario
 
-Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL PostgreSQL] mediante la interfaz de usuario [!DNL Platform].
+Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen [!DNL PostgreSQL] mediante la interfaz de usuario [!DNL Experience Platform].
 
 ## Introducción
 
@@ -29,7 +29,7 @@ Si ya tiene una conexión [!DNL PostgreSQL] válida, puede omitir el resto de es
 
 ### Recopilar credenciales necesarias
 
-Para tener acceso a su cuenta de [!DNL PostgreSQL] en [!DNL Platform], debe proporcionar el siguiente valor:
+Para tener acceso a su cuenta de [!DNL PostgreSQL] en [!DNL Experience Platform], debe proporcionar el siguiente valor:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -50,7 +50,7 @@ El siguiente es un ejemplo de una cadena de conexión [!DNL PostgreSQL] anexada 
 
 ## Conectar su cuenta de [!DNL PostgreSQL]
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL PostgreSQL] a [!DNL Platform].
+Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL PostgreSQL] a [!DNL Experience Platform].
 
 Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de orígenes con los que puede crear una cuenta.
 
@@ -76,4 +76,4 @@ Para conectar una cuenta existente, seleccione la cuenta de [!DNL PostgreSQL] co
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL PostgreSQL]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Platform]](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL PostgreSQL]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).

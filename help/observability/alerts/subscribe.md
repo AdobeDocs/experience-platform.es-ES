@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;inicio;temas populares;intervalo de fechas
-title: Suscribirse a notificaciones de eventos de Adobe I/O
-description: Este documento proporciona pasos sobre cómo suscribirse a las notificaciones de eventos de Adobe I/O para los servicios de Adobe Experience Platform. También se proporciona información de referencia sobre los tipos de eventos disponibles, junto con vínculos a documentación adicional sobre cómo interpretar los datos de eventos devueltos para cada servicio  [!DNL Platform] aplicable.
+title: Suscribirse a las notificaciones de eventos de Adobe I/O
+description: Este documento proporciona pasos sobre cómo suscribirse a las notificaciones de eventos de Adobe I/O para los servicios de Adobe Experience Platform. También se proporciona información de referencia sobre los tipos de eventos disponibles, junto con vínculos a documentación adicional sobre cómo interpretar los datos de eventos devueltos para cada servicio  [!DNL Experience Platform] aplicable.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 2%
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 # Suscribirse a las notificaciones de eventos de Adobe I/O
 
-[!DNL Observability Insights] le permite suscribirse a las notificaciones de eventos de Adobe I/O relacionados con las actividades de Adobe Experience Platform. Estos eventos se envían a un webhook configurado para facilitar la automatización eficaz de la monitorización de la actividad.
+[!DNL Observability Insights] le permite suscribirse a las notificaciones de eventos de Adobe I/O relativas a actividades de Adobe Experience Platform. Estos eventos se envían a un webhook configurado para facilitar la automatización eficaz de la monitorización de la actividad.
 
-Este documento proporciona pasos sobre cómo puede suscribirse a las notificaciones de eventos de Adobe I/O para los servicios de Adobe Experience Platform. También se proporciona información de referencia sobre los tipos de eventos disponibles, junto con vínculos a documentación adicional sobre cómo interpretar los datos de eventos devueltos para cada servicio [!DNL Platform] aplicable.
+Este documento proporciona pasos sobre cómo puede suscribirse a las notificaciones de eventos de Adobe I/O para los servicios de Adobe Experience Platform. También se proporciona información de referencia sobre los tipos de eventos disponibles, junto con vínculos a documentación adicional sobre cómo interpretar los datos de eventos devueltos para cada servicio [!DNL Experience Platform] aplicable.
 
 ## Introducción
 
@@ -29,7 +29,7 @@ Puede configurar su webhook usando el cliente de su elección. Para que una dire
 
 ![](../images/notifications/webhook-url.png)
 
-Durante el proceso de validación inicial, [!DNL I/O Events] envía un parámetro de consulta `challenge` en una solicitud de GET al webhook. Debe configurar el webhook para que devuelva el valor de este parámetro en la carga útil de respuesta. Si usa Webhook.site, seleccione **[!DNL Edit]** en la esquina superior derecha y, a continuación, escriba `$request.query.challenge$` en **[!DNL Response body]** antes de seleccionar **[!DNL Save]**.
+Durante el proceso de validación inicial, [!DNL I/O Events] envía un parámetro de consulta `challenge` en una petición GET al webhook. Debe configurar el webhook para que devuelva el valor de este parámetro en la carga útil de respuesta. Si usa Webhook.site, seleccione **[!DNL Edit]** en la esquina superior derecha y, a continuación, escriba `$request.query.challenge$` en **[!DNL Response body]** antes de seleccionar **[!DNL Save]**.
 
 ![](../images/notifications/response-challenge.png)
 
@@ -41,7 +41,7 @@ Vaya a la [consola de desarrollador de Adobe](https://www.adobe.com/go/devs_cons
 
 >[!NOTE]
 >
->El evento de notificación de ingesta de datos se ha quedado obsoleto en el Adobe I/O. En su lugar, debería usar el evento de E/S **Información de ejecución de flujo de fuentes**.
+>El evento de notificación de ingesta de datos ha quedado obsoleto en Adobe I/O. En su lugar, debería usar el evento de E/S **Información de ejecución de flujo de fuentes**.
 
 Una vez creado un nuevo proyecto, vaya a la pantalla de información general de ese proyecto. Aquí, seleccione **[!UICONTROL Agregar evento]**.
 
@@ -63,7 +63,7 @@ La siguiente pantalla muestra una lista de tipos de eventos a los que suscribirs
 >Si no está seguro de a qué eventos suscribirse para el servicio con el que está trabajando, consulte la siguiente documentación:
 >
 >* [Notificaciones de plataforma](./rules.md)
->* [Notificaciones al Privacy Service](../../privacy-service/privacy-events.md)
+>* [Notificaciones de Privacy Service](../../privacy-service/privacy-events.md)
 
 >[!IMPORTANT]
 >

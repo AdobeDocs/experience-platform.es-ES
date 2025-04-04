@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Resumen de ingesta de streaming
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 2%
@@ -25,7 +25,7 @@ El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de tra
 
 ### Registros de perfil de flujo y [!DNL ExperienceEvents]
 
-Con la ingesta por transmisión, los usuarios pueden transmitir registros de perfil y de [!DNL ExperienceEvents] a [!DNL Platform] en segundos para ayudar a impulsar la personalización en tiempo real. Todos los datos enviados a las API de ingesta de transmisión se mantienen automáticamente en [!DNL Data Lake].
+Con la ingesta por transmisión, los usuarios pueden transmitir registros de perfil y de [!DNL ExperienceEvents] a [!DNL Experience Platform] en segundos para ayudar a impulsar la personalización en tiempo real. Todos los datos enviados a las API de ingesta de transmisión se mantienen automáticamente en [!DNL Data Lake].
 
 Lea [crear una guía de conexión de flujo continuo](../tutorials/create-streaming-connection.md) para obtener más información.
 

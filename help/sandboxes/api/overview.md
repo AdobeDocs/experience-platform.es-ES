@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;guía para desarrolladores de espacios aislados
+keywords: Experience Platform;inicio;temas populares;guía para desarrolladores de zonas protegidas
 solution: Experience Platform
 title: Guía de API de zona protegida
 description: Los entornos limitados de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno de producción.
 role: Developer
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '328'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Una zona protegida es una partición virtual dentro de una sola instancia de Ado
 
 ## Tipos de zonas protegidas
 
-Actualmente, los tipos de zonas protegidas admitidos en Experience Platform son zonas protegidas de producción y desarrollo. Una licencia de Platform predeterminada le concede un total de cinco zonas protegidas, que puede clasificar como producción o desarrollo. Puede obtener una licencia de paquetes adicionales de 10 zonas protegidas, hasta un máximo de 75 zonas protegidas en total. Consulte la [guía de extremo de tipos de zonas protegidas](./types.md) para obtener información sobre cómo ver los tipos de zonas protegidas admitidos para su organización en la API.
+Actualmente, los tipos de zonas protegidas admitidos en Experience Platform son zonas protegidas de producción y desarrollo. Una licencia predeterminada de Experience Platform le concede un total de cinco zonas protegidas, que puede clasificar como producción o desarrollo. Puede obtener una licencia de paquetes adicionales de 10 zonas protegidas, hasta un máximo de 75 zonas protegidas en total. Consulte la [guía de extremo de tipos de zonas protegidas](./types.md) para obtener información sobre cómo ver los tipos de zonas protegidas admitidos para su organización en la API.
 
 ## Pasos siguientes
 

@@ -2,9 +2,9 @@
 title: Crear un listado de intercambio para una extensión
 description: Obtenga información sobre cómo añadir la extensión al catálogo público en Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 69%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform tiene un único catálogo en el que los usuarios puede
 
 Independientemente de las extensiones del catálogo de productos, las extensiones públicas también tienen listas en [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).
 
-Estas listas permiten a los desarrolladores de extensiones publicar descripciones de la funcionalidad, proporcionar vínculos a documentación o asistencia adicional y comercializar extensiones a posibles usuarios que pueden no conocer su empresa o la funcionalidad de su extensión. En este mercado, su extensión tendrá un anuncio público que se podrá consultar sin que el usuario tenga que autenticarse en Platform. Para las extensiones públicas, la creación de esta lista de Exchange es un paso obligatorio.
+Estas listas permiten a los desarrolladores de extensiones publicar descripciones de la funcionalidad, proporcionar vínculos a documentación o asistencia adicional y comercializar extensiones a posibles usuarios que pueden no conocer su empresa o la funcionalidad de su extensión. En este mercado, su extensión tendrá un anuncio público que se podrá consultar sin que el usuario tenga que autenticarse en Experience Platform. Para las extensiones públicas, la creación de esta lista de Exchange es un paso obligatorio.
 
 >[!TIP]
 >

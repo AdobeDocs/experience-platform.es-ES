@@ -2,74 +2,74 @@
 title: Información general de extremo a extremo de recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las funciones de recopilación de datos de Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2616'
+source-wordcount: '2624'
 ht-degree: 0%
 
 ---
 
 # Información general sobre la recopilación de datos de extremo a extremo
 
-Adobe Experience Platform recopila y transfiere sus datos a otros productos de Adobe y destinos de terceros. Para enviar datos de evento de la aplicación al Edge Network Experience Platform, es importante comprender estas tecnologías principales y cómo configurarlas para que entreguen los datos a los destinos que necesite, cuando lo necesite.
+Adobe Experience Platform recopila y transfiere sus datos a otros productos de Adobe y a destinos de terceros. Para enviar datos de evento de su aplicación a Experience Platform Edge Network, es importante comprender estas tecnologías principales y cómo configurarlas para que entreguen los datos a los destinos que necesite, cuando lo necesite.
 
-Esta guía proporciona un tutorial de alto nivel sobre cómo enviar un evento a través del Edge Network mediante las funciones de recopilación de datos de Platform. En concreto, el tutorial recorre los pasos de instalación y configuración de la extensión de etiqueta del SDK web de Adobe Experience Platform dentro de la IU de recopilación de datos (anteriormente, Adobe Experience Platform Launch).
+Esta guía proporciona un tutorial de alto nivel sobre cómo enviar un evento a través de Edge Network mediante las funciones de recopilación de datos de Experience Platform. En concreto, el tutorial recorre los pasos de instalación y configuración de la extensión de etiquetas Adobe Experience Platform Web SDK en la interfaz de usuario de recopilación de datos (anteriormente, Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
->También puede optar por instalar y configurar el SDK manualmente si no desea utilizar etiquetas, pero los pasos que lo rodean deben completarse como se describe a continuación.
+>También puede optar por instalar y configurar SDK manualmente si no desea utilizar etiquetas, pero los pasos circundantes deben completarse como se describe a continuación.
 >
 >Todos los pasos relacionados con la IU de recopilación de datos también se pueden realizar en la IU de Experience Platform.
 
 ## Requisitos previos
 
-Este tutorial utiliza la IU de recopilación de datos para crear un esquema, configurar un flujo de datos e instalar el SDK web. Para realizar estas acciones en la interfaz de usuario, se le debe otorgar acceso a al menos una propiedad web junto con los siguientes [derechos de propiedad](../tags/ui/administration/user-permissions.md#property-rights):
+Este tutorial utiliza la IU de recopilación de datos para crear un esquema, configurar un flujo de datos e instalar Web SDK. Para realizar estas acciones en la interfaz de usuario, se le debe otorgar acceso a al menos una propiedad web junto con los siguientes [derechos de propiedad](../tags/ui/administration/user-permissions.md#property-rights):
 
 * Desarrollo
 * Administración de extensiones
 
 Consulte la guía sobre [administración de permisos para la recopilación de datos](./permissions.md) para obtener información sobre cómo conceder acceso a propiedades y derechos de propiedad.
 
-Para utilizar los distintos productos de recopilación de datos mencionados en esta guía, también debe tener acceso a los flujos de datos y la capacidad de crear y administrar esquemas. Si necesita acceder a alguna de estas funciones, póngase en contacto con el equipo de su cuenta de Adobe para que le ayude a obtener el acceso necesario. Tenga en cuenta que si no ha adquirido Adobe Experience Platform, Adobe le proporcionará el acceso necesario para utilizar el SDK sin coste adicional.
+Para utilizar los distintos productos de recopilación de datos mencionados en esta guía, también debe tener acceso a los flujos de datos y la capacidad de crear y administrar esquemas. Si necesita acceder a cualquiera de estas funciones, póngase en contacto con el equipo de su cuenta de Adobe para que le ayude a obtener el acceso necesario. Tenga en cuenta que si no ha adquirido Adobe Experience Platform, Adobe le proporcionará el acceso necesario para utilizar SDK sin coste adicional.
 
-Si ya tiene acceso a Platform, debe asegurarse de que tiene habilitados todos los [permisos](../access-control/home.md#permissions) en las siguientes categorías:
+Si ya tiene acceso a Experience Platform, debe asegurarse de que tiene habilitados todos los [permisos](../access-control/home.md#permissions) en las siguientes categorías:
 
 * Modelado de datos
 * Identidades
 
-Consulte la [descripción general de la interfaz de usuario de control de acceso](../access-control/ui/overview.md) para obtener información sobre cómo conceder permisos para las capacidades de Platform a los usuarios.
+Consulte la [descripción general de la interfaz de usuario de control de acceso](../access-control/ui/overview.md) para obtener información sobre cómo conceder permisos para las capacidades de Experience Platform a los usuarios.
 
 ## Resumen del proceso
 
 El proceso de configuración de la recopilación de datos para su sitio web se puede resumir de la siguiente manera:
 
-1. [Cree un esquema](#schema) para determinar cómo se estructurarán los datos cuando se envíen al Edge Network.
+1. [Cree un esquema](#schema) para determinar cómo se estructurarán los datos cuando se envíen a Edge Network.
 1. [Cree una secuencia de datos](#datastream) para configurar a qué destinos desea enviar los datos.
-1. [Instale y configure el SDK web](#sdk) para enviar datos a la secuencia de datos cuando se produzcan ciertos eventos en el sitio web.
+1. [Instale y configure Web SDK](#sdk) para enviar datos al conjunto de datos cuando se produzcan ciertos eventos en el sitio web.
 
-Una vez que pueda enviar datos al Edge Network, también puede [configurar el reenvío de eventos](#event-forwarding) si su organización dispone de una licencia para él.
+Una vez que pueda enviar datos a Edge Network, también puede [configurar el reenvío de eventos](#event-forwarding) si su organización dispone de una licencia para él.
 
 ## Creación de un esquema {#schema}
 
-[Experience Data Model (XDM)](../xdm/home.md) es una especificación de código abierto que proporciona estructuras y definiciones comunes para datos en forma de esquemas. En otras palabras, XDM es una forma de estructurar y dar formato a los datos de una manera que pueda ser procesada por el Edge Network y otras aplicaciones de Adobe Experience Cloud.
+[Experience Data Model (XDM)](../xdm/home.md) es una especificación de código abierto que proporciona estructuras y definiciones comunes para datos en forma de esquemas. En otras palabras, XDM es una forma de estructurar y dar formato a los datos de una manera que pueda ser procesada por Edge Network y otras aplicaciones de Adobe Experience Cloud.
 
 El primer paso para configurar las operaciones de recopilación de datos es crear un esquema XDM para representar los datos. En un paso posterior de este tutorial, asignará los datos que desee enviar a la estructura de este esquema.
 
 >[!NOTE]
 >
->Los esquemas XDM son muy personalizables. En lugar de ser excesivamente prescriptivos, los pasos descritos a continuación se centran específicamente en los requisitos de esquema para el SDK web. Fuera de estos parámetros, puede definir la estructura restante de los datos como desee.
+>Los esquemas XDM son muy personalizables. En lugar de ser excesivamente prescriptivos, los pasos descritos a continuación se centran específicamente en los requisitos de esquema para Web SDK. Fuera de estos parámetros, puede definir la estructura restante de los datos como desee.
 
 En la interfaz de usuario, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. Desde aquí puede ver una lista de los esquemas creados anteriormente que pertenecen a su organización. Para continuar, selecciona **[!UICONTROL Crear esquema]** y luego selecciona **[!UICONTROL XDM ExperienceEvent]** en el menú desplegable.
 
 ![Espacio de trabajo de esquemas](./images/e2e/schemas.png)
 
-Aparece un cuadro de diálogo que le solicita que empiece a agregar grupos de campos al esquema. Para enviar eventos mediante el SDK web, debe agregar el grupo de campos **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**. Este grupo de campos contiene definiciones de atributos de datos que la biblioteca del SDK web recopila automáticamente.
+Aparece un cuadro de diálogo que le solicita que empiece a agregar grupos de campos al esquema. Para enviar eventos mediante Web SDK, debe agregar el grupo de campos **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**. Este grupo de campos contiene definiciones de atributos de datos que la biblioteca Web SDK recopila automáticamente.
 
 Utilice la barra de búsqueda para reducir la lista y facilitar la búsqueda de este grupo de campos. Una vez que lo haya encontrado, selecciónelo en la lista antes de seleccionar **[!UICONTROL Agregar grupos de campos]**.
 
 ![Espacio de trabajo de esquemas](./images/e2e/add-field-group.png)
 
-Aparece el lienzo del esquema, que muestra una estructura de árbol del esquema XDM que incluye los campos proporcionados por el grupo de campos del SDK web.
+Aparece el lienzo del esquema, que muestra una estructura de árbol del esquema XDM que incluye los campos proporcionados por el grupo de campos de Web SDK.
 
 ![Estructura del esquema](./images/e2e/schema-structure.png)
 
@@ -85,7 +85,7 @@ Si desea agregar más campos al esquema, puede hacerlo seleccionando **[!UICONTR
 >
 >Consulte la guía sobre [adición de grupos de campos](../xdm/ui/resources/schemas.md#add-field-groups) en la documentación de XDM para ver los pasos detallados sobre cómo buscar diferentes grupos de campos para adaptarlos a sus casos de uso.
 >
->La práctica recomendada es agregar solo campos para los datos que planea enviar a través del Edge Network. Una vez añadidos campos a un esquema y guardado, solo se pueden realizar cambios adicionales en el esquema a partir de entonces. Consulte la sección sobre [reglas de evolución de esquema](../xdm/schema/composition.md#evolution) para obtener más información.
+>La práctica recomendada es agregar solo campos para los datos que planea enviar a través de Edge Network. Una vez añadidos campos a un esquema y guardado, solo se pueden realizar cambios adicionales en el esquema a partir de entonces. Consulte la sección sobre [reglas de evolución de esquema](../xdm/schema/composition.md#evolution) para obtener más información.
 
 Una vez que haya agregado los campos que necesita, seleccione **[!UICONTROL Guardar]** para guardar el esquema.
 
@@ -93,7 +93,7 @@ Una vez que haya agregado los campos que necesita, seleccione **[!UICONTROL Guar
 
 ## Crear un flujo de datos {#datastream}
 
-Un conjunto de datos es una configuración que indica al Edge Network a dónde desea que se envíen los datos. En concreto, un conjunto de datos especifica a qué productos de Experience Cloud desea enviar los datos, y cómo desea que se gestionen y almacenen los datos en cada producto.
+Un conjunto de datos es una configuración que indica a Edge Network dónde desea que se envíen los datos. En concreto, un conjunto de datos especifica a qué productos de Experience Cloud desea enviar los datos, y cómo desea que se gestionen y almacenen los datos en cada producto.
 
 >[!NOTE]
 >
@@ -105,27 +105,27 @@ Seleccione **[!UICONTROL Datastreams]** en el panel de navegación izquierdo. De
 
 Los requisitos de configuración de un conjunto de datos dependen de los productos y las capacidades a los que esté enviando datos. Para obtener información detallada sobre las opciones de configuración de cada producto, consulte la [descripción general de flujos de datos](../datastreams/overview.md).
 
-## Instalación y configuración del SDK web {#install}
+## Instalación y configuración de Web SDK {#install}
 
-Una vez creados un esquema y un conjunto de datos, el siguiente paso es instalar y configurar el SDK web de Platform para que comience a enviar datos al Edge Network.
+Una vez creados un esquema y un conjunto de datos, el siguiente paso es instalar y configurar Experience Platform Web SDK para que comience a enviar datos a Edge Network.
 
 >[!NOTE]
 >
->Esta sección utiliza la IU de recopilación de datos para configurar la extensión de etiqueta del SDK web, pero también puede instalarla y configurarla con código sin procesar en su lugar. Consulte las siguientes guías para obtener más información:
+>Esta sección utiliza la IU de recopilación de datos para configurar la extensión de etiquetas de Web SDK, pero también puede instalarla y configurarla con código sin procesar en su lugar. Consulte las siguientes guías para obtener más información:
 >
->* [Instalar el SDK](/help/web-sdk/install/overview.md)
->* [Configurar el SDK](/help/web-sdk/commands/configure/overview.md)
+>* [Instalar SDK](/help/web-sdk/install/overview.md)
+>* [Configurar SDK](/help/web-sdk/commands/configure/overview.md)
 >
->Tenga en cuenta también que aunque solo desee utilizar el reenvío de eventos, debe instalar y configurar el SDK tal como se describe antes de configurar el reenvío de eventos en un [paso posterior](#event-forwarding).
+>Tenga en cuenta también que aunque solo desee utilizar el reenvío de eventos, debe instalar y configurar SDK como se describe antes de configurar el reenvío de eventos en un [paso posterior](#event-forwarding).
 
 El proceso puede resumirse de la siguiente manera:
 
-1. [Instale el SDK web de Adobe Experience Platform en una propiedad de etiquetas](#install-sdk) para obtener acceso a sus capacidades.
+1. [Instale Adobe Experience Platform Web SDK en una propiedad de etiquetas](#install-sdk) para obtener acceso a sus funciones.
 1. [Cree un elemento de datos de objeto XDM](#data-element) para asignar variables en su sitio web a la estructura del esquema XDM que creó anteriormente.
-1. [Cree una regla](#rule) para indicar al SDK cuándo debe enviar datos al Edge Network.
+1. [Cree una regla](#rule) para indicar a SDK cuándo debe enviar datos a Edge Network.
 1. [Cree e instale una biblioteca](#library) para implementar la regla en su sitio web.
 
-### Instalación del SDK en una propiedad de etiqueta {#install-sdk}
+### Instalación de SDK en una propiedad de etiquetas {#install-sdk}
 
 Seleccione **[!UICONTROL Etiquetas]** en el panel de navegación izquierdo para mostrar una lista de propiedades de etiquetas. Puede elegir una propiedad existente para editarla si lo desea, o bien puede seleccionar **[!UICONTROL Nueva propiedad]**.
 
@@ -135,31 +135,31 @@ Si va a crear una nueva propiedad, proporcione un nombre descriptivo y establezc
 
 ![Crear propiedad](./images/e2e/create-property.png)
 
-Aparecerá la página de información general de la propiedad. Aquí, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Catálogo]**. Busque la lista del SDK web de Platform (opcionalmente, mediante la barra de búsqueda para reducir los resultados) y seleccione **[!UICONTROL Instalar]**.
+Aparecerá la página de información general de la propiedad. Aquí, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Catálogo]**. Busque el listado de Experience Platform Web SDK (opcionalmente, mediante la barra de búsqueda para reducir los resultados) y seleccione **[!UICONTROL Instalar]**.
 
-![Instalar el SDK web](./images/e2e/install-sdk.png)
+![Instalar Web SDK](./images/e2e/install-sdk.png)
 
-Aparecerá la página de configuración del SDK. La mayoría de los valores necesarios se rellenan automáticamente con valores predeterminados que puede elegir cambiar si lo desea.
+Aparecerá la página de configuración de SDK. La mayoría de los valores necesarios se rellenan automáticamente con valores predeterminados que puede elegir cambiar si lo desea.
 
-![Configurar el SDK web](./images/e2e/configure-sdk.png)
+![Configurar Web SDK](./images/e2e/configure-sdk.png)
 
-Sin embargo, antes de instalar el SDK, debe seleccionar un conjunto de datos para que sepa a dónde enviar los datos. En **[!UICONTROL Flujos de datos]**, utilice el menú desplegable para seleccionar el flujo de datos que configuró en un [paso anterior](#datastream). Una vez que haya establecido la secuencia de datos, seleccione **[!UICONTROL Guardar]** para finalizar la instalación del SDK en la propiedad.
+Sin embargo, antes de instalar SDK, debe seleccionar una secuencia de datos para que sepa a dónde enviar los datos. En **[!UICONTROL Flujos de datos]**, utilice el menú desplegable para seleccionar el flujo de datos que configuró en un [paso anterior](#datastream). Una vez que haya establecido la secuencia de datos, seleccione **[!UICONTROL Guardar]** para finalizar la instalación de SDK en la propiedad.
 
 ![Establecer secuencia de datos y guardar](./images/e2e/set-datastream.png)
 
 ### Creación de un elemento de datos XDM {#data-element}
 
-Para que el SDK envíe datos al Edge Network, esos datos deben asignarse al esquema XDM creado en un [paso anterior](#schema). Esta asignación se realiza mediante el uso de un elemento de datos.
+Para que SDK envíe datos a Edge Network, esos datos deben asignarse al esquema XDM creado en un [paso anterior](#schema). Esta asignación se realiza mediante el uso de un elemento de datos.
 
 En la interfaz de usuario, seleccione **[!UICONTROL Elementos de datos]** y luego seleccione **[!UICONTROL Crear nuevo elemento de datos]**.
 
 ![Crear nuevo elemento de datos](./images/e2e/data-elements.png)
 
-En la siguiente pantalla, seleccione **[!UICONTROL SDK web de Adobe Experience Platform]** en el menú desplegable [!UICONTROL Extensión] y, a continuación, seleccione **[!UICONTROL objeto XDM]** para el tipo de elemento de datos.
+En la siguiente pantalla, seleccione **[!UICONTROL Adobe Experience Platform Web SDK]** en el menú desplegable [!UICONTROL Extensión] y, a continuación, seleccione **[!UICONTROL objeto XDM]** para el tipo de elemento de datos.
 
 ![Tipo de objeto XDM](./images/e2e/xdm-object.png)
 
-Aparecerá el cuadro de diálogo de configuración para el tipo de objeto XDM. El cuadro de diálogo selecciona automáticamente el entorno limitado de Platform y desde aquí puede ver todos los esquemas que se han creado en ese entorno limitado. Seleccione el esquema XDM creado anteriormente en la lista.
+Aparecerá el cuadro de diálogo de configuración para el tipo de objeto XDM. El cuadro de diálogo selecciona automáticamente la zona protegida de Experience Platform y desde aquí puede ver todos los esquemas que se han creado en esa zona protegida. Seleccione el esquema XDM creado anteriormente en la lista.
 
 ![Tipo de objeto XDM](./images/e2e/select-schema.png)
 
@@ -179,9 +179,9 @@ Cuando haya terminado de asignar los datos al esquema, proporcione un nombre par
 
 ### Crear una regla
 
-Una vez guardado el elemento de datos, el siguiente paso es crear una regla que lo envíe al Edge Network cada vez que se produzca un evento determinado en el sitio web (como cuando un cliente agrega un producto al carro de compras).
+Una vez guardado el elemento de datos, el siguiente paso es crear una regla que lo envíe a Edge Network cada vez que se produzca un evento determinado en el sitio web (como cuando un cliente agrega un producto al carro de compras).
 
-Puede configurar reglas para prácticamente cualquier evento que se pueda producir en el sitio web. Por ejemplo, esta sección muestra cómo crear una regla que entrará en déclencheur cuando un cliente envíe un formulario. El siguiente HTML representa una página web sencilla con un formulario &quot;Agregar al carro de compras&quot;, que será el tema de la regla:
+Puede configurar reglas para prácticamente cualquier evento que se pueda producir en el sitio web. Por ejemplo, esta sección muestra cómo crear una regla que entrará en déclencheur cuando un cliente envíe un formulario. La siguiente HTML representa una página web sencilla con un formulario &quot;Agregar al carro de compras&quot;, que será el tema de la regla:
 
 ```html
 <!DOCTYPE html>
@@ -212,7 +212,7 @@ Aparecerá la página de configuración del evento. Para configurar un evento, p
 
 >[!NOTE]
 >
->Para obtener más información sobre los distintos tipos de eventos proporcionados por las extensiones web de Adobe, incluido cómo configurarlos, consulte [Referencia de extensiones de Adobe](../tags/extensions/client/overview.md) en la documentación de etiquetas.
+>Para obtener más información sobre los distintos tipos de eventos que proporcionan las extensiones web de Adobe, incluido cómo configurarlos, consulte la [referencia de extensiones de Adobe](../tags/extensions/client/overview.md) en la documentación de etiquetas.
 
 El evento de envío de formulario le permite usar un [selector de CSS](https://www.w3schools.com/css/css_selectors.asp) para hacer referencia a un elemento específico en el que se activará la regla. En el ejemplo siguiente, se utiliza el ID `add-to-cart-form` para que esta regla solo se active para el formulario &quot;Agregar al carro de compras&quot;. Seleccione **[!UICONTROL Conservar cambios]** para agregar el evento a la regla.
 
@@ -224,11 +224,11 @@ De lo contrario, el siguiente paso es añadir una acción para que la regla se e
 
 ![Agregar acción](./images/e2e/add-action.png)
 
-Aparecerá la página de configuración de la acción. Para que la regla envíe datos al Edge Network, seleccione **[!UICONTROL Adobe Experience Platform Web SDK]** para la extensión y **[!UICONTROL Send event]** para el tipo de acción.
+Aparecerá la página de configuración de la acción. Para obtener la regla para enviar datos a Edge Network, seleccione **[!UICONTROL Adobe Experience Platform Web SDK]** para la extensión y **[!UICONTROL Enviar evento]** para el tipo de acción.
 
 ![Tipo de acción](./images/e2e/action-type.png)
 
-La pantalla se actualiza para mostrar opciones adicionales para configurar la acción de envío de eventos. En **[!UICONTROL Type]**, puede proporcionar un valor de tipo personalizado para rellenar el campo XDM `eventType`. En **[!UICONTROL Datos XDM]**, proporcione el nombre del tipo de datos XDM que creó anteriormente (rodeado de símbolos de porcentaje) o seleccione el icono de la base de datos (![Icono de la base de datos](/help/images/icons/database.png)) para seleccionarlo en una lista. Estos son los datos que finalmente se envían al Edge Network.
+La pantalla se actualiza para mostrar opciones adicionales para configurar la acción de envío de eventos. En **[!UICONTROL Type]**, puede proporcionar un valor de tipo personalizado para rellenar el campo XDM `eventType`. En **[!UICONTROL Datos XDM]**, proporcione el nombre del tipo de datos XDM que creó anteriormente (rodeado de símbolos de porcentaje) o seleccione el icono de la base de datos (![Icono de la base de datos](/help/images/icons/database.png)) para seleccionarlo en una lista. Estos son los datos que, en última instancia, se envían a Edge Network.
 
 Seleccione **[!UICONTROL Conservar cambios]** cuando haya terminado.
 
@@ -246,11 +246,11 @@ Una vez configurada la regla, está listo para agregarla a una biblioteca de eti
 >
 >Si todavía no ha configurado un entorno en la IU de recopilación de datos, debe hacerlo antes de poder crear una compilación. Consulte la sección sobre [configuración de un entorno para una propiedad web](../tags/ui/publishing/environments.md#web-configuration) en la documentación de etiquetas para obtener más información.
 
-Para obtener información sobre cómo crear una biblioteca, añadir extensiones y reglas a la biblioteca y crear esa biblioteca en un entorno, consulte la guía sobre [administración de bibliotecas](../tags/ui/publishing/libraries.md) en la documentación de etiquetas. Cuando cree la biblioteca, asegúrese de incluir la extensión del SDK web de Platform y las reglas de recopilación de datos creadas anteriormente.
+Para obtener información sobre cómo crear una biblioteca, añadir extensiones y reglas a la biblioteca y crear esa biblioteca en un entorno, consulte la guía sobre [administración de bibliotecas](../tags/ui/publishing/libraries.md) en la documentación de etiquetas. Cuando cree la biblioteca, asegúrese de incluir la extensión Experience Platform Web SDK y las reglas de recopilación de datos creadas anteriormente.
 
 Una vez creada la biblioteca y asignada su compilación a un entorno, puede instalar ese entorno en el lado del cliente del sitio web. Consulte la sección sobre [instalación de entornos](../tags/ui/publishing/environments.md#installation) para obtener más información.
 
-Una vez que haya instalado el entorno en su sitio web, puede [probar la implementación](../tags/ui/publishing/embed-code-testing.md) con el Adobe Experience Platform Debugger.
+Una vez que haya instalado el entorno en su sitio web, puede [probar la implementación](../tags/ui/publishing/embed-code-testing.md) con Adobe Experience Platform Debugger.
 
 ## Configurar el reenvío de eventos (opcional) {#event-forwarding}
 
@@ -258,7 +258,7 @@ Una vez que haya instalado el entorno en su sitio web, puede [probar la implemen
 >
 >El reenvío de eventos solo está disponible para organizaciones con licencia para él.
 
-Una vez configurado el SDK para enviar datos al Edge Network, puede configurar el reenvío de eventos para indicar al Edge Network dónde desea que se entreguen esos datos.
+Una vez configurado SDK para enviar datos a Edge Network, puede configurar el reenvío de eventos para indicar a Edge Network dónde desea que se envíen esos datos.
 
 Para utilizar el reenvío de eventos, primero debe crear una propiedad de reenvío de eventos. Seleccione **[!UICONTROL Reenvío de eventos]** en la barra de navegación izquierda, luego seleccione **[!UICONTROL Nueva propiedad]**. Proporcione un nombre para la propiedad antes de seleccionar **[!UICONTROL Guardar]**.
 
@@ -274,4 +274,4 @@ Una vez completada la compilación, el paso final es actualizar la secuencia de 
 
 ## Pasos siguientes
 
-Esta guía proporciona información general de alto nivel sobre cómo enviar datos al Edge Network mediante el SDK web de Platform. Consulte la documentación relacionada con esta guía para obtener más información sobre los distintos componentes y servicios implicados.
+Esta guía proporciona información general de alto nivel sobre cómo enviar datos a Edge Network mediante Experience Platform Web SDK. Consulte la documentación relacionada con esta guía para obtener más información sobre los distintos componentes y servicios implicados.

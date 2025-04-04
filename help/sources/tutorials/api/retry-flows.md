@@ -2,9 +2,9 @@
 title: Reintentar ejecuciones de flujo de datos fallidas
 description: Obtenga información sobre cómo reintentar las ejecuciones de flujo de datos fallidas mediante la API de Flow Service.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '272'
 ht-degree: 2%
 
 ---
@@ -21,16 +21,16 @@ Este tutorial explica los pasos para reintentar las ejecuciones de flujo de dato
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): el Experience Platform permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ## Reintentar una ejecución de flujo de datos fallida
 
-Para reintentar una ejecución de flujo de datos fallida, realice una solicitud de POST al extremo `/runs` y proporcione el identificador de ejecución del flujo de datos y la operación `re-trigger` como parte de los parámetros de consulta.
+Para reintentar una ejecución de flujo de datos fallida, realice una petición POST al extremo `/runs` y proporcione el identificador de ejecución del flujo de datos y la operación `re-trigger` como parte de los parámetros de consulta.
 
 **Formato de API**
 

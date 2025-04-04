@@ -5,7 +5,7 @@ title: Creación de una política de gobernanza de datos en la API
 type: Tutorial
 description: Obtenga información sobre cómo crear una política de gobernanza de datos mediante la API del servicio de políticas.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 3%
@@ -26,10 +26,10 @@ Este documento proporciona un tutorial paso a paso para crear una directiva de g
 
 Este tutorial requiere una comprensión práctica de los siguientes conceptos clave implicados en la creación y evaluación de directivas:
 
-* [Control de datos de Adobe Experience Platform](../home.md): El marco por el cual [!DNL Platform] aplica el cumplimiento del uso de datos.
+* [Control de datos de Adobe Experience Platform](../home.md): El marco por el cual [!DNL Experience Platform] aplica el cumplimiento del uso de datos.
    * [Etiquetas de uso de datos](../labels/overview.md): las etiquetas de uso de datos se aplican a los campos de datos XDM, especificando restricciones sobre cómo se puede acceder a esos datos.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
-* [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Antes de comenzar este tutorial, revisa la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API de [!DNL Policy Service] correctamente, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
 
@@ -44,7 +44,7 @@ El primer paso para crear una política de uso de datos es determinar qué acci�
 
 ### Búsqueda de una acción de marketing existente {#look-up}
 
-Puede buscar acciones de marketing existentes para que las evalúe la directiva realizando una solicitud de GET a uno de los `/marketingActions` extremos.
+Puede buscar acciones de marketing existentes para que las evalúe la directiva realizando una petición GET a uno de los `/marketingActions` extremos.
 
 **Formato de API**
 
@@ -129,7 +129,7 @@ Cuando encuentre la acción de marketing que desea utilizar, registre el valor d
 
 ### Crear una nueva acción de marketing {#create-new}
 
-Puede crear una nueva acción de marketing realizando una solicitud de PUT al extremo `/marketingActions/custom/` y proporcionando un nombre para la acción de marketing al final de la ruta de solicitud.
+Puede crear una nueva acción de marketing realizando una petición PUT al extremo `/marketingActions/custom/` y proporcionando un nombre para la acción de marketing al final de la ruta de solicitud.
 
 **Formato de API**
 
@@ -225,7 +225,7 @@ Esta expresión se denomina expresión de directiva y es un objeto que contiene 
 >
 >Solo se admiten los operadores OR y AND.
 
-Una vez configurada la expresión de directiva, puede crear una nueva directiva realizando una solicitud del POST al extremo `/policies/custom`.
+Una vez configurada la expresión de directiva, puede crear una nueva directiva realizando una petición POST al extremo `/policies/custom`.
 
 **Formato de API**
 
@@ -332,7 +332,7 @@ Registre el ID de URI de la directiva recién creada, tal como se utiliza en el 
 >
 >Aunque este paso es opcional si desea dejar la directiva en el estado `DRAFT`, tenga en cuenta que, de forma predeterminada, una directiva debe tener el estado establecido en `ENABLED` para poder participar en la evaluación. Consulte la guía de [aplicación de directivas](../enforcement/api-enforcement.md) para obtener información sobre cómo hacer excepciones para directivas con estado `DRAFT`.
 
-De manera predeterminada, las directivas que tienen la propiedad `status` establecida en `DRAFT` no participan en la evaluación. Puede habilitar la directiva para la evaluación realizando una solicitud del PATCH al extremo `/policies/custom/` y proporcionando el identificador único de la directiva al final de la ruta de solicitud.
+De manera predeterminada, las directivas que tienen la propiedad `status` establecida en `DRAFT` no participan en la evaluación. Puede habilitar la directiva para la evaluación realizando una petición PATCH al extremo `/policies/custom/` y proporcionando el identificador único de la directiva al final de la ruta de solicitud.
 
 **Formato de API**
 
@@ -367,7 +367,7 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `op` | Tipo de operación del PATCH que se va a realizar. Esta solicitud realiza una operación &quot;replace&quot;. |
+| `op` | Tipo de operación de PATCH que se va a realizar. Esta solicitud realiza una operación &quot;replace&quot;. |
 | `path` | Ruta de acceso al campo que se va a actualizar. Al habilitar una directiva, el valor debe establecerse en &quot;/status&quot;. |
 | `value` | El nuevo valor que se va a asignar a la propiedad especificada en `path`. Esta solicitud establece la propiedad `status` de la directiva en &quot;ENABLED&quot;. |
 

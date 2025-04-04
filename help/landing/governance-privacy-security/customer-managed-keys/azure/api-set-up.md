@@ -4,16 +4,16 @@ description: Obtenga información sobre cómo configurar la aplicación CMK con 
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
 
 # Configurar las claves administradas por el cliente de Azure mediante la API
 
-Este documento describe las instrucciones específicas de Azure para habilitar las claves administradas por el cliente (CMK) en Adobe Experience Platform mediante la API. Para obtener instrucciones sobre cómo completar este proceso con la interfaz de usuario para instancias de la plataforma alojada en Azure, consulte el [documento de configuración de CMK de la interfaz de usuario](./ui-set-up.md).
+Este documento describe las instrucciones específicas de Azure para habilitar las claves administradas por el cliente (CMK) en Adobe Experience Platform mediante la API. Para obtener instrucciones sobre cómo completar este proceso mediante la interfaz de usuario de las instancias de Experience Platform alojadas en Azure, consulte el [documento de configuración de CMK en la interfaz de usuario](./ui-set-up.md).
 
 Para obtener instrucciones específicas de AWS, consulte la [guía de configuración de AWS](../aws/ui-set-up.md).
 
@@ -23,7 +23,7 @@ Para ver y visitar la sección [!UICONTROL Cifrado] en Adobe Experience Platform
 
 Para obtener más información sobre la asignación de funciones y permisos en Experience Platform, consulte la [documentación sobre la configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Para habilitar CMK para instancias de plataforma alojadas en Azure, [[!DNL Azure] Key Vault debe estar configurado](./azure-key-vault-config.md) con la siguiente configuración:
+Para habilitar CMK para instancias de Experience Platform alojadas en Azure, [[!DNL Azure] Key Vault debe estar configurado](./azure-key-vault-config.md) con la siguiente configuración:
 
 * [Habilitar protección contra purgas](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Habilitar eliminación suave](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -36,7 +36,7 @@ Una vez configurado el almacén de claves, el siguiente paso es registrarse en l
 
 ### Introducción
 
-El registro de la aplicación CMK requiere que realice llamadas a las API de Platform. Para obtener más información sobre cómo recopilar los encabezados de autenticación necesarios para realizar estas llamadas, consulte la [guía de autenticación de API de Platform](../../../api-authentication.md).
+El registro de la aplicación CMK requiere que realice llamadas a las API de Experience Platform. Para obtener más información sobre cómo recopilar los encabezados de autenticación necesarios para realizar estas llamadas, consulte la [guía de autenticación de la API de Experience Platform](../../../api-authentication.md).
 
 Aunque la guía de autenticación proporciona instrucciones sobre cómo generar su propio valor único para el encabezado de solicitud `x-api-key` requerido, todas las operaciones de API en esta guía utilizan el valor estático `acp_provisioning` en su lugar. Sin embargo, debe proporcionar sus propios valores para `{ACCESS_TOKEN}` y `{ORG_ID}`.
 
@@ -44,7 +44,7 @@ En todas las llamadas API que se muestran en esta guía, `platform.adobe.io` se 
 
 ### Buscar una URL de autenticación {#fetch-authentication-url}
 
-Para iniciar el proceso de registro, realice una solicitud de GET al extremo de registro de la aplicación para recuperar la URL de autenticación necesaria para su organización.
+Para iniciar el proceso de registro, realice una petición GET al extremo de registro de la aplicación para recuperar la URL de autenticación necesaria para su organización.
 
 **Solicitud**
 
@@ -94,9 +94,9 @@ En la siguiente pantalla, elija **[!DNL Select members]** para abrir un cuadro d
 >
 >Si no encuentra su aplicación en la lista, no se ha aceptado su entidad de servicio en su inquilino. Para asegurarse de que tiene los privilegios correctos, trabaje con su administrador o representante de [!DNL Azure].
 
-## Habilitar la configuración de clave de cifrado en el Experience Platform {#send-to-adobe}
+## Habilitar la configuración de clave de cifrado en Experience Platform {#send-to-adobe}
 
-Después de instalar la aplicación CMK en [!DNL Azure], puede enviar su identificador de clave de cifrado al Adobe. Seleccione **[!DNL Keys]** en el panel de navegación izquierdo, seguido del nombre de la clave que desea enviar.
+Después de instalar la aplicación CMK en [!DNL Azure], puede enviar su identificador de clave de cifrado a Adobe. Seleccione **[!DNL Keys]** en el panel de navegación izquierdo, seguido del nombre de la clave que desea enviar.
 
 ![Panel de Microsoft Azure con el objeto [!DNL Keys] y el nombre de clave resaltados.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -110,11 +110,11 @@ El campo **[!UICONTROL Identificador de clave]** muestra el identificador URI de
 
 ![Los detalles de la clave del panel de Microsoft Azure con las secciones [!DNL Permitted operations] y URL de la clave de copia resaltadas.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
-Una vez que haya obtenido el URI del almacén de claves, puede enviarlo mediante una solicitud del POST al punto de conexión de configuración CMK.
+Una vez que haya obtenido el URI de almacén de claves, puede enviarlo mediante una petición POST al punto final de configuración CMK.
 
 >[!NOTE]
 >
->Solo el almacén de claves y el nombre de clave se almacenan con el Adobe, no la versión de la clave.
+>Solo el almacén de claves y el nombre de clave se almacenan con Adobe, no la versión de la clave.
 
 **Solicitud**
 
@@ -176,7 +176,7 @@ El trabajo debe completar el procesamiento en unos minutos.
 
 ## Verificar el estado de la configuración {#check-status}
 
-Para comprobar el estado de la solicitud de configuración, puede realizar una solicitud de GET.
+Para comprobar el estado de la solicitud de configuración, puede realizar una petición GET.
 
 **Solicitud**
 
@@ -221,13 +221,13 @@ curl -X GET \
 
 El atributo `status` puede tener uno de cuatro valores con los significados siguientes:
 
-1. `RUNNING`: valida que Platform puede tener acceso a la clave y al almacén de claves.
+1. `RUNNING`: valida que Experience Platform pueda tener acceso a la clave y al almacén de claves.
 1. `UPDATE_EXISTING_RESOURCES`: el sistema está agregando el almacén de claves y el nombre de claves a los almacenes de datos en todos los entornos limitados de su organización.
 1. `COMPLETED`: el almacén de claves y el nombre de clave se han agregado correctamente a los almacenes de datos.
 1. `FAILED`: se produjo un problema, principalmente relacionado con la clave, el almacén de claves o la configuración de la aplicación de varios inquilinos.
 
 ## Pasos siguientes
 
-Al completar los pasos anteriores, ha habilitado correctamente CMK para su organización. En el caso de las instancias de Platform alojadas en Azure, los datos que se incorporen en los almacenes de datos principales ahora se cifrarán y descifrarán con las claves del almacén de claves de [!DNL Azure].
+Al completar los pasos anteriores, ha habilitado correctamente CMK para su organización. En el caso de las instancias de Experience Platform alojadas en Azure, los datos que se incorporen en los almacenes de datos principales ahora se cifrarán y descifrarán con las claves del almacén de claves de [!DNL Azure].
 
 Para obtener más información acerca del cifrado de datos en Adobe Experience Platform, consulte la [documentación de cifrado](../../encryption.md).

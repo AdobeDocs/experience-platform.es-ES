@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;transmisión;transmisión;transmisión por secuencias;validación de transmisión por secuencias;validación;validación de transmisión por secuencias;validación;validación sincrónica;validación asincrónica;validación asincrónica;validación asincrónica;
+keywords: Experience Platform;inicio;temas populares;streaming;ingesta de transmisión;validación de ingesta de transmisión;validación;validación de ingesta de transmisión;validación;validación sincrónica;validación asincrónica;validación asincrónica;validación asincrónica;
 solution: Experience Platform
 title: Validación de ingesta de streaming
 type: Tutorial
 description: 'La introducción por transmisión le permite cargar los datos en Adobe Experience Platform mediante transmisión por secuencias de puntos finales en tiempo real. Las API de ingesta de transmisión admiten dos modos de validación: sincrónico y asincrónico.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 11%
@@ -29,19 +29,19 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 

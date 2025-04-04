@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre el conector Source de HTTP API
 description: Aprenda a crear conectores de flujo continuo para conectarse con Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Ahora puede usar el origen [!DNL HTTP API] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Un Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información acerca de la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
+>Ahora puede usar el origen [!DNL HTTP API] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-Puede usar el conector de origen [!DNL HTTP API] para transmitir los datos a Platform. El origen [!DNL HTTP API] es compatible con las funciones [!DNL Data Prep], lo que le permite asignar cualquier dato no compatible con XDM a un conjunto de datos compatible con XDM.
+Puede usar el conector de origen [!DNL HTTP API] para transmitir los datos a Experience Platform. El origen [!DNL HTTP API] es compatible con las funciones [!DNL Data Prep], lo que le permite asignar cualquier dato no compatible con XDM a un conjunto de datos compatible con XDM.
 
-La siguiente documentación proporciona información sobre cómo crear un conector de flujo de API HTTP para conectarse con [!DNL Platform] mediante API o la interfaz de usuario:
+La siguiente documentación proporciona información sobre cómo crear un conector de flujo de API HTTP para conectarse con [!DNL Experience Platform] mediante API o la interfaz de usuario:
 
 ## Creación de un conector de flujo de API HTTP mediante API
 

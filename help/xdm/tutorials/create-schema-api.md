@@ -5,22 +5,22 @@ title: Creación de un esquema con la API de Registro de esquemas
 type: Tutorial
 description: Este tutorial utiliza la API de Registro de esquemas para guiarle por los pasos para componer un esquema con una clase estándar.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2584'
 ht-degree: 3%
 
 ---
 
 # Crear un esquema con la API [!DNL Schema Registry]
 
-[!DNL Schema Registry] se usa para obtener acceso a [!DNL Schema Library] en Adobe Experience Platform. [!DNL Schema Library] contiene recursos que le han puesto a su disposición el Adobe, los socios de [!DNL Experience Platform] y los proveedores cuyas aplicaciones utiliza. El Registro proporciona una interfaz de usuario y una API RESTful desde las que se puede acceder a todos los recursos de biblioteca disponibles.
+[!DNL Schema Registry] se usa para obtener acceso a [!DNL Schema Library] en Adobe Experience Platform. El [!DNL Schema Library] contiene recursos que Adobe, los socios de [!DNL Experience Platform] y los proveedores cuyas aplicaciones utiliza han puesto a su disposición. El Registro proporciona una interfaz de usuario y una API RESTful desde las que se puede acceder a todos los recursos de biblioteca disponibles.
 
 Este tutorial utiliza la API [!DNL Schema Registry] para guiarle por los pasos para componer un esquema con una clase estándar. Si prefiere usar la interfaz de usuario en [!DNL Experience Platform], el [Tutorial del editor de esquemas](create-schema-ui.md) proporciona instrucciones paso a paso para realizar acciones similares en el editor de esquemas.
 
 >[!NOTE]
 >
->Si está introduciendo datos CSV en Platform, puede [asignar esos datos a un esquema XDM creado por recomendaciones generadas por IA](../../ingestion/tutorials/map-csv/recommendations.md) (actualmente en fase beta) sin tener que crear manualmente el esquema.
+>Si está ingiriendo datos CSV en Experience Platform, puede [asignar esos datos a un esquema XDM creado por recomendaciones generadas por IA](../../ingestion/tutorials/map-csv/recommendations.md) (actualmente en fase beta) sin tener que crear manualmente el esquema.
 
 ## Introducción
 
@@ -29,7 +29,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Antes de comenzar este tutorial, revisa la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API [!DNL Schema Registry] correctamente. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados necesarios para realizar solicitudes (con especial atención al encabezado `Accept` y sus posibles valores).
 
@@ -43,9 +43,9 @@ Un esquema puede considerarse como el modelo para los datos que desea introducir
 
 El proceso de composición del esquema comienza con la selección de una clase. La clase define aspectos clave de comportamiento de los datos (registro frente a serie temporal), así como los campos mínimos necesarios para describir los datos que se van a introducir.
 
-El esquema que está creando en este tutorial utiliza la clase [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] es una clase estándar proporcionada por el Adobe para definir el comportamiento del registro. Encontrará más información sobre el comportamiento en [conceptos básicos de la composición de esquemas](../schema/composition.md).
+El esquema que está creando en este tutorial utiliza la clase [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] es una clase estándar proporcionada por Adobe para definir el comportamiento del registro. Encontrará más información sobre el comportamiento en [conceptos básicos de la composición de esquemas](../schema/composition.md).
 
-Para asignar una clase, se realiza una llamada API para crear (POST) un nuevo esquema en el contenedor de inquilino. Esta llamada incluye la clase que implementará el esquema. Cada esquema solo puede implementar una clase.
+Para asignar una clase, se realiza una llamada de API para crear (POST) un nuevo esquema en el contenedor de inquilino. Esta llamada incluye la clase que implementará el esquema. Cada esquema solo puede implementar una clase.
 
 **Formato de API**
 
@@ -304,7 +304,7 @@ Los esquemas de miembros socio requieren dos grupos de campos estándar más, qu
 
 >[!TIP]
 >
->Vale la pena revisar todos los grupos de campos disponibles para familiarizarse con los campos incluidos en cada uno. Puede enumerar (GET) todos los grupos de campos disponibles para su uso con una clase particular realizando una solicitud con cada uno de los contenedores &quot;global&quot; e &quot;tenant&quot;, devolviendo solo aquellos grupos de campos donde el campo &quot;meta:intendedToExtend&quot; coincide con la clase que está utilizando. En este caso, es la clase [!DNL XDM Individual Profile], por lo que se utiliza [!DNL XDM Individual Profile] `$id`:
+>Vale la pena revisar todos los grupos de campos disponibles para familiarizarse con los campos incluidos en cada uno. Puede enumerar (GET) todos los grupos de campos disponibles para su uso con una clase particular realizando una solicitud con cada uno de los contenedores &quot;global&quot; e &quot;tenant&quot;, devolviendo solo aquellos grupos de campos en los que el campo &quot;meta:intendedToExtend&quot; coincide con la clase que está utilizando. En este caso, es la clase [!DNL XDM Individual Profile], por lo que se utiliza [!DNL XDM Individual Profile] `$id`:
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -700,7 +700,7 @@ Puede ver que el grupo de campos se ha agregado correctamente porque la respuest
 
 ### Ver el esquema actual
 
-Ahora puede realizar una solicitud de GET para ver el esquema actual y ver cómo los grupos de campos agregados han contribuido a la estructura general del esquema.
+Ahora puede realizar una solicitud GET para ver el esquema actual y ver cómo los grupos de campos agregados han contribuido a la estructura general del esquema.
 
 **Formato de API**
 
@@ -1065,7 +1065,7 @@ La respuesta ahora incluye una referencia (`$ref`) al tipo de datos en el objeto
 }
 ```
 
-Si realiza una solicitud de GET para buscar el esquema ahora, la propiedad `loyaltyTier` muestra la referencia al tipo de datos en `meta:referencedFrom`:
+Si realiza una solicitud GET para buscar el esquema ahora, la propiedad `loyaltyTier` muestra la referencia al tipo de datos en `meta:referencedFrom`:
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1185,7 +1185,7 @@ Una vez que se haya aplicado un descriptor de identidad principal al esquema, pu
 
 ### Agregar una etiqueta `union`
 
-Para que se incluya un esquema en la vista de unión combinada, se debe agregar la etiqueta `union` al atributo `meta:immutableTags` del esquema. Esto se realiza mediante una solicitud de PATCH para actualizar el esquema y agregar una matriz `meta:immutableTags` con un valor de `union`.
+Para que se incluya un esquema en la vista de unión combinada, se debe agregar la etiqueta `union` al atributo `meta:immutableTags` del esquema. Esto se realiza mediante una petición PATCH para actualizar el esquema y agregar una matriz `meta:immutableTags` con un valor de `union`.
 
 **Formato de API**
 
@@ -1298,7 +1298,7 @@ La respuesta muestra que la operación se realizó correctamente y que el esquem
 
 ### Enumeración de esquemas en una unión
 
-Ahora ha agregado correctamente su esquema a la unión [!DNL XDM Individual Profile]. Para ver una lista de todos los esquemas que forman parte de la misma unión, puede realizar una solicitud de GET utilizando parámetros de consulta para filtrar la respuesta.
+Ahora ha agregado correctamente su esquema a la unión [!DNL XDM Individual Profile]. Para ver una lista de todos los esquemas que forman parte de la misma unión, puede realizar una petición GET utilizando parámetros de consulta para filtrar la respuesta.
 
 Con el parámetro de consulta `property`, puede especificar que sólo se devuelvan los esquemas que contienen un campo `meta:immutableTags` que tiene un `meta:class` igual al `$id` de la clase [!DNL XDM Individual Profile].
 

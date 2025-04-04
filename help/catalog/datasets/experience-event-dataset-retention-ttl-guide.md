@@ -2,9 +2,9 @@
 title: Administrar la retención de conjuntos de datos de Experience Event en el lago de datos mediante TTL
 description: Obtenga información sobre cómo evaluar, establecer y administrar la retención de conjuntos de datos de evento de experiencia en el lago de datos mediante configuraciones de tiempo de vida (TTL) con API de Adobe Experience Platform. Esta guía explica cómo la caducidad a nivel de fila TTL admite políticas de retención de datos, optimiza la eficiencia del almacenamiento y garantiza una administración eficaz del ciclo de vida de los datos. También proporciona casos de uso y prácticas recomendadas para ayudarle a aplicar el TTL de forma eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2341'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ TTL es útil cuando se administran datos con distinción de tiempo que pierden r
 
 ### Ejemplo del sector {#industry-example}
 
-Por ejemplo, considere un servicio de streaming de vídeo que rastree las interacciones del usuario, como vistas de vídeo, búsquedas y recomendaciones. Aunque los datos de participación recientes son cruciales para la personalización, los registros de actividad más antiguos (por ejemplo, las interacciones de hace más de un año) pierden relevancia. Al utilizar la caducidad a nivel de fila, Platform elimina automáticamente los registros obsoletos, lo que garantiza que solo se utilicen datos actuales y significativos para los análisis y las recomendaciones.
+Por ejemplo, considere un servicio de streaming de vídeo que rastree las interacciones del usuario, como vistas de vídeo, búsquedas y recomendaciones. Aunque los datos de participación recientes son cruciales para la personalización, los registros de actividad más antiguos (por ejemplo, las interacciones de hace más de un año) pierden relevancia. Al utilizar la caducidad a nivel de fila, Experience Platform elimina automáticamente los registros obsoletos, lo que garantiza que solo se utilicen datos actuales y significativos para los análisis y las recomendaciones.
 
 ## Evaluar la idoneidad de TTL
 
@@ -76,7 +76,7 @@ Para comenzar la administración de TTL, compruebe primero la configuración act
 
 >[!TIP]
 >
->La dirección URL de puerta de enlace de plataforma y la ruta de acceso base para la API del servicio de catálogo son: `https://platform.adobe.io/data/foundation/catalog`.
+>La dirección URL de puerta de enlace de Experience Platform y la ruta de acceso base para la API del servicio de catálogo son: `https://platform.adobe.io/data/foundation/catalog`.
 
 **Formato de API**
 
@@ -375,13 +375,13 @@ Puede aplicar políticas de retención a conjuntos de datos creados con la clase
 ### ¿Cuándo eliminará el trabajo de retención de conjuntos de datos los datos de los servicios de lago de datos?
 
 +++Respuesta
-Los TTL de conjuntos de datos se evalúan y procesan semanalmente, eliminando todos los registros caducados. Un evento se considera caducado si se ingirió en Platform hace más de 30 días (fecha de ingesta > 30 días) y su fecha de evento supera el período de retención definido (TTL).
+Los TTL de conjuntos de datos se evalúan y procesan semanalmente, eliminando todos los registros caducados. Un evento se considera caducado si se ingirió en Experience Platform hace más de 30 días (fecha de ingesta > 30 días) y su fecha de evento supera el periodo de retención definido (TTL).
 +++
 
 ### ¿Cuándo eliminará el trabajo de retención de conjuntos de datos los datos de los servicios de perfil?
 
 +++Respuesta
-Una vez establecida una política de retención, los eventos existentes en Platform se eliminan inmediatamente si su marca de tiempo de evento supera el período de retención (TTL). Los nuevos eventos se eliminan una vez que su marca de tiempo supera el período de retención.
+Una vez establecida una directiva de retención, los eventos existentes en Experience Platform se eliminan inmediatamente si su marca de tiempo de evento supera el período de retención (TTL). Los nuevos eventos se eliminan una vez que su marca de tiempo supera el período de retención.
 
 Por ejemplo, si aplica una directiva de caducidad de 30 días el 15 de mayo, ocurre lo siguiente:
 
@@ -436,6 +436,6 @@ Para obtener más información, consulte la [Guía de creación de conjuntos de 
 
 Ahora que ha aprendido a administrar la configuración de TTL para la caducidad de nivel de fila, revise la siguiente documentación para comprender mejor la administración de TTL:
 
-- Trabajos de retención: aprenda a programar y automatizar las caducidades de los conjuntos de datos en la IU de Platform con la [guía de la IU del ciclo vital de datos](../../hygiene/ui/dataset-expiration.md), o compruebe las configuraciones de retención de conjuntos de datos y compruebe que se eliminan los registros caducados.
+- Trabajos de retención: aprenda a programar y automatizar las caducidades de los conjuntos de datos en la interfaz de usuario de Experience Platform con la [guía de la interfaz de usuario del ciclo vital de datos](../../hygiene/ui/dataset-expiration.md), o compruebe las configuraciones de retención de conjuntos de datos y compruebe que se eliminan los registros caducados.
 - [Guía de extremo de API de caducidad de conjuntos de datos](../../hygiene/api/dataset-expiration.md): Descubra cómo eliminar conjuntos de datos completos en lugar de solo filas. Aprenda a programar, administrar y automatizar la caducidad de los conjuntos de datos mediante la API para garantizar una retención de datos eficiente.
 - [Información general sobre políticas de uso de datos](../../data-governance/policies/overview.md): Aprenda a alinear su estrategia de retención de datos con requisitos de cumplimiento más amplios y restricciones de uso de marketing.

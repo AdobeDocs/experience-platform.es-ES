@@ -4,9 +4,9 @@ title: Habilitar un conjunto de datos para el perfil y el servicio de identidad 
 type: Tutorial
 description: Este tutorial muestra cómo habilitar un conjunto de datos para utilizarlo con el perfil del cliente en tiempo real y el servicio de identidad mediante las API de Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1070'
 ht-degree: 6%
 
 ---
@@ -24,14 +24,14 @@ Este tutorial cubre el proceso de habilitar un conjunto de datos para utilizarlo
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform implicados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estos servicios relacionados de [!DNL Platform]:
+Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform implicados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estos servicios relacionados de [!DNL Experience Platform]:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-- [[!DNL Identity Service]](../../identity-service/home.md): habilita [!DNL Real-Time Customer Profile] al unir identidades de distintos orígenes de datos que se están introduciendo en [!DNL Platform].
+- [[!DNL Identity Service]](../../identity-service/home.md): habilita [!DNL Real-Time Customer Profile] al unir identidades de distintos orígenes de datos que se están introduciendo en [!DNL Experience Platform].
 - [[!DNL Catalog Service]](../../catalog/home.md): una API RESTful que le permite crear conjuntos de datos y configurarlos para [!DNL Real-Time Customer Profile] y [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de Platform.
+Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de Experience Platform.
 
 ### Lectura de llamadas de API de muestra
 
@@ -39,7 +39,7 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -47,7 +47,7 @@ Para poder realizar llamadas a las API de [!DNL Platform], primero debe completa
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado `Content-Type` adicional. El valor correcto de este encabezado se muestra en las solicitudes de ejemplo cuando es necesario.
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado `x-sandbox-name` que especifica el nombre de la zona protegida en la que se realizará la operación. Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API [!DNL Experience Platform] requieren un encabezado `x-sandbox-name` que especifica el nombre de la zona protegida en la que se realizará la operación. Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 ## Crear un conjunto de datos habilitado para Perfil e identidad {#create-a-dataset-enabled-for-profile-and-identity}
 
@@ -57,7 +57,7 @@ Puede habilitar un conjunto de datos para el perfil del cliente en tiempo real y
 >
 >Para crear un nuevo conjunto de datos habilitado para perfiles, debe conocer el ID de un esquema XDM existente que esté habilitado para el perfil. Para obtener información sobre cómo buscar o crear un esquema habilitado para el perfil, vea el tutorial sobre [creación de un esquema mediante la API de Registro de esquemas](../../xdm/tutorials/create-schema-api.md).
 
-Para crear un conjunto de datos habilitado para el perfil, puede usar una solicitud del POST al extremo `/dataSets`.
+Para crear un conjunto de datos habilitado para el perfil, puede usar una petición POST al extremo `/dataSets`.
 
 **Formato de API**
 
@@ -172,7 +172,7 @@ En la propiedad `tags`, puede ver que `unifiedProfile` y `unifiedIdentity` está
 
 ### Habilitar el conjunto de datos {#enable-the-dataset}
 
-Si el conjunto de datos existente no se ha habilitado para [!DNL Profile] o [!DNL Identity Service], puede habilitarlo realizando una solicitud de PATCH con el ID del conjunto de datos.
+Si el conjunto de datos existente no se ha habilitado para [!DNL Profile] o [!DNL Identity Service], puede habilitarlo realizando una petición PATCH con el ID del conjunto de datos.
 
 **Formato de API**
 
@@ -204,7 +204,7 @@ El cuerpo de la solicitud incluye `path` a dos tipos de etiquetas, `unifiedProfi
 
 **Respuesta**
 
-Una solicitud correcta del PATCH devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. Ahora se han agregado las etiquetas `unifiedProfile` y `unifiedIdentity` y los servicios de perfil e identidad han habilitado el uso del conjunto de datos.
+Una solicitud correcta de PATCH devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Ahora se han agregado las etiquetas `unifiedProfile` y `unifiedIdentity` y los servicios de perfil e identidad han habilitado el uso del conjunto de datos.
 
 ```json
 [

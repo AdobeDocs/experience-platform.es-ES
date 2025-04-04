@@ -1,27 +1,27 @@
 ---
 title: Conectar su cuenta de Phoenix mediante la interfaz de usuario de Experience Platform
-description: Aprenda a conectar su cuenta de Phoenix y a llevar los datos de la base de datos de Phoenix al Experience Platform de mediante la interfaz de usuario de.
+description: Aprenda a conectar su cuenta de Phoenix y a llevar los datos de la base de datos de Phoenix a Experience Platform mediante la interfaz de usuario.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
 
-# Conecte su cuenta de [!DNL Phoenix] al Experience Platform mediante la interfaz de usuario
+# Conecte su cuenta de [!DNL Phoenix] a Experience Platform mediante la interfaz de usuario
 
 >[!WARNING]
 >
 >El origen [!DNL Phoenix] quedará obsoleto a finales de junio de 2025.
 
-Este tutorial proporciona pasos sobre cómo conectar su cuenta de [!DNL Phoenix] y traer datos de su base de datos de [!DNL Phoenix] al Experience Platform.
+Este tutorial proporciona pasos sobre cómo conectar su cuenta de [!DNL Phoenix] y traer datos de su base de datos de [!DNL Phoenix] a Experience Platform.
 
 ## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -30,7 +30,7 @@ Si ya tiene una cuenta de [!DNL Phoenix] autenticada, puede omitir el resto de e
 
 ### Recopilar credenciales necesarias
 
-Para acceder a su cuenta de [!DNL Phoenix] en el Experience Platform, debe proporcionar los siguientes valores:
+Para tener acceso a su cuenta de [!DNL Phoenix] en Experience Platform, debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | --- | --- |
@@ -43,11 +43,11 @@ Para acceder a su cuenta de [!DNL Phoenix] en el Experience Platform, debe propo
 
 Para obtener más información sobre cómo empezar, consulte [este [!DNL Phoenix] documento](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para conectar su cuenta de [!DNL Phoenix] al Experience Platform.
+Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para conectar su cuenta de [!DNL Phoenix] a Experience Platform.
 
 ## Conectar su cuenta de [!DNL Phoenix]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo de sources. La pantalla *[!UICONTROL Catálogo]* muestra una variedad de orígenes disponibles en el catálogo de orígenes de Experience Platform.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo de fuentes. La pantalla *[!UICONTROL Catálogo]* muestra una variedad de fuentes disponibles en el catálogo de fuentes de Experience Platform.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar una fuente específica utilizando la opción de búsqueda.
 
@@ -83,4 +83,4 @@ Para usar una cuenta nueva, selecciona [!UICONTROL Cuenta nueva] y proporciona u
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Phoenix]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en el Experience Platform](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Phoenix]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/databases.md).

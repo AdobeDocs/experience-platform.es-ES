@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear y editar clases en la IU
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario de Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1692'
 ht-degree: 5%
 
 ---
@@ -20,25 +20,25 @@ ht-degree: 5%
 
 En Adobe Experience Platform, la clase de un esquema define los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). Además, las clases describen el menor número de propiedades comunes que todos los esquemas basados en esa clase necesitarían incluir y proporcionan una forma de combinar varios conjuntos de datos compatibles.
 
-Adobe proporciona varias clases de modelo de datos de experiencia (XDM) estándar (&quot;principales&quot;), incluidas [XDM Individual Profile](../../classes/individual-profile.md) y [XDM ExperienceEvent](../../classes/experienceevent.md). Además de estas clases principales, también puede crear sus propias clases personalizadas para describir casos de uso más específicos para su organización.
+Adobe proporciona varias clases de modelo de datos de experiencia (XDM) estándar (&quot;principales&quot;), entre las que se incluyen [XDM Individual Profile](../../classes/individual-profile.md) y [XDM ExperienceEvent](../../classes/experienceevent.md). Además de estas clases principales, también puede crear sus propias clases personalizadas para describir casos de uso más específicos para su organización.
 
 Este documento proporciona información general sobre cómo crear, editar y administrar clases personalizadas en la interfaz de usuario de Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
-Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para ver una introducción al papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para conocer cómo las clases contribuyen a los esquemas XDM.
+Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para obtener una introducción del papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para conocer cómo las clases contribuyen a los esquemas XDM.
 
 Aunque no es necesario para esta guía, se recomienda que también siga el tutorial sobre [maquetar un esquema en la interfaz de usuario](../../tutorials/create-schema-ui.md) para familiarizarse con las diversas funcionalidades del Editor de esquemas.
 
 ## Introducción {#getting-started}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el área de trabajo [!UICONTROL Esquemas] y, a continuación, seleccione la pestaña **[!UICONTROL Clases]**. Se muestra una lista de las clases disponibles.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el área de trabajo [!UICONTROL Esquemas] y, a continuación, seleccione la pestaña **[!UICONTROL Clases]**. Se muestra una lista de las clases disponibles.
 
 ![Se ha resaltado el número de clases dentro de la ficha [!UICONTROL Clases] del espacio de trabajo [!UICONTROL Esquemas] [!UICONTROL Clases] y [!UICONTROL Esquemas].](../../images/ui/resources/classes/available-classes.png)
 
 ## Filtrar clases {#filter}
 
-La lista de clases se filtra automáticamente en función de cómo se crearon. La configuración predeterminada muestra las clases definidas por el Adobe. También puede filtrar la lista para mostrar los que ha creado su organización. Seleccione el botón de opción para elegir entre las opciones [!UICONTROL Estándar] y [!UICONTROL Personalizado]. La opción [!UICONTROL Standard] muestra las entidades creadas por Adobe y la opción [!UICONTROL Custom] muestra las entidades creadas dentro de su organización.
+La lista de clases se filtra automáticamente en función de cómo se crearon. La configuración predeterminada muestra las clases definidas por Adobe. También puede filtrar la lista para mostrar los que ha creado su organización. Seleccione el botón de opción para elegir entre las opciones [!UICONTROL Estándar] y [!UICONTROL Personalizado]. La opción [!UICONTROL Standard] muestra las entidades creadas por Adobe y la opción [!UICONTROL Custom] muestra las entidades creadas dentro de su organización.
 
 ![Se ha resaltado la ficha [!UICONTROL Clases] del área de trabajo [!UICONTROL Esquemas] con [!UICONTROL Estándar] y [!UICONTROL Personalizado].](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
@@ -48,7 +48,7 @@ La lista de clases se filtra automáticamente en función de cómo se crearon. L
 
 ## Crear una nueva clase {#create}
 
-Existen dos métodos para crear una clase en la interfaz de usuario de Platform, mediante **[!UICONTROL Crear clase]** o **[!UICONTROL Crear esquema]**.
+Existen dos métodos para crear una clase en la interfaz de usuario de Experience Platform, mediante **[!UICONTROL Crear clase]** o **[!UICONTROL Crear esquema]**.
 
 ### Crear clase
 
@@ -156,6 +156,6 @@ Consulte la guía de [creación y edición de esquemas](./schemas.md#change-clas
 
 ## Pasos siguientes {#next-steps}
 
-En este documento se explica cómo crear y editar clases mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades del área de trabajo [!UICONTROL Esquemas], consulte la descripción general del área de trabajo [[!UICONTROL Esquemas]](../overview.md).
+En este documento se explica cómo crear y editar clases mediante la interfaz de usuario de Experience Platform. Para obtener más información sobre las capacidades del área de trabajo [!UICONTROL Esquemas], consulte la descripción general del área de trabajo [[!UICONTROL Esquemas]](../overview.md).
 
 Para obtener información sobre cómo administrar clases mediante la API de Registro de esquemas, consulte la [guía de extremo de clases](../../api/classes.md).

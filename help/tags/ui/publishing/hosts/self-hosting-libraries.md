@@ -2,10 +2,10 @@
 title: Bibliotecas de alojamiento propio
 description: Aprenda a implementar el alojamiento propio para las compilaciones de su biblioteca de etiquetas en Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 96%
+source-wordcount: '491'
+ht-degree: 90%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las etiquetas en Adobe Experience Platform permiten la producción de un conjunto de archivos llamados [compilación](../builds.md). Este conjunto de archivos controla el comportamiento de la aplicación en tiempo de ejecución.
 
 Las compilaciones deben alojarse en alguna parte para que los dispositivos cliente puedan recuperarlas en el tiempo de ejecución según lo necesiten.
 
-Platform puede administrar el alojamiento de estos archivos por usted o puede hacerlo usted mismo.
+Experience Platform puede administrar el alojamiento de estos archivos por usted o puede hacerlo usted mismo.
 
 ## Administrado por Adobe {#managed-by-adobe}
 
-Adobe no se ocupa del alojamiento web. Si decide que Adobe administre el alojamiento, las compilaciones se entregan a una red de entrega de contenido (CDN) de terceros con la que tenemos un contrato.
+Adobe no se ocupa del alojamiento web. Si decide que Adobe administre el alojamiento, las compilaciones se entregan a una red de distribución de contenido (CDN) de terceros con la que tenemos un contrato.
 
 Actualmente, el proveedor principal de CDN es Akamai. Los archivos alojados en Akamai tienen un dominio de `assets.adobedtm.com`.
 
@@ -33,7 +33,7 @@ La razón principal para utilizar el alojamiento administrado es la comodidad. E
 
 ## Alojamiento propio
 
-Si no desea que Adobe administre los archivos alojados, debe alojarlos por su cuenta. Para alojar los archivos, debe obtener las compilaciones completadas de Platform y asegurarse de que los archivos pasan por el ciclo de lanzamiento de la empresa hasta los servidores administrados de la empresa.
+Si no desea que Adobe administre los archivos alojados, debe alojarlos por su cuenta. Para alojar los archivos, debe obtener las compilaciones completadas de Experience Platform y asegurarse de que los archivos pasan por el ciclo de lanzamiento de la empresa hasta los servidores administrados de la empresa.
 
 ### ¿Por qué utilizar el alojamiento propio?
 

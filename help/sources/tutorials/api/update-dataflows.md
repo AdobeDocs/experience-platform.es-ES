@@ -2,9 +2,9 @@
 title: Actualización de flujos de datos mediante la API de Flow Service
 description: Obtenga información sobre cómo crear un flujo de datos, incluido su nombre, descripción y programación, mediante la API de Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '661'
 ht-degree: 3%
 
 ---
@@ -23,16 +23,16 @@ Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un identifi
 
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ## Búsqueda de detalles de flujo de datos
 
-El primer paso para actualizar el flujo de datos es recuperar los detalles del flujo de datos con el ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una solicitud de GET al extremo `/flows`.
+El primer paso para actualizar el flujo de datos es recuperar los detalles del flujo de datos con el ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una petición GET al extremo `/flows`.
 
 **Formato de API**
 
@@ -173,11 +173,11 @@ Una respuesta correcta devuelve los detalles actuales del flujo de datos, inclui
 
 ## Actualizar flujo de datos
 
-Para actualizar la programación de ejecución, el nombre y la descripción del flujo de datos, realice una solicitud de PATCH a la API [!DNL Flow Service] y proporcione al mismo tiempo el ID de flujo, la versión y la nueva programación que desee utilizar.
+Para actualizar la programación de ejecución, el nombre y la descripción del flujo de datos, realice una petición PATCH a la API [!DNL Flow Service] y proporcione al mismo tiempo el ID de flujo, la versión y la nueva programación que desee utilizar.
 
 >[!IMPORTANT]
 >
->Se requiere el encabezado `If-Match` al realizar una solicitud de PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de un flujo de datos.
+>Se requiere el encabezado `If-Match` al realizar una petición PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de un flujo de datos.
 
 **Formato de API**
 
@@ -224,7 +224,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {
@@ -235,7 +235,7 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 ## Actualizar asignación
 
-Puede actualizar el conjunto de asignaciones de un flujo de datos existente realizando una solicitud de PATCH a la API [!DNL Flow Service] y proporcionando valores actualizados para `mappingId` y `mappingVersion`.
+Puede actualizar el conjunto de asignaciones de un flujo de datos existente realizando una petición PATCH a la API [!DNL Flow Service] y proporcionando valores actualizados para `mappingId` y `mappingVersion`.
 
 **Formato de API**
 
@@ -280,7 +280,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
 
 ```json
 {

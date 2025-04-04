@@ -4,9 +4,9 @@ title: Tablero de audiencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de las audiencias que ha creado su organización.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3136'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de sus audiencias, tal como se captura durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel [!UICONTROL Audiencias] en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el panel.
 
-Para obtener una descripción general de todas las características del servicio de segmentación de Adobe Experience Platform dentro de la interfaz de usuario de Platform, visite la [guía de la interfaz de usuario del servicio de segmentación](../../segmentation/ui/overview.md).
+Para obtener una descripción general de todas las características del servicio de segmentación de Adobe Experience Platform dentro de la interfaz de usuario de Experience Platform, visite la [guía de la interfaz de usuario del servicio de segmentación](../../segmentation/ui/overview.md).
 
 ## [!UICONTROL Audiencias] datos de panel
 
@@ -29,11 +29,11 @@ Los datos de atributos de la instantánea muestran los datos exactamente como ap
 
 ## Explorar el panel [!UICONTROL Audiencias] {#explore}
 
-Para ir al panel [!UICONTROL Audiencias] en la interfaz de usuario de Platform, selecciona **[!UICONTROL Audiencias]** en el carril izquierdo y, a continuación, selecciona la pestaña **[!UICONTROL Información general]** para mostrar el panel.
+Para ir al panel [!UICONTROL Audiencias] en la interfaz de usuario de Experience Platform, selecciona **[!UICONTROL Audiencias]** en el carril izquierdo y, a continuación, selecciona la pestaña **[!UICONTROL Información general]** para mostrar el panel.
 
 >[!NOTE]
 >
->Si su organización es nueva en Platform y aún no ha creado conjuntos de datos de perfil o políticas de combinación activos, el panel [!UICONTROL Audiencias] no estará visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con la segmentación.
+>Si su organización es nueva en Experience Platform y aún no ha creado conjuntos de datos de perfil o políticas de combinación activos, el panel [!UICONTROL Audiencias] no estará visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con la segmentación.
 
 ![La pestaña [!UICONTROL Audiencias] del panel [!UICONTROL Información general] con [!UICONTROL Audiencias] y [!UICONTROL Información general] resaltadas.](../images/audiences/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ Desde la biblioteca de widgets, puede examinar la selección de widgets de audie
 
 ### Ver SQL {#view-sql}
 
-Puede ver el SQL que genera las perspectivas visualizadas en su panel con un conmutador en el espacio de trabajo [!UICONTROL Información general]. Puede inspirarse en el SQL de sus perspectivas existentes para crear nuevas consultas que deriven perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. Para obtener más información acerca de esta característica, consulte la [Guía de la interfaz de usuario de SQL de vista](../view-sql.md).
+Puede ver el SQL que genera las perspectivas visualizadas en su panel con un conmutador en el espacio de trabajo [!UICONTROL Información general]. Puede inspirarse en el SQL de sus perspectivas existentes para crear nuevas consultas que deriven perspectivas únicas de los datos de Experience Platform en función de sus necesidades comerciales. Para obtener más información acerca de esta característica, consulte la [Guía de la interfaz de usuario de SQL de vista](../view-sql.md).
 
 ## Seleccionar una audiencia {#select-audience}
 
@@ -119,7 +119,7 @@ El modelo de IA que determina las puntuaciones de tendencia se elige del selecto
 
 Para ir a la página de detalles del modelo de inteligencia artificial aplicada al cliente seleccionado, seleccione **[!UICONTROL Ver detalles del modelo]**.
 
-![Se ha resaltado el panel Audiencias del Experience Platform con el widget [!UICONTROL Distribución de puntuaciones según la inteligencia artificial aplicada al cliente] y [!UICONTROL Ver detalles del modelo].](../images/segments/customer-ai-distribution-of-scores.png)
+![Se ha resaltado el panel Audiencias de Experience Platform con la distribución de puntuaciones] de la inteligencia artificial aplicada al cliente y el widget [!UICONTROL Ver detalles del modelo].](../images/segments/customer-ai-distribution-of-scores.png)[!UICONTROL 
 
 Aparecerá la página de información detallada del modelo.
 
@@ -146,7 +146,7 @@ El menú desplegable debajo del título del widget proporciona una lista de todo
 >
 >El número total de perfiles calculados depende de la política de combinación elegida. Para cambiar la política de combinación utilizada, seleccione el menú desplegable situado inmediatamente debajo de la pestaña de información general. Consulte la sección sobre [políticas de combinación](#merge-policies) para obtener una breve descripción o la [descripción general de la política de combinación](../../profile/merge-policies/overview.md) para obtener más detalles.
 
-![Panel de audiencias del Experience Platform con el widget de resumen de puntuación de inteligencia artificial aplicada al cliente resaltado.](../images/segments/customer-ai-scoring-summary.png)
+![Panel de audiencias de Experience Platform con el widget de resumen de puntuación de inteligencia artificial aplicada al cliente resaltado.](../images/segments/customer-ai-scoring-summary.png)
 
 Seleccione **[!UICONTROL Ver detalles del modelo]** para navegar a la página de información detallada del modelo de inteligencia artificial aplicada al cliente seleccionado. Encontrará más información sobre inteligencia artificial aplicada al cliente en la [guía de la interfaz de usuario de Discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
@@ -243,7 +243,7 @@ Aparecerá el cuadro de diálogo [!UICONTROL Informe de superposición de audien
 >
 >Seleccione el encabezado de columna **[!UICONTROL Superposición]** para cambiar la clasificación de los resultados de mayor a menor o de menor a mayor.
 
-Para descargar todo el informe en formato de PDF, seleccione el menú de opciones (**`...`**) seguido de **[!UICONTROL Descargar]**.
+Para descargar todo el informe en formato PDF, seleccione el menú de opciones (**`...`**) seguido de **[!UICONTROL Descargar]**.
 
 ![Cuadro de diálogo del informe de superposición de audiencias con los puntos suspensivos y la opción de descarga resaltados.](../images/audiences/audience-overlap-report-dialog-download.png)
 
@@ -297,4 +297,4 @@ El widget permite descubrir de un vistazo dónde y cuándo se está activando la
 
 ## Pasos siguientes
 
-Siguiendo este documento, debería poder encontrar el panel [!UICONTROL Audiencias] y seleccionar una audiencia para verla. También debe comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con audiencias en la interfaz de usuario de Experience Platform, consulte la [Guía de la interfaz de usuario del servicio de segmentación](../../segmentation/ui/overview.md).
+Siguiendo este documento, debería poder encontrar el panel [!UICONTROL Audiencias] y seleccionar una audiencia para verla. También debe comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con audiencias en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario del servicio de segmentación](../../segmentation/ui/overview.md).

@@ -1,24 +1,25 @@
 ---
-title: Configuración de claves gestionadas por el cliente con AWS mediante la interfaz de usuario de Platform
-description: Aprenda a configurar su aplicación CMK con el nombre de recurso de Amazon (ARN) y enviar su ID de clave de cifrado a Adobe Experience Platform.
-source-git-commit: e67aed9e8072bcd531d5aa6ce5b631c910a1812a
+title: Instalación y configuración de claves administradas por el cliente con AWS mediante el Experience Platform IU
+description: Aprenda a configurar la aplicación CMK con su nombre de recurso de Amazon (ARN) y a enviar su ID de clave de cifrado a Adobe Experience Platform.
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
 
-# Configuración de claves gestionadas por el cliente con AWS mediante la interfaz de usuario de Platform
+# Instalación y configuración de claves administradas por el cliente con AWS mediante el Experience Platform IU
 
-Utilice esta guía para habilitar las claves administradas por el cliente (CMK) para instancias de Platform alojadas en AWS a través de la IU de Platform.
+Utilice este guía para habilitar las claves administradas por el cliente (CMK) para Experience Platform instancias alojadas en AWS a través del IU Experience Platform.
 
 >[!IMPORTANT]
 >
->Antes de continuar con esta guía, asegúrese de completar la configuración detallada en el documento [&#39;Configuración de AWS KMS para CMK&#39;](./configure-kms.md).
+>Antes de continuar con este guía, asegúrese de haber completado la configuración detallada en el [documento &quot;Configuración de AWS KMS para CMK&quot;.](./configure-kms.md)
 
-## Actualice la directiva de clave de AWS para integrar la clave con Experience Platform
+## Actualice la clave AWS directiva para integrarla con Experience Platform
 
-Para integrar su clave de AWS con Experience Platform, debe editar el JSON en la sección **[!DNL Key Policy]** del espacio de trabajo de KMS. Una directiva de clave predeterminada tiene un aspecto similar al JSON siguiente.
+Para integrar la clave de AWS con Experience Platform, debe editar el JSON en la **[!DNL Key Policy]** sección del espacio de trabajo de KMS. Un directiva de clave predeterminada es similar al JSON que se muestra a continuación.
 
 <!-- The AWS ID below is fake. Q) Can I refer to it simply as AWS_ACCOUNT_ID ? Is that suitable? -->
 
@@ -40,27 +41,27 @@ Para integrar su clave de AWS con Experience Platform, debe editar el JSON en la
 }
 ```
 
-En el ejemplo anterior, todos los recursos (`"Resource": "*"`) de la misma cuenta (`Principal.AWS`) pueden tener acceso a la clave. Esta directiva permite a los servicios de la cuenta realizar operaciones de cifrado y descifrado, restringidas a la cuenta especificada. Para conceder a la cuenta de un solo inquilino de Platform acceso a esta clave, agregue nuevas instrucciones a la directiva predeterminada de AWS. Puede obtener la política JSON necesaria de la interfaz de usuario de Platform y aplicarla a la clave KMS de AWS para establecer una conexión segura con Adobe Experience Platform.
+En el ejemplo anterior, todos los recursos (`"Resource": "*"`) dentro de la misma cuenta (`Principal.AWS`) pueden acceder a la clave. Este directiva permite a los servicios del cuenta realizar operaciones de cifrado y descifrado, restringidas al cuenta especificado. Para conceder a su Experience Platform inquilino único acceso cuenta a esta clave, añada nuevas instrucciones al directiva predeterminado de AWS. Puede obtener el directiva JSON necesario del Experience Platform IU y aplicarlo a su clave de AWS KMS para establecer una conexión segura con Adobe Experience Platform.
 
-En la IU de Platform, ve a la sección **[!UICONTROL Administración]** en el carril de navegación izquierdo y selecciona **[!UICONTROL Cifrado]**. En el área de trabajo [!UICONTROL Configuración de cifrado], seleccione **[!UICONTROL Configurar]** en la tarjeta [!UICONTROL Claves administradas por el cliente].
+En el Experience Platform IU, vaya a la **[!UICONTROL sección Administración]** en el navegación izquierdo carril y seleccione **[!UICONTROL Cifrado]**. En el espacio de trabajo Configuración de  cifrado, seleccione **[!UICONTROL Configurar]** en el tarjeta de claves] administradas por el [!UICONTROL cliente.
 
-![Espacio de trabajo de configuración de cifrado de plataforma con la opción Configurar resaltada en la tarjeta Claves administradas por el cliente.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![La configuración de cifrado de Experience Platform espacio de trabajo con Configurar resaltada en el tarjeta de claves administradas por el cliente.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-Aparece la configuración [!UICONTROL Claves administradas por el cliente]. Copie el objeto `statement` de la directiva CMK KMS mostrada en [!UICONTROL Claves administradas por el cliente] [!UICONTROL Configuración de cifrado].
+Aparece la configuración de] claves administradas por el [!UICONTROL cliente. Copie el objeto del directiva KMS de CMK que se muestra en la Configuración] de cifrado de claves  administradas por el `statement` [!UICONTROL cliente.
 
 <!-- Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied.  -->
 
 <!-- I cannot add the 'and the copy icon highlighted.' to the alt text below as i do not have access to this UI. -->
 
-![La configuración de claves administradas por el cliente con la directiva CMK KMS mostrada.](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
+![directiva muestra la configuración de claves administradas por el cliente con el KMS de CMK.](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
 
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
-A continuación, vuelva a AWS KMS Workspace y actualice la directiva clave que se muestra a continuación.
+Siguiente, vuelva a la espacio de trabajo de AWS KMS y actualice los directiva clave que se muestran a continuación.
 
-![Fase de revisión del flujo de trabajo con la directiva actualizada y el botón Finalizar resaltado.](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
+![La fase de revisión del flujo de trabajo con el directiva y el acabado actualizados resaltados.](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
-Agregue a la directiva predeterminada las cuatro instrucciones del área de trabajo [!UICONTROL Configuración de cifrado de plataforma], tal como se ve a continuación: `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
+añadir al valor predeterminado directiva las cuatro instrucciones del [!UICONTROL espacio de trabajo Configuración] de cifrado de Platform, como se ve a continuación: `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
 
 ```json
 {
@@ -155,100 +156,100 @@ Agregue a la directiva predeterminada las cuatro instrucciones del área de trab
 }
 ```
 
-Seleccione **[!DNL Finish]** para confirmar la directiva actualizada y crear la clave. La configuración ahora incluye cinco instrucciones, lo que permite que su cuenta de AWS se comunique con Adobe Experience Platform. Los cambios entrarán en vigor inmediatamente.
+Seleccione **[!DNL Finish]** esta opción para confirmar el directiva actualizado y crear la clave. La configuración ahora incluye cinco instrucciones, lo que permite a su cuenta de AWS comunicarse con Adobe Experience Platform. Los cambios se aplicarán inmediatamente.
 
-Aparece el área de trabajo [!DNL Customer Managed Keys] actualizado de AWS [!DNL Key Management Service].
+Aparece el espacio de trabajo actualizado [!DNL Customer Managed Keys] de AWS [!DNL Key Management Service] .
 
-### Añadir detalles de la clave de cifrado de AWS a Platform
+### añadir los detalles de la clave de cifrado de AWS para Experience Platform
 
-A continuación, para habilitar el cifrado, agregue el Nombre de recurso de Amazon (ARN) de la clave a la plataforma [!UICONTROL Configuración de claves administradas por el cliente]. En la sección [!DNL Customer Managed Keys] de AWS, seleccione el alias de su nueva clave en la lista de [!DNL Key Management Service].
+Siguiente, para habilitar el cifrado, agregue el nombre de recurso de Amazon (ARN) de la clave a la configuración] de claves administradas por el cliente de Experience Platform[!UICONTROL . En la [!DNL Customer Managed Keys] sección de AWS, seleccione el alias de la nueva clave en el lista del [!DNL Key Management Service]archivo .
 
-![Espacio de trabajo de claves administradas por el cliente de AWS KMS con el nuevo alias de clave resaltado.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![Las claves administradas por el cliente de AWS KMS espacio de trabajo con el nuevo alias de clave resaltado.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
-Se muestran los detalles de la clave. Todo en AWS tiene un Nombre de recurso de Amazon (ARN) que
-es un identificador único que se utiliza para especificar recursos en los servicios de AWS. Sigue un formato estándar: `arn:partition:service:region:account-id:resource`.
+Se muestran los detalles de la clave. Todo en AWS tiene un nombre de recurso (ARN) Amazon que
+es un identificador único utilizado para especificar recursos en todos los servicios de AWS. Sigue un formato estandarizado: `arn:partition:service:region:account-id:resource`.
 
-Seleccione el icono de copiar para copiar su ARN. Aparecerá un cuadro de diálogo de confirmación.
+Seleccione el icono Copiar para copiar el ARN. Aparecerá un cuadro de diálogo de confirmación.
 
 ![Los detalles clave de su clave administrada por el cliente de AWS KMS con el ARN resaltado.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Ahora, vuelva a la interfaz de usuario de la plataforma [!UICONTROL Configuración de claves administradas por el cliente]. En la sección **[!UICONTROL Agregar detalles de clave de cifrado de AWS]**, agregue un **[!UICONTROL nombre de configuración]** y la clave **[!UICONTROL KMS ARN]** que copió de la interfaz de usuario de AWS.
+Ahora, vuelva al IU de configuración de] claves administradas por el cliente de Experience Platform[!UICONTROL . En la sección añadir detalles de la **[!UICONTROL clave de cifrado de AWS, agregue un**[!UICONTROL  nombre ]**de configuración y el**[!UICONTROL  ARN ]**de clave de KMS que copió de la IU de]** AWS.
 
-![Espacio de trabajo de configuración de cifrado de plataforma con nombre de configuración y ARN de clave de KMS resaltado en la sección Agregar detalles de clave de cifrado de AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![La espacio de trabajo de configuración de cifrado de Experience Platform con el nombre de configuración y el ARN de clave de KMS resaltados en la sección añadir detalles de la clave de cifrado de AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
-A continuación, seleccione **[!UICONTROL SAVE]** para enviar el nombre de la configuración, el ARN de la clave KMS e iniciar la validación de la clave.
+Siguiente, seleccione **[!UICONTROL GUARDAR]** para enviar el nombre de configuración, el ARN de clave KMS y comenzar validación de la clave.
 
-![Espacio de trabajo de configuración de cifrado de plataforma con el guardado resaltado.](../../../images/governance-privacy-security/key-management-service/save.png)
+![La configuración de cifrado de Experience Platform espacio de trabajo con Guardar resaltados.](../../../images/governance-privacy-security/key-management-service/save.png)
 
-Ha vuelto al espacio de trabajo [!UICONTROL Configuraciones de cifrado]. El estado de la configuración de cifrado se muestra en la parte inferior de la tarjeta **[!UICONTROL Claves administradas por el cliente]**.
+Volverá a la [!UICONTROL espacio de trabajo de configuraciones de] cifrado. El estado de la configuración de cifrado se muestra en la parte inferior del tarjeta Claves ]**administradas por el**[!UICONTROL  cliente.
 
-![Espacio de trabajo de configuraciones de cifrado en la interfaz de usuario de Platform con Procesamiento resaltado en la tarjeta Claves administradas por el cliente.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![Las Configuraciones de cifrado espacio de trabajo en el IU Experience Platform con Procesamiento resaltado en el tarjeta Claves administradas por el cliente.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
-Una vez validada la clave, los identificadores de almacén de claves se añaden al lago de datos y a los almacenes de datos de perfil para todos los entornos limitados.
+Una vez validada la clave, los identificadores del almacén de claves se agregan al lago de datos y se perfil almacenes de datos para todos los entornos aislados.
 
 >[!NOTE]
 >
->La duración del proceso depende del tamaño de los datos. Normalmente, el proceso se completa en menos de 24 horas. Cada zona protegida se actualiza normalmente en dos o tres minutos.
+>La duración del proceso depende del tamaño de los datos. Normalmente, el proceso se completa en menos de 24 horas. Cada sandbox generalmente se actualiza en dos o tres minutos.
 
 ## Revocación de claves {#key-revocation}
 
 >[!IMPORTANT]
 >
->Comprenda las implicaciones de la revocación de claves en las aplicaciones de flujo descendente antes de revocar cualquier acceso.
+>Comprenda las implicaciones de la revocación de claves en las aplicaciones descendentes antes de revocar cualquier acceso.
 
 Las siguientes son consideraciones clave para la revocación de claves:
 
-- Si se revoca o deshabilita la clave, los datos de Platform no serán accesibles. Esta acción es irreversible y debe realizarse con precaución.
-- Tenga en cuenta las escalas de tiempo de propagación cuando se revoque el acceso a las claves de cifrado. Los almacenes de datos primarios se vuelven inaccesibles en unos minutos a 24 horas. No se puede acceder a los almacenes de datos en caché o transitorios en un plazo de siete días.
+- Revocar o deshabilitar la clave hará que sus datos de Experience Platform sean inaccesibles. Esta acción es irreversible y debe realizarse con precaución.
+- Tenga en cuenta los plazos de propagación cuando se revoca el acceso a las claves de cifrado. Los almacenes de datos primarios se vuelven inaccesibles en cuestión de unos minutos a 24 horas. Los almacenes de datos en caché o transitorios dejan de ser accesibles en un plazo de siete días.
 
-Para revocar una clave, vaya al espacio de trabajo de AWS KMS. La sección **[!DNL Customer managed keys]** muestra todas las claves disponibles para su cuenta de AWS. Seleccione el alias de la clave en la lista.
+Para revocar una clave, vaya al espacio de trabajo de AWS KMS. La **[!DNL Customer managed keys]** sección muestra todas las claves disponibles para su cuenta AWS. Seleccione el alias de su clave en el lista.
 
-![Espacio de trabajo de claves administradas por el cliente de AWS KMS con el nuevo alias de clave resaltado.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![Las claves administradas por el cliente de AWS KMS espacio de trabajo con el nuevo alias de clave resaltado.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
-Se muestran los detalles de la clave. Para deshabilitar la clave, seleccione **[!DNL Key actions]** y luego **[!DNL Disable]** en el menú desplegable.
+Se muestran los detalles de la clave. Para desactivar la clave, seleccione **[!DNL Key actions]** y, a continuación **[!DNL Disable]** , en el menú desplegable.
 
-![Los detalles de su clave de AWS en la interfaz de usuario de AWS KMS con las acciones de clave y la opción Deshabilitar resaltadas.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
+![Los detalles de su clave de AWS en la IU de AWS KMS con las acciones clave y la desactivación resaltadas.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-Aparecerá un cuadro de diálogo de confirmación. Seleccione **[!DNL Disable key]** para confirmar su elección. El impacto de deshabilitar la clave debe reflejarse en las aplicaciones de Platform y en la interfaz de usuario en un plazo aproximado de cinco minutos.
-
->[!NOTE]
->
->Una vez deshabilitada la clave, puede volver a habilitarla utilizando el mismo método descrito anteriormente si lo necesita. Esta opción está disponible en el menú desplegable **[!DNL Key actions]**.
-
-![Cuadro de diálogo Deshabilitar clave con la clave de deshabilitación resaltada.](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
-
-Alternativamente, si la clave se utiliza en otros servicios, puede quitar el acceso de Experience Platform directamente desde la directiva de claves. Seleccione **[!UICONTROL Editar]** en la sección **[!DNL Key Policy]**.
-
-![La sección de detalles de la clave de AWS con la opción Editar resaltada en la sección de directiva de claves.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
-
-Aparecerá la página **[!DNL Edit key policy]**. Resalte y elimine la declaración de directiva, copiada de la interfaz de usuario de Platform, para eliminar los permisos de la aplicación Claves administradas por el cliente. A continuación, seleccione **[!DNL Save changes]** para completar el proceso.
-
-![Espacio de trabajo Editar directiva de claves en AWS con la instrucción objeto JSON y Guardar cambios resaltados.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
-
-## Rotación de clave {#key-rotation}
-
-AWS ofrece rotación de claves automática y bajo demanda. Para reducir el riesgo de que se comprometan las claves o se cumplan los requisitos de cumplimiento de seguridad, puede generar automáticamente nuevas claves de cifrado bajo demanda o a intervalos regulares. Programe la rotación automática de claves para limitar la duración de una clave y asegurarse de que, si una clave está en peligro, no se pueda utilizar después de la rotación. Aunque los algoritmos de cifrado modernos son muy seguros, la rotación de claves es una medida importante del cumplimiento de la seguridad y demuestra el cumplimiento de las prácticas recomendadas de seguridad.
-
-### Rotación automática de clave {#automatic-key-rotation}
-
-La rotación automática de claves está desactivada de forma predeterminada. Para programar la rotación automática de claves desde el espacio de trabajo de KMS, seleccione la ficha **[!DNL Key rotation]**, seguida de **[!DNL Edit]** en **[!DNL Automatic key rotation section]**.
-
-![Se ha resaltado la sección de detalles de la clave de AWS con la rotación de clave y la opción Editar.](../../../images/governance-privacy-security/key-management-service/key-rotation.png)
-
-Aparece el área de trabajo **[!DNL Edit automatic key rotation]**. Aquí, seleccione el botón de opción para activar o desactivar la rotación automática de claves. A continuación, utilice el campo de entrada de texto o el menú desplegable para elegir un periodo de tiempo para la rotación de clave. Seleccione **[!DNL Save]** para confirmar la configuración y volver al área de trabajo de detalles clave.
+Aparecerá un cuadro de diálogo de confirmación. Seleccione **[!DNL Disable key]** para confirmar su elección. El impacto de deshabilitar la clave debe reflejarse en Experience Platform aplicaciones y el IU en un plazo aproximado de cinco minutos.
 
 >[!NOTE]
 >
->El período mínimo de rotación de clave es de 90 días y el máximo es de 2560 días.
+>Una vez que haya deshabilitado la clave, puede habilitarla nuevamente utilizando el mismo método descrito anteriormente si es necesario. Esta opción está disponible en la **[!DNL Key actions]** lista desplegable.
 
-![El área de trabajo Editar rotación de clave automática con el período de rotación y Guardar resaltados.](../../../images/governance-privacy-security/key-management-service/automatic-key-rotation.png)
+![El cuadro de diálogo Deshabilitar clave con la clave de desactivación resaltada.](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
 
-### Rotación de clave bajo demanda {#on-demand-key-rotation}
+Alternativamente, si su clave se usa en otros servicios, puede eliminar el acceso para Experience Platform directamente desde el directiva de claves. Seleccione **[!UICONTROL Editar]** en la **[!DNL Key Policy]** sección.
 
-Seleccione **[!DNL Rotate Now]** para realizar una rotación de clave inmediata si la clave actual se ve comprometida. AWS limita esta función a 10 rotaciones. Para realizar un mantenimiento regular, programe rotaciones automáticas de claves en su lugar.
+![La sección de detalles de la clave AWS con Editar resaltada en la sección Key directiva.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-![La sección de detalles de la clave de AWS con la opción Rotar ahora resaltada.](../../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
+Aparecerá la **[!DNL Edit key policy]** Página. Resalte y elimine la instrucción directiva, copiada de la IU de Experience Platform, para quitar los permisos de la aplicación Customer Managed Keys. A continuación, seleccione **[!DNL Save changes]** para completar el proceso.
+
+![La clave Editar directiva espacio de trabajo en AWS con la instrucción JSON object y Guardar cambios resaltados.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
+
+## Rotación de claves {#key-rotation}
+
+AWS ofrece rotación de claves automática y bajo demanda. Para reducir el riesgo de comprometer las claves o cumplir los requisitos de cumplimiento normativo de seguridad, puede generar automáticamente nuevas claves de cifrado bajo demanda o a intervalos regulares. Programe la rotación automática de claves para limitar la vida útil de una clave y asegurarse de que si una clave se ve comprometida, se vuelva inutilizable después de la rotación. Si bien los algoritmos de cifrado modernos son altamente seguros, la rotación de claves es un importante medir de cumplimiento de seguridad y demuestra el cumplimiento de las mejores prácticas de seguridad.
+
+### Rotación automática de teclas {#automatic-key-rotation}
+
+La rotación automática de claves está deshabilitada de forma predeterminada. Para programar la rotación automática de teclas desde el espacio de trabajo KMS, seleccione el **[!DNL Key rotation]** pestaña, seguido **[!DNL Edit]** de en el **[!DNL Automatic key rotation section]** archivo .
+
+![La sección de detalles de la clave AWS con la rotación de claves y Editar resaltados.](../../../images/governance-privacy-security/key-management-service/key-rotation.png)
+
+Aparecerá la **[!DNL Edit automatic key rotation]** espacio de trabajo. Desde aquí, seleccione el botón de opción para activar o desactivar la rotación automática de teclas. Luego use el campo de entrada de texto, o el menú desplegable, para elegir un período de tiempo para la rotación de claves. Seleccione **[!DNL Save]** esta opción para confirmar la configuración y volver a los detalles clave espacio de trabajo.
+
+>[!NOTE]
+>
+>El período mínimo de rotación de claves es de 90 días y el máximo es de 2560 días.
+
+![La Editar rotación automática de teclas espacio de trabajo con el período de rotación y la Guardar resaltados.](../../../images/governance-privacy-security/key-management-service/automatic-key-rotation.png)
+
+### Rotación de claves a petición {#on-demand-key-rotation}
+
+Seleccione **[!DNL Rotate Now]** esta opción para realizar una rotación de clave inmediata si la clave actual se ve comprometida. AWS limita esta característica a 10 rotaciones. Para el mantenimiento regular, programe rotaciones automáticas de teclas en su lugar.
+
+![La sección de detalles de la clave AWS con Rotar ahora resaltada.](../../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
 
 ## Pasos siguientes
 
-Después de leer este documento, ha aprendido a crear, configurar y administrar claves de cifrado en AWS KMS para Adobe Experience Platform. A continuación, revise las políticas de seguridad y cumplimiento de normas de su organización para implementar las prácticas recomendadas, como programar las rotaciones de claves y garantizar un almacenamiento de claves seguro.
+Después de leer este documento, ha aprendido a crear, configurar y administrar claves de cifrado en AWS KMS para Adobe Experience Platform. Siguiente, revise las políticas de seguridad y cumplimiento de su organización para implementar prácticas recomendadas, como programar rotaciones de claves y garantizar la seguridad de almacenamiento clave.

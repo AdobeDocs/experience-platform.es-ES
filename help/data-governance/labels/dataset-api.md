@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos para conjuntos de datos mediante API
 description: La API del servicio de conjuntos de datos permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero es independiente de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 2%
@@ -23,13 +23,13 @@ Este documento explica cómo administrar etiquetas para conjuntos de datos y cam
 
 ## Introducción
 
-Antes de leer esta guía, siga los pasos descritos en la [sección de introducción](../../catalog/api/getting-started.md) en la guía para desarrolladores de catálogos para recopilar las credenciales necesarias para realizar llamadas a las API de [!DNL Platform].
+Antes de leer esta guía, siga los pasos descritos en la [sección de introducción](../../catalog/api/getting-started.md) en la guía para desarrolladores de catálogos para recopilar las credenciales necesarias para realizar llamadas a las API de [!DNL Experience Platform].
 
 Para realizar llamadas a los extremos descritos en este documento, debe tener el valor `id` único para un conjunto de datos específico. Si no tiene este valor, consulte la guía en [listar objetos de catálogo](../../catalog/api/list-objects.md) para encontrar los ID de los conjuntos de datos existentes.
 
 ## Búsqueda de etiquetas para un conjunto de datos {#look-up}
 
-Puede buscar las GET de uso de datos que se han aplicado a un conjunto de datos existente realizando una solicitud a la API [!DNL Dataset Service].
+Puede buscar las etiquetas de uso de datos que se han aplicado a un conjunto de datos existente realizando una petición GET a la API [!DNL Dataset Service].
 
 **Formato de API**
 
@@ -82,7 +82,7 @@ Una respuesta correcta devuelve las etiquetas de uso de datos aplicadas al conju
 
 ## Aplicar etiquetas a un conjunto de datos {#apply}
 
-Puede aplicar un conjunto de etiquetas para un conjunto de datos completo proporcionándolas en la carga útil de una solicitud de POST o PUT a la API [!DNL Dataset Service]. El cuerpo de la solicitud es el mismo para ambas llamadas. No puede agregar etiquetas a campos de conjuntos de datos individuales.
+Puede aplicar un conjunto de etiquetas para un conjunto de datos completo proporcionándolas en la carga útil de una petición POST o PUT a la API [!DNL Dataset Service]. El cuerpo de la solicitud es el mismo para ambas llamadas. No puede agregar etiquetas a campos de conjuntos de datos individuales.
 
 **Formato de API**
 
@@ -97,15 +97,15 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Solicitud**
 
-La siguiente solicitud de POST de ejemplo actualiza todo el conjunto de datos con la etiqueta `C1`. Los campos proporcionados en la carga útil son los mismos que se requerirían para una solicitud de PUT.
+La siguiente solicitud POST de ejemplo actualiza todo el conjunto de datos con una etiqueta `C1`. Los campos proporcionados en la carga útil son los mismos que se requerirían para una solicitud de PUT.
 
 Cuando se realizan llamadas de API que actualizan las etiquetas existentes de un conjunto de datos (PUT), se debe incluir un encabezado `If-Match` que indique la versión actual de la entidad dataset-label en el servicio Dataset. Para evitar conflictos de datos, el servicio solo actualizará la entidad del conjunto de datos si la cadena `If-Match` incluida coincide con la última etiqueta de versión generada por el sistema para ese conjunto de datos.
 
 >[!NOTE]
 >
->Si existen etiquetas para el conjunto de datos en cuestión, solo se pueden agregar nuevas mediante una solicitud de PUT, que requiere un encabezado `If-Match`. Una vez agregadas las etiquetas a un conjunto de datos, se requiere el valor `etag` más reciente para actualizar o quitar las etiquetas más adelante<br>Antes de ejecutar el método PUT, debe realizar una solicitud de GET en las etiquetas del conjunto de datos. Asegúrese de actualizar únicamente los campos específicos que se van a modificar en la solicitud, dejando el resto sin cambiar. Además, asegúrese de que la llamada al PUT mantiene las mismas entidades principales que la llamada al GET. Cualquier discrepancia produciría un error para el cliente.
+>Si existen etiquetas para el conjunto de datos en cuestión, solo se pueden agregar nuevas etiquetas a través de una petición PUT, que requiere un encabezado `If-Match`. Una vez agregadas las etiquetas a un conjunto de datos, se requiere el valor `etag` más reciente para actualizar o quitar las etiquetas más adelante<br>Antes de ejecutar el método PUT, debe realizar una solicitud GET en las etiquetas del conjunto de datos. Asegúrese de actualizar únicamente los campos específicos que se van a modificar en la solicitud, dejando el resto sin cambiar. Además, asegúrese de que la llamada de PUT mantiene las mismas entidades principales que la llamada de GET. Cualquier discrepancia produciría un error para el cliente.
 
-Para recuperar la versión más reciente de la entidad dataset-label, realice una [solicitud de GET](#look-up) al extremo `/datasets/{DATASET_ID}/labels`. El valor actual se devuelve en la respuesta bajo un encabezado `etag`. Al actualizar las etiquetas de conjuntos de datos existentes, se recomienda realizar primero una solicitud de búsqueda para el conjunto de datos a fin de recuperar su último valor `etag` antes de utilizar ese valor en el encabezado `If-Match` de la solicitud de PUT posterior.
+Para recuperar la versión más reciente de la entidad dataset-label, realice una [petición GET](#look-up) al extremo `/datasets/{DATASET_ID}/labels`. El valor actual se devuelve en la respuesta bajo un encabezado `etag`. Al actualizar las etiquetas de conjuntos de datos existentes, se recomienda realizar primero una solicitud de búsqueda para el conjunto de datos a fin de recuperar su último valor `etag` antes de utilizar ese valor en el encabezado `If-Match` de la solicitud de PUT posterior.
 
 ```shell
 curl -X POST \
@@ -143,7 +143,7 @@ Una respuesta correcta devuelve el conjunto actualizado de etiquetas para el con
 
 >[!IMPORTANT]
 >
->La propiedad `optionalLabels` ha quedado obsoleta para su uso con solicitudes de POST. Ya no es posible añadir etiquetas de datos a los campos de conjuntos de datos. Una operación del POST generará un error si hay un valor `optionalLabel`. Sin embargo, puede eliminar las etiquetas de campos individuales mediante una solicitud de PUT y la propiedad `optionalLabels`. Para obtener más información, consulte la sección sobre [quitar etiquetas de un conjunto de datos](#remove).
+>La propiedad `optionalLabels` ha quedado obsoleta para su uso con solicitudes POST. Ya no es posible añadir etiquetas de datos a los campos de conjuntos de datos. Una operación POST generará un error si hay un valor `optionalLabel`. Sin embargo, puede eliminar las etiquetas de campos individuales mediante una petición PUT y la propiedad `optionalLabels`. Para obtener más información, consulte la sección sobre [quitar etiquetas de un conjunto de datos](#remove).
 
 ```json
 {
@@ -165,7 +165,7 @@ Una respuesta correcta devuelve el conjunto actualizado de etiquetas para el con
 
 ## Eliminación de etiquetas de un conjunto de datos {#remove}
 
-Puede quitar cualquier etiqueta de campo aplicada anteriormente actualizando los valores de `optionalLabels` existentes con un subconjunto de las etiquetas de campo existentes o con una lista vacía para quitarlos por completo. Realice una solicitud de PUT a la API [!DNL Dataset Service] para actualizar o quitar las etiquetas aplicadas anteriormente.
+Puede quitar cualquier etiqueta de campo aplicada anteriormente actualizando los valores de `optionalLabels` existentes con un subconjunto de las etiquetas de campo existentes o con una lista vacía para quitarlos por completo. Realice una petición PUT a la API [!DNL Dataset Service] para actualizar o quitar las etiquetas aplicadas anteriormente.
 
 >[!NOTE]
 >
@@ -185,7 +185,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 El siguiente conjunto de datos en el que se aplica la operación de PUT tenía el campo C1 optionalLabel en properties/person/properties/address y el campo C1, C2 optionalLabels en /properties/person/properties/name/properties/fullName. Después de la operación de colocación, el primer campo no tendrá etiqueta (se eliminó la etiqueta C1) y el segundo campo solo tendrá etiqueta C1 (se eliminó la etiqueta C2)
 
-En el siguiente escenario de ejemplo, se utiliza una solicitud de PUT para eliminar las etiquetas agregadas a campos individuales. Antes de realizar la solicitud, el campo `fullName` tenía aplicadas las etiquetas `C1` y `C2`, y el campo `address` ya tenía aplicada una etiqueta `C1`. La solicitud de PUT reemplaza las etiquetas existentes `C1, C2` del campo `fullName` con una etiqueta `C1` que usa el parámetro `optionalLabels.labels`. La solicitud también invalida la etiqueta `C1` del campo `address` con un conjunto vacío de etiquetas de campo.
+En el siguiente escenario de ejemplo, se utiliza una solicitud PUT para eliminar las etiquetas agregadas a los campos individuales. Antes de realizar la solicitud, el campo `fullName` tenía aplicadas las etiquetas `C1` y `C2`, y el campo `address` ya tenía aplicada una etiqueta `C1`. La solicitud de PUT anula las etiquetas existentes `C1, C2` del campo `fullName` con una etiqueta `C1` que usa el parámetro `optionalLabels.labels`. La solicitud también invalida la etiqueta `C1` del campo `address` con un conjunto vacío de etiquetas de campo.
 
 ```shell
 curl -X PUT \

@@ -1,15 +1,15 @@
 ---
-title: Conecte su cuenta de Marketing Cloud de Salesforce con el Experience Platform a través de la interfaz de usuario
-description: Obtenga información sobre cómo conectar su cuenta de Marketing Cloud de Salesforce a Experience Platform a través de la interfaz de usuario.
+title: Conecte su cuenta de Salesforce Marketing Cloud a Experience Platform a través de la interfaz de usuario de
+description: Obtenga información sobre cómo conectar su cuenta de Salesforce Marketing Cloud a Experience Platform a través de la interfaz de usuario.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
 
-# Conecte su cuenta de [!DNL Salesforce Marketing Cloud] al Experience Platform mediante la interfaz de usuario
+# Conecte su cuenta de [!DNL Salesforce Marketing Cloud] a Experience Platform mediante la interfaz de usuario
 
 >[!WARNING]
 >
@@ -26,11 +26,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
-Si ya tiene una cuenta de [!DNL Salesforce Marketing Cloud], puede omitir el resto de este documento y continuar con el tutorial de [introducción de datos de automatización de marketing al Experience Platform mediante la interfaz de usuario](../../dataflow/marketing-automation.md).
+Si ya tiene una cuenta de [!DNL Salesforce Marketing Cloud], puede omitir el resto de este documento y continuar con el tutorial de [introducción de datos de automatización de marketing en Experience Platform mediante la interfaz de usuario](../../dataflow/marketing-automation.md).
 
 ### Recopilar credenciales necesarias
 
-Para tener acceso a su cuenta de [!DNL Salesforce Marketing Cloud] en Platform, debe proporcionar los siguientes valores:
+Para tener acceso a su cuenta de [!DNL Salesforce Marketing Cloud] en Experience Platform, debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
@@ -46,15 +46,15 @@ Para obtener más información acerca de la autenticación de [!DNL Salesforce M
 >
 >La integración de origen de [!DNL Salesforce Marketing Cloud] no admite actualmente la ingesta de objetos personalizados.
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. El [!UICONTROL catálogo] muestra una variedad de orígenes admitidos por el Experience Platform.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. El [!UICONTROL catálogo] muestra una variedad de orígenes admitidos por Experience Platform.
 
 Puede seleccionar la categoría adecuada de la lista de categorías. También puede utilizar la barra de búsqueda para filtrar por un origen específico.
 
-En la categoría [!UICONTROL Automatización de marketing], seleccione **[!UICONTROL Marketing Cloud de Salesforce]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
+En la categoría [!UICONTROL Automatización de marketing], seleccione **[!UICONTROL Salesforce Marketing Cloud]** y luego **[!UICONTROL Configurar]**.
 
-![El catálogo de orígenes con el origen de Marketing Cloud de Salesforce seleccionado.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+![El catálogo de orígenes con el origen de Salesforce Marketing Cloud seleccionado.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-Aparecerá la página **[!UICONTROL Conectar con el Marketing Cloud de Salesforce]**. En esta página, puede crear una cuenta nueva o utilizar una cuenta existente.
+Aparecerá la página **[!UICONTROL Conectar con Salesforce Marketing Cloud]**. En esta página, puede crear una cuenta nueva o utilizar una cuenta existente.
 
 ### Nueva cuenta
 
@@ -62,14 +62,14 @@ Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y proporci
 
 Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
-![Interfaz de la nueva cuenta donde puede autenticar una nueva cuenta para el Marketing Cloud de Salesforce.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+![Interfaz de la nueva cuenta donde puede autenticar una nueva cuenta para Salesforce Marketing Cloud.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
 
 ### Cuenta existente
 
 Si ya tiene una cuenta, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la cuenta que desee usar en la lista que aparece.
 
-![Interfaz de cuenta existente donde puede seleccionar una lista de cuentas de Marketing Cloud de Salesforce existentes.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![Interfaz de cuenta existente donde puede seleccionar de una lista de cuentas existentes de Salesforce Marketing Cloud.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión entre su cuenta de [!DNL Salesforce Marketing Cloud] y el Experience Platform. Ahora puede continuar con el siguiente tutorial y [crear un flujo de datos para llevar los datos de automatización de marketing al Experience Platform](../../dataflow/marketing-automation.md).
+Al seguir este tutorial, ha establecido una conexión entre su cuenta de [!DNL Salesforce Marketing Cloud] y Experience Platform. Ahora puede continuar con el siguiente tutorial y [crear un flujo de datos para introducir los datos de automatización de marketing en Experience Platform](../../dataflow/marketing-automation.md).

@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2024'
 description: Las notas de la versión de febrero de 2024 de Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
-workflow-type: ht
-source-wordcount: '1244'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1248'
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ Actualizaciones de funciones existentes en Experience Platform:
 
 ## Alertas {#alerts}
 
-Experience Platform permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a diferentes reglas de alerta a través de la pestaña [!UICONTROL Alertas] de la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia IU o a través de notificaciones por correo electrónico.
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a distintas reglas de alerta a través de la ficha [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
 
 **Funciones nuevas o actualizadas**
 
@@ -95,7 +95,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## Zonas protegidas {#sandboxes}
 
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para responder a esta necesidad, Experience Platform proporciona zonas protegidas que dividen una única instancia de Platform en entornos virtuales separados para ayudar a desarrollar y evolucionar las aplicaciones de la experiencia digital.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar aplicaciones de experiencia digital y hacer que evolucionen.
 
 **Funciones nuevas o actualizadas**
 
@@ -109,17 +109,17 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
+[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Experience Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
 **Nueva funcionalidad**
 
 | Función | Descripción |
 | ------- | ----------- |
-| Públicos de la cuenta | Los públicos de cuenta ya están disponibles de forma general. Ahora puede utilizar la segmentación de cuentas para proporcionar la facilidad y sofisticación totales de la experiencia de segmentación de marketing de los públicos basados en personas a los públicos basados en cuentas en las ediciones B2B y B2P de Real-Time Customer Platform. Esta versión permite utilizar públicos basados en personas como predicado para públicos basados en cuentas, añade funcionalidades de búsqueda, admite el uso de entidades personalizadas y cumple con la gobernanza de datos. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/types/account-audiences.md). |
+| Públicos de la cuenta | Los públicos de cuenta ya están disponibles de forma general. Ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas en las ediciones B2B y B2P de Real-Time Customer Experience Platform. Esta versión permite utilizar públicos basados en personas como predicado para públicos basados en cuentas, añade funcionalidades de búsqueda, admite el uso de entidades personalizadas y cumple con la gobernanza de datos. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
-## Orígenes {#sources}
+## Fuentes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

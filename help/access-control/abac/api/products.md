@@ -5,9 +5,9 @@ title: Extremo de API de productos
 description: El extremo /products de la API de control de acceso basado en atributos le permite administrar productos mediante programación en Adobe Experience Platform.
 role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ El extremo de API utilizado en esta guía forma parte de la API de control de ac
 
 ## Recuperación de una lista de productos con derechos {#list}
 
-Puede recuperar una lista de productos autorizados realizando una solicitud de GET al extremo `/products`.
+Puede recuperar una lista de productos autorizados realizando una petición GET al extremo `/products`.
 
 **Formato de API**
 
@@ -70,7 +70,7 @@ Una respuesta correcta devuelve una lista de productos con derechos que pertenec
 
 ## Búsqueda de categorías de permisos por ID de producto
 
-Puede buscar categorías de permisos para un producto determinado realizando una solicitud de GET al extremo `/products/{PRODUCT_ID}/categories` al especificar el id. del producto.
+Puede buscar categorías de permisos para un producto determinado realizando una petición GET al extremo `/products/{PRODUCT_ID}/categories` mientras especifica el id. del producto.
 
 **Formato de API**
 
@@ -145,7 +145,7 @@ Una respuesta correcta devuelve las categorías de permisos asociadas con el ID 
 
 ## Búsqueda de conjuntos de permisos por ID de producto
 
-Puede buscar conjuntos de permisos para un producto determinado realizando una solicitud de GET al extremo `/products/{PRODUCT_ID}/permission-sets` mientras especifica el Id. del producto.
+Puede buscar conjuntos de permisos para un producto determinado realizando una petición GET al extremo `/products/{PRODUCT_ID}/permission-sets` mientras especifica el Id. del producto.
 
 **Formato de API**
 
@@ -240,6 +240,6 @@ Una respuesta correcta devuelve los conjuntos de permisos asociados al ID de pro
 | `id` | El ID correspondiente del conjunto de permisos consultado. |
 | `name` | El nombre correspondiente del conjunto de permisos consultado. |
 | `category` | La categoría de permisos disponible. |
-| `permissions` | Los permisos incluyen la capacidad de ver o utilizar funciones de Platform, como crear entornos limitados, definir esquemas y administrar conjuntos de datos. |
+| `permissions` | Los permisos incluyen la capacidad de ver o utilizar funciones de Experience Platform, como crear entornos limitados, definir esquemas y administrar conjuntos de datos. |
 | `permissions.resource` | Recurso u objeto al que puede tener acceso o al que no puede tener acceso un sujeto. Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
 | `permissions.actions` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `view`, `read`, `create`, `edit` y `delete` |

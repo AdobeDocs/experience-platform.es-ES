@@ -1,17 +1,17 @@
 ---
 title: Determinación De Una Puntuación De Tendencia Mediante Un Modelo Predictivo Generado Por Aprendizaje Automático
-description: Aprenda a utilizar el servicio de consulta para aplicar el modelo predictivo a los datos de Platform. Este documento muestra cómo utilizar los datos de Platform para predecir la tendencia de un cliente a comprar en cada visita.
+description: Aprenda a utilizar el servicio de consultas para aplicar el modelo predictivo a los datos de Experience Platform. Este documento muestra cómo utilizar los datos de Experience Platform para predecir la tendencia de un cliente a comprar en cada visita.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
 # Determinar una puntuación de tendencia mediante un modelo predictivo generado por aprendizaje automático
 
-Con Query Service puede aprovechar los modelos predictivos, como las puntuaciones de tendencia, creados en su plataforma de aprendizaje automático para analizar los datos de los Experience Platform.
+Con Query Service puede aprovechar los modelos predictivos, como las puntuaciones de tendencia, creados en su plataforma de aprendizaje automático para analizar datos de Experience Platform.
 
 En esta guía se explica cómo utilizar el servicio de consulta para enviar datos a la plataforma de aprendizaje automático con el fin de formar un modelo en un bloc de notas computacional. El modelo entrenado se puede aplicar a los datos utilizando SQL para predecir la tendencia de un cliente a comprar para cada visita.
 
@@ -35,9 +35,9 @@ numpy
 tqdm
 ```
 
-## Importar tablas de análisis de Platform a [!DNL Jupyter Notebook] {#import-analytics-tables}
+## Importar tablas de análisis de Experience Platform en [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Para generar un modelo de puntuación de tendencia, se debe importar una proyección de los datos de análisis almacenados en Platform en [!DNL Jupyter Notebook]. Desde un [!DNL Python] 3 [!DNL Jupyter Notebook] conectado al servicio de consultas, los siguientes comandos importan un conjunto de datos de comportamiento de cliente desde Luma, una tienda de ropa ficticia. Como los datos de Platform se almacenan con el formato Experience Data Model (XDM), se debe generar un objeto JSON de muestra que se ajuste a la estructura del esquema. Consulte la documentación para obtener instrucciones sobre cómo [generar el objeto JSON de muestra](../../xdm/ui/sample.md).
+Para generar un modelo de puntuación de tendencia, se debe importar una proyección de los datos de análisis almacenados en Experience Platform en [!DNL Jupyter Notebook]. Desde un [!DNL Python] 3 [!DNL Jupyter Notebook] conectado al servicio de consultas, los siguientes comandos importan un conjunto de datos de comportamiento de cliente desde Luma, una tienda de ropa ficticia. Como los datos de Experience Platform se almacenan con el formato Experience Data Model (XDM), se debe generar un objeto JSON de muestra que se ajuste a la estructura del esquema. Consulte la documentación para obtener instrucciones sobre cómo [generar el objeto JSON de muestra](../../xdm/ui/sample.md).
 
 ![Panel [!DNL Jupyter Notebook] con varios comandos resaltados.](../images/use-cases/jupyter-commands.png)
 
@@ -161,7 +161,7 @@ En el gráfico de barras se pueden discernir varios patrones. Los puntos de vent
 
 ## Utilice el servicio de consulta para aplicar el modelo entrenado {#use-query-service-to-apply-trained-model}
 
-Una vez creado el modelo entrenado, debe aplicarse a los datos que tiene en Experience Platform. Para ello, la lógica de la canalización de aprendizaje automático debe convertirse a SQL. Los dos componentes clave de esta transición son los siguientes:
+Una vez creado el modelo entrenado, debe aplicarse a los datos que se mantienen en Experience Platform. Para ello, la lógica de la canalización de aprendizaje automático debe convertirse a SQL. Los dos componentes clave de esta transición son los siguientes:
 
 - En primer lugar, SQL debe reemplazar al módulo [!DNL Logistics Regression] para obtener la probabilidad de una etiqueta de predicción. El modelo creado por la regresión logística produjo el modelo de regresión `y = wX + c`, donde los pesos `w` y la intersección `c` son el resultado del modelo. Las funciones SQL se pueden utilizar para multiplicar los pesos y obtener una probabilidad.
 

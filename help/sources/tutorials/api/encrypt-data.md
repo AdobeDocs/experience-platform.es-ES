@@ -2,9 +2,9 @@
 title: Ingesta de datos cifrados
 description: Obtenga información sobre cómo introducir archivos cifrados a través de fuentes por lotes de almacenamiento en la nube mediante la API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1816'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ Puede introducir archivos de datos cifrados en Adobe Experience Platform mediant
 
 El proceso de ingesta de datos cifrados es el siguiente:
 
-1. [Cree un par de claves de cifrado mediante las API de Experience Platform](#create-encryption-key-pair). El par de claves de cifrado consta de una clave privada y una clave pública. Una vez creada, puede copiar o descargar la clave pública, junto con su ID de clave pública y hora de caducidad correspondientes. Durante este proceso, el Experience Platform almacena la clave privada en un almacén seguro. **NOTA:** La clave pública de la respuesta está codificada en Base64 y debe descodificarse antes de usar.
+1. [Cree un par de claves de cifrado mediante las API de Experience Platform](#create-encryption-key-pair). El par de claves de cifrado consta de una clave privada y una clave pública. Una vez creada, puede copiar o descargar la clave pública, junto con su ID de clave pública y hora de caducidad correspondientes. Durante este proceso, Experience Platform almacenará la clave privada en un almacén seguro. **NOTA:** La clave pública de la respuesta está codificada en Base64 y debe descodificarse antes de usar.
 2. Utilice la clave pública para cifrar el archivo de datos que desea introducir.
 3. Coloque el archivo cifrado en el almacenamiento en la nube.
 4. Una vez que el archivo cifrado esté listo, [cree una conexión de origen y un flujo de datos para el origen de almacenamiento en la nube](#create-a-dataflow-for-encrypted-data). Durante el paso de creación de flujo, debe proporcionar un parámetro `encryption` e incluir su ID de clave pública.
@@ -31,13 +31,13 @@ Este documento proporciona pasos sobre cómo generar un par de claves de cifrado
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-   * [Fuentes de almacenamiento en la nube](../api/collect/cloud-storage.md): Cree un flujo de datos para llevar los datos por lotes de su fuente de almacenamiento en la nube al Experience Platform.
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+   * [Fuentes de almacenamiento en la nube](../api/collect/cloud-storage.md): Cree un flujo de datos para traer datos por lotes de su fuente de almacenamiento en la nube a Experience Platform.
+* [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ### Extensiones de archivo compatibles con archivos cifrados {#supported-file-extensions-for-encrypted-files}
 
@@ -68,7 +68,7 @@ La lista de extensiones de archivo compatibles con los archivos cifrados es la s
 >
 >Las claves de cifrado son específicas de una zona protegida determinada. Por lo tanto, debe crear nuevas claves de cifrado si desea introducir datos cifrados en una zona protegida diferente, dentro de su organización.
 
-El primer paso para la ingesta de datos cifrados en Experience Platform es crear el par de claves de cifrado realizando una solicitud del POST al extremo `/encryption/keys` de la API [!DNL Connectors].
+El primer paso para la ingesta de datos cifrados en Experience Platform es crear el par de claves de cifrado realizando una petición POST al extremo `/encryption/keys` de la API [!DNL Connectors].
 
 **Formato de API**
 
@@ -103,7 +103,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre del par de claves de cifrado. |
 | `encryptionAlgorithm` | El tipo de algoritmo de cifrado que está utilizando. Los tipos de cifrado admitidos son `PGP` y `GPG`. |
-| `params.passPhrase` | La frase de contraseña proporciona una capa adicional de protección para las claves de cifrado. Una vez creada, el Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. |
+| `params.passPhrase` | La frase de contraseña proporciona una capa adicional de protección para las claves de cifrado. Una vez creada, Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. |
 
 +++
 
@@ -123,7 +123,7 @@ Una respuesta correcta devuelve la clave pública codificada en Base64, el ID de
 
 | Propiedad | Descripción |
 | --- | --- |
-| `publicKey` | La clave pública se utiliza para cifrar los datos en el almacenamiento de la nube. Esta clave corresponde a la clave privada que también se creó durante este paso. Sin embargo, la clave privada se envía inmediatamente al Experience Platform. |
+| `publicKey` | La clave pública se utiliza para cifrar los datos en el almacenamiento de la nube. Esta clave corresponde a la clave privada que también se creó durante este paso. Sin embargo, la clave privada se envía inmediatamente a Experience Platform. |
 | `publicKeyId` | El ID de clave pública se utiliza para crear un flujo de datos e introducir los datos cifrados del almacenamiento en la nube en Experience Platform. |
 | `expiryTime` | La hora de caducidad define la fecha de caducidad del par de claves de cifrado. Esta fecha se establece automáticamente en 180 días después de la fecha de generación de claves y se muestra en formato unix timestamp. |
 
@@ -131,7 +131,7 @@ Una respuesta correcta devuelve la clave pública codificada en Base64, el ID de
 
 ### Recuperar claves de cifrado {#retrieve-encryption-keys}
 
-Para recuperar todas las claves de cifrado de su organización, realice una solicitud de GET al extremo `/encryption/keys`=nt.
+Para recuperar todas las claves de cifrado de su organización, realice una petición GET al extremo `/encryption/keys`=nt.
 
 **Formato de API**
 
@@ -176,7 +176,7 @@ Una respuesta correcta devuelve el algoritmo de cifrado, el nombre, la clave pú
 
 ### Recuperar claves de cifrado por identificador {#retrieve-encryption-keys-by-id}
 
-Para recuperar un conjunto específico de claves de cifrado, realice una solicitud de GET al extremo `/encryption/keys` y proporcione el identificador de clave pública como parámetro de encabezado.
+Para recuperar un conjunto específico de claves de cifrado, realice una petición GET al extremo `/encryption/keys` y proporcione su ID de clave pública como parámetro de encabezado.
 
 **Formato de API**
 
@@ -221,11 +221,11 @@ Una respuesta correcta devuelve el algoritmo de cifrado, el nombre, la clave pú
 
 Si lo desea, puede crear un par de claves de verificación de firma para firmar e introducir los datos cifrados.
 
-Durante esta fase, debe generar su propia combinación de clave privada y clave pública y, a continuación, utilizar la clave privada para firmar los datos cifrados. A continuación, debe codificar la clave pública en Base64 y luego compartirla con Experience Platform para que Platform pueda comprobar su .
+Durante esta fase, debe generar su propia combinación de clave privada y clave pública y, a continuación, utilizar la clave privada para firmar los datos cifrados. A continuación, debe codificar la clave pública en Base64 y luego compartirla en Experience Platform para que Experience Platform pueda comprobar su firma.
 
-### Compartir la clave pública con el Experience Platform
+### Compartir la clave pública en Experience Platform
 
-Para compartir la clave pública, realice una solicitud de POST al extremo `/customer-keys` y proporcione el algoritmo de cifrado y la clave pública codificada en Base64.
+Para compartir la clave pública, realice una petición POST al extremo `/customer-keys` y proporcione el algoritmo de cifrado y la clave pública codificada en Base64.
 
 **Formato de API**
 
@@ -274,13 +274,13 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `publicKeyId` | Este ID de clave pública se devuelve en respuesta a compartir la clave gestionada por el cliente con el Experience Platform. Puede proporcionar este ID de clave pública como ID de clave de verificación de firma al crear un flujo de datos para datos firmados y cifrados. |
+| `publicKeyId` | Este ID de clave pública se devuelve en respuesta al uso compartido de la clave gestionada por el cliente con Experience Platform. Puede proporcionar este ID de clave pública como ID de clave de verificación de firma al crear un flujo de datos para datos firmados y cifrados. |
 
 +++
 
 ### Recuperar par de claves administrado por el cliente
 
-Para recuperar las claves administradas por el cliente, realice una solicitud de GET al extremo `/customer-keys`.
+Para recuperar las claves administradas por el cliente, realice una petición GET al extremo `/customer-keys`.
 
 **Formato de API**
 
@@ -320,11 +320,11 @@ curl -X GET \
 
 +++
 
-## Conecte el origen de almacenamiento en la nube al Experience Platform mediante la API [!DNL Flow Service]
+## Conecte su origen de almacenamiento en la nube a Experience Platform mediante la API [!DNL Flow Service]
 
-Una vez recuperado el par de claves de cifrado, ahora puede continuar y crear una conexión de origen para la fuente de almacenamiento en la nube y llevar los datos cifrados a Platform.
+Una vez que haya recuperado el par de claves de cifrado, ahora puede continuar y crear una conexión de origen para la fuente de almacenamiento en la nube y llevar los datos cifrados a Experience Platform.
 
-En primer lugar, debe crear una conexión base para autenticar el origen con Platform. Para crear una conexión base y autenticar el origen, seleccione el origen que desee utilizar en la lista siguiente:
+En primer lugar, debe crear una conexión base para autenticar el origen con Experience Platform. Para crear una conexión base y autenticar el origen, seleccione el origen que desee utilizar en la lista siguiente:
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -350,7 +350,7 @@ Después de crear una conexión base, debe seguir los pasos descritos en el tuto
 >* [Id. de conexión de destino](../api/collect/cloud-storage.md#target)
 >* [Id. de asignación](../api/collect/cloud-storage.md#mapping)
 
-Para crear un flujo de datos, realice una solicitud de POST al extremo `/flows` de la API [!DNL Flow Service]. Para introducir datos cifrados, debe agregar una sección `encryption` a la propiedad `transformations` e incluir `publicKeyId` que se creó en un paso anterior.
+Para crear un flujo de datos, realice una petición POST al extremo `/flows` de la API [!DNL Flow Service]. Para introducir datos cifrados, debe agregar una sección `encryption` a la propiedad `transformations` e incluir `publicKeyId` que se creó en un paso anterior.
 
 **Formato de API**
 
@@ -413,8 +413,8 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `flowSpec.id` | ID de especificación de flujo que corresponde a las fuentes de almacenamiento en la nube. |
-| `sourceConnectionIds` | Identificador de conexión de origen. Este ID representa la transferencia de datos de origen a Platform. |
-| `targetConnectionIds` | El ID de conexión de destino. Este ID representa dónde aterrizan los datos una vez que se transfieren a Platform. |
+| `sourceConnectionIds` | Identificador de conexión de origen. Este ID representa la transferencia de datos del origen a Experience Platform. |
+| `targetConnectionIds` | El ID de conexión de destino. Este ID representa dónde aterrizan los datos una vez que se transfieren a Experience Platform. |
 | `transformations[x].params.mappingId` | ID de asignación. |
 | `transformations.name` | Al ingerir archivos cifrados, debe proporcionar `Encryption` como parámetro de transformaciones adicional para el flujo de datos. |
 | `transformations[x].params.publicKeyId` | El ID de clave pública que ha creado. Este ID es la mitad del par de claves de cifrado que se usa para cifrar los datos del almacenamiento en la nube. |
@@ -513,7 +513,7 @@ Una respuesta correcta devuelve el identificador (`id`) del flujo de datos reci�
 
 ### Eliminar claves de cifrado {#delete-encryption-keys}
 
-Para eliminar las claves de cifrado, realice una solicitud de DELETE al extremo `/encryption/keys` y proporcione el identificador de clave pública como parámetro de encabezado.
+Para eliminar las claves de cifrado, realice una petición DELETE al extremo `/encryption/keys` y proporcione el identificador de clave pública como parámetro de encabezado.
 
 **Formato de API**
 
@@ -541,7 +541,7 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo e
 
 ### Validar claves de cifrado {#validate-encryption-keys}
 
-Para validar las claves de cifrado, realice una solicitud de GET al extremo `/encryption/keys/validate/` y proporcione el identificador de clave pública que desea validar como parámetro de encabezado.
+Para validar las claves de cifrado, realice una petición GET al extremo `/encryption/keys/validate/` y proporcione el identificador de clave pública que desea validar como parámetro de encabezado.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -598,7 +598,7 @@ La ingesta de datos cifrados no admite la ingesta de carpetas recurrentes o de v
 
 El siguiente es un ejemplo de una estructura de carpetas admitida, donde la ruta de origen es `/ACME-customers/*.csv.gpg`.
 
-En esta situación, los archivos en negrita se incorporan al Experience Platform.
+En esta situación, los archivos en negrita se incorporan a Experience Platform.
 
 * clientes de ACME
    * **Archivo1.csv.gpg**

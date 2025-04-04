@@ -4,9 +4,9 @@ description: La consulta de auditoría es una API de RESTful que permite a los d
 role: Developer
 feature: Audits, API
 exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '172'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Para ver todos los extremos disponibles y las operaciones de CRUD, visita [[!DNL
 
 ## Eventos
 
-Los eventos de auditoría proporcionan perspectivas sobre las acciones del usuario en Platform, incluido el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes del tipo de acción para varias funciones de Adobe Experience Platform. Para aprender a recuperar métricas mediante la API, consulte la [guía de extremo de eventos](./events.md).
+Los eventos de auditoría proporcionan perspectivas sobre las acciones del usuario en Experience Platform, incluido el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes del tipo de acción para varias funciones de Adobe Experience Platform. Para aprender a recuperar métricas mediante la API, consulte la [guía de extremo de eventos](./events.md).
 
 ## Exportar
 

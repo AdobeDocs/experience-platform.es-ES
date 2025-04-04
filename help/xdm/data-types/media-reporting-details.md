@@ -2,9 +2,9 @@
 title: Tipo de datos de detalles de Media Reporting
 description: Obtenga información sobre el tipo de datos del modelo de datos de experiencia (XDM) de Detalles de creación de informes de medios.
 exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Los campos que se mencionan a continuación no se utilizan directamente para crear solicitudes. En su lugar, la recopilación de campos enviados a Adobe Experience Platform o Adobe Analytics se monta a partir de los datos de solicitud y las métricas se incorporan o procesan en la infraestructura del servidor. Aunque Platform recopila varios tipos de eventos de usuario, los informes devueltos se centran en eventos específicos, como `media.sessionStart`, `media.adStart` y `media.sessionComplete`. Esto significa que, aunque transmite 12 tipos de eventos durante la recopilación, los informes solo presentan desgloses basados en los cinco eventos enumerados a continuación.
+>Los campos que se mencionan a continuación no se utilizan directamente para crear solicitudes. En su lugar, la recopilación de campos enviados a Adobe Experience Platform o Adobe Analytics se monta a partir de los datos de solicitud y las métricas se incorporan o procesan en la infraestructura del servidor. Mientras Experience Platform recopila varios tipos de eventos de usuario, los informes devueltos se centran en eventos específicos, como `media.sessionStart`, `media.adStart` y `media.sessionComplete`. Esto significa que, aunque transmite 12 tipos de eventos durante la recopilación, los informes solo presentan desgloses basados en los cinco eventos enumerados a continuación.
 
 +++Seleccione esta opción para mostrar un diagrama del tipo de datos de [!UICONTROL Detalles de informes de medios].
 ![Un diagrama del tipo de datos de [!UICONTROL Detalles de creación de informes de medios].](../images/data-types/media-reporting-details.png)

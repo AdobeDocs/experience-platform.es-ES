@@ -3,9 +3,9 @@ keywords: Experience Platform;servicio de consultas;servicio de consultas;estruc
 title: Acoplar estructuras de datos anidadas para usarlas con herramientas de BI
 description: En este documento se explica cómo acoplar esquemas XDM para todas las tablas y vistas durante una sesión al utilizar herramientas de BI de terceros con el servicio de consulta.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ El uso de la configuración `FLATTEN` requiere una comprensión práctica de los
 
 * [Sistema XDM](../../xdm/home.md): Información general de alto nivel sobre XDM y su implementación en Experience Platform.
 
-   * [Crear un esquema ad hoc](../../xdm/tutorials/ad-hoc.md): Un esquema XDM con campos que tienen un espacio de nombres para que lo utilice solo un único conjunto de datos se denomina esquema ad hoc. Los esquemas ad hoc se utilizan en varios flujos de trabajo de ingesta de datos para Experience Platform y para crear ciertos tipos de conexiones de origen.
+   * [Crear un esquema ad hoc](../../xdm/tutorials/ad-hoc.md): Un esquema XDM con campos que tienen un espacio de nombres para que lo utilice solo un único conjunto de datos se denomina esquema ad hoc. Los esquemas ad hoc se utilizan en varios flujos de trabajo de ingesta de datos para Experience Platform y en la creación de ciertos tipos de conexiones de origen.
 
-* [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 * [Estructuras de datos anidadas](./nested-data-structures.md): este documento proporciona ejemplos de cómo crear, procesar o transformar conjuntos de datos con tipos de datos complejos, incluidas estructuras de datos anidadas.
 

@@ -5,9 +5,9 @@ title: Eliminar un flujo de datos mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo eliminar flujos de datos por lotes y de flujo continuo mediante la API de Flow Service.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '325'
 ht-degree: 3%
 
 ---
@@ -24,16 +24,16 @@ Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un identifi
 
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../landing/api-guide.md).
 
 ## Eliminación de un flujo de datos
 
-Con un ID de flujo existente, puede eliminar un flujo de datos realizando una solicitud de DELETE a la API [!DNL Flow Service].
+Con un ID de flujo existente, puede eliminar un flujo de datos realizando una petición DELETE a la API [!DNL Flow Service].
 
 **Formato de API**
 
@@ -58,7 +58,7 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco. Puede confirmar la eliminación intentando una solicitud de búsqueda (GET) al flujo de datos. La API devolverá un error HTTP 404 (no encontrado), que indica que el flujo de datos se ha eliminado.
+Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco. Para confirmar la eliminación, intente una solicitud de búsqueda (GET) al flujo de datos. La API devolverá un error HTTP 404 (no encontrado), que indica que el flujo de datos se ha eliminado.
 
 ## Pasos siguientes
 

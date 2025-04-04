@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;espacio de trabajo;campo;
 solution: Experience Platform
 title: Definición de campos XDM en la IU
-description: Obtenga información sobre cómo definir campos XDM en la interfaz de usuario del Experience Platform.
+description: Obtenga información sobre cómo definir campos XDM en la interfaz de usuario de Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ## Requisitos previos
 
-Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para ver una introducción al papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para conocer cómo las clases y los grupos de campos aportan campos a los esquemas XDM.
+Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para obtener una introducción del papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para conocer cómo las clases y los grupos de campos contribuyen a los campos en los esquemas XDM.
 
 Aunque no es necesario para esta guía, se recomienda que también siga el tutorial sobre [maquetar un esquema en la interfaz de usuario](../../tutorials/create-schema-ui.md) para familiarizarse con las diversas funcionalidades de [!DNL Schema Editor].
 
@@ -72,7 +72,7 @@ Una vez que haya terminado de configurar el campo, seleccione **[!UICONTROL Apli
 
 ![La sección [!UICONTROL Propiedades de campo] del Editor de esquemas está resaltada.](../../images/ui/fields/overview/field-details.png)
 
-El lienzo se actualiza para mostrar el campo recién agregado, ubicado dentro de un objeto que tiene un espacio de nombres con respecto a su ID de inquilino único (mostrado como `_tenantId` en el ejemplo siguiente). Todos los campos personalizados que se agregan a un esquema se colocan automáticamente dentro de este espacio de nombres para evitar conflictos con otros campos de clases y grupos de campos proporcionados por el Adobe. El carril derecho ahora enumera la ruta del campo además de sus otras propiedades.
+El lienzo se actualiza para mostrar el campo recién agregado, ubicado dentro de un objeto que tiene un espacio de nombres con respecto a su ID de inquilino único (mostrado como `_tenantId` en el ejemplo siguiente). Todos los campos personalizados que se agregan a un esquema se colocan automáticamente dentro de este espacio de nombres para evitar conflictos con otros campos de clases y grupos de campos proporcionados por Adobe. El carril derecho ahora enumera la ruta del campo además de sus otras propiedades.
 
 ![Se resalta un nuevo campo en el diagrama de esquema y su ruta correspondiente en la sección [!UICONTROL Propiedades del campo].](../../images/ui/fields/overview/field-added.png)
 
@@ -102,7 +102,7 @@ Al definir un nuevo campo, pueden aparecer opciones de configuración adicionale
 
 ## Tipos de campo especiales {#special}
 
-El carril derecho proporciona varias casillas de verificación para designar funciones especiales para el campo seleccionado. Los casos de uso de algunas de estas opciones implican consideraciones importantes sobre su estrategia de modelado de datos y cómo desea utilizar los servicios de Platform secundarios.
+El carril derecho proporciona varias casillas de verificación para designar funciones especiales para el campo seleccionado. Los casos de uso de algunas de estas opciones implican consideraciones importantes sobre su estrategia de modelado de datos y cómo desea utilizar los servicios de Experience Platform descendentes.
 
 Para obtener más información sobre estos tipos especiales, consulte la siguiente documentación:
 

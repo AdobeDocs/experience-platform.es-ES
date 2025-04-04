@@ -2,9 +2,9 @@
 title: Información general sobre la extensión de Adobe Media Analytics para audio y vídeo
 description: Obtenga información acerca de la extensión de etiquetas de Adobe Media Analytics para audio y vídeo en Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '950'
 ht-degree: 96%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta documentación para obtener información sobre la instalación, configuración y implementación de la extensión de audio y vídeo de Adobe Media Analytics (extensión Media Analytics). Se incluyen las opciones disponibles al utilizar esta extensión para generar una regla, así como ejemplos y vínculos a muestras.
 
@@ -178,7 +178,7 @@ La extensión MA expone los módulos compartidos de `get-instance` y `media-hear
 
 >[!NOTE]
 >
->**Prueba:** En esta versión, para probar la extensión debe cargarla en [Platform](../../../extension-dev/submit/upload-and-test.md), donde tiene acceso a todas las extensiones dependientes.
+>**Pruebas:** En esta versión, para probar la extensión debe cargarla en [Experience Platform](../../../extension-dev/submit/upload-and-test.md), donde tiene acceso a todas las extensiones dependientes.
 
 
 <!--

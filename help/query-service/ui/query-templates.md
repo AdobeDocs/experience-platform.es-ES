@@ -1,10 +1,10 @@
 ---
 title: Plantillas de consulta
-description: Las plantillas de consulta son consultas SQL guardadas reutilizables que otros usuarios pueden reutilizar para ahorrar tiempo y esfuerzo. Se pueden crear mediante el Editor de consultas o la API del servicio de consultas y están disponibles para su uso en todos los conjuntos de datos del Experience Platform.
+description: Las plantillas de consulta son consultas SQL guardadas reutilizables que otros usuarios pueden reutilizar para ahorrar tiempo y esfuerzo. Se pueden crear mediante el Editor de consultas o la API del servicio de consultas y están disponibles para su uso en todos los conjuntos de datos de Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ Este documento proporciona la información necesaria para crear plantillas de co
 
 ## Requisitos previos
 
-Debe tener el permiso [!UICONTROL Administrar consultas] habilitado para acceder al Editor de consultas y ver el panel de consultas dentro de la interfaz de usuario de Platform. El permiso está habilitado a través del Adobe [Admin Console](https://adminconsole.adobe.com/). Póngase en contacto con el administrador de su organización si no tiene privilegios de administrador para habilitar este permiso. Consulte la documentación de control de acceso para obtener [instrucciones completas sobre cómo agregar permisos a través del Admin Console](../../access-control/home.md).
+Debe tener el permiso [!UICONTROL Administrar consultas] habilitado para acceder al Editor de consultas y ver el panel de consultas en la interfaz de usuario de Experience Platform. El permiso se habilita a través de Adobe [Admin Console](https://adminconsole.adobe.com/). Póngase en contacto con el administrador de su organización si no tiene privilegios de administrador para habilitar este permiso. Consulte la documentación de control de acceso para obtener [instrucciones completas sobre cómo agregar permisos a través de Admin Console](../../access-control/home.md).
 
 ## Creación de una plantilla de consulta
 
-Puede crear plantillas de consulta mediante dos métodos: realizando una solicitud de POST al extremo `query-templates` de la API del servicio de consultas o escribiendo, nombrando y guardando una consulta a través del Editor de consultas.
+Puede crear plantillas de consulta mediante dos métodos, ya sea realizando una petición POST al extremo `query-templates` de la API del servicio de consultas o escribiendo, nombrando y guardando una consulta a través del Editor de consultas.
 
 ### Utilice el Editor de consultas para crear y guardar una consulta como plantilla
 
@@ -33,7 +33,7 @@ Consulte la documentación para obtener instrucciones sobre cómo usar el Editor
 
 ## Examinar plantillas de consulta {#browse}
 
-En el área de trabajo Consultas de la interfaz de usuario de Platform, seleccione **[!UICONTROL Plantillas]** para mostrar la lista de consultas guardadas disponibles.
+En el área de trabajo Consultas de la IU de Experience Platform, seleccione **[!UICONTROL Plantillas]** para mostrar la lista de consultas guardadas disponibles.
 
 ![Espacio de trabajo de consultas con la ficha Plantillas resaltada.](../images/ui/query-templates/query-templates.png)
 
@@ -55,7 +55,7 @@ Consulte la documentación para obtener instrucciones sobre [cómo crear una pla
 
 >[!NOTE]
 >
->Las plantillas creadas mediante la API también están visibles en la pestaña Plantillas del servicio de consulta de la IU de Platform.
+>Las plantillas creadas mediante la API también están visibles en la pestaña Plantillas del servicio de consulta de la interfaz de usuario de Experience Platform.
 
 ## Pasos siguientes
 

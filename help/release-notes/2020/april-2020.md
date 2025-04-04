@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: notas de la versión;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '985'
-ht-degree: 15%
+ht-degree: 28%
 
 ---
 
@@ -22,7 +22,7 @@ Nuevas funciones de Adobe Experience Platform:
 
 Actualizaciones de funciones existentes:
 * [[!DNL Experience Data Model (XDM)]](#xdm)
-* [Control de datos](#governance)
+* [Gobernanza de datos](#governance)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Privacy Service]](#privacy)
 * [[!DNL Sources]](#sources)
@@ -46,7 +46,7 @@ Para obtener más información sobre [!DNL Intelligent Services] y lo que puede 
 
 ## Sistema [!DNL Experience Data Model] (XDM) {#xdm}
 
-La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
+La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 
 XDM es una especificación documentada públicamente y diseñada para mejorar la potencia de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación para comunicarse con servicios en Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común que ofrece perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
 
@@ -68,7 +68,7 @@ XDM es una especificación documentada públicamente y diseñada para mejorar la
 
 ## Control de datos {#governance}
 
-La gobernanza de datos de Adobe Experience Platform es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de datos. Desempeña un papel clave en [!DNL Experience Platform] en varios niveles, incluidos la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de acceso a datos y el control de acceso a los datos para las acciones de marketing.
+La gobernanza de datos de Adobe Experience Platform es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de datos. Desempeña una función clave dentro de [!DNL Experience Platform] en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de acceso a los datos y el control de acceso de los datos para las acciones de marketing.
 
 Para empezar a usar el control de datos, es necesario comprender a fondo las regulaciones, las obligaciones contractuales y las políticas corporativas que se aplican a los datos de sus clientes. A partir de ahí, los datos se pueden clasificar aplicando las etiquetas de uso de datos adecuadas y su uso se puede controlar mediante la definición de políticas de uso de datos.
 
@@ -89,7 +89,7 @@ Para obtener más información, consulte [Resumen de control de datos](../../dat
 
 ## Destinos {#destinations}
 
-En [Real-time Customer Data Platform](../../rtcdp/overview.md), los destinos son integraciones prediseñadas con plataformas de destino que activan los datos para esos socios de una manera perfecta.
+En [Real-Time Customer Data Platform](../../rtcdp/overview.md), los destinos son integraciones prediseñadas con plataformas de destino que activan los datos para esos socios de una manera perfecta.
 
 **Nuevos destinos**
 
@@ -98,31 +98,31 @@ Real-Time CDP ahora admite la activación de datos en más de cincuenta extensio
 | Documentación | Descripción |
 |--- | ---|
 | [Tipos y categorías de destino](../../destinations/destination-types.md) | En este artículo se explica la diferencia entre conexiones y extensiones en la interfaz de Real-Time CDP y se recomienda cuándo utilizar cada uno de estos destinos. |
-| [extensiones de Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | En esta página se explica cuáles son las extensiones de [!DNL Launch], se enumeran los casos de uso para utilizarlas y se proporcionan vínculos a la documentación de cada extensión de [!DNL Launch] en Real-Time CDP. |
+| [Extensiones de Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | En esta página se explica cuáles son las extensiones de [!DNL Launch], se enumeran los casos de uso para utilizarlas y se proporcionan vínculos a la documentación de cada extensión de [!DNL Launch] en Real-Time CDP. |
 
 Para obtener más información, consulte [Información general sobre destinos](../../destinations/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
-Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derecho de acceder o eliminar sus datos personales de sus almacenes de datos si así lo solicitan. Adobe Experience Platform [!DNL Privacy Service] proporciona una API RESTful y una interfaz de usuario para ayudarle a administrar estas solicitudes de datos de sus clientes. Con [!DNL Privacy Service], puede enviar solicitudes para acceder a datos de clientes privados o personales y eliminarlos de aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las regulaciones de privacidad legales y organizativas.
+Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derecho de acceder o eliminar sus datos personales de sus almacenes de datos si así lo solicitan. Adobe Experience Platform [!DNL Privacy Service] proporciona una API de RESTful y una interfaz de usuario para ayudarle a administrar estas solicitudes de datos de los clientes. Con [!DNL Privacy Service], puede enviar solicitudes para acceder a datos personales de clientes y eliminarlos de aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las regulaciones de privacidad legales y organizativas.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con PDPA | Ahora, las solicitudes de privacidad se pueden crear y rastrear según la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la matriz `regulation` acepta el valor &quot;pdpa_tha&quot;. |
-| Tipos de área de nombres en la IU | Ahora puede especificar diferentes tipos de área de nombres en el Generador de solicitudes en la interfaz de usuario de [!DNL Privacy Service]. Consulte la [guía del usuario](../../privacy-service/ui/user-guide.md) para obtener más información. |
-| Obsolescencia del punto final anterior | El extremo de API anterior (`data/privacy/gdpr`) se ha quedado obsoleto. |
+| Compatibilidad con PDPA | Ahora, las solicitudes de privacidad se pueden crear y rastrear según la Ley de Protección de Datos Personales (PDPA) en Tailandia. Al realizar solicitudes de privacidad en la API, la matriz de `regulation` acepta el valor “pdpa_tha”. |
+| Tipos de espacio de nombres en la IU | Ahora puede especificar diferentes tipos de espacio de nombres en el generador de solicitudes en la interfaz de usuario de [!DNL Privacy Service]. Si desea obtener más información, consulte la [Guía del usuario](../../privacy-service/ui/user-guide.md). |
+| Obsolescencia del punto final anterior | El punto final de API anterior (`data/privacy/gdpr`) ha quedado obsoleto. |
 
 Problemas conocidos
 
 * Ninguna
 
-Para obtener más información acerca de [!DNL Privacy Service], comience por leer la [descripción general del Privacy Service](../../privacy-service/home.md).
+Para obtener más información acerca de [!DNL Privacy Service], comience por leer la [descripción general de Privacy Service](../../privacy-service/home.md).
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Experience Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

@@ -3,9 +3,9 @@ title: Conectar  [!DNL Google BigQuery] A Experience Platform Mediante La Interf
 description: Obtenga información sobre cómo crear una conexión de origen de Google Big Query mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,4 @@ El resto del flujo de trabajo sigue siendo el mismo. La única advertencia es qu
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Google BigQuery]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en la plataforma](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Google BigQuery]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/databases.md).

@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Comparación de Edge Network y hub
+title: Comparación entre Edge Network y hub
 description: Obtenga información acerca de las diferentes rutas de procesamiento disponibles para usar en Adobe Experience Platform.
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 2%
+source-wordcount: '713'
+ht-degree: 3%
 
 ---
 
+# Comparación entre Edge Network y hub
 
-# Comparación de Edge Network y hub
-
-Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Puede utilizar Experience Platform para centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas. Como resultado, Platform tiene varias formas de procesar los datos, lo que le permite evaluarlos de la mejor manera posible.
+Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Puede utilizar Experience Platform para centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas. Como resultado, Experience Platform tiene varias formas de procesar los datos, lo que le permite evaluarlos de la mejor manera posible.
 
 ## Tipos de servidor
 
-En Platform, los datos se pueden procesar en dos rutas diferentes: Adobe Experience Platform hub para flujos de trabajo por lotes y de flujo continuo, y Edge Network para experiencias en tiempo real.
+En Experience Platform, los datos se pueden procesar por dos rutas diferentes: Adobe Experience Platform hub para flujos de trabajo por lotes y de flujo continuo, y Edge Network para experiencias en tiempo real.
 
 ### concentrador de Adobe Experience Platform
 

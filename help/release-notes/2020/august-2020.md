@@ -1,14 +1,14 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2020
-description: Notas de la versión de agosto de 2020 de Adobe Experience Platform.
+description: Las notas de la versión de agosto de 2020 de Adobe Experience Platform.
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '576'
-ht-degree: 23%
+ht-degree: 26%
 
 ---
 
@@ -25,7 +25,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Science Workspace] utiliza aprendizaje automático e inteligencia artificial para obtener información de sus datos. Integrado en Adobe Experience Platform, [!DNL Data Science Workspace] le ayuda a hacer predicciones utilizando sus recursos de contenido y datos en las soluciones de Adobe.
+[!DNL Data Science Workspace] utiliza aprendizaje automático e inteligencia artificial para obtener información de sus datos. Integrado en Adobe Experience Platform, [!DNL Data Science Workspace] le ayuda a hacer predicciones utilizando sus activos de contenido y datos en todas las soluciones de Adobe.
 
 **Nuevas funciones**
 
@@ -37,7 +37,7 @@ Para obtener más información sobre [!DNL JupyterLab], consulte la [[!DNL Jupyt
 
 ## Destinos {#destinations}
 
-En [Real-time Customer Data Platform](../../rtcdp/overview.md), los destinos son integraciones prediseñadas con plataformas de destino que activan los datos para esos socios de una manera perfecta.
+En [Real-Time Customer Data Platform](../../rtcdp/overview.md), los destinos son integraciones prediseñadas con plataformas de destino que activan los datos para esos socios de una manera perfecta.
 
 **Nuevos destinos**
 
@@ -68,7 +68,7 @@ Para obtener más información sobre [!DNL Real-Time CDP], consulte la [[!DNL Re
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo tiempo, estructurarlos, etiquetarlos y mejorarlos mediante los servicios de [!DNL Experience Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 [!DNL Experience Platform] proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

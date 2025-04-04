@@ -2,10 +2,10 @@
 title: Cargar e implementar pruebas de extremo a extremo para una extensión
 description: Obtenga información sobre cómo validar, cargar y probar la extensión en Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 86%
+source-wordcount: '2347'
+ht-degree: 84%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 86%
 >
 >Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Para probar las extensiones de etiquetas en Adobe Experience Platform, utilice la API de etiquetas o las herramientas de línea de comandos para cargar los paquetes de extensiones. A continuación, utilice la IU de Platform o la IU de recopilación de datos para instalar el paquete de extensión en una propiedad y ejercer sus funcionalidades dentro de una biblioteca de etiquetas y compilarlo.
+Para probar las extensiones de etiquetas en Adobe Experience Platform, utilice la API de etiquetas o las herramientas de línea de comandos para cargar los paquetes de extensiones. A continuación, utilice la IU de Experience Platform o la IU de recopilación de datos para instalar el paquete de extensión en una propiedad y ejercer sus funcionalidades dentro de una biblioteca de etiquetas y compilarlo.
 
 Este documento explica cómo implementar pruebas de extremo a extremo para la extensión.
 
@@ -114,7 +114,7 @@ Para añadir la extensión, seleccione la pestaña **Catálogo**
 
 ![](../images/getting-started/catalog.png)
 
-El catálogo muestra los iconos de tarjeta de cada extensión disponible. Si la extensión no se muestra en el catálogo, asegúrese de completar los pasos anteriores en las secciones Configuración de la Consola de administración de Adobe y Creación del paquete de extensión. El paquete de extensión también puede aparecer como Pendiente si Platform no ha completado el procesamiento inicial.
+El catálogo muestra los iconos de tarjeta de cada extensión disponible. Si la extensión no se muestra en el catálogo, asegúrese de completar los pasos anteriores en las secciones Configuración de la Consola de administración de Adobe y Creación del paquete de extensión. El paquete de extensión también puede aparecer como Pendiente si Experience Platform no ha completado el procesamiento inicial.
 
 Si ha seguido los pasos anteriores y aún no ve un paquete de extensión Pendiente o Fallido en el catálogo, debe comprobar el estado del paquete de extensión directamente mediante la API. Para obtener información sobre cómo realizar la llamada de API adecuada, lea [Buscar un ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) en la documentación de la API.
 
@@ -146,7 +146,7 @@ Las extensiones pueden definir tipos de elementos de datos si es necesario para 
 
 Cuando un usuario selecciona la extensión desde el menú desplegable **Extensión**, la lista desplegable **Tipo de elemento de datos** se rellena con cualquier tipo de elemento de datos que proporciona la extensión. A continuación, el usuario puede asignar cada elemento de datos a su valor de origen. Los elementos de datos se pueden utilizar cuando se generan reglas en el Evento de cambio de elemento de datos o en el Evento de código personalizado para activar una regla que se va a ejecutar. También se puede utilizar un elemento de datos en la condición de elemento de datos u otras condiciones, excepciones o acciones de una regla.
 
-Una vez creado el elemento de datos (con la asignación configurada), los usuarios pueden hacer referencia a los datos de origen simplemente haciendo referencia al elemento de datos. Si el origen del valor cambia alguna vez (rediseños del sitio, etc.) Los usuarios de solo deberán actualizar la asignación una vez en la interfaz de usuario y todos los elementos de datos recibirán automáticamente el nuevo valor de origen.
+Una vez creado el elemento de datos (con la asignación configurada), los usuarios pueden hacer referencia a los datos de origen simplemente haciendo referencia al elemento de datos. Si el origen del valor cambia alguna vez (rediseños del sitio, etc.), los usuarios solo deberán actualizar la asignación una vez en la interfaz de usuario y todos los elementos de datos recibirán automáticamente el nuevo valor de origen.
 
 ### Reglas
 

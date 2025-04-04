@@ -2,10 +2,10 @@
 title: Guía de la API de Reactor
 description: La API de Reactor permite a los desarrolladores administrar mediante programación todos los recursos para etiquetas en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 94%
+source-wordcount: '1080'
+ht-degree: 92%
 
 ---
 
@@ -99,7 +99,7 @@ Consulte la [guía de extremo de eventos de auditoría](./endpoints/audit-events
 
 ## Llamadas
 
-Una llamada de retorno es un mensaje que Platform envía a un host de URL cada vez que se genera un nuevo evento de auditoría. Consulte la [guía de extremo de llamadas de retorno](./endpoints/callbacks.md) para obtener información sobre cómo administrar las llamadas de retorno en la API.
+Una llamada de retorno es un mensaje que Experience Platform envía a un host de URL cada vez que se genera un nuevo evento de auditoría. Consulte la [guía de extremo de llamadas de retorno](./endpoints/callbacks.md) para obtener información sobre cómo administrar las llamadas de retorno en la API.
 
 ## Notas
 

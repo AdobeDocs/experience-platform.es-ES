@@ -2,9 +2,9 @@
 title: Prácticas recomendadas para la administración avanzada del ciclo de vida de datos
 description: Aprenda a administrar de forma eficaz las solicitudes de higiene de los datos en Adobe Experience Platform mediante la interfaz de usuario avanzada de administración del ciclo vital de datos y la API de higiene de datos. Esta guía describe las prácticas recomendadas, como maximizar identidades por solicitud, especificar conjuntos de datos individuales y tener en cuenta la limitación de API para evitar ralentizaciones. El documento incluye instrucciones para configurar la limpieza automática de conjuntos de datos, cómo monitorizar los estados de las órdenes de trabajo y métodos de recuperación de respuestas detallados. Siga estas prácticas para optimizar el procesamiento de las solicitudes y los tiempos de respuesta.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Esta guía requiere una comprensión práctica del espacio de trabajo del ciclo 
 
 ## Directrices de creación de órdenes de trabajo {#work-order-creation-guidelines}
 
-Puede usar el extremo `/workorder` en la API de higiene de datos para administrar mediante programación las solicitudes de eliminación de registros en el Experience Platform. Con este punto de conexión, puede crear una solicitud de eliminación, comprobar su estado o actualizar una solicitud existente. Consulte el [documento de extremo de orden de trabajo](./api/workorder.md) para obtener información sobre cómo realizar estas acciones mediante la API.
+Puede usar el extremo `/workorder` en la API de higiene de datos para administrar mediante programación las solicitudes de eliminación de registros en Experience Platform. Con este punto de conexión, puede crear una solicitud de eliminación, comprobar su estado o actualizar una solicitud existente. Consulte el [documento de extremo de orden de trabajo](./api/workorder.md) para obtener información sobre cómo realizar estas acciones mediante la API.
 
 >[!TIP]
 >
@@ -45,9 +45,9 @@ Configure la limpieza automática de conjuntos de datos para datos de corta dura
 
 ## Supervisar el estado de caducidad del orden de trabajo y el conjunto de datos {#monitor}
 
-Puede supervisar de manera eficaz el progreso de la administración del ciclo de vida de los datos mediante **Eventos de E/S**. Un evento de E/S es un mecanismo para recibir notificaciones en tiempo real sobre cambios o actualizaciones en varios servicios dentro de Platform.
+Puede supervisar de manera eficaz el progreso de la administración del ciclo de vida de los datos mediante **Eventos de E/S**. Un evento de E/S es un mecanismo para recibir notificaciones en tiempo real sobre cambios o actualizaciones en varios servicios dentro de Experience Platform.
 
-Las alertas de eventos de E/S se pueden enviar a un webhook configurado para habilitar la automatización de la monitorización de actividades. Para recibir alertas a través de un webhook, debe registrar su webhook para recibir alertas de Platform en Adobe Developer Console. Consulte la guía de [suscripción a notificaciones de eventos de Adobe I/O](../observability/alerts/subscribe.md) para obtener instrucciones detalladas.
+Las alertas de eventos de E/S se pueden enviar a un webhook configurado para habilitar la automatización de la monitorización de actividades. Para recibir alertas a través de un webhook, debe registrar su webhook para recibir alertas de Experience Platform en Adobe Developer Console. Consulte la guía de [suscripción a notificaciones de eventos de Adobe I/O](../observability/alerts/subscribe.md) para obtener instrucciones detalladas.
 
 Utilice los siguientes métodos y directrices del ciclo vital de datos para recuperar y supervisar de forma eficaz los estados de los trabajos:
 
@@ -63,7 +63,7 @@ Para supervisar de forma eficaz el progreso de las tareas del ciclo vital de dat
 
 Para obtener información detallada sobre órdenes de trabajo individuales, utilice el siguiente método:
 
-- Realice una solicitud de GET al extremo `/workorder/{work_order_id}` para obtener datos de respuesta detallados.
+- Realice una petición GET al extremo `/workorder/{work_order_id}` para obtener datos de respuesta detallados.
 - Recupere respuestas y mensajes de éxito específicos del producto.
 - Evite utilizar este método para las actividades de sondeo regulares.
 

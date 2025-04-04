@@ -2,9 +2,9 @@
 title: Crear audiencias con SQL
 description: Aprenda a utilizar la extensión de audiencia SQL en el Distiller de datos de Adobe Experience Platform para crear, administrar y publicar audiencias mediante comandos SQL. Esta guía cubre todos los aspectos del ciclo vital de la audiencia, incluida la creación, actualización y eliminación de perfiles, y el uso de definiciones de audiencia basadas en datos para dirigirse a destinos basados en archivos.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Utilice la extensión de audiencia SQL para crear audiencias con datos del lago 
 
 El uso de esta extensión SQL mejora la capacidad de crear audiencias, ya que no necesita datos sin procesar en los perfiles al definir segmentos de audiencia. Las audiencias creadas con este método se registran automáticamente en el espacio de trabajo de Audience, donde puede segmentarlas a destinos basados en archivos.
 
-![Infografía que muestra el flujo de trabajo de la extensión de audiencia SQL. Las fases incluyen: generar audiencias con el servicio de consulta mediante comandos SQL, administrarlas en la interfaz de usuario de Platform para activarlas en destinos basados en archivos.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![Infografía que muestra el flujo de trabajo de la extensión de audiencia SQL. Las fases incluyen: generar audiencias con el servicio de consultas mediante comandos SQL, administrarlas en la interfaz de usuario de Experience Platform para activarlas en destinos basados en archivos.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 Este documento explica cómo utilizar la extensión de audiencia SQL en Data Distiller de Adobe Experience Platform para crear, administrar y publicar audiencias mediante comandos SQL.
 
@@ -203,7 +203,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Registro y disponibilidad automáticos de audiencias {#registration-and-availability}
 
-Las audiencias creadas con la extensión SQL se registran automáticamente con el Distiller de datos [!UICONTROL Origin] en Audience Workspace. Una vez registradas, estas audiencias están disponibles para la segmentación en destinos basados en archivos, lo que mejora la segmentación y las estrategias de segmentación. Este proceso no requiere ninguna configuración adicional, lo que optimiza la gestión de público. Para obtener más información sobre cómo ver, administrar y crear audiencias en la interfaz de usuario de Platform, consulte la [descripción general del portal de audiencias](../../segmentation/ui/audience-portal.md).
+Las audiencias creadas con la extensión SQL se registran automáticamente con el Distiller de datos [!UICONTROL Origin] en Audience Workspace. Una vez registradas, estas audiencias están disponibles para la segmentación en destinos basados en archivos, lo que mejora la segmentación y las estrategias de segmentación. Este proceso no requiere ninguna configuración adicional, lo que optimiza la gestión de público. Para obtener más información sobre cómo ver, administrar y crear audiencias en la interfaz de usuario de Experience Platform, consulte la [descripción general del portal de audiencias](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -289,9 +289,9 @@ Sí, las audiencias de Data Distiller se eliminan cada 30 días, ya que son audi
 
 Después de leer este documento, ha aprendido a utilizar la extensión de audiencia SQL en Data Distiller para crear, administrar y publicar audiencias de forma eficaz mediante comandos SQL. Ahora puede personalizar las definiciones de audiencias en función de sus requisitos empresariales únicos y activarlas en varios destinos, optimizando las estrategias de marketing y las decisiones basadas en datos.
 
-A continuación, puede leer la siguiente documentación para desarrollar y optimizar aún más sus estrategias de gestión de público de Platform:
+A continuación, puede leer la siguiente documentación para desarrollar y optimizar aún más sus estrategias de gestión de público de Experience Platform:
 
-- **Explorar la evaluación de audiencias**: Obtenga información acerca de los [métodos de evaluación de audiencias en Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): segmentación de streaming para actualizaciones en tiempo real, segmentación por lotes para procesamiento programado o bajo demanda y segmentación de Edge para evaluación instantánea en el Edge Network.
-- **Integrar con destinos**: lea la guía sobre cómo [exportar archivos bajo demanda a destinos por lotes](../../destinations/ui/export-file-now.md) mediante la interfaz de usuario de destinos de Platform.
+- **Explorar la evaluación de audiencias**: Obtenga información acerca de los [métodos de evaluación de audiencias en Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): segmentación de streaming para actualizaciones en tiempo real, segmentación por lotes para procesamiento programado o bajo demanda y segmentación de Edge para evaluación instantánea en Edge Network.
+- **Integrar con destinos**: lea la guía sobre cómo [exportar archivos bajo demanda a destinos por lotes](../../destinations/ui/export-file-now.md) mediante la interfaz de usuario de destinos de Experience Platform.
 - **Revisar rendimiento de audiencias**: Analice el rendimiento de las audiencias definidas por SQL en diferentes canales. Utilice perspectivas de datos para ajustar y mejorar las definiciones de audiencia y las estrategias de segmentación. Lea el documento sobre [Información de la audiencia](../../dashboards/insights/audiences.md) para obtener información sobre cómo acceder y adaptar las consultas SQL para obtener información de la audiencia en Adobe Real-Time CDP. A continuación, puede crear sus propias perspectivas y transformar los datos sin procesar en información procesable personalizando el panel Audiencias para visualizar y utilizar de forma eficaz estas perspectivas y mejorar la toma de decisiones.
 

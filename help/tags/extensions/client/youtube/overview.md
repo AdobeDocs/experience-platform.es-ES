@@ -2,10 +2,10 @@
 title: Información general sobre la extensión YouTube Video Tracking
 description: Obtenga información sobre la extensión de etiqueta de seguimiento de vídeo de YouTube en Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 81%
+source-wordcount: '897'
+ht-degree: 78%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 **Requisitos previos**
 
@@ -23,7 +23,7 @@ Cada propiedad de etiqueta de Adobe Experience Platform requiere que se instalen
 * Servicio de ID de visitante de Experience Cloud
 * Extensión principal
 
-Use el [&quot;Incrustar un reproductor con una etiqueta \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) fragmento de código de los documentos de desarrollador de Google en el HTML de cada página web en la que se va a procesar un reproductor de vídeo.
+Use el [&quot;Incrustar un reproductor con una etiqueta \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) fragmento de código de los documentos de desarrollador de Google en la HTML de cada página web en la que se va a procesar un reproductor de vídeo.
 
 La versión 2.0.1 de esta extensión admite la incrustación de uno o más vídeos de YouTube en una sola página web mediante la inserción de un atributo `id` con un valor único en la etiqueta iframe, y anexando `enablejsapi=1` y `rel=0` al final del valor del atributo `src` si no se ha incluido ya, por ejemplo. Por ejemplo:
 
@@ -98,7 +98,7 @@ Se deben incluir los siguientes objetos de extensión de vídeo.
 
 >[!TIP]
 > 
->En el caso de las implementaciones en las que no se pueden usar varias eVars o props por elemento de vídeo, los valores de los elementos de datos se pueden concatenar en Platform, analizarse en informes de clasificación con la herramienta Generador de reglas de clasificación, como se explica en [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es), y, luego, aplicarse como segmento en Analysis Workspace.
+>En el caso de las implementaciones en las que no se pueden usar varios eVars o props para cada elemento de vídeo, los valores de los elementos de datos se pueden concatenar en Experience Platform, analizarse en informes de clasificación con la herramienta Generador de reglas de clasificación, como se explica en [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es) y, luego, aplicarse como un segmento en Analysis Workspace.
 
 Para concatenar valores de información del vídeo, cree un nuevo elemento de datos denominado Metadatos de vídeo y prográmelo para extraer todos los elementos de datos de vídeo (antes mencionados) y combinarlos. Por ejemplo:
 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Para obtener más información sobre cómo crear y aprovechar elementos de datos de forma eficaz en Platform, lea la documentación de [elementos de datos](../../../ui/managing-resources/data-elements.md).
+Para obtener más información sobre cómo crear y aprovechar los elementos de datos de forma eficaz en Experience Platform, lea la documentación de [elementos de datos](../../../ui/managing-resources/data-elements.md).

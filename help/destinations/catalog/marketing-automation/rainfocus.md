@@ -2,19 +2,19 @@
 title: Perfiles de los asistentes de RainFocus
 description: Aprenda a utilizar el conector de destino Perfiles de asistente de RainFocus para sincronizar perfiles de audiencia con el Perfil de asistente global de RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
-source-git-commit: a3dcf49d3ed9afacd3ffef10d6f280c71ebdf584
+exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1000'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
-
 
 # Perfiles de los asistentes de RainFocus {#rainfocus-destination}
 
 ## Información general {#overview}
 
-Utilice el destino [!DNL RainFocus Attendee Profiles] para transmitir perfiles de clientes de Adobe Experience Platform a la plataforma [!DNL RainFocus] con el fin de crear y actualizar perfiles de asistentes.
+Utilice el destino de [!DNL RainFocus Attendee Profiles] para transmitir perfiles de clientes de Adobe Experience Platform a la plataforma [!DNL RainFocus] con el fin de crear y actualizar perfiles de asistentes.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ También debe tener un identificador de **código de evento** de RainFocus al qu
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 
 {style="table-layout:auto"}
 
@@ -58,8 +58,8 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/overview.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: Elementos de datos
 description: Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1615'
 ht-degree: 89%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
 
@@ -238,7 +238,7 @@ El almacenamiento de sesión es similar al almacenamiento local, excepto que los
 
 ### Comportamiento de los visitantes
 
-De manera similar a Información de página, este elemento de datos utiliza tipos de comportamiento comunes para enriquecer la lógica dentro de las reglas u otras soluciones de la plataforma.
+De forma similar a Información de página, este elemento de datos utiliza tipos de comportamiento comunes para enriquecer la lógica dentro de las reglas u otras soluciones de Experience Platform.
 
 Seleccione uno de los siguientes atributos de comportamiento del visitante:
 

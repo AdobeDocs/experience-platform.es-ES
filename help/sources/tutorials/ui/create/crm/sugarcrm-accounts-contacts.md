@@ -2,9 +2,9 @@
 title: Crear una conexión de origen de contactos y cuentas de SugarCRM en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de cuentas y contactos de Sugar CRM mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '779'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Si ya tiene una cuenta de [!DNL SugarCRM] válida, puede omitir el resto de este
 
 ### Recopilar credenciales necesarias
 
-Para conectar [!DNL SugarCRM Accounts & Contacts] a Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para conectar [!DNL SugarCRM Accounts & Contacts] a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -34,9 +34,9 @@ Para conectar [!DNL SugarCRM Accounts & Contacts] a Platform, debe proporcionar 
 | `Username` | Su nombre de usuario de cuenta de desarrollador de SugarCRM. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Contraseña de su cuenta de desarrollador de SugarCRM. | `123456789` |
 
-### Creación de un esquema de Platform
+### Creación de un esquema de Experience Platform
 
-Antes de crear una conexión de origen de [!DNL SugarCRM], también debe asegurarse de crear primero un esquema de Platform para utilizarlo en el origen. Consulte el tutorial de [creación de un esquema de Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
+Antes de crear una conexión de origen de [!DNL SugarCRM], también debe asegurarse de crear primero un esquema de Experience Platform para utilizarlo en el origen. Consulte el tutorial de [creación de un esquema de Experience Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
 
 [!DNL SugarCRM Accounts & Contacts] admite varias API. Esto significa que debe crear un esquema independiente, según el tipo de objeto que esté aprovechando. Consulte los ejemplos siguientes para ver esquemas de cuentas y contactos:
 
@@ -44,23 +44,23 @@ Antes de crear una conexión de origen de [!DNL SugarCRM], también debe asegura
 
 >[!TAB Cuentas]
 
-![Captura de pantalla de la IU de Platform que muestra un esquema de ejemplo para las cuentas](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
+![Captura de pantalla de la IU de Experience Platform que muestra un esquema de ejemplo para las cuentas](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
 
 >[!TAB Contactos]
 
-![Captura de pantalla de IU de Platform que muestra un esquema de ejemplo para Contactos](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
+![Captura de pantalla de la IU de Experience Platform que muestra un esquema de ejemplo para Contactos](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
 
 >[!ENDTABS]
 
 ## Conectar su cuenta de [!DNL SugarCRM Accounts & Contacts]
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría *CRM*, seleccione **[!UICONTROL Cuentas y contactos de SugarCRM]** y luego seleccione **[!UICONTROL Agregar datos]**.
 
-![Captura de pantalla de la interfaz de usuario de Platform para el catálogo con la tarjeta SugarCRM Accounts &amp; Contacts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform para el catálogo con la tarjeta Contactos y cuentas de SugarCRM](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 Aparecerá la página **[!UICONTROL Conectar cuenta y contactos de SugarCRM]**. En esta página, puede usar credenciales nuevas o existentes.
 
@@ -68,17 +68,17 @@ Aparecerá la página **[!UICONTROL Conectar cuenta y contactos de SugarCRM]**. 
 
 Para usar una cuenta existente, seleccione la cuenta de [!DNL SugarCRM Accounts & Contacts] con la que desee crear un nuevo flujo de datos y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![Captura de pantalla de la IU de Platform para conectar cuentas y contactos de SugarCRM con una cuenta existente](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform para conectar cuentas y contactos de SugarCRM con una cuenta existente](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### Nueva cuenta
 
 Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
-![Captura de pantalla de la IU de Platform para conectar cuentas y contactos de SugarCRM con una nueva cuenta](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+![Captura de pantalla de la IU de Experience Platform para conectar cuentas y contactos de SugarCRM con una nueva cuenta](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### Seleccionar datos
 
-Finalmente, debe seleccionar el tipo de objeto que desea introducir en Platform.
+Finalmente, debe seleccionar el tipo de objeto que desea introducir en Experience Platform.
 
 | Tipo de objeto | Descripción |
 | --- | --- |
@@ -89,17 +89,17 @@ Finalmente, debe seleccionar el tipo de objeto que desea introducir en Platform.
 
 >[!TAB Cuentas]
 
-![Captura de pantalla de la IU de la plataforma para SugarCRM Accounts &amp; Contacts que muestra la configuración con la opción Cuenta seleccionada](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform para cuentas y contactos de SugarCRM que muestran la configuración con la opción de cuenta seleccionada](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
 
 >[!TAB Contactos]
 
-![Captura de pantalla de la interfaz de usuario de Platform para SugarCRM Accounts &amp; Contacts que muestra la configuración con la opción Contacts seleccionada](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform para cuentas y contactos de SugarCRM que muestran la configuración con la opción Contactos seleccionada](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL SugarCRM Accounts & Contacts]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en la plataforma](../../dataflow/crm.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL SugarCRM Accounts & Contacts]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/crm.md).
 
 ## Recursos adicionales
 
@@ -113,7 +113,7 @@ Las velocidades de aceleración de API [!DNL SugarCRM] son de 90 llamadas por mi
 
 Para comprobar que ha configurado correctamente el origen y que se están ingiriendo los datos de [!DNL SugarCRM Accounts & Contacts], siga los pasos a continuación:
 
-* En la interfaz de usuario de Platform, seleccione **[!UICONTROL Ver flujos de datos]** junto al menú de tarjeta [!DNL SugarCRM Accounts & Contacts] en el catálogo de fuentes. A continuación, seleccione **[!UICONTROL Previsualizar conjunto de datos]** para verificar los datos ingeridos.
+* En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Ver flujos de datos]** junto al menú de tarjeta [!DNL SugarCRM Accounts & Contacts] en el catálogo de fuentes. A continuación, seleccione **[!UICONTROL Previsualizar conjunto de datos]** para verificar los datos ingeridos.
 
 * Según el tipo de objeto con el que esté trabajando, puede comprobar los datos agregados con los recuentos visibles en las siguientes páginas de [!DNL SugarMarket] cuentas o contactos:
 

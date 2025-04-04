@@ -1,16 +1,16 @@
 ---
-title: Uso de Offer Decisioning con Platform Web SDK
+title: Uso de Offer Decisioning con Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK puede entregar y procesar ofertas personalizadas administradas en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la IU o la API de Offer Decisioning.
-keywords: offer decisioning;toma de decisiones;Web SDK;Platform Web SDK;ofertas personalizadas;entregar ofertas;entrega de ofertas;personalización de ofertas;
+keywords: offer decisioning;toma de decisiones;Web SDK;Experience Platform Web SDK;ofertas personalizadas;entregar ofertas;entrega de ofertas;personalización de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '799'
 ht-degree: 3%
 
 ---
 
-# Uso de Offer Decisioning con Platform Web SDK
+# Uso de Offer Decisioning con Experience Platform Web SDK
 
 Adobe Experience Platform [!DNL Web SDK] puede entregar y procesar ofertas personalizadas que se administran en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario (IU) o las API de Offer Decisioning.
 
@@ -49,7 +49,7 @@ Es importante comprender la siguiente terminología al trabajar con Offer Decisi
 
 * **Flujos de datos:** Para obtener más información, lea la documentación de [flujos de datos](/help/datastreams/overview.md).
 
-* **Identidad**: para obtener más información, lea esta documentación que describe cómo [Platform Web SDK usa el servicio de identidad](../../identity/overview.md).
+* **Identidad**: para obtener más información, lea esta documentación que describe cómo [Experience Platform Web SDK usa el servicio de identidad](../../identity/overview.md).
 
 ## Habilitación de Offer Decisioning
 
@@ -82,13 +82,13 @@ Para habilitar Offer Decisioning, realice los siguientes pasos:
 
       1. [Creación de una propiedad de etiqueta](/help/tags/ui/administration/companies-and-properties.md)
       1. [Agregar el código incrustado](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Instale y configure la extensión de Platform Web SDK con la secuencia de datos que ha creado seleccionando la configuración en la lista desplegable &quot;Secuencia de datos&quot;. Consulte la documentación sobre [extensiones](/help/tags/ui/managing-resources/extensions/overview.md).
+      1. Instale y configure la extensión de Experience Platform Web SDK con la secuencia de datos que ha creado seleccionando la configuración en la lista desplegable &quot;Secuencia de datos&quot;. Consulte la documentación sobre [extensiones](/help/tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Cree los [elementos de datos](/help/tags/ui/managing-resources/data-elements.md) necesarios. Como mínimo, debe crear un mapa de identidad de Platform Web SDK y un elemento de datos de objeto XDM de Platform Web SDK.
+      1. Cree los [elementos de datos](/help/tags/ui/managing-resources/data-elements.md) necesarios. Como mínimo, debe crear un mapa de identidad de Experience Platform Web SDK y un elemento de datos de objeto XDM de Experience Platform Web SDK.
 
          ![elemento de datos del mapa de identidad](./assets/identity-map-data-element.png)
 
@@ -96,7 +96,7 @@ Para habilitar Offer Decisioning, realice los siguientes pasos:
 
       1. Cree sus [reglas](/help/tags/ui/managing-resources/rules.md).
 
-         * Agregue una acción Enviar evento de Platform Web SDK y agregue el elemento `decisionScopes` relevante a la configuración de dicha acción
+         * Agregue una acción Enviar evento de Experience Platform Web SDK y agregue el elemento `decisionScopes` correspondiente a la configuración de dicha acción
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 

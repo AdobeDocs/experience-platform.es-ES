@@ -2,9 +2,9 @@
 description: En esta página se explica cómo utilizar el extremo /authoring/testing/template/render para visualizar el aspecto que tendrían los campos de datos del cliente con plantillas definidos en la configuración de destino.
 title: Validar campos de cliente con plantilla
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: 6bd169075cd3826ae2a0907e6e624fd901076a4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '388'
 ht-degree: 3%
 
 ---
@@ -26,8 +26,8 @@ Antes de continuar, revisa la [guía de introducción](../../getting-started.md)
 
 Antes de usar el extremo `/template/render`, asegúrese de cumplir las siguientes condiciones:
 
-* Ya tiene un destino basado en archivos creado a través del Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
-* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
+* Ya tiene un destino basado en archivos creado mediante Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada de API desde la dirección URL cuando busque una conexión con su destino en la interfaz de usuario de Experience Platform.
 
   ![Imagen de interfaz de usuario que muestra cómo obtener el identificador de instancia de destino de la dirección URL.](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -98,7 +98,7 @@ Esta respuesta puede ayudarle a validar la estructura correcta de los campos de 
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes {#next-steps}
 

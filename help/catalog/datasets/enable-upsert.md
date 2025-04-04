@@ -4,9 +4,9 @@ title: Habilitar un conjunto de datos para actualizaciones de perfil mediante AP
 type: Tutorial
 description: Este tutorial muestra cómo utilizar las API de Adobe Experience Platform para habilitar un conjunto de datos con funcionalidades de "actualización" y así poder realizar actualizaciones en los datos del perfil del cliente en tiempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1069'
 ht-degree: 7%
 
 ---
@@ -21,14 +21,14 @@ Este tutorial cubre el proceso de activación de un conjunto de datos con funcio
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform implicados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estos servicios relacionados de [!DNL Platform]:
+Este tutorial requiere una comprensión práctica de varios servicios de Adobe Experience Platform implicados en la administración de conjuntos de datos con perfil habilitado. Antes de comenzar este tutorial, revise la documentación de estos servicios relacionados de [!DNL Experience Platform]:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 - [[!DNL Catalog Service]](../../catalog/home.md): una API RESTful que le permite crear conjuntos de datos y configurarlos para [!DNL Real-Time Customer Profile] y [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 - [Ingesta por lotes](../../ingestion/batch-ingestion/overview.md): La API de ingesta por lotes le permite ingerir datos en Experience Platform como archivos por lotes.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de Platform.
+Las secciones siguientes proporcionan información adicional que deberá conocer para realizar llamadas correctamente a las API de Experience Platform.
 
 ### Lectura de llamadas de API de muestra
 
@@ -36,7 +36,7 @@ Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar fo
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ Para poder realizar llamadas a las API de [!DNL Platform], primero debe completa
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado `Content-Type` adicional. El valor correcto de este encabezado se muestra en las solicitudes de ejemplo cuando es necesario.
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API [!DNL Platform] requieren un encabezado `x-sandbox-name` que especifica el nombre de la zona protegida en la que se realizará la operación. Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API [!DNL Experience Platform] requieren un encabezado `x-sandbox-name` que especifica el nombre de la zona protegida en la que se realizará la operación. Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 ## Crear un conjunto de datos habilitado para actualizaciones de perfil
 
@@ -54,7 +54,7 @@ Al crear un nuevo conjunto de datos, puede habilitar ese conjunto de datos para 
 >
 >Para crear un nuevo conjunto de datos habilitado para perfiles, debe conocer el ID de un esquema XDM existente que esté habilitado para el perfil. Para obtener información sobre cómo buscar o crear un esquema habilitado para el perfil, vea el tutorial sobre [creación de un esquema mediante la API de Registro de esquemas](../../xdm/tutorials/create-schema-api.md).
 
-Para crear un conjunto de datos habilitado para Perfil y actualizaciones, use una solicitud del POST al extremo `/dataSets`.
+Para crear un conjunto de datos habilitado para Perfil y actualizaciones, use una petición POST para el extremo `/dataSets`.
 
 **Formato de API**
 
@@ -222,7 +222,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Respuesta**
 
-Una solicitud correcta del PATCH devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. Ahora se han deshabilitado las etiquetas `unifiedProfile` y `unifiedIdentity`.
+Una solicitud correcta de PATCH devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. Ahora se han deshabilitado las etiquetas `unifiedProfile` y `unifiedIdentity`.
 
 ```json
 [
@@ -236,7 +236,7 @@ Se puede habilitar un conjunto de datos existente para las actualizaciones de pe
 
 >[!IMPORTANT]
 >
->Al habilitar el conjunto de datos para el perfil, asegúrese de que el esquema con el que está asociado el conjunto de datos esté habilitado para el perfil **also**. Si el esquema no tiene habilitado el perfil, el conjunto de datos **no** aparecerá como habilitado para el perfil en la interfaz de usuario de Platform.
+>Al habilitar el conjunto de datos para el perfil, asegúrese de que el esquema con el que está asociado el conjunto de datos esté habilitado para el perfil **also**. Si el esquema no tiene habilitado el perfil, el conjunto de datos **no** aparecerá como habilitado para el perfil en la interfaz de usuario de Experience Platform.
 
 **Formato de API**
 
@@ -280,7 +280,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Respuesta**
 
-Una solicitud correcta del PATCH devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud del PATCH. La etiqueta `unifiedProfile` y la etiqueta `unifiedIdentity` se han habilitado y configurado para actualizaciones de atributos.
+Una solicitud correcta de PATCH devuelve el estado HTTP 200 (OK) y una matriz que contiene el ID del conjunto de datos actualizado. Este ID debe coincidir con el enviado en la solicitud de PATCH. La etiqueta `unifiedProfile` y la etiqueta `unifiedIdentity` se han habilitado y configurado para actualizaciones de atributos.
 
 ```json
 [

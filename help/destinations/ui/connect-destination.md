@@ -3,9 +3,9 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a un destino en Adobe Experience Platform, activar alertas y configurar acciones de marketing para el destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
 
 1. Vaya a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la ficha **[!UICONTROL Catálogo]**.
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform que muestra la página del catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la página del catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
 
 2. Las tarjetas de destino del catálogo pueden tener diferentes controles de acción, en función de si tiene una conexión existente con el destino y de si los destinos admiten la activación de audiencias y la exportación de conjuntos de datos, o ambos. Puede ver cualquiera de los siguientes controles para las tarjetas de destino:
 
@@ -37,9 +37,9 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
 
    Seleccione **[!UICONTROL Configurar]**, **[!UICONTROL Activar]** o **[!UICONTROL Activar audiencias]**, según el control que esté disponible.
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform que muestra la página del catálogo de destinos con el control de configuración resaltado.](../assets/ui/connect-destinations/set-up.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform, que muestra la página del catálogo de destinos con el control de configuración resaltado.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform que muestra la página del catálogo de destinos con el control Activar audiencias resaltado.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform, que muestra la página del catálogo de destinos con el control Activar audiencias resaltado.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Si seleccionó **[!UICONTROL Configurar]**, vaya al paso siguiente para [autenticar](#authenticate) en el destino.
 
@@ -47,13 +47,13 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
 
    Seleccione **[!UICONTROL Configurar nuevo destino]** para establecer una nueva conexión con el destino.
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform, que muestra una lista de destinos disponibles y el nuevo control de destino resaltado.](../assets/ui/connect-destinations/configure-new-destination.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform, que muestra una lista de destinos disponibles y el control Configurar nuevo destino resaltado.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## Autenticarse en el destino {#authenticate}
 
 El primer paso para conectarse a un destino es autenticarse en la plataforma de destino.
 
-Según el destino al que se esté conectando, se le podría llevar a la página del socio de destino para autenticarse, o se le podría pedir que introduzca las credenciales de autenticación directamente en el flujo de trabajo de Platform. A continuación se muestra un ejemplo de la entrada requerida para autenticarse en un destino [!DNL Amazon S3]. En cada página de documentación de destino se proporcionan instrucciones detalladas acerca de la entrada necesaria (vea, por ejemplo, la sección de autenticación de [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) y [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Según el destino al que se esté conectando, es posible que se le dirija a la página del socio de destino para autenticarse, o que se le pida que introduzca las credenciales de autenticación directamente en el flujo de trabajo de Experience Platform. A continuación se muestra un ejemplo de la entrada requerida para autenticarse en un destino [!DNL Amazon S3]. En cada página de documentación de destino se proporcionan instrucciones detalladas acerca de la entrada necesaria (vea, por ejemplo, la sección de autenticación de [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) y [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 Se requieren **[!DNL Amazon S3]y parámetros de autenticación opcionales**
 
@@ -105,7 +105,7 @@ Algunos destinos basados en archivos admiten la activación de audiencias a clie
 
 ## Seleccionar acciones de marketing {#select-marketing-actions}
 
-1. Seleccione las acciones de marketing aplicables a los datos que desea exportar al destino. Las acciones de marketing indican la intención con la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por el Adobe o crear su propia acción de marketing. Para obtener más información acerca de las acciones de marketing, consulte la página [descripción general de las políticas de uso de datos](../../data-governance/policies/overview.md).
+1. Seleccione las acciones de marketing aplicables a los datos que desea exportar al destino. Las acciones de marketing indican la intención con la que se exportarán los datos al destino. Puede seleccionar entre las acciones de marketing definidas por Adobe o crear su propia acción de marketing. Para obtener más información acerca de las acciones de marketing, consulte la página [descripción general de las políticas de uso de datos](../../data-governance/policies/overview.md).
 
    ![Cuadro de diálogo Configurar nuevo destino con las acciones de marketing disponibles resaltadas. Los controles disponibles para completar el flujo de trabajo Conectar con destino también están resaltados.](../assets/ui/connect-destinations/governance.png)
 

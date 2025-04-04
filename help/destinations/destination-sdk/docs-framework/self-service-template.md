@@ -2,7 +2,7 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para su destino en el catálogo de Adobe Experience Platform. // Reemplace con el párrafo en la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 10521602a5871419c0c49d54c8ed250af39a78a4
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 2%
@@ -66,8 +66,8 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino *YourD
 | GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
 | ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lea el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
 
 {style="table-layout:auto"}
@@ -80,8 +80,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | X | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | X | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino *YourDestination*. |
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de una audiencia, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Tipo de exportación | **[!UICONTROL Exportación de conjuntos de datos]** | Va a exportar conjuntos de datos sin procesar que no se agrupan ni estructuran por intereses o cualificaciones de audiencia. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 | Frecuencia de exportación | **[!UICONTROL Lote]** | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -111,7 +111,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 ### Autenticarse en el destino {#authenticate}
 
-*Agregue los campos que los clientes deben rellenar al autenticarse en el destino. Estos campos son específicos del destino y dependen de la configuración de en Destination SDK. Es posible que los campos de su destino no sean los mismos que los que se enumeran a continuación. Incluya también una captura de pantalla similar a la captura de pantalla de ejemplo que se muestra a continuación.*
+*Agregue los campos que los clientes deben rellenar al autenticarse en el destino. Estos campos son específicos del destino y dependen de la configuración de Destination SDK. Es posible que los campos de su destino no sean los mismos que los que se enumeran a continuación. Incluya también una captura de pantalla similar a la captura de pantalla de ejemplo que se muestra a continuación.*
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
@@ -121,7 +121,7 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 ### Rellenar detalles de destino {#destination-details}
 
-*Agregue los campos que los clientes deben rellenar al configurar un nuevo destino. Estos campos son específicos del destino y dependen de la configuración de en Destination SDK. Es posible que los campos de su destino no sean los mismos que los que se enumeran a continuación. Incluya también una captura de pantalla similar a la captura de pantalla de ejemplo que se muestra a continuación.*
+*Agregue los campos que los clientes deben rellenar al configurar un nuevo destino. Estos campos son específicos del destino y dependen de la configuración de Destination SDK. Es posible que los campos de su destino no sean los mismos que los que se enumeran a continuación. Incluya también una captura de pantalla similar a la captura de pantalla de ejemplo que se muestra a continuación.*
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 

@@ -2,20 +2,20 @@
 keywords: Experience Platform;inicio;temas populares;conectores de origen;conector de origen;fuentes;fuentes de datos;fuente de datos;conexión de fuente de datos
 solution: Experience Platform
 title: Información general sobre conectores Source
-description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 2%
+source-wordcount: '1557'
+ht-degree: 3%
 
 ---
 
 # Información general sobre conectores Source
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[!DNL Flow Service] se usa para recopilar y centralizar datos de clientes de distintos orígenes dentro de Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen a varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+[!DNL Flow Service] se usa para recopilar y centralizar datos de clientes de distintos orígenes dentro de Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen a varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 Con Experience Platform, puede centralizar los datos que recopila de fuentes diferentes y utilizar las perspectivas obtenidas de él para hacer más.
 
@@ -84,7 +84,7 @@ Experience Platform es compatible con la ingesta de datos desde una plataforma d
 
 ### Almacenamiento en la nube {#cloud-storage}
 
-Las fuentes de almacenamiento en la nube pueden introducir sus propios datos en Platform sin necesidad de descargarlos, formatearlos o cargarlos. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o estar delimitados. Cada paso del proceso se integra en el flujo de trabajo de orígenes mediante la interfaz de usuario de. Consulte los siguientes documentos relacionados para obtener más información:
+Las fuentes de almacenamiento en la nube pueden introducir sus propios datos en Experience Platform sin necesidad de descargarlos, formatearlos o cargarlos. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o estar delimitados. Cada paso del proceso se integra en el flujo de trabajo de orígenes mediante la interfaz de usuario de. Consulte los siguientes documentos relacionados para obtener más información:
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE Lote]{type=Informative}
@@ -224,11 +224,11 @@ El control de acceso basado en atributos en Adobe Experience Platform permite a 
 
 Con el control de acceso basado en atributos, puede aplicar configuraciones de asignación a campos para los que tiene permisos. Además, no puede introducir datos en un conjunto de datos si no tiene acceso a todos los campos del conjunto de datos.
 
-#### Compatibilidad con el control de acceso basado en atributos en orígenes
+#### Compatibilidad con el control de acceso basado en atributos en las fuentes
 
 >[!TIP]
 >
->El control de acceso basado en atributos funciona de la siguiente manera: **roles** se crean para categorizar los tipos de usuarios que interactúan con la instancia de Platform. **Las etiquetas** se han aplicado a **roles** para designar el acceso a ese rol dado. **Las etiquetas** también se aplican a recursos como campos de esquema y segmentos. Para que un usuario tenga acceso a ciertos campos y segmentos de esquema, debe agregarlos a *un rol con la misma etiqueta asignada al recurso consultado*. Para obtener más información, lea la [guía completa de control de acceso basado en atributos](../access-control/abac/end-to-end-guide.md).
+>El control de acceso basado en atributos funciona de la siguiente manera: **roles** se crean para categorizar los tipos de usuarios que interactúan con la instancia de Experience Platform. **Las etiquetas** se han aplicado a **roles** para designar el acceso a ese rol dado. **Las etiquetas** también se aplican a recursos como campos de esquema y segmentos. Para que un usuario tenga acceso a ciertos campos y segmentos de esquema, debe agregarlos a *un rol con la misma etiqueta asignada al recurso consultado*. Para obtener más información, lea la [guía completa de control de acceso basado en atributos](../access-control/abac/end-to-end-guide.md).
 
 - Aplique etiquetas a los campos de esquema para definir el acceso a campos de esquema específicos de su organización. Una vez establecido el acceso a campos de esquema específicos, los usuarios solo podrán crear asignaciones para los campos a los que tengan acceso.
 - Los usuarios sin las funciones adecuadas no podrán crear ni actualizar flujos de datos con asignaciones que impliquen campos de esquema inaccesibles. Además, los usuarios no autorizados no pueden actualizar, eliminar, habilitar ni deshabilitar flujos de datos existentes con campos de esquema inaccesibles.

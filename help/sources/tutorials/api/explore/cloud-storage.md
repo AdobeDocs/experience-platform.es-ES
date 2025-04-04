@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;almacenamiento en la nube;a
 title: Exploración de carpetas de almacenamiento en la nube mediante la API de Flow Service
 description: Este tutorial utiliza la API de Flow Service para explorar un sistema de almacenamiento en la nube de terceros.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '695'
 ht-degree: 4%
 
 ---
@@ -22,16 +22,16 @@ Este tutorial proporciona pasos sobre cómo explorar y previsualizar la estructu
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../landing/api-guide.md).
 
 ## Explorar las carpetas de almacenamiento en la nube
 
-Puede recuperar información sobre la estructura de sus carpetas de almacenamiento en la nube realizando una solicitud de GET a la API [!DNL Flow Service] y proporcionando al mismo tiempo el ID de conexión base de su origen.
+Puede recuperar información sobre la estructura de sus carpetas de almacenamiento en la nube realizando una petición GET a la API [!DNL Flow Service] y proporcionando al mismo tiempo el ID de conexión base de su origen.
 
 Al realizar solicitudes de GET para explorar el almacenamiento en la nube, debe incluir los parámetros de consulta que se enumeran en la siguiente tabla:
 
@@ -94,11 +94,11 @@ Una respuesta correcta devuelve una matriz de archivos y carpetas encontrados de
 ]
 ```
 
-## Inspect la estructura de un archivo
+## Inspeccionar la estructura de un archivo
 
-Para inspeccionar la estructura del archivo de datos desde el almacenamiento en la nube, realice una solicitud de GET y proporcione la ruta y el tipo del archivo como parámetro de consulta.
+Para inspeccionar la estructura del archivo de datos desde el almacenamiento en la nube, realice una petición GET y proporcione la ruta y el tipo del archivo como parámetro de consulta.
 
-Puede inspeccionar la estructura de un archivo de datos desde su origen de almacenamiento en la nube realizando una solicitud de GET al tiempo que proporciona la ruta y el tipo del archivo. También puede inspeccionar distintos tipos de archivo, como CSV, TSV o archivos JSON comprimidos y delimitados, especificando sus tipos de archivo como parte de los parámetros de consulta.
+Puede inspeccionar la estructura de un archivo de datos desde su origen de almacenamiento en la nube realizando una petición GET y proporcionando al mismo tiempo la ruta y el tipo del archivo. También puede inspeccionar distintos tipos de archivo, como CSV, TSV o archivos JSON comprimidos y delimitados, especificando sus tipos de archivo como parte de los parámetros de consulta.
 
 **Formato de API**
 
@@ -168,4 +168,4 @@ La [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refer
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha explorado el sistema de almacenamiento en la nube, ha encontrado la ruta del archivo que desea llevar a [!DNL Platform] y ha visto su estructura. Puedes usar esta información en el siguiente tutorial para [recopilar datos de tu almacenamiento en la nube e introducirlos en Platform](../collect/cloud-storage.md).
+Al seguir este tutorial, ha explorado el sistema de almacenamiento en la nube, ha encontrado la ruta del archivo que desea llevar a [!DNL Experience Platform] y ha visto su estructura. Puedes usar esta información en el siguiente tutorial para [recopilar datos de tu almacenamiento en la nube e introducirlos en Experience Platform](../collect/cloud-storage.md).

@@ -2,9 +2,9 @@
 title: Creación de una conexión de Adobe Analytics Source en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2672'
+source-wordcount: '2676'
 ht-degree: 3%
 
 ---
@@ -17,15 +17,15 @@ Este tutorial proporciona los pasos para crear una conexión de origen de Adobe 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* Sistema [Experience Data Model (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+* Sistema [Experience Data Model (XDM)](../../../../../xdm/home.md): El marco de trabajo estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
 * [Perfil del cliente en tiempo real](../../../../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
-* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Terminología clave
 
 Es importante comprender los siguientes términos clave utilizados en este documento:
 
-* **Atributo estándar**: Los atributos estándar son cualquier atributo predefinido por el Adobe. Contienen el mismo significado para todos los clientes y están disponibles en los grupos de campos de datos de origen [!DNL Analytics] y de esquema [!DNL Analytics].
+* **Atributo estándar**: Los atributos estándar son cualquier atributo predefinido por Adobe. Contienen el mismo significado para todos los clientes y están disponibles en los grupos de campos de datos de origen [!DNL Analytics] y de esquema [!DNL Analytics].
 * **Atributo personalizado**: Los atributos personalizados son cualquier atributo en la jerarquía de variables personalizadas de [!DNL Analytics]. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obtener más información sobre eVars.
 * **Cualquier atributo de los grupos de campos personalizados**: Los atributos que se originan en grupos de campos creados por clientes están todos definidos por el usuario y no se consideran atributos estándar ni personalizados.
 * **Nombres descriptivos**: Los nombres descriptivos son etiquetas proporcionadas por humanos para variables personalizadas en una implementación de [!DNL Analytics]. Consulte la siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obtener más información sobre nombres descriptivos.
@@ -39,7 +39,7 @@ Es importante comprender los siguientes términos clave utilizados en este docum
 >* Un flujo de datos que rellena los datos históricos del grupo de informes con un retraso de 13 meses en el lago de datos. Este flujo de datos finaliza cuando se completa el relleno.
 >* Flujo de flujo de datos que envía datos activos al lago de datos y a [!DNL Real-Time Customer Profile]. Este flujo de datos se ejecuta continuamente.
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede utilizar la barra de búsqueda para reducir los orígenes mostrados.
 
@@ -57,7 +57,7 @@ El paso **[!UICONTROL Agregar datos de origen de Analytics]** le proporciona una
 
 Un grupo de informes es un contenedor de datos que forma la base de los informes de [!DNL Analytics]. Una organización puede tener muchos grupos de informes, cada uno con diferentes conjuntos de datos.
 
-Puede ingerir grupos de informes de cualquier región (Estados Unidos, Reino Unido o Singapur) siempre y cuando se asignen a la misma organización que la instancia de zona protegida Experience Platform en la que se crea la conexión de origen. Un grupo de informes se puede ingerir utilizando un solo flujo de datos activo. Ya se ha introducido un grupo de informes que no se puede seleccionar, ya sea en la zona protegida que está utilizando o en una zona protegida diferente.
+Puede ingerir grupos de informes de cualquier región (Estados Unidos, Reino Unido o Singapur) siempre y cuando se asignen a la misma organización que la instancia de zona protegida de Experience Platform en la que se crea la conexión de origen. Un grupo de informes se puede ingerir utilizando un solo flujo de datos activo. Ya se ha introducido un grupo de informes que no se puede seleccionar, ya sea en la zona protegida que está utilizando o en una zona protegida diferente.
 
 Se pueden realizar varias conexiones entrantes para colocar varios grupos de informes en la misma zona protegida. Si los grupos de informes tienen distintos esquemas para las variables (como eVars o eventos), deben asignarse a campos específicos en los grupos de campos personalizados y evitar conflictos de datos con [preparación de datos](../../../../../data-prep/ui/mapping.md). Los grupos de informes solo se pueden añadir a una sola zona protegida.
 
@@ -115,7 +115,7 @@ La página [!UICONTROL Grupo de campos de esquema de plantilla Adobe Analytics E
 
 ![vista previa de grupo de campos](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-Platform detecta automáticamente los conjuntos de asignaciones para cualquier conflicto de nombres descriptivos. Si no hay conflictos con sus conjuntos de asignaciones, seleccione **[!UICONTROL Siguiente]** para continuar.
+Experience Platform detecta automáticamente los conjuntos de asignaciones para cualquier conflicto de nombres descriptivos. Si no hay conflictos con sus conjuntos de asignaciones, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![asignación](../../../../images/tutorials/create/analytics/mapping.png)
 
@@ -301,7 +301,7 @@ Aparece una lista de los flujos de datos de Analytics existentes en su organizac
 
 ![Una lista de flujos de datos de Adobe Analytics existentes en su organización.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-La página [!UICONTROL Actividad del conjunto de datos] proporciona información sobre el progreso de los datos que se envían de Analytics al Experience Platform. La interfaz muestra métricas como el total de registros del mes anterior, el total de registros ingeridos en los últimos siete días y el tamaño de los datos del mes anterior.
+La página [!UICONTROL Actividad del conjunto de datos] proporciona información sobre el progreso de los datos que se envían de Analytics a Experience Platform. La interfaz muestra métricas como el total de registros del mes anterior, el total de registros ingeridos en los últimos siete días y el tamaño de los datos del mes anterior.
 
 El origen crea una instancia de dos flujos de conjuntos de datos. Un flujo representa los datos de relleno y el otro es para los datos activos. Los datos de relleno no están configurados para su incorporación al Perfil del cliente en tiempo real, sino que se envían al lago de datos para casos de uso analíticos y de ciencia de datos.
 
@@ -311,7 +311,7 @@ Para obtener más información sobre el relleno, los datos activos y sus respect
 
 >[!NOTE]
 >
->La página de actividad del conjunto de datos no muestra información sobre los lotes, ya que el conector de origen de Analytics se administra completamente mediante el Adobe. Puede monitorizar que los datos fluyen mirando las métricas alrededor de los registros ingeridos.
+>La página de actividad del conjunto de datos no muestra información sobre los lotes, ya que el conector de origen de Analytics lo administra completamente Adobe. Puede monitorizar que los datos fluyen mirando las métricas alrededor de los registros ingeridos.
 
 ## Eliminar el flujo de datos {#delete-dataflow}
 
@@ -322,7 +322,7 @@ Para eliminar el flujo de datos de Analytics, seleccione **[!UICONTROL Flujos de
 
 ## Pasos siguientes y recursos adicionales
 
-Una vez creada la conexión, el flujo de datos se crea automáticamente para contener los datos entrantes y rellenar un conjunto de datos con el esquema seleccionado. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando la ingesta inicial se complete, [!DNL Analytics] datos y los servicios de Platform secundarios, como [!DNL Real-Time Customer Profile] y el servicio de segmentación, los usarán. Consulte los siguientes documentos para obtener más información:
+Una vez creada la conexión, el flujo de datos se crea automáticamente para contener los datos entrantes y rellenar un conjunto de datos con el esquema seleccionado. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando la ingesta inicial se complete, los datos de [!DNL Analytics] y el servicio de Experience Platform descendente, como [!DNL Real-Time Customer Profile] y el servicio de segmentación, los usarán. Consulte los siguientes documentos para obtener más información:
 
 * [Información general de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Información general de [!DNL Segmentation Service]](../../../../../segmentation/home.md)
@@ -333,6 +333,6 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la ingesta de dato
 
 >[!WARNING]
 >
-> La interfaz de usuario [!DNL Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
+> La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

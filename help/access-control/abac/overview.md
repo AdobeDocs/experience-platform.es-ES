@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1860'
-ht-degree: 14%
+source-wordcount: '1874'
+ht-degree: 13%
 
 ---
 
@@ -18,9 +18,9 @@ Utilice esta funcionalidad para etiquetar campos de esquema del Modelo de datos 
 
 >[!IMPORTANT]
 >
->El control de acceso basado en atributos no se debe confundir con las capacidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y directivas para controlar cómo se utilizan los datos en Platform en lugar de qué usuarios de su organización tienen acceso a ellos. Consulte la [descripción general del control de datos](../../data-governance/home.md) para obtener más información.
+>El control de acceso basado en atributos no se debe confundir con las funcionalidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y políticas para controlar cómo se utilizan los datos en Experience Platform en lugar de qué usuarios de su organización tienen acceso a ellos. Consulte la [descripción general del control de datos](../../data-governance/home.md) para obtener más información.
 
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y el tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y el tipo personalizado de datos en todos los flujos de trabajo y recursos de Experience Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
 
 El siguiente vídeo tiene como objetivo facilitar la comprensión del control de acceso basado en atributos y describe cómo configurar funciones, recursos y directivas.
 
@@ -32,13 +32,13 @@ El control de acceso basado en atributos implica los siguientes componentes:
 
 | Terminología | Definición |
 | --- | --- |
-| Atributos | Los atributos son identificadores que indican la correlación entre un usuario y los recursos de Platform a los que tiene acceso. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo o segmento de esquema. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios. |
-| Etiquetas | Las etiquetas permiten clasificar los conjuntos de datos y campos según las directivas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas alientan el etiquetado de datos en cuanto se incorporan a Platform o en cuanto los datos están disponibles para su uso en Platform. |
-| Permisos | Los permisos incluyen la capacidad de ver o utilizar funciones de Platform, como crear entornos limitados, definir esquemas y administrar conjuntos de datos. |
+| Atributos | Los atributos son identificadores que indican la correlación entre un usuario y los recursos de Experience Platform a los que tiene acceso. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo o segmento de esquema. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios. |
+| Etiquetas | Las etiquetas permiten clasificar los conjuntos de datos y campos según las directivas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas recomiendan el etiquetado de los datos en cuanto se incorporan a Experience Platform o en cuanto los datos están disponibles para su uso en Experience Platform. |
+| Permisos | Los permisos incluyen la capacidad de ver o utilizar funciones de Experience Platform, como crear entornos limitados, definir esquemas y administrar conjuntos de datos. |
 | Conjuntos de permisos | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
 | Políticas | Las directivas son declaraciones que reúnen atributos para establecer acciones permitidas y no permitidas. Las directivas pueden ser locales o globales, y pueden anular otras directivas. |
 | Recurso | Un recurso es el recurso o el objeto al que puede tener acceso o al que no puede tener acceso un sujeto. Los recursos pueden ser segmentos o campos de esquema. |
-| Funciones | Las funciones son formas de clasificar los tipos de usuarios que interactúan con la instancia de Platform y que son componentes básicos de las directivas de control de acceso. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten. |
+| Funciones | Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Experience Platform y que constituyen bloques generadores de las directivas de control de acceso. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten. |
 | Asunto | Un asunto es el usuario que solicita acceso a un recurso para realizar una acción. |
 | Grupos de usuarios | Los grupos de usuarios son varios usuarios que se han agrupado y tienen acceso para ejecutar las mismas funciones. |
 
@@ -54,15 +54,15 @@ Mediante Permisos, puede crear y administrar funciones, así como asignar los pe
 
 ## API de control de acceso basado en atributos
 
-La API de control de acceso basada en atributos le permite administrar mediante programación funciones, directivas y productos dentro de Platform mediante API. Para obtener más información, consulte la guía sobre [uso de la API para administrar configuraciones de control de acceso basadas en atributos](api/overview.md).
+La API de control de acceso basada en atributos le permite administrar mediante programación funciones, directivas y productos dentro de Experience Platform mediante API. Para obtener más información, consulte la guía sobre [uso de la API para administrar configuraciones de control de acceso basadas en atributos](api/overview.md).
 
 ## Control de acceso basado en atributos en Adobe Experience Platform
 
-Las secciones siguientes proporcionan información sobre cómo el control de acceso basado en atributos está integrado en otros componentes de Platform:
+Las secciones siguientes proporcionan información sobre cómo el control de acceso basado en atributos está integrado en otros componentes de Experience Platform:
 
 ### Control de acceso
 
-Platform aprovecha las funciones de [Adobe Admin Console](https://adminconsole.adobe.com) para vincular a usuarios con permisos y zonas protegidas. Los permisos controlan el acceso a una variedad de funcionalidades de Platform, incluido el modelado de datos, la administración de perfiles y la administración de zonas protegidas. Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Funciones en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de la organización.
+Experience Platform aprovecha las funciones de [Adobe Admin Console](https://adminconsole.adobe.com) para vincular a usuarios con permisos y zonas protegidas. Los permisos controlan el acceso a una variedad de funciones de Experience Platform, incluido el modelado de datos, la administración de perfiles y la administración de zonas protegidas. Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Funciones en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de la organización.
 
 Hay disponibilidad limitada para el control de acceso basado en atributos para clientes que compran Escudos de atención médica o de privacidad. Entre las características de esta funcionalidad se incluyen:
 
@@ -80,7 +80,7 @@ Para obtener más información sobre el control de acceso, vea la [descripción 
 
 ### Destinos {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos desde Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 Como administrador, puede utilizar las funcionalidades de control de acceso basadas en atributos para lo siguiente:
 
@@ -109,7 +109,7 @@ Para obtener más información sobre [!DNL Identity Service], consulte la [[!DNL
 
 ### Perfil del cliente en tiempo real
 
-Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos los canales en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los distintos datos de clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción de clientes.
+Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos los canales en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los distintos datos de clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción de clientes.
 
 Como administrador, puede utilizar las funcionalidades de control de acceso basadas en atributos para lo siguiente:
 
@@ -133,7 +133,7 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [[
 
 ### XDM
 
-Experience Data Model (XDM) es una especificación de código abierto diseñada para mejorar la potencia de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación para comunicarse con servicios en Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
+Experience Data Model (XDM) es una especificación de código abierto diseñada para mejorar la potencia de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación para comunicarse con servicios en Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
 
 Con el control de acceso basado en atributos, puede:
 

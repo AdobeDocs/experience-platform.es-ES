@@ -3,9 +3,9 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1961'
 ht-degree: 2%
 
 ---
@@ -85,7 +85,7 @@ Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]
 
 ![Configuración de flujo de datos con segmentación Edge y destinos Personalization resaltados.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Para obtener más información sobre cómo configurar una secuencia de datos, siga las instrucciones que se describen en [Documentación de Platform Web SDK](../../datastreams/configure.md#aep).
+Para obtener más información sobre cómo configurar una secuencia de datos, siga las instrucciones que se describen en la [documentación de Experience Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Crear una política de combinación [!DNL Active-On-Edge] {#create-merge-policy}
 
@@ -97,9 +97,9 @@ Después de crear la conexión de destino, debe crear una política de combinaci
 
 Siga las instrucciones de [creación de una política de combinación](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) y asegúrese de habilitar la opción **[!UICONTROL Política de combinación activa en Edge]**.
 
-### Creación de una nueva audiencia en Platform {#create-audience}
+### Creación de una nueva audiencia en Experience Platform {#create-audience}
 
-Después de crear la política de combinación [!DNL Active-On-Edge], debe crear una audiencia nueva en Platform.
+Después de crear la política de combinación [!DNL Active-On-Edge], debe crear una audiencia nueva en Experience Platform.
 
 Siga la guía de [generador de audiencias](../../segmentation/ui/segment-builder.md) para crear su nueva audiencia y asegúrese de [asignarla](../../segmentation/ui/segment-builder.md#merge-policies) a la política de combinación [!DNL Active-On-Edge] que creó en el paso anterior.
 
@@ -141,7 +141,7 @@ Para seleccionar las audiencias que desea activar en el destino, utilice las cas
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 * **[!UICONTROL Servicio de segmentación]**: Audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
-* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
 ![Seleccione el paso de audiencias del flujo de trabajo de activación con varias audiencias resaltadas.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

@@ -1,10 +1,10 @@
 ---
-description: Esta página ejemplifica la llamada de API utilizada para eliminar una configuración de servidor de destino existente a través del Adobe Experience Platform Destination SDK.
+description: Esta página ejemplifica la llamada de API utilizada para eliminar una configuración de servidor de destino existente a través de Adobe Experience Platform Destination SDK.
 title: Eliminar una configuración de servidor de destino
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '331'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Para obtener una descripción detallada de las funciones que puede eliminar a tr
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API del servidor de destino {#get-started}
 
@@ -64,11 +64,11 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta HTTP 
 
 ## Administración de errores de API {#error-handling}
 
-Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo eliminar un servidor de destino existente a través del extremo de API del Destination SDK `/authoring/destination-servers`.
+Después de leer este documento, ahora sabe cómo eliminar un servidor de destino existente a través del extremo de la API de Destination SDK `/authoring/destination-servers`.
 
 Para obtener más información acerca de lo que puede hacer con este extremo, consulte los siguientes artículos:
 

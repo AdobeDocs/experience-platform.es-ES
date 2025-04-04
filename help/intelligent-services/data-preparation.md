@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;Servicios inteligentes;temas populares;servicio inteligente;servicio inteligente
+keywords: Experience Platform;inicio;Servicios inteligentes;temas populares;servicio inteligente;Servicio inteligente
 solution: Experience Platform
 title: Preparación de datos para utilizarlos en servicios inteligentes
 description: Para que los servicios inteligentes descubran datos de sus eventos de marketing, los datos deben enriquecerse semánticamente y mantenerse en una estructura estándar. Los servicios inteligentes utilizan esquemas XDM (Experience Data Model) para conseguirlo.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Este documento proporciona orientación general sobre la asignación de los dato
 
 [!DNL Intelligent Services] requiere diferentes cantidades de datos históricos según el objetivo que cree. Independientemente, los datos que prepare para **todos** [!DNL Intelligent Services] deben incluir eventos o recorridos de clientes positivos y negativos. Tener eventos negativos y positivos mejora la precisión y la precisión del modelo.
 
-Por ejemplo, si utiliza la inteligencia artificial aplicada al cliente para predecir la tendencia a comprar un producto, el modelo para la inteligencia artificial aplicada al cliente necesita tanto ejemplos de rutas de compra exitosas como ejemplos de rutas fallidas. Esto se debe a que durante la formación del modelo, la inteligencia artificial aplicada al cliente busca comprender qué eventos y recorridos conducen a una compra. Esto también incluye las acciones realizadas por los clientes que no realizaron ninguna compra, como por ejemplo una persona que detuvo su recorrido al agregar un artículo al carro de compras. Estos clientes pueden mostrar comportamientos similares; sin embargo, la inteligencia artificial aplicada al cliente puede proporcionar perspectivas y explorar en profundidad las principales diferencias y factores que conducen a una puntuación de tendencia más alta. Del mismo modo, Attribution AI requiere ambos tipos de eventos y recorridos para mostrar métricas como la efectividad de los puntos de contacto, las rutas de conversión principales y los desgloses por posición de punto de contacto.
+Por ejemplo, si utiliza la inteligencia artificial aplicada al cliente para predecir la tendencia a comprar un producto, el modelo para la inteligencia artificial aplicada al cliente necesita tanto ejemplos de rutas de compra exitosas como ejemplos de rutas fallidas. Esto se debe a que durante la formación del modelo, la inteligencia artificial aplicada al cliente busca comprender qué eventos y recorridos conducen a una compra. Esto también incluye las acciones realizadas por los clientes que no realizaron ninguna compra, como por ejemplo una persona que detuvo su recorrido al agregar un artículo al carro de compras. Estos clientes pueden mostrar comportamientos similares; sin embargo, la inteligencia artificial aplicada al cliente puede proporcionar perspectivas y explorar en profundidad las principales diferencias y factores que conducen a una puntuación de tendencia más alta. Del mismo modo, Inteligencia artificial aplicada a la atribución requiere ambos tipos de eventos y recorridos para mostrar métricas como la efectividad de los puntos de contacto, las rutas de conversión principales y los desgloses por posición de punto de contacto.
 
-Para obtener más ejemplos e información sobre los requisitos de datos históricos, visite la sección de requisitos de datos históricos de [inteligencia artificial aplicada al cliente](./customer-ai/data-requirements.md#data-requirements) o [Attribution AI](./attribution-ai/input-output.md#data-requirements) en la documentación de entrada y salida.
+Para obtener más ejemplos e información sobre los requisitos de datos históricos, visite la sección de requisitos de datos históricos de [inteligencia artificial aplicada al cliente](./customer-ai/data-requirements.md#data-requirements) o [inteligencia artificial aplicada a la atribución](./attribution-ai/input-output.md#data-requirements) en la documentación de entrada y salida.
 
 ### Directrices para vincular datos
 
@@ -37,13 +37,13 @@ El proceso de preparación varía en función de si los datos se almacenan en Ad
 
 ### Preparación de datos externos
 
-Si los datos se almacenan fuera de Experience Platform, debe asignarlos a los campos obligatorios y relevantes en un esquema de [Consumer ExperienceEvent](#cee-schema). Este esquema se puede ampliar con grupos de campos personalizados para capturar mejor los datos de los clientes. Una vez asignado, puede crear un conjunto de datos con el esquema Consumer ExperienceEvent e [introducir los datos en la plataforma](../ingestion/home.md). El conjunto de datos CEE se puede seleccionar al configurar un [!DNL Intelligent Service].
+Si los datos se almacenan fuera de Experience Platform, debe asignarlos a los campos obligatorios y relevantes en un [esquema de Consumer ExperienceEvent](#cee-schema). Este esquema se puede ampliar con grupos de campos personalizados para capturar mejor los datos de los clientes. Una vez asignado, puede crear un conjunto de datos con el esquema Consumer ExperienceEvent e [introducir los datos en Experience Platform](../ingestion/home.md). El conjunto de datos CEE se puede seleccionar al configurar un [!DNL Intelligent Service].
 
-Según el(la) [!DNL Intelligent Service] que desee utilizar, es posible que se requieran diferentes campos. Tenga en cuenta que es recomendable agregar datos a un campo si tiene los datos disponibles. Para obtener más información sobre los campos obligatorios, visita la guía de requisitos de datos de [Attribution AI](./attribution-ai/input-output.md) o [inteligencia artificial aplicada al cliente](./customer-ai/data-requirements.md).
+Según el(la) [!DNL Intelligent Service] que desee utilizar, es posible que se requieran diferentes campos. Tenga en cuenta que es recomendable agregar datos a un campo si tiene los datos disponibles. Para obtener más información sobre los campos obligatorios, visita la guía de requisitos de datos de [inteligencia artificial aplicada a la atribución](./attribution-ai/input-output.md) o la [inteligencia artificial aplicada al cliente](./customer-ai/data-requirements.md).
 
 ### Preparación de datos de Adobe Analytics {#analytics-data}
 
-Attribution AI La inteligencia artificial aplicada al cliente y la compatibilidad nativa con datos de Adobe Analytics. Para usar datos de Adobe Analytics, sigue los pasos descritos en la documentación para configurar un [conector de origen de Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+La inteligencia artificial aplicada al cliente y la inteligencia artificial aplicada a la atribución admiten datos de Adobe Analytics de forma nativa. Para usar datos de Adobe Analytics, sigue los pasos descritos en la documentación para configurar un [conector de origen de Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
 Una vez que el conector de origen transmite los datos a Experience Platform, puede seleccionar Adobe Analytics como fuente de datos seguida de un conjunto de datos durante la configuración de la instancia. Todos los grupos de campos de esquema requeridos y los campos individuales se crean automáticamente durante la configuración de la conexión. No es necesario extraer, transformar o cargar los conjuntos de datos en el formato CEE.
 
@@ -65,11 +65,11 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->El conector de Adobe Analytics tarda hasta cuatro semanas en rellenar los datos. Si ha configurado recientemente una conexión, debe comprobar que el conjunto de datos tiene la longitud mínima de datos necesaria para el cliente o el Attribution AI. Revise las secciones de datos históricos en [inteligencia artificial aplicada al cliente](./customer-ai/data-requirements.md#data-requirements) o [Attribution AI](./attribution-ai/input-output.md#data-requirements), y verifique que tenga datos suficientes para el objetivo de predicción.
+>El conector de Adobe Analytics tarda hasta cuatro semanas en rellenar los datos. Si ha configurado recientemente una conexión, debe verificar que el conjunto de datos tenga la longitud mínima de datos necesaria para la inteligencia artificial aplicada a la atribución o el cliente. Revise las secciones de datos históricos en [inteligencia artificial aplicada al cliente](./customer-ai/data-requirements.md#data-requirements) o [inteligencia artificial aplicada a la atribución](./attribution-ai/input-output.md#data-requirements), y verifique que tenga datos suficientes para el objetivo de predicción.
 
 ### Preparación de datos de Adobe Audience Manager (solo inteligencia artificial aplicada al cliente) {#AAM-data}
 
-La inteligencia artificial aplicada al cliente admite datos de Adobe Audience Manager de forma nativa. Para usar datos de Audience Manager, siga los pasos descritos en la documentación para configurar un [conector de origen de Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+La inteligencia artificial aplicada al cliente admite datos de Adobe Audience Manager de forma nativa. Para usar datos de Audience Manager, sigue los pasos descritos en la documentación para configurar un [conector de origen de Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
 
 Una vez que el conector de origen transmite los datos a Experience Platform, puede seleccionar Adobe Audience Manager como fuente de datos seguida de un conjunto de datos durante la configuración de la inteligencia artificial aplicada al cliente. Todos los grupos de campos de esquema y los campos individuales se crean automáticamente durante la configuración de la conexión. No es necesario extraer, transformar o cargar los conjuntos de datos en el formato CEE.
 
@@ -79,7 +79,7 @@ Una vez que el conector de origen transmite los datos a Experience Platform, pue
 
 ### [!DNL Experience Platform] preparación de datos
 
-Si sus datos ya están almacenados en [!DNL Platform] y no se transmiten a través de los conectores de origen de Adobe Analytics o Adobe Audience Manager (solo inteligencia artificial aplicada al cliente), siga los pasos a continuación. Se recomienda que entienda el esquema de CEE.
+Si sus datos ya están almacenados en [!DNL Experience Platform] y no se transmiten a través de los conectores de origen de Adobe Analytics o Adobe Audience Manager (solo inteligencia artificial aplicada al cliente), siga los pasos a continuación. Se recomienda que entienda el esquema de CEE.
 
 1. Revise la estructura del esquema [Consumer ExperienceEvent](#cee-schema) y determine si los datos se pueden asignar a sus campos.
 2. Póngase en contacto con los servicios de Adobe Consulting para que le ayuden a asignar los datos al esquema e ingerirlos en [!DNL Intelligent Services], o [siga los pasos de esta guía](#mapping) si desea asignar los datos usted mismo.
@@ -108,7 +108,7 @@ Aunque se recomienda encarecidamente el uso de todos los campos clave, hay dos c
 
 * [Un campo de identidad principal](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:channel](#channel) (obligatorio solo para Attribution AI)
+* [xdm:channel](#channel) (obligatorio solo para inteligencia artificial aplicada a la atribución)
 
 #### Identidad principal {#identity}
 
@@ -118,7 +118,7 @@ Debe determinar el mejor campo para utilizarlo como identidad principal en funci
 
 >[!NOTE]
 >
->El ID del Experience Cloud (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
+>El Experience Cloud ID (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
 
 * &quot;email&quot;
 * &quot;phone&quot;
@@ -156,7 +156,7 @@ Este campo representa la fecha y hora a la que se produjo el evento. Este valor 
 
 >[!NOTE]
 >
->Este campo solo es obligatorio cuando se utiliza el Attribution AI.
+>Este campo solo es obligatorio cuando se utiliza Attribution AI.
 
 Este campo representa el canal de marketing relacionado con ExperienceEvent. El campo incluye información sobre el tipo de canal, el tipo de medios y el tipo de ubicación.
 
@@ -321,9 +321,9 @@ Si tiene una suscripción de [!DNL Adobe Experience Platform] y desea asignar e 
 
 >[!NOTE]
 >
->Los pasos siguientes requieren una suscripción a Experience Platform. Si no tiene acceso a Platform, vaya a la sección [pasos siguientes](#next-steps).
+>Los pasos siguientes requieren una suscripción a Experience Platform. Si no tiene acceso a Experience Platform, vaya a la sección [pasos siguientes](#next-steps).
 
-En esta sección se describe el flujo de trabajo para asignar e ingerir datos en el Experience Platform para su uso en [!DNL Intelligent Services], incluidos los vínculos a tutoriales para ver los pasos detallados.
+En esta sección se describe el flujo de trabajo para asignar e ingerir datos en Experience Platform para usarlos en [!DNL Intelligent Services], incluidos los vínculos a tutoriales para ver los pasos detallados.
 
 #### Crear un esquema y un conjunto de datos de CEE
 
@@ -343,7 +343,7 @@ Una vez creado y guardado el esquema, puede crear un nuevo conjunto de datos bas
 * [Crear un conjunto de datos en la interfaz de usuario](../catalog/datasets/user-guide.md#create) (siga el flujo de trabajo para usar un esquema existente)
 * [Cree un conjunto de datos en la API](../catalog/datasets/create.md)
 
-Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario de Platform dentro del área de trabajo **[!UICONTROL Conjuntos de datos]**.
+Una vez creado el conjunto de datos, puede encontrarlo en la interfaz de usuario de Experience Platform dentro del área de trabajo **[!UICONTROL Conjuntos de datos]**.
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -355,11 +355,11 @@ Si está ingiriendo datos de un archivo CSV local, puede pasar a la siguiente se
 
 #### Asignación e ingesta de datos {#ingest}
 
-Después de crear un esquema y un conjunto de datos de CEE, puede empezar a asignar las tablas de datos al esquema e introducir esos datos en Platform. Consulte el tutorial sobre [asignación de un archivo CSV a un esquema XDM](../ingestion/tutorials/map-csv/overview.md) para ver los pasos sobre cómo hacerlo en la interfaz de usuario. Puede usar el siguiente [archivo JSON de muestra](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para probar el proceso de ingesta antes de usar sus propios datos.
+Después de crear un esquema y un conjunto de datos de CEE, puede empezar a asignar las tablas de datos al esquema e introducir esos datos en Experience Platform. Consulte el tutorial sobre [asignación de un archivo CSV a un esquema XDM](../ingestion/tutorials/map-csv/overview.md) para ver los pasos sobre cómo hacerlo en la interfaz de usuario. Puede usar el siguiente [archivo JSON de muestra](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para probar el proceso de ingesta antes de usar sus propios datos.
 
 Una vez que se ha rellenado un conjunto de datos, se puede utilizar el mismo conjunto de datos para introducir archivos de datos adicionales.
 
-Si los datos están almacenados en una aplicación de terceros compatible, también puede optar por crear un [conector de origen](../sources/home.md) para introducir los datos de eventos de marketing en [!DNL Platform] en tiempo real.
+Si los datos están almacenados en una aplicación de terceros compatible, también puede optar por crear un [conector de origen](../sources/home.md) para introducir los datos de eventos de marketing en [!DNL Experience Platform] en tiempo real.
 
 ## Pasos siguientes {#next-steps}
 

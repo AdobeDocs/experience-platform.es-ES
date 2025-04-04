@@ -2,9 +2,9 @@
 title: Borradores de flujos de datos en la IU
 description: Obtenga información sobre cómo guardar los flujos de datos como borrador y publicarlos más adelante, al utilizar el espacio de trabajo de fuentes.
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Este documento proporciona pasos sobre cómo guardar los flujos de datos al util
 
 Este documento requiere un entendimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
 
 ## Guardar un flujo de datos como borrador
 
-Puede pausar el progreso de creación del flujo de datos en cualquier momento después de seleccionar los datos que va a introducir en Platform.
+Puede pausar el progreso de creación del flujo de datos en cualquier momento después de seleccionar los datos que va a introducir en Experience Platform.
 
 Por ejemplo, si desea guardar el progreso durante el paso de detalles del flujo de datos, seleccione **[!UICONTROL Guardar como borrador]**.
 
@@ -51,7 +51,7 @@ También puede acceder a sus flujos de datos de borrador a través del catálogo
 
 ![Una lista de flujos de datos para una organización determinada.](../../images/tutorials/draft/catalog-access.png)
 
-## Publish el flujo de datos de borrador
+## Publicación del flujo de datos de borrador
 
 Volverá al paso [!UICONTROL Agregar datos] del flujo de trabajo de orígenes, donde podrá volver a confirmar el formato de los datos y continuar progresando en el flujo de datos.
 

@@ -2,9 +2,9 @@
 title: Implementación asíncrona
 description: Obtenga información sobre cómo implementar de forma asíncrona las bibliotecas de Adobe Experience Platform Launch en su sitio web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 El rendimiento y la implementación sin bloqueo de las bibliotecas de JavaScript requeridas por nuestros productos es cada vez más importante para los usuarios de Adobe Experience Cloud. Las herramientas como [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recomiendan a los usuarios cambiar su forma de implementar las bibliotecas de Adobe en el sitio. Este artículo explica cómo utilizar las bibliotecas de JavaScript de Adobe de forma asíncrona.
 
@@ -106,4 +106,4 @@ Las etiquetas proporcionan un conmutador para activar la carga asíncrona al cre
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Este código indica a Platform que el analizador del explorador ha llegado al final de la página. Debido a que es probable que las etiquetas no se hayan cargado y ejecutado antes de este tiempo, la llamada a los resultados de `_satellite.pageBottom()` en un error y el tipo de evento Page Bottom puede no comportarse según lo esperado.
+   Este código indica a Experience Platform que el explorador ha llegado al final de la página. Debido a que es probable que las etiquetas no se hayan cargado y ejecutado antes de este tiempo, la llamada a los resultados de `_satellite.pageBottom()` en un error y el tipo de evento Page Bottom puede no comportarse según lo esperado.

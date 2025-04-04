@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;query;editor de consultas;Editor de consultas;editor de consultas;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consulta;editor de consultas;Editor de consultas;Editor de consultas;
 solution: Experience Platform
 title: Guía de credenciales de Query Service
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1830'
 ht-degree: 2%
 
 ---
@@ -32,33 +32,33 @@ Puede utilizar credenciales que caducan para configurar rápidamente una conexi�
 
 La sección **[!UICONTROL Credenciales que caducan]** proporciona la siguiente información:
 
-- **[!UICONTROL Host]**: Nombre del host al que conectar a su cliente. Esto incorpora el nombre de su organización, tal como se ve en la cinta superior de la interfaz de usuario de Platform.
+- **[!UICONTROL Host]**: Nombre del host al que conectar a su cliente. Esto incorpora el nombre de su organización, tal como se ve en la cinta superior de la interfaz de usuario de Experience Platform.
 - **[!UICONTROL Puerto]**: número de puerto del host al que se va a conectar.
 - **[!UICONTROL Base de datos]**: Nombre de la base de datos a la que conectar un cliente.
 - **[!UICONTROL Nombre de usuario]**: El nombre de usuario usado para conectarse al servicio de consultas.
 - **[!UICONTROL Contraseña]**: La contraseña utilizada para conectarse al servicio de consultas. Las contraseñas de la IU se han cifrado en hash por motivos de seguridad. Seleccione el icono de copia (![El icono de copia.](/help/images/icons/copy.png)) para copiar sus credenciales completas sin hash en el portapapeles.
 - **[!UICONTROL Comando PSQL]**: Un comando que ha insertado automáticamente toda la información relevante para conectarse al servicio de consultas mediante PSQL en la línea de comandos.
-- **[!UICONTROL Caduca]**: La fecha y hora de caducidad de las credenciales que caducan. La duración de validez predeterminada del token es de 24 horas, pero se puede cambiar en la configuración avanzada del Admin Console.
+- **[!UICONTROL Caduca]**: La fecha y hora de caducidad de las credenciales que caducan. La duración de validez predeterminada del token es de 24 horas, pero se puede cambiar en la configuración avanzada de Admin Console.
 
 >[!TIP]
 >
->Para cambiar la duración de la sesión de la conexión de credenciales que caduca al servicio de consultas, vaya al [Admin Console](https://adminconsole.adobe.com/) y seleccione las siguientes opciones en la pantalla: **Configuración** > **Privacidad y seguridad** > **Configuración de autenticación** > **Configuración avanzada** > **Duración máxima de la sesión**.
+>Para cambiar la duración de la sesión de la conexión de credenciales que caduca al servicio de consultas, vaya a [Admin Console](https://adminconsole.adobe.com/) y seleccione las siguientes opciones en la pantalla: **Configuración** > **Privacidad y seguridad** > **Configuración de autenticación** > **Configuración avanzada** > **Duración máxima de la sesión**.
 >
->![Pestaña de configuración del Admin Console con las opciones Privacidad y seguridad, Autenticación y Duración máxima de la sesión resaltadas.](../images/ui/credentials/max-session-life.png)
+>![Pestaña Configuración de Admin Console con las opciones Privacidad y seguridad, Autenticación y Duración máxima de la sesión resaltadas.](../images/ui/credentials/max-session-life.png)
 >
 >Consulte la documentación de ayuda de Adobe para obtener más información sobre la [configuración avanzada](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) que ofrece Admin Console.
 
-### Conectarse a los datos del Customer Journey Analytics en sesiones de consulta {#connect-to-customer-journey-analytics}
+### Conectarse a los datos de Customer Journey Analytics en sesiones de consulta {#connect-to-customer-journey-analytics}
 
-Utilice la extensión de BI de Customer Journey Analytics con Power BI o Tableau para acceder a las [vistas de datos](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) de su Customer Journey Analytics con SQL. Al integrar el servicio de consultas con la extensión de BI, puede acceder a las vistas de datos directamente dentro de las sesiones del servicio de consultas. Esta integración optimiza la funcionalidad de las herramientas de BI que utilizan el servicio de consultas como interfaz PostgreSQL. Esta funcionalidad elimina la necesidad de duplicar vistas de datos en las herramientas de BI, garantiza la creación de informes coherentes en todas las plataformas y simplifica la integración de datos de Customer Journey Analytics con otras fuentes en las plataformas de BI.
+Utilice la extensión de Customer Journey Analytics BI con Power BI o Tableau para acceder a sus [vistas de datos](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) de Customer Journey Analytics con SQL. Al integrar el servicio de consultas con la extensión de BI, puede acceder a las vistas de datos directamente dentro de las sesiones del servicio de consultas. Esta integración optimiza la funcionalidad de las herramientas de BI que utilizan el servicio de consultas como interfaz PostgreSQL. Esta funcionalidad elimina la necesidad de duplicar vistas de datos en las herramientas de BI, garantiza la creación de informes coherentes en todas las plataformas y simplifica la integración de datos de Customer Journey Analytics con otras fuentes en las plataformas de BI.
 
 Consulte la documentación para aprender a [conectar Query Service a diversas aplicaciones cliente de escritorio](../clients/overview.md), como [Power BI](../clients/power-bi.md) o [Tableau](../clients/tableau.md)
 
 >[!IMPORTANT]
 >
->Se requieren un proyecto del espacio de trabajo del Customer Journey Analytics y una vista de datos para utilizar esta funcionalidad.
+>Se requieren un proyecto de Customer Journey Analytics Workspace y una vista de datos para utilizar esta funcionalidad.
 
-Para acceder a los datos del Customer Journey Analytics en Power BI o Tableau, seleccione el menú desplegable [!UICONTROL Base de datos] y, a continuación, seleccione `prod:cja` de las opciones disponibles. A continuación, copie los parámetros de credenciales de [!DNL Postgres] (host, puerto, base de datos, nombre de usuario y otros) para usarlos en la configuración de Power BI o Tableau.
+Para acceder a los datos de Customer Journey Analytics en Power BI o Tableau, seleccione el menú desplegable [!UICONTROL Base de datos] y, a continuación, seleccione `prod:cja` de las opciones disponibles. A continuación, copie los parámetros de credenciales de [!DNL Postgres] (host, puerto, base de datos, nombre de usuario y otros) para usarlos en la configuración de Power BI o Tableau.
 
 ![Pestaña de credenciales del servicio de consulta con la lista desplegable de base de datos resaltada.](../images/ui/credentials/database-dropdown.png)
 
@@ -66,9 +66,9 @@ Para acceder a los datos del Customer Journey Analytics en Power BI o Tableau, s
 >
 >Al conectar Power BI o Tableau a Customer Journey Analytics, se consume el derecho de &quot;sesiones simultáneas&quot; del servicio de consultas. Si se requieren sesiones y consultas adicionales, se puede adquirir un complemento adicional del paquete de usuarios de consultas ad hoc para obtener cinco sesiones simultáneas adicionales y una consulta simultánea adicional.
 
-También puede acceder a los datos del Customer Journey Analytics directamente desde el Editor de consultas o la CLI de Postgres. Para ello, haga referencia a la base de datos `cja` al escribir la consulta. Consulte la [guía de creación de consultas](./user-guide.md#query-authoring) del Editor de consultas para obtener más información sobre cómo escribir, ejecutar y guardar consultas.
+También puede acceder a sus datos de Customer Journey Analytics directamente desde el Editor de consultas o la CLI de Postgres. Para ello, haga referencia a la base de datos `cja` al escribir la consulta. Consulte la [guía de creación de consultas](./user-guide.md#query-authoring) del Editor de consultas para obtener más información sobre cómo escribir, ejecutar y guardar consultas.
 
-Consulte la [guía de extensión de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obtener instrucciones completas sobre el acceso a las vistas de datos del Customer Journey Analytics con SQL.
+Consulte la [guía de extensión de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obtener instrucciones completas sobre el acceso a las vistas de datos de Customer Journey Analytics con SQL.
 
 ## Credenciales que no caducan {#non-expiring-credentials}
 
@@ -99,7 +99,7 @@ Todos los permisos necesarios ahora están configurados en Adobe Developer Conso
 
 ### Generar credenciales {#generate-credentials}
 
-Para crear un conjunto de credenciales que no caduquen, vuelva a la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo para acceder al área de trabajo de [!UICONTROL Consultas]. A continuación, seleccione la ficha **[!UICONTROL Credenciales]** seguida de **[!UICONTROL Generar credenciales]**.
+Para crear un conjunto de credenciales que no caduquen, vuelva a la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo para acceder al área de trabajo de [!UICONTROL Consultas]. A continuación, seleccione la ficha **[!UICONTROL Credenciales]** seguida de **[!UICONTROL Generar credenciales]**.
 
 ![El panel Consultas con la ficha Credenciales y las credenciales de generación resaltadas.](../images/ui/credentials/generate-credentials.png)
 
@@ -108,7 +108,7 @@ Aparece un cuadro de diálogo que le permite generar credenciales. Para crear cr
 - **[!UICONTROL Nombre]**: El nombre de las credenciales que está generando.
 - **[!UICONTROL Descripción]**: (Opcional) Una descripción de las credenciales que está generando.
 - **[!UICONTROL Asignado a]**: Usuario al que se asignarán las credenciales. Este valor debe ser la dirección de correo electrónico del usuario que está creando las credenciales.
-- **[!UICONTROL Contraseña]** (opcional) Una contraseña opcional para sus credenciales. Si no se ha establecido la contraseña, el Adobe generará automáticamente una contraseña.
+- **[!UICONTROL Contraseña]** (opcional) Una contraseña opcional para sus credenciales. Si no se ha establecido la contraseña, Adobe la generará automáticamente.
 
 Una vez que haya proporcionado todos los detalles necesarios, seleccione **[!UICONTROL Generar credenciales]** para generar sus credenciales.
 
@@ -116,7 +116,7 @@ Una vez que haya proporcionado todos los detalles necesarios, seleccione **[!UIC
 
 >[!IMPORTANT]
 >
->Cuando se selecciona **[!UICONTROL Generar credenciales]**, se descarga un archivo JSON de configuración en el equipo local. Dado que la Adobe **no** registra las credenciales generadas, debe almacenar de forma segura el archivo descargado y mantener un registro de las credenciales.
+>Cuando se selecciona **[!UICONTROL Generar credenciales]**, se descarga un archivo JSON de configuración en el equipo local. Dado que Adobe **no** registra las credenciales generadas, debe almacenar de forma segura el archivo descargado y mantener un registro de las credenciales.
 >
 >Además, si las credenciales no se utilizan durante 90 días, se eliminarán las credenciales.
 

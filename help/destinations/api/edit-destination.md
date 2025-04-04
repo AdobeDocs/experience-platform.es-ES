@@ -4,9 +4,9 @@ title: Editar conexiones de destino mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo editar varios componentes de una conexión de destino mediante la API de Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1609'
 ht-degree: 5%
 
 ---
@@ -30,23 +30,23 @@ Este tutorial requiere que tenga un ID de flujo de datos válido. Si no tiene un
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Destinos](../home.md): [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
-* [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante la API [!DNL Flow Service].
 
 ### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de Experience Platform.
 
 ### Recopilación de valores para los encabezados obligatorios {#gather-values-for-required-headers}
 
-Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
+Para realizar llamadas a las API de Experience Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos del Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de Platform requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de Experience Platform, incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de Experience Platform requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -60,13 +60,13 @@ Todas las solicitudes que contienen una carga útil (`POST`, `PUT`, `PATCH`) req
 
 ## Búsqueda de detalles de flujo de datos {#look-up-dataflow-details}
 
-El primer paso para editar la conexión de destino es recuperar los detalles del flujo de datos con el ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una solicitud de GET al extremo `/flows`.
+El primer paso para editar la conexión de destino es recuperar los detalles del flujo de datos con el ID de flujo. Puede ver los detalles actuales de un flujo de datos existente realizando una petición GET al extremo `/flows`.
 
 >[!TIP]
 >
->Puede utilizar la interfaz de usuario del Experience Platform para obtener el ID de flujo de datos deseado de un destino. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]**, seleccione el flujo de datos de destino deseado y busque el ID de destino en el carril derecho. El ID de destino es el valor que utilizará como ID de flujo en el siguiente paso.
+>Puede utilizar la interfaz de usuario de Experience Platform para obtener el ID de flujo de datos deseado de un destino. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]**, seleccione el flujo de datos de destino deseado y busque el ID de destino en el carril derecho. El ID de destino es el valor que utilizará como ID de flujo en el siguiente paso.
 >
-> ![Obtener el identificador de destino mediante la interfaz de usuario del Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![Obtener el identificador de destino mediante la interfaz de usuario de Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
 >[!BEGINSHADEBOX]
 
@@ -183,7 +183,7 @@ Para actualizar los componentes de una conexión de destino, realice una solicit
 >
 >Se requiere el encabezado `If-Match` al realizar una solicitud `PATCH`. El valor de este encabezado es la versión única de la conexión de destino que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
 >
-> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET al extremo `/targetConnections/{TARGET_CONNECTION_ID}`, donde `{TARGET_CONNECTION_ID}` es el identificador de conexión de destino que desea actualizar.
+> Para obtener la última versión del valor de etiqueta, realice una petición GET al extremo `/targetConnections/{TARGET_CONNECTION_ID}`, donde `{TARGET_CONNECTION_ID}` es el identificador de conexión de destino que desea actualizar.
 >
 > Asegúrese de encerrar el valor del encabezado `If-Match` entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
 
@@ -235,7 +235,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID de conexión de destino y una etiqueta electrónica actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión de destino.
+Una respuesta correcta devuelve el ID de conexión de destino y una etiqueta electrónica actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión de destino.
 
 ```json
 {
@@ -275,7 +275,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID de conexión de destino y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión de destino.
+Una respuesta correcta devuelve el ID de conexión de destino y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión de destino.
 
 ```json
 {
@@ -317,7 +317,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID de conexión de destino y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión de destino.
+Una respuesta correcta devuelve el ID de conexión de destino y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión de destino.
 
 ```json
 {
@@ -342,7 +342,7 @@ Recuerde que obtuvo el identificador de conexión base en un [paso anterior](#lo
 >
 >Se requiere el encabezado `If-Match` al realizar una solicitud `PATCH`. El valor de este encabezado es la versión única de la conexión base que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión base y otras.
 >
-> Para obtener la última versión del valor Etag, realice una solicitud de GET al extremo `/connections/{BASE_CONNECTION_ID}`, donde `{BASE_CONNECTION_ID}` es el identificador de conexión base que desea actualizar.
+> Para obtener la última versión del valor Etag, realice una petición GET al extremo `/connections/{BASE_CONNECTION_ID}`, donde `{BASE_CONNECTION_ID}` es el identificador de conexión base que desea actualizar.
 >
 > Asegúrese de encerrar el valor del encabezado `If-Match` entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
 
@@ -394,7 +394,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID de conexión base y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión base.
+Una respuesta correcta devuelve el ID de conexión base y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión base.
 
 ```json
 {
@@ -436,7 +436,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID de conexión base y una etiqueta actualizada. Puede comprobar la actualización realizando una solicitud de GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión base.
+Una respuesta correcta devuelve el ID de conexión base y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de conexión base.
 
 ```json
 {
@@ -451,7 +451,7 @@ Una respuesta correcta devuelve el ID de conexión base y una etiqueta actualiza
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de respuestas de error.
+Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform para obtener más información sobre cómo interpretar las respuestas de error.
 
 ## Pasos siguientes {#next-steps}
 

@@ -3,9 +3,9 @@ title: Activar datos de audiencia en destinos de flujo continuo
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform asignándolas a destinos de flujo continuo.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 6%
 
 ---
@@ -52,7 +52,7 @@ Para seleccionar las audiencias que desea activar en el destino, utilice las cas
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 * **[!UICONTROL Servicio de segmentación]**: Audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
-* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
 ![Varias audiencias resaltadas en el paso Seleccionar audiencias.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -125,7 +125,7 @@ Para ver todas las audiencias que se están activando en su destino, use la opci
 
      ![Se ha resaltado el menú desplegable de ID de asignación.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * Algunos destinos requieren que asigne manualmente [!DNL Platform] audiencias a su homólogo en el destino de destino. Para ello, seleccione cada audiencia e introduzca el ID de audiencia correspondiente de la plataforma de destino en el campo **[!UICONTROL ID de asignación]**. Si el destino no incluye este campo, omita este paso.
+   * Algunos destinos requieren que asigne manualmente [!DNL Experience Platform] audiencias a su homólogo en el destino de destino. Para ello, seleccione cada audiencia e introduzca el ID de audiencia correspondiente de la plataforma de destino en el campo **[!UICONTROL ID de asignación]**. Si el destino no incluye este campo, omita este paso.
 
      ![Se ha resaltado el menú desplegable Origen de la audiencia.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
@@ -147,7 +147,7 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
-En el paso **[!UICONTROL Revisar]**, el Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
+En el paso **[!UICONTROL Revisar]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
 
 ![Ejemplo de una infracción de directiva de datos que se muestra en el flujo de trabajo de activación.](../assets/common/data-policy-violation.png)
 

@@ -2,9 +2,9 @@
 title: Ejemplos de conjuntos de datos
 description: Los conjuntos de datos de ejemplo del servicio de consultas le permiten realizar consultas exploratorias de big data con un tiempo de procesamiento muy reducido a costa de la precisión de la consulta. Esta guía proporciona información sobre cómo administrar los ejemplos para el procesamiento aproximado de consultas
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Para utilizar las capacidades de procesamiento de consultas de creación y elimi
 
 >[!NOTE]
 >
->Debe habilitar el indicador de sesión cada vez que inicie sesión en Platform.
+>Debe habilitar el indicador de sesión cada vez que inicie sesión en Experience Platform.
 
 ![Se resaltó el Editor de consultas con el comando &#39;SET aqp=true;&#39;.](../images/key-concepts/set-session-flag.png)
 

@@ -4,10 +4,10 @@ description: Obtenga información sobre cómo crear un flujo de datos para su cu
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 1%
+source-wordcount: '1003'
+ht-degree: 2%
 
 ---
 
@@ -45,9 +45,9 @@ Si ya tiene una conexión de [!DNL Braze], puede omitir el resto de este documen
 
 >[!TIP]
 >
->Debe crear un esquema del Modelo de datos de experiencia (XDM) si es la primera vez que crea una conexión de [!DNL Braze Currents]. Si ya ha creado un esquema para [!DNL Braze Currents], puede omitir este paso y continuar con [conectando su cuenta al Experience Platform](#connect).
+>Debe crear un esquema del Modelo de datos de experiencia (XDM) si es la primera vez que crea una conexión de [!DNL Braze Currents]. Si ya ha creado un esquema para [!DNL Braze Currents], puede omitir este paso y continuar con [conectando su cuenta a Experience Platform](#connect).
 
-En la interfaz de usuario de Platform, utilice la navegación izquierda y, a continuación, seleccione **[!UICONTROL Esquemas]** para acceder al área de trabajo de [!UICONTROL Esquemas]. A continuación, seleccione **[!UICONTROL Crear esquema]** y luego seleccione **[!UICONTROL Evento de experiencia]**. Para continuar, seleccione **[!UICONTROL Siguiente]**.
+En la interfaz de usuario de Experience Platform, utilice la navegación izquierda y, a continuación, seleccione **[!UICONTROL Esquemas]** para acceder al área de trabajo de [!UICONTROL Esquemas]. A continuación, seleccione **[!UICONTROL Crear esquema]** y luego seleccione **[!UICONTROL Evento de experiencia]**. Para continuar, seleccione **[!UICONTROL Siguiente]**.
 
 ![Esquema completado.](../../../../images/tutorials/create/braze/schema.png)
 
@@ -55,9 +55,9 @@ Proporcione un nombre y una descripción para el esquema. A continuación, utili
 
 Para obtener más información sobre los esquemas, lea la guía para [crear esquemas en la interfaz de usuario](../../../../../xdm/tutorials/create-schema-ui.md).
 
-## Conecte su cuenta de [!DNL Braze] al Experience Platform {#connect}
+## Conecte su cuenta de [!DNL Braze] a Experience Platform {#connect}
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
 En la categoría *Automatización de mercadotecnia*, seleccione **[!UICONTROL Corrientes de Bear]** y, a continuación, **[!UICONTROL Agregar datos]**.
 
@@ -84,7 +84,7 @@ Una vez agregado el nuevo campo calculado, seleccione **[!UICONTROL Asignar camp
 
 >[!IMPORTANT]
 >
->Las marcas de tiempo de Braze no se expresan en milisegundos, sino en segundos. Para que las marcas de tiempo en Experience Platform se reflejen con precisión, debe crear campos calculados en milisegundos. Un cálculo de &quot;tiempo * 1000&quot; se convertirá correctamente en milisegundos, adecuado para su asignación a un campo de marca de tiempo dentro de Experience Platform.
+>Las marcas de tiempo de Braze no se expresan en milisegundos, sino en segundos. Para que las marcas de tiempo de Experience Platform se reflejen con precisión, debe crear campos calculados en milisegundos. Un cálculo de &quot;tiempo * 1000&quot; se convertirá correctamente en milisegundos, adecuados para su asignación a un campo de marca de tiempo en Experience Platform.
 >
 >![Creando un campo calculado para la marca de tiempo ](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
@@ -94,16 +94,16 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**. Utilice la página de rev
 
 ### Recopilar credenciales necesarias
 
-Una vez creada la conexión, debe recopilar los siguientes valores de credencial, que luego proporcionará en el panel de Braze para enviar datos al Experience Platform. Para obtener más información, lea la [!DNL Braze] [guía sobre cómo navegar a Corrientes](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Una vez creada la conexión, debe recopilar los siguientes valores de credencial, que luego proporcionará en el panel de Brazo para enviar datos a Experience Platform. Para obtener más información, lea la [!DNL Braze] [guía sobre cómo navegar a Corrientes](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Campo | Descripción |
 | --- | --- |
-| ID de cliente | El ID de cliente asociado con el origen del Experience Platform. |
-| Secreto del cliente | El secreto de cliente asociado con el origen del Experience Platform. |
-| ID de inquilino | El ID de inquilino asociado con el origen del Experience Platform. |
-| Nombre de la zona protegida | La zona protegida asociada a la fuente del Experience Platform. |
-| ID de flujo de datos | El ID de flujo de datos asociado con el origen del Experience Platform. |
-| Punto final de streaming | El extremo de flujo continuo asociado con el origen del Experience Platform. **Nota**: [!DNL Braze] convierte automáticamente esto en el extremo de flujo continuo por lotes. |
+| ID de cliente | El ID de cliente asociado con el origen de Experience Platform. |
+| Secreto del cliente | El secreto de cliente asociado con el origen de Experience Platform. |
+| ID de inquilino | El ID de inquilino asociado con el origen de Experience Platform. |
+| Nombre de la zona protegida | La zona protegida asociada a su origen de Experience Platform. |
+| ID de flujo de datos | El ID de flujo de datos asociado con el origen de Experience Platform. |
+| Punto final de streaming | Punto final de flujo continuo asociado a la fuente de Experience Platform. **Nota**: [!DNL Braze] convierte automáticamente esto en el extremo de flujo continuo por lotes. |
 
 ### Configure [!DNL Braze Currents] para transmitir datos a su fuente de datos
 
@@ -111,4 +111,4 @@ En [!DNL Braze Dashboard], vaya a Integraciones de socios **->** Exportación de
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Braze]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incorporar datos del sistema de automatización de marketing a [!DNL Platform]](../../dataflow/marketing-automation.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Braze]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incorporar datos del sistema de automatización de marketing a [!DNL Experience Platform]](../../dataflow/marketing-automation.md).

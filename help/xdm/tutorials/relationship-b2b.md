@@ -1,10 +1,10 @@
 ---
-title: Definir una relación entre dos esquemas en Real-time Customer Data Platform B2B Edition
-description: Aprenda a definir una relación varios a uno entre dos esquemas en Adobe Real-time Customer Data Platform B2B Edition.
+title: Definición de una relación entre dos esquemas en Real-Time Customer Data Platform B2B edition
+description: Aprenda a definir una relación de varios a uno entre dos esquemas en Adobe Real-Time Customer Data Platform B2B edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1771'
 ht-degree: 12%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 12%
 >title="Esquema de referencia"
 >abstract="Seleccione el esquema con el que desea establecer una relación. Según la clase del esquema, también puede tener relaciones existentes con otras entidades en el contexto B2B. Consulte la documentación para obtener más información acerca de cómo se relacionan las clases de esquema B2B entre sí."
 
-Adobe Real-time Customer Data Platform B2B Edition proporciona varias clases de modelo de datos de experiencia (XDM) que capturan entidades de datos B2B fundamentales, como [cuentas](../classes/b2b/business-account.md), [oportunidades](../classes/b2b/business-opportunity.md), [campañas](../classes/b2b/business-campaign.md) y más. Si crea esquemas basados en estas clases y los habilita para su uso en [Perfil del cliente en tiempo real](../../profile/home.md), podrá combinar datos de distintas fuentes en una representación unificada denominada esquema de unión.
+Adobe Real-Time Customer Data Platform B2B edition proporciona varias clases de modelo de datos de experiencia (XDM) que capturan entidades de datos B2B fundamentales, como [cuentas](../classes/b2b/business-account.md), [oportunidades](../classes/b2b/business-opportunity.md), [campañas](../classes/b2b/business-campaign.md) y más. Si crea esquemas basados en estas clases y los habilita para su uso en [Perfil del cliente en tiempo real](../../profile/home.md), podrá combinar datos de distintas fuentes en una representación unificada denominada esquema de unión.
 
 Sin embargo, los esquemas de unión solo pueden contener campos capturados por esquemas que comparten la misma clase. Aquí es donde entran en juego las relaciones de esquema. Al implementar relaciones en los esquemas B2B, puede describir cómo se relacionan entre sí estas entidades comerciales y puede incluir atributos de varias clases en casos de uso de segmentación descendente.
 
@@ -24,13 +24,13 @@ El diagrama siguiente proporciona un ejemplo de cómo las diferentes clases B2B 
 
 ![relaciones de clase B2B](../images/tutorials/relationship-b2b/classes.png)
 
-Este tutorial trata los pasos para definir una relación varios a uno entre dos esquemas en Real-Time CDP B2B Edition.
+Este tutorial cubre los pasos para definir una relación varios a uno entre dos esquemas en Real-Time CDP B2B edition.
 
 >[!NOTE]
 >
->Si no usa Real-time Customer Data Platform B2B Edition o desea crear una relación uno a uno, consulte la guía sobre [creación de una relación uno a uno](./relationship-ui.md) en su lugar.
+>Si no usa Real-Time Customer Data Platform B2B edition o desea crear una relación uno a uno, consulte la guía sobre [creación de una relación uno a uno](./relationship-ui.md) en su lugar.
 >
->Este tutorial se centra en cómo establecer manualmente relaciones entre esquemas B2B en la IU de Platform. Si va a traer datos desde una conexión de origen B2B, puede utilizar una utilidad de generación automática para crear los esquemas, identidades y relaciones necesarios en su lugar. Consulte la documentación de fuentes sobre áreas de nombres y esquemas B2B para obtener más información sobre [el uso de la utilidad de generación automática](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+>Este tutorial se centra en cómo establecer manualmente relaciones entre esquemas B2B en la IU de Experience Platform. Si va a traer datos desde una conexión de origen B2B, puede utilizar una utilidad de generación automática para crear los esquemas, identidades y relaciones necesarios en su lugar. Consulte la documentación de fuentes sobre áreas de nombres y esquemas B2B para obtener más información sobre [el uso de la utilidad de generación automática](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ## Introducción
 
@@ -53,7 +53,7 @@ Las relaciones de esquema están representadas por un campo dedicado dentro de u
 >title="Área de nombres de identidad de referencia"
 >abstract="El área de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las identidades en las relaciones B2B."
 
-Para establecer una relación, el esquema de referencia debe tener una identidad principal definida. Al establecer una identidad principal para una entidad B2B, tenga en cuenta que los ID de entidad basados en cadenas pueden superponerse si los recopila en diferentes sistemas o ubicaciones, lo que podría provocar conflictos de datos en Platform.
+Para establecer una relación, el esquema de referencia debe tener una identidad principal definida. Al establecer una identidad principal para una entidad B2B, tenga en cuenta que los ID de entidad basados en cadenas pueden superponerse si los recopila en diferentes sistemas o ubicaciones, lo que podría provocar conflictos de datos en Experience Platform.
 
 Para tener en cuenta esto, todas las clases B2B estándar contienen campos &quot;clave&quot; que se ajustan al tipo de datos [[!UICONTROL B2B Source]](../data-types/b2b-source.md). Este tipo de datos proporciona campos para un identificador de cadena para la entidad B2B junto con otra información contextual sobre el origen del identificador. Uno de estos campos, `sourceKey`, concatena los valores de los demás campos en el tipo de datos para producir un identificador totalmente único para la entidad. Este campo siempre debe utilizarse como identidad principal para los esquemas de entidad B2B.
 

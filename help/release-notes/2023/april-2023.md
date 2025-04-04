@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2023'
 description: Las notas de la versión de abril de 2023 de Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2038'
-ht-degree: 98%
+source-wordcount: '2040'
+ht-degree: 97%
 
 ---
 
@@ -139,7 +139,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Platform, lea la [Información general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, lea la [descripción general del sistema XDM](../../xdm/home.md).
 
 ## Real-Time Customer Data Platform
 
@@ -182,7 +182,7 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [I
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

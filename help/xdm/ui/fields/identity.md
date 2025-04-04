@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos;ui;workspace;identity;field;
 solution: Experience Platform
 title: Definición de campos de identidad en la IU
-description: Obtenga información sobre cómo definir un campo de identidad en la interfaz de usuario del Experience Platform.
+description: Obtenga información sobre cómo definir un campo de identidad en la interfaz de usuario de Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '652'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ En el Modelo de datos de experiencia (XDM), un campo de identidad representa un 
 
 ## Requisitos previos
 
-Los campos de identidad son un componente crucial en la forma en que se construyen los gráficos de identidad de los clientes en Platform, lo que en última instancia afecta a la forma en que el Perfil del cliente en tiempo real combina fragmentos de datos dispares para obtener una vista completa del cliente. Antes de definir los campos de identidad en los esquemas, consulte la siguiente documentación para obtener más información sobre los servicios y conceptos clave relacionados con los campos de identidad:
+Los campos de identidad son un componente crucial en la forma en que se construyen los gráficos de identidad de los clientes en Experience Platform, lo que en última instancia afecta a la forma en que el Perfil del cliente en tiempo real combina fragmentos de datos dispares para obtener una vista completa del cliente. Antes de definir los campos de identidad en los esquemas, consulte la siguiente documentación para obtener más información sobre los servicios y conceptos clave relacionados con los campos de identidad:
 
 * [Servicio de identidad de Adobe Experience Platform](../../../identity-service/home.md): vincula identidades entre dispositivos y sistemas y vincula conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
    * [Áreas de nombres de identidad](../../../identity-service/features/namespaces.md): Las áreas de nombres de identidad definen los diferentes tipos de información de identidad que se pueden relacionar con una sola persona y son un componente necesario para cada campo de identidad.

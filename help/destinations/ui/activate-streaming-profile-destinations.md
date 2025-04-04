@@ -4,9 +4,9 @@ type: Tutorial
 description: Obtenga información sobre cómo activar los datos de audiencia que tiene en Adobe Experience Platform enviando audiencias a destinos basados en perfiles de streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Para seleccionar las audiencias que desea activar en el destino, utilice las cas
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 * **[!UICONTROL Servicio de segmentación]**: Audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de Audience Portal](../../segmentation/ui/audience-portal.md) para obtener más información.
-* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
 ![Imagen que resalta la selección de casillas de verificación en el paso Seleccionar audiencias del flujo de trabajo de activación.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
@@ -101,7 +101,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
-En el paso **[!UICONTROL Revisar]**, el Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
+En el paso **[!UICONTROL Revisar]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
 
 ![infracción de directiva de datos](../assets/common/data-policy-violation.png)
 

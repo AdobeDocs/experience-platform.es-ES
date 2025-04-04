@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: octubre de 2023'
 description: Las notas de la versión de octubre de 2023 de Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 40%
+source-wordcount: '1057'
+ht-degree: 37%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Métricas de uso de destinos | Se han añadido nuevas métricas de medición al panel de uso de licencias. Las métricas **[!UICONTROL Tamaño de Audience Activation]** y **[!UICONTROL Tamaño de exportación de datos]** proporcionan una forma cómoda de rastrear la cantidad de datos que ha exportado fuera de Platform en relación con sus derechos de uso de licencias. Consulte la documentación de [métricas disponibles](../../dashboards/guides/license-usage.md#available-metrics) para obtener descripciones de estas y otras métricas de uso de licencias. |
+| Métricas de uso de destinos | Se han añadido nuevas métricas de medición al panel de uso de licencias. Las métricas **[!UICONTROL Tamaño de Audience Activation]** y **[!UICONTROL Tamaño de exportación de datos]** proporcionan una forma cómoda de rastrear la cantidad de datos que ha exportado fuera de Experience Platform en relación con sus derechos de uso de licencias. Consulte la documentación de [métricas disponibles](../../dashboards/guides/license-usage.md#available-metrics) para obtener descripciones de estas y otras métricas de uso de licencias. |
 
 {style="table-layout:auto"}
 
@@ -47,7 +47,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Extensiones | Mejora de la API de conversiones [!DNL Meta] | Hay tres mejoras en la extensión [Meta Conversions API](/help/tags/extensions/server/meta/overview.md): <ul><li>Integración con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea una experiencia de inicio de sesión perfecta, ya que le permite compartir su pixelID y el token de acceso para la integración de la API de conversiones con Adobe.</li><li>Integración con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar publicidad a las personas que tienen más probabilidades de completar una acción deseada y vincular la acción de nuevo a los anuncios enviados.</li><li>Integración con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite pasar el RampID de LiveRamp en el campo Transferencia fácil, lo que elimina la necesidad de compartir PII directamente con socios o Meta. </li></ul> |
 | Extensiones | API de conversiones [!DNL LinkedIn] | La extensión de la API [[!DNL LinkedIn] Conversiones](../../tags/extensions/server/linkedin/overview.md) le permite evaluar la efectividad de sus campañas de marketing de LinkedIn reenviando datos de evento de Experience Platform a LinkedIn. |
 | Secreto | Secreto de OAuth 2 de [!DNL LinkedIn] | El [[!DNL LinkedIn] Secreto de OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) le permite enviar interacciones servidor-servidor a [!DNL LinkedIn] en el reenvío de eventos. |
-| Reenvío de eventos | Actualización de Etiquetas y Reenvío de eventos | Para conservar el rendimiento de [Etiquetas](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y [Reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) en Platform, solo se conservarán las compilaciones de desarrollo y fase más recientes, tanto las que se realizaron correctamente como las que no se realizaron correctamente. Se eliminarán todas las compilaciones que ya no estén en uso. Además, se han implementado restricciones de limitación de velocidad y limitación de restricción para garantizar que algunos usos intensos de la API no degraden el rendimiento de la API para otros. |
+| Reenvío de eventos | Actualización de Etiquetas y Reenvío de eventos | Para conservar el rendimiento de [Etiquetas](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y [Reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) en Experience Platform, solo se conservarán las compilaciones de desarrollo y fase más recientes, tanto las que se realizaron correctamente como las que no. Se eliminarán todas las compilaciones que ya no estén en uso. Además, se han implementado restricciones de limitación de velocidad y limitación de restricción para garantizar que algunos usos intensos de la API no degraden el rendimiento de la API para otros. |
 | Extensiones | Elementos, reglas y extensiones | [Los elementos, las reglas y las extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) ahora se ordenan en el resultado de la biblioteca para garantizar una mayor coherencia entre varias compilaciones e implementaciones de la misma biblioteca. |
 
 Para obtener más información sobre la recopilación de datos, lea la [Información general sobre recopilación de datos](../../tags/home.md).
@@ -80,7 +80,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## Zonas protegidas {#sandboxes}
 
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para responder a esta necesidad, Experience Platform proporciona zonas protegidas que dividen una única instancia de Platform en entornos virtuales separados para ayudar a desarrollar y evolucionar las aplicaciones de la experiencia digital.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar aplicaciones de experiencia digital y hacer que evolucionen.
 
 **Nueva funcionalidad**
 
@@ -92,7 +92,7 @@ Para obtener más información sobre las zonas protegidas, consulte la [descripc
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
+[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Experience Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
 **Nueva funcionalidad**
 
@@ -102,7 +102,7 @@ Para obtener más información sobre las zonas protegidas, consulte la [descripc
 
 Para obtener más información sobre el servicio de segmentación, lea la [descripción general del servicio de segmentación](../../segmentation/home.md).
 
-## Orígenes {#sources}
+## Fuentes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 

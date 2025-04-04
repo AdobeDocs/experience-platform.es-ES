@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2023'
 description: Las notas de la versión de febrero de 2023 de Adobe Experience Platform.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1255'
-ht-degree: 97%
+source-wordcount: '1259'
+ht-degree: 91%
 
 ---
 
@@ -92,7 +92,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Platform, lea la [Información general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, lea la [descripción general del sistema XDM](../../xdm/home.md).&#x200B;
 
 ## Servicio de consultas {#query-service}
 
@@ -128,7 +128,7 @@ Para obtener más información sobre Real-Time CDP B2B Edition, lea la [Informac
 
 ## Fuentes {#sources}
 
-Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
+Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
@@ -136,8 +136,8 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
-| Designación del acceso de nivel de suscripción con [!DNL Google PubSub] | Ahora puede definir el acceso a una suscripción a un tema específico al utilizar el origen [!DNL Google PubSub] proporcionando el ID de suscripción al autenticarse. Para obtener más información, lea el [!DNL Google PubSub] tutorial de autenticación [usando la API de Flow Service](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) o [IU de Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Ingesta de datos de actividad personalizada de [!DNL Marketo] | Ahora puede obtener datos de actividad personalizada de su instancia [!DNL Marketo] a Experience Platform. Para introducir datos de actividad personalizada, debe configurar grupos de campos de actividades personalizadas en el esquema de actividades B2B y crear un flujo de datos mediante el conjunto de datos de actividades. Una vez completado el flujo de datos, el conjunto de datos introducido contendrá actividades estándar y personalizadas de su instancia [!DNL Marketo]. A continuación, puede utilizar el [Servicio de consultas](../../query-service/home.md) para acceder a sus registros de actividad personalizados en Platform. Para obtener más información, lea la guía de [creación de un flujo de datos para datos de actividad personalizada](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Designación del acceso de nivel de suscripción con [!DNL Google PubSub] | Ahora puede definir el acceso a una suscripción a un tema específico al utilizar el origen [!DNL Google PubSub] proporcionando el ID de suscripción al autenticarse. Para obtener más información, lea el tutorial de autenticación [!DNL Google PubSub] [mediante la API de Flow Service](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) o [IU de Experience Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Ingesta de datos de actividad personalizada de [!DNL Marketo] | Ahora puede obtener datos de actividad personalizada de su instancia [!DNL Marketo] a Experience Platform. Para introducir datos de actividad personalizada, debe configurar grupos de campos de actividades personalizadas en el esquema de actividades B2B y crear un flujo de datos mediante el conjunto de datos de actividades. Una vez completado el flujo de datos, el conjunto de datos introducido contendrá actividades estándar y personalizadas de su instancia [!DNL Marketo]. A continuación, puede usar [Servicio de consultas](../../query-service/home.md) para acceder a sus registros de actividad personalizados en Experience Platform. Para obtener más información, lea la guía de [creación de un flujo de datos para datos de actividad personalizada](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Excluir cuentas no reclamadas de [!DNL Marketo] | Ahora puede configurar si desea excluir o incluir cuentas no reclamadas de la ingesta al crear un flujo de datos para datos de empresas. Para obtener más información, lea la guía sobre la [creación de una conexión de origen y un flujo de datos para  [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}

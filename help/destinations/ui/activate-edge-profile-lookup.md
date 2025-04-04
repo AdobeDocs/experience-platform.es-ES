@@ -3,9 +3,9 @@ title: Búsqueda de atributos de perfil de Edge en tiempo real
 description: Aprenda a buscar atributos de perfil de Edge en tiempo real, mediante el destino de Personalization personalizado y la API de Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1907'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ En esta página se describen los pasos que debe seguir para buscar datos de perf
 
 ## Terminología y requisitos previos {#prerequisites}
 
-Al configurar el caso de uso descrito en esta página, utilizará los siguientes componentes de Platform:
+Al configurar el caso de uso descrito en esta página, utilizará los siguientes componentes de Experience Platform:
 
 * [Datastreams](../../datastreams/overview.md): un conjunto de datos recibe datos de evento entrantes de Web SDK y responde con datos de perfil perimetral.
 * [Políticas de combinación](../../segmentation/ui/segment-builder.md#merge-policies): Creará una política de combinación [!UICONTROL Activa en Edge] para garantizar que los perfiles de Edge utilicen correctamente los datos de perfil.
@@ -54,7 +54,7 @@ Siga los pasos de la documentación de [configuración de secuencia de datos](..
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![Imagen de la interfaz de usuario de Platform que muestra la pantalla de configuración de secuencia de datos.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+  ![Imagen de la interfaz de usuario de Experience Platform que muestra la pantalla de configuración de secuencia de datos.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Paso 2: Configurar las audiencias para la evaluación de Edge {#audience-edge-evaluation}
@@ -110,7 +110,7 @@ Después de crear una conexión de **[!UICONTROL Personalization personalizado c
    Puede seleccionar entre varios tipos de audiencias, según su origen:
 
    * **[!UICONTROL Servicio de segmentación]**: Audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
-   * **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
    * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
      ![Seleccione el paso de audiencias del flujo de trabajo de activación con varias audiencias resaltadas.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

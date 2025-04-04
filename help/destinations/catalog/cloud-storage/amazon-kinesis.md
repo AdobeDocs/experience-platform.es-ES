@@ -4,9 +4,9 @@ title: Conexión de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real a su almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1989'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El servicio [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] le permite recopilar y procesar grandes flujos de registros de datos en tiempo real.
 
@@ -25,7 +25,7 @@ Puede crear una conexión saliente en tiempo real a su almacenamiento de [!DNL A
 
 * Para obtener más información acerca de [!DNL Amazon Kinesis], consulte la [documentación de Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Para conectarse a [!DNL Amazon Kinesis] mediante programación, consulte el [tutorial de la API de destinos de transmisión](../../api/streaming-destinations.md).
-* Para conectarse a [!DNL Amazon Kinesis] mediante la interfaz de usuario de Platform, consulte las secciones siguientes.
+* Para conectarse a [!DNL Amazon Kinesis] mediante la interfaz de usuario de Experience Platform, consulte las secciones siguientes.
 
 ![Amazon Kinesis en la interfaz de usuario](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
@@ -41,8 +41,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -63,13 +63,13 @@ Para cumplir los requisitos de seguridad y conformidad de los clientes, Experien
 
 ## Permisos necesarios de [!DNL Amazon Kinesis] {#required-kinesis-permission}
 
-Para conectar y exportar correctamente los datos a las secuencias de [!DNL Amazon Kinesis], el Experience Platform necesita permisos para las siguientes acciones:
+Para conectar y exportar correctamente los datos a las secuencias de [!DNL Amazon Kinesis], Experience Platform necesita permisos para las siguientes acciones:
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-Estos permisos se organizan a través de la consola [!DNL Kinesis] y Platform los comprueba una vez que ha configurado el destino de Kinesis en la interfaz de usuario de Platform.
+Estos permisos se organizan a través de la consola [!DNL Kinesis] y Experience Platform los comprueba una vez que ha configurado el destino Kinesis en la interfaz de usuario de Experience Platform.
 
 El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para exportar correctamente datos a un destino [!DNL Kinesis].
 
@@ -94,7 +94,7 @@ El ejemplo siguiente muestra los derechos de acceso mínimos necesarios para exp
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `kinesis:ListStreams` | Una acción que enumera las secuencias de datos de Amazon Kinesis. |
+| `kinesis:ListStreams` | Una acción que enumera sus flujos de datos de Amazon Kinesis. |
 | `kinesis:PutRecord` | Una acción que escribe un único registro de datos en un flujo de datos de Kinesis. |
 | `kinesis:PutRecords` | Una acción que escribe varios registros de datos en un flujo de datos de Kinesis en una sola llamada. |
 
@@ -116,7 +116,7 @@ Escriba los campos siguientes y seleccione **[!UICONTROL Conectar con destino]**
 
 ![Imagen de la pantalla de la interfaz de usuario que muestra los campos completados para los detalles de autenticación de Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services]clave de acceso y clave secreta**: en [!DNL Amazon Web Services], genere un par de `access key - secret access key` para conceder acceso de plataforma a su cuenta de [!DNL Amazon Kinesis]. Obtenga más información en la [documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]clave de acceso y clave secreta**: en [!DNL Amazon Web Services], genere un par de `access key - secret access key` para conceder acceso a Experience Platform a su cuenta de [!DNL Amazon Kinesis]. Obtenga más información en la [documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Región]**: Indique a qué región [!DNL Amazon Web Services] se transmitirán los datos.
 
 ### Rellenar detalles de destino {#destination-details}
@@ -133,11 +133,11 @@ Escriba los campos siguientes y seleccione **[!UICONTROL Conectar con destino]**
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-![Imagen de la pantalla de la interfaz de usuario que muestra campos completados para los detalles de destino de Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+![Imagen de la pantalla de la interfaz de usuario que muestra los campos completados para los detalles del destino de Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
 * **[!UICONTROL Nombre]**: proporcione un nombre para la conexión con [!DNL Amazon Kinesis]
 * **[!UICONTROL Descripción]**: proporcione una descripción para la conexión con [!DNL Amazon Kinesis].
-* **[!UICONTROL Stream]**: proporciona el nombre de un flujo de datos existente en tu cuenta de [!DNL Amazon Kinesis]. Platform exportará datos a este flujo.
+* **[!UICONTROL Stream]**: proporciona el nombre de un flujo de datos existente en tu cuenta de [!DNL Amazon Kinesis]. Experience Platform exportará datos a este flujo.
 * **[!UICONTROL Incluir nombres de segmentos]**: Cambie la opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
 * **[!UICONTROL Incluir marcas de tiempo de segmentos]**: actívela si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
 
@@ -145,7 +145,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -166,7 +166,7 @@ Consulte [Activar datos de audiencia en destinos de exportación de perfiles de 
 
 ## Comportamiento de exportación de perfil {#profile-export-behavior}
 
-El Experience Platform optimiza el comportamiento de exportación de perfiles a su destino [!DNL Amazon Kinesis] para exportar solo datos a su destino cuando se han producido actualizaciones relevantes en un perfil tras la calificación de la audiencia u otros eventos significativos. Los perfiles se exportan al destino en las siguientes situaciones:
+Experience Platform optimiza el comportamiento de exportación de perfiles a su destino [!DNL Amazon Kinesis] para exportar solo datos a su destino cuando se han producido actualizaciones relevantes en un perfil tras la calificación de la audiencia u otros eventos significativos. Los perfiles se exportan al destino en las siguientes situaciones:
 
 * La actualización de perfil se determinó mediante un cambio en el abono a audiencia de al menos una de las audiencias asignadas al destino. Por ejemplo, el perfil cumple los requisitos de una de las audiencias asignadas al destino o ha salido de una de las audiencias asignadas al destino.
 * La actualización de perfil se determinó mediante un cambio en el [mapa de identidad](/help/xdm/field-groups/profile/identitymap.md). Por ejemplo, a un perfil que ya estaba cualificado para una de las audiencias asignadas al destino se le ha añadido una nueva identidad en el atributo del mapa de identidad.
@@ -182,7 +182,7 @@ Con respecto a los datos que se exportan para un perfil determinado, es importan
 
 | Qué determina una exportación de destino | Qué se incluye en la exportación de destino |
 |---------|----------|
-| <ul><li>Los atributos y audiencias asignados sirven de referencia para una exportación de destino. Esto significa que si alguna audiencia asignada cambia de estado (de `null` a `realized` o de `realized` a `exiting`) o si se actualiza algún atributo asignado, se iniciará una exportación de destino.</li><li>Dado que las identidades no se pueden asignar actualmente a [!DNL Amazon Kinesis] destinos, los cambios en cualquier identidad de un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es el mismo valor o no. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>El objeto `segmentMembership` incluye la audiencia asignada en el flujo de datos de activación, para la cual el estado del perfil ha cambiado después de un evento de calificación o salida de audiencia. Tenga en cuenta que otras audiencias sin asignar para las que el perfil cumple los requisitos pueden formar parte de la exportación de destino, si estas audiencias pertenecen a la misma [política de combinación](/help/profile/merge-policies/overview.md) que la audiencia asignada en el flujo de datos de activación. </li><li>También se incluyen todas las identidades del objeto `identityMap` (actualmente, el Experience Platform no admite la asignación de identidades en el destino [!DNL Amazon Kinesis]).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
+| <ul><li>Los atributos y audiencias asignados sirven de referencia para una exportación de destino. Esto significa que si alguna audiencia asignada cambia de estado (de `null` a `realized` o de `realized` a `exiting`) o si se actualiza algún atributo asignado, se iniciará una exportación de destino.</li><li>Dado que las identidades no se pueden asignar actualmente a [!DNL Amazon Kinesis] destinos, los cambios en cualquier identidad de un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es el mismo valor o no. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>El objeto `segmentMembership` incluye la audiencia asignada en el flujo de datos de activación, para la cual el estado del perfil ha cambiado después de un evento de calificación o salida de audiencia. Tenga en cuenta que otras audiencias sin asignar para las que el perfil cumple los requisitos pueden formar parte de la exportación de destino, si estas audiencias pertenecen a la misma [política de combinación](/help/profile/merge-policies/overview.md) que la audiencia asignada en el flujo de datos de activación. </li><li>También se incluyen todas las identidades del objeto `identityMap` (Experience Platform no admite actualmente la asignación de identidades en el destino [!DNL Amazon Kinesis]).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -196,7 +196,7 @@ Desde el punto de vista de los atributos de perfil, cualquier cambio en los cuat
 
 ## Relleno de datos históricos {#historical-data-backfill}
 
-Cuando se añade una audiencia nueva a un destino existente o se crea un destino nuevo y se le asignan audiencias, Experience Platform exporta al destino los datos históricos de cualificación de audiencias. Los perfiles que cumplen los requisitos para la audiencia *antes de* que la audiencia se agregó al destino se exportan al destino en un plazo aproximado de una hora.
+Al agregar una audiencia nueva a un destino existente o al crear un destino nuevo y asignarle audiencias, Experience Platform exporta al destino los datos de calificación de audiencias históricas. Los perfiles que cumplen los requisitos para la audiencia *antes de* que la audiencia se agregó al destino se exportan al destino en un plazo aproximado de una hora.
 
 ## Datos exportados {#exported-data}
 
@@ -300,7 +300,7 @@ A continuación se muestran más ejemplos de datos exportados, según la configu
 
 En el 95 por ciento de los casos, Experience Platform intenta ofrecer una latencia de rendimiento de menos de 10 minutos para los mensajes enviados correctamente con una tasa de menos de 10 000 solicitudes por segundo para cada flujo de datos a un destino HTTP.
 
-En caso de solicitudes fallidas al destino de la API HTTP, el Experience Platform almacena las solicitudes fallidas y las reintenta dos veces para enviar las solicitudes al extremo.
+En caso de solicitudes fallidas al destino de la API HTTP, Experience Platform almacena las solicitudes fallidas y las reintenta dos veces para enviar las solicitudes al extremo.
 
 >[!MORELIKETHIS]
 >

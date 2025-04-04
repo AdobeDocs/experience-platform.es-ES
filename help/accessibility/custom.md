@@ -4,9 +4,9 @@ title: Soluciones de accesibilidad personalizadas para Experience Platform
 type: Documentation
 description: Obtenga más información acerca de las soluciones de accesibilidad personalizadas en la interfaz de usuario de Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -17,17 +17,17 @@ Adobe Experience Platform se mejora continuamente para satisfacer las necesidade
 
 ## Página principal e IU general
 
-La interfaz de usuario del Experience Platform cumple las relaciones de contraste requeridas para los componentes normales de texto, gráficos e interfaz de usuario. Los colores de la interfaz de usuario también se han elegido para admitir la accesibilidad para todos los usuarios, incluidos los que tienen discapacidades visuales.
+La interfaz de usuario de Experience Platform cumple las relaciones de contraste necesarias para los componentes normales de texto, gráficos e interfaz de usuario. Los colores de la interfaz de usuario también se han elegido para admitir la accesibilidad para todos los usuarios, incluidos los que tienen discapacidades visuales.
 
-En Platform, los elementos de la interfaz de usuario en los que se puede hacer clic o procesar con un puntero también se pueden activar mediante un teclado. Esto incluye la navegación izquierda, reproductores de vídeo, tablas y más.
+En , los elementos de la IU en los que se puede hacer clic o que se pueden activar con un puntero también se pueden activar mediante un teclado. Esto incluye la navegación izquierda, reproductores de vídeo, tablas y más.
 
-Experience Platform se esfuerza por cumplir con los estándares de accesibilidad internacionales, incluidas las Directrices de accesibilidad al contenido web 2.1 de nivel A y nivel AA y las normas web de la Iniciativa de accesibilidad web - Aplicaciones de Internet enriquecidas accesibles (WAI-ARIA).
+Experience Platform se esfuerza por cumplir con los estándares de accesibilidad internacionales, incluidas las Directrices de accesibilidad al contenido web 2.1 de nivel A y nivel AA y los estándares web de la Iniciativa de accesibilidad web - Aplicaciones de Internet enriquecidas accesibles (WAI-ARIA).
 
 ![Página principal de la interfaz de usuario de Adobe Experience Platform.](images/homepage.png)
 
 ## Navegación izquierda
 
-La navegación izquierda dentro de la interfaz de usuario del Experience Platform es accesible mediante el teclado y proporciona un contraste de color en los estados normal, de desplazamiento y de selección que cumplen los estándares de accesibilidad.
+La navegación izquierda dentro de la interfaz de usuario de Experience Platform es accesible mediante el teclado y proporciona contraste de color en los estados normal, de desplazamiento y de selección que cumplen los estándares de accesibilidad.
 
 Desde la pantalla de inicio, los usuarios pueden pulsar el tabulador en el panel de navegación izquierdo. Si selecciona **Mayús + Tab**, el usuario volverá a la pantalla Inicio.
 
@@ -35,19 +35,19 @@ Desde la pantalla de inicio, los usuarios pueden pulsar el tabulador en el panel
 
 Con la navegación izquierda enfocada, **Tab** lleva a los usuarios a la interacción de expandir y contraer. La capacidad para expandir o contraer la navegación izquierda está activada con **Intro (retorno)**.
 
-![La navegación izquierda del Experience Platform se ha contraído.](images/left-navigation-collapse.png)
+![La navegación izquierda de Experience Platform se ha contraído.](images/left-navigation-collapse.png)
 
 Con la navegación izquierda enfocada, las teclas de flecha arriba y abajo navegan a cada elemento de la navegación y cierran continuamente (en otras palabras, el enfoque no se aleja hasta que el usuario aleja la navegación izquierda). Cuando se selecciona, se muestra el enfoque de los elementos de navegación. La selección actual se muestra con un resaltado y texto en negrita. Al seleccionar un elemento de navegación izquierdo, **Intro (volver)** abre el elemento de interfaz de usuario seleccionado en el panel derecho; sin embargo, el enfoque permanece en la navegación izquierda hasta que el usuario sale de la pestaña.
 
-![El Experience Platform dejó seleccionada la navegación con orígenes.](images/left-navigation-sources.png)
+![El Experience Platform dejó la navegación con orígenes seleccionados.](images/left-navigation-sources.png)
 
-Algunas funciones de Platform no están habilitadas para todos los usuarios. Estos elementos aparecen en la navegación, pero no se pueden seleccionar. Al navegar con un teclado, estos elementos se omiten durante la navegación con flecha y no se pueden seleccionar con **Intro (retorno)**.
+Algunas funciones de Experience Platform no están habilitadas para todos los usuarios. Estos elementos aparecen en la navegación, pero no se pueden seleccionar. Al navegar con un teclado, estos elementos se omiten durante la navegación con flecha y no se pueden seleccionar con **Intro (retorno)**.
 
-![No se pueden seleccionar las secciones de navegación de la izquierda del Experience Platform que no estén habilitadas para el usuario.](images/left-navigation-sections-disabled.png)
+![No se pueden seleccionar las secciones de navegación izquierda de Experience Platform que no estén habilitadas para el usuario.](images/left-navigation-sections-disabled.png)
 
 ## Cuadro de diálogo de vídeo incorporado
 
-Los vídeos se pueden ver en Experience Platform mediante la navegación con el teclado para resaltar y seleccionar un vínculo de vídeo disponible. Esto abre un cuadro de diálogo de vídeo incrustado en la interfaz de usuario de Platform.
+Los vídeos se pueden ver en Experience Platform mediante la navegación con el teclado para resaltar y seleccionar un vínculo de vídeo disponible. Esto abre un cuadro de diálogo de vídeo incrustado en la interfaz de usuario de Experience Platform.
 
 ![Aparece un borde azul alrededor de un elemento seleccionado para indicar que se ha aplicado el enfoque.](images/profile-overview-tab.png)
 
@@ -88,7 +88,7 @@ El uso de un ratón para seleccionar la zona de arrastrar y soltar también invo
 
 ## Exploración de tabla
 
-Todas las tablas de la interfaz de usuario del Experience Platform son accesibles mediante el teclado. Es posible explorar e interactuar con filas y columnas de la tabla mediante una serie de métodos abreviados de teclado:
+Todas las tablas de la interfaz de usuario de Experience Platform son accesibles mediante el teclado. Es posible explorar e interactuar con filas y columnas de la tabla mediante una serie de métodos abreviados de teclado:
 
 * Desde el encabezado de la tabla, utilice la **flecha abajo** para examinar la tabla. Los encabezados de tabla se pueden seleccionar al navegar por **Tab**, y puede cambiar el orden de clasificación con **barra espaciadora**.
 * **Teclas de flecha arriba y abajo** se mueve arriba y abajo por las filas de la tabla.
@@ -126,7 +126,7 @@ La siguiente funcionalidad permite acceder a la interfaz de usuario del Editor d
 
 ## IU del Generador de segmentos
 
-Al utilizar la interfaz de usuario del Generador de segmentos para crear, editar e interactuar con segmentos dentro de Experience Platform, las siguientes funciones mejoran la accesibilidad:
+Al utilizar la interfaz de usuario del Generador de segmentos para crear, editar e interactuar con segmentos en Experience Platform, las siguientes funciones mejoran la accesibilidad:
 
 * Se puede acceder a la IU del Generador de segmentos mediante la navegación mediante el teclado.
 * Los lectores de pantalla deben reconocer las etiquetas de marcado de los encabezados y pueden anunciarlos junto con su nivel.

@@ -3,9 +3,9 @@ keywords: destinos de publicidad;destinos;destinos de plataforma
 title: Información general sobre destinos Advertising
 description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas con estas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '280'
 ht-degree: 1%
 
 ---
@@ -60,10 +60,10 @@ Para comprender la diferencia entre las conexiones y las extensiones, vea [Conex
 * [Extensión OneTag de Flashtalk](flashtalking.md)
 * [Extensión de Google Ads](google-ads-extension.md)
 * [Extensión gtag de Google](gtag-advertising.md)
-* [Extensión de etiqueta de LinkedIn Insight](linkedin.md)
+* [Extensión de etiquetas de Insight de LinkedIn](linkedin.md)
 * [Extensión de seguimiento de conversión de Pinterest](pinterest-extension.md)
 * [Extensión de etiqueta de sitio web universal de Twitter](twitter-uwt.md)
 
 ## Conectar con un nuevo destino de publicidad {#connect-destination}
 
-Para enviar audiencias a destinos publicitarios para sus campañas, Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destinos](../../ui/connect-destination.md) para obtener información detallada sobre cómo configurar un nuevo destino.
+Para enviar audiencias a destinos publicitarios para sus campañas, Experience Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destinos](../../ui/connect-destination.md) para obtener información detallada sobre cómo configurar un nuevo destino.

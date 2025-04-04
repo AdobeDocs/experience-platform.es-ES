@@ -2,10 +2,10 @@
 title: Flujo de extensión web
 description: Descubra cómo los componentes de extensión web interactúan entre sí durante la ejecución en Adobe Experience Platform.
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 93%
+source-wordcount: '272'
+ht-degree: 89%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En las extensiones web, cada evento, condición, acción y tipo de elemento de datos tiene una vista que permite a los usuarios modificar la configuración y un módulo de biblioteca para modificar en función de la configuración definida por el usuario.
 
-Como se muestra en el siguiente diagrama de alto nivel, la vista de tipo de evento de la extensión se mostrará dentro de un iframe en la aplicación integrada con Adobe Experience Platform. El usuario utiliza la vista para modificar la configuración que luego se guarda en Platform. Cuando se crea la biblioteca de tiempo de ejecución de etiquetas, tanto el módulo de biblioteca de tipo de evento de la extensión como la configuración definida por el usuario se incluirán en la biblioteca de tiempo de ejecución. En tiempo de ejecución, Platform insertará la configuración definida por el usuario en el módulo de biblioteca.
+Como se muestra en el siguiente diagrama de alto nivel, la vista de tipo de evento de la extensión se mostrará dentro de un iframe en la aplicación integrada con Adobe Experience Platform. A continuación, el usuario utiliza la vista para modificar la configuración que luego se guarda en Experience Platform. Cuando se crea la biblioteca de tiempo de ejecución de etiquetas, tanto el módulo de biblioteca de tipo de evento de la extensión como la configuración definida por el usuario se incluirán en la biblioteca de tiempo de ejecución. En tiempo de ejecución, Experience Platform insertará la configuración definida por el usuario en el módulo de biblioteca.
 
 ![Diagrama de flujo de extensión](../images/flow/web/extension-flow.png)
 

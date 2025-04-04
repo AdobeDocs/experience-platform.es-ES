@@ -1,30 +1,30 @@
 ---
 keywords: extensión de media analytics;media analytics;extensión de audio y vídeo
-title: Extensión de Adobe Medium Analytics para audio y vídeo
-description: La extensión de Adobe Medium Analytics para audio y vídeo es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+title: Extensión de Adobe Media Analytics para audio y vídeo
+description: La extensión de Adobe Media Analytics para audio y vídeo es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: bf33e3e8-a95b-47e3-a1dc-c8f68f80b080
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '500'
 ht-degree: 5%
 
 ---
 
-# Extensión de Adobe Medium Analytics para audio y vídeo {#adobe-analytics-for-video-extension}
+# Extensión de Adobe Media Analytics para audio y vídeo {#adobe-analytics-for-video-extension}
 
 ## Información general {#overview}
 
-Adobe Medium Analytics para audio y vídeo es un complemento de la oferta base de Analytics que proporciona a los clientes mediciones sólidas para vídeo, audio y anuncios.
+Adobe Media Analytics para audio y vídeo es un complemento de la oferta base de Analytics que proporciona a los clientes mediciones sólidas de vídeo, audio y anuncios.
 
-Adobe Medium Analytics para audio y vídeo es una extensión de Analytics en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
+Adobe Media Analytics para audio y vídeo es una extensión de Analytics en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
 
-Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
+Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
 ![Extensión de Adobe Media Analytics for Audio and Video](../../assets/catalog/analytics/adobe-video-analytics/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
-Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que han adquirido Platform.
+Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
 Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
 
@@ -32,7 +32,7 @@ Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experi
 
 Para instalar la extensión de Adobe Analytics para vídeo:
 
-En la [interfaz de plataforma](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
@@ -42,7 +42,7 @@ Seleccione la propiedad de etiqueta en la que desea instalar la extensión. Tamb
 
 El flujo de trabajo le lleva a la IU de recopilación de datos para completar la instalación.
 
-Para obtener información sobre las opciones de configuración de la extensión, consulte la [página de extensión de Adobe Medium Analytics para audio y vídeo](../../../tags/extensions/client/media-analytics/overview.md) en la documentación de etiquetas.
+Para obtener información sobre las opciones de configuración de la extensión, consulte la [página de extensión de Adobe Media Analytics para audio y vídeo](../../../tags/extensions/client/media-analytics/overview.md) en la documentación de etiquetas.
 
 También puede instalar la extensión directamente en la [IU de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía de [adición de una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 

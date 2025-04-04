@@ -2,9 +2,9 @@
 title: Crear una conexión base de Google Cloud Storage mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Google Cloud Storage mediante la API de Flow Service.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: 3636b785d82fa2e49f76825650e6159be119f8b4
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '556'
 ht-degree: 4%
 
 ---
@@ -19,8 +19,8 @@ Este tutorial lo guiará para crear una conexión base para [!DNL Google Cloud S
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
-* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a una cuenta de Google Cloud Storage mediante la API [!DNL Flow Service].
 
@@ -30,22 +30,22 @@ Para que [!DNL Flow Service] se conecte con su cuenta de [!DNL Google Cloud Stor
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `accessKeyId` | Cadena alfanumérica de 61 caracteres usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Platform. |
-| `secretAccessKey` | Cadena de 40 caracteres codificada en base 64 que se usa para autenticar la cuenta de [!DNL Google Cloud Storage] en Platform. |
+| `accessKeyId` | Cadena alfanumérica de 61 caracteres usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Experience Platform. |
+| `secretAccessKey` | Cadena de 40 caracteres codificada en base 64 que se usa para autenticar la cuenta de [!DNL Google Cloud Storage] en Experience Platform. |
 | `bucketName` | Nombre de su cubo de [!DNL Google Cloud Storage]. Debe especificar un nombre de bloque si desea proporcionar acceso a una subcarpeta específica del almacenamiento en la nube. |
 | `folderPath` | La ruta a la carpeta a la que desea proporcionar acceso. |
 
 Para obtener más información sobre estos valores, consulte la guía [Claves HMAC de Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para ver los pasos sobre cómo generar tu propio identificador de clave de acceso y clave de acceso secreta, consulta la [[!DNL Google Cloud Storage] descripción general](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
-### Uso de API de Platform
+### Uso de API de Experience Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
-Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL Google Cloud Storage] como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una petición POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Google Cloud Storage] como parte de los parámetros de solicitud.
 
 >[!TIP]
 >

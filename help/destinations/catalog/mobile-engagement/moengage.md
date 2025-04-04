@@ -3,7 +3,7 @@ title: Conexión de Moengage
 description: Moengage es una plataforma de participación del cliente que potencia las interacciones centradas en el cliente entre consumidores y marcas en tiempo real.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 2%
@@ -100,7 +100,7 @@ Consulte [Activar datos de audiencia en destinos de exportación de segmentos de
 
 Para enviar correctamente los datos de audiencia de [!DNL Adobe Experience Platform] al destino [!DNL Moengage], debe pasar por el paso de asignación de campos.
 
-La asignación consiste en crear un vínculo entre los campos de esquema [!DNL Experience Data Model] (XDM) de la cuenta [!DNL Platform] y sus equivalentes correspondientes del destino.
+La asignación consiste en crear un vínculo entre los campos de esquema [!DNL Experience Data Model] (XDM) de la cuenta [!DNL Experience Platform] y sus equivalentes correspondientes del destino.
 
 Para asignar correctamente los campos XDM a los campos de destino [!DNL Moengage], siga estos pasos:
 
@@ -128,7 +128,7 @@ En la sección [!UICONTROL Campo de destino], seleccione el icono de asignación
 ![Asignación De Destino De Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 En la ventana [!UICONTROL Seleccionar campo de destino], puede elegir entre dos categorías de campos de destino:
-* [!UICONTROL Seleccionar área de nombres de identidad]: utilice esta opción para asignar [!DNL Platform] áreas de nombres de identidad a [!DNL Moengage] áreas de nombres de identidad.
+* [!UICONTROL Seleccionar área de nombres de identidad]: utilice esta opción para asignar [!DNL Experience Platform] áreas de nombres de identidad a [!DNL Moengage] áreas de nombres de identidad.
 * [!UICONTROL Seleccionar atributos personalizados]: utilice esta opción para asignar atributos XDM a atributos personalizados [!DNL Moengage] que haya definido en su cuenta de [!DNL Moengage]. <br> También puede utilizar esta opción para cambiar el nombre de los atributos XDM existentes a [!DNL Moengage]. Por ejemplo, si se asigna un atributo XDM `lastName` a un atributo `Last_Name` personalizado en [!DNL Moengage], se creará el atributo `Last_Name` en [!DNL Moengage], si aún no existe, y se le asignará el atributo XDM `lastName`.
 
 ![Campos de asignación de destino Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)

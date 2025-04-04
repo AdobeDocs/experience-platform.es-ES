@@ -5,10 +5,10 @@ title: Creación de una conexión de Source de Atributos del cliente en la IU
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen en la interfaz de usuario para incorporar datos de perfil de atributos del cliente a Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 0%
+source-wordcount: '620'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +26,7 @@ Este tutorial proporciona los pasos para crear una conexión de origen en la int
 >
 >Si ya ha establecido una conexión de origen para los datos de perfil de Atributos del cliente, la opción para conectarse con el origen está desactivada.
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una conexión.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una conexión.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
 
@@ -42,7 +42,7 @@ La pantalla [!UICONTROL Agregar datos] enumera todas las fuentes de datos dispon
 >
 >Los grupos de campos, los esquemas y los conjuntos de datos se crean de forma predeterminada como parte del aprovisionamiento de flujo. Permanecerán tal cual y tendrá que eliminarlos manualmente, si es necesario.
 
-El origen de atributos del cliente no admite la evolución del esquema. Si se cambia la entrada de esquema de una fuente de datos de atributos del cliente, esto sería incompatible con Platform. Como solución alternativa, puede eliminar un flujo de datos de atributos del cliente existente, junto con su conjunto de datos, esquema y grupo de campos asociados y, a continuación, crear uno nuevo con el esquema y el origen de datos actualizados.
+El origen de atributos del cliente no admite la evolución del esquema. Si se cambia la entrada de esquema de una fuente de datos de atributos del cliente, esto sería incompatible con Experience Platform. Como solución alternativa, puede eliminar un flujo de datos de atributos del cliente existente, junto con su conjunto de datos, esquema y grupo de campos asociados y, a continuación, crear uno nuevo con el esquema y el origen de datos actualizados.
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ Aparece el paso [!UICONTROL Revisar], que le permite revisar el nuevo flujo de d
 
 ## Pasos siguientes
 
-Una vez creada la conexión, se crea automáticamente un esquema de destino y un conjunto de datos para contener los datos entrantes. Cuando se completa la ingesta inicial, los servicios de Platform secundarios como [!DNL Real-Time Customer Profile] y [!DNL Segmentation Service] pueden usar los datos de perfil de atributos del cliente. Consulte los siguientes documentos para obtener más información:
+Una vez creada la conexión, se crea automáticamente un esquema de destino y un conjunto de datos para contener los datos entrantes. Cuando se completa la ingesta inicial, los servicios de Experience Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Segmentation Service] pueden usar los datos de perfil de atributos del cliente. Consulte los siguientes documentos para obtener más información:
 
 * [Información general de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Información general de [!DNL Segmentation Service]](../../../../../segmentation/home.md)

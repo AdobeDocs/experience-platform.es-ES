@@ -2,9 +2,9 @@
 title: Crear conjuntos de datos derivados con SQL
 description: Obtenga información sobre cómo utilizar SQL para crear un conjunto de datos derivado habilitado para el perfil y cómo utilizar el conjunto de datos para el perfil del cliente en tiempo real y el servicio de segmentación.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1238'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Aprenda a utilizar consultas SQL para manipular y transformar datos de conjuntos de datos existentes con el fin de crear un conjunto de datos derivado que esté habilitado para Perfil. Este flujo de trabajo proporciona un método eficaz y alternativo para crear conjuntos de datos derivados para los casos de uso empresariales del Perfil del cliente en tiempo real.
 
-Este documento describe varias extensiones SQL cómodas que generan un conjunto de datos derivado para utilizarlo con el perfil del cliente en tiempo real. El flujo de trabajo simplifica el proceso que, de lo contrario, tendría que completar a través de varias llamadas de API o interacciones de IU de Platform.
+Este documento describe varias extensiones SQL cómodas que generan un conjunto de datos derivado para utilizarlo con el perfil del cliente en tiempo real. El flujo de trabajo simplifica el proceso que, de lo contrario, tendría que completar a través de varias llamadas de API o interacciones de IU de Experience Platform.
 
 Normalmente, la generación y publicación de un conjunto de datos derivado para el perfil del cliente en tiempo real implicaría los siguientes pasos:
 
@@ -35,7 +35,7 @@ El servicio de consultas le permite realizar todas las acciones enumeradas anter
 >
 >La consulta SQL proporcionada a continuación supone el uso de un área de nombres preexistente.
 
-Utilice una consulta Crear tabla como selección (CTAS) para crear un conjunto de datos, asignar tipos de datos, establecer una identidad principal, crear un esquema y marcarlo como habilitado para perfiles. La instrucción SQL de ejemplo siguiente crea un conjunto de datos y lo pone a disposición de Real-time Customer Data Platform (Real-Time CDP). La consulta SQL seguirá el formato mostrado en el ejemplo siguiente:
+Utilice una consulta Crear tabla como selección (CTAS) para crear un conjunto de datos, asignar tipos de datos, establecer una identidad principal, crear un esquema y marcarlo como habilitado para perfiles. La instrucción SQL de ejemplo siguiente crea un conjunto de datos y lo pone a disposición de Real-Time Customer Data Platform (Real-Time CDP). La consulta SQL seguirá el formato mostrado en el ejemplo siguiente:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -51,7 +51,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Como alternativa, los conjuntos de datos también se pueden habilitar para perfiles mediante la IU de Platform. Para obtener más información sobre cómo marcar un conjunto de datos como habilitado para el perfil, consulte la [documentación sobre cómo habilitar un conjunto de datos para el perfil del cliente en tiempo real](../../../catalog/datasets/user-guide.md#enable-profile).
+Como alternativa, los conjuntos de datos también se pueden habilitar para perfiles mediante la interfaz de usuario de Experience Platform. Para obtener más información sobre cómo marcar un conjunto de datos como habilitado para el perfil, consulte la [documentación sobre cómo habilitar un conjunto de datos para el perfil del cliente en tiempo real](../../../catalog/datasets/user-guide.md#enable-profile).
 
 En la consulta de ejemplo siguiente, el conjunto de datos `decile_table` se crea con `id` como columna de identidad principal y tiene el área de nombres `IDFA`. También tiene un campo denominado `decile1Month` del tipo de datos de asignación. La tabla creada (`decile_table`) está habilitada para el perfil.
 
@@ -178,7 +178,7 @@ Puede ver en el ejemplo que `table_with_a_decile` se ha habilitado para el perfi
 
 ### Creación de un grupo de campos con SQL
 
-Los grupos de campos ahora se pueden crear mediante el uso de SQL. Esto proporciona una alternativa a utilizar el Editor de esquemas en la interfaz de usuario de Platform o realizar una llamada de API al Registro de esquemas.
+Los grupos de campos ahora se pueden crear mediante el uso de SQL. Esto proporciona una alternativa a utilizar el Editor de esquemas en la interfaz de usuario de Experience Platform o realizar una llamada de API al Registro de esquemas.
 
 A continuación, se muestra una instrucción de ejemplo para crear un grupo de campos.
 

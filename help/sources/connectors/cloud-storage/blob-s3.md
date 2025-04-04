@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre los conectores Source de Azure Blob y Amazon S3
 description: Obtenga información sobre cómo conectar Azure Blob y Amazon S3 a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 43a60d4d-1947-43c7-9a13-8e4094ca3604
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Conectores Azure Blob y Amazon S3
 
-Adobe Experience Platform proporciona conectividad nativa para proveedores de la nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure]. Puede llevar los datos de estos sistemas a [!DNL Platform].
+Adobe Experience Platform proporciona conectividad nativa para proveedores de la nube como AWS, [!DNL Google Cloud Platform] y [!DNL Azure]. Puede llevar los datos de estos sistemas a [!DNL Experience Platform].
 
-Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL Platform] sin necesidad de descargarlos, formatearlos o cargarlos. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o estar delimitados. Cada paso del proceso se integra en el flujo de trabajo de orígenes. [!DNL Platform] le permite traer datos de [!DNL Azure Blob] y S3 por lotes.
+Las fuentes de almacenamiento en la nube pueden traer sus propios datos a [!DNL Experience Platform] sin necesidad de descargarlos, formatearlos o cargarlos. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o estar delimitados. Cada paso del proceso se integra en el flujo de trabajo de orígenes. [!DNL Experience Platform] le permite traer datos de [!DNL Azure Blob] y S3 por lotes.
 
 Para obtener más información sobre el conector [!DNL Azure Blob], lea la [[!DNL Azure Blob] descripción general del conector](./blob.md).
 

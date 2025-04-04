@@ -6,9 +6,9 @@ description: Este documento proporciona los pasos para configurar los dos conjun
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Específicamente, se requieren dos conjuntos de datos para capturar datos de con
 
 >[!IMPORTANT]
 >
->Platform solo aplica las cadenas TCF recopiladas en el conjunto de datos de perfil individual. Aunque todavía se necesita un conjunto de datos de ExperienceEvent para crear un conjunto de datos como parte de este flujo de trabajo, solo es necesario introducir datos en el conjunto de datos de perfil. El conjunto de datos de ExperienceEvent se puede seguir utilizando si desea rastrear eventos de cambio de consentimiento a lo largo del tiempo, pero estos valores no se utilizan en al aplicar en la activación de segmentos.
+>Experience Platform solo aplica las cadenas TCF recopiladas en el conjunto de datos de perfil individual. Aunque todavía se necesita un conjunto de datos de ExperienceEvent para crear un conjunto de datos como parte de este flujo de trabajo, solo es necesario introducir datos en el conjunto de datos de perfil. El conjunto de datos de ExperienceEvent se puede seguir utilizando si desea rastrear eventos de cambio de consentimiento a lo largo del tiempo, pero estos valores no se utilizan en al aplicar en la activación de segmentos.
 
-Este documento proporciona información sobre los pasos necesarios para configurar estos dos conjuntos de datos. Para obtener una descripción general del flujo de trabajo completo para configurar las operaciones de datos de Platform para TCF 2.0, consulte la [descripción general del cumplimiento de IAB TCF 2.0](./overview.md).
+Este documento proporciona información sobre los pasos necesarios para configurar estos dos conjuntos de datos. Para obtener una descripción general del flujo de trabajo completo para configurar las operaciones de datos de Experience Platform para TCF 2.0, consulte la [descripción general del cumplimiento de IAB TCF 2.0](./overview.md).
 
 ## Requisitos previos
 
@@ -54,7 +54,7 @@ Consulte la [guía de referencia](../../../../xdm/field-groups/profile/iab.md) p
 
 Si desea rastrear los eventos de cambio de consentimiento a lo largo del tiempo, puede agregar el grupo de campos [!UICONTROL Detalles de consentimiento TCF de IAB 2.0] a su esquema [!UICONTROL XDM ExperienceEvent].
 
-Si no planea rastrear los eventos de cambio de consentimiento a lo largo del tiempo, no es necesario incluir este grupo de campos en el esquema de eventos. Al aplicar automáticamente los valores de consentimiento TCF, el Experience Platform solo utiliza la información de consentimiento más reciente introducida en el [grupo de campos de perfil](#profile-field-group). Los valores de consentimiento capturados por los eventos no participan en los flujos de trabajo de aplicación automática.
+Si no planea rastrear los eventos de cambio de consentimiento a lo largo del tiempo, no es necesario incluir este grupo de campos en el esquema de eventos. Al aplicar automáticamente los valores de consentimiento TCF, Experience Platform solo utiliza la información de consentimiento más reciente introducida en el [grupo de campos de perfil](#profile-field-group). Los valores de consentimiento capturados por los eventos no participan en los flujos de trabajo de aplicación automática.
 
 Consulte la [guía de referencia](../../../../xdm/field-groups/event/iab.md) para este grupo de campos para obtener más información sobre su estructura y caso de uso.
 
@@ -62,9 +62,9 @@ Consulte la [guía de referencia](../../../../xdm/field-groups/event/iab.md) par
 
 Para crear conjuntos de datos que capturan datos de consentimiento, primero debe crear esquemas XDM en los que basar esos conjuntos de datos.
 
-Como se mencionó en la sección anterior, se requiere un esquema que utilice la clase [!UICONTROL XDM Individual Profile] para aplicar el consentimiento en los flujos de trabajo de la plataforma descendente. Si desea rastrear los cambios de consentimiento a lo largo del tiempo, también puede crear un esquema independiente basado en [!UICONTROL XDM ExperienceEvent]. Ambos esquemas deben contener un campo `identityMap` y un grupo de campos TCF 2.0 adecuado.
+Como se mencionó en la sección anterior, se requiere un esquema que utilice la clase [!UICONTROL XDM Individual Profile] para aplicar el consentimiento en los flujos de trabajo de Experience Platform descendentes. Si desea rastrear los cambios de consentimiento a lo largo del tiempo, también puede crear un esquema independiente basado en [!UICONTROL XDM ExperienceEvent]. Ambos esquemas deben contener un campo `identityMap` y un grupo de campos TCF 2.0 adecuado.
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el área de trabajo [!UICONTROL Esquemas]. A partir de aquí, siga los pasos de las secciones siguientes para crear cada esquema requerido.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el área de trabajo [!UICONTROL Esquemas]. A partir de aquí, siga los pasos de las secciones siguientes para crear cada esquema requerido.
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ Si está editando un esquema existente que ya se ha habilitado para usarlo en [!
 
 #### Habilitar el esquema para utilizarlo en [!DNL Real-Time Customer Profile]
 
-Para que Platform asocie los datos de consentimiento que recibe a perfiles de clientes específicos, el esquema de consentimiento debe habilitarse para su uso en [!DNL Real-Time Customer Profile].
+Para que Experience Platform asocie los datos de consentimiento que recibe a perfiles de clientes específicos, el esquema de consentimiento debe habilitarse para su uso en [!DNL Real-Time Customer Profile].
 
 >[!NOTE]
 >
@@ -192,4 +192,4 @@ Al seguir este tutorial, ha creado al menos un conjunto de datos que ahora se pu
 * Un conjunto de datos basado en registros que está habilitado para su uso en el Perfil del cliente en tiempo real. **(obligatorio)**
 * Un conjunto de datos basado en series de tiempo que no está habilitado para [!DNL Profile]. (Opcional)
 
-Ahora puede volver a la [descripción general de IAB TCF 2.0](./overview.md#merge-policies) para continuar con el proceso de configuración de Platform para el cumplimiento de TCF 2.0.
+Ahora puede volver a la [descripción general de IAB TCF 2.0](./overview.md#merge-policies) para continuar con el proceso de configuración de Experience Platform para el cumplimiento de TCF 2.0.

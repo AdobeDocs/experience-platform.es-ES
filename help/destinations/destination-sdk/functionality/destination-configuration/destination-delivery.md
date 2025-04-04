@@ -1,17 +1,17 @@
 ---
-description: Obtenga información sobre cómo ajustar la configuración de entrega de destino para los destinos creados con Destination SDK, para indicar a dónde van los datos exportados y qué regla de autenticación se utiliza en la ubicación a la que aterrizarán los datos.
+description: Obtenga información sobre cómo configurar las opciones de entrega de destino para los destinos creados con Destination SDK para indicar a dónde van los datos exportados y qué regla de autenticación se utiliza en la ubicación a la que llegan los datos.
 title: Envío de destino
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 2%
 
 ---
 
 # Envío de destino
 
-Para ofrecer más control sobre dónde llegan los datos exportados a su destino, Destination SDK le permite especificar la configuración de envío de destino.
+Para ofrecer más control sobre dónde aterrizan los datos exportados a su destino, Destination SDK le permite especificar la configuración de envío de destino.
 
 La sección de entrega de destino indica a dónde van los datos exportados y qué regla de autenticación se utiliza en la ubicación donde aterrizarán los datos.
 
@@ -31,7 +31,7 @@ Este artículo describe todas las opciones de envío de destino admitidas que pu
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -48,7 +48,7 @@ Al configurar la entrega de destino, puede utilizar los parámetros descritos en
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `authenticationRule` | Cadena | Indica cómo debe conectarse [!DNL Platform] a su destino. Valores compatibles:<ul><li>`CUSTOMER_AUTHENTICATION`: utilice esta opción si los clientes de Platform inician sesión en el sistema mediante cualquiera de los métodos de autenticación descritos [aquí](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: utilice esta opción si existe un sistema de autenticación global entre el Adobe y el destino y el cliente [!DNL Platform] no necesita proporcionar credenciales de autenticación para conectarse al destino. En este caso, debe crear un objeto de credenciales con la configuración de la API [credentials](../../credentials-api/create-credential-configuration.md). </li><li>`NONE`: utilice esta opción si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
+| `authenticationRule` | Cadena | Indica cómo debe conectarse [!DNL Experience Platform] a su destino. Valores compatibles:<ul><li>`CUSTOMER_AUTHENTICATION`: utilice esta opción si los clientes de Experience Platform inician sesión en el sistema mediante cualquiera de los métodos de autenticación descritos [aquí](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: utilice esta opción si existe un sistema de autenticación global entre Adobe y su destino y el cliente [!DNL Experience Platform] no necesita proporcionar credenciales de autenticación para conectarse a su destino. En este caso, debe crear un objeto de credenciales con la configuración de la API [credentials](../../credentials-api/create-credential-configuration.md). </li><li>`NONE`: utilice esta opción si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
 | `destinationServerId` | Cadena | `instanceId` del [servidor de destino](../../authoring-api/destination-server/create-destination-server.md) al que desea exportar los datos. |
 | `deliveryMatchers.type` | Cadena | <ul><li>Al configurar la entrega de destino para destinos basados en archivos, establezca siempre `SOURCE`.</li><li>Al configurar la entrega de destino para un destino de flujo continuo, no es necesaria la sección `deliveryMatchers`.</li></ul> |
 | `deliveryMatchers.value` | Cadena | <ul><li>Al configurar la entrega de destino para destinos basados en archivos, establezca siempre `batch`.</li><li>Al configurar la entrega de destino para un destino de flujo continuo, no es necesaria la sección `deliveryMatchers`.</li></ul> |

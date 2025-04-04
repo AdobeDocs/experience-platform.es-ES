@@ -1,15 +1,15 @@
 ---
-title: Hacer copia de seguridad de configuraciones de objeto mediante herramientas de zona protegida
+title: Copia de seguridad de configuraciones de objeto mediante herramientas de zona protegida
 description: Para restablecer de forma segura los entornos limitados y añadir compatibilidad con las versiones, haga una copia de seguridad de las configuraciones de objetos (o metadatos) mediante paquetes de herramientas de entorno limitado. Los paquetes de copia de seguridad evitan la pérdida de configuraciones críticas como esquemas, conjuntos de datos y audiencias, especialmente durante las iteraciones de desarrollo.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 3%
+source-wordcount: '1167'
+ht-degree: 4%
 
 ---
 
-# Hacer copia de seguridad de configuraciones de objeto mediante herramientas de zona protegida
+# Copia de seguridad de configuraciones de objeto mediante herramientas de zona protegida
 
 Para restablecer de forma segura los entornos limitados y añadir compatibilidad con las versiones, haga una copia de seguridad de las configuraciones de objetos (o metadatos) mediante paquetes de herramientas de entorno limitado. Los paquetes de copia de seguridad evitan la pérdida de configuraciones críticas como esquemas, conjuntos de datos y audiencias, especialmente durante las iteraciones de desarrollo.
 
@@ -30,7 +30,7 @@ Cuando planee crear su propio paquete de copia de seguridad dentro de su organiz
 - Según los metadatos de ámbito de los que desee realizar una copia de seguridad, asegúrese de comprender cómo [agregar objetos manualmente a un paquete](../ui/sandbox-tooling.md#add-object-to-a-new-package) o cómo [exportar una zona protegida completa](../ui/sandbox-tooling.md#export-an-entire-sandbox).
 - Asegúrese de que tiene acceso a las herramientas de zona protegida de su organización con los permisos correctos.
 
-### Funcionalidad de la IU, componentes de Platform y productos de Experience Cloud que utilizará {#ui-functionality-and-elements}
+### Funcionalidad de la interfaz de usuario, componentes de Experience Platform y productos de Experience Cloud que utilizará {#ui-functionality-and-elements}
 
 Para implementar correctamente este caso de uso, debe utilizar varias áreas de Adobe Experience Platform. Asegúrese de que tiene los [permisos de control de acceso basados en atributos](../../access-control/abac/overview.md) necesarios para todas estas áreas, o bien pídale al administrador del sistema que le conceda los permisos necesarios.
 
@@ -85,7 +85,7 @@ Puede realizar una copia de seguridad de objetos individuales en un paquete de c
 
 ##### Creación de un paquete de varios objetos
 
-En el Experience Platform, seleccione **[!UICONTROL Zonas protegidas]** en el panel de navegación izquierdo y luego seleccione **[!UICONTROL Paquetes]**. Para empezar a crear un nuevo paquete, seleccione **[!UICONTROL Crear paquete]** en la esquina superior derecha.
+En Experience Platform, seleccione **[!UICONTROL Zonas protegidas]** en el panel de navegación izquierdo y luego seleccione **[!UICONTROL Paquetes]**. Para empezar a crear un nuevo paquete, seleccione **[!UICONTROL Crear paquete]** en la esquina superior derecha.
 
 ![La pestaña de paquetes en el panel de zonas protegidas con la opción Crear paquete resaltada.](../images/use-cases/create-package.png)
 
@@ -125,4 +125,4 @@ Ahora que ha restablecido la zona protegida, puede utilizar el paquete de copia 
 
 Explore más casos de uso habilitados mediante las herramientas de zona protegida:
 
-- [Activación de un centro de excelencia mediante herramientas de zona protegida](./center-of-excellence.md)
+- [Habilitación de un centro de excelencia mediante herramientas de zona protegida](./center-of-excellence.md)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de API del servicio de catálogo
 description: La API del servicio de catálogo permite a los desarrolladores administrar los metadatos del conjunto de datos en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 23%
@@ -21,7 +21,7 @@ Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la AP
 
 [!DNL Catalog] rastrea metadatos para varios tipos de recursos y operaciones dentro de [!DNL Experience Platform]. Esta guía para desarrolladores requiere una comprensión práctica de los distintos servicios de [!DNL Experience Platform] implicados en la creación y administración de estos recursos:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 * [Ingesta por lotes](../../ingestion/batch-ingestion/overview.md): Cómo [!DNL Experience Platform] ingiere y almacena datos de archivos de datos, como CSV y Parquet.
 * [Ingesta de transmisión](../../ingestion/streaming-ingestion/overview.md): Cómo [!DNL Experience Platform] ingiere y almacena datos de dispositivos del lado del cliente y del lado del servidor en tiempo real.
 
@@ -33,19 +33,19 @@ Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar format
 
 ## Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Experience Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
