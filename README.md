@@ -1,8 +1,8 @@
 ---
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 67adfddf57d3b10bb80688cf0f0a109a704f4fa5
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 95%
+source-wordcount: '351'
+ht-degree: 98%
 
 ---
 # Contenido de contribución
@@ -30,20 +30,6 @@ Las correcciones o aclaraciones menores que envía para la documentación y los 
 ### Cambios importantes o nuevos artículos de miembros de la comunidad
 
 Si forma parte de la comunidad de Adobe y desea crear un artículo o enviar cambios importantes, haga clic en la ficha **Problemas** del repositorio de GitHub para enviar un problema. Este envío inicia una conversación con el equipo de documentación. Deberá trabajar con el escritor (u otro empleado de Adobe) para publicar contenido nuevo.
-
-<!--
-If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
--->
-
-### Cambios importantes o artículos nuevos de los empleados de Adobe
-
-Si es redactor técnico, administrador de programa o desarrollador del equipo de producto para una solución de Adobe Experience Cloud, y es su trabajo contribuir a artículos técnicos o crearlos, debe utilizar el repositorio privado en `https://git.corp.adobe.com/AdobeDocs`. Si desea obtener más información, consulte la [Guía de colaboración interna](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html).
-
-<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
-
-## Contacto del equipo de documentación de Experience Platform
-
-Como se ha indicado anteriormente, los miembros de la comunidad de Adobe pueden enviar un problema, este se asignará al redactor correspondiente. Si es un empleado de Adobe, puede enviar un problema o ponerse en contacto directamente con el equipo de documentación de Experience Platform. Para encontrar el redactor jefe de un área específica de Experience Platform, consulte [documentación de Adobe Experience Platform wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Herramientas y configuración
 
