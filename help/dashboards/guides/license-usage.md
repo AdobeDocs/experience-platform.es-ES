@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '3413'
-ht-degree: 15%
+ht-degree: 31%
 
 ---
 
@@ -45,90 +45,90 @@ ht-degree: 15%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Horas calculadas previstas"
->abstract="Las horas calculadas miden el tiempo que los motores de servicios de consulta invierten en leer, procesar y escribir datos al ejecutar consultas por lotes.<br>Es posible que su uso alcance la cantidad con licencia. Para evaluar o reducir el uso, vaya a Consultas > Registro para revisar el historial de consultas. Si no tiene acceso al área de trabajo Consultas, póngase en contacto con el administrador."
+>abstract="Las horas calculadas miden el tiempo que los motores del Servicio de consultas invierten en leer, procesar y escribir datos cuando se ejecutan consultas por lotes.<br>Su uso podría alcanzar la cantidad autorizada. Para evaluar o reducir el uso, vaya a Consultas > Registro para revisar el historial de consultas. Si no tiene permiso para acceder al espacio de trabajo Consultas, póngase en contacto con su administrador."
 >additional-url="https://experience.adobe.com/#/platform/query/log.html?lang=es" text="Espacio de trabajo Registro de consultas"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Público destinatario previsto"
->abstract="La Audiencia a la que se puede dirigir es el conjunto de perfiles de personas en el Perfil del cliente en tiempo real que su organización tiene derecho a incluir. Esta métrica incluye perfiles directamente identificables y seudónimos.<br>Es posible que su uso alcance la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="El público destinatario es el conjunto de perfiles de personas en el perfil del cliente en tiempo real que su organización tiene derecho a captar. Esta métrica incluye perfiles directamente identificables y seudónimos.<br>Su uso podría alcanzar la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
 >title="Perfiles atractivos previstos"
->abstract="Los perfiles atractivos son perfiles de persona en el Perfil del cliente en tiempo real que su organización ha intentado relacionar mediante Journey Optimizer en los últimos 12 meses.<br>Es posible que su uso alcance la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="Los perfiles atractivos son perfiles de personas en el perfil del cliente en tiempo real que su organización ha intentado captar mediante Journey Optimizer en los 12 últimos meses.<br>Su uso podría alcanzar la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="Perfil del empresario previsto"
->abstract="Los perfiles de personas de negocios son registros del perfil del cliente en tiempo real que representan a personas en un contexto B2B.<br>Es posible que su uso alcance la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="Los perfiles de empresarios son registros del perfil del cliente en tiempo real que representan a personas en un contexto B2B.<br>Su uso podría alcanzar la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
 >title="Horario principal previsto"
->abstract="Las horas principales representan el tiempo de procesamiento consumido en los servicios de Experience Platform.<br>Es posible que su uso alcance la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="El horario principal representa el tiempo de procesamiento consumido en los servicios de Experience Platform.<br>Su uso podría alcanzar la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
 >title="Volumen total de datos previsto"
->abstract="Volumen total de datos es la cantidad de datos disponibles en el Perfil del cliente en tiempo real para su uso en flujos de trabajo de participación y personalización.<br>Es posible que su uso alcance la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="El volumen total de datos es la cantidad de datos disponibles en el perfil del cliente en tiempo real para su uso en flujos de trabajo de participación y personalización.<br>Su uso podría alcanzar la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="Filas de CJA previstas disponibles"
->abstract="Filas disponibles de CJA se refiere a las filas medias diarias de datos disponibles para su análisis en Customer Journey Analytics.<br>Es posible que su uso alcance la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="Las filas de CJA disponibles hacen referencia a las filas medias diarias de datos disponibles para su análisis en Customer Journey Analytics.<br>Su uso podría alcanzar la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
 >title="Público destinatario previsto"
->abstract="La Audiencia a la que se puede dirigir es el conjunto de perfiles de personas en el Perfil del cliente en tiempo real que su organización tiene derecho a incluir. Esto incluye perfiles directamente identificables y seudónimos.<br>Su uso ha superado la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="El público destinatario es el conjunto de perfiles de personas en el perfil del cliente en tiempo real que su organización tiene derecho a captar. Esto incluye perfiles directamente identificables y seudónimos.<br>Su uso podría alcanzar la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
 >title="Perfiles atractivos previstos"
->abstract="Los perfiles atractivos son perfiles de persona en el Perfil del cliente en tiempo real que su organización ha intentado relacionar mediante Journey Optimizer en los últimos 12 meses.<br>Su uso ha superado la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="Los perfiles atractivos son perfiles de personas en el perfil del cliente en tiempo real que su organización ha intentado captar mediante Journey Optimizer en los 12 últimos meses.<br>Su uso ha excedido la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
 >title="Perfil del empresario previsto"
->abstract="Los perfiles de personas de negocios son registros del perfil del cliente en tiempo real que representan a personas en un contexto B2B.<br>Su uso ha superado la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="Los perfiles de empresarios son registros del perfil del cliente en tiempo real que representan a personas en un contexto B2B.<br>Su uso ha excedido la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_corehours"
 >title="Horario principal previsto"
->abstract="Las horas principales representan el tiempo de procesamiento consumido en los servicios de Experience Platform.<br>Su uso ha superado la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="El horario principal representa el tiempo de procesamiento consumido en los servicios de Experience Platform.<br>Su uso ha excedido la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
 >title="Volumen total de datos previsto"
->abstract="Volumen total de datos es la cantidad de datos disponibles en el Perfil del cliente en tiempo real para su uso en flujos de trabajo de participación y personalización.<br>Su uso ha superado la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="El volumen total de datos es la cantidad de datos disponibles en el perfil del cliente en tiempo real para su uso en flujos de trabajo de participación y personalización.<br>Su uso ha excedido la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
 >title="Filas de CJA previstas disponibles"
->abstract="Filas disponibles de CJA se refiere a las filas medias diarias de datos disponibles para su análisis en Customer Journey Analytics.<br>Su uso ha superado la cantidad con licencia. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o perfil seudónimo."
+>abstract="Las filas de CJA disponibles hacen referencia a las filas medias diarias de datos disponibles para su análisis en Customer Journey Analytics.<br>Su uso ha excedido la cantidad autorizada. Para reducir el uso, configure las caducidades de los datos del conjunto de datos o del perfil seudónimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
@@ -239,14 +239,14 @@ La ficha **[!UICONTROL Productos]** presenta los datos de uso de licencias agrup
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Uso previsto"
->abstract="Las predicciones se basan en el uso durante los últimos 6-7 meses y se generan semanalmente todos los viernes. Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe. Para reducir el uso, puede configurar las caducidades de los datos de conjunto de datos o perfil seudónimo para los entornos limitados y los conjuntos de datos."
+>abstract="Las predicciones se basan en el uso durante los últimos 6 a 7 meses y se generan semanalmente todos los viernes. Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe. Para reducir el uso, puede configurar la caducidad de los datos del conjunto de datos o del perfil seudónimo para las zonas protegidas y los conjuntos de datos."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=es" text="Caducidades de conjuntos de datos automatizados"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Uso previsto"
->abstract="Las predicciones se basan en el uso durante los últimos 6 a 7 meses y se generan el 15 de cada mes. Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe. Para reducir el uso, puede configurar las caducidades de los datos de conjunto de datos o perfil seudónimo para los entornos limitados y los conjuntos de datos."
+>abstract="Las predicciones se basan en el uso durante los últimos 6 a 7 meses y se generan el 15 de cada mes. Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe. Para reducir el uso, puede configurar la caducidad de los datos del conjunto de datos o del perfil seudónimo para las zonas protegidas y los conjuntos de datos."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=es" text="Caducidades de conjuntos de datos automatizados"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
