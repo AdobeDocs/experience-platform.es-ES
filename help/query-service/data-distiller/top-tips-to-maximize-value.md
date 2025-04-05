@@ -2,9 +2,9 @@
 title: Principales consejos para maximizar el valor con Adobe Experience Platform Data Distiller - OS656
 description: Aprenda a maximizar el valor con Adobe Experience Platform Data Distiller enriqueciendo los datos del perfil del cliente en tiempo real y utilizando perspectivas de comportamiento para crear audiencias segmentadas. Este recurso incluye un conjunto de datos de muestra y un caso práctico que muestra cómo aplicar el modelo de actualización, frecuencia y monetario (RFM) para la segmentación de clientes.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
+source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3743'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ Cada técnica de modelado de marketing implica compensaciones, ofreciendo tanto 
 Sin embargo, el modelado RFM tiene limitaciones. Supone uniformidad dentro de los segmentos en función de la actualización, la frecuencia y el valor monetario, lo que puede simplificar en exceso el comportamiento de los clientes. El modelo también asigna el mismo peso a estos factores, lo que podría tergiversar el valor para el cliente. Además, no tiene en cuenta el contexto, como los rasgos específicos del producto o las preferencias del cliente, que pueden llevar a interpretaciones erróneas del comportamiento de compra.
 
 ## Crear una audiencia SQL dinámica basada en puntuación RFM {#build-a-dynamic-rfm-audience}
+
+La siguiente infografía proporciona información general de alto nivel sobre el flujo de trabajo de creación de audiencias RFM SQL descrito en este tutorial.
+
+![Infografía titulada &quot;Audiencia SQL basada en la puntuación de RFM&quot; que ilustra cuatro pasos: cargar CSV, explorar datos, enriquecer con puntuaciones de RFM y activar la audiencia.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
 Antes de iniciar el caso práctico de Luma, debe ingerir un conjunto de datos de muestra. Primero [seleccione el vínculo para descargar el conjunto de datos `luma_web_data.zip` localmente](../resources/luma_web_data.zip). El conjunto de datos de ejemplo es un archivo csv en formato .zip comprimido para alinearlo con el caso de uso. Descomprima este archivo ZIP con Adobe Acrobat o una herramienta de extracción de archivos de confianza, como la utilidad integrada del sistema operativo. En la práctica, los datos suelen proceder de Adobe Analytics, Adobe Commerce o Adobe Web/Mobile SDK.
 
