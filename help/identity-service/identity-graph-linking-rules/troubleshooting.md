@@ -2,9 +2,9 @@
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,10 @@ Esta consulta supone lo siguiente:
 
 * Se envía una identidad desde el mapa de identidad y otra identidad desde un descriptor de identidad. **NOTA**: en esquemas XDM (Experience Data Model), el descriptor de identidad es el campo marcado como identidad.
 * El CRMID se envía mediante identityMap. Si el CRMID se envía como un campo, quite `key='Email'` de la cláusula WHERE.
+
+>[!NOTE]
+>
+>**En la implementación de WebSDK y la duplicación de ECID**: Si el campo ECID está marcado como identidad (descriptor de identidad) en lugar de identityMap, se genera un segundo ECID en identityMap. Esta duplicación puede evitar que el perfil del cliente en tiempo real almacene eventos anónimos debido a la presencia de dos ECID en un solo evento.
 
 ## Problemas relacionados con el comportamiento de gráficos {#graph-behavior-related-issues}
 
