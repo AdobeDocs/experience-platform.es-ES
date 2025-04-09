@@ -5,10 +5,10 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 30%
+source-wordcount: '1070'
+ht-degree: 35%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 30%
       - [fuente de Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origen de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fuente de recopilación de datos](connectors/adobe-applications/data-collection.md)
-      - Asignaciones de campo {#mapping}
+      - Asignaciones de campos {#mapping}
          - [Asignaciones de campos de Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Asignaciones de campos de Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
@@ -95,10 +95,11 @@ ht-degree: 30%
    - Socio de datos e identidad {#data-partner}
       - [Ingesta de datos de Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importación de datos de prospección de Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Perfiles de usuario de Algolia](connectors/data-partners/algolia-user-profiles.md)
       - [Bombora Intent](connectors/data-partners/bombora.md)
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Resolución de identidad de Merkury Enterprise](connectors/data-partners/merkury.md)
-   - Comercio electrónico {#ecommerce}
+   - eCommerce {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
@@ -122,7 +123,7 @@ ht-degree: 30%
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
       - [Conector de API REST genérico](connectors/protocols/generic-rest.md)
-   - Transmitiendo {#streaming}
+   - Streaming {#streaming}
       - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
    - Crear una conexión base {#create}
@@ -181,7 +182,7 @@ ht-degree: 30%
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - Comercio electrónico {#ecommerce}
+      - eCommerce {#ecommerce}
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
@@ -204,7 +205,7 @@ ht-degree: 30%
       - Protocolos {#protocols}
          - [OData genérico](tutorials/api/create/protocols/odata.md)
          - [API REST genérica](tutorials/api/create/protocols/generic-rest.md)
-      - Transmitiendo {#streaming}
+      - Streaming {#streaming}
          - [API HTTP](tutorials/api/create/streaming/http.md)
    - Explorar datos {#explore}
       - [Exploración de datos publicitarios](tutorials/api/explore/advertising.md)
@@ -217,7 +218,7 @@ ht-degree: 30%
       - [Explorar datos de pago](tutorials/api/explore/payments.md)
       - [Explorar datos de protocolo](tutorials/api/explore/protocols.md)
       - [Explorar tablas de datos](tutorials/api/explore/tabular.md)
-   - Recopilar datos {#collect}
+   - Recopilación de datos {#collect}
       - [Recopilación de datos publicitarios](tutorials/api/collect/advertising.md)
       - [Recopilar datos de almacenamiento en la nube](tutorials/api/collect/cloud-storage.md)
       - [Recopilar datos de CRM](tutorials/api/collect/crm.md)
@@ -309,10 +310,11 @@ ht-degree: 30%
       - Socio de datos e identidad {#data-partner}
          - [Ingesta de datos de Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importación de datos de prospección de Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Perfiles de usuario de Algolia](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Resolución de identidad de Merkury Enterprise](tutorials/ui/create/data-partners/merkury.md)
-      - Comercio electrónico {#ecommerce}
+      - eCommerce {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
@@ -337,9 +339,9 @@ ht-degree: 30%
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocolos {#protocols}
          - [OData genérico](tutorials/ui/create/protocols/odata.md)
-      - Transmitiendo {#streaming}
+      - Streaming {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
-   - Configurar un flujo de datos {#dataflow}
+   - Configuración de un flujo de datos {#dataflow}
       - [Flujo de datos de conexión Advertising](tutorials/ui/dataflow/advertising.md)
       - [Flujo de datos de conexión de Analytics](tutorials/ui/dataflow/analytics.md)
       - [Flujo de datos de conexión de almacenamiento en nube por lotes](tutorials/ui/dataflow/batch/cloud-storage.md)
@@ -367,12 +369,12 @@ ht-degree: 30%
    - [Aplicación de etiquetas de acceso a un flujo de datos](tutorials/ui/labels.md)
 - Fuentes de autoservicio (SDK por lotes) {#sdk}
    - [Información general](sources-sdk/overview.md)
-   - Configure la especificación de conexión {#config}
+   - Configurar la especificación de conexión {#config}
       - [Opciones de configuración](sources-sdk/config/config.md)
       - [Configurar la especificación de autenticación](sources-sdk/config/authspec.md)
       - [Configurar especificación de origen](sources-sdk/config/sourcespec.md)
       - [Configurar la especificación de exploración](sources-sdk/config/explorespec.md)
-   - Guía de API de fuentes de autoservicio (SDK por lotes) {#self-serve-api}
+   - Guía de la API de fuentes de autoservicio (SDK por lotes) {#self-serve-api}
       - [Resumen de la API de fuentes de autoservicio (SDK por lotes)](sources-sdk/api/api-overview.md)
       - [Introducción](sources-sdk/api/getting-started.md)
       - [Crear una especificación de conexión](sources-sdk/api/create.md)
@@ -385,7 +387,7 @@ ht-degree: 30%
       - [Utilice un editor de texto en el entorno local para crear una página de documentación de fuentes](sources-sdk/documentation/text-editor.md)
       - [Plantilla de API de autoservicio de documentación](sources-sdk/documentation/template.md)
       - [Plantilla de IU de autoservicio de documentación](sources-sdk/documentation/ui-template.md)
-   - Transmitiendo SDK {#streaming-sdk}
+   - Streaming de SDK {#streaming-sdk}
       - [Introducción a las fuentes de autoservicio (streaming de SDK)](sources-sdk/streaming/getting-started.md)
       - [Creación de una especificación de conexión para un origen de flujo continuo](sources-sdk/streaming/create.md)
       - [Actualizar una especificación de conexión para un origen de flujo continuo](sources-sdk/streaming/update-connection-specs.md)
