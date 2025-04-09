@@ -4,10 +4,10 @@ user-guide-title: Guía del asistente de IA en Adobe Experience Platform
 user-guide-description: Aprenda a utilizar el Asistente de IA para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 description: Este documento enumera la tabla de contenido del Asistente de IA en Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7c6b73509d2ba3f53c62c53d70c33969b0b4157b
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 31%
+source-wordcount: '115'
+ht-degree: 29%
 
 ---
 
@@ -21,11 +21,15 @@ ht-degree: 31%
 * [Guía de IU del asistente de IA](ui-guide.md)
 * [Privacidad, seguridad y gobernanza](privacy.md)
 * [Preguntas frecuentes](faq.md)
-* Nuevas características {#new-features}
+* Nuevas funciones {#new-features}
    * [Funciones del asistente de IA en Alpha y Beta](./new-features/alpha-beta.md)
    * [Asistente de IA para asistencia al cliente](./new-features/customer-support.md)
    * [Monitorización de cambios significativos y previsión de audiencias](./new-features/audience-forecasting.md)
    * [Estimación de lenguaje natural](./new-features/natural-language.md)
    * [Descubrimiento de campos XDM para la creación de audiencias](./new-features/xdm-field-discovery.md)
+* Tarjetas de modelo {#model-cards}
+   * [Información general sobre tarjetas de modelo](./model-cards/overview.md)
+   * Tarjetas de modelo de IA {#ai-model-cards}
+      * [Puntuación de tendencia de Customer AI](./model-cards/ai-model-cards/customer-ai.md)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
 
