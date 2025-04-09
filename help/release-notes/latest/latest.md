@@ -66,7 +66,7 @@ Para obtener más información, lea la [Información general de destinos](../../
 
 ## Composición de público federado {#federated-audience-composition}
 
-Para obtener información sobre las últimas actualizaciones de Federated Audience Composition, lea las [notas de la versión](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes) aquí.
+Para obtener más información sobre las últimas actualizaciones de la Composición de público federado, lea las [notas de la versión específicas](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes) aquí.
 
 ## Servicio de segmentación {#segmentation-service}
 
