@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
 source-wordcount: '1679'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -61,7 +61,7 @@ Además de las composiciones de audiencias y las definiciones de segmentos, pued
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Métodos de evaluación"
->abstract="Experience Platform admite actualmente tres métodos para evaluar audiencias: segmentación de streaming, segmentación por lotes y segmentación de Edge."
+>abstract="Actualmente, Experience Platform admite tres métodos de evaluación de públicos: segmentación de streaming, segmentación por lotes y segmentación de Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ Además de las composiciones de audiencias y las definiciones de segmentos, pued
 >abstract="La segmentación de streaming es un proceso continuo de selección de datos que actualiza las audiencias en respuesta a la actividad de los usuarios."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=es" text="Evaluar eventos en tiempo casi real con segmentación de streaming"
 
-Experience Platform admite actualmente tres métodos para evaluar audiencias: segmentación de streaming, segmentación por lotes y segmentación de Edge.
+Actualmente, Experience Platform admite tres métodos de evaluación de públicos: segmentación de streaming, segmentación por lotes y segmentación de Edge.
 
 ### Segmentación de streaming {#streaming}
 
@@ -93,7 +93,7 @@ Las audiencias por lotes se evalúan automáticamente cada 24 horas. Si desea ev
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Evaluación de Edge"
->abstract="La segmentación de Edge es la capacidad de evaluar segmentos en Experience Platform de forma instantánea en Edge Network, lo que permite casos de uso de personalización de la misma página y de la siguiente."
+>abstract="La segmentación de Edge es la posibilidad de evaluar segmentos en Experience Platform instantáneamente en Edge Network, lo que permite casos de uso de habilitación de la misma página y personalización de la siguiente página."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=es" text="Guía de segmentación de Edge"
 
 La segmentación de Edge es la capacidad para evaluar segmentos en Experience Platform de forma instantánea [en Edge Network](../landing/edge-and-hub-comparison.md), lo que permite casos de uso de personalización de la misma página y de la siguiente.

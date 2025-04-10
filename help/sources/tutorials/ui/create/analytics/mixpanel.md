@@ -5,7 +5,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -64,7 +64,7 @@ Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a co
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
 >title="Establecer una zona horaria para la ingesta de Mixpanel"
->abstract="La zona horaria debe ser la misma que la del perfil de Mixpanel, ya que Experience Platform utiliza la zona horaria del proyecto designada para introducir datos relevantes de Mixpanel. Mixpanel ajustará su zona horaria para coordinarse con la zona horaria del proyecto antes de registrar el evento en un almacén de datos de Mixpanel."
+>abstract="La zona horaria debe ser la misma que la configuración de la zona horaria del perfil de Mixpanel, ya que Experience Platform utiliza la zona horaria del proyecto designada para ingerir datos relevantes de Mixpanel. Mixpanel ajustará su zona horaria para coordinarse con la zona horaria del proyecto antes de registrar el evento en un almacén de datos de Mixpanel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=es#project-id-and-timezone" text="Obtenga más información en la documentación"
 
 Una vez que el origen esté autenticado, proporcione el ID de proyecto y la zona horaria y luego seleccione **[!UICONTROL Seleccionar]**.

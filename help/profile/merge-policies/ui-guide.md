@@ -32,7 +32,7 @@ Esta guía requiere una comprensión práctica de varias características import
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Política de combinación no encontrada"
->abstract="Esto significa que Experience Platform no pudo encontrar la política de combinación solicitada. Para resolver este error, pruebe una de las siguientes soluciones:<ul><li>Asegúrese de que el ID de la política de combinación correcto aparece en la dirección URL.</li><li>Asegúrese de que tiene la combinación correcta de organización y zona protegida para la política de combinación a la que intenta acceder.</li></ul>"
+>abstract="Esto significa que Experience Platform no ha podido encontrar la política de combinación solicitada. Para resolver este error, pruebe una de las siguientes soluciones:<ul><li>Asegúrese de que el ID de la política de combinación correcto aparece en la dirección URL.</li><li>Asegúrese de que tiene la combinación correcta de organización y zona protegida para la política de combinación a la que intenta acceder.</li></ul>"
 
 En la interfaz de usuario de [!DNL Experience Platform], puede empezar a trabajar con directivas de combinación seleccionando **[!UICONTROL Perfiles]** en el panel de navegación izquierdo y, a continuación, la pestaña **[!UICONTROL Políticas de combinación]**.
 

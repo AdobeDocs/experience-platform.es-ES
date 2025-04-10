@@ -7,7 +7,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 27%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Acciones principales"
->abstract="Este widget muestra los principales tipos de acciones que se han realizado en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Experience Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
+>abstract="Este widget muestra los principales tipos de acciones que se han realizado en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Experience Platform, seleccione **Auditorías** en el panel de navegación situado a la izquierda."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Usuarios principales"
->abstract="Este widget muestra los usuarios que ejecutaron la mayoría de las acciones en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Experience Platform, seleccione **Auditorías** en el panel de navegación izquierdo."
+>abstract="Este widget muestra los usuarios que ejecutaron la mayoría de las acciones en Experience Platform dentro del periodo de tiempo seleccionado. Para ver la lista completa de acciones registradas en Experience Platform, seleccione **Auditorías** en el panel de navegación situado a la izquierda."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitorización de actividades del usuario en Experience Platform"
->abstract="<h2>Descripción</h2><p>Puede monitorizar la actividad del usuario para varios servicios y funcionalidades de Experience Platform en forma de registros de auditoría. Estos registros forman una pista de auditoría que registra <b>quién</b> realizó <b>qué</b> acción y <b>cuándo</b>. Los registros de auditoría pueden ayudar a solucionar problemas en Experience Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.</p>"
+>title="Monitorización de actividades de los usuarios en Experience Platform"
+>abstract="<h2>Descripción</h2><p>Puede monitorizar la actividad de los usuarios para los distintos servicios y funcionalidades de Experience Platform en forma de registros de auditoría. Estos registros forman una pista de auditoría que registra <b>quién</b> realizó <b>qué</b> acción y <b>cuándo</b>. Los registros de auditoría pueden ayudar a solucionar problemas en Experience Platform y a que su empresa cumpla de manera eficaz con las políticas corporativas de administración de datos y los requisitos normativos.</p>"
 
 Para aumentar la transparencia y la visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform le permite auditar la actividad del usuario para varios servicios y funcionalidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Experience Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 

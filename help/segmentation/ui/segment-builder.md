@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '4980'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -349,7 +349,7 @@ Una vez que seleccione **[!UICONTROL Desenvolver contenedor]**, el contenedor se
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Combinar políticas"
->abstract="La política de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Experience Platform proporciona una política de combinación predeterminada, o bien puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para este público."
+>abstract="La política de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Experience Platform ha proporcionado una política de combinación predeterminada o también puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para este público."
 
 [!DNL Experience Platform] le permite reunir datos de varios orígenes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Experience Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear un perfil.
 

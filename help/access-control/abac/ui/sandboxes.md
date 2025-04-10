@@ -6,7 +6,7 @@ exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 13%
+ht-degree: 18%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 13%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_sandboxes_about"
 >title="¿Qué son las zonas protegidas?"
->abstract="Las zonas protegidas son particiones virtuales en una sola instancia de Experience Platform. Todo el contenido y las acciones realizadas en una zona protegida se limitan a ella y no afectan a otras zonas protegidas. El acceso a las zonas protegidas se administra mediante funciones."
+>abstract="Las zonas protegidas son particiones virtuales dentro de una única instancia de Experience Platform. Todo el contenido y las acciones realizadas en una zona protegida se limitan a ella y no afectan a otras zonas protegidas. El acceso a las zonas protegidas se administra mediante funciones."
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/home" text="Información general de zonas protegidas"
 
 Los zonas protegidas son particiones virtuales en una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de sus aplicaciones de experiencia digital. Todo el contenido y las acciones realizadas en una zona protegida se limitan únicamente a esa zona protegida y no afectan a ninguna otra. Para obtener más información sobre las zonas protegidas, consulte la [Información general sobre las zonas protegidas](../../../sandboxes/home.md).
