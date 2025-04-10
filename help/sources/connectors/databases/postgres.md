@@ -1,35 +1,86 @@
 ---
-keywords: Experience Platform;inicio;temas populares;PostgreSQL;postgresql
-solution: Experience Platform
 title: Información general sobre el conector Source PostgreSQL
-description: Obtenga información sobre cómo conectar PostgreSQL a Adobe Experience Platform mediante API o la interfaz de usuario.
+description: Obtenga información sobre el origen PostgreSQL en Adobe Experience Platform.
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 98d1bec3cd453f3a20b8871b891b5464ddd44a09
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
 
-# Conector [!DNL PostgreSQL]
+# [!DNL PostgreSQL]
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Lea este documento para obtener más información acerca de los pasos necesarios que debe llevar a cabo antes de conectar la base de datos de [!DNL PostgreSQL] a Adobe Experience Platform.
 
-[!DNL Experience Platform] proporciona soporte para la ingesta de datos desde una base de datos de terceros. [!DNL Experience Platform] puede conectarse a diferentes tipos de bases de datos, como relacionales, NoSQL o almacenes de datos. La compatibilidad con los proveedores de bases de datos incluye [!DNL PostgreSQL].
+## Requisitos previos {#prerequisites}
 
-## LISTA DE PERMITIDOS de direcciones IP
+Lea las siguientes secciones para completar la configuración de requisitos previos antes de conectar la base de datos de [!DNL PostgreSQL] a Experience Platform.
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+### LISTA DE PERMITIDOS de direcciones IP
 
-La siguiente documentación proporciona información sobre cómo conectar [!DNL PostgreSQL] a [!DNL Experience Platform] mediante API o la interfaz de usuario:
+Debe agregar direcciones IP específicas de la región a la lista de permitidos antes de conectar las fuentes a Experience Platform en Azure o Amazon Web Service (AWS). Para obtener más información, lea la guía de [inclusión en la lista de permitidos de direcciones IP para conectarse a Experience Platform en Azure y AWS](../../ip-address-allow-list.md).
 
-## Conectar [!DNL PostgreSQL] a [!DNL Experience Platform] mediante API
+### Autenticar en Experience Platform en Azure {#azure}
 
-- [Crear una conexión base  [!DNL PostgreSQL] mediante la API de Flow Service](../../tutorials/api/create/databases/postgres.md)
-- [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
-- [Crear un flujo de datos para un origen de base de datos mediante la API de Flow Service](../../tutorials/api/collect/database-nosql.md)
+Debe proporcionar valores para las siguientes credenciales de autenticación para conectar [!DNL PostgreSQL] a Experience Platform en Azure.
 
-## Conectar [!DNL PostgreSQL] a [!DNL Experience Platform] mediante la interfaz de usuario
+>[!BEGINTABS]
 
-- [Crear una  [!DNL PostgreSQL] conexión de origen en la interfaz de usuario](../../tutorials/ui/create/databases/postgres.md)
-- [Crear un flujo de datos para una conexión de origen de base de datos en la IU](../../tutorials/ui/dataflow/databases.md)
+>[!TAB Autenticación de clave de cuenta]
+
+Proporcione valores para las siguientes credenciales a fin de conectar su base de datos de [!DNL PostgreSQL] a Experience Platform en Azure mediante la autenticación de clave de cuenta.
+
+| Credencial | Descripción |
+| --- | --- |
+| `connectionString` | La cadena de conexión asociada a su cuenta de [!DNL PostgreSQL]. El patrón de cadena de conexión [!DNL PostgreSQL] es: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL PostgreSQL] es `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+
+Lea la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/) para obtener más información.
+
+>[!TAB Autenticación básica]
+
+Proporcione valores para las siguientes credenciales a fin de conectar su base de datos de [!DNL PostgreSQL] a Experience Platform en Azure mediante la autenticación básica.
+
+| Credencial | Descripción |
+| --- | --- |
+| `server` | Nombre o dirección IP de la base de datos [!DNL PostgreSQL]. |
+| `port` | El puerto TCP del servidor [!DNL PostgreSQL]. |
+| `username` | El nombre de usuario asociado con la autenticación de la base de datos [!DNL PostgreSQL]. |
+| `password` | La contraseña asociada con la autenticación de la base de datos [!DNL PostgreSQL]. |
+| `database` | Nombre de la base de datos [!DNL PostgreSQL] a la que desea conectarse. |
+| `sslMode` | El método [!DNL Secure Sockets Layer] (SSL) que se aplicará a su conexión. Los valores disponibles son: <ul><li>`Disable`: utilice esta opción para deshabilitar SSL. Si el servidor requiere una configuración SSL, la conexión fallará.</li><li>`Allow`: utilice esta opción para permitir conexiones SSL. Las conexiones no SSL pueden seguir utilizándose si el servidor las admite.</li><li>`Prefer`: utilice esta opción para preferir las conexiones SSL, ya que el servidor las admite. Esta opción también permite conexiones no SSL.</li><li>`Require`: utilice esta opción para que las conexiones SSL sean obligatorias. Si el servidor no admite SSL, las conexiones fallarán.</li><li>`Verify-Ca`: utilice esta opción para comprobar los certificados de servidor mientras se producen errores en las conexiones si el servidor no admite SSL.</li><li>`Verify-Full`: utilice esta opción para comprobar los certificados de servidor con el nombre del host mientras se producen errores en las conexiones si el servidor no admite SSL.</li></ul> |
+
+Lea la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/) para obtener más información.
+
+>[!ENDTABS]
+
+### Autenticar en Experience Platform en Amazon Web Service (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Esta sección se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
+
+Proporcione valores para las siguientes credenciales a fin de conectar su base de datos [!DNL PostgreSQL] a Experience Platform en AWS mediante la autenticación básica.
+
+| Credencial | Descripción |
+| --- | --- |
+| `server` | Nombre o dirección IP de la base de datos [!DNL PostgreSQL]. |
+| `port` | El puerto TCP del servidor [!DNL PostgreSQL]. |
+| `username` | El nombre de usuario asociado con la autenticación de la base de datos [!DNL PostgreSQL]. |
+| `password` | La contraseña asociada con la autenticación de la base de datos [!DNL PostgreSQL]. |
+| `database` | Nombre de la base de datos [!DNL PostgreSQL] a la que desea conectarse. |
+| `sslMode` | El método [!DNL Secure Sockets Layer] (SSL) que se aplicará a su conexión. Los valores disponibles son: <ul><li>`Disable`: utilice esta opción para deshabilitar SSL. Si el servidor requiere una configuración SSL, la conexión fallará.</li><li>`Allow`: utilice esta opción para permitir conexiones SSL. Las conexiones no SSL pueden seguir utilizándose si el servidor las admite.</li><li>`Prefer`: utilice esta opción para preferir las conexiones SSL, ya que el servidor las admite. Esta opción también permite conexiones no SSL.</li><li>`Require`: utilice esta opción para que las conexiones SSL sean obligatorias. Si el servidor no admite SSL, las conexiones fallarán.</li><li>`Verify-Ca`: utilice esta opción para comprobar los certificados de servidor mientras se producen errores en las conexiones si el servidor no admite SSL.</li><li>`Verify-Full`: utilice esta opción para comprobar los certificados de servidor con el nombre del host mientras se producen errores en las conexiones si el servidor no admite SSL.</li></ul> |
+
+Lea la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/) para obtener más información.
+
+## Conectar [!DNL PostgreSQL] a Experience Platform mediante API
+
+* [Crear una conexión base  [!DNL PostgreSQL] mediante la API de Flow Service](../../tutorials/api/create/databases/postgres.md)
+* [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
+* [Crear un flujo de datos para un origen de base de datos mediante la API de Flow Service](../../tutorials/api/collect/database-nosql.md)
+
+## Conectar [!DNL PostgreSQL] a Experience Platform mediante la interfaz de usuario
+
+* [Crear una  [!DNL PostgreSQL] conexión de origen en la interfaz de usuario](../../tutorials/ui/create/databases/postgres.md)
+* [Crear un flujo de datos para una conexión de origen de base de datos en la IU](../../tutorials/ui/dataflow/databases.md)
