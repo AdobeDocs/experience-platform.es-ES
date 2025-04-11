@@ -1,66 +1,89 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Maria DB;maria db
-solution: Experience Platform
-title: Crear una conexión de MariaDB Source en la interfaz de usuario
-type: Tutorial
-description: Obtenga información sobre cómo crear una conexión de origen Maria DB mediante la interfaz de usuario de Adobe Experience Platform.
+title: Conecte MariaDB a Experience Platform usando el IU
+description: Aprenda a conectar su cuenta MariaDB a Experience Platform utilizando las fuentes espacio de trabajo en la interfaz de Experience Platform usuario.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 2%
+source-wordcount: '590'
+ht-degree: 0%
 
 ---
 
-# Crear una conexión de origen [!DNL MariaDB] en la interfaz de usuario
+# Conéctese [!DNL MariaDB] a Experience Platform mediante el IU
 
-Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen Maria DB mediante la interfaz de usuario [!DNL Experience Platform].
+Lea este guía para aprender a conectar su [!DNL MariaDB] cuenta a Adobe Experience Platform utilizando las fuentes espacio de trabajo en la interfaz de Experience Platform usuario.
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco de trabajo estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de la experiencia del cliente.
-   * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
-* [Perfil del cliente en tiempo real](../../../../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco de trabajo estandarizado por el cual Experience Platform organiza experiencia del cliente datos.
+   * [Conceptos básicos de la composición](../../../../../xdm/schema/composition.md) esquema: aprenda sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición esquema.
+   * [Editor de esquemas tutorial](../../../../../xdm/tutorials/create-schema-ui.md): aprenda a crear esquemas personalizados mediante el Editor de esquemas IU.
+* [Perfil](../../../../../profile/home.md) del cliente en tiempo real: proporciona un perfil del consumidor unificado y en tiempo real basado en datos agregados de múltiples fuentes.
 
-Si ya tiene una conexión de [!DNL MariaDB], puede omitir el resto de este documento y continuar con el tutorial sobre [configuración de un flujo de datos](../../dataflow/databases.md).
+Si ya tiene una [!DNL MariaDB] conexión, puede omitir el resto de este documento y continuar con la tutorial de [configuración de un flujo](../../dataflow/databases.md) de datos.
 
-### Recopilar credenciales necesarias
+### Recopile las credenciales necesarias
 
-Para tener acceso a su cuenta de [!DNL MariaDB] en [!DNL Experience Platform], debe proporcionar el siguiente valor:
+Lea la descripción general](../../../../connectors/databases/mariadb.md#prerequisites) para obtener información sobre la [[!DNL MariaDB] autenticación.
 
-| Credencial | Descripción |
-| ---------- | ----------- |
-| `connectionString` | La cadena de conexión asociada a su autenticación MariaDB. El patrón de cadena de conexión [!DNL MariaDB] es: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+## Navegar por el catálogo de orígenes
 
-Para obtener más información sobre cómo empezar, consulte este [[!DNL MariaDB] documento](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+En el IU Experience Platform, seleccione **[!UICONTROL Orígenes]** en el navegación izquierdo para acceder *[!UICONTROL al espacio de trabajo Orígenes]* . Seleccione el categoría adecuado en el *[!UICONTROL panel Categorías]* También puede utilizar la barra búsqueda para desplazarse hasta el origen específico que desee utilizar.
 
-## Conectar su cuenta de [!DNL Maria DB]
+Para usar [!DNL MariaDB], seleccione el **[!UICONTROL tarjeta de origen MariaDB]** en *[!UICONTROL Bases de datos y, a continuación, seleccione **[!UICONTROL Configurar]*]**.
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Maria DB] a [!DNL Experience Platform].
+>[!TIP]
+>
+>Las fuentes del catálogo de fuentes muestran la **[!UICONTROL opción Configurar]** cuando una fuente determinada aún no tiene un cuenta autenticado. Una vez que se crea un cuenta autenticado, esta opción cambia a **[!UICONTROL añadir datos]**.
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de orígenes con los que puede crear una cuenta.
+![El catálogo de fuentes en el IU con el tarjeta MariaDB seleccionado.](../../../../images/tutorials/create/maria-db/catalog.png)
 
-En la categoría **[!UICONTROL Bases de datos]**, seleccione **[!UICONTROL Maria DB]**. Si es la primera vez que usa este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Agregar datos]** para crear un nuevo conector [!DNL Maria DB].
+## Utilizar un cuenta existente {#existing}
 
-![](../../../../images/tutorials/create/maria-db/catalog.png)
+Para utilizar un cuenta existente, seleccione **[!UICONTROL cuenta]** existente y, a continuación, seleccione el [!DNL MariaDB] cuenta que desea utilizar.
 
-Aparecerá la página **[!UICONTROL Conectar con Maria DB]**. En esta página, puede usar credenciales nuevas o existentes.
+![La interfaz de cuentas existentes en los orígenes flujo de trabajo con la opción &quot;cuenta existente&quot; seleccionada.](../../../../images/tutorials/create/maria-db/existing.png)
 
-### Nueva cuenta
+## Crear una nueva cuenta {#create}
 
-Si está usando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione un nombre, una descripción opcional y sus credenciales de [!DNL MariaDB]. Cuando termine, seleccione **[!UICONTROL Conectar]** y deje pasar un tiempo para que se establezca la nueva conexión.
+Si no tiene un cuenta existente, debe crear un nuevo cuenta proporcionando las credenciales de autenticación necesarias que correspondan con su origen.
 
-![](../../../../images/tutorials/create/maria-db/new.png)
+Para crear un nuevo cuenta, seleccione **[!UICONTROL Nuevo cuenta]** y, a continuación, proporcione un nombre y, opcionalmente, agregue una descripción para su cuenta.
 
-### Cuenta existente
+![La nueva interfaz cuenta de los orígenes flujo de trabajo con un nombre cuenta y una descripción opcional.](../../../../images/tutorials/create/maria-db/new.png)
 
-Para conectar una cuenta existente, seleccione la cuenta de [!DNL MariaDB] con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+### Connect to Experience Platform on Azure {#azure}
 
-![](../../../../images/tutorials/create/maria-db/existing.png)
+Puede conectar su [!DNL MariaDB] cuenta a Experience Platform en Azure mediante cuenta clave o autenticación básica.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación de clave de cuenta]
+
+Para usar cuenta autenticación de clave, seleccione **[!UICONTROL Autenticación]** de clave de cuenta, proporcione la [cadena](../../../../connectors/databases/mariadb.md#azure) de conexión y, a continuación, seleccione **[!UICONTROL Conectar al origen]**.
+
+![La nueva interfaz cuenta de los orígenes flujo de trabajo con la opción &quot;Autenticación de clave de cuenta&quot; seleccionada.](../../../../images/tutorials/create/maria-db/account-key.png)
+
+>[!TAB Autenticación básica]
+
+Para usar la autenticación básica, seleccione **[!UICONTROL Autenticación]** básica, proporcione valores para sus [credenciales](../../../../connectors/databases/mariadb.md#azure) de autenticación y, a continuación, seleccione **[!UICONTROL Conectar con el origen]**.
+
+![La nueva interfaz cuenta en los orígenes flujo de trabajo con la opción &quot;Autenticación básica&quot; seleccionada.](../../../../images/tutorials/create/maria-db/basic-auth.png)
+
+>[!ENDTABS]
+
+### Conéctese a Experience Platform en Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Esta sección se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Services (AWS). Experience Platform que se ejecutan en AWS están disponibles actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura Experience Platform compatible, consulte la Experience Platform información general](../../../../../landing/multi-cloud.md) sobre varios [nube.
+
+Para crear un nuevo [!DNL MariaDB] cuenta y conectarse a Experience Platform en AWS, asegúrese de estar en un entorno de pruebas VA6 y, a continuación, proporcione las credenciales necesarias [para la autenticación](../../../../connectors/databases/mariadb.md#aws).
+
+![La nueva interfaz de cuenta en los orígenes flujo de trabajo para conectarse a AWS.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL MariaDB]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).
+Al seguir este tutorial, ha establecido una conexión con su [!DNL MariaDB] cuenta. Ahora puede continuar con la siguiente tutorial y [configurar un flujo de datos para llevar los datos a Experience Platform](../../dataflow/databases.md).
