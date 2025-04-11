@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '4980'
+source-wordcount: '5024'
 ht-degree: 8%
 
 ---
@@ -26,6 +26,16 @@ ht-degree: 8%
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campos"
 >abstract="Los tres tipos de campo que componen una definición de segmento son atributos, eventos y públicos. Los atributos permiten utilizar atributos de perfil que pertenecen a la clase de perfil XDM individual, los eventos permiten crear un público basado en acciones o eventos que tienen lugar mediante elementos de datos XDM ExperienceEvent y los públicos permiten utilizar públicos importados de fuentes externas."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="Mostrar esquema XDM completo"
+>abstract="De forma predeterminada, solo se muestran los campos que contienen datos. Active esta opción para mostrar todos los campos del esquema XDM."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="Mostrar campos obsoletos"
+>abstract="De forma predeterminada, no se muestran los campos XDM obsoletos. Active esta opción para mostrar los campos XDM obsoletos."
 
 Los componentes básicos de las definiciones de segmentos son los atributos y los eventos. Además, los atributos y eventos contenidos en las audiencias existentes pueden utilizarse como componentes para nuevas definiciones.
 

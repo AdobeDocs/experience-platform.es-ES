@@ -3,13 +3,13 @@ title: Generador de audiencias en Real-Time Customer Data Platform
 description: Aprenda a utilizar el Generador de audiencias en Real-Time Customer Data Platform para crear audiencias.
 feature: Get Started, Audiences
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b9099b123ae83eef6d470076dc2f8d143170a846
+exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
-
 
 # Generador de audiencias en Real-Time Customer Data Platform
 
@@ -18,6 +18,21 @@ Compilado en Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Plat
 ![Generador de audiencias en la sección Cuentas.](../assets/segmentation/audience-builder/audience-builder.png){zoomable="yes"}
 
 ## Campos {#fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showfullxdmschema"
+>title="Mostrar esquema XDM completo"
+>abstract="De forma predeterminada, solo se muestran los campos que contienen datos. Active esta opción para mostrar todos los campos del esquema XDM."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showrelationselectors"
+>title="Mostrar selectores de relación"
+>abstract="De forma predeterminada, se utilizan las relaciones estándar para su organización. Active esta opción para mostrar los selectores de relación utilizados."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showconstrainedfields"
+>title="Mostrar campos restringidos"
+>abstract="De forma predeterminada, solo se muestran los campos que no tienen restricciones. Active esta opción para mostrar los campos que tienen restricciones."
 
 Al usar el Generador de audiencias para cuentas de, puede usar los atributos de cuenta o las audiencias existentes como campos de la audiencia.
 
