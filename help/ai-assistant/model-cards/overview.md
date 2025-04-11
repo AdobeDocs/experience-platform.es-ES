@@ -3,24 +3,31 @@ title: Tarjetas De Modelo Para La Transparencia Del Modelo De IA En Adobe Experi
 description: Obtenga información sobre las tarjetas de modelo en Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 21a95bd678cf83c72a08213b647ef778cfb49cfc
+exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
+source-git-commit: 1edecf0cb413b66d66973517421bc0062f475337
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
 # Tarjetas de modelo para la transparencia del modelo de IA en Adobe Experience Platform
 
-Las tarjetas de modelo son los formatos estándar mediante los cuales se comunica la transparencia del modelo de IA. Las tarjetas de modelo son públicas y su objetivo es mejorar la comprensión, tanto del cliente existente como del potencial, de los modelos de IA que utiliza Adobe. Las tarjetas de modelo suelen ser estáticas. Sin embargo, hay varios aspectos de los modelos de IA que pueden cambiar con el tiempo, incluidos el linaje, el sesgo y otros atributos de transparencia.
+Una tarjeta del modelo de IA es el formato estándar mediante el cual se comunica la transparencia del modelo de IA. Las tarjetas de modelo proporcionan información completa sobre el modelo subyacente en el que se basa una herramienta de IA determinada. Las tarjetas de modelo incluyen información como el propósito de una herramienta de IA, datos de formación, métricas de rendimiento, limitaciones y consideraciones éticas. Puede utilizar la transparencia que las tarjetas de modelo proporcionan para comprender mejor las capacidades y limitaciones del modelo, así como para promover mejor un uso responsable y justo de la IA.
+
+Las tarjetas de modelo son públicas y su objetivo es mejorar la comprensión, tanto del cliente existente como del potencial, de los modelos de IA que utiliza Adobe. Las tarjetas de modelo suelen ser estáticas. Sin embargo, hay varios aspectos de los modelos de IA que pueden cambiar con el tiempo, incluidos el linaje, el sesgo y otros atributos de transparencia.
 
 Lea este documento para obtener más información sobre las tarjetas de modelo en Adobe Experience Platform.
 
 ## Secciones de tarjeta de modelo {#model-card-sections}
 
+Una tarjeta de modelo está compuesta por una variedad de secciones diferentes, cada una de las cuales se centra en un aspecto particular del modelo de IA.
+
 Lea lo siguiente para obtener una guía sobre las diferentes secciones de una tarjeta de modelo, incluida la información sobre las preguntas que abordan.
 
 ### Información general del modelo {#model-overview}
+
+La descripción general del modelo contiene información general sobre un modelo de IA. Utilice esta sección para proporcionar información como el nombre, el propósito y el tipo de su modelo de IA. Además, puede utilizar esta sección para identificar a los usuarios previstos y explicar cómo el modelo se integra con Experience Platform.
 
 +++Ver preguntas y ejemplos de respuestas
 
@@ -38,6 +45,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 
 ### Uso previsto {#intended-use}
 
+La sección de uso previsto contiene información sobre los casos de uso principales del modelo de IA. Puede utilizar esta sección para ampliar los problemas que su modelo pretende resolver, las industrias o dominios para los que su modelo es relevante y los casos de uso incorrecto que deben evitarse al utilizar su modelo de IA.
+
 +++Ver preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
@@ -52,6 +61,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 +++
 
 ### Entradas y salidas de modelo {#model-inputs-and-outputs}
+
+La sección de entradas y salidas del modelo contiene información sobre los tipos de datos admitidos que el modelo toma como entrada y devuelve como salida. Puede utilizar esta sección para proporcionar ejemplos de las entradas y salidas de datos que son relevantes para su modelo de IA.
 
 +++Ver preguntas y ejemplos de respuestas
 
@@ -68,6 +79,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 
 ### Datos de formación {#training-data}
 
+La sección de datos de formación contiene información sobre los conjuntos de datos que se utilizaron para entrenar un modelo de IA determinado. Puede utilizar esta sección para obtener más información sobre el tamaño y el origen de los datos de formación, los sesgos identificados en el conjunto de datos y cómo se han preprocesado los datos.
+
 +++Ver preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
@@ -82,6 +95,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 +++
 
 ### Arquitectura de modelo y formación {#model-architecture-and-training}
+
+La sección de arquitectura y formación del modelo describe el modelo del modelo de IA. Esta sección hace referencia a la estructura y el diseño del modelo de IA, incluidos detalles sobre el tipo de algoritmo y los métodos de evaluación utilizados. También puede utilizar esta sección para proporcionar información sobre los marcos de formación utilizados, así como los recursos de cálculo utilizados en la formación.
 
 +++Ver preguntas y ejemplos de respuestas
 
@@ -99,6 +114,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 
 ### Rendimiento y evaluación {#performance-and-evaluation}
 
+La sección de rendimiento y evaluación contiene información sobre las métricas y los métodos utilizados para evaluar el rendimiento del modelo para las tareas previstas. Puede utilizar esta sección para proporcionar información sobre las métricas de evaluación que se utilizaron, así como sobre las debilidades o los casos de error identificados.
+
 +++Ver preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
@@ -114,19 +131,23 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 
 ### Equidad y parcialidad {#fairness-and-bias}
 
+La sección de equidad y sesgo contiene información sobre el rendimiento del modelo de IA con respecto a las métricas de imparcialidad y sesgo. La equidad se refiere a la capacidad del modelo para proporcionar resultados equitativos entre diferentes grupos demográficos y casos de uso, mientras que el sesgo se refiere a errores sistemáticos que resultan en resultados injustos. Utilice esta sección para obtener más información sobre las comprobaciones de equidad que se realizaron y para analizar cómo el modelo mitiga el sesgo.
+
 +++Ver preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
 | ¿Qué controles de equidad se realizaron? | Los procesos de análisis y mitigación de sesgos que se realizaron. | El modelo se sometió a pruebas de paridad demográfica y evaluaciones de equidad contradictoria para detectar disparidades de desempeño entre los distintos segmentos de usuarios. |
 | ¿Afecta el modelo de forma desproporcionada a determinados grupos? | Cualquier disparidad en el rendimiento que se haya identificado. | El análisis reveló una caída del rendimiento del 5 % para los usuarios con datos de interacción históricos bajos. Para resolver esto, el modelo incorpora técnicas de reponderación durante el entrenamiento. |
-| ¿Cómo mitiga el modelo los bits? | Las técnicas utilizadas para abordar el sesgo. | El conjunto de datos está estratificado para garantizar una representación proporcional de los distintos datos demográficos de los clientes, y se introducen restricciones de equidad durante la formación para evitar que el modelo favorezca a ningún grupo en particular. Las auditorías periódicas de los sesgos se llevan a cabo mediante el análisis de la paridad demográfica, lo que permite realizar ajustes si se detectan disparidades en el rendimiento. |
+| ¿Cómo mitiga el modelo el sesgo? | Las técnicas utilizadas para abordar el sesgo. | El conjunto de datos está estratificado para garantizar una representación proporcional de los distintos datos demográficos de los clientes, y se introducen restricciones de equidad durante la formación para evitar que el modelo favorezca a ningún grupo en particular. Las auditorías periódicas de los sesgos se llevan a cabo mediante el análisis de la paridad demográfica, lo que permite realizar ajustes si se detectan disparidades en el rendimiento. |
 
 {style="table-layout:auto"}
 
 +++
 
 ### Explicación e interpretabilidad {#explainability-and-interpretability}
+
+La sección de explicabilidad e interpretabilidad contiene información sobre la capacidad de un modelo de IA para proporcionar explicaciones claras y comprensibles, y la facilidad con la que un usuario humano puede comprender cómo las características de entrada afectan a las predicciones y respuestas. Utilice esta sección para explicar cómo los usuarios pueden comprender mejor por qué el modelo toma determinadas decisiones y qué herramientas o técnicas están disponibles para la interpretabilidad.
 
 +++Ver preguntas y ejemplos de respuestas
 
@@ -141,6 +162,12 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 
 ### Solidez y generalización {#robustness-and-generalization}
 
+La sección de solidez y generalización contiene información sobre el rendimiento del modelo de IA en datos no vistos. Además, puede utilizar esta sección para explicar cómo el modelo mantiene su rendimiento y precisión a partir de entradas inesperadas o desafiantes.
+
+>[!TIP]
+>
+>En IA, &quot;datos no vistos&quot; se refiere a datos que son diferentes de los datos en los que se formó un modelo determinado.
+
 +++Ver preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
@@ -153,6 +180,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 +++
 
 ### Consideraciones de seguridad y privacidad {#security-and-privacy-considerations}
+
+La sección Consideraciones de seguridad y privacidad contiene información sobre las medidas y prácticas implementadas para proteger los datos confidenciales y garantizar el uso seguro del modelo. Puede utilizar esta sección para responder a preguntas sobre cómo gestiona el modelo los datos confidenciales.
 
 +++Ver preguntas y ejemplos de respuestas
 
@@ -167,6 +196,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 
 ### Monitorización y mantenimiento {#monitoring-and-maintenance}
 
+La sección de supervisión y mantenimiento contiene información sobre cómo se supervisa el rendimiento del modelo a lo largo del tiempo y con qué frecuencia se vuelve a entrenar el modelo. Puede utilizar esta sección para proporcionar información sobre cómo se realiza el seguimiento de métricas como precisión, precisión, recuperación y latencia.
+
 +++Ver preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
@@ -179,6 +210,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 +++
 
 ### Consideraciones éticas e IA responsable {#ethical-considerations-and-responsible-ai}
+
+La sección Consideraciones éticas y IA responsable contiene información sobre cualquier preocupación ética asociada con su modelo de IA. Esta sección también contiene la eficacia con la que el modelo se alinea con los principios de IA responsables. Utilice esta sección para proporcionar información sobre los posibles impactos éticos del uso de su modelo, incluido el reconocimiento de sesgos, la garantía de equidad y la prevención de daños a personas o grupos.
 
 +++Ver preguntas y ejemplos de respuestas
 
@@ -193,6 +226,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 
 ### Limitaciones conocidas {#known-limitations}
 
+La sección Limitaciones conocidas contiene información sobre las limitaciones existentes identificadas para su modelo de IA. Utilice esta sección para subrayar las condiciones en las que el modelo de IA puede tener un mal rendimiento y para esbozar las limitaciones que los usuarios deben tener en cuenta.
+
 +++Ver preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
@@ -205,6 +240,8 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de una ta
 +++
 
 ### Mejoras futuras {#future-improvements}
+
+La sección de futuras mejoras contiene información sobre las actualizaciones de funciones planificadas para su modelo de IA. Utilice esta sección para obtener más información sobre la hoja de ruta de mejoras.
 
 +++Ver preguntas y ejemplos de respuestas
 
