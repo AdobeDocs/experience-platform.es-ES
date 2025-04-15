@@ -15,19 +15,19 @@ ht-degree: 47%
 # Zonas protegidas {#sandbox}
 
 * [Información general de zonas protegidas](home.md)
-* IU de espacio aislado {#ui}
+* IU de zona protegida {#ui}
    * [Información general de la IU de zona protegida](ui/overview.md)
    * [Guía del usuario de las zonas protegidas](ui/user-guide.md)
    * [Herramientas de zona protegida](ui/sandbox-tooling.md)
    * [Uso compartido de paquetes entre organizaciones](ui/sharing-packages-across-orgs.md)
-* API de espacio aislado {#api}
+* API de zona protegida {#api}
    * Información general de [](api/overview.md)
    * [Introducción](api/getting-started.md)
    * [Zonas protegidas disponibles](api/available.md)
    * [Administración de zona protegida](api/sandboxes.md)
    * [Tipos de zonas protegidas](api/types.md)
    * [Apéndice](api/appendix.md)
-* API de herramientas de zona protegida {#sandbox-tooling-api}
+* API de Sandbox Tools {#sandbox-tooling-api}
    * [Información general](sandbox-tooling-api/overview.md)
    * [Primeros pasos](sandbox-tooling-api/getting-started.md)
    * [Paquetes](sandbox-tooling-api/packages.md)

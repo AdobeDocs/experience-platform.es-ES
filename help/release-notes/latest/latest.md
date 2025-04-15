@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -43,7 +43,7 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 [!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
-**Destinos nuevos o actualizados** {#new-updated-destinations}
+**Nuevo o destinos actualizados** {#new-updated-destinations}
 
 | Destino | Descripción |
 | --- | --- |
@@ -53,7 +53,7 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 {style="table-layout:auto"}
 
-**Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
+**Nuevo o funcionalidad actualizada** {#destinations-new-updated-functionality}
 
 | Función | Descripción |
 | --- | --- |
@@ -89,8 +89,8 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 | Función | Descripción |
 | --- | --- |
-| [!DNL Bombora Intent] | El origen [!DNL Bombora Intent] ya está disponible en el catálogo de orígenes. Utilice esta fuente para: <ul><li>Integrar los datos de intención de Bombora&#39;s Company Surge para identificar cuentas que investiguen activamente sus productos o servicios.</li><li>Priorizar las cuentas en el mercado para crear segmentos precisos y ejecutar campañas de ABM con objetivos hiperdefinidos, lo que garantiza que los esfuerzos de marketing se centren en las cuentas que tienen más probabilidades de convertirse.</li><li>Aprovechar las estrategias basadas en la intención para optimizar el gasto en publicidad, impulsar la participación y maximizar el retorno de la inversión.</li></ul> Para obtener más información, lea la guía sobre [la conexión de su cuenta de  [!DNL Bombora]  a Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
-| [!DNL Demandbase Intent] | El origen [!DNL Demandbase Intent] ahora está disponible en el catálogo de orígenes. Utilice esta fuente para: <ul><li>Integrar los datos de intención de cuenta de Demandbase para identificar cuentas de alto interés en función de participaciones en tiempo real.</li><li>Al priorizar las señales de intención más sólidas, puede crear segmentos precisos y ofrecer campañas con objetivos hiperdefinidos para garantizar que los esfuerzos de marketing se centren en las cuentas con más probabilidades de conversión.</li><li>Activar estrategias basadas en la intención para permitir la optimización del gasto en publicidad, una mayor participación y un retorno de la inversión más alto.</li></ul> Para obtener más información, lea la guía sobre [la conexión de su cuenta de  [!DNL Demandbase]  a Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
+| [!DNL Bombora Intent] | La fuente de [!DNL Bombora Intent] ya está disponible en el catálogo de fuentes. Utilice esta fuente para: <ul><li>Integrar los datos de intención de Bombora&#39;s Company Surge para identificar cuentas que investiguen activamente sus productos o servicios.</li><li>Priorizar las cuentas en el mercado para crear segmentos precisos y ejecutar campañas de ABM con objetivos hiperdefinidos, lo que garantiza que los esfuerzos de marketing se centren en las cuentas que tienen más probabilidades de convertirse.</li><li>Aprovechar las estrategias basadas en la intención para optimizar el gasto en publicidad, impulsar la participación y maximizar el retorno de la inversión.</li></ul> Para obtener más información, lea la guía sobre [la conexión de su cuenta de  [!DNL Bombora]  a Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
+| [!DNL Demandbase Intent] | La fuente de [!DNL Demandbase Intent] ya está disponible en el catálogo de fuentes. Utilice esta fuente para: <ul><li>Integrar los datos de intención de cuenta de Demandbase para identificar cuentas de alto interés en función de participaciones en tiempo real.</li><li>Al priorizar las señales de intención más sólidas, puede crear segmentos precisos y ofrecer campañas con objetivos hiperdefinidos para garantizar que los esfuerzos de marketing se centren en las cuentas con más probabilidades de conversión.</li><li>Activar estrategias basadas en la intención para permitir la optimización del gasto en publicidad, una mayor participación y un retorno de la inversión más alto.</li></ul> Para obtener más información, lea la guía sobre [la conexión de su cuenta de  [!DNL Demandbase]  a Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
 
 {style="table-layout:auto"}
 
