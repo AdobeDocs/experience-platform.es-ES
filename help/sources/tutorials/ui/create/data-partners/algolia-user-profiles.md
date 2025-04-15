@@ -3,9 +3,10 @@ title: Conexión de perfiles de usuario de Algolia a Experience Platform mediant
 description: Aprenda a conectar la intención de los usuarios de Algolia a Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: a55f0b37614bb43a66d7d2e9cf106484b4d6e8dc
+exl-id: d4c936a7-4983-4a12-a813-03b672116e44
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1137'
 ht-degree: 1%
 
 ---
@@ -53,13 +54,13 @@ Para usar [!DNL Algolia], selecciona la tarjeta de origen de **[!UICONTROL Algol
 
 ## Autenticación
 
-### Cuenta existente
+### Usar una cuenta existente
 
 Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la cuenta [!DNL Algolia User Profiles] que desee usar. Para continuar, seleccione **[!UICONTROL Siguiente]**.
 
 ![Interfaz de cuenta existente.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
-### Nueva cuenta
+### Crear una nueva cuenta
 
 Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a continuación, proporcione un nombre, una descripción opcional y [!DNL Algolia] credenciales. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
@@ -76,7 +77,7 @@ Una vez que termine de seleccionar y obtener una vista previa de los datos para 
 
 ![Paso para seleccionar datos del flujo de trabajo.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
-### Proporcionar detalles del flujo de datos
+## Proporcionar detalles del flujo de datos
 
 Si está usando un conjunto de datos existente, seleccione un conjunto de datos asociado a un esquema que esté usando el grupo de campos [!DNL Algolia Profile].
 
@@ -86,13 +87,13 @@ Si está creando un nuevo conjunto de datos, seleccione un esquema que esté uti
 
 ![El nuevo paso del conjunto de datos del flujo de trabajo de orígenes.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### Asignación de campos de datos a un esquema XDM
+## Asignación de campos de datos a un esquema XDM
 
 Utilice la interfaz de asignación para asignar los datos de origen a los campos de esquema adecuados antes de introducir datos en Experience Platform.  Para obtener más información, lea la guía de asignación [en la interfaz de usuario](../../../../../data-prep/ui/mapping.md).
 
 ![Paso de asignación del flujo de trabajo de orígenes.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
-### Programar ejecuciones de ingesta
+## Programar ejecuciones de ingesta
 
 A continuación, utilice la interfaz de programación para definir la programación de ingesta del flujo de datos.
 
@@ -107,7 +108,7 @@ A continuación, utilice la interfaz de programación para definir la programaci
 | Hora de inicio | La marca de tiempo de la ejecución proyectada, presentada en la zona horaria UTC. |
 | Relleno | El relleno determina qué datos se incorporan inicialmente. Si el relleno está habilitado, todos los archivos actuales de la ruta especificada se introducirán durante la primera ingesta programada. Si se desactiva el relleno, solo se incorporarán los archivos que se carguen entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán. |
 
-### Revisión del flujo de datos
+## Revisión del flujo de datos
 
 Utilice la página Revisar para obtener un resumen del flujo de datos antes de la ingesta. Los detalles se agrupan en las siguientes categorías:
 
