@@ -5,10 +5,10 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 5%
+source-wordcount: '1290'
+ht-degree: 6%
 
 ---
 
@@ -33,10 +33,10 @@ ht-degree: 5%
    * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de datos](/help/destinations/api/export-datasets.md)
    * [Ordenar y filtrar respuestas API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
-* Guías de interfaz de usuario {#ui}
+* Guías de IU {#ui}
    * [Espacio de trabajo Destinos](./ui/destinations-workspace.md)
    * [Crear una nueva conexión de destino](./ui/connect-destination.md)
-   * Activar datos en destinos{#activate}
+   * Activación de datos en destinos{#activate}
       * [Información general de Activation](./ui/activation-overview.md)
       * [Activar audiencias en destinos de exportación de audiencia de flujo continuo](./ui/activate-segment-streaming-destinations.md)
       * [Activación de audiencias en destinos de exportación de perfiles de flujo continuo](./ui/activate-streaming-profile-destinations.md)
@@ -51,6 +51,7 @@ ht-degree: 5%
       * [(Beta) Utilice el atributo XDM tiempo de última calificación en los nuevos destinos de almacenamiento en la nube beta](./ui/activate-last-qualification-time.md)
       * [Exportación de matrices, mapas y objetos](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Realizar transformaciones en los datos exportados a destinos de almacenamiento en la nube](/help/destinations/ui/data-transformations-calculated-fields.md)
+      * [Actualizar la fecha final de los flujos de datos del conjunto de datos de exportación](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [Ver detalles de destino](./ui/destination-details-page.md)
    * [Actualizar cuentas de destino](./ui/update-accounts.md)
    * [Eliminar cuentas de destino](./ui/delete-destination-account.md)
@@ -131,7 +132,7 @@ ht-degree: 5%
       * [Extensión SessionCam](./catalog/analytics/sessioncam.md)
       * [Extensión TMMData](./catalog/analytics/tmmdata.md)
       * [Extensión de seguimiento de conversión de texto](./catalog/analytics/yext.md)
-   * Destinos de almacenamiento en la nube {#cloud-storage}
+   * Destinos de almacenamiento en nube {#cloud-storage}
       * [Información general sobre destinos de Cloud Storage](./catalog/cloud-storage/overview.md)
       * [Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexión de Amazon S3](./catalog/cloud-storage/amazon-s3.md)
@@ -149,7 +150,7 @@ ht-degree: 5%
       * [Conexión de Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexión de divulgación](catalog/crm/outreach.md)
       * [Conexión de Zendesk](catalog/crm/zendesk.md)
-   * Destinos de la plataforma de administración de datos {#data-management}
+   * Destinos de Data Management Platform {#data-management}
       * [Información general sobre destinos de Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extensión de Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
       * [Plataforma de marketing de Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
