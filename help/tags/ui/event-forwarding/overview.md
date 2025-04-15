@@ -32,10 +32,10 @@ Este documento proporciona información general de alto nivel sobre el reenvío 
 
 El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
 
-**Performance**:
+**Rendimiento**:
 
-* Make a single call from a page that contains a payload of data which then federates on the server side to reduce client-side network traffic and deliver a faster experience for customers.
-* Decrease the amount of time it takes for web pages to load to improve site performance.
+* Realizar una sola llamada desde una página que contenga una carga útil de datos que luego se federe en el servidor para reducir el tráfico de red del lado del cliente y ofrecer una experiencia más rápida a los clientes.
+* Reducir la cantidad de tiempo que tardan las páginas web en cargarse para mejorar el rendimiento del sitio.
 * Reduzca la cantidad de tecnologías del lado del cliente necesarias para ofrecer su experiencia y enviar datos a muchos destinos.
 
 **Gobernanza de datos**:
@@ -69,13 +69,13 @@ El reenvío de eventos tiene su propio catálogo de extensiones compatibles, com
 
 Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
-![Event forwarding extensions in the Data Collection UI.](../../images/ui/event-forwarding/overview/extensions.png)
+![Extensiones de reenvío de eventos en la IU de recopilación de datos.](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### Elementos de datos {#data-elements}
 
-The types of data elements that are available in event forwarding are limited to the catalog of compatible [extensions](#extensions) that provide them.
+Los tipos de elementos de datos disponibles en el reenvío de eventos se limitan al catálogo de [extensiones](#extensions) compatibles que los proporcionan.
 
-While data elements themselves are created and configured the same way in event forwarding as they are for tags, there are some important syntax differences when it comes to how they reference data from Experience Platform Edge Network.
+Aunque los elementos de datos se crean y configuran del mismo modo en el reenvío de eventos que para las etiquetas, existen algunas diferencias de sintaxis importantes en cuanto a cómo hacen referencia a los datos de Experience Platform Edge Network.
 
 #### Datos de referencia de Experience Platform Edge Network {#data-element-path}
 
@@ -99,11 +99,11 @@ Puede ver los recursos adicionales disponibles para obtener más información so
 
 #### Tokenización de elementos de datos {#tokenization}
 
-En las reglas de etiquetas, los elementos de datos llevan un símbolo de token `%` al principio y al final del nombre del elemento de datos (por ejemplo: `%viewportHeight%`). In event forwarding rules, data elements are instead tokenized with `{{` at the beginning and `}}` at the end of the data element name (for example: `{{viewportHeight}}`).
+En las reglas de etiquetas, los elementos de datos llevan un símbolo de token `%` al principio y al final del nombre del elemento de datos (por ejemplo: `%viewportHeight%`). En las reglas de reenvío de eventos, los elementos de datos se identifican mediante token con `{{` al principio y `}}` al final del nombre del elemento de datos (por ejemplo: `{{viewportHeight}}`).
 
-You can view additional resources available to learn more about this feature by selecting ![about](../../images/ui/event-forwarding/overview/about.png) from the right panel.
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
-![Example of a path type data element for event forwarding.](../../images/ui/event-forwarding/overview/tokenization.png)
+![Ejemplo de un elemento de datos de tipo de ruta de acceso para el reenvío de eventos.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Secuencia de acciones de regla {#action-sequencing}
 
