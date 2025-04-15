@@ -6,10 +6,10 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 44%
+source-wordcount: '778'
+ht-degree: 43%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 44%
 # Etiquetas {#tags}
 
 * [Información general sobre etiquetas](./home.md)
-* Primeros pasos {#get-started}
+* Introducción {#get-started}
    * [Guía de inicio rápido](./quick-start/quick-start.md)
    * [Guías de implementación](./quick-start/implementation-guides.md)
-* Guías de interfaz de usuario {#ui}
+* Guías de IU {#ui}
    * [Información general](./ui/managing-resources/overview.md)
    * Extensiones {#extensions}
       * [Información general](./ui/managing-resources/extensions/overview.md)
@@ -87,7 +87,7 @@ ht-degree: 44%
       * [Adobe Analytics mediante Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Información general](./extensions/client/audience-manager/overview.md)
-      * Capa de datos de cliente de Adobe {#client-data-layer}
+      * Capa de datos del cliente de Adobe {#client-data-layer}
          * [Información general](./extensions/client/client-data-layer/overview.md)
          * [Notas de la versión](./extensions/client/client-data-layer/release-notes.md)
       * Adobe Content Analytics {#content-analytics}
@@ -110,7 +110,7 @@ ht-degree: 44%
          * [Complementos de Web SDK](./extensions/client/web-sdk/web-sdk-plugins.md)
          * [Notas de la versión de Web SDK](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
          * [Notas de la versión de complementos de Web SDK](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
-      * Datos del recurso de Adobe Experience Manager {#asset-insights}
+      * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Información general](./extensions/client/asset-insights/overview.md)
          * [Notas de la versión](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
@@ -140,7 +140,7 @@ ht-degree: 44%
       * [Contexto humano de Bemray](https://exchange.adobe.com/apps/ec/101063)
       * [Seguimiento de eventos universales de Bing Ads](https://exchange.adobe.com/apps/ec/100154)
       * [Rama](https://exchange.adobe.com/apps/ec/101382)
-      * [!DNL BrightCove] seguimiento de vídeo {#brightcove}
+      * Seguimiento de vídeo [!DNL BrightCove] {#brightcove}
          * [Información general](./extensions/client/brightcove/overview.md)
          * [Notas de la versión](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
@@ -210,7 +210,7 @@ ht-degree: 44%
       * [Compositor XDM](https://exchange.adobe.com/apps/ec/106062)
       * [Seguimiento de conversión de texto](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] Reproducción](https://exchange.adobe.com/apps/ec/104160)
-      * [!DNL YouTube] seguimiento de vídeo {#youtube}
+      * Seguimiento de vídeo [!DNL YouTube] {#youtube}
          * [Información general](./extensions/client/youtube/overview.md)
          * [Notas de la versión](./extensions/client/youtube/release-notes.md)
    * Extensiones de reenvío de eventos (del lado del servidor) {#server}
@@ -218,6 +218,8 @@ ht-degree: 44%
       * Conector de Adobe Experience Platform Cloud {#cloud-connector}
          * [Información general](./extensions/server/cloud-connector/overview.md)
          * [Notas de la versión](./extensions/server/cloud-connector/release-notes.md)
+      * [!DNL Adform] {#adform}
+         * [Información general](./extensions/server/adform/overview.md)
       * [!DNL AWS] {#aws}
          * [Información general](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
@@ -228,7 +230,7 @@ ht-degree: 44%
       * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)
       * Conversiones mejoradas de Google Ads {#google-ads-enhanced-conversions}
          * [Información general](./extensions/server/google-ads-enhanced-conversions/overview.md)
-      * Plataforma de Google Cloud {#google-cloud-platform}
+      * Google Cloud Platform {#google-cloud-platform}
          * [Información general](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [Información general](./extensions/server/linkedin/overview.md)
@@ -251,7 +253,7 @@ ht-degree: 44%
          * [Información general](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Información general](./extensions/server/twitter/overview.md)
-      * API {#tiktok} de eventos web de [!DNL Tiktok]
+      * API de eventos web [!DNL Tiktok] {#tiktok}
          * [Información general](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [Información general](./extensions/server/tradedesk/overview.md)
