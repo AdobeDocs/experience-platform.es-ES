@@ -2,7 +2,7 @@
 title: Transmitir datos de la base de datos de Snowflake a Experience Platform mediante la interfaz de usuario
 description: Aprenda a transmitir datos de su base de datos de Snowflake a Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 3%
@@ -86,7 +86,7 @@ Utilice el directorio de base de datos que encontrará a la izquierda de la pant
 
 ![Interfaz de datos de selección con una tabla de base de datos seleccionada.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-A continuación, seleccione el tipo de columna de marca de tiempo de la tabla. Puede seleccionar entre dos tipos de columnas de marca de tiempo: `TIMESTAMP_NTZ` o `TIMESTAMP_LTZ`. Si selecciona un tipo de columna de `TIMESTAMP_NTZ`, también debe proporcionar una zona horaria. Las columnas no deben tener una restricción nula. Para obtener más información, lea la sección sobre [limitaciones y preguntas más frecuentes]
+A continuación, seleccione el tipo de columna de marca de tiempo de la tabla. Puede seleccionar entre dos tipos de columnas de marca de tiempo: `TIMESTAMP_NTZ` o `TIMESTAMP_LTZ`. Si selecciona un tipo de columna de `TIMESTAMP_NTZ`, también debe proporcionar una zona horaria. Las columnas no deben tener una restricción nula. Para obtener más información, lea la sección sobre [limitaciones y preguntas más frecuentes](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 También puede configurar las opciones de relleno durante este paso. El relleno determina qué datos se incorporan inicialmente. Si el relleno está habilitado, todos los archivos actuales de la ruta especificada se introducirán durante la primera ingesta programada. Si no es así, solo se incorporarán los archivos que se carguen entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán.
 
