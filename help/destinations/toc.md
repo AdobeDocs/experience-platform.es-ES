@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
+source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1282'
 ht-degree: 6%
 
 ---
@@ -51,7 +51,6 @@ ht-degree: 6%
       * [(Beta) Utilice el atributo XDM tiempo de última calificación en los nuevos destinos de almacenamiento en la nube beta](./ui/activate-last-qualification-time.md)
       * [Exportación de matrices, mapas y objetos](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Realizar transformaciones en los datos exportados a destinos de almacenamiento en la nube](/help/destinations/ui/data-transformations-calculated-fields.md)
-      * [Actualizar la fecha final de los flujos de datos del conjunto de datos de exportación](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [Ver detalles de destino](./ui/destination-details-page.md)
    * [Actualizar cuentas de destino](./ui/update-accounts.md)
    * [Eliminar cuentas de destino](./ui/delete-destination-account.md)
