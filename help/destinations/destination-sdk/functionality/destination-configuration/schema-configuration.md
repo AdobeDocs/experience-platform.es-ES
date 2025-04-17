@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar el esquema de socio para destinos creados con Destination SDK.
 title: Configuración del esquema de socio
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '1896'
 ht-degree: 3%
 
 ---
@@ -105,8 +105,8 @@ Para crear un esquema estático con atributos de perfil, defina los atributos de
 | `profileRequired` | Booleano | Opcional | Use `true` si los usuarios deben poder asignar atributos de perfil de Experience Platform a atributos personalizados en la plataforma de destino. |
 | `segmentRequired` | Booleano | Requerido | Destination SDK requiere este parámetro y siempre se debe establecer en `true`. |
 | `identityRequired` | Booleano | Requerido | Se establece en `true` si los usuarios deben poder asignar [tipos de identidad](identity-namespace-configuration.md) de Experience Platform a los atributos definidos en la matriz `profileFields` |
-| `segmentNamespaceAllowList` | Matriz | Opcional | Define áreas de nombres de audiencia específicas desde las que los usuarios pueden asignar audiencias al destino. Utilice este parámetro para restringir a los usuarios de Experience Platform la exportación de audiencias únicamente desde las áreas de nombres de audiencia definidas en la matriz. Este parámetro no se puede usar junto con `segmentNamespaceDenyList`.<br> <br> Ejemplo: `"segmentNamespaceAllowList": ["AudienceManager"]` permitirá a los usuarios asignar solamente audiencias del área de nombres `AudienceManager` a este destino. <br> <br> Para permitir que los usuarios exporten cualquier audiencia a su destino, puede ignorar este parámetro. <br> <br> Si faltan `segmentNamespaceAllowList` y `segmentNamespaceDenyList` en la configuración, los usuarios solo podrán exportar audiencias que se originen del [servicio de segmentación](../../../../segmentation/home.md). |
-| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe a los usuarios de la asignación de audiencias al destino, desde los espacios de nombres de audiencia definidos en la matriz. No se puede usar junto con `segmentNamespaceAllowed`. <br> <br> Ejemplo: `"segmentNamespaceDenyList": ["AudienceManager"]` impedirá que los usuarios asignen audiencias del área de nombres `AudienceManager` a este destino. <br> <br> Para permitir que los usuarios exporten cualquier audiencia a su destino, puede ignorar este parámetro. <br> <br> Si faltan `segmentNamespaceAllowed` y `segmentNamespaceDenyList` en la configuración, los usuarios solo podrán exportar audiencias que se originen del [servicio de segmentación](../../../../segmentation/home.md). <br> <br> Para permitir la exportación de todas las audiencias, independientemente del origen, establezca `"segmentNamespaceDenyList":[]`. |
+| `segmentNamespaceAllowList` | Matriz | Opcional | Permite a los usuarios asignar únicamente audiencias de las áreas de nombres de audiencia definidas en la matriz al destino. <br><br> En la mayoría de los casos no se recomienda el uso de este parámetro. En su lugar, use `"segmentNamespaceDenyList":[]` para permitir que se exporten todos los tipos de audiencias a su destino. <br><br> Si faltan `segmentNamespaceAllowList` y `segmentNamespaceDenyList` en la configuración, los usuarios solo podrán exportar audiencias que se originen del [servicio de segmentación](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` y `segmentNamespaceDenyList` se excluyen mutuamente. |
+| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe a los usuarios de la asignación de audiencias desde las áreas de nombres de audiencia definidas en la matriz al destino. <br><br>Adobe recomienda permitir la exportación de todas las audiencias, independientemente del origen, estableciendo `"segmentNamespaceDenyList":[]`. <br><br>Si faltan `segmentNamespaceAllowed` y `segmentNamespaceDenyList` en la configuración, los usuarios solo podrán exportar audiencias que se originen del [servicio de segmentación](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` y `segmentNamespaceDenyList` se excluyen mutuamente. |
 
 {style="table-layout:auto"}
 
