@@ -766,7 +766,7 @@ CRMID: Tom, ECID: 111
 
 Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
 
-* [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
+* [Información general sobre las reglas de vinculación de gráficos de identidad](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)

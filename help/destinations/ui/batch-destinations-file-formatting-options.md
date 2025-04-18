@@ -17,7 +17,7 @@ ht-degree: 17%
 
 La opción de configurar varias opciones de formato de archivo para los archivos exportados está disponible cuando [conecte](/help/destinations/ui/connect-destination.md) a un destino basado en archivos, como [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) o [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
-Puede configurar varias opciones de formato de archivo para los archivos exportados mediante la interfaz de usuario de Experience Platform. Puede modificar varias propiedades de los archivos exportados para que coincidan con los requisitos del sistema de recepción de archivos de su lado, a fin de leer e interpretar de forma óptima los archivos recibidos del Experience Platform.
+Puede configurar varias opciones de formato de archivo para los archivos exportados mediante la interfaz de usuario de Experience Platform. Puede modificar varias propiedades de los archivos exportados para que coincidan con los requisitos del sistema de recepción de archivos de su lado, a fin de leer e interpretar de forma óptima los archivos recibidos de Experience Platform.
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -32,7 +32,7 @@ Para mostrar las opciones de formato de archivo, inicie el flujo de trabajo [con
 >
 >Es posible que el destino al que se está conectando no tenga todas estas opciones disponibles. Depende del desarrollador de destino determinar qué opciones de formato de archivo desea admitir en su destino. El desarrollador de destino puede determinar qué opciones están disponibles al conectarse al destino. Las opciones requeridas se marcan con un asterisco en la interfaz de usuario de Experience Platform.
 > 
->Los destinos de almacenamiento en la nube generados por el Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - actualmente solo admiten las seis opciones de CSV que se indican a continuación.
+>Los destinos de almacenamiento en la nube creados por Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - actualmente solo admiten las seis opciones de CSV que se indican a continuación.
 
 ![Imagen que muestra algunas de las opciones de formato de archivo disponibles.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -122,7 +122,7 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 
 * Ejemplo de salida con **[!UICONTROL null]** seleccionado: `male,NULL,TestLastName`. En este caso, Experience Platform transforma el valor vacío en un valor nulo.
 * Ejemplo de salida con **&quot;&quot;** seleccionado: `male,"",TestLastName`. En este caso, Experience Platform transforma el valor vacío en un par de comillas dobles.
-* Ejemplo de salida con **[!UICONTROL cadena vacía]** seleccionada: `male,,TestLastName`. En este caso, el Experience Platform mantiene el valor vacío y lo exporta tal cual (sin comillas dobles).
+* Ejemplo de salida con **[!UICONTROL cadena vacía]** seleccionada: `male,,TestLastName`. En este caso, Experience Platform mantiene el valor vacío y lo exporta tal cual (sin comillas dobles).
 
 >[!TIP]
 >

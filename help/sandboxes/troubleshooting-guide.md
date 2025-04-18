@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '827'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -19,7 +19,7 @@ Los entornos limitados dividen una sola instancia de Experience Platform en ento
 
 ## ¿Qué es una zona protegida?
 
-Las zonas protegidas son particiones virtuales en una sola instancia de Experience Platform. Cada zona protegida mantiene su propia biblioteca independiente de recursos de Experience Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Todo el contenido y las acciones realizadas en una zona protegida se limitan únicamente a esa zona protegida y no afectan a ninguna otra. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
+Las zonas protegidas son particiones virtuales dentro de una única instancia de Experience Platform. Cada zona protegida mantiene su propia biblioteca independiente de recursos de Experience Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Todo el contenido y las acciones realizadas en una zona protegida se limitan únicamente a esa zona protegida y no afectan a ninguna otra. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
 
 ## ¿Qué tipos de zonas protegidas están disponibles y cuáles son sus diferencias? {#sandbox-types}
 

@@ -28,12 +28,12 @@ En Audience Portal, puede realizar las siguientes tareas:
    - [Utilice el Generador de segmentos para crear una audiencia](#segment-builder)
    - [Usar Composición de audiencia para crear una audiencia](#audience-composition)
    - [Use la Composición de audiencia federada para crear una audiencia con los datos de su almacén de datos existente](#fac)
-   - [Utilice el Distiller de datos para crear una audiencia](#data-distiller)
+   - [Uso de Data Distiller para crear una audiencia](#data-distiller)
 - [Importación de públicos generados externamente](#import-audience)
 
 >[!ENDSHADEBOX]
 
-Para abrir Audience Portal, seleccione la **[!UICONTROL Examinar]** pestaña dentro de la sección Segmentación.
+Para abrir Audience Portal, seleccione la ficha **[!UICONTROL Examinar]** en la sección Segmentación.
 
 ## Lista de público {#list}
 
@@ -55,14 +55,14 @@ De forma predeterminada, Audience Portal muestra una lista de todas las audienci
 
 Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta opción, se muestra una lista de las acciones rápidas disponibles para la audiencia. Esta lista de acciones difiere según el origen de la audiencia.
 
-![El lista de acciones rápidas se muestra para las audiencias con el origen de composición] de [!UICONTROL audiencias.](../images/ui/audience-portal/browse-audience-composition-details.png)
+![Se muestra la lista de acciones rápidas para las audiencias con el origen de [!UICONTROL Composición de audiencias].](../images/ui/audience-portal/browse-audience-composition-details.png)
 
 | Acción | Orígenes | Descripción |
 | ------ | ------- | ----------- |
 | [!UICONTROL Editar] | Servicio de segmentación | Abre el Generador de segmentos para editar la audiencia. Tenga en cuenta que si la audiencia se creó mediante la API, **no** podrá editarla con el Generador de segmentos. Para obtener más información sobre el uso del Generador de segmentos, lea la [guía de la interfaz de usuario del Generador de segmentos](./segment-builder.md). |
 | [!UICONTROL Abrir composición] | Composición del público | Abre la composición Audiencia para ver su audiencia. Para obtener más información sobre la composición de audiencias, lea la [guía de interfaz de usuario sobre composición de audiencias](./audience-composition.md). |
 | [!UICONTROL Activar en destino] | Servicio de segmentación | Activa la audiencia en un destino. Para obtener información más detallada sobre cómo activar una audiencia en un destino, lea [información general de activación](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Comparte la audiencia con otros usuarios de Experience Platform. Para obtener más información sobre esta característica, lea [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
+| [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Comparte la audiencia con otros usuarios de Experience Platform. Para obtener más información sobre esta característica, lea [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
 | [!UICONTROL Administrar etiquetas] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información sobre esta característica, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Mover a la carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra a qué carpeta pertenece la audiencia. Para obtener más información sobre esta característica, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Copiar] | Servicio de segmentación | Duplica la audiencia seleccionada. Encontrará más información sobre esta función en [Preguntas frecuentes sobre la segmentación](../faq.md#copy). |
@@ -70,13 +70,13 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | [!UICONTROL Publicar] | Carga personalizada, servicio de segmentación | Publica la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las Preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Desactivar] | Carga personalizada, servicio de segmentación | Desactiva la audiencia seleccionada. Tenga en cuenta que para desactivar una audiencia, **no se puede** activar en **ningún** destino (incluidos destinos que no sean de Experience Platform) ni formar parte de **ningún** otro tipo de audiencias. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las Preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. Las audiencias que se usan en destinos de flujo descendente o que dependen de otras audiencias **no se pueden** eliminar. Para obtener más información sobre la eliminación de audiencias, lea las [preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-states). |
-| [!UICONTROL Agregar al paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Mueve el audiencia entre los entornos aislados. Para obtener más información sobre esta función, lea el guía](../../sandboxes/ui/sandbox-tooling.md) de [herramientas de sandbox. |
+| [!UICONTROL Agregar al paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Mueve la audiencia entre zonas protegidas. Para obtener más información sobre esta característica, lea la [guía de herramientas para zonas protegidas](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
->Antes de eliminar su audiencia, asegúrese de que el audiencia no **se** utiliza como componente en un audiencia basado en cuenta ni en Adobe Systems Journey Optimizer.
+>Antes de eliminar tu audiencia, asegúrate de que la audiencia **no** se use como componente en una audiencia basada en cuentas o se use en Adobe Journey Optimizer.
 
-En la parte superior del Página hay opciones para agregar todas las audiencias a una programación, importar un audiencia, crear un nuevo audiencia y vista un resumen de la evaluación audiencia.
+En la parte superior de la página hay opciones para añadir todas las audiencias a una programación, importar una audiencia, crear una audiencia nueva y ver un resumen de la evaluación de audiencias.
 
 Si se cambia **[!UICONTROL Programar todas las audiencias]**, se habilitará la segmentación programada. Encontrará más información sobre la segmentación programada en la sección [segmentación programada de esta guía del usuario](#scheduled-segmentation).
 
@@ -104,7 +104,7 @@ Puede agregar campos adicionales al Portal de audiencias seleccionando ![el icon
 | [!UICONTROL Recuento de perfiles] | Número total de perfiles aptos para la audiencia. |
 | [!UICONTROL Origen] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen [Servicio de segmentación](#segment-builder), [Carga personalizada](#import-audience), [Composición de audiencias](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audiencia similar](../types/lookalike-audiences.md), [Composición de audiencias federada](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller de datos](#data-distiller) y [AJO B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles de este campo incluyen `Draft`, `Inactive` y `Published`. Para obtener más información sobre los estados del ciclo vital, incluidos el significado de los distintos estados y cómo mover audiencias a diferentes estados del ciclo vital, lea la sección [estado del ciclo vital de las Preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-status). |
-| [!UICONTROL Frecuencia de actualización] | A value that states how often the audience&#39;s data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
+| [!UICONTROL Frecuencia de actualización] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles para este campo incluyen [!UICONTROL Lote], [!UICONTROL Transmisión en línea], [!UICONTROL Edge] y [!UICONTROL No programado]. |
 | [!UICONTROL Última actualización por] | El nombre de la persona que actualizó la audiencia por última vez. |
 | [!UICONTROL Creado] | La fecha y la hora, en UTC, en que se creó la audiencia. |
 | [!UICONTROL Última actualización] | La fecha y la hora, en UTC, en que se actualizó la audiencia por última vez. |
@@ -122,9 +122,9 @@ Si se selecciona desglose, la pantalla muestra un gráfico de barras que indica 
 | [!UICONTROL Existente] | Recuento de perfiles que **permanecieron** en la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. Este campo es **calculado** y no aparece en el objeto [`segmentMembership`](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Saliendo] | Recuento de perfiles que **abandonaron** la audiencia en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
 
-Una vez seleccionados los campos que desea mostrar, también puede cambiar el tamaño del ancho de las columnas mostradas. Puede hacerlo arrastrando el área entre las columnas o seleccionando el icono](/help/images/icons/chevron-down.png) de flecha de la columna cuyo tamaño desea cambiar, seguido **[!UICONTROL de ![Cambiar tamaño de la columna]**.
+Después de seleccionar los campos que desea mostrar, también puede cambiar el tamaño del ancho de las columnas mostradas. Para ello, arrastre el área entre las columnas o seleccione el ![icono de flecha](/help/images/icons/chevron-down.png) de la columna cuyo tamaño desea cambiar, seguido de **[!UICONTROL Cambiar tamaño de columna]**.
 
-![Se resalta el botón de la columna Cambiar tamaño.](../images/ui/audience-portal/browse-audience-resize-column.png)
+![El botón Cambiar tamaño de columna está resaltado.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
 ### Filtrado, carpetas y etiquetado {#manage-audiences}
 
@@ -134,7 +134,7 @@ Para mejorar la eficacia del trabajo, puede buscar audiencias existentes, añadi
 
 Puede buscar audiencias existentes en hasta 9 idiomas diferentes con [!DNL Unified Search].
 
-To use [!DNL Unified Search], add the term you want to search in the highlighted search bar.
+Para usar [!DNL Unified Search], agregue el término que desea buscar en la barra de búsqueda resaltada.
 
 ![La barra de búsqueda está resaltada.](../images/ui/audience-portal/browse-audience-search.png)
 
@@ -173,7 +173,7 @@ Para crear una carpeta para albergar tus audiencias, selecciona **[!UICONTROL Cr
 
 >[!NOTE]
 >
->You can only create a folder if you&#39;re within another folder. This means you **cannot** create a folder if you have **[!UICONTROL All Audiences]** selected on the left navigation bar.
+>Solo puede crear una carpeta si está dentro de otra carpeta. Esto significa que **no puede** crear una carpeta si tiene **[!UICONTROL Todas las audiencias]** seleccionadas en la barra de navegación izquierda.
 
 Aparece una ventana emergente que le permite asignar un nombre a la carpeta recién creada. Seleccione **[!UICONTROL Guardar]** después de darle un nombre a la carpeta para terminar de crearla. Tenga en cuenta que los nombres **deben** ser exclusivos de la carpeta principal.
 
@@ -215,7 +215,7 @@ Se muestra la lista de filtros disponibles.
 
 ### Acciones masivas {#bulk-actions}
 
-Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. Estas acciones incluyen [mover a una carpeta](#folders), [editar o aplicar una etiqueta](#tags), [evaluar audiencias](#flexible-audience-evaluation), [aplicar etiquetas de acceso](../../access-control/abac/ui/labels.md) y [eliminar](#browse).
+Además, puede seleccionar hasta 25 audiencias diferentes y realizar diversas acciones en estas audiencias. Estas acciones incluyen [mover a una carpeta](#folders), [editar o aplicar una etiqueta](#tags), [evaluar audiencias](#flexible-audience-evaluation), [aplicar etiquetas de acceso](../../access-control/abac/ui/labels.md) y [eliminar](#browse).
 
 ![Se muestran las opciones disponibles para las acciones masivas.](../images/ui/audience-portal/bulk-actions.png)
 
@@ -285,15 +285,15 @@ Para audiencias y composiciones generadas por Experience Platform, la sección *
 >
 >El recuento total de audiencias puede tardar hasta 30 minutos en actualizarse una vez completado el trabajo de exportación.
 
-Estimates are generated by using a sample size of that day&#39;s sample data. If there are less than 1 million entities in your Profile store, the full data set is used; for between 1 and 20 million entities, 1 million entities are used; and for over 20 million entities, 5% of the total entities are used. More information about generating estimates can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the audience creation tutorial.
+Las estimaciones se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de 1 millón de entidades en el almacén de perfiles, se utiliza el conjunto de datos completo; para entre 1 y 20 millones de entidades, se utiliza 1 millón de entidades; y para más de 20 millones de entidades, se utiliza el 5% del total de entidades. Encontrará más información sobre la generación de estimaciones en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de audiencias.
 
 ### Detalles de ingesta {#ingestion-details}
 
-For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTROL Ingestion details]** section shows both the profile total, as well as details of the dataset the externally generated audience was ingested into.
+Para audiencias con un origen de **[!UICONTROL carga personalizada]**, la sección **[!UICONTROL Detalles de ingesta]** muestra tanto el total del perfil como los detalles del conjunto de datos en el que se ingirió la audiencia generada externamente.
 
 >[!NOTE]
 >
->El recuento de perfil del audiencia puede tardar hasta 30 minutos después del trabajo de exportación en actualizarse por completo.
+>El recuento de perfiles de la audiencia puede tardar hasta 30 minutos después del trabajo de exportación en actualizarse por completo.
 
 ![Se muestra la sección de detalles de ingesta de la página de detalles de audiencia.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
@@ -303,8 +303,8 @@ For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTRO
 | Nombre del conjunto de datos | Nombre del conjunto de datos en el que se ingirió la audiencia. Puede seleccionar el nombre del conjunto de datos para obtener más información sobre este. Para obtener más información sobre los conjuntos de datos, lea la [guía de la interfaz de usuario del conjunto de datos](../../catalog/datasets/user-guide.md). |
 | Lote de conjuntos de datos | El ID del conjunto de datos en el que se ingirió la audiencia. Puede seleccionar el ID del lote para obtener más información sobre el lote. Para obtener más información sobre los lotes, lea la [guía de supervisión de la ingesta de datos](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Lote de perfiles | El ID del lote que creó los perfiles en Experience Platform. Puede seleccionar el ID del lote para obtener más información sobre el lote. Para obtener más información sobre los lotes, lea la [guía de supervisión de la ingesta de datos](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Esquema | El nombre del esquema al que pertenece la audiencia. You can select the name of the schema to view information about the schema&#39;s structure and apply data usage labels. Para obtener más información, lea las [etiquetas de uso de datos administradas para una guía de esquema](../../xdm/tutorials/labels.md). |
-| Registros ingeridos | The number of records ingested into the dataset. |
+| Esquema | El nombre del esquema al que pertenece la audiencia. Puede seleccionar el nombre del esquema para ver información sobre la estructura del esquema y aplicar etiquetas de uso de datos. Para obtener más información, lea las [etiquetas de uso de datos administradas para una guía de esquema](../../xdm/tutorials/labels.md). |
+| Registros ingeridos | El número de registros ingeridos en el conjunto de datos. |
 | Error de registros | El número de registros que no se pudieron introducir en el conjunto de datos. |
 | Nuevos fragmentos de perfil | El número de perfiles nuevos que se crearon. |
 | Fragmentos de perfil existentes | El número de perfiles existentes que se actualizaron. |
@@ -333,15 +333,15 @@ Para la ingesta de transmisión, el almacén de perfiles se analiza automáticam
 
 El tamaño de la muestra de la exploración depende del número total de entidades del almacén de perfiles. Estos tamaños de muestra se representan en la siguiente tabla:
 
-| Entities in Profile store | Tamaño de muestra |
+| Entidades en el almacén de perfiles | Tamaño de muestra |
 | ------------------------- | ----------- |
-| Less than 1 million | Conjunto de datos completo |
+| Menos de 1 millón | Conjunto de datos completo |
 | 1 a 20 millones | 1 millón |
-| Más de 20 millones | 5% del total |
+| Más de 20 millones | 5 % del total |
 
-Al seleccionar el ID, se puede ver información más detallada sobre cada [!DNL Profile] [!DNL Profile] uno. Para obtener más información sobre los detalles de una perfil, lea la [[!DNL Real-Time Customer Profile] usuario guía](../../profile/ui/user-guide.md#profile-detail).
+Se puede ver información más detallada sobre cada [!DNL Profile] seleccionando el ID [!DNL Profile]. Para obtener más información sobre los detalles de un perfil, lee la [[!DNL Real-Time Customer Profile] guía del usuario](../../profile/ui/user-guide.md#profile-detail).
 
-![Se resaltan los perfiles de muestra para el audiencia. La información perfil muestra incluye la identificación de perfil, el nombre, el apellido y la correo electrónico de la persona.](../images/ui/audience-portal/audience-details-profiles.png)
+![Se resaltan los perfiles de muestra de la audiencia. La información de perfil de ejemplo incluye el identificador de perfil, el nombre, los apellidos y el correo electrónico de la persona.](../images/ui/audience-portal/audience-details-profiles.png)
 
 ## Segmentación programada {#scheduled-segmentation}
 
@@ -350,17 +350,17 @@ Al seleccionar el ID, se puede ver información más detallada sobre cada [!DNL 
 >title="Añadir todos los públicos a la programación"
 >abstract="Habilite la opción para incluir todos los públicos evaluados mediante la segmentación por lotes en la actualización programada diaria. Deshabilite para quitar todos los públicos de la actualización programada."
 
-Una vez creadas las audiencias, puede evaluarlas mediante una evaluación bajo demanda o programada (continua). La evaluación implica mover [!DNL Real-Time Customer Profile] datos a través de trabajos de segmentos para producir las audiencias correspondientes. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs.
+Una vez creadas las audiencias, puede evaluarlas mediante una evaluación bajo demanda o programada (continua). La evaluación implica mover [!DNL Real-Time Customer Profile] datos a través de trabajos de segmentos para producir las audiencias correspondientes. Una vez creadas, las audiencias se guardan y almacenan para que se puedan exportar con las API [!DNL Experience Platform].
 
-On-demand evaluation involves using the API to perform evaluation and build audiences as needed, whereas scheduled evaluation (also known as &#39;scheduled segmentation&#39;) allows you to create a recurring schedule to evaluate audiences at a specific time (at a maximum, once daily).
+La evaluación bajo demanda implica utilizar la API para realizar evaluaciones y generar audiencias según sea necesario, mientras que la evaluación programada (también conocida como &quot;segmentación programada&quot;) le permite crear una programación recurrente para evaluar audiencias a una hora específica (como máximo, una vez al día).
 
-### Enable scheduled segmentation {#enable-scheduled-segmentation}
+### Habilitar la segmentación programada {#enable-scheduled-segmentation}
 
-Enabling your audiences for scheduled evaluation can be done using the UI or the API. In the UI, return to the **[!UICONTROL Browse]** tab within **[!UICONTROL Audiences]** and toggle on **[!UICONTROL Schedule all audiences]**. Esto hará que todas las audiencias se evalúen según la programación establecida por su organización.
+La activación de las audiencias para la evaluación programada se puede realizar mediante la interfaz de usuario o la API. En la interfaz de usuario, vuelva a la ficha **[!UICONTROL Examinar]** en **[!UICONTROL Audiencias]** y active **[!UICONTROL Programar todas las audiencias]**. Esto hará que todas las audiencias se evalúen según la programación establecida por su organización.
 
 >[!NOTE]
 >
->La evaluación programada se puede activar para entornos limitados con un máximo de cinco (5) políticas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco políticas de combinación para [!DNL XDM Individual Profile] en un solo entorno de zona protegida, no podrá utilizar la evaluación programada.
+>La evaluación programada se puede habilitar para las zonas protegidas con un máximo de cinco (5) políticas de combinación para [!DNL XDM Individual Profile]. Si su organización tiene más de cinco políticas de combinación para [!DNL XDM Individual Profile] en un solo entorno de zona protegida, no podrá utilizar la evaluación programada.
 
 Actualmente, los horarios solo se pueden crear con la API. Para ver los pasos detallados sobre cómo crear, editar y trabajar con programaciones mediante la API, siga el tutorial para evaluar y acceder a los resultados de la segmentación, específicamente la sección sobre la [evaluación programada mediante la API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -390,7 +390,7 @@ Si selecciona **[!UICONTROL Generar regla]**, accederá al Generador de segmento
 
 ### Composición de público federado {#fac}
 
-You can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal.
+Puede utilizar la Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenar esas audiencias en Adobe Experience Platform Audience Portal.
 
 También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
 
@@ -443,13 +443,13 @@ También puede añadir algunos detalles adicionales a la audiencia generada exte
 > - **debe** comenzar con una letra (a-z o A-Z), un guion bajo (_) o un signo de dólar ($).
 > - Los caracteres siguientes pueden ser alfanuméricos (a-z, A-Z, 0-9), guiones bajos (_) o signos de dólar ($).
 
-Después de completar los detalles de su audiencia, seleccione **[!UICONTROL Siguiente]**.
+Después de rellenar los detalles de la audiencia, selecciona **[!UICONTROL Siguiente]**.
 
-![El [!UICONTROL botón Siguiente] se resalta en el Página de detalles] de audiencia[!UICONTROL .](../images/ui/audience-portal/import-audience-filled-details.png)
+![El botón [!UICONTROL Siguiente] está resaltado en la página [!UICONTROL Detalles de audiencia].](../images/ui/audience-portal/import-audience-filled-details.png)
 
-Se muestra el **[!UICONTROL Página de revisión]** . Puede revisar los detalles de los audiencia generados externamente recién importados.
+Se muestra la página **[!UICONTROL Revisar]**. Puede revisar los detalles de la audiencia recién importada y generada externamente.
 
-![Se muestra la [!UICONTROL Página de revisión] con detalles del audiencia generado externamente recién importado.](../images/ui/audience-portal/import-audience-review-details.png)
+![Se muestra la página [!UICONTROL Revisar], con detalles de la audiencia recién importada generada externamente.](../images/ui/audience-portal/import-audience-review-details.png)
 
 Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL Finalizar]** para importar la audiencia generada externamente en Adobe Experience Platform.
 
@@ -459,12 +459,12 @@ Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL F
 >
 >Además, si la audiencia generada externamente contiene información confidencial o relacionada con la atención médica, **debe** aplicar las etiquetas de uso de datos necesarias antes de activarla en cualquier destino. Dado que las variables de audiencias generadas externamente se almacenan en el lago de datos en lugar de en el perfil del cliente en tiempo real, **no** debe incluir datos de consentimiento en su archivo CSV.
 >
->Para obtener más información sobre cómo aplicar etiquetas de uso de datos, lea la documentación de [administrar etiquetas](../../access-control/abac/ui/labels.md). Para obtener más información sobre las etiquetas de uso de datos en Experience Platform en general, lea [información general sobre las etiquetas de uso de datos](../../data-governance/labels/overview.md). To learn about how consent works in externally generated audiences, please read the [audiences FAQ](../faq.md#consent).
+>Para obtener más información sobre cómo aplicar etiquetas de uso de datos, lea la documentación de [administrar etiquetas](../../access-control/abac/ui/labels.md). Para obtener más información sobre las etiquetas de uso de datos en Experience Platform en general, lea [información general sobre las etiquetas de uso de datos](../../data-governance/labels/overview.md). Para obtener más información sobre cómo funciona el consentimiento en audiencias generadas externamente, lea las [preguntas frecuentes sobre audiencias](../faq.md#consent).
 
 ## Pasos siguientes
 
-After reading this overview, you should be able to use Audience Portal to effectively manage, create, and import audiences into Adobe Experience Platform.
+Después de leer esta descripción general, debe poder usar Audience Portal para administrar, crear e importar audiencias en Adobe Experience Platform de forma eficaz.
 
-For more information on using the Segmentation Service UI, please read the [Segmentation Service UI overview](./overview.md).
+Para obtener más información sobre el uso de la interfaz de usuario del servicio de segmentación, lea la [descripción general de la interfaz de usuario del servicio de segmentación](./overview.md).
 
 Para conocer las preguntas más frecuentes sobre Audience Portal, lea las [preguntas más frecuentes](../faq.md).

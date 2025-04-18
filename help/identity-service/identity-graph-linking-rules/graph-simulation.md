@@ -182,7 +182,7 @@ En el gráfico de ejemplo siguiente, existe una línea de puntos entre `{Email: 
 
 Al leer este documento, ahora sabe cómo usar la herramienta [!DNL Graph Simulation] para comprender mejor cómo se tratan los datos de identidad según un conjunto determinado de reglas y configuraciones. Para obtener más información, lea los siguientes documentos:
 
-* [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
+* [Información general sobre las reglas de vinculación de gráficos de identidad](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)

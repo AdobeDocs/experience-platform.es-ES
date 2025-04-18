@@ -7,7 +7,7 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 18%
+ht-degree: 20%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 18%
 >title="Solicitudes del sujeto de datos"
 >abstract="Este widget muestra el número de solicitudes de interesados enviadas y completadas procesadas por Privacy Service durante un día determinado. Para obtener más información sobre los procesos de Privacy Service, seleccione **Solicitudes** en el panel de navegación situado a la izquierda."
 
-La IU de Privacy Service le permite coordinar las solicitudes de privacidad y conformidad normativa en varias aplicaciones de Adobe Experience Cloud.
+La interfaz de usuario de Privacy Service le permite coordinar las solicitudes de privacidad y conformidad normativa en varias aplicaciones de Adobe Experience Cloud.
 
 >[!NOTE]
 >
->Para obtener información sobre cómo administrar solicitudes de conformidad mediante programación usando la API de Privacy Service, consulte la [guía de API de Privacy Service](../api/overview.md). Consulte el documento [administración de permisos de Privacy Service](../permissions.md) para obtener más información.
+>Para obtener información sobre cómo administrar solicitudes de cumplimiento mediante programación usando la API de Privacy Service, consulte la [guía de API de Privacy Service](../api/overview.md). Consulte el documento sobre [administración de permisos de Privacy Service](../permissions.md) para obtener más información.
 
 ## Iniciar sesión en la interfaz de usuario de [!DNL Privacy Service]
 
@@ -32,7 +32,7 @@ La IU de Privacy Service le permite coordinar las solicitudes de privacidad y co
 
 Para acceder a la interfaz de usuario, inicia sesión en [Adobe Experience Cloud](https://experience.adobe.com/) y selecciona **[!UICONTROL IU de privacidad]** en el menú de acceso rápido.
 
-![Panel del Experience Cloud con la IU de privacidad resaltada.](../images/ui-overview/quick-access.png)
+![Se ha resaltado el panel de Experience Cloud con la interfaz de usuario de privacidad.](../images/ui-overview/quick-access.png)
 
 
 ### Iniciando sesión desde [!DNL Experience Platform]

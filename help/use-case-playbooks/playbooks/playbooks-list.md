@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Casos de uso y libros de reproducción disponibles para Real-time Customer Data Platform y Adobe Journey Optimizer.
-description: Una lista de todos los libros de reproducción de Real-time Customer Data Platform y Adobe Journey Optimizer.
+title: Casos de uso y libros de reproducción disponibles para Real-Time Customer Data Platform y Adobe Journey Optimizer.
+description: Una lista de todos los libros de reproducción de Real-Time Customer Data Platform y Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
@@ -61,7 +61,7 @@ Lea esta página para obtener una descripción general de todos los libros de re
 
 {style="table-layout:auto"}
 
-## Casos de uso y manuales en Real-time Customer Data Platform {#rtcdp-playbooks}
+## Casos de uso y manuales en Real-Time Customer Data Platform {#rtcdp-playbooks}
 
 | Nombre del manual | Descripción |
 | ------------- | ----------- |

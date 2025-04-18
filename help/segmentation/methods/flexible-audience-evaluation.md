@@ -29,8 +29,8 @@ La evaluación flexible de audiencias le permite ejecutar un trabajo de segmenta
 
 Cuando ejecute una evaluación de audiencia flexible, tenga en cuenta las siguientes condiciones:
 
-- Solo puede usar la evaluación **de audiencia flexible dos veces** al día por sandbox. Este límite se restablece a medianoche (UTC).
-- Tiene un **máximo** de 50 ejecuciones de evaluación de audiencia flexibles al año por **sandbox de producción** .
+- Solo puede usar la evaluación de audiencia flexible **dos veces** al día por zona protegida. Este límite se restablece a medianoche (UTC).
+- Tiene un **máximo** de 50 ejecuciones flexibles de evaluación de audiencia por año por cada zona protegida de **producción**.
 - Tiene un **máximo** de 100 ejecuciones flexibles de evaluación de audiencia por año por cada zona protegida de **desarrollo**.
 - Todas las audiencias **deben** tener un origen de &quot;Servicio de segmentación&quot;.
 - Todas las audiencias **deben** evaluarse mediante la segmentación por lotes.
@@ -39,7 +39,7 @@ Cuando ejecute una evaluación de audiencia flexible, tenga en cuenta las siguie
 
 >[!NOTE]
 >
->Puede comprar ejecuciones de evaluación de audiencia flexibles adicionales por año. Para obtener más información, póngase en contacto con Adobe Systems Servicio de atención al cliente.
+>Puede adquirir ejecuciones de evaluación de audiencia flexibles adicionales por año. Para obtener más información, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
 ## Acceso {#access}
 
@@ -86,7 +86,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `segmentId` | ID de la definición de segmento que desea evaluar. Estas definiciones de segmento pueden pertenecer a diferentes políticas de combinación. |
+| `segmentId` | El ID de la definición del segmento que desea evaluar. Estas definiciones de segmentos pueden pertenecer a distintas políticas de combinación. |
 
 +++
 
@@ -298,9 +298,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 +++
 
->[!TAB Experience Platform IU]
+>[!TAB IU DE Experience Platform]
 
-Para ejecutar la evaluación de audiencia flexible dentro del IU Experience Platform, seleccione **[!UICONTROL Audiences en la**[!UICONTROL  sección Clientes ]**]**.
+Para ejecutar una evaluación de audiencia flexible dentro de la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Audiencias]** en la sección **[!UICONTROL Clientes]**.
 
 ![El botón Audiencias de la sección Clientes está resaltado. Se muestra Audience Portal para perfiles de clientes.](../images/methods/fae/audience-portal.png)
 
@@ -310,15 +310,15 @@ Se muestra Audience Portal, con una lista de todas las audiencias de personas de
 
 Aparece la ventana emergente **[!UICONTROL Evaluar audiencias bajo demanda]**, que muestra la lista de audiencias que se evaluarán con el trabajo del segmento bajo demanda. Si una audiencia no puede evaluarse bajo demanda, se elimina automáticamente del trabajo de evaluación. Confirme que las audiencias de la lista son las que desea que se evalúen.
 
-![Se muestran las audiencias que se pueden evaluar mediante la evaluación de audiencia flexible.](../images/methods/fae/evaluate-audiences-modal.png)
+![Se muestran las audiencias que se pueden evaluar mediante una evaluación de audiencia flexible.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Después de confirmar que se enumeran las audiencias correctas, puede continuar con el solicitud y comenzará la evaluación de audiencia flexible. Puede vista el estado de esta evaluación audiencia en el vista](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) de supervisión del [trabajo de evaluación.
+Después de confirmar que se enumeran las audiencias correctas, puede continuar con la solicitud, y comenzará la evaluación flexible de audiencias. Puede ver el estado de esta evaluación de audiencia en la [vista de supervisión del trabajo de evaluación](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
->El estado del trabajo de segmento puede informarse como en estado &quot;En cola&quot; dentro del panel de supervisión. Puede vista el estado más actualizado del trabajo de segmento realizando un petición GET al `/segment/jobs` punto final, proporcionando el ID del trabajo de segmento en la ruta de solicitud. Puede encontrar más información sobre el uso de este punto de conexión en API pestaña.
+>El estado del trabajo del segmento puede informarse como en &quot;En cola&quot; en el panel de monitorización. Puede ver el estado más actualizado del trabajo del segmento realizando una petición GET al extremo `/segment/jobs`, proporcionando el ID del trabajo del segmento en la ruta de solicitud. Puede encontrar más información sobre el uso de este extremo en la pestaña API.
 >
->Si ejecuta una evaluación de audiencia flexible y desea que la evaluación active el audiencia a un destino, debe asegurarse de que la Frecuencia esté establecida en **[!UICONTROL Después de segmento evaluación]**. La ejecución de una evaluación de audiencia flexible en audiencias que ya están configuradas para activarse [después de la evaluación de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), activará las audiencias en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior.
+>Si ejecuta una evaluación de audiencia flexible y desea que la evaluación active la audiencia en un destino, debe asegurarse de que la frecuencia esté establecida en **[!UICONTROL Después de la evaluación del segmento]**. La ejecución de una evaluación de audiencia flexible en audiencias que ya están configuradas para activarse [después de la evaluación de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), activará las audiencias en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior.
 
 >[!ENDTABS]
 
@@ -332,7 +332,7 @@ En el siguiente vídeo se muestra cómo acceder y utilizar la evaluación de aud
 
 En la siguiente sección se enumeran las preguntas más frecuentes relacionadas con la evaluación flexible de audiencias.
 
-### ¿Qué tan pronto puedo activar un audiencia utilizando la evaluación de audiencia flexible?
+### ¿Con qué frecuencia puedo activar una audiencia mediante una evaluación de audiencia flexible?
 
 +++ Respuesta
 
@@ -364,7 +364,7 @@ Puede utilizar audiencias en todos los servicios descendentes, incluidos destino
 
 +++
 
-### ¿Cuándo se restablecen los límites de evaluación de audiencia flexibles?
+### ¿Cuándo se restablecen los límites flexibles de evaluación de audiencia?
 
 +++ Respuesta
 
@@ -384,7 +384,7 @@ Para una evaluación de audiencia flexible, solo se admiten audiencias con el or
 
 +++ Respuesta
 
-Las ejecuciones de evaluación de audiencia flexibles que se crearon utilizando la API o la IU cuentan para el límite máximo. Sin embargo, el lote diario segmentación trabajo ejecutado diariamente **** no contribuye a este límite.
+Las ejecuciones de evaluación de audiencia flexibles que se crearon mediante la API o el recuento de IU hasta el límite máximo. Sin embargo, la ejecución diaria del trabajo de segmentación por lotes que se ejecuta todas las noches **no** contribuye a este límite.
 
 +++
 

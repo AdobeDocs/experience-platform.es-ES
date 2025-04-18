@@ -28,7 +28,7 @@ Esta guía de interfaz de usuario requiere una comprensión de los distintos ser
 
 ## Ver atributos calculados {#view}
 
-En la interfaz de usuario del Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Atributos calculados]** para ver una lista de los atributos calculados disponibles para su organización. Esto incluye información sobre el nombre, la descripción, la última fecha de evaluación y el último estado de evaluación del atributo calculado.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Atributos calculados]** para ver una lista de los atributos calculados disponibles para su organización. Esto incluye información sobre el nombre, la descripción, la última fecha de evaluación y el último estado de evaluación del atributo calculado.
 
 ![La sección [!UICONTROL Perfil] y las fichas [!UICONTROL Atributos calculados] están resaltadas, y muestran a los usuarios cómo acceder a la página de exploración de atributos calculados.](./images/ui/browse.png)
 
@@ -118,7 +118,7 @@ Para obtener más información sobre la actualización rápida, lea la [sección
 
 Una vez completados estos pasos, puede elegir guardar este atributo calculado como borrador o publicarlo inmediatamente.
 
-![Los botones [!UICONTROL Guardar como borrador] y [!UICONTROL Publish] están resaltados.](./images/ui/draft-or-publish.png)
+![Los botones [!UICONTROL Guardar como borrador] y [!UICONTROL Publicar] están resaltados.](./images/ui/draft-or-publish.png)
 
 ## Visualización de los detalles de un atributo calculado {#view-details}
 

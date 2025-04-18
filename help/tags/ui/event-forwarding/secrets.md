@@ -26,7 +26,7 @@ Actualmente se admiten los siguientes tipos de secretos:
 
 {style="table-layout:auto"}
 
-Esta guía proporciona información general de alto nivel sobre cómo configurar secretos para una propiedad de reenvío de eventos ([!UICONTROL Edge]) en la interfaz de usuario del Experience Platform o la IU de recopilación de datos.
+Esta guía proporciona información general de alto nivel sobre cómo configurar secretos para una propiedad de reenvío de eventos ([!UICONTROL Edge]) en la interfaz de usuario de Experience Platform o de recopilación de datos.
 
 >[!NOTE]
 >

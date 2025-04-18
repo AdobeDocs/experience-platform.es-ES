@@ -6,7 +6,7 @@ description: Aprenda a utilizar la interfaz de usuario de Privacy Service para c
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1770'
 ht-degree: 11%
 
 ---
@@ -22,9 +22,9 @@ Este documento proporciona los pasos para crear y administrar solicitudes de pri
 
 >[!IMPORTANT]
 >
->El Privacy Service solo está diseñado para solicitudes de derechos de los interesados y consumidores. No se admite ni permite ningún otro uso de Privacy Service para la limpieza o el mantenimiento de datos. El Adobe tiene la obligación legal de cumplirlos en el momento oportuno. Como tal, no se permiten las pruebas de carga en el Privacy Service, ya que es un entorno de solo producción y crea un registro de solicitudes de privacidad válidas innecesarias.
+>Privacy Service solo está diseñado para solicitudes de derechos de los interesados y consumidores. No se admite ni permite ningún otro uso de Privacy Service para la limpieza o el mantenimiento de datos. Adobe tiene la obligación legal de cumplirlos a tiempo. Como tal, no se permiten las pruebas de carga en Privacy Service, ya que es un entorno de solo producción y crea un registro de asuntos pendientes innecesario de solicitudes de privacidad válidas.
 >
->Ahora se establece un límite diario de carga estricto para ayudar a evitar el abuso del servicio. Si se detecta que algún usuario abusa del sistema, se deshabilitará el acceso al servicio. Luego se celebrará una reunión posterior con ellos para abordar sus acciones y discutir el uso aceptable de Privacy Service.
+>Ahora se establece un límite diario de carga estricto para ayudar a evitar el abuso del servicio. Si se detecta que algún usuario abusa del sistema, se deshabilitará el acceso al servicio. A continuación, se celebrará una reunión posterior con ellos para abordar sus acciones y discutir el uso aceptable de Privacy Service.
 
 ## Examinar el panel de IU [!DNL Privacy Service]
 
@@ -163,7 +163,7 @@ Se abre el cuadro de diálogo **[!UICONTROL Crear solicitud]**, que muestra las 
 
 Seleccione el **[!UICONTROL Tipo de trabajo]** de la solicitud (&quot;Eliminar&quot; o &quot;Acceso&quot;) y uno o más productos disponibles de la lista.
 
-El Privacy Service admite dos tipos de solicitudes de trabajo para datos personales: [!UICONTROL Acceso] (lectura) y [!UICONTROL Eliminar]. Puede enviar una solicitud para recibir toda la información contenida en el producto que se relaciona con el sujeto de la consulta, o solicitar que se elimine toda la información relacionada con el sujeto de la consulta.
+Privacy Service admite dos tipos de solicitudes de trabajo para datos personales: [!UICONTROL Acceso] (lectura) o [!UICONTROL Eliminar]. Puede enviar una solicitud para recibir toda la información contenida en el producto que se relaciona con el sujeto de la consulta, o solicitar que se elimine toda la información relacionada con el sujeto de la consulta.
 
 ![](../images/user-guide/type-and-products.png){width=500}
 

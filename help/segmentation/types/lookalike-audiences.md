@@ -94,7 +94,7 @@ Aparecerá la página de detalles de la audiencia. Seleccione la pestaña **[!UI
 >title="Similitud y alcance"
 >abstract="El gráfico de similitud y alcance traza el alcance esperado de un público de similitud compuesto por perfiles que superan una determinada puntuación de similitud. Puede situarse sobre un punto específico del gráfico para mostrar el porcentaje de similitud y el recuento de perfiles esperado para el punto resaltado actualmente."
 
-La sección de similitud y alcance muestra un gráfico que representa el alcance esperado de una audiencia de similitud compuesta por perfiles superiores a una puntuación de similitud determinada. La puntuación de similitud representa la **distancia** de similitud entre el perfil de la audiencia base y el perfil de la perspectiva de similitud.
+La sección de similitud y alcance muestra un gráfico que representa el alcance esperado de una audiencia de similitud compuesta por perfiles superiores a una puntuación de similitud determinada. La puntuación de similitud representa la **distancia** de similitud entre el perfil de la audiencia base y el perfil de similitud de insight.
 
 ![Se resalta el gráfico de similitud y alcance.](../images/types/lookalike/similarity-and-reach.png)
 

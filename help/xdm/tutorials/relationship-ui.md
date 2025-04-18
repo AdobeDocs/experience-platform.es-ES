@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;ui;IU;XDM;sistema XDM;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos de experiencia;modelo de datos;modelo de datos;editor de esquemas;editor de esquemas;esquema;esquemas;esquemas;crear;relación;referencia;referencia;
 solution: Experience Platform
 title: Definición de una relación entre dos esquemas con el Editor de esquemas
-description: Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de esquemas en la interfaz de usuario del Experience Platform.
+description: Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de esquemas en la interfaz de usuario de Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
@@ -41,7 +41,7 @@ Este documento proporciona un tutorial para definir una relación entre dos esqu
 
 >[!NOTE]
 >
->Para ver los pasos sobre cómo crear una relación varios a uno en Adobe Real-time Customer Data Platform B2B Edition, consulte la guía sobre [creación de relaciones B2B](./relationship-b2b.md).
+>Para ver los pasos sobre cómo crear una relación varios a uno en Adobe Real-Time Customer Data Platform B2B edition, consulte la guía sobre [creación de relaciones B2B](./relationship-b2b.md).
 
 ## Introducción
 
@@ -119,7 +119,7 @@ Aparecerá el cuadro de diálogo [!UICONTROL Agregar relación]. Desde este cuad
 
 >[!NOTE]
 >
->Si tiene acceso a Real-Time CDP B2B Edition, puede utilizar los controles del carril derecho del lienzo para definir un campo de relación, así como crear una relación de varios a uno mediante [el mismo cuadro de diálogo](./relationship-b2b.md#relationship-field).
+>Si tiene acceso a Real-Time CDP B2B edition, puede utilizar los controles del carril derecho del lienzo para definir un campo de relación, así como para crear una relación de varios a uno mediante el [mismo cuadro de diálogo](./relationship-b2b.md#relationship-field).
 
 ![Cuadro de diálogo Agregar relación.](../images/tutorials/relationship/add-relationship-dialog.png)
 

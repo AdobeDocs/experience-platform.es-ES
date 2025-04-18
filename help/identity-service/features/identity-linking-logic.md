@@ -5,7 +5,7 @@ exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '968'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_simulatedgraph"
 >title="Gráfico simulado"
->abstract="Las identidades se vinculan cuando coinciden el espacio de nombres de identidad y el valor de identidad."
+>abstract="Las identidades se vinculan cuando coinciden el área de nombres de identidad y el valor de identidad."
 
 Se establece un vínculo entre dos identidades cuando coinciden el área de nombres de identidad y los valores de identidad.
 
@@ -105,7 +105,7 @@ La identidad principal de cada evento se determinará en función de [cómo conf
 
 >[!NOTE]
 >
->* Si selecciona el CRMID como principal, los eventos autenticados (eventos con mapa de identidad que contenga el CRMID y el ECID) tendrán una identidad principal de CRMID. Para eventos no autenticados (los eventos con el mapa de identidad que solo contiene ECID) tendrán una identidad principal de ECID. El Adobe recomienda esta opción.
+>* Si selecciona el CRMID como principal, los eventos autenticados (eventos con mapa de identidad que contenga el CRMID y el ECID) tendrán una identidad principal de CRMID. Para eventos no autenticados (los eventos con el mapa de identidad que solo contiene ECID) tendrán una identidad principal de ECID. Adobe recomienda esta opción.
 >
 >* Si selecciona el ECID como principal, independientemente del estado de autenticación, el ECID se convierte en la identidad principal.
 

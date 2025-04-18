@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -165,7 +165,7 @@ Vea el diagrama siguiente para comprender mejor cómo funciona la asociación de
 
 Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
 
-* [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
+* [Información general sobre las reglas de vinculación de gráficos de identidad](./overview.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)

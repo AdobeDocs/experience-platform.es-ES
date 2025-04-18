@@ -25,7 +25,7 @@ ht-degree: 9%
 >
 >Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, debe usar la [API de Edge Network Server](/help/server-api/overview.md) al configurar el destino de **[!UICONTROL Personalization personalizado]** para la personalización basada en atributos. Todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../../server-api/authentication.md).
 >
-><br>Puede recuperar atributos de perfil a través de la API de [Edge Network Server](/help/server-api/overview.md) agregando una integración del lado del servidor que utiliza la misma secuencia de datos que ya está utilizando para su implementación de SDK web o móvil.
+><br>Puede recuperar atributos de perfil a través de la [API de servidor de Edge Network](/help/server-api/overview.md) agregando una integración del lado del servidor que utiliza la misma secuencia de datos que ya está utilizando para su implementación de SDK web o móvil.
 >
 ><br>Si no cumple los requisitos anteriores, la personalización se basará únicamente en el abono a audiencias.
 
@@ -37,13 +37,13 @@ Configure este destino para permitir que las plataformas de personalización ext
 
 Este destino requiere el uso de uno de los siguientes métodos de recopilación de datos, según la implementación:
 
-* Use [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) si quiere recopilar datos de su sitio web.
-* Use [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si quiere recopilar datos de su aplicación móvil.
-* Use la API de [Edge Network Server](../../../server-api/overview.md) si no usa [SDK web](/help/web-sdk/home.md) o [SDK móvil](https://developer.adobe.com/client-sdks/documentation/), o si desea personalizar la experiencia del usuario según los atributos del perfil.
+* Use [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) si desea recopilar datos de su sitio web.
+* Use [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si desea recopilar datos de su aplicación móvil.
+* Use la [API de Edge Network Server](../../../server-api/overview.md) si no usa [Web SDK](/help/web-sdk/home.md) o [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), o si desea personalizar la experiencia del usuario según los atributos del perfil.
 
 >[!IMPORTANT]
 >
->Antes de crear una conexión de personalización personalizada, lee la guía sobre cómo [activar datos de audiencia en destinos de personalización Edge](../../ui/activate-edge-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para los casos de uso de personalización de la misma página y de la página siguiente, en varios componentes de Experience Platform.
+>Antes de crear una conexión de personalización personalizada, lee la guía sobre cómo [activar datos de audiencia en destinos de personalización Edge](../../ui/activate-edge-personalization-destinations.md). Esta guía le explica los pasos de configuración necesarios para los casos de uso de personalización de la misma página y de la siguiente página, en varios componentes de Experience Platform.
 
 ## Audiencias compatibles {#supported-audiences}
 
@@ -51,8 +51,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!DNL Profile request]** | Está solicitando todas las audiencias asignadas en el destino de personalización personalizado para un solo perfil. Se pueden configurar diferentes destinos de personalización personalizados para diferentes [flujos de datos de recopilación de datos de Adobe](../../../datastreams/overview.md). |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Conexión al destino {#connect}
 
@@ -83,7 +83,7 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
 * **[!UICONTROL Nombre]**: rellene el nombre preferido para este destino.
 * **[!UICONTROL Descripción]**: escribe una descripción para el destino. Por ejemplo, puede mencionar para qué campaña está usando este destino. Este campo es opcional.
-* **[!UICONTROL Alias de integración]**: Este valor se envía al SDK web de Experience Platform como nombre de objeto JSON.
+* **[!UICONTROL Alias de integración]**: Este valor se envía a Experience Platform Web SDK como nombre de objeto JSON.
 * **[!UICONTROL ID de secuencia de datos]**: Esto determina en qué secuencia de datos de recopilación de datos se incluirán las audiencias en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Consulte [Configuración de una secuencia de datos](../../../datastreams/overview.md) para obtener más información.
 
 ### Habilitar alertas {#enable-alerts}
@@ -102,7 +102,7 @@ Lea [Activar perfiles y audiencias para destinos personalizados Edge](../../ui/a
 
 ## Datos exportados {#exported-data}
 
-Si usa [Etiquetas en Adobe Experience Platform](../../../tags/home.md) para implementar el SDK web de Experience Platform, use la funcionalidad [enviar evento completado](../../../tags/extensions/client/web-sdk/event-types.md) y la acción de código personalizado tendrá una variable `event.destinations` que puede usar para ver los datos exportados.
+Si usa [etiquetas en Adobe Experience Platform](../../../tags/home.md) para implementar Experience Platform Web SDK, use la funcionalidad [enviar evento completado](../../../tags/extensions/client/web-sdk/event-types.md) y la acción de código personalizado tendrá una variable `event.destinations` que puede usar para ver los datos exportados.
 
 Este es un valor de muestra para la variable `event.destinations`:
 
@@ -124,7 +124,7 @@ Este es un valor de muestra para la variable `event.destinations`:
 ]
 ```
 
-Si no usa [Tags](/help/tags/home.md) para implementar el SDK web de Experience Platform, use [respuestas de comandos](/help/web-sdk/commands/command-responses.md) para ver los datos exportados.
+Si no usa [Tags](/help/tags/home.md) para implementar Experience Platform Web SDK, use [respuestas de comandos](/help/web-sdk/commands/command-responses.md) para ver los datos exportados.
 
 La respuesta JSON de Adobe Experience Platform se puede analizar para encontrar el alias de integración correspondiente de la aplicación que está integrando con Adobe Experience Platform. Los ID de audiencia se pueden pasar al código de la aplicación como parámetros de segmentación. A continuación se muestra un ejemplo de cómo sería esto específico de la respuesta de destino.
 
