@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 22%
+source-wordcount: '404'
+ht-degree: 27%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 22%
 - [Introducción al servicio de consultas](home.md)
 - [Empaquetado del servicio de consultas](packaging.md)
 - [Protecciones del servicio de consultas](guardrails.md)
-- Introducción {#get-started}
+- Introducción  {#get-started}
    - [Requisitos previos](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
    - [Información general](data-distiller/overview.md)
@@ -27,12 +27,13 @@ ht-degree: 22%
       - [Información general](data-distiller/derived-datasets/overview.md)
       - [Crear conjuntos de datos derivados con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Crear conjuntos de datos derivados basados en deciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - SQL Insights para el sistema de informes ampliado de la aplicación {#sql-insights}
+   - SQL Insights para creación de informes ampliados de aplicaciones {#sql-insights}
       - [Información general](data-distiller/sql-insights/overview.md)
       - [Modo de consulta profesional](data-distiller/sql-insights/query-pro-mode.md)
+      - [Información general sobre la tienda acelerada](data-distiller/sql-insights/accelerated-store-overview.md)
       - [Envío de consultas aceleradas](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Guía del modelo de datos de Reporting Insights](data-distiller/sql-insights/reporting-insights-data-model.md)
-   - Canalizaciones de características de AI/ML {#ml-feature-pipelines}
+   - Canalizaciones de funciones de IA/ML {#ml-feature-pipelines}
       - [Información general](data-distiller/ml-feature-pipelines/overview.md)
       - [Conectar con Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Análisis exploratorio de datos](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -45,7 +46,7 @@ ht-degree: 22%
    - [Ingeniería de funciones](advanced-statistics/feature-engineering.md)
    - [Modelos](advanced-statistics/models.md)
    - [Transformación de funciones](advanced-statistics/feature-transformation.md)
-   - Implementar modelos {#implement-models}
+   - Implementación de modelos {#implement-models}
       - [Implementación de modelos](advanced-statistics/implement-models/implement-models.md)
       - [Regresión](advanced-statistics/implement-models/regression.md)
       - [Clasificación](advanced-statistics/implement-models/classification.md)
@@ -110,7 +111,7 @@ ht-degree: 22%
    - [Monitorización de consultas programadas](ui/monitor-queries.md)
    - [Guía de credenciales](ui/credentials.md)
    - [Generar conjuntos de datos de salida a partir de resultados de consulta](ui/create-datasets.md)
-- API de servicio de consultas {#api}
+- API del servicio de consultas {#api}
    - [Introducción](api/getting-started.md)
    - [Consultas](api/queries.md)
    - [Parámetros de conexión](api/connection-parameters.md)
