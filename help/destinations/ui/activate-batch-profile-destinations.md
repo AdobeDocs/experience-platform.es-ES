@@ -3,10 +3,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
 workflow-type: tm+mt
-source-wordcount: '4454'
-ht-degree: 12%
+source-wordcount: '4517'
+ht-degree: 11%
 
 ---
 
@@ -83,6 +83,16 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >id="platform_destinations_activate_schedule"
 >title="Programación"
 >abstract="Utilice el icono de lápiz para establecer el tipo de exportación de archivos (archivos completos o archivos incrementales) y la frecuencia de exportación."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_weekly_messaging"
+>title="Exportaciones semanales"
+>abstract="Seleccione la fecha de inicio y las exportaciones posteriores se producirán ese día de la semana hasta la fecha de finalización seleccionada."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_monthly_messaging"
+>title="Exportaciones mensuales"
+>abstract="Seleccione la fecha de inicio y las exportaciones posteriores se producirán en esa fecha del mes hasta la fecha de finalización seleccionada. En el caso de los meses con menos de 30 o 31 días, la exportación se produce el último día del mes."
 
 [!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube como [diferentes tipos de archivos](#supported-file-formats-export). En la página **[!UICONTROL Programación]**, puede configurar la programación y los nombres de archivo para cada audiencia que esté exportando.
 
