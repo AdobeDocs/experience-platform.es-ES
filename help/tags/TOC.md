@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
+source-git-commit: 3bd3ef14cd0bd2c079c1c881a70865b067f28341
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '779'
 ht-degree: 43%
 
 ---
@@ -220,6 +220,8 @@ ht-degree: 43%
          * [Notas de la versión](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [Información general](./extensions/server/adform/overview.md)
+      * [!DNL Amazon] {#amazon}
+         * [Información general](./extensions/server/amazon/overview.md)
       * [!DNL AWS] {#aws}
          * [Información general](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
