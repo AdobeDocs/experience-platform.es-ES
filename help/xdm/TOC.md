@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
-breadcrumb-title: Guía del modelo de datos (XDM) de Experience
-user-guide-description: Explore una descripción general del sistema Experience Data Model (XDM) en Experience Platform y aprenda a utilizar clases y grupos de campos de esquema para estandarizar los datos de experiencia.
+breadcrumb-title: Guía del Modelo de datos de experiencia (XDM)
+user-guide-description: Explore una descripción general del sistema Modelo de datos de experiencia (XDM) en Experience Platform y aprenda a utilizar clases y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
 role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '698'
-ht-degree: 45%
+ht-degree: 48%
 
 ---
 
@@ -29,11 +29,11 @@ ht-degree: 45%
       * [Asistencia sanitaria](./schema/industries/healthcare.md)
       * [Telecomunicaciones](./schema/industries/telecom.md)
       * [Viajes y hospitalidad](./schema/industries/travel-hospitality.md)
-   * Modelo de datos de atención médica V2 {#healthcare}
+   * Modelo de datos de atención sanitaria V2 {#healthcare}
       * [Healthcare V2](./schema/healthcare/healthcare-v2.md)
       * Clases {#classes}
          * [Ubicación](./schema/healthcare/classes/location.md)
-      * Grupos de campos {#field-groups}
+      * Grupos de campo {#field-groups}
          * [Cuenta](./schema/healthcare/field-groups/account.md)
          * [Cita](./schema/healthcare/field-groups/appointment.md)
          * [Plan de atención](./schema/healthcare/field-groups/care-plan.md)
@@ -93,7 +93,7 @@ ht-degree: 45%
       * [Relación de persona de la oportunidad de negocio de XDM](./classes/b2b/business-opportunity-person-relation.md)
       * [Lista de marketing empresarial de XDM](./classes/b2b/business-marketing-list.md)
       * [Miembros de la lista de marketing empresarial de XDM](./classes/b2b/business-marketing-list-members.md)
-* Grupos de campos {#field-groups}
+* Grupos de campo {#field-groups}
    * Perfil individual de XDM {#profile}
       * [Consentimientos y preferencias](./field-groups/profile/consents.md)
       * [Información demográfica](./field-groups/profile/demographic-details.md)
@@ -108,7 +108,7 @@ ht-degree: 45%
       * [Detalles de contacto de trabajo](./field-groups/profile/work-contact-details.md)
       * [Componentes de la persona empresarial de XDM](./field-groups/profile/business-person-components.md)
       * [Detalles de la persona empresarial de XDM](./field-groups/profile/business-person-details.md)
-   * Perfil de cliente potencial individual de XDM {#prospect-profile}
+   * Perfil de cliente potencial individual XDM {#prospect-profile}
       * [Detalles del cliente potencial del socio (ejemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * ExperienceEvent de XDM {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
@@ -138,9 +138,9 @@ ht-degree: 45%
       * [Detalles de la Web](./field-groups/event/web-details.md)
    * Campaña empresarial de XDM {#b2b-campaign}
       * [Detalles de la campaña empresarial de XDM](./field-groups/b2b-campaign/details.md)
-   * Miembros de XDM Business Campaign {#b2b-campaign-members}
+   * Miembros de la campaña empresarial de XDM {#b2b-campaign-members}
       * [Detalles de miembros de XDM Business Campaign](./field-groups/b2b-campaign-members/details.md)
-   * Medicamento {#medication}
+   * Medicación {#medication}
       * [Medicación sanitaria](./field-groups/medication/healthcare-medication.md)
    * Plan {#plan}
       * [Detalles del plan de atención médica](./field-groups/plan/healthcare-plan-details.md)
@@ -230,15 +230,15 @@ ht-degree: 45%
    * [Información web](./data-types/web-information.md)
    * [Interacción web](./data-types/web-interaction.md)
    * [Detalles de la página web](./data-types/webpage-details.md)
-* [!UICONTROL Esquemas] interfaz de usuario {#ui}
+* IU [!UICONTROL Esquemas] {#ui}
    * [Información general](./ui/overview.md)
    * [Exploración de recursos XDM](./ui/explore.md)
-   * Crear y editar recursos {#resources}
+   * Creación y edición de recursos {#resources}
       * [Esquemas](./ui/resources/schemas.md)
       * [Clases](./ui/resources/classes.md)
       * [Grupos de campo](./ui/resources/field-groups.md)
       * [Tipos de datos](./ui/resources/data-types.md)
-   * Definir campos {#fields}
+   * Definición de campos {#fields}
       * [Información general](./ui/fields/overview.md)
       * [Campos de matriz](./ui/fields/array.md)
       * [Campos de enumeración](./ui/fields/enum.md)
