@@ -2,10 +2,10 @@
 title: Prioridad del área de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1801'
-ht-degree: 3%
+source-wordcount: '1866'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada y todos los clientes pueden acceder a ellas desde los entornos limitados de desarrollo.
+>
+>* **Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.
+>* **Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.
+>* **Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.
 
 Cada implementación de cliente es única y está diseñada para satisfacer los objetivos de una organización en particular y, como tal, la importancia de un área de nombres determinada varía según el cliente. Algunos ejemplos del mundo real son:
 

@@ -2,20 +2,24 @@
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3375'
 ht-degree: 0%
 
 ---
 
-# Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
+# Guía de solución de problemas para [!DNL Identity Graph Linking Rules]
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada y todos los clientes pueden acceder a ellas desde los entornos limitados de desarrollo.
+>
+>* **Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.
+>* **Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.
+>* **Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.
 
-A medida que prueba y valida las reglas de vinculación de gráficos de identidad, puede encontrar algunos problemas relacionados con la ingesta de datos y el comportamiento del gráfico. Lea este documento para aprender a solucionar algunos problemas comunes que pueden producirse al trabajar con reglas de vinculación de gráficos de identidad.
+A medida que prueba y valida [!DNL Identity Graph Linking Rules], puede encontrar algunos problemas relacionados con la ingesta de datos y el comportamiento de gráficos. Lea este documento para aprender a solucionar algunos problemas comunes que podrían producirse al trabajar con [!DNL Identity Graph Linking Rules].
 
 ## Resumen del flujo de ingesta {#data-ingestion-flow-overview}
 
@@ -55,7 +59,7 @@ Esto puede deberse a varios motivos, entre los que se incluyen, entre otros:
 * De manera predeterminada, [AAID están bloqueados para la ingesta](../guardrails.md#identity-namespace-ingestion).
 * Se ha quitado la identidad debido a [protecciones del sistema](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
-En el contexto de las reglas de vinculación de gráficos de identidad, se puede rechazar un registro del servicio de identidad porque el evento entrante tiene dos o más identidades con el mismo área de nombres única pero con un valor de identidad diferente. Este escenario suele ocurrir debido a errores de implementación.
+En el contexto de [!DNL Identity Graph Linking Rules], se puede rechazar un registro del servicio de identidad porque el evento entrante tiene dos o más identidades con el mismo área de nombres única pero con un valor de identidad diferente. Este escenario suele ocurrir debido a errores de implementación.
 
 Considere el siguiente evento con dos suposiciones:
 
@@ -318,11 +322,11 @@ Puede utilizar la siguiente consulta en el conjunto de datos de exportación de 
 
 >[!TIP]
 >
->Las dos consultas enumeradas anteriormente arrojarán los resultados esperados si la zona protegida no está habilitada para el método provisional de dispositivos compartidos y se comportarán de forma diferente a las reglas de vinculación de gráficos de identidad.
+>Las dos consultas enumeradas anteriormente arrojarán los resultados esperados si la zona protegida no está habilitada para el método provisional de dispositivos compartidos y se comportarán de forma diferente a [!DNL Identity Graph Linking Rules].
 
 ## Preguntas frecuentes {#faq}
 
-En esta sección se describe una lista de respuestas a las preguntas más frecuentes sobre las reglas de vinculación de gráficos de identidad.
+En esta sección se describe una lista de respuestas a las preguntas más frecuentes acerca de [!DNL Identity Graph Linking Rules].
 
 ## Algoritmo de optimización de identidad {#identity-optimization-algorithm}
 
@@ -389,7 +393,7 @@ El algoritmo de optimización de identidad se aplicará primero para garantizar 
 
 ## Pruebas
 
-Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca de las características de prueba y depuración en las reglas de vinculación de gráficos de identidad.
+Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca de las características de prueba y depuración de [!DNL Identity Graph Linking Rules].
 
 ### ¿Cuáles son algunos de los escenarios que debería probar en un entorno de zona protegida de desarrollo?
 

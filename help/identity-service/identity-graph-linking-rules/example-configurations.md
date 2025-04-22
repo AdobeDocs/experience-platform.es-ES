@@ -2,9 +2,9 @@
 title: Ejemplos de configuraciones de gráficos
 description: Obtenga información sobre los escenarios de gráficos comunes que podrían surgir al trabajar con reglas de vinculación de gráficos de identidad y datos de identidad.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2849'
 ht-degree: 6%
 
 ---
@@ -18,14 +18,18 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada y todos los clientes pueden acceder a ellas desde los entornos limitados de desarrollo.
+>
+>* **Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.
+>* **Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.
+>* **Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.
 
 >[!NOTE]
 >
 >* &quot;CRMID&quot; y &quot;loginID&quot; son áreas de nombres personalizadas. En este documento, &quot;CRMID&quot; es un identificador de persona y &quot;loginID&quot; es un identificador de inicio de sesión asociado a una persona determinada.
 >* Para simular los escenarios de gráficos de ejemplo descritos en este documento, primero debe crear dos áreas de nombres personalizadas, una con el símbolo de identidad &quot;CRMID&quot; y otra con el símbolo de identidad &quot;loginID&quot;. Los símbolos de identidad distinguen entre mayúsculas y minúsculas.
 
-Este documento describe ejemplos de configuración de gráficos de escenarios comunes que podrían surgir al trabajar con reglas de vinculación de gráficos de identidad y datos de identidad.
+Este documento describe ejemplos de configuración de gráficos de escenarios comunes que podrían surgir al trabajar con [!DNL Identity Graph Linking Rules] y datos de identidad.
 
 ## Solo CRMID
 
@@ -764,9 +768,9 @@ CRMID: Tom, ECID: 111
 
 ## Pasos siguientes
 
-Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
+Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la siguiente documentación:
 
-* [Información general sobre las reglas de vinculación de gráficos de identidad](./overview.md)
+* [Información general de [!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)

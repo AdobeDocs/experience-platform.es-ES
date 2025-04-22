@@ -2,9 +2,9 @@
 title: Guía de implementación para reglas de vinculación de gráficos de identidad
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1888'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada y todos los clientes pueden acceder a ellas desde los entornos limitados de desarrollo.
+>
+>* **Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.
+>* **Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.
+>* **Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.
 
 >[!IMPORTANT]
 >
@@ -33,7 +37,7 @@ Descripción paso a paso:
 
 ## Requisitos previos para la implementación {#prerequisites-for-implementation}
 
-En esta sección se describen los pasos previos que debe llevar a cabo antes de implementar las reglas de vinculación de gráficos de identidad con los datos.
+En esta sección se describen los pasos previos que debe seguir antes de implementar [!DNL Identity Graph Linking Rules] en sus datos.
 
 ### Área de nombres única
 
@@ -291,9 +295,9 @@ Este ejemplo también muestra que Tom y Summer son dos entidades de persona dist
 
 ## Pasos siguientes
 
-Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
+Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la siguiente documentación:
 
-* [Información general sobre las reglas de vinculación de gráficos de identidad](./overview.md)
+* [Información general de [!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)

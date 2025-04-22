@@ -2,10 +2,10 @@
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 4%
+source-wordcount: '697'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre cómo acceder a la función en los entornos limitados de desarrollo.
+>Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada y todos los clientes pueden acceder a ellas desde los entornos limitados de desarrollo.
+>
+>* **Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.
+>* **Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.
+>* **Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.
 
 La configuración de identidad es una característica de la interfaz de usuario del servicio de identidad de Adobe Experience Platform que puede utilizar para designar áreas de nombres únicas y configurar la prioridad del área de nombres.
 
@@ -23,7 +27,7 @@ Lea esta guía para aprender a configurar los ajustes de identidad en la interfa
 
 Lea los siguientes documentos antes de empezar a trabajar con la configuración de identidad:
 
-* [Reglas de vinculación de gráficos de identidad](./overview.md)
+* [[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
@@ -83,9 +87,9 @@ A partir de aquí, debe confirmar lo siguiente antes de continuar con el paso fi
 
 ## Pasos siguientes
 
-Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
+Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la siguiente documentación:
 
-* [Información general sobre las reglas de vinculación de gráficos de identidad](./overview.md)
+* [Información general de [!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
