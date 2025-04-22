@@ -3,22 +3,14 @@ keywords: atributos del dirigible;destino del dirigible
 title: Conexión de Atributos del dirigible
 description: Pase sin problemas los datos de audiencias de Adobe a la aeronave como atributos de audiencia para segmentar dentro de la aeronave.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 4%
+source-wordcount: '1042'
+ht-degree: 2%
 
 ---
 
 # [!DNL Airship Attributes] conexión {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->* A partir del 25 de marzo de 2025, verá dos tarjetas de [!DNL Airship Attributes] en paralelo en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino [!DNL Airship Attributes] existente a **[!UICONTROL (obsoleto) Atributos del dirigible]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Atributos del dirigible]**.
->* Use la conexión **[!UICONTROL Airship Attributes]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) Atributos de dirigible]**, se actualizarán automáticamente, por lo que no se requiere que realice ninguna acción por su parte.
->* Si está creando flujos de datos a través de la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar sus [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:
->   * ID de especificación de flujo: `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * ID de especificación de conexión: `594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## Información general {#overview}
 
