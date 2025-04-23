@@ -3,9 +3,9 @@ title: 'Notas de la versión de Adobe Experience Platform: febrero de 2024'
 description: Las notas de la versión de febrero de 2024 de Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 91%
+workflow-type: ht
+source-wordcount: '1238'
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ Actualizaciones de funciones existentes en Experience Platform:
 
 ## Alertas {#alerts}
 
-Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a distintas reglas de alerta a través de la ficha [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a diferentes reglas de alertas a través de la pestaña [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia IU o a través de notificaciones por correo electrónico.
 
 **Funciones nuevas o actualizadas**
 
@@ -84,10 +84,10 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 | ----------- | ----------- |
 | Activar públicos de cuenta disponibles de forma general | La funcionalidad para activar públicos de cuenta en determinados destinos ya está disponible de forma general para empresas que compran las ediciones de Real-time Customer Data Platform [De empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [De empresa a persona](/help/rtcdp/overview.md#rtcdp-b2p). Lea el tutorial sobre [activación de públicos de cuenta](/help/destinations/ui/activate-account-audiences.md) para obtener información completa, incluidos los destinos admitidos. |
 | Herramientas de aplicación de consentimientos de Ley de mercados digitales para destinos de Google | Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de mercados digitales](https://digital-markets-act.ec.europa.eu/index_es) (DMA) de la Unión Europea ([Política de consentimiento del usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). Se espera que la aplicación de estos cambios en los requisitos de consentimiento entre en vigor a partir del 6 de marzo de 2024. <br/><br/> Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de público para usuarios del Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que aprueban el consentimiento del usuario final al cargar datos de público. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.<br/><br/>Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no necesitan realizar ninguna acción.<br/><br/>Los clientes que no hayan adquirido Adobe Privacy &amp; Security Shield deben usar las funciones de [definición de segmento](../../segmentation/home.md#segment-definitions) del [Generador de segmentos](../../segmentation/ui/segment-builder.md) para filtrar los perfiles no consentidos y así poder seguir usando los destinos de Real-Time CDP Google existentes sin interrupción. |
-| [!BADGE Beta]{type=Informative} Reordene los campos de asignación para destinos por lotes | Ahora puede cambiar el orden de las columnas en sus exportaciones de CSV arrastrando y soltando los campos de asignación en el paso de [asignación](../../destinations/ui/activate-batch-profile-destinations.md#mapping). El orden de los campos asignados en la IU se refleja en el orden de las columnas del archivo CSV exportado, de arriba a abajo, siendo la fila superior la columna situada más a la izquierda en el archivo CSV. <br/><br/> Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe. |
-| [!BADGE Beta]{type=Informative} Programaciones de exportación predeterminadas preseleccionadas para destinos por lotes | Experience Platform ahora establece automáticamente una programación predeterminada para cada exportación de archivo. Consulte la documentación sobre [exportaciones de público de programación](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) para obtener información sobre cómo modificar la programación predeterminada. <br/><br/> Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe. |
+| [!BADGE Beta]{type=Informative} Reordenar los campos de asignación para destinos por lotes | Ahora puede cambiar el orden de las columnas en sus exportaciones de CSV arrastrando y soltando los campos de asignación en el paso de [asignación](../../destinations/ui/activate-batch-profile-destinations.md#mapping). El orden de los campos asignados en la IU se refleja en el orden de las columnas del archivo CSV exportado, de arriba a abajo, siendo la fila superior la columna situada más a la izquierda en el archivo CSV. <br/><br/> Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe. |
+| [!BADGE Beta]{type=Informative} Programaciones de exportación predeterminadas preseleccionadas para destinos por lotes | Experience Platform ahora establece automáticamente una programación predeterminada para cada exportación de archivo. Consulte la documentación sobre [exportaciones de público de programación](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) para obtener información sobre cómo modificar la programación predeterminada. <br/><br/> Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe. |
 | [!BADGE Beta]{type=Informative} Editar programaciones de activación de público por lotes para destinos por lotes | Ahora puede editar de forma masiva la programación de activación para varios públicos desde la página [Datos de activación](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br/><br/> Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe. |
-| [!BADGE Beta]{type=Informative} Exporta archivos en lote bajo demanda a destinos por lotes | Ahora puede exportar públicos de forma masiva a destinos por lotes mediante la funcionalidad [exportar archivos bajo demanda](../../destinations/ui/export-file-now.md). <br/><br/> Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe. |
+| [!BADGE Beta]{type=Informative} Exportación masiva de archivos On-demand a destinos por lotes | Ahora puede exportar públicos de forma masiva a destinos por lotes mediante la funcionalidad [exportar archivos bajo demanda](../../destinations/ui/export-file-now.md). <br/><br/> Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe. |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## Zonas protegidas {#sandboxes}
 
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar aplicaciones de experiencia digital y hacer que evolucionen.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para responder a esta necesidad, Experience Platform proporciona zonas protegidas que dividen una única instancia de Experience Platform en entornos virtuales separados para ayudar a que se desarrollan y evolucionen las aplicaciones de experiencia digital.
 
 **Funciones nuevas o actualizadas**
 
@@ -115,7 +115,7 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 | Función | Descripción |
 | ------- | ----------- |
-| Públicos de la cuenta | Los públicos de cuenta ya están disponibles de forma general. Ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas en las ediciones B2B y B2P de Real-Time Customer Experience Platform. Esta versión permite utilizar públicos basados en personas como predicado para públicos basados en cuentas, añade funcionalidades de búsqueda, admite el uso de entidades personalizadas y cumple con la gobernanza de datos. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/types/account-audiences.md). |
+| Públicos de la cuenta | Los públicos de cuenta ya están disponibles de forma general. Ahora puede utilizar la segmentación de cuentas para proporcionar facilidad y sofisticación totales de la experiencia de segmentación de marketing de públicos basados en personas a públicos basados en cuentas en las ediciones B2B y B2P de Real-Time Customer Experience Platform. Esta versión permite utilizar públicos basados en personas como predicado para públicos basados en cuentas, añade funcionalidades de búsqueda, admite el uso de entidades personalizadas y cumple con la gobernanza de datos. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom] origen | Use la [[!DNL Acxiom Prospecting Data Import] fuente](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) para recuperar y asignar datos del servicio del cliente potencial [!DNL Acxiom] a Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom] origen | Use la [[!DNL Acxiom Prospecting Data Import] fuente](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) para recuperar y asignar datos del servicio del cliente potencial [!DNL Acxiom] a Experience Platform. |
 
 {style="table-layout:auto"}
 

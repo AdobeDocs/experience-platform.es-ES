@@ -3,9 +3,9 @@ title: 'Notas de la versión de Adobe Experience Platform: marzo de 2025'
 description: Las notas de la versión de marzo de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1250'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 [!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
-**Nuevo o destinos actualizados** {#new-updated-destinations}
+**Destinos nuevos o actualizados** {#new-updated-destinations}
 
 | Destino | Descripción |
 | --- | --- |
@@ -53,7 +53,7 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 {style="table-layout:auto"}
 
-**Nuevo o funcionalidad actualizada** {#destinations-new-updated-functionality}
+**Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
 
 | Función | Descripción |
 | --- | --- |

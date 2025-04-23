@@ -3,9 +3,9 @@ title: 'Notas de la versión de Adobe Experience Platform: marzo de 2024'
 description: Las notas de la versión de marzo de 2024 de Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '1188'
+ht-degree: 100%
 
 ---
 
@@ -71,7 +71,7 @@ Para obtener más información acerca de la recopilación de datos, lea la [info
 
 [!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
-**Destinos nuevos o actualizados** {#new-updated-destinations}
+**Destinos nuevos o actualizados** {#new-updated-destinations}
 
 | Destino | Tipo | Descripción |
 | ----------- | --------- | ----------- |
@@ -102,7 +102,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Experience Platform, consulte la [descripción general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
@@ -126,8 +126,8 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Tipo | Descripción |
 | --- | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Nuevo | Utilice la [[!DNL Acxiom Data Ingestion] fuente](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) para ingerir datos de [!DNL Acxiom] en Real-time Customer Data Platform y enriquecer perfiles de origen. A continuación, puede usar sus perfiles de origen enriquecidos con [!DNL Acxiom] para mejorar los públicos y activarlos en todos los canales de marketing. <br> ![Origen de ingesta de datos de Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nuevo origen de ingesta de datos de Acxiom."){width="100" zoomable="yes"} <br> Lea la [[!DNL Acxiom Data Ingestion] información general](../../sources/connectors/data-partners/acxiom-data-ingestion.md) para obtener información sobre cómo empezar. |
-| [!BADGE Beta]{type=Informative} [!DNL Stripe] | Nuevo | Use [[!DNL Stripe] fuente](../../sources/connectors/payments/stripe.md) para ingerir en Experience Platform los datos capturados durante el flujo de compra por sus clientes. Una vez ingeridos, puede utilizar estos datos para crear ofertas personalizadas y desbloquear perspectivas comerciales más enriquecidas. <br> ![La fuente de Stripe.](../2024/assets/march/stripe.png "Nuevo origen de Stripe."){width="100" zoomable="yes"} <br> Lea la [[!DNL Stripe] información general](../../sources/connectors/payments/stripe.md) para obtener información sobre cómo empezar. |
+| [!BADGE Beta]{type=Informative}[!DNL Acxiom Data Ingestion] | Nuevo | Utilice la [[!DNL Acxiom Data Ingestion] fuente](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) para ingerir datos de [!DNL Acxiom] en Real-time Customer Data Platform y enriquecer perfiles de origen. A continuación, puede usar sus perfiles de origen enriquecidos con [!DNL Acxiom] para mejorar los públicos y activarlos en todos los canales de marketing. <br> ![Origen de ingesta de datos de Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nuevo origen de ingesta de datos de Acxiom."){width="100" zoomable="yes"} <br> Lea la [[!DNL Acxiom Data Ingestion] información general](../../sources/connectors/data-partners/acxiom-data-ingestion.md) para obtener información sobre cómo empezar. |
+| [!BADGE Beta]{type=Informative}[!DNL Stripe] | Nuevo | Use [[!DNL Stripe] fuente](../../sources/connectors/payments/stripe.md) para ingerir en Experience Platform los datos capturados durante el flujo de compra por sus clientes. Una vez ingeridos, puede utilizar estos datos para crear ofertas personalizadas y desbloquear perspectivas comerciales más enriquecidas. <br> ![La fuente de Stripe.](../2024/assets/march/stripe.png "Nuevo origen de Stripe."){width="100" zoomable="yes"} <br> Lea la [[!DNL Stripe] información general](../../sources/connectors/payments/stripe.md) para obtener información sobre cómo empezar. |
 | Compatibilidad con la IU para [!DNL Snowflake Streaming] | Nuevo | Ahora puede usar el [[!DNL Snowflake Streaming] origen](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) en la IU de Experience Platform para transmitir datos desde la base de datos de [!DNL Snowflake]. <br> ![La fuente de streaming de Snowflake.](../2024/assets/march/snowflake-streaming.png "Nueva fuente de streaming de Snowflake."){width="100" zoomable="yes"} <br> Lea la [[!DNL Snowflake Streaming] información general](../../sources/connectors/databases/snowflake-streaming.md) para obtener información sobre cómo empezar. |
 
 {style="table-layout:auto"}

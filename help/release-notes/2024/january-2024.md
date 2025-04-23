@@ -3,9 +3,9 @@ title: Notas de la versión de Adobe Experience Platform, enero de 2024
 description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '1658'
+ht-degree: 100%
 
 ---
 
@@ -43,9 +43,9 @@ Para empezar a usar [!UICONTROL Manuales de tácticas de casos de uso], lea las 
 
 ## Control de acceso basado en atributos {#abac}
 
-El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Experience Platform específicos de su organización.
+El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios específicos de Experience Platform de su organización.
 
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y otros tipos personalizados de datos en todos los flujos de trabajo y recursos de Experience Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a datos personales confidenciales (SPD), información de identificación personal (PII) y otro tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
 
 **Documentación nueva o actualizada**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Ver SQL | Ahora puede ver el SQL subyacente a sus perfiles, audiencias, destinos y perspectivas personalizadas con la opción Ver SQL y, a continuación, ejecutar la consulta bajo demanda mediante el Editor de consultas. El acceso al SQL que alimenta las perspectivas de Real-time Customer Data Platform le ayuda a comprender la lógica detrás del análisis del modelo de datos. Esta transparencia hace que los datos de Real-time CDP de su Adobe sean más accesibles, comprensibles e impactantes para la toma de decisiones.<br>Inspírese con el SQL de más de 40 perspectivas existentes para crear nuevas consultas que obtengan perspectivas únicas de los datos de Experience Platform en función de sus necesidades comerciales. El SQL también está disponible para las perspectivas de [Perfiles](../../dashboards/insights/profiles.md), [Públicos](../../dashboards/insights/audiences.md) y [Destinos](../../dashboards/insights/destinations.md) de la documentación de Experience League. Estos documentos destacan los casos de uso empresarial que se pueden responder con las perspectivas estándar. Para obtener más información, lea la guía de [visualización de SQL de datos](../../dashboards/view-sql.md). |
+| Ver SQL | Ahora puede ver el SQL subyacente a sus perfiles, audiencias, destinos y perspectivas personalizadas con la opción Ver SQL y, a continuación, ejecutar la consulta bajo demanda mediante el Editor de consultas. El acceso al SQL que alimenta las perspectivas de Real-time Customer Data Platform le ayuda a comprender la lógica detrás del análisis del modelo de datos. Esta transparencia hace que los datos de Real-time CDP de su Adobe sean más accesibles, comprensibles e impactantes para la toma de decisiones.<br>Inspírese en el SQL de más de 40 perspectivas existentes para crear nuevas consultas que obtengan perspectivas únicas de los datos de Experience Platform en función de sus necesidades comerciales. El SQL también está disponible para las perspectivas de [Perfiles](../../dashboards/insights/profiles.md), [Públicos](../../dashboards/insights/audiences.md) y [Destinos](../../dashboards/insights/destinations.md) de la documentación de Experience League. Estos documentos destacan los casos de uso empresarial que se pueden responder con las perspectivas estándar. Para obtener más información, lea la guía de [visualización de SQL de datos](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -181,8 +181,8 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] fuentes | Utilice las integraciones de [!DNL Oracle NetSuite] en el catálogo de fuentes para llevar los datos de sus cuentas de [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) y [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) a Experience Platform. |
-| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] origen | Utilice la integración de [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) en el catálogo de fuentes para llevar los datos de su cuenta de [!DNL Braze] a Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] origen | Utilice las integraciones de [!DNL Oracle NetSuite] en el catálogo de fuentes para llevar los datos de sus cuentas de [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) y [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) a Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] origen | Utilice la integración de [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) en el catálogo de fuentes para llevar los datos de su cuenta de [!DNL Braze] a Experience Platform. |
 | Compatibilidad con la autenticación de par de claves para la fuente por lotes de [!DNL Snowflake] | Ahora puede usar la autenticación de par de claves al crear una nueva cuenta de [!DNL Snowflake] para los datos por lotes. Para obtener más información, lea la guía de [creación de una cuenta de [!DNL Snowflake] mediante la API](../../sources/tutorials/api/create/databases/snowflake.md) o la guía de [creación de una cuenta de [!DNL Snowflake] mediante la IU](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}
