@@ -2,7 +2,7 @@
 title: Creación y configuración de flujos de datos
 description: Obtenga información sobre cómo conectar la integración del SDK web del lado del cliente con otros productos de Adobe y destinos de terceros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 48%
@@ -81,7 +81,7 @@ La información de dispositivo y hardware utiliza la cadena de matriz `"device"`
 
 Además, asegúrese de que cada campo XDM deseado exista en el esquema. Si no es así, puede agregar el grupo de campos `Environment Details` proporcionado por Adobe a su esquema.
 
-### Configurar opciones avanzadas {#@advanced-options}
+### Configuración de opciones avanzadas {#advanced-options}
 
 Para mostrar las opciones de configuración avanzadas, seleccione **[!UICONTROL Opciones avanzadas]**. Aquí puede configurar ajustes adicionales del flujo de datos, como la confusión de IP, las cookies de ID de origen, etc.
 
