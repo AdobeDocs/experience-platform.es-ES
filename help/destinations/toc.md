@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
+source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1286'
 ht-degree: 6%
 
 ---
@@ -243,6 +243,7 @@ ht-degree: 6%
          * [Funciones de transformación compatibles](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [Configuración de formato de archivo](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Componentes de configuración de destino {#destination-configuration}
+         * [Configurar tipo de datos de audiencia](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
          * [Configuración de autenticación del cliente](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [Autorización de OAuth2](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Campos de datos del cliente](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
