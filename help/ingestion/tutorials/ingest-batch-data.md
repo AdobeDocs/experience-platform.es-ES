@@ -5,7 +5,7 @@ title: Ingesta De Datos En Experience Platform
 type: Tutorial
 description: Adobe Experience Platform permite importar fácilmente datos como archivos por lotes en forma de archivos de Parquet o datos que se ajusten a un esquema conocido de Experience Data Model (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -78,7 +78,7 @@ En la ficha Información también se encuentra la opción **[!UICONTROL Perfil]*
 
 ![Actividad del conjunto de datos](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Habilitar conjunto de datos para [!DNL Real-Time Customer Profile]
+## Habilitar conjunto de datos para [!DNL Real-Time Customer Profile] {#enable-for-profile}
 
 Los conjuntos de datos se utilizan para la ingesta de datos en [!DNL Experience Platform], y en última instancia esos datos se utilizan para identificar a las personas y unir información proveniente de múltiples fuentes. Esa información unida se denomina [!DNL Real-Time Customer Profile]. Para que [!DNL Experience Platform] sepa qué información debe incluirse en [!DNL Real-Time Profile], los conjuntos de datos se pueden marcar para su inclusión mediante la opción **[!UICONTROL Perfil]**.
 
