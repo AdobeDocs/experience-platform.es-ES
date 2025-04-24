@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;ingesta por lotes;ingesta por lotes;ingesta;guía para desarrolladores;guía de api;cargar;ingesta de parquet;ingesta de json;
+keywords: Experience Platform;inicio;temas populares;ingesta por lotes;ingesta por lotes;ingesta;guía para desarrolladores;guía de api;cargar;ingesta de Parquet;ingesta de json;
 solution: Experience Platform
 title: Guía API de ingesta por lotes
 description: Este documento proporciona una guía completa para los desarrolladores que trabajan con las API de ingesta por lotes para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2435'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,9 @@ Antes de continuar, revise la [descripción general de la API de ingesta por lot
 
 >[!NOTE]
 >
->Los siguientes pasos son aplicables a archivos pequeños (256 MB o menos). Si supera el tiempo de espera de una puerta de enlace o solicita errores de tamaño de cuerpo, debe cambiar a una carga de archivo grande.
+>- Los siguientes pasos son aplicables a archivos pequeños (256 MB o menos). Si supera el tiempo de espera de una puerta de enlace o solicita errores de tamaño de cuerpo, debe cambiar a una carga de archivo grande.
+>
+>- Utilice JSON de una sola línea en lugar de JSON de varias líneas como entrada para la ingesta por lotes. El JSON de una sola línea ofrece un mejor rendimiento, ya que el sistema puede dividir un archivo de entrada en varios fragmentos y procesarlos en paralelo, mientras que el JSON de varias líneas no se puede dividir. Esto puede reducir significativamente los costes de procesamiento de datos y mejorar la latencia de procesamiento por lotes.
 
 ### Crear lote
 
@@ -405,7 +407,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Cargar fragmentos de archivo grandes
 
-Ahora que se ha creado el archivo, se pueden cargar todos los fragmentos posteriores realizando solicitudes repetidas al PATCH, una para cada sección del archivo.
+Ahora que el archivo se ha creado, todos los fragmentos posteriores se pueden cargar realizando repetidas solicitudes PATCH, una para cada sección del archivo.
 
 **Formato de API**
 
@@ -720,7 +722,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminar un lote {#delete-a-batch}
 
-Se puede eliminar un lote realizando la siguiente solicitud de POST con el parámetro de consulta `action=REVERT` al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, por lo que es apto para la recolección de basura. El lote se recopilará asincrónicamente, momento en el que se marcará como &quot;eliminado&quot;.
+Se puede eliminar un lote realizando la siguiente petición POST con el parámetro de consulta `action=REVERT` al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, por lo que es apto para la recolección de basura. El lote se recopilará asincrónicamente, momento en el que se marcará como &quot;eliminado&quot;.
 
 **Formato de API**
 
