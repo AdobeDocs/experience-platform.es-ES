@@ -4,9 +4,9 @@ title: Editar flujos de datos de activación
 type: Tutorial
 description: Siga los pasos de este artículo para editar un flujo de datos de activación existente en Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: ca33131c505803b74075f6d8331095b016a301a0
+source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,12 @@ ht-degree: 0%
 
 En Adobe Experience Platform, puede configurar varios componentes de flujos de datos de activación existentes en destinos como, por ejemplo:
 
-* [Habilitar o deshabilitar](#enable-disable-dataflows) flujos de datos de activación;
-* [Agregar audiencias y atributos de perfil adicionales](#add-audiences) a flujos de datos de activación;
-* [Agregar conjuntos de datos adicionales](#add-datasets) a flujos de trabajo de activación;
-* [Editar nombres y descripciones](#edit-names-descriptions) para sus flujos de datos de activación;
+* [Habilitar o deshabilitar](#enable-disable-dataflows) flujos de datos de activación
+* [Agregar audiencias adicionales](#add-audiences) a flujos de datos de activación
+* [Editar atributos e identidades asignados](#edit-mapped-attributes)
+* [Editar la programación de activación y la frecuencia de exportación](#edit-schedule-frequency)
+* [Agregar conjuntos de datos adicionales](#add-datasets) a flujos de trabajo de activación
+* [Editar nombres y descripciones](#edit-names-descriptions) para sus flujos de datos de activación
 
 <!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
@@ -26,7 +28,7 @@ En Adobe Experience Platform, puede configurar varios componentes de flujos de d
 
 Siga los pasos a continuación para examinar los flujos de datos de activación existentes e identificar el que desea editar.
 
-1. Inicie sesión en la [interfaz de usuario del Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Examinar]** en el encabezado superior para ver los flujos de datos de destino existentes.
+1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Examinar]** en el encabezado superior para ver los flujos de datos de destino existentes.
 
    ![Destinos de exploración](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -44,19 +46,61 @@ Siga los pasos a continuación para examinar los flujos de datos de activación 
 
 Utilice la opción **[!UICONTROL Habilitado]/[!UICONTROL Deshabilitado]** para iniciar o pausar todas las exportaciones de datos al destino.
 
-![Imagen de la interfaz de usuario del Experience Platform que muestra la opción de ejecución de flujo de datos habilitada/deshabilitada.](../assets/ui/edit-activation/enable-toggle.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra la opción de ejecución de flujo de datos habilitada/deshabilitada.](../assets/ui/edit-activation/enable-toggle.png)
 
 ## Añadir audiencias a un flujo de datos de activación {#add-audiences}
 
-Seleccione **[!UICONTROL Activar audiencias]** en el carril derecho para cambiar qué audiencias o atributos de perfil se enviarán al destino. Esta acción le lleva al flujo de trabajo de activación, que difiere según el tipo de destino.
+Seleccione **[!UICONTROL Activar audiencias]** en el carril derecho para cambiar las audiencias que se enviarán al destino. Esta acción lo lleva al flujo de trabajo de activación.
 
-![Imagen de la interfaz de usuario del Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
 
-Para obtener más información sobre los flujos de trabajo de activación para cada tipo de destino, consulte las siguientes guías:
+En el paso **[!UICONTROL Seleccionar audiencias]** del flujo de trabajo de activación, puede quitar audiencias existentes o agregar nuevas audiencias al flujo de trabajo de activación.
 
-* [Activar audiencias en destinos de flujo continuo](./activate-segment-streaming-destinations.md) (por ejemplo, Facebook o Twitter);
+El flujo de trabajo de activación difiere ligeramente según el tipo de destino. Para obtener más información sobre los flujos de trabajo de activación para cada tipo de destino, lea las siguientes guías:
+
+* [Activar audiencias en destinos de streaming](./activate-segment-streaming-destinations.md) (por ejemplo, Facebook o Twitter);
 * [Activar audiencias para destinos de exportación de perfiles por lotes](./activate-batch-profile-destinations.md) (por ejemplo, Amazon S3 o Oracle Eloqua);
 * [Activar audiencias en destinos de exportación de perfiles de streaming](./activate-streaming-profile-destinations.md) (por ejemplo, API HTTP o Amazon Kinesis).
+
+## Editar la programación de activación y la frecuencia de exportación {#edit-schedule-frequency}
+
+Seleccione **[!UICONTROL Activar audiencias]** en el carril derecho. Esta acción lo lleva al flujo de trabajo de activación.
+
+![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
+
+Seleccione el paso **[!UICONTROL Scheduling]** del flujo de trabajo de activación para editar la programación de activación y la frecuencia de exportación del flujo de datos. Este paso le permite configurar la frecuencia con la que se exportan los datos al destino.
+
+En el paso **[!UICONTROL Scheduling]** del flujo de trabajo de activación, puede:
+* Ajuste la frecuencia de exportación.
+* Establezca o modifique las fechas de inicio y finalización del flujo de datos de activación, etc.
+
+Las operaciones de programación que puede realizar varían ligeramente según el tipo de destino. Para obtener más información sobre los flujos de trabajo de activación para cada tipo de destino, lea las siguientes guías:
+
+* [Activar audiencias en destinos de streaming](./activate-segment-streaming-destinations.md) (por ejemplo, Facebook o Twitter);
+* [Activar audiencias para destinos de exportación de perfiles por lotes](./activate-batch-profile-destinations.md) (por ejemplo, Amazon S3 o Oracle Eloqua);
+* [Activar audiencias en destinos de exportación de perfiles de streaming](./activate-streaming-profile-destinations.md) (por ejemplo, API HTTP o Amazon Kinesis).
+
+## Editar atributos e identidades asignados {#edit-mapped-attributes}
+
+Seleccione **[!UICONTROL Activar audiencias]** en el carril derecho. Esta acción lo lleva al flujo de trabajo de activación.
+
+![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
+
+Seleccione el paso **[!UICONTROL Mapping]** del flujo de trabajo de activación para editar los atributos e identidades asignados al flujo de datos de activación. Esto le permite ajustar qué atributos e identidades de perfil se deben exportar al destino.
+
+En el paso **[!UICONTROL Mapping]** del flujo de trabajo de activación, puede:
+
+* Agregue nuevos atributos o identidades a la asignación.
+* Elimine atributos o identidades existentes de la asignación.
+* Ajuste el orden de las asignaciones para definir el orden de las columnas en los archivos exportados.
+
+El flujo de trabajo de activación difiere ligeramente según el tipo de destino. Para obtener más información sobre los flujos de trabajo de activación para cada tipo de destino, lea las siguientes guías:
+
+* [Activar audiencias en destinos de streaming](./activate-segment-streaming-destinations.md) (por ejemplo, Facebook o Twitter);
+* [Activar audiencias para destinos de exportación de perfiles por lotes](./activate-batch-profile-destinations.md) (por ejemplo, Amazon S3 o Oracle Eloqua);
+* [Activar audiencias en destinos de exportación de perfiles de streaming](./activate-streaming-profile-destinations.md) (por ejemplo, API HTTP o Amazon Kinesis).
+
+
 
 ## Adición de conjuntos de datos a un flujo de datos de activación {#add-datasets}
 
@@ -66,7 +110,9 @@ Seleccione **[!UICONTROL Exportar conjuntos de datos]** en el carril derecho par
 >
 >Esta opción solo está visible para [destinos que admiten la exportación del conjunto de datos](export-datasets.md#supported-destinations).
 
-![Imagen de la interfaz de usuario del Experience Platform que muestra la opción Exportar conjuntos de datos del flujo de datos.](../assets/ui/edit-activation/export-datasets.png)
+![Imagen de la interfaz de usuario de Experience Platform que muestra la opción de ejecución Exportar conjuntos de datos del flujo de datos.](../assets/ui/edit-activation/export-datasets.png)
+
+
 
 <!-- ## Apply access labels {#apply-access-labels}
 
