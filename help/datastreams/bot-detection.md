@@ -2,9 +2,9 @@
 title: Configuración de la detección de bots para flujos de datos
 description: Aprenda a configurar la detección de bots para flujos de datos a fin de diferenciar el tráfico humano del no humano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 El tráfico no humano procedente de programas automatizados, raspadores web, arañas y escáneres con secuencias de comandos puede dificultar la identificación de eventos de visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos.
 
-La detección de bots le permite identificar eventos generados por [SDK web](../web-sdk/home.md), [SDK móvil](https://developer.adobe.com/client-sdks/home/) y [[!DNL Server API]](../server-api/overview.md) como generados por arañas web y bots conocidos.
+La detección de bots le permite identificar eventos generados por [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) y [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) como generados por arañas web y bots conocidos.
 
 Al configurar la detección de bots para los flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud para clasificarlos como eventos de bots. Esto ayuda a proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil.
 
-Cuando una solicitud al Edge Network coincide con cualquiera de las reglas de detección de bots, el esquema XDM se actualiza con una puntuación de bots (siempre establecida en 1), como se muestra a continuación:
+Cuando una solicitud a Edge Network coincide con cualquiera de las reglas de detección de bots, el esquema XDM se actualiza con una puntuación de bots (siempre establecida en 1), como se muestra a continuación:
 
 ```json
 {
@@ -33,9 +33,9 @@ Esta puntuación de bots ayuda a las soluciones que reciben la solicitud a ident
 >
 >La detección de bots no elimina ninguna solicitud de bots. Solo actualiza el esquema XDM con la puntuación de bots y reenvía el evento al [servicio de secuencia de datos](configure.md) que configuró.
 >
->Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) y no usa la puntuación establecida por el Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
+>Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) y no usa la puntuación establecida por Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
 
-Las reglas de detección de bots pueden tardar hasta 15 minutos en propagarse por el Edge Network una vez creadas.
+Las reglas de detección de bots pueden tardar hasta 15 minutos en propagarse por Edge Network después de crearse.
 
 ## Requisitos previos {#prerequisites}
 

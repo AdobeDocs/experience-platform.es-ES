@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
 description: Las notas de la versión de agosto de 2022 de Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 26%
+source-wordcount: '2014'
+ht-degree: 27%
 
 ---
 
@@ -94,7 +94,7 @@ Para obtener más información acerca de [!DNL Data Prep], vea la [[!DNL Data Pr
 
 | Función | Descripción |
 | ----------- | ----------- |
-| (Beta) Compatibilidad de personalización basada en atributos para destinos de personalización | Con la versión beta de la personalización basada en atributos, verá dos nuevas tarjetas en el [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: este conector está actualmente en versión beta y solo está disponible para un número selecto de clientes. Además de la funcionalidad proporcionada por la tarjeta de Adobe Target V1, el conector de Target V2 agrega un [paso de asignación](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a Adobe Target, lo que permite la personalización de la misma página y de la página siguiente basada en atributos.</li><li>**[!UICONTROL Personalization personalizado con atributos]**: este conector está actualmente en versión beta y solo está disponible para un número determinado de clientes. Además de la funcionalidad proporcionada por **[!UICONTROL Personalization personalizado]**, el conector **[!UICONTROL Personalization personalizado con atributos]** agrega un paso de asignación [opcional](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a su destino de personalización personalizado, lo que permite la personalización de la misma página y de la siguiente página basada en atributos.</li></ul> <br> Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Personalization personalizado con atributos]** requiere que use la [API de Edge Network Server](../../server-api/overview.md) para la recopilación de datos. Además, todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../server-api/authentication.md). |
+| (Beta) Compatibilidad de personalización basada en atributos para destinos de personalización | Con la versión beta de la personalización basada en atributos, verá dos nuevas tarjetas en el [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: este conector está actualmente en versión beta y solo está disponible para un número selecto de clientes. Además de la funcionalidad proporcionada por la tarjeta de Adobe Target V1, el conector de Target V2 agrega un [paso de asignación](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a Adobe Target, lo que permite la personalización de la misma página y de la página siguiente basada en atributos.</li><li>**[!UICONTROL Personalization personalizado con atributos]**: este conector está actualmente en versión beta y solo está disponible para un número determinado de clientes. Además de la funcionalidad proporcionada por **[!UICONTROL Personalization personalizado]**, el conector **[!UICONTROL Personalization personalizado con atributos]** agrega un paso de asignación [opcional](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a su destino de personalización personalizado, lo que permite la personalización de la misma página y de la siguiente página basada en atributos.</li></ul> <br> Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Personalization personalizado con atributos]** requiere que use la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) para la recopilación de datos. Además, todas las llamadas a la API de Edge Network deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Experience Platform, consulte la [descripción general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
 
 ## Perfil del cliente en tiempo real {#profile}
 

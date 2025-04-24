@@ -3,7 +3,7 @@ title: Integración de la extensión de API de eventos web de Adobe TikTok
 description: Esta API de eventos web de Adobe Experience Platform le permite compartir interacciones de sitios web directamente con TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Información general sobre la extensión API de eventos web [!DNL TikTok]
 
-La API de eventos [!DNL TikTok] es una interfaz segura [API de Edge Network Server](/help/server-api/overview.md) que le permite compartir información con [!DNL TikTok] directamente sobre las acciones del usuario en sus sitios web. Puede aprovechar las reglas de reenvío de eventos para enviar datos de [!DNL Adobe Experience Platform Edge Network] a [!DNL TikTok] mediante la extensión de API de eventos web [!DNL TikTok].
+La API de eventos [!DNL TikTok] es una interfaz segura [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) que te permite compartir información con [!DNL TikTok] directamente sobre las acciones del usuario en tus sitios web. Puede aprovechar las reglas de reenvío de eventos para enviar datos de [!DNL Adobe Experience Platform Edge Network] a [!DNL TikTok] mediante la extensión de API de eventos web [!DNL TikTok].
 
 ## [!DNL TikTok] requisitos previos {#prerequisites}
 
@@ -82,7 +82,7 @@ Los parámetros de contexto de usuario contienen información de cliente que se 
 | Agente de usuario | El agente de usuario sin hash del dispositivo del usuario. |
 | Correo electrónico | Dirección de correo electrónico del contacto asociado con el evento de conversión. |
 | Teléfono | El número de teléfono debe tener el formato E164 [+][código de país][código de área][local phone number] antes del hash. |
-| ID de cookies | Si utiliza el SDK de píxeles guardará automáticamente un identificador único en la cookie `_ttp`, en caso de que las cookies estén habilitadas. El valor `_ttp` se puede extraer y utilizar para este campo. |
+| ID de cookies | Si usa Pixel SDK, guardará automáticamente un identificador único en la cookie `_ttp` si las cookies están habilitadas. El valor `_ttp` se puede extraer y utilizar para este campo. |
 | ID externo | Cualquier identificador único, como ID de usuario, ID de cookie externas, etc., debe tener un cifrado hash con SHA256. |
 | ID de clic TikTok | El `ttclid` que se agrega a la dirección URL de la página de aterrizaje cada vez que se selecciona un anuncio en [!DNL TikTok]. |
 | URL de página | La dirección URL de la página en el momento del evento. |
@@ -116,9 +116,9 @@ Utilice los parámetros de propiedades para configurar propiedades compatibles a
 
 ## Deduplicación de eventos {#deduplication}
 
-Se deberán configurar [!DNL TikTok] píxeles para la anulación de duplicación si utiliza el SDK de [!DNL TikTok] píxeles y la extensión de API de eventos web [!DNL TikTok] para enviar los mismos eventos a [!DNL TikTok].
+Se deberán configurar [!DNL TikTok] píxeles para la anulación de duplicación si utiliza tanto la SDK de [!DNL TikTok] píxeles como la extensión de API de eventos web [!DNL TikTok] para enviar los mismos eventos a [!DNL TikTok].
 
-La deduplicación no es necesaria si se envían distintos tipos de eventos desde el cliente y el servidor sin ninguna superposición. Para asegurarse de que los informes no se vean afectados negativamente, debe asegurarse de deduplicar cualquier evento único compartido por el SDK de píxeles [!DNL TikTok] y la extensión de API de eventos web [!DNL TikTok].
+La deduplicación no es necesaria si se envían distintos tipos de eventos desde el cliente y el servidor sin ninguna superposición. Para asegurarse de que los informes no se vean afectados negativamente, debe asegurarse de deduplicar cualquier evento único compartido por la SDK de [!DNL TikTok] píxeles y la extensión de API de eventos web [!DNL TikTok].
 
 Al enviar eventos compartidos, asegúrese de que cada evento incluya un ID de píxel, un ID de evento y un nombre. Se combinarán los eventos duplicados que llegan en un plazo de cinco minutos uno del otro. Si el campo de datos estaba ausente del primer evento, se combina con el evento posterior. Se eliminará cualquier evento duplicado recibido en un plazo de 48 horas.
 

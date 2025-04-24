@@ -1,22 +1,22 @@
 ---
-title: Personalización del lado del servidor mediante la API de Edge Network Server
-description: Este artículo muestra cómo puede utilizar la API de Edge Network Server para implementar la personalización del lado del servidor en las propiedades web.
+title: Personalización del lado del servidor mediante la API de Edge Network
+description: Este artículo muestra cómo puede utilizar la API de Edge Network para implementar la personalización del lado del servidor en las propiedades web.
 keywords: personalización; api de servidor; red perimetral; lado del servidor;
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '559'
 ht-degree: 2%
 
 ---
 
 
-# Personalización del lado del servidor mediante la API de Edge Network Server
+# Personalización del lado del servidor mediante la API de Edge Network
 
 ## Información general {#overview}
 
-La personalización del lado del servidor implica el uso de la [API de Edge Network Server](../../server-api/overview.md) para personalizar la experiencia del cliente en sus propiedades web.
+La personalización del lado del servidor implica el uso de la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) para personalizar la experiencia del cliente en sus propiedades web.
 
-En el ejemplo descrito en este artículo, el contenido de personalización se recupera en el lado del servidor mediante la API de servidor. A continuación, el HTML se procesa en el servidor, según el contenido de personalización recuperado.
+En el ejemplo descrito en este artículo, el contenido de personalización se recupera en el lado del servidor mediante la API de Edge Network. A continuación, HTML se procesa del lado del servidor en función del contenido de personalización recuperado.
 
 La siguiente tabla muestra un ejemplo de contenido personalizado y no personalizado.
 
@@ -37,12 +37,12 @@ Las cookies se utilizan para mantener la identidad del usuario y la información
 
 ### Solicitar ubicación {#request-placement}
 
-Las solicitudes de Personalization son necesarias para obtener propuestas y enviar una notificación de visualización. Al utilizar una implementación del lado del servidor, el servidor de aplicaciones realiza estas solicitudes a la API de Edge Network Server.
+Las solicitudes de Personalization son necesarias para obtener propuestas y enviar una notificación de visualización. Al utilizar una implementación del lado del servidor, el servidor de aplicaciones realiza estas solicitudes a la API de Edge Network.
 
 | Solicitud | Realizado por |
 |---|---|
-| Solicitud de interacción para recuperar propuestas | Servidor de aplicaciones llamando a la API de Edge Network Server. |
-| Solicitud de interacción para enviar notificaciones de visualización | Servidor de aplicaciones llamando a la API de Edge Network Server. |
+| Solicitud de interacción para recuperar propuestas | Servidor de aplicaciones que llama a la API de Edge Network. |
+| Solicitud de interacción para enviar notificaciones de visualización | Servidor de aplicaciones que llama a la API de Edge Network. |
 
 ## Aplicación de ejemplo {#sample-app}
 
@@ -68,7 +68,7 @@ En esta sección se describen los pasos utilizados para recuperar el contenido p
 
 1. [Express](https://expressjs.com/) se usa para una implementación ligera del lado del servidor. Esto administra las solicitudes y el enrutamiento básicos del servidor.
 2. El explorador solicita la página web. Se incluye cualquier cookie previamente almacenada por el explorador, con el prefijo `kndctr_`.
-3. Cuando se solicita la página desde el servidor de aplicaciones, se envía un evento al [extremo interactivo de recopilación de datos](../../../server-api/interactive-data-collection.md) para recuperar el contenido de personalización. La aplicación de ejemplo usa métodos de ayuda para simplificar la creación y el envío de solicitudes a la API (consulte [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). La solicitud `POST` contiene `event` y `query`. Las cookies del paso anterior, si están disponibles, se incluyen en la matriz `meta>state>entries`.
+3. Cuando se solicita la página desde el servidor de aplicaciones, se envía un evento al [extremo interactivo de recopilación de datos](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) para recuperar el contenido de personalización. La aplicación de ejemplo usa métodos de ayuda para simplificar la creación y el envío de solicitudes a la API (consulte [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). La solicitud `POST` contiene `event` y `query`. Las cookies del paso anterior, si están disponibles, se incluyen en la matriz `meta>state>entries`.
 
    ```js
    fetch(
@@ -148,7 +148,7 @@ En esta sección se describen los pasos utilizados para recuperar el contenido p
    ).then((res) => res.json());
    ```
 
-4. La oferta de Target de la actividad basada en formularios se lee de la respuesta y se utiliza al producir la respuesta del HTML.
+4. La oferta de Target de la actividad basada en formularios se lee de la respuesta y se utiliza al producir la respuesta de HTML.
 5. Para las actividades basadas en formularios, los eventos de visualización deben enviarse manualmente en la implementación para indicar cuándo se ha mostrado la oferta. En este ejemplo, la notificación se envía del lado del servidor, durante el ciclo de vida de la solicitud.
 
    ```js
@@ -196,5 +196,5 @@ En esta sección se describen los pasos utilizados para recuperar el contenido p
    }
    ```
 
-6. Las ofertas [!DNL Visual Experience Composer (VEC)] se omiten, ya que solo se pueden procesar mediante el SDK web.
-7. Cuando se devuelve la respuesta del HTML, el servidor de aplicaciones establece las cookies de identidad y de clúster en la respuesta.
+6. Las ofertas [!DNL Visual Experience Composer (VEC)] se omiten, ya que solo se pueden procesar mediante Web SDK.
+7. Cuando se devuelve la respuesta de HTML, el servidor de aplicaciones establece las cookies de identidad y de clúster en la respuesta.

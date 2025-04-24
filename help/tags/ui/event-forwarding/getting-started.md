@@ -3,10 +3,10 @@ title: Introducción al reenvío de eventos
 description: Siga este tutorial paso a paso para empezar a utilizar el reenvío de eventos en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 72%
+source-wordcount: '892'
+ht-degree: 71%
 
 ---
 
@@ -24,7 +24,7 @@ Para utilizar el reenvío de eventos en Adobe Experience Platform, los datos deb
 
 * [SDK web de Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
 * [SDK móvil de Adobe Experience Platform](https://sdkdocs.com)
-* [API del servidor de red perimetral](/help/server-api/overview.md)
+* [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDK y Experience Platform Mobile SDK no requieren implementación a través de etiquetas en Adobe Experience Platform. Sin embargo, el método recomendado es utilizar etiquetas para implementar estos SDK.
@@ -35,7 +35,7 @@ Después de enviar datos a Edge Network, puede activar las soluciones de Adobe p
 
 * Adobe Real-Time CDP Connections, Prime o Ultimate (póngase en contacto con el equipo de su cuenta de Adobe para conocer los precios)
 * Reenvío de eventos en Adobe Experience Platform
-* Adobe Experience Platform Web SDK, Mobile SDK o la API de servidor de Edge Network configuradas para enviar datos a Edge Network
+* Adobe Experience Platform Web SDK, Mobile SDK o la API de Edge Network configuradas para enviar datos a Edge Network
 * Los datos deben asignarse al modelo de datos de experiencia (XDM) (esta asignación puede realizarse utilizando etiquetas)
 
 ## Creación de un esquema XDM
@@ -54,7 +54,7 @@ En Adobe Experience Platform, puede crear su propio esquema.
 
 1. Guarde el esquema y anote el nombre que le ha asignado.
 
-Para obtener más información sobre esquemas, consulte la [Ayuda del sistema del modelo de datos de Experience (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es).
+Para obtener más información sobre esquemas, consulte la [Ayuda del sistema del Modelo de datos de experiencia (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es).
 
 ## Crear una propiedad de reenvío de eventos
 
@@ -130,7 +130,7 @@ Para otro ejemplo, puede crear una regla que envíe la capa de datos a Edge si e
 
 Con lo siguiente, ahora podrá crear reglas de reenvío de eventos para reenviar datos a destinos que no son de Adobe.
 
-* Esquema del modelo de datos de Experience (tenga en cuenta el nombre que le ha asignado).
+* Esquema del Modelo de datos de experiencia (tenga en cuenta el nombre que le ha asignado).
 * Una propiedad de reenvío de eventos (realice un seguimiento del ID de propiedad y los ID de entorno).
 * Un conjunto de datos (observe el ID de entorno, que no debe confundirse con el ID de entorno del reenvío de eventos).
 * Una propiedad de etiqueta

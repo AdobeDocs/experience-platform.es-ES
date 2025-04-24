@@ -3,7 +3,7 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '2288'
 ht-degree: 5%
@@ -199,7 +199,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 
 - Se agregó compatibilidad con [Página por migración completa de página](home.md#migrating-to-web-sdk). El perfil de Adobe Target ahora se conservará cuando un visitante se mueva entre páginas de at.js y de Web SDK.
 - Se agregó compatibilidad configurable para [sugerencias de cliente de agente de usuario de alta entropía](/help/web-sdk/use-cases/client-hints.md).
-- Se agregó compatibilidad con el comando [`applyResponse`](/help/web-sdk/commands/applyresponse.md). Esto habilita la personalización híbrida mediante la [API de servidor de Edge Network](../server-api/overview.md).
+- Se agregó compatibilidad con el comando [`applyResponse`](/help/web-sdk/commands/applyresponse.md). Esto habilita la personalización híbrida a través de la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/).
 - Los vínculos del modo de control de calidad ahora funcionan en varias páginas.
 
 **Correcciones y mejoras**

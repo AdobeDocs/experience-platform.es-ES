@@ -3,9 +3,9 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
@@ -150,9 +150,9 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 >[!IMPORTANT]
 >
->Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Custom Personalization]** requiere que use la [API de Edge Network Server](../../server-api/overview.md) al configurar el destino para la personalización basada en atributos. Todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../server-api/authentication.md).
+>Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Personalization personalizado]** requiere que uses la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) al configurar el destino para la personalización basada en atributos. Todas las llamadas a la API de Edge Network deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 >
-><br>Si ya utiliza Web SDK o Mobile SDK para la integración, puede recuperar atributos mediante la API de servidor agregando una integración del lado del servidor.
+><br>Si ya utiliza Web SDK o Mobile SDK para la integración, puede recuperar atributos mediante la API de Edge Network agregando una integración del lado del servidor.
 >
 ><br>Si no cumple los requisitos anteriores, la personalización se basará únicamente en el abono a audiencias.
 

@@ -3,7 +3,7 @@ title: Información general sobre la extensión API Snapchat Conversions
 description: Utilice la conversión de Snapchat para enviar datos de evento del lado del servidor a Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Información general sobre la extensión API de conversiones [!DNL Snapchat]
 
-La extensión de la API de conversión de [!DNL Snap] es una interfaz segura de [Edge Network Server API](/help/server-api/overview.md) que le permite compartir información con [!DNL Snapchat] directamente acerca de las acciones del usuario en sus sitios web. Puede aprovechar las reglas de reenvío de eventos para enviar datos de **[!DNL Adobe Experience Platform Edge Network]** a **[!DNL Snapchat]** mediante la extensión de API de conversión **[!DNL Snap]**.
+La extensión de la API de conversión de [!DNL Snap] es una interfaz segura de [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) que te permite compartir información con [!DNL Snapchat] directamente acerca de las acciones del usuario en tus sitios web. Puede aprovechar las reglas de reenvío de eventos para enviar datos de **[!DNL Adobe Experience Platform Edge Network]** a **[!DNL Snapchat]** mediante la extensión de API de conversión **[!DNL Snap]**.
 
 ## [!DNL Snapchat] requisitos previos {#prerequisites}
 

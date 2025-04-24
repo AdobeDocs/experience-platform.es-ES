@@ -3,9 +3,9 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ No, [Web SDK](../web-sdk/home.md) no es necesario para activar audiencias en [Ad
 
 Sin embargo, si se usa [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) en lugar de Web SDK, solo se admite la personalización de la sesión siguiente.
 
-Para los casos de uso de [personalización de la misma página y de la siguiente](ui/activate-edge-personalization-destinations.md), debe usar [Web SDK](../web-sdk/home.md) o la [API de Edge Network Server](../server-api/overview.md). Consulte la documentación sobre [activación de audiencias en destinos Edge](ui/activate-edge-personalization-destinations.md) para obtener más información sobre la implementación.
+Para los casos de uso de [personalización de la misma página y de la siguiente](ui/activate-edge-personalization-destinations.md), debe usar [Web SDK](../web-sdk/home.md) o la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Consulte la documentación sobre [activación de audiencias en destinos Edge](ui/activate-edge-personalization-destinations.md) para obtener más información sobre la implementación.
 +++
 
 ### ¿Hay un límite en el número de atributos que puedo enviar desde Real-time Customer Data Platform a Adobe Target o a un destino personalizado de Personalization?
@@ -244,10 +244,10 @@ Actualmente, esto no se admite en la IU de destinos. Si necesita ayuda en este c
 Al eliminar un destino, todas las audiencias y atributos asignados en dicho destino se eliminan de Adobe Target y también se eliminan de Edge Network.
 +++
 
-### ¿Funciona la integración con la API de servidor de Edge Network?
+### ¿Funciona la integración con la API de Edge Network?
 
 +++Respuesta
-Sí, la API de servidor de Edge Network funciona con el destino de Personalization personalizado. Dado que los atributos de perfil pueden contener datos confidenciales, para protegerlos, el destino de Personalization personalizado requiere que utilice la API de servidor de Edge Network para recopilar datos. Además, todas las llamadas de API deben realizarse en un [contexto autenticado](../server-api/authentication.md).
+Sí, la API de Edge Network funciona con el destino de Personalization personalizado. Dado que los atributos de perfil pueden contener datos confidenciales, para protegerlos, el destino de Personalization personalizado requiere que utilice la API de Edge Network para la recopilación de datos. Además, todas las llamadas de API deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 +++
 
 ### Solo puedo tener una política de combinación activa en Edge. ¿Puedo crear audiencias que utilicen una política de combinación diferente y seguir enviándolas a Adobe Target como audiencias de streaming?

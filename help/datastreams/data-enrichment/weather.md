@@ -2,9 +2,9 @@
 title: Mejore la recopilación de datos con datos meteorológicos de DNL The Weather Channel
 description: Mejore los datos que recopila a través de flujos de datos con datos meteorológicos de DNL The Weather Channel.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 68%
 
 ---
@@ -28,7 +28,7 @@ Hay tres tipos de datos disponibles en [!DNL The Weather Channel]:
 Antes de usar los datos meteorológicos, asegúrese de cumplir los siguientes requisitos:
 
 * Debe obtener una licencia de los datos meteorológicos que usará de [!DNL The Weather Channel]. A continuación los habilitarán en su cuenta.
-* Los datos meteorológicos solo están disponibles a través de secuencias de datos. Para usar datos meteorológicos, debe usar [!DNL Web SDK], [!DNL Mobile Edge Extension] o la [API de servidor](../../server-api/overview.md) para incluir estos datos.
+* Los datos meteorológicos solo están disponibles a través de secuencias de datos. Para usar datos meteorológicos, debes usar [!DNL Web SDK], [!DNL Mobile Edge Extension] o la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) para incluir estos datos.
 * La secuencia de datos debe tener la [[!UICONTROL Ubicación geográfica]](../configure.md#advanced-options) activada.
 * Agregue el [grupo de campos meteorológicos](#schema-configuration) al esquema que está utilizando.
 
@@ -66,7 +66,7 @@ En [!DNL Adobe Customer Journey Analytics], los datos meteorológicos están dis
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Los datos del tiempo están disponibles en [Real-time Customer Data Platform](../../rtcdp/overview.md) para su uso en audiencias. Los datos meteorológicos se adjuntan a los eventos.
+Los datos del tiempo están disponibles en [Real-Time Customer Data Platform](../../rtcdp/overview.md) para su uso en audiencias. Los datos meteorológicos se adjuntan a los eventos.
 
 ![Generador de segmentos que muestra eventos meteorológicos](../assets/data-enrichment/weather/schema-builder.png)
 
