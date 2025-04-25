@@ -1,15 +1,16 @@
 ---
-title: Redireccionamiento fuera del sitio de visitantes no autenticados
+title: Retargeting del lado del servidor no autenticado
 description: Obtenga información sobre cómo redireccionar usuarios no autenticados mediante ECID
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Retargeting no autenticado {#unauthenticated-retargeting}
+# Retargeting del lado del servidor no autenticado {#unauthenticated-retargeting}
 
 A medida que las cookies de terceros pierden eficacia, las empresas están realizando la transición a soluciones sin cookies para lograr una participación y un redireccionamiento personalizados. La resegmentación fuera del sitio permite a las empresas llegar a usuarios con muchas intenciones en función de sus interacciones anteriores, sin depender de JavaScript del lado del cliente.
 
