@@ -2,9 +2,9 @@
 title: Filtrado de datos de nivel de fila para una Source mediante la API de Flow Service
 description: Este tutorial trata los pasos sobre cómo filtrar datos en el nivel de origen mediante la API de Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1825'
 ht-degree: 5%
 
 ---
@@ -15,11 +15,12 @@ ht-degree: 5%
 >
 >Actualmente, la compatibilidad con el filtrado de datos de nivel de fila solo está disponible para las siguientes fuentes:
 >
+>* [[Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Marketo Engage] actividades estándar](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
->* [[!DNL Marketo Engage] actividades estándar](../../connectors/adobe-applications/marketo/marketo.md)
 
 Lea esta guía para ver los pasos sobre cómo filtrar los datos de nivel de fila para un origen mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
