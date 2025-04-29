@@ -2,10 +2,10 @@
 title: Crear audiencias con SQL
 description: Aprenda a utilizar la extensión de audiencia SQL en el Distiller de datos de Adobe Experience Platform para crear, administrar y publicar audiencias mediante comandos SQL. Esta guía cubre todos los aspectos del ciclo vital de la audiencia, incluida la creación, actualización y eliminación de perfiles, y el uso de definiciones de audiencia basadas en datos para dirigirse a destinos basados en archivos.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 1%
+source-wordcount: '1833'
+ht-degree: 2%
 
 ---
 
@@ -100,6 +100,97 @@ El siguiente ejemplo muestra cómo agregar perfiles a una audiencia existente co
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### Reemplazar datos de audiencia (INSERTAR SOBRESCRITURA) {#replace-audience}
+
+Utilice el comando `INSERT OVERWRITE INTO` para reemplazar todos los perfiles existentes en una audiencia con los resultados de una nueva consulta SQL. Este comando resulta útil para administrar segmentos de audiencia dinámicos, ya que le permite actualizar por completo el contenido de una audiencia en un solo paso.
+
+>[!AVAILABILITY]
+>
+>El comando `INSERT OVERWRITE INTO` solo está disponible para los clientes de Data Distiller. Para obtener más información sobre el complemento Data Distiller, póngase en contacto con su representante de Adobe.
+
+A diferencia de [`INSERT INTO`](#add-profiles-to-audience), que agrega a la audiencia actual, `INSERT OVERWRITE INTO` quita todos los miembros de la audiencia existentes e inserta solamente los devueltos por la consulta. Esto proporciona un mayor control y flexibilidad al administrar audiencias que requieren actualizaciones frecuentes o completas.
+
+Utilice la siguiente plantilla de sintaxis para sobrescribir una audiencia con un nuevo conjunto de perfiles:
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**Parámetros**
+
+En la tabla siguiente se explican los parámetros necesarios para el comando `INSERT OVERWRITE INTO`:
+
+| Parámetro | Descripción |
+|-----------|-------------|
+| `audience_name` | Nombre de la audiencia creada con el comando `CREATE AUDIENCE`. |
+| `select_query` | Una instrucción `SELECT` que define los perfiles que se incluirán en la audiencia. |
+
+**Ejemplo:**
+
+En este ejemplo, la audiencia `audience_monthly_refresh` se sobrescribe completamente con los resultados de la consulta. Los perfiles que no devuelva la consulta se eliminarán de la audiencia.
+
+>[!NOTE]
+>
+>Solo debe haber una carga por lotes asociada a la audiencia para que las operaciones de sobrescritura funcionen correctamente.
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### Comportamiento de sobrescritura de audiencia en el perfil del cliente en tiempo real
+
+Al sobrescribir una audiencia, el Perfil del cliente en tiempo real aplica la siguiente lógica para actualizar el abono al perfil:
+
+- Los perfiles que aparecen solo en el nuevo lote se marcan como introducidos.
+- Los perfiles que solo existían en el lote anterior se marcan como salientes.
+- Los perfiles presentes en ambos lotes se dejan sin cambiar (no se realiza ninguna operación).
+
+Esto garantiza que las actualizaciones de audiencia se reflejen con precisión en los sistemas y flujos de trabajo descendentes.
+
+**Ejemplo de escenario**
+
+Si la audiencia `A1` contiene originalmente:
+
+| ID | NOMBRE |
+|----|------|
+| A | Jack |
+| B | John |
+| C | Martha |
+
+Y la consulta de sobrescritura devuelve:
+
+| ID | NOMBRE |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+A continuación, la audiencia actualizada contendrá lo siguiente:
+
+| ID | NOMBRE |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Se elimina el perfil B, se actualiza el perfil A y el perfil C se mantiene sin cambios.
+
+Si la consulta de sobrescritura incluye un perfil nuevo:
+
+| ID | NOMBRE |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
+
+La audiencia final será:
+
+| ID | NOMBRE |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
 
 ### Ejemplo de audiencia del modelo RFM {#rfm-model-audience-example}
 
