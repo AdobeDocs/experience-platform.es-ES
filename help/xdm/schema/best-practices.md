@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3236'
 ht-degree: 1%
 
 ---
@@ -251,7 +251,7 @@ A continuación se muestra una colección de sugerencias para mantener la integr
 * **Aplicar patrones para valores coherentes**: Si los valores de identidad siguen un patrón específico, debe usar la configuración **[!UICONTROL Patrón]** para aplicar esta restricción. Esta configuración puede incluir reglas como solo dígitos, mayúsculas o minúsculas, o combinaciones de caracteres específicas. Utilice expresiones regulares para hacer coincidir patrones en las cadenas.
 * **Limitar eVars en esquemas de Analytics**: normalmente, un esquema de Analytics solo debe tener una eVar designada como identidad. Si tiene intención de utilizar más de una eVar como identidad, debe comprobar si la estructura de datos se puede optimizar.
 * **Asegúrese de que un campo seleccionado sea único**: el campo elegido debe ser único en comparación con la identidad principal del esquema. Si no es así, no la marque como identidad. Por ejemplo, si varios clientes pueden proporcionar la misma dirección de correo electrónico, ese área de nombres no es una identidad adecuada. Este principio también se aplica a otras áreas de nombres de identidad, como los números de teléfono. Marcar un campo no único como identidad podría provocar el colapso no deseado del perfil.
-* **Verificar la longitud mínima de las cadenas**: todos los campos de cadena deben tener al menos un carácter, ya que los valores de cadena nunca deben estar vacíos. Sin embargo, se aceptan valores nulos para los campos no obligatorios.
+* **Verificar la longitud mínima de las cadenas**: todos los campos de cadena deben tener al menos un carácter, ya que los valores de cadena nunca deben estar vacíos. Sin embargo, se aceptan valores nulos para los campos no obligatorios. Los nuevos campos de cadena tienen una longitud mínima de uno de forma predeterminada.
 
 ## Pasos siguientes
 

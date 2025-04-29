@@ -2,9 +2,9 @@
 title: Definir campos XDM en la API del Registro de esquemas
 description: Obtenga información sobre cómo definir diferentes campos al crear recursos de modelo de datos de experiencia (XDM) personalizados en la API de registro de esquemas.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1197'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Los campos [!UICONTROL Cadena] están indicados por `type: string`.
 Si lo desea, puede restringir qué tipos de valores se pueden introducir para la cadena mediante las siguientes propiedades adicionales:
 
 * `pattern`: un patrón regex para restringir.
-* `minLength`: una longitud mínima para la cadena.
+* `minLength`: una longitud mínima para la cadena. Las cadenas reciben un valor mínimo de `1` de forma predeterminada.
 * `maxLength`: una longitud máxima para la cadena.
 
 ```json
