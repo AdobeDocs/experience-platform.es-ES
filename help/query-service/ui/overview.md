@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de consultas
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
 workflow-type: tm+mt
-source-wordcount: '2276'
+source-wordcount: '2767'
 ht-degree: 1%
 
 ---
@@ -104,6 +104,50 @@ A medida que escribe en el Editor de consultas, el editor completa automáticame
 
 ![Área de trabajo del Editor de consultas.](../images/ui/overview/query-editor.png)
 
+### Descargar resultados de la consulta {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Las funciones de descarga solo están disponibles para los clientes con el complemento Data Distiller. Para obtener más información sobre Data Distiller, póngase en contacto con su representante de Adobe.
+
+Ahora puede descargar los resultados de la consulta directamente desde la interfaz de usuario del Editor de consultas. Después de una ejecución correcta de la consulta, puede descargar la salida en formato de archivo CSV, XLSX o JSON. Esta funcionalidad optimiza los flujos de trabajo para los equipos de marketing y análisis al permitir el acceso inmediato a los resultados de consultas para el análisis, la creación de informes y los procesos basados en Excel sin conexión.
+
+Para descargar los resultados de la consulta, seleccione **[!UICONTROL Descargar]** en la esquina superior derecha de la ficha **[!UICONTROL Resultado]** del editor de consultas. A continuación, elija **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** o **[!UICONTROL JSON]** en el menú desplegable. El archivo se descarga automáticamente en el equipo local.
+
+>[!NOTE]
+>
+>El botón **[!UICONTROL Descargar]** solo aparece cuando una consulta devuelve resultados. Si no se devuelve ningún registro, la ficha **[!UICONTROL Result]** muestra el mensaje &#39;No results&#39; y la opción de descarga está deshabilitada.
+
+![La ficha de resultados del Editor de consultas con el menú desplegable Descarga resaltado.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Al abrir un archivo CSV en Excel, puede que vea la siguiente advertencia: <br>&quot;Posible pérdida de datos. Es posible que se pierdan algunas características si guarda este libro en formato delimitado por comas (.csv). Para conservar estas funciones, guárdelo en formato de archivo de Excel&quot;.<br>Además, tenga en cuenta que el formato de fecha y hora puede variar según el tipo de archivo. Los archivos CSV conservan el formato mostrado en los resultados de la consulta, mientras que los archivos XLSX pueden aplicar formato localizado automáticamente en Excel.
+
+### Ver resultados en pantalla completa {#view-results}
+
+Después de ejecutar una consulta correcta, seleccione **[!UICONTROL Ver resultados]** en la ficha **[!UICONTROL Resultado]** para abrir una vista tabulada a pantalla completa de los resultados.
+
+La vista a pantalla completa muestra la salida en una cuadrícula de tamaño variable, lo que facilita la revisión de conjuntos de datos grandes y el análisis entre columnas. Este modo de vista previa es especialmente útil para analizar tablas anchas o revisar detalles de nivel de fila.
+
+>[!NOTE]
+>
+>La vista previa es de solo lectura y no modifica la consulta ni el conjunto de datos.
+
+![Cuadro de diálogo de vista previa a pantalla completa con la opción Ver resultados seleccionada.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copiar resultados {#copy-results}
+
+Utilice la función de copia mejorada en el Editor de consultas para copiar rápidamente los resultados de la consulta como valores separados por comas (CSV). Pegue fácilmente los datos copiados en aplicaciones de hoja de cálculo como Excel para un análisis más detallado. Esta funcionalidad mejora la legibilidad, conserva el formato y optimiza los flujos de trabajo de validación y creación de informes sin depender de herramientas de terceros.
+
+Puede copiar los resultados de la consulta desde la ficha [!UICONTROL Result] o desde la vista previa de resultados a pantalla completa. En la ficha **[!UICONTROL Resultado]**, seleccione el icono Copiar (![Un icono Copiar.](../../images/icons/copy.png)) para copiar todos los resultados de la consulta en el portapapeles. En la pestaña Resultados del editor de consultas, seleccione filas individuales o utilice el encabezado de columna de casilla de verificación para seleccionar todas las filas. Seleccione una sola fila para activar el icono de copia.
+
+![Pestaña de resultados del Editor de consultas con el icono de copia resaltado.](../images/ui/overview/query-editor-copy-icon.png)
+
+También puede seleccionar **[!UICONTROL Ver resultados]** para abrir la vista previa a pantalla completa. En este cuadro de diálogo, seleccione filas individuales o utilice la casilla de verificación de la esquina superior izquierda para seleccionar todas las filas y, a continuación, seleccione el icono de copia (![Un icono de copia.](../../images/icons/copy.png)) para copiar los datos seleccionados.
+
+![Cuadro de diálogo de vista previa a pantalla completa con filas de resultados seleccionadas y el icono de copia resaltado.](../images/ui/overview/results-copy.png)
+
 ## Consultas programadas {#scheduled-queries}
 
 Las consultas que ya se han guardado como plantilla se pueden programar para ejecutarse en una cadencia normal. Al programar una consulta, puede elegir la frecuencia de ejecuciones, la fecha de inicio y finalización, el día de la semana en que se ejecuta la consulta programada, así como el conjunto de datos al que exportar la consulta. Las programaciones de consultas se establecen mediante el Editor de consultas.
@@ -113,8 +157,6 @@ Para obtener información sobre cómo programar una consulta a través de la int
 Una vez programada una consulta, aparece en la lista de consultas programadas de la ficha [!UICONTROL Consultas programadas]. Para obtener todos los detalles sobre la consulta, las ejecuciones, el creador y los tiempos, seleccione una consulta programada en la lista.
 
 ![Área de trabajo Consultas con la ficha Consultas programadas resaltada y que muestra filas de programaciones de consultas.](../images/ui/overview/scheduled-queries.png)
-
-<!--  -->
 
 | Columna | Descripción |
 | --- | --- |

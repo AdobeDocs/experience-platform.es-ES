@@ -3,9 +3,9 @@ title: Modelos
 description: Modele la administración del ciclo vital con la extensión SQL de Data Distiller. Aprenda a crear, entrenar y administrar modelos estadísticos avanzados mediante SQL, incluidos procesos clave como versiones, evaluación y predicción de modelos, para obtener perspectivas procesables de sus datos.
 role: Developer
 exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
-source-git-commit: 6a61900b19543f110c47e30f4d321d0016b65262
+source-git-commit: 09129d9d19816b4d93b4979305f4ad532e5ffde4
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1645'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >Esta funcionalidad está disponible para los clientes que han adquirido el complemento Data Distiller. Para obtener más información, contacte con su representante de Adobe.
 
-El servicio de consulta ahora es compatible con los procesos principales de creación e implementación de un modelo. Puede utilizar SQL para entrenar el modelo con los datos, evaluar su precisión y, a continuación, aplicar el modelo de tren para hacer predicciones sobre los nuevos datos. A continuación, puede utilizar el modelo para generalizar a partir de los datos anteriores para tomar decisiones informadas sobre escenarios reales.
+El servicio de consulta ahora es compatible con los procesos principales de creación e implementación de un modelo. Puede utilizar SQL para entrenar el modelo con los datos, evaluar su precisión y, a continuación, utilizar el modelo entrenado para hacer predicciones sobre los nuevos datos. A continuación, puede utilizar el modelo para generalizar a partir de los datos anteriores para tomar decisiones informadas sobre escenarios reales.
 
 Los tres pasos del ciclo de vida del modelo para generar perspectivas procesables son los siguientes:
 
@@ -75,6 +75,10 @@ Para ayudarle a comprender los componentes y las configuraciones clave del proce
 
 Utilice SQL para hacer referencia al conjunto de datos utilizado para la formación.
 
+>[!TIP]
+>
+>Para obtener una referencia completa sobre la cláusula `TRANSFORM`, incluidas las funciones compatibles y el uso en `CREATE MODEL` y `CREATE TABLE`, consulte la cláusula [`TRANSFORM` en la documentación de sintaxis SQL](../sql/syntax.md#transform).
+
 ## Actualización de un modelo {#update}
 
 Aprenda a actualizar un modelo de aprendizaje automático existente aplicando nuevas transformaciones de ingeniería de funciones y configurando opciones como el tipo de algoritmo y la columna de etiqueta. Cada actualización crea una nueva versión del modelo, incrementada desde la última versión. Esto garantiza que se realice un seguimiento de los cambios y que el modelo se pueda reutilizar en pasos de predicción o evaluación futuros.
@@ -104,6 +108,80 @@ En las siguientes notas se explican los componentes y las opciones clave del flu
 - `UPDATE model <model_alias>`: el comando de actualización controla las versiones y crea una nueva versión de modelo incrementada con respecto a la última versión.
 - `version`: una palabra clave opcional utilizada solo durante las actualizaciones para especificar explícitamente que se debe crear una nueva versión. Si se omite, el sistema incrementa automáticamente la versión.
 
+### Previsualización y persistencia de funciones transformadas {#preview-transform-output}
+
+Utilice la cláusula `TRANSFORM` dentro de las instrucciones `CREATE TABLE` y `CREATE TEMP TABLE` para obtener una vista previa y mantener la salida de las transformaciones de características antes de la formación del modelo. Esta mejora proporciona visibilidad sobre cómo se aplican las funciones de transformación (como codificación, tokenización y ensamblador vectorial) al conjunto de datos.
+
+Al materializar datos transformados en una tabla independiente, se pueden inspeccionar funciones intermedias, validar la lógica de procesamiento y garantizar la calidad de las funciones antes de crear un modelo. Esto mejora la transparencia en toda la canalización de aprendizaje automático y admite una toma de decisiones más informada durante el desarrollo del modelo.
+
+#### Sintaxis {#syntax}
+
+Utilice la cláusula `TRANSFORM` dentro de una instrucción `CREATE TABLE` o `CREATE TEMP TABLE` como se muestra a continuación:
+
+```sql
+CREATE TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+O bien:
+
+```sql
+CREATE TEMP TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+**Ejemplo**
+
+Cree una tabla con transformaciones básicas:
+
+```sql
+CREATE TABLE ctas_transform_table
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review;
+```
+
+Cree una tabla temporal siguiendo pasos adicionales de ingeniería de funciones:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+A continuación, consulte el resultado:
+
+```sql
+SELECT * FROM ctas_transform_table LIMIT 1;
+```
+
+#### Consideraciones importantes {#considerations}
+
+Aunque esta característica mejora la transparencia y admite la validación de características, existen limitaciones importantes que se deben tener en cuenta al utilizar la cláusula `TRANSFORM` fuera de la creación del modelo.
+
+- **Salidas vectoriales**: Si la transformación genera salidas de tipo vectorial, se convierten automáticamente en matrices.
+- **Limitación de reutilización de lotes**: las tablas creadas con `TRANSFORM` solo pueden aplicar transformaciones durante la creación de tablas. Los nuevos lotes de datos insertados con `INSERT INTO` se **no se transforman automáticamente**. Para aplicar la misma lógica de transformación a los nuevos datos, debe volver a crear la tabla con una nueva instrucción `CREATE TABLE AS SELECT` (CTAS).
+- **Limitación de reutilización del modelo**: las tablas creadas con `TRANSFORM` no se pueden usar directamente en instrucciones `CREATE MODEL`. Debe redefinir la lógica `TRANSFORM` durante la creación del modelo. Las transformaciones que producen salidas de tipo vectorial no son compatibles durante la formación del modelo. Para obtener más información, consulte [Tipos de datos de salida de transformación de características](./feature-transformation.md#available-transformations).
+
+>[!NOTE]
+>
+>Esta función está diseñada para la inspección y validación. No sustituye a la lógica de canalización reutilizable. Cualquier transformación destinada a la entrada de modelo debe redefinirse explícitamente en el paso de creación del modelo.
 
 ## Evaluar modelos {#evaluate-model}
 
@@ -114,10 +192,10 @@ SELECT *
 FROM   model_evaluate(model-alias, version-number,SELECT col1,
        col2,
        label-COLUMN
-FROM   test -dataset)
+FROM   test_dataset)
 ```
 
-La función `model_evaluate` toma `model-alias` como primer argumento y una instrucción `SELECT` flexible como segundo argumento. El servicio de consultas ejecuta primero la instrucción `SELECT` y asigna los resultados a la función definida por el Adobe (ADF) `model_evaluate`. El sistema espera que los nombres de columna y los tipos de datos del resultado de la instrucción `SELECT` coincidan con los utilizados en el paso de aprendizaje. Estos nombres de columna y tipos de datos se tratan como datos de prueba y datos de etiqueta para su evaluación.
+La función `model_evaluate` toma `model-alias` como primer argumento y una instrucción `SELECT` flexible como segundo argumento. Query Service ejecuta primero la instrucción `SELECT` y asigna los resultados a la función definida por Adobe (ADF) `model_evaluate`. El sistema espera que los nombres de columna y los tipos de datos del resultado de la instrucción `SELECT` coincidan con los utilizados en el paso de aprendizaje. Estos nombres de columna y tipos de datos se tratan como datos de prueba y datos de etiqueta para su evaluación.
 
 >[!IMPORTANT]
 >
@@ -125,21 +203,62 @@ La función `model_evaluate` toma `model-alias` como primer argumento y una inst
 
 ## Predecir {#predict}
 
-A continuación, utilice la palabra clave `model_predict` para aplicar el modelo y la versión especificados a un conjunto de datos y generar predicciones para las columnas seleccionadas. El siguiente SQL muestra este proceso y cómo prever los resultados utilizando el alias y la versión del modelo.
-
-```sql
-SELECT *
-FROM   model_predict(model-alias, version-number,SELECT col1,
-       col2,
-       label-COLUMN
-FROM   dataset)
-```
-
-`model_predict` acepta el alias del modelo como primer argumento y una instrucción `SELECT` flexible como segundo argumento. El servicio de consultas ejecuta primero la instrucción `SELECT` y asigna los resultados al archivo ADF `model_predict`. El sistema espera que los nombres de columna y los tipos de datos del resultado de la instrucción `SELECT` coincidan con los del paso de aprendizaje. Estos datos se utilizan para puntuar y generar predicciones.
-
 >[!IMPORTANT]
 >
->Al evaluar (`model_evaluate`) y predecir (`model_predict`), se utilizan las transformaciones realizadas en el momento de la formación.
+>La selección mejorada de columnas y el alias de `model_predict` se controlan mediante un indicador de características. De manera predeterminada, los campos intermedios como `probability` y `rawPrediction` no se incluyen en el resultado de la predicción.\
+>Para habilitar el acceso a estos campos intermedios, ejecute el siguiente comando antes de ejecutar `model_predict`:
+>
+>`set advanced_statistics_show_hidden_fields=true;`
+
+Utilice la palabra clave `model_predict` para aplicar el modelo y la versión especificados a un conjunto de datos y generar predicciones. Puede seleccionar todas las columnas de salida, elegir unas específicas o asignar alias para mejorar la claridad de salida.
+
+De forma predeterminada, solo se devuelven las columnas base y la predicción final a menos que el indicador de funcionalidad esté habilitado.
+
+```sql
+SELECT * FROM model_predict(model-alias, version-number, SELECT col1, col2 FROM dataset);
+```
+
+### Seleccionar campos de salida específicos {#select-specific-output-fields}
+
+Cuando el indicador de funcionalidad está habilitado, puede recuperar un subconjunto de campos de la salida `model_predict`. Utilice esto para recuperar resultados intermedios, como probabilidades de predicción, puntuaciones de predicción sin procesar y columnas base de la consulta de entrada.
+
+**Caso 1: devolver todos los campos de salida disponibles**
+
+```sql
+SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Caso 2: devolver columnas seleccionadas**
+
+```sql
+SELECT a, b, c, probability, predictionCol FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Caso 3: devuelve columnas seleccionadas con alias**
+
+```sql
+SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+En cada caso, el `SELECT` externo controla qué campos de resultado se devuelven. Estos incluyen campos base de la consulta de entrada, junto con resultados de predicción como `probability`, `rawPrediction` y `predictionCol`.
+
+### Persistir predicciones utilizando CREATE TABLE o INSERT INTO
+
+Puede mantener las predicciones utilizando &quot;CREATE TABLE AS SELECT&quot; o &quot;INSERT INTO SELECT&quot;, incluidos los resultados de predicción si lo desea.
+
+**Ejemplo: crear tabla con todos los campos de salida de predicción**
+
+```sql
+CREATE TABLE scored_data AS SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Ejemplo: Insertar campos de salida seleccionados con alias**
+
+```sql
+INSERT INTO scored_data SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+Esto proporciona flexibilidad para seleccionar y mantener solo los campos de salida de predicción y las columnas base relevantes para el análisis descendente o la creación de informes.
 
 ## Evaluación y administración de modelos
 
