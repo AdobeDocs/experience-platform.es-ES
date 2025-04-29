@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Caducidad de datos de perfil seudónimo
 description: Este documento proporciona instrucciones generales para configurar la caducidad de los datos de los perfiles seudónimos en Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 6%
+source-wordcount: '1245'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ En Adobe Experience Platform, puede configurar los tiempos de caducidad de los d
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Caducidad de los datos de perfil seudónimo"
->abstract="La caducidad de los datos de perfil seudónimo representa el número de días que un perfil seudónimo permanecerá en Adobe Experience Platform antes de eliminarse."
+>abstract="La caducidad de los datos del perfil seudónimo representa el número de días que un perfil seudónimo permanecerá en Adobe Experience Platform antes de eliminarse. Este valor debe establecerse como mínimo en 1. Tenga en cuenta que el perfil seudónimo puede tardar hasta tres días en eliminarse."
 
 Un perfil se considera para la caducidad de datos seudónimos si cumple las siguientes condiciones:
 
@@ -37,17 +37,36 @@ Un perfil se considera para la caducidad de datos seudónimos si cumple las sigu
 
 ## Acceso {#access}
 
-La caducidad de los datos del perfil seudónimo no se puede configurar mediante la interfaz de usuario o las API de Experience Platform. En su lugar, debe ponerse en contacto con el servicio de asistencia para habilitar esta función. Cuando contacte con el servicio de asistencia, incluya la siguiente información:
+>[!AVAILABILITY]
+>
+>Para acceder a esta función, debe tener los siguientes permisos:
+>
+>- Administrar configuración de perfil
+>- Ver perfiles
+>
+>El permiso **Administrar configuración de perfil** le permite establecer la caducidad de los datos, mientras que el permiso **Ver perfiles** le permite ver la caducidad de los datos.
+>
+>Encontrará más información sobre los permisos de Experience Platform en la [descripción general del control de acceso](../access-control/home.md#permissions).
 
-- Las áreas de nombres de identidad que se deben tener en cuenta para las eliminaciones de perfiles seudónimos.
-   - Por ejemplo: solo `ECID`, solo `AAID` o una combinación de `ECID` y `AAID`.
-- Cantidad de tiempo que se debe esperar antes de eliminar un perfil seudónimo. La recomendación predeterminada para los clientes de es de 14 días. Sin embargo, este valor puede diferir según el caso de uso.
+Para agregar la caducidad de los datos de perfil seudónimos a tu organización, ve al panel Perfil y selecciona **[!UICONTROL Configuración]**.
+
+![El botón Configuración del panel Perfil está resaltado.](./images/pseudonymous-profiles/profile-settings.png)
+
+Aparece la ventana emergente [!UICONTROL Configuración del perfil]. En esta ventana emergente, puede establecer el número de días para la caducidad de los datos de perfil seudónimos, así como el área de nombres de identidad utilizada para la caducidad de los datos.
+
+Para los entornos limitados de producción, la caducidad predeterminada de los datos de perfil seudónimos es de 14 días, con un mínimo de 1 día y un máximo de 365 días. Para los entornos limitados de desarrollo, la caducidad predeterminada de los datos de perfil seudónimos es de 3 días, con un mínimo de 1 día y un máximo de 365 días.
+
+Seleccione **[!UICONTROL Aplicar]** para guardar la configuración de caducidad de los datos.
+
+![La ventana emergente para agregar la caducidad de datos de perfil seudónimos a los perfiles de su organización. El botón Aplicar está resaltado.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
 ## Preguntas frecuentes {#faq}
 
 La siguiente sección enumera las preguntas más frecuentes sobre la caducidad de los datos de perfiles seudónimos:
 
 ### ¿En qué se diferencia la caducidad de datos del perfil seudónimo de la caducidad de datos del evento de experiencia?
+
++++ Respuesta
 
 La caducidad de datos de perfil seudónimo y la caducidad de datos de evento de experiencia son funciones complementarias.
 
@@ -69,7 +88,11 @@ La caducidad de datos de perfil seudónimos elimina **ambos** registros de event
 
 La caducidad de datos de Experience Event **only** elimina eventos y **not** elimina datos de clase de perfil. Los datos de la clase de perfil solo se eliminan cuando se eliminan todos los datos de **todos** los conjuntos de datos y no quedan **ningún** registro de clase de perfil para el perfil.
 
++++
+
 ### ¿Cómo se puede usar la caducidad de datos de perfil seudónimo junto con la caducidad de datos de Experience Event?
+
++++ Respuesta
 
 La caducidad de datos de perfil seudónimo y la caducidad de datos de evento de experiencia se pueden usar para complementarse entre sí.
 
@@ -77,14 +100,22 @@ La caducidad de datos de perfil seudónimo y la caducidad de datos de evento de 
 
 En un caso de uso típico, puede establecer la caducidad de los datos de Experience Event en función de los valores de los datos de usuario conocidos y puede establecer la caducidad de los datos del perfil seudónimo en una duración mucho más corta para limitar el impacto de los perfiles seudónimos en el cumplimiento de la licencia de Experience Platform.
 
-### ¿Qué usuarios deben utilizar la caducidad de datos de perfiles seudónimos?
++++
+
+### ¿Para qué tipos de casos de uso debo usar la caducidad de datos de perfiles seudónimos?
+
++++ Respuesta
 
 - Si utiliza Web SDK para enviar datos directamente a Experience Platform.
 - Si tiene un sitio web que sirve a clientes no autenticados en masa.
 - Si tiene recuentos de perfiles excesivos en los conjuntos de datos y ha confirmado que este recuento excesivo de perfiles se debe a un área de nombres de identidad anónima basada en cookies.
    - Para determinarlo, debe utilizar el informe de superposición del área de nombres de identidad. Encontrará más información sobre este informe en la sección [informe de superposición de identidades](./api/preview-sample-status.md#identity-overlap-report) de la guía de API de estado de muestra de vista previa.
 
++++
+
 ### ¿Cuáles son algunas advertencias que debe tener en cuenta antes de utilizar la caducidad de datos de perfiles seudónimos?
+
++++ Respuesta
 
 - La caducidad de los datos de perfil seudónimos se ejecuta en un nivel de **espacio aislado**. Puede elegir tener diferentes configuraciones para los entornos limitados de producción y desarrollo.
 - Una vez que haya activado esta función, la eliminación de perfiles es **permanente**. Hay una forma **no** de revertir o restaurar los perfiles eliminados.
@@ -93,7 +124,17 @@ En un caso de uso típico, puede establecer la caducidad de los datos de Experie
 - Esta limpieza **solo** se producirá en el perfil. El servicio de identidad puede seguir mostrando las identidades eliminadas dentro del gráfico después de la limpieza en casos en los que el perfil tenga dos o más identidades seudónimas asociadas (como `AAID` y `ECID`). Esta discrepancia se solucionará en un futuro próximo.
 - La caducidad de los datos del perfil seudónimo **no** se ejecuta inmediatamente y puede tardar hasta tres días en procesarse.
 
++++
+
 ### ¿Cómo interactúa la caducidad de datos de perfiles seudónimos con las protecciones de los datos del servicio de identidad?
+
++++ Respuesta
 
 - El sistema de eliminación ](../identity-service/guardrails.md) del servicio de identidad [, que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
 - Si este comportamiento de eliminación provoca que se almacene un perfil solo de ECID en el Perfil del cliente en tiempo real (almacén de perfiles), la caducidad de los datos de perfil seudónimo eliminará este perfil del almacén de perfiles.
+
++++
+
+## Pasos siguientes
+
+Después de leer esta guía, sabe cómo ver y crear caducidades de datos de perfil seudónimos. Para obtener más información sobre la administración de datos en Experience Platform en su conjunto, lea la [Guía de prácticas recomendadas para la asignación de licencias de administración de datos](../landing/license-usage-and-guardrails/data-management-best-practices.md).
