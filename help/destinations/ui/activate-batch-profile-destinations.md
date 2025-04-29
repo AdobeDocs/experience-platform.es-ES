@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4517'
+source-wordcount: '4596'
 ht-degree: 11%
 
 ---
@@ -125,7 +125,7 @@ Para editar varias programaciones al mismo tiempo, selecciona las audiencias med
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Activar después de la evaluación de público"
->abstract="La activación se ejecuta inmediatamente después de que se complete el trabajo de segmentación diaria. Esto garantiza que se exporten los perfiles más actualizados."
+>abstract="<p>La activación se ejecuta inmediatamente después de que se complete el trabajo de segmentación diaria. Esto garantiza que se exporten los perfiles más actualizados.</p><p>La opción para exportar perfiles después de la evaluación de audiencia está <i>no</i> disponible para la frecuencia de exportación semanal y mensual.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en décle
 
    * **[!UICONTROL Una vez]**: programe una exportación de archivos completa bajo demanda única.
    * **[!UICONTROL Diario]**: programe exportaciones de archivos completas una vez al día, todos los días y a la hora que especifique.
+   * **[!UICONTROL Semanal]**: seleccione la fecha de inicio y las exportaciones posteriores se producirán ese día de la semana hasta la fecha de finalización seleccionada.
+   * **[!UICONTROL Mensual]**: seleccione la fecha de inicio y las exportaciones posteriores se producirán en esa fecha del mes hasta la fecha de finalización seleccionada. En el caso de los meses con menos de 30 o 31 días, la exportación se produce el último día del mes.
 
 2. Use el conmutador **[!UICONTROL Tiempo]** para seleccionar si la exportación debe realizarse inmediatamente después de la evaluación de la audiencia o de forma programada a una hora especificada. Al seleccionar la opción **[!UICONTROL Programado]**, puede utilizar el selector para elegir la hora del día, en formato [!DNL UTC], en la que debe realizarse la exportación.
 
@@ -187,6 +189,7 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para almacenar en d�
 
    * **[!UICONTROL Diario]**: programe las exportaciones de archivos incrementales una vez al día, todos los días y a la hora especificada.
    * **[!UICONTROL Por hora]**: programe exportaciones de archivos incrementales cada 3, 6, 8 o 12 horas.
+
 
 2. Utilice el selector **[!UICONTROL Time]** para elegir la hora del día, en formato [!DNL UTC], en que debe realizarse la exportación.
 
