@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Caducidad de datos de perfil seudónimo
 description: Este documento proporciona instrucciones generales para configurar la caducidad de los datos de los perfiles seudónimos en Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
+source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
 workflow-type: tm+mt
 source-wordcount: '1245'
 ht-degree: 4%
@@ -138,3 +138,4 @@ En un caso de uso típico, puede establecer la caducidad de los datos de Experie
 ## Pasos siguientes
 
 Después de leer esta guía, sabe cómo ver y crear caducidades de datos de perfil seudónimos. Para obtener más información sobre la administración de datos en Experience Platform en su conjunto, lea la [Guía de prácticas recomendadas para la asignación de licencias de administración de datos](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
