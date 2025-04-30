@@ -4,7 +4,7 @@ title: Exportación de conjuntos de datos mediante la API de Flow Service
 description: Aprenda a utilizar la API de Flow Service para exportar conjuntos de datos a destinos seleccionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
+source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '5220'
 ht-degree: 3%
@@ -19,9 +19,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**Elemento de acción**: la versión de [septiembre de 2024 de Experience Platform](/help/release-notes/latest/latest.md#destinations) introdujo la opción de establecer una fecha de `endTime` para exportar flujos de datos del conjunto de datos. Adobe también ha introducido una fecha de finalización predeterminada del 1 de mayo de 2025 para todos los flujos de datos de exportación de conjuntos de datos creados *antes de la versión de septiembre de 2024*.
+>**Elemento de acción**: la versión de [septiembre de 2024 de Experience Platform](/help/release-notes/latest/latest.md#destinations) introdujo la opción de establecer una fecha de `endTime` para exportar flujos de datos del conjunto de datos. Adobe también ha introducido una fecha de finalización predeterminada del 1 de septiembre de 2025 para todos los flujos de datos de exportación de conjuntos de datos creados *antes de la versión de septiembre de 2024*.
 >
->Para cualquiera de estos flujos de datos, debe actualizar la fecha de finalización del flujo de datos manualmente antes de la fecha de finalización; de lo contrario, las exportaciones se detendrán en esa fecha. Utilice la IU de Experience Platform para ver qué flujos de datos se configurarán para detenerse el 1 de mayo de 2025.
+>Para cualquiera de estos flujos de datos, debe actualizar la fecha de finalización del flujo de datos manualmente antes de la fecha de finalización; de lo contrario, las exportaciones se detendrán en esa fecha. Utilice la interfaz de usuario de Experience Platform para ver qué flujos de datos se configurarán para detenerse el 1 de septiembre de 2025.
 >
 >Del mismo modo, para cualquier flujo de datos que cree sin especificar una fecha `endTime`, se establecerá de forma predeterminada una hora de finalización en seis meses desde la hora en que se crean.
 

@@ -3,10 +3,10 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
+source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '2732'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->**Elemento de acción**: la versión de [septiembre de 2024 de Experience Platform](/help/release-notes/latest/latest.md#destinations) introdujo la opción de establecer una fecha de `endTime` para exportar flujos de datos del conjunto de datos. Adobe también ha introducido una fecha de finalización predeterminada del 1 de mayo de 2025 para todos los flujos de datos de exportación de conjuntos de datos creados *antes de la versión de septiembre de 2024*.
+>**Elemento de acción**: la versión de [septiembre de 2024 de Experience Platform](/help/release-notes/latest/latest.md#destinations) introdujo la opción de establecer una fecha de `endTime` para exportar flujos de datos del conjunto de datos. Adobe también ha introducido una fecha de finalización predeterminada del 1 de septiembre de 2025 para todos los flujos de datos de exportación de conjuntos de datos creados *antes de la versión de septiembre de 2024*.
 >
->Para cualquiera de estos flujos de datos, debe actualizar la fecha de finalización del flujo de datos manualmente antes de la fecha de finalización; de lo contrario, las exportaciones se detendrán en esa fecha. Utilice la IU de Experience Platform para ver qué flujos de datos se configurarán para detenerse el 1 de mayo de 2025.
+>Para cualquiera de estos flujos de datos, debe actualizar la fecha de finalización del flujo de datos manualmente antes de la fecha de finalización; de lo contrario, las exportaciones se detendrán en esa fecha. Utilice la interfaz de usuario de Experience Platform para ver qué flujos de datos se configurarán para detenerse el 1 de septiembre de 2025.
 >
 >Consulte la [sección de programación](#scheduling) para obtener información sobre cómo editar la fecha de finalización de un flujo de datos de exportación de conjunto de datos.
 
@@ -158,7 +158,7 @@ Utilice las casillas de verificación de la izquierda de los nombres de los conj
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Actualizar la fecha de finalización de este cuerpo de flujo de datos"
->abstract="Debido a las recientes actualizaciones en este destino, el flujo de datos ahora requiere una fecha de finalización. Adobe ha establecido una fecha de finalización predeterminada para el 1 de marzo de 2025. Actualice a la fecha de finalización deseada; de lo contrario, las exportaciones de datos se detendrán en la fecha predeterminada."
+>abstract="Debido a las recientes actualizaciones en este destino, el flujo de datos ahora requiere una fecha de finalización. Adobe ha establecido una fecha de finalización predeterminada para el 1 de septiembre de 2025. Actualice a la fecha de finalización deseada; de lo contrario, las exportaciones de datos se detendrán en la fecha predeterminada."
 
 Use el paso **[!UICONTROL Programación]** para:
 
