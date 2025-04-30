@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2025'
 description: Las notas de la versión de abril de 2025 de Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: 65e0f0f98006f55bc08ccf24499841413def7a16
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 29%
+source-wordcount: '1899'
+ht-degree: 27%
 
 ---
 
@@ -31,6 +31,7 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 - [Servicio de consultas](#query-service)
 - [Perfil del cliente en tiempo real](#profile)
 - [Fuentes](#sources)
+- [Manuales de tácticas de casos de uso](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -152,3 +153,21 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [Información general de las fuentes](../../sources/home.md).
+
+## Manuales de tácticas de casos de uso {#use-case-playbooks}
+
+Los manuales de casos de uso se diseñaron originalmente para ayudar a superar los desafíos al comenzar con Real-Time Customer Data Platform o Adobe Journey Optimizer. Siguen evolucionando y ahora le permiten poner en marcha casos prácticos de marketing clave y proporcionar inspiración y recursos creados previamente para probar y pasar a la producción.
+
+Los manuales de casos de uso han pasado de ser una herramienta de descubrimiento a un marco de trabajo colaborativo. Ahora le ayudan a crear, administrar y compartir sus propios libros de reproducción entre diferentes organizaciones.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Crea y comparte tus propios libros de reproducción | Un nuevo módulo de creación de libros de estrategias le permite crear, administrar y compartir sus propios libros de casos de uso. Esto incluye compatibilidad para capturar metadatos clave, editar mapas de recorrido y asociar recursos técnicos relevantes. Puede compartir manuales entre organizaciones para estandarizar los enfoques de marketing y mantener la coherencia. |
+
+{style="table-layout:auto"}
+
+Para aprender a crear y compartir libros de reproducción, lee el documento [Autor y comparte tus propios libros de reproducción](/help/use-case-playbooks/playbooks/author.md).
+
+Para obtener más información, lea la [Descripción general de los libros de casos de uso](/help/use-case-playbooks/playbooks/overview.md), que proporciona información general sobre la funcionalidad de los libros de reproducción, su propósito y una demostración completa, incluyendo cómo crear instancias e importar recursos generados en otros entornos de espacio aislado.
