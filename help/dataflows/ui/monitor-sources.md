@@ -1,21 +1,21 @@
 ---
-description: Aprenda a utilizar el tablero de monitorización para monitorizar los datos introducidos desde las fuentes.
-title: Monitorización de flujos de datos para fuentes en la IU
+description: Aprenda a utilizar el tablero de monitorización para monitorizar los datos introducidos en el lago de datos.
+title: Monitorización de ingesta de lago de datos
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 11%
+source-wordcount: '1303'
+ht-degree: 10%
 
 ---
 
-# Monitorización de flujos de datos para orígenes en la interfaz de usuario
+# Monitorización de ingesta de lago de datos
 
 >[!IMPORTANT]
 >
 >El tablero de monitorización no admite actualmente fuentes de streaming, como la [fuente de API HTTP](../../sources/connectors/streaming/http.md). En este momento, solo puede utilizar el panel para monitorizar los orígenes de lotes.
 
-Lea este documento para aprender a utilizar el panel de monitorización para monitorizar los flujos de datos de origen en la interfaz de usuario de Experience Platform.
+Lea este documento para aprender a utilizar el panel de monitorización para monitorizar la ingesta de lago de datos en la interfaz de usuario de Experience Platform.
 
 ## Introducción  {#get-started}
 
@@ -28,7 +28,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
 * [Zonas protegidas](../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-## Monitorizar los datos de origen mediante el panel de monitorización
+## Uso del tablero de monitorización para la ingesta del lago de datos
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -42,15 +42,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >abstract="El procesamiento de fuentes contiene información sobre el estado de la actividad de datos y las métricas del servicio de lago de datos, incluidos los registros ingeridos y los registros con errores. Consulte la guía de definición de métricas para obtener más información sobre métricas y gráficos."
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+Seleccione **[!UICONTROL lago de datos]** en el encabezado principal del panel de monitorización para ver la tasa de ingesta del lago de datos.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
+![Panel de supervisión con la tarjeta de orígenes seleccionada.](../assets/ui/monitor-sources/data-lake.png)
 
-En el panel de monitoreo, seleccione [!UICONTROL Fuentes] del encabezado principal para actualizar el panel con una visualización de la tasa de ingesta de flujo de datos de fuentes.
-
-![Panel de supervisión con la tarjeta de orígenes seleccionada.](../assets/ui/monitor-sources/sources.png)
-
-El gráfico [!UICONTROL Tasa de ingesta] muestra su tasa de ingesta de datos en función del lapso de tiempo configurado. De forma predeterminada, el panel de monitorización muestra la tasa de ingesta de las últimas 24 horas. Para ver los pasos sobre cómo configurar el lapso de tiempo, lea la guía sobre [configuración del lapso de tiempo de supervisión](monitor.md#configure-monitoring-time-frame).
+El gráfico [!UICONTROL Tasa de ingesta] muestra su tasa de ingesta de datos en función del lapso de tiempo configurado. De forma predeterminada, el panel de monitorización muestra las tasas de ingesta de las últimas 24 horas. Para ver los pasos sobre cómo configurar el lapso de tiempo, lea la guía sobre [configuración del lapso de tiempo de supervisión](monitor.md#configure-monitoring-time-frame).
 
 El gráfico se muestra de forma predeterminada. Para ocultar el gráfico, seleccione **[!UICONTROL Métricas y gráficos]** para deshabilitar la opción y ocultar el gráfico.
 
@@ -132,11 +128,9 @@ Utilice la sección [!UICONTROL Registros con errores] para ver las métricas de
 >
 >Solo puede utilizar diagnósticos de error si la función se ha habilitado durante el proceso de creación de la conexión de origen.
 
-![El panel de errores de ejecución del flujo de datos.](../assets/ui/monitor-sources/errors.png)
-
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha monitorizado correctamente el flujo de datos de ingesta desde el nivel de origen mediante el panel **[!UICONTROL Supervisión]**. También ha identificado correctamente los errores que contribuyeron al error de los flujos de datos durante el proceso de ingesta. Consulte los siguientes documentos para obtener más información:
+Siguiendo este tutorial, ha aprendido a monitorizar la tasa de ingesta del lago de datos mediante el tablero **[!UICONTROL Monitoring]**. También ha aprendido a identificar errores que causan errores de flujo de datos durante la ingesta. Consulte los siguientes documentos para obtener más información:
 
 * [Supervisión de datos de identidad](./monitor-identities.md).
 * [Supervisar datos de perfil](./monitor-profiles.md).

@@ -2,9 +2,9 @@
 title: Información general del panel de monitorización
 description: Aprenda a utilizar el tablero de monitorización en la interfaz de usuario de Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -63,12 +63,6 @@ Seleccione **[!UICONTROL Cliente y cuenta]** para actualizar su tablero y mostra
 
 ![El tipo de datos de supervisión establecido en Cliente y cuenta.](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB Candidato]
-
-Seleccione **[!UICONTROL Candidato]** para actualizar el tablero y mostrar las métricas de los datos de prospección que se han introducido en Experience Platform durante un período determinado. **Nota**: solo puede ver actividades de tipo de datos de clientes potenciales si tiene [derecho a recibir datos de clientes potenciales](../../rtcdp/partner-data/prospecting.md).
-
-![El tipo de datos de supervisión establecido en &quot;Cliente potencial&quot;.](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB Enriquecimiento del perfil de la cuenta]
 
 Seleccione **[!UICONTROL Enriquecimiento del perfil de cuenta]** para actualizar su tablero y mostrar métricas sobre los datos de enriquecimiento del perfil. **Nota**: solo puedes ver las métricas de enriquecimiento de perfil de cuenta si tienes derecho a [datos B2B](../../rtcdp/b2b-tutorial.md).
@@ -81,11 +75,11 @@ Utilice el encabezado superior del panel para una experiencia de monitorización
 
 >[!BEGINTABS]
 
->[!TAB Fuentes]
+>[!TAB lago de datos]
 
-Seleccione **[!UICONTROL Fuentes]** para ver las métricas de su tasa de ingesta de fuentes. Lea la guía sobre [datos de fuentes de supervisión](monitor-sources.md) para obtener más información.
+Seleccione **[!UICONTROL lago de datos]** para ver las métricas de la tasa de ingesta de su lago de datos. Lea la guía sobre [supervisión de la ingesta del lago de datos](monitor-sources.md) para obtener más información.
 
-![Panel de supervisión en la interfaz de usuario con la tarjeta de orígenes seleccionada.](../assets/ui/monitor-overview/sources.png)
+![Panel de monitorización en la interfaz de usuario con la tarjeta del lago de datos seleccionada.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB Identidades]
 
@@ -133,8 +127,12 @@ Cuando termine, seleccione **[!UICONTROL Aplicar]**.
 
 Al leer este documento, ahora puede navegar por el panel de monitorización de la interfaz de usuario. Para obtener información sobre cómo monitorizar los datos de un servicio Experience Platform específico, lea la siguiente documentación:
 
-* [Supervisar datos de origen](monitor-sources.md).
+* [Supervisar la ingesta del lago de datos](monitor-sources.md).
 * [Supervisar datos de identidad](monitor-identities.md).
 * [Supervisar datos de perfil](monitor-profiles.md).
 * [Supervisar datos de audiencia](monitor-audiences.md).
 * [Supervisar datos de destinos](monitor-destinations.md).
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
