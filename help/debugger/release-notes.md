@@ -4,14 +4,22 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: depurador;extensión de Experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 98%
+source-wordcount: '850'
+ht-degree: 93%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.6.3: 30 de abril de 2025
+
+### Correcciones y mejoras
+
+* Se ha corregido un problema en el cual Debugger impedía que las funciones DTM y Launch funcionaran.
+* Se ha corregido un problema en el cual las visitas posteriores al procesamiento de Analytics no aparecían en los registros.
+* Se ha corregido un problema en el cual los datos en idiomas que no son ASCII, como el japonés, no se mostraban correctamente en los registros.
 
 ## Versión 1.6.2: miércoles, 01 de octubre de 2024
 
