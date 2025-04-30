@@ -1,7 +1,7 @@
 ---
 title: (V2) Conexión de audiencia en tiempo real Pega CDH
 description: Utilice el destino Audiencia en tiempo real del centro de decisiones de clientes de Pega en Adobe Experience Platform para enviar atributos de perfil y datos de pertenencia a audiencias al centro de decisiones de clientes de Pega para la toma de decisiones de la mejor acción siguiente.
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 3%
@@ -115,17 +115,21 @@ A continuación se muestra un ejemplo de asignación de identidad correcta al ex
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
 Una actualización correcta de la pertenencia a audiencias de un perfil insertaría el identificador de audiencia, el nombre y los estados en el almacén de datos de pertenencia a audiencias de marketing de Pega. Los datos de pertenencia están asociados a un cliente que usa Designer de perfil de cliente en [!DNL Pega Customer Decision Hub], como se muestra a continuación.
+
 ![Imagen de la pantalla de la interfaz de usuario donde puede asociar datos de pertenencia a audiencias de Adobe con el cliente mediante el perfil del cliente Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 Los datos de pertenencia a audiencias se utilizan en las políticas de participación de Designer de la siguiente mejor acción de Pega para la toma de decisiones de la siguiente mejor acción, como se muestra a continuación.
-![Imagen de la pantalla de la interfaz de usuario donde se pueden agregar campos de pertenencia a audiencias como condiciones en las directivas de participación de Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![Imagen de la pantalla de la interfaz de usuario donde se pueden agregar campos de pertenencia a audiencias como condiciones en las directivas de participación de Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 Los campos de datos de pertenencia a audiencias del cliente se agregan como predictores en los modelos adaptables, como se muestra a continuación.
+
 ![Imagen de la pantalla de la interfaz de usuario donde se pueden agregar campos de pertenencia a audiencias como predicadores en modelos adaptables mediante Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Recursos adicionales {#additional-resources}
 
 Consulte la siguiente documentación de [!DNL Pega] para obtener más información:
+
 * [Configuración de un registro de cliente de OAuth 2.0](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [Creación de una ejecución en tiempo real para flujos de datos](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [Administrar registros de clientes en el perfil de cliente de Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)

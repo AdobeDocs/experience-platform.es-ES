@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1292'
 ht-degree: 6%
 
 ---
@@ -203,7 +203,8 @@ ht-degree: 6%
       * [Extensión de Gainsight](./catalog/personalization/gainsight.md)
       * [Extensión de KickFire](./catalog/personalization/kickfire.md)
       * [Extensión de Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
-      * [Conexión de Pega Customer Decision Hub](./catalog/personalization/pega.md)
+      * [Conexión de audiencia en tiempo real de Pega CDH](./catalog/personalization/pega.md)
+      * [(V2) Conexión de audiencia en tiempo real Pega CDH](./catalog/personalization/pega-v2.md)
       * [Conexión del perfil Pega](./catalog/personalization/pega-profile.md)
    * Destinos sociales{#social}
       * [Información general sobre destinos sociales](./catalog/social/overview.md)
