@@ -4,9 +4,9 @@ title: Aprenda a crear y compartir sus propios libros de reproducción con el as
 description: Cómo crear y compartir sus propios libros de casos de uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: a910c922e9a51b60e276b0aac7e81e35d0a378fd
+source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -161,11 +161,11 @@ Si un libro de reproducción está marcado por contenido inapropiado u ofensivo,
 
 Si su organización contiene varias zonas protegidas, no es necesario que comparta manualmente los libros de reproducción entre ellas. Una vez creado y publicado un libro de reproducción en una zona protegida, estará disponible en todas las zonas protegidas de esa organización. A continuación, puede crear instancias de ese manual en cualquiera de las demás zonas protegidas.
 
-Si el manual hace referencia a campos que no están disponibles en el esquema de unión de otra zona protegida, puede ver un mensaje de error al intentar crear la instancia. Ese mensaje llama a los campos que faltan, para que pueda actualizar el esquema según sea necesario.
+Si el manual hace referencia a campos que no están disponibles en el esquema de unión de la zona protegida de destino o carecen de los permisos necesarios, puede ver un mensaje de error al intentar crear la instancia. Ese mensaje llama a los campos que faltan o a los permisos que faltan.
 
->[!IMPORTANT]
->
->No se admite el uso compartido transitorio de libros de reproducción. Si comparte un manual de una organización a otra y luego lo importa, no se puede volver a compartir desde la organización receptora a una tercera organización.
+Si falta algún campo en el esquema de unión, un cuadro de diálogo lo resaltará durante la importación.
+
+Faltan ![campos en el esquema de unión enumerados durante el proceso de importación](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Uso compartido de libros de reproducción entre organizaciones {#sharing-playbooks-organizations}
 
@@ -181,14 +181,14 @@ Para compartir un manual de una organización a otra, siga estos pasos:
 * **Iniciar uso compartido**: Una vez que se publique el libro de reproducción y se establezca una asociación, seleccione **[!UICONTROL Compartir libro de reproducción]**.
 * **Seleccione la organización de destino**: elija la organización con la que desea compartir el manual de implementación cuando se le solicite.
 * **Confirmar y compartir**: Confirme su selección. Recibirá mensajes de confirmación que indican que el uso compartido se ha realizado correctamente.
-* ***Compruebe la organización de destino**: Inicie sesión en la organización de destino para comprobar que el manual está disponible.
+* **Verificar la organización de destino**: Inicie sesión en la organización de destino para verificar que el manual esté disponible.
 * **Importar el manual**: selecciona **[!UICONTROL Importar]** para llevar el manual a la organización de destino. Puede verlo en la ficha **Libros de reproducción**.
 
-Si falta algún campo en el esquema de unión, un cuadro de diálogo lo resaltará durante la importación.
-
-Faltan ![campos en el esquema de unión enumerados durante el proceso de importación](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
-
 Si el manual no aparece, asegúrese de que se publique y de que la asociación con la organización esté activa.
+
+>[!IMPORTANT]
+>
+>No se admite el uso compartido transitorio de libros de reproducción. Si comparte un manual de una organización a otra y luego lo importa, no se puede volver a compartir desde la organización receptora a una tercera organización.
 
 ## Permisos necesarios
 
