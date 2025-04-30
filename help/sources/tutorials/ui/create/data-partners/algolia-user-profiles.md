@@ -1,19 +1,17 @@
 ---
 title: Conexión de perfiles de usuario de Algolia a Experience Platform mediante la IU
 description: Aprenda a conectar la intención de los usuarios de Algolia a Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1136'
 ht-degree: 1%
 
 ---
 
 # Ingesta de datos de [!DNL Algolia User Profiles] en Experience Platform mediante la IU
 
-Lea este tutorial para aprender a ingerir datos de pagos de su cuenta de [!DNL Algolia User Profiles] en Adobe Experience Platform mediante la interfaz de usuario.
+Lea este tutorial para aprender a ingerir datos de su cuenta de [!DNL Algolia User Profiles] en Adobe Experience Platform mediante la interfaz de usuario.
 
 ## Introducción 
 

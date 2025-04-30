@@ -2,9 +2,9 @@
 title: Crear una conexión de origen de Oracle Eloqua mediante la IU de Experience Platform
 description: Aprenda a conectar Adobe Experience Platform a Oracle Eloqua mediante la interfaz de usuario de Experience Platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '575'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->El origen [!DNL Oracle Eloqua] quedará obsoleto a finales de junio de 2025.
+>El origen [!DNL Oracle Eloqua] quedará obsoleto en enero de 2026. Una nueva fuente se publicará a finales de este año como alternativa. Una vez lanzada la nueva fuente, debe planificar la migración a la nueva fuente creando nuevas conexiones de cuenta y flujos de datos antes de finales de enero de 2026.
 
 Este tutorial proporciona los pasos para crear una conexión de origen [!DNL Oracle Eloqua] mediante la interfaz de usuario de Adobe Experience Platform.
 
