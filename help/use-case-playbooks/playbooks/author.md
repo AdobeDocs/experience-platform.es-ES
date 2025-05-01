@@ -4,9 +4,9 @@ title: Aprenda a crear y compartir sus propios libros de reproducción con el as
 description: Cómo crear y compartir sus propios libros de casos de uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
+source-git-commit: 9583d836d4e295bcb5cc2ce41ba8ba6d2046b114
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1679'
 ht-degree: 0%
 
 ---
@@ -157,11 +157,13 @@ Al crear libros de reproducción, tenga en cuenta el idioma y el contenido que i
 
 Si un libro de reproducción está marcado por contenido inapropiado u ofensivo, se comunica automáticamente a Adobe para su revisión. A continuación, Adobe revisa el contenido marcado y, si se considera inapropiado, se notifica al cliente y se elimina el manual.
 
-## Uso compartido de libros de reproducción en zonas protegidas {#sharing-playbooks-sandboxes}
+## Compartir libros de reproducción en zonas protegidas {#share-playbooks-sandboxes}
 
-Si su organización contiene varias zonas protegidas, no es necesario que comparta manualmente los libros de reproducción entre ellas. Una vez creado y publicado un libro de reproducción en una zona protegida, estará disponible en todas las zonas protegidas de esa organización. A continuación, puede crear instancias de ese manual en cualquiera de las demás zonas protegidas.
+Al crear y publicar un libro de reproducción en una zona protegida, estará disponible automáticamente en todas las zonas protegidas de su organización. Esto elimina la necesidad de compartir manualmente y le permite crear instancias del manual en cualquier otra zona protegida sin problemas.
 
-Si el manual hace referencia a campos que no están disponibles en el esquema de unión de la zona protegida de destino o carecen de los permisos necesarios, puede ver un mensaje de error al intentar crear la instancia. Ese mensaje llama a los campos que faltan o a los permisos que faltan.
+>[!TIP]
+>
+>Si el manual hace referencia a campos que no están disponibles en el esquema de unión de la zona protegida de destino o carecen de los permisos necesarios, puede ver un mensaje de error al intentar crear la instancia. Ese mensaje llama a los campos que faltan o a los permisos que faltan.
 
 Si falta algún campo en el esquema de unión, un cuadro de diálogo lo resaltará durante la importación.
 
@@ -169,34 +171,34 @@ Faltan ![campos en el esquema de unión enumerados durante el proceso de importa
 
 ## Uso compartido de libros de reproducción entre organizaciones {#sharing-playbooks-organizations}
 
-Para compartir un manual de una organización a otra, siga estos pasos:
+Compartir libros de reproducción entre organizaciones ayuda a garantizar la coherencia y la eficacia cuando varios equipos necesitan seguir las mismas prácticas recomendadas. Para compartir un manual de una organización a otra, siga estos pasos:
 
-* **Inicie sesión en la organización de origen**: vaya a la organización que contiene el manual que creó y que desea compartir desde la ficha **[!UICONTROL Sus libros de reproducción]**.
-* **Publicar el libro de reproducción**: Si el libro de reproducción no se ha publicado todavía, debe publicarlo antes de compartirlo.
+1. **Inicie sesión en la organización de origen**: vaya a la organización que contiene el manual que creó y que desea compartir desde la ficha **[!UICONTROL Sus libros de reproducción]**.
+2. **Publicar el libro de reproducción**: Si el libro de reproducción no se ha publicado todavía, debe publicarlo antes de compartirlo.
 
->[!NOTE]
->
->Debe establecerse una asociación entre las organizaciones de origen y de destino para permitir el uso compartido del manual. Aprenda a [crear una solicitud de asociación con una organización](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+   >[!NOTE]
+   >
+   >Debe establecerse una asociación entre las organizaciones de origen y de destino para permitir el uso compartido del manual. Aprenda a [crear una solicitud de asociación con una organización](/help/sandboxes/ui/sharing-packages-across-orgs.md#create-an-organization-partnership-request).
 
-* **Iniciar uso compartido**: Una vez que se publique el libro de reproducción y se establezca una asociación, seleccione **[!UICONTROL Compartir libro de reproducción]**.
-* **Seleccione la organización de destino**: elija la organización con la que desea compartir el manual de implementación cuando se le solicite.
-* **Confirmar y compartir**: Confirme su selección. Recibirá mensajes de confirmación que indican que el uso compartido se ha realizado correctamente.
-* **Verificar la organización de destino**: Inicie sesión en la organización de destino para verificar que el manual esté disponible.
-* **Importar el manual**: selecciona **[!UICONTROL Importar]** para llevar el manual a la organización de destino. Puede verlo en la ficha **Libros de reproducción**.
+3. **Iniciar uso compartido**: Una vez que se publique el libro de reproducción y se establezca una asociación, seleccione **[!UICONTROL Compartir libro de reproducción]**.
+4. **Seleccione la organización de destino**: elija la organización con la que desea compartir el manual de implementación cuando se le solicite.
+5. **Confirmar y compartir**: Confirme su selección. Recibirá mensajes de confirmación que indican que el uso compartido se ha realizado correctamente.
+6. **Verificar la organización de destino**: Inicie sesión en la organización de destino para verificar que el manual esté disponible.
+7. **Importar el manual**: selecciona **[!UICONTROL Importar]** para llevar el manual a la organización de destino. Puede verlo en la ficha **Libros de reproducción**.
 
-Si el manual no aparece, asegúrese de que se publique y de que la asociación con la organización esté activa.
+Si no aparece el manual, asegúrese de que se publique y de que la asociación de organización esté activa.
 
 >[!IMPORTANT]
 >
 >No se admite el uso compartido transitorio de libros de reproducción. Si comparte un manual de una organización a otra y luego lo importa, no se puede volver a compartir desde la organización receptora a una tercera organización.
 
-## Permisos necesarios
+## Permisos necesarios {#required-permissions}
 
 Para acceder a la zona protegida y utilizar esta función, necesita los siguientes permisos:
 
-* **Permisos de espacio aislado**:
+### Permisos de zona protegida
 
-Son necesarios para acceder al entorno de zona protegida donde existe la función:
+Estos permisos son necesarios para acceder al entorno de zona protegida donde existe la función:
 
 * **Administrar zona protegida**
 * **Ver zona protegida**
