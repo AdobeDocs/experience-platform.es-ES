@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2025'
 description: Las notas de la versión de abril de 2025 de Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 65e0f0f98006f55bc08ccf24499841413def7a16
+source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 27%
+source-wordcount: '2040'
+ht-degree: 29%
 
 ---
 
@@ -30,6 +30,7 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 - [Servicio de identidad](#identity)
 - [Servicio de consultas](#query-service)
 - [Perfil del cliente en tiempo real](#profile)
+- [Zonas protegidas](#sandboxes)
 - [Fuentes](#sources)
 - [Manuales de tácticas de casos de uso](#use-case-playbooks)
 
@@ -127,6 +128,20 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 Para obtener más información sobre el perfil del cliente en tiempo real, lea la [descripción general del perfil](../../profile/home.md)
 
+## Zonas protegidas {#sandboxes}
+
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para responder a esta necesidad, Experience Platform proporciona zonas protegidas que dividen una única instancia de Experience Platform en entornos virtuales separados para ayudar a que se desarrollan y evolucionen las aplicaciones de experiencia digital.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Ampliación de compatibilidad de complemento de herramientas de zona protegida | Ahora, las acciones personalizadas se pueden copiar como un objeto dependiente al duplicar objetos de Recorrido en las herramientas de zona protegida. Además, puede seleccionar acciones existentes para reutilizarlas en la zona protegida de Target. También se pueden añadir a un paquete de forma independiente. Para obtener información completa sobre los objetos Adobe Journey Optimizer admitidos, lea la guía [herramientas de espacio aislado](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects). |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre las zonas protegidas, lea la [información general sobre zonas protegidas](../../sandboxes/home.md).
+
 ## Fuentes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
@@ -137,8 +152,8 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | El origen [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ya está disponible. Utilice esta fuente para llevar los datos de afinidades de perfiles de usuario de [!DNL Algolia] a Experience Platform. A continuación, puede utilizar estos datos para mejorar la participación del usuario, las tasas de conversión y la experiencia general del cliente mediante el suministro de soluciones de búsqueda de alto rendimiento para sitios web, plataformas de comercio electrónico y aplicaciones. Para obtener más información, lee la guía sobre cómo [ingerir [!DNL Algolia User Profiles] datos en Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
-| Compatibilidad con la API [!BADGE Beta]{type=Informative} para [!DNL Azure Databricks] | El origen [!DNL Azure Databricks] ya está disponible en la API. Use la API [!DNL Flow Service] para conectar su cuenta de [!DNL Databricks] y llevar los datos de [!DNL Databricks] a Experience Platform. Para obtener más información, lea la documentación sobre [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md). |
+| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | El origen [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ya está disponible. Utilice esta fuente para llevar los datos de afinidades de perfiles de usuario de [!DNL Algolia] a Experience Platform. A continuación, puede utilizar estos datos para mejorar la participación del usuario, las tasas de Conversión y la experiencia del cliente general proporcionando soluciones de búsqueda de alto rendimiento para sitios web, plataformas comercio electrónico y aplicaciones. Para obtener más información, lea la guía sobre cómo [incorporar [!DNL Algolia User Profiles] datos en Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
+| [!BADGE ]{type=Informative} Compatibilidad API de Beta con[!DNL Azure Databricks] | El origen [!DNL Azure Databricks] ya está disponible en la API. Use la API [!DNL Flow Service] para conectar su cuenta de [!DNL Databricks] y llevar los datos de [!DNL Databricks] a Experience Platform. Para obtener más información, lea la documentación sobre [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md). |
 
 {style="table-layout:auto"}
 
@@ -148,7 +163,7 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 | --- | --- |
 | Se han actualizado los campos XDM para la ingesta de datos de medios de streaming en Experience Platform. | El nuevo grupo de campos XDM `mediaReporting` ya está disponible para la ingesta de datos de medios de streaming a través del origen de Adobe Analytics en Experience Platform. Este campo reemplaza el campo `media.mediaTimed`.</br> <br>Durante un período de transición de tres meses, la ingesta de datos en `media.mediaTimed` campos continuará. Sin embargo, a finales de julio de 2025, los campos `media.mediaTimed` quedarán totalmente obsoletos y dejarán de ser visibles en la interfaz de usuario del esquema de Experience Platform, y los datos solo se enviarán mediante los campos `mediaReporting`.</br><br>Si ha implementado el origen de Analytics para recopilar datos de medios de streaming en Platform antes del 22 de abril de 2025, debe migrar las configuraciones existentes para enviar datos mediante el nuevo grupo de campos. Esta migración debe completarse para finales de julio de 2025. Póngase en contacto con el equipo de su cuenta de Adobe para obtener ayuda sobre la migración. |
 | Nuevos tipos de autenticación para [!DNL MariaDB] y [!DNL PostgreSQL] | Ahora puede usar la autenticación básica para autenticar los orígenes de [!DNL MariaDB] y [!DNL PostgreSQL] en Experience Platform. Lea la siguiente documentación para obtener más información: <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
-| Compatibilidad con filtrado a nivel de fila para [!DNL Amazon Redshift] | Puede usar funcionalidades de filtrado a nivel de fila para sus datos de [!DNL Amazon Redshift] en Experience Platform. Para obtener más información, lea la guía sobre [filtrado de datos de nivel de fila para orígenes en la API](../../sources/tutorials/api/filter.md). |
+| Compatibilidad con filtrado a nivel de fila para [!DNL Amazon Redshift] | Puede usar capacidades de filtrado a nivel de fila para los [!DNL Amazon Redshift] datos en Experience Platform. Para obtener más información, lea la guía sobre [filtrado de datos de nivel de fila para orígenes en la API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
