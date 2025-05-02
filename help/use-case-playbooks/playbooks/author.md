@@ -4,9 +4,9 @@ title: Aprenda a crear y compartir sus propios libros de reproducción con el as
 description: Cómo crear y compartir sus propios libros de casos de uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: 9583d836d4e295bcb5cc2ce41ba8ba6d2046b114
+source-git-commit: 5cdbc160369a146da3ae8ca39d8c3095887e03b5
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---
@@ -34,25 +34,25 @@ Siga estos pasos para crear un manual con el asistente de IA:
 
 En el panel de navegación izquierdo, seleccione **[!UICONTROL Libros de reproducción]**.
 
-![ &quot;Libros de reproducción&quot; resaltados en el panel de navegación izquierdo de la interfaz de usuario.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
+![IU de plataforma con la opción &quot;Libros de reproducción&quot; resaltada en el panel de navegación izquierdo.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
 Seleccione **[!UICONTROL Nuevo libro de estrategias]** y luego seleccione **Generar libro de estrategias con el Asistente de IA**.
 
-![Interfaz de libro de reproducción con la opción &quot;Generar libro de reproducción con el asistente de IA&quot; seleccionada.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
+![Interfaz de creación de libros de reproducción que muestra la opción &quot;Generar libro de reproducción con el Asistente de IA&quot; seleccionada.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
 Utilice el campo de solicitud para describir el caso de uso. Por ejemplo:
 
 &quot;Capte a los clientes de ACME que exploraron las zapatillas de running pero que no completaron la compra&quot;.
 
-![Interfaz de libro de reproducción con área de formulario web resaltada.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![Interfaz de creación de libros de reproducción que resalta el área de formulario web donde los usuarios pueden escribir una solicitud.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
 Seleccione **[!UICONTROL Generar]** para crear los metadatos del libro de reproducción.
 
-![Área de solicitud con el botón &quot;Generar&quot; del libro de reproducción resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
+![Interfaz de creación de libros de reproducción que muestra el botón &quot;Generar&quot; resaltado en el área de solicitud.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
 Una vez generado, seleccione **[!UICONTROL Editar]** para modificar el título, la descripción y los metadatos generados según sea necesario.
 
-![Libro de reproducción generado con el botón &quot;Editar&quot; resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
+![Libro de reproducción generado con el botón &quot;Editar&quot; resaltado, que permite a los usuarios modificar los metadatos.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
 Para asegurarse de que los ingenieros de datos tengan todos los detalles necesarios para configurar el caso de uso, rellene la sección **[!UICONTROL Detalles del manual]**. Aunque son opcionales, estos campos ayudan a capturar información clave, lo que facilita la conexión de los componentes técnicos adecuados. Seleccione **[!UICONTROL Editar]** para agregar valores a los siguientes campos:
 
@@ -60,17 +60,17 @@ Para asegurarse de que los ingenieros de datos tengan todos los detalles necesar
 * **Público objetivo**
 * **Canal de marketing**
 
-![La sección de detalles del libro de reproducción con el botón &quot;Editar&quot; resaltado.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![La sección de detalles del libro de reproducción con el botón &quot;Editar&quot; resaltado para que pueda agregar o modificar detalles como el sector, la audiencia de destino y el canal de marketing.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
 Una vez generados los metadatos, seleccione **[!UICONTROL Editar mapa de recorrido]** para ajustar los pasos del mapa de recorrido según sea necesario.
 
-![Editar el botón de asignación de recorrido.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
+![Botón &quot;Editar mapa de recorrido&quot; para modificar los pasos del mapa de recorrido.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
-![Edite el mapa de recorrido una vez que capture los metadatos del manual.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
+![Interfaz del editor de mapas de recorrido para que pueda ajustar los pasos después de capturar los metadatos del libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
 A continuación, proceda a asociar el manual de implementación con los recursos técnicos. Para crear un libro de reproducción manualmente, seleccione **[!UICONTROL Crear libro de reproducción manualmente]**.
 
-![Crear libro de reproducción manualmente](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
+![La opción &quot;Crear libro de reproducción manualmente&quot; para iniciar un libro de reproducción a partir de una plantilla en blanco.](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
 Aparecerá una plantilla de libro de estrategias en blanco. Rellene detalles como **Título** y **Descripción**. También puede editar el mapa de recorrido para añadir eventos y puntos de contacto según sea necesario.
 
@@ -82,25 +82,25 @@ Independientemente de si crea un libro de reproducción manualmente o con el asi
 >
 > En una versión futura se agregará compatibilidad con Real-Time CDP.
 
-![Se resaltaron la ficha &quot;Recursos técnicos&quot; y el botón &quot;Agregar producto requerido&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![La ficha &quot;Assets técnico&quot; con el botón &quot;Agregar producto requerido&quot; resaltó que puede usar para asociar recursos técnicos con el libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Elija **[!UICONTROL Seleccionar un recurso]** para asociar este libro de reproducción con un recorrido como se muestra en la imagen siguiente. A continuación, seleccione **Publicar libro de reproducción** para finalizar el libro de reproducción.
 
-![: botón &quot;Seleccionar recursos&quot; resaltado en la ficha &quot;Recursos técnicos&quot;](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
+![La ficha &quot;Assets técnico&quot; con el botón &quot;Seleccionar recursos&quot; resaltó que puede usar para asociar un recorrido con el libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
 
-![Seleccionar un recorrido](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
+![Seleccione un recorrido para asociarlo a un libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
 
 Una vez publicado, el manual extrae y asocia automáticamente el esquema del recorrido y los detalles de audiencia.
 
-![Libro de reproducción publicado](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
+![Libro de reproducción publicado que muestra metadatos y recursos técnicos asociados.](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
 
 Todos los libros de reproducción creados están disponibles en la ficha **Tus libros de reproducción**.
 
-![&quot;Sus libros de reproducción&quot;, ficha](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
+![: ficha &quot;Sus libros de reproducción&quot; que muestra una lista de los libros de reproducción creados.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
 Puede seleccionar cualquier manual del catálogo para crear instancias que desee reutilizar. Consulte la documentación para [aprender a crear instancias](/help/use-case-playbooks/playbooks/create-share-reuse.md).
 
-La opción ![&quot;Crear instancia&quot; se resaltó en la ficha &quot;Descripción general del manual&quot; una vez que seleccionó un manual.](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
+![La ficha &quot;Información general del libro de estrategias&quot; con la opción &quot;Crear instancia&quot; resaltada.](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
 
 >[!NOTE]
 >
@@ -108,13 +108,13 @@ La opción ![&quot;Crear instancia&quot; se resaltó en la ficha &quot;Descripci
 
 ## Ejemplos de peticiones
 
-El asistente de IA puede procesar varias estructuras de solicitud y extraer detalles clave al tiempo que filtra la información innecesaria. A continuación se muestran algunos ejemplos de mensajes de usuario y cómo el sistema los interpreta:
+El asistente de IA puede procesar varias estructuras de solicitud y extraer detalles clave al tiempo que filtra la información innecesaria. A continuación se muestran algunos ejemplos de indicaciones del usuario y de cómo las interpreta el sistema.
 
 **Ejemplo 1:**
 
-&quot;Cree una campaña titulada &quot;Complete la apariencia&quot; para aumentar las ventas y el CLV. La campaña anima a los clientes que compraron utensilios de cocina o muebles a completar una compra complementaria mediante recomendaciones y ofertas personalizadas relacionadas con su compra. Primero envíe un mensaje a los clientes con recomendaciones de productos. Si no realiza ninguna compra en un plazo de 7 días, recibe un segundo mensaje con recomendaciones y ofertas de productos. Utilice notificaciones push y correo electrónico para ponerse en contacto con los clientes. Clientes objetivo que hayan realizado una compra en los últimos 7 días en la categoría de utensilios de cocina o muebles y que no hayan sido objetivos en los últimos 30 días. Como parte de la campaña, queremos medir los KPI como los clics (correo electrónico, aplicación, SMS, push), CTR, E-Wallet CTR, AOV Conversion.CLV Revenue, eventos de compra total (en tienda, digital, centro de llamadas).&quot;
+&quot;Cree una campaña titulada &quot;Complete la apariencia&quot; para aumentar las ventas y el CLV. La campaña anima a los clientes que compraron utensilios de cocina o muebles a completar una compra complementaria mediante recomendaciones y ofertas personalizadas relacionadas con su compra. Primero envíe un mensaje a los clientes con recomendaciones de productos. Si no realiza ninguna compra en un plazo de 7 días, recibe un segundo mensaje con recomendaciones y ofertas de productos. Utilice notificaciones push y correo electrónico para ponerse en contacto con los clientes. Clientes objetivo que hayan realizado una compra en los últimos 7 días en la categoría de utensilios de cocina o muebles y que no hayan sido objetivos en los últimos 30 días. Como parte de la campaña, queremos medir los KPI como los clics (correo electrónico, aplicación, sms, push), CTR, E-Wallet CTR, AOV Conversion.CLV Revenue, eventos de compra total (en tienda, digital, centro de llamadas).&quot;
 
-![Ejemplo que muestra un mensaje largo en el cuadro de entrada de texto](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
+![Ejemplo de un mensaje largo introducido en el cuadro de entrada de texto para generar un libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Ejemplo 2:**
 
@@ -126,20 +126,20 @@ Canales/puntos de contacto del proyecto: correo electrónico
 Destinatarios objetivo: Clientes que se han suscrito a las comunicaciones del boletín de moda ACME.
 KPI de objetivo/métricas de participación/ROI: 1. Aumentar los ingresos de productos. 2. Impulse la lealtad del cliente&quot;.
 
-![Ejemplo que muestra una solicitud organizada en el cuadro de entrada de texto](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
+![Ejemplo de un mensaje de estilo lista organizado introducido en el cuadro de entrada de texto para generar un libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **Ejemplo 3:**
 
 &quot;Empuje a los compradores a comprar productos durante una campaña promocional de productos en curso.
 Interactúe con los compradores durante una promoción continua enviando comunicaciones adecuadas por correo electrónico, SMS o notificaciones push para comprar productos. Envíeles un correo electrónico recordatorio después de 24 horas de que no participen en la promoción&quot;.
 
-![Ejemplo que muestra un mensaje conciso en el cuadro de entrada de texto](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
+![Ejemplo de un mensaje conciso introducido en el cuadro de entrada de texto para generar un libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **Ejemplo 4:**
 
 &quot;Vende zapatos a jugadores de secundaria&quot;.
 
-![Ejemplo que muestra un indicador de línea única](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
+![Ejemplo de un mensaje de una línea introducido en el cuadro de entrada de texto para generar un libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 El asistente de IA elimina todos los detalles innecesarios, como el nombre del proyecto o el fondo. Extrae los elementos clave como la &quot;audiencia de destino&quot;, el &quot;objetivo de campaña&quot; y el &quot;canal de marketing&quot; y funciona con cualquier estilo de entrada.
 
@@ -151,23 +151,23 @@ Estos ejemplos muestran cómo la IA puede refinar y extraer detalles esenciales 
 
 ## Directrices y moderación de contenido
 
-Al crear libros de reproducción, tenga en cuenta el idioma y el contenido que incluye. Los libros de reproducción son visibles en toda la organización y los usuarios pueden marcar cualquier contenido ofensivo o inapropiado.
+Al crear libros de reproducción, tenga en cuenta el idioma y el contenido que incluye. Los libros de reproducción son visibles en toda la organización y cualquier contenido ofensivo o inapropiado que los usuarios marquen.
 
 ### Proceso de indicación y revisión
 
-Si un libro de reproducción está marcado por contenido inapropiado u ofensivo, se comunica automáticamente a Adobe para su revisión. A continuación, Adobe revisa el contenido marcado y, si se considera inapropiado, se notifica al cliente y se elimina el manual.
+Si un libro de reproducción contiene contenido inapropiado u ofensivo, Adobe recibe automáticamente un informe para su revisión. Adobe revisa el contenido marcado, notifica al cliente si lo considera inapropiado y elimina el manual de implementación.
 
 ## Compartir libros de reproducción en zonas protegidas {#share-playbooks-sandboxes}
 
-Al crear y publicar un libro de reproducción en una zona protegida, estará disponible automáticamente en todas las zonas protegidas de su organización. Esto elimina la necesidad de compartir manualmente y le permite crear instancias del manual en cualquier otra zona protegida sin problemas.
+Al crear y publicar un libro de reproducción en una zona protegida, estará disponible automáticamente en todas las zonas protegidas de su organización. Esta función elimina la necesidad de compartir manualmente y le permite crear instancias del manual en cualquier otra zona protegida sin problemas.
 
 >[!TIP]
 >
->Si el manual hace referencia a campos que no están disponibles en el esquema de unión de la zona protegida de destino o carecen de los permisos necesarios, puede ver un mensaje de error al intentar crear la instancia. Ese mensaje llama a los campos que faltan o a los permisos que faltan.
+>Si el manual hace referencia a campos que no están disponibles en el esquema de unión de la zona protegida de destino o si carece de los permisos necesarios, aparece un mensaje de error al intentar crear la instancia. El mensaje especifica los campos y/o permisos que faltan.
 
-Si falta algún campo en el esquema de unión, un cuadro de diálogo lo resaltará durante la importación.
+Si falta algún campo en el esquema de unión, un cuadro de diálogo lo resalta durante la importación.
 
-Faltan ![campos en el esquema de unión enumerados durante el proceso de importación](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
+![Cuadro de diálogo que enumera los campos que faltan en el esquema de unión durante el proceso de importación del libro de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Uso compartido de libros de reproducción entre organizaciones {#sharing-playbooks-organizations}
 
@@ -210,7 +210,7 @@ Estos permisos son necesarios para la funcionalidad de uso compartido interno:
 * [**Administrar paquete**](/help/sandboxes/ui/sandbox-tooling.md)
 * [**Compartir paquete**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
 
-Estos permisos le permiten:
+Utilice estos permisos para lo siguiente:
 
 * Introduzca el entorno de zona protegida
 * Acceder a la función dentro de la zona protegida
@@ -218,11 +218,11 @@ Estos permisos le permiten:
 
 Estos permisos se encuentran en la sección **[!UICONTROL Zonas protegidas]** de la lista de permisos.
 
-![Lista de permisos con los permisos relevantes resaltados.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+![Se ha resaltado la lista de permisos con permisos relevantes para administrar y compartir libros de reproducción.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 
 ### Recorridos y objetos relacionados: permisos
 
-Al crear Recorridos que utilizan libros de reproducción, es probable que haga referencia a otros objetos como **Canales**, **Audiencias** y otras entidades. Cada uno de ellos tiene su propio conjunto de permisos.
+Al crear Recorridos que utilizan libros de reproducción, podría hacer referencia a otros objetos, como **Canales**, **Audiencias** y otras entidades. Cada uno de estos objetos tiene su propio conjunto de permisos.
 
 Estos son los permisos clave para las acciones relacionadas con el Recorrido, como:
 
@@ -230,7 +230,7 @@ Estos son los permisos clave para las acciones relacionadas con el Recorrido, co
 * **Administrar recorrido**
 * Permisos relacionados con objetos como audiencias y canales
 
-También necesitará los siguientes permisos de audiencia:
+También necesita los siguientes permisos de audiencia:
 
 * **Lectura de segmento**
 * **Lectura de perfil**
