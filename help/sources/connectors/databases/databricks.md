@@ -5,18 +5,20 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
+source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '612'
 ht-degree: 3%
 
 ---
 
 # [!DNL Azure Databricks]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->El origen [!DNL Azure Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
+>* El origen [!DNL Azure Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
+>
+>* El origen [!DNL Azure Databricks] está en la versión beta. Lea los [términos y condiciones](../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 [!DNL Azure Databricks] es una plataforma basada en la nube diseñada para el análisis de datos, el aprendizaje automático y la IA. Puede usar [!DNL Databricks] para integrarse con [!DNL Azure] y proporcionar un entorno holístico para crear, implementar y administrar soluciones de datos a escala.
 

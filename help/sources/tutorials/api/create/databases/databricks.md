@@ -4,18 +4,20 @@ description: Obtenga información sobre cómo conectar Azure Databricks a Experi
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
+source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '528'
 ht-degree: 2%
 
 ---
 
 # Conectar [!DNL Azure Databricks] a Experience Platform mediante la API [!DNL Flow Service]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->El origen [!DNL Azure Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
+>* El origen [!DNL Azure Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
+>
+>* El origen [!DNL Azure Databricks] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Lea esta guía para aprender a conectar su cuenta de [!DNL Azure Databricks] a Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
