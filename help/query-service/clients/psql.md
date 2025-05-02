@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conectar PSQL al servicio de consultas
 description: Obtenga información sobre cómo conectar el cliente PSQL al servicio de consultas de Adobe Experience Platform, incluidas las versiones de PostgreSQL admitidas y las instrucciones de configuración.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 74f4ac5a3ca4c06e81111ef453ae0effd21b3f16
+source-git-commit: f75ea97e8631984dcd1d4a7f8aff3c10cba7b11f
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Una vez instalado PSQL, puede conectarlo al servicio de consultas. Vuelva a la i
 
 En la sección **[!UICONTROL Comando PSQL]**, seleccione el icono **[!UICONTROL Copiar al portapapeles]** (![Icono Copiar](/help/images/icons/copy.png)) para copiar la cadena de comandos.
 
-![Pestaña Credenciales del panel de consultas con el icono de copia resaltado.](../images/clients/psql/connect-bi.png)
+![Pestaña Credenciales del panel de consultas con el icono de copia resaltado.](../images/clients/psql/copy-credentials.png)
 
 Pegue la cadena de comando en el terminal y presione **Enter** en el teclado.
 

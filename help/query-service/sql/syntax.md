@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento detalla y explica la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 1%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>Cuando se usa `HEAD` o `TAIL` en una cláusula `SNAPSHOT`, se deben envolver entre comillas simples (por ejemplo, &quot;HEAD&quot;, &quot;TAIL&quot;). Si se utilizan sin comillas, se produce un error de sintaxis.
 
 En la tabla siguiente se explica el significado de cada opción de sintaxis dentro de la cláusula SNAPSHOT.
 
@@ -130,7 +134,7 @@ En la tabla siguiente se explica el significado de cada opción de sintaxis dent
 | `AS OF end_snapshot_id` | Lee los datos tal como estaban en el ID de instantánea especificado (incluido). |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | Lee datos entre los ID de instantánea de inicio y fin especificados. Es exclusivo de `start_snapshot_id` e incluye `end_snapshot_id`. |
 | `BETWEEN HEAD AND start_snapshot_id` | Lee datos desde el principio (antes de la primera instantánea) hasta el ID de instantánea de inicio especificado (incluido). Tenga en cuenta que esto solo devuelve filas en `start_snapshot_id`. |
-| `BETWEEN end_snapshot_id AND TAIL` | Lee datos inmediatamente después del `end-snapshot_id` especificado hasta el final del conjunto de datos (sin incluir el ID de instantánea). Esto significa que si `end_snapshot_id` es la última instantánea del conjunto de datos, la consulta devolverá cero filas porque no hay instantáneas más allá de la última instantánea. |
+| `BETWEEN end_snapshot_id AND TAIL` | Lee datos inmediatamente después del `end_snapshot_id` especificado hasta el final del conjunto de datos (sin incluir el ID de instantánea). Esto significa que si `end_snapshot_id` es la última instantánea del conjunto de datos, la consulta devolverá cero filas porque no hay instantáneas más allá de la última instantánea. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Lee datos que comienzan desde el identificador de instantánea especificado de `table_to_be_queried` y los une con los datos de `table_to_be_joined` tal y como estaban a las `your_chosen_snapshot_id`. La unión se basa en las ID coincidentes de las columnas ID de las dos tablas que se unen. |
 
 Una cláusula `SNAPSHOT` funciona con una tabla o alias de tabla, pero no sobre una subconsulta o vista. Una cláusula `SNAPSHOT` funciona en cualquier lugar donde se pueda aplicar una consulta `SELECT` en una tabla.

@@ -4,10 +4,10 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3398'
-ht-degree: 39%
+source-wordcount: '3442'
+ht-degree: 38%
 
 ---
 
@@ -307,7 +307,7 @@ El panel de uso de licencias informa sobre varias métricas únicas que se aplic
 | [!UICONTROL Número de paquetes de riqueza de perfiles] | Aumento en su volumen total de datos autorizado de 25 KB por perfil para cada paquete de riqueza del perfil adicional. |
 | [!UICONTROL Horas de cálculo del servicio de consultas] | Medida de la cantidad de tiempo que los motores del servicio de consultas tardan en leer, procesar y escribir los datos en el lago de datos cuando se ejecuta una consulta por lotes. |
 | [!UICONTROL Nº de paquetes de segmentación de transmisión] | Los paquetes actualizan la pertenencia al segmento de un perfil de persona cuando los nuevos datos entran en el servicio de segmentación a través de un flujo de streaming. La pertenencia al segmento se evalúa en función de los atributos del perfil de la persona actual y el valor del evento actual, sin tener en cuenta el comportamiento histórico. La segmentación de streaming es una función compartida. |
-| [!UICONTROL Volumen total de datos] | Cantidad total de datos disponibles para que el perfil del cliente en tiempo real los utilice en los flujos de trabajo de participación. Consulte las [preguntas más frecuentes acerca del volumen total de datos](../../landing/license-usage-and-guardrails/total-data-volume.md) para obtener más información. |
+| [!UICONTROL Volumen total de datos] | Cantidad total de datos disponibles para que el perfil del cliente en tiempo real los utilice en los flujos de trabajo de participación. El volumen total de datos se calcula mediante la fórmula siguiente: **Volumen total de datos = Audiencia a la que se puede dirigir × Riqueza promedio de perfiles**. Esta métrica refleja los datos almacenados solamente en el almacén de perfiles y excluye el almacenamiento del lago de datos. Proporciona una vista más enfocada de los datos relevantes para la participación basada en perfiles. Consulte las [preguntas más frecuentes acerca del volumen total de datos](../../landing/license-usage-and-guardrails/total-data-volume.md) para obtener más información. |
 | [!UICONTROL Volumen total de salida de datos] | El volumen anual acumulado de datos exportados de Adobe Experience Platform a almacenes de datos de terceros. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
