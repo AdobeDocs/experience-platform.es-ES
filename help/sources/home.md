@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 02fafc830e964bbfa94c125c2006f4998d9d193d
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 3%
@@ -32,6 +32,7 @@ Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Transmisión]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Lote]{type=Informative}
+- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Transmisión]{type=Positive}
 - [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE Lote]{type=Informative}
@@ -128,7 +129,6 @@ Experience Platform es compatible con la ingesta de datos desde una base de dato
 
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE Lote]{type=Informative}

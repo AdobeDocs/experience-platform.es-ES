@@ -1,14 +1,21 @@
 ---
 title: Conectar Azure Databricks A Experience Platform Mediante La API De Flow Service
 description: Obtenga información sobre cómo conectar Azure Databricks a Experience Platform mediante API.
-source-git-commit: 22cdbb1cbdeafced17dcd6bec243173723c8e483
+badgeUltimate: label="Ultimate" type="Positive"
+badgeBeta: label="Beta" type="Informative"
+exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '507'
 ht-degree: 2%
 
 ---
 
 # Conectar [!DNL Azure Databricks] a Experience Platform mediante la API [!DNL Flow Service]
+
+>[!IMPORTANT]
+>
+>El origen [!DNL Azure Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
 
 Lea esta guía para aprender a conectar su cuenta de [!DNL Azure Databricks] a Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 

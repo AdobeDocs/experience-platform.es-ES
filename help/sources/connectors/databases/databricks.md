@@ -1,16 +1,22 @@
 ---
 title: Azure Databricks
 description: Obtenga información acerca de los pasos previos necesarios para conectar Azure Databricks a Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
+badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 16de2879f5f5da533ce640d93871571f03aa74c2
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 2%
+source-wordcount: '593'
+ht-degree: 3%
 
 ---
 
 # [!DNL Azure Databricks]
+
+>[!IMPORTANT]
+>
+>El origen [!DNL Azure Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
 
 [!DNL Azure Databricks] es una plataforma basada en la nube diseñada para el análisis de datos, el aprendizaje automático y la IA. Puede usar [!DNL Databricks] para integrarse con [!DNL Azure] y proporcionar un entorno holístico para crear, implementar y administrar soluciones de datos a escala.
 
