@@ -4,7 +4,7 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: depurador;extensión de Experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
+source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 93%
@@ -17,7 +17,7 @@ ht-degree: 93%
 
 ### Correcciones y mejoras
 
-* Se ha corregido un problema en el cual Debugger impedía que las funciones DTM y Launch funcionaran.
+* Se ha corregido un problema en el cual Debugger impedía que las funciones de DTM y Etiquetas funcionaran.
 * Se ha corregido un problema en el cual las visitas posteriores al procesamiento de Analytics no aparecían en los registros.
 * Se ha corregido un problema en el cual los datos en idiomas que no son ASCII, como el japonés, no se mostraban correctamente en los registros.
 
