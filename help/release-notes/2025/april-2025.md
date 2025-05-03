@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2025'
 description: Las notas de la versión de abril de 2025 de Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
+source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 29%
+source-wordcount: '2147'
+ht-degree: 30%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 29%
 Actualizaciones de funciones y documentación existentes en Adobe Experience Platform:
 
 - [Experience League](#experience-league)
+- [Recopilación de datos](#data-collection)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia](#xdm)
 - [Servicio de identidad](#identity)
@@ -41,6 +42,18 @@ Experience League es una completa plataforma de aprendizaje diseñada para ayuda
 | Función | Descripción |
 | --- | --- |
 | Página de inicio personalizada | Acceda a su página de inicio personalizada en [Experience League](https://experienceleague.adobe.com/en/home#) y personalícela. Inicie sesión con sus credenciales de Adobe y, a continuación, seleccione **[!UICONTROL Experience League]** en el menú superior para comenzar a optimizar su experiencia de aprendizaje: <ul><li>**Marcadores**: usa la característica [!UICONTROL Marcadores] para guardar y recopilar tus recursos favoritos en un solo lugar. Puede guardar una variedad de contenido, incluidas listas de reproducción, artículos y tutoriales.</li><li>**Personalice su aprendizaje**: Mejore su experiencia de aprendizaje al actualizar su perfil de Experience League con los roles, industrias, productos y niveles de experiencia que mejor se adapten a sus necesidades.</li><li>**Recommendations**: vea el contenido de aprendizaje recomendado en función de su actividad reciente.</li><li>**Vistos recientemente**: Utilice la sección [!UICONTROL Vistos recientemente] para volver rápidamente al contenido visualizado recientemente, como documentación y vídeos.</li><li>**Recursos de aprendizaje**: use el panel [!UICONTROL Todos los recursos de aprendizaje] para ir a tutoriales, documentación, comunidad, eventos y certificaciones.</li><li>**Novedades**: vea la sección [!UICONTROL Novedades] para ver una secuencia del contenido más reciente en Experience League.</li><li>**Vea eventos anteriores bajo demanda**: Vea transmisiones en vivo grabadas anteriormente sobre temas destacados de productos, casos de uso y tutoriales con la sección [!UICONTROL Ver eventos anteriores bajo demanda].</li></ul><br> ![Página de inicio personalizada en Experience League.](../2025/assets/april/personalized-home-page.png "Página de inicio personalizada en Experience League."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+## Recopilación de datos {#data-collection}
+
+Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Extensión de la API de eventos web [!DNL Amazon] | La extensión de la API de conversiones [!DNL Amazon] permite a los anunciantes compartir interacciones del sitio web directamente con [!DNL Amazon], lo que mejora la atribución, la fiabilidad de los datos y la optimización de la campaña. Esta extensión es compatible con el reenvío de eventos, lo que le permite enviar eventos de conversión como compras, adiciones al carro de compras y mucho más, a la vez que garantiza la anulación de duplicación adecuada para unos informes precisos. Para obtener más información, consulte la [descripción general de la extensión de Amazon](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
 
@@ -152,8 +165,8 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | El origen [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ya está disponible. Utilice esta fuente para llevar los datos de afinidades de perfiles de usuario de [!DNL Algolia] a Experience Platform. A continuación, puede utilizar estos datos para mejorar la participación del usuario, las tasas de Conversión y la experiencia del cliente general proporcionando soluciones de búsqueda de alto rendimiento para sitios web, plataformas comercio electrónico y aplicaciones. Para obtener más información, lea la guía sobre cómo [incorporar [!DNL Algolia User Profiles] datos en Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
-| [!BADGE ]{type=Informative} Compatibilidad API de Beta con[!DNL Azure Databricks] | El origen [!DNL Azure Databricks] ya está disponible en la API. Use la API [!DNL Flow Service] para conectar su cuenta de [!DNL Databricks] y llevar los datos de [!DNL Databricks] a Experience Platform. Para obtener más información, lea la documentación sobre [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md). |
+| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | El origen [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ya está disponible. Utilice esta fuente para llevar los datos de afinidades de perfiles de usuario de [!DNL Algolia] a Experience Platform. A continuación, puede utilizar estos datos para mejorar la participación del usuario, las tasas de conversión y la experiencia general del cliente mediante el suministro de soluciones de búsqueda de alto rendimiento para sitios web, plataformas de comercio electrónico y aplicaciones. Para obtener más información, lee la guía sobre cómo [ingerir [!DNL Algolia User Profiles] datos en Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
+| Compatibilidad con la API [!BADGE Beta]{type=Informative} para [!DNL Azure Databricks] | El origen [!DNL Azure Databricks] ya está disponible en la API. Use la API [!DNL Flow Service] para conectar su cuenta de [!DNL Databricks] y llevar los datos de [!DNL Databricks] a Experience Platform. Para obtener más información, lea la documentación sobre [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md). |
 
 {style="table-layout:auto"}
 
@@ -163,7 +176,7 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 | --- | --- |
 | Se han actualizado los campos XDM para la ingesta de datos de medios de streaming en Experience Platform. | El nuevo grupo de campos XDM `mediaReporting` ya está disponible para la ingesta de datos de medios de streaming a través del origen de Adobe Analytics en Experience Platform. Este campo reemplaza el campo `media.mediaTimed`.</br> <br>Durante un período de transición de tres meses, la ingesta de datos en `media.mediaTimed` campos continuará. Sin embargo, a finales de julio de 2025, los campos `media.mediaTimed` quedarán totalmente obsoletos y dejarán de ser visibles en la interfaz de usuario del esquema de Experience Platform, y los datos solo se enviarán mediante los campos `mediaReporting`.</br><br>Si ha implementado el origen de Analytics para recopilar datos de medios de streaming en Platform antes del 22 de abril de 2025, debe migrar las configuraciones existentes para enviar datos mediante el nuevo grupo de campos. Esta migración debe completarse para finales de julio de 2025. Póngase en contacto con el equipo de su cuenta de Adobe para obtener ayuda sobre la migración. |
 | Nuevos tipos de autenticación para [!DNL MariaDB] y [!DNL PostgreSQL] | Ahora puede usar la autenticación básica para autenticar los orígenes de [!DNL MariaDB] y [!DNL PostgreSQL] en Experience Platform. Lea la siguiente documentación para obtener más información: <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
-| Compatibilidad con filtrado a nivel de fila para [!DNL Amazon Redshift] | Puede usar capacidades de filtrado a nivel de fila para los [!DNL Amazon Redshift] datos en Experience Platform. Para obtener más información, lea la guía sobre [filtrado de datos de nivel de fila para orígenes en la API](../../sources/tutorials/api/filter.md). |
+| Compatibilidad con filtrado a nivel de fila para [!DNL Amazon Redshift] | Puede usar funcionalidades de filtrado a nivel de fila para sus datos de [!DNL Amazon Redshift] en Experience Platform. Para obtener más información, lea la guía sobre [filtrado de datos de nivel de fila para orígenes en la API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
