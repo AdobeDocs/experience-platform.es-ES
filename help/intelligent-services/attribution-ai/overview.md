@@ -29,7 +29,7 @@ Attribution AI admite dos categorías de puntuaciones, algorítmica y basada en 
 
 El siguiente vídeo está diseñado para ayudarle a comprender mejor Attribution AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36562?learn=on&quality=12&captions=spa)
 
 ## Ejemplos de casos de uso empresariales
 

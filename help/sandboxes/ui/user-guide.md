@@ -53,7 +53,7 @@ Una vez seleccionada una zona protegida, la pantalla se actualiza y se actualiza
 
 Utilice el siguiente vídeo para obtener una descripción general rápida sobre cómo utilizar las zonas protegidas en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430293/?quality=12&learn=on&captions=spa)
 
 Para crear una nueva zona protegida, seleccione **[!UICONTROL Crear zona protegida]** en la esquina superior derecha de la pantalla.
 

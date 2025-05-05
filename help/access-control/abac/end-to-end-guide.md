@@ -247,4 +247,4 @@ Para obtener más información sobre el control de acceso basado en atributos, v
 
 El siguiente vídeo tiene como objetivo facilitar la comprensión del control de acceso basado en atributos y describe cómo configurar funciones, recursos y directivas.
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451831?learn=on&captions=spa)

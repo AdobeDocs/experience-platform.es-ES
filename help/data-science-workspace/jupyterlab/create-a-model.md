@@ -69,7 +69,7 @@ El resto de este tutorial abarca los siguientes archivos predefinidos en el bloc
 
 El siguiente tutorial de vídeo explica el portátil del modelo de tendencia de Luma:
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452495?captions=spa)
 
 ### Archivo de requisitos {#requirements-file}
 

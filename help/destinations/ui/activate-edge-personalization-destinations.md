@@ -39,11 +39,11 @@ Para obtener una breve descripción general sobre cómo configurar la conexión 
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449796/?quality=12&learn=on&captions=spa)
 
 Vea el siguiente vídeo para obtener una breve descripción general de cómo compartir audiencias y atributos de perfil en Adobe Target y destinos de personalización personalizados.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447358/?quality=12&learn=on&captions=spa)
 
 ## Casos de uso {#use-cases}
 

@@ -17,7 +17,7 @@ Adobe Experience Platform ingiere datos de una amplia variedad de fuentes. Un de
 
 Puede utilizar el servicio de consultas para conectar el recorrido del cliente con conexión y comprender la atribución omnicanal de su marca. El siguiente vídeo muestra cómo una empresa de experiencia puede utilizar el servicio de consultas para tratar casos de uso clave y cómo funciona el servicio de consultas.
 
->[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33590?quality=12&learn=on&captions=spa)
 
 ## Uso del servicio de consultas {#usage}
 
@@ -66,4 +66,4 @@ Al leer este documento, se le ha presentado el Servicio de consultas y cómo fun
 
 Para prepararse mejor para ejecutar consultas, vea el siguiente vídeo. Este vídeo comparte sugerencias y prácticas recomendadas para ejecutar consultas en la interfaz del editor de consultas, los clientes SQL, las soluciones de inteligencia empresarial (BI) y la API HTTP.
 
->[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33588?quality=12&learn=on&captions=spa)

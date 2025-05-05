@@ -273,4 +273,4 @@ Al seguir este tutorial, ha creado correctamente una instancia de servicio en At
 
 El siguiente vídeo describe un flujo de trabajo completo para crear una nueva instancia en Attribution AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36568?learn=on&quality=12&captions=spa)

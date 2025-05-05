@@ -48,7 +48,7 @@ Esta guía explica cómo asignar los datos dentro de la interfaz de usuario. Par
 
 Para obtener una demostración rápida del proceso de preparación de datos para la recopilación de datos, consulte el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345563?quality=12&enable10seconds=on&speedcontrol=on&captions=spa)
 
 ## [!UICONTROL Seleccionar datos] {#select-data}
 

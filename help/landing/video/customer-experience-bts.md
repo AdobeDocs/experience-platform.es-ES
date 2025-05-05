@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Después de ver el video que muestra [una experiencia del cliente con tecnología de Experience Platform](customer-experience.md), ve detrás de escena para ver cómo se usó Adobe Experience Platform para impulsar esta experiencia.
 
->[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36311?quality=12&learn=on&captions=spa)

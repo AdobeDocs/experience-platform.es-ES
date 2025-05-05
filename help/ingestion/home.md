@@ -304,4 +304,4 @@ Este documento proporciona una breve introducción a los diferentes aspectos de 
 >
 >El término &quot;perfil unificado&quot; que se utiliza en el siguiente vídeo no está actualizado. Los términos [!DNL "Profile"] o [!DNL "Real-Time Customer Profile"] son los términos correctos utilizados en la documentación de [!DNL Experience Platform]. Consulte la documentación para obtener la funcionalidad más reciente.
 
->[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346830?quality=12&learn=on&captions=spa)

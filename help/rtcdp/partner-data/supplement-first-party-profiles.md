@@ -47,7 +47,7 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 
 Vea el tutorial de vídeo a continuación para ver un tutorial sobre cómo complementar las audiencias de origen con atributos proporcionados por los socios:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452453/?learn=on&captions=spa)
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 

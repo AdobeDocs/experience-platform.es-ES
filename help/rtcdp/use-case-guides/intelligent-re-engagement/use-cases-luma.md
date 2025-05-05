@@ -16,12 +16,12 @@ Descubra cómo Adobe adaptó el caso de uso de renovación inteligente de la par
 
 ## Implementación
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454268/?quality=12&learn=on&captions=spa)
 
 ## Configuración de recorrido
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453964/?quality=12&learn=on&captions=spa)
 
 ## Configuración de audiencia y destino
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452908/?quality=12&learn=on&captions=spa)

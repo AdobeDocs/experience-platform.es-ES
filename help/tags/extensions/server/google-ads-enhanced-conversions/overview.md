@@ -39,7 +39,7 @@ Dado que el envío de eventos de conversión implica una implementación del lad
 
 El siguiente vídeo proporciona una introducción a la extensión [!DNL Enhanced Conversions] y explica los pasos de implementación en un nivel superior:
 
->[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416061?quality=12&learn=on&captions=spa)
 
 ## Envío de una conversión mediante etiquetas
 

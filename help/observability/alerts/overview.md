@@ -64,7 +64,7 @@ Las alertas se pueden enviar a un webhook configurado para facilitar la automati
 
 La interfaz de usuario de Experience Platform permite ver las alertas recibidas y administrar las reglas de alerta. El siguiente vídeo ofrece una introducción a estas funciones.
 
->[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423918?quality=12&learn=on&captions=spa)
 
 Para trabajar con alertas en la interfaz de usuario de Experience Platform, debe tener los siguientes permisos de control de acceso habilitados a través de Adobe Admin Console:
 

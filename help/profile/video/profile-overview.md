@@ -24,4 +24,4 @@ Este vídeo proporciona información básica sobre el perfil del cliente en tiem
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía de la interfaz de usuario del perfil](../ui/user-guide.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/31833?quality=12&learn=on&captions=spa)

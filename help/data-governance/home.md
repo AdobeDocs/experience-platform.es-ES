@@ -132,8 +132,8 @@ En la tabla siguiente se describen los términos clave relacionados con la gober
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender el marco de trabajo de control de datos.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32682?quality=12&enable10seconds=on&speedcontrol=on&captions=spa)
 
 En el siguiente vídeo se explica cómo aplicar etiquetas de uso de datos a los esquemas o a la totalidad de un conjunto de datos en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422794/?learn=on&captions=spa)

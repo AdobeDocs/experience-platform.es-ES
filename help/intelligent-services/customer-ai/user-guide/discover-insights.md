@@ -231,4 +231,4 @@ Este documento describe las perspectivas proporcionadas por una instancia del se
 
 El siguiente vídeo describe cómo utilizar la inteligencia artificial aplicada al cliente para ver la salida de los modelos y los factores influyentes.
 
->[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36569?learn=on&quality=12&captions=spa)

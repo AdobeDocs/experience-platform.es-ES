@@ -21,7 +21,7 @@ El siguiente documento proporciona pasos sobre cómo acceder y utilizar el visua
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender el visualizador de gráficos de identidad.
 
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345653/?quality=12&learn=on&captions=spa)
 
 ## Introducción
 

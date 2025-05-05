@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Este vídeo proporciona información general sobre las funciones, las fases y los resultados clave relacionados con un proyecto de Adobe Experience Platform exitoso.
 
->[!VIDEO](https://video.tv.adobe.com/v/32807?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430452?quality=12&learn=on&captions=spa)

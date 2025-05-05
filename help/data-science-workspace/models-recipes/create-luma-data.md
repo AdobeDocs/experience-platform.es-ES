@@ -51,13 +51,13 @@ El siguiente tutorial utiliza un modelo de tendencia de compra de Luma personali
 
 Para crear un modelo, debe tener un conjunto de datos en Experience Platform que se utilice para entrenar y puntuar el modelo. El siguiente tutorial en vídeo del curso [Data Science Workspace](https://experienceleague.adobe.com/?lang=es&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=es) le guiará en la creación del esquema de Luma y en la ingesta de los datos utilizados por el modelo de tendencia de compra.
 
->[!VIDEO](https://video.tv.adobe.com/v/333312)
+>[!VIDEO](https://video.tv.adobe.com/v/3447157?captions=spa)
 
 ### Cree los conjuntos de datos de formación, puntuación y resultados de puntuación
 
 Para ejecutar el bloc de notas del generador de fórmulas o utilizar la API para entrenar y puntuar un modelo, debe especificar los conjuntos de datos y los esquemas que se utilizan para la formación/puntuación. El siguiente tutorial de vídeo le guía a través de la configuración de los conjuntos de datos de formación, puntuación y resultados de puntuación, así como el esquema de resultados de puntuación utilizado en el modelo de tendencia de compra de Luma.
 
->[!VIDEO](https://video.tv.adobe.com/v/333426)
+>[!VIDEO](https://video.tv.adobe.com/v/3447424?captions=spa)
 
 ## Pasos siguientes
 

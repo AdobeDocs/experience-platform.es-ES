@@ -192,7 +192,7 @@ Al seguir este tutorial, ha creado correctamente un flujo de datos para introduc
 >
 > La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
->[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32642?quality=12&learn=on&captions=spa)
 
 ## Apéndice
 

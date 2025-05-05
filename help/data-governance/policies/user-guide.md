@@ -223,4 +223,4 @@ Este documento proporciona información general sobre cómo administrar las dire
 
 El siguiente vídeo proporciona una demostración de cómo trabajar con directivas de uso en la interfaz de usuario de [!DNL Experience Platform]:
 
->[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37128?quality=12&learn=on&captions=spa)

@@ -39,4 +39,4 @@ Puede utilizar la información recopilada por Experience Platform Debugger para 
 
 ## Tutorial de vídeo
 
->[!VIDEO](https://video.tv.adobe.com/v/32156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35998?quality=12&learn=on&captions=spa)

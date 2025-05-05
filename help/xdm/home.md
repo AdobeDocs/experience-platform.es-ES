@@ -147,4 +147,4 @@ Para conocer los principios de diseño y las prácticas recomendadas para crear 
 
 Para comprender mejor [!DNL XDM System] en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38506?quality=12&learn=on&captions=spa)

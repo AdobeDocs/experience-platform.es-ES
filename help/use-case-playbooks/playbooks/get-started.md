@@ -26,7 +26,7 @@ Para acceder a una amplia galería de libros de casos de uso en la interfaz de u
 
 Vea este vídeo para conocer los pasos necesarios para crear su zona protegida, configurar permisos y configurar superficies de canal para notificaciones por correo electrónico, push y SMS en Journey Optimizer.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449829?learn=on&captions=spa)
 
 ## Creación de una zona protegida de desarrollo {#create-development-sandbox}
 

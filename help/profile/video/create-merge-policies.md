@@ -25,4 +25,4 @@ Este vídeo proporciona información básica sobre las políticas de combinació
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía de la interfaz de usuario de las políticas de combinación](../merge-policies/ui-guide.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/345075?quality=12&learn=on&captions=spa)

@@ -64,4 +64,4 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender el servicio de ide
 >
 >La interfaz de usuario del Experience Platform que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
->[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31673?quality=12&learn=on&captions=spa)

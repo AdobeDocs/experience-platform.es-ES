@@ -195,4 +195,4 @@ Una vez que haya terminado de filtrar los datos y haya podido mostrar la informa
 
 El siguiente vídeo está diseñado para ayudarle a aprender a utilizar la página de perspectivas de Attribution AI con el fin de comprender el ROI de los canales y campañas de marketing.
 
->[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/345099?learn=on&quality=12&captions=spa)

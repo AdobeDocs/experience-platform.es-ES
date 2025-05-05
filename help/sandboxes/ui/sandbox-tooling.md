@@ -258,7 +258,7 @@ Cuando finaliza la importación, se recibe una notificación en la interfaz de u
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender las herramientas de la zona protegida, y describe cómo crear un nuevo paquete, publicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446086/?learn=on&captions=spa)
 
 ## Pasos siguientes
 

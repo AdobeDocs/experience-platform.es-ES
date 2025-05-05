@@ -25,4 +25,4 @@ Este vídeo proporciona información básica sobre los esquemas de unión en Ado
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía de IU de esquemas de unión](../ui/union-schema.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/342821?quality=12&learn=on&captions=spa)

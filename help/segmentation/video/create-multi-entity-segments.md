@@ -25,4 +25,4 @@ El siguiente vídeo pretende ayudarle a comprender la creación de segmentos din
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía del Generador de segmentos](../ui/segment-builder.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345106?quality=12&learn=on&captions=spa)

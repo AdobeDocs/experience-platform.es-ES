@@ -116,7 +116,7 @@ Para quitar un usuario de un rol, seleccione el icono **X** junto al nombre del 
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de una función nueva y a administrar usuarios para esa función.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423938/?learn=on&captions=spa)
 
 ## Administrar credenciales de API para un rol {#manage-api-credentials-for-role}
 

@@ -42,7 +42,7 @@ La transición a los permisos de Adobe Experience Platform tiene pasos adicional
 
 El siguiente vídeo pretende facilitar su comprensión de las credenciales de desarrollador y API.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446401/?learn=on&captions=spa)
 
 ## Pasos siguientes
 

@@ -22,7 +22,7 @@ Los servicios inteligentes permiten a los analistas y profesionales de marketing
 
 El siguiente vídeo está diseñado para ayudarle a comprender los servicios inteligentes. En este vídeo, que utiliza ejemplos de casos de uso empresariales, se explica un flujo de trabajo de alto nivel y se describen las capacidades de la inteligencia artificial aplicada a la atribución y la inteligencia artificial aplicada al cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36571?learn=on&quality=12&captions=spa)
 
 ## Ventajas de los servicios inteligentes
 

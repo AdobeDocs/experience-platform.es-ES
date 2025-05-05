@@ -152,4 +152,4 @@ Para obtener más información sobre la ingesta por lotes, lea la [descripción 
 >
 >La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
->[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34380?quality=12&learn=on&captions=spa)

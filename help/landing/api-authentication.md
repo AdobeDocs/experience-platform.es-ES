@@ -118,7 +118,7 @@ Seleccione **[!UICONTROL Guardar la API configurada]** cuando esté listo.
 
 En el tutorial de vídeo siguiente también se muestra una descripción detallada de los pasos descritos anteriormente para configurar una integración con la API de Experience Platform:
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31627/?learn=on&captions=spa)
 
 ### Recopilar credenciales {#gather-credentials}
 
@@ -298,7 +298,7 @@ Para acceder o modificar varios recursos dentro de Experience Platform, debe ten
 
 Encontrará información detallada sobre cómo un administrador del sistema puede conceder los permisos necesarios para acceder a los recursos de Experience Platform a través de la API en el siguiente tutorial de vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
+>[!VIDEO](https://video.tv.adobe.com/v/31627/?learn=on&t=159&captions=spa)
 
 ## Usar Postman para autenticar y probar llamadas a la API {#use-postman}
 
@@ -308,17 +308,17 @@ Encontrará información detallada sobre el uso de Postman con colecciones y ent
 
 **Descargar e importar un entorno de Postman para utilizarlo con las API de Experience Platform**
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
+>[!VIDEO](https://video.tv.adobe.com/v/31627/?learn=on&t=106&captions=spa)
 
 **Use una colección de Postman para generar tokens de acceso**
 
 Descargue la [colección Postman del servicio Identity Management](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) y vea el siguiente vídeo para aprender a generar tokens de acceso.
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32727/?learn=on&captions=spa)
 
 **Descargue colecciones Postman de API de Experience Platform e interactúe con las API**
 
->[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32723/?learn=on&captions=spa)
 
 <!--
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Experience Platform APIs.
@@ -366,7 +366,7 @@ Para utilizar y realizar operaciones en las API de Experience Platform, un admin
 
 En el tutorial de vídeo siguiente también se muestra una descripción detallada de los pasos descritos anteriormente para añadir desarrolladores a perfiles de producto y asignar API a funciones:
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446401/?learn=on&captions=spa)
 
 ## Recursos adicionales {#additional-resources}
 

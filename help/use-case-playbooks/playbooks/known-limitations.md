@@ -35,4 +35,4 @@ Después de incluir esos campos en el esquema en la zona protegida de desarrollo
 
 Para obtener más información, vea el siguiente vídeo para crear grupos de campos de esquema.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413601/?learn=on&captions=spa)

@@ -24,4 +24,4 @@ En este vídeo se describen las funciones clave de Experience Platform:
 1. Mejore la entrega y personalización de experiencias en tiempo real
 1. Gane confianza con los controles de gobernanza, seguridad y privacidad
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428505?quality=12&learn=on&captions=spa)

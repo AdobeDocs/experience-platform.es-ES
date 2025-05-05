@@ -59,5 +59,5 @@ Para obtener acceso al Asistente de IA para la asistencia al cliente, póngase e
 
 Para obtener más información, vea el siguiente vídeo para aprender cómo puede utilizar el Asistente de IA para la asistencia al cliente con el fin de solucionar problemas sin abandonar los flujos de trabajo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443186?learn=on&captions=spa)
 

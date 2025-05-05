@@ -28,7 +28,7 @@ En esta guía se da por hecho que ha adquirido el reenvío de eventos y que tien
 
 Vea el siguiente vídeo para obtener información general de alto nivel sobre la función de monitorado:
 
->[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411266?quality=12&learn=on&captions=spa)
 
 ## Selección de propiedades y entornos
 

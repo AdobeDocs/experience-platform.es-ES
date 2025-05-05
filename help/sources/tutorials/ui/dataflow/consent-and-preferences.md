@@ -153,4 +153,4 @@ Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar l
 >
 > La interfaz de usuario de Experience Platform que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 >
->[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32646?quality=12&learn=on&captions=spa)

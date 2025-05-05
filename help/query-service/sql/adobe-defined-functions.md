@@ -487,4 +487,4 @@ Con las funciones descritas aquí, puede escribir consultas para acceder a sus p
 
 El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente SQL. Además, el vídeo también utiliza ejemplos que implican propiedades individuales en un objeto XDM, utilizando funciones definidas por el Adobe y utilizando CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34045?quality=12&learn=on&captions=spa)

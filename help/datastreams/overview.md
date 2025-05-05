@@ -45,7 +45,7 @@ Las secuencias de datos utilizan las funciones integradas de control de datos de
 
 El siguiente vídeo proporciona una breve descripción sobre cómo se configuran y aplican las restricciones de uso de datos para secuencias de datos en la IU:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413101/?quality=12&learn=on&speedcontrol=on&captions=spa)
 
 En Experience Platform, puede aplicar [etiquetas de uso de datos confidenciales](../data-governance/labels/reference.md#sensitive) a esquemas y campos que contienen datos que su organización considera confidenciales. Por ejemplo, la etiqueta `RHD` se usa para denotar la Información médica protegida (PHI), y la etiqueta `S1` representa los datos de geolocalización.
 

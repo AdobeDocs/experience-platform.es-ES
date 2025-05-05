@@ -90,7 +90,7 @@ Para las preguntas de información operativa, es posible que las respuestas no r
 
 Vea el siguiente vídeo para obtener información adicional sobre las perspectivas operativas del asistente de IA:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444035?learn=on&enablevpops&captions=spa)
 
 ### Funcionalidad del ámbito {#feature-scope}
 

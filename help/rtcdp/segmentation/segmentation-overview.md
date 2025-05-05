@@ -48,7 +48,7 @@ Para comenzar con la inteligencia artificial aplicada al cliente, debe seguir el
 
 Para obtener más información sobre la inteligencia artificial aplicada al cliente, comience por visitar la [descripción general de la inteligencia artificial aplicada al cliente](../../intelligent-services/customer-ai/overview.md). Además, el siguiente vídeo muestra cómo la inteligencia artificial aplicada al cliente enriquece los perfiles de los clientes con las tendencias basadas en IA y potencia la segmentación de clientes y los esfuerzos de segmentación.
 
->[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328473/?quality=12&learn=on&captions=spa)
 
 
 ## Pasos siguientes

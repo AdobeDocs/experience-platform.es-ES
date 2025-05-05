@@ -55,7 +55,7 @@ Antes de expandir Real-Time CDP para atraer y adquirir nuevos clientes, asegúre
 
 Vea el tutorial en vídeo a continuación para obtener una descripción detallada de cómo llegar a las audiencias de clientes potenciales y participar en ellas:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452860/?learn=on&captions=spa)
 
 ## Cómo lograr el caso de uso: Instrucciones paso a paso {#step-by-step-instructions}
 

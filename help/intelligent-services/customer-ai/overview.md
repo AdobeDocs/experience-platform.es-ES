@@ -44,7 +44,7 @@ El cliente no está diseñado para:
 
 El siguiente vídeo está diseñado para ayudarle a comprender la inteligencia artificial aplicada al cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36461?learn=on&quality=12&captions=spa)
 
 ## Funcionamiento
 
