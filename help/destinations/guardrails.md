@@ -105,7 +105,7 @@ Las siguientes protecciones se aplican a la activación a través de [destinos d
 
 ### Exportaciones de conjuntos de datos {#dataset-exports}
 
-Las exportaciones de conjuntos de datos se admiten actualmente en un **[!UICONTROL patrón [Primero completo y luego incremental]**](/help/destinations/ui/export-datasets.md#scheduling). Las protecciones descritas en esta sección *se aplican a la primera exportación completa* que se produce después de configurar un flujo de trabajo de exportación de conjunto de datos.
+Las exportaciones de conjuntos de datos se admiten actualmente en un **[[!UICONTROL patrón [Primero completo y luego incremental]**]](/help/destinations/ui/export-datasets.md#scheduling). Las protecciones descritas en esta sección *se aplican a la primera exportación completa* que se produce después de configurar un flujo de trabajo de exportación de conjunto de datos.
 
 <!--
 

@@ -20,7 +20,7 @@ Actualmente se admiten los siguientes tipos de secretos:
 | [!UICONTROL Google OAuth 2] | Contiene varios atributos para admitir la especificación de autenticación [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) que se usará en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) y en [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
 | [!UICONTROL HTTP] | Contiene dos atributos de cadena para un nombre de usuario y una contraseña, respectivamente. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
-| [!UICONTROL OAuth 2] | Contiene varios atributos para admitir el tipo de concesión de credenciales de cliente [para la especificación de autenticación [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). ](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
+| [!UICONTROL OAuth 2] | Contiene varios atributos para admitir el tipo de concesión de credenciales de cliente [&#128279;](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)para la especificación de autenticación [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749).  El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
 | [!UICONTROL OAuth 2 JWT] | Contiene varios atributos para admitir el perfil de token web JSON (JWT) para [concesiones de autorización de OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1). El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
 | [!UICONTROL Token] | Una única cadena de caracteres que representa un valor de token de autenticación conocido y entendido por ambos sistemas. |
 
@@ -194,7 +194,7 @@ Una vez completado el proceso de autorización, volverá a la ficha **[!UICONTRO
 
 ![La ficha [!UICONTROL Secreto] que resalta el secreto recién creado.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Volver a autorizar un secreto de OAuth 2] de [!UICONTROL [!DNL LinkedIn]
+#### Volver a autorizar un secreto de OAuth 2 de [!DNL LinkedIn]
 
 >IMPORTANTE
 >
@@ -206,7 +206,7 @@ Tres meses antes del secreto que requiere reautorización, una ventana emergente
 
 Se le redirigirá a la ficha [!UICONTROL Secretos]. Los secretos enumerados en esta página se filtran para mostrar solo los secretos que deben volver a autorizarse. Seleccione **[!UICONTROL Se necesita autenticación]** para el secreto que necesita para volver a autorizar.
 
-![Se necesita autenticación]para el secreto [!UICONTROL Secreto] que resalta [!UICONTROL el secreto [!DNL LinkedIn].](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+[Se necesita autenticación]para el secreto [!UICONTROL Secreto] que resalta ![[!UICONTROL el secreto [!DNL LinkedIn].]](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Aparecerá un cuadro de diálogo que le pedirá que escriba sus credenciales de [!DNL LinkedIn]. Siga las indicaciones para volver a autorizar su secreto.
 

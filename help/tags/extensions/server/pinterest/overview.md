@@ -33,7 +33,7 @@ Para obtener más información sobre casos de uso específicos de [!DNL Pinteres
 
 Debe tener una [!DNL Pinterest] [cuenta empresarial](https://help.pinterest.com/en/business/article/get-a-business-account) válida para usar esta extensión. Vaya a la [[!DNL Pinterest] página de registro](https://www.pinterest.com/business/create/) para registrarse y crear una cuenta si todavía no la tiene.
 
-También necesitará una cuenta de desarrollador de [!DNL Pinterest], que deberá asociarse a su cuenta comercial de [!DNL Pinterest]. Para asociar tu cuenta de desarrollador con tu cuenta de empresa, consulta la [[!DNL Pinterest ] cuenta de desarrollador](https://developers.pinterest.com/account-setup/).
+También necesitará una cuenta de desarrollador de [!DNL Pinterest], que deberá asociarse a su cuenta comercial de [!DNL Pinterest]. Para asociar tu cuenta de desarrollador con tu cuenta de empresa, consulta la [[!DNL Pinterest &#x200B;] cuenta de desarrollador](https://developers.pinterest.com/account-setup/).
 
 ### Recopilar detalles de configuración necesarios {#configuration-details}
 

@@ -17,7 +17,7 @@ Este documento describe los pasos para conectar [!DNL Aqua Data Studio] con Adob
 
 ## Introducción
 
-Esta guía requiere que ya tenga acceso a [!DNL Aqua Data Studio] y que esté familiarizado con cómo navegar por su interfaz. Encontrará más información sobre [!DNL Aqua Data Studio] en la [documentación oficial [!DNL Aqua Data Studio] 3}.](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1)
+Esta guía requiere que ya tenga acceso a [!DNL Aqua Data Studio] y que esté familiarizado con cómo navegar por su interfaz. Encontrará más información sobre [!DNL Aqua Data Studio] en la [documentación oficial [!DNL Aqua Data Studio] 3&rbrace;.](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1)
 
 >[!NOTE]
 >

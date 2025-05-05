@@ -22,7 +22,7 @@ Aparecerá el cuadro de diálogo **[!UICONTROL Filtros]**. Desde esta vista, eli
 
 1. Seleccione una **[!UICONTROL audiencia]**: elija el segmento de audiencia que desee analizar (por ejemplo, **Canadá - Alberta**).
 2. Especificar una **[!UICONTROL política de combinación]**: defina la política de combinación que dicta cómo se combinan las identidades en la audiencia seleccionada (en la captura de pantalla de ejemplo, se selecciona la política **Basada en tiempo predeterminado**).
-3. Seleccione una **[!UICONTROL identidad A]** y una **[!UICONTROL identidad B]** para comparar**: elija los dos tipos de identidad que desea comparar. En el ejemplo, **Identidad A** está seleccionada como &quot;crmId&quot; y **Identidad B** está seleccionada como &quot;correo electrónico&quot;.
+3. Seleccione una **[!UICONTROL identidad A]** y una **[!UICONTROL identidad B]** para comparar&#x200B;**: elija los dos tipos de identidad que desea comparar. En el ejemplo, &#x200B;** Identidad A **&#x200B; está seleccionada como &quot;crmId&quot; y &#x200B;** Identidad B** está seleccionada como &quot;correo electrónico&quot;.
 4. **Establecer un intervalo de fechas**: elija un intervalo predefinido como &quot;Hoy&quot; o establezca manualmente las fechas de inicio y finalización utilizando los campos de calendario.
 
 ![Cuadro de diálogo Filtros en el panel Superposiciones de identidad de audiencia.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)

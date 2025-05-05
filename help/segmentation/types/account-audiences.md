@@ -203,7 +203,7 @@ Al usar audiencias de cuenta, la audiencia **debe** cumplir con las siguientes r
    - Esto significa que la audiencia **no puede** tener más de cinco reglas que compongan la audiencia.
 - El número máximo de entidades cruzadas que se pueden usar es **5**.
    - Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro del público. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing.
-- No se pueden usar las entidades personalizadas **1}.**
+- No se pueden usar las entidades personalizadas **1&rbrace;.**
 - El número máximo de valores que se pueden comprobar para un solo campo es **50**.
    - Por ejemplo, si tiene un campo de &quot;Nombre de ciudad&quot;, puede comprobar ese valor con 50 nombres de ciudades.
 - Las audiencias de cuenta **no pueden** usar `inSegment` eventos.

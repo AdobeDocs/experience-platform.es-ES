@@ -98,7 +98,7 @@ curl -X POST \
 | `engine.type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se desarrolla la imagen Docker. Cuando se proporciona una URL de Docker para crear un motor, `type` es `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
 | `artifacts.default.image.location` | Su `{DOCKER_URL}` se va aquí. Una dirección URL de Docker completa tiene la siguiente estructura: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Un nombre adicional para el archivo de imagen Docker. No elimine esta propiedad, deje que este valor sea una cadena vacía si decide no proporcionar un nombre de archivo de imagen Docker adicional. |
-| `artifacts.default.image.executionType` | Tipo de ejecución de este motor. Este valor corresponde al idioma en el que se desarrolla la imagen de Docker. Cuando se proporciona un URL de Docker para crear un motor, `executionType` es , `Python``R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
+| `artifacts.default.image.executionType` | Tipo de ejecución de este motor. Este valor corresponde al idioma en el que se desarrolla la imagen de Docker. Cuando se proporciona un URL de Docker para crear un motor, `executionType` es , `Python` `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
 
 **Solicitar PySpark**
 

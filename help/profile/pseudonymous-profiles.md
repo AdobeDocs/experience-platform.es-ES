@@ -130,7 +130,7 @@ En un caso de uso típico, puede establecer la caducidad de los datos de Experie
 
 +++ Respuesta
 
-- El sistema de eliminación ](../identity-service/guardrails.md) del servicio de identidad [, que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
+- El sistema de eliminación [&#128279;](../identity-service/guardrails.md) del servicio de identidad , que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
 - Si este comportamiento de eliminación provoca que se almacene un perfil solo de ECID en el Perfil del cliente en tiempo real (almacén de perfiles), la caducidad de los datos de perfil seudónimo eliminará este perfil del almacén de perfiles.
 
 +++

@@ -28,7 +28,7 @@ El servicio [!DNL Dashboards] proporciona tres permisos que, cuando se combinan,
 | Permiso | Descripción |
 |---|---|
 | **Administrar tableros estándar** | Este permiso es un **permiso** global de lectura y escritura. Le permite [crear widgets](./customize/custom-widgets.md) personalizados y [editar el widget esquema](./customize/edit-schema.md) través del [!UICONTROL biblioteca de Widget]. |
-| **Ver Tableros estándar** | Esto proporciona **funcionalidad de solo** lectura para los [!UICONTROL tableros Perfiles], Destinos] y [!UICONTROL Segmentos y permite acceder a ellos a través del navegación izquierdo de Experience Platform. También agrega [!UICONTROL Dashboards] al navegación izquierdo y acceso a los inventario Dashboards] y a las [!UICONTROL integraciones pestaña. |
+| **Ver Tableros estándar** | Esto proporciona **funcionalidad de solo** lectura para los [!UICONTROL tableros Perfiles], Destinos y [!UICONTROL Segmentos y permite acceder a ellos a través del navegación izquierdo de Experience Platform. También agrega [!UICONTROL Dashboards] al navegación izquierdo y acceso a los inventario Dashboards] y a las integraciones pestaña. |
 | **Ver Panel de uso de licencias** | Este permiso permite a los usuarios **acceso de solo lectura** a [el tablero de uso de licencias](./guides/license-usage.md) en la interfaz de usuario de Experience Platform. |
 
 Hay cinco permisos no incluidos en la categoría [!DNL Dashboard] que son potencialmente necesarios según sus necesidades. En la tabla siguiente se describen las ubicaciones de las categorías en Admin Console:

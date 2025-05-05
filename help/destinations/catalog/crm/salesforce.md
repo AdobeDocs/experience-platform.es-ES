@@ -144,7 +144,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -187,8 +187,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -222,6 +222,7 @@ Para asignar correctamente los campos XDM a los campos de destino [!DNL (API) Sa
      | `xdm: personalEmail.address` | `Attribute: Email` | La dirección de correo electrónico del contacto. |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
+
      ![Ejemplo de captura de pantalla de IU de Experience Platform que muestra asignaciones de destino.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **Trabajando con posibles clientes**
@@ -238,6 +239,7 @@ Para asignar correctamente los campos XDM a los campos de destino [!DNL (API) Sa
      | `xdm: personalEmail.address` | `Attribute: Email` | La dirección de correo electrónico del posible cliente. |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
+
      ![Ejemplo de captura de pantalla de IU de Experience Platform que muestra asignaciones de destino.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 Cuando haya terminado de proporcionar las asignaciones para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
@@ -288,17 +290,21 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
    **Trabajando con contactos**
 
    * Si ha seleccionado *Contactos* dentro de su segmento de Experience Platform, vaya a la página **[!DNL Apps]** > **[!DNL Contacts]**.
+
      ![Captura de pantalla de Salesforce CRM que muestra la página Contactos con los perfiles del segmento.](../../assets/catalog/crm/salesforce/contacts.png)
 
    * Seleccione un *contacto* y compruebe si los campos están actualizados. Puede ver que cada estado de audiencia en [!DNL Salesforce CRM] se actualizó con el estado de audiencia correspondiente de Experience Platform, según el valor de **[!UICONTROL ID de asignación]** proporcionado durante la [programación de audiencias](#schedule-segment-export-example).
+
      ![Captura de pantalla de Salesforce CRM que muestra la página Detalles de contacto con estados de audiencia actualizados.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Trabajando con posibles clientes**
 
    * Si ha seleccionado *posibles clientes* dentro del segmento de Experience Platform, vaya a la página **[!DNL Apps]** > **[!DNL Leads]**.
+
      ![Captura de pantalla de Salesforce CRM que muestra la página de posibles clientes con los perfiles del segmento.](../../assets/catalog/crm/salesforce/leads.png)
 
    * Seleccione un *posible cliente* y compruebe si los campos están actualizados. Puede ver que cada estado de audiencia en [!DNL Salesforce CRM] se actualizó con el estado de audiencia correspondiente de Experience Platform, según el valor de **[!UICONTROL ID de asignación]** proporcionado durante la [programación de audiencias](#schedule-segment-export-example).
+
      ![Captura de pantalla de Salesforce CRM que muestra la página Detalles del posible cliente con estados de audiencia actualizados.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}

@@ -75,52 +75,52 @@ A continuación se muestra una comparación en paralelo que muestra campos relac
   <tr>
   <td>
   <pre class=" language-json">
-{
-  "xdm:birthDate": {
+&lbrace;
+  "xdm:birthDate": &lbrace;
     "title": "Fecha de nacimiento",
     "type": "string",
     "format": "date"
-  },
-  "xdm:birthDayAndMonth": {
+  &rbrace;,
+  "xdm:birthDayAndMonth": &lbrace;
     "title": "Fecha de nacimiento",
     "type": "string",
     "patrón": "[0-1][0-9]-[0-9][0-9]"
-  },
-  "xdm:birthYear": {
+  &rbrace;,
+  "xdm:birthYear": &lbrace;
     "title": "Año de nacimiento",
     "tipo": "entero",
     "mínimo": 1,
     "máximo": 32767
-  }
-}
+  &rbrace;
+&rbrace;
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-{
-  "birthDate": {
+&lbrace;
+  "birthDate": &lbrace;
     "title": "Fecha de nacimiento",
     "type": "string",
     "format": "date",
     "meta:xdmField": "xdm:birthDate",
     "meta:xdmType": "date"
-  },
-  "birthDayAndMonth": {
+  &rbrace;,
+  "birthDayAndMonth": &lbrace;
     "title": "Fecha de nacimiento",
     "type": "string",
     "patrón": "[0-1][0-9]-[0-9][0-9]",
     "meta:xdmField": "xdm:birthDayAndMonth",
     "meta:xdmType": "string"
-  },
-  "birthYear": {
+  &rbrace;,
+  "birthYear": &lbrace;
     "title": "Año de nacimiento",
     "tipo": "entero",
     "mínimo": 1,
     "maximum": 32767,
     "meta:xdmField": "xdm:birthYear",
     "meta:xdmType": "short"
-  }
-}
+  &rbrace;
+&rbrace;
       </pre>
   </td>
   </tr>

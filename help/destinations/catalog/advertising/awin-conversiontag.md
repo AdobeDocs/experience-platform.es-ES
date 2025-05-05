@@ -18,7 +18,7 @@ La etiqueta de conversión es la declaración del AWIN. Tracking.Sale JavaScript
 
 Awin Advertiser Conversion Tag es una extensión publicitaria en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de extensión, consulte el Página de extensión en [Adobe Systems Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
-Este destino es una extensión etiqueta. Para obtener más información acerca del funcionamiento de las extensiones de etiquetas en Experience Platform, consulte la información general](../launch-extensions/overview.md) sobre las [extensiones de etiqueta.
+Este destino es una extensión etiqueta. Para obtener más información acerca del funcionamiento de las extensiones de etiquetas en Experience Platform, consulte la información general[&#128279;](../launch-extensions/overview.md) sobre las extensiones de etiqueta.
 
 ![Extensión Awin Advertiser Conversiontag en el IU](../../assets/catalog/advertising/awin-conversion-tag/catalog.png)
 
@@ -44,7 +44,7 @@ El flujo de trabajo le lleva al IU de recopilación de datos para completar la i
 
 Para obtener información sobre las opciones de configuración de la extensión y el soporte de instalación, consulte el [Página de etiqueta de conversión del anunciante de Awin en Adobe Systems Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
-También puede instalar la extensión directamente en el IU](https://experience.adobe.com/#/data-collection/) de recopilación de [datos. Consulte la guía sobre cómo [agregar una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
+También puede instalar la extensión directamente en el IU[&#128279;](https://experience.adobe.com/#/data-collection/) de recopilación de datos. Consulte la guía sobre cómo [agregar una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 
 
 ## Cómo utilizar la extensión {#how-to-use}
@@ -59,4 +59,4 @@ Puede configurar, actualizar y eliminar extensiones en el IU de recopilación de
 >
 >Si la extensión ya está instalada en una de sus propiedades, la IU seguirá mostrando **[!UICONTROL Instalar]** para la extensión. Inicie la flujo de trabajo de instalación como se describe en [Instalar extensión](#install-extension) para configurar o eliminar la extensión.
 
-Para actualizar la extensión, consulte la guía sobre el proceso](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) de actualización de extensiones [en la documentación de las etiquetas.
+Para actualizar la extensión, consulte la guía sobre el proceso[&#128279;](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) de actualización de extensiones en la documentación de las etiquetas.

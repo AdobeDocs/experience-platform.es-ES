@@ -31,7 +31,7 @@ Vaya a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la f
 
 ### Permisos necesarios {#permissions}
 
-Para activar las audiencias de clientes potenciales, necesitas los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Activar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para activar las audiencias de clientes potenciales, necesitas los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Activar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para asegurarse de que dispone de los permisos necesarios para activar las audiencias de clientes potenciales, consulte el catálogo de destinos. Si un destino tiene un control **[!UICONTROL Activate]**, usted cuenta con los permisos apropiados.
 

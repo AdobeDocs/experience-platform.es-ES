@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Esta documentación está destinada a clientes existentes con derechos previos a Data Science Espacio de trabajo.
 
-El siguiente documento contiene ejemplos sobre cómo acceder a datos con Spark para su uso en Data Science Espacio de trabajo. Para obtener información sobre el acceso a los datos con blocs de notas de JupyterLab, visita la documentación de acceso](../jupyterlab/access-notebook-data.md) a datos [de blocs de notas de JupyterLab.
+El siguiente documento contiene ejemplos sobre cómo acceder a datos con Spark para su uso en Data Science Espacio de trabajo. Para obtener información sobre el acceso a los datos con blocs de notas de JupyterLab, visita la documentación de acceso[&#128279;](../jupyterlab/access-notebook-data.md) a datos de blocs de notas de JupyterLab.
 
 ## Primeros pasos
 

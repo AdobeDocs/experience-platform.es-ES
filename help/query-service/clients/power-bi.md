@@ -17,7 +17,7 @@ Este documento describe los pasos para conectar el escritorio [!DNL Power BI] co
 
 ## Introducción
 
-Esta guía requiere que ya tenga acceso a la aplicación de escritorio [!DNL Power BI] y que esté familiarizado con la forma de navegar por su interfaz. Para descargar el escritorio [!DNL Power BI] o para obtener más información, consulte la [documentación oficial [!DNL Power BI] 3}.](https://docs.microsoft.com/en-us/power-bi/)
+Esta guía requiere que ya tenga acceso a la aplicación de escritorio [!DNL Power BI] y que esté familiarizado con la forma de navegar por su interfaz. Para descargar el escritorio [!DNL Power BI] o para obtener más información, consulte la [documentación oficial [!DNL Power BI] 3&rbrace;.](https://docs.microsoft.com/en-us/power-bi/)
 
 >[!IMPORTANT]
 >

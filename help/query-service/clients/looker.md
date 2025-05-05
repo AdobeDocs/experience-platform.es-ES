@@ -17,7 +17,7 @@ Este documento describe los pasos para conectar [!DNL Looker] con Adobe Experien
 
 >[!NOTE]
 >
-> En esta guía se da por hecho que ya tiene acceso a [!DNL Looker] y que está familiarizado con la forma de navegar por su interfaz. Encontrará más información sobre [!DNL Looker] en la [documentación oficial [!DNL Looker] 3}.](https://docs.looker.com/)
+> En esta guía se da por hecho que ya tiene acceso a [!DNL Looker] y que está familiarizado con la forma de navegar por su interfaz. Encontrará más información sobre [!DNL Looker] en la [documentación oficial [!DNL Looker] 3&rbrace;.](https://docs.looker.com/)
 
 ## Crear una nueva conexión de base de datos {#create-connection}
 

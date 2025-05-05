@@ -279,7 +279,7 @@ La clase [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md
 
 +++
 
-Plantilla de ExperienceEvent de +++Adobe Analytics (grupo de campos)
++++Plantilla de ExperienceEvent de Adobe Analytics (grupo de campos)
 
 El grupo de campos [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) captura métricas comunes que recopila Adobe Analytics.
 
@@ -534,7 +534,7 @@ Los eventos permiten activar sus recorridos de forma unitaria para enviar mensaj
 
 +++
 
-Lógica clave del lienzo +++Recorrido
++++Lógica clave del lienzo Recorrido
 
 La lógica de clave de lienzo de recorrido requiere que identifique eventos específicos y que configure las acciones que deben realizarse después de que se produzca el evento.
 
@@ -666,7 +666,7 @@ Los eventos permiten activar sus recorridos de forma unitaria para enviar mensaj
 
 +++
 
-Lógica clave del lienzo +++Recorrido
++++Lógica clave del lienzo Recorrido
 
 La lógica de clave de lienzo de recorrido requiere que identifique eventos específicos y que configure las acciones que deben realizarse después de que se produzca el evento.
 
@@ -734,7 +734,7 @@ Los eventos permiten activar sus recorridos de forma unitaria para enviar mensaj
 
 +++
 
-Lógica clave del lienzo +++Recorrido
++++Lógica clave del lienzo Recorrido
 
 La lógica de clave de lienzo de recorrido requiere que identifique eventos específicos y que configure las acciones que deben realizarse después de que se produzca el evento.
 

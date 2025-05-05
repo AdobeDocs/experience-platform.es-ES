@@ -20,7 +20,7 @@ ht-degree: 6%
 
 La API de limpieza de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 
-Puede acceder a la API a través de la misma ruta raíz que la API Privacy Service[](../../privacy-service/api/overview.md):`https://platform.adobe.io/data/core/privacy/`
+Puede acceder a la API a través de la misma ruta raíz que la API Privacy Service[&#128279;](../../privacy-service/api/overview.md):`https://platform.adobe.io/data/core/privacy/`
 
 ## Introducción
 

@@ -23,7 +23,7 @@ La pestaña Registros muestra información en cuatro columnas:
 
 **[!UICONTROL Soluciones]:** Muestra iconos para la solución de Experience Cloud afectada por el elemento registrado. Pase el ratón sobre el icono para ver una descripción.
 
-**[!UICONTROL Ocurrido a las ]:** Muestra cuándo se produjo el problema registrado durante la sesión.
+**[!UICONTROL Ocurrido a las &#x200B;]:** Muestra cuándo se produjo el problema registrado durante la sesión.
 
 **[!UICONTROL Nivel de registro]:** Muestra la gravedad del problema. La gravedad tiene uno de los siguientes niveles:
 

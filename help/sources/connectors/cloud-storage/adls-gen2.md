@@ -38,7 +38,7 @@ A continuación se muestra una lista de restricciones que debe tener en cuenta a
 
 >[!NOTE]
 >
->La entidad de seguridad de servicio utilizada para crear una cuenta de [!DNL Azure Data Lake Storage Gen2] debe tener al menos el rol de Reader de datos de blob de almacenamiento **2} asignado desde el control de acceso (IAM)**
+>La entidad de seguridad de servicio utilizada para crear una cuenta de [!DNL Azure Data Lake Storage Gen2] debe tener al menos el rol de Reader de datos de blob de almacenamiento **2&rbrace; asignado desde el control de acceso (IAM)**
 
 La siguiente documentación proporciona información sobre cómo conectar [!DNL Azure Data Lake Storage Gen2] al Experience Platform mediante API o la interfaz de usuario:
 

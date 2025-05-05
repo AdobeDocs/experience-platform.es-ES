@@ -106,7 +106,7 @@ Web SDK está disponible actualmente para el público en general y se puede util
 
 El SDK es gratuito y está alojado en Adobe de forma gratuita. Si es necesario, puede descargarlo y alojarlo en sus propios servidores sin coste alguno.
 
-Web SDK requiere acceso a [configuraciones de secuencia de datos](../datastreams/overview.md) y al generador de esquemas XDM](../xdm/tutorials/create-schema-ui.md) de Experience Platform para que los servidores de Adobe puedan gestionar correctamente los datos entrantes procedentes de SDK. [ Si desea obtener acceso, póngase en contacto con el equipo de su cuenta de Adobe para iniciar el proceso de solicitud.
+Web SDK requiere acceso a [configuraciones de secuencia de datos](../datastreams/overview.md) y al generador de esquemas XDM[&#128279;](../xdm/tutorials/create-schema-ui.md) de Experience Platform para que los servidores de Adobe puedan gestionar correctamente los datos entrantes procedentes de SDK.  Si desea obtener acceso, póngase en contacto con el equipo de su cuenta de Adobe para iniciar el proceso de solicitud.
 
 ## ¿Qué casos de uso admite actualmente Web SDK?
 

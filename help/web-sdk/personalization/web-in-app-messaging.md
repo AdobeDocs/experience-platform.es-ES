@@ -21,7 +21,7 @@ Con los mensajes en la aplicación, puede interactuar de forma eficaz con su aud
 >
 >La mensajería en la aplicación web es una característica de [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es) que usa Web SDK para entregar el contenido personalizado.
 >
->Para obtener instrucciones detalladas sobre cómo configurar su campaña de mensajería en aplicación web, consulte la documentación](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html) de [Adobe Systems Journey Optimizer.
+>Para obtener instrucciones detalladas sobre cómo configurar su campaña de mensajería en aplicación web, consulte la documentación[&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html) de Adobe Systems Journey Optimizer.
 
 
 ## Requisitos previos {#prerequisites}
@@ -44,7 +44,7 @@ Para obtener más información acerca de cómo configurar un CSP, consulte la [d
 
 Consulte la [página de configuración de la extensión de etiquetas Web SDK](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para saber dónde puede encontrar la configuración que se describe a continuación.
 
-Después de instalar [](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) la extensión de etiqueta del SDK web, seguir los pasos que se indican a continuación para configurar la extensión para la mensajería web en la aplicación.
+Después de instalar [&#128279;](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) la extensión de etiqueta del SDK web, seguir los pasos que se indican a continuación para configurar la extensión para la mensajería web en la aplicación.
 
 En la **[!UICONTROL sección Personalización]** , marque la opción Habilitar personalización **[!UICONTROL almacenamiento]** . Esta opción permite al SDK web realizar un seguimiento de las experiencias que han visto los usuario a través de Página cargas.
 
@@ -83,7 +83,7 @@ Siguiente, debe agregar una acción a la regla creada.
 3. En el lado derecho de la pantalla, en la **[!UICONTROL sección Personalización]** , habilite la **[!UICONTROL opción Procesar decisiones de personalización]** visual.
    ![Imagen muestra la pantalla de configuración personalización.](assets/web-in-app-messaging/render-visual-personalization.png)
 
-4. En el lado derecho de la pantalla, en la **[!UICONTROL sección Contexto]** de decisión, defina los pares clave/**[!UICONTROL Valor]** que utilizó en la ****configuración del campaña para poder recibir el mensaje en la aplicación.
+4. En el lado derecho de la pantalla, en la **[!UICONTROL sección Contexto]** de decisión, defina los pares clave/**[!UICONTROL Valor]** que utilizó en la **&#x200B;**&#x200B;configuración del campaña para poder recibir el mensaje en la aplicación.
    ![Imagen muestra la pantalla de configuración personalización.](assets/web-in-app-messaging/decision-context.png)
 
 5. Seleccione **[!UICONTROL Conservar cambios]** para guardar la configuración.
@@ -165,7 +165,7 @@ Para que Web SDK recupere automáticamente el contenido de personalización al c
 
 Para mostrar el contenido personalización solo después de que el usuario realice una acción específica, use el `evaluateRulesets` comando como se muestra en el ejemplo siguiente.
 
-En este ejemplo, el contenido personalización se muestra cuando un usuario hace clic en el botón Comprar ahora **** del sitio Web.
+En este ejemplo, el contenido personalización se muestra cuando un usuario hace clic en el botón Comprar ahora **&#x200B;**&#x200B;del sitio Web.
 
 ```js
  alloy("evaluateRulesets", {

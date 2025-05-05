@@ -52,7 +52,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Configuración de flujos de datos
 
-El [asistente de configuración guiada de Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) selecciona automáticamente el valor adecuado para **[!UICONTROL espacio aislado]** y **[!UICONTROL secuencia de datos de producción]**. Opcionalmente, puede configurar una secuencia de datos de ensayo **[!UICONTROL adicional]** y una secuencia de datos de desarrollo **[!UICONTROL 3}.]**
+El [asistente de configuración guiada de Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) selecciona automáticamente el valor adecuado para **[!UICONTROL espacio aislado]** y **[!UICONTROL secuencia de datos de producción]**. Opcionalmente, puede configurar una secuencia de datos de ensayo **[!UICONTROL adicional]** y una secuencia de datos de desarrollo **[!UICONTROL 3&rbrace;.]**
 
 ![Imagen que muestra la configuración de flujos de datos de la extensión de etiquetas de Adobe Content Analytics en la interfaz de usuario de etiquetas](assets/aca-tag-datastreams.png)
 

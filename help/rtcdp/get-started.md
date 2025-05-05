@@ -50,13 +50,13 @@ Con Real-Time CDP, impulsado por Adobe Experience Platform, la organización mar
 
 Esta tutorial incluye los siguientes pasos:
 
-1. Construya la perfil](#customer-profile) del [cliente.
+1. Construya la perfil[&#128279;](#customer-profile) del cliente.
 1. [Personalice](#personalizing-the-user-experience) el experiencia del usuario.
 1. Utilice [varias fuentes](#using-multiple-data-sources) de datos.
 1. [Configurar un origen de datos](#configuring-a-data-source).
 1. [Recopilar los datos](#bringing-the-data-together-for-a-specific-customer) de un cliente específico.
 1. Configure [audiencias](#audiences).
-1. Configure destinos[](#destinations).
+1. Configure destinos[&#128279;](#destinations).
 1. [Cose la perfil a través de dispositivos](#cross-device-identity-stitching).
 1. [Analizar el perfil](#analyzing-the-profile).
 

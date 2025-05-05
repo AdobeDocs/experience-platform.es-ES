@@ -284,7 +284,7 @@ Si el lote tiene uno o más errores y tiene habilitados los diagnósticos de err
 >
 >Si los diagnósticos de error no están disponibles, aparecerá el siguiente mensaje de error en su lugar:
 >
-```json
+>```json
 >{
 >       "errors": [{
 >               "code": "INGEST-1211-400",

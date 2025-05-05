@@ -96,7 +96,7 @@ Si desea utilizar un conjunto de datos desde dentro de Adobe Experience Platform
 
 ![conjunto de datos RTML](../images/rtml/rtml-dataset.png)
 
-Para acceder a un conjunto de datos del [!DNL JupyterLab] bloc de notas, seleccione el **** pestaña datos del navegación izquierdo de [!DNL JupyterLab]. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Conjuntos de datos]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas. Esta celda contiene su `dataset_id`.
+Para acceder a un conjunto de datos del [!DNL JupyterLab] bloc de notas, seleccione el **&#x200B;**&#x200B;pestaña datos del navegación izquierdo de [!DNL JupyterLab]. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Conjuntos de datos]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas. Esta celda contiene su `dataset_id`.
 
 ![acceso al conjunto de datos](../images/rtml/access-dataset.png)
 

@@ -15,7 +15,7 @@ Este documento describe los pasos necesarios para conectar [!DNL Jupyter Noteboo
 
 ## Introducción
 
-Esta guía requiere que ya tenga acceso a [!DNL Jupyter Notebook] y que esté familiarizado con su interfaz. Para descargar [!DNL Jupyter Notebook] o más información, consulte la [documentación oficial [!DNL Jupyter Notebook] 3}.](https://jupyter.org/)
+Esta guía requiere que ya tenga acceso a [!DNL Jupyter Notebook] y que esté familiarizado con su interfaz. Para descargar [!DNL Jupyter Notebook] o más información, consulte la [documentación oficial [!DNL Jupyter Notebook] 3&rbrace;.](https://jupyter.org/)
 
 Para adquirir las credenciales necesarias para conectar [!DNL Jupyter Notebook] a Experience Platform, debe tener acceso al área de trabajo [!UICONTROL Consultas] en la interfaz de usuario de Experience Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo [!UICONTROL Consultas].
 

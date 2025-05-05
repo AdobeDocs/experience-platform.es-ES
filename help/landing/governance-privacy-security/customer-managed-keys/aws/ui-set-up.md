@@ -43,11 +43,11 @@ Para integrar la clave de AWS con Experience Platform, debe editar el JSON en la
 
 En el ejemplo anterior, todos los recursos (`"Resource": "*"`) dentro de la misma cuenta (`Principal.AWS`) pueden acceder a la clave. Este directiva permite a los servicios del cuenta realizar operaciones de cifrado y descifrado, restringidas al cuenta especificado. Para conceder a su Experience Platform inquilino único acceso cuenta a esta clave, añada nuevas instrucciones al directiva predeterminado de AWS. Puede obtener el directiva JSON necesario del Experience Platform IU y aplicarlo a su clave de AWS KMS para establecer una conexión segura con Adobe Experience Platform.
 
-En el Experience Platform IU, vaya a la **[!UICONTROL sección Administración]** en el navegación izquierdo carril y seleccione **[!UICONTROL Cifrado]**. En el espacio de trabajo Configuración de  cifrado, seleccione **[!UICONTROL Configurar]** en el tarjeta de claves] administradas por el [!UICONTROL cliente.
+En el Experience Platform IU, vaya a la **[!UICONTROL sección Administración]** en el navegación izquierdo carril y seleccione **[!UICONTROL Cifrado]**. En el espacio de trabajo Configuración de  cifrado, seleccione **[!UICONTROL Configurar]** en el tarjeta de claves administradas por el cliente.
 
 ![La configuración de cifrado de Experience Platform espacio de trabajo con Configurar resaltada en el tarjeta de claves administradas por el cliente.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-Aparece la configuración de] claves administradas por el [!UICONTROL cliente. Copie el objeto del directiva KMS de CMK que se muestra en la Configuración] de cifrado de claves  administradas por el `statement` [!UICONTROL cliente.
+Aparece la configuración de claves administradas por el [!UICONTROL cliente. Copie el objeto del directiva KMS de CMK que se muestra en la Configuración] de cifrado de claves  administradas por el `statement` cliente.
 
 <!-- Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied.  -->
 
@@ -162,7 +162,7 @@ Aparece el espacio de trabajo actualizado [!DNL Customer Managed Keys] de AWS [!
 
 ### añadir los detalles de la clave de cifrado de AWS para Experience Platform
 
-Siguiente, para habilitar el cifrado, agregue el nombre de recurso de Amazon (ARN) de la clave a la configuración] de claves administradas por el cliente de Experience Platform[!UICONTROL . En la [!DNL Customer Managed Keys] sección de AWS, seleccione el alias de la nueva clave en el lista del [!DNL Key Management Service]archivo .
+Siguiente, para habilitar el cifrado, agregue el nombre de recurso de Amazon (ARN) de la clave a la configuración de claves administradas por el cliente de Experience Platform. En la [!DNL Customer Managed Keys] sección de AWS, seleccione el alias de la nueva clave en el lista del [!DNL Key Management Service]archivo .
 
 ![Las claves administradas por el cliente de AWS KMS espacio de trabajo con el nuevo alias de clave resaltado.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -173,7 +173,7 @@ Seleccione el icono Copiar para copiar el ARN. Aparecerá un cuadro de diálogo 
 
 ![Los detalles clave de su clave administrada por el cliente de AWS KMS con el ARN resaltado.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Ahora, vuelva al IU de configuración de] claves administradas por el cliente de Experience Platform[!UICONTROL . En la sección añadir detalles de la **[!UICONTROL clave de cifrado de AWS, agregue un**[!UICONTROL  nombre ]**de configuración y el**[!UICONTROL  ARN ]**de clave de KMS que copió de la IU de]** AWS.
+Ahora, vuelva al IU de configuración de claves administradas por el cliente de Experience Platform. En la sección añadir detalles de la **[!UICONTROL clave de cifrado de AWS, agregue un**&#x200B;[!UICONTROL &#x200B; nombre &#x200B;]&#x200B;**de configuración y el**&#x200B;[!UICONTROL &#x200B; ARN &#x200B;]&#x200B;**de clave de KMS que copió de la IU de]** AWS.
 
 ![La espacio de trabajo de configuración de cifrado de Experience Platform con el nombre de configuración y el ARN de clave de KMS resaltados en la sección añadir detalles de la clave de cifrado de AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
@@ -181,7 +181,7 @@ Siguiente, seleccione **[!UICONTROL GUARDAR]** para enviar el nombre de configur
 
 ![La configuración de cifrado de Experience Platform espacio de trabajo con Guardar resaltados.](../../../images/governance-privacy-security/key-management-service/save.png)
 
-Volverá a la [!UICONTROL espacio de trabajo de configuraciones de] cifrado. El estado de la configuración de cifrado se muestra en la parte inferior del tarjeta Claves ]**administradas por el**[!UICONTROL  cliente.
+Volverá a la [!UICONTROL espacio de trabajo de configuraciones de] cifrado. El estado de la configuración de cifrado se muestra en la parte inferior del tarjeta Claves **administradas por el** cliente.
 
 ![Las Configuraciones de cifrado espacio de trabajo en el IU Experience Platform con Procesamiento resaltado en el tarjeta Claves administradas por el cliente.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 

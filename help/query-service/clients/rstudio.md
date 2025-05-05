@@ -19,7 +19,7 @@ Este documento explica los pasos para conectar [!DNL RStudio] con Adobe Experien
 >
 > [!DNL RStudio] se ha cambiado a [!DNL Posit]. Se cambió el nombre de [!DNL RStudio] productos a [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package], [!DNL Posit Cloud], y [!DNL Posit Academy].
 >
-> En esta guía se da por hecho que ya tiene acceso a [!DNL RStudio] y que está familiarizado con su uso. Encontrará más información sobre [!DNL RStudio] en la [documentación oficial [!DNL RStudio] 3}.](https://rstudio.com/products/rstudio/)
+> En esta guía se da por hecho que ya tiene acceso a [!DNL RStudio] y que está familiarizado con su uso. Encontrará más información sobre [!DNL RStudio] en la [documentación oficial [!DNL RStudio] 3&rbrace;.](https://rstudio.com/products/rstudio/)
 > 
 > Además, para usar [!DNL RStudio] con el servicio de consultas, debe instalar el controlador JDBC 4.2 de [!DNL PostgreSQL]. Puede descargar el controlador JDBC desde el [[!DNL PostgreSQL] sitio oficial](https://jdbc.postgresql.org/download/).
 

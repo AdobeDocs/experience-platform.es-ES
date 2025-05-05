@@ -39,7 +39,7 @@ Vea el siguiente vídeo para obtener información general sobre la creación y a
 
 ### Permisos necesarios {#permissions}
 
-Para activar audiencias de cuenta, necesitas los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Activar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para activar audiencias de cuenta, necesitas los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Activar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para asegurarse de que tiene los permisos necesarios para activar audiencias de cuenta, examine el catálogo de destinos. Si un destino tiene un control **[!UICONTROL Activate]**, usted cuenta con los permisos apropiados.
 

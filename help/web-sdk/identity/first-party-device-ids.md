@@ -166,7 +166,7 @@ Para utilizar esta funcionalidad, debe establecer la cookie [!DNL FPID] en el ni
 >
 >Esta característica requiere que tenga habilitada la [recopilación de datos de origen](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en).
 
-**Paso 2. Habilitar la funcionalidad**[!UICONTROL  First Party ID Cookie ]**para su secuencia de datos**
+**Paso 2. Habilitar la funcionalidad**&#x200B;[!UICONTROL &#x200B; First Party ID Cookie &#x200B;]&#x200B;**para su secuencia de datos**
 
 Una vez que haya configurado su CNAME, debe habilitar la opción **[!UICONTROL Cookie de ID de origen]** para su secuencia de datos. Esta configuración indica a Edge Network que haga referencia a una cookie especificada cuando busque un ID de dispositivo de origen, en lugar de buscar este valor en el [mapa de identidad](#identityMap).
 

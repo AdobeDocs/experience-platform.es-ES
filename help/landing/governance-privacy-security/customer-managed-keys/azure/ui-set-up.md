@@ -48,7 +48,7 @@ Para iniciar el proceso de registro, copie la URL de autenticación de la aplica
 
 Seleccione el icono de copia (![El icono de copia.](../../../../images/icons/copy.png)) por la [!UICONTROL URL de autenticación de aplicación].
 
-![Vista de la configuración de claves administradas por el cliente [!UICONTROL con la sección URL de autenticación de aplicación resaltada.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)]
+![Vista de la configuración de claves administradas por el cliente [[!UICONTROL con la sección URL de autenticación de aplicación resaltada.]](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)]
 
 Copie y pegue la [!UICONTROL URL de autenticación de aplicación] en un explorador para abrir un cuadro de diálogo de autenticación. Seleccione **[!DNL Accept]** para agregar la entidad de seguridad del servicio de aplicaciones CMK a su inquilino [!DNL Azure]. Al confirmar la autenticación, se le redirige a la página de aterrizaje de Experience Cloud.
 
@@ -80,7 +80,7 @@ En la siguiente pantalla, elija **[!DNL Select members]** para abrir un cuadro d
 
 Puede comprobar la aplicación comparando la [!UICONTROL ID de aplicación] proporcionada en la vista de [!UICONTROL configuración de claves administradas por el cliente] con la [!DNL Application ID] proporcionada en la descripción general de la aplicación [!DNL Microsoft Azure].
 
-![Vista de la configuración de claves administradas por el cliente [!UICONTROL con el identificador de aplicación [!UICONTROL resaltado].](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)]
+![Vista de la configuración de claves administradas por el cliente [[!UICONTROL con el identificador de aplicación [!UICONTROL resaltado].]](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)]
 
 Todos los detalles necesarios para comprobar las herramientas de Azure se incluyen en la interfaz de usuario de Experience Platform. Este nivel de granularidad se proporciona ya que muchos usuarios desean utilizar otras herramientas de Azure para mejorar su capacidad de monitorizar y registrar el acceso de estas aplicaciones a su almacén de claves. Comprender estos identificadores es fundamental para ese fin y para ayudar a los servicios de Adobe a acceder a la clave.
 

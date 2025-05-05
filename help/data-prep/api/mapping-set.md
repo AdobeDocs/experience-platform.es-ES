@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;preparación de datos;guía de api;conjuntos de asignaciones;
 solution: Experience Platform
 title: Asignación de conjuntos de extremos de API
-description: Puede utilizar el extremo `/mappingSets` en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar conjuntos de asignaciones mediante programación.
+description: Puede utilizar el extremo &grave;/mappingSets&grave; en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar conjuntos de asignaciones mediante programación.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt

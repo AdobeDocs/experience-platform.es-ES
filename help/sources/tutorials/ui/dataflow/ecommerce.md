@@ -69,7 +69,7 @@ Para ingerir en una nueva conjunto de datos, seleccione **[!UICONTROL Nuevo conj
 
 A continuación, seleccione la opción **[!UICONTROL Conjunto de datos del perfil]** para habilitar su conjunto de datos para [!DNL Profile]. Esto le permite crear una vista integral de los atributos y comportamientos de una entidad. Los datos de todos los [!DNL Profile]conjuntos de datos habilitados se incluirán en [!DNL Profile] el flujo de datos y se aplicarán los cambios al guardar el flujo de datos.
 
-[!UICONTROL Error diagnóstico permite la generación detallada de mensajes de error para cualquier registro erróneo que se produzca en el flujo de] datos, mientras [!UICONTROL que la ingesta] parcial le permite ingerir datos que contienen errores, hasta un cierto umbral que defina manualmente. Consulte la información general](../../../../ingestion/batch-ingestion/partial.md) sobre la [ingesta parcial de lotes para obtener más información.
+[!UICONTROL Error diagnóstico permite la generación detallada de mensajes de error para cualquier registro erróneo que se produzca en el flujo de] datos, mientras [!UICONTROL que la ingesta] parcial le permite ingerir datos que contienen errores, hasta un cierto umbral que defina manualmente. Consulte la información general[&#128279;](../../../../ingestion/batch-ingestion/partial.md) sobre la ingesta parcial de lotes para obtener más información.
 
 ![perfil y errores](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
 
@@ -135,7 +135,7 @@ Una vez creado el flujo de datos, puede monitor los datos que se ingieren a trav
 
 ## Eliminar el flujo de datos
 
-Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente mediante la función Eliminar **** disponible en el espacio de trabajo Flujos ]**de**[!UICONTROL  datos. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre [la eliminación de flujos de datos en el IU](../delete.md).
+Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente mediante la función Eliminar **&#x200B;**&#x200B;disponible en el espacio de trabajo Flujos **de** datos. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre [la eliminación de flujos de datos en el IU](../delete.md).
 
 ## Pasos siguientes
 

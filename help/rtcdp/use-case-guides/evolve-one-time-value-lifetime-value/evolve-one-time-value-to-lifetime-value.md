@@ -246,7 +246,7 @@ Este esquema se utiliza para estructurar y hacer referencia a los datos de event
 
 El esquema del conector web [!DNL Adobe] está representado por una clase [!UICONTROL XDM ExperienceEvent], que incluye los siguientes grupos de campos:
 
-Plantilla de ExperienceEvent de +++Adobe Analytics (grupo de campos)
++++Plantilla de ExperienceEvent de Adobe Analytics (grupo de campos)
 
 [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](/help/xdm/field-groups/event/analytics-full-extension.md) es un grupo de campos de esquema estándar que captura métricas comunes recopiladas por Adobe Analytics.
 

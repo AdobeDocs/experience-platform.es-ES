@@ -69,7 +69,7 @@ La IU y la API de Data Science Workspace le permiten publicar la fórmula como m
 
 ### Crear un modelo
 
-Para obtener más información sobre cómo crear un modelo con el IU, visita la formación y evaluación de un modelo en el IU tutorial de ciencia de datos o en el tutorial de API Espacio de trabajo[[](./train-evaluate-model-api.md).](./train-evaluate-model-ui.md) Este tutorial proporciona un ejemplo sobre cómo crear, entrenar y actualizar hiperparámetros para ajustar el modelo.
+Para obtener más información sobre cómo crear un modelo con el IU, visita la formación y evaluación de un modelo en el IU tutorial de ciencia de datos o en el tutorial de API Espacio de trabajo[&#128279;](./train-evaluate-model-ui.md) [&#128279;](./train-evaluate-model-api.md). Este tutorial proporciona un ejemplo sobre cómo crear, entrenar y actualizar hiperparámetros para ajustar el modelo.
 
 >[!NOTE]
 >

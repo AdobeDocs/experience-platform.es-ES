@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Activar audiencias en destinos depurados según identificadores de LiveRamp
 
-Use la integración de Adobe Real-Time CDP con [!DNL LiveRamp] para activar audiencias en una lista revisada de destinos que usan [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) para la activación, incluidos destinos de audio y TV conectados, como los que se enumeran a continuación.
+Use la integración de Adobe Real-Time CDP con [!DNL LiveRamp] para activar audiencias en una lista revisada de destinos que usan [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) para la activación, incluidos destinos de audio y TV conectados, como los que se enumeran a continuación.
 
 >[!IMPORTANT]
 >

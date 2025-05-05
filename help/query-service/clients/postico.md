@@ -17,7 +17,7 @@ Este documento describe los pasos para conectar [!DNL Postico] con Adobe Experie
 
 >[!NOTE]
 >
-> En esta guía se da por hecho que ya tiene acceso a [!DNL Postico] y que está familiarizado con la forma de navegar por su interfaz. Encontrará más información sobre [!DNL Postico] en la [documentación oficial [!DNL Postico] 3}.](https://eggerapps.at/postico/docs)
+> En esta guía se da por hecho que ya tiene acceso a [!DNL Postico] y que está familiarizado con la forma de navegar por su interfaz. Encontrará más información sobre [!DNL Postico] en la [documentación oficial [!DNL Postico] 3&rbrace;.](https://eggerapps.at/postico/docs)
 > 
 > Además, [!DNL Postico] es **solamente** disponible en dispositivos macOS.
 

@@ -119,7 +119,7 @@ El modelo de IA que determina las puntuaciones de tendencia se elige del selecto
 
 Para ir a la página de detalles del modelo de inteligencia artificial aplicada al cliente seleccionado, seleccione **[!UICONTROL Ver detalles del modelo]**.
 
-![Se ha resaltado el panel Audiencias de Experience Platform con la distribución de puntuaciones] de la inteligencia artificial aplicada al cliente y el widget [!UICONTROL Ver detalles del modelo].](../images/segments/customer-ai-distribution-of-scores.png)[!UICONTROL 
+![Se ha resaltado el panel Audiencias de Experience Platform con la distribución de puntuaciones] de la inteligencia artificial aplicada al cliente y el widget [!UICONTROL Ver detalles del modelo].(../images/segments/customer-ai-distribution-of-scores.png)
 
 Aparecerá la página de información detallada del modelo.
 

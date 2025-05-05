@@ -185,7 +185,9 @@ Una vez obtenidos los números, pueden transferirse a una función sigmoidea don
 ```sql
 SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 THEN 1 ELSE 0 END AS Prediction;
 ```
+
  
+
 ### Un ejemplo de extremo a extremo
 
 En una situación en la que tiene dos columnas (`c1` y `c2`), si `c1` tiene dos categorías, el algoritmo [!DNL Logistic Regression] se entrena con la siguiente función:
@@ -194,6 +196,7 @@ En una situación en la que tiene dos columnas (`c1` y `c2`), si `c1` tiene dos 
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
 ```
+
  
 El equivalente en SQL es el siguiente:
 
@@ -209,6 +212,7 @@ FROM
     FROM TABLE
   )
 ```
+
  
 El código [!DNL Python] para automatizar el proceso de traducción es el siguiente:
 

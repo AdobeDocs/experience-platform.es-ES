@@ -103,8 +103,8 @@ Al conectarse al destino, la configuración de una directiva de control de datos
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en un destino.
 
@@ -144,7 +144,7 @@ Para validar que los datos se exportan correctamente desde Experience Platform a
 
 1. En primer lugar, seleccione la ficha **[!UICONTROL Datos]** y revise la sección **[!UICONTROL Datos de origen]**.
 2. Desplácese hacia abajo en la página, en **[!UICONTROL Datos importados]**, encontrará el **[!UICONTROL Mosaico 1PD de Adobe]**.
-3. Haga clic en el mosaico**[!UICONTROL Adobe 1PD]** y se enumerarán todas las audiencias activadas en el destino [!DNL Trade Desk] para su anunciante. También puede utilizar la función de búsqueda.
+3. Haga clic en el mosaico&#x200B;**[!UICONTROL Adobe 1PD]** y se enumerarán todas las audiencias activadas en el destino [!DNL Trade Desk] para su anunciante. También puede utilizar la función de búsqueda.
 4. El ID de segmento # de Experience Platform aparecerá como el nombre del segmento en la interfaz de usuario de [!DNL Trade Desk].
 
 ## Uso de datos y gobernanza {#data-usage-governance}

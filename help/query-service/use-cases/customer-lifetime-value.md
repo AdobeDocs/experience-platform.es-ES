@@ -91,7 +91,7 @@ Consulte la [descripción general de los destinos de marketing por correo electr
 
 ## Ver los datos de análisis devueltos de la campaña {#post-campaign-data-analysis}
 
-Los datos de orígenes ahora se [pueden procesar](../key-concepts/incremental-load.md) de forma incremental como parte de una actualización programada del modelo de datos en el tienda de datos acelerado. Cualquier evento de respuesta de los clientes se puede ingerir en Adobe Experience Platform a medida que ocurren o en lotes. El modelo de datos se puede actualizar una o varias veces al día, en función de la configuración o los conectores de origen. Consulte la descripción general](../../ingestion/batch-ingestion/api-overview.md) de la API de ingesta por lotes o la [descripción general](../../ingestion/streaming-ingestion/overview.md) de ingesta [de flujo para obtener más información.
+Los datos de orígenes ahora se [pueden procesar](../key-concepts/incremental-load.md) de forma incremental como parte de una actualización programada del modelo de datos en el tienda de datos acelerado. Cualquier evento de respuesta de los clientes se puede ingerir en Adobe Experience Platform a medida que ocurren o en lotes. El modelo de datos se puede actualizar una o varias veces al día, en función de la configuración o los conectores de origen. Consulte la descripción general[&#128279;](../../ingestion/batch-ingestion/api-overview.md) de la API de ingesta por lotes o la [descripción general](../../ingestion/streaming-ingestion/overview.md) de ingesta de flujo para obtener más información.
 
 Una vez que se actualiza su modelo de datos, sus widgets de panel personalizados proporcionan señales significativas que le permiten medir y visualizar valor de tiempo de vida del cliente.
 

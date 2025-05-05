@@ -117,9 +117,11 @@ Esta sección le permite definir el comportamiento de Web SDK cuando se trata de
 * **[!UICONTROL Usar cookies de terceros]**: cuando esta opción está habilitada, Web SDK intenta almacenar un identificador de usuario en una cookie de terceros. Si se realiza correctamente, el usuario se identifica como un solo usuario a medida que navega por varios dominios, en lugar de identificarse como un usuario independiente en cada dominio. Si esta opción está habilitada, es posible que SDK aún no pueda almacenar el identificador de usuario en una cookie de terceros si el explorador no admite cookies de terceros o si el usuario lo ha configurado para no permitir cookies de terceros. En este caso, SDK solo almacena el identificador en el dominio de origen.
 
   >[!IMPORTANT]
-  >>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
+  >&#x200B;>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
+
 Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
   >
+
 ## Configuración de la personalización {#personalization}
 
 Esta sección le permite configurar cómo desea ocultar determinadas partes de una página mientras se carga contenido personalizado. Esto garantiza que los visitantes solo vean la página personalizada.
@@ -140,7 +142,7 @@ Para utilizar el fragmento preocultado, cópielo y péguelo dentro del elemento 
 
 >[!IMPORTANT]
 >
-Al utilizar el fragmento preocultado, Adobe recomienda utilizar la misma regla de [!DNL CSS] que la utilizada por el [estilo preocultado](#prehiding-style).
+>Al utilizar el fragmento preocultado, Adobe recomienda utilizar la misma regla de [!DNL CSS] que la utilizada por el [estilo preocultado](#prehiding-style).
 
 ## Configuración de la recopilación de datos {#data-collection}
 
@@ -166,7 +168,7 @@ Administrar las opciones de configuración de recopilación de datos. Hay config
 
 >[!TIP]
 >
-El campo **[!UICONTROL Activado antes de hacer clic en el vínculo enviar]** es una llamada de retorno obsoleta que solo está visible para propiedades que ya lo tienen configurado. Es la etiqueta equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) en la biblioteca de JavaScript. Use la llamada de retorno **[!UICONTROL Filtrar propiedades de clic]** para filtrar o ajustar datos de clics, o use la llamada de retorno **[!UICONTROL Activado antes del envío de evento]** para filtrar o ajustar la carga útil general enviada a Adobe. Si se establecen tanto la devolución de llamada **[!UICONTROL Filter click properties]** como la devolución de llamada **[!UICONTROL Activada antes de enviar clic en vínculo]**, solo se ejecutará la devolución de llamada **[!UICONTROL Filter click properties]**.
+>El campo **[!UICONTROL Activado antes de hacer clic en el vínculo enviar]** es una llamada de retorno obsoleta que solo está visible para propiedades que ya lo tienen configurado. Es la etiqueta equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) en la biblioteca de JavaScript. Use la llamada de retorno **[!UICONTROL Filtrar propiedades de clic]** para filtrar o ajustar datos de clics, o use la llamada de retorno **[!UICONTROL Activado antes del envío de evento]** para filtrar o ajustar la carga útil general enviada a Adobe. Si se establecen tanto la devolución de llamada **[!UICONTROL Filter click properties]** como la devolución de llamada **[!UICONTROL Activada antes de enviar clic en vínculo]**, solo se ejecutará la devolución de llamada **[!UICONTROL Filter click properties]**.
 
 ## Configuración de la colección de medios {#media-collection}
 
@@ -194,13 +196,13 @@ La anulación de la configuración de la secuencia de datos es un proceso de dos
 1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](/help/datastreams/configure.md).
 2. A continuación, debe enviar las invalidaciones a Edge Network mediante un comando de Web SDK o utilizando la extensión de etiquetas de Web SDK.
 
-Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1} para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
+Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1&rbrace; para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
 
 Como alternativa a pasar las invalidaciones a través de un comando de Web SDK, puede configurarlas en la pantalla de extensión de etiquetas que se muestra a continuación.
 
 >[!IMPORTANT]
 >
-Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
+>Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
 
 ![Imagen que muestra las anulaciones de configuración de secuencia de datos usando la página de extensión de etiquetas Web SDK.](assets/datastream-overrides.png)
 

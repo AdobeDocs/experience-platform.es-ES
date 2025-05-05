@@ -115,7 +115,7 @@ A partir de ahora, no hay métricas de evaluación predeterminadas para [!DNL Py
 
 Para las métricas de evaluación personalizadas, existen dos métodos principales que deben implementarse para el evaluador: `split()` y `evaluate()`.
 
-Para [!DNL Python], estos métodos se definirían en [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para la `Evaluator` clase. Siga la vincular de evaluator.py [](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para ver un ejemplo del `Evaluator`archivo .
+Para [!DNL Python], estos métodos se definirían en [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para la `Evaluator` clase. Siga la vincular de evaluator.py [&#128279;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) para ver un ejemplo del `Evaluator`archivo .
 
 La creación de métricas de evaluación requiere [!DNL Python] que el usuario implementar los `evaluate()` métodos and `split()` .
 

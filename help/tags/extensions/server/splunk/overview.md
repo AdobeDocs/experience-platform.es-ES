@@ -75,7 +75,7 @@ El siguiente paso es asignar las propiedades del evento Splunk a los elementos d
 
 | Nombre del campo | Descripción |
 | --- | --- |
-| [!UICONTROL Evento ]<br><br>**(OBLIGATORIO)** | Indique cómo desea proporcionar los datos de evento. Los datos de evento se pueden asignar a la clave `event` dentro del objeto JSON en la solicitud HTTP o pueden ser texto sin procesar. La clave `event` está en el mismo nivel dentro del paquete de eventos JSON que las claves de metadatos. Dentro de los llaves clave-valor de `event`, los datos pueden estar en cualquier formulario que necesite (como una cadena, un número, otro objeto JSON, etc.). |
+| [!UICONTROL Evento &#x200B;]<br><br>**(OBLIGATORIO)** | Indique cómo desea proporcionar los datos de evento. Los datos de evento se pueden asignar a la clave `event` dentro del objeto JSON en la solicitud HTTP o pueden ser texto sin procesar. La clave `event` está en el mismo nivel dentro del paquete de eventos JSON que las claves de metadatos. Dentro de los llaves clave-valor de `event`, los datos pueden estar en cualquier formulario que necesite (como una cadena, un número, otro objeto JSON, etc.). |
 | [!UICONTROL Host] | El nombre de host del cliente desde el que envía los datos. |
 | [!UICONTROL Tipo de Source] | Tipo de origen que se asigna a los datos de evento. |
 | [!UICONTROL Source] | Valor de origen que se asigna a los datos de evento. Por ejemplo, si está enviando datos desde una aplicación que está desarrollando, establezca esta clave en el nombre de la aplicación. |

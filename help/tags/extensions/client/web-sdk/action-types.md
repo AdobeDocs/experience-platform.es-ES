@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Después de configurar la [extensión de etiquetas de Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md), debe configurar los tipos de acción.
 
-Este Página describe los tipos de acción admitidos por la extensión](web-sdk-extension-configuration.md) de [etiqueta del SDK web de Adobe Experience Platform.
+Este Página describe los tipos de acción admitidos por la extensión[&#128279;](web-sdk-extension-configuration.md) de etiqueta del SDK web de Adobe Experience Platform.
 
 ## Aplicar propuestas {#apply-propositions}
 

@@ -45,5 +45,5 @@ La siguiente documentación proporciona información sobre cómo conectar [!DNL 
 
 ## Conectar [!DNL Zendesk] a Experience Platform mediante la interfaz de usuario
 
-* [Crear una  [!DNL Zendesk ]conexión de origen en la interfaz de usuario](../../tutorials/ui/create/customer-success/zendesk.md)
+* [Crear una  [!DNL Zendesk &#x200B;]conexión de origen en la interfaz de usuario](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Crear un flujo de datos para una conexión de origen de éxito de cliente en la interfaz de usuario](../../tutorials/ui/dataflow/customer-success.md)

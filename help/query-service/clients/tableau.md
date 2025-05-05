@@ -17,7 +17,7 @@ Este documento proporciona información para conectar [!DNL Tableau] con Adobe E
 
 >[!NOTE]
 >
-> En esta guía se da por hecho que ya tiene acceso a [!DNL Tableau] y que está familiarizado con la forma de navegar por su interfaz. Encontrará más información sobre [!DNL Tableau] en la [documentación oficial [!DNL Tableau] 3}.](https://help.tableau.com/current/pro/desktop/en-us/default.htm)
+> En esta guía se da por hecho que ya tiene acceso a [!DNL Tableau] y que está familiarizado con la forma de navegar por su interfaz. Encontrará más información sobre [!DNL Tableau] en la [documentación oficial [!DNL Tableau] 3&rbrace;.](https://help.tableau.com/current/pro/desktop/en-us/default.htm)
 
 Las instrucciones sobre cómo [conectarse a un servidor PostgreSQL con Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) están disponibles en el sitio web oficial de Tableau. Una vez que aparezca el cuadro de diálogo para la configuración de conexión, introduzca sus credenciales de Experience Platform en los campos de parámetros para conectarse con Adobe Experience Platform. A continuación, se muestra una lista de los parámetros de conexión necesarios.
 
