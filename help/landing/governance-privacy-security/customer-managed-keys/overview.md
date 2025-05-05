@@ -17,7 +17,7 @@ Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante 
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform admite claves administradas por el cliente (CMK) tanto para Microsoft Azure como para Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Si la implementación se ejecuta en AWS, tiene la opción de utilizar el Servicio de administración de claves (KMS) para el cifrado de datos de Experience Platform. Para obtener más información sobre la infraestructura compatible, consulte [Descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform admite claves administradas por el cliente (CMK) tanto para Microsoft Azure como para Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Si la implementación se ejecuta en AWS, tiene la opción de utilizar el Servicio de administración de claves (KMS) para el cifrado de datos de Experience Platform. Para obtener más información sobre la infraestructura compatible, consulte [Descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/landing/multi-cloud).
 >
 >Para obtener más información acerca de la creación y administración de claves de cifrado en AWS KMS, consulte la [Guía de cifrado de datos de AWS KMS](./aws/configure-kms.md). Para implementaciones de Azure, consulte la [Guía de configuración de Azure Key Vault](./azure/azure-key-vault-config.md).
 
@@ -39,7 +39,7 @@ Para habilitar CMK, el entorno de alojamiento de su plataforma ([!DNL Azure] o A
 
 Para ver y obtener acceso a la sección [!UICONTROL Cifrado] en Adobe Experience Platform, debe haber creado una función y asignado el permiso [!UICONTROL Administrar clave administrada por el cliente] a esa función.  Cualquier usuario con el permiso [!UICONTROL Administrar clave administrada por el cliente] puede habilitar CMK para su organización.
 
-Para obtener más información sobre la asignación de funciones y permisos en Experience Platform, consulte la [documentación sobre la configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Para obtener más información sobre la asignación de funciones y permisos en Experience Platform, consulte la [documentación sobre la configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=es).
 
 ### Requisitos previos específicos de Azure
 
@@ -109,7 +109,7 @@ Por ejemplo, el panel Perfil seguirá mostrando los datos de su caché durante u
 
 >[!TIP]
 >
->Existen dos excepciones específicas de casos de uso a la caducidad de conjuntos de datos de siete días en datos no principales (almacenados en caché/transitorios). Consulte su documentación correspondiente para obtener más información sobre estas funciones.<ul><li>[Abreviador de URL de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=es#message-preset-sms)</li><li>[Proyecciones de Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Existen dos excepciones específicas de casos de uso a la caducidad de conjuntos de datos de siete días en datos no principales (almacenados en caché/transitorios). Consulte su documentación correspondiente para obtener más información sobre estas funciones.<ul><li>[Abreviador de URL de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=es#message-preset-sms)</li><li>[Proyecciones de Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=es#edge-projections)</li></ul>
 
 ## Pasos siguientes
 

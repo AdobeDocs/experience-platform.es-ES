@@ -13,7 +13,7 @@ ht-degree: 11%
 
 [!UICONTROL Detalles del cliente potencial del socio (ejemplo)] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). [!UICONTROL Detalles del posible cliente asociado (ejemplo)] proporciona un marco de ejemplo para varios detalles relacionados con el perfil de un cliente potencial. Este marco de trabajo agiliza el proceso de organización y gestión de diversa información relacionada con los posibles clientes.
 
-Este grupo de campos amplía la [clase de perfil de cliente potencial individual](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) en el contexto de un socio.
+Este grupo de campos amplía la [clase de perfil de cliente potencial individual](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=es) en el contexto de un socio.
 
 ![Diagrama del grupo de campos [!UICONTROL Detalles del posible cliente asociado (muestra)].](../../images/field-groups/partner/partner-prospect-details-sample.png)
 

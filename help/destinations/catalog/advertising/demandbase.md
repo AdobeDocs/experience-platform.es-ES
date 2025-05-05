@@ -1,8 +1,8 @@
 ---
 title: Conexión de Demandbase
 description: Utilice este destino para activar los públicos de su cuenta para los casos de uso de Account-Based Marketing (ABM). Anuncie para personas y funciones relevantes en sus cuentas de destino a través de B2B Demand Side Platform (DSP) de DemandBase. Las cuentas de destino también se pueden enriquecer con datos de terceros de Demandbase para otros casos de uso posteriores en marketing y ventas.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
+badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
 source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923

@@ -17,7 +17,7 @@ El control de acceso para Adobe Experience Platform se proporciona mediante **[!
 
 ## Flujo de trabajo y jerarquía de control de acceso
 
-Para configurar el control de acceso de Experience Platform, debe tener privilegios de administrador de sistemas o productos para una organización que tenga un producto de Experience Platform. La función mínima que puede conceder o retirar permisos es de administrador de productos. Otros roles de administrador que pueden administrar permisos son administradores del sistema (sin restricciones). Consulte el artículo del Centro de ayuda de Adobe sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) para obtener más información.
+Para configurar el control de acceso de Experience Platform, debe tener privilegios de administrador de sistemas o productos para una organización que tenga un producto de Experience Platform. La función mínima que puede conceder o retirar permisos es de administrador de productos. Otros roles de administrador que pueden administrar permisos son administradores del sistema (sin restricciones). Consulte el artículo del Centro de ayuda de Adobe sobre [funciones administrativas](https://helpx.adobe.com/es/enterprise/using/admin-roles.html) para obtener más información.
 
 >[!NOTE]
 >

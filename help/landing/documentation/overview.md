@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >La documentación de Adobe Experience Platform se ha movido recientemente. Dedique un momento a revisar la nueva navegación y a actualizar los marcadores existentes.
 
-La documentación de Adobe Experience Platform está disponible para varias funciones y servicios de Experience Platform. Para acceder a la documentación de Experience Platform, vuelva a la [página de aterrizaje de documentación](https://experienceleague.adobe.com/docs/experience-platform.html) y seleccione la guía que desee ver.
+La documentación de Adobe Experience Platform está disponible para varias funciones y servicios de Experience Platform. Para acceder a la documentación de Experience Platform, vuelva a la [página de aterrizaje de documentación](https://experienceleague.adobe.com/docs/experience-platform.html?lang=es) y seleccione la guía que desee ver.
 
 ## Tipos de documentación de Experience Platform
 

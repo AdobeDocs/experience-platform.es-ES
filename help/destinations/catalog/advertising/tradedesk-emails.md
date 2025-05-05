@@ -88,7 +88,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ### Rellene los detalles del destino {#fill-in-details}
 
-Para poder enviar o activar datos de audiencia a un destino, debe configurar una conexión con su propia plataforma de destino. Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, debe proporcionar la siguiente información:
+Para poder enviar o activar datos de audiencia a un destino, debe configurar una conexión con su propia plataforma de destino. Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Tipo de cuenta]**: Elija la opción **[!UICONTROL Cuenta existente]**.
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.

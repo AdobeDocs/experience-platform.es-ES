@@ -52,7 +52,7 @@ Como se ve en la tabla siguiente, los datos de evento se representan con palabra
 
 Las audiencias externas también se pueden utilizar como componentes de una nueva definición de segmento y añadir sus reglas de atributos a las nuevas definiciones de segmento.
 
-Actualmente, solo se admite Adobe Audience Manager como audiencia externa y las fuentes adicionales se habilitarán en el futuro. Encontrará más información sobre el uso de audiencias de Adobe Audience Manager con Experience Platform en la [guía para compartir audiencias de la documentación de Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Actualmente, solo se admite Adobe Audience Manager como audiencia externa y las fuentes adicionales se habilitarán en el futuro. Encontrará más información sobre el uso de audiencias de Adobe Audience Manager con Experience Platform en la [guía para compartir audiencias de la documentación de Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es).
 
 ### Uso compartido de definiciones de segmento
 

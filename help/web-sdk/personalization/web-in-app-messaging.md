@@ -21,7 +21,7 @@ Con los mensajes en la aplicación, puede interactuar de forma eficaz con su aud
 >
 >La mensajería en la aplicación web es una característica de [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es) que usa Web SDK para entregar el contenido personalizado.
 >
->Para obtener instrucciones detalladas sobre cómo configurar su campaña de mensajería en aplicación web, consulte la documentación[&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html) de Adobe Systems Journey Optimizer.
+>Para obtener instrucciones detalladas sobre cómo configurar su campaña de mensajería en aplicación web, consulte la documentación[&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=es) de Adobe Systems Journey Optimizer.
 
 
 ## Requisitos previos {#prerequisites}
@@ -184,5 +184,5 @@ Puede elegir mostrar mensajes en la aplicación a los usuarios una cantidad dete
 
 En la [configuración de Web SDK](../commands/configure/overview.md) establezca la opción `personalizationStorageEnabled` según sus necesidades:
 
-* `personalizationStorageEnabled: true` almacena en déclencheur el mensaje en la aplicación con la frecuencia que definió en [Adobe Journey Optimizer campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` almacena en déclencheur el mensaje en la aplicación con la frecuencia que definió en [Adobe Journey Optimizer campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=es#configure-inapp).
 * `personalizationStorageEnabled: false` almacena en déclencheur el mensaje en la aplicación en cada carga de página.

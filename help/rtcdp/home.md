@@ -156,11 +156,11 @@ Vea estos tres vídeos introductorios para comprender mejor Real-Time CDP, su ar
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=es">
       <img alt="Real-Time CDP como parte del vídeo de Adobe Experience Cloud" src="/help/rtcdp/assets/platform-apps-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=es">
     <strong>Real-Time CDP como parte de Adobe Experience Cloud</strong>
     </a>
     </div>
@@ -169,11 +169,11 @@ Vea estos tres vídeos introductorios para comprender mejor Real-Time CDP, su ar
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=es">
       <img alt="imagen en miniatura del vídeo Arquitectura básica de Adobe Experience Platform" src="/help/rtcdp/assets/platform-architecture-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=es">
     <strong>Arquitectura básica de Adobe Experience Platform</strong>
     </a>
     </div>
@@ -182,11 +182,11 @@ Vea estos tres vídeos introductorios para comprender mejor Real-Time CDP, su ar
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=es">
       <img alt="imagen en miniatura del vídeo &quot;Recorrido por la interfaz de Adobe Experience Platform&quot;" src="/help/rtcdp/assets/rtcdp-ui-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=es">
     <strong>Recorrido por la interfaz de Adobe Experience Platform</strong>
     </a>
     </div>
@@ -203,12 +203,12 @@ Examine los vínculos siguientes para comprender mejor los casos de uso, los ser
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es" target="_blank">Tutoriales</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Descripción del producto Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Información general de seguridad (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=es" target="_blank">Modelos de implementación</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">Glosario</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es" target="_blank">Tutoriales</a> - <a href="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Descripción del producto Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Información general de seguridad (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=es" target="_blank">Modelos de implementación</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=es" target="_blank">Glosario</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=es" target="_blank">Documentación</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">Referencia de API - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">Curso: Introducción a Experience Platform</a></a>
+<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=es" target="_blank">Documentación</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">Referencia de API - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html?lang=es" target="_blank">Curso: Introducción a Experience Platform</a></a>
 </td>
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Manténgase informado, contribuya a la comunidad y mejore su experiencia con Adobe Real-Time CDP.</b><br/>Visite la comunidad de Real-Time Customer Data Platform para hablar sobre la funcionalidad con otros profesionales. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Únase a la comunidad hoy mismo.</a></td></tr></table>
+<b>Manténgase informado, contribuya a la comunidad y mejore su experiencia con Adobe Real-Time CDP.</b><br/>Visite la comunidad de Real-Time Customer Data Platform para hablar sobre la funcionalidad con otros profesionales. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP?profile.language=es">Únase a la comunidad hoy mismo.</a></td></tr></table>

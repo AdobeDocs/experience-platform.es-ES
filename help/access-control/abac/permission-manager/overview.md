@@ -24,7 +24,7 @@ Con [!UICONTROL Administrador de permisos], puede buscar según lo siguiente:
 
 Puede limitar la búsqueda mediante la selección de recursos, acciones y zonas protegidas específicos.
 
-Para obtener acceso al [!UICONTROL Administrador de permisos] para [!DNL Experience Platform], debe ser administrador de una organización que tenga acceso a Experience Platform. Aunque Adobe permite jerarquías de administrador personalizables dentro de la organización, debe ser administrador de producto de [!DNL Adobe Experience Platform]. Para obtener más información, consulte el artículo del Centro de ayuda de Adobe sobre [funciones de administración](https://helpx.adobe.com/enterprise/using/admin-roles.html).
+Para obtener acceso al [!UICONTROL Administrador de permisos] para [!DNL Experience Platform], debe ser administrador de una organización que tenga acceso a Experience Platform. Aunque Adobe permite jerarquías de administrador personalizables dentro de la organización, debe ser administrador de producto de [!DNL Adobe Experience Platform]. Para obtener más información, consulte el artículo del Centro de ayuda de Adobe sobre [funciones de administración](https://helpx.adobe.com/es/enterprise/using/admin-roles.html).
 
 Inicie sesión en [Adobe Experience Platform](https://experience.adobe.com/) con sus credenciales de [!DNL Adobe].  Después de iniciar sesión, verá la página **[!UICONTROL Información general]** para su organización. Esta página muestra los productos a los que está suscrita su organización. Para iniciar el área de trabajo de control de acceso basado en atributos para la integración de la plataforma, seleccione **[!UICONTROL Permisos]**.
 

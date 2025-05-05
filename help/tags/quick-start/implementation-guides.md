@@ -17,8 +17,8 @@ ht-degree: 16%
 
 A continuación se muestra una lista de guías de implementación de extremo a extremo para etiquetas y reenvío de eventos. Estas guías están diseñadas para desarrolladores de front-end y especialistas en marketing técnico que deseen aprender a implementar productos de Adobe Experience Cloud en sus sitios web y aplicaciones móviles.
 
-* [Implementar etiquetas para un sitio web](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
-* [Implementar etiquetas para una aplicación de Android](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html)
-* [Implementar etiquetas para una aplicación Objective-C de iOS](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-objective-c-apps/overview.html)
-* [Implementar etiquetas para una aplicación Swift de iOS](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-swift-apps/overview.html)
-* [Implementar el reenvío de eventos (anteriormente Adobe Experience Platform Launch Server Side)](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/overview.html)
+* [Implementar etiquetas para un sitio web](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html?lang=es)
+* [Implementar etiquetas para una aplicación de Android](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html?lang=es)
+* [Implementar etiquetas para una aplicación Objective-C de iOS](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-objective-c-apps/overview.html?lang=es)
+* [Implementar etiquetas para una aplicación Swift de iOS](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-swift-apps/overview.html?lang=es)
+* [Implementar el reenvío de eventos (anteriormente Adobe Experience Platform Launch Server Side)](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/overview.html?lang=es)

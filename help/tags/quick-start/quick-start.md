@@ -134,6 +134,6 @@ Para obtener más información sobre los distintos estados y opciones disponible
 
 Para obtener más información sobre las etiquetas, consulte los siguientes recursos:
 
-* **[La comunidad de recopilación de datos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Formule y responda preguntas, aporte ideas, y vote las ideas de otros. Inicie sesión con su ID de Adobe.
+* **[La comunidad de recopilación de datos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=es)**: Formule y responda preguntas, aporte ideas, y vote las ideas de otros. Inicie sesión con su ID de Adobe.
 * **[Documentos de desarrolladores](../api/overview.md)**: Participe en la comunidad de desarrolladores de etiquetas para desarrollar extensiones o utilizar las API de etiquetas.
 * **[Información general sobre tutoriales](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=es)**: Estos documentos le presentan conceptos de etiquetas, incluidos el reenvío de eventos y SDK móvil en aplicaciones Android.

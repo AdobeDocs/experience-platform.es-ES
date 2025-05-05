@@ -77,7 +77,7 @@ Si un trabajo en particular sigue pendiente o ha devuelto un error, puede recupe
 
 ## Datos de solicitud de acceso {#access-request-data}
 
-Cuando se solicita información del interesado, cada servicio devuelve los datos en un formato coherente con la forma en que almacenan y utilizan dichos datos. Una vez que todos los servicios hayan completado la solicitud, se proporciona una URL de archivo .ZIP en los detalles del trabajo para permitir la descarga de estos datos. Consulte la guía de solución de problemas para obtener información sobre [cómo descargar los resultados de los trabajos de privacidad](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
+Cuando se solicita información del interesado, cada servicio devuelve los datos en un formato coherente con la forma en que almacenan y utilizan dichos datos. Una vez que todos los servicios hayan completado la solicitud, se proporciona una URL de archivo .ZIP en los detalles del trabajo para permitir la descarga de estos datos. Consulte la guía de solución de problemas para obtener información sobre [cómo descargar los resultados de los trabajos de privacidad](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=es#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
 
 A continuación se indican algunos aspectos importantes relacionados con la gestión del archivo de datos:
 

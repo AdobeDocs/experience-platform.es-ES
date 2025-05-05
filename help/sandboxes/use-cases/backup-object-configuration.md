@@ -40,7 +40,7 @@ Para implementar correctamente este caso de uso, debe utilizar varias áreas de 
 - [Conjuntos de datos](../../catalog/datasets/overview.md)
 - [Esquemas](../../xdm//home.md)
 - [Públicos](../../segmentation/home.md)
-- [Recorridos de Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Recorridos de Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 

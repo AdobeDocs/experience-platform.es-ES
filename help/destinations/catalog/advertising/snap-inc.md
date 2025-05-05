@@ -67,7 +67,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
 | Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
-| [!DNL Federated Audience Composition] | ✓ | Audiencias importadas en Experience Platform mediante [Composición de audiencias federada](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+| [!DNL Federated Audience Composition] | ✓ | Audiencias importadas en Experience Platform mediante [Composición de audiencias federada](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -140,7 +140,7 @@ Después de activar audiencias en el destino *Snap Inc*, podrás ver las audienc
 
 ![Públicos](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tenga en cuenta que cuando se activa por primera vez una audiencia de Adobe en Snap Inc, inicialmente la verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa la audiencia. Para obtener más información sobre cómo se evalúan las audiencias en Experience Platform, consulte la [descripción general del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Tenga en cuenta que cuando se activa por primera vez una audiencia de Adobe en Snap Inc, inicialmente la verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa la audiencia. Para obtener más información sobre cómo se evalúan las audiencias en Experience Platform, consulte la [descripción general del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=es#evaluate-segments).
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Acceso a tokens de respuesta
 
-El contenido de Personalization devuelto desde Adobe Target incluye [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), que son detalles acerca de la actividad, oferta, experiencia, perfil de usuario, información geográfica y más. Estos detalles se pueden compartir con herramientas de terceros o utilizar para la depuración. Los tokens de respuesta se pueden configurar en la interfaz de usuario de Adobe Target.
+El contenido de Personalization devuelto desde Adobe Target incluye [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=es), que son detalles acerca de la actividad, oferta, experiencia, perfil de usuario, información geográfica y más. Estos detalles se pueden compartir con herramientas de terceros o utilizar para la depuración. Los tokens de respuesta se pueden configurar en la interfaz de usuario de Adobe Target.
 
 Para acceder a cualquier contenido de personalización, proporcione una función de llamada de retorno al enviar un evento. Se llamará a esta devolución de llamada después de que el SDK reciba una respuesta correcta del servidor. Se le proporcionará una devolución de llamada con un objeto `result`, el cual puede contener una propiedad `propositions` con el contenido de personalización devuelto. A continuación se muestra un ejemplo de cómo proporcionar una función de llamada de retorno.
 

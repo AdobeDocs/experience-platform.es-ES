@@ -127,4 +127,4 @@ Los siguientes documentos proporcionan sugerencias adicionales sobre los matices
 * [Crear una cuenta de servicio (JWT) de Adobe en el portal de Adobe Developer](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [Creación de un esquema en la API](../../../../../xdm/tutorials/create-schema-api.md)
 * [Creación de un esquema en la interfaz de usuario](../../../../../xdm/tutorials/create-schema-ui.md)
-* [Definir campos de identidad en la interfaz de usuario](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+* [Definir campos de identidad en la interfaz de usuario](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=es)

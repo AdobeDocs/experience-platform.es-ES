@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introducción a Real-Time Customer Data Platform B2B edition
 description: Utilice este escenario como ejemplo al configurar la implementación de Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -100,9 +100,9 @@ En el espacio de trabajo [!UICONTROL Segmentos] de la interfaz de usuario de Exp
 
 >[!NOTE]
 > 
->Consulte el tutorial sobre [activación de una audiencia en un destino](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) para ver los pasos detallados sobre cómo hacerlo.
+>Consulte el tutorial sobre [activación de una audiencia en un destino](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=es) para ver los pasos detallados sobre cómo hacerlo.
 
-El especialista en marketing de Bodea activa la audiencia en el destino de Marketo, lo que les permite insertar datos de audiencia de Experience Platform en Marketo Engage en forma de lista estática. Consulte la guía del [destino de Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) para obtener más información.
+El especialista en marketing de Bodea activa la audiencia en el destino de Marketo, lo que les permite insertar datos de audiencia de Experience Platform en Marketo Engage en forma de lista estática. Consulte la guía del [destino de Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=es) para obtener más información.
 
 ## Pasos siguientes
 

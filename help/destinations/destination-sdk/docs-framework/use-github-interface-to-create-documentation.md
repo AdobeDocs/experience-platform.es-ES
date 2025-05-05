@@ -16,14 +16,14 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 >[!TIP]
 >
 >Consulte también la documentación de soporte en la Guía del colaborador de Adobe:
->* [Instalar las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [Configurar el repositorio Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [Instalar las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=es)
+>* [Configurar el repositorio Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=es)
+>* [Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=es).
 
 ## Configuración del entorno de creación de GitHub {#set-up-environment}
 
 1. En su explorador, vaya a `https://github.com/AdobeDocs/experience-platform.en`.
-2. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) el repositorio, haga clic en **Ramificar** como se muestra a continuación. Esto crea una copia del repositorio de Experience Platform en su propia cuenta de GitHub.
+2. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=es#fork-the-repository) el repositorio, haga clic en **Ramificar** como se muestra a continuación. Esto crea una copia del repositorio de Experience Platform en su propia cuenta de GitHub.
 
    ![Repositorio de documentación de Fork Adobe](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -46,7 +46,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
    >
    >Puede cerrar la ventana del explorador en cualquier momento y volver a abrirla más tarde. Su trabajo se guarda automáticamente y le estará esperando cuando vuelva a abrir el explorador.
 3. Copie el contenido del editor de markdown en el nuevo archivo en GitHub.
-4. Para cualquier captura de pantalla o imagen que planee usar, use la interfaz de GitHub para cargar los archivos en `experience-platform.en/help/destinations/assets/catalog/[...]`, donde `[...]` es la categoría deseada para el destino. Por ejemplo, si está agregando un destino de personalización al Experience Platform, seleccione la categoría `personalization`. Debe vincular a las imágenes de la página que está creando. Vea [instrucciones sobre cómo vincular a imágenes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
+4. Para cualquier captura de pantalla o imagen que planee usar, use la interfaz de GitHub para cargar los archivos en `experience-platform.en/help/destinations/assets/catalog/[...]`, donde `[...]` es la categoría deseada para el destino. Por ejemplo, si está agregando un destino de personalización al Experience Platform, seleccione la categoría `personalization`. Debe vincular a las imágenes de la página que está creando. Vea [instrucciones sobre cómo vincular a imágenes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=es#link-to-images).
 
    ![Cargar imagen en GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -82,4 +82,4 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 
 >[!TIP]
 >
->Para agregar imágenes y vínculos a tu documentación y para cualquier otra pregunta sobre Markdown, lee [Using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) en la guía de escritura colaborativa de Adobe.
+>Para agregar imágenes y vínculos a tu documentación y para cualquier otra pregunta sobre Markdown, lee [Using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=es) en la guía de escritura colaborativa de Adobe.

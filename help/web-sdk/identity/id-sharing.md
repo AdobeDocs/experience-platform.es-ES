@@ -53,7 +53,7 @@ El parámetro de cadena de consulta incluye:
 
 El uso compartido de ID de móvil a web usa el parámetro `adobe_mc`. Cuando el parámetro `adobe_mc` está presente y es válido, el elemento `ECID` de la cadena de consulta se agrega automáticamente al mapa de identidad en la primera solicitud realizada al Edge Network. Todas las interacciones de Edge Network subsiguientes utilizarán ese(a) `ECID`.
 
-Para obtener más información sobre cómo pasar ID de visitantes de una aplicación móvil a un WebView, consulte la documentación sobre [administración de WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Para obtener más información sobre cómo pasar ID de visitantes de una aplicación móvil a un WebView, consulte la documentación sobre [administración de WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=es#implementation).
 
 ## Implementación del uso compartido de ID entre dominios {#cross-domain-sharing}
 

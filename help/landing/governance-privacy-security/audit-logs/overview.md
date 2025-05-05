@@ -167,7 +167,7 @@ Todas las acciones que puede realizar en la interfaz de usuario también se pued
 
 ## Administración de registros de auditoría para Adobe Admin Console
 
-Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/es/enterprise/using/audit-logs.html).
 
 ## Pasos siguientes y recursos adicionales
 

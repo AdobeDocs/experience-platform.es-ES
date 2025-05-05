@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # Seleccione un perfil de producto para administrar sus permisos de control de acceso
 
-Para configurar el control de acceso de [!DNL Experience Platform] mediante Adobe Admin Console, debe ser administrador de una organización que tenga una suscripción a [!DNL Experience Platform]. Aunque Adobe admite jerarquías de administrador flexibles para las organizaciones, debe tener privilegios de administrador del sistema, administrador de productos o administrador de perfiles de productos para configurar el control de acceso. Consulte el artículo del Centro de ayuda de Adobe sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) para obtener más información.
+Para configurar el control de acceso de [!DNL Experience Platform] mediante Adobe Admin Console, debe ser administrador de una organización que tenga una suscripción a [!DNL Experience Platform]. Aunque Adobe admite jerarquías de administrador flexibles para las organizaciones, debe tener privilegios de administrador del sistema, administrador de productos o administrador de perfiles de productos para configurar el control de acceso. Consulte el artículo del Centro de ayuda de Adobe sobre [funciones administrativas](https://helpx.adobe.com/es/enterprise/using/admin-roles.html) para obtener más información.
 
 Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema para obtener acceso.
 

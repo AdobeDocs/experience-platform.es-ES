@@ -25,7 +25,7 @@ Este documento y el vídeo que lo acompaña proporcionan un flujo de trabajo com
 Esta demostración del flujo de trabajo se basa en varios servicios de Adobe Experience Platform. Si desea realizar el seguimiento, se recomienda tener una buena comprensión de las siguientes funciones y servicios:
 
 * Los [conceptos básicos de la composición de esquemas del Modelo de datos de experiencia (XDM)](../../xdm/schema/composition.md)
-* Cómo [crear conjuntos de datos e ingerir datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
+* Cómo [crear conjuntos de datos e ingerir datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es)
 * Cómo [introducir datos mediante el conector de origen de Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=es)
 * [Segmentación](../../segmentation/home.md)
 * [Destinos](../../destinations/home.md)

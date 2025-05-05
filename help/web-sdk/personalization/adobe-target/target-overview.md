@@ -11,25 +11,25 @@ ht-degree: 3%
 
 # Usar [!DNL Adobe Target] y [!DNL Web SDK] para personalización
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] puede entregar y procesar experiencias personalizadas administradas en [!DNL Adobe Target] al canal web. Puede usar un editor de WYSIWYG, llamado [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), o una interfaz no visual, [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), para crear, activar y entregar sus actividades y experiencias de personalización.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] puede entregar y procesar experiencias personalizadas administradas en [!DNL Adobe Target] al canal web. Puede usar un editor de WYSIWYG, llamado [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es) (VEC), o una interfaz no visual, [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es), para crear, activar y entregar sus actividades y experiencias de personalización.
 
 >[!IMPORTANT]
 >
->Aprenda a migrar su implementación de Target a Experience Platform Web SDK con el tutorial [Migrar Target de at.js 2.x a Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html).
+>Aprenda a migrar su implementación de Target a Experience Platform Web SDK con el tutorial [Migrar Target de at.js 2.x a Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=es).
 >
->Aprenda a implementar Target por primera vez con el tutorial [Implementar Adobe Experience Cloud con Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es). Para obtener información específica de Target, consulte la sección del tutorial titulada [Configurar Target con Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Aprenda a implementar Target por primera vez con el tutorial [Implementar Adobe Experience Cloud con Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es). Para obtener información específica de Target, consulte la sección del tutorial titulada [Configurar Target con Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=es).
 
 
 Las siguientes características se han probado y actualmente son compatibles con [!DNL Target]:
 
-* [Pruebas A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [Informes de impresión y conversión de A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
-* [Actividades de Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [Actividades de segmentación de experiencias](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [Pruebas multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Actividades de Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
-* [Informes de conversión e impresión de destino nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
-* [Compatibilidad con VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+* [Pruebas A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es)
+* [Informes de impresión y conversión de A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es)
+* [Actividades de Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=es)
+* [Actividades de segmentación de experiencias](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=es)
+* [Pruebas multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=es)
+* [Actividades de Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=es)
+* [Informes de conversión e impresión de destino nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=es)
+* [Compatibilidad con VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es)
 
 ## Diagrama del sistema [!DNL Web SDK]
 
@@ -64,7 +64,7 @@ A continuación, de forma opcional, también puede añadir las siguientes opcion
 
 Para usar el VEC con una implementación de [!DNL Web SDK], instale y active la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o la extensión [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper.
 
-Para obtener más información, consulte la [extensión de ayuda del Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) en la *guía de Adobe Target*.
+Para obtener más información, consulte la [extensión de ayuda del Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=es) en la *guía de Adobe Target*.
 
 ## Representación de contenido personalizado
 
@@ -85,7 +85,7 @@ Si tiene [!DNL Target] actividades con audiencias predefinidas que utilizan par�
 * Fuentes de tráfico
 * Lapso de tiempo
 
-Para obtener más información, consulte [Categorías para audiencias](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) en la *guía de Adobe Target*.
+Para obtener más información, consulte [Categorías para audiencias](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=es) en la *guía de Adobe Target*.
 
 ### Tokens de respuesta
 

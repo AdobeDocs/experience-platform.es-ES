@@ -50,7 +50,7 @@ No es necesario realizar ninguna configuración para inicializar o agregar un co
 >
 >Este elemento de datos establece cookies y permite almacenar valores generados por el usuario en cookies. Consulte la documentación específica del complemento para obtener más información.
 
-Permite configurar el complemento [`getAndPersistValue` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html). El elemento de datos `getAndPersistValue` almacena un valor en una cookie que se puede recuperar posteriormente durante una visita.
+Permite configurar el complemento [`getAndPersistValue` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html?lang=es). El elemento de datos `getAndPersistValue` almacena un valor en una cookie que se puede recuperar posteriormente durante una visita.
 
 El elemento de datos `getAndPersistValue` proporciona los siguientes argumentos:
 
@@ -66,7 +66,7 @@ Si se establece la variable en el argumento `vtp`, el elemento de datos establec
 >
 >Este complemento requiere acceso a la ubicación en el cliente, pero no genera una excepción si no la obtiene.
 
-Permite configurar el complemento [`getGeoCoordinates` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html). El elemento de datos `getGeoCoordinates` captura la latitud y longitud de los dispositivos de los visitantes.
+Permite configurar el complemento [`getGeoCoordinates` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html?lang=es). El elemento de datos `getGeoCoordinates` captura la latitud y longitud de los dispositivos de los visitantes.
 
 El elemento de datos `getGeoCoordinates` no utiliza ningún argumento. Devuelve uno de los siguientes valores:
 
@@ -80,7 +80,7 @@ El elemento de datos `getGeoCoordinates` no utiliza ningún argumento. Devuelve 
 >
 >Este elemento de datos establece cookies. Consulte la documentación específica del complemento para obtener más información.
 
-Permite configurar el complemento [`getNewRepeat` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html). El elemento de datos `getNewRepeat` determina si un visitante del sitio accede por primera vez o si repite dentro de un número determinado de días.
+Permite configurar el complemento [`getNewRepeat` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html?lang=es). El elemento de datos `getNewRepeat` determina si un visitante del sitio accede por primera vez o si repite dentro de un número determinado de días.
 
 El elemento de datos `getNewRepeat` utiliza los siguientes argumentos:
 
@@ -90,7 +90,7 @@ Este elemento de datos devuelve el valor de `"New"` si la cookie configurada por
 
 ### `getPageName`
 
-Permite configurar el complemento [`getPageName` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html). El elemento de datos `getPageName` crea una versión fácil de leer y con formato sencillo de la dirección URL actual.
+Permite configurar el complemento [`getPageName` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html?lang=es). El elemento de datos `getPageName` crea una versión fácil de leer y con formato sencillo de la dirección URL actual.
 
 El elemento de datos `getPageName` utiliza los siguientes argumentos:
 
@@ -107,7 +107,7 @@ El elemento de datos devuelve una cadena que contiene una versión de la direcci
 >
 >Este elemento de datos establece cookies y permite almacenar valores generados por el usuario en cookies. Consulte la documentación específica del complemento para obtener más información.
 
-Permite configurar el complemento [`getPreviousValue` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html). El elemento de datos `getPreviousValue` establece una variable en un valor establecido en una visita anterior.
+Permite configurar el complemento [`getPreviousValue` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html?lang=es). El elemento de datos `getPreviousValue` establece una variable en un valor establecido en una visita anterior.
 
 El elemento de datos `getPreviousValue` utiliza los siguientes argumentos:
 
@@ -118,7 +118,7 @@ Al llamar a este elemento de datos, devuelve el valor de cadena contenido en la 
 
 ### `getQueryParam`
 
-Permite configurar el complemento [`getQueryParam` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html). El elemento de datos `getQueryParam` extrae el valor de cualquier parámetro de cadena de consulta contenido en una dirección URL. Resulta útil para extraer códigos de campaña, tanto internos como externos, de las direcciones URL de las páginas de aterrizaje. También resulta útil al extraer términos de búsqueda u otros parámetros de cadena de consulta. Este elemento de datos proporciona funciones sólidas para analizar direcciones URL complejas, incluidos hashes y direcciones URL que contienen varios parámetros de cadena de consulta.
+Permite configurar el complemento [`getQueryParam` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html?lang=es). El elemento de datos `getQueryParam` extrae el valor de cualquier parámetro de cadena de consulta contenido en una dirección URL. Resulta útil para extraer códigos de campaña, tanto internos como externos, de las direcciones URL de las páginas de aterrizaje. También resulta útil al extraer términos de búsqueda u otros parámetros de cadena de consulta. Este elemento de datos proporciona funciones sólidas para analizar direcciones URL complejas, incluidos hashes y direcciones URL que contienen varios parámetros de cadena de consulta.
 
 El elemento de datos `getQueryParam` utiliza los siguientes argumentos:
 
@@ -135,7 +135,7 @@ Llamar a este elemento de datos devuelve un valor según los argumentos anterior
 
 ### `getTimeParting`
 
-Permite configurar el complemento [`getTimeParting` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html). El elemento de datos `getTimeParting` captura los detalles del momento en que se produce cualquier actividad que se pueda medir en el sitio. Este elemento de datos es útil cuando desea desglosar métricas para cualquier división de tiempo repetible en un intervalo de fechas determinado. Por ejemplo: puede comparar las tasas de conversión entre dos días diferentes de la semana, como los domingos frente a los jueves. También puede comparar periodos del día, como las mañanas frente a las noches.
+Permite configurar el complemento [`getTimeParting` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=es). El elemento de datos `getTimeParting` captura los detalles del momento en que se produce cualquier actividad que se pueda medir en el sitio. Este elemento de datos es útil cuando desea desglosar métricas para cualquier división de tiempo repetible en un intervalo de fechas determinado. Por ejemplo: puede comparar las tasas de conversión entre dos días diferentes de la semana, como los domingos frente a los jueves. También puede comparar periodos del día, como las mañanas frente a las noches.
 
 El elemento de datos `getTimeParting` utiliza el argumento siguiente:
 
@@ -162,7 +162,7 @@ Llamar a este elemento de datos devuelve una cadena que contiene lo siguiente, d
 >
 >Este elemento de datos establece cookies. Consulte la documentación específica del complemento para obtener más información.
 
-Permite configurar el complemento [`getTimeSinceLastVisit` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html). El elemento de datos `getTimeSinceLastVisit` realiza el seguimiento del tiempo que un visitante ha tardado en regresar al sitio después de su última visita.
+Permite configurar el complemento [`getTimeSinceLastVisit` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html?lang=es). El elemento de datos `getTimeSinceLastVisit` realiza el seguimiento del tiempo que un visitante ha tardado en regresar al sitio después de su última visita.
 
 El elemento de datos `getTimeSinceLastVisit` no utiliza ningún argumento. Devuelve el tiempo transcurrido desde la última vez que el visitante accedió al sitio, agrupado en el siguiente formato:
 
@@ -177,7 +177,7 @@ El elemento de datos `getTimeSinceLastVisit` no utiliza ningún argumento. Devue
 >
 >Este elemento de datos establece cookies y permite almacenar valores generados por el usuario en cookies. Consulte la documentación específica del complemento para obtener más información.
 
-Permite configurar el complemento [`getValOnce` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html). El elemento de datos `getValOnce` evita que una variable se establezca en el mismo valor más de una vez.
+Permite configurar el complemento [`getValOnce` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html?lang=es). El elemento de datos `getValOnce` evita que una variable se establezca en el mismo valor más de una vez.
 
 El elemento de datos `getValOnce` utiliza los siguientes argumentos:
 
@@ -194,7 +194,7 @@ Si el argumento `vtc` y el valor de la cookie coinciden, este método devuelve u
 >
 >Este elemento de datos establece cookies. Consulte la documentación específica del complemento para obtener más información.
 
-Permite configurar el complemento [`getVisitDuration` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html). El elemento de datos `getVisitDuration` realiza el seguimiento del tiempo en minutos que el visitante ha pasado en el sitio hasta ese momento.
+Permite configurar el complemento [`getVisitDuration` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html?lang=es). El elemento de datos `getVisitDuration` realiza el seguimiento del tiempo en minutos que el visitante ha pasado en el sitio hasta ese momento.
 
 El elemento de datos `getVisitDuration` no utiliza ningún argumento. Devuelve uno de los siguientes valores:
 
@@ -209,7 +209,7 @@ El elemento de datos `getVisitDuration` no utiliza ningún argumento. Devuelve u
 >
 >Este elemento de datos establece cookies. Consulte la documentación específica del complemento para obtener más información.
 
-Permite configurar el complemento [`getVisitNum` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html). El elemento de datos `getVisitNum` devuelve el número de la visita de todos los visitantes que acceden al sitio dentro del número de días deseado.
+Permite configurar el complemento [`getVisitNum` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html?lang=es). El elemento de datos `getVisitNum` devuelve el número de la visita de todos los visitantes que acceden al sitio dentro del número de días deseado.
 
 El elemento de datos `getVisitNum` utiliza los siguientes argumentos:
 
@@ -223,7 +223,7 @@ El número de visitas aumenta cada vez que el visitante regresa al sitio despué
 
 ### `p_fo` (Page First Only)
 
-Permite configurar el complemento [`p_fo` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html). El elemento de datos `p_fo` es una utilidad que comprueba la existencia de un objeto JavaScript específico. Si el objeto no existe, el complemento crea el objeto y devuelve `true`. Si el objeto JavaScript ya existe en la página, devuelve `false`. Este elemento de datos es útil para ejecutar código exactamente una vez en una página.
+Permite configurar el complemento [`p_fo` de Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html?lang=es). El elemento de datos `p_fo` es una utilidad que comprueba la existencia de un objeto JavaScript específico. Si el objeto no existe, el complemento crea el objeto y devuelve `true`. Si el objeto JavaScript ya existe en la página, devuelve `false`. Este elemento de datos es útil para ejecutar código exactamente una vez en una página.
 
 El elemento de datos `p_fo` utiliza los siguientes argumentos:
 

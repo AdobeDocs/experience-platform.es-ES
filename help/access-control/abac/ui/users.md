@@ -16,7 +16,7 @@ ht-degree: 11%
 >id="platform_permissions_users_about"
 >title="¿Qué son los usuarios?"
 >abstract="Los usuarios son las personas que tienen acceso a Experience Platform. El acceso de un usuario individual a los recursos de una organización se administra mediante las funciones."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles?lang=es" text="Administrar funciones"
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/access-control/abac/permissions-ui/roles?lang=es" text="Administrar funciones"
 
 Si desea ver los detalles de usuario y las funciones a las que están asignados, seleccione la pestaña **[!UICONTROL Usuarios]**.
 

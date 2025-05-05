@@ -46,7 +46,7 @@ Para implementar correctamente este caso de uso, debe utilizar varias áreas de 
 - [Conjuntos de datos](../../catalog/datasets/overview.md)
 - [Esquemas](../../xdm//home.md)
 - [Públicos](../../segmentation/home.md)
-- [Recorridos de Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Recorridos de Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ Ahora que el paquete de zona protegida dorada está listo, ha establecido un cen
 
 >[!NOTE]
 >
-> Los pasos anteriores siguen el proceso en la interfaz de usuario de Experience Platform. Es posible seguir los mismos pasos utilizando la API a través de varios extremos. Consulte `sandboxes` [guía de extremo](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) y `packages` [guía de extremo](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages) para obtener información sobre cómo realizar cada solicitud a través de la API.
+> Los pasos anteriores siguen el proceso en la interfaz de usuario de Experience Platform. Es posible seguir los mismos pasos utilizando la API a través de varios extremos. Consulte `sandboxes` [guía de extremo](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/api/sandboxes#create) y `packages` [guía de extremo](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/sandbox-tooling-api/packages) para obtener información sobre cómo realizar cada solicitud a través de la API.
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 

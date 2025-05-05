@@ -78,7 +78,7 @@ Lea el tutorial [Exportar conjuntos de datos](/help/destinations/ui/export-datas
 
 ## Validar exportación de datos {#exported-data}
 
-Para validar una exportación correcta del conjunto de datos, puede comprobar que el conjunto de datos ha llegado correctamente al [almacén de datos del Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
+Para validar una exportación correcta del conjunto de datos, puede comprobar que el conjunto de datos ha llegado correctamente al [almacén de datos del Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=es).
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Funciones SQL definidas por el Adobe en el servicio de consultas
 
-Las funciones definidas por el Adobe, en lo sucesivo denominadas ADF, son funciones predefinidas en Adobe Experience Platform Query Service que ayudan a realizar tareas comunes relacionadas con la empresa en los datos de [!DNL Experience Event]. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) y [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) como las que se encuentran en Adobe Analytics.
+Las funciones definidas por el Adobe, en lo sucesivo denominadas ADF, son funciones predefinidas en Adobe Experience Platform Query Service que ayudan a realizar tareas comunes relacionadas con la empresa en los datos de [!DNL Experience Event]. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=es) y [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=es) como las que se encuentran en Adobe Analytics.
 
 Este documento proporciona información para las funciones definidas por el Adobe disponibles en [!DNL Query Service].
 
@@ -47,7 +47,7 @@ Cuando trabaja con datos de [!DNL Experience Event] procedentes de un sitio web,
 
 Esta agrupación, o sesionización de datos, ayuda a asociar los eventos para descubrir más contexto sobre la experiencia del cliente.
 
-Para obtener más información acerca de la creación de sesiones en Adobe Analytics, consulte la documentación de [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Para obtener más información acerca de la creación de sesiones en Adobe Analytics, consulte la documentación de [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=es).
 
 **Sintaxis de consulta**
 

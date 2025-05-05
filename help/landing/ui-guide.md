@@ -159,12 +159,12 @@ La sección **[!UICONTROL Supervisión]** le permite supervisar la ingesta por l
 
 ### [!UICONTROL Datos federados]
 
-La sección **[!UICONTROL Modelos]** le permite diseñar y crear modelos de datos y esquemas que definen la estructura, las relaciones y las restricciones de los datos. Puede encontrar más información sobre los modelos de datos y los esquemas en la [guía del usuario de la Composición de audiencias federada](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
+La sección **[!UICONTROL Modelos]** le permite diseñar y crear modelos de datos y esquemas que definen la estructura, las relaciones y las restricciones de los datos. Puede encontrar más información sobre los modelos de datos y los esquemas en la [guía del usuario de la Composición de audiencias federada](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/config/datamodel/schemas).
 
 La sección **[!UICONTROL Pista de auditoría]** proporciona un registro detallado y cronológico de todas las acciones y eventos que se han realizado en su entorno en tiempo real. Puede encontrar más información sobre la pista de auditoría en la [guía del usuario de Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
 
 
-La sección **[!UICONTROL Bases de datos federadas]** le permite conectar Adobe Experience Platform a su almacén de datos empresarial. Puede encontrar más información sobre la conexión a bases de datos federadas en la [guía del usuario de Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
+La sección **[!UICONTROL Bases de datos federadas]** le permite conectar Adobe Experience Platform a su almacén de datos empresarial. Puede encontrar más información sobre la conexión a bases de datos federadas en la [guía del usuario de Federated Audience Composition](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/config/federated-db).
 
 ### [!UICONTROL Toma de decisiones]
 

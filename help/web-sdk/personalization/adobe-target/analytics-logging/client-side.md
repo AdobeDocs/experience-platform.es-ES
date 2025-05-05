@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Adobe Experience Platform Web SDK le permite recopilar datos de [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) en el lado del cliente de la aplicación web.
+Adobe Experience Platform Web SDK le permite recopilar datos de [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es) en el lado del cliente de la aplicación web.
 
-El registro en el lado del cliente significa que se devuelven datos relevantes de [!DNL Target] en el lado del cliente, lo que le permite recopilarlos y compartirlos con Analytics. Esta opción debería habilitarse si desea enviar manualmente datos a Analytics mediante la [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
+El registro en el lado del cliente significa que se devuelven datos relevantes de [!DNL Target] en el lado del cliente, lo que le permite recopilarlos y compartirlos con Analytics. Esta opción debería habilitarse si desea enviar manualmente datos a Analytics mediante la [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=es).
 
 >[!NOTE]
 >
@@ -227,7 +227,7 @@ Las siguientes subsecciones muestran cómo implementar el registro del lado del 
 
 ### Actividades del Compositor de experiencias basadas en formularios {#form-based-composer}
 
-Puede usar Web SDK para controlar la ejecución de propuestas desde las actividades de [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+Puede usar Web SDK para controlar la ejecución de propuestas desde las actividades de [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es).
 
 Cuando se solicitan propuestas para un ámbito de decisión específico, la propuesta devuelta contiene el token de Analytics correspondiente. La práctica recomendada es encadenar el comando `sendEvent` de Experience Platform Web SDK e iterar por las propuestas devueltas para ejecutarlas mientras se recopilan los tokens de Analytics al mismo tiempo.
 
@@ -467,7 +467,7 @@ alloy("sendEvent", {
 
 ### Actividades del Compositor de experiencias visuales {#visual-experience-composer-acitivties}
 
-Web SDK le permite gestionar ofertas creadas con [Compositor de experiencias visuales (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+Web SDK le permite gestionar ofertas creadas con [Compositor de experiencias visuales (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es).
 
 >[!NOTE]
 >

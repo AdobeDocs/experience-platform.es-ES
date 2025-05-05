@@ -14,7 +14,7 @@ ht-degree: 77%
 
 >[!AVAILABILITY]
 >
->* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.
 
@@ -41,7 +41,7 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 
 >[!WARNING]
 >
->Los atributos adicionales proporcionados por el socio introducidos en Real-Time CDP afectan a su *volumen total de datos*. Lea la [Descripción del producto de Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información sobre el volumen total de datos.
+>Los atributos adicionales proporcionados por el socio introducidos en Real-Time CDP afectan a su *volumen total de datos*. Lea la [Descripción del producto de Real-time Customer Data Platform](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información sobre el volumen total de datos.
 
 ## Tutorial de vídeo {#video-walkthrough}
 

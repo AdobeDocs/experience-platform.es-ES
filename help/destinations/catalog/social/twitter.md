@@ -24,7 +24,7 @@ Antes de configurar el destino [!DNL Twitter Custom Audiences], asegúrese de re
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Twitter Custom Audiences] admite la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+[!DNL Twitter Custom Audiences] admite la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es#getting-started).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

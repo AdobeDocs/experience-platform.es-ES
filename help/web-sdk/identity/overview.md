@@ -56,7 +56,7 @@ Además, al utilizar la recopilación de datos de terceros, algunos bloqueadores
 
 ### Efectos de la duración de las cookies en las aplicaciones de Adobe Experience Cloud {#lifespans}
 
-Independientemente de si elige la recopilación de datos de origen o de terceros, el tiempo que una cookie puede persistir tiene un impacto directo en los recuentos de visitantes en [Adobe Analytics](https://experienceleague.adobe.com/es/docs/analytics) y [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/customer-journey-analytics). Además, los usuarios finales pueden experimentar experiencias de personalización incoherentes cuando se usan [Adobe Target](https://experienceleague.adobe.com/en/docs/target) o [Offer decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) en el sitio.
+Independientemente de si elige la recopilación de datos de origen o de terceros, el tiempo que una cookie puede persistir tiene un impacto directo en los recuentos de visitantes en [Adobe Analytics](https://experienceleague.adobe.com/es/docs/analytics) y [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/customer-journey-analytics). Además, los usuarios finales pueden experimentar experiencias de personalización incoherentes cuando se usan [Adobe Target](https://experienceleague.adobe.com/es/docs/target) o [Offer decisioning](https://experienceleague.adobe.com/es/docs/target/using/integrate/ajo/offer-decision) en el sitio.
 
 Por ejemplo, considere una situación en la que ha creado una experiencia de personalización que promociona cualquier elemento a la página principal si un usuario lo ha visto tres veces en los últimos siete días.
 
@@ -165,7 +165,7 @@ Cada objeto de identidad de la matriz de identidades contiene las siguientes pro
 | `authenticatedState` | Cadena | **(obligatorio)** El estado de autenticación del ID. Los valores posibles son `ambiguous`, `authenticated` y `loggedOut`. |
 | `primary` | Booleano | Determina si esta identidad debe utilizarse como fragmento principal en el perfil. De forma predeterminada, el ECID se establece como identificador principal del usuario. Si se omite, el valor predeterminado es `false`. |
 
-El uso del campo `identityMap` para identificar dispositivos o usuarios lleva al mismo resultado que el uso del método [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) desde [!DNL ID Service API]. Consulte la [documentación de la API del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) para obtener más información.
+El uso del campo `identityMap` para identificar dispositivos o usuarios lleva al mismo resultado que el uso del método [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=es) desde [!DNL ID Service API]. Consulte la [documentación de la API del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=es) para obtener más información.
 
 ## Migración de la API de visitante a ECID {#migrating-visitor-api-ecid}
 
@@ -177,7 +177,7 @@ Al migrar desde la API de visitante, también puede migrar las cookies AMCV exis
 
 ### Actualización de características para la migración
 
-Cuando se envían datos con formato XDM a Audience Manager, estos datos deben convertirse en señales al migrar. Las características deben actualizarse para reflejar las nuevas claves que proporciona XDM. Este proceso es más fácil gracias a la [herramienta BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) que el Audience Manager ha creado.
+Cuando se envían datos con formato XDM a Audience Manager, estos datos deben convertirse en señales al migrar. Las características deben actualizarse para reflejar las nuevas claves que proporciona XDM. Este proceso es más fácil gracias a la [herramienta BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=es#getting-started-with-bulk-management) que el Audience Manager ha creado.
 
 ## Uso en el reenvío de eventos
 

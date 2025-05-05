@@ -15,7 +15,7 @@ ht-degree: 7%
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) en Experience Cloud le permite cargar los datos empresariales capturados desde una base de datos de administración de la relación con los clientes (CRM). Puede cargar los datos en una fuente de datos de atributos del cliente de Experience Cloud y, a continuación, utilizar los datos en Adobe Analytics y Adobe Target.
+[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=es) en Experience Cloud le permite cargar los datos empresariales capturados desde una base de datos de administración de la relación con los clientes (CRM). Puede cargar los datos en una fuente de datos de atributos del cliente de Experience Cloud y, a continuación, utilizar los datos en Adobe Analytics y Adobe Target.
 
 Experience Platform proporciona soporte para la ingesta de datos de perfil [!DNL Customer Attributes] en Adobe Experience Platform.
 

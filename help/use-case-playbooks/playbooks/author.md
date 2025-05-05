@@ -236,7 +236,7 @@ También necesita los siguientes permisos de audiencia:
 * **Lectura de perfil**
 * **Lectura de conjunto de datos**
 
-Como los Recorridos son muy flexibles y pueden incluir muchos objetos interconectados, sus [permisos completos](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) se documentan por separado y pueden variar según el caso de uso en que se encuentren.
+Como los Recorridos son muy flexibles y pueden incluir muchos objetos interconectados, sus [permisos completos](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) se documentan por separado y pueden variar según el caso de uso en que se encuentren.
 
 ## Pasos siguientes
 

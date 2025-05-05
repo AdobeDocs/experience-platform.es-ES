@@ -73,7 +73,7 @@ La prioridad del área de nombres se puede configurar usando la [interfaz de usu
 
 ## Uso de prioridad de área de nombres
 
-Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Un diagrama del ámbito de aplicación de prioridad de espacio de nombres](../images/namespace-priority/application-scope.png)
 

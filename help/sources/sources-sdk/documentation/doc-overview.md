@@ -19,8 +19,8 @@ Esta guía de documentación incluye:
 
 * Un tutorial que puede seguir para crear una página de documentación para el nuevo origen;
 * Una plantilla de documentación para que la rellene para su nuevo origen;
-* [Instrucciones sobre cómo usar Markdown para escribir documentación técnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Instrucciones para comprender el sabor de Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [Instrucciones sobre cómo usar Markdown para escribir documentación técnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=es);
+* [Instrucciones para comprender el sabor de Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=es#custom-markdown-extensions).
 
 ## Requisitos previos
 

@@ -23,9 +23,9 @@ ht-degree: 6%
 
 | Nombre para mostrar | Propiedad | Tipo de datos | Requerido | Descripción |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL Velocidad de bits]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | entero | No | El valor de velocidad de bits (en kbps). |
-| [[!UICONTROL Fotogramas perdidos]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | entero | No | Recuento total de fotogramas descartados durante la reproducción. |
-| [[!UICONTROL Fotogramas Por Segundo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | entero | No | Velocidad de fotogramas de la secuencia actual (en fotogramas por segundo). |
-| [[!UICONTROL Tiempo Para El Inicio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | entero | No | Duración (en segundos) entre la carga y el inicio del vídeo. |
+| [[!UICONTROL Velocidad de bits]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=es#average-bitrate) | `bitrate` | entero | No | El valor de velocidad de bits (en kbps). |
+| [[!UICONTROL Fotogramas perdidos]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=es#dropped-frames) | `droppedFrames` | entero | No | Recuento total de fotogramas descartados durante la reproducción. |
+| [[!UICONTROL Fotogramas Por Segundo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=es#frames-per-second) | `framesPerSecond` | entero | No | Velocidad de fotogramas de la secuencia actual (en fotogramas por segundo). |
+| [[!UICONTROL Tiempo Para El Inicio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=es#time-to-start-1) | `timeToStart` | entero | No | Duración (en segundos) entre la carga y el inicio del vídeo. |
 
 {style="table-layout:auto"}

@@ -423,7 +423,7 @@ Después de configurar el destino mediante los extremos de configuración de los
 Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear audiencias que activar en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
 * [Creación de una audiencia: página de documentación](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Crear una audiencia: tutorial en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Crear una audiencia: tutorial en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es)
 
 ## Paso 6: Publicación del destino {#publish-destination}
 

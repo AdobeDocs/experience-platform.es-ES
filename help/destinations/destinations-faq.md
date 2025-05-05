@@ -199,7 +199,7 @@ Para obtener explicaciones detalladas sobre los requisitos de coincidencia de ID
 +++Respuesta
 No, [Web SDK](../web-sdk/home.md) no es necesario para activar audiencias en [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Sin embargo, si se usa [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) en lugar de Web SDK, solo se admite la personalización de la sesión siguiente.
+Sin embargo, si se usa [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=es) en lugar de Web SDK, solo se admite la personalización de la sesión siguiente.
 
 Para los casos de uso de [personalización de la misma página y de la siguiente](ui/activate-edge-personalization-destinations.md), debe usar [Web SDK](../web-sdk/home.md) o la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Consulte la documentación sobre [activación de audiencias en destinos Edge](ui/activate-edge-personalization-destinations.md) para obtener más información sobre la implementación.
 +++
@@ -229,7 +229,7 @@ Las definiciones de audiencia se propagan a [Edge Network](../web-sdk/home.md) e
 ### ¿Dónde puedo ver los atributos activados en Adobe Target?
 
 +++Respuesta
-Los atributos estarán disponibles para usarlos en Target en las ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) y [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
+Los atributos estarán disponibles para usarlos en Target en las ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=es) y [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=es).
 +++
 
 ### ¿Puedo crear un destino sin una secuencia de datos y luego agregar una secuencia de datos al mismo destino en un momento posterior?

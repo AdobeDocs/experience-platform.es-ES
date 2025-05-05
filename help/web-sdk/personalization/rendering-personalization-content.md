@@ -16,7 +16,7 @@ El SDK web de Adobe Experience Platform admite la recuperación de contenido per
 
 Además, el SDK web potencia las funcionalidades de personalización de la misma página y de la siguiente página a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y la [conexión de personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-El SDK puede recuperar y procesar automáticamente el contenido creado en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) de Adobe Target y en la [interfaz de usuario de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) de Adobe Journey Optimizer. El SDK no puede procesar automáticamente el contenido creado en el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) de Adobe Target, el [canal de experiencias basado en código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer o el Offer decisioning. En su lugar, debe solicitar este contenido mediante el SDK y, a continuación, procesar manualmente el contenido.
+El SDK puede recuperar y procesar automáticamente el contenido creado en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es) de Adobe Target y en la [interfaz de usuario de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=es) de Adobe Journey Optimizer. El SDK no puede procesar automáticamente el contenido creado en el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es) de Adobe Target, el [canal de experiencias basado en código](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer o el Offer decisioning. En su lugar, debe solicitar este contenido mediante el SDK y, a continuación, procesar manualmente el contenido.
 
 ## Representación automática del contenido {#automatic}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Caso de uso 2: Procesar propuestas que no tienen selector
 
-Este caso de uso se aplica a las experiencias creadas con [!DNL Target Form-based Experience Composer] o el [Canal de experiencia basado en código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer.
+Este caso de uso se aplica a las experiencias creadas con [!DNL Target Form-based Experience Composer] o el [Canal de experiencia basado en código](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer.
 
 Debe proporcionar el selector, la acción y el ámbito en la llamada a `applyPropositions`.
 

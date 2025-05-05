@@ -175,7 +175,7 @@ El consentimiento de `adID` representa el consentimiento del cliente para saber 
 
 Para usar el grupo de campos [!UICONTROL Consentimientos y preferencias] para introducir datos de consentimiento de sus clientes, debe crear un conjunto de datos basado en un esquema que contenga ese grupo de campos.
 
-Consulte el tutorial de [creación de un esquema en la interfaz de usuario](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) para ver los pasos sobre cómo asignar grupos de campos a los campos. Una vez que haya creado un esquema que contiene un campo con el grupo de campos [!UICONTROL Consentimientos y preferencias], consulte la sección sobre [creación de un conjunto de datos](../../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siguiendo los pasos para crear un conjunto de datos con un esquema existente.
+Consulte el tutorial de [creación de un esquema en la interfaz de usuario](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_es) para ver los pasos sobre cómo asignar grupos de campos a los campos. Una vez que haya creado un esquema que contiene un campo con el grupo de campos [!UICONTROL Consentimientos y preferencias], consulte la sección sobre [creación de un conjunto de datos](../../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siguiendo los pasos para crear un conjunto de datos con un esquema existente.
 
 >[!IMPORTANT]
 >

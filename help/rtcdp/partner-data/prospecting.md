@@ -14,7 +14,7 @@ ht-degree: 85%
 
 >[!AVAILABILITY]
 >
->* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Utilice la compatibilidad con datos de terceros en Real-Time CDP para ampliar su base de perfiles con perfiles potenciales de socios de datos y comprometerse con ellos para adquirir o llegar a nuevos clientes.
 

@@ -52,7 +52,7 @@ Vea este vídeo para aprender a descubrir, crear, publicar y solucionar problema
 
 ## Disponibilidad {#availability}
 
-Algunos [!UICONTROL libros de reproducción de casos de uso] están diseñados para casos de uso de Real-Time CDP, mientras que otros son los más adecuados para los clientes que utilizan Journey Optimizer. Examine el catálogo para encontrar los libros de reproducción más adecuados para su producto y caso de uso. Obtenga más información sobre Real-Time CDP y Journey Optimizer en las [descripciones de productos de Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=es).
+Algunos [!UICONTROL libros de reproducción de casos de uso] están diseñados para casos de uso de Real-Time CDP, mientras que otros son los más adecuados para los clientes que utilizan Journey Optimizer. Examine el catálogo para encontrar los libros de reproducción más adecuados para su producto y caso de uso. Obtenga más información sobre Real-Time CDP y Journey Optimizer en las [descripciones de productos de Adobe](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es).
 
 ## Guías de IU {#ui-guides}
 

@@ -190,7 +190,7 @@ Aparecerá el cuadro de diálogo **[!UICONTROL Quitar]** que le pedirá que conf
 >id="platform_permissions_policies_about"
 >title="¿Qué son las directivas?"
 >abstract="Las directivas son declaraciones que reúnen atributos para establecer acciones permitidas y no permitidas. Cada organización viene con una directiva predeterminada que debe activar para comenzar a controlar el acceso a objetos específicos en función de las etiquetas. Las etiquetas aplicadas a los recursos deniegan el acceso a menos que se asigne a los usuarios una función con una etiqueta coincidente. Las directivas predeterminadas no se pueden editar ni eliminar, pero se pueden activar o desactivar."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels?lang=es" text="Administrar etiquetas"
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/access-control/abac/permissions-ui/labels?lang=es" text="Administrar etiquetas"
 
 Para activar una directiva existente, selecciónela en la ficha **[!UICONTROL Directivas]**.
 

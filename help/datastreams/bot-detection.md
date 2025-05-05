@@ -33,7 +33,7 @@ Esta puntuación de bots ayuda a las soluciones que reciben la solicitud a ident
 >
 >La detección de bots no elimina ninguna solicitud de bots. Solo actualiza el esquema XDM con la puntuación de bots y reenvía el evento al [servicio de secuencia de datos](configure.md) que configuró.
 >
->Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) y no usa la puntuación establecida por Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
+>Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=es) y no usa la puntuación establecida por Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
 
 Las reglas de detección de bots pueden tardar hasta 15 minutos en propagarse por Edge Network después de crearse.
 

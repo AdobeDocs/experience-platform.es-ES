@@ -30,7 +30,7 @@ Antes de poder crear una conexión de origen para llevar la versión 8 de Campai
 
 >[!IMPORTANT]
 >
->Debe tener acceso a la consola del cliente de Adobe Campaign v8 para ver los datos de registro en Campaign. Visite la [documentación de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) para obtener información sobre cómo descargar e instalar la consola del cliente.
+>Debe tener acceso a la consola del cliente de Adobe Campaign v8 para ver los datos de registro en Campaign. Visite la [documentación de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=es) para obtener información sobre cómo descargar e instalar la consola del cliente.
 
 Inicie sesión en la instancia de Campaign v8 a través de la consola del cliente. En la ficha [!DNL Explorer], seleccione [!DNL Administration] y luego seleccione [!DNL Configuration]. A continuación, seleccione [!DNL Data schemas] y aplique el filtro `broadLog` para el nombre o la etiqueta. En la lista que aparece, seleccione el esquema de origen de registros de envío de destinatarios con el nombre `broadLogRcp`.
 

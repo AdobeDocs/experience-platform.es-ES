@@ -47,7 +47,7 @@ Antes de integrar Adobe con Adobe, asegúrese de que se cumplen los siguientes r
 2. **CDP o SKU de conexión**: para habilitar una comunicación perfecta del lado del cliente y del servidor, debe tener el Prime de Adobe Customer Data Platform (CDP) o el SKU de Ultimate, o el SKU de conexión.
 
 3. **Configuración de Adobe Experience Platform Edge Network**:
-   * Asegúrese de que Edge Network esté configurado para admitir el reenvío de eventos en tiempo real para el redireccionamiento fuera del sitio. Consulte la [Guía de introducción al reenvío de eventos](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) de Adobe para obtener más información.
+   * Asegúrese de que Edge Network esté configurado para admitir el reenvío de eventos en tiempo real para el redireccionamiento fuera del sitio. Consulte la [Guía de introducción al reenvío de eventos](https://experienceleague.adobe.com/es/docs/experience-platform/tags/event-forwarding/getting-started) de Adobe para obtener más información.
    * Este paso es crucial para transmitir datos al extremo del lado del servidor de Adobe de forma eficaz.
 
 Una vez cumplidos estos requisitos previos, puede seguir configurando e implementando la extensión [!DNL Adform].

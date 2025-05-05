@@ -15,6 +15,6 @@ ht-degree: 73%
 * [Resumen de accesibilidad](home.md)
 * [Funciones de accesibilidad](features.md)
 * [Accesibilidad personalizada para Experience Platform](custom.md)
-* [Documentación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html)
+* [Documentación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html?lang=es)
 * [Información general de Experience Platform](https://www.adobe.com/go/platform-overview-en)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

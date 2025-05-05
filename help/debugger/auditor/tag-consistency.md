@@ -21,6 +21,6 @@ Las pruebas de coherencia de etiquetas buscan incoherencias en todas las página
 
 | Prueba | Grosor | Criterios | Recomendación |
 | --- | --- | --- | --- |
-| Adobe Analytics: versión de código coherente | 5 | Se ha encontrado más de una versión del código de Analytics. | Reemplazar todas las instancias de Analytics con la versión actual.<br><br>[Más información](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
+| Adobe Analytics: versión de código coherente | 5 | Se ha encontrado más de una versión del código de Analytics. | Reemplazar todas las instancias de Analytics con la versión actual.<br><br>[Más información](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=es) |
 
 {style="table-layout:auto"}

@@ -41,7 +41,7 @@ Los destinos de exportación de perfiles reciben datos sin procesar, a menudo co
 
 >[!IMPORTANT]
 >
->Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+>Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 Utilice los conectores de datos de destino empresariales avanzados para ofrecer perfiles de Adobe Real-Time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros para la sincronización de datos, el análisis y más casos de uso de enriquecimiento de perfiles.
 

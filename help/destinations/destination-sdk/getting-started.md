@@ -17,13 +17,13 @@ En esta página se describe cómo autenticarse y empezar a utilizar Adobe Experi
 
 ## Terminología {#terminology}
 
-Esta guía utiliza conceptos específicos de Experience Platform, como la organización y los entornos limitados. Consulte el [glosario de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) para ver las definiciones de estos términos. Consulte el [glosario de Destination SDK](/help/destinations/destination-sdk/glossary.md) para ver los términos relacionados directamente con esta funcionalidad.
+Esta guía utiliza conceptos específicos de Experience Platform, como la organización y los entornos limitados. Consulte el [glosario de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=es) para ver las definiciones de estos términos. Consulte el [glosario de Destination SDK](/help/destinations/destination-sdk/glossary.md) para ver los términos relacionados directamente con esta funcionalidad.
 
 ## Obtener las credenciales de autenticación requeridas {#obtain-authentication-credentials}
 
 Destination SDK usa la puerta de enlace [Adobe I/O](https://www.adobe.io/) para la autenticación. Para realizar llamadas de API a extremos de Destination SDK, debe proporcionar ciertos encabezados en las llamadas de API. Trabaje con el equipo de Adobe Exchange para configurar la autenticación en [Adobe Developer Console](https://developer.adobe.com/console).
 
-Para realizar llamadas correctamente a los extremos de la API de Destination SDK, siga el [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=es). Inicie el tutorial desde el paso &quot;[Generar una clave de API, ID de organización y secreto de cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. El equipo de Adobe Exchange se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en las llamadas a la API de Destination SDK, como se muestra a continuación:
+Para realizar llamadas correctamente a los extremos de la API de Destination SDK, siga el [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=es). Inicie el tutorial desde el paso &quot;[Generar una clave de API, ID de organización y secreto de cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=es#api-ims-secret)&quot;. El equipo de Adobe Exchange se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en las llamadas a la API de Destination SDK, como se muestra a continuación:
 
 * `x-api-key: {API_KEY}`, también denominado ID de cliente
 * `x-gw-ims-org-id: {ORG_ID}`, también denominado ID de organización

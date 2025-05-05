@@ -86,7 +86,7 @@ No. Cualquier cliente de Adobe Digital Experience puede utilizar Adobe Experienc
 * Los clientes que *no* tengan acceso a Experience Platform o Real-time CDP y deseen usar [!DNL Web SDK] deberán configurar los permisos adecuados para crear esquemas y flujos de datos en la IU de recopilación de datos o la IU de Experience Platform.
 * Los clientes que tengan acceso a Experience Platform o Real-time CDP y deseen utilizar [!DNL Web SDK] deberán configurar los permisos adecuados para crear esquemas, conjuntos de datos, áreas de nombres de identidad y flujos de datos en la IU de recopilación de datos o la IU de Experience Platform.
 
-Para obtener más información sobre la configuración de estos permisos, consulte nuestra documentación sobre [administración de permisos de recopilación de datos](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
+Para obtener más información sobre la configuración de estos permisos, consulte nuestra documentación sobre [administración de permisos de recopilación de datos](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=es).
 
 ## ¿Quién debe utilizar Web SDK?
 

@@ -23,7 +23,7 @@ La recopilación de datos es compatible con las siguientes fuentes del lado del 
 
 La recopilación de datos se centra en la detección y accesibilidad de conjuntos de datos ingeridos, e incluye lo siguiente:
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
+* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=es)
 * [Etiquetas](../tags/home.md)
 * [Secuencias de datos](../datastreams/overview.md)
 * [Reenvío de eventos](../tags/ui/event-forwarding/overview.md)

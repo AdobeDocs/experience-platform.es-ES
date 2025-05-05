@@ -23,7 +23,7 @@ Con [!UICONTROL permisos], puede configurar:
 * [Zonas protegidas](./sandboxes.md)
 * [Usuarios](./users.md)
 
-Para tener acceso a los permisos de control de acceso basados en atributos para [!DNL Adobe Experience Platform], debe ser administrador de su organización que tenga una suscripción a [!DNL Adobe Experience Platform]. Aunque Adobe admite jerarquías de administradores flexibles para las organizaciones, debe ser administrador de productos de [!DNL Adobe Experience Platform] para poder configurar los permisos. Consulte el artículo del Centro de ayuda de Adobe sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) para obtener más información.
+Para tener acceso a los permisos de control de acceso basados en atributos para [!DNL Adobe Experience Platform], debe ser administrador de su organización que tenga una suscripción a [!DNL Adobe Experience Platform]. Aunque Adobe admite jerarquías de administradores flexibles para las organizaciones, debe ser administrador de productos de [!DNL Adobe Experience Platform] para poder configurar los permisos. Consulte el artículo del Centro de ayuda de Adobe sobre [funciones administrativas](https://helpx.adobe.com/es/enterprise/using/admin-roles.html) para obtener más información.
 
 Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema para obtener acceso.
 

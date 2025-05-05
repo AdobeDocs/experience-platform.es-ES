@@ -49,7 +49,7 @@ El siguiente tutorial utiliza un modelo de tendencia de compra de Luma personali
 
 ### Creación del esquema de datos web de Luma e ingesta de datos
 
-Para crear un modelo, debe tener un conjunto de datos en Experience Platform que se utilice para entrenar y puntuar el modelo. El siguiente tutorial en vídeo del curso [Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=es) le guiará en la creación del esquema de Luma y en la ingesta de los datos utilizados por el modelo de tendencia de compra.
+Para crear un modelo, debe tener un conjunto de datos en Experience Platform que se utilice para entrenar y puntuar el modelo. El siguiente tutorial en vídeo del curso [Data Science Workspace](https://experienceleague.adobe.com/?lang=es&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=es) le guiará en la creación del esquema de Luma y en la ingesta de los datos utilizados por el modelo de tendencia de compra.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

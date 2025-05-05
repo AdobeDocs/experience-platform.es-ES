@@ -57,7 +57,7 @@ Para crear instancias de libros de reproducción en Journey Optimizer, debe conf
 
 ### Superficie del canal de correo electrónico
 
-Vaya a `Channels` en la interfaz de Journey Optimizer. Configure subdominios y grupos de IP independientes para los correos electrónicos de marketing y la mensajería transaccional, si no están configurados ya. Estas son las prácticas recomendadas para garantizar que los mensajes transaccionales, como los correos electrónicos de confirmación de pedidos, lleguen a sus clientes. Escriba nombres, direcciones de correo electrónico y configuraciones adicionales. Seleccione **Enviar** en la parte superior derecha de la página para crear la superficie del canal de marketing. Lea la documentación sobre [cómo configurar las superficies de canal de correo electrónico](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Vaya a `Channels` en la interfaz de Journey Optimizer. Configure subdominios y grupos de IP independientes para los correos electrónicos de marketing y la mensajería transaccional, si no están configurados ya. Estas son las prácticas recomendadas para garantizar que los mensajes transaccionales, como los correos electrónicos de confirmación de pedidos, lleguen a sus clientes. Escriba nombres, direcciones de correo electrónico y configuraciones adicionales. Seleccione **Enviar** en la parte superior derecha de la página para crear la superficie del canal de marketing. Lea la documentación sobre [cómo configurar las superficies de canal de correo electrónico](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=es).
 
 ### Superficie del canal SMS
 

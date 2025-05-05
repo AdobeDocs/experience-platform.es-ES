@@ -34,7 +34,7 @@ Para empezar a utilizar rápidamente las funciones del servicio de consultas, se
 
 ## Servicio de consultas y servicios de Experience Platform {#experience-platform-services}
 
-El servicio de consulta interactúa y se puede utilizar con varios servicios de Experience Platform. Para sacar el máximo partido a las capacidades del servicio de consultas, debe familiarizarse con estos servicios y con cómo interactúan con él. La [página de aterrizaje de documentación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html) proporciona resúmenes y vínculos a las capacidades de la plataforma.
+El servicio de consulta interactúa y se puede utilizar con varios servicios de Experience Platform. Para sacar el máximo partido a las capacidades del servicio de consultas, debe familiarizarse con estos servicios y con cómo interactúan con él. La [página de aterrizaje de documentación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html?lang=es) proporciona resúmenes y vínculos a las capacidades de la plataforma.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 

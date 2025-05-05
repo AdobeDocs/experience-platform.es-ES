@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Destino de Audience Analysis
 
-El destino [!UICONTROL Análisis de audiencia] le permite enriquecer los datos de audiencia de Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en los informes de [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
+El destino [!UICONTROL Análisis de audiencia] le permite enriquecer los datos de audiencia de Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en los informes de [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=es).
 
 >[!AVAILABILITY]
 >

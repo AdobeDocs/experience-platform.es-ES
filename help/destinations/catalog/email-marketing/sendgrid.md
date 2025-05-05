@@ -34,7 +34,7 @@ Se requieren los siguientes elementos antes de comenzar a configurar el destino.
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Antes de activar datos en el destino SendGrid, debe tener un [esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=es), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform]. Consulte también la sección [límites](#limits) más abajo en esta página.
+Antes de activar datos en el destino SendGrid, debe tener un [esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=es), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform]. Consulte también la sección [límites](#limits) más abajo en esta página.
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 ### Rellenar detalles de destino {#destination-details}
 
-Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, debe proporcionar la siguiente información:
+Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Nombre]**: Nombre con el que reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: una descripción opcional que le ayudará a identificar este destino en el futuro.

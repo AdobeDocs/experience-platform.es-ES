@@ -98,7 +98,7 @@ Se deben incluir los siguientes objetos de extensión de vídeo.
 
 >[!TIP]
 > 
->En el caso de las implementaciones en las que no se pueden usar varios eVars o props para cada elemento de vídeo, los valores de los elementos de datos se pueden concatenar en Experience Platform, analizarse en informes de clasificación con la herramienta Generador de reglas de clasificación, como se explica en [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es) y, luego, aplicarse como un segmento en Analysis Workspace.
+>En el caso de las implementaciones en las que no se pueden usar varios eVars o props para cada elemento de vídeo, los valores de los elementos de datos se pueden concatenar en Experience Platform, analizarse en informes de clasificación con la herramienta Generador de reglas de clasificación, como se explica en [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es) y, luego, aplicarse como un segmento en Analysis Workspace.
 
 Para concatenar valores de información del vídeo, cree un nuevo elemento de datos denominado Metadatos de vídeo y prográmelo para extraer todos los elementos de datos de vídeo (antes mencionados) y combinarlos. Por ejemplo:
 

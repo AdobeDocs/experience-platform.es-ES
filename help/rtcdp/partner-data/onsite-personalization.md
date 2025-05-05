@@ -14,7 +14,7 @@ ht-degree: 88%
 
 >[!AVAILABILITY]
 >
->Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Aprenda a utilizar el reconocimiento asistido por socios para ofrecer experiencias personalizadas a los visitantes de su propiedad web. Utilice este tutorial para comprender la secuencia de implementación de varios elementos en Experience Platform y otras soluciones de Experience Cloud para mostrar una experiencia personalizada a los visitantes autenticados y no autenticados.
 
@@ -157,7 +157,7 @@ Rellene los campos obligatorios y seleccione **[!UICONTROL Guardar]**.
 
 ![Rellene los campos obligatorios para la nueva propiedad.](/help/rtcdp/assets/partner-data/onsite-personalization/tag-property-fields.png)
 
-Obtenga información completa sobre cómo [crear una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
+Obtenga información completa sobre cómo [crear una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=es).
 
 A continuación, debe instalar varias extensiones dentro de la propiedad. Seleccione la propiedad de etiquetas y vaya a la sección [!UICONTROL Extensiones].
 
@@ -175,7 +175,7 @@ Tenga en cuenta que este tutorial indica cómo puede instrumentar el sitio web c
 
 En la pantalla para configurar el SDK web, vaya a la sección **[!UICONTROL Secuencias de datos]** y proporcione información sobre la zona protegida de Experience Platform que está utilizando. Seleccione la zona protegida adecuada y la secuencia de datos creada en los pasos anteriores en el menú desplegable siguiente. Puede elegir los mismos valores de zona protegida y de secuencia de datos para todos los demás entornos. Deje el resto de configuraciones sin cambios y seleccione **[!UICONTROL Guardar]**.
 
-Obtenga información completa sobre [cómo instalar el SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html).
+Obtenga información completa sobre [cómo instalar el SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=es).
 
 #### Instalar extensión del servicio de ID
 

@@ -26,7 +26,7 @@ En Adobe Analytics, los datos personalizados del nivel de producto se pueden rec
 
 Estas variables se denominan variables de comercialización de sintaxis de producto. Esto permite recopilar información, como una &quot;cantidad de descuento&quot; por producto o información sobre la &quot;ubicación en la página&quot; del producto en los resultados de búsqueda del cliente.
 
-Para obtener más información acerca del uso de la sintaxis del producto, lea la documentación de Adobe Analytics sobre [implementación de eVars con sintaxis del producto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Para obtener más información acerca del uso de la sintaxis del producto, lea la documentación de Adobe Analytics sobre [implementación de eVars con sintaxis del producto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=es#implement-using-product-syntax).
 
 Las secciones siguientes describen los campos XDM necesarios para acceder a las variables de comercialización del conjunto de datos [!DNL Analytics]:
 
@@ -127,7 +127,7 @@ En los informes, los pedidos, los ingresos, las vistas de productos y las adicio
 | búsqueda interna: camisa de verano | 19,99 | 1 | 1 | 1 |
 | búsqueda interna:gorro de invierno | 12,99 | 1 | 1 | 1 |
 
-Para obtener más información acerca del uso de la sintaxis de la variable de conversión, lea la documentación de Adobe Analytics sobre [implementación de eVars mediante la sintaxis de la variable de conversión](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Para obtener más información acerca del uso de la sintaxis de la variable de conversión, lea la documentación de Adobe Analytics sobre [implementación de eVars mediante la sintaxis de la variable de conversión](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=es#implement-using-conversion-variable-syntax).
 
 A continuación se muestran los campos XDM para producir la sintaxis de la variable de conversión en el conjunto de datos [!DNL Analytics]:
 

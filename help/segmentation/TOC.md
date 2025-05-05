@@ -17,7 +17,7 @@ ht-degree: 40%
 
 - [Resumen del servicio de segmentación](home.md)
 - [Tipos de datos de segmentación](data-types.md)
-- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=es#segmentation-guardrails)
 - API de segmentación {#api}
    - [Información general](api/overview.md)
    - [Primeros pasos](api/getting-started.md)

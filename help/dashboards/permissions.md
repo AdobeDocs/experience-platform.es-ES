@@ -19,7 +19,7 @@ Este documento proporciona un resumen de los permisos disponibles para los panel
 
 ## Requisitos previos
 
-Para configurar el control de acceso de [!DNL Experience Platform], debe tener privilegios de administrador en una organización que tenga una integración de producto de [!DNL Experience Platform]. Consulte el artículo de Adobe Centro de Ayuda sobre [funciones](https://helpx.adobe.com/enterprise/using/admin-roles.html) administrativas para obtener más información.
+Para configurar el control de acceso de [!DNL Experience Platform], debe tener privilegios de administrador en una organización que tenga una integración de producto de [!DNL Experience Platform]. Consulte el artículo de Adobe Centro de Ayuda sobre [funciones](https://helpx.adobe.com/es/enterprise/using/admin-roles.html) administrativas para obtener más información.
 
 ## Permisos de panel disponibles {#available-permissions}
 

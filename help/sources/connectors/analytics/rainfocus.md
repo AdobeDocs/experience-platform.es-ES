@@ -98,7 +98,7 @@ Para crear el esquema para los datos de [!DNL RainFocus], lea la siguiente docum
 >[!IMPORTANT]
 >
 >* El esquema debe ampliar la clase **XDM ExperienceEvent.**
->* Debe asegurarse de que el esquema incluya una **identidad principal** y de que esté **habilitado para el perfil**. Para obtener más información, lea la guía sobre [definición de campos de identidad en la interfaz de usuario](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+>* Debe asegurarse de que el esquema incluya una **identidad principal** y de que esté **habilitado para el perfil**. Para obtener más información, lea la guía sobre [definición de campos de identidad en la interfaz de usuario](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=es)
 >* Puede sustituir la identidad de ejemplo (Correo electrónico) por otro identificador adecuado, como un correo electrónico sha256 o un ECID.
 
 ### Creación de un perfil de integración en RainFocus {#create-an-integration-profile-in-rainfocus}
@@ -122,7 +122,7 @@ A continuación, proporcione las credenciales que ha recuperado en el proyecto d
 
 Una vez proporcionadas las credenciales, seleccione **[!DNL Save]**. Ahora debería ver el nuevo [!DNL Integration Profile] en el panel [!DNL RainFocus].
 
-Seleccione el [!DNL Integration Profile] que acaba de crear para ver una lista de **tipos de inserción** predefinidos ya configurados. Estos son los [Eventos de experiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html) que se enviarán al Experience Platform cuando ocurran.
+Seleccione el [!DNL Integration Profile] que acaba de crear para ver una lista de **tipos de inserción** predefinidos ya configurados. Estos son los [Eventos de experiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=es) que se enviarán al Experience Platform cuando ocurran.
 
 ![Lista de tipos de inserción predefinidos en el panel RainFocus.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 

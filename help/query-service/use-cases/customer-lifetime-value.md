@@ -81,7 +81,7 @@ El siguiente paso es crear una definición de segmento y generar audiencias a pa
 * Habilite todas las definiciones de segmento para las segmentación programadas.
 * Habilite las definiciones de segmento especificadas para el flujo continuo segmentación.
 
-Alternativamente, también hay un [tutorial de video del generador de segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) disponible para obtener más información.
+Alternativamente, también hay un [tutorial de video del generador de segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=es) disponible para obtener más información.
 
 ## Activar la audiencia para una campaña de correo electrónico {#activate-audience-for-campaign}
 

@@ -23,7 +23,7 @@ Use consultas simples en el [!UICONTROL Administrador de permisos] para crear in
 >id="platform_permission_manager"
 >title="Administrador de permisos"
 >abstract="Utilice los selectores desplegables de la página para obtener informes de nivel de acceso de diferentes niveles de granularidad para usuarios y funciones."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=es" text="Permission manager" -->
 
 En la lista desplegable, seleccione el atributo **[!UICONTROL Usuarios]**.
 

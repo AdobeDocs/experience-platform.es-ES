@@ -76,7 +76,7 @@ Configure un reenvío de eventos en Platform para enviar los datos de comportami
 
 Asegúrese de que la extensión de retargeting fuera del sitio esté adjunta a una regla de evento válida en la recopilación de datos de Adobe Experience Platform. Normalmente, se debe crear una regla global para que se active cuando se realizan acciones clave, como `page load` o interacciones de usuario específicas.
 
-Para obtener más información acerca de cómo configurar la extensión, lea la documentación de [Reenvío de eventos](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started).
+Para obtener más información acerca de cómo configurar la extensión, lea la documentación de [Reenvío de eventos](https://experienceleague.adobe.com/es/docs/experience-platform/tags/event-forwarding/getting-started).
 
 ## Otros casos de uso {#other-use-cases}
 

@@ -123,7 +123,7 @@ Versión 2.0.4
 
 * Se ha agregado compatibilidad con elementos de datos en varios campos. La compatibilidad con elementos de datos se ha añadido a los siguientes eventos: Tiempo en la página, Entra en la ventanilla, Pase de ratón y Tiempo de reproducción de medios. Así como las siguientes condiciones: Tiempo en el sitio y Comparación de valor
 * Añade compatibilidad con el comportamiento predeterminado para ctrl/cmd + clic y para clic con el botón central del ratón cuando se utiliza Demora del vínculo
-* **Se ha marcado la demora del vínculo en el evento de clic como que ya no es compatible.**: puede encontrar más información en el [Blog de recopilación de datos ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)para Adobe Experience Platform.
+* **Se ha marcado la demora del vínculo en el evento de clic como que ya no es compatible.**: puede encontrar más información en el [Blog de recopilación de datos ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=es)para Adobe Experience Platform.
 
 ## 6 de enero de 2021
 
