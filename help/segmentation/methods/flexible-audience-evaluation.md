@@ -300,7 +300,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 >[!TAB Experience Platform IU]
 
-Para ejecutar la evaluación de audiencia flexible dentro del IU Experience Platform, seleccione **[!UICONTROL Audiences en la**[!UICONTROL  sección Clientes ]**]**.
+Para ejecutar la evaluación de audiencia flexible dentro del IU Experience Platform, seleccione **[!UICONTROL Audiences en la**&#x200B;[!UICONTROL &#x200B; sección Clientes &#x200B;]&#x200B;**]**.
 
 ![El botón Audiencias de la sección Clientes está resaltado. Se muestra Audience Portal para perfiles de clientes.](../images/methods/fae/audience-portal.png)
 
@@ -312,7 +312,7 @@ Aparece la ventana emergente **[!UICONTROL Evaluar audiencias bajo demanda]**, q
 
 ![Se muestran las audiencias que se pueden evaluar mediante la evaluación de audiencia flexible.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Después de confirmar que se enumeran las audiencias correctas, puede continuar con el solicitud y comenzará la evaluación de audiencia flexible. Puede vista el estado de esta evaluación audiencia en el vista](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) de supervisión del [trabajo de evaluación.
+Después de confirmar que se enumeran las audiencias correctas, puede continuar con el solicitud y comenzará la evaluación de audiencia flexible. Puede vista el estado de esta evaluación audiencia en el vista[&#128279;](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) de supervisión del trabajo de evaluación.
 
 >[!NOTE]
 >
