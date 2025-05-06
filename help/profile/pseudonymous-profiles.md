@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Caducidad de datos de perfil seudónimo
 description: Este documento proporciona instrucciones generales para configurar la caducidad de los datos de los perfiles seudónimos en Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
+source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1264'
 ht-degree: 4%
 
 ---
@@ -43,8 +43,9 @@ Un perfil se considera para la caducidad de datos seudónimos si cumple las sigu
 >
 >- Administrar configuración de perfil
 >- Ver perfiles
+>- Ver áreas de nombres de identidad
 >
->El permiso **Administrar configuración de perfil** le permite establecer la caducidad de los datos, mientras que el permiso **Ver perfiles** le permite ver la caducidad de los datos.
+>El permiso **Administrar configuración de perfil** le permite establecer las caducidades de los datos, el permiso **Ver perfiles** le permite ver las caducidades de los datos y el permiso **Ver áreas de nombres de identidad** le permite ver las áreas de nombres de identidad disponibles que puede utilizar.
 >
 >Encontrará más información sobre los permisos de Experience Platform en la [descripción general del control de acceso](../access-control/home.md#permissions).
 
@@ -130,7 +131,7 @@ En un caso de uso típico, puede establecer la caducidad de los datos de Experie
 
 +++ Respuesta
 
-- El sistema de eliminación [&#128279;](../identity-service/guardrails.md) del servicio de identidad , que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
+- El sistema de eliminación ](../identity-service/guardrails.md) del servicio de identidad [, que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
 - Si este comportamiento de eliminación provoca que se almacene un perfil solo de ECID en el Perfil del cliente en tiempo real (almacén de perfiles), la caducidad de los datos de perfil seudónimo eliminará este perfil del almacén de perfiles.
 
 +++
