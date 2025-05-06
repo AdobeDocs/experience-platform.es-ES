@@ -4,14 +4,20 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: depurador;extensión de Experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
+source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 93%
+source-wordcount: '864'
+ht-degree: 92%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.6.4: miércoles, 06 de mayo de 2025
+
+### Correcciones y mejoras
+
+* Se ha corregido un problema por el cual el inicio de sesión no estaba disponible.
 
 ## Versión 1.6.3: 30 de abril de 2025
 
