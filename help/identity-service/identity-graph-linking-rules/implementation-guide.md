@@ -2,9 +2,9 @@
 title: Guía de implementación para reglas de vinculación de gráficos de identidad
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1886'
 ht-degree: 6%
 
 ---
@@ -113,7 +113,7 @@ Durante el proceso previo a la implementación, debe asegurarse de que los event
 
 Si el sistema envía dos identificadores de persona, la implementación puede fallar en el requisito del área de nombres de una sola persona. Por ejemplo, si identityMap en la implementación del SDK web contiene un CRMID, un customerID y un área de nombres ECID, no hay garantía de que cada evento contenga CRMID y customerID.
 
-Lo ideal es enviar una carga útil similar a la siguiente:
+**no** debería enviar una carga útil como la siguiente:
 
 ```json
 {
