@@ -48,6 +48,7 @@ Siga estos pasos para instalar y configurar la extensión de API [!DNL Reddit] C
 3. Proporcione los siguientes detalles de configuración:
    - **ID de píxel**: escribe tu ID de píxel [!DNL Reddit Ads].
    - **Token de acceso de conversión**: escribe el token generado en tu cuenta de [!DNL Reddit Ads] y selecciona **[!UICONTROL Guardar]** cuando termines.
+
      ![Detalles de configuración para la extensión de la API de conversiones de Reddit, incluidos los campos de ID de píxel y Token de acceso de conversión.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Configuración de una regla de reenvío de eventos {#config-rule}
