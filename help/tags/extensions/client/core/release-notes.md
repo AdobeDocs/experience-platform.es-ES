@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
+source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 61%
+source-wordcount: '1693'
+ht-degree: 59%
 
 ---
 
@@ -14,6 +14,14 @@ ht-degree: 61%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 8 de mayo de 2025
+
+Versión 3.4.3
+
+* Se corrige un problema en el cual **Elementos de datos** > **Herramientas de JavaScript** > **Reemplazo simple** muestra una casilla de verificación para **Reemplazar todo**, pero provoca un error al intentar guardar la regla con la casilla de verificación habilitada.
+* Actualiza @adobe/react-spectrum a la versión 3.41.0.
+* Actualiza @adobe/reactor-sandbox a la versión 13.2.1.
 
 ## 23 de octubre de 2024
 
@@ -70,7 +78,7 @@ Se introdujeron los siguientes cambios en el elemento de datos Valor condicional
 * Los valores de número se exponen como números en el objeto de configuración.
 * El valor condicional ya no es necesario para que pueda comportarse del mismo modo que el valor de reserva.
 
-## sábado, 17 de septiembre de 2021
+## 17 de septiembre de 2021
 
 Versión 3.1.1
 
@@ -94,7 +102,7 @@ Versión 3.0.0
 
 * PDCL-6153: Añade compatibilidad para extraer de forma fiable la URL completa para acciones de código personalizado en caché.
 
-La versión 3.0.0 de la extensión principal se asocia con cambios en la versión [v27.2.0 del tiempo de ejecución web de Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite a los usuarios cargar su biblioteca entre muchas regiones de alojamiento administradas por el Adobe si la compañía del usuario admite CDN Premium.
+La versión 3.0.0 de la extensión principal se asocia con cambios en la versión [v27.2.0 del tiempo de ejecución web de Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite a los usuarios cargar su biblioteca entre muchas regiones de alojamiento administradas por Adobe si la compañía del usuario admite CDN Premium.
 
 Esta actualización es opcional y compatible con versiones anteriores para usuarios sin CDN Premium, y obligatoria para los clientes que tienen CDN Premium habilitado en su empresa.
 
@@ -123,7 +131,7 @@ Versión 2.0.4
 
 * Se ha agregado compatibilidad con elementos de datos en varios campos. La compatibilidad con elementos de datos se ha añadido a los siguientes eventos: Tiempo en la página, Entra en la ventanilla, Pase de ratón y Tiempo de reproducción de medios. Así como las siguientes condiciones: Tiempo en el sitio y Comparación de valor
 * Añade compatibilidad con el comportamiento predeterminado para ctrl/cmd + clic y para clic con el botón central del ratón cuando se utiliza Demora del vínculo
-* **Se ha marcado la demora del vínculo en el evento de clic como que ya no es compatible.**: puede encontrar más información en el [Blog de recopilación de datos ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=es)para Adobe Experience Platform.
+* **Se ha marcado la demora del vínculo en el evento de clic como que ya no es compatible.**: puede encontrar más información en el [Blog de recopilación de datos ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)para Adobe Experience Platform.
 
 ## 6 de enero de 2021
 
