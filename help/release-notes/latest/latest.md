@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2025'
 description: Las notas de la versión de abril de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 92b9d4a0529fabb8094e13f4dc6b4bb6d8649b16
+source-git-commit: a79efc5d64862850d17cff0fd0633c73fd08207d
 workflow-type: tm+mt
 source-wordcount: '2197'
 ht-degree: 29%
@@ -16,9 +16,9 @@ ht-degree: 29%
 >Consulte la siguiente documentación para ver las notas de la versión de otras aplicaciones de Adobe Experience Platform:
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Fecha de publicación: miércoles, 29 de abril de 2025**
 
@@ -41,7 +41,7 @@ Experience League es una completa plataforma de aprendizaje diseñada para ayuda
 
 | Función | Descripción |
 | --- | --- |
-| Página de inicio personalizada | Acceda a su página de inicio personalizada en [Experience League](https://experienceleague.adobe.com/es/home#) y personalícela. Inicie sesión con sus credenciales de Adobe y, a continuación, seleccione **[!UICONTROL Experience League]** en el menú superior para comenzar a optimizar su experiencia de aprendizaje: <ul><li>**Marcadores**: usa la característica [!UICONTROL Marcadores] para guardar y recopilar tus recursos favoritos en un solo lugar. Puede guardar una variedad de contenido, incluidas listas de reproducción, artículos y tutoriales.</li><li>**Personalice su aprendizaje**: Mejore su experiencia de aprendizaje al actualizar su perfil de Experience League con los roles, industrias, productos y niveles de experiencia que mejor se adapten a sus necesidades.</li><li>**Recommendations**: vea el contenido de aprendizaje recomendado en función de su actividad reciente.</li><li>**Vistos recientemente**: Utilice la sección [!UICONTROL Vistos recientemente] para volver rápidamente al contenido visualizado recientemente, como documentación y vídeos.</li><li>**Recursos de aprendizaje**: use el panel [!UICONTROL Todos los recursos de aprendizaje] para ir a tutoriales, documentación, comunidad, eventos y certificaciones.</li><li>**Novedades**: vea la sección [!UICONTROL Novedades] para ver una secuencia del contenido más reciente en Experience League.</li><li>**Vea eventos anteriores bajo demanda**: Vea transmisiones en vivo grabadas anteriormente sobre temas destacados de productos, casos de uso y tutoriales con la sección [!UICONTROL Ver eventos anteriores bajo demanda].</li></ul><br> ![Página de inicio personalizada en Experience League.](../2025/assets/april/personalized-home-page.png "Página de inicio personalizada en Experience League."){width="250" align="center" zoomable="yes"} |
+| Página de inicio personalizada | Acceda a su página de inicio personalizada en [Experience League](https://experienceleague.adobe.com/en/home#) y personalícela. Inicie sesión con sus credenciales de Adobe y, a continuación, seleccione **[!UICONTROL Experience League]** en el menú superior para comenzar a optimizar su experiencia de aprendizaje: <ul><li>**Marcadores**: usa la característica [!UICONTROL Marcadores] para guardar y recopilar tus recursos favoritos en un solo lugar. Puede guardar una variedad de contenido, incluidas listas de reproducción, artículos y tutoriales.</li><li>**Personalice su aprendizaje**: Mejore su experiencia de aprendizaje al actualizar su perfil de Experience League con los roles, industrias, productos y niveles de experiencia que mejor se adapten a sus necesidades.</li><li>**Recommendations**: vea el contenido de aprendizaje recomendado en función de su actividad reciente.</li><li>**Vistos recientemente**: Utilice la sección [!UICONTROL Vistos recientemente] para volver rápidamente al contenido visualizado recientemente, como documentación y vídeos.</li><li>**Recursos de aprendizaje**: use el panel [!UICONTROL Todos los recursos de aprendizaje] para ir a tutoriales, documentación, comunidad, eventos y certificaciones.</li><li>**Novedades**: vea la sección [!UICONTROL Novedades] para ver una secuencia del contenido más reciente en Experience League.</li><li>**Vea eventos anteriores bajo demanda**: Vea transmisiones en vivo grabadas anteriormente sobre temas destacados de productos, casos de uso y tutoriales con la sección [!UICONTROL Ver eventos anteriores bajo demanda].</li></ul><br> ![Página de inicio personalizada en Experience League.](../2025/assets/april/personalized-home-page.png "Página de inicio personalizada en Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
