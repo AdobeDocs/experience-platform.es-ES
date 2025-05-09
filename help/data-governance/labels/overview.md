@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Resumen de etiquetas de uso de datos
 description: Descubra cómo se utilizan las etiquetas de uso de datos para ayudar a aplicar el cumplimiento de la gobernanza de datos en Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 16%
@@ -44,7 +44,7 @@ Para obtener más información sobre cómo funciona la aplicación automática e
 
 [!DNL Experience Platform] tiene la capacidad de compartir segmentos con Adobe Audience Manager. Cualquier control de exportación de datos que se haya aplicado a segmentos de Audience Manager se traduce en etiquetas equivalentes y acciones de marketing reconocidas por el control de datos de [!DNL Experience Platform].
 
-Para obtener información sobre cómo se asignan los controles de exportación de datos a las etiquetas de uso de datos de [!DNL Experience Platform], consulte la [documentación de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es#aam-data-export-control-in-aep).
+Para obtener información sobre cómo se asignan los controles de exportación de datos a las etiquetas de uso de datos de [!DNL Experience Platform], consulte la [documentación de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Administración de etiquetas de uso de datos en [!DNL Experience Platform] {#manage-labels}
 
@@ -57,7 +57,7 @@ Puede administrar las etiquetas de uso de datos mediante las API [!DNL Experienc
 
 ### Uso de la IU
 
-El área de trabajo **[!UICONTROL Políticas]** de la interfaz de usuario de [!DNL Experience Platform] le permite ver y administrar las etiquetas principales y personalizadas de su organización. Puede usar el área de trabajo **[!UICONTROL Esquemas]** para [aplicar etiquetas a los esquemas XDM (Experience Data Model)](../../xdm/tutorials/labels.md), o aprender a [crear y administrar etiquetas personalizadas en la interfaz de usuario de **[!UICONTROL Políticas]](./user-guide.md) leyendo la guía del usuario de etiquetas de uso de datos en su lugar.
+El área de trabajo **[!UICONTROL Políticas]** de la interfaz de usuario de [!DNL Experience Platform] le permite ver y administrar las etiquetas principales y personalizadas de su organización. Puede usar el área de trabajo **[!UICONTROL Esquemas]** para [aplicar etiquetas a sus esquemas XDM (Experience Data Model)](../../xdm/tutorials/labels.md), o aprender a [crear y administrar etiquetas personalizadas en la interfaz de usuario **[!UICONTROL Políticas]**](./user-guide.md) leyendo la guía del usuario de etiquetas de uso de datos en su lugar.
 
 >[!IMPORTANT]
 >

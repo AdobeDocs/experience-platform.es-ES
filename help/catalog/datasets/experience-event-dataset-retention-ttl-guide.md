@@ -2,9 +2,9 @@
 title: Administrar la retención de conjuntos de datos de Experience Event en el lago de datos mediante TTL
 description: Obtenga información sobre cómo evaluar, establecer y administrar la retención de conjuntos de datos de evento de experiencia en el lago de datos mediante configuraciones de tiempo de vida (TTL) con API de Adobe Experience Platform. Esta guía explica cómo la caducidad a nivel de fila TTL admite políticas de retención de datos, optimiza la eficiencia del almacenamiento y garantiza una administración eficaz del ciclo de vida de los datos. También proporciona casos de uso y prácticas recomendadas para ayudarle a aplicar el TTL de forma eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
+source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
 workflow-type: tm+mt
-source-wordcount: '2456'
+source-wordcount: '2452'
 ht-degree: 0%
 
 ---
@@ -301,12 +301,12 @@ Estas preguntas frecuentes abarcan preguntas prácticas acerca de los trabajos d
 ### ¿A qué tipos de conjuntos de datos puedo aplicar reglas de política de retención?
 
 +++Respuesta
-Puede aplicar políticas de retención basadas en TTL a cualquier conjunto de datos que utilice un esquema de serie temporal. Esto incluye conjuntos de datos basados en la clase ExperienceEvent de XDM estándar, así como esquemas personalizados que amplían la clase de serie temporal de XDM.
+Puede aplicar políticas de retención basadas en TTL a cualquier conjunto de datos que utilice el comportamiento de series temporales. Esto incluye conjuntos de datos basados en la clase ExperienceEvent de XDM estándar, así como esquemas personalizados diseñados para capturar datos de series temporales.
 
 La caducidad a nivel de fila requiere las siguientes condiciones técnicas:
 
-- El esquema debe ampliar la clase base de series temporales XDM.
-- El esquema debe incluir un campo de marca de tiempo, utilizado para evaluar la caducidad.
+- El esquema debe diseñarse para capturar datos de series temporales.
+- El esquema debe incluir un campo de marca de tiempo utilizado para evaluar la caducidad.
 - El conjunto de datos debe almacenar datos de nivel de evento, que generalmente utilizan o amplían la clase XDM ExperienceEvent.
 - El conjunto de datos debe estar registrado en el servicio de catálogo, ya que la configuración de TTL se aplica a través de `extensions.adobe_lakeHouse.rowExpiration`.
 - Los valores TTL deben utilizar el formato de duración ISO-8601 (por ejemplo, `P30D`, `P6M`, `P1Y`).
