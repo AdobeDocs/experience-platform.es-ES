@@ -44,7 +44,7 @@ Para obtener más información sobre cómo funciona la aplicación automática e
 
 [!DNL Experience Platform] tiene la capacidad de compartir segmentos con Adobe Audience Manager. Cualquier control de exportación de datos que se haya aplicado a segmentos de Audience Manager se traduce en etiquetas equivalentes y acciones de marketing reconocidas por el control de datos de [!DNL Experience Platform].
 
-Para obtener información sobre cómo se asignan los controles de exportación de datos a las etiquetas de uso de datos de [!DNL Experience Platform], consulte la [documentación de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Para obtener información sobre cómo se asignan los controles de exportación de datos a las etiquetas de uso de datos de [!DNL Experience Platform], consulte la [documentación de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es#aam-data-export-control-in-aep).
 
 ## Administración de etiquetas de uso de datos en [!DNL Experience Platform] {#manage-labels}
 
