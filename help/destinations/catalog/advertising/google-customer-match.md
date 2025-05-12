@@ -3,9 +3,9 @@ keywords: coincidencia de cliente de google;coincidencia de cliente de Google;co
 title: Conexión de Google Customer Match
 description: Customer Match de Google le permite utilizar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping y Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2360'
 ht-degree: 2%
 
 ---
@@ -58,11 +58,15 @@ Algunos destinos de Experience Platform tienen ciertas reglas y obligaciones par
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Seleccione esta identidad de destino cuando su identidad de origen sea un área de nombres GAID. |
-| IDFA | Apple ID para anunciantes | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres IDFA. |
-| phone_sha256_e.164 | Números de teléfono en formato E164, con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono con hash y texto sin formato, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para direcciones de correo electrónico de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
-| user_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
+| `GAID` | GOOGLE ADVERTISING ID | Seleccione esta identidad de destino cuando su identidad de origen sea un área de nombres GAID. |
+| `IDFA` | Apple ID para anunciantes | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres IDFA. |
+| `phone_sha256_e.164` | Números de teléfono en formato E164, con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono con hash y texto sin formato, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| `email_lc_sha256` | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para direcciones de correo electrónico de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| `user_id` | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
+| `address_info_first_name` | Nombre del usuario | Esta identidad de destino debe usarse junto con `address_info_last_name`, `address_info_country_code` y `address_info_postal_code` cuando desee enviar datos de direcciones de correo a su destino. <br><br>Para asegurarse de que Google coincida con la dirección, debe asignar los cuatro campos de dirección (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` y `address_info_postal_code`) y asegurarse de que ninguno de estos campos contiene datos ausentes en los perfiles exportados. <br> Si algún campo no está asignado o contiene datos que faltan, Google no coincidirá con la dirección. |
+| `address_info_last_name` | Apellidos del usuario | Esta identidad de destino debe usarse junto con `address_info_first_name`, `address_info_country_code` y `address_info_postal_code` cuando desee enviar datos de direcciones de correo a su destino. <br><br>Para asegurarse de que Google coincida con la dirección, debe asignar los cuatro campos de dirección (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` y `address_info_postal_code`) y asegurarse de que ninguno de estos campos contiene datos ausentes en los perfiles exportados. <br> Si algún campo no está asignado o contiene datos que faltan, Google no coincidirá con la dirección. |
+| `address_info_country_code` | Código de país de dirección de usuario | Esta identidad de destino debe usarse junto con `address_info_first_name`, `address_info_last_name` y `address_info_postal_code` cuando desee enviar datos de direcciones de correo a su destino. <br><br>Para asegurarse de que Google coincida con la dirección, debe asignar los cuatro campos de dirección (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` y `address_info_postal_code`) y asegurarse de que ninguno de estos campos contiene datos ausentes en los perfiles exportados. <br> Si algún campo no está asignado o contiene datos que faltan, Google no coincidirá con la dirección. <br><br>Formato aceptado: códigos de país en minúsculas y de 2 letras en formato [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
+| `address_info_postal_code` | Código postal de la dirección de usuario | Esta identidad de destino debe usarse junto con `address_info_first_name`, `address_info_last_name` y `address_info_country_code` cuando desee enviar datos de direcciones de correo a su destino. <br><br>Para asegurarse de que Google coincida con la dirección, debe asignar los cuatro campos de dirección (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` y `address_info_postal_code`) y asegurarse de que ninguno de estos campos contiene datos ausentes en los perfiles exportados. <br> Si algún campo no está asignado o contiene datos que faltan, Google no coincidirá con la dirección. |
 
 {style="table-layout:auto"}
 
@@ -146,19 +150,19 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Vídeo introductorio {#video-overview}
 
 Vea el siguiente vídeo para obtener una explicación de las ventajas y cómo activar los datos en Customer Match de Google.
 
->[!VIDEO](https://video.tv.adobe.com/v/326490?captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -184,8 +188,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades* a destinos, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de [Ver gráfico de identidad]**. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades* a destinos, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de [Ver gráfico de identidad]**. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -227,6 +231,10 @@ Los datos de origen de los atributos no se cifran automáticamente. Si el campo 
 ## Supervisar destino {#monitor-destination}
 
 Después de conectarse al destino y establecer un flujo de datos de destino, puede usar la [funcionalidad de supervisión](/help/dataflows/ui/monitor-destinations.md) en Real-Time CDP para obtener información detallada acerca de los registros de perfil activados en el destino en cada ejecución de flujo de datos.
+
+>[!IMPORTANT]
+>
+>Al asignar las cuatro identidades de destino relacionadas con direcciones (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` y `address_info_postal_code`), se cuentan como identidades individuales independientes para cada perfil en la página de supervisión del flujo de datos.
 
 ## Compruebe que la activación de la audiencia se haya realizado correctamente {#verify-activation}
 
