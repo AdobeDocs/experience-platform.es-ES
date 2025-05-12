@@ -1,11 +1,11 @@
 ---
-title: 'Notas de la versión de Adobe Experience Cloud: abril de 2025'
+title: 'Notas de la versión de Adobe Experience Platform: abril de 2025'
 description: Las notas de la versión de abril de 2025 de Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: b0ed9e38dbc3b4a4f4f7cde5751c2edd35355b59
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2197'
-ht-degree: 29%
+source-wordcount: '2192'
+ht-degree: 94%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 29%
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/analytics-platform/using/releases/latest)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/latest)
 
-**Fecha de publicación: miércoles, 29 de abril de 2025**
+**Fecha de publicación: 29 de abril de 2025**
 
 Actualizaciones de funciones y documentación existentes en Adobe Experience Platform:
 
@@ -37,11 +37,11 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 
 ## Experience League {#experience-league}
 
-Experience League es una completa plataforma de aprendizaje diseñada para ayudarle a mejorar sus habilidades con los productos de Adobe. Ofrece una variedad de recursos, incluidos cursos, documentación, páginas de la comunidad, eventos y acceso a certificaciones.
+Experience League es una plataforma de aprendizaje integral que le ayudará a perfeccionar sus habilidades con los productos de Adobe. Ya que ofrece una variedad de recursos, incluidos cursos, documentación, páginas de la comunidad, eventos y acceso a certificaciones.
 
 | Función | Descripción |
 | --- | --- |
-| Página de inicio personalizada | Acceda a su página de inicio personalizada en [Experience League](https://experienceleague.adobe.com/es/home#) y personalícela. Inicie sesión con sus credenciales de Adobe y, a continuación, seleccione **[!UICONTROL Experience League]** en el menú superior para comenzar a optimizar su experiencia de aprendizaje: <ul><li>**Marcadores**: usa la característica [!UICONTROL Marcadores] para guardar y recopilar tus recursos favoritos en un solo lugar. Puede guardar una variedad de contenido, incluidas listas de reproducción, artículos y tutoriales.</li><li>**Personalice su aprendizaje**: Mejore su experiencia de aprendizaje al actualizar su perfil de Experience League con los roles, industrias, productos y niveles de experiencia que mejor se adapten a sus necesidades.</li><li>**Recommendations**: vea el contenido de aprendizaje recomendado en función de su actividad reciente.</li><li>**Vistos recientemente**: Utilice la sección [!UICONTROL Vistos recientemente] para volver rápidamente al contenido visualizado recientemente, como documentación y vídeos.</li><li>**Recursos de aprendizaje**: use el panel [!UICONTROL Todos los recursos de aprendizaje] para ir a tutoriales, documentación, comunidad, eventos y certificaciones.</li><li>**Novedades**: vea la sección [!UICONTROL Novedades] para ver una secuencia del contenido más reciente en Experience League.</li><li>**Vea eventos anteriores bajo demanda**: Vea transmisiones en vivo grabadas anteriormente sobre temas destacados de productos, casos de uso y tutoriales con la sección [!UICONTROL Ver eventos anteriores bajo demanda].</li></ul><br> ![Página de inicio personalizada en Experience League.](../2025/assets/april/personalized-home-page.png "Página de inicio personalizada en Experience League."){width="250" align="center" zoomable="yes"} |
+| Página de inicio personalizada | Acceda a su página de inicio personalizada en [Experience League](https://experienceleague.adobe.com/es/home#) y personalícela. Inicie sesión con sus credenciales de Adobe y, a continuación, seleccione **[!UICONTROL Experience League]** en el menú superior para optimizar su experiencia de aprendizaje. <ul><li>**Marcadores**: utilice la característica [!UICONTROL Marcadores] para guardar y recopilar sus recursos favoritos en un solo lugar. Puede guardar una variedad de contenido, incluidas listas de reproducción, artículos y tutoriales.</li><li>**Personalice su aprendizaje**: mejore su experiencia de aprendizaje al actualizar su perfil de Experience League con las funciones, sectores, productos y niveles de experiencia que mejor se adapten a sus necesidades.</li><li>**Recomendaciones**: vea contenido de aprendizaje recomendado en función de su actividad reciente.</li><li>**Vistos recientemente**: utilice la sección [!UICONTROL Vistos recientemente] para volver rápidamente al contenido visualizado recientemente, como documentación y vídeos.</li><li>**Recursos de aprendizaje**: use el panel [!UICONTROL Todos los recursos de aprendizaje] para ir a tutoriales, documentación, comunidad, eventos y certificaciones.</li><li>**Novedades**: vea la sección [!UICONTROL Novedades] para ver una secuencia del contenido más reciente en Experience League.</li><li>**Ver eventos anteriores bajo demanda**: mire transmisiones en vivo grabadas anteriormente sobre temas destacados de productos, casos de uso y tutoriales en la sección [!UICONTROL Ver eventos anteriores bajo demanda].</li></ul><br> ![Página de inicio personalizada en Experience League.](../2025/assets/april/personalized-home-page.png "Página de inicio personalizada en Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -66,25 +66,25 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Destino | Descripción |
 | --- | --- |
-| [Sincronización de persona de Marketo Engage](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe actualizó el destino [!DNL Marketo Engage Person Sync] para solucionar un problema que afectaba a los clientes cuando había varios correos electrónicos presentes en el mapa de identidad. |
-| [(V2) Pega CDH Conexión de audiencia en tiempo real](/help/destinations/catalog/personalization/pega-v2.md) | Utilice el destino [!DNL (V2) Pega Customer Decision Hub Realtime Audience] en Adobe Experience Platform para enviar atributos de perfil y datos de pertenencia a audiencias al Centro de decisiones de clientes de Pega para la toma de decisiones de la mejor acción siguiente, cuando tenga varias aplicaciones del Centro de decisiones de clientes de Pega configuradas en su cuenta de Pega. |
+| [Sincronización de personas de Marketo Engage](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe actualizó el destino de [!DNL Marketo Engage Person Sync] para solucionar un problema que afectaba a los clientes cuando había varios correos electrónicos presentes en el mapa de identidad. |
+| [(V2) Conexión de público en tiempo real de Pega CDH](/help/destinations/catalog/personalization/pega-v2.md) | Utilice el destino [!DNL (V2) Pega Customer Decision Hub Realtime Audience] en Adobe Experience Platform para enviar atributos de perfil y datos de abonos del público al Centro de decisiones de clientes de Pega para la toma de decisiones de la mejor acción siguiente, cuando tenga varias aplicaciones del Centro de decisiones de clientes de Pega configuradas en su cuenta de Pega. |
 
 **Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
 
 | Función | Descripción |
 | --- | --- |
-| Opciones de programación **semanales** y **mensuales** para exportaciones de archivos completas | Ahora puede programar exportaciones de archivos completas para personas y audiencias potenciales de forma semanal o mensual al activarlas en destinos basados en archivos de almacenamiento en la nube. [Más información](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) sobre las opciones de horario. |
+| Opciones de programación **semanales** y **mensuales** para exportaciones de archivos completos | Ahora puede programar exportaciones de archivos completas para personas y públicos de clientes potenciales de forma semanal o mensual al activarlas en destinos basados en archivos de almacenamiento en la nube. [Más información](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) sobre las opciones de programación. |
 
 {style="table-layout:auto"}
 
 **Correcciones, mejoras y otros anuncios** {#destinations-fixes-and-enhancements}
 
 - **La aplicación de las fechas de finalización de la exportación del conjunto de datos se retrasó hasta el 1 de septiembre de 2025**\
-  Como parte de la [versión de septiembre de 2024](/help/release-notes/2024/september-2024.md#destinations-new-updated-functionality), Adobe estableció una fecha de finalización predeterminada del 1 de mayo de 2025 para cualquier flujo de datos de exportación de conjuntos de datos creado *antes de esa versión*. Adobe está ampliando esta fecha límite de aplicación al **1 de septiembre de 2025** para proporcionar a los clientes tiempo adicional para actualizar sus programaciones. Consulte la sección de programación del [tutorial de exportación de conjuntos de datos](../../destinations/ui/export-datasets.md#schedule-dataset-export) para obtener información sobre cómo editar la fecha de finalización de un flujo de datos de exportación de conjuntos de datos.
+  En la [versión de septiembre de 2024](/help/release-notes/2024/september-2024.md#destinations-new-updated-functionality), Adobe estableció el 1 de mayo de 2025 como la fecha de finalización predeterminada para cualquier flujo de datos de exportación de conjuntos de datos creado *antes de esa versión*. Adobe extendió esta fecha límite de aplicación al **1 de septiembre de 2025** para proporcionar a los clientes tiempo adicional para actualizar sus programaciones. Consulte la sección de programación del [tutorial de exportación de conjuntos de datos](../../destinations/ui/export-datasets.md#schedule-dataset-export) para obtener información sobre la edición de la fecha de finalización de un flujo de datos de exportación de conjuntos de datos.
 
-- **Se ha mejorado la administración de las transferencias SFTP fallidas para la incorporación de LiveRamp**\
-  Adobe ha implementado una corrección para un problema que afecta a las exportaciones de archivos al destino [LiveRamp Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) a través de SFTP. En ocasiones, las transferencias de archivos fallaban debido a problemas transitorios del lado del servidor y los archivos temporales de los intentos fallidos permanecían en el servidor. Estos archivos no eliminables bloquearon reintentos posteriores, ya que Adobe no tenía permiso para sobrescribirlos.\
-  Con la corrección, si un intento de reintento no puede eliminar el archivo temporal, Adobe generará un nuevo archivo con un sufijo anexado, `attempt2`, para garantizar que el reintento se complete correctamente.
+- **Se ha mejorado la administración de las transferencias con SFTP fallidas para LiveRamp Onboarding**\
+  Adobe ha implementado una corrección para el problema que afecta a las exportaciones de archivos al destino [LiveRamp Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) a través de SFTP. En ocasiones, las transferencias de archivos fallaban debido a problemas transitorios del lado del servidor y los archivos temporales de los intentos fallidos permanecían en el servidor. Estos archivos que no se podían eliminar bloqueaban los reintentos posteriores, ya que Adobe no tenía permiso para sobrescribirlos.\
+  Con la corrección, si al reintentar, no se podía eliminar el archivo temporal, Adobe generaba un nuevo archivo con un sufijo anexado, `attempt2`, para garantizar que el reintento se complete correctamente.
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
@@ -108,11 +108,11 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Disponibilidad limitada]{type=Informative} [!DNL Identity Graph Linking Rules] | Las reglas de vinculación de gráficos de identidad ahora están en disponibilidad limitada y todos los clientes pueden acceder a ellas en los entornos limitados de desarrollo. <ul><li>**Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.</li><li>**Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.</li><li>**Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.</li></ul> |
+| [!BADGE Disponibilidad limitada]{type=Informative} [!DNL Identity Graph Linking Rules] | Ahora todos los clientes pueden acceder a las reglas de vinculación de gráficos de identidad en los entornos limitados de desarrollo. <ul><li>**Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.</li><li>**Notas importantes**: Durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en la pertenencia al segmento. Sin embargo, el streaming y la segmentación por lotes funcionarán según lo esperado.</li><li>**Pasos siguientes**: para obtener información sobre la habilitación de esta característica en las zonas protegidas de producción, póngase en contacto con el equipo de cuentas de Adobe.</li></ul> |
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [[!DNL Identity Graph Linking Rules] documentación](../../identity-service/identity-graph-linking-rules/overview.md).
+Para obtener más información, consulte la [[!DNL Identity Graph Linking Rules] documentación](../../identity-service/identity-graph-linking-rules/overview.md).
 
 ## Servicio de consultas {#query-service}
 
@@ -122,10 +122,10 @@ Consulte datos en el lago de datos de Adobe Experience Platform utilizando SQL e
 
 | Función | Descripción |
 | --- | --- |
-| Sobrescritura de audiencia SQL | Actualice la pertenencia a audiencias sobrescribiendo los perfiles existentes con los resultados de una nueva consulta SQL. Esto permite administrar las audiencias dinámicas de forma más eficaz eliminando registros obsoletos e insertando registros actualizados en una sola operación. Para obtener más información, consulte la [guía de extensión de audiencias SQL](../../query-service/data-distiller-audiences/overview.md#replace-audience). |
-| Descargar y copiar resultados de la consulta | [Descargue los resultados de la consulta directamente desde el Editor de consultas](../../query-service/ui/overview.md#download-query-results) como archivos CSV, XLSX o JSON, o [copie los resultados en el portapapeles](../../query-service/ui/overview.md#copy-results) como valores separados por comas (CSV) para su uso rápido en aplicaciones de hojas de cálculo como Excel. Estas mejoras optimizan los flujos de trabajo de análisis, creación de informes y validación de datos sin conexión. |
-| Ver resultados de la consulta en pantalla completa | [Vista previa de los resultados de la consulta en un cuadro de diálogo de pantalla completa](../../query-service/ui/overview.md#view-results) para mejorar la legibilidad, analizar fácilmente conjuntos de datos grandes y seleccionar filas para copiar. La vista de pantalla completa proporciona un diseño de cuadrícula redimensionable, lo que le ayuda a revisar tablas anchas y resultados detallados de forma más eficaz. |
-| Selección de columnas mejorada en la predicción del modelo | Seleccione columnas específicas y aplique alias utilizando la sintaxis extendida `model_predict`. Recupere resultados de predicción intermedios, como vectores de características y puntuaciones de probabilidad. La selección mejorada requiere la activación de un indicador de funcionalidad. Consulte [Documentación del ciclo de vida del modelo](../../query-service/advanced-statistics/models.md#select-specific-output-fields) para ver ejemplos de sintaxis y detalles de indicadores de características. |
+| Sobrescritura de públicos de SQL | Actualice la pertenencia a públicos sobrescribiendo los perfiles existentes con los resultados de una nueva consulta SQL. Esto permite administrar los públicos dinámicos de forma más eficaz eliminando registros obsoletos e insertando registros actualizados en una sola operación. Para obtener más información, consulte la [Guía de ampliación de público de SQL](../../query-service/data-distiller-audiences/overview.md#replace-audience). |
+| Descarga y copia de resultados de la consulta | [Descargue los resultados de la consulta directamente desde el Editor de consultas](../../query-service/ui/overview.md#download-query-results) como archivos CSV, XLSX o JSON, o [copie los resultados en el portapapeles](../../query-service/ui/overview.md#copy-results) como valores separados por comas (CSV) para su uso rápido en aplicaciones de hojas de cálculo como Excel. Estas mejoras optimizan los flujos de trabajo de análisis, creación de informes y validación de datos sin conexión. |
+| Ver resultados de la consulta en pantalla completa | [Vista previa de los resultados de la consulta en un cuadro de diálogo de pantalla completa](../../query-service/ui/overview.md#view-results) para mejorar la legibilidad, analizar fácilmente conjuntos de datos grandes y seleccionar filas para copiar. La vista de pantalla completa proporciona un diseño de cuadrícula redimensionable, lo que sirve para revisar tablas anchas y resultados detallados de forma más eficaz. |
+| Selección de columnas mejorada en la predicción del modelo | Seleccione columnas específicas y aplique alias utilizando la sintaxis extendida `model_predict`. Recupere resultados de predicción intermedios, como vectores de características y puntuaciones de probabilidad. La selección mejorada requiere la activación de un indicador de función. Consulte la [Documentación del ciclo de vida del modelo](../../query-service/advanced-statistics/models.md#select-specific-output-fields) para ver ejemplos de sintaxis y datos de indicadores de función. |
 | Guardar salidas de predicción de modelo usando CREATE TABLE e INSERT INTO | [Guarde los resultados de predicción seleccionados en tablas nuevas utilizando CREATE TABLE AS SELECT o inserte en tablas existentes utilizando INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). Si se habilita la selección mejorada de columnas, también se pueden mantener los resultados intermedios, como los vectores de características y las probabilidades, junto con las predicciones finales. Para ver ejemplos de uso, consulte la [documentación de sintaxis SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
 Para obtener más información sobre [!DNL Query Service], consulte la [[!DNL Query Service] Información general](../../query-service/home.md).
@@ -150,7 +150,7 @@ Adobe Experience Platform está diseñado para enriquecer las aplicaciones de ex
 
 | Función | Descripción |
 | --- | --- |
-| Ampliación de compatibilidad de complemento de herramientas de zona protegida | Ahora, las acciones personalizadas se pueden copiar como un objeto dependiente al duplicar objetos de Recorrido en las herramientas de zona protegida. Además, puede seleccionar acciones existentes para reutilizarlas en la zona protegida de Target. También se pueden añadir a un paquete de forma independiente. Para obtener información completa sobre los objetos Adobe Journey Optimizer admitidos, lea la guía [herramientas de espacio aislado](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects). |
+| Ampliación de compatibilidad de complemento de herramientas de zona protegida | Ahora, las acciones personalizadas se pueden copiar como un objeto dependiente al duplicar objetos de Recorrido en las herramientas de zona protegida. Además, puede seleccionar acciones existentes para reutilizarlas en la zona protegida de destinatario. También se pueden añadir a un paquete de forma independiente. Para obtener información completa sobre los objetos de Adobe Journey Optimizer admitidos, lea la guía de [herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects). |
 
 {style="table-layout:auto"}
 
@@ -166,8 +166,8 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | El origen [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ya está disponible. Utilice esta fuente para llevar los datos de afinidades de perfiles de usuario de [!DNL Algolia] a Experience Platform. A continuación, puede utilizar estos datos para mejorar la participación del usuario, las tasas de conversión y la experiencia general del cliente mediante el suministro de soluciones de búsqueda de alto rendimiento para sitios web, plataformas de comercio electrónico y aplicaciones. Para obtener más información, lee la guía sobre cómo [ingerir [!DNL Algolia User Profiles] datos en Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
-| Compatibilidad con la API [!BADGE Beta]{type=Informative} para [!DNL Azure Databricks] | El origen [!DNL Azure Databricks] ya está disponible en la API. Use la API [!DNL Flow Service] para conectar su cuenta de [!DNL Databricks] y llevar los datos de [!DNL Databricks] a Experience Platform. Para obtener más información, lea la documentación sobre [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md). |
+| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | La fuente de [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) ahora está disponible. Utilice esta fuente para llevar sus datos de afinidades de perfiles de usuario de [!DNL Algolia] a Experience Platform. A continuación, puede utilizar estos datos para mejorar la participación del usuario, las tasas de conversión y la experiencia general del cliente mediante el suministro de soluciones de búsqueda de alto rendimiento para sitios web, plataformas de comercio electrónico y aplicaciones. Para más información, lea la guía sobre cómo [ingestar [!DNL Algolia User Profiles]  datos a Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
+| Compatibilidad con la API [!BADGE Beta]{type=Informative} para [!DNL Azure Databricks] | La fuente [!DNL Azure Databricks] ya está disponible en la API. Use la API de [!DNL Flow Service] para conectar su cuenta de [!DNL Databricks] y llevar los datos de [!DNL Databricks] a Experience Platform. Para obtener más información, lea la documentación sobre [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md). |
 
 {style="table-layout:auto"}
 
@@ -175,9 +175,9 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 | Función | Descripción |
 | --- | --- |
-| Se han actualizado los campos XDM para la ingesta de datos de medios de streaming en Experience Platform. | El nuevo grupo de campos XDM `mediaReporting` ya está disponible para la ingesta de datos de medios de streaming a través del origen de Adobe Analytics en Experience Platform. Este campo reemplaza el campo `media.mediaTimed`.</br> <br>Durante un período de transición de tres meses, la ingesta de datos en `media.mediaTimed` campos continuará. Sin embargo, a finales de julio de 2025, los campos `media.mediaTimed` quedarán totalmente obsoletos y dejarán de ser visibles en la interfaz de usuario del esquema de Experience Platform, y los datos solo se enviarán mediante los campos `mediaReporting`.</br><br>Si ha implementado el origen de Analytics para recopilar datos de medios de streaming en Platform antes del 22 de abril de 2025, debe migrar las configuraciones existentes para enviar datos mediante el nuevo grupo de campos. Esta migración debe completarse para finales de julio de 2025. Póngase en contacto con el equipo de su cuenta de Adobe para obtener ayuda sobre la migración. |
-| Nuevos tipos de autenticación para [!DNL MariaDB] y [!DNL PostgreSQL] | Ahora puede usar la autenticación básica para autenticar los orígenes de [!DNL MariaDB] y [!DNL PostgreSQL] en Experience Platform. Lea la siguiente documentación para obtener más información: <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
-| Compatibilidad con filtrado a nivel de fila para [!DNL Amazon Redshift] | Puede usar funcionalidades de filtrado a nivel de fila para sus datos de [!DNL Amazon Redshift] en Experience Platform. Para obtener más información, lea la guía sobre [filtrado de datos de nivel de fila para orígenes en la API](../../sources/tutorials/api/filter.md). |
+| Se han actualizado los campos XDM para la ingesta de datos de medios de streaming en Experience Platform. | El nuevo grupo de campos XDM `mediaReporting` ya está disponible para la ingesta de datos de medios de streaming a través de la fuente de Adobe Analytics para Experience Platform. Este campo reemplaza el campo `media.mediaTimed`.</br> <br>Durante un período de transición de tres meses, la ingesta de datos en los campos `media.mediaTimed` continuará. Sin embargo, a finales de julio de 2025, los campos `media.mediaTimed` quedarán totalmente obsoletos y dejarán de ser visibles en la interfaz de usuario del esquema de Experience Platform, y los datos solo se enviarán mediante los campos `mediaReporting`.</br><br>Si ha implementado el origen de Analytics para recopilar datos de medios de streaming en Platform antes del 22 de abril de 2025, debe migrar las configuraciones existentes para enviar datos mediante el nuevo grupo de campos. Esta migración debe completarse para finales de julio de 2025. Póngase en contacto con el equipo de cuentas de Adobe para obtener ayuda sobre la migración. |
+| Nuevos tipos de autenticación para [!DNL MariaDB] y [!DNL PostgreSQL] | Ahora puede usar la autenticación básica para autenticar las fuentes de [!DNL MariaDB] y [!DNL PostgreSQL] en Experience Platform. Lea la siguiente documentación para obtener más información: <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
+| Compatibilidad con filtrado a nivel de fila para [!DNL Amazon Redshift] | Puede usar funcionalidades de filtrado a nivel de fila para sus datos de [!DNL Amazon Redshift] en Experience Platform. Para obtener más información, lea la guía de [filtrado de datos para una fuente mediante la API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
@@ -185,18 +185,18 @@ Para obtener más información, lea la [Información general de las fuentes](../
 
 ## Manuales de tácticas de casos de uso {#use-case-playbooks}
 
-Los manuales de casos de uso se diseñaron originalmente para ayudar a superar los desafíos al comenzar con Real-Time Customer Data Platform o Adobe Journey Optimizer. Siguen evolucionando y ahora le permiten poner en marcha casos prácticos de marketing clave y proporcionar inspiración y recursos creados previamente para probar y pasar a la producción.
+Los manuales de tácticas de casos de uso se diseñaron originalmente para superar los desafíos al comenzar con Real-Time Customer Data Platform o Adobe Journey Optimizer. Siguen evolucionando y ahora le permiten poner en marcha casos prácticos de marketing clave y proporcionar inspiración y recursos creados previamente para probar y pasar a la producción.
 
-Los manuales de casos de uso han pasado de ser una herramienta de descubrimiento a un marco de trabajo colaborativo. Ahora le ayudan a crear, administrar y compartir sus propios libros de reproducción entre diferentes organizaciones.
+Los manuales de tácticas de casos de uso han pasado de ser una herramienta de descubrimiento a un marco de trabajo colaborativo. Ahora le ayudan a crear, administrar y compartir sus propios manuales de tácticas entre diferentes organizaciones.
 
 **Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Crea y comparte tus propios libros de reproducción | Un nuevo módulo de creación de libros de estrategias le permite crear, administrar y compartir sus propios libros de casos de uso. Esto incluye compatibilidad para capturar metadatos clave, editar mapas de recorrido y asociar recursos técnicos relevantes. Puede compartir manuales entre organizaciones para estandarizar los enfoques de marketing y mantener la coherencia. |
+| [!BADGE Beta]{type=Informative} Cree y comparta sus propios manuales de tácticas | Un nuevo marco de trabajo de creación de manuales de tácticas le permite crear, administrar y compartir sus propios manuales de tácticas de casos de uso. Esto incluye compatibilidad para capturar metadatos clave, editar mapas de recorrido y asociar recursos técnicos relevantes. Puede compartir manuales de tácticas entre organizaciones para estandarizar los enfoques de marketing y mantener la coherencia. |
 
 {style="table-layout:auto"}
 
-Para aprender a crear y compartir libros de reproducción, lee el documento [Autor y comparte tus propios libros de reproducción](/help/use-case-playbooks/playbooks/author.md).
+Para aprender a crear y compartir sus manuales de tácticas, lea el documento [Crear y compartir sus propios manuales de tácticas](/help/use-case-playbooks/playbooks/author.md).
 
-Para obtener más información, lea la [Descripción general de los libros de casos de uso](/help/use-case-playbooks/playbooks/overview.md), que proporciona información general sobre la funcionalidad de los libros de reproducción, su propósito y una demostración completa, incluyendo cómo crear instancias e importar recursos generados en otros entornos de espacio aislado.
+Para obtener más información, lea la [Información general de los manuales de tácticas de casos de uso](/help/use-case-playbooks/playbooks/overview.md), que proporciona una descripción general de la funcionalidad de los manuales de tácticas, su propósito y una demostración completa, incluyendo cómo crear instancias e importar recursos generados en otros entornos de zona protegida.

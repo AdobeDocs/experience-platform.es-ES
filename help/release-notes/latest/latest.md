@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: abril de 2025'
 description: Las notas de la versión de abril de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a79efc5d64862850d17cff0fd0633c73fd08207d
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2197'
-ht-degree: 94%
+source-wordcount: '2192'
+ht-degree: 93%
 
 ---
 
@@ -108,7 +108,7 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Disponibilidad limitada]{type=Informative} [!DNL Identity Graph Linking Rules] | Las reglas de vinculación de gráficos de identidad ahora tienen disponibilidad limitada, todos los clientes pueden acceder a ellas en las zonas protegidas de desarrollo. <ul><li>**Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.</li><li>**Notas importantes**: Durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en la pertenencia al segmento. Sin embargo, el streaming y la segmentación por lotes funcionarán según lo esperado.</li><li>**Pasos siguientes**: para obtener información sobre la habilitación de esta característica en las zonas protegidas de producción, póngase en contacto con el equipo de cuentas de Adobe.</li></ul> |
+| [!BADGE Disponibilidad limitada]{type=Informative} [!DNL Identity Graph Linking Rules] Ahora todos los clientes pueden acceder a las reglas de vinculación de gráfico de identidad en los entornos limitados de desarrollo. <ul><li>**Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.</li><li>**Notas importantes**: Durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en la pertenencia al segmento. Sin embargo, el streaming y la segmentación por lotes funcionarán según lo esperado.</li><li>**Pasos siguientes**: para obtener información sobre la habilitación de esta característica en las zonas protegidas de producción, póngase en contacto con el equipo de cuentas de Adobe.</li></ul> |
 
 {style="table-layout:auto"}
 
