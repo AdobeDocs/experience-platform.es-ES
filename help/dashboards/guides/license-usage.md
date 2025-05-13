@@ -6,7 +6,7 @@ type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3442'
+source-wordcount: '3455'
 ht-degree: 38%
 
 ---
@@ -14,7 +14,10 @@ ht-degree: 38%
 # Panel de uso de licencias {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
->
+>id="testy-mctestface"
+>title="Cuadro de diálogo de prueba que no debería estar visible"
+>abstract="El objeto {name} se está viendo en {date}."
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
 >title="Tabla de productos principales"
@@ -320,11 +323,11 @@ La disponibilidad de estas métricas y la definición específica de cada una de
 
 | Licencia | Descripción del producto |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:ESTÁNDAR OD</li><li>ADOBE EXPERIENCE PLATFORM:PESADO OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/es/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, servicios de aplicaciones y servicios inteligentes](https://helpx.adobe.com/es/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 10M</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) |
-| <ul><li>AEP:ACTIVACIÓN OD</li><li>AEP:ACTIVACIÓN OD PRFL A 10M</li><li>AEP: PERFIL DE ACTIVACIÓN OD DE HASTA 50 M</li></ul> | [Activación de Adobe Experience Platform](https://helpx.adobe.com/es/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:INTELIGENCIA OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/es/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:ESTÁNDAR OD</li><li>ADOBE EXPERIENCE PLATFORM:PESADO OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, servicios de aplicaciones y servicios inteligentes](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 10M</li><li>RT PLATAFORMA DE DATOS DEL CLIENTE:OD PRFL A 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) |
+| <ul><li>AEP:ACTIVACIÓN OD</li><li>AEP:ACTIVACIÓN OD PRFL A 10M</li><li>AEP: PERFIL DE ACTIVACIÓN OD DE HASTA 50 M</li></ul> | [Activación de Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:INTELIGENCIA OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>DESACTIVAR AJO PRIME STARTER:OD</li><li>DESACTIVAR AJO ULTIMATE STARTER:OD</li><li>DESACTIVAR Real-Time CDP:ORQUESTACIÓN DE PERFILES OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/es/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
