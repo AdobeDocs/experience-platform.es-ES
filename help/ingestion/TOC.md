@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Ayuda de ingesta de datos de Adobe Experience Platform
 breadcrumb-title: Guía de ingesta de datos
-user-guide-description: Incluya sus datos en Experience Platform mediante la ingestión por lotes o streaming.
+user-guide-description: Incluya sus datos en Experience Platform mediante la ingesta por lotes o streaming.
 feature: Data Ingestion
 role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
@@ -16,7 +16,7 @@ ht-degree: 21%
 # Ingesta de datos de Adobe Experience Platform {#ingestion}
 
 - [Resumen de ingesta de datos](home.md)
-- Ingesta de transmisión {#streaming}
+- Ingesta por streaming {#streaming}
    - [Información general](streaming-ingestion/overview.md)
    - [Conector Kafka](streaming-ingestion/kafka.md)
    - [Resolución de problemas](streaming-ingestion/troubleshooting.md)
@@ -27,7 +27,7 @@ ht-degree: 21%
    - [Ingesta parcial por lotes](batch-ingestion/partial.md)
    - [Resolución de problemas](batch-ingestion/troubleshooting.md)
 - Tutoriales {#tutorials}
-   - Asignar un archivo CSV a XDM {#map-csv}
+   - Asignación de un archivo CSV a XDM {#map-csv}
       - [Información general](./tutorials/map-csv/overview.md)
       - [Asignación de un archivo CSV a un esquema existente](./tutorials/map-csv/existing-schema.md)
       - [Asignación de un archivo CSV mediante recomendaciones generadas por IA](./tutorials/map-csv/recommendations.md)
@@ -38,7 +38,7 @@ ht-degree: 21%
    - [Transmisión de datos de registro](tutorials/streaming-record-data.md)
    - [Datos de series temporales de streaming](tutorials/streaming-time-series-data.md)
    - [Transmisión de varios mensajes](tutorials/streaming-multiple-messages.md)
-- Calidad de datos y supervisión{#quality}
+- Calidad de los datos y monitorización{#quality}
    - [Información general](quality/overview.md)
    - [Monitorización de la ingesta de datos](quality/monitor-data-ingestion.md)
    - [Recuperar diagnósticos de error](quality/error-diagnostics.md)
