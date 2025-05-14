@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Caducidad de evento de experiencia
 description: Este documento proporciona instrucciones generales para configurar los tiempos de caducidad de los eventos de experiencia individuales dentro de un conjunto de datos de Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,10 @@ Por lo tanto, si es posible, debe mantener el mismo valor de caducidad del Event
 ## Preguntas frecuentes {#faq}
 
 La siguiente sección enumera las preguntas más frecuentes sobre la caducidad de los datos de Experience Event:
+
+### ¿Cuál es la duración mínima para la que puedo establecer una caducidad de datos de evento de experiencia?
+
+La duración mínima para la caducidad de datos de un Evento de experiencia es de **un día**.
 
 ### ¿En qué se diferencia la caducidad de los datos de Experience Event de la del perfil seudónimo?
 
