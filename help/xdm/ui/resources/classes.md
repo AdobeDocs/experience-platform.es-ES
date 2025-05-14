@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear y editar clases en la IU
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario de Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1691'
 ht-degree: 5%
 
 ---
@@ -120,7 +120,7 @@ Consulte la guía [definición de campos en la interfaz de usuario](../fields/ov
 
 Si ha creado anteriormente esquemas que emplean esta clase, los campos recién agregados aparecerán automáticamente en esos esquemas.
 
-## Edición de una clase (#edit-a-class)
+## Edición de una clase {#edit-a-class}
 
 >[!NOTE]
 >
