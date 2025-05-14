@@ -2,7 +2,7 @@
 title: Definir campos XDM en la API del Registro de esquemas
 description: Obtenga información sobre cómo definir diferentes campos al crear recursos de modelo de datos de experiencia (XDM) personalizados en la API de registro de esquemas.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 0%
@@ -188,7 +188,7 @@ El equivalente de un campo [!UICONTROL Long] creado a través de la interfaz de 
 
 ## [!UICONTROL Corto] {#short}
 
-El equivalente de un campo [!UICONTROL Short] creado a través de la interfaz de usuario del generador de esquemas es un campo de tipo [`integer`](#integer) con valores específicos de `minimum` y `maximum` (`-32768` y `32768`, respectivamente).
+El equivalente de un campo [!UICONTROL Short] creado a través de la interfaz de usuario del generador de esquemas es un campo de tipo [`integer`](#integer) con valores específicos de `minimum` y `maximum` (`-32768` y `32767`, respectivamente).
 
 ```json
 "sampleField": {
@@ -196,13 +196,13 @@ El equivalente de un campo [!UICONTROL Short] creado a través de la interfaz de
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
 ## [!UICONTROL Byte] {#byte}
 
-El equivalente de un campo [!UICONTROL Byte] creado a través de la interfaz de usuario del generador de esquemas es un campo de tipo [`integer`](#integer) con valores específicos de `minimum` y `maximum` (`-128` y `128`, respectivamente).
+El equivalente de un campo [!UICONTROL Byte] creado a través de la interfaz de usuario del generador de esquemas es un campo de tipo [`integer`](#integer) con valores específicos de `minimum` y `maximum` (`-128` y `127`, respectivamente).
 
 ```json
 "sampleField": {
@@ -210,7 +210,7 @@ El equivalente de un campo [!UICONTROL Byte] creado a través de la interfaz de 
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 
