@@ -3,20 +3,24 @@ title: Extremo de certificado público
 description: Obtenga información sobre cómo recuperar los certificados públicos mediante el extremo /public-certificate de la API del servicio MTLS.
 role: Developer
 exl-id: 8369c783-e595-476f-9546-801cf4f10f71
-source-git-commit: 754044621cdaf1445f809bceaa3e865261eb16f0
+source-git-commit: d74353e70e992150c031397009d0c8add3df5e7b
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 3%
+source-wordcount: '471'
+ht-degree: 2%
 
 ---
 
 # Extremo de certificado público
 
+>[!NOTE]
+>
+>Adobe ya no admite la descarga estática de certificados mTLS públicos. Utilice esta API para recuperar certificados válidos para sus integraciones. Ahora se requiere la recuperación automatizada para evitar interrupciones en el servicio.
+
 En esta guía se explica cómo utilizar el extremo de certificados públicos para recuperar de forma segura certificados públicos para las aplicaciones de Adobe de su organización. Incluye una llamada de API de ejemplo e instrucciones detalladas para ayudar a los desarrolladores a autenticarse y verificar los intercambios de datos.
 
 ## Introducción
 
-Antes de continuar, revisa la [guía de introducción](./getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
+Antes de continuar, revisa la [guía de introducción](./getting-started.md) para obtener detalles importantes acerca de los encabezados requeridos y cómo interpretar las llamadas de API de ejemplo.
 
 ## Rutas de API {#paths}
 
@@ -28,7 +32,7 @@ La siguiente información son las rutas de API esenciales que necesitará para u
 
 ## Recuperación de certificados públicos {#list}
 
-Puede recuperar los certificados públicos de cualquiera de las aplicaciones de Adobe de su organización realizando una solicitud de GET al extremo `/v1/certificate/public-certificate`.
+Realice una petición GET al extremo `/v1/certificate/public-certificate` para recuperar los certificados públicos de cualquiera de las aplicaciones Adobe de su organización.
 
 **Formato de API**
 
@@ -38,7 +42,7 @@ GET /v1/certificate/public-certificate
 
 Los siguientes parámetros de consulta opcionales se pueden utilizar al recuperar los certificados públicos.
 
-| Parámetro de consulta | Descripción | Ejemplo |
+| Parámetros de consulta | Descripción | Ejemplo |
 | --------------- | ----------- | ------- |
 | `page` | Especifica desde qué página comenzarán los resultados de la solicitud. | `page=5` |
 | `limit` | Número máximo de certificados públicos que desea recuperar por página. | `limit=20` |
@@ -105,10 +109,19 @@ Una respuesta correcta devuelve el estado HTTP 200 y enumera los certificados p�
 
 +++
 
+## Automatización del ciclo vital de certificados {#certificate-lifecycle-automation}
+
+Adobe automatiza el ciclo de vida de los certificados mTLS públicos para garantizar la continuidad y reducir las interrupciones del servicio.
+
+- Los certificados se vuelven a emitir 60 días antes del vencimiento.
+- Los certificados se revocan 30 días antes de la caducidad.
+
+>[!NOTE]
+>
+>Estas escalas de tiempo se acortarán con el tiempo de acuerdo con las [directrices del foro CA/B](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days), cuyo objetivo es reducir la duración del certificado a un máximo de 47 días.
+
+Debe actualizar las integraciones para que admitan la recuperación automatizada a través de la API. No confíe en las descargas manuales de certificados ni en las copias estáticas, ya que pueden dar lugar a certificados caducados o revocados.
+
 ## Pasos siguientes
 
-Después de leer esta guía, ahora sabe cómo recuperar los certificados públicos mediante la API de Adobe Experience Platform. Para obtener más información acerca de la administración de datos de clientes con el fin de garantizar el cumplimiento de las regulaciones y las políticas organizativas, consulte la [Información general sobre la administración de datos](../home.md).
-
-<!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
-
-<!-- Add link after developer page is live -->
+Después de recuperar los certificados públicos mediante la API, actualice las integraciones para llamar regularmente a este punto de conexión antes de que los certificados caduquen. Para probar esta llamada de forma interactiva, visite la [página de referencia de la API MTLS](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). Para obtener instrucciones más amplias sobre las integraciones basadas en certificados, consulte [Información general sobre el cifrado de datos en Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) o [Información general sobre el control de datos](../home.md).

@@ -4,9 +4,9 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
+source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2692'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El destino de la API HTTP es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 
@@ -71,13 +71,11 @@ Puede usar [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) para garantizar 
 
 Si desea usar [!DNL mTLS] con [!DNL HTTP API] destinos, la dirección de servidor que puso en la página [detalles de destino](#destination-details) debe tener los protocolos [!DNL TLS] deshabilitados y solamente [!DNL mTLS] habilitados. Si el protocolo [!DNL TLS] 1.2 sigue habilitado en el extremo, no se envía ningún certificado para la autenticación del cliente. Esto significa que para usar [!DNL mTLS] con su destino [!DNL HTTP API], el extremo del servidor de &quot;recepción&quot; debe ser un extremo de conexión habilitado solo para [!DNL mTLS].
 
-### Descargar certificado {#certificate}
+### Recuperar e inspeccionar detalles del certificado {#certificate}
 
-Si desea comprobar [!DNL Common Name] (CN) y [!DNL Subject Alternative Names] (SAN) para realizar una validación adicional de terceros, puede descargar el certificado a continuación:
+Si desea inspeccionar los detalles del certificado, como [!DNL Common Name] (CN) y [!DNL Subject Alternative Names] (SAN), para la validación adicional de terceros, utilice la API para recuperar el certificado y extraer esos campos de la respuesta.
 
-* [Certificado público mTLS de la API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-También puede recuperar de forma segura certificados públicos realizando una petición GET al extremo MTLS. Consulte la [documentación de extremo de certificado público](../../../data-governance/mtls-api/public-certificate-endpoint.md) para obtener más información.
+Consulte la [documentación de extremo de certificado público](../../../data-governance/mtls-api/public-certificate-endpoint.md) para obtener más información.
 
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allowlist}
 
@@ -114,7 +112,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). Al conectarse a este destino, debe proporcionar la siguiente información:
 
@@ -219,7 +217,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* [La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones al destino de la API HTTP. [Más información](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
