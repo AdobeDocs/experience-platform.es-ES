@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
 source-wordcount: '1264'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ En Adobe Experience Platform, puede configurar los tiempos de caducidad de los d
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Caducidad de los datos de perfil seudónimo"
->abstract="La caducidad de los datos del perfil seudónimo representa el número de días que un perfil seudónimo permanecerá en Adobe Experience Platform antes de eliminarse. Este valor debe establecerse como mínimo en 1. Tenga en cuenta que el perfil seudónimo puede tardar hasta tres días en eliminarse."
+>abstract="La caducidad de los datos de perfil seudónimo representa el número de días que un perfil seudónimo permanecerá en Adobe Experience Platform antes de eliminarse. Este valor debe establecerse como mínimo en 1. Tenga en cuenta que el perfil seudónimo puede tardar hasta tres días en eliminarse."
 
 Un perfil se considera para la caducidad de datos seudónimos si cumple las siguientes condiciones:
 
@@ -131,7 +131,7 @@ En un caso de uso típico, puede establecer la caducidad de los datos de Experie
 
 +++ Respuesta
 
-- El sistema de eliminación [&#128279;](../identity-service/guardrails.md) del servicio de identidad , que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
+- El sistema de eliminación ](../identity-service/guardrails.md) del servicio de identidad [, que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
 - Si este comportamiento de eliminación provoca que se almacene un perfil solo de ECID en el Perfil del cliente en tiempo real (almacén de perfiles), la caducidad de los datos de perfil seudónimo eliminará este perfil del almacén de perfiles.
 
 +++

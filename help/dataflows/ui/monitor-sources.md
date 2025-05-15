@@ -28,7 +28,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
 * [Zonas protegidas](../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-## Uso del tablero de monitorización para la ingesta del lago de datos
+## Uso del panel de monitorización para la ingesta del lago de datos
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"

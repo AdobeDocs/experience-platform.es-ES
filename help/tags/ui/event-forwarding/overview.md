@@ -1,12 +1,12 @@
 ---
 title: Información general sobre el reenvío de eventos
-description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Experience Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
+description: Obtenga información sobre el reenvío de eventos en Adobe Experience Platform, que le permite utilizar Experience Platform Edge Network para ejecutar tareas sin cambiar la implementación de las etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -30,7 +30,7 @@ Este documento proporciona información general de alto nivel sobre el reenvío 
 >
 >Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Experience Platform, consulte la [descripción general de la recopilación de datos](../../../collection/home.md).
 
-El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=es) ofrece las siguientes ventajas:
+El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
 
 **Rendimiento**:
 

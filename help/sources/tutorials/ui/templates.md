@@ -15,7 +15,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
 >title="Plantillas para fuentes en la IU de Experience Platform"
->abstract="Las plantillas incluyen archivos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a una Experience Platform. Puede actualizar los archivos generados automáticamente para personalizarlos según sus casos de uso."
+>abstract="Las plantillas incluyen archivos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, espacios de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a una Experience Platform. Puede actualizar los archivos generados automáticamente para personalizarlos según sus casos de uso."
 
 >[!IMPORTANT]
 >

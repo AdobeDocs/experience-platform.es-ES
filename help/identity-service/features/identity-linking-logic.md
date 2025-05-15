@@ -14,7 +14,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_identities_simulatedgraph"
 >title="Gráfico simulado"
->abstract="Las identidades se vinculan cuando coinciden el área de nombres de identidad y el valor de identidad."
+>abstract="Las identidades se vinculan cuando coinciden el espacio de nombres de identidad y el valor de identidad."
 
 Se establece un vínculo entre dos identidades cuando coinciden el área de nombres de identidad y los valores de identidad.
 

@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '2732'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -50,16 +50,16 @@ Utilice la siguiente tabla para comprender qué tipos de conjuntos de datos pued
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de ingerir o recopilar datos a través de fuentes, Web SDK, Mobile SDK, Analytics Data Connector y Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=es#profile-attribute-datasets">Conjunto de datos de instantánea de perfil generado por el sistema</a>.</li></td>
+    <td><ul><li>Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de ingerir o recopilar datos a través de fuentes, Web SDK, Mobile SDK, Analytics Data Connector y Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Conjunto de datos de instantánea de perfil generado por el sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Consulte la documentación de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=es#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulte la documentación de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulte la documentación de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=es#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulte la documentación de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilice la siguiente tabla para comprender qué tipos de conjuntos de datos pued
 
 Vea el siguiente vídeo para obtener una explicación completa del flujo de trabajo descrito en esta página, los beneficios de utilizar la funcionalidad de exportar conjunto de datos y algunos casos de uso sugeridos.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448821?captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinos admitidos {#supported-destinations}
 
@@ -193,11 +193,11 @@ La opción **[!UICONTROL Exportar archivos incrementales]** está seleccionada d
 > 
 >Para las exportaciones de conjuntos de datos, los nombres de archivo tienen un formato preestablecido predeterminado que no se puede modificar. Consulte la sección [Verificar la exportación correcta del conjunto de datos](#verify) para obtener más información y ejemplos de archivos exportados.
 
-## Editar ruta de la carpeta {#edit-folder-path}
+## Edición de la ruta de la carpeta {#edit-folder-path}
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
->title="Editar ruta de la carpeta"
+>title="Edición de la ruta de la carpeta"
 >abstract="Utilice varias macros proporcionadas para personalizar la ruta de la carpeta donde se exportan los conjuntos de datos."
 
 >[!CONTEXTUALHELP]
@@ -280,7 +280,7 @@ Para eliminar conjuntos de datos de un flujo de datos existente, siga los pasos 
 
 ## Derechos de exportación de conjuntos de datos {#licensing-entitlement}
 
-Consulte los documentos de descripción del producto para comprender cuántos datos puede exportar por año para cada aplicación de Experience Platform. Por ejemplo, puede ver la Descripción de producto de Real-Time CDP [aquí](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulte los documentos de descripción del producto para comprender cuántos datos puede exportar por año para cada aplicación de Experience Platform. Por ejemplo, puede ver la Descripción de producto de Real-Time CDP [aquí](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Tenga en cuenta que los derechos de exportación de datos para diferentes aplicaciones no son aditivos. Por ejemplo, esto significa que si compra Real-Time CDP Ultimate y Adobe Journey Optimizer Ultimate, el derecho de exportación de perfil será el mayor de los dos, según las descripciones del producto. Las autorizaciones por volumen se calculan tomando el número total de perfiles con licencia y multiplicando por 500 KB para Real-Time CDP Prime o 700 KB para Real-Time CDP Ultimate para determinar el volumen de datos al que tiene derecho.
 
