@@ -21,7 +21,7 @@ ht-degree: 71%
    * [Herramientas de zona protegida](ui/sandbox-tooling.md)
    * [Uso compartido de paquetes entre organizaciones](ui/sharing-packages-across-orgs.md)
 * API de zona protegida {#api}
-   * Información general de [](api/overview.md)
+   * [Información general de ](api/overview.md)
    * [Introducción](api/getting-started.md)
    * [Zonas protegidas disponibles](api/available.md)
    * [Administración de zona protegida](api/sandboxes.md)
