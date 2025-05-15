@@ -2,10 +2,10 @@
 title: Desarrollar una extensión
 description: Este documento proporciona una visión general del proceso de desarrollo de extensiones de etiquetas, con vínculos a documentación adicional para ver procesos más detallados.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 93%
+source-wordcount: '462'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Una extensión de etiqueta debe considerarse como un producto (pequeño) con sus propios requisitos. Determinar cómo un usuario de Adobe Experience Platform querrá utilizar su extensión puede ayudarle a clasificar la funcionalidad según los tipos de evento, los tipos de condición, los tipos de acciones y los tipos de elementos de datos que debe proporcionar su extensión.
 
@@ -24,7 +24,7 @@ Con esos conocimientos puede planificar los componentes que se deben proporciona
 Una vez establecido el plan, las directrices que se muestran a continuación pueden ayudarle a comprender el proceso de desarrollo de la extensión:
 
 * La [guía de introducción](../getting-started.md) y otros documentos de **desarrollo de extensiones** en la navegación izquierda son buenos materiales de referencia para comprender las extensiones. Incluyen detalles sobre qué pueden hacer las extensiones, cómo se almacena y pasa la información de usuario entre su extensión y Adobe Experience Platform, cómo se agrupa el código en las bibliotecas, y cómo se interpreta y utiliza el código de extensión en el explorador durante la ejecución.
-* El [tutorial de vídeo de extensiones](https://youtu.be/rxjtC9o4rl0) es un excelente punto de partida.
+<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
 * La lista de reproducción de YouTube [Introducción a las extensiones](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) le guiará por el proceso de creación de paquetes de extensión.
 * [Explicación del esquema JSON](https://spacetelescope.github.io/understanding-json-schema/index.html#).
 * [JSON Lint/Validator](https://jsonlint.com/).
