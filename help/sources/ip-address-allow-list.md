@@ -2,9 +2,9 @@
 description: Obtenga información acerca de las direcciones IP que debe agregar a la lista de permitidos para utilizar correctamente las fuentes de Adobe Experience Platform.
 title: LISTA DE PERMITIDOS de direcciones IP para orígenes
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -290,6 +290,10 @@ Debe agregar las siguientes direcciones IP a su lista de permitidos para permiti
 
 ## Direcciones IP a la lista de permitidos para la conexión de orígenes a Experience Platform en [!DNL Amazon Web Services] (AWS) {#aws}
 
-Debe agregar la siguiente dirección IP a la lista de permitidos para conectar el origen a Experience Cloud en AWS:
+Debe agregar la siguiente dirección IP a la lista de permitidos para conectar el origen a Experience Cloud en AWS:.
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
