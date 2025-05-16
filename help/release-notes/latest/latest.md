@@ -2,9 +2,9 @@
 title: 'Notas de la versión de Adobe Experience Platform: abril de 2025'
 description: Las notas de la versión de abril de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
-workflow-type: ht
-source-wordcount: '2192'
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
+workflow-type: tm+mt
+source-wordcount: '2069'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,6 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 - [Modelo de datos de experiencia](#xdm)
 - [Servicio de identidad](#identity)
 - [Servicio de consultas](#query-service)
-- [Perfil del cliente en tiempo real](#profile)
 - [Zonas protegidas](#sandboxes)
 - [Fuentes](#sources)
 - [Manuales de tácticas de casos de uso](#use-case-playbooks)
@@ -129,18 +128,6 @@ Consulte datos en el lago de datos de Adobe Experience Platform utilizando SQL e
 | Guardar salidas de predicción de modelo usando CREATE TABLE e INSERT INTO | [Guarde los resultados de predicción seleccionados en tablas nuevas utilizando CREATE TABLE AS SELECT o inserte en tablas existentes utilizando INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). Si se habilita la selección mejorada de columnas, también se pueden mantener los resultados intermedios, como los vectores de características y las probabilidades, junto con las predicciones finales. Para ver ejemplos de uso, consulte la [documentación de sintaxis SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
 Para obtener más información sobre [!DNL Query Service], consulte la [[!DNL Query Service] Información general](../../query-service/home.md).
-
-## Perfil del cliente en tiempo real {#profile}
-
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos los canales en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción del cliente.
-
-| Función | Descripción |
-| ------- | ----------- |
-| Caducidad de los datos de perfil seudónimo | Administre la caducidad de sus datos de perfil seudónimos en el panel Perfil. Para obtener más información acerca de esta función y los perfiles seudónimos, lea la [Guía de caducidad de datos de perfil seudónimo](../../profile/pseudonymous-profiles.md). |
-
-{style="table-layout:auto"}
-
-Para obtener más información sobre el perfil del cliente en tiempo real, lea la [descripción general del perfil](../../profile/home.md)
 
 ## Zonas protegidas {#sandboxes}
 

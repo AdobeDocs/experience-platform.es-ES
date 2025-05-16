@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: abril de 2025'
 description: Las notas de la versión de abril de 2025 de Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: tm+mt
-source-wordcount: '2192'
-ht-degree: 94%
+source-wordcount: '2069'
+ht-degree: 99%
 
 ---
 
@@ -30,7 +30,6 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 - [Modelo de datos de experiencia](#xdm)
 - [Servicio de identidad](#identity)
 - [Servicio de consultas](#query-service)
-- [Perfil del cliente en tiempo real](#profile)
 - [Zonas protegidas](#sandboxes)
 - [Fuentes](#sources)
 - [Manuales de tácticas de casos de uso](#use-case-playbooks)
@@ -41,7 +40,7 @@ Experience League es una plataforma de aprendizaje integral que le ayudará a pe
 
 | Función | Descripción |
 | --- | --- |
-| Página de inicio personalizada | Acceda a su página de inicio personalizada en [Experience League](https://experienceleague.adobe.com/es/home#) y personalícela. Inicie sesión con sus credenciales de Adobe y, a continuación, seleccione **[!UICONTROL Experience League]** en el menú superior para optimizar su experiencia de aprendizaje. <ul><li>**Marcadores**: utilice la característica [!UICONTROL Marcadores] para guardar y recopilar sus recursos favoritos en un solo lugar. Puede guardar una variedad de contenido, incluidas listas de reproducción, artículos y tutoriales.</li><li>**Personalice su aprendizaje**: mejore su experiencia de aprendizaje al actualizar su perfil de Experience League con las funciones, sectores, productos y niveles de experiencia que mejor se adapten a sus necesidades.</li><li>**Recomendaciones**: vea contenido de aprendizaje recomendado en función de su actividad reciente.</li><li>**Vistos recientemente**: utilice la sección [!UICONTROL Vistos recientemente] para volver rápidamente al contenido visualizado recientemente, como documentación y vídeos.</li><li>**Recursos de aprendizaje**: use el panel [!UICONTROL Todos los recursos de aprendizaje] para ir a tutoriales, documentación, comunidad, eventos y certificaciones.</li><li>**Novedades**: vea la sección [!UICONTROL Novedades] para ver una secuencia del contenido más reciente en Experience League.</li><li>**Ver eventos anteriores bajo demanda**: mire transmisiones en vivo grabadas anteriormente sobre temas destacados de productos, casos de uso y tutoriales en la sección [!UICONTROL Ver eventos anteriores bajo demanda].</li></ul><br> ![Página de inicio personalizada en Experience League.](../2025/assets/april/personalized-home-page.png "Página de inicio personalizada en Experience League."){width="250" align="center" zoomable="yes"} |
+| Página de inicio personalizada | Acceda a su página de inicio personalizada en [Experience League](https://experienceleague.adobe.com/es/home#) y personalícela aún más. Inicie sesión con sus credenciales de Adobe y, a continuación, seleccione **[!UICONTROL Experience League]** en el menú superior para optimizar su experiencia de aprendizaje. <ul><li>**Marcadores**: utilice la característica [!UICONTROL Marcadores] para guardar y recopilar sus recursos favoritos en un solo lugar. Puede guardar una variedad de contenido, incluidas listas de reproducción, artículos y tutoriales.</li><li>**Personalice su aprendizaje**: mejore su experiencia de aprendizaje al actualizar su perfil de Experience League con las funciones, sectores, productos y niveles de experiencia que mejor se adapten a sus necesidades.</li><li>**Recomendaciones**: vea contenido de aprendizaje recomendado en función de su actividad reciente.</li><li>**Vistos recientemente**: utilice la sección [!UICONTROL Vistos recientemente] para volver rápidamente al contenido visualizado recientemente, como documentación y vídeos.</li><li>**Recursos de aprendizaje**: use el panel [!UICONTROL Todos los recursos de aprendizaje] para ir a tutoriales, documentación, comunidad, eventos y certificaciones.</li><li>**Novedades**: vea la sección [!UICONTROL Novedades] para ver una secuencia del contenido más reciente en Experience League.</li><li>**Ver eventos anteriores bajo demanda**: mire transmisiones en vivo grabadas anteriormente sobre temas destacados de productos, casos de uso y tutoriales en la sección [!UICONTROL Ver eventos anteriores bajo demanda].</li></ul><br> ![Página de inicio personalizada en Experience League.](../2025/assets/april/personalized-home-page.png "Página de inicio personalizada en Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -53,8 +52,8 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| Extensión [!DNL Adform] | La extensión del lado del servidor [!DNL Adform] permite que las marcas redireccionen fácilmente las audiencias fuera del sitio mediante ECID. Esta extensión del lado del servidor no depende de cookies de terceros ni de ID alternativos de cookies. Además, como esto se realiza completamente en el lado del servidor, no se necesitan píxeles adicionales ni otros cambios en el lado del cliente. Para obtener más información, consulte la [descripción general de la extensión de Adform](/help/tags/extensions/server/adform/overview.md). |
-| Extensión de la API de eventos web [!DNL Amazon] | La extensión de la API de conversiones [!DNL Amazon] permite a los anunciantes compartir interacciones del sitio web directamente con [!DNL Amazon], lo que mejora la atribución, la fiabilidad de los datos y la optimización de la campaña. Esta extensión es compatible con el reenvío de eventos, lo que le permite enviar eventos de conversión como compras, adiciones al carro de compras y mucho más, a la vez que garantiza la anulación de duplicación adecuada para unos informes precisos. Para obtener más información, consulte la [descripción general de la extensión de Amazon](/help/tags/extensions/server/amazon/overview.md). |
+| Extensión [!DNL Adform] | La extensión del lado del servidor [!DNL Adform] permite que las marcas vuelvan a direccionar fácilmente a los públicos fuera del sitio mediante ECID. Esta extensión del lado del servidor no depende de cookies de terceros ni de ID alternativos de cookies. Además, como esto se realiza completamente en el lado del servidor, no se necesitan píxeles adicionales ni otros cambios en el lado del cliente. Para obtener más información, consulte la [información general de la extensión Adform](/help/tags/extensions/server/adform/overview.md). |
+| Extensión de API de eventos web de [!DNL Amazon] | La extensión de API de conversiones de [!DNL Amazon] permite a los anunciantes compartir las interacciones del sitio web directamente con [!DNL Amazon], lo que mejora la atribución, la fiabilidad de los datos y la optimización de la campaña. Esta extensión es compatible con el reenvío de eventos, lo que le permite enviar eventos de conversión como compras, adiciones al carro de compras y mucho más, a la vez que garantiza la anulación de duplicación adecuada para unos informes precisos. Para obtener más información, consulte la [información general de la extensión de Amazon](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
 
@@ -129,18 +128,6 @@ Consulte datos en el lago de datos de Adobe Experience Platform utilizando SQL e
 | Guardar salidas de predicción de modelo usando CREATE TABLE e INSERT INTO | [Guarde los resultados de predicción seleccionados en tablas nuevas utilizando CREATE TABLE AS SELECT o inserte en tablas existentes utilizando INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). Si se habilita la selección mejorada de columnas, también se pueden mantener los resultados intermedios, como los vectores de características y las probabilidades, junto con las predicciones finales. Para ver ejemplos de uso, consulte la [documentación de sintaxis SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
 Para obtener más información sobre [!DNL Query Service], consulte la [[!DNL Query Service] Información general](../../query-service/home.md).
-
-## Perfil del cliente en tiempo real {#profile}
-
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos los canales en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción del cliente.
-
-| Función | Descripción |
-| ------- | ----------- |
-| Caducidad de los datos de perfil seudónimo | Administre la caducidad de sus datos de perfil seudónimos en el panel Perfil. Para obtener más información acerca de esta función y los perfiles seudónimos, lea la [Guía de caducidad de datos de perfil seudónimo](../../profile/pseudonymous-profiles.md). |
-
-{style="table-layout:auto"}
-
-Para obtener más información sobre el perfil del cliente en tiempo real, lea la [descripción general del perfil](../../profile/home.md)
 
 ## Zonas protegidas {#sandboxes}
 
