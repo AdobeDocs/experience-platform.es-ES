@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4143'
 ht-degree: 4%
 
 ---
@@ -54,6 +54,10 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
 >title="Retención del conjunto de datos"
 >abstract="La retención de Datalake establece reglas sobre cuánto tiempo se almacenan los datos y cuándo se deben eliminar en diferentes servicios. Esto garantiza el cumplimiento de las regulaciones, la administración de los costes de almacenamiento y el mantenimiento de la calidad de los datos."
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_orchestratedCampaigns_toggle"
+>title="Campañas organizadas"
+>abstract="Active este botón de alternancia para permitir que el conjunto de datos seleccionado se utilice en Campañas orquestadas de Adobe Journey Optimizer. El conjunto de datos debe utilizar un esquema relacional y solo se puede crear un conjunto de datos por esquema."
 
 En la interfaz de usuario [!DNL Experience Platform], seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir el panel **[!UICONTROL Conjuntos de datos]**. El panel enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere y el estado de la ejecución de la ingesta más reciente.
 
