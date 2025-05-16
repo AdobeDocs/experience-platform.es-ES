@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2025'
 description: Las notas de la versión de marzo de 2025 de Adobe Experience Platform.
 exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: ca2793f6e498f63bffb0f30ebc9797ea5ed52a70
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 95%
+source-wordcount: '1248'
+ht-degree: 97%
 
 ---
 
@@ -46,8 +46,8 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 | Destino | Descripción |
 | --- | --- |
-| [Conexión Personas de Demandbase](/help/destinations/catalog/advertising/demandbase-people.md) | Utilice la conexión [!DNL Demandbase People] para activar perfiles para sus campañas de Demandbase para la segmentación, personalización y supresión de audiencias. |
-| [Conexión a cuenta de Bombora](/help/destinations/catalog/advertising/bombora.md) | Utilice la conexión [!DNL Bombora] para activar perfiles para sus campañas Bombora de segmentación, personalización y supresión de audiencias, según [audiencias de cuenta](/help/segmentation/types/account-audiences.md). |
+| [Conexión de Demandbase People](/help/destinations/catalog/advertising/demandbase-people.md) | Utilice la conexión de [!DNL Demandbase People] para activar perfiles para sus campañas de Demandbase para la segmentación, personalización y supresión de públicos. |
+| [Conexión a cuenta de Bombora](/help/destinations/catalog/advertising/bombora.md) | Utilice la conexión de [!DNL Bombora] para activar perfiles para sus campañas de Bombora para la segmentación, personalización y supresión de públicos basadas en los [públicos de la cuenta](/help/segmentation/types/account-audiences.md). |
 | Actualización de [Atributos de Airship](/help/destinations/catalog/mobile-engagement/airship-attributes.md) | Desde el 25 de marzo de 2025, puede ver dos tarjetas de **[!UICONTROL Atributos de Airship]** una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino existente **[!UICONTROL Atributos de Airship]** por el de **[!UICONTROL (Obsoleto) Atributos de Airship]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Atributos de Airship]**. <br> Use la conexión **[!UICONTROL Atributos de Airship]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino [!DNL (Deprecated) Airship Attributes], se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br> Si está creando flujos de datos a través de la [API del servicio de flujo](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar su [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores: <ul><li> ID de especificación de flujo: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> ID de especificación de conexión: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
@@ -57,7 +57,7 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 | Función | Descripción |
 | --- | --- |
 | [Mejoras en la precisión de la creación de informes para destinos de streaming](../../dataflows/ui/monitor-destinations.md) | Desde marzo de 2025, Adobe está implementando gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre la creación de informes en Experience Platform y la creación de informes en las plataformas de destino. <br> Antes de esta actualización, **[!UICONTROL Identities failed]** incluía todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total. <br> Esta mejora se aplica a todos los destinos de streaming. <br>Tras esta mejora, es posible que los usuarios de los destinos de streaming puedan detectar un descenso previsto en su recuento de **[!UICONTROL Identidades fallidas]**. |
-| [Compatibilidad de la exportación de campos de tipo de asignación para destinos de empresa y perimetrales](/help/destinations/ui/export-arrays-maps-objects.md) | Al exportar datos a los destinos [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) y [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), ahora puede seleccionar campos de tipo de asignación para la exportación en el paso de asignación del flujo de trabajo de activación. <br> ![Exporte el campo de tipo de asignación al destino de empresa.](../2025/assets/march/export-map.png "Exporte el campo de tipo de asignación al destino de empresa."){width="250" align="center" zoomable="yes"} |
+| [Compatibilidad de la exportación de campos de tipo de asignación para destinos de empresa y perimetrales](/help/destinations/ui/export-arrays-maps-objects.md) | Al exportar datos a los destinos [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md) y [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), ahora puede seleccionar campos de tipo mapa para exportar en el paso de asignación del flujo de trabajo de activación. <br> ![Exporte el campo de tipo de asignación al destino de empresa.](../2025/assets/march/export-map.png "Exporte el campo de tipo de asignación al destino de empresa."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Para obtener más información, lea la [Información general de destinos](../../
 
 ## Composición de público federado {#federated-audience-composition}
 
-Para obtener información sobre las últimas actualizaciones de Federated Audience Composition, lea las [notas de la versión](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes) aquí.
+Para obtener más información sobre las últimas actualizaciones de la Composición de público federado, lea las [notas de la versión específicas](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes) aquí.
 
 ## Servicio de segmentación {#segmentation-service}
 
