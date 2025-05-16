@@ -3,9 +3,9 @@ title: Exportación de matrices, mapas y objetos desde Real-Time CDP
 type: Tutorial
 description: Obtenga información sobre cómo exportar matrices, mapas y objetos de Real-Time CDP a destinos de almacenamiento en la nube.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1077'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >La funcionalidad para exportar matrices y otros objetos complejos a destinos de almacenamiento en la nube suele estar disponible para los siguientes destinos: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
 >
->Además, puede exportar campos de tipo mapa a los siguientes destinos: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
+>Además, puede exportar campos de tipo mapa a los siguientes destinos: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
 Aprenda a exportar matrices, asignaciones y objetos de Real-Time CDP a [destinos de almacenamiento en la nube](/help/destinations/catalog/cloud-storage/overview.md). Además, puede exportar campos de tipo mapa a [destinos empresariales](/help/destinations/destination-types.md#advanced-enterprise-destinations) y [destinos de personalización edge](/help/destinations/destination-types.md#edge-personalization-destinations) limitados. Lea este documento para comprender el flujo de trabajo de exportación, los casos de uso habilitados por esta funcionalidad y las limitaciones conocidas. Consulte la tabla siguiente para comprender las funcionalidades disponibles por tipo de destino.
@@ -28,7 +28,7 @@ Aprenda a exportar matrices, asignaciones y objetos de Real-Time CDP a [destinos
 | Destinos de almacenamiento en la nube creados por socios personalizados existentes (destinos personalizados basados en archivos creados mediante Destination SDK) | No |
 | Destinos empresariales (Amazon Kinesis, Azure Event Hubs, API HTTP) | Parcialmente. Puede seleccionar y exportar objetos de tipo mapa en el paso de asignación del flujo de trabajo de activación. |
 | Destinos de streaming (por ejemplo: Facebook, Braze, Google Customer Match y más) | No |
-| Destinos de personalización de Edge (Adobe Target) | Parcialmente. Puede seleccionar y exportar objetos de tipo mapa en el paso de asignación del flujo de trabajo de activación. |
+| Destinos de personalización de Edge | No |
 
 {style="table-layout:auto"}
 
