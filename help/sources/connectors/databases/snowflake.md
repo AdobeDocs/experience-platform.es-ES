@@ -3,20 +3,24 @@ title: Información general sobre el conector Snowflake Source
 description: Obtenga información sobre cómo conectar Snowflake a Adobe Experience Platform mediante API o la interfaz de usuario.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 573691db9f71fcbe8b5edd4ea647d718ab3784e4
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
 
-# [!DNL Snowflake] origen
+# Fuente de [!DNL Snowflake] 
 
 >[!IMPORTANT]
 >
 >* El origen [!DNL Snowflake] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time Customer Data Platform Ultimate.
 >* De manera predeterminada, el origen [!DNL Snowflake] interpreta `null` como una cadena vacía. Póngase en contacto con su representante de Adobe para asegurarse de que los valores de `null` se escriban correctamente como `null` en Adobe Experience Platform.
 >* Para que Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC. La única marca de tiempo compatible con el origen [!DNL Snowflake] es TIMESTAMP_NTZ con la hora UTC.
+
+>[!WARNING]
+>
+>La autenticación básica (o autenticación de clave de cuenta) para el origen [!DNL Snowflake] quedará obsoleta en noviembre de 2025. Debe pasar a la autenticación basada en pares de claves para seguir utilizando el origen e introduciendo datos de la base de datos en Experience Platform. Para obtener más información sobre la obsolescencia, lea la [[!DNL Snowflake] guía de prácticas recomendadas sobre cómo mitigar los riesgos de compromiso de credenciales](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
