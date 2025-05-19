@@ -2,10 +2,10 @@
 title: Prácticas recomendadas de licencia de administración de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 2%
+source-wordcount: '2338'
+ht-degree: 1%
 
 ---
 
@@ -15,13 +15,34 @@ Adobe Experience Platform es un sistema abierto que transforma sus datos en perf
 
 Experience Platform ofrece licencias que establecen la cantidad de perfiles que puede crear y la cantidad de datos que puede introducir. Dada la capacidad de incorporar cualquier fuente, volumen o historial de datos, es posible superar los derechos de licencia a medida que crezcan los volúmenes de datos.
 
-Este documento describe las prácticas recomendadas a seguir y las herramientas que puede utilizar para administrar mejor las autorizaciones de Adobe Experience Platform.
+Lea esta guía para conocer las prácticas recomendadas a seguir y las herramientas que puede utilizar para administrar mejor las autorizaciones de Experience Platform.
 
-## Explicación del almacenamiento de datos de Adobe Experience Platform
+## Resumen de funciones {#summary-of-features}
 
-Experience Platform se compone principalmente de dos repositorios de datos: [!DNL data lake] y el almacén de perfiles.
+Utilice las prácticas recomendadas y las herramientas descritas en este documento para administrar mejor el uso de las autorizaciones en Experience Platform. Este documento se actualiza a medida que se lanzan funciones adicionales para ayudar a proporcionar visibilidad y control a todos los clientes de Experience Platform.
 
-**[!DNL data lake]** sirve principalmente para los siguientes propósitos:
+La siguiente tabla describe la lista de funciones disponibles actualmente para administrar mejor el derecho de uso de licencias.
+
+| Función | Descripción |
+| --- | --- |
+| [IU de conjunto de datos - Retención de datos de evento de experiencia](../../catalog/datasets/user-guide.md#data-retention-policy) | Configure un período de retención de datos fijo en el lago de datos y el almacén de perfiles. Los registros se eliminan al finalizar el período de retención configurado. |
+| [Habilitar/deshabilitar conjuntos de datos para el perfil del cliente en tiempo real](../../catalog/datasets/user-guide.md) | Habilite o deshabilite la ingesta de conjuntos de datos en el Perfil del cliente en tiempo real. |
+| [Caducidad de evento de experiencia en el almacén de perfiles](../../profile/event-expirations.md) | Aplique una hora de caducidad para todos los eventos introducidos en un conjunto de datos con perfil habilitado. Póngase en contacto con el equipo de su cuenta de Adobe o con el Servicio de atención al cliente para habilitar esta función. |
+| [Filtros de preparación de datos de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Aplique [!DNL Kafka] filtros para excluir la ingesta de datos innecesarios. |
+| [Filtros del conector de origen de Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplique filtros de conexión de origen de Audience Manager para excluir los datos innecesarios de la ingesta. |
+| [Filtros de datos de reenvío de eventos](../../tags/ui/event-forwarding/overview.md) | Aplique filtros [!DNL Kafka] del lado del servidor para excluir la ingesta de datos innecesarios.  Consulte la documentación sobre [reglas de etiquetas](../../tags/ui/managing-resources/rules.md) para obtener más información. |
+| [IU del panel de uso de licencias](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Monitorice el consumo de productos de Experience Platform por parte de su organización en relación con los derechos con licencia. Acceda a instantáneas de uso diario, tendencias predictivas y datos detallados a nivel de zona protegida para admitir la administración proactiva de licencias. |
+| [API de informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md) | Genera los conjuntos de datos que más contribuyen a su audiencia direccionable. |
+| [API de informe de superposición de identidad](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Genera las áreas de nombres de identidad que más contribuyen a su audiencia direccionable. |
+| [Caducidad de datos de perfil seudónimo](../../profile/pseudonymous-profiles.md) | Configure los tiempos de caducidad de los datos para perfiles seudónimos y elimine automáticamente los datos del almacén de perfiles. |
+
+{style="table-layout:auto"}
+
+## Explicación del almacenamiento de datos de Experience Platform
+
+Experience Platform se compone principalmente de dos repositorios de datos: el lago de datos y el almacén de perfiles.
+
+El lago de datos sirve principalmente para los siguientes propósitos:
 
 * Actúa como área de ensayo para la incorporación de datos en Experience Platform;
 * Actúa como almacenamiento de datos a largo plazo para todos los datos de Experience Platform;
@@ -42,7 +63,7 @@ Al obtener la licencia de Experience Platform, se le otorgan derechos de uso de 
 
 **[!DNL Addressable Audience]**: el número total de perfiles de clientes que están permitidos por contrato en Experience Platform, incluidos los perfiles conocidos y seudónimos.
 
-**[!DNL Total Data Volume]**: cantidad total de datos disponibles para que el servicio de perfil de Adobe Experience Platform los use en los flujos de trabajo de participación.
+**[!DNL Total Data Volume]**: cantidad total de datos disponibles para el perfil del cliente en tiempo real que se utilizará en los flujos de trabajo de participación.
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían según la licencia que haya adquirido su organización.
 
@@ -123,7 +144,7 @@ El almacén de perfiles está compuesto por los siguientes componentes:
 
 {style="table-layout:auto"}
 
-#### Informes de composición del almacén de perfiles
+### Informes de composición del almacén de perfiles
 
 Hay varios informes disponibles para ayudarle a comprender la composición del almacén de perfiles. Estos informes le ayudan a tomar decisiones informadas sobre cómo y dónde establecer las caducidades de los eventos de experiencia para optimizar el uso de la licencia:
 
@@ -132,13 +153,17 @@ Hay varios informes disponibles para ayudarle a comprender la composición del a
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Caducidad de datos de perfil seudónimo {#pseudonymous-profile-expirations}
+### Caducidad de datos de perfil seudónimo {#pseudonymous-profile-expirations}
 
-Esta capacidad le permite eliminar automáticamente perfiles seudónimos antiguos del almacén de perfiles. Para obtener más información sobre esta característica, lea [Información general sobre la caducidad de los datos del perfil seudónimo](../../profile/pseudonymous-profiles.md).
+Utilice la capacidad Caducidad de datos de perfiles seudónimos para quitar automáticamente datos de que ya no son válidos o útiles para sus casos de uso del almacén de perfiles. La caducidad de datos de perfil seudónimo elimina los registros de evento y de perfil. Como resultado, esta configuración reducirá los volúmenes de Audiencia direccionable. Para obtener más información sobre esta característica, lea [Información general sobre la caducidad de los datos del perfil seudónimo](../../profile/pseudonymous-profiles.md).
 
-#### Caducidades de eventos de experiencia {#event-expirations}
+### IU de conjunto de datos: retención de conjuntos de datos de Experience Event {#data-retention}
 
-Esta capacidad le permite eliminar automáticamente datos de comportamiento de un conjunto de datos con perfil habilitado que ya no es útil para sus casos de uso. Consulte la descripción general de [Caducidad de eventos de experiencia](../../profile/event-expirations.md) para obtener detalles sobre cómo funciona este proceso una vez que está habilitado para un conjunto de datos.
+Configure la caducidad y la retención del conjunto de datos para aplicar un período de retención fijo a los datos en el lago de datos y el almacén de perfiles. Una vez finalizado el período de retención, se eliminan los datos. La caducidad de datos de Experience Event solo elimina eventos y no elimina datos de clase de perfil, lo que reducirá el [volumen total de datos](total-data-volume.md) en las métricas de uso de licencias. Para obtener más información, lea la guía sobre [configuración de la directiva de retención de datos](../../catalog/datasets/user-guide.md#data-retention-policy).
+
+### Caducidad de eventos de experiencia de perfil {#event-expirations}
+
+Configure los tiempos de caducidad para eliminar automáticamente los datos de comportamiento del conjunto de datos con perfil habilitado una vez que ya no sean útiles para sus casos de uso. Lea la descripción general de [Vencimientos de eventos de experiencia](../../profile/event-expirations.md) para obtener más información.
 
 ## Resumen de las prácticas recomendadas para el cumplimiento de licencias {#best-practices}
 
@@ -147,24 +172,6 @@ A continuación se muestra una lista de algunas prácticas recomendadas que pued
 * Use el [tablero de uso de licencias](../../dashboards/guides/license-usage.md) para rastrear y supervisar las tendencias de uso de los clientes. Esto le permite adelantarse a cualquier posible uso adicional en el que pueda incurrir.
 * Configure [filtros de ingesta](#ingestion-filters) identificando los eventos necesarios para los casos de uso de segmentación y personalización. Esto le permite enviar solo los eventos importantes necesarios para sus casos de uso.
 * Asegúrese de que solo tiene [conjuntos de datos habilitados para el perfil](#ingestion-filters) que son necesarios para los casos de uso de segmentación y personalización.
-* Configure [caducidades de eventos de experiencia](#event-expirations) y [caducidades de datos de perfiles seudónimos](#pseudonymous-profile-expirations) para datos de alta frecuencia como datos web.
+* Configure [caducidades de eventos de experiencia](../../catalog/datasets/user-guide.md#data-retention-policy) y [caducidades de datos de perfiles seudónimos](../../profile/pseudonymous-profiles.md) para datos de alta frecuencia como datos web.
+* Configure las políticas de retención de [tiempo de vida (TTL) para los conjuntos de datos de evento de experiencia](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) en el lago de datos a fin de eliminar automáticamente los registros obsoletos y optimizar el uso del almacenamiento en línea con las autorizaciones.
 * Compruebe periódicamente [informes de composición de perfiles](#profile-store-composition-reports) para comprender su composición de almacén de perfiles. Esto le permite comprender las fuentes de datos que más contribuyen al consumo de licencias.
-
-## Resumen de funciones y disponibilidad {#feature-summary}
-
-Las prácticas recomendadas y las herramientas descritas en este documento le ayudarán a administrar mejor el uso de las autorizaciones en Adobe Experience Platform. Este documento se actualizará a medida que se publiquen funciones adicionales para ayudar a proporcionar visibilidad y control a todos los clientes de Experience Platform.
-
-La siguiente tabla describe la lista de funciones disponibles actualmente para administrar mejor el derecho de uso de licencias.
-
-| Función | Descripción |
-| --- | --- |
-| [Habilitar/deshabilitar conjuntos de datos para el perfil](../../catalog/datasets/user-guide.md) | Habilite o deshabilite la ingesta de conjuntos de datos en el Perfil del cliente en tiempo real. |
-| [Caducidad de evento de experiencia](../../profile/event-expirations.md) | Aplique una hora de caducidad para todos los eventos introducidos en un conjunto de datos con perfil habilitado. Póngase en contacto con el equipo de su cuenta de Adobe o con el Servicio de atención al cliente para habilitar esta función. |
-| [Filtros de preparación de datos de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Aplicar filtros [!DNL Kafka] para excluir la ingesta de datos innecesarios |
-| [Filtros del conector de origen de Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplicar filtros de conexión de origen de Audience Manager para excluir los datos innecesarios de la ingesta |
-| [Filtros de datos de reenvío de eventos](../../tags/ui/event-forwarding/overview.md) | Aplique filtros [!DNL Kafka] del lado del servidor para excluir la ingesta de datos innecesarios.  Consulte la documentación sobre [reglas de etiquetas](../../tags/ui/managing-resources/rules.md) para obtener más información. |
-| [IU del panel de uso de licencias](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Vea una instantánea de los datos relacionados con las licencias de su organización para Experience Platform |
-| [API de informe de superposición de conjuntos de datos](../../profile/tutorials/dataset-overlap-report.md) | Genera los conjuntos de datos que más contribuyen a su audiencia direccionable |
-| [API de informe de superposición de identidad](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Genera las áreas de nombres de identidad que más contribuyen a su audiencia direccionable |
-
-{style="table-layout:auto"}
