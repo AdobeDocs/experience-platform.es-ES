@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 27%
+source-wordcount: '409'
+ht-degree: 26%
 
 ---
 
@@ -110,6 +110,7 @@ ht-degree: 27%
    - [Registros de consultas](ui/query-logs.md)
    - [Monitorización de consultas programadas](ui/monitor-queries.md)
    - [Guía de credenciales](ui/credentials.md)
+   - [Migrar credenciales de JWT a OAuth](ui/migrate-jwt-to-oauth.md)
    - [Generar conjuntos de datos de salida a partir de resultados de consulta](ui/create-datasets.md)
 - API del servicio de consultas {#api}
    - [Introducción](api/getting-started.md)
