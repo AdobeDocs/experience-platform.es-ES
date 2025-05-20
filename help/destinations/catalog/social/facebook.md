@@ -3,9 +3,9 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de Facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de público en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2137'
 ht-degree: 6%
 
 ---
@@ -136,13 +136,13 @@ Antes de poder usar el área de nombres `Extern_ID` para enviar datos a [!DNL Fa
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar audiencias.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -157,7 +157,15 @@ El siguiente vídeo también muestra los pasos para configurar un destino [!DNL 
 
 ### Actualizar credenciales de autenticación {#refresh-authentication-credentials}
 
-Los tokens de Facebook caducan cada 60 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
+Los tokens de autenticación de Facebook caducan cada 60 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar.
+
+Puede supervisar las fechas de caducidad de los tokens desde la columna **[!UICONTROL Fecha de caducidad de la cuenta]** en las pestañas **[!UICONTROL Cuentas]** o **[!UICONTROL Examinar]**.
+
+![Columna de fecha de caducidad del token de la cuenta de Facebook en la pestaña Examinar](../../assets/catalog/social/facebook/account-expiration-browse.png)
+
+![Columna de fecha de caducidad del token de la cuenta de Facebook en la ficha Cuentas](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+
+Para evitar que la caducidad del token interrumpa los flujos de datos de activación, vuelva a autenticarse realizando los siguientes pasos:
 
 1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]**
 2. (Opcional) Utilice los filtros disponibles en la página para mostrar solo las cuentas de Facebook.
@@ -214,8 +222,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
