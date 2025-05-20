@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de consultas
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
+source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
 workflow-type: tm+mt
-source-wordcount: '2767'
+source-wordcount: '2467'
 ht-degree: 1%
 
 ---
@@ -104,49 +104,23 @@ A medida que escribe en el Editor de consultas, el editor completa automáticame
 
 ![Área de trabajo del Editor de consultas.](../images/ui/overview/query-editor.png)
 
-### Descargar resultados de la consulta {#download-query-results}
+### Acerca de la pestaña Resultados {#results-tab}
 
->[!AVAILABILITY]
->
->Las funciones de descarga solo están disponibles para los clientes con el complemento Data Distiller. Para obtener más información sobre Data Distiller, póngase en contacto con su representante de Adobe.
+La pestaña [!UICONTROL Result] muestra el resultado tabular de la consulta después de la ejecución. Utilice esta pestaña para revisar los resultados, validar los resultados y realizar acciones de seguimiento directamente en la interfaz. Desde esta vista, puede:
 
-Ahora puede descargar los resultados de la consulta directamente desde la interfaz de usuario del Editor de consultas. Después de una ejecución correcta de la consulta, puede descargar la salida en formato de archivo CSV, XLSX o JSON. Esta funcionalidad optimiza los flujos de trabajo para los equipos de marketing y análisis al permitir el acceso inmediato a los resultados de consultas para el análisis, la creación de informes y los procesos basados en Excel sin conexión.
+- Descargue los resultados en formato CSV, XLSX o JSON para análisis sin conexión. Ver [Descargar resultados de la consulta](./user-guide.md#download-query-results).
+- Ver los resultados en pantalla completa para examinar tablas grandes o conjuntos de datos anchos en un diseño de cuadrícula redimensionable. Ver [Ver resultados en pantalla completa](./user-guide.md#view-results).
+- Copie los resultados en el portapapeles en formato CSV para pegarlos rápidamente en aplicaciones de hoja de cálculo. Ver [Copiar resultados](./user-guide.md#copy-results).
 
-Para descargar los resultados de la consulta, seleccione **[!UICONTROL Descargar]** en la esquina superior derecha de la ficha **[!UICONTROL Resultado]** del editor de consultas. A continuación, elija **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** o **[!UICONTROL JSON]** en el menú desplegable. El archivo se descarga automáticamente en el equipo local.
+Estas funciones están diseñadas para admitir flujos de trabajo de validación, creación de informes y uso compartido de datos sin problemas, todo sin salir del Editor de consultas.
 
->[!NOTE]
->
->El botón **[!UICONTROL Descargar]** solo aparece cuando una consulta devuelve resultados. Si no se devuelve ningún registro, la ficha **[!UICONTROL Result]** muestra el mensaje &#39;No results&#39; y la opción de descarga está deshabilitada.
+### Consultas parametrizadas {#parameterized-queries}
 
-![La ficha de resultados del Editor de consultas con el menú desplegable Descarga resaltado.](../images/ui/overview/download-results.png)
+El Editor de consultas admite consultas parametrizadas, que permiten insertar variables en las instrucciones SQL y asignar valores dinámicamente durante la ejecución. Esta función ayuda a simplificar las consultas reutilizables y a mejorar la flexibilidad de los flujos de trabajo.
 
->[!NOTE]
->
->Al abrir un archivo CSV en Excel, puede que vea la siguiente advertencia: <br>&quot;Posible pérdida de datos. Es posible que se pierdan algunas características si guarda este libro en formato delimitado por comas (.csv). Para conservar estas funciones, guárdelo en formato de archivo de Excel&quot;.<br>Además, tenga en cuenta que el formato de fecha y hora puede variar según el tipo de archivo. Los archivos CSV conservan el formato mostrado en los resultados de la consulta, mientras que los archivos XLSX pueden aplicar formato localizado automáticamente en Excel.
+Puede definir parámetros al escribir consultas y, a continuación, asignar valores mediante la ficha [!UICONTROL Parámetros de consulta] antes de ejecutarlos. Las consultas parametrizadas son especialmente útiles para consultas programadas o plantillas de consulta compartidas en la organización.
 
-### Ver resultados en pantalla completa {#view-results}
-
-Después de ejecutar una consulta correcta, seleccione **[!UICONTROL Ver resultados]** en la ficha **[!UICONTROL Resultado]** para abrir una vista tabulada a pantalla completa de los resultados.
-
-La vista a pantalla completa muestra la salida en una cuadrícula de tamaño variable, lo que facilita la revisión de conjuntos de datos grandes y el análisis entre columnas. Este modo de vista previa es especialmente útil para analizar tablas anchas o revisar detalles de nivel de fila.
-
->[!NOTE]
->
->La vista previa es de solo lectura y no modifica la consulta ni el conjunto de datos.
-
-![Cuadro de diálogo de vista previa a pantalla completa con la opción Ver resultados seleccionada.](../images/ui/overview/view-results-fullscreen.png)
-
-### Copiar resultados {#copy-results}
-
-Utilice la función de copia mejorada en el Editor de consultas para copiar rápidamente los resultados de la consulta como valores separados por comas (CSV). Pegue fácilmente los datos copiados en aplicaciones de hoja de cálculo como Excel para un análisis más detallado. Esta funcionalidad mejora la legibilidad, conserva el formato y optimiza los flujos de trabajo de validación y creación de informes sin depender de herramientas de terceros.
-
-Puede copiar los resultados de la consulta desde la ficha [!UICONTROL Result] o desde la vista previa de resultados a pantalla completa. En la ficha **[!UICONTROL Resultado]**, seleccione el icono Copiar (![Un icono Copiar.](../../images/icons/copy.png)) para copiar todos los resultados de la consulta en el portapapeles. En la pestaña Resultados del editor de consultas, seleccione filas individuales o utilice el encabezado de columna de casilla de verificación para seleccionar todas las filas. Seleccione una sola fila para activar el icono de copia.
-
-![Pestaña de resultados del Editor de consultas con el icono de copia resaltado.](../images/ui/overview/query-editor-copy-icon.png)
-
-También puede seleccionar **[!UICONTROL Ver resultados]** para abrir la vista previa a pantalla completa. En este cuadro de diálogo, seleccione filas individuales o utilice la casilla de verificación de la esquina superior izquierda para seleccionar todas las filas y, a continuación, seleccione el icono de copia (![Un icono de copia.](../../images/icons/copy.png)) para copiar los datos seleccionados.
-
-![Cuadro de diálogo de vista previa a pantalla completa con filas de resultados seleccionadas y el icono de copia resaltado.](../images/ui/overview/results-copy.png)
+Para aprender a definir y utilizar parámetros, vea [Consultas parametrizadas en el Editor de consultas](./parameterized-queries.md).
 
 ## Consultas programadas {#scheduled-queries}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El Editor de consultas es una herramienta interactiva proporcionada por el Servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bf9de8c5358f1ab90dd5d70b0607dcfba7d1e2f5
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '3360'
 ht-degree: 0%
 
 ---
@@ -234,11 +234,69 @@ La consola proporciona información sobre el estado y el funcionamiento del serv
 >
 >La consola solo muestra los errores resultantes de la ejecución de una consulta. No muestra los errores de validación de consultas que se producen antes de ejecutar una consulta.
 
-### Resultados de consulta {#query-results}
+## Resultados de consulta {#query-results}
 
 Una vez finalizada una consulta, los resultados se muestran en la ficha **[!UICONTROL Resultados]**, junto a la ficha **[!UICONTROL Consola]**. Esta vista muestra el resultado tabular de la consulta, mostrando entre 50 y 1000 filas de resultados según el [recuento de resultados](#result-count) seleccionado. Esta vista le permite comprobar que la consulta produce el resultado esperado. Para generar un conjunto de datos con la consulta, quite los límites de las filas devueltas y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con el resultado. Consulte el [tutorial de generación de conjuntos de datos](./create-datasets.md) para obtener instrucciones sobre cómo generar un conjunto de datos a partir de los resultados de la consulta en el Editor de consultas.
 
 ![La ficha Resultados de la consola del Editor de consultas muestra los resultados de una ejecución de consulta.](../images/ui/query-editor/query-results.png)
+
+### Descargar resultados de la consulta {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Las funciones de descarga solo están disponibles para los clientes con el complemento Data Distiller. Para obtener más información sobre Data Distiller, póngase en contacto con su representante de Adobe.
+
+Después de ejecutar correctamente una consulta, descargue los resultados en formato CSV, XLSX o JSON para utilizarlos en flujos de trabajo de análisis, creación de informes o hoja de cálculo sin conexión. Esta funcionalidad optimiza los flujos de trabajo para los equipos de marketing y análisis al permitir el acceso inmediato a los resultados de consultas para el análisis, la creación de informes y los procesos basados en Excel sin conexión.
+
+Para descargar los resultados de la consulta, seleccione **[!UICONTROL Descargar]** en la esquina superior derecha de la ficha **[!UICONTROL Resultado]** del editor de consultas. A continuación, elija **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** o **[!UICONTROL JSON]** en el menú desplegable. El archivo se descarga automáticamente en el equipo local. Elija el formato que se adapte a su caso de uso, CSV para exportaciones ligeras, XLSX para hojas de cálculo con formato o JSON para la administración estructurada de datos.
+
+>[!NOTE]
+>
+>Si falta el botón **[!UICONTROL Descargar]**, compruebe los resultados de la consulta. El botón aparece únicamente cuando se devuelven registros. Si no se devuelve ningún registro, la ficha **[!UICONTROL Result]** muestra el mensaje &#39;No results&#39; y la opción de descarga está deshabilitada.
+
+![La ficha de resultados del Editor de consultas con el menú desplegable Descarga resaltado.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Al abrir un archivo CSV en Excel, puede que vea la siguiente advertencia: <br>&quot;Posible pérdida de datos. Es posible que se pierdan algunas características si guarda este libro en formato delimitado por comas (.csv). Para conservar estas funciones, guárdelo en formato de archivo de Excel&quot;.<br>Además, tenga en cuenta que el formato de fecha y hora puede variar según el tipo de archivo. Los archivos CSV conservan el formato mostrado en los resultados de la consulta, mientras que los archivos XLSX pueden aplicar formato localizado automáticamente en Excel. Si aparece esta advertencia, puede continuar sin problemas. Para conservar el formato específico de Excel, guarde el archivo como XLSX.
+
+### Ver resultados en pantalla completa {#view-results}
+
+Después de ejecutar una consulta correcta, seleccione **[!UICONTROL Ver resultados]** en la ficha **[!UICONTROL Resultado]** para abrir una vista tabulada a pantalla completa de los resultados.
+
+Utilice la vista previa a pantalla completa para explorar fácilmente tablas anchas e inspeccionar los detalles de nivel de fila sin desplazamiento horizontal. La vista a pantalla completa muestra la salida en una cuadrícula de tamaño variable, lo que facilita la revisión de conjuntos de datos grandes y el análisis entre columnas.
+
+>[!NOTE]
+>
+>La vista previa es de solo lectura y no modifica la consulta ni el conjunto de datos.
+
+![Cuadro de diálogo de vista previa a pantalla completa con la opción Ver resultados seleccionada.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copiar resultados {#copy-results}
+
+Utilice la función de copia mejorada en el Editor de consultas para copiar los resultados de la consulta como valores separados por comas (CSV) y pegarlos en herramientas de hoja de cálculo como Excel para su validación inmediata o para la creación de informes. Esta funcionalidad mejora la legibilidad, conserva el formato y optimiza los flujos de trabajo sin depender de herramientas de terceros.
+
+Puede copiar los resultados de la consulta desde la ficha [!UICONTROL Result] o desde la vista previa de resultados a pantalla completa. En la ficha **[!UICONTROL Resultado]**, seleccione el icono Copiar (![Un icono Copiar.](../../images/icons/copy.png)) para copiar todos los resultados de la consulta en el portapapeles. Para habilitar el icono de copia, seleccione primero una fila. Puede seleccionar filas individuales o utilizar la casilla de verificación de la parte superior para seleccionar todas las filas a la vez.
+
+![Pestaña de resultados del Editor de consultas con el icono de copia resaltado.](../images/ui/overview/query-editor-copy-icon.png)
+
+También puede seleccionar **[!UICONTROL Ver resultados]** para abrir la vista previa a pantalla completa. En este cuadro de diálogo, seleccione filas individuales o utilice la casilla de verificación de la esquina superior izquierda para seleccionar todas las filas y, a continuación, seleccione el icono de copia (![Un icono de copia.](../../images/icons/copy.png)) para copiar los datos seleccionados.
+
+![Cuadro de diálogo de vista previa a pantalla completa con filas de resultados seleccionadas y el icono de copia resaltado.](../images/ui/overview/results-copy.png)
+
+### Tabla de resultados heredados (disponibilidad limitada) {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>La tabla de resultados heredados solo está disponible para seleccionar usuarios mediante un indicador de funciones y es posible que no aparezca en su experiencia actual con el Editor de consultas. Si su equipo depende de la función de arrastrar para seleccionar flujos de trabajo, póngase en contacto con su representante de Adobe para solicitar acceso.
+
+La versión heredada del Editor de consultas está destinada a los usuarios que dependen de flujos de trabajo de datos manuales y flexibles, como controles de calidad o revisiones basadas en hojas de cálculo.
+
+Admite la selección de arrastre nativa basada en el explorador, de modo que puede resaltar y copiar cualquier parte de la salida, incluidas celdas o bloques individuales, mediante el comportamiento de selección estándar. Esto contrasta con la tabla mejorada, que utiliza la selección de filas estructuradas y las acciones de copia dedicadas.
+
+Los datos copiados están delimitados por tabuladores, por lo que al pegarlos en herramientas como Excel, las columnas permanecen alineadas y son legibles. Los encabezados de columna también se incluyen al arrastrar y seleccionar en la fila de encabezado.
+
+![Visualización de resultados en el editor heredado con resultados de simple arrastrar y seleccionar resaltados.](../images/ui/query-editor/legacy-results-table.png)
 
 ## Ejemplos {#examples}
 
@@ -254,7 +312,7 @@ El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Exp
 >
 >La interfaz de usuario que se muestra en el vídeo está obsoleta, pero la lógica utilizada en el flujo de trabajo sigue siendo la misma.
 
->[!VIDEO](https://video.tv.adobe.com/v/34045?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Pasos siguientes
 
