@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Caducidad de evento de experiencia
 description: Este documento proporciona instrucciones generales para configurar los tiempos de caducidad de los eventos de experiencia individuales dentro de un conjunto de datos de Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
+source-git-commit: 05479dcfd1a375b3589ce212168f324aa72af4ba
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 En Adobe Experience Platform, puede configurar los tiempos de caducidad para todos los eventos de experiencia que se incorporan a un conjunto de datos habilitado para [Perfil del cliente en tiempo real](./home.md). Esto permite eliminar automáticamente los datos del almacén de perfiles que ya no son válidos o útiles para sus casos de uso.
 
-Las caducidades de los eventos de experiencia no se pueden configurar mediante la interfaz de usuario o las API de Experience Platform. En su lugar, debe ponerse en contacto con el servicio de asistencia para habilitar la caducidad de los eventos de experiencia en los conjuntos de datos necesarios.
+Para obtener información sobre cómo administrar las caducidades de los eventos de experiencia en los conjuntos de datos, lea la [guía de la interfaz de usuario del conjunto de datos](../catalog/datasets/user-guide.md#data-retention-policy).
 
 >[!IMPORTANT]
 >
