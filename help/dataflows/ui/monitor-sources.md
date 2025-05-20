@@ -2,10 +2,10 @@
 description: Aprenda a utilizar el tablero de monitorización para monitorizar los datos introducidos en el lago de datos.
 title: Monitorización de ingesta de lago de datos
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
+source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 10%
+source-wordcount: '1458'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 10%
 >
 >El tablero de monitorización no admite actualmente fuentes de streaming, como la [fuente de API HTTP](../../sources/connectors/streaming/http.md). En este momento, solo puede utilizar el panel para monitorizar los orígenes de lotes.
 
-Lea este documento para aprender a utilizar el panel de monitorización para monitorizar la ingesta de lago de datos en la interfaz de usuario de Experience Platform.
+Puede utilizar el panel de monitorización de la interfaz de usuario de Adobe Experience Platform para recuperar métricas sobre los procesos de ingesta y retención de datos en el lago de datos. Utilice los gráficos de la interfaz para monitorizar las tendencias de ingesta y retención a lo largo del tiempo y resumir el rendimiento de todos los flujos de datos de origen.
+
+Lea este documento para aprender cómo puede utilizar el panel de monitorización para monitorizar todo el procesamiento de datos en el lago de datos, incluidas tanto la ingesta como la retención.
 
 ## Introducción  {#get-started}
 
@@ -60,6 +62,7 @@ La parte inferior del panel muestra una tabla que describe el informe de métric
 | --- | --- |
 | Registros recibidos | Número total de registros recibidos de un origen determinado. |
 | Registros ingeridos | Número total de registros ingeridos en el lago de datos. |
+| Registros eliminados | Número total de registros eliminados debido a la configuración de retención del lago de datos o a cambios en las operaciones de captura de datos. |
 | Registros omitidos | Número total de registros omitidos. Un registro omitido hace referencia a campos que se omitieron porque no eran necesarios para la ingesta. Por ejemplo, si crea un flujo de datos de origen con la ingesta parcial habilitada, puede configurar un umbral de tasa de error aceptable. Durante el proceso de ingesta, la ingesta omite los registros de campos que no son obligatorios, como los campos de identidad, siempre y cuando se encuentren dentro del umbral de error. |
 | Error de registros | Número total de registros que no se pudieron ingerir debido a errores. |
 | Tasa de ingesta | El porcentaje de registros que se ingirieron en función del número total de registros recibidos. |
@@ -79,7 +82,19 @@ Puede filtrar aún más los datos mediante las opciones proporcionadas sobre la 
 
 {style="table-layout:auto"}
 
+Para personalizar la visualización de la columna, seleccione el icono de configuración de columna ![column-icon](/help/images/icons/column-settings.png).
+
+![Panel de supervisión con el icono de configuración de columna seleccionado.](../assets/ui/monitor-sources/edit-columns.png)
+
+A continuación, use la ventana *[!UICONTROL Personalizar tabla]* para seleccionar las columnas que desea que muestre el panel. Cuando termine, seleccione **[!UICONTROL Aplicar]**.
+
+![Ventana emergente de columna personalizada en el panel de supervisión.](../assets/ui/monitor-sources/customize-table.png)
+
 Para monitorizar los datos que se están ingiriendo en un flujo de datos específico, seleccione el icono de filtro ![filter](/help/images/icons/filter-add.png) junto a un origen.
+
+>[!TIP]
+>
+>Puede utilizar el tablero de monitorización para monitorizar las métricas de eliminación de datos de los registros eliminados mediante políticas de retención de datos. Para obtener más información sobre la retención de datos, lea la guía sobre [configuración de políticas de retención de datos](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![Controle un flujo de datos específico seleccionando el icono de filtro junto a una fuente determinada.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
