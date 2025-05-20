@@ -5,9 +5,9 @@ title: Procesamiento de solicitudes de privacidad en el perfil del cliente en ti
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el Perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6eaa384feb1b84e6081f03cb4de9687ad26f437d
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1757'
 ht-degree: 1%
 
 ---
@@ -200,10 +200,10 @@ Dependiendo de si también incluyó el servicio de identidad (`identity`) y el l
 
 | Productos incluidos | Efectos |
 | --- | --- |
-| Solo `ProfileService` | El perfil se elimina inmediatamente en cuanto Experience Platform envía la confirmación de que se ha recibido la solicitud de eliminación. Sin embargo, el gráfico de identidad del perfil sigue existiendo y el perfil puede reconstruirse potencialmente a medida que se incorporan nuevos datos con las mismas identidades. Los datos asociados con el perfil también permanecen en el lago de datos. |
-| `ProfileService` y `identity` | El perfil y su gráfico de identidad asociado se eliminan inmediatamente en cuanto Experience Platform envía la confirmación de que se ha recibido la solicitud de eliminación. Los datos asociados con el perfil permanecen en el lago de datos. |
-| `ProfileService` y `aepDataLake` | El perfil se elimina inmediatamente en cuanto Experience Platform envía la confirmación de que se ha recibido la solicitud de eliminación. Sin embargo, el gráfico de identidad del perfil sigue existiendo y el perfil puede reconstruirse potencialmente a medida que se incorporan nuevos datos con las mismas identidades.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan en blanco y, por lo tanto, ningún servicio de [!DNL Experience Platform] puede obtener acceso a ellos. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
-| `ProfileService`, `identity` y `aepDataLake` | El perfil y su gráfico de identidad asociado se eliminan inmediatamente en cuanto Experience Platform envía la confirmación de que se ha recibido la solicitud de eliminación.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan en blanco y, por lo tanto, ningún servicio de [!DNL Experience Platform] puede obtener acceso a ellos. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
+| Solo `ProfileService` | El perfil se considera eliminado inmediatamente cuando Privacy Service envía la confirmación de que la solicitud de eliminación se ha completado. Sin embargo, el gráfico de identidad del perfil sigue existiendo y el perfil puede reconstruirse potencialmente a medida que se incorporan nuevos datos con las mismas identidades. Los datos no identificables personalmente asociados con el perfil también permanecen en el lago de datos. |
+| `ProfileService` y `identity` | El perfil y su gráfico de identidad asociado se eliminan inmediatamente en cuanto Privacy Service envía la confirmación de que la solicitud de eliminación se ha completado. Los datos no identificables personalmente asociados con el perfil también permanecen en el lago de datos. |
+| `ProfileService` y `aepDataLake` | El perfil se elimina inmediatamente en cuanto Privacy Service envía la confirmación de que la solicitud de eliminación se ha completado. Sin embargo, el gráfico de identidad del perfil sigue existiendo y el perfil puede reconstruirse potencialmente a medida que se incorporan nuevos datos con las mismas identidades.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan en blanco y, por lo tanto, ningún servicio de [!DNL Experience Platform] puede obtener acceso a ellos. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
+| `ProfileService`, `identity` y `aepDataLake` | El perfil y su gráfico de identidad asociado se eliminan inmediatamente en cuanto Privacy Service envía la confirmación de que la solicitud de eliminación se ha completado.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan en blanco y, por lo tanto, ningún servicio de [!DNL Experience Platform] puede obtener acceso a ellos. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
 
 Consulte la [[!DNL Privacy Service] documentación](../privacy-service/home.md#monitor) para obtener más información sobre el seguimiento de estados de trabajos.
 
