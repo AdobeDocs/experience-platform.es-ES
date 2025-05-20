@@ -2,10 +2,10 @@
 title: Reglas de vinculación de gráfico de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 6%
+source-wordcount: '1547'
+ht-degree: 4%
 
 ---
 
@@ -14,21 +14,13 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Reglas de vinculación de gráficos de identidad"
->abstract="Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios."
+>abstract="Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante Reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios."
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada y todos los clientes pueden acceder a ellas desde los entornos limitados de desarrollo.
->
->* **Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.
->* **Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.
->* **Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.
+>Póngase en contacto con su equipo de cuenta de Adobe si tiene una zona protegida existente que requiera que los gráficos contraídos se anulen (&quot;fijos&quot;) después de habilitar la configuración de identidad.
 
 Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona a través de un identificador de persona, como un CRMID. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de gráfico&quot;). Para evitar estas combinaciones no deseadas, puede usar las configuraciones proporcionadas mediante [!DNL Identity Graph Linking Rules] y permitir una personalización precisa para los usuarios.
-
-Vea el siguiente vídeo para obtener información adicional sobre el uso de [!DNL Identity Graph Linking Rules]:
-
->[!VIDEO](https://video.tv.adobe.com/v/3448275/?learn=on&enablevpops&captions=spa)
 
 ## Introducción 
 
@@ -41,6 +33,70 @@ Los siguientes documentos son esenciales para comprender [!DNL Identity Graph Li
 * [Prioridad del área de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)
+
+## Biblioteca de vídeos
+
+Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de las reglas de vinculación de gráficos de identidad.
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="Reglas de vinculación de gráfico de identidad: Información general" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Reglas de vinculación de gráfico de identidad: Información general"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="Reglas de vinculación de gráfico de identidad: Información general">Reglas de vinculación de gráfico de identidad: Información general</a>
+                    </p>
+                    <p class="is-size-6">Vea este vídeo para obtener información general sobre las reglas de vinculación de gráficos de identidad y descubra cómo puede utilizar esta capacidad para evitar el colapso de gráficos.</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
+                  </a>
+                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Leer</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Reglas de vinculación de gráfico de identidad: Configuración de identidad" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Reglas de vinculación de gráfico de identidad: Configuración de identidad"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="Reglas de vinculación de gráfico de identidad: Configuración de identidad">Reglas de vinculación de gráfico de identidad: Configuración de identidad</a>
+                    </p>
+                    <p class="is-size-6">Vea este vídeo para aprender a configurar sus parámetros de identidad y crear gráficos de identidad y perfiles de cliente de alta calidad para aplicaciones de Adobe Experience Platform como Real-Time CDP, Adobe Journey Optimizer y Customer Journey Analytics.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
+                  </a>
+                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Leer</span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Contraer escenarios de gráfico {#graph-collapse-scenarios}
 
@@ -107,8 +163,8 @@ Con [!DNL Identity Graph Linking Rules] puede:
 | Terminología | Descripción |
 | --- | --- |
 | Área de nombres única | Un área de nombres única es un área de nombres de identidad que se ha configurado para que sea distinta en el contexto de un gráfico de identidades. Puede configurar un área de nombres para que sea única mediante la interfaz de usuario. Una vez que un área de nombres se define como única, un gráfico solo puede tener una identidad que contenga ese área de nombres. |
-| Prioridad del área de nombres | La prioridad del área de nombres hace referencia a la importancia relativa de las áreas de nombres en comparación con otras. La prioridad del área de nombres se puede configurar a través de la IU. Puede clasificar las áreas de nombres en un gráfico de identidad determinado. Una vez habilitada, la prioridad de los nombres se utilizará en varios escenarios, como la entrada para el algoritmo de optimización de identidades y la determinación de la identidad principal para los fragmentos de eventos de experiencia. |
-| Algoritmo de optimización de identidad | El algoritmo de optimización de identidad garantiza que las directrices creadas al configurar un área de nombres única y las prioridades de área de nombres se apliquen en un gráfico de identidad determinado. |
+| Prioridad del área de nombres | La prioridad del área de nombres hace referencia a la importancia relativa de las áreas de nombres en comparación con otras. La prioridad del área de nombres se puede configurar a través de la IU. Puede clasificar las áreas de nombres en un gráfico de identidad determinado. Una vez habilitada, la prioridad de los nombres se utilizará en varios casos, como la entrada para el algoritmo de optimización de identidad y la determinación de la identidad principal para los fragmentos de evento de experiencia. |
+| Algoritmo de optimización de identidad | El algoritmo de optimización de identidad garantiza que las directrices creadas configurando un área de nombres única y las prioridades de área de nombres se apliquen en un gráfico de identidad determinado. |
 
 ### Área de nombres única {#unique-namespace}
 

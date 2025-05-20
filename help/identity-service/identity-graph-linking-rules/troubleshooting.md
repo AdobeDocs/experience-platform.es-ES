@@ -1,23 +1,15 @@
 ---
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
-description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
+description: Obtenga información sobre cómo solucionar problemas comunes en Reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '3375'
+source-wordcount: '3285'
 ht-degree: 0%
 
 ---
 
 # Guía de solución de problemas para [!DNL Identity Graph Linking Rules]
-
->[!AVAILABILITY]
->
->Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada y todos los clientes pueden acceder a ellas desde los entornos limitados de desarrollo.
->
->* **Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.
->* **Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.
->* **Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.
 
 A medida que prueba y valida [!DNL Identity Graph Linking Rules], puede encontrar algunos problemas relacionados con la ingesta de datos y el comportamiento de gráficos. Lea este documento para aprender a solucionar algunos problemas comunes que podrían producirse al trabajar con [!DNL Identity Graph Linking Rules].
 
@@ -190,7 +182,7 @@ Esta sección describe problemas comunes que pueden surgir con respecto al compo
 
 ### Los ExperienceEvents no autenticados se están adjuntando al perfil autenticado incorrecto
 
-El algoritmo de optimización de identidad respetará [los vínculos establecidos más recientemente y eliminará los vínculos más antiguos](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Por lo tanto, es posible que una vez habilitada esta función, los ECID se puedan reasignar (volver a vincular) de una persona a otra. Para comprender el historial de cómo se vincula una identidad a lo largo del tiempo, siga los pasos a continuación:
+El algoritmo de optimización de identidad respetará [los vínculos establecidos más recientemente y quitará los vínculos más antiguos](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Por lo tanto, es posible que una vez habilitada esta función, los ECID se puedan reasignar (volver a vincular) de una persona a otra. Para comprender el historial de cómo se vincula una identidad a lo largo del tiempo, siga los pasos a continuación:
 
 **Pasos para solucionar problemas**
 
@@ -266,14 +258,14 @@ ORDER BY timestamp desc
 
 **Pasos para solucionar problemas**
 
-Consulte la documentación sobre [algoritmo de optimización de identidad](./identity-optimization-algorithm.md), así como los tipos de estructuras de gráficos admitidos.
+Consulte la documentación sobre [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md), así como los tipos de estructuras de gráficos admitidos.
 
 * Lea la [guía de configuración de gráficos](./example-configurations.md) para ver ejemplos de estructuras de gráficos compatibles.
 * También puede leer la [guía de implementación](./implementation-guide.md#appendix) para ver ejemplos de estructuras de gráficos no admitidas. Hay dos escenarios que podrían ocurrir:
    * No hay un área de nombres única en todos los perfiles.
    * Se produce un escenario [&quot;colgando ID&quot;](./implementation-guide.md#dangling-loginid-scenario). En esta situación, el servicio de identidad no puede determinar si el ID colgado está asociado con ninguna de las entidades de persona de los gráficos.
 
-También puede usar la [herramienta de simulación de gráficos de la interfaz de usuario](./graph-simulation.md) para simular eventos y configurar su propia configuración de área de nombres y prioridad de área de nombres únicas. Hacerlo puede ayudarle a comprender una línea de base del comportamiento del algoritmo de optimización de identidad.
+También puede usar la [herramienta de simulación de gráficos de la interfaz de usuario](./graph-simulation.md) para simular eventos y configurar su propia configuración de área de nombres y prioridad de área de nombres únicas. Hacerlo puede ayudarle a obtener una comprensión básica del comportamiento del algoritmo de optimización de identidad.
 
 Si los resultados de la simulación coinciden con las expectativas de comportamiento del gráfico, puede comprobar si la [configuración de identidad](./identity-settings-ui.md) coincide con la configuración de la simulación.
 
@@ -330,7 +322,7 @@ En esta sección se describe una lista de respuestas a las preguntas más frecue
 
 ## Algoritmo de optimización de identidad {#identity-optimization-algorithm}
 
-Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca del [algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
+Lea esta sección para obtener respuestas a las preguntas frecuentes acerca del [algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
 
 ### Tengo un CRMID para cada una de mis unidades de negocio (B2C CRMID, B2B CRMID), pero no tengo un área de nombres única en todos mis perfiles. ¿Qué sucederá si marco B2C CRMID y B2B CRMID como únicos y habilito mi configuración de identidad?
 

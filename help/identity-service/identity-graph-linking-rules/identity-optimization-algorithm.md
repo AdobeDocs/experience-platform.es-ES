@@ -2,9 +2,9 @@
 title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1527'
 ht-degree: 4%
 
 ---
@@ -15,14 +15,6 @@ ht-degree: 4%
 >id="platform_identities_uniquenamespace"
 >title="Área de nombres única"
 >abstract="Un gráfico no puede tener dos identidades con un área de nombres única. Si un gráfico intenta superar este límite, se conservan los vínculos más recientes y se eliminan los vínculos más antiguos."
-
->[!AVAILABILITY]
->
->Las reglas de vinculación de gráficos de identidad están actualmente en disponibilidad limitada y todos los clientes pueden acceder a ellas desde los entornos limitados de desarrollo.
->
->* **Requisitos de activación**: la característica permanecerá inactiva hasta que configure y guarde su [!DNL Identity Settings]. Sin esta configuración, el sistema seguirá funcionando normalmente, sin cambios en el comportamiento.
->* **Notas importantes**: durante esta fase de disponibilidad limitada, la segmentación de Edge puede producir resultados inesperados en los miembros del segmento. Sin embargo, la transmisión y la segmentación por lotes funcionarán según lo esperado.
->* **Pasos siguientes**: para obtener información sobre cómo habilitar esta característica en los entornos limitados de producción, póngase en contacto con el equipo de la cuenta de Adobe.
 
 El algoritmo de optimización de identidad es un algoritmo gráfico del servicio de identidad que ayuda a garantizar que un gráfico de identidad sea representativo de una sola persona y, por lo tanto, evita la combinación no deseada de identidades en el perfil del cliente en tiempo real.
 
@@ -36,7 +28,7 @@ Un área de nombres única determina los vínculos que se eliminan si se contrae
 
 Un solo perfil combinado y su gráfico de identidad correspondiente deben representar a un único individuo (entidad de persona). Un solo individuo suele estar representado por CRMID o ID de inicio de sesión. Se espera que no se fusionen dos personas (CRMID) en un solo perfil o gráfico.
 
-Debe especificar qué áreas de nombres representan una entidad de persona en Identity Service mediante el algoritmo de optimización de identidad. Por ejemplo, si una base de datos CRM define una cuenta de usuario para asociarla a un único CRMID y a una sola dirección de correo electrónico, la configuración de identidad de esta zona protegida tendría este aspecto:
+Debe especificar qué áreas de nombres representan una entidad de persona en el servicio de identidad mediante el algoritmo de optimización de identidad. Por ejemplo, si una base de datos CRM define una cuenta de usuario para asociarla a un único CRMID y a una sola dirección de correo electrónico, la configuración de identidad de esta zona protegida tendría este aspecto:
 
 * Área de nombres CRMID = única
 * Área de nombres de correo electrónico = única
@@ -68,7 +60,7 @@ Al ingerir nuevas identidades, el servicio de identidad comprueba si las nuevas 
 
 ## Detalles del algoritmo de optimización de identidad
 
-Cuando se infringe la restricción de área de nombres única, el algoritmo de optimización de identidad vuelve a reproducir los vínculos y reconstruye el gráfico desde cero.
+Cuando se infringe la restricción de área de nombres única, el algoritmo de optimización de identidad &quot;vuelve a reproducir&quot; los vínculos y reconstruye el gráfico desde cero.
 
 * Los vínculos se ordenan en el siguiente orden:
    * Último evento.
@@ -78,9 +70,9 @@ Cuando se infringe la restricción de área de nombres única, el algoritmo de o
 
 ![Diagrama que visualiza el algoritmo de optimización de identidad.](../images/ido_algorithm.png)
 
-## Ejemplo de escenarios de algoritmo de optimización de identidad
+## Casos de ejemplo para el algoritmo de optimización de identidad
 
-En la siguiente sección se describe cómo se comporta el algoritmo de optimización de la identidad en situaciones como dispositivos compartidos o ingesta de datos con la misma marca de tiempo.
+En la siguiente sección se describe cómo se comporta el algoritmo de optimización de identidad en situaciones como el uso compartido de dispositivos o la ingesta de datos con la misma marca de tiempo.
 
 ### Dispositivo compartido
 
@@ -143,7 +135,7 @@ En este ejemplo, las áreas de nombres CRMID y Email se designan como únicas. C
    * Esto se convierte en una infracción de la configuración del área de nombres única, ya que crea un solo gráfico con dos áreas de nombres CRMID.
    * Como resultado, el algoritmo de optimización de identidad elimina el vínculo más antiguo, que en este caso es el vínculo entre la identidad de Jane con el área de nombres CRMID y la identidad con test<span>@test.
 
-Con el algoritmo de optimización de identidad, los valores de identidad incorrectos, como correos electrónicos o números de teléfono falsos, no se propagan en varios gráficos de identidad diferentes.
+Con el algoritmo de optimización de identidad, los valores de identidad incorrectos, como correos electrónicos falsos o números de teléfono, no se propagan en varios gráficos de identidad diferentes.
 
 ![correo electrónico incorrecto](../images/identity-settings/bad-email.png)
 
