@@ -69,9 +69,9 @@ La ficha **[!UICONTROL Cuentas]** muestra detalles acerca de las conexiones que 
 
 >[!TIP]
 >
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Activar control](/help/images/icons/data-add.png)**[!UICONTROL Activar ]**/**[!UICONTROL  Activar audiencias ]**/**[!UICONTROL  Exportar conjuntos de datos ]**para exportar audiencias o conjuntos de datos a ese destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Editar detalles](/help/images/icons/edit.png)**[!UICONTROL Editar detalles ]**para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Eliminar control](/help/images/icons/delete.png)**[!UICONTROL Eliminar ]**para [eliminar](delete-destination-account.md) una cuenta de destino existente.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Activar control](/help/images/icons/data-add.png)**[!UICONTROL Activar &#x200B;]**/**[!UICONTROL &#x200B; Activar audiencias &#x200B;]**/**[!UICONTROL &#x200B; Exportar conjuntos de datos &#x200B;]**&#x200B;para exportar audiencias o conjuntos de datos a ese destino.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Editar detalles](/help/images/icons/edit.png)**[!UICONTROL Editar detalles &#x200B;]**&#x200B;para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Eliminar control](/help/images/icons/delete.png)**[!UICONTROL Eliminar &#x200B;]**&#x200B;para [eliminar](delete-destination-account.md) una cuenta de destino existente.
 
 ![Pestaña Cuentas](../assets/ui/workspace/destination-account-options.png)
 
@@ -92,10 +92,10 @@ La ficha **[!UICONTROL Examinar]** muestra los destinos con los que ha estableci
 
 >[!TIP]
 >
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Activar control de audiencias](/help/images/icons/data-add.png)**[!UICONTROL Activar ]**para exportar audiencias o conjuntos de datos a ese destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Eliminar control](/help/images/icons/delete.png)**[!UICONTROL Eliminar ]**para [quitar](delete-destinations.md) una conexión existente a un destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Ver en control de supervisión](/help/images/icons/monitoring.png)**[!UICONTROL Ver en control de supervisión ]**para ver la información de activación de este destino en el [panel de supervisión](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Suscribirse a alertas ](/help/images/icons/alert-add.png)**[!UICONTROL Suscribirse a alertas ]**para suscribirse a alertas de flujo de datos de destino. Puede suscribirse a alertas para recibir mensajes sobre el estado, el éxito o el error de la ejecución del flujo. Consulte [Suscribirse a alertas de destino en contexto](alerts.md) para obtener información detallada sobre las alertas de flujo de datos de destino.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Activar control de audiencias](/help/images/icons/data-add.png)**[!UICONTROL Activar &#x200B;]**&#x200B;para exportar audiencias o conjuntos de datos a ese destino.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Eliminar control](/help/images/icons/delete.png)**[!UICONTROL Eliminar &#x200B;]**&#x200B;para [quitar](delete-destinations.md) una conexión existente a un destino.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Ver en control de supervisión](/help/images/icons/monitoring.png)**[!UICONTROL Ver en control de supervisión &#x200B;]**&#x200B;para ver la información de activación de este destino en el [panel de supervisión](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Suscribirse a alertas ](/help/images/icons/alert-add.png)**[!UICONTROL Suscribirse a alertas &#x200B;]**&#x200B;para suscribirse a alertas de flujo de datos de destino. Puede suscribirse a alertas para recibir mensajes sobre el estado, el éxito o el error de la ejecución del flujo. Consulte [Suscribirse a alertas de destino en contexto](alerts.md) para obtener información detallada sobre las alertas de flujo de datos de destino.
 
 ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
 
