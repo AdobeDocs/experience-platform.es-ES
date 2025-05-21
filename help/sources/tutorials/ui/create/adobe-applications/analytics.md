@@ -1,19 +1,19 @@
 ---
-title: Creación de una conexión de Adobe Analytics Source en la IU
-description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
+title: Conectar Adobe Analytics A Experience Platform
+description: Aprenda a llevar los datos del grupo de informes de Adobe Analytics a Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 086777a09eec17c94a7e0a5d2db58e4a1f6b523f
 workflow-type: tm+mt
-source-wordcount: '2676'
+source-wordcount: '2731'
 ht-degree: 3%
 
 ---
 
-# Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
+# Conectar Adobe Analytics a Experience Platform
 
-Este tutorial proporciona los pasos para crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir datos del grupo de informes de Adobe Analytics en Adobe Experience Platform.
+Lea esta guía para aprender a utilizar la fuente de Adobe Analytics para introducir los datos del grupo de informes de Analytics en Adobe Experience Platform.
 
-## Introducción
+## Introducción 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -25,12 +25,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 Es importante comprender los siguientes términos clave utilizados en este documento:
 
-* **Atributo estándar**: Los atributos estándar son cualquier atributo predefinido por Adobe. Contienen el mismo significado para todos los clientes y están disponibles en los grupos de campos de datos de origen [!DNL Analytics] y de esquema [!DNL Analytics].
-* **Atributo personalizado**: Los atributos personalizados son cualquier atributo en la jerarquía de variables personalizadas de [!DNL Analytics]. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=es) para obtener más información sobre eVars.
+* **Atributo estándar**: Los atributos estándar son cualquier atributo predefinido por Adobe. Contienen el mismo significado para todos los clientes y están disponibles en los grupos de campos Datos de origen de Analytics y Esquema de Analytics.
+* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizada en Analytics. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [documentación de Analytics sobre las variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obtener más información sobre las eVars.
 * **Cualquier atributo de los grupos de campos personalizados**: Los atributos que se originan en grupos de campos creados por clientes están todos definidos por el usuario y no se consideran atributos estándar ni personalizados.
-* **Nombres descriptivos**: Los nombres descriptivos son etiquetas proporcionadas por humanos para variables personalizadas en una implementación de [!DNL Analytics]. Consulte la siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=es) para obtener más información sobre nombres descriptivos.
 
-## Crear una conexión de origen con Adobe Analytics
+## Navegar por el catálogo de fuentes
 
 >[!NOTE]
 >
@@ -39,99 +38,92 @@ Es importante comprender los siguientes términos clave utilizados en este docum
 >* Un flujo de datos que rellena los datos históricos del grupo de informes con un retraso de 13 meses en el lago de datos. Este flujo de datos finaliza cuando se completa el relleno.
 >* Flujo de flujo de datos que envía datos activos al lago de datos y a [!DNL Real-Time Customer Profile]. Este flujo de datos se ejecuta continuamente.
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. En la categoría *[!UICONTROL aplicaciones de Adobe]*, seleccione la tarjeta Adobe Analytics y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede utilizar la barra de búsqueda para reducir los orígenes mostrados.
+![El catálogo de orígenes con la tarjeta de origen de Adobe Analytics seleccionada.](../../../../images/tutorials/create/analytics/catalog.png)
 
-En la categoría **[!UICONTROL aplicaciones de Adobe]**, seleccione **[!UICONTROL Adobe Analytics]** y, a continuación, **[!UICONTROL Agregar datos]**.
-
-![catálogo](../../../../images/tutorials/create/analytics/catalog.png)
-
-### Seleccionar datos
+## Seleccionar datos
 
 >[!IMPORTANT]
 >
->Los grupos de informes enumerados en la pantalla pueden provenir de varias regiones. Usted es responsable de comprender las limitaciones y obligaciones de sus datos y de cómo los utiliza en las regiones cruzadas de Adobe Experience Platform. Asegúrese de que su empresa lo permita.
+>* Los grupos de informes enumerados en la pantalla pueden provenir de varias regiones. Usted es responsable de comprender las limitaciones y obligaciones de sus datos y de cómo los utiliza en las regiones cruzadas de Adobe Experience Platform. Asegúrese de que su empresa lo permita.
+>* Los datos de varios grupos de informes se pueden habilitar para Perfil del cliente en tiempo real solo si no hay conflictos de datos, como dos propiedades personalizadas (eVars, listas y props) con un significado diferente.
 
-El paso **[!UICONTROL Agregar datos de origen de Analytics]** le proporciona una lista de [!DNL Analytics] datos de grupo de informes con los que crear una conexión de origen.
+Un grupo de informes es un contenedor de datos que forma la base de los informes de Analytics. Una organización puede tener muchos grupos de informes, cada uno con diferentes conjuntos de datos.
 
-Un grupo de informes es un contenedor de datos que forma la base de los informes de [!DNL Analytics]. Una organización puede tener muchos grupos de informes, cada uno con diferentes conjuntos de datos.
-
-Puede ingerir grupos de informes de cualquier región (Estados Unidos, Reino Unido o Singapur) siempre y cuando se asignen a la misma organización que la instancia de zona protegida de Experience Platform en la que se crea la conexión de origen. Un grupo de informes se puede ingerir utilizando un solo flujo de datos activo. Ya se ha introducido un grupo de informes que no se puede seleccionar, ya sea en la zona protegida que está utilizando o en una zona protegida diferente.
+Puede ingerir grupos de informes de cualquier región (Estados Unidos, Reino Unido o Singapur) siempre y cuando se asignen a la misma organización que la instancia de zona protegida de Experience Platform en la que se crea la conexión de origen. Un grupo de informes se puede ingerir utilizando un solo flujo de datos activo. Si un grupo de informes es gris y no se puede seleccionar, ya se ha introducido, ya sea en la zona protegida que está utilizando o en una zona protegida diferente.
 
 Se pueden realizar varias conexiones entrantes para colocar varios grupos de informes en la misma zona protegida. Si los grupos de informes tienen distintos esquemas para las variables (como eVars o eventos), deben asignarse a campos específicos en los grupos de campos personalizados y evitar conflictos de datos con [preparación de datos](../../../../../data-prep/ui/mapping.md). Los grupos de informes solo se pueden añadir a una sola zona protegida.
 
-![](../../../../images/tutorials/create/analytics/report-suite.png)
+Seleccione **[!UICONTROL Grupo de informes]** y, a continuación, utilice la interfaz de *[!UICONTROL Agregar datos de origen de Analytics]* para navegar por la lista e identificar el grupo de informes de Analytics que desea introducir en Experience Platform. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
->[!NOTE]
->
->Los datos de varios grupos de informes se pueden habilitar para Perfil del cliente en tiempo real solo si no hay conflictos de datos, como dos propiedades personalizadas (eVars, listas y props) con un significado diferente.
-
-Para crear una conexión de origen de [!DNL Analytics], seleccione un grupo de informes y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
-
-![](../../../../images/tutorials/create/analytics/add-data.png)
+![Se ha seleccionado un grupo de informes de análisis para la ingesta y el botón &quot;Siguiente&quot; está resaltado](../../../../images/tutorials/create/analytics/add-data.png)
 
 &lt;!: los grupos de informes de Analytics se pueden configurar para una zona protegida a la vez. Para importar el mismo grupo de informes en una zona protegida diferente, el flujo del conjunto de datos deberá eliminarse y volver a crearse una instancia mediante la configuración para una zona protegida diferente.—>
 
-### Asignación
+## Asignación {#mapping}
 
 >[!IMPORTANT]
 >
 >Las transformaciones de la preparación de datos pueden añadir latencia al flujo de datos general. La latencia adicional añadida varía en función de la complejidad de la lógica de transformación.
 
-Antes de poder asignar los datos de [!DNL Analytics] al esquema XDM de destino, primero debe seleccionar si está utilizando un esquema predeterminado o personalizado.
+Antes de poder asignar los datos de Analytics al esquema XDM de destino, primero debe determinar si está utilizando un esquema predeterminado o personalizado.
 
-Un esquema predeterminado crea un nuevo esquema en su nombre, que contiene el grupo de campos [!DNL Adobe Analytics ExperienceEvent Template]. Para usar un esquema predeterminado, seleccione **[!UICONTROL Esquema predeterminado]**.
+>[!BEGINTABS]
 
-![esquema predeterminado](../../../../images/tutorials/create/analytics/default-schema.png)
+>[!TAB Esquema predeterminado]
 
-Con un esquema personalizado, puede elegir cualquier esquema disponible para los datos de [!DNL Analytics], siempre y cuando ese esquema tenga el grupo de campos [!DNL Adobe Analytics ExperienceEvent Template]. Para usar un esquema personalizado, seleccione **[!UICONTROL Esquema personalizado]**.
+Un esquema predeterminado crea un nuevo esquema en su nombre. Este esquema recién creado contiene el grupo de campos [!DNL Adobe Analytics ExperienceEvent Template]. Para usar un esquema predeterminado, seleccione **[!UICONTROL Esquema predeterminado]**.
 
-![esquema personalizado](../../../../images/tutorials/create/analytics/custom-schema.png)
+![Paso de selección de esquema del flujo de trabajo de origen de Analytics, con &quot;Esquema predeterminado&quot; seleccionado.](../../../../images/tutorials/create/analytics/default-schema.png)
 
-La página [!UICONTROL Mapping] proporciona una interfaz para asignar campos de origen a sus campos de esquema de destino correspondientes. Desde aquí, puede asignar variables personalizadas a nuevos grupos de campos de esquema y aplicar cálculos según sea compatible con la preparación de datos. Seleccione un esquema de destino para iniciar el proceso de asignación.
+>[!TAB Esquema personalizado]
+
+Con un esquema personalizado, puede elegir cualquier esquema disponible para los datos de Analytics, siempre y cuando ese esquema tenga el grupo de campos [!DNL Adobe Analytics ExperienceEvent Template]. Para usar un esquema personalizado, seleccione **[!UICONTROL Esquema personalizado]**.
+
+![Paso de selección de esquema del flujo de trabajo de origen de Analytics, con &quot;Esquema personalizado&quot; seleccionado.](../../../../images/tutorials/create/analytics/custom-schema.png)
+
+>[!ENDTABS]
+
+Utilice la interfaz *[!UICONTROL Mapping]* para asignar campos de origen a sus campos de esquema de destino correspondientes. Puede asignar variables personalizadas a nuevos grupos de campos de esquema y aplicar cálculos según lo admitido por la preparación de datos. Seleccione un esquema de destino para iniciar el proceso de asignación.
 
 >[!TIP]
 >
 >En el menú de selección de esquemas solo se muestran los esquemas que tienen el grupo de campos [!DNL Adobe Analytics ExperienceEvent Template]. Se omiten otros esquemas. Si no hay esquemas adecuados disponibles para los datos del grupo de informes, debe crear un nuevo esquema. Para ver los pasos detallados sobre la creación de esquemas, consulte la guía de [creación y edición de esquemas en la interfaz de usuario](../../../../../xdm/ui/resources/schemas.md).
 
-![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
+![Panel de selección de esquema de destino de la interfaz de asignación.](../../../../images/tutorials/create/analytics/select-schema.png)
 
-La sección [!UICONTROL Asignar campos estándar] muestra paneles para [!UICONTROL asignaciones estándar aplicadas], [!UICONTROL asignaciones estándar no coincidentes] y [!UICONTROL Asignaciones personalizadas]. Consulte la siguiente tabla para obtener información específica sobre cada categoría:
+Puede consultar el panel [!UICONTROL Asignar campos estándar] para ver las métricas de las [!UICONTROL asignaciones estándar aplicadas]. [!UICONTROL Asignaciones estándar con conflictos de nombre de descriptor] y [!DNL Custom mappings].
 
 | Asignar campos estándar | Descripción |
 | --- | --- |
-| [!UICONTROL Asignaciones estándar aplicadas] | El panel [!UICONTROL Asignaciones estándar aplicadas] muestra la cantidad total de atributos asignados. Las asignaciones estándar hacen referencia a conjuntos de asignaciones entre todos los atributos de los datos de origen [!DNL Analytics] y los atributos correspondientes del grupo de campos [!DNL Analytics]. Están preasignados y no se pueden editar. |
-| [!UICONTROL Asignaciones estándar no coincidentes] | El panel [!UICONTROL Asignaciones estándar no coincidentes] hace referencia al número de atributos asignados que contienen conflictos de nombres descriptivos. Estos conflictos aparecen cuando se reutiliza un esquema que ya tiene un conjunto rellenado de descriptores de campo de un grupo de informes diferente. Puede continuar con el flujo de datos [!DNL Analytics] incluso con conflictos de nombres descriptivos. |
-| [!UICONTROL Asignaciones personalizadas] | El panel [!UICONTROL Asignaciones personalizadas] muestra el número de atributos personalizados asignados, incluidos eVars, props y listas. Las asignaciones personalizadas hacen referencia a conjuntos de asignaciones entre atributos personalizados en los datos de origen [!DNL Analytics] y atributos en grupos de campos personalizados incluidos en el esquema seleccionado. |
+| [!UICONTROL Asignaciones estándar aplicadas] | El panel [!UICONTROL Asignaciones estándar aplicadas] muestra la cantidad total de atributos asignados. Las asignaciones estándar hacen referencia a asignaciones entre todos los atributos de los datos de Analytics de origen y los atributos correspondientes del grupo de campos de Analytics. Están preasignados y no se pueden editar. |
+| [!UICONTROL Asignaciones estándar con conflictos de nombre de descriptor] | El panel [!UICONTROL Asignaciones estándar con conflictos de nombre de descriptor] hace referencia al número de atributos asignados que contienen conflictos de nombre. Estos conflictos aparecen cuando se reutiliza un esquema que ya tiene un conjunto rellenado de descriptores de campo de un grupo de informes diferente. Puede continuar con el flujo de datos de Analytics incluso con conflictos de nombres. |
+| [!UICONTROL Asignaciones personalizadas] | El panel [!UICONTROL Asignaciones personalizadas] muestra el número de atributos personalizados asignados, incluidos eVars, props y listas. Las asignaciones personalizadas hacen referencia a la asignación entre atributos personalizados en los datos de Analytics de origen y atributos en grupos de campos personalizados incluidos en el esquema seleccionado. |
 
-![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
+### Asignaciones estándar {#standard-mappings}
 
-Para obtener una vista previa del grupo de campos de esquema de plantilla [!DNL Analytics] ExperienceEvent, seleccione **[!UICONTROL Ver]** en el panel [!UICONTROL Asignaciones estándar aplicadas].
+Experience Platform detecta automáticamente la asignación para cualquier conflicto de nombres. Si no hay conflictos con sus asignaciones, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![vista](../../../../images/tutorials/create/analytics/view.png)
-
-La página [!UICONTROL Grupo de campos de esquema de plantilla Adobe Analytics ExperienceEvent] proporciona una interfaz que se utilizará para inspeccionar la estructura del esquema. Cuando termine, seleccione **[!UICONTROL Cerrar]**.
-
-![vista previa de grupo de campos](../../../../images/tutorials/create/analytics/field-group-preview.png)
-
-Experience Platform detecta automáticamente los conjuntos de asignaciones para cualquier conflicto de nombres descriptivos. Si no hay conflictos con sus conjuntos de asignaciones, seleccione **[!UICONTROL Siguiente]** para continuar.
-
-![asignación](../../../../images/tutorials/create/analytics/mapping.png)
+![El encabezado de asignaciones estándar no muestra ningún conflicto de nombres](../../../../images/tutorials/create/analytics/standard.png)
 
 >[!TIP]
 >
->Si existen conflictos de nombres descriptivos entre el grupo de informes de origen y el esquema seleccionado, aún puede continuar con el flujo de datos [!DNL Analytics], lo que reconoce que los descriptores de campo no se cambiarán. También puede optar por crear un nuevo esquema con un conjunto de descriptores en blanco.
+>Si hay conflictos de nombre entre el grupo de informes de origen y el esquema seleccionado, puede continuar con el flujo de datos de Analytics, reconociendo que los descriptores de campo no se cambiarán. También puede optar por crear un nuevo esquema con un conjunto de descriptores en blanco.
 
-#### Asignaciones personalizadas
+## Asignaciones personalizadas {#custom-mappings}
 
 Puede utilizar las funciones de preparación de datos para agregar nuevas asignaciones personalizadas o campos calculados para atributos personalizados. Para agregar asignaciones personalizadas, seleccione **[!UICONTROL Personalizado]**.
 
-![personalizado](../../../../images/tutorials/create/analytics/custom.png)
+![Ficha de asignación personalizada en el flujo de trabajo de origen de Analytics.](../../../../images/tutorials/create/analytics/custom.png)
 
-Según sus necesidades, puede seleccionar **[!UICONTROL Agregar nueva asignación]** o **[!UICONTROL Agregar campo calculado]** y continuar creando asignaciones personalizadas para sus atributos personalizados. Para ver los pasos detallados sobre cómo usar las funciones de preparación de datos, lee la [guía de la interfaz de usuario de la preparación de datos](../../../../../data-prep/ui/mapping.md).
+* **[!UICONTROL Campos de filtro]**: use la entrada de texto [!UICONTROL Campos de filtro] para filtrar campos de asignación específicos en sus asignaciones.
+* **[!UICONTROL Agregar nueva asignación]**: para agregar un nuevo campo de origen y asignación de campo de destino, seleccione **[!UICONTROL Agregar nueva asignación]**.
+* **[!UICONTROL Agregar campo calculado]**: Si es necesario, puede seleccionar **[!UICONTROL Agregar campo calculado]** para crear un nuevo campo calculado para sus asignaciones.
+* **[!UICONTROL Asignación de importación]**: puede reducir el tiempo de configuración manual del proceso de ingesta de datos y limitar los errores mediante la funcionalidad de asignación de importación de la preparación de datos. Seleccione **[!UICONTROL Importar asignación]** para importar asignaciones de un flujo existente o de un archivo exportado. Para obtener más información, lea [la guía sobre importación y exportación de asignaciones](../../../../../data-prep/ui/mapping.md#import-mapping).
+* **[!UICONTROL Descargar plantilla]**: también puede descargar una copia CSV de sus asignaciones y configurar las asignaciones en su dispositivo local. Seleccione **[!UICONTROL Descargar plantilla]** para descargar una copia CSV de sus asignaciones. Debe asegurarse de que solo utiliza los campos proporcionados en el archivo de origen y en el esquema de destino.
 
-La siguiente documentación proporciona más recursos para comprender la preparación de datos, los campos calculados y las funciones de asignación:
+Consulte la siguiente documentación para obtener más información sobre la preparación de datos.
 
 * [Resumen de preparación de datos](../../../../../data-prep/home.md)
 * [Funciones de asignación de preparación de datos](../../../../../data-prep/functions.md)
@@ -175,7 +167,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >title="Crear reglas de filtro"
 >abstract="Defina las reglas de filtrado de nivel de fila y columna al enviar datos al perfil del cliente en tiempo real. Utilice el filtrado de nivel de fila para aplicar condiciones y dictar qué datos **incluir para la ingesta de perfiles**. Utilice el filtrado de nivel de columna para seleccionar las columnas de datos que desea **excluir para la ingesta de perfiles**. Las reglas de filtrado no se aplican a los datos enviados al lago de datos."
 
-Una vez que haya completado las asignaciones para los datos del grupo de informes [!DNL Analytics], puede aplicar reglas y condiciones de filtrado para incluir o excluir selectivamente los datos de la ingesta en el Perfil del cliente en tiempo real. La compatibilidad con el filtrado solo está disponible para los datos de [!DNL Analytics] y los datos solo se filtran antes de introducir [!DNL Profile.]. Todos los datos se incorporan al lago de datos.
+Una vez que haya completado las asignaciones para los datos del grupo de informes de Analytics, puede aplicar reglas y condiciones de filtrado para incluir o excluir selectivamente los datos de la ingesta en el Perfil del cliente en tiempo real. La compatibilidad con el filtrado solo está disponible para datos de Analytics y los datos solo se filtran antes de introducir [!DNL Profile.]. Todos los datos se incorporan al lago de datos.
 
 >[!BEGINSHADEBOX]
 
@@ -183,8 +175,8 @@ Una vez que haya completado las asignaciones para los datos del grupo de informe
 
 * Puede utilizar la funcionalidad de filtrado para los datos que se dirigen a Perfil, pero no para los que se dirigen al lago de datos.
 * Puede utilizar el filtrado para los datos activos, pero no puede filtrar los datos de relleno.
-   * El origen [!DNL Analytics] no rellena los datos en el perfil.
-* Si usa las configuraciones de la preparación de datos durante la configuración inicial de un flujo de [!DNL Analytics], esos cambios también se aplicarán al relleno automático de 13 meses.
+   * La fuente de Analytics no rellena los datos en el perfil.
+* Si utiliza las configuraciones de la preparación de datos durante la configuración inicial de un flujo de Analytics, esos cambios también se aplican al relleno automático de 13 meses.
    * Sin embargo, este no es el caso del filtrado, ya que solo se reserva para datos activos.
 * La preparación de datos se aplica a las rutas de ingesta por flujo continuo y por lotes. Si modifica una configuración de preparación de datos existente, esos cambios se aplican a los nuevos datos entrantes en las rutas de ingesta por flujo continuo y por lotes.
    * Sin embargo, cualquier configuración de la preparación de datos no se aplica a los datos que ya se han introducido en Experience Platform, independientemente de si son datos de flujo continuo o por lotes.
@@ -202,19 +194,15 @@ Una vez que haya completado las asignaciones para los datos del grupo de informe
 >
 >Utilice el filtrado de nivel de fila para aplicar condiciones y dictar qué datos **incluir para la ingesta de perfiles**. Use el filtrado a nivel de columna para seleccionar las columnas de datos que desea **excluir para la ingesta de perfiles**.
 
-Puede filtrar los datos de la ingesta de [!DNL Profile] en los niveles de fila y columna. El filtrado de nivel de fila permite definir criterios como que la cadena contiene, es igual a, comienza o termina con. También puede usar el filtrado de nivel de fila para unir condiciones usando `AND` así como `OR`, y negar condiciones usando `NOT`.
+Puede filtrar los datos para la ingesta de perfiles en los niveles de fila y columna. Utilice el filtrado de nivel de fila para definir criterios como que la cadena contiene, es igual a, comienza o termina con. También puede usar el filtrado de nivel de fila para unir condiciones usando `AND` así como `OR`, y negar condiciones usando `NOT`.
 
-Para filtrar los datos de [!DNL Analytics] en el nivel de fila, seleccione **[!UICONTROL Filtro de fila]**.
+Para filtrar los datos de Analytics en el nivel de fila, seleccione **[!UICONTROL Filtro de fila]** y utilice el carril izquierdo para navegar por la jerarquía de esquema e identificar el atributo de esquema que desee seleccionar.
 
-![filtro de fila](../../../../images/tutorials/create/analytics/row-filter.png)
-
-Utilice el carril izquierdo para navegar por la jerarquía de esquemas y seleccionar el atributo de esquema que desee para explorar en profundidad un esquema determinado.
-
-![carril izquierdo](../../../../images/tutorials/create/analytics/left-rail.png)
+![Interfaz de filtro de fila para datos de Analytics.](../../../../images/tutorials/create/analytics/row-filter.png)
 
 Una vez identificado el atributo que desea configurar, selecciónelo y arrástrelo del carril izquierdo al panel de filtrado.
 
-![panel de filtrado](../../../../images/tutorials/create/analytics/filtering-panel.png)
+![Atributo &quot;Manufacturer&quot; seleccionado para el filtrado.](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
 Para configurar diferentes condiciones, seleccione **[!UICONTROL es igual a]** y luego seleccione una condición en la ventana desplegable que aparece.
 
@@ -230,43 +218,33 @@ La lista de condiciones configurables incluye:
 * [!UICONTROL existe]
 * [!UICONTROL no existe]
 
-![condiciones](../../../../images/tutorials/create/analytics/conditions.png)
+![Menú desplegable de condiciones con una lista de operadores de condición.](../../../../images/tutorials/create/analytics/conditions.png)
 
 A continuación, introduzca los valores que desea incluir en función del atributo seleccionado. En el ejemplo siguiente, [!DNL Apple] y [!DNL Google] están seleccionados para su ingesta como parte del atributo **[!UICONTROL Manufacturer]**.
 
-![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+![Panel de filtrado con los atributos y valores seleccionados incluidos.](../../../../images/tutorials/create/analytics/include.png)
 
-Para especificar más las condiciones de filtrado, agregue otro atributo del esquema y, a continuación, agregue valores basados en ese atributo. En el ejemplo siguiente, se agrega el atributo **[!UICONTROL Model]** y los modelos como [!DNL iPhone 13] y [!DNL Google Pixel 6] se filtran para su ingesta.
+Para especificar más las condiciones de filtrado, agregue otro atributo del esquema y, a continuación, agregue valores basados en ese atributo. En el ejemplo siguiente, se agrega el atributo **[!UICONTROL Model]** y los modelos como [!DNL iPhone 16] y [!DNL Google Pixel 9] se filtran para su ingesta.
 
-![include-model](../../../../images/tutorials/create/analytics/include-model.png)
+![Atributos y valores adicionales incluidos en el contenedor.](../../../../images/tutorials/create/analytics/include-model.png)
 
 Para agregar un nuevo contenedor, seleccione los puntos suspensivos (`...`) en la parte superior derecha de la interfaz de filtrado y, a continuación, seleccione **[!UICONTROL Agregar contenedor]**.
 
-![add-container](../../../../images/tutorials/create/analytics/add-container.png)
+![Se seleccionó el menú desplegable &quot;Agregar contenedor&quot;.](../../../../images/tutorials/create/analytics/add-container.png)
 
-Una vez agregado un nuevo contenedor, seleccione **[!UICONTROL Include]** y, a continuación, seleccione **[!UICONTROL Exclude]** en la ventana desplegable que aparece.
+Una vez agregado un nuevo contenedor, selecciona **[!UICONTROL Incluir]** y luego selecciona **[!UICONTROL Excluir]** en el menú desplegable. Agregue los atributos y valores que desee excluir y, cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
-![excluir](../../../../images/tutorials/create/analytics/exclude.png)
-
-A continuación, complete el mismo proceso arrastrando los atributos de esquema y agregando sus valores correspondientes que desee excluir del filtrado. En el ejemplo siguiente, [!DNL iPhone 12], [!DNL iPhone 12 mini] y [!DNL Google Pixel 5] se filtran para no ser excluidos del atributo **[!UICONTROL Modelo]**, el horizontal se excluye de la **[!UICONTROL orientación de la pantalla]** y el número de modelo [!DNL A1633] se excluye de **[!UICONTROL Número de modelo]**.
-
-Cuando termine, seleccione **[!UICONTROL Siguiente]**.
-
-![excluir-ejemplos](../../../../images/tutorials/create/analytics/exclude-examples.png)
+![Atributos y valores filtrados para exclusión.](../../../../images/tutorials/create/analytics/exclude.png)
 
 ### Filtrado de nivel de columna
 
 Seleccione **[!UICONTROL Filtro de columna]** del encabezado para aplicar el filtrado de nivel de columna.
 
-![filtro de columna](../../../../images/tutorials/create/analytics/column-filter.png)
+La página se actualiza a un árbol de esquema interactivo y muestra los atributos de esquema en el nivel de columna. Desde aquí, puede seleccionar las columnas de datos que desea excluir de la Ingesta de perfiles. También puede expandir una columna y seleccionar atributos específicos para la exclusión.
 
-La página se actualiza a un árbol de esquema interactivo y muestra los atributos de esquema en el nivel de columna. Aquí puede seleccionar las columnas de datos que desea excluir de la ingesta de [!DNL Profile]. También puede expandir una columna y seleccionar atributos específicos para la exclusión.
+De forma predeterminada, todos los análisis se dirigen a un perfil y este proceso permite excluir las ramas de datos XDM de la ingesta de perfiles.
 
-De manera predeterminada, todos los [!DNL Analytics] van a [!DNL Profile] y este proceso permite que las ramas de los datos XDM se excluyan de la ingesta de [!DNL Profile].
-
-Cuando termine, seleccione **[!UICONTROL Siguiente]**.
-
-![columnas seleccionadas](../../../../images/tutorials/create/analytics/columns-selected.png)
+![Interfaz de filtro de columna con el árbol de esquema.](../../../../images/tutorials/create/analytics/column-filter.png)
 
 ### Filtrar identidades secundarias
 
@@ -274,13 +252,13 @@ Utilice un filtro de columna para excluir las identidades secundarias de la inge
 
 El filtro solo se aplica cuando una identidad se marca como secundaria. Si se seleccionan identidades, pero llega un evento con una de las identidades marcadas como principales, estas no se filtran.
 
-![identidades secundarias](../../../../images/tutorials/create/analytics/secondary-identities.png)
+![Identidades secundarias en el árbol de esquema para el filtrado de columnas.](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Proporcionar detalles del flujo de datos
 
 Aparece el paso **[!UICONTROL Detalle del flujo de datos]**, donde debe proporcionar un nombre y una descripción opcional para el flujo de datos. Seleccione **[!UICONTROL Siguiente]** cuando haya terminado.
 
-![detalle de flujo de datos](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+![Interfaz de detalles del flujo de datos. del flujo de trabajo de ingesta.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### Revisar
 
@@ -289,19 +267,13 @@ Aparecerá el paso [!UICONTROL Revisar], que le permitirá revisar su nuevo fluj
 * [!UICONTROL Conexión]: Muestra la plataforma de origen de la conexión.
 * [!UICONTROL Tipo de datos]: muestra el grupo de informes seleccionado y su ID de grupo de informes correspondiente.
 
-![revisión](../../../../images/tutorials/create/analytics/review.png)
+![Interfaz de revisión del flujo de trabajo de ingesta.](../../../../images/tutorials/create/analytics/review.png)
 
 ## Monitorización del flujo de datos {#monitor-your-dataflow}
 
-Una vez completado el flujo de datos, seleccione **[!UICONTROL Flujos de datos]** en el catálogo de fuentes para supervisar la actividad y el estado de los datos.
+Una vez completado el flujo de datos, puede usar la interfaz *[!UICONTROL Dataflows]* para supervisar el estado del flujo de datos de Analytics.
 
-![Catálogo de orígenes con la ficha de flujos de datos seleccionada.](../../../../images/tutorials/create/analytics/select-dataflows.png)
-
-Aparece una lista de los flujos de datos de Analytics existentes en su organización. Aquí, seleccione un conjunto de datos de destinatario para ver su actividad de ingesta correspondiente.
-
-![Una lista de flujos de datos de Adobe Analytics existentes en su organización.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
-
-La página [!UICONTROL Actividad del conjunto de datos] proporciona información sobre el progreso de los datos que se envían de Analytics a Experience Platform. La interfaz muestra métricas como el total de registros del mes anterior, el total de registros ingeridos en los últimos siete días y el tamaño de los datos del mes anterior.
+Utilice la interfaz [!UICONTROL Actividad del conjunto de datos] para obtener información sobre el progreso de los datos que se envían de Analytics a Experience Platform. La interfaz muestra métricas como el total de registros del mes anterior, el total de registros ingeridos en los últimos siete días y el tamaño de los datos del mes anterior.
 
 El origen crea una instancia de dos flujos de conjuntos de datos. Un flujo representa los datos de relleno y el otro es para los datos activos. Los datos de relleno no están configurados para su incorporación al Perfil del cliente en tiempo real, sino que se envían al lago de datos para casos de uso analíticos y de ciencia de datos.
 
@@ -322,7 +294,7 @@ Para eliminar el flujo de datos de Analytics, seleccione **[!UICONTROL Flujos de
 
 ## Pasos siguientes y recursos adicionales
 
-Una vez creada la conexión, el flujo de datos se crea automáticamente para contener los datos entrantes y rellenar un conjunto de datos con el esquema seleccionado. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando la ingesta inicial se complete, los datos de [!DNL Analytics] y el servicio de Experience Platform descendente, como [!DNL Real-Time Customer Profile] y el servicio de segmentación, los usarán. Consulte los siguientes documentos para obtener más información:
+Una vez creada la conexión, el flujo de datos se crea automáticamente para contener los datos entrantes y rellenar un conjunto de datos con el esquema seleccionado. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando se complete la ingesta inicial, los datos de Analytics y los servicios de Experience Platform descendentes, como [!DNL Real-Time Customer Profile] y el servicio de segmentación, los usarán. Consulte los siguientes documentos para obtener más información:
 
 * [Información general de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Información general de [!DNL Segmentation Service]](../../../../../segmentation/home.md)
@@ -335,4 +307,5 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la ingesta de dato
 >
 > La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430250?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
