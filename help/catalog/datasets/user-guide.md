@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
+source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
 workflow-type: tm+mt
-source-wordcount: '4143'
+source-wordcount: '4237'
 ht-degree: 4%
 
 ---
@@ -100,7 +100,7 @@ La IU de conjuntos de datos ahora ofrece colecciones de acciones en línea para 
 * [[!UICONTROL Administrar datos y etiquetas de acceso]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Habilitar perfil unificado]](#enable-profile)
 * [[!UICONTROL Administrar etiquetas]](#manage-tags)
-* [(Beta) [!UICONTROL Establecer directiva de retención de datos]](#data-retention-policy)
+* [[!UICONTROL Establecer directiva de retención de datos]](#data-retention-policy)
 * [[!UICONTROL Mover a carpetas]](#move-to-folders)
 * [[!UICONTROL Eliminar]](#delete).
 
@@ -174,13 +174,15 @@ Una vez añadida una etiqueta a un conjunto de datos, los conjuntos de datos se 
 
 Para obtener más información sobre cómo clasificar objetos de negocio para facilitar la detección y la categorización, consulte la guía sobre [administración de taxonomías de metadatos](../../administrative-tags/ui/managing-tags.md). En esta guía se explica cómo los usuarios con los permisos adecuados pueden crear etiquetas predefinidas, asignarlas a categorías y administrar todas las operaciones de CRUD relacionadas en la interfaz de usuario de Experience Platform.
 
-### (Beta) Establecer una directiva de retención de datos {#data-retention-policy}
-
->[!AVAILABILITY]
-> 
->La configuración de retención de datos está actualmente en versión beta y solo está disponible en **versión limitada** para algunas organizaciones. Es posible que la interfaz de usuario no refleje la función que se describe a continuación.
+### Establecer política de retención de datos {#data-retention-policy}
 
 Administre la configuración de caducidad y retención del conjunto de datos mediante el menú de acciones en línea de la pestaña [!UICONTROL Examinar] del área de trabajo [!UICONTROL Conjuntos de datos]. Puede utilizar esta función para configurar cuánto tiempo se retienen los datos en el lago de datos y en el almacén de perfiles. La fecha de caducidad se basa en el momento en que se incorporaron los datos en Experience Platform y en el periodo de retención configurado.
+
+>[!IMPORTANT]
+>
+>Para aplicar o actualizar reglas de retención para un conjunto de datos de ExperienceEvent, su función de usuario debe incluir el permiso **Administrar conjuntos de datos**. Este control de acceso basado en funciones garantiza que solo los usuarios autorizados puedan modificar la configuración de retención del conjunto de datos.
+>
+>Consulte la [Información general sobre el control de acceso](../../access-control/home.md#platform-permissions) para obtener más información sobre cómo asignar permisos en Adobe Experience Platform.
 
 >[!TIP]
 >
@@ -216,7 +218,7 @@ Puede utilizar la previsión visual para evaluar el impacto de diferentes perío
 
 >[!NOTE]
 >
->El gráfico de distribución de Experience Event es específico del conjunto de datos y refleja únicamente los datos del conjunto de datos seleccionado.
+>El gráfico de distribución de Evento de experiencia es específico para el conjunto de datos seleccionado y refleja solo sus datos. Se aplica exclusivamente a los datos almacenados en el lago de datos.
 
 ![Se muestra el cuadro de diálogo Establecer retención de datos con el gráfico de distribución de Experience Event.](../images/datasets/user-guide/visual-forecast.png)
 
@@ -226,7 +228,9 @@ Cuando esté satisfecho con la configuración, seleccione **[!UICONTROL Guardar]
 >
 >Una vez aplicadas las reglas de retención de datos, los datos anteriores al número de días definido por el valor de caducidad se eliminan de forma permanente y no se pueden recuperar.
 
-Después de configurar los ajustes de retención, utilice la interfaz de usuario de monitorización para confirmar que el sistema ejecutó los cambios. La IU de monitorización proporciona una vista centralizada de la actividad de retención de datos en todos los conjuntos de datos. A partir de ahí, puede realizar un seguimiento de la ejecución del trabajo, revisar la cantidad de datos que se eliminaron y asegurarse de que las políticas de retención funcionen según lo esperado. Esta visibilidad es compatible con la gobernanza, el cumplimiento y la administración eficiente del ciclo vital de los datos.
+Después de configurar los ajustes de retención, utilice la interfaz de usuario de monitorización para confirmar que el sistema ejecutó los cambios. La IU de monitorización proporciona una vista centralizada de la actividad de retención de datos en todos los conjuntos de datos. A partir de ahí, puede realizar un seguimiento de la ejecución del trabajo, revisar la cantidad de datos que se eliminaron y asegurarse de que las políticas de retención funcionen según lo esperado.
+
+Para explorar cómo se aplican las políticas de retención en los distintos servicios, consulte las guías específicas sobre la retención de conjuntos de datos de [Experience Event en el perfil](../../profile/event-expirations.md) y la retención de conjuntos de datos de [Experience Event en el lago de datos](./experience-event-dataset-retention-ttl-guide.md). Esta visibilidad es compatible con la gobernanza, el cumplimiento y la administración eficiente del ciclo vital de los datos.
 
 Para aprender a utilizar el panel de monitorización para rastrear los flujos de datos de origen en la interfaz de usuario de Experience Platform, consulte la documentación de [Monitorización de flujos de datos para orígenes en la interfaz de usuario](../../dataflows/ui/monitor-sources.md).
 
@@ -234,15 +238,15 @@ Para aprender a utilizar el panel de monitorización para rastrear los flujos de
 
 Para obtener más información sobre las reglas que definen los intervalos de fechas de caducidad de los conjuntos de datos y las prácticas recomendadas para configurar la directiva de retención de datos, consulte la [página de preguntas más frecuentes](../catalog-faq.md).
 
-#### (Beta) Visibilidad mejorada de los períodos de retención y las métricas de almacenamiento {#retention-and-storage-metrics}
+#### Visibilidad mejorada de los períodos de retención y las métricas de almacenamiento {#retention-and-storage-metrics}
 
-Hay cuatro columnas nuevas disponibles para los usuarios de la versión beta que ofrecen una mayor visibilidad de la administración de datos: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** y **[!UICONTROL Profile Retention]**. Estas métricas muestran cuánto almacenamiento consumen los datos y su período de retención, tanto en el lago de datos como en el servicio de perfil.
+Cuatro nuevas columnas proporcionan una mayor visibilidad de la administración de datos: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** y **[!UICONTROL Profile Retention]**. Estas métricas muestran cuánto almacenamiento consumen los datos y su período de retención, tanto en el lago de datos como en el servicio de perfil.
 
-Esta mayor visibilidad le permite tomar decisiones informadas y administrar los costes de almacenamiento de forma más eficaz. Ordene los conjuntos de datos por tamaño de almacenamiento para identificar los más grandes de la zona protegida actual. Estas perspectivas también admiten un mejor control y le ayudan a comprender el ciclo de vida de los datos y el uso de los derechos.
+Esta mayor visibilidad le permite tomar decisiones informadas y administrar los costes de almacenamiento de forma más eficaz. Ordene los conjuntos de datos por tamaño de almacenamiento para identificar los más grandes de la zona protegida actual. Estas perspectivas respaldan las prácticas recomendadas de administración de datos y ayudan a garantizar el cumplimiento de sus derechos con licencia.
 
 ![Pestaña Examinar del área de trabajo Conjuntos de datos con las cuatro nuevas columnas de almacenamiento y retención resaltadas.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
-La siguiente tabla proporciona información general sobre las nuevas métricas de retención y almacenamiento disponibles en la versión beta. Detalla el propósito de cada columna y cómo admite la administración de la retención y el almacenamiento de datos.
+En la tabla siguiente se proporciona una descripción general de las nuevas métricas de retención y almacenamiento. Detalla el propósito de cada columna y cómo admite la administración de la retención y el almacenamiento de datos.
 
 | Título de columna | Descripción |
 |---|---|
@@ -252,6 +256,8 @@ La siguiente tabla proporciona información general sobre las nuevas métricas d
 | [!UICONTROL Retención de perfil] | Período de retención actual para conjuntos de datos de perfil. Puede actualizar este valor para controlar cuánto tiempo se retienen los datos de perfil. |
 
 {style="table-layout:auto"}
+
+Para actuar según las perspectivas de las métricas de almacenamiento y retención, consulte la [guía de prácticas recomendadas de asignación de licencias de administración de datos](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Utilícelo para administrar qué datos ingiere y conserva, aplicar filtros y reglas de caducidad y controlar el crecimiento de los datos para que se mantenga dentro de los límites de uso con licencia.
 
 ### Mover a carpetas {#move-to-folders}
 
