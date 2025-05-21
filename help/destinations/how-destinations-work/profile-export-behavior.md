@@ -42,7 +42,7 @@ La directiva de agregación se puede configurar y los desarrolladores de destino
 
 >[!IMPORTANT]
 >
-> Los destinos empresariales solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Los destinos empresariales solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 Los [destinos empresariales](/help/destinations/destination-types.md#advanced-enterprise-destinations) de Experience Platform son Amazon Kinesis, Azure Event Hubs y la API de HTTP.
 
