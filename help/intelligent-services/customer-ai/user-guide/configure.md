@@ -255,4 +255,4 @@ El siguiente vídeo está diseñado para ayudarle a comprender el flujo de traba
 >
 > El siguiente vídeo no está actualizado. Para obtener la información más actualizada, consulte la documentación.
 
->[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36570?learn=on&quality=12&captions=spa)
