@@ -2,9 +2,9 @@
 title: Conexión De MariaDB A Experience Platform Mediante La Interfaz De Usuario
 description: Obtenga información sobre cómo conectar su cuenta de MariaDB a Experience Platform mediante el espacio de trabajo de fuentes en la interfaz de usuario de Experience Platform.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Lea esta guía para obtener información sobre cómo conectar su cuenta de [!DNL MariaDB] a Adobe Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario de Experience Platform.
 
-## Introducción
+## Introducción 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -54,9 +54,9 @@ Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y, a conti
 
 ![La nueva interfaz de cuenta en el flujo de trabajo de orígenes con un nombre de cuenta y una descripción opcional proporcionados.](../../../../images/tutorials/create/maria-db/new.png)
 
-### Conectarse a Experience Platform en Azure {#azure}
+### Conectar con Experience Platform
 
-Puede conectar su cuenta de [!DNL MariaDB] a Experience Platform en Azure mediante la clave de cuenta o la autenticación básica.
+Puede conectar su cuenta de [!DNL MariaDB] a Experience Platform mediante la clave de cuenta o la autenticación básica.
 
 >[!BEGINTABS]
 
@@ -73,17 +73,5 @@ Para usar la autenticación básica, selecciona **[!UICONTROL Autenticación bá
 ![Nueva interfaz de cuenta en el flujo de trabajo de orígenes con la opción Autenticación básica seleccionada.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
-
-### Conexión a Experience Platform en Amazon Web Service (AWS) {#aws}
-
->[!AVAILABILITY]
->
->Esta sección se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../../../landing/multi-cloud.md).
-
-Para crear una nueva cuenta de [!DNL MariaDB] y conectarse a Experience Platform en AWS, asegúrese de estar en una zona protegida de VA6 y, a continuación, proporcione las [credenciales necesarias para la autenticación](../../../../connectors/databases/mariadb.md#aws).
-
-![La nueva interfaz de cuenta en el flujo de trabajo de orígenes para conectarse a AWS.](../../../../images/tutorials/create/maria-db/basic-auth.png)
-
-## Pasos siguientes
 
 Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL MariaDB]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/databases.md).

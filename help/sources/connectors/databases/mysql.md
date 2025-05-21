@@ -1,11 +1,11 @@
 ---
 title: Información general sobre el conector MySQL Source
 description: Aprenda a conectar MySQL a Adobe Experience Platform mediante API o la interfaz de usuario.
-last-substantial-update: 2025-05-17T00:00:00Z
+last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: f758479c37b72752bbb8a371de88bf653b2e6030
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Debe proporcionar valores para las siguientes credenciales a fin de conectar [!D
 | `username` | Nombre de la base de datos. |
 | `password` | El nombre de usuario que corresponde con su base de datos. |
 | `database` | La contraseña que corresponde a su base de datos. |
-| `sslMode` | El método [!DNL Secure Sockets Layer] (SSL) que se aplicará a su conexión. Los valores disponibles son: <ul><li>`DISABLED`: utilice esta opción para deshabilitar SSL. Si el servidor requiere una configuración SSL, la conexión fallará</li><li>`PREFERRED`: utilice esta opción para preferir las conexiones SSL, ya que el servidor las admite. Esta opción también permite conexiones no SSL.</li><li>`REQUIRED`: utilice esta opción para que las conexiones SSL sean obligatorias. Si el servidor no admite SSL, las conexiones fallarán.</li><li>`Verify-Ca`: utilice esta opción para comprobar los certificados de servidor mientras se producen errores en las conexiones si el servidor no admite SSL.</li><li>`Verify Identity`: utilice esta opción para comprobar los certificados de servidor con el nombre del host mientras se producen errores en las conexiones si el servidor no admite SSL.</li></ul> |
+| `sslMode` | Un valor booleano que controla si SSL se aplica o no, según la compatibilidad con el servidor. El valor predeterminado de esta configuración es `false`. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL MySQL] es `26d738e0-8963-47ea-aadf-c60de735468a`. **Nota**: esta credencial solo es necesaria cuando se conecta a través de la API [!DNL Flow Service]. |
 
 ## Conectar [!DNL MySQL] a Experience Platform mediante API

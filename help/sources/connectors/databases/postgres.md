@@ -1,11 +1,11 @@
 ---
 title: Información general sobre el conector Source PostgreSQL
 description: Obtenga información sobre el origen PostgreSQL en Adobe Experience Platform.
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Proporcione valores para las siguientes credenciales a fin de conectar su base d
 | Credencial | Descripción |
 | --- | --- |
 | `connectionString` | La cadena de conexión asociada a su cuenta de [!DNL PostgreSQL]. El patrón de cadena de conexión [!DNL PostgreSQL] es: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL PostgreSQL] es `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL PostgreSQL] es `74a1c565-4e59-48d7-9d67-7c03b8a13137`. Esta credencial solo es necesaria cuando se conecta a través de la API [!DNL Flow Service]. |
 
 Lea la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/) para obtener más información.
 
@@ -51,6 +51,7 @@ Proporcione valores para las siguientes credenciales a fin de conectar su base d
 | `password` | La contraseña asociada con la autenticación de la base de datos [!DNL PostgreSQL]. |
 | `database` | Nombre de la base de datos [!DNL PostgreSQL] a la que desea conectarse. |
 | `sslMode` | El método [!DNL Secure Sockets Layer] (SSL) que se aplicará a su conexión. Los valores disponibles son: <ul><li>`Disable`: utilice esta opción para deshabilitar SSL. Si el servidor requiere una configuración SSL, la conexión fallará.</li><li>`Allow`: utilice esta opción para permitir conexiones SSL. Las conexiones no SSL pueden seguir utilizándose si el servidor las admite.</li><li>`Prefer`: utilice esta opción para preferir las conexiones SSL, ya que el servidor las admite. Esta opción también permite conexiones no SSL.</li><li>`Require`: utilice esta opción para que las conexiones SSL sean obligatorias. Si el servidor no admite SSL, las conexiones fallarán.</li><li>`Verify-Ca`: utilice esta opción para comprobar los certificados de servidor mientras se producen errores en las conexiones si el servidor no admite SSL.</li><li>`Verify-Full`: utilice esta opción para comprobar los certificados de servidor con el nombre del host mientras se producen errores en las conexiones si el servidor no admite SSL.</li></ul> |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL PostgreSQL] es `74a1c565-4e59-48d7-9d67-7c03b8a13137`. Esta credencial solo es necesaria cuando se conecta a través de la API [!DNL Flow Service]. |
 
 Lea la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/) para obtener más información.
 
@@ -71,7 +72,8 @@ Proporcione valores para las siguientes credenciales a fin de conectar su base d
 | `username` | El nombre de usuario asociado con la autenticación de la base de datos [!DNL PostgreSQL]. |
 | `password` | La contraseña asociada con la autenticación de la base de datos [!DNL PostgreSQL]. |
 | `database` | Nombre de la base de datos [!DNL PostgreSQL] a la que desea conectarse. |
-| `sslMode` | El método [!DNL Secure Sockets Layer] (SSL) que se aplicará a su conexión. Los valores disponibles son: <ul><li>`Disable`: utilice esta opción para deshabilitar SSL. Si el servidor requiere una configuración SSL, la conexión fallará.</li><li>`Allow`: utilice esta opción para permitir conexiones SSL. Las conexiones no SSL pueden seguir utilizándose si el servidor las admite.</li><li>`Prefer`: utilice esta opción para preferir las conexiones SSL, ya que el servidor las admite. Esta opción también permite conexiones no SSL.</li><li>`Require`: utilice esta opción para que las conexiones SSL sean obligatorias. Si el servidor no admite SSL, las conexiones fallarán.</li><li>`Verify-Ca`: utilice esta opción para comprobar los certificados de servidor mientras se producen errores en las conexiones si el servidor no admite SSL.</li><li>`Verify-Full`: utilice esta opción para comprobar los certificados de servidor con el nombre del host mientras se producen errores en las conexiones si el servidor no admite SSL.</li></ul> |
+| `sslMode` | Un valor booleano que controla si SSL se aplica o no, según la compatibilidad con el servidor. El valor predeterminado de esta configuración es `false`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL PostgreSQL] es `74a1c565-4e59-48d7-9d67-7c03b8a13137`. Esta credencial solo es necesaria cuando se conecta a través de la API [!DNL Flow Service]. |
 
 Lea la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/) para obtener más información.
 

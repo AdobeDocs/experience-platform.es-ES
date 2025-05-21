@@ -2,14 +2,14 @@
 title: Conectar PostgreSQL a Experience Platform mediante la API de Flow Service
 description: Aprenda a conectar su base de datos de  [!DNL PostgreSQL]  a Experience Platform mediante API.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: 5348158f6de9fea1a9fe186a14409afb7e7a376e
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '749'
 ht-degree: 3%
 
 ---
 
-# Crear una conexión base [!DNL PostgreSQL] mediante la API [!DNL Flow Service]
+# Conectar [!DNL PostgreSQL] a Experience Platform mediante la API [!DNL Flow Service]
 
 Lea esta guía para aprender a conectar su base de datos de [!DNL PostgreSQL] a Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -135,12 +135,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "Allow"
           }
       },
       "connectionSpec": {
@@ -217,12 +217,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -239,7 +239,7 @@ curl -X POST \
 | `auth.params.database` | Nombre de su base de datos [!DNL PostgreSQL]. |
 | `auth.params.username` | El nombre de usuario asociado con la autenticación de la base de datos [!DNL PostgreSQL]. |
 | `auth.params.password` | La contraseña asociada con la autenticación de la base de datos [!DNL PostgreSQL]. |
-| `auth.params.sslMode` | Método por el que se cifran los datos durante la transferencia de datos. Los valores disponibles incluyen: `Disable`, `Allow`, `Prefer`, `Verify Ca` y `Verify Full`. |
+| `sslMode` | Un valor booleano que controla si SSL se aplica o no, según la compatibilidad con el servidor. El valor predeterminado de esta configuración es `false`. |
 | `connectionSpec.id` | Los identificadores de especificación de conexión [!DNL PostgreSQL]: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 +++
