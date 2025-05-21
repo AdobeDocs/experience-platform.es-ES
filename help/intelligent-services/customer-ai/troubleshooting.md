@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;introducción;inteligencia artificial aplicada al cliente;temas populares;entrada de inteligencia artificial aplicada al cliente;salida de inteligencia artificial aplicada al cliente;solución de problemas de inteligencia artificial aplicada al cliente;errores de inteligencia artificial aplicada al cliente
+keywords: Experience Platform;introducción;inteligencia artificial aplicada al cliente;temas populares;entrada de inteligencia artificial aplicada al cliente;salida de inteligencia artificial aplicada al cliente;solución de problemas de ia del cliente;errores de ia del cliente
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Solución de errores de Customer AI
 description: Encuentre respuestas a errores comunes en Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1780'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 La inteligencia artificial aplicada al cliente muestra errores cuando falla la formación, la puntuación y la configuración del modelo. En la sección **[!UICONTROL Instancias de servicio]**, una columna para **[!UICONTROL ÚLTIMO ESTADO DE EJECUCIÓN]** muestra uno de los siguientes mensajes: **[!UICONTROL Éxito]**, **[!UICONTROL Problema de formación]** y **[!UICONTROL Error]**.
 
-![último estado de ejecución](./images/errors/last-run-status.png)
+![Último estado de ejecución que muestra éxito, problema de formación o error.](./images/errors/last-run-status.png)
 
 En caso de que se muestre **[!UICONTROL Error]** o **[!UICONTROL Problema de formación]**, puede seleccionar el estado de ejecución para abrir un panel lateral. El panel lateral contiene **[!UICONTROL Último estado de ejecución]** y **[!UICONTROL Detalles de la última ejecución]**. **[!UICONTROL Detalles de la última ejecución]** contiene información sobre el motivo del error de la ejecución. En caso de que la inteligencia artificial aplicada al cliente no pueda proporcionar detalles sobre el error, póngase en contacto con el servicio de asistencia técnica e incluya el código de error proporcionado.
 
@@ -27,13 +27,13 @@ En caso de que se muestre **[!UICONTROL Error]** o **[!UICONTROL Problema de for
 
 Los errores de carga en el modo incógnito de Google Chrome están presentes debido a las actualizaciones en la configuración de seguridad del modo incógnito de Google Chrome. El problema se está trabajando activamente con Chrome para hacer de experience.adobe.com un dominio de confianza.
 
-![Imagen de error](./images/errors/error.PNG){width=500}
+![Imagen de error que muestra un ejemplo de un mensaje de error de inteligencia artificial aplicada al cliente.](./images/errors/error.PNG){width=500}
 
 ### Corrección recomendada
 
 Para solucionar este problema, debe agregar experience.adobe.com como sitio que siempre puede usar cookies. Comience por navegar hasta **chrome://settings/cookies**. A continuación, desplácese hacia abajo hasta la sección **Comportamientos personalizados** y, a continuación, seleccione el botón **Agregar** junto a &quot;Sitios que siempre pueden usar cookies&quot;. En la ventana emergente que aparece, copie y pegue `[*.]experience.adobe.com` y, a continuación, active la casilla de verificación **Incluyendo cookies de terceros** en este sitio. Una vez finalizado, selecciona **Agregar** y vuelve a cargar la inteligencia artificial aplicada al cliente de incógnito.
 
-![corrección recomendada](./images/errors/cookies2.gif)
+![Animación que muestra los pasos para agregar experience.adobe.com como sitio que siempre puede usar cookies en la configuración de Chrome.](./images/errors/cookies2.gif)
 
 ## La calidad del modelo es mala
 

@@ -6,9 +6,9 @@ title: Requisitos de datos en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información acerca de los eventos, las entradas y los resultados necesarios que utiliza la inteligencia artificial aplicada al cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2551'
+source-wordcount: '2552'
 ht-degree: 1%
 
 ---
@@ -49,8 +49,8 @@ La inteligencia artificial aplicada al cliente funciona analizando los siguiente
 
 - Datos de Adobe Analytics que usan el [conector de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Datos de Adobe Audience Manager que usan el [conector de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Conjunto de datos de evento de experiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=es)
-- [Conjunto de datos de evento de experiencia del consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=es#cee-schema)
+- [Conjunto de datos de evento de experiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [Conjunto de datos de evento de experiencia del consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 Puede agregar varios conjuntos de datos de diferentes fuentes si cada uno de los conjuntos de datos comparte el mismo tipo de identidad (área de nombres), como un ECID. Para obtener más información sobre cómo agregar varios conjuntos de datos, visite la [Guía del usuario de inteligencia artificial aplicada al cliente](../customer-ai/user-guide/configure.md).
 
@@ -213,7 +213,7 @@ La inteligencia artificial aplicada al cliente genera varios atributos para perf
 
 Puede encontrar el conjunto de datos de salida en el área de trabajo **Conjuntos de datos** de Experience Platform. Todos los conjuntos de datos de salida de inteligencia artificial aplicada al cliente comienzan con el nombre **Puntuaciones de inteligencia artificial aplicada al cliente - NAME_OF_APP**. Del mismo modo, todos los esquemas de salida de inteligencia artificial aplicada al cliente comienzan con el nombre **Esquema de inteligencia artificial aplicada al cliente - Name_of_app**.
 
-![Nombre de los conjuntos de datos de salida en la inteligencia artificial aplicada al cliente](./images/user-guide/cai-schema-name-of-app.png)
+![Convenciones de nomenclatura para conjuntos de datos de salida en inteligencia artificial aplicada al cliente.](./images/user-guide/cai-schema-name-of-app.png)
 
 La siguiente tabla describe los distintos atributos que se encuentran en la salida de la inteligencia artificial aplicada al cliente:
 

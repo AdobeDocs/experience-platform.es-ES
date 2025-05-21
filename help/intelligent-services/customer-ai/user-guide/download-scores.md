@@ -5,9 +5,9 @@ feature: Customer AI
 title: Descargar puntuaciones en Customer AI
 description: La inteligencia artificial aplicada al cliente le permite descargar puntuaciones en el formato de archivo Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '987'
 ht-degree: 3%
 
 ---
@@ -31,11 +31,11 @@ Actualmente, hay dos formas de descargar las puntuaciones de inteligencia artifi
 
 En la instancia de servicio para la información de inteligencia artificial aplicada al cliente, haga clic en el menú desplegable *Más acciones* en la barra de navegación superior derecha y, a continuación, seleccione **[!UICONTROL Puntuaciones de acceso]**.
 
-![más acciones](../images/insights/more-actions.png)
+![Menú desplegable de más acciones que muestra la opción &quot;Puntuaciones de acceso&quot;.](../images/insights/more-actions.png)
 
 Aparece un nuevo cuadro de diálogo que contiene un vínculo a la documentación de descarga de puntuaciones y el ID del conjunto de datos de la instancia actual. Copie el ID del conjunto de datos en el portapapeles y continúe con el siguiente paso.
 
-![ID de conjunto de datos](../images/download-scores/access-scores.png)
+![Cuadro de diálogo Puntuaciones de acceso que muestra la ID del conjunto de datos para la instancia actual.](../images/download-scores/access-scores.png)
 
 ## Recupere su ID de lote {#retrieve-your-batch-id}
 
@@ -236,12 +236,11 @@ La respuesta contiene una matriz de datos que puede tener una sola entrada o una
 | --------- | ----------- |
 | `_links.self.href` | La URL de solicitud de GET utilizada para descargar un archivo en su directorio. |
 
-
 Copie el valor `href` de cualquier objeto de archivo de la matriz `data` y, a continuación, continúe con el paso siguiente.
 
 ## Descargar los datos del archivo
 
-Para descargar los datos del archivo, realice una solicitud de GET al valor `"href"` que copió en el paso anterior [recuperar los archivos](#retrieving-your-files).
+Para descargar los datos del archivo, realice una petición GET al valor `"href"` que copió en el paso anterior [recuperar los archivos](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -271,13 +270,13 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Asegúrese de que está en el directorio o carpeta correctos en los que desea guardar el archivo antes de realizar la solicitud de GET.
+>Asegúrese de que está en el directorio o la carpeta correctos en los que desea guardar el archivo antes de realizar la solicitud de GET.
 
 **Respuesta**
 
 La respuesta descarga el archivo solicitado en en el directorio actual. En este ejemplo, el nombre de archivo es &quot;filename.parquet&quot;.
 
-![Terminal](../images/download-scores/response.png)
+![Ejemplo de una respuesta de terminal que muestra una llamada de API correcta.](../images/download-scores/response.png)
 
 ## Descargar un segmento configurado con Customer AI {#segment}
 
