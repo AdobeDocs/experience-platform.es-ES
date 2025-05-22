@@ -2,9 +2,9 @@
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
+source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Póngase en contacto con su equipo de cuenta de Adobe si tiene una zona protegida existente que requiera que los gráficos contraídos se anulen (&quot;fijos&quot;) después de habilitar la configuración de identidad.
+>[!DNL Identity Graph Linking Rules] ya está disponible de forma general. Póngase en contacto con el Soporte técnico de Adobe si tiene una zona protegida existente que requiere que los gráficos contraídos se anulen (&quot;fijos&quot;) después de habilitar la configuración de identidad.
 
 La configuración de identidad es una característica de la interfaz de usuario del servicio de identidad de Adobe Experience Platform que puede utilizar para designar áreas de nombres únicas y configurar la prioridad del área de nombres.
 

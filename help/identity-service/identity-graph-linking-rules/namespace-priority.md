@@ -2,9 +2,9 @@
 title: Prioridad del área de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 579489e711858c3e80ca5d14eb4ad9187ecf80f8
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2120'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ Si la estructura de gráficos de su organización tiene capas, la prioridad del 
 >
 >* Un gráfico de capas hace referencia a gráficos de identidad que tienen varios niveles de vínculos. Vea la siguiente imagen para ver un ejemplo de un gráfico con tres capas.
 
-![Un diagrama de capas de gráficos](../images/namespace-priority/graph-layers.png)
+![Diagrama de capas de gráficos](../images/namespace-priority/graph-layers.png "Diagrama de capas de gráficos"){zoomable="yes"}
 
 ### Significado semántico del área de nombres
 
@@ -65,9 +65,9 @@ La prioridad del área de nombres se puede configurar usando la [interfaz de usu
 
 ## Uso de prioridad de área de nombres
 
-Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![Un diagrama del ámbito de aplicación de prioridad de espacio de nombres](../images/namespace-priority/application-scope.png)
+![Diagrama del ámbito de aplicación de prioridad de espacio de nombres.](../images/namespace-priority/application-scope.png "Diagrama del ámbito de aplicación de prioridad de espacio de nombres."){zoomable="yes"}
 
 ## Servicio de identidad: algoritmo de optimización de identidad
 
@@ -120,7 +120,7 @@ Dadas las configuraciones descritas anteriormente, las acciones del usuario y la
 
 ## Servicio de segmentación: almacenamiento de metadatos de pertenencia a segmentos
 
-![Un diagrama del almacenamiento de pertenencia a segmento](../images/namespace-priority/segment-membership-storage.png)
+![Diagrama del almacenamiento de pertenencia a segmentos.](../images/namespace-priority/segment-membership-storage.png "Diagrama del almacenamiento de pertenencia a segmento."){zoomable="yes"}
 
 Para un perfil combinado determinado, las suscripciones a segmentos se almacenarán en la identidad con la prioridad de área de nombres más alta.
 
@@ -208,13 +208,13 @@ En un evento determinado, asegúrese de que todas las áreas de nombres que repr
 
 * **Aplicabilidad de eventos**: este comportamiento se aplica solo a los eventos enviados directamente a Edge Network (como WebSDK y Mobile SDK). Los eventos ingeridos desde [Experience Platform hub](../../landing/edge-and-hub-comparison.md), como los ingeridos con el origen de la API HTTP, otros orígenes de flujo continuo y orígenes por lotes, no están sujetos a esta limitación.
 * **Especificidad de segmentación de Edge**: Este comportamiento es específico de la segmentación de Edge. La segmentación por lotes y streaming son servicios independientes evaluados en el concentrador y no siguen el mismo proceso. Lea la [guía de segmentación de Edge](../../segmentation/methods/edge-segmentation.md) para obtener más información.
-* Lea las páginas de [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) y [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) para obtener más información.
+* Lea las páginas de [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) y [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) para obtener más información.
 
 #### Aplicaciones de Edge Network
 
 Para garantizar que las aplicaciones de Edge Network tengan acceso al perfil de Edge sin demora, asegúrese de que los eventos incluyan a `primary=true` en el CRMID. Esto garantiza la disponibilidad inmediata sin esperar las actualizaciones del gráfico de identidad desde el concentrador.
 
 * Las aplicaciones de Edge Network, como Adobe Target, Offer Decisioning y Destinos personalizados de Personalization, seguirán dependiendo de la identidad principal en los eventos para acceder a los perfiles del perfil de Edge.
-* Lea el [diagrama de arquitectura de Experience Platform Web SDK y Edge Network](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obtener más información sobre el comportamiento de Edge Network.
+* Lea el [diagrama de arquitectura de Experience Platform Web SDK y Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obtener más información sobre el comportamiento de Edge Network.
 * Lea la documentación sobre [tipos de elementos de datos](../../tags/extensions/client/web-sdk/data-element-types.md) y [datos de identidad en Web SDK](../../web-sdk/identity/overview.md) para obtener más información sobre cómo configurar la identidad principal en Web SDK.
 * Asegúrese de que el ECID esté incluido en el evento de experiencia. Si falta el ECID, se agregará a la carga útil de evento con `primary=true`, lo que puede dar lugar a resultados inesperados.

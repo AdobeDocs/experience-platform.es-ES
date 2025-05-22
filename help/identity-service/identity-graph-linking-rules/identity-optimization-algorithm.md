@@ -2,9 +2,9 @@
 title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
@@ -49,7 +49,7 @@ Los espacios de nombres del servicio de identidad tienen un orden de importancia
 
 Para obtener información detallada sobre la prioridad del área de nombres y sus funcionalidades y usos completos, lea la [guía de prioridad del área de nombres](./namespace-priority.md).
 
-![capas de gráficos y prioridad de área de nombres](../images/namespace-priority/graph-layers.png)
+![Las capas de gráficos y la prioridad del área de nombres.](../images/namespace-priority/graph-layers.png "Las capas de gráficos y la prioridad del área de nombres."){zoomable="yes"}
 
 ## Proceso {#process}
 
@@ -68,7 +68,7 @@ Cuando se infringe la restricción de área de nombres única, el algoritmo de o
 * El gráfico se restablecería en función del orden anterior. Si al agregar el vínculo se infringe la restricción del límite (por ejemplo, el gráfico contiene dos o más identidades con un área de nombres única), los vínculos se eliminan.
 * El gráfico resultante será compatible con la restricción de área de nombres única que ha configurado.
 
-![Diagrama que visualiza el algoritmo de optimización de identidad.](../images/ido_algorithm.png)
+![Diagrama que visualiza el algoritmo de optimización de identidad.](../images/ido_algorithm.png "Diagrama que visualiza el algoritmo de optimización de identidad."){zoomable="yes"}
 
 ## Casos de ejemplo para el algoritmo de optimización de identidad
 
@@ -95,7 +95,7 @@ En este ejemplo, tanto CRMID como Email se designan como áreas de nombres únic
 * Sin embargo, debido a la configuración del área de nombres única que establece un máximo de un área de nombres CRMID y un área de nombres de correo electrónico por gráfico, el algoritmo de optimización de identidad divide el gráfico en dos.
    * Finalmente, como John es el último usuario autenticado, el ECID que representa el portátil permanece vinculado a su gráfico en lugar de al de Jane.
 
-![caso uno del dispositivo compartido](../images/identity-settings/shared-device-case-one.png)
+![Caso uno de dispositivo compartido.](../images/identity-settings/shared-device-case-one.png "Caso uno de dispositivo compartido."){zoomable="yes"}
 
 >[!TAB Ejemplo dos]
 
@@ -112,7 +112,7 @@ En este ejemplo, el área de nombres CRMID se designa como un área de nombres �
    * Como resultado, el algoritmo de optimización de identidad elimina el vínculo más antiguo, que en este caso es el CRMID de Jane que se vinculó en `timestamp=1`.
    * Sin embargo, aunque el CRMID de Jane ya no existirá como gráfico en el servicio de identidad, persistirá como perfil en el perfil del cliente en tiempo real. Esto se debe a que un gráfico de identidad debe contener al menos dos identidades vinculadas y, como resultado de la eliminación de los vínculos, el CRMID de Jane ya no tiene otra identidad a la que vincular.
 
-![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
+![Caso dos de dispositivo compartido.](../images/identity-settings/shared-device-case-two.png "Caso dos de dispositivo compartido."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ En este ejemplo, las áreas de nombres CRMID y Email se designan como únicas. C
 
 Con el algoritmo de optimización de identidad, los valores de identidad incorrectos, como correos electrónicos falsos o números de teléfono, no se propagan en varios gráficos de identidad diferentes.
 
-![correo electrónico incorrecto](../images/identity-settings/bad-email.png)
+![Diagrama de una ingesta de correo electrónico incorrecta.](../images/identity-settings/bad-email.png "Diagrama de una ingesta de correo electrónico incorrecta."){zoomable="yes"}
 
 ## Asociación de evento anónimo
 
@@ -154,7 +154,7 @@ Vea el diagrama siguiente para comprender mejor cómo funciona la asociación de
       * Antes de su inicio de sesión anterior a `timestamp=1`; y
       * Cualquier actividad que él o Nora hicieran mientras navegaban anónimamente entre el primer y el segundo inicio de sesión de Kevin.
 
-![anon-event-association](../images/identity-settings/anon-event-association.png)
+![Un diagrama de asociación de eventos anónimos.](../images/identity-settings/anon-event-association.png "Un diagrama de asociación de eventos anónimos."){zoomable="yes"}
 
 
 ## Pasos siguientes

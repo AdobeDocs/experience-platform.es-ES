@@ -2,9 +2,9 @@
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en Reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '3285'
+source-wordcount: '3295'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ A medida que prueba y valida [!DNL Identity Graph Linking Rules], puede encontra
 
 El diagrama siguiente es una representación simplificada de cómo fluyen los datos a Adobe Experience Platform y aplicaciones. Utilice este diagrama como referencia para comprender mejor el contenido de esta página.
 
-![Diagrama de cómo fluye la ingesta de datos en el servicio de identidad.](../images/troubleshooting/dataflow_in_identity.png)
+![Diagrama de cómo fluye la ingesta de datos en el servicio de identidad.](../images/troubleshooting/dataflow_in_identity.png "Diagrama de cómo fluye la ingesta de datos en el servicio de identidad."){zoomable="yes"}
 
 Es importante tener en cuenta los siguientes factores:
 

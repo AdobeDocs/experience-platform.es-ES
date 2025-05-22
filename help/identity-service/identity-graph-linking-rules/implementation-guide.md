@@ -2,10 +2,10 @@
 title: Guía De Implementación De Reglas De Vinculación De Gráfico De Identidad
 description: Conozca los pasos recomendados a seguir al implementar los datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 6%
+source-wordcount: '1955'
+ht-degree: 5%
 
 ---
 
@@ -41,7 +41,7 @@ Debe asegurarse de que el área de nombres única con la prioridad más alta est
 
 Sin un área de nombres única que represente los identificadores de persona, puede terminar con un gráfico que se vincule a identificadores de persona diferentes para el mismo ECID. En este ejemplo, B2BCRM y B2CRM están vinculados al mismo ECID al mismo tiempo. Este gráfico sugiere que Tom, usando su cuenta de inicio de sesión B2C, compartió un dispositivo con Summer, usando su cuenta de inicio de sesión B2B. Sin embargo, el sistema reconocerá que este es un perfil (colapso de gráfico).
 
-![Escenario de gráfico en el que dos identificadores de persona están vinculados al mismo ECID.](../images/graph-examples/multi_namespaces.png)
+![Escenario de gráfico en el que dos identificadores de persona están vinculados al mismo ECID.](../images/graph-examples/multi_namespaces.png "Escenario de gráfico en el que dos identificadores de persona están vinculados al mismo ECID."){zoomable="yes"}
 
 +++
 
@@ -49,7 +49,7 @@ Sin un área de nombres única que represente los identificadores de persona, pu
 
 Dado un área de nombres única (en este caso, un CRMID en lugar de dos áreas de nombres dispares), el servicio de identidad puede discernir el identificador de persona que se asoció por última vez con el ECID. En este ejemplo, como existe un CRMID único, el servicio de identidad puede reconocer un escenario de &quot;dispositivo compartido&quot;, en el que dos entidades comparten el mismo dispositivo.
 
-![Escenario de gráfico de dispositivo compartido, en el que dos identificadores de persona están vinculados al mismo ECID, pero se ha eliminado el vínculo anterior.](../images/graph-examples/crmid_only_multi.png)
+![Escenario de gráfico de dispositivo compartido, en el cual dos identificadores de persona están vinculados al mismo ECID, pero se elimina el vínculo anterior.](../images/graph-examples/crmid_only_multi.png "Escenario de gráfico de dispositivo compartido, en el que dos identificadores de persona están vinculados al mismo ECID, pero se ha eliminado el vínculo anterior."){zoomable="yes"}
 
 +++
 
@@ -149,7 +149,7 @@ Por lo tanto, se recomienda enviar solo un identificador de persona con los even
 
 En la simulación de gráficos, esta ingesta puede tener el siguiente aspecto:
 
-![Se representa la IU de simulación de gráficos con un gráfico de ejemplo.](../images/implementation/example-graph.png)
+![Se representa la IU de simulación de gráficos con un gráfico de ejemplo.](../images/implementation/example-graph.png "Se representa la IU de simulación de gráficos con un gráfico de ejemplo."){zoomable="yes"}
 
 >[!TAB Eventos autenticados sin identificadores de persona]
 
@@ -201,7 +201,7 @@ Mediante la creación de diferentes configuraciones, puede utilizar la herramien
 
 Una vez que tengas una mejor idea de cómo deseas que se comporte tu gráfico, ve a la [interfaz de usuario de configuración de identidad](./identity-settings-ui.md) en el área de trabajo de la interfaz de usuario del servicio de identidad. Para acceder a la interfaz de usuario de configuración de identidad, selecciona **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, selecciona **[!UICONTROL Configuración]**.
 
-![La página de exploración de identidades con el botón de configuración resaltado.](../images/implementation/settings.png)
+![La página de exploración de identidades con el botón de configuración resaltado.](../images/implementation/settings.png "La página de exploración de identidades con el botón de configuración resaltado."){zoomable="yes"}
 
 Utilice la interfaz de usuario de configuración de identidad para designar las áreas de nombres únicas y configurar las áreas de nombres por orden de prioridad. Una vez que haya terminado de aplicar la configuración, debe esperar al menos seis horas antes de continuar con la ingesta de datos, ya que la nueva configuración tarda al menos seis horas en reflejarse en el servicio de identidad.
 
@@ -249,11 +249,11 @@ Utilice el panel de identidad para obtener información sobre el estado de los g
 
 Seleccione los puntos suspensivos (`...`) y, a continuación, seleccione **[!UICONTROL Ver más]** para obtener más información y para comprobar que no hay gráficos contraídos.
 
-![Panel de identidad en el área de trabajo de la interfaz de usuario del servicio de identidad.](../images/implementation/identity_dashboard.png)
+![Panel de identidad en el área de trabajo de IU del servicio de identidad.](../images/implementation/identity_dashboard.png "Panel de identidad en el área de trabajo de la interfaz de usuario del servicio de identidad."){zoomable="yes"}
 
 Utilice la ventana que aparece para ver información sobre los gráficos contraídos. En este ejemplo, tanto el correo electrónico como el teléfono están marcados como un área de nombres única, por lo que no hay gráficos contraídos en la zona protegida.
 
-![Ventana emergente para gráficos con varias identidades.](../images/implementation/graphs.png)
+![Ventana emergente para gráficos con varias identidades.](../images/implementation/graphs.png "Ventana emergente para gráficos con varias identidades."){zoomable="yes"}
 
 ## Apéndice {#appendix}
 
@@ -269,13 +269,13 @@ El siguiente gráfico simula un escenario de ID de inicio de sesión &quot;colga
 
 En este ejemplo, `{loginID: ID_C}` se deja colgado y desenlazado a un CRMID. Por lo tanto, la entidad de la persona a la que se debe asociar este ID de inicio de sesión queda ambigua.
 
-![Ejemplo de gráfico con un escenario &quot;colgado&quot; de loginID.](../images/graph-examples/dangling_example.png)
+![Ejemplo de gráfico con un escenario &quot;colgado&quot; de loginID.](../images/graph-examples/dangling_example.png "Ejemplo de gráfico con un escenario de loginID colgado."){zoomable="yes"}
 
 >[!TAB loginID está vinculado a un CRMID]
 
 En este ejemplo, `{loginID: ID_C}` está vinculado a `{CRMID: Tom}`. Por lo tanto, el sistema puede discernir que este ID de inicio de sesión está asociado con Tom.
 
-![LoginID está vinculado a un CRMID.](../images/graph-examples/id_c_tom.png)
+![LoginID está vinculado a un CRMID.](../images/graph-examples/id_c_tom.png "LoginID está vinculado a un CRMID."){zoomable="yes"}
 
 >[!TAB loginID está enlazado a otro CRMID]
 
@@ -283,7 +283,7 @@ En este ejemplo, `{loginID: ID_C}` está vinculado a `{CRMID: Summer}`. Por lo t
 
 Este ejemplo también muestra que Tom y Summer son dos entidades de persona distintas que comparten un dispositivo, que se representa mediante `{ECID: 111}`.
 
-![LoginID está vinculado a otro CRMID.](../images/graph-examples/id_c_summer.png)
+![LoginID está enlazado a otro CRMID.](../images/graph-examples/id_c_summer.png "LoginID está vinculado a otro CRMID."){zoomable="yes"}
 
 >[!ENDTABS]
 
