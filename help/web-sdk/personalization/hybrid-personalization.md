@@ -3,10 +3,10 @@ title: Personalización híbrida mediante Web SDK y API de Edge Network
 description: Este artículo muestra cómo se puede utilizar Web SDK junto con la API de Edge Network para implementar la personalización híbrida en las propiedades web.
 keywords: personalización; híbrido; api de servidor; lado del servidor; implementación híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 3%
+source-wordcount: '1200'
+ht-degree: 2%
 
 ---
 
@@ -39,7 +39,7 @@ El diagrama de flujo siguiente describe el orden de los pasos realizados para of
 1. La API de Edge Network devuelve el contenido de personalización a su servidor de aplicaciones.
 1. El servidor de aplicaciones devuelve una respuesta de HTML al explorador del cliente, que contiene las [cookies de identidad y de clúster](#cookies).
 1. En la página del cliente, se llama al comando [!DNL Web SDK] `applyResponse`, pasando los encabezados y el cuerpo de la respuesta de la [!UICONTROL API de Edge Network] del paso anterior.
-1. [!DNL Web SDK] procesa automáticamente las ofertas de Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es) y los elementos del canal web de Journey Optimizer porque el indicador `renderDecisions` está establecido en `true`.
+1. [!DNL Web SDK] procesa automáticamente las ofertas de Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) y los elementos del canal web de Journey Optimizer porque el indicador `renderDecisions` está establecido en `true`.
 1. Las ofertas [!DNL HTML]/[!DNL JSON] basadas en formularios de Target y las experiencias basadas en código de Journey Optimizer se aplican manualmente mediante el método `applyProposition` para actualizar [!DNL DOM] según el contenido de personalización de la propuesta.
 1. Para las ofertas [!DNL HTML]/[!DNL JSON] basadas en formularios de Target y las experiencias basadas en código de Journey Optimizer, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado el contenido devuelto. Esto se realiza mediante el comando `sendEvent`.
 
@@ -61,6 +61,39 @@ Las solicitudes de API de Edge Network son necesarias para obtener propuestas y 
 | Solicitud de interacción para recuperar propuestas | Servidor de aplicaciones |
 | Solicitud de interacción para enviar notificaciones de visualización | Servidor de aplicaciones |
 
+
+## Establecimiento del host regional de Edge Network {#regional-host}
+
+Para establecer el host regional de Edge Network, lea primero la sugerencia de ubicación de la cookie `kndctr_<orgId>_AdobeOrg_cluster`, que puede tener los siguientes valores:
+
+* `va6`
+* `or2`
+* `irl1`
+* `ind1`
+* `sgp3`
+* `jpn3`
+* `aus3`
+
+Ejemplo: `kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_cluster: va6`
+
+El host regional de Edge Network utiliza el siguiente formato: `<location_hint>.server.adobedc.net` y puede tener los siguientes valores:
+
+* `va6.server.adobedc.net`
+* `or2.server.adobedc.net`
+* `irl1.server.adobedc.net`
+* `ind1.server.adobedc.net`
+* `sgp3.server.adobedc.net`
+* `jpn3.server.adobedc.net`
+* `aus3.server.adobedc.net`
+
+Al utilizar estos hosts específicos, las solicitudes se dirigen a la misma ubicación de Edge Network que el usuario visitó anteriormente y el sistema puede ofrecer la mejor experiencia, ya que los datos de usuario están presentes en la ubicación.
+
+Si no hay ninguna sugerencia de ubicación (es decir, ninguna cookie), use el host predeterminado: `server.adobedc.net`.
+
+>[!TIP]
+>
+>Se recomienda utilizar una lista de ubicaciones permitidas. Esto evita que la sugerencia de ubicación se atempere con, ya que se proporciona mediante cookies del lado del cliente.
+
 ## Implicaciones de Analytics {#analytics}
 
 Al implementar la personalización híbrida, debe prestar especial atención para que las visitas a la página no se cuenten varias veces en Analytics.
@@ -74,8 +107,7 @@ El ejemplo de esta implementación utiliza dos flujos de datos diferentes:
 
 De este modo, la solicitud del lado del servidor no registra ningún evento de Analytics, pero las solicitudes del lado del cliente sí. Esto hace que las solicitudes de Analytics se cuenten con precisión.
 
-
-## Solicitud del lado del servidor {#server-side-request}
+## Generar la solicitud del lado del servidor {#server-side-request}
 
 La solicitud de ejemplo siguiente ilustra una solicitud de API de Edge Network que el servidor de aplicaciones podría utilizar para recuperar el contenido de personalización.
 
@@ -145,16 +177,16 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
       "state":{
          "domain":"localhost",
          "cookiesEnabled":true,
-         "entries":[
-            {
-               "key":"kndctr_XXX_AdobeOrg_identity",
-               "value":"abc123"
-            },
-            {
-               "key":"kndctr_XXX_AdobeOrg_cluster",
-               "value":"or2"
-            }
-         ]
+         "entries": [{
+           "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_identity",
+           "value":"CiY0NzE0NzkwMTUyMzYzMzI4NDAxMjc3NDcwNzA2NTcxMjI3OTI1NVIRCJ_S-uCRMRABGAEqBElSTDHwAZ_S-uCRMQ=="
+         }, {
+           "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_consent",
+           "value": "general=in"
+         }, {
+            "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_cluster",
+            "value": "va6"
+         }]
       }
    }
 }'
@@ -165,10 +197,57 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 | `dataStreamId` | `String` | Sí. | El ID de la secuencia de datos que utiliza para pasar las interacciones a Edge Network. Consulte la [descripción general de flujos de datos](../../datastreams/overview.md) para obtener información sobre cómo configurar un flujo de datos. |
 | `requestId` | `String` | No | ID aleatorio para correlacionar solicitudes internas del servidor. Si no se proporciona ninguno, Edge Network generará uno y lo devolverá en la respuesta. |
 
+### Encabezados de proxy {#proxy-headers}
+
+Se requieren los siguientes encabezados para procesar correctamente la solicitud.
+
+* `Referer`
+* `X-Forwarded-For`
+* `X-Forwarded-Proto`
+* `X-Forwarded-Host`
+
+Asegúrese de configurarlas correctamente para que indiquen la información real del cliente. Por ejemplo, el encabezado `X-Forwarded-For` debe contener la dirección IP del cliente para que se realice la geolocalización adecuada.
+
+### Encabezados de agente de usuario {#user-agent-headers}
+
+Utilice los siguientes encabezados de usuario-agente para procesar correctamente la solicitud.
+
+**Predeterminado**
+
+* `User-Agent`
+
+**Baja entropía (obligatoria):**
+
+* `Sec-CH-UA`
+* `Sec-CH-UA-Mobile`
+* `Sec-CH-UA-Platform`
+
+**Alta entropía (opcional):**
+
+* `Sec-CH-UA-Platform-Version`
+* `Sec-CH-UA-Arch`
+* `Sec-CH-UA-Model`
+* `Sec-CH-UA-Bitness`
+* `Sec-CH-UA-WoW64`
+
+La solicitud debe enviarse tal como se muestra en la [especificación de API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/). Consulte la [documentación de personalización](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization/) si su caso de uso lo requiere.
+
 ### Respuesta del lado del servidor {#server-response}
 
-La respuesta de ejemplo siguiente muestra cómo podría ser la respuesta de la API de Edge Network.
+La respuesta de Edge Network contendrá `state:store` instrucciones, que deben transformarse en `Set-Cookie` encabezados. Se guardan en el explorador y la implementación de Web SDK puede utilizarlos.
 
+Las cookies deben configurarse en el dominio de nivel superior para que se envíen junto con solicitudes a la implementación del servidor y a la del cliente. (O al menos un subdominio común utilizado por ambas implementaciones)
+
+Por ejemplo:
+
+* Las llamadas del lado del servidor utilizan `api.example.com`
+* Las llamadas del lado del cliente utilizan `adobe.example.com`
+
+Las cookies deben establecerse en `.example.com` para que se compartan en ambos casos.
+
+La respuesta del lado del servidor está organizada en fragmentos llamados `Handles`, que se generan según la configuración de la secuencia de datos. Por ejemplo, los motores de personalización en tiempo real devuelven identificadores de `personalization:decisions`, mientras que el motor de activación en tiempo real produce identificadores de `activation:pull`.
+
+La respuesta de ejemplo siguiente muestra cómo podría ser la respuesta de la API de Edge Network.
 
 ```json
 {
@@ -200,6 +279,8 @@ La respuesta de ejemplo siguiente muestra cómo podría ser la respuesta de la A
    ]
 }
 ```
+
+
 
 ## Solicitud del lado del cliente {#client-request}
 
