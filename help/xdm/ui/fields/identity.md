@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos de identidad en la IU
 description: Obtenga información sobre cómo definir un campo de identidad en la interfaz de usuario de Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '665'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ Cuando termine, seleccione **[!UICONTROL Aplicar]** para aplicar el cambio al es
 
 >[!IMPORTANT]
 >
->Si ya se ha establecido un campo de identidad principal, puede cambiar este campo en el esquema siguiendo los pasos anteriores. Sin embargo, debe deshabilitar y volver a habilitar los conjuntos de datos asociados en el perfil para que el cambio entre en vigor.
+>Una vez que un esquema está habilitado para usarse en el perfil del cliente en tiempo real y se han introducido los datos, **no puede cambiar el campo de identidad principal**. Si intenta hacerlo, se producirá un error de validación. Si necesita utilizar una identidad principal diferente, debe crear un nuevo esquema y un nuevo conjunto de datos con la configuración de identidad actualizada.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ Si ha definido una identidad principal para el esquema, ahora puede continuar co
 En esta guía se explica cómo definir un campo de identidad en la interfaz de usuario. A medida que los datos se incorporan mediante este esquema, los gráficos de identidad de los clientes se actualizarán para reflejar los campos de identidad del esquema. Consulte la guía del [visor de gráficos de identidad](../../../identity-service/features/identity-graph-viewer.md) para obtener información sobre cómo explorar el gráfico privado de su organización en la interfaz de usuario.
 
 Consulte la descripción general de [definición de campos en la interfaz de usuario](./overview.md#special) para aprender a definir otros tipos de campos XDM en [!DNL Schema Editor].
-
