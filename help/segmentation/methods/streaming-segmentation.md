@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de segmentación de streaming
 description: Obtenga información sobre la segmentación de flujo continuo, incluido qué es, cómo crear una audiencia evaluada mediante la segmentación de flujo y cómo ver las audiencias creadas mediante la segmentación de flujo.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
+source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -140,6 +140,8 @@ Además, la descalificación de segmentos, de manera similar a la calificación 
 
 Para combinar datos de fuentes de flujo y por lotes, deberá separar los componentes por lotes y de flujo continuo en audiencias independientes.
 
+### Atributo de perfil y evento de experiencia {#profile-and-event}
+
 Por ejemplo, tomemos las dos audiencias de muestra siguientes en cuenta:
 
 | Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
@@ -159,7 +161,9 @@ WHEN(<= 24 hours before now)])
 
 La audiencia resultante *se* evaluará usando la segmentación de flujo continuo, ya que aprovecha la pertenencia de la audiencia por lotes haciendo referencia al componente de audiencia por lotes.
 
-Sin embargo, si desea combinar dos audiencias con datos de evento, **no puede** combinar los dos eventos. Deberá crear ambas audiencias y luego crear otra audiencia que use `inSegment` para hacer referencia a ambas audiencias.
+### Varios eventos de experiencia {#two-events}
+
+Si desea combinar varias audiencias con datos de evento, **no puede** simplemente combinar los eventos. Deberá crear una audiencia para cada evento y luego crear otra audiencia que use `inSegment` para referirse a todas las audiencias.
 
 Por ejemplo, supongamos que tiene dos audiencias, con ambas audiencias albergando datos de esquema de evento de experiencia:
 
