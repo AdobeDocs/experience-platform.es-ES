@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
 workflow-type: tm+mt
 source-wordcount: '4237'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -56,8 +56,8 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
->title="Campañas organizadas"
->abstract="Active este botón de alternancia para permitir que el conjunto de datos seleccionado se utilice en Campañas orquestadas de Adobe Journey Optimizer. El conjunto de datos debe utilizar un esquema relacional y solo se puede crear un conjunto de datos por esquema."
+>title="Campañas orquestadas"
+>abstract="Active este conmutador para permitir que el conjunto de datos seleccionado se utilice en las campañas orquestadas de Adobe Journey Optimizer. El conjunto de datos debe utilizar un esquema relacional y solo se puede crear un conjunto de datos por esquema."
 
 En la interfaz de usuario [!DNL Experience Platform], seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir el panel **[!UICONTROL Conjuntos de datos]**. El panel enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere y el estado de la ejecución de la ingesta más reciente.
 
