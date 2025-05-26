@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de IU del servicio de consultas
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
+source-git-commit: 0553b8bc62d54c3ab98c60b16840ce730d9ed5c0
 workflow-type: tm+mt
 source-wordcount: '2467'
 ht-degree: 1%
@@ -176,7 +176,7 @@ La pestaña **[!UICONTROL Log]** proporciona una lista de consultas que se han e
 | **[!UICONTROL Cliente]** | El cliente utilizado para la consulta. |
 | **[!UICONTROL Creado por]** | El nombre de la persona que creó la consulta. |
 
->
+>[!NOTE]
 >
 >Seleccione el icono de lápiz (![Un icono de lápiz.](/help/images/icons/edit.png)) desde cualquier fila del registro de consultas para navegar hasta el Editor de consultas. La consulta se rellena previamente para facilitar la edición.
 
