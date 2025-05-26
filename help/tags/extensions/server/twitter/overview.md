@@ -1,10 +1,10 @@
 ---
 keywords: extensión de reenvío de eventos;twitter;extensión de reenvío de eventos de twitter
-title: extensión de reenvío de eventos de twitter
-description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en el Twitter para sus necesidades comerciales.
+title: Extensión de reenvío de eventos de Twitter
+description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en Twitter para los requisitos de su empresa.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 3%
@@ -13,15 +13,15 @@ ht-degree: 3%
 
 # Extensión de reenvío de eventos de [!DNL Twitter]
 
-[[!DNL Twitter]](https://twitter.com/i/flow/login) es un servicio de redes sociales y medios sociales en línea, en el que los usuarios publican e interactúan con mensajes de 280 caracteres conocidos como tweets. Los usuarios pueden interactuar con el Twitter usando un navegador, software de front-end móvil o mediante programación a través de sus [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) es un servicio de redes sociales y medios sociales en línea, en el que los usuarios publican e interactúan con mensajes de 280 caracteres conocidos como tweets. Los usuarios pueden interactuar con Twitter usando un navegador, software de front-end móvil o mediante programación a través de sus [API](https://developer.twitter.com/en/docs/twitter-api)
 
-La extensión de la API de conversiones web [!DNL Twitter] [reenvío de eventos](../../../ui/event-forwarding/overview.md) permite aprovechar los datos capturados en el Edge Network de Adobe Experience Platform y enviarlos a [!DNL Twitter]. Este documento describe los casos de uso de la extensión, cómo instalarla y cómo integrar sus capacidades en las [reglas](../../../ui/managing-resources/rules.md) de reenvío de eventos.
+La extensión de la API de conversiones web [!DNL Twitter] [reenvío de eventos](../../../ui/event-forwarding/overview.md) permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Twitter]. Este documento describe los casos de uso de la extensión, cómo instalarla y cómo integrar sus capacidades en las [reglas](../../../ui/managing-resources/rules.md) de reenvío de eventos.
 
 [!DNL Twitter] requiere [OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) para la autenticación con la API [!DNL Twitter] [!DNL Web Conversions].
 
 ## Casos de uso
 
-Esta extensión debe usarse si desea usar datos del Edge Network en [!DNL Twitter] para aprovechar las capacidades de segmentación y análisis de clientes.
+Esta extensión debe usarse si desea usar datos de Edge Network en [!DNL Twitter] para aprovechar las capacidades de segmentación y análisis de clientes.
 
 Por ejemplo, considere un equipo de marketing en una organización. El equipo captura los datos de eventos de interacción de usuarios de su sitio web como datos de eventos de su sitio web y los carga en [!DNL Twitter] mediante esta extensión de reenvío de eventos.
 
@@ -45,7 +45,7 @@ Para conectar el Experience Platform a [!DNL Twitter], se requieren las siguient
 
 | Tipo de clave | Descripción |
 | --- | --- |
-| Clave de consumidor | Clave de API de la aplicación para acceder a la API [!DNL Twitter]. Consulte la documentación de [!DNL Twitter] sobre [secretos y claves de api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obtener instrucciones. | |
+| Clave de consumidor | Clave de API de la aplicación para acceder a la API [!DNL Twitter]. Consulte la documentación de [!DNL Twitter] sobre [secretos y claves de api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obtener instrucciones. |
 | Secreto del consumidor | El Secreto de API permite que su aplicación acceda a la API [!DNL Twitter]. Consulte la documentación de [!DNL Twitter] sobre [secretos y claves de api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obtener instrucciones. |
 | Secreto de token | El secreto de token que no caduca de su aplicación, que se usa para autenticarse en la API [!DNL Twitter] a través de OAuth. Consulte la documentación de [!DNL Twitter] sobre [obtención de tokens de acceso de usuario](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) para obtener instrucciones. |
 | Token de acceso | El token de acceso de su aplicación, que no caduca y que se usa para autenticarse en la API [!DNL Twitter] a través de OAuth. Consulte la documentación de [!DNL Twitter] sobre [obtención de tokens de acceso de usuario](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) para obtener instrucciones. |

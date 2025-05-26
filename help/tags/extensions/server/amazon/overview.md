@@ -1,116 +1,117 @@
 ---
-title: Extensión de API de conversiones de Adobe Amazon
-description: Esta API de eventos web de Adobe Experience Platform le permite compartir interacciones de sitios web directamente con Amazon.
+title: Información general sobre la extensión API de conversiones Amazon
+description: Comparta interacciones con sitios web directamente con Amazon mediante la API de eventos web de Adobe Experience Platform
 last-substantial-update: 2025-04-17T00:00:00Z
-source-git-commit: 65a3eb20dc3de62319f73be49197dacb8fc1778b
+exl-id: 20339b6e-15e3-4d0e-8870-a3a85b7e66fd
+source-git-commit: 306795c0fdd665b1813c70c41bd9b5d58f5507e6
 workflow-type: tm+mt
-source-wordcount: '672'
-ht-degree: 1%
+source-wordcount: '957'
+ht-degree: 2%
 
 ---
 
 # Información general sobre la extensión API de eventos web [!DNL Amazon]
 
-La extensión de la API de conversiones [!DNL Amazon] crea una conexión directa entre los datos de marketing del servidor de un anunciante y [!DNL Amazon]. Esto permite a los anunciantes evaluar la eficacia de la campaña independientemente de la ubicación de conversión y optimizar las campañas en consecuencia. La extensión proporciona una atribución más completa, una fiabilidad de los datos mejorada y una entrega optimizada.
+La extensión de la API de conversiones [!DNL Amazon] crea una conexión directa entre los datos de marketing del servidor de un anunciante y [!DNL Amazon]. Permite a los anunciantes evaluar la eficacia de la campaña independientemente de la ubicación de conversión y optimizar las campañas en consecuencia. Esta extensión proporciona atribución completa, fiabilidad de los datos y una entrega optimizada.
 
 ## [!DNL Amazon] requisitos previos {#prerequisites}
 
-Antes de instalar y configurar la extensión de la API Conversiones [!DNL Amazon], debe completar varios pasos previos para garantizar la autenticación y el acceso a los datos adecuados.
+Antes de instalar y configurar la extensión de API Conversiones [!DNL Amazon], complete los siguientes pasos previos para garantizar la autenticación y el acceso a datos adecuados:
 
 ### Crear un secreto y un elemento de datos {#secret}
 
-La autenticación con [!DNL Amazon] requiere un token seguro que debe almacenarse correctamente y al que se debe hacer referencia:
+Cree un nuevo [!DNL Amazon] [secreto de reenvío de eventos](../../../ui/event-forwarding/secrets.md) y asígnele un nombre único que signifique el miembro autenticador. Se utilizará para autenticar la conexión con su cuenta y mantener el valor seguro.
 
-1. Cree un nuevo secreto de reenvío de eventos [!DNL Amazon] con un nombre único para la autenticación.
-2. Cree un elemento de datos con la extensión **Core** con un tipo de elemento de datos **Secret** para hacer referencia a su secreto [!DNL Amazon].
+A continuación, [cree un elemento de datos](../../../ui/managing-resources/data-elements.md#create-a-data-element) con la extensión [!UICONTROL Core] y un tipo de elemento de datos [!UICONTROL Secret] para hacer referencia al secreto `Amazon` que acaba de crear.
 
-Este proceso garantiza que las credenciales de autenticación permanezcan seguras y que la extensión pueda acceder a ellas cuando sea necesario.
+### Recopilar detalles de configuración necesarios {#configuration-details}
 
-## Instalar y configurar la extensión [!DNL Amazon]
+Para conectar Experience Platform a [!DNL Amazon], escriba los siguientes detalles:
 
-La instalación de la extensión requiere acceso a la propiedad de reenvío de eventos en Experience Platform:
+| Tipo de clave | Descripción |
+| --- | --- |
+| ID de cuenta | El identificador único de la cuenta de [!DNL Amazon]. |
+| ID de entidad | El identificador de un perfil asociado a la cuenta del anunciante. Se encuentra en la dirección URL del portal del Administrador de campañas, con el prefijo `entity`. |
+| Token de acceso | El token de acceso de su aplicación, que no caduca y que se usa para autenticarse en la API [!DNL Amazon] a través de OAuth. Consulte la [documentación de la API de Amazon sobre autenticación](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html) para obtener instrucciones. |
 
-- Cree o edite una propiedad de reenvío de eventos.
-- Seleccione **Extensiones** en el panel de navegación izquierdo y, a continuación, seleccione [!DNL Amazon] extensión en la pestaña Catálogo.
-- Seleccione **Instalar**.
+## Instalar y configurar la extensión [!DNL Amazon] {#install-configure}
 
-Se seleccionó la extensión ![[!DNL Amazon] en el catálogo de extensiones junto con el botón de instalación.](../../../images/extensions/server/amazon/amazon-extension.png)
+Siga estos pasos para instalar y configurar la extensión de API [!DNL Amazon] Conversiones:
 
-- Configurar con:
+1. Cree o edite una propiedad de reenvío de eventos.
+2. Vaya a **Extensiones** en el panel de navegación izquierdo y, a continuación, seleccione la extensión [!DNL Amazon] en la pestaña Catálogo.
+3. Seleccione **Instalar**.
 
-- **Token de acceso**: El secreto del elemento de datos que contiene el token de OAuth 2
+   ![Tarjeta de extensión de Amazon resaltada en el catálogo de extensiones de Adobe Experience Platform.](../../../images/extensions/server/amazon/amazon-extension.png)
 
-![Configuración individual para escribir el secreto del elemento de datos resaltado.](../../../images/extensions/server/amazon/2.png)
+4. Configure la extensión con los siguientes detalles:
+   - **Token de acceso**: El secreto del elemento de datos que contiene el token de OAuth 2.
 
-- **Id. de entidad**: Su Id. de entidad (que se encuentra en la dirección URL del portal de Campaign Manager con el prefijo &quot;entity&quot;)
+     ![Interfaz de configuración que resalta el campo para introducir el secreto del elemento de datos para el token de OAuth 2.](../../../images/extensions/server/amazon/amazon-oauth2-token-field.png)
 
-![Portal del administrador de campañas en el panel de navegación izquierdo.](../../../images/extensions/server/amazon/3.png)
+   - **ID de entidad**: su ID de entidad (que se encuentra en la URL del portal de Campaign Manager con el prefijo &quot;entity&quot;).
 
-- Seleccione **Guardar**.
+     ![Interfaz de portal de Campaign Manager con el campo Identificador de entidad resaltado.](../../../images/extensions/server/amazon/campaign-manager-entity-id.png)
 
-Estos valores de configuración establecen la conexión entre Platform y su cuenta de [!DNL Amazon].
-
-### [!DNL Amazon] OAuth 2 {#oauth}
-
-Para crear un secreto de OAuth 2 de [!DNL Amazon]:
-
-- Seleccione [!DNL Amazon] OAuth 2 del menú desplegable **Tipo** y seleccione **Crear secreto**.
-
-![Amazon OAuth 2 en el menú desplegable.](../../../images/extensions/server/amazon/Oauth.png)
-
-- Seleccione **Crear y autorizar secreto con Amazon** en la ventana emergente para autorizar manualmente el secreto y continuar.
-
-![Crear y autorizar secreto con Amazon seleccionado.](../../../images/extensions/server/amazon/Oauth.1.png)
-
-- Escriba sus credenciales de [!DNL Amazon] en el cuadro de diálogo que aparece. Siga las indicaciones para conceder acceso al reenvío de eventos a sus datos.
-
-Una vez finalizado, verá su secreto con su estado y fecha de caducidad en la ficha **Secretos**.
-
-![Secreto creado en la ficha secretos.](../../../images/extensions/server/amazon/Oauth.2.png)
+5. Seleccione **Guardar** para completar la configuración.
 
 ## Configuración de una regla de reenvío de eventos {#config-rule}
 
-Una vez configurados todos los elementos de datos, puede crear reglas de reenvío de eventos que determinen cuándo y cómo se enviarán los eventos a Amazon.
+Una vez configurados todos los elementos de datos, cree reglas de reenvío de eventos para determinar cuándo y cómo se enviarán los eventos a [!DNL Amazon].
 
-- Vaya a **Reglas** y cree una nueva regla de reenvío de eventos.
-- En **Acciones**, seleccione **Extensión de la API de conversiones de Amazon**.
-- Establezca **Tipo de acción** en **Importar eventos de conversión**.
+1. Vaya a **Reglas** y cree una nueva regla de reenvío de eventos.
+2. En **Acciones**, seleccione **Extensión de la API de conversiones de Amazon**.
+3. Establezca **Tipo de acción** en **Importar eventos de conversión**.
 
-![Opciones de configuración de acción resaltadas.](../../../images/extensions/server/amazon/4.png)
+   ![Interfaz de configuración de regla de reenvío de eventos con el tipo de acción establecido en Importar eventos de conversión.](../../../images/extensions/server/amazon/amazon-import-conversion-events.png)
 
-- Configure las propiedades del evento como se describe a continuación:
+### Configuración de datos de evento de conversión {#conversion-event-data}
 
-| Entrada | Descripción |
-| --- | --- |
-| **Nombre del evento** | Nombre del evento de conversión. |
-| **Tipo de evento** | Define el tipo de evento rastreado (por ejemplo, compras, adiciones al carro de compras). |
-| **Marca de tiempo** | Hora del evento en formato ISO. |
-| **ID de desduplicación de cliente** | Un ID único para la anulación de duplicación. |
-| **Claves de coincidencia** | Identificadores de usuario y dispositivo para la atribución. |
-| **Valor** | Valor monetario del evento. |
-| **Código de divisa** | Moneda en formato ISO-4217. |
-| **Unidades vendidas** | Cantidad de artículos comprados. |
-| **Código de país** | País donde ocurrió el evento. |
-| **Opciones de procesamiento de datos** | Indica el uso limitado de los datos. |
-| **Consentimiento** | Indica el consentimiento del usuario para el uso de datos publicitarios. |
+Los datos de eventos de conversión son esenciales para realizar un seguimiento de las interacciones de los usuarios y medir la eficacia de las campañas. Al reenviar estos datos a [!DNL Amazon], puede obtener información sobre el comportamiento del usuario, optimizar las campañas y garantizar una atribución precisa para las conversiones.
 
-- Seleccione **Conservar cambios** para guardar la regla.
+En la tabla siguiente se describen las propiedades clave necesarias para configurar y reenviar los datos de evento de conversión:
 
-![Los parámetros de evento de la configuración de acción se resaltaron junto con el botón Conservar cambios.](../../../images/extensions/server/amazon/5.png)
+| Entrada | Descripción | Requerido | Ejemplo |
+| --- | --- | --- | --- |
+| `name` | Nombre del evento importado. | Sí | `My Event Name` |
+| `eventType` | El tipo de evento estándar de Amazon asociado al evento y utilizado para el sistema de informes. | Sí | `Add to Shopping Cart` |
+| `eventActionSource` | La plataforma desde la que se originó el evento. | Sí | `WEBSITE` |
+| `clientDedupeId` | `id` especificado por el anunciante para el evento de conversión. En el caso de los eventos con el mismo `clientDedupeId`, solo se conservará el primer evento y se perderán todos los eventos subsiguientes. | Opcional | `3234A398932` |
+| `timestamp` | La marca de tiempo del informe de cuándo se produjo el evento. La marca de tiempo puede ser de hasta 7 días antes de enviar un evento. No se procesarán los datos con más de 7 días. | Sí | `2023-05-08T14:04:28Z` |
+| `matchKeys` | Matriz que representa los tipos/valores de identificador de cliente y dispositivo que se utilizarán para la atribución a eventos de tráfico. | Sí | — |
+| `matchKeys > type` | El tipo de identificador utilizado para la atribución. | Sí | — |
+| `matchKeys > value` | El valor de identificador utilizado para la atribución. | Sí | Lista de valores de identificador con hash SHA-256 del cliente que realizó el evento. |
+| `value` | El valor del evento. | Opcional | `5` o `0.99` |
+| `currencyCode` | El código de moneda asociado con el `value` del evento en formato ISO-4217. Solo se aplica al tipo de evento de Compras Off Amazon. Si no se proporciona, se utilizará la configuración del código de moneda de la definición de conversión. | Opcional | `USD`, `EUR`, `GBP`, etc. |
+| `unitsSold` | Número de artículos comprados. Solo se aplica al tipo de evento de Compras Off Amazon. Si no se proporciona en el evento de conversión, se aplicará un valor predeterminado de `1`. | Opcional | — |
+| `countryCode` | Este valor se basa en los códigos de país ISO 3166-1 alpha-2 de dos letras definidos en la norma ISO 3166-1, que forma parte de la norma ISO 3166 publicada por la Organización Internacional de Normalización (ISO), para representar países, territorios dependientes y áreas especiales de interés geográfico. | Sí | — |
+| `dataProcessingOptions` | Indica el consentimiento del usuario para el uso de datos publicitarios. | Opcional | LIMITED_DATA_USE |
 
-![Se resaltaron parámetros de evento adicionales en la configuración de la acción junto con el botón Conservar cambios.](../../../images/extensions/server/amazon/6.png)
+- Seleccione **[!UICONTROL Conservar cambios]** para guardar la regla.
+
+![Interfaz de configuración de parámetros de evento con el botón Conservar cambios resaltado.](../../../images/extensions/server/amazon/event-parameters.png)
+
+![Interfaz de configuración de parámetros de evento adicionales con el botón Conservar cambios resaltado.](../../../images/extensions/server/amazon/additional-event-parameters.png)
 
 ## Deduplicación de eventos {#deduplication}
 
-Si usa la etiqueta de Advertising [!DNL Amazon] (AAT) y la extensión de API de conversiones [!DNL Amazon] para los mismos eventos, se requiere la configuración de anulación de duplicación. Incluya `clientDedupeId` en cada evento compartido para garantizar la deduplicación adecuada.
-La deduplicación no es necesaria si los eventos del cliente y del servidor no se superponen.
+La deduplicación es esencial para garantizar unos informes precisos y evitar recuentos de conversiones inflados al utilizar la etiqueta Advertising (AAT) [!DNL Amazon] y la extensión de la API de conversiones [!DNL Amazon] para rastrear los mismos eventos.
 
-La deduplicación adecuada evita los recuentos de conversión inflados y garantiza que los datos de optimización sigan siendo precisos.
+### ¿Cuándo se requiere la deduplicación?
 
-Consulte la [Guía de anulación de duplicación de eventos de Amazon](https://advertising.amazon.com/) para obtener más información.
+- **Obligatorio**: Si se envía el mismo evento desde el cliente (AAT) y el servidor (API de conversiones).
+- **No se requiere**: Si se envían distintos tipos de eventos desde el cliente y el servidor sin ninguna superposición.
 
-## Pasos siguientes
+### Activación de la deduplicación
 
-En esta guía se explica cómo configurar y enviar eventos de conversión a [!DNL Amazon] mediante la extensión de API de conversiones [!DNL Amazon]. Para obtener más información sobre las capacidades de reenvío de eventos en [!DNL Adobe Experience Platform], consulte la [descripción general del reenvío de eventos](../../../ui/event-forwarding/overview.md)
+Para habilitar la anulación de duplicación, incluya el campo `clientDedupeId` en cada evento compartido. Este identificador único permite a [!DNL Amazon] distinguir entre eventos del lado del cliente y del lado del servidor, así como evitar entradas duplicadas.
 
-Para obtener más información sobre cómo depurar la implementación con la herramienta de supervisión de Experience Platform Debugger y reenvío de eventos, lea la [descripción general de Adobe Experience Platform Debugger](https://experienceleague.adobe.com/es/docs/experience-platform/debugger/home) y [Supervisar actividades](https://experienceleague.adobe.com/es/docs/experience-platform/tags/event-forwarding/monitoring) en el reenvío de eventos.
+Al configurar correctamente la deduplicación, puede asegurarse de que los datos de optimización sigan siendo precisos y de que los informes no se vean afectados negativamente.
+
+Para obtener más información, consulte la [Guía de anulación de duplicación de eventos de Amazon](https://advertising.amazon.com/).
+
+## Pasos siguientes {#next-steps}
+
+En esta guía se explica cómo configurar y enviar eventos de conversión a [!DNL Amazon] mediante la extensión de API de conversiones [!DNL Amazon]. Para obtener más información sobre las capacidades de reenvío de eventos en [!DNL Adobe Experience Platform], consulte la [descripción general del reenvío de eventos](../../../ui/event-forwarding/overview.md).
+
+Para obtener más información sobre cómo depurar la implementación con la herramienta de supervisión de Experience Platform Debugger y reenvío de eventos, lea la [descripción general de Adobe Experience Platform Debugger](/help/debugger/home.md) y [Supervisar actividades](../../../ui/event-forwarding/monitoring.md) en el reenvío de eventos.
