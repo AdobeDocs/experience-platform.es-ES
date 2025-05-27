@@ -2,10 +2,10 @@
 title: Información general sobre la extensión Cloud Connector
 description: Obtenga información acerca de la extensión de reenvío de eventos de Cloud Connector en Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 98%
+source-wordcount: '1715'
+ht-degree: 79%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 La extensión de Cloud Connector para reenvío de eventos permite crear solicitudes HTTP personalizadas para enviar datos a un destino o recuperar datos de un destino. La extensión de conector de nube es como tener Postman en Adobe Experience Platform Edge Network y se puede usar para enviar datos a un punto final que aún no tiene una extensión dedicada.
 
@@ -125,3 +125,41 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
+
+## Usar la seguridad de la capa de transporte mutuo [!DNL mTLS] en las reglas de reenvío de eventos {#mtls-rules}
+
+El certificado [!DNL mTLS] es una credencial digital que prueba la identidad de un servidor o cliente en comunicaciones seguras. Cuando usa la API del servicio [!DNL mTLS], estos certificados le ayudan a comprobar y cifrar las interacciones con el reenvío de eventos de Adobe Experience Platform. Este proceso no solo protege sus datos, sino que también garantiza que todas las conexiones procedan de un socio de confianza.
+
+### Instalación de la extensión de conector de Adobe Cloud {#install}
+
+Para instalar la extensión, [cree una propiedad de reenvío de eventos](../../../ui/event-forwarding/overview.md#properties) o seleccione una propiedad existente para editar en su lugar.
+
+Seleccione **[!UICONTROL Extensiones]** en el panel izquierdo. En la ficha **[!UICONTROL Catálogo]**, seleccione la tarjeta de API **[!UICONTROL Adobe Cloud Connector]** de conversiones en tiempo real y, a continuación, seleccione **[!UICONTROL Instalar]**.
+
+![Catálogo de extensiones que muestra la tarjeta de extensión [!DNL Adobe Cloud Connector] que resalta la instalación.](../../../images/extensions/server/cloud-connector/install-extension.png)
+
+### Configuración de una regla de reenvío de eventos {#rule}
+
+>[!NOTE]
+>
+>Para configurar una regla para usar [!DNL mTLS], debe tener la versión 1.2.4 o posterior de Adobe Cloud Connector.
+
+Después de instalar la extensión, puede crear una regla de reenvío de eventos que use [!DNL mTLS] y agregarla a la biblioteca.
+
+Cree una nueva regla [rule](../../../ui/managing-resources/rules.md) de reenvío de eventos en su propiedad de reenvío de eventos. Proporcione un nombre para la regla y en **[!UICONTROL Acciones]**, agregue una acción nueva y establezca la extensión en **[!UICONTROL Conector de Adobe Cloud]**. A continuación, seleccione **[!UICONTROL Realizar llamada de recuperación]** para **[!UICONTROL Tipo de acción]**.
+
+![La vista Reglas de propiedad de reenvío de eventos, con los campos necesarios para agregar una configuración de acción de regla de reenvío de eventos resaltada.](../../../images/extensions/server/cloud-connector/event-action.png)
+
+Después de realizar la selección, aparecerán controles adicionales para configurar los métodos y el destino de la solicitud [!DNL mTLS]. Para habilitar el uso de certificados activos en los entornos, seleccione **[!UICONTROL Habilitar en[!DNL mTLS]]** y, a continuación, seleccione **[!UICONTROL Conservar cambios]** para guardar la regla.
+
+![La vista Reglas de propiedad de reenvío de eventos, con los campos de control adicionales y mantenga los cambios resaltados.](../../../images/extensions/server/cloud-connector/save-rule.png)
+
+La nueva regla ya está lista. Seleccione **[!UICONTROL Guardar en biblioteca]** y, a continuación, seleccione **[!UICONTROL Generar]** para implementarlo. La solicitud [!DNL mTLS] ya está activa y disponible en su biblioteca.
+
+![Regla de reenvío de eventos con la opción Guardar en biblioteca y compilación resaltadas.](../../../images/extensions/server/cloud-connector/save-build.png)
+
+## Pasos siguientes
+
+En esta guía se explica cómo configurar reglas mTLS en el reenvío de eventos. Para obtener más información sobre la configuración de mTLS en un entorno, consulte la [guía de seguridad de la capa de transporte mutuo [!DNL mTLS] 2}.](../cloud-connector/mtls.md)
+
+Para obtener más información sobre las funcionalidades de reenvío de eventos en Experience Platform, consulte la [descripción general del reenvío de eventos](../../../ui/event-forwarding/overview.md).

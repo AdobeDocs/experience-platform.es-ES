@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
+source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 43%
 
 ---
@@ -217,6 +217,7 @@ ht-degree: 43%
       * [Información general](./extensions/server/overview.md)
       * Conector de Adobe Experience Platform Cloud {#cloud-connector}
          * [Información general](./extensions/server/cloud-connector/overview.md)
+         * [Certificados mTLS](./extensions/server/cloud-connector/mtls.md)
          * [Notas de la versión](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [Información general](./extensions/server/adform/overview.md)
