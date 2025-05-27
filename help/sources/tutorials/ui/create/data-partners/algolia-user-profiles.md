@@ -1,52 +1,54 @@
 ---
 title: Conexión de perfiles de usuario de Algolia a Experience Platform mediante la IU
-description: Aprenda a conectar la intención de los usuarios de Algolia a Experience Platform
+description: Aprenda a conectar los datos de intención de usuario de Algolia a Adobe Experience Platform
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
+source-git-commit: 2ba1f82fbefd9a7af7a1cf305ccafcb2c7814d7b
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1209'
 ht-degree: 1%
 
 ---
 
+
 # Ingesta de datos de [!DNL Algolia User Profiles] en Experience Platform mediante la IU
 
-Lea este tutorial para aprender a ingerir datos de su cuenta de [!DNL Algolia User Profiles] en Adobe Experience Platform mediante la interfaz de usuario.
+Este tutorial lo guiará a través de la ingesta de datos de su cuenta de [!DNL Algolia User Profiles] en Adobe Experience Platform mediante la interfaz de usuario.
 
 ## Introducción 
 
 >[!IMPORTANT]
 >
->Antes de comenzar, asegúrese de completar los pasos de requisitos previos descritos en la [[!DNL Algolia User Profiles] descripción general](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites).
+>Antes de comenzar, asegúrese de completar los requisitos previos descritos en la [[!DNL Algolia User Profiles] descripción general](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites).
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
+Este tutorial supone que está familiarizado con los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
-   * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): el marco estandarizado que utiliza Experience Platform para organizar los datos de la experiencia del cliente.
+
+   * [Conceptos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información acerca de la composición de esquemas, incluidos los principios clave y las prácticas recomendadas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): un perfil de cliente unificado y en tiempo real basado en datos agregados de varias fuentes.
+* [Fuentes](../../../../home.md): ingrese datos de varias fuentes y use los servicios de Experience Platform para estructurar, etiquetar y mejorar los datos.
 
 ### Recopilar credenciales necesarias
 
-Para conectar [!DNL Algolia] a Experience Platform, debe proporcionar valores para las siguientes credenciales:
+Para conectar [!DNL Algolia] a Adobe Experience Platform, proporcione las siguientes credenciales:
 
 | Credencial | Descripción |
-| --- | --- |
-| ID de aplicación | El id. de aplicación [!DNL Algolia] es un identificador único asignado a su cuenta [!DNL Algolia]. |
-| Clave de API | La clave de API [!DNL Algolia] es una credencial que se usa para autenticar y autorizar solicitudes de API para los servicios de búsqueda e indexación de [!DNL Algolia]. |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| ID de aplicación | El identificador único asignado a su cuenta de [!DNL Algolia]. |
+| Clave de API | La credencial para autenticar y autorizar solicitudes de API a los servicios de [!DNL Algolia]. |
 
-Para obtener más información sobre estas credenciales, consulte la [!DNL Algolia] [documentación de autenticación](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
+Para obtener más información, consulte la [!DNL Algolia] [documentación de autenticación](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
 ## Conectar su cuenta de [!DNL Algolia]
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Fuentes]*. Puede seleccionar la categoría adecuada en el panel *[!UICONTROL Categorías]*. También puede utilizar la barra de búsqueda para desplazarse al origen específico que desee utilizar.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para abrir el área de trabajo *[!UICONTROL Fuentes]*. Use el panel *[!UICONTROL Categorías]* o la barra de búsqueda para encontrar el origen deseado.
 
-Para usar [!DNL Algolia], selecciona la tarjeta de origen de **[!UICONTROL Algolia]** en *[!UICONTROL Socios de datos e identidad]* y, a continuación, selecciona **[!UICONTROL Configurar]**.
+Para conectar a [!DNL Algolia], elige la tarjeta de origen de **[!UICONTROL Algolia]** en *[!UICONTROL Socios de datos e identidad]* y selecciona **[!UICONTROL Configurar]**.
 
 >[!TIP]
 >
->Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
+> Si un origen aún no tiene una cuenta autenticada, muestra la opción **[!UICONTROL Configurar]**. Una vez autenticado, esto cambia a **[!UICONTROL Agregar datos]**.
 
 ![El catálogo de orígenes con el origen de Perfiles de usuario de Algolia seleccionado.](../../../../images/tutorials/create/algolia/user-profiles/catalog.png)
 
@@ -54,48 +56,76 @@ Para usar [!DNL Algolia], selecciona la tarjeta de origen de **[!UICONTROL Algol
 
 ### Usar una cuenta existente
 
-Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la cuenta [!DNL Algolia User Profiles] que desee usar. Para continuar, seleccione **[!UICONTROL Siguiente]**.
+Para usar una cuenta existente, elija **[!UICONTROL Cuenta existente]** y seleccione la cuenta [!DNL Algolia User Profiles] que desee usar. Luego selecciona **[!UICONTROL Siguiente]**.
 
 ![Interfaz de cuenta existente.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
 ### Crear una nueva cuenta
 
-Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a continuación, proporcione un nombre, una descripción opcional y [!DNL Algolia] credenciales. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
+Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y luego escribe un nombre, una descripción opcional y tus credenciales de [!DNL Algolia]. Seleccione **[!UICONTROL Conectarse al origen]** y esperar a que se establezca la conexión.
 
 ![Interfaz de la nueva cuenta.](../../../../images/tutorials/create/algolia/user-profiles/new-account.png)
 
 ## Adición de datos
 
-Después de crear su cuenta de [!DNL Algolia User Profiles], aparece el paso **[!UICONTROL Agregar datos]**, que proporciona una interfaz para que explore los perfiles de usuario de [!DNL Algolia] que desee llevar a Experience Platform.
+Una vez creada la cuenta de [!DNL Algolia User Profiles], aparecerá el paso **[!UICONTROL Agregar datos]**. Utilícelo para seleccionar y previsualizar datos de perfil de usuario para su ingesta.
 
-* La parte izquierda de la interfaz es para que usted ingrese los campos **[!UICONTROL Índices]** y **[!UICONTROL Afinidad(es)]** opcionales.
-* La parte derecha de la interfaz de usuario permite previsualizar hasta 100 filas de perfiles de usuario.
+* A la izquierda, introduzca **[!UICONTROL Índices]** y **[!UICONTROL Afinidad(es)]** opcionales.
+* A la derecha, previsualice hasta 100 filas de perfiles de usuario.
 
-Una vez que termine de seleccionar y obtener una vista previa de los datos para su ingesta, seleccione **[!UICONTROL Siguiente]**.
+Una vez finalizado, seleccione **[!UICONTROL Siguiente]**.
 
 ![Paso para seleccionar datos del flujo de trabajo.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
 ## Proporcionar detalles del flujo de datos
 
-Si está usando un conjunto de datos existente, seleccione un conjunto de datos asociado a un esquema que esté usando el grupo de campos [!DNL Algolia Profile].
+Si utiliza un conjunto de datos existente, elija uno asociado a un esquema que incluya el grupo de campos [!DNL Algolia Profile]. Asegúrese de que el campo [!DNL Algolia User Token] esté usando el área de nombres de identidad [!DNL Algolia User Token].  Si [!DNL Algolia User Token] no se ha creado ni asignado actualmente, se proporcionan las instrucciones a continuación.
 
-![Paso del conjunto de datos existente del flujo de trabajo de orígenes.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
+![Paso del conjunto de datos existente.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
 
-Si está creando un nuevo conjunto de datos, seleccione un esquema que esté utilizando el grupo de campos [!DNL Algolia Profile] que es necesario en el paso de asignación.
+Si crea un nuevo conjunto de datos, seleccione un esquema con el grupo de campos [!DNL Algolia Profile].
 
-![El nuevo paso del conjunto de datos del flujo de trabajo de orígenes.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+![El nuevo paso del conjunto de datos.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+
+### Crear área de nombres de identidad [!DNL Algolia User Token]
+
+Deberá crear el área de nombres de identidad [!DNL Algolia User Token] si aún no existe en su organización.
+
+Use el panel de navegación izquierdo y seleccione **[!UICONTROL Identidades]** para acceder al área de trabajo de la interfaz de usuario del [servicio de identidad](../../../../../identity-service/home.md) y, a continuación, seleccione **[!UICONTROL Crear área de nombres de identidad]**.
+
+A continuación, proporcione un **[!UICONTROL Nombre para mostrar]** y un **[!UICONTROL Símbolo de identidad]** para su área de nombres personalizada. Durante este paso, también debe configurar el tipo del área de nombres. Cuando termine, seleccione **[!UICONTROL Crear]**.
+
+![Crear pantalla del área de nombres de identidad.](../../../../images/tutorials/create/algolia/user-profiles/aep-identity-inputs.png)
+
+| Configuración de área de nombres personalizada | Valor |
+| --- | --- |
+| **[!UICONTROL Nombre para mostrar]** | [!DNL Algolia User Token] |
+| **[!UICONTROL Símbolo de identidad]** | [!DNL AlgoliaUserToken] |
+| **[!UICONTROL Seleccionar un tipo]** | [!DNL Cookie ID] |
+
+Una vez agregado, el área de nombres aparece en la lista. Ahora puede aplicarlo en el esquema.
+
+![Creación correcta del área de nombres de identidad de Algolia.](../../../../images/tutorials/create/algolia/user-profiles/aep-algolia-user-token-identity.png)
+
+### Aplicar el área de nombres al esquema
+
+Utilice la barra de navegación izquierda y seleccione **[!UICONTROL Esquemas]** para acceder al área de trabajo de la interfaz de usuario de [Esquemas](../../../../../xdm/ui/overview.md). Utilice el espacio de trabajo de esquemas para crear o actualizar un esquema con el grupo de campos [!DNL Algolia Profile Details]. A continuación, vaya al campo **[!UICONTROL Token de usuario]** y utilice el carril derecho para seleccionar el cuadro **[!UICONTROL Identidad]**. Además, utilice el cuadro de entrada para definir el área de nombres de identidad [!DNL Algolia User Token]. Cuando termine, seleccione **[!UICONTROL Guardar]**.
+
+![Establecer identidad en el campo.](../../../../images/tutorials/create/algolia/user-profiles/set-set-identity-on-field.png)
+
+Una vez que el campo **[!UICONTROL Token de usuario]** se asigna al área de nombres de identidad [!DNL Algolia User Token], la identidad aparece en el perfil de usuario de cualquier perfil.
+
+![Interfaz de perfil de usuario.](../../../../images/tutorials/create/algolia/user-profiles/user-profile.png)
 
 ## Asignación de campos de datos a un esquema XDM
 
-Utilice la interfaz de asignación para asignar los datos de origen a los campos de esquema adecuados antes de introducir datos en Experience Platform.  Para obtener más información, lea la guía de asignación [en la interfaz de usuario](../../../../../data-prep/ui/mapping.md).
+Utilice la interfaz de asignación para asignar los datos de origen a los campos de esquema. Para obtener más información, consulte la [guía de asignación](../../../../../data-prep/ui/mapping.md).
 
-![Paso de asignación del flujo de trabajo de orígenes.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
+![Paso de asignación.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
 ## Programar ejecuciones de ingesta
 
 A continuación, utilice la interfaz de programación para definir la programación de ingesta del flujo de datos.
-
-<!-- The Scheduling step allows for configuration of the data/time to execute the [!DNL Algolia Uer Profiles] Source connector. There is configuration to backfill the data from [!DNL Algolia] which will pull all the profiles from the source system.  If the source is scheduled, then it will retrieve modified profiles from the [!DNL Algolia] based on the configured time interval. -->
 
 ![Paso de programación del flujo de trabajo de orígenes.](../../../../images/tutorials/create/algolia/user-profiles/scheduling.png)
 
