@@ -160,6 +160,6 @@ La nueva regla ya está lista. Seleccione **[!UICONTROL Guardar en biblioteca]**
 
 ## Pasos siguientes
 
-En esta guía se explica cómo configurar reglas mTLS en el reenvío de eventos. Para obtener más información sobre la configuración de mTLS en un entorno, consulte la [guía de seguridad de la capa de transporte mutuo [!DNL mTLS] 2}.](../cloud-connector/mtls.md)
+En esta guía se explica cómo configurar reglas mTLS en el reenvío de eventos. Para obtener más información sobre la configuración de mTLS en un entorno, consulte la [guía de seguridad de la capa de transporte mutuo [!DNL mTLS] 2&rbrace;.](../cloud-connector/mtls.md)
 
 Para obtener más información sobre las funcionalidades de reenvío de eventos en Experience Platform, consulte la [descripción general del reenvío de eventos](../../../ui/event-forwarding/overview.md).
