@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
+source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1078'
 ht-degree: 35%
 
 ---
@@ -242,6 +242,7 @@ ht-degree: 35%
    - [Introducir datos cifrados](tutorials/api/encrypt-data.md)
    - [Guardar un flujo de datos como borrador](tutorials/api/draft.md)
    - [Aplicación de etiquetas de acceso a un flujo de datos](tutorials/api/labels.md)
+   - [Usar extremos privados](tutorials/api/private-link.md)
 - Tutoriales de IU {#ui-tutorials}
    - Crear una conexión de origen {#create}
       - Aplicaciones de Adobe {#adobe-applications}
