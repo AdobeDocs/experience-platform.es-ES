@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: mayo de 2025'
 description: Las notas de la versión de mayo de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 81%
+source-wordcount: '1530'
+ht-degree: 77%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 81%
 
 Actualizaciones de funciones y documentación existentes en Adobe Experience Platform:
 
+- [Asistente de IA](#ai-assistant)
 - [Servicio de catálogo](#catalog-service)
 - [Preparación de los datos](#data-prep)
 - [Destinos](#destinations)
@@ -33,6 +34,18 @@ Actualizaciones de funciones y documentación existentes en Adobe Experience Pla
 - [Zonas protegidas](#sandboxes)
 - [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
+
+## Asistente de IA {#ai-assistant}
+
+El Asistente de IA de Adobe Experience Platform es una experiencia conversacional que puede utilizar para acelerar los flujos de trabajo en aplicaciones de Adobe. Puede utilizar el Asistente de IA para comprender mejor el conocimiento del producto, solucionar problemas o buscar a través de la información y encontrar perspectivas operativas. El Asistente de IA es compatible con Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Disponibilidad general del agente de soporte del producto | Ahora puede utilizar el Agente de soporte de producto en el Asistente de IA para solucionar problemas sin problemas sin abandonar los flujos de trabajo. Los administradores de soporte de su organización ahora pueden utilizar el Agente de soporte de producto para crear vales de soporte al cliente, con detalles de contexto y sesión de sus interacciones con el Asistente de IA. <br><br>El acceso al Agente de soporte técnico estará disponible hasta el 30 de noviembre de 2025. Debe ponerse en contacto con el representante de cuentas de Adobe para obtener la licencia del agente de soporte técnico y seguir utilizando la función después de esta fecha. Para obtener más información, lea la [Documentación del agente de soporte técnico](../../ai-assistant/new-features/customer-support.md). |
+
+Para obtener más información, lea la [Información general sobre el Asistente de IA](../../ai-assistant/landing.md).
 
 ## Servicio de catálogo {#catalog-service}
 
