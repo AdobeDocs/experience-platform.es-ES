@@ -2,16 +2,23 @@
 title: Notas de la versión de la extensión Adobe Experience Platform Web SDK
 description: Extensión de etiqueta de Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
 workflow-type: tm+mt
-source-wordcount: '2652'
-ht-degree: 29%
+source-wordcount: '2677'
+ht-degree: 28%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Web SDK
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión de SDK, consulte las [notas de la versión de Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+
+## Versión 2.30.1: miércoles, 27 de mayo de 2025
+
+**Correcciones y mejoras**
+
+- Se ha corregido un problema en el cual la vista de variables de actualización se bloqueaba cuando una organización no tenía establecida una zona protegida predeterminada.
 
 ## Versión 2.30.0: jueves, 21 de mayo de 2025
 
