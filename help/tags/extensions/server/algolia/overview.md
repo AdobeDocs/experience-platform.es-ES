@@ -171,5 +171,5 @@ Para obtener más información sobre cómo depurar la implementación con la her
 
 - [[!DNL Algolia] Documentación de la API de Insights](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Documentación de eventos](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Documentación del reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
+- [[!DNL Adobe Experience Platform] Documentación del reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=es)
 - [[!DNL Algolia] Resumen de características de IA](https://www.algolia.com/products/ai-search/)
