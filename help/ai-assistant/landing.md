@@ -98,7 +98,7 @@ Puede utilizar el Agente de soporte de productos en el Asistente de IA para solu
 
 Watch the following video for more information on the security features of AI Assistant:
 
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441083/?learn=on&captions=spa)
 
 >[!BEGINSHADEBOX]
 
@@ -146,8 +146,8 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441066/?learn=on" title="Información general sobre seguridad del asistente de IA" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Información general sobre seguridad del asistente de IA"
+                    <a href="https://video.tv.adobe.com/v/3441083/?learn=on&captions=spa" title="Información general sobre seguridad del asistente de IA" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441083/?format=jpeg&nocache=1732633205785&captions=spa" alt="Información general sobre seguridad del asistente de IA"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -155,12 +155,12 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" title="Información general sobre seguridad del asistente de IA">Introducción a la seguridad del Asistente de IA</a>
+                        <a href="https://video.tv.adobe.com/v/3441083/?learn=on&captions=spa" target="_blank" rel="referrer" title="Información general sobre seguridad del asistente de IA">Introducción a la seguridad del Asistente de IA</a>
                     </p>
                     <p class="is-size-6">Vea este vídeo para obtener una descripción general completa de las funciones y procesos de seguridad de AI Assistant. Además, puede leer la hoja de datos de seguridad del Asistente de IA para obtener más información sobre la arquitectura de seguridad del Asistente de IA.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441083/?learn=on&captions=spa" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                   </a>
                   <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -176,8 +176,8 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441024?learn=on" title="Conocimiento del producto del asistente de IA" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441024/?format=jpeg&nocache=1732633205780" alt="Conocimiento del producto del asistente de IA"
+                    <a href="https://video.tv.adobe.com/v/3441027?learn=on&captions=spa" title="Conocimiento del producto del asistente de IA" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441027/?format=jpeg&nocache=1732633205780&captions=spa" alt="Conocimiento del producto del asistente de IA"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,12 +185,12 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" title="Conocimiento del producto del asistente de IA">Conocimiento del producto del Asistente de IA</a>
+                        <a href="https://video.tv.adobe.com/v/3441027?learn=on&captions=spa" target="_blank" rel="referrer" title="Conocimiento del producto del asistente de IA">Conocimiento del producto del Asistente de IA</a>
                     </p>
                     <p class="is-size-6">En el asistente de IA, el conocimiento del producto hace referencia a conceptos y temas basados en la documentación de Experience League. Vea este vídeo para obtener información sobre cómo puede utilizar el conocimiento del producto AI Assistant para guiar sus tareas sin abandonar los flujos de trabajo. </p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441027?learn=on&captions=spa" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                   </a>
                     <a href="home.md#product-knowledge" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -204,8 +204,8 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3444031?learn=on&enablevpops" title="Perspectivas operativas del asistente de IA" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444031/?format=jpeg&nocache=1732633205785" alt="Perspectivas operativas del asistente de IA"
+                    <a href="https://video.tv.adobe.com/v/3444035?learn=on&enablevpops&captions=spa" title="Perspectivas operativas del asistente de IA" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444035/?format=jpeg&nocache=1732633205785&captions=spa" alt="Perspectivas operativas del asistente de IA"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -213,12 +213,12 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" title="Perspectivas operativas del asistente de IA">Perspectivas operativas del Asistente de IA</a>
+                        <a href="https://video.tv.adobe.com/v/3444035/?learn=on&captions=spa" target="_blank" rel="referrer" title="Perspectivas operativas del asistente de IA">Perspectivas operativas del Asistente de IA</a>
                     </p>
                     <p class="is-size-6">Las perspectivas operativas se refieren a las respuestas que genera el Asistente de IA cuando se le consultan los metadatos de sus objetos. Vea este vídeo para aprender a utilizar las perspectivas operativas en para descubrir perspectivas de uso, linaje e higiene en los objetos de datos de su organización.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3444035/?learn=on&captions=spa" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                   </a>
                   <a href="./ui-guide.md#operational-insights" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -294,8 +294,8 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3435532?learn=on" title="Desorden de las audiencias" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435532/?format=jpeg&nocache=1732633205785" alt="Desorden de las audiencias"
+                    <a href="https://video.tv.adobe.com/v/3441990?learn=on&captions=spa" title="Desorden de las audiencias" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441990/?format=jpeg&nocache=1732633205785&captions=spa" alt="Desorden de las audiencias"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -303,11 +303,11 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" title="Desorden de las audiencias">Desorden de audiencias</a>
+                        <a href="https://video.tv.adobe.com/v/3441990?learn=on&captions=spa" target="_blank" rel="referrer" title="Desorden de las audiencias">Desorden de audiencias</a>
                     </p>
                     <p class="is-size-6">Vea este vídeo para aprender a utilizar el Asistente de IA con el fin de desorganizar su audiencia y optimizar sus operaciones de marketing.</p>
                 </div>
-                  <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441990?learn=on&captions=spa" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                   </a>  
             </div>
@@ -319,8 +319,8 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3440962/?learn=on" title="Uso del panel de detección para empezar" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440962/?format=jpeg&nocache=1732633205780" alt="Uso del panel de detección para empezar"
+                    <a href="https://video.tv.adobe.com/v/3440965/?learn=on&captions=spa" title="Uso del panel de detección para empezar" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440965/?format=jpeg&nocache=1732633205780&captions=spa" alt="Uso del panel de detección para empezar"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -328,12 +328,12 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" title="Uso del panel de detección para empezar">Use el panel de detección para comenzar</a>
+                        <a href="https://video.tv.adobe.com/v/3440965/?learn=on&captions=spa" target="_blank" rel="referrer" title="Uso del panel de detección para empezar">Use el panel de detección para comenzar</a>
                     </p>
                     <p class="is-size-6">Vea este vídeo para obtener más información sobre el panel de detección del asistente de IA y cómo puede utilizarlo para empezar a utilizar el asistente de IA.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3440965/?learn=on&captions=spa" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                   </a>
                   <a href="./ui-guide.md#use-discoverability" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -347,8 +347,8 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441738/?learn=on" title="Verificación y validación de respuestas de IA" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441738/?format=jpeg&nocache=1732633205785" alt="Verificación y validación de respuestas de IA"
+                    <a href="https://video.tv.adobe.com/v/3441741/?learn=on&captions=spa" title="Verificación y validación de respuestas de IA" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441741/?format=jpeg&nocache=1732633205785&captions=spa" alt="Verificación y validación de respuestas de IA"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -356,12 +356,12 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" title="Verificación y validación de respuestas de IA">Verificar y validar respuestas de IA</a>
+                        <a href="https://video.tv.adobe.com/v/3441741/?learn=on&captions=spa" target="_blank" rel="referrer" title="Verificación y validación de respuestas de IA">Verificar y validar respuestas de IA</a>
                     </p>
                     <p class="is-size-6">Vea este vídeo para aprender a utilizar el Asistente de IA para verificar y validar las respuestas.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441741/?learn=on&captions=spa" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                   </a>
                   <a href="./ui-guide.md#verify-operational-insights-responses" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -377,8 +377,8 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441680/?learn=on" title="Ejecutar un análisis más efectivo de linaje e impacto" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441680/?format=jpeg&nocache=1732633205780" alt="Ejecutar un análisis más efectivo de linaje e impacto"
+                    <a href="https://video.tv.adobe.com/v/3441683/?learn=on&captions=spa" title="Ejecutar un análisis más efectivo de linaje e impacto" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441683/?format=jpeg&nocache=1732633205780&captions=spa" alt="Ejecutar un análisis más efectivo de linaje e impacto"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -386,11 +386,11 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" title="Ejecutar un análisis más efectivo de linaje e impacto">Ejecutar un análisis de linaje e impacto más efectivo</a>
+                        <a href="https://video.tv.adobe.com/v/3441683/?learn=on&captions=spa" target="_blank" rel="referrer" title="Ejecutar un análisis más efectivo de linaje e impacto">Ejecutar un análisis de linaje e impacto más efectivo</a>
                     </p>
                     <p class="is-size-6">Vea este vídeo para aprender a utilizar el asistente de IA con el fin de ejecutar un análisis de impacto más eficaz antes de realizar cambios en los objetos de datos.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3441683/?learn=on&captions=spa" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                 </a>
             </div>
@@ -400,8 +400,8 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3443183?learn=on" title="Usar el agente de soporte técnico en el asistente de IA" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443183/?format=jpeg&nocache=1732633205785" alt="Usar el agente de soporte técnico en el asistente de IA"
+                    <a href="https://video.tv.adobe.com/v/3443186?learn=on&captions=spa" title="Usar el agente de soporte técnico en el asistente de IA" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443186/?format=jpeg&nocache=1732633205785&captions=spa" alt="Usar el agente de soporte técnico en el asistente de IA"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -409,12 +409,12 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" title="Usar el agente de soporte técnico en el asistente de IA">Usar el agente de soporte técnico en el asistente de IA</a>
+                        <a href="https://video.tv.adobe.com/v/3443186?learn=on&captions=spa" target="_blank" rel="referrer" title="Usar el agente de soporte técnico en el asistente de IA">Usar el agente de soporte técnico en el asistente de IA</a>
                     </p>
                     <p class="is-size-6">Vea este vídeo para aprender cómo puede utilizar el Agente de soporte de productos para solucionar problemas sin problemas sin abandonar los flujos de trabajo.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3443186?learn=on&captions=spa" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                   </a>
                   <a href="./new-features/customer-support.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">

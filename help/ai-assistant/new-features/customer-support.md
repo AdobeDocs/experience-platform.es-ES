@@ -62,5 +62,5 @@ Una vez completados estos pasos, los administradores de asistencia de su organiz
 
 Para obtener más información, vea el siguiente vídeo para aprender cómo puede utilizar el Agente de soporte de productos para solucionar problemas sin tener que abandonar los flujos de trabajo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443186?learn=on&captions=spa)
 
