@@ -2,9 +2,9 @@
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
+source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '665'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] ya está disponible de forma general. Póngase en contacto con el Soporte técnico de Adobe si tiene una zona protegida existente que requiere que los gráficos contraídos se anulen (&quot;fijos&quot;) después de habilitar la configuración de identidad.
+>[!DNL Identity Graph Linking Rules] ya está disponible de forma general. Póngase en contacto con el equipo de cuenta de Adobe o con el servicio de asistencia de Adobe si tiene una zona protegida existente que requiera que los gráficos contraídos se cancelen (&quot;fijos&quot;) después de habilitar la configuración de identidad.
 
 La configuración de identidad es una característica de la interfaz de usuario del servicio de identidad de Adobe Experience Platform que puede utilizar para designar áreas de nombres únicas y configurar la prioridad del área de nombres.
 
@@ -82,6 +82,8 @@ A partir de aquí, debe confirmar lo siguiente antes de continuar con el paso fi
 >* El paso final es otro mensaje de confirmación que indica que los gráficos existentes solo se verán afectados por el algoritmo de gráficos **si los gráficos se actualizan después de guardar la configuración** y que la identidad principal de los fragmentos de evento en el Perfil del cliente en tiempo real no se actualizará incluso después de que cambie la prioridad del área de nombres.
 >
 >* La configuración nueva o actualizada tardará hasta **24 horas** en surtir efecto. Para confirmar, escribe el nombre de tu zona protegida y selecciona **[!UICONTROL Confirmar]**.
+>
+>* No habrá cambios en sus datos hasta que guarde su configuración de identidad.
 
 ![Ventana de confirmación que muestra una advertencia sobre un retraso de seis horas antes de que se procesen las configuraciones.](../images/rules/complete.png)
 
