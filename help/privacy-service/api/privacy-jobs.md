@@ -5,14 +5,20 @@ title: Punto final de API de trabajos de privacidad
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
+source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1861'
 ht-degree: 2%
 
 ---
 
 # Extremo de trabajos de privacidad
+
+>[!IMPORTANT]
+>
+>Para admitir el creciente número de leyes de privacidad estatales de Estados Unidos, Privacy Service está cambiando sus valores `regulation_type`. Use los nuevos valores que incluyan abreviaciones de estado (por ejemplo, `ucpa_ut_usa`) a partir del **12 de junio de 2025**. Los valores anteriores (por ejemplo, `ucpa_usa`) dejan de funcionar después del **28 de julio de 2025**.
+>
+>Actualice las integraciones antes de este plazo para evitar errores de solicitud.
 
 Este documento explica cómo trabajar con trabajos de privacidad mediante llamadas a la API. En concreto, cubre el uso del extremo `/job` en la API [!DNL Privacy Service]. Antes de leer esta guía, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar correctamente llamadas a la API, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 
@@ -22,7 +28,7 @@ Este documento explica cómo trabajar con trabajos de privacidad mediante llamad
 
 ## Enumerar todos los trabajos {#list}
 
-Puede ver una lista de todos los trabajos de privacidad disponibles en su organización realizando una solicitud de GET al extremo `/jobs`.
+Puede ver una lista de todos los trabajos de privacidad disponibles en su organización realizando una petición GET al extremo `/jobs`.
 
 **Formato de API**
 
@@ -42,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{REGULATION}` | Tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte la descripción general de [regulaciones admitidas](../regulations/overview.md) para obtener más información sobre las regulaciones de privacidad que representan los valores anteriores. |
+| `{REGULATION}` | Tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Consulte la descripción general de [regulaciones admitidas](../regulations/overview.md) para obtener más información sobre las regulaciones de privacidad que representan los valores anteriores. |
 | `{PAGE}` | Página de datos que se va a mostrar, con numeración basada en 0. El valor predeterminado es `0`. |
 | `{SIZE}` | El número de resultados que se mostrarán en cada página. El valor predeterminado es `100` y el máximo es `1000`. Si se supera el máximo, la API devolverá un error de 400 códigos. |
 | `{status}` | El comportamiento predeterminado es incluir todos los estados. Si especifica un tipo de estado, la solicitud solo devolverá los trabajos de privacidad que coincidan con ese tipo de estado. Los valores aceptados incluyen: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -76,11 +82,11 @@ Para obtener el siguiente conjunto de resultados en una respuesta paginada, debe
 
 >[!IMPORTANT]
 >
->El Privacy Service solo está diseñado para solicitudes de derechos de los interesados y consumidores. No se admite ni permite ningún otro uso de Privacy Service para la limpieza o el mantenimiento de datos. El Adobe tiene la obligación legal de cumplirlos en el momento oportuno. Como tal, no se permiten las pruebas de carga en el Privacy Service, ya que es un entorno de solo producción y crea un registro de solicitudes de privacidad válidas innecesarias.
+>Privacy Service solo está diseñado para solicitudes de derechos de los interesados y consumidores. No se admite ni permite ningún otro uso de Privacy Service para la limpieza o el mantenimiento de datos. Adobe tiene la obligación legal de cumplirlos a tiempo. Como tal, no se permiten las pruebas de carga en Privacy Service, ya que es un entorno de solo producción y crea un registro de asuntos pendientes innecesario de solicitudes de privacidad válidas.
 >
->Ahora se establece un límite diario de carga estricto para ayudar a evitar el abuso del servicio. Si se detecta que algún usuario abusa del sistema, se deshabilitará el acceso al servicio. Luego se celebrará una reunión posterior con ellos para abordar sus acciones y discutir el uso aceptable de Privacy Service.
+>Ahora se establece un límite diario de carga estricto para ayudar a evitar el abuso del servicio. Si se detecta que algún usuario abusa del sistema, se deshabilitará el acceso al servicio. A continuación, se celebrará una reunión posterior con ellos para abordar sus acciones y discutir el uso aceptable de Privacy Service.
 
-Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación de los interesados a cuyos datos desea acceder, eliminar o excluir de la venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga de una solicitud de POST al extremo `/jobs`.
+Antes de crear una nueva solicitud de trabajo, primero debe recopilar información de identificación de los interesados a cuyos datos desea acceder, eliminar o excluir de la venta. Una vez que tenga los datos requeridos, deben proporcionarse en la carga de una petición POST al extremo `/jobs`.
 
 >[!NOTE]
 >
@@ -170,7 +176,7 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` **(obligatorio)** | Matriz que contiene información de autenticación de su organización. Cada identificador enumerado incluye los siguientes atributos: <ul><li>`namespace`: área de nombres de un identificador.</li><li>`value`: el valor del identificador.</li></ul>Se **requiere** que uno de los identificadores use `imsOrgId` como su `namespace`, y que su `value` contenga el identificador único de su organización. <br/><br/>Los identificadores adicionales pueden ser calificadores de compañía específicos de productos (por ejemplo, `Campaign`), que identifican una integración con una aplicación de Adobe que pertenece a su organización. Los valores potenciales incluyen nombres de cuenta, códigos de cliente, ID de inquilino u otros identificadores de aplicación. |
 | `users` **(obligatorio)** | Matriz que contiene una colección de al menos un usuario cuya información desea eliminar o a la que desea acceder. Se puede proporcionar un máximo de 1000 usuarios en una sola solicitud. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`: identificador de un usuario que se usa para calificar los identificadores de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a ella o buscarla más tarde.</li><li>`action`: una matriz que enumera las acciones que se deben realizar con los datos del usuario. Según las acciones que desee realizar, esta matriz debe incluir `access`, `delete` o ambos.</li><li>`userIDs`: una colección de identidades del usuario. El número de identidades que un solo usuario puede tener está limitado a nueve. Cada identidad consta de `namespace`, `value` y un calificador de área de nombres (`type`). Consulte el [apéndice](appendix.md) para obtener más información sobre estas propiedades requeridas.</li></ul> Para obtener una explicación más detallada de `users` y `userIDs`, consulte la [guía de solución de problemas](../troubleshooting-guide.md#user-ids). |
-| `include` **(obligatorio)** | Una matriz de productos de Adobe para incluir en el procesamiento. Si falta este valor o está vacío, la solicitud es rechazada. Incluya solo productos con los que su organización tenga una integración. Consulte la sección sobre [valores de productos aceptados](appendix.md) en el apéndice para obtener más información. |
+| `include` **(obligatorio)** | Una matriz de productos de Adobe que se incluirán en el procesamiento. Si falta este valor o está vacío, la solicitud es rechazada. Incluya solo productos con los que su organización tenga una integración. Consulte la sección sobre [valores de productos aceptados](appendix.md) en el apéndice para obtener más información. |
 | `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los identificadores en las aplicaciones (actualmente solo es compatible con [!DNL Analytics]). Si se omite, el valor predeterminado es `false`. |
 | `priority` | Propiedad opcional utilizada por Adobe Analytics que establece la prioridad para procesar solicitudes. Los valores aceptados son `normal` y `low`. Si se omite `priority`, el comportamiento predeterminado es `normal`. |
 | `mergePolicyId` | Al realizar solicitudes de privacidad para el perfil del cliente en tiempo real (`profileService`), puede proporcionar de forma opcional el identificador de la [política de combinación](../../profile/merge-policies/overview.md) específica que desee usar para la vinculación de ID. Al especificar una política de combinación, las solicitudes de privacidad pueden incluir información de la audiencia al devolver datos de un cliente. Solo se puede especificar una política de combinación por solicitud. Si no se proporciona ninguna política de combinación, la información de segmentación no se incluye en la respuesta. |
@@ -234,7 +240,7 @@ Una vez que haya enviado correctamente la solicitud de trabajo, puede continuar 
 
 ## Comprobar el estado de un trabajo {#check-status}
 
-Puede recuperar información sobre un trabajo específico, como su estado de procesamiento actual, incluyendo el `jobId` de ese trabajo en la ruta de una solicitud de GET al extremo `/jobs`.
+Puede recuperar información sobre un trabajo específico, como su estado de procesamiento actual, incluyendo el `jobId` de ese trabajo en la ruta de una petición GET al extremo `/jobs`.
 
 >[!IMPORTANT]
 >
@@ -369,4 +375,4 @@ En la tabla siguiente se enumeran las diferentes categorías de estado de trabaj
 
 ## Pasos siguientes
 
-Ahora sabe cómo crear y supervisar trabajos de privacidad mediante la API [!DNL Privacy Service]. Para obtener información sobre cómo realizar las mismas tareas con la interfaz de usuario, vea la [descripción general de la interfaz de usuario del Privacy Service](../ui/overview.md).
+Ahora sabe cómo crear y supervisar trabajos de privacidad mediante la API [!DNL Privacy Service]. Para obtener información sobre cómo realizar las mismas tareas con la interfaz de usuario, vea la [descripción general de la interfaz de usuario de Privacy Service](../ui/overview.md).

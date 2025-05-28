@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;RGPD;rgpd;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;descripción general;descripción general;regulación;regulación;regulaciones;regulaciones;privacidad;privacidad;
+keywords: Experience Platform;inicio;temas populares;RGPD;rgpd;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;descripción general;información general;regulación;regulación;regulaciones;regulaciones;privacidad;privacidad;
 solution: Experience Platform
 title: Terminología de normas de privacidad
 description: Este documento proporciona definiciones de términos clave relacionados con las regulaciones de privacidad admitidas por Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
+source-git-commit: ccde37961bd98275030db98440800925d3a6703e
 workflow-type: tm+mt
-source-wordcount: '2404'
-ht-degree: 1%
+source-wordcount: '2630'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 **CCPA**: La [!DNL California Consumer Privacy Act] (CCPA) proporciona a los residentes de California más control sobre la información personal que las empresas recopilan de entonces. La ley establece varios derechos nuevos para los consumidores, incluido el derecho de acceso y la información personal recopilada de ellos, y el derecho a optar por la venta de su información personal a terceros.
 
-**CPA**: la [!DNL Colorado Privacy Act] (CPA) proporciona a los consumidores de Colorado una perspectiva adicional de lo que los controladores de datos personales recopilan, comparten y venden, y de cómo se utilizan esos datos. La CPA protege los datos personales de los residentes de Colorado cuando actúan en un contexto individual o familiar. Estas reglas detallan las especificaciones técnicas de uno o más mecanismos universales de exclusión. Estos mecanismos comunican claramente la opción afirmativa, libre e inequívoca del consumidor de excluirse del procesamiento de datos personales con fines de publicidad dirigida o de venta de datos personales.
+**CPA**: [!DNL Colorado Privacy Act] (CPA) proporciona a los consumidores de Colorado insight adicional sobre lo que los controladores de datos personales recopilan, comparten y venden, y sobre cómo se utilizan esos datos. La CPA protege los datos personales de los residentes de Colorado cuando actúan en un contexto individual o familiar. Estas reglas detallan las especificaciones técnicas de uno o más mecanismos universales de exclusión. Estos mecanismos comunican claramente la opción afirmativa, libre e inequívoca del consumidor de excluirse del procesamiento de datos personales con fines de publicidad dirigida o de venta de datos personales.
 
 **CTDPA**: [!DNL Connecticut Data Privacy Act] (CTDPA) otorga a los residentes de Connecticut ciertos derechos sobre sus datos personales y establece responsabilidades y estándares de protección de privacidad para los controladores de datos que procesan sus datos personales. La CTDPA les otorga los siguientes derechos: acceso, corrección, eliminación, obtención de una copia o exclusión de la venta, procesamiento o elaboración de perfiles de sus datos personales. La CTDPA protege a un residente de Connecticut que actúa como individuo o en un contexto familiar.
 
@@ -87,11 +87,11 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 ## I
 
-**Servicios de Identity Management (IMS)**: La implementación de Adobe de Federated ID y OAuth 2.0 para la autenticación de usuarios de Adobe ID y la autorización de recursos de Adobe. Integre IMS con la aplicación o el servicio de Adobe para permitir que los usuarios inicien sesión en los servicios de Adobe y accedan a ellos. Los usuarios pueden iniciar sesión directamente con Renga (el proveedor de servicios de identidad de Adobe) o a través de un dominio de autenticación de terceros de confianza (como [!DNL Google], [!DNL Facebook] o el LDAP de una empresa u organización).
+**Servicios de Identity Management (IMS)**: la implementación de Adobe de Federated ID y OAuth 2.0 para la autenticación de usuarios de Adobe ID y la autorización de recursos de Adobe. Integre IMS con su aplicación o servicio de Adobe para permitir que sus usuarios inicien sesión en los servicios de Adobe y accedan a ellos. Los usuarios pueden iniciar sesión directamente con Renga (el proveedor de servicios de identidad de Adobe) o a través de un dominio de autenticación de terceros de confianza (como [!DNL Google], [!DNL Facebook] o el LDAP de una empresa u organización).
 
 **Consentimiento implícito**: también conocido como consentimiento inequívoco. El consentimiento implícito hace referencia a un consentimiento que no fue otorgado explícitamente por el interesado, pero que, sin embargo, es de naturaleza inequívoca. Por ejemplo, durante el proceso de registro en el sitio web de una empresa, se envía un aviso de que, al proporcionar una dirección de correo electrónico, el interesado consiente en recibir correos electrónicos en ofertas especiales. Si el interesado lee el aviso, la acción afirmativa de introducir su correo electrónico es suficiente para considerarse un consentimiento implícito.
 
-**ID de organización de IMS**: hace referencia a un token de autorización de Adobe para la autenticación entre servicio, que no requiere el inicio de sesión del usuario. Se emite a un cliente IMS y no tiene ningún usuario asociado. Un cliente IMS necesita un token de servicio para autorizar solicitudes de canal secundario entre servicios. (El término &quot;token de sistema&quot; se utiliza de forma ocasional con el significado de &quot;token de servicio&quot;).
+**ID de organización de IMS**: hace referencia a un token de autorización de Adobe para la autenticación servicio a servicio, que no requiere el inicio de sesión del usuario. Se emite a un cliente IMS y no tiene ningún usuario asociado. Un cliente IMS necesita un token de servicio para autorizar solicitudes de canal secundario entre servicios. (El término &quot;token de sistema&quot; se utiliza de forma ocasional con el significado de &quot;token de servicio&quot;).
 
 **[!DNL Iowa Consumer Data Protection Act]**: Una ley de privacidad del estado que otorga a los residentes de Iowa el derecho de acceder, eliminar y excluir la venta de sus datos personales. El ICDPA se aplica a las empresas que procesan datos para más de 100.000 residentes de Iowa o que obtienen más del 50% de los ingresos por la venta de datos. Entre las exenciones importantes se incluyen las instituciones educativas y sin fines de lucro. La ley establece un período de cura de 90 días para que las empresas corrijan las violaciones antes de que se impongan sanciones.
 
@@ -108,6 +108,8 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 **Establecimiento principal**: El lugar dentro de la Unión en el que se toman las principales decisiones relacionadas con el procesamiento de datos; con respecto al procesador.
 
 **MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) mejora los derechos de privacidad de los consumidores con respecto a sus datos de salud. Exige revelaciones, consentimiento del consumidor y derechos de eliminación para los datos de salud, y prohíbe la venta de datos de salud sin autorización. Además, la ley hace ilegal el uso de geoperimetraje alrededor de las instalaciones de salud.
+
+**[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): a partir del 31 de julio de 2025, la MCDPA otorga a los residentes de Minnesota derechos para acceder, corregir, eliminar y obtener sus datos personales, así como para excluirse de las ventas de datos, la publicidad segmentada y ciertos perfiles. Se aplica a las empresas que operan en Minnesota o que se dirigen a ella y que procesan datos de más de 100 000 consumidores al año (excluyendo datos solo de pago), o más de 25 000 consumidores si más del 25 % de los ingresos proceden de la venta de datos. Las entidades cubiertas deben implementar medidas razonables de seguridad de datos y realizar evaluaciones de riesgos. El Fiscal General de Minnesota hace cumplir la ley y puede emitir multas de hasta $7,500 por violación. Sin embargo, las empresas tienen hasta el 31 de enero de 2026 para corregir cualquier infracción antes de que se apliquen sanciones.
 
 **[!DNL Montana Consumer Data Privacy Act]**: Esta ley otorga a los residentes de Montana derechos para acceder, corregir, eliminar y solicitar copias de sus datos personales. La MCDPA se aplica a las empresas que procesan datos para más de 50.000 consumidores de Montana y hace hincapié en la protección de datos personales sensibles, como la información biométrica y genética. Aplica transparencia en torno a la recopilación, el uso compartido y las prácticas de venta de datos.
 
@@ -169,6 +171,8 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 ## T
 
 **TDPSA**: La Ley de Privacidad y Seguridad de Datos de Texas (TDPSA) es una ley integral que protege los derechos de datos personales de los residentes de Texas. Otorga a las personas el derecho a acceder, corregir, eliminar y obtener copias de sus datos, así como a excluirse de las ventas de datos y la publicidad segmentada. Las empresas que violen esta legislación pueden enfrentarse a sanciones económicas.
+
+**[!DNL Tennessee Information Protection Act (TIPA)]**: a partir del 1 de julio de 2025, TIPA otorga a los residentes el derecho de acceder, corregir, eliminar y obtener sus datos personales. También les permite excluirse de las ventas de datos, la publicidad segmentada y la creación de perfiles utilizados para tomar decisiones que producen efectos legales o significativos similares. Se aplica a las empresas con más de 25 millones de dólares en ingresos anuales que procesan datos de 175.000 o más consumidores, o 25.000 si más de la mitad de los ingresos provienen de la venta de datos personales. Las empresas cubiertas deben adoptar medidas de seguridad razonables y llevar a cabo evaluaciones de protección de datos para determinadas actividades de procesamiento de alto riesgo. El Fiscal General de Tennessee hace cumplir la ley, con multas de hasta $7,500 por violación. Las empresas tienen 60 días para corregir las infracciones antes de enfrentar sanciones, pero las infracciones intencionales o a sabiendas pueden resultar en daños triples.
 
 **Trílogos**: Los Trílogos son negociaciones informales entre la Comisión Europea, el Parlamento Europeo y el Consejo de la Unión Europea. Estas negociaciones se suelen celebrar después de las primeras lecturas de la legislación propuesta para acordar más rápidamente un texto de compromiso que se adopte.
 acordar la adopción de un texto de compromiso más rápidamente.
