@@ -1,14 +1,15 @@
 ---
 title: Información general sobre la seguridad de la capa de transporte mutuo (mTLS)
 description: Descubra cómo puede utilizar mTLS para recuperar de forma segura certificados públicos emitidos por Adobe para el reenvío de eventos.
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
+source-git-commit: ab16cc3f70ec54460c7c4834e665c828d75d4d9e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 1%
+source-wordcount: '638'
+ht-degree: 2%
 
 ---
 
-# Información general sobre la seguridad de la capa de transporte mutuo [!DNL mTLS]
+# Información general sobre la seguridad de la capa de transporte mutuo ([!DNL mTLS])
 
 Vincule los certificados de seguridad de la capa de transporte mutuo ([!DNL mTLS]) en la [!UICONTROL interfaz de usuario de entornos] para tomar el control de la seguridad de su extensión. El certificado [!DNL mTLS] es una credencial digital que prueba la identidad de un servidor o cliente en comunicaciones seguras. Cuando usa la API del servicio [!DNL mTLS], estos certificados le ayudan a comprobar y cifrar las interacciones con el reenvío de eventos de Adobe Experience Platform. Este proceso no solo protege sus datos, sino que también garantiza que todas las conexiones procedan de un socio de confianza.
 
@@ -48,14 +49,14 @@ Para ver los detalles del certificado de un entorno, seleccione la pestaña **[!
 
 Se muestran los siguientes detalles del certificado:
 
-| Entorno | Descripción |
+| Nombre del campo | Descripción |
 | --- | --- |
 | Certificado | Detalles del certificado, que incluyen:<ul><li>**Nombre**: El nombre del certificado.</li><li>**Fecha de creación**: La fecha en la que se creó el certificado.</li><li>**Estado**: El estado actual del certificado:<ul><li>**Actual**: el certificado está en uso activamente.</li><li>**Obsoleto**: el certificado no está en uso, pero aún no ha caducado. Aún se puede seleccionar para su uso.</li><li>**Caducado**: el certificado ha caducado, está atenuado y ya no está disponible para su uso.</li></ul></ul> |
 | Caduca | Fecha de caducidad del certificado. |
 | Nombre de variable | Nombre de variable del certificado. |
 | Estado | Estado actual del certificado:<ul><li>**Implementado**: El certificado se ha implementado correctamente y está activo.</li><li>**Implementación**: el certificado se está implementando.</li><li>**Necesita implementación**: Este estado aparece cuando se selecciona un certificado obsoleto.</li></ul> |
 
-![La página Editar entorno de desarrollo, que resalta los detalles de [!UICONTROL Certificado].](../../../images/extensions/server/cloud-connector/create-environment.png)
+![La página Editar entorno de desarrollo, que resalta los detalles de [!UICONTROL Certificado].](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### Seleccionar e implementar un certificado obsoleto {#deploy-obsolete-certificate}
 
