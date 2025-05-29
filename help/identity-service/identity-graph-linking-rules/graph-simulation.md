@@ -5,7 +5,7 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '1446'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="Simulación de gráficos"
->abstract="Simular gráficos para comprender cómo vincula el servicio de identidad las identidades y cómo funciona el algoritmo de optimización de identidad."
+>abstract="Simule gráficos para comprender cómo vincula el servicio de identidad las identidades y cómo funciona el algoritmo de optimización de identidad."
 
 [!DNL Graph Simulation] es una herramienta en la interfaz de usuario del servicio de identidad que puedes usar para simular cómo se comporta un gráfico de identidad dada una combinación particular de identidades y cómo configuras el [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
 
 Vea el siguiente vídeo para obtener información adicional sobre el uso de la interfaz [!DNL Graph Simulation] en el área de trabajo de la interfaz de usuario del servicio de identidad:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444046/?learn=on&enablevpops&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Lea este documento para aprender cómo puede usar [!DNL Graph Simulation] para comprender mejor el comportamiento del gráfico de identidad y cómo funciona el algoritmo del gráfico.
 
