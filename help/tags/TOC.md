@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3434fd13ba4ca58f27834e75b045af079c18c64c
+source-git-commit: f038927d6a19db5e0187ccefd76d9ecc9df91b6a
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '785'
 ht-degree: 43%
 
 ---
@@ -133,6 +133,8 @@ ht-degree: 43%
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
       * [Información de recursos de AEM](https://exchange.adobe.com/apps/ec/103406)
       * [Notificador JS del freno neumático](https://exchange.adobe.com/apps/ec/103342)
+      * [!DNL Algolia] datos {#algolia-insights}
+         * Información general de [](./extensions/client/algolia/overview.md)
       * [Amplitud](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
       * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
