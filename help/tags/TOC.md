@@ -134,7 +134,7 @@ ht-degree: 43%
       * [Información de recursos de AEM](https://exchange.adobe.com/apps/ec/103406)
       * [Notificador JS del freno neumático](https://exchange.adobe.com/apps/ec/103342)
       * [!DNL Algolia] datos {#algolia-insights}
-         * Información general de [](./extensions/client/algolia/overview.md)
+         * [Información general de ](./extensions/client/algolia/overview.md)
       * [Amplitud](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
       * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
