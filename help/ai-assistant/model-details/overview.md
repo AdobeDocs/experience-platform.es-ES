@@ -1,29 +1,29 @@
 ---
-title: Tarjetas De Modelo Para La Transparencia Del Modelo De IA En Adobe Experience Platform
-description: Obtenga información sobre las tarjetas de modelo en Adobe Experience Platform.
+title: Detalles Del Modelo Para La Transparencia Del Modelo De IA En Adobe Experience Platform
+description: Obtenga información acerca de los detalles del modelo en Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: dddd699f231d54ee44b33f86a5c9e59c0aedc30c
+source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
-# Tarjetas de modelo para la transparencia del modelo de IA en Adobe Experience Platform
+# Detalles del modelo para la transparencia del modelo de IA en Adobe Experience Platform
 
-Una tarjeta del modelo de IA es el formato estándar mediante el cual se comunica la transparencia del modelo de IA. Las tarjetas de modelo proporcionan información completa sobre el modelo subyacente en el que se basa una herramienta de IA determinada. Las tarjetas de modelo incluyen información como el propósito de una herramienta de IA, datos de formación, métricas de rendimiento, limitaciones y consideraciones éticas. Puede utilizar la transparencia que las tarjetas de modelo proporcionan para comprender mejor las capacidades y limitaciones del modelo, así como para promover mejor un uso responsable y justo de la IA.
+Un detalle del modelo de IA es el formato estándar mediante el cual se comunica la transparencia del modelo de IA. Los detalles del modelo proporcionan información completa sobre el modelo subyacente en el que se basa una herramienta de IA determinada. Los detalles del modelo incluyen información como el propósito de una herramienta de IA, datos de formación, métricas de rendimiento, limitaciones y consideraciones éticas. Puede utilizar la transparencia que proporcionan los detalles del modelo para comprender mejor las capacidades y limitaciones del modelo, así como para promover un uso responsable y justo de la IA.
 
-Las tarjetas de modelo son públicas y su objetivo es mejorar la comprensión, tanto del cliente existente como del potencial, de los modelos de IA que utiliza Adobe. Las tarjetas de modelo suelen ser estáticas. Sin embargo, hay varios aspectos de los modelos de IA que pueden cambiar con el tiempo, incluidos el linaje, el sesgo y otros atributos de transparencia.
+Los detalles del modelo son públicos y están pensados para mejorar la comprensión, tanto del cliente existente como del potencial, de los modelos de IA que utiliza Adobe. Los detalles del modelo suelen ser estáticos. Sin embargo, hay varios aspectos de los modelos de IA que pueden cambiar con el tiempo, incluidos el linaje, el sesgo y otros atributos de transparencia.
 
-Lea este documento para obtener más información sobre las tarjetas de modelo en Adobe Experience Platform.
+Lea este documento para obtener más información sobre los detalles del modelo en Adobe Experience Platform.
 
-## Secciones de tarjeta de modelo {#model-card-sections}
+## Secciones de detalles del modelo {#model-detail-sections}
 
-Una tarjeta de modelo está compuesta por una variedad de secciones diferentes, cada una de las cuales se centra en un aspecto particular del modelo de IA.
+Un detalle de modelo se compone de una variedad de secciones diferentes, cada una centrada en un aspecto particular del modelo de IA.
 
-Lea lo siguiente para obtener una guía sobre las diferentes secciones de una tarjeta de modelo, incluida la información sobre las preguntas que abordan.
+Lea lo siguiente para obtener una guía sobre las diferentes secciones de los detalles de un modelo, incluida la información sobre las preguntas que abordan.
 
 ### Información general del modelo {#model-overview}
 
