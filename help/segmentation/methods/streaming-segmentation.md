@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de segmentación de streaming
 description: Obtenga información sobre la segmentación de flujo continuo, incluido qué es, cómo crear una audiencia evaluada mediante la segmentación de flujo y cómo ver las audiencias creadas mediante la segmentación de flujo.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
+source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 2%
@@ -169,13 +169,13 @@ Por ejemplo, supongamos que tiene dos audiencias, con ambas audiencias albergand
 
 | Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 24 horas | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 24 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 En este caso, debe crear una tercera audiencia de la siguiente manera:
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 ## Crear público {#create-audience}

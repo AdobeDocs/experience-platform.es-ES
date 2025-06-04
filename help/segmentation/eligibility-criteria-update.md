@@ -4,7 +4,7 @@ description: Obtenga información acerca de las actualizaciones de los criterios
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: eafb7337edacc5d2b2aa9c38540aff946c8d39c0
+source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 3%
@@ -68,13 +68,13 @@ Por ejemplo, supongamos que tiene dos audiencias, con ambas audiencias albergand
 
 | Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 24 horas | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 24 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 En este caso, debe crear una tercera audiencia de la siguiente manera:
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 >[!IMPORTANT]
