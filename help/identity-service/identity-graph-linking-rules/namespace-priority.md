@@ -2,7 +2,7 @@
 title: Prioridad del área de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
 workflow-type: tm+mt
 source-wordcount: '2120'
 ht-degree: 2%
@@ -49,7 +49,7 @@ Una identidad representa un objeto real. Hay tres objetos que se representan en 
 
 Las áreas de nombres de persona son relativamente inmutables en comparación con los dispositivos de hardware (como IDFA y GAID), que son relativamente inmutables en comparación con los exploradores web. Básicamente, usted (persona) siempre será una sola entidad, que puede tener varios dispositivos de hardware (teléfono, portátil, tableta, etc.) y utilizar varios navegadores (Google Chrome, Safari, FireFox, etc.)
 
-Otra forma de abordar este tema es a través de la cardinalidad. Para una entidad de persona determinada, ¿cuántas identidades se crearán? En la mayoría de los casos, una persona tendrá un CRMID, un puñado de identificadores de dispositivos de hardware (los restablecimientos IDFA/GAID no deberían ocurrir con frecuencia) e incluso más cookies (es concebible que una persona navegue en varios dispositivos, utilice el modo incógnito o restablezca cookies en un momento dado). Por lo general, **la cardinalidad inferior indica un área de nombres con un valor más alto**.
+Otra forma de abordar este tema es a través de la cardinalidad. Para una entidad de persona determinada, ¿cuántas identidades se crearán? En la mayoría de los casos, una persona tendrá un CRMID, un puñado de identificadores de dispositivos de hardware (los restablecimientos IDFA/GAID no deberían ocurrir con frecuencia) e incluso más cookies (es concebible que una persona navegue en varios dispositivos, utilice el modo incógnito o restablezca cookies en un momento dado). Por lo general, **la cardinalidad inferior indica un área de nombres con mayor prioridad**.
 
 ## Validar la configuración de prioridad del área de nombres
 
@@ -65,7 +65,7 @@ La prioridad del área de nombres se puede configurar usando la [interfaz de usu
 
 ## Uso de prioridad de área de nombres
 
-Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Diagrama del ámbito de aplicación de prioridad de espacio de nombres.](../images/namespace-priority/application-scope.png "Diagrama del ámbito de aplicación de prioridad de espacio de nombres."){zoomable="yes"}
 
@@ -208,13 +208,13 @@ En un evento determinado, asegúrese de que todas las áreas de nombres que repr
 
 * **Aplicabilidad de eventos**: este comportamiento se aplica solo a los eventos enviados directamente a Edge Network (como WebSDK y Mobile SDK). Los eventos ingeridos desde [Experience Platform hub](../../landing/edge-and-hub-comparison.md), como los ingeridos con el origen de la API HTTP, otros orígenes de flujo continuo y orígenes por lotes, no están sujetos a esta limitación.
 * **Especificidad de segmentación de Edge**: Este comportamiento es específico de la segmentación de Edge. La segmentación por lotes y streaming son servicios independientes evaluados en el concentrador y no siguen el mismo proceso. Lea la [guía de segmentación de Edge](../../segmentation/methods/edge-segmentation.md) para obtener más información.
-* Lea las páginas de [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) y [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) para obtener más información.
+* Lea las páginas de [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) y [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) para obtener más información.
 
 #### Aplicaciones de Edge Network
 
 Para garantizar que las aplicaciones de Edge Network tengan acceso al perfil de Edge sin demora, asegúrese de que los eventos incluyan a `primary=true` en el CRMID. Esto garantiza la disponibilidad inmediata sin esperar las actualizaciones del gráfico de identidad desde el concentrador.
 
 * Las aplicaciones de Edge Network, como Adobe Target, Offer Decisioning y Destinos personalizados de Personalization, seguirán dependiendo de la identidad principal en los eventos para acceder a los perfiles del perfil de Edge.
-* Lea el [diagrama de arquitectura de Experience Platform Web SDK y Edge Network](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obtener más información sobre el comportamiento de Edge Network.
+* Lea el [diagrama de arquitectura de Experience Platform Web SDK y Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obtener más información sobre el comportamiento de Edge Network.
 * Lea la documentación sobre [tipos de elementos de datos](../../tags/extensions/client/web-sdk/data-element-types.md) y [datos de identidad en Web SDK](../../web-sdk/identity/overview.md) para obtener más información sobre cómo configurar la identidad principal en Web SDK.
 * Asegúrese de que el ECID esté incluido en el evento de experiencia. Si falta el ECID, se agregará a la carga útil de evento con `primary=true`, lo que puede dar lugar a resultados inesperados.
