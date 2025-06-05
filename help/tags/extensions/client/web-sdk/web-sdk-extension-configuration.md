@@ -2,10 +2,10 @@
 title: Configuración de la extensión de etiquetas Web SDK
 description: Obtenga información sobre cómo configurar la extensión de etiquetas Experience Platform Web SDK en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 57b29c396531ee18c79fad7cce068ff3adf5f2a2
 workflow-type: tm+mt
-source-wordcount: '2875'
-ht-degree: 4%
+source-wordcount: '2965'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ En este documento se explica cómo configurar la extensión de etiqueta en la in
 
 ## Instalación de la extensión de etiquetas de Web SDK {#install}
 
-La extensión de etiquetas Web SDK necesita que haya una propiedad instalada en. Si aún no lo ha hecho, consulte la documentación de [creación de una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=es).
+La extensión de etiquetas Web SDK necesita que haya una propiedad instalada en. Si aún no lo ha hecho, consulte la documentación de [creación de una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
 Después de crear una propiedad, ábrala y seleccione la ficha **[!UICONTROL Extensiones]** en la barra lateral izquierda.
 
@@ -42,7 +42,7 @@ Al crear una compilación personalizada de Web SDK, esta se utiliza en todas las
 >[!IMPORTANT]
 >
 >Al deshabilitar los componentes de Web SDK, se puede interrumpir la implementación existente. Cada vez que deshabilite un componente, asegúrese de probar la implementación a fondo para asegurarse de que todas las funcionalidades que necesita funcionan según lo esperado.
->Cuando desactiva un componente, ya no puede editar su configuración.
+>>Cuando desactiva un componente, ya no puede editar su configuración.
 
 Para crear una compilación personalizada de Web SDK mediante la extensión de etiquetas de Web SDK, siga los pasos a continuación.
 
@@ -117,11 +117,9 @@ Esta sección le permite definir el comportamiento de Web SDK cuando se trata de
 * **[!UICONTROL Usar cookies de terceros]**: cuando esta opción está habilitada, Web SDK intenta almacenar un identificador de usuario en una cookie de terceros. Si se realiza correctamente, el usuario se identifica como un solo usuario a medida que navega por varios dominios, en lugar de identificarse como un usuario independiente en cada dominio. Si esta opción está habilitada, es posible que SDK aún no pueda almacenar el identificador de usuario en una cookie de terceros si el explorador no admite cookies de terceros o si el usuario lo ha configurado para no permitir cookies de terceros. En este caso, SDK solo almacena el identificador en el dominio de origen.
 
   >[!IMPORTANT]
-  >&#x200B;>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
-
-Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
+  >>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
+  >>Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
   >
-
 ## Configuración de la personalización {#personalization}
 
 Esta sección le permite configurar cómo desea ocultar determinadas partes de una página mientras se carga contenido personalizado. Esto garantiza que los visitantes solo vean la página personalizada.
@@ -142,7 +140,7 @@ Para utilizar el fragmento preocultado, cópielo y péguelo dentro del elemento 
 
 >[!IMPORTANT]
 >
->Al utilizar el fragmento preocultado, Adobe recomienda utilizar la misma regla de [!DNL CSS] que la utilizada por el [estilo preocultado](#prehiding-style).
+Al utilizar el fragmento preocultado, Adobe recomienda utilizar la misma regla de [!DNL CSS] que la utilizada por el [estilo preocultado](#prehiding-style).
 
 ## Configuración de la recopilación de datos {#data-collection}
 
@@ -155,6 +153,11 @@ Administrar las opciones de configuración de recopilación de datos. Hay config
    * **[!UICONTROL Sin agrupación de eventos]**: los datos de seguimiento de vínculos se envían a Adobe en eventos independientes. Los clics en vínculos enviados en eventos independientes pueden aumentar el uso contractual de los datos enviados a Adobe Experience Platform.
    * **[!UICONTROL Agrupación de eventos mediante el almacenamiento de sesión]**: almacena los datos de seguimiento de vínculos en el almacenamiento de sesión hasta el siguiente evento de página. En la página siguiente, los datos de seguimiento de vínculos almacenados y los datos de vista de página se envían a Adobe al mismo tiempo. Adobe recomienda habilitar esta configuración al realizar el seguimiento de vínculos internos.
    * **[!UICONTROL Agrupación de eventos mediante el objeto local]**: almacena los datos de seguimiento de vínculos en un objeto local hasta el siguiente evento de página. Si un visitante navega a una página nueva, se pierden los datos de seguimiento de vínculos. Esta configuración es más beneficiosa en el contexto de aplicaciones de una sola página.
+
+  Cuando elige la agrupación de eventos con almacenamiento de sesión o un objeto local y envía datos a Real-Time CDP, Customer Journey Analytics, Adobe Journey Optimizer o Mix Modeler, debe actualizar las reglas de etiquetado. Asegúrese de que cada evento de vista de página asigne explícitamente tanto el nombre de página (como una cadena) como el valor de vista de página (como un entero, normalmente 1) al objeto XDM antes de enviar los datos a Adobe.
+
+  Si envía datos a Adobe Analytics, estos valores se incluyen automáticamente y no se necesita ninguna configuración adicional.
+
 * **[!UICONTROL Recopilar clics en vínculos externos]**: Casilla de verificación que habilita la recopilación de vínculos externos.
 * **[!UICONTROL Recopilar clics en vínculos de descarga]**: Casilla de verificación que habilita la recopilación de vínculos de descarga.
 * **[!UICONTROL Calificador de vínculo de descarga]**: una expresión regular que califica una dirección URL de vínculo como vínculo de descarga.
@@ -168,7 +171,7 @@ Administrar las opciones de configuración de recopilación de datos. Hay config
 
 >[!TIP]
 >
->El campo **[!UICONTROL Activado antes de hacer clic en el vínculo enviar]** es una llamada de retorno obsoleta que solo está visible para propiedades que ya lo tienen configurado. Es la etiqueta equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) en la biblioteca de JavaScript. Use la llamada de retorno **[!UICONTROL Filtrar propiedades de clic]** para filtrar o ajustar datos de clics, o use la llamada de retorno **[!UICONTROL Activado antes del envío de evento]** para filtrar o ajustar la carga útil general enviada a Adobe. Si se establecen tanto la devolución de llamada **[!UICONTROL Filter click properties]** como la devolución de llamada **[!UICONTROL Activada antes de enviar clic en vínculo]**, solo se ejecutará la devolución de llamada **[!UICONTROL Filter click properties]**.
+El campo **[!UICONTROL Activado antes de hacer clic en el vínculo enviar]** es una llamada de retorno obsoleta que solo está visible para propiedades que ya lo tienen configurado. Es la etiqueta equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) en la biblioteca de JavaScript. Use la llamada de retorno **[!UICONTROL Filtrar propiedades de clic]** para filtrar o ajustar datos de clics, o use la llamada de retorno **[!UICONTROL Activado antes del envío de evento]** para filtrar o ajustar la carga útil general enviada a Adobe. Si se establecen tanto la devolución de llamada **[!UICONTROL Filter click properties]** como la devolución de llamada **[!UICONTROL Activada antes de enviar clic en vínculo]**, solo se ejecutará la devolución de llamada **[!UICONTROL Filter click properties]**.
 
 ## Configuración de la colección de medios {#media-collection}
 
@@ -196,13 +199,13 @@ La anulación de la configuración de la secuencia de datos es un proceso de dos
 1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](/help/datastreams/configure.md).
 2. A continuación, debe enviar las invalidaciones a Edge Network mediante un comando de Web SDK o utilizando la extensión de etiquetas de Web SDK.
 
-Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1&rbrace; para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
+Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1} para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
 
 Como alternativa a pasar las invalidaciones a través de un comando de Web SDK, puede configurarlas en la pantalla de extensión de etiquetas que se muestra a continuación.
 
 >[!IMPORTANT]
 >
->Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
+Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
 
 ![Imagen que muestra las anulaciones de configuración de secuencia de datos usando la página de extensión de etiquetas Web SDK.](assets/datastream-overrides.png)
 
