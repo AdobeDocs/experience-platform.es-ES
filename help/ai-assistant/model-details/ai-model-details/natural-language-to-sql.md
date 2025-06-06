@@ -4,9 +4,9 @@ description: Obtenga información sobre el modelo de IA Assistant Natural Langua
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## Evaluación de modelo {#model-evaluation}
 
-* **Métricas y procedimientos de evaluación**: El modelo se evalúa con precisión. Por ejemplo, de todas las [!DNL NL2SQL] solicitudes, ¿cuántas de ellas arrojan los resultados SQL correctos? El proceso de evaluación es una combinación de coincidencia basada en reglas (estandarización SQL y luego coincidencia directa de cadenas SQL), solucionador SQL basado en LLM y evaluación humana.
+* **Métricas y procedimientos de evaluación**: El modelo se evalúa mirando las [!DNL NL2SQL] solicitudes y evaluando cuántas de ellas arrojan los resultados SQL correctos. El proceso de evaluación es una combinación de coincidencia basada en reglas (estandarización SQL y luego coincidencia directa de cadenas SQL), solucionador SQL basado en LLM y evaluación humana.
 * **Datos de evaluación y preprocesamiento**: Utilizamos conjuntos abiertos para pruebas de regresión y también tenemos proyectos de anotación semanales para monitorizar el rendimiento del modelo a través del tráfico de clientes reales muestreado.
 
 ## Implementación de modelo {#model-deployment}
 
 * **Supervisión del modelo**: El modelo base está hospedado por [!DNL Azure].
-* **Actualización del modelo**: El modelo se actualiza con regularidad, de forma semanal, mediante la expansión del banco de preguntas. El modelo también se actualiza mediante nuevas estrategias de solicitud e instrucciones cuando es necesario.
+* **Actualización del modelo**: Adobe Experience Platform AI Assistant Operational Insights Natural Language to SQL Model se actualiza regularmente (semanalmente) mediante la expansión del banco de preguntas. El modelo también se actualiza mediante nuevas estrategias de solicitud e instrucciones cuando es necesario.
 
 ## Equidad y parcialidad {#fairness-and-bias}
 

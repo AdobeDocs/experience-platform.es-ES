@@ -4,9 +4,9 @@ description: Obtenga información acerca del modelo de IA utilizado para la inte
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,8 @@ ht-degree: 0%
 
 ## Formación de modelo {#model-training}
 
-* **Datos de formación y preprocesamiento**: el conjunto de datos de formación de cada cliente se obtiene directamente de sus propios datos en Adobe Experience Platform. Esto incluye las interacciones históricas del cliente, los registros transaccionales, los registros de participación de comportamiento y la información demográfica recopilada y almacenada en su instancia de Adobe Experience Platform. El conjunto de datos aprovecha los datos específicos del cliente en el periodo de tiempo que ha elegido, capturando las tendencias estacionales y los patrones de participación únicos. Antes de usar, el conjunto de datos de cada cliente se somete a un preprocesamiento personalizado según sus características de datos, incluida la administración de valores que faltan, la codificación categórica, la escala de características, la detección de periféricos y la ingeniería de características para garantizar una calidad y una facilidad de uso óptimas para su caso de uso específico
+* **Datos de formación y preprocesamiento**: el conjunto de datos de formación de cada cliente se obtiene directamente de sus propios datos en Adobe Experience Platform. Esto incluye las interacciones históricas del cliente, los registros transaccionales, los registros de participación de comportamiento y la información demográfica recopilada y almacenada en su instancia de Adobe Experience Platform. El conjunto de datos aprovecha los datos específicos del cliente en el periodo de tiempo que ha elegido, capturando las tendencias estacionales y los patrones de participación únicos. Antes de usar, el conjunto de datos de cada cliente se somete a un preprocesamiento personalizado según sus características de datos, incluida la administración de valores que faltan, la codificación categórica, la escala de características, la detección de periféricos y la ingeniería de características para garantizar una calidad y una facilidad de uso óptimas para su caso de uso específico.
+   * Los datos de consumidor utilizados para la formación no se utilizan entre clientes.
 * **Especificaciones de formación**: El modelo aprovecha [!DNL LightGBM] con [!DNL GBM], optimizado para datos estructurados. Se le enseña sobre las secuencias de eventos de clientes históricas para identificar patrones de comportamiento predictivos.
 * **Marcos de formación**: El modelo se desarrolló con [!DNL LightGBM] y [!DNL scikit-learn], y está entrenado en la infraestructura en la nube de Adobe AI.
 * **Infraestructura de formación**: [!DNL Databricks] clústeres.
@@ -64,7 +65,7 @@ ht-degree: 0%
 
 * **Implementación de modelo**: el modelo está alojado en los servicios de IA de Adobe Experience Platform e integrado con varias aplicaciones de Adobe. Está disponible a través de puntos finales de API, lo que permite un acceso fluido a predicciones en tiempo real y procesamiento por lotes en los flujos de trabajo de marketing y participación del consumidor.
 * **Supervisión del modelo**: El modelo se supervisa continuamente mediante la supervisión del modelo para ver la desviación de la configuración de formación. Las retenciones periódicas (una vez cada 3 meses) se ejecutan automáticamente.
-* **Modelo ipdate**: El modelo se vuelve a entrenar una vez cada varios meses (máximo una vez cada 6 meses) utilizando datos actualizados de interacción del consumidor para garantizar una relevancia continua. El reciclaje periódico ayuda a mitigar la deriva de datos y las fluctuaciones estacionales que podrían afectar a la precisión predictiva.
+* **Actualización del modelo**: El modelo se vuelve a entrenar una vez cada varios meses (máximo una vez cada 6 meses) utilizando datos actualizados de interacción del consumidor para garantizar una relevancia continua. El reciclaje periódico ayuda a mitigar la deriva de datos y las fluctuaciones estacionales que podrían afectar a la precisión predictiva.
 
 ## Explicabilidad {#explainability}
 
