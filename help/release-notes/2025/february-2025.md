@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2025'
 description: Las notas de la versión de febrero de 2025 de Adobe Experience Platform.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 97%
+source-wordcount: '1677'
+ht-degree: 96%
 
 ---
 
@@ -54,7 +54,7 @@ El servicio de catálogo es el sistema de registro para la ubicación y el linaj
 
 | Función | Descripción |
 | --- | --- |
-| Nuevo punto final de la API | Administre los metadatos del conjunto de datos de Adobe Experience Platform de forma más eficaz con el nuevo punto final de la [API de servicio de catálogo /v2/dataSets/{DATASET_ID}](../../catalog/api/update-object.md#patch-v2-notation). Actualice fácilmente atributos de conjuntos de datos complejos y profundamente anidados, ya que el sistema crea automáticamente niveles de ruta que faltan para ahorrarle tiempo, reducir los pasos manuales y minimizar los errores. |
+| Nuevo punto final de la API | Administre los metadatos del conjunto de datos de Adobe Experience Platform de forma más eficaz con el nuevo extremo [Catalog Service API /v2/dataSets/{DATASET_ID}](../../catalog/api/update-object.md#patch-v2-notation). Actualice fácilmente atributos de conjuntos de datos complejos y profundamente anidados, ya que el sistema crea automáticamente niveles de ruta que faltan para ahorrarle tiempo, reducir los pasos manuales y minimizar los errores. |
 
 {style="table-layout:auto"}
 
@@ -117,11 +117,11 @@ Para obtener más información, lea la [Información general de destinos](../../
 
 | Función | Descripción |
 | ------- | ----------- |
-| División persistente | Composición de audiencia ahora admite divisiones persistentes. Puede hacer que las audiencias divididas permanezcan constantes al dividir por perfil agregando un área de nombres de identidad al bloque dividido. Encontrará más información sobre esta característica en la [documentación de composición de audiencias](../../segmentation/ui/audience-composition.md). |
+| División persistente | La composición de público admite ahora divisiones persistentes. Puede hacer que los públicos divididos permanezcan constantes al dividir por perfil añadiendo un espacio de nombres de identidad al bloque de división. Encontrará más información sobre esta nueva función en la [documentación sobre composición de público](../../segmentation/ui/audience-composition.md). |
 
 Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
-## Orígenes {#sources}
+## Fuentes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
@@ -132,6 +132,7 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 | Función | Descripción |
 | --- | --- |
 | Compatibilidad con vistas en [!DNL Microsoft Dynamics] | Ahora puede ingerir `"entityType": "view"` al usar el origen [!DNL Microsoft Dynamics]. Para obtener más información, lea la guía sobre [la conexión de un origen  [!DNL Microsoft Dynamics]  a Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
+| Nuevas direcciones IP para la lista de permitidos | Debe añadir las siguientes direcciones IP a la lista de permitidos para utilizar correctamente las fuentes de Experience Platform.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> <br></br>Para obtener más información, lea la [guía de lista de permitidos de direcciones IP de origen](../../sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 
