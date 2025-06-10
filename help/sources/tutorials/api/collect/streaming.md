@@ -5,9 +5,9 @@ title: Creación de un flujo de datos de streaming para datos sin procesar media
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar los datos de flujo continuo y llevarlos a Experience Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1208'
 ht-degree: 3%
 
 ---
@@ -414,6 +414,10 @@ Una respuesta correcta devuelve una lista de especificaciones de flujo de datos.
 ```
 
 ## Creación de un flujo de datos
+
+>[!NOTE]
+>
+>Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
 El último paso para recopilar datos de flujo continuo es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 

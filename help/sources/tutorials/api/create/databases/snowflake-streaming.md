@@ -3,9 +3,9 @@ title: Conecte su cuenta de flujo continuo de Snowflake a Adobe Experience Platf
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Snowflake Streaming mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '880'
 ht-degree: 5%
 
 ---
@@ -212,6 +212,10 @@ Una respuesta correcta devuelve el ID de conexión de origen y su etiqueta corre
 ```
 
 ## Creación de un flujo de datos
+
+>[!NOTE]
+>
+>Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
 Para crear un flujo de datos para transmitir datos de la cuenta del recorrido [!DNL Snowflake] a Experience Platform, debe realizar una petición POST al extremo `/flows` y, al mismo tiempo, proporcionar los siguientes valores:
 

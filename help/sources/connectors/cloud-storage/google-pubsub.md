@@ -3,14 +3,14 @@ title: Información general sobre Google PubSub Source
 description: Aprenda a conectar Google PubSub a Adobe Experience Platform mediante API o la interfaz de usuario.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
 
-# [!DNL Google PubSub] origen
+# Fuente de [!DNL Google PubSub] 
 
 >[!IMPORTANT]
 >
@@ -82,6 +82,10 @@ Debe **establecer la duración de retención de mensajes de suscripción en 24 h
 >Solo puede crear un flujo de datos de origen por cada suscripción de [!DNL Google PubSub]. La reutilización de una suscripción, incluso en entornos limitados, provoca la pérdida de datos.
 
 ## Conectar [!DNL Google PubSub] a Experience Platform
+
+>[!NOTE]
+>
+>Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
 La siguiente documentación proporciona información sobre cómo conectar [!DNL Google PubSub] a Experience Platform mediante API o la interfaz de usuario:
 

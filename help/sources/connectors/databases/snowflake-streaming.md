@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo crear una conexión de origen y un
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -86,6 +86,10 @@ Para obtener más información sobre la administración de roles y privilegios, 
       * `TIMESTAMP_TZ` no se puede usar en una columna de marca de tiempo o en una asignación.
 
 ## Pasos siguientes
+
+>[!NOTE]
+>
+>Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
 El siguiente tutorial proporciona pasos sobre cómo conectar el origen de flujo continuo de [!DNL Snowflake] a Experience Platform mediante la API:
 

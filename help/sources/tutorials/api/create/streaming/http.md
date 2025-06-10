@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo
 title: Creación de una conexión de flujo continuo de API HTTP mediante la API de Flow Service
 description: Este tutorial proporciona pasos sobre cómo crear una conexión de flujo continuo utilizando el origen de API HTTP para los datos sin procesar y XDM mediante la API de Flow Service
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1684'
 ht-degree: 4%
 
 ---
@@ -457,6 +457,10 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 ```
 
 ## Creación de un flujo de datos
+
+>[!NOTE]
+>
+>Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
 Con las conexiones de origen y destino creadas, ahora puede crear un flujo de datos. El flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una petición POST al extremo `/flows`.
 

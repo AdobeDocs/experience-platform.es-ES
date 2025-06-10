@@ -3,9 +3,9 @@ title: Crear una conexión de Azure Event Hubs con Source mediante la API de Flo
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Azure Event Hubs mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1524'
 ht-degree: 2%
 
 ---
@@ -384,6 +384,10 @@ curl -X POST \
 | `params.dataType` | Este parámetro define el tipo de datos que se están introduciendo. Los tipos de datos admitidos son: `raw` y `xdm`. |
 | `params.reset` | Este parámetro define cómo se leerán los datos. Use `latest` para comenzar a leer los datos más recientes y use `earliest` para comenzar a leer los primeros datos disponibles en el flujo. Este parámetro es opcional y el valor predeterminado es `earliest` si no se proporciona. |
 | `params.consumerGroup` | Mecanismo de publicación o suscripción que se utilizará para [!DNL Event Hubs]. Este parámetro es opcional y el valor predeterminado es `$Default` si no se proporciona. Consulte esta [[!DNL Event Hubs] guía sobre consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obtener más información. **Nota**: Un grupo de consumidores [!DNL Event Hubs] solo se puede usar para un solo flujo en un momento dado. |
+
+>[!NOTE]
+>
+>Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
 ## Pasos siguientes
 

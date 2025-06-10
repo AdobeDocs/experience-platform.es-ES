@@ -3,9 +3,9 @@ title: Creación de una conexión de Google PubSub Source mediante la API de Flo
 description: Aprenda a conectar Adobe Experience Platform a una cuenta PubSub de Google mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1181'
 ht-degree: 2%
 
 ---
@@ -257,6 +257,10 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+>[!NOTE]
+>
+>Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
 ## Pasos siguientes
 
