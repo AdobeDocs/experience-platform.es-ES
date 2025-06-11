@@ -21,7 +21,7 @@ Aparecerá su tablero personalizado. A continuación, seleccione **[!UICONTROL E
 
 >[!NOTE]
 >
->Las exportaciones solo de visualización no requieren el permiso [!UICONTROL Exportar datos del panel]. Consulte la [[!UICONTROL Documentación de ]Ver más](./view-more.md#export) para obtener más detalles.
+>Las exportaciones solo de visualización no requieren el permiso [!UICONTROL Exportar datos del panel]. Consulte la [[!UICONTROL Documentación de &#x200B;]Ver más](./view-more.md#export) para obtener más detalles.
 
 ![Panel personalizado con exportación resaltada.](../images/sql-insights-query-pro-mode/export.png)
 
