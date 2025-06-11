@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3582ce4f73887f03bbb9da72f96aab1be9b99614
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 44%
+ht-degree: 46%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 44%
 * [Inventario de paneles](inventory.md)
 * [Paneles estándar](standard-dashboards.md)
 * [Descargar tableros en PDF](download.md)
-* Datos de SQL: query pro mode {#sql-insights-query-pro-mode}
+* SQL insights: modo query pro {#sql-insights-query-pro-mode}
    * [Información general](sql-insights-query-pro-mode/overview.md)
-   * Plantillas de Distiller de datos {#templates}
+   * Plantillas de Data Distiller {#templates}
       * [Información general](sql-insights-query-pro-mode/templates/overview.md)
       * [Superposiciones de público avanzadas](sql-insights-query-pro-mode/templates/overlaps.md)
       * [Comparación de públicos](sql-insights-query-pro-mode/templates/comparison.md)
@@ -34,7 +34,7 @@ ht-degree: 44%
    * [Explorar en profundidad](sql-insights-query-pro-mode/drill-through.md)
    * [Ver más](sql-insights-query-pro-mode/view-more.md)
    * [Ver SQL](sql-insights-query-pro-mode/view-sql.md)
-   * [Descargar como CSV](sql-insights-query-pro-mode/download-csv.md)
+   * [Exportar como CSV](sql-insights-query-pro-mode/download-csv.md)
    * [Exportar como PDF](sql-insights-query-pro-mode/export-pdf.md)
 * Paneles disponibles {#guides}
    * [Perfiles](guides/profiles.md)
@@ -42,7 +42,7 @@ ht-degree: 44%
    * [Públicos](guides/audiences.md)
    * [Destinos](guides/destinations.md)
    * [Uso de licencias](guides/license-usage.md)
-* Datos disponibles {#insights}
+* Perspectivas disponibles {#insights}
    * [Perfiles](insights/profiles.md)
    * [Públicos](insights/audiences.md)
    * [Destinos](insights/destinations.md)

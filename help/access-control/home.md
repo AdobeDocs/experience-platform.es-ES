@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 6a466770495b226f890ab67b21c5cb027fd46e02
 workflow-type: tm+mt
-source-wordcount: '3818'
+source-wordcount: '3851'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ El control de acceso para Adobe Experience Platform se proporciona mediante **[!
 
 ## Flujo de trabajo y jerarquía de control de acceso
 
-Para configurar el control de acceso de Experience Platform, debe tener privilegios de administrador de sistemas o productos para una organización que tenga un producto de Experience Platform. La función mínima que puede conceder o retirar permisos es de administrador de productos. Otros roles de administrador que pueden administrar permisos son administradores del sistema (sin restricciones). Consulte el artículo del Centro de ayuda de Adobe sobre [funciones administrativas](https://helpx.adobe.com/es/enterprise/using/admin-roles.html) para obtener más información.
+Para configurar el control de acceso de Experience Platform, debe tener privilegios de administrador de sistemas o productos para una organización que tenga un producto de Experience Platform. La función mínima que puede conceder o retirar permisos es de administrador de productos. Otros roles de administrador que pueden administrar permisos son administradores del sistema (sin restricciones). Consulte el artículo del Centro de ayuda de Adobe sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) para obtener más información.
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ En la tabla siguiente se describen los permisos disponibles para Experience Plat
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Ver configuraciones de modelos Adobe Mix Modeler] | Acceso de solo lectura a configuraciones de modelos. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Administrar configuraciones de planes de modelos Adobe Mix Modeler] | La capacidad de ver y modificar configuraciones de planes. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Ver configuraciones de planes de modelos Adobe Mix Modeler] | Acceso de solo lectura a configuraciones de planes. |
-| [!DNL AI Assistant] | [!UICONTROL Habilitar el asistente de IA] | Capacidad para hacer preguntas sobre [[!DNL [AI assistant]]](../ai-assistant/access.md). |
+| [!DNL AI Assistant] | [!UICONTROL Habilitar el asistente de IA] | Capacidad para hacer preguntas sobre [!DNL [AI assistant]](../ai-assistant/access.md). |
 | [!DNL AI Assistant] | [!UICONTROL Ver datos operativos] | Acceso para obtener respuestas a [consultas de perspectivas operacionales](../ai-assistant/home.md##operational-insights). |
 | [!DNL AI Assistant] | [!UICONTROL Generar contenido] | Permitir que los usuarios generen contenido mediante [!DNL AI Assistant]. |
 | [!DNL AI Assistant] | [!UICONTROL Administrar kit de marca] | Permitir que los usuarios creen directrices de marca utilizando [!DNL AI Assistant]. |
@@ -193,10 +193,11 @@ En la tabla siguiente se describen los permisos disponibles para Experience Plat
 | [!DNL Customer Managed Keys] | [!UICONTROL Administrar claves administradas por el cliente] | Acceso para ver y configurar las claves administradas por el cliente. |
 | [!DNL Dashboards] | [!UICONTROL Ver tablero de uso de licencias] | Acceso de solo lectura para ver el panel de uso de licencias. |
 | [!DNL Dashboards] | [!UICONTROL Administrar paneles estándar] | Agregue atributos personalizados que aún no estén en el almacén de datos. |
-| [!DNL Dashboards] | [!UICONTROL Ver paneles estándar] | Acceso de solo lectura para ver el panel de uso de licencias. |
+| [!DNL Dashboards] | [!UICONTROL Ver paneles estándar] | Acceso de solo lectura a los paneles Perfiles, Destinos y Segmentos. También permite el acceso a los paneles en la navegación izquierda y a la pestaña de inventario e integraciones de los paneles. |
 | [!DNL Dashboards] | [!UICONTROL Administrar paneles personalizados] | Acceso para crear o editar un tablero. |
 | [!DNL Dashboards] | [!UICONTROL Ver paneles personalizados] | Acceso de solo lectura a los paneles definidos por el usuario. |
 | [!DNL Dashboards] | [!UICONTROL Administrar horarios de informes] | Capacidad para crear programaciones. |
+| [!DNL Dashboards] | [!UICONTROL Exportar datos de panel] | Controla la capacidad de un usuario para exportar datos de tablas desde paneles de modo de consulta profesional. |
 | [!DNL Data Collection] | [!UICONTROL Administrar flujos de datos] | Acceso para leer, crear y editar flujos de datos. |
 | [!DNL Data Collection] | [!UICONTROL Ver flujos de datos] | Acceso de solo lectura a flujos de datos. |
 | [!DNL Data Governance] | [!UICONTROL Administrar etiquetas de uso] | Acceso para leer, crear y eliminar etiquetas de uso. |
