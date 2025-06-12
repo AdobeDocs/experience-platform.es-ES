@@ -2,9 +2,9 @@
 title: Conexión de Salesforce a Experience Platform mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1118'
 ht-degree: 3%
 
 ---
@@ -29,6 +29,10 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 Lea los pasos siguientes para obtener información sobre cómo conectar su origen de [!DNL Salesforce] a Experience Platform en [!DNL Azure].
 
 ### Recopilar credenciales necesarias
+
+>[!WARNING]
+>
+>La autenticación básica para el origen [!DNL Salesforce] quedará obsoleta en enero de 2026. Debe pasar a la autenticación de credencial de cliente de OAuth 2 para seguir usando el origen e ingiriendo datos de su cuenta de [!DNL Salesforce] a Experience Platform.
 
 El origen [!DNL Salesforce] admite la autenticación básica y la credencial de cliente OAuth2.
 
@@ -61,7 +65,7 @@ Para conectar su cuenta de [!DNL Salesforce] a [!DNL Flow Service] mediante la c
 | `apiVersion` | La versión de la API de REST de la instancia [!DNL Salesforce] que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si está usando la versión de API `52`, debe introducir el valor como `52.0`. Si este campo se deja en blanco, Experience Platform utilizará automáticamente la última versión disponible. Este valor es obligatorio para la autenticación de credenciales de cliente de OAuth2. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL Salesforce] es: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
-Para obtener más información sobre el uso de OAuth para [!DNL Salesforce], lea la [[!DNL Salesforce] guía sobre flujos de autorización de OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Para obtener más información sobre el uso de OAuth para [!DNL Salesforce], lea la [[!DNL Salesforce] guía sobre flujos de autorización de OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 

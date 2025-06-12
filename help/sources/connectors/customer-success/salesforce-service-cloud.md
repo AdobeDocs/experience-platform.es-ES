@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Salesforce Service Cloud;Salesforce service cloud
-solution: Experience Platform
 title: Información general sobre el conector Source de Salesforce Service Cloud
 description: Obtenga información sobre cómo conectar Salesforce Service Cloud a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-# Conector [!DNL Salesforce Service Cloud]
+# [!DNL Salesforce Service Cloud]
+
+>[!WARNING]
+>
+>La autenticación básica para el origen [!DNL Salesforce Service Cloud] quedará obsoleta en enero de 2026. Debe pasar a la autenticación de credencial de cliente de OAuth 2 para seguir usando el origen e ingiriendo datos de su cuenta de [!DNL Salesforce Service Cloud] a Experience Platform.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
