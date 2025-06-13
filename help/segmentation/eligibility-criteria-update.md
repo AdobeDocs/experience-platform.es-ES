@@ -4,10 +4,10 @@ description: Obtenga información acerca de las actualizaciones de los criterios
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 3%
+source-wordcount: '586'
+ht-degree: 2%
 
 ---
 
@@ -47,8 +47,8 @@ Por ejemplo, supongamos que tiene dos audiencias, con un perfil de alojamiento d
 
 | Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Residentes de California | Perfil | Lote | La dirección postal está en el estado de California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Residentes de California | Perfil | Origen del lote | La dirección postal está en el estado de California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Cierres de compra recientes | Evento de experiencia | Fuente de streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Si desea utilizar el componente por lotes en la audiencia de flujo continuo, deberá hacer referencia a la audiencia por lotes mediante un segmento de segmentos.
 
@@ -68,8 +68,8 @@ Por ejemplo, supongamos que tiene dos audiencias, con ambas audiencias albergand
 
 | Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 24 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
-| Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Abandonos recientes | Evento de experiencia | Origen del lote | Tiene al menos un evento de abandono en las últimas 48 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Cierres de compra recientes | Evento de experiencia | Fuente de streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 En este caso, debe crear una tercera audiencia de la siguiente manera:
 

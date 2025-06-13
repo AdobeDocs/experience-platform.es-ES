@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de segmentación de streaming
 description: Obtenga información sobre la segmentación de flujo continuo, incluido qué es, cómo crear una audiencia evaluada mediante la segmentación de flujo y cómo ver las audiencias creadas mediante la segmentación de flujo.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 2%
@@ -169,7 +169,7 @@ Por ejemplo, supongamos que tiene dos audiencias, con ambas audiencias albergand
 
 | Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 24 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 48 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 En este caso, debe crear una tercera audiencia de la siguiente manera:

@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 92b70dc6d6085067f11d43436bc74d64bce72dd0
 workflow-type: tm+mt
-source-wordcount: '4842'
+source-wordcount: '4837'
 ht-degree: 2%
 
 ---
@@ -120,7 +120,7 @@ Los atributos de enriquecimiento son atributos que provienen de un conjunto de d
 
 | Canal de activación | Audiencias de carga personalizada en CSV | Audiencias de la composición de audiencias |
 | --- | --- | --- |
-| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1&rbrace;.** |
+| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1}.** |
 | Adobe Journey Optimizer Campaigns | Ni los atributos de audiencia ni los de carga útil pueden activarse. | Se pueden activar tanto la audiencia como los atributos de ampliación. |
 
 ## Estados del ciclo vital {#lifecycle-states}
@@ -430,4 +430,4 @@ Una definición de segmento tarda hasta una hora en estar disponible.
 
 ### ¿Existen limitaciones a los datos que se transmiten en?
 
-Para que los datos transmitidos se usen en la segmentación de flujo continuo, **debe** haber un espacio entre los eventos transmitidos. Si se transmiten demasiados eventos en el mismo segundo, Experience Platform tratará estos eventos como datos generados por bots y se descartarán. Como práctica recomendada, debe tener **al menos** cinco segundos entre los datos de evento para asegurarse de que los datos se utilizan correctamente.
+Al utilizar la segmentación de Edge o de flujo continuo, asegúrese de que los eventos de cada perfil estén espaciados. Si se transmiten demasiados eventos en el mismo segundo, Experience Platform tratará estos eventos como datos generados por bots y se descartarán. Como práctica recomendada, debe tener **al menos** cinco segundos entre los datos de evento para asegurarse de que los datos se utilizan correctamente.
