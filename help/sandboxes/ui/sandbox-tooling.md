@@ -2,10 +2,10 @@
 title: Herramientas de zona protegida
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
+source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
 workflow-type: tm+mt
-source-wordcount: '2678'
-ht-degree: 7%
+source-wordcount: '3414'
+ht-degree: 5%
 
 ---
 
@@ -59,7 +59,7 @@ La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualment
 | [!DNL Adobe Journey Optimizer] | Acciones personalizadas |  | Las acciones personalizadas se pueden añadir a un paquete de forma independiente. Una vez asignada una acción personalizada a un recorrido, ya no se puede editar. Para realizar actualizaciones en las acciones personalizadas, debe: <ul><li>mover acciones personalizadas antes de migrar un recorrido</li><li>actualizar configuraciones (como encabezados de solicitud, parámetros de consulta y autenticación) para acciones personalizadas después de la migración</li><li>migrar objetos de recorrido con las acciones personalizadas agregadas durante el primer paso</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Plantilla de contenido | | Una plantilla de contenido se puede copiar como un objeto dependiente del objeto de recorrido. Las plantillas independientes le permiten reutilizar fácilmente contenido personalizado en todas las campañas y recorridos de Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragmento | Todos los fragmentos anidados. | Un fragmento se puede copiar como un objeto dependiente del objeto de recorrido. Los fragmentos son componentes reutilizables a los que se puede hacer referencia en uno o varios correos electrónicos en campañas y recorridos de Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campañas | Los siguientes objetos utilizados en la campaña se copian como objetos dependientes: <ul><li>Campañas</li><li>Públicos</li><li>Esquemas</li><li>Plantillas de contenido</li><li>Fragmentos</li><li>Mensaje/Contenido</li><li>Configuración de canal</li><li>Objetos de decisión unificados</li><li>Configuración/variantes del experimento</li></ul> | <ul><li>Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>El sistema detectará y reutilizará automáticamente un objeto de configuración de canal existente en la zona protegida de destino si existe una configuración idéntica. Si no se encuentra ninguna configuración que coincida, la configuración del canal se omite durante la importación y los usuarios deben actualizar manualmente la configuración del canal en la zona protegida de destino para este recorrido.</li><li>Los usuarios pueden reutilizar los experimentos y las audiencias existentes en la zona protegida de Target como objetos dependientes de las campañas seleccionadas.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campañas | Los siguientes objetos utilizados en la campaña se copian como objetos dependientes: <ul><li>Campañas</li><li>Públicos</li><li>Esquemas</li><li>Plantillas de contenido</li><li>Fragmentos</li><li>Mensaje/Contenido</li><li>Configuración de canal</li><li>Objetos de decisión unificados</li><li>Configuración/variantes del experimento</li></ul> | <ul><li>Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>El sistema detectará y reutilizará automáticamente un objeto de configuración de canal existente en la zona protegida de destino si existe una configuración idéntica. Si no se encuentra ninguna configuración que coincida, la configuración del canal se omite durante la importación y los usuarios deben actualizar manualmente la configuración del canal en la zona protegida de destino para este recorrido.</li><li>Los usuarios pueden reutilizar los experimentos y las audiencias existentes en la zona protegida de Target como objetos dependientes de las campañas seleccionadas.</li></ul> |
 
 Las superficies (por ejemplo, los ajustes preestablecidos) no se copian. El sistema selecciona automáticamente la coincidencia más cercana posible en la zona protegida de destino en función del tipo de mensaje y el nombre de la superficie. Si no se encuentran superficies en la zona protegida de destino, la copia de superficie fallará, lo que provocará que la copia del mensaje falle porque un mensaje requiere que haya una superficie disponible para la configuración. En este caso, es necesario crear al menos una superficie para el canal derecho del mensaje para que funcione la copia.
 
@@ -253,11 +253,99 @@ El cuadro de diálogo **[!UICONTROL Resumen de importación]** muestra un desglo
 
 Cuando finaliza la importación, se recibe una notificación en la interfaz de usuario de Experience Platform. Puede acceder a estas notificaciones desde el icono de alertas. Puede navegar a la resolución de problemas desde aquí si un trabajo no se ha realizado correctamente.
 
+## Transferir actualizaciones de configuraciones de objetos iterativas entre zonas protegidas mediante las herramientas de zonas protegidas {#move-configs}
+
+Puede utilizar las herramientas de zona protegida para transferir configuraciones de objetos entre diferentes zonas protegidas. Anteriormente, las actualizaciones de configuración de los objetos (como esquemas, grupos de campos y tipos de datos) tenían que volver a crearse o importarse manualmente para transferirse a otros entornos limitados. Con esta capacidad, puede utilizar las herramientas de la zona protegida para acelerar los flujos de trabajo y reducir los posibles errores transfiriendo sin problemas las actualizaciones de configuración en diferentes zonas protegidas.
+
+![Diagrama que muestra cómo se mueven las actualizaciones entre zonas protegidas.](../images/ui/sandbox-tooling/move-updates-diagram.png)
+
+>[!TIP]
+>
+> Asegúrese de tener los siguientes requisitos previos antes de intentar transferir las configuraciones de objetos en diferentes zonas protegidas.
+>
+>- Los permisos adecuados para acceder a las herramientas de la zona protegida.
+>- Un objeto recién creado o actualizado (como un esquema) en la zona protegida de origen.
+
+>[!BEGINSHADEBOX]
+
+### Tipos de objetos admitidos para la operación de actualización
+
+Se admiten los siguientes tipos de objetos para la actualización:
+
+- Esquemas
+- Grupos de campo
+- Tipos de datos
+
+| Actualizaciones compatibles | Actualizaciones no admitidas |
+| --- | --- |
+| <ul><li>Adición de nuevos campos o grupos de campos al recurso.</li><li>Hacer opcional un campo obligatorio.</li><li>Introducción de nuevos campos obligatorios.</li><li>Introducción de un nuevo campo de relación.</li><li>Introducción de un nuevo campo de identidad.</li><li>Cambiar el nombre para mostrar y la descripción del recurso.</li></ul> | <ul><li>Eliminando los campos definidos anteriormente.</li><li>Redefinición de campos existentes cuando el esquema está habilitado para el perfil del cliente en tiempo real.</li><li>Eliminación o restricción de los valores de campo admitidos anteriormente.</li><li>Mover los campos existentes a una ubicación diferente en el árbol de esquema: esto creará un nuevo campo en la zona protegida de destino, pero no se eliminará el campo anterior.</li><li>Habilitar o deshabilitar el esquema para que participe en el perfil: esta operación se omitirá en la comparación de diferencias.</li><li>Etiquetas de control de acceso.</li></ul> |
+
+>[!ENDSHADEBOX]
+
+Siga los pasos a continuación para aprender a utilizar las herramientas de zona protegida para transferir las configuraciones de objetos en diferentes zonas protegidas.
+
+### Objetos importados anteriormente
+
+Siga estos pasos si el caso de uso implica objetos existentes en la zona protegida de origen que requieren actualizaciones de configuración, después de haberse empaquetado e importado a otras zonas protegidas.
+
+En primer lugar, actualice el objeto en la zona protegida de origen. Por ejemplo, vaya al área de trabajo **[!UICONTROL Esquemas]**, seleccione el esquema y agregue un nuevo grupo de campos.
+
+![El área de trabajo de esquema con un esquema actualizado.](../images/ui/sandbox-tooling/update-schema.png)
+
+Una vez que haya actualizado el esquema, vaya a **[!UICONTROL Zonas protegidas]**, seleccione **[!UICONTROL Paquetes]** y, a continuación, busque el paquete existente.
+
+![Interfaz de herramientas de zona protegida con un paquete seleccionado](../images/ui/sandbox-tooling/select-package.png)
+
+Utilice la interfaz de paquetes para comprobar los cambios. Seleccione **[!UICONTROL Buscar actualizaciones]** para ver cualquier cambio en los artefactos del paquete. A continuación, seleccione **[!UICONTROL Ver diferencia]** para recibir un resumen detallado de todos los cambios realizados en los artefactos.
+
+![Interfaz del paquete con el botón de diferencia de vista seleccionado.](../images/ui/sandbox-tooling/view-diff.png)
+
+Aparecerá la interfaz [!UICONTROL Ver diff]. Consulte este peaje para obtener información sobre los artefactos de origen y destino, así como los cambios que se les deben aplicar.
+
+![Resumen de cambios.](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+Durante este paso, también puede seleccionar [!UICONTROL Resumir con IA] para obtener un resumen paso a paso de todos los cambios.
+
+![Resumen con IA habilitada.](../images/ui/sandbox-tooling/ai-summary.png)
+
+Cuando esté listo, selecciona **[!UICONTROL Actualizar paquete]** y, a continuación, selecciona **[!UICONTROL Confirmar]** en la ventana emergente que aparece. Una vez completado el trabajo, puede actualizar la página y seleccionar **[!UICONTROL Ver historial]** para comprobar la versión del paquete.
+
+![Ventana de confirmación.](../images/ui/sandbox-tooling/confirm-changes.png)
+
+Para importar los cambios, vuelva al directorio [!UICONTROL Paquetes] y seleccione los puntos suspensivos (`...`) junto al paquete. A continuación, seleccione **[!UICONTROL Importar paquete]**. Experience Platform selecciona automáticamente [!UICONTROL Actualizar objetos existentes]. Compruebe los cambios y, a continuación, seleccione **[!UICONTROL Finalizar]**.
+
+>[!NOTE]
+>
+>Todos los objetos dependientes se actualizan automáticamente en la zona protegida de destino como parte de este flujo de trabajo.
+
+![Interfaz del objetivo de importación.](../images/ui/sandbox-tooling/import-objective.png)
+
+Para validar aún más el proceso de importación, vaya a la zona protegida de destino y vea manualmente el objeto actualizado desde dicha zona protegida.
+
+### Objetos creados manualmente en la zona protegida de Target
+
+Siga estos pasos si el caso de uso implica aplicar cambios de configuración a objetos creados manualmente en zonas protegidas independientes.
+
+En primer lugar, cree y publique un nuevo paquete con el objeto actualizado.
+
+A continuación, importe el paquete en la zona protegida de destino que contiene los objetos que también desea actualizar. Durante el proceso de importación, seleccione **[!UICONTROL Actualizar objetos existentes]** y, a continuación, utilice el navegador de objetos para seleccionar manualmente los objetos de destino a los que desea aplicar las actualizaciones.
+
+>[!NOTE]
+>
+>- Es opcional seleccionar una asignación de destino en una zona protegida diferente para los objetos dependientes. Si no se selecciona ninguna, se crea una nueva.
+>- Para el área de nombres de identidad, el sistema detecta automáticamente si es necesario crear una nueva identidad si es necesario reutilizar una existente en la zona protegida de Target.
+
+![Interfaz del objetivo de importación con marcadores de posición para los objetos de destino que se van a actualizar.](../images/ui/sandbox-tooling/update-existing-objects.png)
+
+Una vez identificados los objetos de destino que desea actualizar, seleccione **[!UICONTROL Finalizar]**.
+
+![Los objetos de destino seleccionados.](../images/ui/sandbox-tooling/add-updated-objects.png)
+
 ## Tutorial de vídeo
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender las herramientas de la zona protegida, y describe cómo crear un nuevo paquete, publicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446086/?learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Pasos siguientes
 
