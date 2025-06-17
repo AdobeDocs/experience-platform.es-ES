@@ -3,9 +3,9 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de Facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de público en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
+source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2690'
 ht-degree: 5%
 
 ---
@@ -13,14 +13,6 @@ ht-degree: 5%
 # [!DNL Facebook] conexión
 
 ## Información general {#overview}
-
->[!IMPORTANT]
->
->* A partir del 23 de mayo de 2025 y durante junio de 2025, es posible que vea temporalmente dos tarjetas de destino **[!DNL Facebook Custom Audience]** en el catálogo de destinos durante un máximo de unas horas. Esto se debe a una actualización interna del servicio de destinos y a la compatibilidad con nuevos campos para mejorar la segmentación y la coincidencia con perfiles en las propiedades de Facebook. Para obtener más información sobre los nuevos campos relacionados con direcciones, consulte la sección [identidades admitidas](#supported-identities).
->* Si ve una tarjeta con la etiqueta **[!UICONTROL (Nueva) Audiencia personalizada de Facebook]**, use esta tarjeta para nuevos flujos de datos de activación. Los flujos de datos existentes se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. Cualquier cambio que realice en los flujos de datos existentes durante este período se conservará después de la actualización. Una vez completada la actualización, se cambiará el nombre de la tarjeta de destino de **[!UICONTROL (nueva) audiencia personalizada de Facebook]** a **[!DNL Facebook Custom Audience]**.
->* Si está creando flujos de datos mediante la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar sus [!DNL flow spec ID] y [!DNL connection spec ID] con los siguientes valores:
->   * ID de especificación de flujo: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
->   * ID de especificación de conexión: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 Active perfiles para sus campañas [!DNL Facebook] de segmentación, personalización y supresión de audiencias en función de los correos electrónicos con hash.
 
@@ -146,8 +138,8 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 >[!NOTE]
 >
 >[!DNL Experience Platform] crea automáticamente un hash de los datos de las áreas de nombres sin hash tras la activación.
-> Los datos de origen de los atributos no se cifran automáticamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación.
-> La opción **[!UICONTROL Aplicar transformación]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir áreas de nombres.
+>> Los datos de origen de los atributos no se cifran automáticamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación.
+>> La opción **[!UICONTROL Aplicar transformación]** solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir áreas de nombres.
 
 ![Aplicar control de transformación resaltado en el paso de asignación.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -159,13 +151,13 @@ Antes de poder usar el área de nombres `Extern_ID` para enviar datos a [!DNL Fa
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar audiencias.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -245,8 +237,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
