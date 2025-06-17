@@ -2,10 +2,10 @@
 title: Guía De Implementación De Reglas De Vinculación De Gráfico De Identidad
 description: Conozca los pasos recomendados a seguir al implementar los datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
+source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
 workflow-type: tm+mt
-source-wordcount: '1955'
-ht-degree: 5%
+source-wordcount: '1956'
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ En esta sección se describen los pasos previos que debe seguir antes de impleme
 
 #### Requisito de área de nombres de persona única {#single-person-namespace-requirement}
 
-Debe asegurarse de que el área de nombres única con la prioridad más alta esté siempre presente en cada perfil. Al hacerlo, el servicio de identidad puede detectar el identificador de persona adecuado en un gráfico determinado.
+Debe asegurarse de que el área de nombres única con la prioridad más alta esté siempre presente en todos los perfiles conocidos. Al hacerlo, el servicio de identidad puede detectar el identificador de persona adecuado en un gráfico determinado.
 
 +++Seleccione esta opción para ver un ejemplo de gráfico sin un área de nombres de identificador de persona individual
 

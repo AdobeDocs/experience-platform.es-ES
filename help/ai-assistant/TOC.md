@@ -4,10 +4,10 @@ user-guide-title: Guía del asistente de IA en Adobe Experience Platform
 user-guide-description: Aprenda a utilizar el Asistente de IA para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 description: Este documento enumera la tabla de contenido del Asistente de IA en Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: c5ca8c8e13c5bf889a8ed4d67f00e955aea56e75
+source-git-commit: 4aa2e4fb17d1c6ab9997ab7d0fbe7f5f5d0e5ad7
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 30%
+source-wordcount: '116'
+ht-degree: 31%
 
 ---
 
@@ -29,8 +29,7 @@ ht-degree: 30%
    * [Descubrimiento de campos XDM para la creación de audiencias](./new-features/xdm-field-discovery.md)
 * Detalles del modelo {#model-details}
    * [Información general sobre detalles del modelo](./model-details/overview.md)
-   * Detalles del modelo de IA {#ai-model-details}
-      * [Lenguaje de Insights Operacional Natural Asistente de IA para SQL](./model-details/ai-model-details/natural-language-to-sql.md)
-      * [Optimización del tiempo de envío](./model-details/ai-model-details/send-time-optimization.md)
+   * [Lenguaje de Insights Operacional Natural Asistente de IA para SQL](./model-details/natural-language-to-sql.md)
+   * [Optimización del tiempo de envío](./model-details/send-time-optimization.md)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
 
