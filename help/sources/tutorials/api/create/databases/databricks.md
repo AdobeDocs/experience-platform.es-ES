@@ -4,10 +4,10 @@ description: Obtenga información sobre cómo conectar Azure Databricks a Experi
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 2%
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
@@ -47,6 +47,8 @@ Proporcione valores para las siguientes credenciales a fin de conectar [!DNL Dat
 | `accessToken` | El token de acceso que autentica su cuenta de [!DNL Databricks]. Puede generar el token de acceso mediante el área de trabajo [!DNL Databricks]. |
 | `database` | Nombre de la base de datos en el lago delta. |
 | `connectionSpec.Id` | El ID de especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y fuente. El id. de especificación de conexión para [!DNL Databricks] es `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
+
+Para obtener más información, lea la [[!DNL Azure Databricks] información general](../../../../connectors/databases/databricks.md).
 
 ## Crear una conexión base
 
