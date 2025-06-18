@@ -3,10 +3,10 @@ title: Creación de una conexión de Source de Azure Synapse Analytics en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Azure Synapse Analytics (en adelante, "Synapse") mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f8eb8640360205e8ae9579d4b664d4880bf8a368
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 2%
+source-wordcount: '469'
+ht-degree: 0%
 
 ---
 
@@ -16,55 +16,67 @@ ht-degree: 2%
 >
 >El origen [!DNL Azure Synapse Analytics] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time Customer Data Platform Ultimate.
 
-Este tutorial proporciona los pasos para crear un conector de origen [!DNL Azure Synapse Analytics] (denominado en adelante &quot;[!DNL Synapse]&quot;) mediante la interfaz de usuario [!DNL Experience Platform].
+Lea esta guía para obtener información sobre cómo conectar su cuenta de [!DNL Azure Synapse Analytics] a Adobe Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario.
 
-## Introducción
+## Introducción 
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco de trabajo estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de la experiencia del cliente.
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
-Si ya tiene una conexión [!DNL Synapse] válida, puede omitir el resto de este documento y continuar con el tutorial sobre [configuración de un flujo de datos](../../dataflow/databases.md).
+Si ya tiene una conexión [!DNL Azure Synapse Analytics] válida, puede omitir el resto de este documento y continuar con el tutorial sobre [configuración de un flujo de datos](../../dataflow/databases.md).
 
 ### Recopilar credenciales necesarias
 
-Para tener acceso a su cuenta de [!DNL Synapse] en [!DNL Experience Platform], debe proporcionar los siguientes valores:
+Lea la [[!DNL Azure Synapse Analytics] descripción general](../../../../connectors/databases/synapse-analytics.md#prerequisites) para obtener información sobre la autenticación.
 
-| Credencial | Descripción |
-| ---------- | ----------- |
-| `connectionString` | La cadena de conexión asociada con su autenticación [!DNL Synapse]. El patrón de cadena de conexión [!DNL Synapse] es `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+## Navegar por el catálogo de fuentes
 
-Para obtener más información sobre este valor, consulte [este [!DNL Synapse] documento](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Fuentes]*. Elija una categoría o utilice la barra de búsqueda para encontrar el origen.
 
-## Conectar su cuenta de [!DNL Synapse]
+Para conectarse a [!DNL Azure Synapse Analytics], vaya a la categoría *[!UICONTROL Bases de datos]*, seleccione la tarjeta de origen de **[!UICONTROL Azure Synapse Analytics]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
-Una vez que haya recopilado las credenciales requeridas, puede seguir los pasos a continuación para vincular su cuenta de [!DNL Synapse] a [!DNL Experience Platform].
+>[!TIP]
+>
+>Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez creada una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
 
-Inicie sesión en [Adobe Experience Platform](https://platform.adobe.com) y, a continuación, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de **[!UICONTROL Fuentes]**. La pantalla **[!UICONTROL Catálogo]** muestra una variedad de orígenes con los que puede crear una cuenta.
+![El catálogo de orígenes con &quot;Azure Synapse Analytics&quot; seleccionado.](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+## Usar una cuenta existente {#existing}
 
-En la categoría **[!UICONTROL Bases de datos]**, seleccione **[!UICONTROL Azure Synapse Analytics]**. Si es la primera vez que usa este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Agregar datos]** para crear un nuevo conector [!DNL Synapse].
+Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la cuenta [!DNL Azure Synapse Analytics] que desee usar.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
+![Interfaz de cuenta existente del flujo de trabajo de orígenes.](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
-Aparecerá la página **[!UICONTROL Conectarse a Azure Synapse Analytics]**. En esta página, puede usar credenciales nuevas o existentes.
+## Crear una nueva cuenta {#new}
 
-### Nueva cuenta
+Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y, a continuación, proporciona un nombre y, opcionalmente, agrega una descripción para tu cuenta.
 
-Si está usando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione un nombre, una descripción opcional y sus credenciales de [!DNL Synapse]. Cuando termine, seleccione **[!UICONTROL Conectar]** y deje pasar un tiempo para que se establezca la nueva conexión.
+![La nueva interfaz de cuenta del flujo de trabajo de orígenes.](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
+### Conectar con Experience Platform
 
-### Cuenta existente
+Puede conectar su cuenta de [!DNL Azure Synapse Analytics] a Experience Platform mediante la autenticación de clave de cuenta o la autenticación de clave y principal de servicio.
 
-Para conectar una cuenta existente, seleccione la cuenta de [!DNL Synapse] con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+>[!BEGINTABS]
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
+>[!TAB Autenticación de clave de cuenta]
 
-## Pasos siguientes
+Para usar la autenticación de clave de cuenta, selecciona **[!UICONTROL Autenticación de clave de cuenta]**, proporciona tu [cadena de conexión](../../../../connectors/databases/synapse-analytics.md#prerequisites) y, a continuación, selecciona **[!UICONTROL Conectarse al origen]**.
 
-Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Synapse]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).
+![El paso &quot;crear nueva cuenta&quot; en el flujo de trabajo de orígenes con &quot;autenticación de clave de cuenta seleccionada.](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png)
+
+>[!TAB Autenticación de clave y principal de servicio]
+
+También puede seleccionar **[!UICONTROL Autenticación de clave y principal de servicio]**, proporcionar valores para sus [credenciales de autenticación](../../../../connectors/databases/synapse-analytics.md#prerequisites) y, a continuación, seleccionar **[!UICONTROL Conectarse al origen]**.
+
+![El paso &quot;crear nueva cuenta&quot; en el flujo de trabajo de orígenes con la opción &quot;autenticación de clave y principal de servicio&quot; seleccionada.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
+
+>[!ENDTABS]
+
+## Crear un flujo de datos para [!DNL Azure Synapse Analytics] datos
+
+Ahora que ha conectado correctamente su base de datos de [!DNL Azure Synapse Analytics], puede [crear un flujo de datos e introducir datos de su base de datos en Experience Platform](../../dataflow/databases.md).
