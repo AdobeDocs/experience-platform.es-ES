@@ -112,8 +112,8 @@ La opción **[!UICONTROL Mostrar etiquetas heredadas]** está activada de forma 
 >[!NOTE]
 >
 >Las etiquetas que se aplicaban antes de que la función de etiquetado de conjuntos de datos quedara obsoleta se pueden eliminar del conjunto de datos buscando el conjunto de datos correspondiente y seleccionando el icono Cancelar de la etiqueta.
->>![Pestaña Control de datos del área de trabajo Conjuntos de datos con una etiqueta eliminable resaltada.](../images/labels/remove-governance-labels.png)
->>Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
+>&#x200B;>![Pestaña Control de datos del área de trabajo Conjuntos de datos con una etiqueta eliminable resaltada.](../images/labels/remove-governance-labels.png)
+>&#x200B;>Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
 
 ## Administración de etiquetas personalizadas {#manage-custom-labels}
 
