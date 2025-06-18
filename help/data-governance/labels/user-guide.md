@@ -16,7 +16,7 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Gobernanza del uso de datos en Experience Platform"
->abstract="<h2>Descripción</h2><p>El marco de Gobernanza de datos de Experience Platform le permite etiquetar atributos y conjuntos de datos según las restricciones de uso de datos, así como establecer directivas que identifiquen y apliquen estas limitaciones para acciones de marketing específicas.</p>"
+>abstract="<h2>Descripción</h2><p>El marco de Gobernanza de datos de Experience Platform le permite etiquetar atributos y esquemas según las restricciones de uso de datos, así como establecer directivas que identifiquen y apliquen estas limitaciones para acciones de marketing específicas.</p>"
 
 Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos en la interfaz de usuario de [!DNL Experience Platform].
 
@@ -24,7 +24,7 @@ Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de 
 
 Para aplicar etiquetas a los datos, necesita el permiso **[!UICONTROL Administrar etiquetas de uso]** para utilizarlo en la zona protegida de producción predeterminada llamada &quot;prod&quot;. Para crear una etiqueta personalizada, también debe tener derechos administrativos en el perfil del producto. Cada organización solo tiene una lista de etiquetas aplicables. Usted **no puede** eliminar etiquetas. En su lugar, puede eliminarlos de los conjuntos de datos o campos a los que se aplican.
 
-Consulte la guía sobre cómo [configurar permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=es) o la [descripción general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso a Admin Console para su organización, póngase en contacto con el administrador de la organización.
+Consulte la guía sobre cómo [configurar permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [descripción general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso a Admin Console para su organización, póngase en contacto con el administrador de la organización.
 
 ## Administrar etiquetas en el nivel de esquema
 
@@ -112,8 +112,8 @@ La opción **[!UICONTROL Mostrar etiquetas heredadas]** está activada de forma 
 >[!NOTE]
 >
 >Las etiquetas que se aplicaban antes de que la función de etiquetado de conjuntos de datos quedara obsoleta se pueden eliminar del conjunto de datos buscando el conjunto de datos correspondiente y seleccionando el icono Cancelar de la etiqueta.
->![Pestaña Control de datos del área de trabajo Conjuntos de datos con una etiqueta eliminable resaltada.](../images/labels/remove-governance-labels.png)
->Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
+>>![Pestaña Control de datos del área de trabajo Conjuntos de datos con una etiqueta eliminable resaltada.](../images/labels/remove-governance-labels.png)
+>>Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
 
 ## Administración de etiquetas personalizadas {#manage-custom-labels}
 
@@ -156,4 +156,4 @@ Ahora también puede definir políticas de uso de datos basadas en las etiquetas
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422794?quality=12&enable10seconds=on&speedcontrol=on&captions=spa) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->
