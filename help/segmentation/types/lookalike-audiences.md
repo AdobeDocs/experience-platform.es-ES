@@ -3,18 +3,26 @@ solution: Experience Platform
 title: Audiencias con similitud
 description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experience Platform mediante audiencias de similitud.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2299'
 ht-degree: 9%
 
 ---
 
 # Guía de audiencias similares
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >Las perspectivas y audiencias de similitud solo están disponibles en la **edición B2C**.
+
+>[!IMPORTANT]
+>
+>Las perspectivas de similitud y las audiencias de similitud se desactivan automáticamente en entornos que muestran un uso bajo. Un uso bajo se define como no ver perspectivas de similitud durante los últimos tres meses o no crear una nueva audiencia de similitud durante los últimos seis meses.
+>
+>Si se desactivan las perspectivas de similitud para su entorno, puede solicitar acceso enviando un correo electrónico al equipo de atención al cliente de Adobe, incluido su ID de organización y los detalles del entorno en su mensaje.
+>
+>Después de recibir la confirmación del Servicio de atención al cliente de Adobe, las perspectivas y audiencias de similitud se habilitarán en todos los entornos limitados de su entorno.
 
 En Adobe Experience Platform, las audiencias de similitud proporcionan una perspectiva inteligente de cada una de sus audiencias, aprovechando las perspectivas basadas en el aprendizaje automático para identificar y dirigirse a clientes de alto valor con sus campañas de marketing.
 
@@ -75,7 +83,9 @@ Los siguientes derechos se aplican al uso de audiencias de similitud:
 
 Los paquetes de complementos, que estarán disponibles más adelante, aumentan las autorizaciones de los entornos limitados de producción en 20 audiencias de similitud por paquete.
 
-Para confirmar si tiene acceso a audiencias de similitud, póngase en contacto con su representante de Adobe.
+## Acceso {#access}
+
+Para confirmar si tiene acceso a audiencias de similitud, seleccione cualquier audiencia dentro de Audience Portal y compruebe si la pestaña **[!UICONTROL Información de similitud]** está visible.
 
 ## Ver perspectivas de similitud {#view}
 
