@@ -3,9 +3,9 @@ keywords: personalización;Personalization
 title: Información general sobre destinos Personalization
 description: Las plataformas Personalization recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en marketing a navegar por datos anónimos, ofrecer ofertas o anuncios a los posibles clientes en función de actividades anteriores o como parte de audiencias con hábitos similares.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: 33b9dda43f8f0b19a184f0fa3fa2c1cffdb7acf6
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '158'
 ht-degree: 11%
 
 ---
@@ -24,6 +24,7 @@ Actualmente, Experience Platform admite los destinos de personalización que se 
 
 * [Adobe Target](adobe-target-connection.md)
 * [Adobe Commerce](adobe-commerce.md)
+* [Algolia](algolia.md)
 * [Conexión de personalización personalizada](custom-personalization.md)
 * [Conexión de Pega Customer Decision Hub](pega.md)
 * [(V2) Conexión de Pega Customer Decision Hub](pega.md)
