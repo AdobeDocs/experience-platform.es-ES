@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 7%
+source-wordcount: '1054'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,27 @@ ht-degree: 7%
 
 ## Información general {#overview}
 
-Exporte datos a su cuenta de Snowflake mediante anuncios privados.
+Use el conector de destino de Snowflake para exportar datos a la instancia de Snowflake de Adobe y, a continuación, compártalos con tu instancia a través de [listados privados](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+
+Lea las siguientes secciones para comprender cómo funciona el destino de Snowflake y cómo se transfieren los datos entre Adobe y Snowflake.
+
+### Funcionamiento del uso compartido de datos Snowflake {#data-sharing}
+
+Este destino usa un recurso compartido de datos de [!DNL Snowflake], lo que significa que no se exportarán ni transferirán físicamente datos a su propia instancia de Snowflake. En su lugar, Adobe le concede acceso de solo lectura a una tabla activa alojada en el entorno de Snowflake de Adobe. Puede consultar esta tabla compartida directamente desde su cuenta de Snowflake, pero no es el propietario de la tabla y no puede modificarla ni conservarla más allá del período de retención especificado. Adobe administra completamente el ciclo de vida y la estructura de la tabla compartida.
+
+La primera vez que comparta datos de la instancia de Snowflake de Adobe con la suya, se le pedirá que acepte el anuncio privado de Adobe.
+
+### Retención de datos y tiempo de vida (TTL) {#ttl}
+
+Todos los datos compartidos a través de esta integración tienen un tiempo de vida (TTL) fijo de siete días. Siete días después de la última exportación, la tabla compartida caduca automáticamente y se vuelve inaccesible, independientemente de si el flujo de datos sigue activo. Si necesita conservar los datos durante más de siete días, debe copiar el contenido en una tabla suya en su propia instancia de Snowflake antes de que caduque el TTL.
+
+### Comportamiento de actualización de audiencia {#audience-update-behavior}
+
+Si la audiencia se evalúa en [modo por lotes](../../../segmentation/methods/batch-segmentation.md), los datos de la tabla compartida se actualizarán cada 24 horas. Esto significa que puede haber un retraso de hasta 24 horas entre los cambios en la pertenencia a la audiencia y cuando esos cambios se reflejan en la tabla compartida.
+
+### Lógica de exportación incremental {#incremental-export}
+
+Cuando un flujo de datos se ejecuta para una audiencia por primera vez, realiza un relleno y comparte todos los perfiles cualificados actualmente. Después de este relleno inicial, solo las actualizaciones incrementales se reflejan en la tabla compartida. Esto significa perfiles que se añaden o eliminan de la audiencia. Este método garantiza actualizaciones eficientes y mantiene la tabla compartida actualizada.
 
 ## Requisitos previos {#prerequisites}
 
@@ -55,7 +75,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -67,13 +87,20 @@ Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]
 
 ### Rellenar detalles de destino {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_accountID"
+>title="Introduzca su ID de cuenta de Snowflake"
+>abstract="Si su cuenta está vinculada a una organización, use este formato: `OrganizationName.AccountName`<br><br> Si su cuenta no está vinculada a una organización, use este formato:`AccountName`"
+
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
 ![Captura de pantalla de muestra que muestra cómo rellenar los detalles de tu destino](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta de Snowflake]**: tu ID de cuenta de Snowflake. Ejemplo: `adobe-123456`.
+* **[!UICONTROL ID de cuenta de Snowflake]**: tu ID de cuenta de Snowflake. Utilice el siguiente formato de ID de cuenta en función de si su cuenta está vinculada a una organización:
+   * Si su cuenta está vinculada a una organización:`OrganizationName.AccountName`.
+   * Si su cuenta no está vinculada a una organización:`AccountName`.
 * **[!UICONTROL Reconocimiento de cuenta]**: alterne el reconocimiento de ID de cuenta de Snowflake para confirmar que el ID de cuenta es correcto y que le pertenece.
 
 >[!IMPORTANT]
@@ -90,8 +117,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
