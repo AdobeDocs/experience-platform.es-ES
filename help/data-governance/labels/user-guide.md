@@ -24,7 +24,7 @@ Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de 
 
 Para aplicar etiquetas a los datos, necesita el permiso **[!UICONTROL Administrar etiquetas de uso]** para utilizarlo en la zona protegida de producción predeterminada llamada &quot;prod&quot;. Para crear una etiqueta personalizada, también debe tener derechos administrativos en el perfil del producto. Cada organización solo tiene una lista de etiquetas aplicables. Usted **no puede** eliminar etiquetas. En su lugar, puede eliminarlos de los conjuntos de datos o campos a los que se aplican.
 
-Consulte la guía sobre cómo [configurar permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [descripción general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso a Admin Console para su organización, póngase en contacto con el administrador de la organización.
+Consulte la guía sobre cómo [configurar permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=es) o la [descripción general del control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso a Admin Console para su organización, póngase en contacto con el administrador de la organización.
 
 ## Administrar etiquetas en el nivel de esquema
 
