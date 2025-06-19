@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
 workflow-type: tm+mt
-source-wordcount: '3626'
+source-wordcount: '3621'
 ht-degree: 10%
 
 ---
@@ -119,14 +119,33 @@ La página de detalles también muestra una lista de identidades que fallaron y 
 
 ![Registros de flujo de datos para destinos de flujo continuo con un mensaje de error resaltado.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### (Beta) Monitorización de ejecución de flujo de datos en el nivel de audiencia para destinos de streaming {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE Beta]{type=Informative} Supervisión de ejecución de flujo de datos en el nivel de audiencia para destinos de flujo continuo {#audience-level-dataflow-runs-for-streaming-destinations}
 
 Puede ver información sobre las identidades activadas, excluidas o fallidas desglosada a nivel de audiencia para cada audiencia que forme parte del flujo de datos.
 
 Actualmente, la monitorización a nivel de audiencia para destinos de streaming solo está disponible para los siguientes destinos:
 
-- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
-- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
+- [[!DNL (API) Oracle Eloqua] conexión](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+- [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+- [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+- [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+- [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+- [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+- [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+- [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+- [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+- [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+- [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+- [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+- [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+- [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+- [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+- [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+- [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+- [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+- [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+- [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 
 ![Supervisión a nivel de audiencia para destinos de flujo continuo.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -305,7 +324,16 @@ Por ejemplo, está activando una audiencia denominada &quot;Miembros socio en Ca
 >[!IMPORTANT]
 >
 >Tenga en cuenta las limitaciones actuales relacionadas con las métricas de nivel de audiencia:
->- Actualmente, la vista a nivel de audiencia está disponible para destinos por lotes (basados en archivos) y solo para el destino de streaming [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md). Se ha planificado el despliegue para más destinos de flujo continuo.
+>
+>- La vista a nivel de audiencia está disponible actualmente para los destinos enumerados a continuación. Se ha planificado el despliegue para más destinos de flujo continuo.
+>
+>   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - Destinos por lotes (basados en archivos)
+> 
 >- En el caso de los destinos por lotes, las métricas de nivel de audiencia solo se registran actualmente para ejecuciones de flujo de datos correctas. No se registran para ejecuciones de flujo de datos fallidas y registros excluidos. Para las ejecuciones de flujo de datos a destinos de flujo continuo, las métricas se capturan y se muestran para los registros activados y excluidos.
 
 ![Audiencias resaltadas en el panel de flujo de datos.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
