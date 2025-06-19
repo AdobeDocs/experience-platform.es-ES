@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo crear una nueva cuenta empresarial
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,14 @@ Si Key Vault está configurado para restringir el acceso público a ciertas rede
 
 Seleccione **[!DNL Networking]** en el panel de navegación izquierdo. En **[!DNL Firewalls and virtual networks]**, active la casilla de verificación **[!DNL Allow trusted Microsoft services to bypass this firewall]** y, a continuación, seleccione **[!DNL Apply]**.
 
+>[!NOTE]
+>
+>Si el almacén de claves utiliza acceso de red restringido, Adobe recomienda agregar la siguiente dirección IP estática: `20.88.123.53`. Añadir esta dirección IP permite a los servicios de Adobe supervisar la conectividad de forma más eficaz y proporcionar alertas en la plataforma cuando se detectan problemas de acceso.
+>
+>Para obtener más información acerca de cuándo se debe realizar la lista de permitidos de la dirección IP de Adobe, cómo funcionan las alertas y cómo responder a las notificaciones de error de acceso a claves, consulte [Configuración de alertas y acceso IP para Azure CMK](./alerts-and-ip-access.md).
+>
+>Si el almacén de claves ya está configurado para permitir el acceso a la red pública, no se requiere ninguna otra acción.
+
 ![Se resaltó la ficha [!DNL Networking] de [!DNL Microsoft Azure] con la excepción [!DNL Networking] y [!DNL Allow trusted Microsoft surfaces to bypass this firewall].](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### Generar una clave {#generate-a-key}
@@ -69,7 +77,7 @@ Use el formulario proporcionado para proporcionar un nombre para la clave y sele
 
 >[!NOTE]
 >
->Recuerde el nombre que proporciona para la clave, ya que es necesario enviar la clave al Adobe.
+>Recuerde el nombre que proporciona para la clave, ya que es necesario enviar la clave a Adobe.
 
 Utilice los controles restantes para configurar la clave que desee generar o importar. Cuando termine, seleccione **[!DNL Create]**.
 

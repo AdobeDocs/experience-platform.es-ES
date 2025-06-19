@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real con guías, documentación y tutoriales.
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e53616a183cc8fe834782c82c56f8483d7b43eb1
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 28%
+source-wordcount: '332'
+ht-degree: 30%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 28%
 * [Información general sobre Experience Platform (vídeo)](video/platform-overview.md)
 * [Información general sobre varias nubes](multi-cloud.md)
 * [Comparación entre Edge Network y hub](./edge-and-hub-comparison.md)
-* [Tutoriales de Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es)
+* [Tutoriales de Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Una experiencia del cliente con tecnología de Experience Platform (vídeo)](video/customer-experience.md)
 * [En segundo plano, una experiencia del cliente con tecnología de Experience Platform (vídeo)](video/customer-experience-bts.md)
 * Introducción {#getting-started}
@@ -43,17 +43,17 @@ ht-degree: 28%
    * [Idiomas de soporte](documentation/language-support.md)
 * Aplicaciones creadas en Experience Platform {#ecosystem}
    * [Información general](application-services.md)
-   * [Adobe Real-Time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=es)
+   * [Adobe Real-Time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Servicios inteligentes y de aplicaciones (vídeo)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=es)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=es)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=es)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=es)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Integraciones de Experience Platform con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
 * Gobernanza, privacidad y seguridad {#governance-privacy-security}
    * [Información general](./governance-privacy-security/overview.md)
    * Gestión de consentimiento {#consent}
-      * Estándar de Adobe {#adobe}
+      * Adobe standard {#adobe}
          * [Información general](./governance-privacy-security/consent/adobe/overview.md)
          * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencia](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
@@ -68,12 +68,13 @@ ht-degree: 28%
          * [Eventos](./governance-privacy-security/audit-logs/api/events.md)
          * [Exportar](./governance-privacy-security/audit-logs/api/export.md)
    * [Cifrado de datos](./governance-privacy-security/encryption.md)
-   * Claves administradas por el cliente {#customer-managed-keys}
+   * Claves gestionadas por el cliente {#customer-managed-keys}
       * [Claves gestionadas por el cliente](./governance-privacy-security/customer-managed-keys/overview.md)
       * Azure {#azure}
          * [Configurar un Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
          * [Utilice la API para configurar CMK](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
          * [Uso de la interfaz de usuario para configurar CMK](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+         * [Configuración de alertas y lista de permitidos IP para Azure CMK](./governance-privacy-security/customer-managed-keys/azure/alerts-and-ip-access.md)
       * Amazon Web Service {#aws}
          * [Configuración de AWS KMS para CMK](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
          * [Utilice la interfaz de usuario para configurar CMK en AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
@@ -81,9 +82,9 @@ ht-degree: 28%
    * [Prácticas recomendadas de asignación de licencias para administración de datos](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Volumen total de datos](./license-usage-and-guardrails/total-data-volume.md)
-   * [protecciones de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=es)
-   * [protecciones de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=es)
-   * [protecciones de Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=es)
+   * [protecciones de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [protecciones de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [protecciones de Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Migración de lago de datos Gen2](adls2-gen2-migration.md)
 * [Glosario](glossary.md)
