@@ -3,9 +3,9 @@ title: Punto final de API de cuota
 description: El punto final /quota en la API de higiene de datos le permite supervisar el uso de la administración avanzada del ciclo de vida de datos con respecto a los límites de cuotas mensuales de su organización para cada tipo de trabajo.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 48a83e2b615fc9116a93611a5e6a8e7f78cb4dee
+source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 2%
 
 ---
@@ -14,10 +14,7 @@ ht-degree: 2%
 
 El extremo `/quota` de la API de higiene de datos le permite supervisar el uso de la administración avanzada del ciclo de vida de datos en relación con los límites de cuota de su organización para cada tipo de trabajo.
 
-Las cuotas se aplican a cada tipo de trabajo del ciclo vital de datos de las siguientes maneras:
-
-* Las eliminaciones y actualizaciones de registros se limitan a un determinado número de solicitudes cada mes.
-* La caducidad de los conjuntos de datos tiene un límite plano para el número de trabajos activos simultáneamente, independientemente de cuándo se ejecutará la caducidad.
+El uso de la cuota se rastrea para cada tipo de trabajo del ciclo vital de datos. Los límites de cuota reales dependen de los derechos de su organización y pueden revisarse periódicamente. La caducidad de los conjuntos de datos está sujeta a un límite estricto en el número de trabajos activos simultáneamente.
 
 ## Introducción
 
@@ -27,9 +24,17 @@ El extremo utilizado en esta guía forma parte de la API de higiene de datos. An
 * Una guía para leer las llamadas de API de ejemplo en este documento
 * Información importante sobre los encabezados necesarios para realizar llamadas a cualquier API de Experience Platform
 
+## Cuotas y plazos de procesamiento {#quotas}
+
+Las solicitudes de eliminación de registros están sujetas a cuotas y expectativas de nivel de servicio en función de sus derechos de licencia. Estos límites se aplican a solicitudes de eliminación basadas en la interfaz de usuario y la API.
+
+>[!TIP]
+> 
+>Este documento muestra cómo consultar el uso en relación con los límites basados en derechos. Para obtener una descripción completa de los niveles de cuota, los derechos de eliminación de registros y el comportamiento de SLA, consulte los documentos [eliminación de registros basada en la interfaz de usuario](../ui/record-delete.md#quotas) o[eliminación de registros basada en la API](./workorder.md#quotas).
+
 ## Enumerar cuotas {#list}
 
-Puede ver la información de cuota de su organización realizando una solicitud de GET al extremo `/quota`.
+Puede ver la información de cuota de su organización realizando una petición GET al extremo `/quota`.
 
 **Formato de API**
 
@@ -70,13 +75,13 @@ Una respuesta correcta devuelve los detalles de las cuotas del ciclo vital de da
       "name": "dailyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
       "consumed": 0,
-      "quota": 600000
+      "quota": 1000000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
       "consumed": 841,
-      "quota": 600000
+      "quota": 2000000
     },
     {
       "name": "monthlyUpdatedFieldIdentitiesQuota",
@@ -89,7 +94,5 @@ Una respuesta correcta devuelve los detalles de las cuotas del ciclo vital de da
 ```
 
 | Propiedad | Descripción |
-| --- | --- |
+| -------- | ------- |
 | `quotas` | Muestra la información de cuota de cada tipo de trabajo del ciclo vital de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`: el tipo de trabajo del ciclo vital de datos:<ul><li>`expirationDatasetQuota`: caducidades del conjunto de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: eliminaciones de registros</li></ul></li><li>`description`: una descripción del tipo de trabajo del ciclo vital de datos.</li><li>`consumed`: número de trabajos de este tipo ejecutados en el período actual. El nombre del objeto indica el período de cuota.</li><li>`quota`: asignación para este tipo de trabajo para su organización. Para las eliminaciones y actualizaciones de registros, la cuota representa el número de trabajos que se pueden ejecutar para cada período mensual. Para las caducidades del conjunto de datos, la cuota representa el número de trabajos que pueden estar activos simultáneamente en un momento determinado.</li></ul> |
-
-{style="table-layout:auto"}

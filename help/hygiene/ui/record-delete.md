@@ -1,24 +1,20 @@
 ---
-title: Eliminar registros
+title: Registrar solicitudes de eliminación (flujo de trabajo de IU)
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
 workflow-type: tm+mt
-source-wordcount: '1574'
-ht-degree: 8%
+source-wordcount: '1797'
+ht-degree: 7%
 
 ---
 
-# Eliminación de registros {#record-delete}
+# Registrar solicitudes de eliminación (flujo de trabajo de IU) {#record-delete}
 
 Use el espacio de trabajo [[!UICONTROL Ciclo de vida de datos]](./overview.md) para eliminar registros en Adobe Experience Platform según sus identidades principales. Estos registros se pueden asociar a consumidores individuales o a cualquier otra entidad que se incluya en el gráfico de identidad.
 
 >[!IMPORTANT]
-> 
->La característica de eliminación de registros está actualmente en Beta y disponible solamente en **versión limitada**. No está disponible para todos los clientes. Las solicitudes de eliminación de registros solo están disponibles para organizaciones en la versión limitada.
-> 
-> 
+>
 >Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Son **no** para usar en solicitudes de derechos de titulares de datos (cumplimiento) relacionadas con normas de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento, usa [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
 ## Requisitos previos {#prerequisites}
@@ -134,13 +130,59 @@ Para agregar más identidades, seleccione el icono más (![Un icono más.](/help
 
 ![Flujo de trabajo de creación de solicitud con el icono más y el icono de agregar identidad resaltados.](../images/ui/record-delete/more-identities.png)
 
+## Cuotas y plazos de procesamiento {#quotas}
+
+Las solicitudes de eliminación de registros están sujetas a límites diarios y mensuales de envío de identificadores, determinados por el derecho de licencia de su organización. Estos límites se aplican a solicitudes de eliminación basadas en la interfaz de usuario y la API.
+
+>[!NOTE]
+>
+>Puede enviar hasta **1.000.000 de identificadores por día**, pero solo si la cuota mensual restante lo permite. Si su límite mensual es inferior a 1 millón, sus envíos diarios no pueden exceder ese límite.
+
+### Derecho de envío mensual por producto {#quota-limits}
+
+En la tabla siguiente se describen los límites de envío de identificadores por producto y nivel de asignación de derechos. Para cada producto, el límite mensual es el menor de dos valores: un límite de identificador fijo o un umbral basado en porcentajes y vinculado al volumen de datos con licencia.
+
+| Producto | Descripción del derecho | Límite mensual (el que sea menor) |
+|----------|-------------------------|---------------------------------|
+| REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Sin el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 2 000 000 de identificadores o el 5 % de la audiencia direccionable |
+| REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Con el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 15 000 000 de identificadores o el 10 % de la audiencia direccionable |
+| Customer Journey Analytics | Sin el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 2 000 000 de identificadores o 100 identificadores por millón de filas de CJA de derechos |
+| Customer Journey Analytics | Con el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 15 000 000 de identificadores o 200 identificadores por millón de filas de CJA de derechos |
+
+>[!NOTE]
+>
+> La mayoría de las organizaciones tendrán límites mensuales más bajos en función de su audiencia direccionable real o de los derechos de fila de CJA.
+
+Las cuotas se restablecen el primer día de cada mes calendario. La cuota no utilizada **no** se transfiere.
+
+>[!NOTE]
+>
+>Las cuotas se basan en los derechos mensuales con licencia de su organización para **identificadores enviados**. Estas no se aplican mediante protecciones del sistema, pero se pueden supervisar y revisar.
+>
+>La eliminación de registros es un **servicio compartido**. Su límite mensual refleja el derecho más alto en Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics y cualquier complemento de Shield aplicable.
+
+### Tiempos de procesamiento para los envíos de identificadores {#sla-processing-timelines}
+
+Después del envío, las solicitudes de eliminación de registros se ponen en cola y se procesan según su nivel de asignación de derechos.
+
+| Descripción del producto y los derechos | Duración de cola | Tiempo máximo de procesamiento (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Sin el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | Hasta 15 días | 30 días |
+| Con el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | Normalmente 24 horas | 15 días |
+
+Si su organización requiere límites más altos, póngase en contacto con su representante de Adobe para obtener una revisión de las autorizaciones.
+
+>[!TIP]
+>
+>Para comprobar el uso actual de la cuota o el nivel de derechos, consulte la [Guía de referencia de cuotas](../api/quota.md).
+
 ## Enviar la solicitud {#submit}
 
 Una vez que haya terminado de agregar identidades a la solicitud, en **[!UICONTROL Configuración de solicitud]**, proporcione un nombre y una descripción opcional para la solicitud antes de seleccionar **[!UICONTROL Enviar]**.
 
->[!IMPORTANT]
-> 
->Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-Time Customer Data Platform o Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Las organizaciones que hayan adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** pueden enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Una sola solicitud de eliminación de registro a través de la interfaz de usuario le permite enviar 10.000 ID al mismo tiempo. El método [API para eliminar registros](../api/workorder.md#create) permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
+>[!TIP]
+>
+>Puede enviar hasta 10 000 identidades por solicitud a través de la interfaz de usuario. Para enviar volúmenes más grandes (hasta 100 000 ID por solicitud), usa el [método API](../api/workorder.md#create).
 
 ![Los campos [!UICONTROL Nombre] y [!UICONTROL Descripción] de la configuración de la solicitud con [!UICONTROL Enviar] resaltados.](../images/ui/record-delete/submit.png)
 

@@ -2,9 +2,9 @@
 title: Información general sobre Advanced Data Lifecycle Management
 description: La administración avanzada del ciclo de vida de los datos permite administrar el ciclo de vida de los datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9ffd2db5555a4c157171d488deb9641aadbb08b4
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,11 @@ La interfaz de usuario [!UICONTROL Data Lifecycle] se basa en la API de higiene 
 
 [Eliminación de registros](./ui/record-delete.md) y las solicitudes de caducidad de conjuntos de datos tienen sus propias escalas de tiempo de procesamiento y proporcionan actualizaciones de transparencia en puntos clave de sus respectivos flujos de trabajo.
 
+>[!TIP]
+>
+>Para supervisar su uso actual en relación con los límites de cuotas, consulte la [Guía de referencia de cuotas](./api/quota.md).\
+>Para ver las reglas de asignación de derechos, los límites mensuales, las escalas de tiempo de SLA y las directivas de administración de excepciones, consulte la [eliminación de registros (IU)](./ui/record-delete.md#quotas) y la [documentación de la orden de trabajo (API)](./api/workorder.md#quotas).
+
 Lo siguiente ocurre cuando se crea una [solicitud de caducidad del conjunto de datos](./ui/dataset-expiration.md):
 
 | Prueba | Tiempo tras el vencimiento programado | Descripción |
@@ -51,7 +56,7 @@ Lo siguiente ocurre cuando se crea una [solicitud de caducidad del conjunto de d
 | Conjunto de datos perdido | 3 horas | **Una hora después de que se haya marcado la eliminación del conjunto de datos**, se ha eliminado completamente del sistema. En este punto, el conjunto de datos se borra de la [página de inventario de conjuntos de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario. Sin embargo, los datos dentro del lago de datos solo se eliminan en este momento de forma suave y permanecerán así hasta que se complete el proceso de eliminación en firme. |
 | Recuento de perfiles actualizado | 30 horas | Según el contenido del conjunto de datos que se elimine, algunos perfiles pueden eliminarse del sistema si todos sus atributos de componentes están vinculados a ese conjunto de datos. 30 horas después de que se elimine el conjunto de datos, los cambios resultantes en los recuentos generales de perfiles se reflejarán en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
 | Audiencias actualizadas | 48 horas | Una vez que se hayan actualizado todos los perfiles afectados, todas las [audiencias](../segmentation/home.md) relacionadas se actualizarán para reflejar su nuevo tamaño. Según el conjunto de datos eliminado y los atributos por los que esté segmentando, el tamaño de cada audiencia podría aumentar o disminuir como resultado de la eliminación. |
-| Recorridos y destinos actualizados | 50 horas | Los [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=es), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=es) y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
+| Recorridos y destinos actualizados | 50 horas | Los [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
 | Eliminación completa del hardware | 15 días | Todos los datos relacionados con el conjunto de datos se eliminan del lago de datos. El [estado del trabajo del ciclo de vida de datos](./ui/browse.md#view-details) que eliminó el conjunto de datos se ha actualizado para reflejarlo. |
 
 {style="table-layout:auto"}
@@ -72,7 +77,7 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 | Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted. |
 | Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
-| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=es), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=es), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
+| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
 | Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
 | Data vacuuming completed | 14 days | The [status of the lifecycle job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
 

@@ -1,38 +1,80 @@
 ---
-title: Punto final de API de orden de trabajo
+title: Registrar Solicitudes De Eliminación (Extremo De Orden De Trabajo)
 description: El extremo /workorder de la API de higiene de datos le permite administrar mediante programación las tareas de eliminación de identidades.
-badgeBeta: label="Beta" type="Informative"
 role: Developer
-badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: bf819d506b0ee6f3aba6850f598ee46f16695dfa
+source-git-commit: d569b1d04fa76e0a0e48364a586e8a1a773b9bf2
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1505'
 ht-degree: 2%
 
 ---
 
-# Punto final de orden de trabajo {#work-order-endpoint}
+# Registrar solicitudes de eliminación (extremo de pedido de trabajo) {#work-order-endpoint}
 
 El extremo `/workorder` de la API de higiene de datos le permite administrar mediante programación las solicitudes de eliminación de registros en Adobe Experience Platform.
 
 >[!IMPORTANT]
 > 
->La característica de eliminación de registros está actualmente en Beta y disponible solamente en **versión limitada**. No está disponible para todos los clientes. Las solicitudes de eliminación de registros solo están disponibles para organizaciones en la versión limitada.
->
 >Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Son **no** para usar en solicitudes de derechos de titulares de datos (cumplimiento) relacionadas con normas de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento, usa [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
 ## Introducción
 
 El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, revise la [descripción general](./overview.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante con respecto a los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
+## Cuotas y plazos de procesamiento {#quotas}
+
+Las solicitudes de eliminación de registros están sujetas a límites diarios y mensuales de envío de identificadores, determinados por el derecho de licencia de su organización. Estos límites se aplican a solicitudes de eliminación basadas en la interfaz de usuario y la API.
+
+>[!NOTE]
+>
+>Puede enviar hasta **1.000.000 de identificadores por día**, pero solo si la cuota mensual restante lo permite. Si su límite mensual es inferior a 1 millón, sus envíos diarios no pueden exceder ese límite.
+
+### Derecho de envío mensual por producto {#quota-limits}
+
+En la tabla siguiente se describen los límites de envío de identificadores por producto y nivel de asignación de derechos. Para cada producto, el límite mensual es el menor de dos valores: un límite de identificador fijo o un umbral basado en porcentajes y vinculado al volumen de datos con licencia.
+
+| Producto | Descripción del derecho | Límite mensual (el que sea menor) |
+|----------|-------------------------|---------------------------------|
+| REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Sin el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 2 000 000 de identificadores o el 5 % de la audiencia direccionable |
+| REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Con el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 15 000 000 de identificadores o el 10 % de la audiencia direccionable |
+| Customer Journey Analytics | Sin el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 2 000 000 de identificadores o 100 identificadores por millón de filas de CJA de derechos |
+| Customer Journey Analytics | Con el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 15 000 000 de identificadores o 200 identificadores por millón de filas de CJA de derechos |
+
+>[!NOTE]
+>
+> La mayoría de las organizaciones tendrán límites mensuales más bajos en función de su audiencia direccionable real o de los derechos de fila de CJA.
+
+Las cuotas se restablecen el primer día de cada mes calendario. La cuota no utilizada **no** se transfiere.
+
+>[!NOTE]
+>
+>Las cuotas se basan en los derechos mensuales con licencia de su organización para **identificadores enviados**. Estas no se aplican mediante protecciones del sistema, pero se pueden supervisar y revisar.
+>
+>La eliminación de registros es un **servicio compartido**. Su límite mensual refleja el derecho más alto en Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics y cualquier complemento de Shield aplicable.
+
+### Tiempos de procesamiento para los envíos de identificadores {#sla-processing-timelines}
+
+Después del envío, las solicitudes de eliminación de registros se ponen en cola y se procesan según su nivel de asignación de derechos.
+
+| Descripción del producto y los derechos | Duración de cola | Tiempo máximo de procesamiento (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Sin el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | Hasta 15 días | 30 días |
+| Con el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | Normalmente 24 horas | 15 días |
+
+Si su organización requiere límites más altos, póngase en contacto con su representante de Adobe para obtener una revisión de las autorizaciones.
+
+>[!TIP]
+>
+>Para comprobar el uso actual de la cuota o el nivel de derechos, consulte la [Guía de referencia de cuotas](../api/quota.md).
+
 ## Crear una solicitud de eliminación de registro {#create}
 
-Puede eliminar una o más identidades de un único conjunto de datos o de todos ellos realizando una solicitud del POST al extremo `/workorder`.
+Puede eliminar una o más identidades de un único conjunto de datos o de todos ellos realizando una petición POST al extremo `/workorder`.
 
->[!IMPORTANT]
-> 
->Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Las organizaciones que hayan adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** pueden enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Una sola solicitud de eliminación de registro de [a través de la interfaz de usuario](../ui/record-delete.md) le permite enviar 10.000 ID al mismo tiempo. El método API para eliminar registros permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
+>[!TIP]
+>
+>Cada solicitud de eliminación de registro enviada a través de la API puede incluir hasta **100,000 identidades**. Para maximizar la eficacia, envíe tantas identidades por solicitud como sea posible y evite envíos de bajo volumen, como órdenes de trabajo de ID único.
 
 **Formato de API**
 
@@ -207,7 +249,7 @@ Una respuesta correcta devuelve los detalles de la operación de eliminación, i
 
 ## Actualizar una solicitud de eliminación de registro
 
-Puede actualizar `displayName` y `description` para una eliminación de registro realizando una solicitud de PUT.
+Puede actualizar `displayName` y `description` para una eliminación de registro realizando una petición PUT.
 
 **Formato de API**
 
