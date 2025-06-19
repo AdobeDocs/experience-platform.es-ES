@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
 workflow-type: tm+mt
-source-wordcount: '5024'
+source-wordcount: '5195'
 ht-degree: 8%
 
 ---
@@ -324,7 +324,7 @@ La lista de restricciones de tiempo disponibles para esta operación difiere de 
 >[!NOTE]
 >
 >Al utilizar la restricción de tiempo &quot;Después&quot;, el último evento puede tener lugar durante más tiempo que el indicado en la restricción de tiempo. >
->Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
+>>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
 >
 >Además, estas dos restricciones de tiempo se pueden utilizar en coordinación entre sí.
 >
@@ -382,13 +382,27 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >abstract="Puede actualizar las estimaciones de la definición del segmento para ver inmediatamente una previsualización de cuántos perfiles cumplen los requisitos para la definición de segmento propuesta. Las estimaciones de público se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
+>title="Perfiles cualificados"
+>abstract="Los perfiles cualificados indican el número real de perfiles que coinciden con las reglas de la definición del segmento. Este número se actualiza cada 24 horas, después de que se haya ejecutado el trabajo de evaluación de segmentos."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
+>title="Perfiles estimados"
+>abstract="La estimación de perfiles indica un número aproximado de perfiles, en función del trabajo de muestra, que cumplen los requisitos para las reglas de la definición del segmento. Esto significa que los datos de muestra se proyectan en el conjunto de perfiles más grande, lo que da como resultado un número estimado que puede diferir del número real de perfiles cualificados. La muestra de perfil estimada tiene un intervalo de confianza del 95 %. <br><br>Este número se actualiza cuando se actualiza el trabajo de ejemplo, lo que ocurre cuando hay un cambio mayor del 5% en los datos del cliente o el último trabajo de ejemplo tiene más de 7 días."
+
 Al crear una definición de segmento, la sección **[!UICONTROL Propiedades de la audiencia]** en el lado derecho del espacio de trabajo muestra una estimación del tamaño de la definición de segmento resultante, que le permite ajustar la definición de segmento según sea necesario antes de crear la propia audiencia.
 
 **[!UICONTROL Perfiles calificados]** indica el número **actual** de perfiles que coinciden con las reglas de la definición del segmento. Este número se actualiza cada 24 horas, después de que se haya ejecutado el trabajo de evaluación de segmentos.
 
 La marca de tiempo de los perfiles cualificados indica el trabajo de evaluación de segmentos **por lotes** más reciente y se muestra **no** para las definiciones de segmentos evaluadas mediante streaming o segmentación de Edge. Si edita la definición del segmento, el número de perfiles cualificados seguirá siendo el mismo hasta que se ejecute el siguiente trabajo de evaluación de segmentos.
 
-**[!UICONTROL Perfiles estimados]** indica un número **aproximado** de perfiles basados en el **trabajo de muestra**. Puede ver una versión actualizada de este valor después de agregar las nuevas reglas o condiciones y seleccionar **[!UICONTROL Actualizar estimación]**. Al seleccionar la burbuja de información, se proporciona el umbral de error y el tiempo del trabajo de muestra más reciente.
+**[!UICONTROL Perfiles estimados]** indica un número **aproximado** de perfiles, según el **trabajo de muestra**. Esto significa que los datos de muestra se proyectan en el conjunto de perfiles más grande, lo que da como resultado un número estimado que puede diferir del número real de perfiles cualificados. La muestra de perfil estimada tiene un intervalo de confianza del 95 %.
+
+Este número se actualiza cuando se actualiza el trabajo de muestra, lo que ocurre cuando hay un cambio mayor del 5 % en los datos del cliente o el último trabajo de muestra tiene más de 7 días&quot;.
+
+Al seleccionar la burbuja de información, se proporciona el umbral de error y el tiempo del trabajo de muestra más reciente.
 
 ![Los perfiles calificados y los perfiles estimados se resaltan en la sección de propiedades de Audiencia.](../images/ui/segment-builder/audience-estimates.png)
 
