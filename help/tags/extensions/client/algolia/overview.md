@@ -2,7 +2,7 @@
 title: Información general sobre la extensión Algolia Tags
 description: Obtenga información acerca de la extensión de etiquetas Algolia en Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 605f89a09f58568c2ec2492f788bedbe610292ae
+source-git-commit: 24d2dc76fc4208f8e1555d90fd3c3ef2cf55643e
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 2%
@@ -85,8 +85,8 @@ Agregue la acción **[!UICONTROL Click]** a la regla de etiqueta para enviar los
 >[!NOTE]
 >
 >Si se incluyen `queryID` y `position`, el evento se clasifica como **ID de objeto en los que se hizo clic después de la búsqueda**. De lo contrario, se clasifica como un evento **ID de objeto en el que se hizo clic**.
->&#x200B;><br><br>
->&#x200B;>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
+>><br>
+>>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -105,8 +105,8 @@ Agregue la acción **[!UICONTROL Converted]** a la regla de etiquetas para envia
 >[!NOTE]
 >
 >Si el elemento de datos contiene `queryId`, el evento se clasifica como **Convertido después de la búsqueda**. De lo contrario, se clasificará como un evento **Converted**.
->&#x200B;><br><br>
->&#x200B;>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
+>><br>
+>>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -125,10 +125,10 @@ Agregue la acción **[!UICONTROL Agregado al carro]** a la regla de etiquetas pa
 >[!NOTE]
 >
 >Si el elemento de datos contiene `queryId`, el evento se clasificará como **Se agregará a los identificadores de objeto del carro de compras después de la búsqueda**. De lo contrario, se clasificará como un evento **Se agregó al objeto de carro de compras ID**.
->&#x200B;><br><br>
->&#x200B;>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
->&#x200B;><br><br>
->&#x200B;>Si los elementos de datos predeterminados no cumplen con sus requisitos, se puede crear un elemento de datos personalizado para devolver los detalles de evento deseados.
+>><br>
+>>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
+>><br>
+>>Si los elementos de datos predeterminados no cumplen con sus requisitos, se puede crear un elemento de datos personalizado para devolver los detalles de evento deseados.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -147,10 +147,10 @@ Agregue la acción **[!UICONTROL Purchased]** a la regla de etiqueta para enviar
 >[!NOTE]
 >
 >Si el elemento de datos contiene `queryId`, el evento se clasificará como **ID de objeto adquiridos después de la búsqueda**. De lo contrario, se clasificará como un evento **ID de objeto adquiridos**.
->&#x200B;><br><br>
->&#x200B;>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
->&#x200B;><br><br>
->&#x200B;>Si los elementos de datos predeterminados no cumplen con sus requisitos, se puede crear un elemento de datos personalizado para devolver los detalles de evento deseados.
+>><br>
+>>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
+>><br>
+>>Si los elementos de datos predeterminados no cumplen con sus requisitos, se puede crear un elemento de datos personalizado para devolver los detalles de evento deseados.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
