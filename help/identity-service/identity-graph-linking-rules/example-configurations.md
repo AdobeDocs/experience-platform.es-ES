@@ -1,10 +1,8 @@
 ---
 title: Guía de configuración de reglas de vinculación de Identity Graph
 description: Obtenga información sobre los distintos tipos de implementación que puede configurar mediante las reglas de vinculación de gráficos de identidad.
-hide: true
-hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
+source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -136,7 +134,7 @@ Lea esta sección para implementaciones intermedias de [!DNL Identity Graph Link
 >
 >Para completar las implementaciones siguientes, debe crear las siguientes áreas de nombres personalizadas con los símbolos de identidad (con distinción de mayúsculas y minúsculas) de:
 >* `CRMID`
->* `CCHash` (es un área de nombres personalizada que representa un número de tarjeta de crédito con hash).
+>* `CChash` (es un área de nombres personalizada que representa un número de tarjeta de crédito con hash).
 
 Imagine que es un arquitecto de datos que trabaja para un banco comercial que emite tarjetas de crédito. Su equipo de marketing ha indicado que desea incluir el historial de transacciones de tarjetas de crédito anteriores en un perfil. Este gráfico de identidad puede tener el siguiente aspecto.
 
@@ -482,6 +480,7 @@ loginID: JanePersonal, ECID: 222
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
+>* `orderID`
 
 Es una empresa de medios de comunicación y entretenimiento y los usuarios finales tienen lo siguiente:
 
