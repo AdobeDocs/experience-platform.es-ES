@@ -2,12 +2,12 @@
 title: Demandbase Intent
 description: Obtenga información acerca del origen de Demandbase Intent en Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
@@ -34,11 +34,11 @@ Debe tener los permisos para **[!UICONTROL Ver fuentes]** y **[!UICONTROL Admini
 
 ### Restricciones de nomenclatura para archivos y directorios
 
-The restrictions listed below must be taken into consideration when naming your cloud storage file or directory:
+Las restricciones enumeradas a continuación deben tenerse en cuenta al nombrar el archivo o directorio de almacenamiento en la nube:
 
-* Directory and file component names cannot exceed 255 characters.
-* Directory and file names cannot end with a forward slash (`/`). If provided, it will be automatically removed.
-* The following reserved URL characters must be properly escaped: `! ' ( ) ; @ & = + $ , % # [ ]`
+* Los nombres de componentes de directorio y archivo no pueden superar los 255 caracteres.
+* Los nombres de directorio y archivo no pueden terminar con una barra diagonal (`/`). Si se proporciona, se eliminará automáticamente.
+* Los siguientes caracteres de URL reservadas deben ser de escape correcto: `! ' ( ) ; @ & = + $ , % # [ ]`
 * No se permiten los siguientes caracteres: `" \ / : | < > * ?`.
 * No se permiten caracteres de ruta de URL no válidos. Los puntos de código como `\uE000`, si bien son válidos en los nombres de archivo NTFS, no son caracteres Unicode válidos. Además, algunos caracteres ASCII o Unicode, como los caracteres de control (0x00 a 0x1F, \u0081, etc.), tampoco están permitidos. Para las reglas que rigen las cadenas Unicode en HTTP/1.1, consulte [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) y [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 * No se permiten los siguientes nombres de archivo: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carácter de punto (.) y dos caracteres de punto (..).
@@ -49,7 +49,7 @@ The restrictions listed below must be taken into consideration when naming your 
 
 | Credencial | Descripción |
 | --- | --- |
-| ID de clave de acceso | Identificador de clave de acceso [!DNL Demandbase]. This is a 61-character alphanumeric string that is required to authenticate your account to Experience Platform. |
+| ID de clave de acceso | Identificador de clave de acceso [!DNL Demandbase]. Se trata de una cadena alfanumérica de 61 caracteres que es necesaria para autenticar su cuenta en Experience Platform. |
 | Clave de acceso secreta | La clave de acceso secreta [!DNL Demandbase]. Es una cadena de 40 caracteres con codificación base 64 necesaria para autenticar su cuenta en Experience Platform. |
 | Nombre del segmento | El bloque [!DNL Demandbase] del cual se extraerán los datos. |
 | Ruta de carpeta | La ruta a la carpeta a la que desea proporcionar acceso. |
@@ -64,19 +64,20 @@ El esquema [!DNL Demandbase] se llama **Intención de la compañía semanal**. E
 
 | Nombre del campo | Tipo de datos | Requerido | Clave empresarial | Notas |
 | --- | --- | --- | --- | --- |
-| `company_id` | STRING | VERDADERO | SÍ | El ID de empresa canónico. |
+| `company_id` | CADENA | VERDADERO | SÍ | El ID de empresa canónico. |
 | `domain` | CADENA | VERDADERO | SÍ | El dominio identificado de la cuenta que muestra la intención. |
 | `start_date` | FECHA | VERDADERO | SÍ | La fecha de inicio en la que se produjo la actividad por intención en el período de duración. |
 | `end_date` | FECHA | VERDADERO | SÍ | La fecha de finalización en la que se produjo la actividad por intención en el período de duración. |
 | `duration_type` | CADENA | VERDADERO | SÍ | El tipo de duración. Por lo general, este valor puede ser diario, semanal o mensual, según la duración de resumen elegida. Para esta muestra de datos, este valor es `week`. |
 | `keyword_set_id` | CADENA | VERDADERO | SÍ | ID del conjunto de palabras clave. Esto es único para un cliente determinado. |
-| `keyword_set` | CADENA | VERDADERO | YES | The keyword set name. |
-| `is_trending` | STRING | TRUE | | El estado actual de una tendencia determinada. El estado de tendencia se mide como una ráfaga en la actividad por intención de tratamiento en la última semana en relación con los promedios de las siete semanas anteriores. |
+| `keyword_set` | CADENA | VERDADERO | SÍ | El nombre del conjunto de palabras clave. |
+| `keyword` | CADENA | VERDADERO | | La palabra clave Intent. |
+| `is_trending` | CADENA | VERDADERO | | El estado actual de una tendencia determinada. El estado de tendencia se mide como una ráfaga en la actividad por intención de tratamiento en la última semana en relación con los promedios de las siete semanas anteriores. |
 | `intent_strength` | ENUM[CADENA] | VERDADERO | | Una medida cuantificada de la intensidad por intención. Los valores aceptados incluyen: `HIGH`, `MED` y `LOW`. |
 | `num_people_researching` | ENTERO | VERDADERO | | Recuento de personas que pertenecen a `company_id` y que investigaron la palabra clave en los últimos siete días. |
 | `num_trending_days` | ENTERO | VERDADERO | | El número de días que la palabra clave fue tendencia en una duración determinada. |
-| `trending_score` | INTEGER | TRUE | | The trending score. |
-| `record_id` | STRING | TRUE | | The unique primary record ID. |
+| `trending_score` | ENTERO | VERDADERO | | La puntuación de tendencia. |
+| `record_id` | CADENA | VERDADERO | | El ID único del registro principal. |
 | `partition_date` | FECHA | VERDADERO | | La fecha de calendario de la instantánea. Esto se realiza semanalmente, al final de la semana. |
 
 {style="table-layout:auto"}
@@ -95,9 +96,9 @@ Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca
 
 ### ¿Necesito tener que tener un contrato existente con [!DNL Demandbase] para usar los datos de intención de la cuenta en Real-Time CDP B2B edition?
 
-+++Answer
++++Respuesta
 
-Yes, you must have an active contract with [!DNL Demandbase] to access and utilize their intent data within Experience Platform and Real-Time CDP B2B Edition. La integración aprovecha el acuerdo existente con [!DNL Demandbase] para ingerir y activar señales de intención de cuenta en Experience Platform y Real-Time CDP.
+Sí, debe tener un contrato activo con [!DNL Demandbase] para acceder y utilizar los datos de intención en Experience Platform y Real-Time CDP B2B edition. La integración aprovecha el acuerdo existente con [!DNL Demandbase] para ingerir y activar señales de intención de cuenta en Experience Platform y Real-Time CDP.
 
 +++
 
@@ -157,17 +158,17 @@ Debe [eliminar el conjunto de datos](../../../catalog/datasets/user-guide.md#del
 
 +++Respuesta
 
-The `accountOrganization.domain` field is used for matching accounts. Si su organización utiliza un campo personalizado diferente para almacenar el nombre del sitio web, asegúrese de proporcionar la ruta de campo correcta para una asignación precisa.
+El campo `accountOrganization.domain` se usa para las cuentas coincidentes. Si su organización utiliza un campo personalizado diferente para almacenar el nombre del sitio web, asegúrese de proporcionar la ruta de campo correcta para una asignación precisa.
 
 +++
 
-### What happens when a company domain is updated in Experience Platform?
+### ¿Qué sucede cuando se actualiza un dominio de empresa en Experience Platform?
 
-+++Answer
++++Respuesta
 
-When a company domain is updated, the new domain value will be applied in the next dataflow run. This ensures that:
+Cuando se actualiza un dominio de empresa, el nuevo valor de dominio se aplica en la siguiente ejecución del flujo de datos. Esto garantiza que:
 
-* Future intent data ingestion use the updated domain for account matching.
+* La ingesta de datos por intención futura utiliza el dominio actualizado para la coincidencia de cuentas.
 * Ahora, cualquier señal de intención que no coincida correctamente con la cuenta deseada puede alinearse correctamente.
 * No se realizan cambios retroactivos a los datos pasados introducidos; solo los datos nuevos y entrantes reflejarán la actualización.
 
