@@ -2,9 +2,9 @@
 title: Información general sobre el conector SFTP Source
 description: Obtenga información sobre cómo conectar un servidor SFTP a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -183,7 +183,7 @@ Proporcione los valores apropiados para las siguientes credenciales a fin de aut
 | `port` | El puerto del servidor [!DNL SFTP] al que se está conectando. Si no se proporciona, el valor predeterminado es `22`. |
 | `username` | El nombre de usuario con acceso a su servidor [!DNL SFTP]. |
 | `password` | Contraseña del servidor [!DNL SFTP]. |
-| `privateKeyContent` | El contenido de clave privada SSH codificado en Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
+| `privateKeyContent` | El contenido de clave privada SSH codificado en Base64. Los tipos de claves OpenSSH admitidos son `ed25519`, `RSA` y `DSA`. |
 | `passPhrase` | La contraseña o frase de paso para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de paso. Si PrivateKeyContent está protegido con contraseña, este parámetro debe utilizarse con la frase de contraseña de PrivateKeyContent como valor. |
 | `maxConcurrentConnections` | Este parámetro le permite especificar un límite máximo para el número de conexiones simultáneas que Experience Platform creará al conectarse al servidor SFTP. Debe configurar este valor para que sea inferior al límite establecido por SFTP. **Nota**: Cuando esta configuración está habilitada para una cuenta SFTP existente, solo afectará los flujos de datos futuros y no los existentes. |
 | `folderPath` | La ruta a la carpeta a la que desea proporcionar acceso. [!DNL SFTP] origen, puede proporcionar la ruta de la carpeta para especificar el acceso del usuario a la subcarpeta que elija. |

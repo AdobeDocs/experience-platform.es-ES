@@ -2,9 +2,9 @@
 title: Creación de una conexión base SFTP mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos) mediante la API de Flow Service.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,7 @@ Para crear un identificador de conexión base, realice una petición POST al ext
 
 >[!IMPORTANT]
 >
->El conector [!DNL SFTP] admite una clave OpenSSH de tipo RSA o DSA. Asegúrese de que el contenido del archivo de claves comience por `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` y termine por `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir de formato PPK a formato OpenSSH.
+>El conector [!DNL SFTP] admite la clave OpenSSH de tipo `ed25519`, `RSA` o `DSA`. Asegúrese de que el contenido del archivo de claves comience por `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` y termine por `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir de formato PPK a formato OpenSSH.
 
 **Formato de API**
 
@@ -160,7 +160,7 @@ curl -X POST \
 | `auth.params.host` | El nombre de host del servidor [!DNL SFTP]. |
 | `auth.params.port` | El puerto del servidor SFTP. El valor predeterminado de este entero es 22. |
 | `auth.params.username` | El nombre de usuario asociado con su servidor [!DNL SFTP]. |
-| `auth.params.privateKeyContent` | El contenido de clave privada SSH codificado en Base64. El tipo de clave OpenSSH debe clasificarse como RSA o DSA. |
+| `auth.params.privateKeyContent` | El contenido de clave privada SSH codificado en Base64. Los tipos de claves OpenSSH admitidos son `ed25519`, `RSA` y `DSA`. |
 | `auth.params.passPhrase` | La contraseña o frase de paso para descifrar la clave privada si el archivo de clave o el contenido de la clave están protegidos por una frase de paso. Si PrivateKeyContent está protegido con contraseña, este parámetro debe utilizarse con la frase de contraseña de PrivateKeyContent como valor. |
 | `auth.params.maxConcurrentConnections` | Número máximo de conexiones simultáneas especificadas al conectar Experience Platform a SFTP. Cuando está habilitado, este valor debe establecerse en al menos 1. |
 | `auth.params.folderPath` | La ruta a la carpeta a la que desea proporcionar acceso. |
