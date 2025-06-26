@@ -2,14 +2,14 @@
 title: Conexión de Amazon S3
 description: Cree una conexión saliente activa a su almacenamiento de Amazon Web Service (AWS) S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios contenedores de S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 16%
+source-wordcount: '1818'
+ht-degree: 13%
 
 ---
 
-# [!DNL Amazon S3] conexión {#s3-connection}
+# [!DNL Amazon S3] conexión {#s3-connection}
 
 ## Registro de cambios de destino {#changelog}
 
@@ -71,7 +71,7 @@ Al exportar *conjuntos de datos*, Experience Platform crea un archivo de `.parqu
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -87,7 +87,7 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 * Autenticación de clave de acceso y clave secreta
 * Autenticación de la función asumida
 
-#### Autenticación de clave de acceso y clave secreta
+#### Autenticación con clave de acceso S3 y clave secreta
 
 Utilice este método de autenticación cuando desee introducir la clave de acceso y la clave secreta de Amazon S3 para permitir que Experience Platform exporte datos a las propiedades de Amazon S3.
 
@@ -98,21 +98,103 @@ Utilice este método de autenticación cuando desee introducir la clave de acces
 
   ![Imagen que muestra un ejemplo de una clave PGP correctamente formateada en la interfaz de usuario.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Función asumida {#assumed-role-authentication}
+#### Autenticación con S3 como rol asumido {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="Autenticación de la función asumida"
 >abstract="Utilice este tipo de autenticación si prefiere no compartir claves de cuenta y claves secretas con Adobe. En su lugar, Experience Platform se conecta a la ubicación de Amazon S3 mediante el acceso basado en funciones. Pegue el ARN de la función que ha creado en AWS para el usuario de Adobe. El patrón es similar a `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
-![Imagen de los campos requeridos al seleccionar la autenticación de rol asumido.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 Utilice este tipo de autenticación si prefiere no compartir claves de cuenta y claves secretas con Adobe. En su lugar, Experience Platform se conecta a su ubicación de Amazon S3 mediante el acceso basado en funciones.
 
-Para ello, debe crear en la consola de AWS un usuario supuesto para Adobe con los [permisos necesarios](#minimum-permissions-iam-user) para escribir en los bloques de Amazon S3. Cree una **[!UICONTROL entidad de confianza]** en AWS con la cuenta de Adobe **[!UICONTROL 670664943635]**. Para obtener más información, consulte la [documentación de AWS sobre la creación de funciones](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+![Imagen de los campos requeridos al seleccionar la autenticación de rol asumido.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**: pegue el ARN del rol que creó en AWS para el usuario de Adobe. El patrón es similar a `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!DNL Role]**: pegue el ARN del rol que creó en AWS para el usuario de Adobe. El patrón es similar a `arn:aws:iam::800873819705:role/destinations-role-customer`. Consulte los pasos siguientes para obtener instrucciones detalladas sobre cómo configurar correctamente el acceso a S3.
 * **[!UICONTROL Clave de cifrado]**: de forma opcional, puede adjuntar la clave pública con formato RSA para agregar el cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
+
+Para ello, debe crear en la consola de AWS una función asumida para Adobe con los [permisos necesarios](#minimum-permissions-iam-user) para escribir en los bloques de Amazon S3.
+
+**Crear una directiva con los permisos necesarios**
+
+1. Abra la consola AWS y vaya a IAM > Políticas > Crear política
+2. Seleccione Editor de directivas > JSON y añada los permisos siguientes.
+
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "VisualEditor0",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:DeleteObject",
+                   "s3:GetBucketLocation",
+                   "s3:ListMultipartUploadParts"
+               ],
+               "Resource": "arn:aws:s3:::bucket/folder/*"
+           },
+           {
+               "Sid": "VisualEditor1",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:ListBucket"
+               ],
+               "Resource": "arn:aws:s3:::bucket"
+           }
+       ]
+   }
+   ```
+
+3. En la página siguiente, escriba un nombre para la directiva y guárdela como referencia. Necesitará este nombre de directiva al crear la función en el paso siguiente.
+
+**Crear función de usuario en su cuenta de cliente de S3**
+
+1. Abra la consola AWS y vaya a IAM > Funciones > Crear nueva función
+2. Seleccione **tipo de entidad de confianza** > **cuenta de AWS**
+3. Seleccione **Una cuenta de AWS** > **Otra cuenta de AWS** e introduzca el identificador de la cuenta de Adobe: `670664943635`
+4. Añadir permisos mediante la directiva creada anteriormente
+5. Escriba un nombre de rol (por ejemplo, `destinations-role-customer`). El nombre de la función debe tratarse como confidencial, de forma similar a una contraseña. Puede contener hasta 64 caracteres y puede contener caracteres alfanuméricos y los siguientes caracteres especiales: `+=,.@-_`. A continuación, compruebe que:
+   * El id. de cuenta de Adobe `670664943635` se encuentra en la sección **[!UICONTROL Seleccionar entidades de confianza]**
+   * La directiva creada anteriormente está presente en **[!UICONTROL Resumen de directivas de permisos]**
+
+**Proporcione el rol que Adobe debe asumir**
+
+Después de crear la función en AWS, debe proporcionar la función ARN a Adobe. El ARN sigue este patrón: `arn:aws:iam::800873819705:role/destinations-role-customer`
+
+Puede encontrar el ARN en la página principal después de crear la función en la consola de AWS. Utilizará este ARN al crear el destino.
+
+**Verificar permisos de funciones y relaciones de confianza**
+
+Asegúrese de que la función tenga la configuración siguiente:
+
+* **Permisos**: la función debe tener permisos para acceder a S3 (ya sea acceso completo o los permisos mínimos proporcionados en el paso **Crear una directiva con los permisos requeridos** anterior)
+* **Relaciones de confianza**: el rol debe tener la cuenta raíz de Adobe (`670664943635`) en sus relaciones de confianza
+
+**Alternativa: restringir a un usuario de Adobe específico (opcional)**
+
+Si prefiere no permitir la cuenta completa de Adobe, puede restringir el acceso solo a un usuario de Adobe específico. Para ello, edite la directiva de confianza con la siguiente configuración:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+Para obtener más información, consulte la [documentación de AWS sobre la creación de funciones](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+
 
 ### Rellenar detalles de destino {#destination-details}
 
@@ -209,8 +291,8 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
