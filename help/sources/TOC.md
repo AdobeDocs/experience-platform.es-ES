@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
+source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1045'
 ht-degree: 35%
 
 ---
@@ -65,9 +65,7 @@ ht-degree: 35%
       - [Conector de Salesforce](connectors/crm/salesforce.md)
       - [Conector SugarCRM](connectors/crm/sugarcrm.md)
       - [Conector de Veeva CRM](connectors/crm/veeva.md)
-      - [Conector de Zoho CRM](connectors/crm/zoho.md)
    - Éxito del cliente {#customer-success}
-      - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
       - [Conector de Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Conector ServiceNow](connectors/customer-success/servicenow.md)
       - [Conector de Zendesk](connectors/customer-success/zendesk.md)
@@ -79,7 +77,6 @@ ht-degree: 35%
       - [Conector de Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Conector de Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Azure Table Storage](connectors/databases/ats.md)
-      - [Conector Couchbase](connectors/databases/couchbase.md)
       - [Conector de Google BigQuery](connectors/databases/bigquery.md)
       - [Conector GreenPlum](connectors/databases/greenplum.md)
       - [Conector HP Vertica](connectors/databases/hp-vertica.md)
@@ -88,7 +85,6 @@ ht-degree: 35%
       - [Conector de Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Conector MySQL](connectors/databases/mysql.md)
       - [Conector de Oracle](connectors/databases/oracle.md)
-      - [Conector Phoenix](connectors/databases/phoenix.md)
       - [Conector PostgreSQL](connectors/databases/postgres.md)
       - [Conector de flujo Snowflake](connectors/databases/snowflake-streaming.md)
       - [Conector de Snowflake](connectors/databases/snowflake.md)
@@ -114,11 +110,9 @@ ht-degree: 35%
       - [Conector de Mailchimp](connectors/marketing-automation/mailchimp.md)
       - [Conector Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
-      - [Conector de Oracle Responsys](connectors/marketing-automation/oracle-responsys.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Marketing Cloud de Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagos {#payments}
-      - [Conector de PayPal](connectors/payments/paypal.md)
       - [Conector cuadrado](connectors/payments/square.md)
       - [Conector de Stripe](connectors/payments/stripe.md)
    - Protocolos {#protocols}
@@ -156,9 +150,7 @@ ht-degree: 35%
          - [Cuentas y contactos de SugarCRM](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [Eventos de SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
-         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Éxito del cliente {#customer-success}
-         - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -170,7 +162,6 @@ ht-degree: 35%
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
-         - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -178,7 +169,6 @@ ht-degree: 35%
          - [MariaDB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
-         - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
@@ -197,11 +187,9 @@ ht-degree: 35%
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Actividades de Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entidades de Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
-         - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Marketing Cloud de Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagos {#payments}
-         - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Cuadrado](tutorials/api/create/payments/square.md)
          - [Stripe](tutorials/api/create/payments/stripe.md)
       - Protocolos {#protocols}
@@ -283,9 +271,7 @@ ht-degree: 35%
          - [Cuentas y contactos de SugarCRM](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [Eventos de SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
-         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Éxito del cliente {#customer-success}
-         - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -297,7 +283,6 @@ ht-degree: 35%
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
-         - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
@@ -306,7 +291,6 @@ ht-degree: 35%
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
-         - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflake Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
@@ -334,11 +318,9 @@ ht-degree: 35%
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Actividades de Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entidades de Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
-         - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Marketing Cloud de Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagos {#payments}
-         - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [Cuadrado](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocolos {#protocols}

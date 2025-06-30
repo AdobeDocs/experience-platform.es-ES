@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: octubre de 2021'
 description: Las notas de la versión de octubre de 2021 de Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 26%
+source-wordcount: '433'
+ht-degree: 28%
 
 ---
 
@@ -59,6 +59,5 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | --- | --- |
 | [!DNL Amazon S3] mejoras de origen | Ahora puede usar el parámetro `s3SessionToken` para conectar su cuenta de [!DNL Amazon S3] a Experience Platform mediante credenciales de seguridad temporales. Este token le permite proporcionar acceso temporal a corto plazo a sus recursos de [!DNL Amazon S3] a los usuarios que no se encuentren en entornos de confianza. Consulte la [[!DNL Amazon S3] documentación](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obtener más información. |
 | [!DNL Generic REST API] (Beta) | Ahora puede crear una conexión de origen [!DNL Generic REST API] mediante la [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para traer datos de una aplicación REST genérica a Experience Platform. Consulte la [[!DNL Generic REST API] descripción general](../../sources/connectors/protocols/generic-rest.md) para obtener más información. |
-| [!DNL Zoho CRM] (Beta) | Ahora puede crear una conexión de origen de [!DNL Zoho CRM] mediante la [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) o la [interfaz de usuario](../../sources/tutorials/ui/create/crm/zoho.md) para llevar los datos de su cuenta de [!DNL Zoho CRM] a Experience Platform. Consulte la [[!DNL Zoho CRM] descripción general](../../sources/connectors/crm/zoho.md) para obtener más información. |
 
 Para obtener más información sobre las fuentes, consulte [descripción general de las fuentes](../../sources/home.md).

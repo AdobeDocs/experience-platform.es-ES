@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2022'
 description: Las notas de la versión de febrero de 2022 de Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 18%
@@ -33,7 +33,7 @@ Adobe Experience Platform proporciona varios(as) [!DNL dashboards] a través de 
 
 | Función | Descripción |
 | --- | --- |
-| Nuevos widgets de destinos estándar | Los siguientes widgets estándar le permiten visualizar diferentes métricas relacionadas con sus destinos.<ul><li>Segmentos activados recientemente por destino. Este widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido.</li><li>Tendencia de tamaño de audiencia. Este widget muestra la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino.</li><li>Segmentos no asignados por identidad. Este widget enumera los cinco segmentos no asignados principales clasificados por recuento de identidad descendente para un destino e identidad determinados.</li><li>Segmentos asignados por identidad. Este widget enumera los cinco segmentos asignados principales. Los segmentos se ordenan de alto a bajo según sus respectivos recuentos de ID de origen que coinciden con el ID de destino seleccionado en el menú desplegable del widget.</li><li>Audiencias comunes. Este widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable del widget.</li></ul> Para obtener más información sobre los widgets estándar disponibles, consulte la documentación del panel [destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=es#standard-widgets). |
+| Nuevos widgets de destinos estándar | Los siguientes widgets estándar le permiten visualizar diferentes métricas relacionadas con sus destinos.<ul><li>Segmentos activados recientemente por destino. Este widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido.</li><li>Tendencia de tamaño de audiencia. Este widget muestra la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino.</li><li>Segmentos no asignados por identidad. Este widget enumera los cinco segmentos no asignados principales clasificados por recuento de identidad descendente para un destino e identidad determinados.</li><li>Segmentos asignados por identidad. Este widget enumera los cinco segmentos asignados principales. Los segmentos se ordenan de alto a bajo según sus respectivos recuentos de ID de origen que coinciden con el ID de destino seleccionado en el menú desplegable del widget.</li><li>Audiencias comunes. Este widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable del widget.</li></ul> Para obtener más información sobre los widgets estándar disponibles, consulte la documentación del panel [destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets). |
 
 Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashboards] Información general](../../dashboards/home.md).
 
@@ -85,6 +85,6 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
-| Fuentes de Beta que se trasladan a GA | Las siguientes fuentes se han promocionado de beta a GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| Fuentes de Beta que se trasladan a GA | Las siguientes fuentes se han promocionado de beta a GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li></ul> |
 
 Para obtener más información sobre las fuentes, consulte [descripción general de las fuentes](../../sources/home.md).

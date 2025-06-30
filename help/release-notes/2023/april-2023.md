@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2023'
 description: Las notas de la versión de abril de 2023 de Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 97%
+source-wordcount: '2010'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!IMPORTANT]
 >
->A partir del 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de abono del segmento para eliminar la redundancia en el ciclo vital de los miembros del segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`. Para obtener más información sobre este cambio, lea la [sección Servicio de segmentación](#segmentation).
+>A partir del 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de pertenencia al segmento para eliminar la redundancia en el ciclo vital de los miembros del segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`. Para obtener más información sobre este cambio, lea la [sección Servicio de segmentación](#segmentation).
 
 **Fecha de publicación: 26 de abril de 2023**
 
@@ -131,7 +131,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Extensión de unión de cuentas del servicio de perfil unificado de Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Se ha añadido un grupo de campos de extensión de cuenta para el Perfil del cliente en tiempo real que permite a los usuarios añadir un abono de segmentos en la unión de cuentas. |
+| Grupo de campos | [[!UICONTROL Extensión de unión de cuentas del servicio de perfil unificado de Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Se ha añadido un grupo de campos de extensión de cuenta para el Perfil del cliente en tiempo real que permite a los usuarios añadir la pertenencia al segmento en la unión de cuentas. |
 | Esquema | [[!UICONTROL Esquema del sistema de atributos calculados]](https://github.com/adobe/xdm/pull/1696/files) | El grupo de campos Atributos calculados utilizado por el Perfil del cliente en tiempo real se ha actualizado a un esquema global de solo lectura del sistema. |
 | Grupo de campos | Múltiple | Se han añadido varios eventos como campos para [[!UICONTROL Esquema de series de tiempo]](https://github.com/adobe/xdm/pull/1718/files). |
 | Grupo de campos | Detalles de fidelización del perfil | [Se ha corregido el título](https://github.com/adobe/xdm/pull/1717/files) para `xdm:upgradeDate` de “Nombre del programa” a “Fecha de actualización”. |
@@ -168,13 +168,13 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de serie temporal que representen las interacciones de los clientes con su marca.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | ------- | ----------- |
-| Mapa de abono de segmento | Como continuación del anuncio anterior, realizado en febrero, el 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de abono del segmento para eliminar la redundancia en el ciclo vital del abono del segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`.<br/><br/> Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, API HTTP) y pueden tener procesos descendentes automatizados basados en el estado `Existing`. Si este es su caso, revise las integraciones posteriores. Si está interesado en identificar perfiles recién cualificados más allá de un cierto tiempo, considere la posibilidad de utilizar una combinación del estado `Realized` y el `lastQualificationTime` en el mapa de abono a segmentos. Para obtener más información, póngase en contacto con su representante de Adobe. |
+| Mapa de pertenencia al segmento | Como continuación del anuncio anterior, realizado en febrero, el 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de pertenencia al segmento para eliminar la redundancia en el ciclo vital de la pertenencia al segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`.<br/><br/> Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, API HTTP) y pueden tener procesos descendentes automatizados basados en el estado `Existing`. Si este es su caso, revise las integraciones posteriores. Si le interesa identificar perfiles recién cualificados más allá de un cierto tiempo, considere la posibilidad de utilizar una combinación del estado `Realized` y el `lastQualificationTime` en el mapa de pertenencia al segmento. Para obtener más información, póngase en contacto con su representante de Adobe. |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,6 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | Compatibilidad de la API para filtrar datos de nivel de fila para el origen de CRM de Salesforce. | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para la fuente CRM de Salesforce. Lea la guía de [filtrado de datos para una fuente mediante la API](../../sources/tutorials/api/filter.md) para obtener más información. |
 | Disponibilidad beta de Shopify Streaming | La [fuente de streaming de Shopify](../../sources/connectors/ecommerce/shopify-streaming.md) ya está disponible en la versión beta. Utilice la fuente de streaming de Shopify para transmitir los datos de su cuenta de socios de Shopify a Experience Platform. |
 | Disponibilidad general de la integración de OneTrust | La [Fuente de integración de OneTrust](../../sources/connectors/consent-and-preferences/onetrust.md) es ahora GA. Utilice la fuente de integración de OneTrust para llevar los datos de preferencias y consentimiento de su cuenta de integración de OneTrust a Experience Platform. |
-| Disponibilidad general de Oracle Service Cloud | La [fuente de nube del servicio de Oracle](../../sources/connectors/customer-success/oracle-service-cloud.md) es ahora GA. Utilice la fuente de nube del servicio de Oracle para llevar los datos de nube del servicio de Oracle a Experience Platform. |
 
 {style="table-layout:auto"}
 

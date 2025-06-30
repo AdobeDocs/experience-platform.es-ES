@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1554'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ Con Experience Platform, puede centralizar los datos que recopila de fuentes dif
 
 ## Fuentes empresariales avanzadas {#advanced-enterprise-sources}
 
-Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Transmisión]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Lote]{type=Informative}
@@ -112,13 +112,11 @@ Los sistemas CRM proporcionan datos que pueden ayudar a crear relaciones con los
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE Lote]{type=Informative}
 - [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE Lote]{type=Informative}
 
 ### Éxito del cliente {#customer-success}
 
 Experience Platform proporciona asistencia para la ingesta de datos desde una aplicación de éxito de clientes de terceros. Consulte los siguientes documentos relacionados para obtener más información:
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE Lote]{type=Informative}
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE Lote]{type=Informative}
@@ -131,7 +129,6 @@ Experience Platform es compatible con la ingesta de datos desde una base de dato
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE Lote]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE Lote]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE Lote]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE Lote]{type=Informative}
@@ -139,7 +136,6 @@ Experience Platform es compatible con la ingesta de datos desde una base de dato
 - [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE Lote]{type=Informative}
 - [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE Lote]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Lote]{type=Informative}
 
@@ -181,15 +177,11 @@ Experience Platform es compatible con la ingesta de datos desde un sistema de au
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Lote]{type=Informative}
 - [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Lote]{type=Informative}
-<!-- 
-- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
--->
 
 ### Pagos {#payments}
 
 Experience Platform es compatible con la ingesta de datos desde un sistema de pagos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Lote]{type=Informative}
 

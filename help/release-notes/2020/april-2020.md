@@ -1,15 +1,15 @@
 ---
-title: 'Notas de la versión de Adobe Experience Cloud: abril de 2020'
+title: 'Notas de la versión de Adobe Experience Platform: abril de 2020'
 description: Las notas de la versión de abril de 2020 de Adobe Experience Platform.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: notas de la versión;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '985'
-ht-degree: 28%
+source-wordcount: '972'
+ht-degree: 29%
 
 ---
 
@@ -66,7 +66,7 @@ XDM es una especificación documentada públicamente y diseñada para mejorar la
 
 * Conocido
 
-## Control de datos {#governance}
+## Gobernanza de datos {#governance}
 
 La gobernanza de datos de Adobe Experience Platform es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de datos. Desempeña una función clave dentro de [!DNL Experience Platform] en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de acceso a los datos y el control de acceso de los datos para las acciones de marketing.
 
@@ -130,8 +130,7 @@ Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo 
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad de API e IU con bases de datos | Conectores de origen nuevos para [!DNL Apache Spark] (en HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive] (en HDInsights) y [!DNL Phoenix]. |
-| Compatibilidad con API e IU para aplicaciones basadas en pagos | Conectores de origen nuevos para [!DNL PayPal]. |
+| Compatibilidad de API e IU con bases de datos | Conectores de origen nuevos para [!DNL Apache Spark] (en HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage] y [!DNL Hive]. |
 | Compatibilidad con API e IU para aplicaciones basadas en protocolos | Conectores de origen nuevos para [!DNL Generic OData]. |
 
 **Problemas conocidos**

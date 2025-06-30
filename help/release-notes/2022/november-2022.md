@@ -2,10 +2,10 @@
 title: Notas de la versión de noviembre de 2022 de Adobe Experience Platform
 description: Las notas de la versión de noviembre de 2022 de Adobe Experience Platform.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 58%
+source-wordcount: '312'
+ht-degree: 63%
 
 ---
 
@@ -45,18 +45,4 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Experience Platform, consulte la [descripción general del sistema XDM](../../xdm/home.md).
-
-## Fuentes {#sources}
-
-Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
-
-Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
-
-**Funciones actualizadas**
-
-| Función | Descripción |
-| --- | --- | 
-| Disponibilidad de Beta del origen de Oracle Service Cloud | Utilice la fuente de Oracle Service Cloud para introducir datos de su cuenta de Oracle Service Cloud en Experience Platform. Para obtener más información, lea la [fuente de Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md). |
-
-Para obtener más información acerca de las fuentes, lea la [Información general de fuentes](../../sources/home.md).
+Para obtener más información sobre XDM en Experience Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
