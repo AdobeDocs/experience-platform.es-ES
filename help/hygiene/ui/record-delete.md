@@ -2,9 +2,9 @@
 title: Registrar solicitudes de eliminación (flujo de trabajo de IU)
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
+source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1848'
 ht-degree: 7%
 
 ---
@@ -45,19 +45,28 @@ Aparecerá el flujo de trabajo de creación de solicitudes. De manera predetermi
 
 ## Seleccionar conjuntos de datos {#select-dataset}
 
-El siguiente paso es determinar si desea eliminar registros de un único conjunto de datos o de todos ellos. Si esta opción no está disponible, continúe a la sección [Proporcionar identidades](#provide-identities) de la guía.
+El siguiente paso es determinar si desea eliminar registros de un único conjunto de datos o de todos ellos. Según la configuración de su organización, es posible que la opción de selección de conjuntos de datos no esté disponible. Si no ve esta opción, continúe a la sección [Proporcionar identidades](#provide-identities) de la guía.
 
-En la sección **[!UICONTROL Detalles del registro]**, utilice el botón de opción para seleccionar entre un conjunto de datos específico y todos los conjuntos de datos. Si elige **[!UICONTROL Seleccionar conjunto de datos]**, proceda a seleccionar el icono de la base de datos (![El icono de la base de datos](/help/images/icons/database.png)) para abrir un cuadro de diálogo que proporcione una lista de los conjuntos de datos disponibles. Seleccione el conjunto de datos deseado de la lista seguido de **[!UICONTROL Listo]**.
+En la sección **[!UICONTROL Detalles del registro]**, seleccione un botón de opción para elegir un conjunto de datos específico o todos los conjuntos de datos.
+
+Para eliminar de un conjunto de datos específico, seleccione **[!UICONTROL Seleccionar conjunto de datos]** y, a continuación, seleccione el icono de base de datos (![El icono de base de datos](/help/images/icons/database.png)). En el cuadro de diálogo que aparece, elija un conjunto de datos y seleccione **[!UICONTROL Listo]** para confirmar.
 
 ![Cuadro de diálogo [!UICONTROL Seleccionar conjunto de datos] con un conjunto de datos seleccionado y [!UICONTROL Listo] resaltado.](../images/ui/record-delete/select-dataset.png)
 
-Si desea eliminar registros de todos los conjuntos de datos, seleccione **[!UICONTROL Todos los conjuntos de datos]**.
+Para eliminar de todos los conjuntos de datos, seleccione **[!UICONTROL Todos los conjuntos de datos]**. Esta opción aumenta el ámbito de la operación y requiere que proporcione todos los tipos de identidad relevantes.
 
 ![Cuadro de diálogo [!UICONTROL Seleccionar conjunto de datos] con la opción [!UICONTROL Todos los conjuntos de datos] seleccionada.](../images/ui/record-delete/all-datasets.png)
 
->[!NOTE]
+>[!WARNING]
 >
->Si se selecciona la opción **[!UICONTROL Todos los conjuntos de datos]**, la operación de eliminación puede tardar más y es posible que no se eliminen registros con precisión.
+>Al seleccionar **[!UICONTROL Todos los conjuntos de datos]**, se expande la operación a todos los conjuntos de datos de su organización. Cada conjunto de datos puede utilizar un tipo de identidad principal diferente. Debe proporcionar **todos los tipos de identidad** necesarios para garantizar una coincidencia precisa.
+>
+>Si falta algún tipo de identidad, es posible que algunos registros se omitan durante la eliminación. Esto puede ralentizar el procesamiento y generar **resultados parciales**.
+
+Cada conjunto de datos de Experience Platform solo admite un tipo de identidad principal.
+
+* Al eliminar de **un solo conjunto de datos**, todas las identidades de su solicitud deben usar **el mismo tipo**.
+* Al eliminar de **todos los conjuntos de datos**, puede incluir **varios tipos de identidad**, ya que distintos conjuntos de datos pueden depender de identidades principales diferentes&quot;.
 
 ## Proporcionar identidades {#provide-identities}
 
@@ -80,8 +89,6 @@ Al igual que todos los campos de identidad de Experience Platform, un área de n
 >Si no conoce el área de nombres de identidad de un conjunto de datos concreto, puede encontrarla en la interfaz de usuario de Experience Platform. En el área de trabajo **[!UICONTROL Conjuntos de datos]**, seleccione el conjunto de datos en cuestión en la lista. En la página de detalles del conjunto de datos, pase el ratón sobre el nombre del esquema del conjunto de datos en el carril derecho. El área de nombres de identidad se muestra junto con el nombre y la descripción del esquema.
 >
 >![El panel Conjuntos de datos con un conjunto de datos seleccionado y un cuadro de diálogo de esquema abierto desde el panel de detalles del conjunto de datos. El identificador principal del conjunto de datos está resaltado.](../images/ui/record-delete/dataset-primary-identity.png)
-
-Si elimina registros de un único conjunto de datos, todas las identidades proporcionadas deben tener el mismo tipo, ya que un conjunto de datos solo puede tener un área de nombres de identidad. Si está eliminando de todos los conjuntos de datos, puede incluir varios tipos de identidad, ya que distintos conjuntos de datos pueden tener diferentes identidades principales.
 
 Existen dos opciones para proporcionar identidades al eliminar registros:
 
