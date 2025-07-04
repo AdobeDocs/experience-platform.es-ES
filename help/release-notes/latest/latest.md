@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, junio de 2025
 description: Las notas de la versión de junio de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fb34e033c90c269742a2045025bf0c964b513679
-workflow-type: ht
+source-git-commit: c78dc0e83976499403e066b314a0889df803c976
+workflow-type: tm+mt
 source-wordcount: '1665'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -160,7 +160,7 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 ## Servicio de segmentación {#segmentation-service}
 
-[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de serie temporal que representen las interacciones de los clientes con su marca.
 
 **Funciones nuevas o actualizadas**
 
@@ -177,7 +177,7 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | Función | Descripción |
 | --- | --- |
 | Compatibilidad con la interfaz de usuario [!BADGE Beta]{type=Informative} para [!DNL Azure Databricks] | Ahora puede conectar su cuenta de [!DNL Azure Databricks] a Experience Platform mediante el espacio de trabajo de fuentes en la interfaz de usuario. Lea la guía de [conexión [!DNL Databricks] con Experience Platform en la interfaz de usuario](../../sources/connectors/databases/databricks.md) para obtener más información. |
-| Compatibilidad con un nuevo tipo de autenticación para [!DNL Azure Synapse Analytics] | [!DNL Azure Synapse Analytics] ahora también admitirá la autenticación principal de servicio, además de la autenticación de cadena de conexión existente. Para obtener más información, consulte la [[!DNL Azure Synapse Analytics] información general sobre autenticación](../../sources/connectors/databases/synapse-analytics.md) |
+| Compatibilidad con un nuevo tipo de autenticación para [!DNL Azure Synapse Analytics] | [!DNL Azure Synapse Analytics] ahora también admitirá la autenticación principal de servicio, además de la autenticación de cadena de conexión existente. Para obtener más información, lea la [[!DNL Azure Synapse Analytics] descripción general de la autenticación](../../sources/connectors/databases/synapse-analytics.md). |
 | [!DNL Salesforce] desuso de autenticación básica | La autenticación básica de [Salesforce CRM](../../sources/connectors/crm/salesforce.md) y [Salesforce Service Cloud](../../sources/connectors/customer-success/salesforce-service-cloud.md) quedará obsoleta en enero de 2026. Los clientes deben migrar a la autenticación OAuth 2.0 para mantener la conectividad. Este cambio afecta a los conectores de origen y garantiza una seguridad mejorada y el cumplimiento de los estándares de autenticación de Salesforce. |
 
 {style="table-layout:auto"}
