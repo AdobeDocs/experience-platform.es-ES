@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
+source-git-commit: 13adf42a23458d10e217d216d8fe79e8ce33376d
 workflow-type: tm+mt
-source-wordcount: '4596'
+source-wordcount: '4595'
 ht-degree: 13%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 > 
-> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[[!UICONTROL permisos de control de acceso[Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**]](/help/access-control/home.md#permissions).
+> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]** Ver destinos **[!UICONTROL ,]** Activar destinos **[!UICONTROL ,]** Ver perfiles **[!UICONTROL y]** Ver segmentos[](/help/access-control/home.md#permissions).
 > * Para activar audiencias sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 > 
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
@@ -348,7 +348,7 @@ Consideremos los dos perfiles siguientes.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_1@example.com"
@@ -382,7 +382,7 @@ Consideremos los dos perfiles siguientes.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_2@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_2@example.com"
@@ -425,7 +425,7 @@ Suponiendo la anulación de duplicación por el espacio de nombres [!DNL Email],
 
 | Correo electrónico* | personalEmail | firstName | lastName |
 |---|---|---|---|
-| johndoe_2@example.com | johndoe@example.com | John | D |
+| johndoe@example.com | johndoe@example.com | John | D |
 | doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### Caso de uso de deduplicación 3: deduplicación basada en un único atributo de perfil {#deduplication-use-case-3}
@@ -450,7 +450,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave
 
@@ -554,9 +554,10 @@ Para los destinos basados en perfiles, debe seleccionar los atributos de perfil 
 >
 >Debido a una limitación conocida, actualmente no puede usar la ventana **[!UICONTROL Seleccionar campo]** para agregar `segmentMembership.seg_namespace.seg_id.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.seg_namespace.seg_id.status` en el campo de esquema, como se muestra a continuación.
 >
->![Grabación de pantalla que muestra la solución alternativa para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Grabación de pantalla que muestra la solución alternativa para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Las exportaciones de archivos varían de las siguientes maneras, dependiendo de si `segmentMembership.seg_namespace.seg_id.status` está seleccionado o no:
+
 * Si se selecciona el campo `segmentMembership.seg_namespace.seg_id.status`, los archivos exportados incluyen **[!UICONTROL miembros activos]** en la instantánea completa inicial y **[!UICONTROL miembros activos]** y **[!UICONTROL caducados]** en las exportaciones incrementales posteriores.
 * Si no se selecciona el campo `segmentMembership.seg_namespace.seg_id.status`, los archivos exportados incluyen solo **[!UICONTROL miembros activos]** en la instantánea completa inicial y en las exportaciones incrementales posteriores.
 
@@ -592,7 +593,7 @@ Si desea activar audiencias externas en sus destinos sin exportar ningún atribu
 
 Seleccione **[!UICONTROL Siguiente]** para pasar al paso [Revisar](#review).
 
-## Revisar {#review}
+## Revisión {#review}
 
 >[!NOTE]
 > 
@@ -632,7 +633,7 @@ Si está satisfecho con su selección y no se han detectado infracciones de dire
 
 ## Verificar activación de audiencia {#verify}
 
-Al exportar audiencias a destinos de almacenamiento en la nube, Adobe Experience Platform crea un archivo de `.csv`, `.json` o `.parquet` en la ubicación de almacenamiento proporcionada. Es de esperar que se cree un nuevo archivo en su ubicación de almacenamiento según la programación establecida en el flujo de trabajo. El formato de archivo predeterminado se muestra a continuación, pero puede [editar los componentes del nombre de archivo](#file-names):
+Al exportar audiencias a destinos de almacenamiento en la nube, Adobe Experience Platform crea un archivo de `.csv`, `.json` o `.parquet` en la ubicación de almacenamiento proporcionada. Es de esperar que se cree un nuevo archivo en su ubicación de almacenamiento según la programación establecida en el flujo de trabajo. El formato de archivo predeterminado se muestra a continuación, pero puede [editar los componentes del nombre de archivo](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Por ejemplo, si seleccionara una frecuencia de exportación diaria, los archivos que recibiría en tres días consecutivos podrían tener este aspecto:
