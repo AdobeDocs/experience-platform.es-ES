@@ -2,9 +2,9 @@
 title: Administrar la retención de conjuntos de datos de Experience Event en el lago de datos mediante TTL
 description: Obtenga información sobre cómo evaluar, establecer y administrar la retención de conjuntos de datos de evento de experiencia en el lago de datos mediante configuraciones de tiempo de vida (TTL) con API de Adobe Experience Platform. Esta guía explica cómo la caducidad a nivel de fila TTL admite políticas de retención de datos, optimiza la eficiencia del almacenamiento y garantiza una administración eficaz del ciclo de vida de los datos. También proporciona casos de uso y prácticas recomendadas para ayudarle a aplicar el TTL de forma eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
+source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2458'
 ht-degree: 0%
 
 ---
@@ -333,7 +333,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### ¿Puedo establecer diferentes políticas de retención para el lago de datos y los servicios de perfil?
 
 +++Respuesta
-Sí, puede establecer diferentes políticas de retención para el lago de datos y los servicios de perfil. Sin embargo, el período de retención del perfil no debe ser inferior al establecido para el lago de datos.
+Sí, puede establecer diferentes políticas de retención para el lago de datos y los servicios de perfil. El período de retención del almacén de perfiles puede ser más corto o más largo que el período de retención del lago de datos, según las necesidades de la organización.
 +++
 
 ### ¿Cómo puedo comprobar el uso actual de mi conjunto de datos?
