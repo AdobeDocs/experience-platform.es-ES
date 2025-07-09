@@ -25,8 +25,8 @@ Para obtener más información sobre cómo configurar cuentas técnicas y asigna
 
 Para obtener instrucciones adicionales sobre la creación y configuración de una cuenta técnica, consulte:
 
-- [Configuración de Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): instrucciones paso a paso para configurar Adobe Developer Console y obtener credenciales de OAuth.
-- [Configuración de cuenta técnica de extremo a extremo](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): Un tutorial completo para crear y configurar una cuenta técnica en Adobe Experience Platform.
+- [Configuración de Developer Console](https://experienceleague.adobe.com/es/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): instrucciones paso a paso para configurar Adobe Developer Console y obtener credenciales de OAuth.
+- [Configuración de cuenta técnica de extremo a extremo](https://experienceleague.adobe.com/es/docs/platform-learn/tutorial-comprehensive-technical/setup): Un tutorial completo para crear y configurar una cuenta técnica en Adobe Experience Platform.
 
 Si solo utiliza la interfaz de usuario del servicio de consultas, asegúrese de que tiene los permisos necesarios o coordínelo con un administrador que administre cuentas técnicas. Todas las consultas programadas se agregan a la lista de la ficha [!UICONTROL Consultas programadas], donde puede supervisar el estado, programar detalles y mensajes de error para todos los trabajos de consulta programados, así como suscribirse a alertas. Para obtener más información sobre la supervisión y administración de las consultas, consulte el [documento de supervisión de consultas programadas](./monitor-queries.md).
 
