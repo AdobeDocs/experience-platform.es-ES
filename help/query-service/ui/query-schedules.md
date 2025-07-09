@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2181'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,24 @@ Puede automatizar las ejecuciones de consultas creando programaciones de consult
 >
 >Solo puede agregar una programación a una consulta que ya se ha creado y guardado.
 
-Todas las consultas programadas se agregan a la lista en la ficha [!UICONTROL Consultas programadas]. Desde ese espacio de trabajo, puede monitorizar el estado de todos los trabajos de consulta programados a través de la interfaz de usuario. En la ficha [!UICONTROL Consultas programadas] encontrará información importante acerca de las ejecuciones de consultas y la suscripción a alertas. La información disponible incluye el estado, los detalles de la programación y los mensajes/códigos de error en caso de que falle una ejecución. Consulte el [documento Supervisión de consultas programadas](./monitor-queries.md) para obtener más información.
+## Requisitos de cuenta para consultas programadas {#technical-account-user-requirements}
 
-Este flujo de trabajo cubre el proceso de programación en la interfaz de usuario del servicio de consultas. Para obtener información sobre cómo agregar programaciones mediante la API, lea la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
+Para que las consultas programadas se ejecuten de forma fiable, Adobe recomienda que los administradores proporcionen una cuenta técnica (con credenciales de servidor a servidor de OAuth) para crear consultas programadas. Las consultas programadas también se pueden crear con una cuenta de usuario personal, pero las consultas creadas de esta manera dejarán de ejecutarse si se elimina o deshabilita el acceso de ese usuario.
+
+Para obtener más información sobre cómo configurar cuentas técnicas y asignar los permisos necesarios, consulte los [requisitos previos de la guía de credenciales](./credentials.md#prerequisites) y la [autenticación de API](../../landing/api-authentication.md).
+
+Para obtener instrucciones adicionales sobre la creación y configuración de una cuenta técnica, consulte:
+
+- [Configuración de Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): instrucciones paso a paso para configurar Adobe Developer Console y obtener credenciales de OAuth.
+- [Configuración de cuenta técnica de extremo a extremo](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): Un tutorial completo para crear y configurar una cuenta técnica en Adobe Experience Platform.
+
+Si solo utiliza la interfaz de usuario del servicio de consultas, asegúrese de que tiene los permisos necesarios o coordínelo con un administrador que administre cuentas técnicas. Todas las consultas programadas se agregan a la lista de la ficha [!UICONTROL Consultas programadas], donde puede supervisar el estado, programar detalles y mensajes de error para todos los trabajos de consulta programados, así como suscribirse a alertas. Para obtener más información sobre la supervisión y administración de las consultas, consulte el [documento de supervisión de consultas programadas](./monitor-queries.md).
+
+Este flujo de trabajo cubre el proceso de programación en la interfaz de usuario del servicio de consultas. Para aprender a agregar programaciones mediante la API, consulte la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
+
+>[!NOTE]
+>
+>Utilice una cuenta técnica para asegurarse de que las consultas programadas se siguen ejecutando aunque los usuarios abandonen la organización o sus funciones cambien. Elija una cuenta técnica siempre que sea posible para la automatización ininterrumpida de consultas.
 
 ## Creación de una programación de consultas {#create-schedule}
 
@@ -163,7 +178,6 @@ En la tabla siguiente se describen las columnas disponibles en la sección de de
 >[!NOTE]
 >
 >Los datos de horas calculadas están disponibles a partir del 15/08/2024. Los datos anteriores a esta fecha aparecen como &quot;No disponible&quot;.
-
 
 Consulte la [guía de consulta programada de monitor](./monitor-queries.md#inline-actions) para obtener información completa sobre cómo supervisar el estado de todos los trabajos de consulta a través de la interfaz de usuario.
 

@@ -5,18 +5,32 @@ title: Extremo de programaciones
 description: En las siguientes secciones se describen las distintas llamadas a la API que puede realizar para consultas programadas con la API del servicio de consultas.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
+source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 3%
+source-wordcount: '1410'
+ht-degree: 2%
 
 ---
 
 # Extremo de programaciones
 
+Obtenga información sobre cómo crear, administrar y supervisar consultas programadas mediante programación mediante la API de programación del servicio de consultas con información detallada y ejemplos.
+
+## Requisitos y requisitos previos
+
+Puede crear consultas programadas mediante una cuenta técnica (autenticada mediante credenciales de servidor a servidor de OAuth) o una cuenta de usuario personal (token de usuario). Sin embargo, Adobe recomienda encarecidamente utilizar una cuenta técnica para garantizar la ejecución ininterrumpida y segura de consultas programadas, especialmente para cargas de trabajo de producción o a largo plazo.
+
+Las consultas creadas con una cuenta de usuario personal fallarán si se revoca el acceso de ese usuario o se deshabilita su cuenta. Las cuentas técnicas proporcionan una mayor estabilidad porque no están vinculadas a la situación laboral o los derechos de acceso de un usuario individual.
+
+>[!IMPORTANT]
+>
+>Consideraciones importantes al administrar consultas programadas:<ul><li>Las consultas programadas fallarán si la cuenta (técnica o de usuario) utilizada para crearlas pierde el acceso o los permisos.</li><li>Las consultas programadas deben desactivarse antes de eliminarse mediante la API o la interfaz de usuario.</li><li>No se admite la programación indefinida sin fecha de finalización; siempre se debe especificar una fecha de finalización.</li></ul>
+
+Para obtener instrucciones detalladas sobre los requisitos de cuenta, la configuración de permisos y la administración de consultas programadas, consulte la [documentación de programaciones de consultas](../ui/query-schedules.md#technical-account-user-requirements). Para obtener instrucciones paso a paso sobre cómo crear y configurar una cuenta técnica, consulte [Configuración de Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) y [Configuración de cuenta técnica de extremo a extremo](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
+
 ## Llamadas de API de muestra
 
-Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones describen las distintas llamadas a la API que puede realizar mediante la API [!DNL Query Service]. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+Una vez configurados los encabezados de autenticación necesarios (consulte la [guía de autenticación de API](../../landing/api-authentication.md)), puede empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones muestran varias llamadas de API con formatos generales, solicitudes de ejemplo, incluidos los encabezados requeridos, y respuestas de ejemplo.
 
 ### Recuperación de una lista de consultas programadas
 
