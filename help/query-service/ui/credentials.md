@@ -172,7 +172,7 @@ En la tabla siguiente se describen los parámetros que suelen ser necesarios par
 >[!NOTE]
 >
 >Al conectarse a un host mediante credenciales que no caducan, sigue siendo necesario utilizar todos los parámetros enumerados en la sección [!UICONTROL CREDENCIALES QUE CADUCAN], excepto la contraseña y el nombre de usuario.
->>El formato para escribir el nombre de usuario y la contraseña utiliza valores separados por dos puntos, tal como se ve en este ejemplo `username:{your_username}` y `password:{password_string}`.
+>&#x200B;>El formato para escribir el nombre de usuario y la contraseña utiliza valores separados por dos puntos, tal como se ve en este ejemplo `username:{your_username}` y `password:{password_string}`.
 
 | Parámetro | Descripción | Ejemplo |
 |---|---|---|
