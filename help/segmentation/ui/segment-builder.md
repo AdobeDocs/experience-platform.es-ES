@@ -324,7 +324,7 @@ La lista de restricciones de tiempo disponibles para esta operación difiere de 
 >[!NOTE]
 >
 >Al utilizar la restricción de tiempo &quot;Después&quot;, el último evento puede tener lugar durante más tiempo que el indicado en la restricción de tiempo. >
->&#x200B;>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
+>>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
 >
 >Además, estas dos restricciones de tiempo se pueden utilizar en coordinación entre sí.
 >
@@ -390,7 +390,7 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Perfiles estimados"
->abstract="La estimación de perfiles indica un número aproximado de perfiles, en función del trabajo de muestra, que cumplen los requisitos para las reglas de la definición del segmento."
+>abstract="Los perfiles estimados indican un número aproximado de perfiles, en función del trabajo de muestra, que cumplirían las reglas de definición del segmento."
 
 Al crear una definición de segmento, la sección **[!UICONTROL Propiedades de la audiencia]** en el lado derecho del espacio de trabajo muestra una estimación del tamaño de la definición de segmento resultante, que le permite ajustar la definición de segmento según sea necesario antes de crear la propia audiencia.
 
