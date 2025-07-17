@@ -311,5 +311,5 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la ingesta de dato
 >
 > La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430250?quality=12&learn=on&captions=spa)
 
