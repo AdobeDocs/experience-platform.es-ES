@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 13adf42a23458d10e217d216d8fe79e8ce33376d
+source-git-commit: 00cec76319c1209e4527e31fad36992b7e778367
 workflow-type: tm+mt
-source-wordcount: '4595'
+source-wordcount: '4644'
 ht-degree: 13%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 > 
-> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]** Ver destinos **[!UICONTROL ,]** Activar destinos **[!UICONTROL ,]** Ver perfiles **[!UICONTROL y]** Ver segmentos[&#128279;](/help/access-control/home.md#permissions).
+> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]** Ver destinos **[!UICONTROL ,]** Activar destinos **[!UICONTROL ,]** Ver perfiles **[!UICONTROL y]** Ver segmentos[](/help/access-control/home.md#permissions).
 > * Para activar audiencias sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 > 
@@ -142,6 +142,18 @@ Seleccione **[!UICONTROL Exportar archivos completos]** para almacenar en décle
    * **[!UICONTROL Diario]**: programe exportaciones de archivos completas una vez al día, todos los días y a la hora que especifique.
    * **[!UICONTROL Semanal]**: seleccione la fecha de inicio y las exportaciones posteriores se producirán ese día de la semana hasta la fecha de finalización seleccionada.
    * **[!UICONTROL Mensual]**: seleccione la fecha de inicio y las exportaciones posteriores se producirán en esa fecha del mes hasta la fecha de finalización seleccionada. En el caso de los meses con menos de 30 o 31 días, la exportación se realiza el último día del mes.
+
+   >[!NOTE]
+   >
+   > Actualmente, las opciones de programación semanales y mensuales solo se admiten para los siguientes destinos de almacenamiento en la nube basados en archivos y solo cuando se activan [audiencias de personas](../../segmentation/types/overview.md#people-audience) y [audiencias de clientes potenciales](../../segmentation/types/overview.md#prospect-audience).
+   > 
+   > * [Amazon S3](../catalog/cloud-storage/amazon-s3.md)
+   > * [Almacenamiento de blob de Azure](../catalog/cloud-storage/azure-blob.md)
+   > * [Zona de aterrizaje de datos](../catalog/cloud-storage/data-landing-zone.md)
+   > * [Almacenamiento en la nube de Google](../catalog/cloud-storage/google-cloud-storage.md)
+   > * [SFTP](../catalog/cloud-storage/sftp.md)
+   > 
+   > Las opciones de programación semanales y mensuales no están disponibles para otros tipos de destino.
 
 2. Use el conmutador **[!UICONTROL Tiempo]** para seleccionar si la exportación debe realizarse inmediatamente después de la evaluación de la audiencia o de forma programada a una hora especificada. Al seleccionar la opción **[!UICONTROL Programado]**, puede utilizar el selector para elegir la hora del día, en formato [!DNL UTC], en la que debe realizarse la exportación.
 
@@ -450,7 +462,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave
 
