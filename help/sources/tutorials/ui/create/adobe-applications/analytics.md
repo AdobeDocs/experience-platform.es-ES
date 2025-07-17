@@ -2,9 +2,9 @@
 title: Conectar Adobe Analytics A Experience Platform
 description: Aprenda a llevar los datos del grupo de informes de Adobe Analytics a Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 086777a09eec17c94a7e0a5d2db58e4a1f6b523f
+source-git-commit: d6a290b9891b3507d531a595a5428955c7e9ee90
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2750'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 Es importante comprender los siguientes términos clave utilizados en este documento:
 
 * **Atributo estándar**: Los atributos estándar son cualquier atributo predefinido por Adobe. Contienen el mismo significado para todos los clientes y están disponibles en los grupos de campos Datos de origen de Analytics y Esquema de Analytics.
-* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizada en Analytics. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [documentación de Analytics sobre las variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=es) para obtener más información sobre las eVars.
+* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizada en Analytics. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [documentación de Analytics sobre las variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obtener más información sobre las eVars.
 * **Cualquier atributo de los grupos de campos personalizados**: Los atributos que se originan en grupos de campos creados por clientes están todos definidos por el usuario y no se consideran atributos estándar ni personalizados.
 
 ## Navegar por el catálogo de fuentes
@@ -260,7 +260,7 @@ Aparece el paso **[!UICONTROL Detalle del flujo de datos]**, donde debe proporci
 
 ![Interfaz de detalles del flujo de datos. del flujo de trabajo de ingesta.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### Revisar
+### Revisión
 
 Aparecerá el paso [!UICONTROL Revisar], que le permitirá revisar su nuevo flujo de datos de Analytics antes de crearlo. Los detalles de la conexión se agrupan por categorías, incluidas:
 
@@ -287,6 +287,10 @@ Para obtener más información sobre el relleno, los datos activos y sus respect
 
 ## Eliminar el flujo de datos {#delete-dataflow}
 
+>[!NOTE]
+>
+>No puede deshabilitar un flujo de datos de Analytics. Para detener el flujo de datos de Analytics, debe **eliminar** el flujo de datos por completo.
+
 Para eliminar el flujo de datos de Analytics, seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior del área de trabajo de orígenes. Utilice la página de flujos de datos para localizar el flujo de datos de Analytics que desea eliminar y, a continuación, seleccione los puntos suspensivos (`...`) que aparecen junto a él. A continuación, usa el menú desplegable y selecciona **[!UICONTROL Eliminar]**.
 
 * Al eliminar el flujo de datos activo de Analytics, también se eliminará su conjunto de datos subyacente.
@@ -307,5 +311,5 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la ingesta de dato
 >
 > La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430250?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
