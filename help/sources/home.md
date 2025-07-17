@@ -61,7 +61,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 ### Fuentes empresariales avanzadas {#advanced-enterprise-sources}
 
-Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fuente | Categoría | Tipo de ingesta | Nube |
 | --- | --- | --- | --- |
