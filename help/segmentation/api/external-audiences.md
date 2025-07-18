@@ -3,13 +3,13 @@ title: Punto final de API de audiencias externas
 description: Aprenda a utilizar la API de audiencias externas para crear, actualizar, activar y eliminar audiencias externas de Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
-ht-degree: 5%
+source-wordcount: '2405'
+ht-degree: 4%
 
 ---
-
 
 # Extremo de audiencias externas
 
@@ -381,7 +381,7 @@ Puede iniciar una ingesta de audiencia realizando una petición POST al siguient
 **Formato de API**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **Solicitud**
@@ -391,7 +391,7 @@ La siguiente solicitud crea un déclencheur de ejecución de ingesta para la aud
 +++ Una solicitud de ejemplo para iniciar una ingesta de audiencia.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles sobre la ejecuci
 +++
 
 ## Recuperar estado de ingesta de audiencia específico {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>Para usar el siguiente extremo, necesita tener `audienceId` de la audiencia externa y `runId` del identificador de ejecución de la ingesta. Puede obtener su `audienceId` desde una llamada correcta al extremo `GET /external-audiences/operations/{OPERATION_ID}` y su `runId` desde una llamada correcta anterior del extremo `POST /external-audience/{AUDIENCE_ID}/runs`.
 
 Puede recuperar el estado de una ingesta de audiencia realizando una petición GET al siguiente extremo, proporcionando al mismo tiempo la audiencia y los ID de ejecución.
 
@@ -514,9 +518,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la ingesta de
 
 +++
 
-## Enumerar estados de ingesta de audiencia {#list-ingestion-statuses}
+## Enumerar ejecuciones de ingesta de audiencia {#list-ingestion-runs}
 
-Puede recuperar todos los estados de ingesta de la audiencia externa seleccionada realizando una petición GET al siguiente punto de conexión, proporcionando al mismo tiempo el ID de audiencia. Se pueden incluir varios parámetros, separados por el símbolo et (`&`).
+>[!NOTE]
+>
+>Para usar el siguiente punto de conexión, necesita tener `audienceId` de su audiencia externa. Puede obtener su `audienceId` desde una llamada correcta al extremo `GET /external-audiences/operations/{OPERATION_ID}`.
+
+Puede recuperar todas las ejecuciones de ingesta para la audiencia externa seleccionada realizando una petición GET al siguiente punto de conexión mientras proporciona el ID de audiencia. Se pueden incluir varios parámetros, separados por el símbolo et (`&`).
 
 **Formato de API**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | Parámetro | Descripción | Ejemplo |
 | --------- | ----------- | ------- |
 | `limit` | Número máximo de elementos devueltos en la respuesta. Este valor puede variar de 1 a 40. De forma predeterminada, el límite se establece en 20. | `limit=30` |
-| `sortBy` | Orden en el que se ordenan los elementos devueltos. Puede ordenar por `name` o por `ingestionTime`. Además, puede agregar un signo `-` para ordenar por orden **descendente** en lugar de **ascendente**. De forma predeterminada, los elementos se ordenan por `ingestionTime` en orden descendente. | `sortBy=name` |
-| `property` | Un filtro para determinar qué ejecuciones de ingesta de audiencia se muestran. Puede filtrar según las siguientes propiedades: <ul><li>`name`: le permite filtrar por nombre de audiencia. Si utiliza esta propiedad, puede realizar la comparación mediante `=`, `!=`, `=contains` o `!=contains`. </li><li>`ingestionTime`: le permite filtrar por el tiempo de ingesta. Si usa esta propiedad, puede realizar la comparación mediante `>=` o `<=`.</li><li>`status`: le permite filtrar por el estado de la ejecución de ingesta. Si utiliza esta propiedad, puede realizar la comparación mediante `=`, `!=`, `=contains` o `!=contains`. </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | Orden en el que se ordenan los elementos devueltos. Puede ordenar por `name` o por `createdAt`. Además, puede agregar un signo `-` para ordenar por orden **descendente** en lugar de **ascendente**. De forma predeterminada, los elementos se ordenan por `createdAt` en orden descendente. | `sortBy=name` |
+| `property` | Un filtro para determinar qué ejecuciones de ingesta de audiencia se muestran. Puede filtrar según las siguientes propiedades: <ul><li>`name`: le permite filtrar por nombre de audiencia. Si utiliza esta propiedad, puede realizar la comparación mediante `=`, `!=`, `=contains` o `!=contains`. </li><li>`createdAt`: le permite filtrar por el tiempo de ingesta. Si usa esta propiedad, puede realizar la comparación mediante `>=` o `<=`.</li><li>`status`: le permite filtrar por el estado de la ejecución de ingesta. Si utiliza esta propiedad, puede realizar la comparación mediante `=`, `!=`, `=contains` o `!=contains`. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **Solicitud**
 
-La siguiente solicitud recupera todos los estados de ingesta para la audiencia externa.
+La siguiente solicitud recupera todas las ejecuciones de ingesta para la audiencia externa.
 
-+++ Una solicitud de ejemplo para obtener una lista de los estados de ingesta de audiencias.
++++ Se ejecuta una solicitud de ejemplo para obtener una lista de ejecuciones de ingesta de audiencias.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de estados de ingesta para la audiencia externa especificada.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de ejecuciones de ingesta para la audiencia externa especificada.
 
-+++ Una respuesta de ejemplo al recuperar una lista de los estados de ingesta de audiencias.
++++ Una respuesta de ejemplo al recuperar una lista de ejecuciones de ingesta de audiencia.
 
 ```json
 {
@@ -573,19 +581,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de estados de i
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de estados de i
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de estados de i
 +++
 
 ## Eliminación de una audiencia externa {#delete-audience}
+
+>[!NOTE]
+>
+>Para usar el siguiente punto de conexión, necesita tener `audienceId` de su audiencia externa. Puede obtener su `audienceId` desde una llamada correcta al extremo `GET /external-audiences/operations/{OPERATION_ID}`.
 
 Puede eliminar una audiencia externa realizando una petición DELETE al siguiente extremo, siempre que proporcione el ID de audiencia.
 
