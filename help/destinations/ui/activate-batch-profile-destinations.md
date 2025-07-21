@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 00cec76319c1209e4527e31fad36992b7e778367
+source-git-commit: ec0a51bc8a6151a6d713d8f4639d6733989bbb16
 workflow-type: tm+mt
-source-wordcount: '4644'
+source-wordcount: '4678'
 ht-degree: 13%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 > 
-> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]** Ver destinos **[!UICONTROL ,]** Activar destinos **[!UICONTROL ,]** Ver perfiles **[!UICONTROL y]** Ver segmentos[&#128279;](/help/access-control/home.md#permissions).
+> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]** Ver destinos **[!UICONTROL ,]** Activar destinos **[!UICONTROL ,]** Ver perfiles **[!UICONTROL y]** Ver segmentos[](/help/access-control/home.md#permissions).
 > * Para activar audiencias sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 > 
@@ -285,6 +285,10 @@ En este paso, debe seleccionar los atributos de perfil que desea añadir a los a
 
 1. El campo seleccionado para la exportación ahora aparece en la vista de asignación. Si lo desea, puede editar el nombre del encabezado en el archivo exportado. Para ello, seleccione el icono en el campo de destinatario.
 
+   >[!NOTE]
+   >
+   >Los puntos (`.`) no se admiten en los nombres de campo de los archivos exportados. Si el nombre de un campo incluye puntos (como `person.name.firstName`), cada punto se reemplazará con un guion bajo (`_`) en el nombre de columna exportado. Por ejemplo, `person.name.firstName` pasará a ser `person_name_firstName` en el archivo exportado.
+
    ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
 1. En la página **[!UICONTROL Seleccionar campo de destino]**, escriba el nombre deseado del encabezado en el archivo exportado y, a continuación, elija **[!UICONTROL Seleccionar]**.
@@ -462,7 +466,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave
 
@@ -474,9 +478,9 @@ Considere los siguientes datos, donde la clave de anulación de duplicación es 
 
 | Correo electrónico* | first_name | last_name | timestamp |
 |---|---|---|---|  
-| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
-| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
-| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+| `test1@test.com` | John | Morris | 12-10-2024 :50 |
+| `test1@test.com` | John | Doe | 12-10-2024 :50 |
+| `test2@test.com` | Frank | Smith | 12-10-2024 :50 |
 
 {style="table-layout:auto"}
 
@@ -484,8 +488,8 @@ Después de la deduplicación, el archivo de exportación contiene:
 
 | Correo electrónico* | first_name | last_name | timestamp |
 |---|---|---|---|  
-| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
-| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 12-10-2024 :50 |
+| `test2@test.com` | Frank | Smith | 12-10-2024 :50 |
 
 {style="table-layout:auto"}
 
