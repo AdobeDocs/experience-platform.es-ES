@@ -3,9 +3,9 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión de personalización personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de audiencia de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a audiencias de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '960'
 ht-degree: 9%
 
 ---
@@ -67,13 +67,13 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Acerca de los ID de secuencia de datos"
+>title="Acerca de los flujos de datos"
 >abstract="Esta opción determina en qué secuencia de datos de recopilación de datos se incluirán los públicos en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Debe configurar una secuencia de datos para poder configurar el destino."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=es" text="Obtenga información sobre cómo configurar una secuencia de datos"
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -84,7 +84,7 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 * **[!UICONTROL Nombre]**: rellene el nombre preferido para este destino.
 * **[!UICONTROL Descripción]**: escribe una descripción para el destino. Por ejemplo, puede mencionar para qué campaña está usando este destino. Este campo es opcional.
 * **[!UICONTROL Alias de integración]**: Este valor se envía a Experience Platform Web SDK como nombre de objeto JSON.
-* **[!UICONTROL ID de secuencia de datos]**: Esto determina en qué secuencia de datos de recopilación de datos se incluirán las audiencias en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Consulte [Configuración de una secuencia de datos](../../../datastreams/overview.md) para obtener más información.
+* **[!UICONTROL Flujo de datos]**: determina en qué flujo de datos de recopilación de datos se incluirán las audiencias en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Consulte [Configuración de una secuencia de datos](../../../datastreams/overview.md) para obtener más información.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -96,7 +96,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar perfiles y audiencias para destinos personalizados Edge](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
