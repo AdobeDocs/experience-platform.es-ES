@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
+source-git-commit: dca3762169d2a469948ee7e877213697f4c444b6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1126'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Use el conector de destino de Snowflake para exportar datos a la instancia de Snowflake de Adobe y, a continuación, compártalos con tu instancia a través de [listados privados](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Use el conector de destino de Snowflake para exportar datos a la instancia de Snowflake de Adobe, que Adobe luego compartirá con su instancia a través de [listados privados](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
 
 Lea las siguientes secciones para comprender cómo funciona el destino de Snowflake y cómo se transfieren los datos entre Adobe y Snowflake.
 
@@ -29,6 +29,8 @@ Lea las siguientes secciones para comprender cómo funciona el destino de Snowfl
 Este destino usa un recurso compartido de datos de [!DNL Snowflake], lo que significa que no se exportarán ni transferirán físicamente datos a su propia instancia de Snowflake. En su lugar, Adobe le concede acceso de solo lectura a una tabla activa alojada en el entorno de Snowflake de Adobe. Puede consultar esta tabla compartida directamente desde su cuenta de Snowflake, pero no es el propietario de la tabla y no puede modificarla ni conservarla más allá del período de retención especificado. Adobe administra completamente el ciclo de vida y la estructura de la tabla compartida.
 
 La primera vez que comparta datos de la instancia de Snowflake de Adobe con la suya, se le pedirá que acepte el anuncio privado de Adobe.
+
+![Captura de pantalla que muestra la pantalla de aceptación de anuncios privados de Snowflake](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
 
 ### Retención de datos y tiempo de vida (TTL) {#ttl}
 
@@ -51,12 +53,12 @@ Antes de configurar la conexión de Snowflake, asegúrese de cumplir los siguien
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipos de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino. Las dos tablas siguientes indican qué audiencias admite este conector, según los _tipos de origen de audiencia_ y _perfil incluidos en la audiencia_:
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
+| Todos los demás orígenes de audiencia | ✓ | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -75,7 +77,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -117,7 +119,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
