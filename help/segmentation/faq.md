@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 92b70dc6d6085067f11d43436bc74d64bce72dd0
+source-git-commit: 721024192b54fcbab11b483cc26fa84151bb61a7
 workflow-type: tm+mt
-source-wordcount: '4837'
+source-wordcount: '4841'
 ht-degree: 2%
 
 ---
@@ -120,7 +120,7 @@ Los atributos de enriquecimiento son atributos que provienen de un conjunto de d
 
 | Canal de activación | Audiencias de carga personalizada en CSV | Audiencias de la composición de audiencias |
 | --- | --- | --- |
-| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1&rbrace;.** |
+| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1}.** |
 | Adobe Journey Optimizer Campaigns | Ni los atributos de audiencia ni los de carga útil pueden activarse. | Se pueden activar tanto la audiencia como los atributos de ampliación. |
 
 ## Estados del ciclo vital {#lifecycle-states}
@@ -306,7 +306,7 @@ La colocación del componente de composición sigue una estructura rígida de la
 4. Si lo desea, puede agregar un bloque de [!UICONTROL Clasificación] o [!UICONTROL División]. Puede **solamente** tener uno de estos bloques por composición.
 5. Usted **siempre** termina con un bloque [!UICONTROL Guardar] para guardar su audiencia.
 
-Además, las restricciones siguientes (?) aplicar al utilizar estos bloques:
+Además, se aplican las siguientes restricciones al utilizar estos bloques:
 
 - Bloque de división
    - Este bloque solo admite tipos de datos **String**. El bloque dividido **no** admite el tipo de datos booleano o de fecha.
@@ -326,7 +326,7 @@ Una vez creada la composición de audiencias, pueden pasar hasta 48 horas hasta 
 
 ### ¿Cuándo puedo utilizar la audiencia que he creado?
 
-La audiencia creada en Composición de audiencias **se mostrará inmediatamente** en el Portal de audiencias. Sin embargo, para utilizarlo en Adobe Journey Optimizer, debe esperar al menos 24 horas después de la evaluación.
+La audiencia creada en Composición de audiencias **se mostrará inmediatamente** en el Portal de audiencias. Sin embargo, para utilizarlo en servicios descendentes como Adobe Journey Optimizer, debe esperar al menos 24 horas después de la evaluación.
 
 ### ¿Los trabajos de evaluación son visibles dentro de la sección de monitorización?
 
