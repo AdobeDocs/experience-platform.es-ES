@@ -74,7 +74,7 @@ Para añadir audiencias al bloque Audiencia. seleccione **[!UICONTROL Agregar au
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que solo aparecerán **1} audiencias definidas mediante la política de combinación predeterminada.**
+>Tenga en cuenta que solo aparecerán **1&rbrace; audiencias definidas mediante la política de combinación predeterminada.**
 >
 >Además, solo se pueden usar **audiencias publicadas** creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencias y audiencias generadas externamente están disponibles **no**.
 
