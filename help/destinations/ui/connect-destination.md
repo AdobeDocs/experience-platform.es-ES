@@ -3,9 +3,9 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a un destino en Adobe Experience Platform, activar alertas y configurar acciones de marketing para el destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->* Para conectarse a un destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para conectarse a un destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para conectarse a un destino que admita exportaciones de conjuntos de datos, necesita los **[!UICONTROL permisos Ver destinos]** y **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 ## Información general {#overview}
@@ -50,6 +50,11 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
    ![Captura de pantalla de la interfaz de usuario de Experience Platform, que muestra una lista de destinos disponibles y el control Configurar nuevo destino resaltado.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## Autenticarse en el destino {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="Nombre de la cuenta"
+>abstract="Escriba un nombre que le ayude a identificar fácilmente esta cuenta de destino en el futuro. Esto resulta especialmente útil si tiene varias conexiones al mismo tipo de destino."
 
 El primer paso para conectarse a un destino es autenticarse en la plataforma de destino.
 
