@@ -4,9 +4,9 @@ description: Una previsualización de las últimas notas de la versión para Ado
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d30778ef3152b779157206ce0d416c0e61ba98c3
+source-git-commit: fddefb7de85b5dcb8c8721e14d04efc0567ccae4
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1358'
 ht-degree: 22%
 
 ---
@@ -53,10 +53,9 @@ Estas son las nuevas funciones y actualizaciones de las existentes en Adobe Expe
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con cifrado de destino de zona de aterrizaje de datos (DLZ) | Se ha agregado compatibilidad con cifrado para el destino de zona de aterrizaje de datos. Ahora puede adjuntar claves públicas con formato RSA para agregar cifrado a los archivos exportados, lo que proporciona una seguridad mejorada para las exportaciones de datos confidenciales. |
-| Información mejorada del flujo de datos para destinos Edge | La información mejorada del carril derecho para destinos de Adobe Target y Personalization personalizados ahora muestra los campos Nombre de secuencia de datos e ID de secuencia de datos, lo que proporciona una visibilidad más clara de las configuraciones de secuencia de datos asociadas y reduce la confusión al revisar los flujos de datos existentes. El selector **[!UICONTROL Datastream ID]** de la pantalla de configuración de destino se ha actualizado a **[!UICONTROL Datastream]** para mejorar la claridad en la interfaz de usuario. |
-| Visibilidad de acciones de marketing en selección de destino | Las acciones de marketing ahora se muestran en el carril derecho del paso [!UICONTROL Seleccionar destino] al configurar un flujo de datos, lo que proporciona visibilidad inmediata de los cambios de las acciones de marketing sin requerir la navegación a la página de vista. Esta mejora mejora mejora la experiencia del usuario al facilitar la verificación de las configuraciones de acciones de marketing durante la configuración del destino. |
-| Editar acciones de marketing para destinos | Ahora puede editar acciones de marketing para destinos existentes. |
+| Información mejorada del flujo de datos para destinos Edge | La información mejorada del carril derecho para destinos de Adobe Target y Personalization personalizados ahora muestra el nombre del flujo de datos, lo que proporciona una visibilidad más clara de las configuraciones del flujo de datos asociadas y reduce las confusiones al revisar los flujos de datos existentes. El selector **[!UICONTROL Datastream ID]** de la pantalla de configuración de destino se ha actualizado a **[!UICONTROL Datastream]** para mejorar la claridad en la interfaz de usuario. |
+| Visibilidad de acciones de marketing en selección de destino | Las acciones de marketing ahora se muestran en el carril derecho de la pestaña **[!UICONTROL Examinar]** de destino y en la página **[!UICONTROL Ejecuciones de flujo de datos]**, lo que proporciona una visibilidad inmediata de los cambios de las acciones de marketing sin que sea necesario navegar a la página de vista. Esta mejora mejora mejora la experiencia del usuario al facilitar la verificación de las configuraciones de acciones de marketing durante la configuración del destino. |
+| (Beta limitada) Editar acciones de marketing para destinos | Ahora puede editar acciones de marketing para destinos existentes. Esta funcionalidad está en versión beta limitada. Para solicitar acceso, póngase en contacto con su representante de Adobe. |
 | Nombres de cuenta y descripciones para conexiones de destino | Ahora puede agregar nombres y descripciones de cuentas al conectarse a destinos, lo que permite una mejor administración de los destinos con varias cuentas. |
 
 **Correcciones**
