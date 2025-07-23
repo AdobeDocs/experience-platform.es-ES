@@ -3,9 +3,9 @@ title: Conexión Google Customer Match + Display & Video 360
 description: Con el conector de destino Google Customer Match + Display & Video 360, puede utilizar los datos en línea y sin conexión de Experience Platform para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping, Gmail y YouTube.
 badge: Disponibilidad limitada
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: efdec64dee4c5857d0df008c2d1242674f9d0b49
+source-git-commit: 16192df76b618ed1d516b78f9c3191027140b8d3
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2384'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->**Disponibilidad limitada del conector Google Customer Match + DV360**<br> A medida que atravesamos el ciclo de vida completo de la madurez de esta integración con Google, vemos datos que apuntan a debilidades en la implementación que deben corregirse antes de que pueda producirse una adopción más amplia. Ante estos problemas, Adobe ha reducido la visibilidad de este destino a un número limitado de clientes. Mantenemos conversaciones activas con Google para mejorar la experiencia con el producto. Entendemos que estas pueden ser noticias decepcionantes, pero creemos que es el enfoque responsable para garantizar una experiencia confiable y de alta calidad para nuestros clientes.</br>
+>**Disponibilidad limitada del conector Google Customer Match + Display &amp; Video 360**<br> A medida que atravesamos el ciclo de vida completo de la madurez de esta integración con Google, vemos datos que apuntan a debilidades en la implementación que deben corregirse antes de que pueda producirse una adopción más amplia. Ante estos problemas, Adobe ha reducido la visibilidad de este destino a un número limitado de clientes. Mantenemos conversaciones activas con Google para mejorar la experiencia con el producto. Entendemos que estas pueden ser noticias decepcionantes, pero creemos que es el enfoque responsable para garantizar una experiencia confiable y de alta calidad para nuestros clientes.</br>
 
 Use este destino para activar sus listas de [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) basadas en PII de origen directamente en [!DNL Google Display & Video 360] propiedades como [!DNL Search], [!DNL YouTube], [!DNL Gmail] y [!DNL Google Display Network].
 
@@ -29,12 +29,12 @@ Con la capacidad recién introducida de poder usar audiencias de [!DNL Customer 
 >[!IMPORTANT]
 >
 > Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_es) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
-> &#x200B;><br/>
-> &#x200B;>Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.
-> &#x200B;><br/>
-> &#x200B;>Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no tienen que realizar ninguna acción.
-> &#x200B;><br/>
-> &#x200B;>Los clientes que no hayan adquirido Adobe Privacy &amp; Security Shield deben utilizar las funciones de [definición de segmento](../../../segmentation/home.md#segment-definitions) de [Generador de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar los perfiles no consentidos y así poder seguir utilizando los destinos de Real-Time CDP Google existentes sin interrupción.
+> ><br/>
+> >Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.
+> ><br/>
+> >Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no tienen que realizar ninguna acción.
+> ><br/>
+> >Los clientes que no hayan adquirido Adobe Privacy &amp; Security Shield deben utilizar las funciones de [definición de segmento](../../../segmentation/home.md#segment-definitions) de [Generador de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar los perfiles no consentidos y así poder seguir utilizando los destinos de Real-Time CDP Google existentes sin interrupción.
 
 ## Cuándo utilizar este destino
 
@@ -107,16 +107,16 @@ Las exportaciones de datos fallarán si su cuenta de Google no está correctamen
 
 >[!NOTE]
 >
->Adobe ha actualizado el identificador de cuenta de socio de Google de `6219889373` a `4641108541`.
+>Para los clientes que formaban parte del programa beta de este conector: Adobe ha actualizado el ID de cuenta de socio de Google de `6219889373` a `4641108541`.
 >
->**Si su cuenta de Google está vinculada actualmente al id. de cuenta de socio de Adobe anterior (`6219889373`), siga los pasos a continuación:**
+>**Si formaba parte del programa beta para el conector Google Customer Match + Display &amp; Video 360 y si su cuenta de Google está vinculada actualmente al ID de cuenta de socio de Adobe anterior (`6219889373`), siga los pasos a continuación:**
 >
 >1. Desvincule su cuenta de Google del ID de cuenta de socio de Adobe anterior (`6219889373`)
 >2. Vincule su cuenta de Google al nuevo identificador de cuenta de socio de Adobe (`4641108541`)
 >3. Eliminar todas las audiencias de los flujos de datos existentes
 >4. Cree nuevos flujos de datos y asigne sus audiencias
 >
->Si su cuenta de Google ya está vinculada al nuevo id. de cuenta de socio de Adobe (`4641108541`), no es necesario que realice ninguna acción.
+>Si su cuenta de Google ya está vinculada al nuevo id. de cuenta de socio de Adobe (`4641108541`), no es necesario que realice ninguna acción para utilizar este conector.
 
 **Para organizaciones con cuentas de administrador:**
 
@@ -176,7 +176,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Conexión al destino {#connect}
 
@@ -187,7 +187,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -212,7 +212,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades* a destinos, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
