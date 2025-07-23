@@ -2,10 +2,10 @@
 title: Alojamientos de SFTP
 description: Obtenga información sobre cómo configurar Adobe Experience Platform para que entregue compilaciones de biblioteca a un servidor SFTP seguro y autoalojado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 34%
+source-wordcount: '815'
+ht-degree: 37%
 
 ---
 
@@ -37,27 +37,11 @@ La clave privada se utiliza para cifrar la clave pública. Debe proporcionar la 
 
 ### Lista de permitidos de direcciones IP de Experience Platform
 
->[!IMPORTANT]
->
-> El 23 de junio de 2025, Adobe Launch actualizará las direcciones IP externas utilizadas para admitir el tipo de host SFTP y la funcionalidad de la API de devolución de llamada. Para seguir utilizando cualquiera de estas funciones, asegúrese de que las reglas del cortafuegos permitan el tráfico desde las nuevas direcciones IP.
->
-> Para mantener el acceso ininterrumpido, recomendamos añadir las nuevas direcciones IP ahora y eliminar las antiguas después del 23 de junio de 2025.
->
->**Direcciones IP antiguas:**
-> * `184.72.239.68`
-> * `23.20.85.113`
-> * `54.226.193.184`
->
->**Nuevas direcciones IP:**
-> * `34.227.138.75 `
-> * `44.194.43.191`
-> * `3.215.163.18`
-
 Es posible que deba aprobar un conjunto de direcciones IP para su uso dentro del cortafuegos de su empresa, de modo que Experience Platform pueda acceder al servidor SFTP y conectarse a él. Estas direcciones IP son:
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >
@@ -96,6 +80,6 @@ Seleccione **[!UICONTROL Guardar]** para crear el host con la configuración sel
 
 Al seleccionar **[!UICONTROL Guardar]**, se comprueba la conexión y la capacidad de enviar los archivos al servidor SFTP. Experience Platform crea una carpeta, escribe un archivo dentro de esa carpeta, comprueba que el archivo está allí y limpia la carpeta después. Si la cuenta de usuario del servidor SFTP (la que se adjunta al certificado seguro que ha proporcionado a Experience Platform) no tiene los permisos necesarios para realizar esta acción, el host pasa a estar en estado &quot;failed&quot;.
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo configurar un servidor SFTP autoalojado para utilizarlo en etiquetas. Una vez establecido el host, puede asociarlo con uno o más de sus [entornos](../environments.md) para publicar bibliotecas de etiquetas. Para obtener más información sobre el proceso de alto nivel de activación de las funcionalidades de etiquetas en las propiedades web o móviles, consulte [información general de publicación](../overview.md).
