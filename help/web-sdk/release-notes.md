@@ -3,18 +3,31 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2438'
 ht-degree: 5%
 
 ---
 
 
-# Notas de la versión
+# Notas de la versión de Web SDK
 
 Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
 Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.28.0: viernes, 24 de julio de 2025
+
+**Nuevas funciones**
+
+- Se ha agregado compatibilidad con las reglas de descalificación de Adobe Journey Optimizer.
+
+**Correcciones y mejoras**
+
+- Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](identity/overview.md)
+- Se ha resuelto un problema en el cual [contenido de personalización](personalization/rendering-personalization-content.md) con elementos de contenido de HTML no se podían procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
+- Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 
 ## Versión 2.27.0: miércoles, 20 de mayo de 2025
 

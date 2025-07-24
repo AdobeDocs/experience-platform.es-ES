@@ -2,17 +2,29 @@
 title: Notas de la versión de la extensión Adobe Experience Platform Web SDK
 description: Extensión de etiqueta de Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2677'
+source-wordcount: '2733'
 ht-degree: 28%
 
 ---
 
-# Notas de la versión de Adobe Experience Platform Web SDK
+
+# Notas de la versión de Web SDK
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión de SDK, consulte las [notas de la versión de Experience Platform Web SDK](/help/web-sdk/release-notes.md).
 
+## Versión 2.31.0: viernes, 24 de julio de 2025
+
+**Nuevas funciones**
+
+- Contiene [versión 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) de Adobe Experience Platform Web SDK.
+
+**Correcciones y mejoras**
+
+- Se ha corregido un problema por el cual se producía un error cuando se habilitaba la anulación de un conjunto de datos a través de un elemento de datos.
+- Se corrigió un problema en el cual las invalidaciones vacías de `idSyncContainerId` generaban un error.
+- Al resolver elementos de datos de contenidos, ahora se incluye el objeto de evento.
 
 ## Versión 2.30.1: miércoles, 27 de mayo de 2025
 
