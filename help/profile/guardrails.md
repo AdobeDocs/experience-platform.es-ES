@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: cfc221250a9c8f91b16aa1d4572263ecaf4eeccc
+source-git-commit: 1536201961211aeb747e418794196c146d86e869
 workflow-type: tm+mt
-source-wordcount: '2622'
+source-wordcount: '2636'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform le permite ofrecer experiencias multicanal personaliza
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
 
@@ -120,9 +120,9 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 | --------- | ----- | ---------- | ----------- |
 | Audiencias por zona protegida | 4000 | Protección de rendimiento | Puede tener hasta 4000 **audiencias activas** por zona protegida. Puede tener más de 4000 audiencias por organización, siempre y cuando haya menos de 4000 audiencias en cada zona protegida **individual**. Esto incluye audiencias por lotes, de streaming y de Edge. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. Obtenga más información sobre [la creación de audiencias](/help/segmentation/ui/segment-builder.md) a través del generador de segmentos. |
 | Audiencias de Edge por zona protegida | 150 | Protección de rendimiento | Puede tener hasta 150 **audiencias de Edge activas** por zona protegida. Puede tener más de 150 audiencias de Edge por organización, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida **individual**. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de Edge](/help/segmentation/methods/edge-segmentation.md). |
-| Rendimiento de Edge en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación de Edge admite un valor máximo de 1500 eventos entrantes por segundo al entrar en Adobe Experience Platform Edge Network. La segmentación de Edge puede tardar hasta 350 milisegundos en procesar un evento entrante después de que entre en Adobe Experience Platform Edge Network. Más información sobre [audiencias de Edge](/help/segmentation/methods/edge-segmentation.md). |
+| Rendimiento de Edge en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación de Edge admite un valor máximo combinado de 1500 eventos entrantes por segundo que entran en el Edge Network de Adobe Experience Platform en los entornos limitados de producción y desarrollo. La segmentación de Edge puede tardar hasta 350 milisegundos en procesar un evento entrante después de que entre en Adobe Experience Platform Edge Network. Más información sobre [audiencias de Edge](/help/segmentation/methods/edge-segmentation.md). |
 | Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Puede tener hasta 500 **audiencias de streaming activas** por zona protegida. Puede tener más de 500 audiencias de streaming por organización, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida **individual**. Esto incluye tanto a las audiencias de streaming como a las de Edge. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de streaming](/help/segmentation/methods/streaming-segmentation.md). |
-| Rendimiento de streaming en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación por flujo continuo admite un valor máximo de 1500 eventos entrantes por segundo. La segmentación por streaming puede tardar hasta 5 minutos en calificar un perfil para el abono a un segmento. Más información sobre [audiencias de streaming](/help/segmentation/methods/streaming-segmentation.md). |
+| Rendimiento de streaming en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación por flujo admite un valor máximo combinado de 1500 eventos entrantes por segundo en las zonas protegidas de producción y desarrollo. La segmentación por streaming puede tardar hasta 5 minutos en calificar un perfil para el abono a un segmento. Más información sobre [audiencias de streaming](/help/segmentation/methods/streaming-segmentation.md). |
 | Audiencias por lotes por zona protegida | 4000 | Protección de rendimiento | Puede tener hasta 4000 **audiencias por lotes activas** por zona protegida. Puede tener más de 4000 audiencias de lote por organización, siempre y cuando haya menos de 4000 audiencias de lote en cada zona protegida **individual**. Si intenta crear audiencias por lotes adicionales, el rendimiento del sistema puede verse afectado. |
 | Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | Puede crear un máximo de 50 audiencias de cuenta en una zona protegida. Después de llegar a 50 audiencias en una zona protegida, el control **[!UICONTROL Crear audiencia]** se deshabilita al intentar crear una nueva audiencia de cuenta. Más información sobre [audiencias de la cuenta](/help/segmentation/types/account-audiences.md). |
 | Composiciones publicadas por zona protegida | 10 | Protección de rendimiento | Puede tener un máximo de 10 composiciones publicadas en una zona protegida. Obtenga más información sobre [composición de audiencias en la guía de la interfaz de usuario](/help/segmentation/ui/audience-composition.md). |
@@ -183,12 +183,12 @@ Al unir datos de varias fuentes, las políticas de combinación son las reglas q
 
 Se pueden habilitar varios grupos de informes para el perfil siempre y cuando se resuelvan todos los conflictos de datos. Puede utilizar la funcionalidad Preparación de datos para resolver conflictos de datos entre eVars, listas y props. Para obtener más información acerca de cómo usar la funcionalidad de preparación de datos, lea la [guía de la interfaz de usuario del conector de Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
-## Pasos siguientes
+## Próximos pasos
 
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
