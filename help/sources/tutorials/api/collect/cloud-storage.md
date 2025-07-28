@@ -5,9 +5,9 @@ title: Crear un flujo de datos para fuentes de almacenamiento en la nube mediant
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un almacenamiento en la nube de terceros e incluirlos en Experience Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1792'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,8 @@ curl -X POST \
       },
       "params": {
           "path": "/acme/summerCampaign/account.csv",
-          "type": "file"
+          "type": "file",
+          "cdcEnabled": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -100,6 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Opcional) Una propiedad que define el tipo de archivo comprimido para la ingesta. Los tipos de archivo comprimidos admitidos son: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` y `tar`. **Nota**: la propiedad `compressionType` solo se puede usar al ingerir archivos delimitados o JSON. |
 | `params.path` | La ruta del archivo de origen al que está accediendo. Este parámetro apunta a un archivo individual o a una carpeta completa.  **Nota**: puede usar un asterisco en lugar del nombre de archivo para especificar la ingesta de una carpeta entera. Por ejemplo: `/acme/summerCampaign/*.csv` ingerirá toda la carpeta `/acme/summerCampaign/`. |
 | `params.type` | El tipo de archivo del archivo de datos de origen que está ingiriendo. Use el tipo `file` para ingerir un archivo individual y el tipo `folder` para ingerir una carpeta completa. |
+| `params.cdcEnabled` | Un valor booleano que indica si la captura del historial de cambios está habilitada o no. Estas fuentes de almacenamiento en la nube admiten esta propiedad: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> Para obtener más información, lea la guía sobre el uso de [cambiar la captura de datos en las fuentes](../change-data-capture.md). |
 | `connectionSpec.id` | El ID de especificación de conexión asociado con el origen de almacenamiento en la nube específico. Consulte el [apéndice](#appendix) para obtener una lista de los ID de especificación de conexión. |
 
 **Respuesta**
@@ -678,7 +680,7 @@ Una respuesta correcta devuelve el identificador (`id`) del flujo de datos reci�
 
 Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para obtener más información sobre cómo supervisar flujos de datos, consulte el tutorial sobre [supervisión de flujos de datos en la API](../monitor.md)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado un conector de origen para recopilar datos del almacenamiento en la nube de forma programada. Ahora los servicios de Experience Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
 
