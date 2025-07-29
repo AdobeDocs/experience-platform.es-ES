@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Experience Platform Web SDK
 description: Extensión de etiqueta de Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2733'
-ht-degree: 28%
+source-wordcount: '2801'
+ht-degree: 27%
 
 ---
 
@@ -25,6 +25,11 @@ Este documento describe las notas de la versión de la extensión de etiquetas A
 - Se ha corregido un problema por el cual se producía un error cuando se habilitaba la anulación de un conjunto de datos a través de un elemento de datos.
 - Se corrigió un problema en el cual las invalidaciones vacías de `idSyncContainerId` generaban un error.
 - Al resolver elementos de datos de contenidos, ahora se incluye el objeto de evento.
+
+**Problemas conocidos**
+
+- Después de la versión 2.31.0, se identificó un problema con el proceso de [compilación de componentes personalizados](/help/web-sdk/install/create-custom-build.md). Aunque las compilaciones personalizadas siguen funcionando, todos los componentes se incluyen actualmente en la compilación, lo que da como resultado un paquete de tamaño completo independientemente de la selección de componentes. Se está desarrollando una solución para este problema. Si se basa en la selección de componentes personalizados para minimizar el tamaño de la compilación, se recomienda esperar a una versión futura.
+
 
 ## Versión 2.30.1: miércoles, 27 de mayo de 2025
 
