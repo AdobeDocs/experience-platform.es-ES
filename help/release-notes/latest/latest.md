@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, julio de 2025
 description: Las notas de la versión de julio de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
+source-git-commit: 2a8d5576ea937cdda70f10218b5eec35613fd264
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1623'
+ht-degree: 25%
 
 ---
 
@@ -28,11 +28,11 @@ Estas son las nuevas funciones y actualizaciones de las existentes en Adobe Expe
 
 - [Capacidad](#capacity)
 - [Destinos](#destinations)
-- [Ingesta de datos](#ingestion)
-- [Servicio de consultas](#query-service)
+- [Ingesta de datos](#data-ingestion)
+- [Servicio de consultas]&#x200B;(#query-service
 - [Real-time CDP edición B2B](#b2b)
 - [Zonas protegidas](#sandboxes)
-- [Servicio de segmentación](#segmentation)
+- [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
 
 ## Capacidad {#capacity}
@@ -155,5 +155,6 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | Función | Descripción |
 | --- | --- |
 | Compatibilidad con la captura de datos de cambio en orígenes seleccionados mediante la API [!DNL Flow Service] | Ahora puede crear flujos de datos que permitan la captura de datos modificados para la ingesta incremental mediante conectores de origen. Esta capacidad permite a los clientes introducir tipos de datos de cambio para la ingesta incremental, lo que mejora la actualización de los datos y reduce la sobrecarga de procesamiento. Para obtener más información, lea la documentación sobre [usando la captura de datos modificados para las fuentes](../../sources/tutorials/api/change-data-capture.md) |
+| Compatibilidad con la eliminación suave de registros en [!DNL Salesforce] | El origen [!DNL Salesforce] ahora admite la inclusión de registros eliminados de forma suave mediante un parámetro `includeDeletedObjects` opcional. Cuando se establece en true, los clientes pueden incluir registros eliminados temporalmente en sus consultas [!DNL Salesforce] e incluir estos registros en Experience Platform. Lea la documentación de fuentes de [[!DNL Salesforce] ](../../sources/connectors/crm/salesforce.md) para obtener más información. |
 
 Para obtener más información, lea la [Información general de las fuentes](../../sources/home.md).

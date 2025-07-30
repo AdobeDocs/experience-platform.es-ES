@@ -2,16 +2,16 @@
 title: Conectar su cuenta de Salesforce mediante la interfaz de usuario de Experience Platform
 description: Obtenga información sobre cómo conectar su cuenta de Salesforce y llevar los datos de CRM a Experience Platform mediante la interfaz de usuario.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1003'
 ht-degree: 2%
 
 ---
 
 # Conecte su cuenta de [!DNL Salesforce] a Experience Platform mediante la interfaz de usuario
 
-Este tutorial proporciona pasos sobre cómo conectar su cuenta de [!DNL Salesforce] y llevar los datos de CRM a Adobe Experience Platform mediante la interfaz de usuario de Experience Platform.
+Lea esta guía para obtener información sobre cómo conectar su cuenta de [!DNL Salesforce] e introducir los datos de CRM en Adobe Experience Platform mediante la interfaz de usuario de Experience Platform.
 
 ## Introducción
 
@@ -58,6 +58,7 @@ Debe proporcionar valores para las siguientes credenciales a fin de conectar su 
 | ID de cliente | El ID de cliente se utiliza junto con el secreto de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación en [!DNL Salesforce]. |
 | Secreto del cliente | El secreto de cliente se utiliza junto con el ID de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación en [!DNL Salesforce]. |
 | Versión de API | La versión de la API de REST de la instancia [!DNL Salesforce] que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si está usando la versión de API `52`, debe introducir el valor como `52.0`. Si este campo se deja en blanco, Experience Platform utilizará automáticamente la última versión disponible. |
+| Incluir objetos eliminados | Un valor booleano que se utiliza para determinar si se deben incluir los registros eliminados. Si se establece en true, se pueden incluir registros eliminados de forma suave en la consulta [!DNL Salesforce] e ingerirlos desde la cuenta en Experience Platform. Si no especifica la configuración, el valor predeterminado es `false`. |
 
 Para obtener más información sobre el uso de OAuth para [!DNL Salesforce], lea la [[!DNL Salesforce] guía sobre flujos de autorización de OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
@@ -67,13 +68,13 @@ Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos 
 
 ## Conectar su cuenta de [!DNL Salesforce]
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, vaya a **[!UICONTROL Sources]** desde el menú de la izquierda para abrir el área de trabajo [!UICONTROL Sources]. Utilice el catálogo de la izquierda para examinar las categorías o utilice la barra de búsqueda para encontrar rápidamente el origen que desea conectar.
 
 Seleccione **[!DNL Salesforce]** en la categoría *[!UICONTROL CRM]* y luego seleccione **[!UICONTROL Agregar datos]**.
 
 >[!TIP]
 >
->Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
+>En el catálogo de orígenes, verá **[!UICONTROL Configurar]** si no hay ninguna cuenta conectada, o **[!UICONTROL Agregar datos]** si una cuenta ya está autenticada.
 
 ![El catálogo de orígenes en la interfaz de usuario de Experience Platform con la tarjeta de origen de Salesforce seleccionada.](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -116,10 +117,11 @@ Para la credencial de cliente de OAuth 2, seleccione **[!UICONTROL Credencial de
 * ID de cliente
 * Secreto del cliente
 * Versión de API
+* Incluir objetos de eliminación
 
 Cuando termine, seleccione **[!UICONTROL Conectarse al origen]**.
 
-![Interfaz de OAuth para la creación de cuentas de Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![Interfaz de OAuth para la creación de cuentas de Salesforce.](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 
@@ -129,6 +131,6 @@ Durante el paso de selección de datos, puede encontrar un tiempo de espera al i
 
 El resto del flujo de trabajo sigue siendo el mismo. La única advertencia es que omitir la previsualización de datos puede impedir que los campos calculados y requeridos se validen automáticamente durante el paso de asignación y, a continuación, tendrá que validar manualmente esos campos durante la asignación.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Salesforce]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/crm.md).
