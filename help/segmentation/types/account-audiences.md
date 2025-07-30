@@ -1,13 +1,13 @@
 ---
 title: Audiencias de cuenta
 description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perfiles de cuenta en destinos de flujo descendente.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 21%
+source-wordcount: '1528'
+ht-degree: 20%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 21%
 Con la segmentación de cuentas, Adobe Experience Platform le permite ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas.
 
 Las audiencias de cuenta pueden utilizarse como entrada para destinos basados en cuentas, lo que le permite dirigirse a las personas de esas cuentas en servicios descendentes. Por ejemplo, puede usar audiencias basadas en cuentas para recuperar registros de todas las cuentas que **no** tienen información de contacto de cualquier persona con el título de Director de operaciones (COO) o Director de marketing (CMO).
+
+>[!NOTE]
+>
+>Como parte de la actualización de la arquitectura B2B, las estimaciones del tamaño de audiencia para audiencias con entidades B2B ahora se calculan con precisión exacta. Estas estimaciones están disponibles durante la vista previa y proporcionan perspectivas más precisas y fiables para las audiencias que implican relaciones B2B complejas. <br>Para obtener más información, lea la [descripción general de las actualizaciones de la arquitectura de Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminología {#terminology}
 
@@ -43,7 +47,7 @@ Esta vista muestra información sobre la audiencia, incluido el nombre, el recue
 
 También puede utilizar la funcionalidad de búsqueda y filtrado para buscar y ordenar rápidamente audiencias de cuenta específicas. Encontrará más información sobre esta característica en la [descripción general de Audience Portal](../ui/audience-portal.md#manage-audiences).
 
-## Crear público {#create}
+## Crear audiencia {#create}
 
 >[!NOTE]
 >
@@ -114,7 +118,7 @@ Seleccione la audiencia que desee activar, seguida de **[!UICONTROL Activar en d
 
 Aparecerá la página [!UICONTROL Activar destino]. Para obtener más información sobre el proceso de activación, incluidos los destinos admitidos y los detalles sobre las asignaciones de campos, lea el tutorial [activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md).
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer esta guía, ahora tiene una mejor comprensión de cómo crear y utilizar las audiencias de la cuenta en Adobe Experience Platform. Para aprender a usar otros tipos de audiencias en Experience Platform, lea la [descripción general del tipo de audiencia](./overview.md).
 
@@ -126,8 +130,8 @@ En la siguiente sección se proporciona información adicional sobre las audienc
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="Error de ventana retrospectiva máxima"
->abstract="La ventana retrospectiva máxima para eventos de Experience es de 30 días."
+>title="Ventana retroactiva"
+>abstract="Utilice la ventana retrospectiva para ver el historial completo de eventos de nivel de persona."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -196,18 +200,19 @@ En la siguiente sección se proporciona información adicional sobre las audienc
 
 Al usar audiencias de cuenta, la audiencia **debe** cumplir con las siguientes restricciones:
 
-- La ventana retrospectiva máxima para eventos de experiencia es de **30 días**.
 - La profundidad máxima de los contenedores anidados es de **5**.
    - Esto significa que **no puede** tener más de cinco contenedores anidados al crear el público.
 - El número máximo de reglas dentro de un solo contenedor es **5**.
    - Esto significa que la audiencia **no puede** tener más de cinco reglas que compongan la audiencia.
 - El número máximo de entidades cruzadas que se pueden usar es **5**.
    - Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro del público. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing.
-- No se pueden usar las entidades personalizadas **1&rbrace;.**
 - El número máximo de valores que se pueden comprobar para un solo campo es **50**.
    - Por ejemplo, si tiene un campo de &quot;Nombre de ciudad&quot;, puede comprobar ese valor con 50 nombres de ciudades.
-- Las audiencias de cuenta **no pueden** usar `inSegment` eventos.
 - Las audiencias de cuenta **no pueden** usar eventos secuenciales.
 - Las audiencias de cuenta **no pueden** usar mapas.
 - La profundidad máxima de las matrices anidadas es **5**.
 - El número máximo de objetos anidados es de **10**.
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->
