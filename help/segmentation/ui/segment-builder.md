@@ -131,7 +131,7 @@ Una vez asignados los grupos de informes, puede utilizar estos campos recién as
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Audiencias externas"
 >abstract="Las audiencias importadas a través de la pestaña Audiencias ahora aparecen automáticamente en Audience Portal. Las audiencias introducidas desde Audience Manager, Customer Journey Analytics, Coincidencia de segmentos y otras integraciones personalizadas están fácilmente disponibles, sin necesidad de configurarlas primero en el Generador de segmentos. A partir del 1 de septiembre de 2025, todas las audiencias se recuperan exclusivamente mediante la búsqueda unificada y ya no se admite el flujo de trabajo anterior."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
 >
