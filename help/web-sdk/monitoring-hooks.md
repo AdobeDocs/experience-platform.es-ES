@@ -1,23 +1,23 @@
 ---
-title: Monitorización de vínculos para el SDK web de Adobe Experience Platform
-description: Aprenda a utilizar los vínculos de monitorización que proporciona el SDK web de Adobe Experience Platform para depurar la implementación y capturar los registros del SDK web.
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+title: Enlaces de monitorización para Adobe Experience Platform Web SDK
+description: Aprenda a utilizar los enlaces de monitorización que proporciona Adobe Experience Platform Web SDK para depurar la implementación y capturar los registros de SDK web.
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
 
 ---
 
+# Monitorización de vínculos para Web SDK
 
-# Monitorización de vínculos para SDK web
+Adobe Experience Platform Web SDK incluye vínculos de monitorización que puede utilizar para monitorizar varios eventos del sistema. Estas herramientas son útiles para desarrollar sus propias herramientas de depuración y capturar registros de Web SDK.
 
-El SDK web de Adobe Experience Platform incluye vínculos de monitorización que puede utilizar para monitorizar varios eventos del sistema. Estas herramientas son útiles para desarrollar sus propias herramientas de depuración y capturar registros del SDK web.
-
-El SDK web déclencheur las funciones de supervisión independientemente de si ha habilitado la [depuración](commands/configure/debugenabled.md).
+Web SDK almacena en déclencheur las funciones de supervisión independientemente de si ha habilitado la [depuración](commands/configure/debugenabled.md).
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
-Esta función de llamada de retorno se activa cuando se crea correctamente una nueva instancia del SDK web. Consulte el ejemplo siguiente para obtener más información sobre los parámetros de función.
+Esta función de llamada de retorno se activa cuando se ha creado correctamente una nueva instancia de Web SDK. Consulte el ejemplo siguiente para obtener más información sobre los parámetros de función.
 
 ```js
 onInstanceCreated(data) {
@@ -28,12 +28,12 @@ onInstanceCreated(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
-| `data.instance` | Función | La función de instancia utilizada para llamar a los comandos del SDK web. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
+| `data.instance` | Función | Función de instancia utilizada para llamar a comandos de Web SDK. |
 
 ## `onInstanceConfigured` {#onInstanceConfigured}
 
-El SDK web activa esta función de devolución de llamada cuando el comando [`configure`](commands/configure/overview.md) se resuelve correctamente. Consulte el ejemplo siguiente para obtener más información sobre los parámetros de función.
+Web SDK activa esta función de devolución de llamada cuando el comando [`configure`](commands/configure/overview.md) se resuelve correctamente. Consulte el ejemplo siguiente para obtener más información sobre los parámetros de función.
 
 ```js
  onInstanceConfigured(data) {
@@ -44,12 +44,12 @@ El SDK web activa esta función de devolución de llamada cuando el comando [`co
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
-| `data.config` | Objeto | Objeto que contiene la configuración utilizada para la instancia del SDK web. Estas son las opciones pasadas al comando [`configure`](commands/configure/overview.md) con todos los valores predeterminados agregados. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
+| `data.config` | Objeto | Objeto que contiene la configuración utilizada para la instancia de Web SDK. Estas son las opciones pasadas al comando [`configure`](commands/configure/overview.md) con todos los valores predeterminados agregados. |
 
 ## `onBeforeCommand` {#onBeforeCommand}
 
-El SDK web activa esta función de llamada de retorno antes de ejecutar cualquier otro comando. Puede utilizar esta función para recuperar las opciones de configuración de un comando específico. Consulte el ejemplo siguiente para obtener más información sobre los parámetros de función.
+Web SDK activa esta función de llamada de retorno antes de ejecutar cualquier otro comando. Puede utilizar esta función para recuperar las opciones de configuración de un comando específico. Consulte el ejemplo siguiente para obtener más información sobre los parámetros de función.
 
 ```js
 onBeforeCommand(data) {
@@ -61,9 +61,9 @@ onBeforeCommand(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
-| `data.commandName` | Cadena | Nombre del comando del SDK web antes del cual se ejecuta esta función. |
-| `data.options` | Objeto | Objeto que contiene las opciones pasadas al comando SDK web. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
+| `data.commandName` | Cadena | Nombre del comando Web SDK antes del cual se ejecuta esta función. |
+| `data.options` | Objeto | Objeto que contiene las opciones pasadas al comando Web SDK. |
 
 ## `onCommandResolved` {#onCommandResolved}
 
@@ -80,10 +80,10 @@ onCommandResolved(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
-| `data.commandName` | Cadena | Nombre del comando del SDK web ejecutado. |
-| `data.options` | Objeto | Objeto que contiene las opciones pasadas al comando SDK web. |
-| `data.result` | Objeto | Objeto que contiene el resultado del comando SDK web. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
+| `data.commandName` | Cadena | Nombre del comando ejecutado de Web SDK. |
+| `data.options` | Objeto | Objeto que contiene las opciones pasadas al comando Web SDK. |
+| `data.result` | Objeto | Objeto que contiene el resultado del comando Web SDK. |
 
 ## `onCommandRejected` {#onCommandRejected}
 
@@ -100,9 +100,9 @@ onCommandRejected(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
-| `data.commandName` | Cadena | Nombre del comando del SDK web ejecutado. |
-| `data.options` | Objeto | Objeto que contiene las opciones pasadas al comando SDK web. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
+| `data.commandName` | Cadena | Nombre del comando ejecutado de Web SDK. |
+| `data.options` | Objeto | Objeto que contiene las opciones pasadas al comando Web SDK. |
 | `data.error` | Objeto | Objeto que contiene el mensaje de error devuelto por la llamada de red del explorador (`fetch` en la mayoría de los casos), junto con el motivo por el que se rechazó el comando. |
 
 ## `onBeforeNetworkRequest` {#onBeforeNetworkRequest}
@@ -120,8 +120,8 @@ onBeforeNetworkRequest(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
-| `data.requestId` | Cadena | `requestId` generado por el SDK web para habilitar la depuración. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
+| `data.requestId` | Cadena | `requestId` generado por Web SDK para habilitar la depuración. |
 | `data.url` | Cadena | La dirección URL solicitada. |
 | `data.payload` | Objeto | Objeto de carga de solicitud de red que se convertirá al formato JSON y se enviará en el cuerpo de la solicitud, a través de un método `POST`. |
 
@@ -144,8 +144,8 @@ onNetworkResponse(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
-| `data.requestId` | Cadena | `requestId` generado por el SDK web para habilitar la depuración. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
+| `data.requestId` | Cadena | `requestId` generado por Web SDK para habilitar la depuración. |
 | `data.url` | Cadena | La dirección URL solicitada. |
 | `data.payload` | Objeto | El objeto de carga útil que se convertirá al formato JSON y se enviará en el cuerpo de la solicitud, a través de un método `POST`. |
 | `data.body` | Cadena | El cuerpo de respuesta en formato de cadena. |
@@ -169,15 +169,15 @@ onNetworkError(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
-| `data.requestId` | Cadena | `requestId` generado por el SDK web para habilitar la depuración. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
+| `data.requestId` | Cadena | `requestId` generado por Web SDK para habilitar la depuración. |
 | `data.url` | Cadena | La dirección URL solicitada. |
 | `data.payload` | Objeto | El objeto de carga útil que se convertirá al formato JSON y se enviará en el cuerpo de la solicitud, a través de un método `POST`. |
 | `data.error` | Objeto | Objeto que contiene el mensaje de error devuelto por la llamada de red del explorador (`fetch` en la mayoría de los casos), junto con el motivo por el que se rechazó el comando. |
 
 ## `onBeforeLog` {#onBeforeLog}
 
-Esta función de llamada de retorno se activa antes de que el SDK web registre algo en la consola. Consulte el ejemplo siguiente para obtener más información sobre los parámetros de función.
+Esta función de llamada de retorno se activa antes de que Web SDK registre algo en la consola. Consulte el ejemplo siguiente para obtener más información sobre los parámetros de función.
 
 ```js
 onBeforeLog(data) {
@@ -190,7 +190,7 @@ onBeforeLog(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
 | `data.componentName` | Cadena | Nombre del componente que generó el mensaje de registro. |
 | `data.level` | Cadena | El nivel de registro. Niveles compatibles: `log`, `info`, `warn`, `error`. |
 | `data.arguments` | Matriz de cadenas | Los argumentos del mensaje de registro. |
@@ -211,10 +211,10 @@ El componente `personalization` activa esta función de llamada de retorno en va
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
 | `data.componentName` | Cadena | Nombre del componente que generó el mensaje de registro. |
 | `data.payload` | Objeto | El objeto de carga útil que se convertirá al formato JSON y se enviará en el cuerpo de la solicitud, a través de un método `POST`. |
-| `data.status` | Cadena | El componente `personalization` notifica al SDK web del estado de la representación.  Valores compatibles: <ul><li>`rendering-started`: indica que el SDK web está a punto de procesar propuestas. Antes de que el SDK web empiece a procesar una vista o un ámbito de decisión, en el objeto `data` puede ver las propuestas que están a punto de ser representadas por el componente `personalization` y el nombre del ámbito.</li><li>`no-offers`: indica que no se recibió carga útil para los parámetros solicitados.</li> <li>`rendering-failed`: indica que el SDK web no pudo procesar una propuesta.</li><li>`rendering-succeeded`: indica que se ha completado el procesamiento para un ámbito de decisión.</li> <li>`rendering-redirect`: indica que el SDK web procesará una propuesta de redirección.</li></ul> |
+| `data.status` | Cadena | El componente `personalization` notifica al Web SDK del estado de la representación.  Valores compatibles: <ul><li>`rendering-started`: indica que Web SDK está a punto de procesar propuestas. Antes de que Web SDK empiece a procesar una vista o un ámbito de decisión, en el objeto `data` puede ver las propuestas que van a representar el componente `personalization` y el nombre del ámbito.</li><li>`no-offers`: indica que no se recibió carga útil para los parámetros solicitados.</li> <li>`rendering-failed`: indica que Web SDK no pudo procesar una propuesta.</li><li>`rendering-succeeded`: indica que se ha completado el procesamiento para un ámbito de decisión.</li> <li>`rendering-redirect`: indica que Web SDK procesará una propuesta de redirección.</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
@@ -230,13 +230,13 @@ onContentHiding(data) {
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|----------|
-| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia del SDK web. |
+| `data.instanceName` | Cadena | Nombre de la variable global donde se almacena la instancia de Web SDK. |
 | `data.componentName` | Cadena | Nombre del componente que generó el mensaje de registro. |
-| `data.status` | Cadena | El componente `personalization` notifica al SDK web del estado de la representación. Valores compatibles: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
+| `data.status` | Cadena | El componente `personalization` notifica al Web SDK del estado de la representación. Valores compatibles: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## Cómo especificar los enlaces de monitorización al utilizar el paquete NPM {#specify-monitoris-npm}
+## Cómo especificar los enlaces de monitorización al utilizar el paquete NPM {#specify-monitoring-npm}
 
-Si utiliza el SDK web a través del [paquete NPM](install/npm.md), puede especificar los vínculos de supervisión en la función `createInstasnce`, como se muestra a continuación.
+Si está usando Web SDK a través del [paquete NPM](install/npm.md), puede especificar vínculos de supervisión en la función `createInstance`, como se muestra a continuación.
 
 ```js
 var monitor = {
@@ -253,11 +253,11 @@ alloy("sendEvent", { ... });
 
 ## Ejemplo {#example}
 
-El SDK web busca una matriz de objetos en una variable global llamada `__alloyMonitors`.
+Web SDK busca una matriz de objetos en una variable global llamada `__alloyMonitors`.
 
-Para capturar todos los eventos del SDK web, debe definir los vínculos de monitorización antes de cargar el código del SDK web en la página. Cada método de monitorización captura un evento de SDK web.
+Para capturar todos los eventos de Web SDK, debe definir los vínculos de supervisión antes de cargar el código de Web SDK en la página. Cada método de monitorización captura un evento de SDK web.
 
-Puede definir los vínculos de supervisión *después de* la carga de código del SDK web en su página, pero los vínculos que se hayan activado antes de la carga de la página *no se capturarán*.
+Puede definir los vínculos de monitorización *después de* que el código de Web SDK se cargue en su página, pero cualquier vínculo que se haya activado antes de que se cargue la página *no se capturará*.
 
 Al definir el objeto de vínculo de monitorización, solo necesita definir los métodos para los que desea definir una lógica especial.
 Por ejemplo, si solo le importa `onContentRendering`, puede definir ese método. No es necesario utilizar todos los ganchos de monitorización a la vez.

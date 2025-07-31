@@ -1,15 +1,15 @@
 ---
-title: Conexión de lista de clientes de pinterest
+title: Conexión de lista de clientes de Pinterest
 description: Cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '808'
 ht-degree: 3%
 
 ---
 
-# [!DNL Pinterest Customer List] conexión
+# [!DNL Pinterest Customer List] conexión
 
 ## Información general {#overview}
 
@@ -26,14 +26,14 @@ Cree audiencias a partir de las listas de clientes, personas que hayan visitado 
 
 ## Identidades admitidas {#supported-identities}
 
-El destino [!DNL Pinterest Customer List] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es#getting-started).
+El destino [!DNL Pinterest Customer List] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 En el [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación de destino, asigne las identidades deseadas al campo de destino *pinterest_audience*. Las identidades se distinguen y resuelven tras la ingesta de datos en Pinterest.
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Asigne el área de nombres de identidad de origen *GAID* al campo de identidad de destino *pinterest_audience*. Las identidades se distinguen y resuelven tras la ingesta de datos en Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Asigne el área de nombres de identidad de origen *IDFA* al campo de identidad de destino *pinterest_audience*. Las identidades se distinguen y resuelven tras la ingesta de datos en Pinterest. |
+| GAID | [!DNL Google Advertising ID] | Asigne el área de nombres de identidad de origen *GAID* al campo de identidad de destino *pinterest_audience*. |
+| IDFA | [!DNL Apple ID for Advertisers] | Asigne el área de nombres de identidad de origen *IDFA* al campo de identidad de destino *pinterest_audience*. |
 | EMAIL | Direcciones de correo electrónico (texto no cifrado o con hash con el algoritmo SHA256) | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. <br>: asigne el área de nombres de identidad de origen *Email* o *Email_LC_SHA256* al campo de identidad de destino *pinterest_audience*. |
 
 {style="table-layout:auto"}
@@ -45,7 +45,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino de lista de clientes de Pinterest. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ Cree audiencias a partir de las listas de clientes, personas que hayan visitado 
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -75,7 +75,7 @@ Al [configurar](../../ui/connect-destination.md) este destino, debe proporcionar
 
 ### Actualizar credenciales de autenticación {#refresh-authentication-credentials}
 
-Los tokens de pinterest caducan cada 30 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
+Los tokens de Pinterest caducan cada 30 días. Una vez caducado el token, las exportaciones de datos al destino dejan de funcionar. Para evitar esta situación, vuelva a autenticarse realizando los siguientes pasos:
 
 1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]**
 2. (Opcional) Utilice los filtros disponibles en la página para mostrar solo las cuentas de Pinterest.
@@ -99,8 +99,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

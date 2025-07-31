@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares; alertas;destinos
 description: Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 title: Suscribirse a alertas de destino en contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 8%
@@ -113,6 +113,6 @@ Aparece una ventana emergente que le proporciona una lista de alertas de destino
 
 ![Imagen de interfaz de usuario que muestra la página de suscripciones de alertas de destino](../assets/ui/alerts/destination-alerts-list.png)
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Este documento proporciona una guía paso a paso sobre cómo suscribirse a alertas en contexto para los flujos de datos de destino. Para obtener más información, consulte la [guía de la interfaz de usuario de alertas](../../observability/alerts/ui.md).

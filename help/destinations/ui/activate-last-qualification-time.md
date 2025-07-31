@@ -3,9 +3,9 @@ title: Utilice el atributo XDM Última hora de calificación en los nuevos desti
 description: Aprenda a utilizar el atributo XDM tiempo de última calificación en los nuevos destinos de almacenamiento en la nube beta
 badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
-source-git-commit: 7130ac46a7768ea6e71bf73eb970bf2890323d0f
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Para utilizar el atributo XDM de la última hora de calificación (`lastQualific
 * [[!DNL ADLS Gen 2]](/help/destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * [[!DNL Azure Blob]](/help/destinations/catalog/cloud-storage/azure-blob.md)
-* [[!DNL Data Landing Zon]e](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Data Landing Zone]](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
 * [[!DNL Google Cloud Storage]](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)
 * [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)
 

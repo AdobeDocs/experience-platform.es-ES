@@ -1,8 +1,8 @@
 ---
-title: Recopilar información de comercio, productos y pedidos mediante el SDK web de Adobe Experience Platform
-description: Obtenga información sobre cómo agregar datos relacionados con productos o un carro de compras mediante el SDK web de Adobe Experience Platform.
+title: Recopilar información de comercio, productos y pedidos mediante Adobe Experience Platform Web SDK
+description: Obtenga información sobre cómo agregar datos relacionados con productos o un carro de compras mediante Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 2%
@@ -49,11 +49,11 @@ Esta sección describe los campos disponibles en el objeto `commerce`.
 
 ### `Commerce` ejemplos de objeto
 
-Expanda la sección siguiente para ver un ejemplo de un comando del SDK web que utiliza un campo del objeto `commerce`.
+Expanda la sección siguiente para ver un ejemplo de un comando de Web SDK con un campo del objeto `commerce`.
 
 +++`productViews`
 
-Una llamada básica del SDK web `sendEvent` que establece el campo `productViews` en `1`:
+Una llamada básica de Web SDK `sendEvent` que establece el campo `productViews` en `1`:
 
 ```javascript
 alloy("sendEvent", {
@@ -89,11 +89,11 @@ En esta sección se describen todos los campos admitidos por el objeto `order`.
 
 ### Ejemplos de objetos de pedidos
 
-Expanda la sección siguiente para ver un ejemplo de un comando del SDK web que utiliza el objeto `commerce`.
+Expanda la sección siguiente para ver un ejemplo de un comando de Web SDK que utiliza el objeto `commerce`.
 
 +++Ejemplo de objeto `Order`
 
-Una llamada del SDK web `sendEvent` que establece el objeto `order` que se aplica a varios productos de la matriz `productListItems`:
+Una llamada de Web SDK `sendEvent` que establece el objeto `order` que se aplica a varios productos de la matriz `productListItems`:
 
 ```javascript
 alloy("sendEvent",{
@@ -149,11 +149,11 @@ La lista de productos indica qué productos están relacionados con la acción c
 
 ### Ejemplos de listas de productos
 
-Expanda las secciones siguientes para ver ejemplos de comandos del SDK web que utilizan el objeto `productListItems`.
+Expanda las secciones siguientes para ver ejemplos de comandos de Web SDK que utilizan el objeto `productListItems`.
 
 +++Ejemplo de `productListItems`
 
-Una llamada del SDK web `sendEvent` que configura `productViews` para varios productos en la matriz `productListItems`:
+Una llamada de Web SDK `sendEvent` que configura `productViews` para varios productos en la matriz `productListItems`:
 
 ```javascript
 alloy("sendEvent",{
@@ -181,7 +181,7 @@ alloy("sendEvent",{
 
 +++Ejemplo de `productListAdds`
 
-Una llamada del SDK web `sendEvent` que configura el evento `productListAdds` para varios productos en la matriz `productListItems`:
+Una llamada de Web SDK `sendEvent` que configura el evento `productListAdds` para varios productos en la matriz `productListItems`:
 
 ```javascript
 alloy("sendEvent",{
@@ -215,7 +215,7 @@ alloy("sendEvent",{
 
 +++Ejemplo de `checkouts`
 
-Una llamada del SDK web `sendEvent` que configura el evento `checkouts` para varios productos en la matriz `productListItems`:
+Una llamada de Web SDK `sendEvent` que configura el evento `checkouts` para varios productos en la matriz `productListItems`:
 
 ```javascript
 alloy("sendEvent",{

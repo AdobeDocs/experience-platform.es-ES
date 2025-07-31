@@ -1,9 +1,9 @@
 ---
-title: Representar contenido personalizado mediante el SDK web de Adobe Experience Platform
-description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Adobe Experience Platform.
+title: Procesar contenido personalizado mediante Adobe Experience Platform Web SDK
+description: Obtenga información sobre cómo procesar contenido personalizado con Adobe Experience Platform Web SDK.
 keywords: personalización;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # Procesar contenido personalizado
 
-El SDK web de Adobe Experience Platform admite la recuperación de contenido personalizado de soluciones de personalización de Adobe, entre las que se incluyen [Adobe Target](https://business.adobe.com/es/products/target/adobe-target.html), [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=es) y [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=es).
+Adobe Experience Platform Web SDK admite la recuperación de contenido personalizado de las soluciones de personalización de Adobe, como [Adobe Target](https://business.adobe.com/es/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=es) y [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=es).
 
-Además, el SDK web potencia las funcionalidades de personalización de la misma página y de la siguiente página a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y la [conexión de personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../../destinations/ui/activate-edge-personalization-destinations.md).
+Además, Web SDK potencia las funciones de personalización de la misma página y de la página siguiente a través de destinos de personalización Adobe Experience Platform, como [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y la [conexión de personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-El SDK puede recuperar y procesar automáticamente el contenido creado en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es) de Adobe Target y en la [interfaz de usuario de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=es) de Adobe Journey Optimizer. El SDK no puede procesar automáticamente el contenido creado en el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es) de Adobe Target, el [canal de experiencias basado en código](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer o el Offer decisioning. En su lugar, debe solicitar este contenido mediante el SDK y, a continuación, procesar manualmente el contenido.
+SDK puede recuperar y procesar automáticamente el contenido creado en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) de Adobe Target y en la [interfaz de usuario de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) de Adobe Journey Optimizer. SDK no puede procesar automáticamente el contenido creado en el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) de Adobe Target, el [Canal de experiencias basado en código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer o Offer Decisioning. En su lugar, debe solicitar este contenido mediante SDK y, a continuación, procesarlo manualmente.
 
 ## Representación automática del contenido {#automatic}
 
-Al enviar eventos al servidor, puede establecer la opción `renderDecisions` en `true`. Esto obliga al SDK a procesar automáticamente cualquier contenido personalizado que sea apto para el procesamiento automático.
+Al enviar eventos al servidor, puede establecer la opción `renderDecisions` en `true`. Al hacerlo, SDK debe procesar automáticamente todo el contenido personalizado que sea apto para el procesamiento automático.
 
 ```javascript
 alloy("sendEvent", {
@@ -42,7 +42,7 @@ La representación del contenido personalizado es asíncrona, por lo que no debe
 
 ## Representación manual del contenido {#manual}
 
-Para acceder a cualquier contenido de personalización, puede proporcionar una función de llamada de retorno a la que se llamará después de que el SDK reciba una respuesta correcta del servidor. Se ha proporcionado una llamada de retorno con un objeto `result`, que puede contener una propiedad `propositions` con el contenido de personalización devuelto. A continuación se muestra un ejemplo de cómo proporcionaría una función de llamada de retorno al enviar un evento.
+Para acceder a cualquier contenido de personalización, puede proporcionar una función de llamada de retorno a la que se llamará después de que SDK reciba una respuesta correcta del servidor. Se ha proporcionado una llamada de retorno con un objeto `result`, que puede contener una propiedad `propositions` con el contenido de personalización devuelto. A continuación se muestra un ejemplo de cómo proporcionaría una función de llamada de retorno al enviar un evento.
 
 ```javascript
 alloy("sendEvent", {
@@ -103,9 +103,9 @@ La matriz `propositions` puede tener un aspecto similar al de este ejemplo:
 ]
 ```
 
-En el ejemplo, la opción `renderDecisions` no se estableció en `true` cuando se ejecutó el comando `sendEvent`, por lo que el SDK no intentó procesar automáticamente ningún contenido. Sin embargo, el SDK recuperó automáticamente el contenido apto para el procesamiento automático y le proporcionó esto para que lo procesara manualmente si así lo deseaba. Observe que cada objeto de propuesta tiene su propiedad `renderAttempted` establecida en `false`.
+En el ejemplo, la opción `renderDecisions` no se estableció en `true` cuando se ejecutó el comando `sendEvent`, por lo que SDK no intentó procesar automáticamente ningún contenido. Sin embargo, SDK recuperó automáticamente el contenido apto para el procesamiento automático y le proporcionó esto para el procesamiento manual si así lo desea. Observe que cada objeto de propuesta tiene su propiedad `renderAttempted` establecida en `false`.
 
-Si, en su lugar, hubiera establecido la opción `renderDecisions` en `true` al enviar el evento, el SDK habría intentado procesar todas las propuestas que cumplen los requisitos para el procesamiento automático (como se describió anteriormente). Como consecuencia, cada uno de los objetos de la propuesta tendría su propiedad `renderAttempted` establecida en `true`. No sería necesario procesar manualmente estas propuestas en este caso.
+Si, en su lugar, hubiera establecido la opción `renderDecisions` en `true` al enviar el evento, SDK habría intentado procesar todas las propuestas que cumplen los requisitos para el procesamiento automático (como se describió anteriormente). Como consecuencia, cada uno de los objetos de la propuesta tendría su propiedad `renderAttempted` establecida en `true`. No sería necesario procesar manualmente estas propuestas en este caso.
 
 Hasta ahora, solo hemos hablado del contenido de personalización que puede procesarse automáticamente (es decir, cualquier contenido creado en el Compositor de experiencias visuales de Adobe Target o en la IU de la campaña web de Adobe Journey Optimizer). Para recuperar cualquier contenido de personalización _que no sea_ apto para el procesamiento automático, debe solicitar el contenido rellenando la opción `decisionScopes` al enviar el evento. Un ámbito es una cadena que identifica una propuesta concreta que desea recuperar del servidor.
 
@@ -224,8 +224,8 @@ En este punto, puede procesar el contenido de la propuesta como crea conveniente
 
 1. Extraer propuestas del objeto `result`.
 1. Recorra en bucle cada propuesta, buscando la propuesta con un ámbito de `discount`.
-1. Si encuentra una propuesta, revise cada elemento de la propuesta en busca del elemento que sea contenido del HTML. (Es mejor comprobar que suponer).
-1. Si encuentra un elemento con contenido de HTML, busque el elemento `daily-special` en la página y reemplace su HTML por el contenido personalizado.
+1. Si encuentra una propuesta, revise cada elemento de la propuesta en busca del elemento que sea contenido de HTML. (Es mejor comprobar que suponer).
+1. Si encuentra un elemento que contenga contenido de HTML, busque el elemento `daily-special` en la página y reemplace su HTML por el contenido personalizado.
 1. Una vez representado el contenido, envíe un evento `display`.
 
 El código tendría el siguiente aspecto:
@@ -252,7 +252,7 @@ alloy("sendEvent", {
   var discountHtml;
   if (discountProposition) {
     // Find the item from proposition that should be rendered.
-    // Rather than assuming there a single item that has HTML
+    // Rather than assuming there is a single item that has HTML
     // content, find the first item whose schema indicates
     // it contains HTML content.
     for (var j = 0; j < discountProposition.items.length; j++) {
@@ -263,7 +263,7 @@ alloy("sendEvent", {
         var dailySpecialElement = document.getElementById("daily-special");
         dailySpecialElement.innerHTML = discountHtml;
         
-        // For this example, we assume there is only a signle place to update in the HTML.
+        // For this example, we assume there is only a single place to update in the HTML.
         break;  
       }
     }
@@ -298,7 +298,7 @@ alloy("sendEvent", {
 
 ### Administrar parpadeo
 
-El SDK proporciona funciones para [administrar el parpadeo](../personalization/manage-flicker.md) durante el proceso de personalización.
+SDK proporciona funciones para [administrar el parpadeo](../personalization/manage-flicker.md) durante el proceso de personalización.
 
 ## Procesar propuestas en aplicaciones de una sola página sin incrementar las métricas {#applypropositions}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Caso de uso 2: Procesar propuestas que no tienen selector
 
-Este caso de uso se aplica a las experiencias creadas con [!DNL Target Form-based Experience Composer] o el [Canal de experiencia basado en código](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer.
+Este caso de uso se aplica a las experiencias creadas con [!DNL Target Form-based Experience Composer] o el [Canal de experiencia basado en código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer.
 
 Debe proporcionar el selector, la acción y el ámbito en la llamada a `applyPropositions`.
 

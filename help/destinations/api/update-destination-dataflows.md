@@ -5,7 +5,7 @@ title: Actualización de flujos de datos de destino mediante la API de Flow Serv
 type: Tutorial
 description: Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante la API de Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 4%
@@ -857,6 +857,6 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 
 Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform para obtener más información sobre cómo interpretar las respuestas de error.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha aprendido a actualizar varios componentes de un flujo de datos de destino, como agregar o eliminar audiencias o atributos de perfil mediante la API [!DNL Flow Service]. Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../home.md).

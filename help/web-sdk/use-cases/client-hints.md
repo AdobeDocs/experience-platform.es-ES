@@ -1,11 +1,11 @@
 ---
 title: User agent client hints
-description: Descubra cómo funcionan las sugerencias del cliente del agente de usuario en el SDK web. Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la cadena del agente de usuario, pero de una manera que preserva la privacidad.
+description: Descubra cómo funcionan las sugerencias del cliente del agente de usuario en Web SDK. Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la cadena del agente de usuario, pero de una manera que preserva la privacidad.
 keywords: user-agent;sugerencias del cliente; cadena; cadena de user-agent; baja entropía; alta entropía
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 3%
 
 ---
@@ -86,7 +86,7 @@ Existen dos categorías de sugerencias del cliente del agente de usuario:
 
 Las sugerencias de cliente de baja entropía incluyen información básica que no se puede usar para tomar huellas digitales de los usuarios. Información como la marca del explorador, la plataforma y si la solicitud proviene de un dispositivo móvil.
 
-Las sugerencias de cliente de baja entropía están habilitadas de forma predeterminada en el SDK web y se pasan en cada solicitud.
+Las sugerencias de cliente de baja entropía están habilitadas de forma predeterminada en Web SDK y se pasan en cada solicitud.
 
 | Encabezado HTTP | JavaScript | Incluido en el agente de usuario de forma predeterminada | Incluido en las sugerencias del cliente de forma predeterminada |
 |---|---|---|---|
@@ -101,15 +101,15 @@ Las sugerencias de cliente de alta entropía son información más detallada sob
 | Propiedad | Descripción | Encabezado HTTP | Ruta de XDM | Ejemplo | Incluido en el agente de usuario de forma predeterminada | Incluido en las sugerencias del cliente de forma predeterminada |
 | --- | --- | --- | --- | --- |---|---|
 | Versión de sistema operativo | La versión del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Sí | No |
-| Arquitectura | Arquitectura de CPU subyacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Sí | No |
+| Arquitectura | La arquitectura de CPU subyacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Sí | No |
 | Modelo de dispositivo | Nombre del dispositivo utilizado. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Sí | No |
-| Mordacidad | Número de bits que admite la arquitectura de CPU subyacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Sí | No |
+| Mordacidad | El número de bits que admite la arquitectura de CPU subyacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Sí | No |
 | Proveedor del explorador | Compañía que creó el explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | Sí | No |
 | Nombre del explorador | El explorador utilizado. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Sí | No |
 | Versión del explorador | La versión significativa del explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. La versión exacta del explorador no se recopila automáticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Sí | No |
 
 
-Las sugerencias de cliente de alta entropía están deshabilitadas de forma predeterminada en el SDK web. Para habilitarlas, debe configurar manualmente el SDK web para solicitar sugerencias de cliente de alta entropía.
+Las sugerencias de cliente de alta entropía están deshabilitadas de forma predeterminada en Web SDK. Para habilitarlas, debe configurar manualmente Web SDK para solicitar sugerencias de cliente de alta entropía.
 
 ## Impacto de las sugerencias de cliente de alta entropía en las soluciones de Experience Cloud {#impact-in-experience-cloud-solutions}
 
@@ -119,17 +119,17 @@ Si no habilita sugerencias de cliente de alta entropía en su entorno, los infor
 
 ### Informes de Adobe Analytics que dependen de sugerencias del cliente de alta entropía {#analytics}
 
-La dimensión [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=es) incluye la versión del sistema operativo que se almacena como una sugerencia de cliente de alta entropía. Si no está habilitada la opción sugerencias de clientes de alta entropía, la versión del sistema operativo puede ser inexacta para las visitas recopiladas de los exploradores Chromium.
+La dimensión [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) incluye la versión del sistema operativo que se almacena como una sugerencia de cliente de alta entropía. Si no está habilitada la opción sugerencias de clientes de alta entropía, la versión del sistema operativo puede ser inexacta para las visitas recopiladas de los exploradores Chromium.
 
 ### Características de Audience Manager que dependen de sugerencias de cliente de alta entropía {#aam}
 
-[!DNL Google] ha actualizado la funcionalidad del explorador [!DNL Chrome] para minimizar la información recopilada a través del encabezado `User-Agent`. Como resultado, los clientes de Audience Manager que usen [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es) ya no recibirán información confiable para rasgos basados en [claves a nivel de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=es).
+[!DNL Google] ha actualizado la funcionalidad del explorador [!DNL Chrome] para minimizar la información recopilada a través del encabezado `User-Agent`. Como resultado, los clientes de Audience Manager que usen [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es) ya no recibirán información confiable para rasgos basados en [claves de nivel de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-Los clientes de Audience Manager que usen claves de nivel de plataforma para el direccionamiento deben cambiar a [SDK web de Experience Platform](/help/web-sdk/home.md) en lugar de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es) y habilitar las [sugerencias de cliente de alta entropía](#enabling-high-entropy-client-hints) para seguir recibiendo datos de rasgos confiables.
+Los clientes de Audience Manager que usen claves de nivel de plataforma para el direccionamiento deben cambiar a [Experience Platform Web SDK](/help/web-sdk/home.md) en lugar de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es) y habilitar las [sugerencias de cliente de alta entropía](#enabling-high-entropy-client-hints) para seguir recibiendo datos de rasgos confiables.
 
 ## Habilitar sugerencias de cliente de alta entropía {#enabling-high-entropy-client-hints}
 
-Para habilitar sugerencias de cliente de alta entropía en la implementación del SDK web, debe incluir la opción de contexto `highEntropyUserAgentHints` adicional en el campo [`context`](/help/web-sdk/commands/configure/context.md).
+Para habilitar sugerencias de cliente de alta entropía en la implementación de Web SDK, debe incluir la opción de contexto `highEntropyUserAgentHints` adicional en el campo [`context`](/help/web-sdk/commands/configure/context.md).
 
 Por ejemplo, para recuperar sugerencias de cliente de alta entropía de las propiedades web, la configuración tendría este aspecto:
 
