@@ -27,7 +27,7 @@ Para editar varios componentes de una conexión de destino existente:
 
 1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]**.
 2. Seleccione el destino que desee editar.
-3. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar control de destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino ]**para editar las conexiones de destino existentes.
+3. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar control de destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino &#x200B;]**&#x200B;para editar las conexiones de destino existentes.
 4. En la ventana modal, edite la configuración que desee. Seleccione **[!UICONTROL Guardar]** cuando haya terminado.
 
 En la ventana de edición de destino, puede actualizar cualquier configuración que haya configurado al conectarse inicialmente al destino. Esta configuración es diferente en función de la plataforma de destino que esté actualizando.
