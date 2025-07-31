@@ -5,11 +5,11 @@ exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '2744'
-ht-degree: 37%
+ht-degree: 38%
 
 ---
 
-# [!DNL LiveRamp - Distribution] conexión
+# [!DNL LiveRamp - Distribution] conexión
 
 La conexión [!DNL LiveRamp - Distribution] le permite activar audiencias de Experience Platform a editores Premium en medios móviles, web, de visualización y de TV conectados.
 
@@ -56,7 +56,7 @@ Antes de activar audiencias a través de la conexión [!DNL LiveRamp - Distribut
 
 Después de haber incorporado las audiencias a LiveRamp, continúe con el flujo de trabajo de activación desde el paso [conectar con el destino](#connect) para seleccionar y configurar las plataformas de destino de destino para la activación de datos.
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_identifier_settings"
@@ -65,7 +65,7 @@ Después de haber incorporado las audiencias a LiveRamp, continúe con el flujo 
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -91,8 +91,8 @@ Una vez que se haya conectado correctamente a su cuenta de LiveRamp, introduzca 
 >[!NOTE]
 >
 >Al asignar un nombre al destino, Adobe recomienda seguir este formato: `LiveRamp - Downstream Destination Name`. Este patrón de nomenclatura le ayuda a identificar rápidamente sus destinos en la ficha [Examinar](../../ui/destinations-workspace.md#browse) del área de trabajo de destinos.
-><br>
->Ejemplo: `LiveRamp - Roku`.
+>><br>
+>>Ejemplo: `LiveRamp - Roku`.
 
 * **[!UICONTROL Descripción]**: escribe una descripción para el destino. Utilice una descripción que le ayude a identificar fácilmente el propósito de este destino.
 * **[!UICONTROL Destino]**: utilice el menú desplegable para seleccionar el destino al que desea activar las audiencias. El destino que seleccione aquí afectará directamente lo que vea en la pantalla [configuración específica del destino](#destination-settings).
@@ -303,7 +303,7 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_pandora_account_name"
->title="Nombre de la cuenta"
+>title="Nombre de cuenta"
 >abstract="El nombre de su cuenta de Pandora. Póngase en contacto con el representante de su cuenta de Pandora si no está seguro de cuál es su nombre de cuenta. No utilice espacios ni caracteres especiales."
 
 Para configurar los detalles del destino, rellene los campos siguientes.
@@ -431,7 +431,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 La conexión [!DNL LiveRamp - Distribution] activa audiencias que ya se han incorporado a su cuenta de LiveRamp a través de la conexión [LiveRamp - Onboarding](liveramp-onboarding.md).
 
