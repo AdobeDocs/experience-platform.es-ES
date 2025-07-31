@@ -2,9 +2,9 @@
 title: Crear un filtro global
 description: Obtenga información sobre cómo filtrar las perspectivas de datos con un filtro personalizado aplicado globalmente.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 473aaa8dedd549cf524d77c9b0a37d71b4688805
+source-git-commit: 60b0c73766c89b98685810b4f58cfe1a40316dc9
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,17 @@ Para crear un filtro global, primero selecciona **[!UICONTROL Agregar filtro]** 
 
 Puede cambiar rápidamente las perspectivas proporcionadas por su SQL con filtros globales personalizados.
 
-Se abre el cuadro de diálogo [!UICONTROL Crear un filtro global]. La creación de un filtro global sigue el mismo proceso que la creación de una perspectiva con SQL. En primer lugar, seleccione una base de datos (modelo de datos de perspectivas) para realizar una consulta y, a continuación, escriba el SQL personalizado en el Editor de consultas y, finalmente, seleccione el icono de ejecución (![Icono de ejecución.](/help/images/icons/play.png)).
+Se abre el cuadro de diálogo [!UICONTROL Crear un filtro global]. La creación de un filtro global sigue el mismo proceso que la creación de una insight con SQL. En primer lugar, seleccione una base de datos (modelo de datos de perspectivas) para realizar una consulta y, a continuación, escriba el SQL personalizado en el Editor de consultas y, finalmente, seleccione el icono de ejecución (![Icono de ejecución.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
 >Debe incluir un ID y un valor al crear un filtro global. Los valores de ejemplo permiten ejecutar la instrucción SQL y crear el gráfico. Tenga en cuenta que los valores de ejemplo que proporcione al maquetar la instrucción se sustituirán por los valores reales que seleccione para la fecha o el filtro global durante la ejecución.
 
 Después de ejecutar correctamente la consulta, la pestaña resultados muestra los resultados. Seleccione **[!UICONTROL Siguiente]**.
+
+>[!NOTE]
+>
+>De forma predeterminada, los resultados de la consulta están limitados a 100 filas. Para devolver más filas, agregue una cláusula LIMIT a la consulta SQL con el recuento de filas deseado. Para recuperar todas las filas y eliminar el límite predeterminado, utilice LIMIT 0 en la consulta.
 
 ![Cuadro de diálogo [!UICONTROL Crear un filtro global] con el menú desplegable del conjunto de datos, el icono de ejecución y Siguiente resaltados.](../../images/sql-insights-query-pro-mode/global-filter.png)
 
@@ -41,7 +45,7 @@ Finalmente, seleccione **[!UICONTROL Seleccionar]** para regresar a la vista del
 
 ![Cuadro de diálogo [!UICONTROL Crear un filtro global] con la opción Seleccionar y la entrada de texto de la etiqueta Filtro resaltada.](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
-## Habilitar el filtro global para cada perspectiva {#enable-global-filter}
+## Habilitar el filtro global para cada insight {#enable-global-filter}
 
 >[!TIP]
 >
@@ -53,7 +57,7 @@ Después de crear el filtro global para el tablero, la opción de ese filtro glo
 
 >[!IMPORTANT]
 >
->Asegúrese de que el parámetro de filtro global se incluya en el SQL de cada perspectiva.
+>Asegúrese de que el parámetro de filtro global esté incluido en el SQL de cada insight.
 
 ## Seleccionar un filtro global {#select-global-filter}
 

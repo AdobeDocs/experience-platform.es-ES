@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
+source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
 workflow-type: tm+mt
-source-wordcount: '4551'
+source-wordcount: '4482'
 ht-degree: 5%
 
 ---
@@ -108,25 +108,26 @@ Puede encontrar más información sobre estas acciones disponibles en sus seccio
 
 ### Previsualización de un conjunto de datos {#preview}
 
-Puede obtener una vista previa de los datos de ejemplo del conjunto de datos desde las opciones en línea de la pestaña [!UICONTROL Examinar] y también desde la vista [!UICONTROL Actividad del conjunto de datos]. Hay disponible una nueva ventana de vista previa de conjuntos de datos con mejoras adicionales de navegación y contexto.
+Puede obtener una vista previa de hasta 100 filas de datos de ejemplo para cualquier conjunto de datos, ya sea desde las opciones en línea de la pestaña [!UICONTROL Examinar] o desde la vista [!UICONTROL Actividad del conjunto de datos].
 
-En la ficha [!UICONTROL Examinar], seleccione los puntos suspensivos (...) junto al nombre del conjunto de datos que desee previsualizar. Aparecerá una lista de opciones. A continuación, seleccione [!UICONTROL Vista previa del conjunto de datos] de las opciones disponibles. Si el conjunto de datos está vacío, el vínculo de vista previa está desactivado e indica que la vista previa no está disponible.
+En la ficha [!UICONTROL Examinar], seleccione los puntos suspensivos (...) junto al nombre del conjunto de datos y elija [!UICONTROL Previsualizar conjunto de datos]. Si el conjunto de datos está vacío, la opción de previsualización está desactivada. En la pantalla **[!UICONTROL Actividad del conjunto de datos]**, seleccione **[!UICONTROL Previsualizar conjunto de datos]** cerca de la esquina superior derecha de la pantalla.
 
 ![La pestaña Examinar del área de trabajo Conjuntos de datos con la opción de puntos suspensivos y Vista previa del conjunto de datos resaltada para el conjunto de datos elegido.](../images/datasets/user-guide/preview-dataset-option.png)
 
-Esto abre la ventana de vista previa, donde la vista de esquema jerárquico del conjunto de datos se muestra a la izquierda.
+Esto abre la ventana de vista previa, donde la vista de esquema jerárquico del conjunto de datos aparece a la izquierda.
 
 >[!NOTE]
 >
->El diagrama de esquema de la parte izquierda de la vista solo muestra los campos que contienen datos. Los campos sin datos se ocultan automáticamente para optimizar la interfaz de usuario y centrarse en la información relevante.
+>El diagrama de esquema de la izquierda solo muestra los campos que contienen datos. Los campos sin datos se ocultan automáticamente para optimizar la interfaz de usuario y centrarse en la información relevante.
 
 ![Se muestra el cuadro de diálogo de vista previa del conjunto de datos con información sobre la estructura y los valores de muestra del conjunto de datos.](../images/datasets/user-guide/preview-dataset.png)
 
-En la pantalla **[!UICONTROL Actividad del conjunto de datos]**, seleccione **[!UICONTROL Previsualizar conjunto de datos]** cerca de la esquina superior derecha de la pantalla para obtener una vista previa de hasta 100 filas de datos.
+En la pantalla **[!UICONTROL Actividad del conjunto de datos]**, seleccione **[!UICONTROL Previsualizar conjunto de datos]** para abrir la ventana de vista previa y revisar una muestra de la estructura y los valores del conjunto de datos.
 
 ![El botón Vista previa del conjunto de datos está resaltado.](../images/datasets/user-guide/select-preview.png)
 
-La ventana de vista previa del conjunto de datos proporciona una interfaz optimizada para explorar y validar conjuntos de datos.
+La ventana de vista previa del conjunto de datos proporciona una forma rápida de explorar y validar la estructura y los datos del conjunto de datos.
+
 
 #### Ventana Vista previa del conjunto de datos {#dataset-preview-window}
 
@@ -137,34 +138,25 @@ La siguiente animación muestra la ventana de vista previa del conjunto de datos
 La ventana de vista previa del conjunto de datos incluye:
 
 * Barra lateral del explorador de objetos a la izquierda para navegar y filtrar campos de conjuntos de datos.
-* Indicadores de tipo de datos mostrados junto al nombre de cada columna para una insight rápida en la estructura del conjunto de datos.
+* Indicadores de tipo de datos junto a cada nombre de columna para insight en la estructura del conjunto de datos.
 * Se muestra una consulta SQL en la parte superior de la ventana, que muestra la consulta utilizada para generar el conjunto de datos.
-* Una vista de tabla con formato de hasta 100 filas en el área inferior derecha para una revisión eficaz de los datos.
-* Navegación directa al Editor de consultas para usuarios de Data Distiller, con la consulta SQL previamente rellenada para una exploración o modificación posterior.
+* Una vista de tabla con formato de hasta 100 filas para una revisión eficaz de los datos.
 
-Estas funciones admiten la navegación rápida, la comprensión del esquema y la validación transparente del conjunto de datos.
-
-Seleccione **[!UICONTROL Previsualizar conjunto de datos]** de las acciones en línea o de la pantalla [!UICONTROL Actividad del conjunto de datos] para abrir la ventana de vista previa.
-
->[!NOTE]
->
->La ventana de vista previa muestra un ejemplo de hasta 100 filas. Los campos sin datos se excluyen de la vista.
+Estas funciones le ayudan a navegar, comprender los detalles del esquema y validar datos de ejemplo de forma eficaz.
 
 #### Acceso directo del Editor de consultas avanzado {#query-editor-shortcut}
 
-Si su organización tiene una licencia de Data Distiller, puede acceder al Editor de consultas avanzadas directamente desde la ventana de vista previa del conjunto de datos.
+Si su organización tiene una licencia de Data Distiller, puede acceder a [!UICONTROL Advanced Query Editor] directamente desde la ventana de vista previa del conjunto de datos. Utilice este método abreviado para pasar sin problemas de la vista previa de datos de ejemplo a la ejecución y el refinamiento de consultas en el servicio de consultas.
 
 >[!AVAILABILITY]
 >
->Solo los usuarios con la licencia de Data Distiller necesaria pueden acceder a esta funcionalidad. Si su organización no tiene Data Distiller, la opción [!UICONTROL Advanced query editor] no está visible.
+>El acceso a [!UICONTROL Advanced Query Editor] está limitado a organizaciones con una licencia de SKU de Data Distiller. Si su organización no tiene la licencia necesaria, esta opción no aparece en la ventana de vista previa del conjunto de datos.
 
-Seleccione **[!UICONTROL Editor de consultas avanzado]** en la parte superior derecha de la ventana de vista previa para abrir el Editor de consultas. La consulta de vista previa actual está precargada y lista para su ejecución o análisis posterior.
+Seleccione [!UICONTROL Editor de consultas avanzado] en la parte superior derecha de la ventana de vista previa para abrir el servicio de consultas con la consulta SQL actual precargada y ejecutada. Puede seguir analizando o modificando SQL sin volver a introducir la consulta.
 
-![Ventana de vista previa del conjunto de datos que muestra el botón Advanced query editor en la esquina superior derecha.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+![Ventana de vista previa del conjunto de datos que muestra el botón Editor de consultas avanzado en la esquina superior derecha.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-Este acceso directo le permite pasar sin problemas de la vista previa de datos de ejemplo a la ejecución y el refinamiento de consultas en el servicio de consultas sin volver a introducir SQL o el contexto.
-
-Para obtener acceso a datos y análisis adicionales, use los servicios descendentes como [!DNL Query Service] y [!DNL JupyterLab]. Consulte los siguientes documentos para obtener más información:
+Para realizar un análisis adicional, use servicios descendentes como [!DNL Query Service] y [!DNL JupyterLab]. Consulte los siguientes documentos para obtener más información:
 
 * [Introducción al servicio de consultas](../../query-service/home.md)
 * [Guía del usuario de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
@@ -467,7 +459,7 @@ Si desea eliminar el lote, seleccione **[!UICONTROL Eliminar lote]** cerca de la
 
 ![El botón Eliminar lote está resaltado en la página de detalles del conjunto de datos.](../images/datasets/user-guide/delete-batch.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Esta guía del usuario proporciona instrucciones para realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario [!DNL Experience Platform]. Para ver los pasos sobre la realización de flujos de trabajo comunes de [!DNL Experience Platform] que implican conjuntos de datos, consulte los siguientes tutoriales:
 

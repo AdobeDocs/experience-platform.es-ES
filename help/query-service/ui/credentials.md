@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de credenciales de Query Service
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 60b9fd250ba1a3e2da374681b78f0375f75dc87e
+source-git-commit: 58018684a5f042bd4e121f4162e7c1663597c19a
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '2023'
 ht-degree: 5%
 
 ---
@@ -46,11 +46,11 @@ La sección **[!UICONTROL Credenciales que caducan]** proporciona la siguiente i
 >
 >![Pestaña Configuración de Admin Console con las opciones Privacidad y seguridad, Autenticación y Duración máxima de la sesión resaltadas.](../images/ui/credentials/max-session-life.png)
 >
->Consulte la documentación de ayuda de Adobe para obtener más información sobre la [configuración avanzada](https://helpx.adobe.com/es/enterprise/using/authentication-settings.html#advanced-settings) que ofrece Admin Console.
+>Consulte la documentación de ayuda de Adobe para obtener más información sobre la [configuración avanzada](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) que ofrece Admin Console.
 
 ### Conectarse a los datos de Customer Journey Analytics en sesiones de consulta {#connect-to-customer-journey-analytics}
 
-Utilice la extensión de Customer Journey Analytics BI con Power BI o Tableau para acceder a sus [vistas de datos](https://experienceleague.adobe.com/es/docs/analytics-platform/using/cja-dataviews/data-views) de Customer Journey Analytics con SQL. Al integrar el servicio de consultas con la extensión de BI, puede acceder a las vistas de datos directamente dentro de las sesiones del servicio de consultas. Esta integración optimiza la funcionalidad de las herramientas de BI que utilizan el servicio de consultas como interfaz PostgreSQL. Esta funcionalidad elimina la necesidad de duplicar vistas de datos en las herramientas de BI, garantiza la creación de informes coherentes en todas las plataformas y simplifica la integración de datos de Customer Journey Analytics con otras fuentes en las plataformas de BI.
+Utilice la extensión de Customer Journey Analytics BI con Power BI o Tableau para acceder a sus [vistas de datos](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) de Customer Journey Analytics con SQL. Al integrar el servicio de consultas con la extensión de BI, puede acceder a las vistas de datos directamente dentro de las sesiones del servicio de consultas. Esta integración optimiza la funcionalidad de las herramientas de BI que utilizan el servicio de consultas como interfaz PostgreSQL. Esta funcionalidad elimina la necesidad de duplicar vistas de datos en las herramientas de BI, garantiza la creación de informes coherentes en todas las plataformas y simplifica la integración de datos de Customer Journey Analytics con otras fuentes en las plataformas de BI.
 
 Consulte la documentación para aprender a [conectar Query Service a diversas aplicaciones cliente de escritorio](../clients/overview.md), como [Power BI](../clients/power-bi.md) o [Tableau](../clients/tableau.md)
 
@@ -68,7 +68,7 @@ Para acceder a los datos de Customer Journey Analytics en Power BI o Tableau, se
 
 También puede acceder a sus datos de Customer Journey Analytics directamente desde el Editor de consultas o la CLI de Postgres. Para ello, haga referencia a la base de datos `cja` al escribir la consulta. Consulte la [guía de creación de consultas](./user-guide.md#query-authoring) del Editor de consultas para obtener más información sobre cómo escribir, ejecutar y guardar consultas.
 
-Consulte la [guía de extensión de BI](https://experienceleague.adobe.com/es/docs/analytics-platform/using/cja-dataviews/bi-extension) para obtener instrucciones completas sobre el acceso a las vistas de datos de Customer Journey Analytics con SQL.
+Consulte la [guía de extensión de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obtener instrucciones completas sobre el acceso a las vistas de datos de Customer Journey Analytics con SQL.
 
 ## Credenciales sin caducidad {#non-expiring-credentials}
 
@@ -78,6 +78,10 @@ Consulte la [guía de extensión de BI](https://experienceleague.adobe.com/es/do
 >abstract="Esta migración es necesaria, ya que las credenciales de JWT dejarán de funcionar después del 30 de junio de 2025. Tarda entre 30 y 40 segundos y no se puede cancelar una vez iniciada. Todos los trabajos e integraciones existentes seguirán funcionando con OAuth tras la migración. Puede salir de esta pantalla y volver en cualquier momento para comprobar el estado."
 
 Puede utilizar credenciales que no caduquen para configurar una conexión más permanente con un cliente externo.
+
+>[!IMPORTANT]
+>
+>La primera vez que cree o migre una credencial que no caduque al servidor de OAuth, debe utilizar una cuenta de administrador del sistema. Solo un administrador del sistema puede realizar esta acción en su organización. Si un administrador que no es del sistema intenta realizar este paso, el proceso fallará y producirá un error de autorización. Después de la configuración inicial, los usuarios con los permisos necesarios pueden crear o migrar las credenciales que no caduquen a continuación.
 
 >[!NOTE]
 >
@@ -172,7 +176,7 @@ En la tabla siguiente se describen los parámetros que suelen ser necesarios par
 >[!NOTE]
 >
 >Al conectarse a un host mediante credenciales que no caducan, sigue siendo necesario utilizar todos los parámetros enumerados en la sección [!UICONTROL CREDENCIALES QUE CADUCAN], excepto la contraseña y el nombre de usuario.
->&#x200B;>El formato para escribir el nombre de usuario y la contraseña utiliza valores separados por dos puntos, tal como se ve en este ejemplo `username:{your_username}` y `password:{password_string}`.
+>>El formato para escribir el nombre de usuario y la contraseña utiliza valores separados por dos puntos, tal como se ve en este ejemplo `username:{your_username}` y `password:{password_string}`.
 
 | Parámetro | Descripción | Ejemplo |
 |---|---|---|
@@ -184,6 +188,6 @@ En la tabla siguiente se describen los parámetros que suelen ser necesarios par
 
 {style="table-layout:auto"}
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que comprende cómo funcionan las credenciales que caducan y las que no caducan, puede utilizar estas credenciales para conectarse a clientes externos. Para obtener más información detallada acerca de los clientes externos, lea la guía [conectar clientes al servicio de consultas](../clients/overview.md).

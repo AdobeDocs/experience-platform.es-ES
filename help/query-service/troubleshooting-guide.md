@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preguntas frecuentes sobre el servicio de consultas y Data Distiller
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas y Data Distiller. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5186'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Una causa potencial es la función de autocompletar. La función procesa ciertos
 ### ¿Puedo usar [!DNL Postman] para la API del servicio de consultas?
 
 +++Respuesta
-Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/31627?captions=spa) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### ¿Hay un límite en el número máximo de filas devueltas por una consulta a través de la interfaz de usuario?
@@ -406,7 +406,7 @@ El resultado de la consola proporcionado en la interfaz de usuario del servicio 
 
 #### Convertir desde la marca de tiempo UTC
 
-El método `from_utc_timestamp()` interpreta los parámetros dados **de la marca de tiempo de su zona horaria local** y proporciona la marca de tiempo equivalente de la región deseada en formato UTC. En el ejemplo siguiente, la hora es las 2:40 p.m. en la zona horaria local del usuario. La zona horaria de Seúl que se pasa como variable está nueve horas por delante de la zona horaria local.
+El método `from_utc_timestamp()` interpreta los parámetros dados **de la marca de tiempo de su zona horaria local** y proporciona la marca de tiempo equivalente de la región deseada en formato UTC. En el ejemplo siguiente, la hora es 2:40PM en la zona horaria local del usuario. La zona horaria de Seúl que se pasa como variable está nueve horas por delante de la zona horaria local.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -647,6 +647,14 @@ Calcular las horas de una consulta puede fluctuar debido a varios factores. Esto
 La infraestructura back-end se mejora constantemente para optimizar la utilización de Compute Hour y el tiempo de procesamiento. Como resultado, es posible que observe cambios con el tiempo a medida que se implementan las mejoras de rendimiento.
 +++
 
+### ¿Difiere el rendimiento de Data Distiller entre los entornos limitados de desarrollo y producción?
+
++++Respuesta
+Puede esperar un rendimiento similar cuando se ejecutan consultas en entornos limitados de desarrollo y producción. Ambos entornos están diseñados para proporcionar el mismo nivel de capacidad de procesamiento. Sin embargo, pueden producirse diferencias en las horas calculadas, según la cantidad de datos que procese y la actividad general del sistema en el momento de ejecutar la consulta.
+
+Rastree el uso de las horas de cálculo en [Tablero de uso de licencias](../dashboards/guides/license-usage.md) en la interfaz de usuario de Experience Platform.
++++
+
 ## IU de consultas
 
 ### La opción &quot;Crear consulta&quot; se bloquea &quot;Inicializando conexión...&quot; al intentar conectarse al servicio de consultas. ¿Cómo puedo solucionar el problema?
@@ -752,6 +760,12 @@ Sí, los clientes de escritorio de terceros se pueden conectar al servicio de co
 +++Respuesta
 El valor de las credenciales que no caducan son los argumentos concatenados de `technicalAccountID` y `credential` tomados del archivo JSON de configuración. El valor de contraseña adopta la forma: `{{technicalAccountId}:{credential}}`.
 Consulte la documentación para obtener más información sobre cómo [conectarse a clientes externos con credenciales](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
++++
+
+### ¿Existen restricciones en cuanto a los caracteres especiales para las contraseñas de credenciales que no caducan?
+
++++Respuesta
+Sí. Cuando establece una contraseña para credenciales que no caducan, debe incluir al menos un número, una letra minúscula, una letra mayúscula y un carácter especial. No se admite el signo de dólar ($). Utilice caracteres especiales como !, @, #, ^ o &amp; en su lugar.
 +++
 
 ### ¿Qué tipo de editores SQL de terceros puedo conectar al Editor de servicios de consulta?
