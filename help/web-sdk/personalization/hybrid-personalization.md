@@ -39,7 +39,7 @@ El diagrama de flujo siguiente describe el orden de los pasos realizados para of
 1. La API de Edge Network devuelve el contenido de personalización a su servidor de aplicaciones.
 1. El servidor de aplicaciones devuelve una respuesta de HTML al explorador del cliente, que contiene las [cookies de identidad y de clúster](#cookies).
 1. En la página del cliente, se llama al comando [!DNL Web SDK] `applyResponse`, pasando los encabezados y el cuerpo de la respuesta de la [!UICONTROL API de Edge Network] del paso anterior.
-1. [!DNL Web SDK] procesa automáticamente las ofertas de Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) y los elementos del canal web de Journey Optimizer porque el indicador `renderDecisions` está establecido en `true`.
+1. [!DNL Web SDK] procesa automáticamente las ofertas de Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es) y los elementos del canal web de Journey Optimizer porque el indicador `renderDecisions` está establecido en `true`.
 1. Las ofertas [!DNL HTML]/[!DNL JSON] basadas en formularios de Target y las experiencias basadas en código de Journey Optimizer se aplican manualmente mediante el método `applyProposition` para actualizar [!DNL DOM] según el contenido de personalización de la propuesta.
 1. Para las ofertas [!DNL HTML]/[!DNL JSON] basadas en formularios de Target y las experiencias basadas en código de Journey Optimizer, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado el contenido devuelto. Esto se realiza mediante el comando `sendEvent`.
 
