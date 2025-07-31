@@ -4,9 +4,9 @@ title: Editar conexiones de destino mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo editar varios componentes de una conexión de destino mediante la API de Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1622'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ Este tutorial trata los pasos para editar varios componentes de una conexión de
 
 >[!NOTE]
 >
-> Actualmente, las operaciones de edición descritas en este tutorial solo se admiten a través de la API de Flow Service.
+> Las operaciones de edición descritas en este tutorial también se admiten en la interfaz de usuario de Experience Platform. Lea el tutorial sobre cómo [editar destinos en la interfaz de usuario](/help/destinations/ui/edit-destination.md) para obtener más información.
 
 ## Introducción {#get-started}
 
@@ -453,6 +453,6 @@ Una respuesta correcta devuelve el ID de conexión base y una etiqueta actualiza
 
 Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform para obtener más información sobre cómo interpretar las respuestas de error.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha aprendido a actualizar varios componentes de una conexión de destino mediante la API [!DNL Flow Service]. Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../home.md).
