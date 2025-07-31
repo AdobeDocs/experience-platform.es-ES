@@ -1,14 +1,12 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, julio de 2025
 description: Las notas de la versión de julio de 2025 de Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
+source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1573'
 ht-degree: 23%
 
 ---
-
 
 # Notas de la versión de Adobe Experience Platform
 
@@ -34,6 +32,7 @@ Estas son las nuevas funciones y actualizaciones de las existentes en Adobe Expe
 - [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
 
+
 ## Capacidad {#capacity}
 
 >[!AVAILABILITY]
@@ -53,6 +52,7 @@ Para obtener más información, lea [Descripción general de la capacidad](../..
 | Destino | Descripción |
 | --- | --- |
 | Disponibilidad limitada de la conexión [Google Customer Match + Display &amp; Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) | Después de estar disponible brevemente para todos los clientes en junio, Adobe ha devuelto esta integración a una disponibilidad limitada. Actualmente, el acceso a este destino está restringido a los clientes que ya están habilitados, mientras que Adobe y Google trabajan para resolver los problemas de implementación. Si le interesa utilizar esta integración una vez que se reanude el despliegue más amplio, póngase en contacto con su representante de Adobe para expresar su intención. |
+| Actualización interna de [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) | Desde el viernes, 31 de julio de 2025, puede ver dos tarjetas [!DNL The Trade Desk] una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. <br><br>Se ha cambiado el nombre del conector de destino [!DNL The Trade Desk] existente a **[!UICONTROL (obsoleto) The Trade Desk]** y ya está disponible una nueva tarjeta con el nombre **[!UICONTROL The Trade Desk]**. Use la nueva conexión **[!UICONTROL The Trade Desk]** en el catálogo para nuevos flujos de datos de activación. <br><br>Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de Trade Desk]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br><br>Si está creando flujos de datos a través de la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar sus [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:<ul><li>ID de especificación de flujo: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>ID de especificación de conexión: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **Funcionalidad nueva o actualizada**
 
@@ -144,3 +144,4 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | Compatibilidad con la eliminación suave de registros en [!DNL Salesforce] | El origen [!DNL Salesforce] ahora admite la inclusión de registros eliminados de forma suave mediante un parámetro `includeDeletedObjects` opcional. Cuando se establece en true, los clientes pueden incluir registros eliminados temporalmente en sus consultas [!DNL Salesforce] e incluir estos registros en Experience Platform. Lea la documentación de fuentes de [[!DNL Salesforce] ](../../sources/connectors/crm/salesforce.md) para obtener más información. |
 
 Para obtener más información, lea la [Información general de las fuentes](../../sources/home.md).
+
