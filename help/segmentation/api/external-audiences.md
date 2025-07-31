@@ -2,9 +2,9 @@
 title: Punto final de API de audiencias externas
 description: Aprenda a utilizar la API de audiencias externas para crear, actualizar, activar y eliminar audiencias externas de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
+source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2189'
 ht-degree: 5%
 
 ---
@@ -78,10 +78,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
@@ -95,8 +97,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | Cadena | Nombre de la audiencia externa. |
 | `description` | Cadena | Una descripción opcional para la audiencia externa. |
 | `customAudienceId` | Cadena | Un identificador opcional para la audiencia externa. |
-| `fields` | Matriz de objetos | La lista de campos y sus tipos de datos. Al crear la lista de campos, puede agregar los siguientes elementos: <ul><li>`name`: **Requerido** El nombre del campo que forma parte de la especificación de audiencia externa.</li><li>`type`: **Requerido** Tipo de datos que van al campo. Los valores admitidos son `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) y `boolean`.</li>`identityNs`: **Requerido para el campo de identidad** El área de nombres que usa el campo de identidad. Los valores admitidos incluyen todas las áreas de nombres válidas, como `ECID` o `email`.li><li>`labels`: *Opcional* Una matriz de etiquetas de control de acceso para el campo. Encontrará más información sobre las etiquetas de control de acceso disponibles en el [glosario de etiquetas de uso de datos](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objeto | Un objeto que contiene la información donde se encuentra la audiencia externa. Al usar este objeto, **debe** incluir la siguiente información: <ul><li>`path`: **Requerido**: La ubicación de la audiencia externa o la carpeta que contiene la audiencia externa dentro del origen.</li><li>`type`: **Requerido** El tipo de objeto que está recuperando del origen. Este valor puede ser `file` o `folder`.</li><li>`sourceType`: *Opcional* El tipo de origen desde el que está recuperando. Actualmente, el único valor admitido es `Cloud Storage`.</li><li>`cloudType`: *Opcional* El tipo de almacenamiento en la nube, basado en el tipo de origen. Los valores admitidos son `S3`, `DLZ`, `GCS` y `SFTP`.</li><li>`baseConnectionId`: el identificador de la conexión base y se proporciona desde el proveedor de origen. Este valor es **obligatorio** si se usa un valor `cloudType` de `S3`, `GCS` o `SFTP`. Para obtener más información, lea la [descripción general de conectores de origen](../../sources/home.md)li></ul> |
+| `fields` | Matriz de objetos | La lista de campos y sus tipos de datos. Al crear la lista de campos, puede agregar los siguientes elementos: <ul><li>`name`: **Requerido** El nombre del campo que forma parte de la especificación de audiencia externa.</li><li>`type`: **Requerido** Tipo de datos que van al campo. Los valores admitidos son `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) y `boolean`.</li><li>`identityNs`: **Requerido para el campo de identidad** El área de nombres que usa el campo de identidad. Los valores admitidos incluyen todas las áreas de nombres válidas, como `ECID` o `email`.</li><li>`labels`: *Opcional* Una matriz de etiquetas de control de acceso para el campo. Encontrará más información sobre las etiquetas de control de acceso disponibles en el [glosario de etiquetas de uso de datos](/help/data-governance/labels/reference.md). </li></ul> |
+| `sourceSpec` | Objeto | Un objeto que contiene la información donde se encuentra la audiencia externa. Al usar este objeto, **debe** incluir la siguiente información: <ul><li>`path`: **Requerido**: La ubicación de la audiencia externa o la carpeta que contiene la audiencia externa dentro del origen.</li><li>`type`: **Requerido** El tipo de objeto que está recuperando del origen. Este valor puede ser `file` o `folder`.</li><li>`sourceType`: *Opcional* El tipo de origen desde el que está recuperando. Actualmente, el único valor admitido es `Cloud Storage`.</li><li>`cloudType`: *Opcional* El tipo de almacenamiento en la nube, basado en el tipo de origen. Los valores admitidos son `S3`, `DLZ`, `GCS` y `SFTP`.</li><li>`baseConnectionId`: el identificador de la conexión base y se proporciona desde el proveedor de origen. Este valor es **obligatorio** si se usa un valor `cloudType` de `S3`, `GCS` o `SFTP`. Para obtener más información, lea la [descripción general de los conectores de origen](../../sources/home.md)</li></ul> |
 | `ttlInDays` | Entero | La caducidad de los datos de la audiencia externa en días. Este valor puede establecerse de 1 a 90. De forma predeterminada, la caducidad de los datos se establece en 30 días. |
 | `audienceType` | Cadena | Tipo de audiencia de la audiencia externa. Actualmente, solo se admite `people`. |
 | `originName` | Cadena | **Requerido**: el origen de la audiencia. Indica de dónde proviene la audiencia. Para audiencias externas, debe usar `CUSTOM_UPLOAD`. |
@@ -139,11 +141,13 @@ Una respuesta correcta devuelve el estado HTTP 202 con detalles de la audiencia 
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -231,11 +235,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del estado de la
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -276,6 +282,7 @@ Al utilizar este punto de conexión, puede actualizar los siguientes campos:
 - Descripción de público
 - Etiquetas de control de acceso de nivel de campo
 - Etiquetas de control de acceso de nivel de audiencia
+- Caducidad de los datos de la audiencia
 
 Al actualizar el campo usando este extremo **se reemplaza** el contenido del campo que solicitó.
 
@@ -403,7 +410,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 | -------- | ---- | ----------- |
 | `dataFilterStartTime` | Marca de tiempo Epoch | **Requerido** Intervalo que especifica la hora de inicio en la que se ejecutará el flujo para seleccionar qué archivos se procesarán. |
 | `dataFilterEndTime` | Marca de tiempo Epoch | Intervalo que especifica la hora de finalización en la que se ejecutará el flujo para seleccionar qué archivos se procesarán. |
-| `differentialIngestion` | Booleano | Campo que determina si la ingesta será parcial, en función de la diferencia desde la última o total. De manera predeterminada, este valor es `true`. |
 
 +++
 
