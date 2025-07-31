@@ -72,8 +72,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 >[!IMPORTANT]
 >
 >Al activar *audiencias de Edge para casos de uso de personalización de la misma página y de la siguiente página*, las audiencias *deben* usar una [política de combinación activa en Edge](../../../segmentation/ui/segment-builder.md#merge-policies). La política de combinación [!DNL active-on-edge] garantiza que las audiencias se evalúen constantemente [en el perímetro](../../../segmentation/methods/edge-segmentation.md) y que estén disponibles para casos de uso de personalización en tiempo real y de la página siguiente.  Obtenga información sobre [todos los casos de uso disponibles](#parameter), según el tipo de implementación.
->>Si asigna audiencias perimetrales que utilizan una política de combinación diferente a destinos de Adobe Target, esas audiencias no se evalúan para casos de uso en tiempo real y de la página siguiente.
->>Siga las instrucciones de [creación de una política de combinación](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) y asegúrese de habilitar la opción **[!UICONTROL Política de combinación activa en Edge]**.
+>&#x200B;>Si asigna audiencias perimetrales que utilizan una política de combinación diferente a destinos de Adobe Target, esas audiencias no se evalúan para casos de uso en tiempo real y de la página siguiente.
+>&#x200B;>Siga las instrucciones de [creación de una política de combinación](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) y asegúrese de habilitar la opción **[!UICONTROL Política de combinación activa en Edge]**.
 
 
 | Origen de audiencia | Admitido | Descripción |
@@ -104,7 +104,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -140,8 +140,8 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 >[!NOTE]
 >
 >Cuando se usa un área de trabajo de Target personalizada para la personalización de la misma página y de la página siguiente de [con atributos](../../ui/activate-edge-personalization-destinations.md), solo se envían las [audiencias seleccionadas](../../ui/activate-edge-personalization-destinations.md#select-audiences) al área de trabajo de Target seleccionada. Los [atributos asignados](../../ui/activate-edge-personalization-destinations.md#mapping) se envían al espacio de trabajo de Target predeterminado.
->><br>
->>Este comportamiento cambiará en una actualización futura.
+>&#x200B;><br>
+>&#x200B;>Este comportamiento cambiará en una actualización futura.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -153,7 +153,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar audiencias en destinos de personalización Edge](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
