@@ -1,15 +1,13 @@
 ---
 title: Uso de licencias y capacidad
 description: Obtenga información sobre el uso de licencias y los límites de capacidad en Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 1%
+source-wordcount: '577'
+ht-degree: 6%
 
 ---
-
 
 # Uso de licencias y capacidades
 
@@ -27,7 +25,7 @@ Para obtener más información sobre las protecciones en Experience Platform, le
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="Recuento de audiencia de streaming"
->abstract="Número máximo de audiencias de streaming por zona protegida. Este número incluye el número de audiencias de Edge que tiene en su zona protegida."
+>abstract="Número máximo de audiencias de streaming por zona protegida. Este número incluye el número de audiencias de Edge que tiene en la zona protegida."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
@@ -43,7 +41,7 @@ Dentro de estos servicios, se rastrean las siguientes barreras:
 
 - El número máximo de audiencias de streaming es de 500
    - De estas 500 audiencias de streaming, el número máximo de audiencias de Edge es de 150
-- El rendimiento máximo combinado de la segmentación de streaming es de 1500 registros por segundo (rps)
+- El rendimiento máximo combinado de la segmentación por streaming es de 1500 registros por segundo (rps)
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
