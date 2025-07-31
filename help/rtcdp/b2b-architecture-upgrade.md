@@ -1,12 +1,11 @@
 ---
 title: Actualizaciones de arquitectura en Real-Time CDP B2B edition
 description: Lea este documento para obtener más información sobre las completas actualizaciones de la arquitectura en Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-hide: true
-hidefromtoc: true
-source-git-commit: 78444555178773a8305ba27aaaf7998fe279a71d
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+exl-id: d958a947-e195-4dd4-a04c-63ad82829728
+source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Este documento describe las actualizaciones arquitectónicas de las ediciones B2B y B2P de Real-Time CDP. **No se requiere ninguna acción por su parte** en este momento. Consulte este documento para obtener información sobre cómo las actualizaciones afectarán a las funciones existentes de Adobe Experience Platform. Si tiene alguna pregunta, póngase en contacto con el equipo de cuenta de Adobe.
+>Este documento describe las actualizaciones arquitectónicas de las ediciones B2B y B2P de Real-Time CDP. Las actualizaciones no requerirán acciones por parte de la mayoría de los clientes. Sin embargo, hay audiencias que no se pueden actualizar automáticamente. Adobe trabajará directamente con usted para abordar estos escenarios. Consulte este documento para obtener información sobre cómo las actualizaciones afectarán a las funciones existentes de Adobe Experience Platform. Si tiene alguna pregunta, póngase en contacto con el equipo de cuenta de Adobe.
 
 Adobe ha rediseñado las ediciones B2B y B2P de Real-Time CDP para mejorar la escalabilidad, el rendimiento y la fiabilidad, a la vez que admite casos de uso B2B más avanzados. Para garantizar que todos los clientes se beneficien de estas mejoras, Adobe actualizará todos los clientes B2B y B2P existentes a la nueva arquitectura.
 
@@ -52,19 +51,6 @@ Con esta actualización, ahora puede:
 
 Lea la documentación sobre [audiencias de cuenta](../segmentation/types/account-audiences.md) para obtener más información.
 
-### Retrospectiva completa para eventos de nivel de persona en audiencias de cuenta
-
-Las audiencias de cuenta ahora pueden aprovechar el historial completo de eventos de nivel de persona, ampliándose más allá de la ventana retrospectiva de 30 días anterior.
-
-Con esta actualización, ahora puede:
-
-* Cree audiencias más completas basadas en el historial completo de eventos de nivel de persona asociados.
-* Habilite definiciones de audiencia más completas y precisas aprovechando los datos de comportamiento a largo plazo.
-* Identifique cuentas de alto valor basadas en patrones de participación más profundos a lo largo del tiempo.
-* Casos de uso de soporte que requieren perspectivas de acciones históricas, como las que implican ciclos de venta largos o señales de compra demoradas.
-
-Lea la documentación sobre [audiencias de cuenta](../segmentation/types/account-audiences.md) para obtener más información.
-
 ## Actualizaciones de funciones existentes
 
 Las siguientes funciones se han actualizado como parte de las actualizaciones arquitectónicas de B2B.
@@ -73,16 +59,33 @@ Las siguientes funciones se han actualizado como parte de las actualizaciones ar
 
 Como parte de la nueva actualización de la arquitectura, los filtros de Evento de experiencia ya no se pueden usar dentro de una sola audiencia de varias entidades que incluya atributos B2B.
 
-Para lograr la misma lógica de audiencia, utilice el enfoque de segmento a segmento:
+Para lograr la misma lógica de audiencia, puede usar el generador de segmentos para [agregar audiencias y referenciar audiencias](../segmentation/ui/segment-builder.md#adding-audiences)
 
-1. Crear una audiencia de evento de experiencia: defina la condición de comportamiento por separado. Por ejemplo: &quot;Personas que visitaron la página de precios en los últimos tres días&quot;.
-2. Crear una audiencia de varias entidades con atributos B2B: Haga referencia a la audiencia de Experience Event como parte de los criterios de esta audiencia. Por ejemplo: &quot;Personas que son **&#39;Responsables de la toma de decisiones&#39;** de cualquier oportunidad donde la cuenta se encuentra en el sector **&#39;Finanzas&#39;** y miembro de la audiencia de personas que visitaron la página de precios en los últimos tres días.
+Por ejemplo:
 
-Una vez completada la actualización, cualquier nueva audiencia de varias entidades con atributos B2B y eventos de experiencia debe crearse con el enfoque de segmento a segmento. Además, debe validar la pertenencia a audiencias para garantizar el comportamiento esperado.
+* Crear una audiencia de evento de experiencia
+   * Defina la condición de comportamiento por separado. Por ejemplo: &quot;Personas que visitaron la página de precios en los últimos tres días&quot;.
+* Cree una audiencia de varias entidades con atributos B2B.
+   * Desde aquí puede hacer referencia a la audiencia de Experience Event como parte de los criterios de esta audiencia. Por ejemplo: &quot;Personas que son **&#39;Responsables de la toma de decisiones&#39;** de cualquier oportunidad donde la cuenta se encuentra en el sector **&#39;Finanzas&#39;** y miembro de la audiencia de personas que visitaron la página de precios en los últimos tres días.
+
+Una vez completada la actualización, cualquier nueva audiencia de varias entidades con atributos B2B y eventos de experiencia debe crearse con el enfoque [segmento de segmento](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types).
+
+>[!TIP]
+>
+>Un **segmento de segmentos** es cualquier definición de segmento que contiene uno o más segmentos de lote o de borde. **Nota**: si usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**.
 
 ### Resolución de entidades y combinación de prioridad de tiempo en audiencias B2B
 
-Como parte de la actualización de la arquitectura, Adobe ha introducido la resolución de entidades para cuentas y oportunidades, que se ejecuta a diario. Esta mejora permite a Experience Platform identificar y consolidar varios registros que representan la misma entidad real, lo que mejora la coherencia de los datos y permite una segmentación de audiencia más precisa.
+Como parte de la actualización de la arquitectura, Adobe presenta la resolución de entidades para Cuentas y oportunidades. La resolución de la entidad se basa en la coincidencia de ID determinística y en los datos más recientes. El trabajo de resolución de entidades se ejecuta a diario durante la segmentación por lotes, antes de evaluar audiencias de varias entidades con atributos B2B.
+
+>[!BEGINSHADEBOX]
+
+#### ¿Cómo funciona la resolución de entidades?
+
+* **Antes**: Si se usó un número del Sistema de numeración universal de datos (DUNS) como identidad adicional y el número DUNS de la cuenta se actualizó en un sistema de origen como CRM, el identificador de la cuenta se vincula a los números DUNS antiguos y nuevos.
+* **Después**: Si el número DUNS se usó como identidad adicional y el número DUNS de la cuenta se actualizó en un sistema de origen como un CRM, el ID de cuenta solo se vincula al nuevo número DUNS, reflejando así el estado actual de la cuenta con mayor precisión.
+
+>[!ENDSHADEBOX]
 
 Con esta actualización, ahora puede:
 
@@ -94,8 +97,6 @@ Lea la [[!DNL Profile Access] API](../profile/api/entities.md) para obtener más
 ### Compatibilidad con políticas de combinación en audiencias B2B de varias entidades
 
 Las audiencias de varias entidades con atributos B2B ahora admiten una única política de combinación (la política de combinación predeterminada que configure) en lugar de varias políticas de combinación.
-
-Las audiencias que anteriormente dependían de una política de combinación no predeterminada pueden producir resultados diferentes. Para comprender los cambios potenciales en la composición de la audiencia, revise y pruebe cualquiera de sus audiencias que dependa de una política de combinación no predeterminada. Además, supervise los resultados de activación para detectar cualquier cambio en la composición de la audiencia debido al cambio en la política de combinación.
 
 Lea la guía del caso de uso de segmentación [para Real-Time CDP B2B edition](./segmentation/b2b.md) para obtener más información.
 
@@ -127,25 +128,25 @@ Lea la [[!DNL Profile Access] API](../profile/api/entities.md) para obtener más
 
 Ahora puede recuperar esquemas de cuenta y oportunidad como entidades de dimensión de consulta solo después de haber completado el proceso diario de resolución de entidades. Los registros recién introducidos no estarán disponibles para las definiciones de segmento o enriquecimiento de perfil hasta que se complete el siguiente ciclo de resolución de entidad (normalmente cada 24 horas).
 
-Se recomienda revisar cualquier caso de uso que requiera acceso en tiempo real a la cuenta y a los datos de oportunidad. Además, se recomienda planificar el periodo de latencia hasta un máximo de 24 horas al diseñar o actualizar flujos de trabajo que dependan de la segmentación basada en búsquedas o la personalización con entidades de cuenta y de oportunidad.
+<!-- ### Deprecation of audience creation via API for B2B entities
 
-### Obsolescencia de la creación de audiencias mediante API para entidades B2B
+Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
-La creación de audiencias mediante entidades B2B a través de API está en desuso. La lista de entidades B2B afectadas incluye:
-
-* Cuenta
-* Oportunidad
-* Relación cuenta con la persona
-* Relación entre oportunidad y la persona
+* Account
+* Opportunity
+* Account-Person Relation
+* Opportunity-Person Relation
 * Campaign
-* Miembro de campaña
-* Lista de marketing
-* Miembro de lista de marketing
+* Campaign Member
+* Marketing List
+* Marketing List Member
 
-Lea la [guía de API de extremo de definiciones de segmento](../segmentation/api/segment-definitions.md) para obtener más información.
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
 
 ### Cambios en las importaciones de audiencias de varias entidades en las herramientas de zonas protegidas
 
-Con las actualizaciones de arquitectura, ya no podrá importar audiencias de varias entidades con atributos B2B y eventos de experiencia si se exportaron antes de la actualización. Estas audiencias no se importarán correctamente y no se pueden convertir automáticamente a la nueva arquitectura. Para solucionar esta limitación, debe volver a exportar estas audiencias y luego importarlas en sus respectivas zonas protegidas de destino con las herramientas de zonas protegidas.
+Con las actualizaciones de la arquitectura, ya no podrá importar audiencias de varias entidades con atributos B2B y eventos de experiencia si el paquete que incluía estas audiencias se publicó antes de la actualización. Estas audiencias no se importarán correctamente y no se pueden convertir automáticamente a la nueva arquitectura. Para solucionar esta limitación, debe crear un nuevo paquete con las audiencias actualizadas y luego importarlas a sus respectivas zonas protegidas de destino con las herramientas de zonas protegidas.
+
+Los entornos limitados de desarrollo se actualizarán a la nueva arquitectura. Se actualizarán las audiencias que se puedan actualizar automáticamente; las que no se puedan actualizar se deshabilitarán. Las audiencias deshabilitadas deben volver a crearse después de la actualización.
 
 Lea la [guía de herramientas de espacio aislado](../sandboxes/ui/sandbox-tooling.md) para obtener más información.
