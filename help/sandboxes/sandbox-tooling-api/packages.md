@@ -2,9 +2,9 @@
 title: Punto final de API de paquetes de herramientas de zona protegida
 description: El extremo /packages en la API de herramientas de espacio aislado le permite administrar paquetes mediante programación en Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
+source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2933'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ El extremo `/packages` de la API de herramientas de zona protegida le permite ad
 
 ## Creación de un paquete {#create}
 
-Puede crear un paquete de varios artefactos realizando una solicitud de POST al extremo `/packages` y proporcionando al mismo tiempo valores para el nombre y el tipo de paquete del paquete.
+Puede crear un paquete de varios artefactos realizando una petición POST al extremo `/packages` y proporcionando al mismo tiempo valores para el nombre y el tipo de paquete del paquete.
 
 **Formato de API**
 
@@ -100,7 +100,7 @@ Una respuesta correcta devuelve el paquete recién creado. La respuesta incluye 
 
 ## Actualización de un paquete {#update}
 
-Puede actualizar un paquete realizando una solicitud de PUT al extremo `/packages`.
+Use el extremo `/packages` en la API de herramientas de zona protegida para actualizar un paquete.
 
 ### Adición de artefactos a un paquete {#add-artifacts}
 
@@ -139,7 +139,7 @@ curl -X PUT \
 | `id` | El ID del paquete que se va a actualizar. | Cadena | Sí |
 | `action` | Para agregar artefactos al paquete, el valor de la acción debe ser **ADD**. Esta acción solo es compatible con los tipos de paquete **PARTIAL**. | Cadena | Sí |
 | `artifacts` | Una lista de artefactos que se añadirán en el paquete. No habrá cambios en el paquete si la lista es **null** o **empty**. Los artefactos se deduplican antes de agregarse al paquete. Consulte la tabla siguiente para obtener una lista completa de los artefactos admitidos. | Matriz | No |
-| `expiry` | La marca de tiempo que define la fecha de caducidad del paquete. El valor predeterminado es de 90 días desde la hora en que se llama a la API del PUT si no se especifica la caducidad en la carga útil. El campo de caducidad de la respuesta será la hora UTC epoch. | Cadena (formato de marca de hora UTC) | No |
+| `expiry` | La marca de tiempo que define la fecha de caducidad del paquete. El valor predeterminado es de 90 días desde el momento en que se llama a la API de PUT si no se especifica la caducidad en la carga útil. El campo de caducidad de la respuesta será la hora UTC epoch. | Cadena (formato de marca de hora UTC) | No |
 
 Actualmente se admiten los siguientes tipos de artefactos.
 
@@ -345,7 +345,7 @@ Una respuesta correcta devuelve el paquete actualizado. La respuesta incluye el 
 
 ## Eliminación de un paquete {#delete}
 
-Para eliminar un paquete, realice una solicitud de DELETE al extremo `/packages` y especifique el identificador del paquete que desea eliminar.
+Para eliminar un paquete, realice una petición DELETE al extremo `/packages` y especifique el identificador del paquete que desea eliminar.
 
 **Formato de API**
 
@@ -380,9 +380,9 @@ Una respuesta correcta devuelve un motivo que muestra el ID del paquete eliminad
 }
 ```
 
-## Publish un paquete {#publish}
+## Publicación de un paquete {#publish}
 
-Para habilitar la importación de un paquete en una zona protegida, debe publicarlo. Realice una solicitud de GET al extremo `/packages` mientras especifica el identificador del paquete que desea publicar.
+Para habilitar la importación de un paquete en una zona protegida, debe publicarlo. Realice una petición GET al extremo `/packages` mientras especifica el identificador del paquete que desea publicar.
 
 **Formato de API**
 
@@ -433,7 +433,7 @@ Una respuesta correcta devuelve el paquete publicado.
 
 ## Búsqueda de un paquete {#look-up-package}
 
-Puede buscar un paquete individual realizando una solicitud de GET al extremo `/packages` que incluya el ID correspondiente del paquete en la ruta de solicitud.
+Puede buscar un paquete individual realizando una petición GET al extremo `/packages` que incluya el ID correspondiente del paquete en la ruta de solicitud.
 
 **Formato de API**
 
@@ -501,7 +501,7 @@ Una respuesta correcta devuelve detalles para el ID del paquete consultado. La r
 
 ## Enumeración de paquetes {#list-packages}
 
-Puede enumerar todos los paquetes de su organización realizando una solicitud de GET al extremo `/packages`.
+Puede enumerar todos los paquetes de su organización realizando una petición GET al extremo `/packages`.
 
 **Formato de API**
 
@@ -753,7 +753,7 @@ Se devuelven conflictos en la respuesta. La respuesta muestra el paquete origina
 >
 >Es inherente a la resolución de conflictos que el artefacto alternativo ya existe en la zona protegida de destino.
 
-Puede enviar una importación para un paquete una vez que haya revisado los conflictos y proporcionado las sustituciones realizando una solicitud de POST al extremo `/packages`. El resultado se proporciona como carga útil, que inicia el trabajo de importación para la zona protegida de destino según se especifica en la carga útil.
+Puede enviar una importación para un paquete una vez que haya revisado conflictos y proporcionado sustituciones realizando una petición POST al extremo `/packages`. El resultado se proporciona como carga útil, que inicia el trabajo de importación para la zona protegida de destino según se especifica en la carga útil.
 
 La carga útil también acepta el nombre y la descripción del trabajo especificados por el usuario para el trabajo de importación. Si el nombre y la descripción especificados por el usuario no están disponibles, se utilizan el nombre y la descripción del paquete para el nombre y la descripción del trabajo.
 
@@ -820,7 +820,7 @@ curl -X POST \
 
 ## Mostrar todos los objetos dependientes {#dependent-objects}
 
-Enumere todos los objetos dependientes para los objetos exportados en un paquete realizando una solicitud de POST al extremo `/packages` mientras especifica el identificador del paquete.
+Enumere todos los objetos dependientes para los objetos exportados en un paquete realizando una petición POST al extremo `/packages` mientras especifica el ID del paquete.
 
 **Formato de API**
 
@@ -900,7 +900,7 @@ Una respuesta correcta devuelve una lista de elementos secundarios para los obje
 
 ## Compruebe los permisos basados en funciones para importar todos los artefactos del paquete {#role-based-permissions}
 
-Puede comprobar si tiene permisos para importar artefactos del paquete realizando una solicitud de GET al extremo `/packages` mientras especifica el ID del paquete y el nombre de la zona protegida de destino.
+Puede comprobar si tiene permisos para importar artefactos del paquete realizando una petición GET al extremo `/packages` y especificando al mismo tiempo el ID del paquete y el nombre de la zona protegida de destino.
 
 **Formato de API**
 
@@ -1048,7 +1048,7 @@ Una respuesta correcta devuelve permisos de recurso para la zona protegida de de
 
 ## Enumerar trabajos de exportación/importación {#list-jobs}
 
-Puede enumerar los trabajos de exportación e importación actuales realizando una solicitud de GET al extremo `/packages`.
+Puede enumerar los trabajos de exportación e importación actuales realizando una petición GET al extremo `/packages`.
 
 **Formato de API**
 
@@ -1165,7 +1165,7 @@ El extremo `/handshake` de la API de herramientas de zona protegida le permite a
 
 ### Envío de una solicitud de uso compartido {#send-request}
 
-Envíe una solicitud a una organización asociada de destino para compartir la aprobación realizando una solicitud de POST al extremo `/handshake/bulkCreate`. Esto es necesario para poder compartir paquetes privados.
+Envíe una solicitud a una organización asociada de destino para compartir la aprobación realizando una petición POST al extremo `/handshake/bulkCreate`. Esto es necesario para poder compartir paquetes privados.
 
 **Formato de API**
 
@@ -1223,7 +1223,7 @@ Una respuesta correcta devuelve detalles sobre la solicitud de uso compartido.
             "modifiedByName": "{MODIFIED_BY}",
             "modifiedByIMSOrgId": "{ORG_ID}",
             "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "{LINKIND_ID}"
+            "linkingId": "{LINKING_ID}"
         }
     },
     "failedRequests": {}
@@ -1232,7 +1232,7 @@ Una respuesta correcta devuelve detalles sobre la solicitud de uso compartido.
 
 ### Aprobación de solicitudes de uso compartido recibidas {#approve-requests}
 
-Apruebe solicitudes compartidas de organizaciones asociadas de destino realizando una solicitud de POST al extremo `/handshake/action`. Después de la aprobación, las organizaciones asociadas de origen pueden compartir paquetes privados.
+Apruebe solicitudes de uso compartido de organizaciones asociadas de destino realizando una petición POST al extremo `/handshake/action`. Después de la aprobación, las organizaciones asociadas de origen pueden compartir paquetes privados.
 
 **Formato de API**
 
@@ -1300,7 +1300,7 @@ Una respuesta correcta devuelve detalles sobre la solicitud de uso compartido ap
 
 ### Enumerar solicitudes de recursos compartidos salientes/entrantes {#outgoing-and-incoming-requests}
 
-Enumerar solicitudes de recursos compartidos entrantes y salientes realizando una solicitud de GET al extremo `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`.
+Enumerar solicitudes de recursos compartidos entrantes y salientes realizando una petición GET al extremo `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`.
 
 **Formato de API**
 
@@ -1374,7 +1374,7 @@ Use el extremo `/transfer` en la API de herramientas de zona protegida para recu
 
 ### Nueva solicitud de uso compartido {#share-request}
 
-Recupere el paquete de una organización de origen publicada y compártalo con una organización de destino realizando una solicitud de POST al extremo `/transfer` al mismo tiempo que proporciona el ID del paquete y el ID de la organización de destino.
+Busque el paquete de una organización de origen publicada y compártalo con una organización de destino realizando una petición POST al extremo `/transfer` al mismo tiempo que proporciona el ID del paquete y el ID de la organización de destino.
 
 **Formato de API**
 
@@ -1434,7 +1434,7 @@ Una respuesta correcta devuelve los detalles del paquete solicitado y su estado 
 
 ### Obtener una solicitud de uso compartido por ID {#fetch-transfer-by-id}
 
-Recupere los detalles de una solicitud de uso compartido realizando una solicitud de GET al extremo `/transfer/{TRANSFER_ID}` mientras proporciona el ID de transferencia.
+Recupere los detalles de una solicitud compartida realizando una solicitud GET al extremo `/transfer/{TRANSFER_ID}` mientras proporciona el ID de transferencia.
 
 **Formato de API**
 
@@ -1481,7 +1481,7 @@ Una respuesta correcta devuelve los detalles de una solicitud de uso compartido.
 
 ### Buscar lista de recursos compartidos {#transfers-list}
 
-Busque una lista de solicitudes de transferencia realizando una solicitud de GET al extremo `/transfer/list?{QUERY_PARAMETERS}`, cambiando los parámetros de la misma según sea necesario.
+Recupere una lista de solicitudes de transferencia realizando una petición GET al extremo `/transfer/list?{QUERY_PARAMETERS}`, cambiando los parámetros de la consulta según sea necesario.
 
 **Formato de API**
 
@@ -1557,7 +1557,7 @@ Una respuesta correcta devuelve una lista de todas las solicitudes de transferen
 
 ### Actualización de la disponibilidad del paquete de privado a público {#update-availability}
 
-Cambie un paquete de privado a público realizando una solicitud de GET al extremo `/packages/update`. De forma predeterminada, se crea un paquete con disponibilidad privada.
+Cambie un paquete de privado a público realizando una petición GET al extremo `/packages/update`. De forma predeterminada, se crea un paquete con disponibilidad privada.
 
 **Formato de API**
 
@@ -1628,7 +1628,7 @@ Una respuesta correcta devuelve detalles sobre un paquete y su visibilidad.
 
 ### Solicitud para importar un paquete público {#pull-public-package}
 
-Importe un paquete desde una organización de origen con disponibilidad pública realizando una solicitud de POST al extremo `/transfer/pullRequest`.
+Importe un paquete desde una organización de origen con disponibilidad pública realizando una petición POST al extremo `/transfer/pullRequest`.
 
 **Formato de API**
 
@@ -1684,7 +1684,7 @@ Una respuesta correcta devuelve detalles sobre el paquete público importado.
 
 ### Enumeración de paquetes públicos {#list-public-packages}
 
-Obtenga una lista de paquetes con visibilidad pública realizando una solicitud de GET al extremo `/transfer/list?{QUERY_PARAMS}`.
+Obtenga una lista de paquetes con visibilidad pública realizando una petición GET al extremo `/transfer/list?{QUERY_PARAMS}`.
 
 **Formato de API**
 
@@ -1935,7 +1935,7 @@ Una respuesta correcta devuelve una lista de paquetes públicos y sus detalles.
 
 ## Copiar carga útil del paquete (#package-payload)
 
-Puede copiar la carga útil de un paquete público realizando una solicitud de GET al extremo `/packages/payload` que incluya el ID correspondiente del paquete en la ruta de solicitud.
+Puede copiar la carga útil de un paquete público realizando una petición GET al extremo `/packages/payload` que incluya el ID correspondiente del paquete en la ruta de solicitud.
 
 **Formato de API**
 
@@ -1975,5 +1975,497 @@ Una respuesta correcta devuelve la carga útil del paquete.
 {
     "imsOrgId": "{ORG_ID}",
     "packageId": "{PACKAGE_ID}"
+}
+```
+
+## Migrar actualizaciones de configuración de objetos
+
+Utilice el extremo /packages en la API de herramientas de entorno limitado para migrar actualizaciones de configuración de objetos.
+
+### Operaciones de actualización (#update-operations)
+
+Compare una versión especificada o más reciente de una instantánea de paquete con el estado actual de la zona protegida de origen o una zona protegida de destino utilizada anteriormente en la que se importó el paquete realizando una petición POST al extremo `/packages/{packageId}/version/compare`, proporcionando el ID del paquete.
+
+***Formato de API***
+
+```http
+PATCH /packages/{packageId}/version/compare
+```
+
+| Propiedad | Descripción | Tipo | Requerido |
+| --- | --- | --- | --- |
+| `packageId` | El ID del paquete. | Cadena | Sí |
+
+**Solicitud**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/compare/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "triggerNew": true,
+      "targetSandbox": "{SANDBOX_NAME}"
+  }'
+```
+
+| Propiedad | Descripción | Tipo | Requerido |
+| --- | --- | --- | --- |
+| `triggerNew` | Indicador para almacenar en déclencheur el nuevo trabajo de cálculo de diferencia incluso si ya hay un trabajo activo o completado. | Booleano | No |
+| `targetSandbox` | Representa el nombre de la zona protegida de destino con la que se debe calcular la diferencia. Si no se especifica, la zona protegida de origen se utilizará como zona protegida de destino. | Cadena | No |
+
+**Respuesta**
+
+Una respuesta correcta para un trabajo completado anteriormente devuelve el objeto de trabajo con los resultados de diferencia calculados anteriormente. Un trabajo recién finalizado devuelve el JobId.
+
++++Ver respuesta (trabajo enviado)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "c4b7d07ae4c646279e2070a31c50bd5c",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "SUCCESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "deltaPackageVersion": {
+            "packageId": "{PACKAGE_ID}",
+            "currentVersion": 0,
+            "validated": false,
+            "rootArtifacts": [
+                {
+                    "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de",
+                    "type": "REGISTRY_SCHEMA",
+                    "found": false,
+                    "count": 0
+                }
+            ],
+            "eximGraphDelta": {
+                "vertices": [],
+                "pluginDeltas": [
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 2_1738766274074",
+                                "newValue": "Custom FieldGroup 2"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 4_1738766274074",
+                                "newValue": "Custom FieldGroup 4"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "importReplacementMap": {
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+            "5a45f8cd309d5ed5797be9a0af65e89152a51d57a6c74b52": "4ae041fa182d6faf2e7c56463399170d913138a7c5712909",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/b2b7705e770a35341b8bc5ec5e3644d9c7387266777fe4ba": "https://ns.adobe.com/sandboxtoolingstage/schemas/838c4e21ad81543ac14238ac1756012f7f98f0e0bec6b425",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de": "https://ns.adobe.com/sandboxtoolingstage/schemas/9a55692d527169d0239e126137a694ed9db2406c9bcbd06a",
+            "8f45c79235c91e7f0c09af676a77d170a34b5ee0ad5de72c": "65d755cc3300674c3cfcec620c59876af07f046884afd359",
+            "f04b8e461396ff426f8ba8dc5544f799bf287baa8e0fa5c": "b6fa821ada8cb97cac384f0b0354bbe74209ec97fb6a83a3",
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+            "c8304f3cb7986e8c9b613cd8d832125bd867fb4a5aedf67a": "4d21e9bf89ce0042b52d7d41ff177a7697d695e2617d1fc1"
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
++++Ver respuesta (trabajo enviado recientemente)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "aa5cfacf35a8478c8cf44a675fab1c30 ",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "IN_PROGRESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
+### Actualizar versión del paquete (#package-versioning)
+
+Actualice el paquete a una nueva versión utilizando la última instantánea de la zona protegida de origen para cada objeto realizando una petición GET al extremo `/packages/{packageId}/version/save`, proporcionando el ID del paquete.
+
+***Formato de API***
+
+```http
+PATCH /packages/{packageId}/version/save
+```
+
+| Propiedad | Descripción | Tipo | Requerido |
+| --- | --- | --- | --- |
+| `packageId` | El ID del paquete. | Cadena | Sí |
+
+**Solicitud**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado del trabajo para la actualización de la versión.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Version Job Package: {JOB_ID}",
+    "description": null,
+    "visibility": "TENANT",
+    "requestType": "VERSION",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPGRADE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Recuperación del historial de versiones del paquete (#package-version-history)
+
+Recupere el historial de versiones del paquete, incluidas la marca de tiempo y el modificador, realizando una petición GET al extremo `/packages/{packageId}/history`, proporcionando el ID del paquete.
+
+***Formato de API***
+
+```http
+PATCH /packages/{packageId}/history
+```
+
+| Propiedad | Descripción | Tipo | Requerido |
+| --- | --- | --- | --- |
+| `packageId` | El ID del paquete. | Cadena | Sí |
+
+**Solicitud**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve el historial de versiones de un paquete.
+
+```json
+[
+    {
+        "id": "cb68591a1ed941e191e7f52e33637a26",
+        "version": 0,
+        "createdDate": 1739516784000,
+        "modifiedDate": 1739516784000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 3
+    },
+    {
+        "id": "e26189e6e4df476bb66c3fc3e66a1499",
+        "version": 0,
+        "createdDate": 1739343268000,
+        "modifiedDate": 1739343268000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 2
+    },
+    {
+        "id": "11af34c0eee449ac84ef28c66d9383e3",
+        "version": 0,
+        "createdDate": 1739343073000,
+        "modifiedDate": 1739343073000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 1
+    }
+]
+```
+
+### Enviar un trabajo de actualización (#submit-update)
+
+Inserte nuevas actualizaciones en los objetos de zona protegida de destino realizando una petición PATCH al extremo `/packages/{packageId}/import`, proporcionando el ID del paquete.
+
+***Formato de API***
+
+```http
+PATCH /packages/{packageId}/import
+```
+
+| Propiedad | Descripción | Tipo | Requerido |
+| --- | --- | --- | --- |
+| `packageId` | El ID del paquete. | Cadena | Sí |
+
+**Solicitud**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "id": "50fd94f8072b4f248737a2b57b41058f",
+      "name": "Test Update",
+      "destinationSandbox": {
+        "name": "test-sandbox-sbt",
+        "imsOrgId": "{ORG_ID}"
+      },
+      "overwriteMappings": {
+        "https://ns.adobe.com/sandboxtoolingstage/schemas/327a48c83a5359f8160420a00d5a07f0ba8631a1fd466f9e" : {
+            "id" : "https://ns.adobe.com/sandboxtoolingstage/schemas/e346bb2cd7b26576cb51920d214aebbd42940a9bf94a75cd",
+            "type" : "REGISTRY_SCHEMA"
+        }
+      }
+  }'
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve el ID de trabajo de la actualización.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Update Job Name",
+    "description": "Update Job Description",
+    "visibility": "TENANT",
+    "requestType": "IMPORT",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPDATE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "amanda-1",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Deshabilitar la actualización y la anulación de un paquete (#disable-update)
+
+Deshabilite la actualización y la invalidación de los paquetes que no los admitan realizando una petición GET al extremo `/packages/{packageId}/?{QUERY_PARAMS}`, proporcionando el identificador del paquete.
+
+***Formato de API***
+
+```http
+PATCH /packages/{packageId}?{QUERY_PARAMS}
+```
+
+| Propiedad | Descripción | Tipo | Requerido |
+| --- | --- | --- | --- |
+| `packageId` | El ID del paquete. | Cadena | Sí |
+| {QUERY_PARAM} | Parámetro de consulta getCapabilites. Debe establecerse en `true` o `false` | Booleano | Sí |
+
+**Solicitud**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Respuesta**
+
+Una respuesta correcta devuelve una lista de las capacidades del paquete.
+
+```json
+{
+    "id": "80230dde96574a828191144709bb9b51",
+    "version": 3,
+    "createdDate": 1749808582000,
+    "modifiedDate": 1749808648000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "Ankit_Primary_Descriptor_Test",
+    "description": "RestPackage",
+    "imsOrgId": "{ORG_ID}",
+    "clientId": "usecasebuilder",
+    "packageType": "PARTIAL",
+    "expiry": 1757584598000,
+    "publishDate": 1749808648000,
+    "status": "PUBLISHED",
+    "packageVisibility": "PRIVATE",
+    "latestPackageVersion": 0,
+    "packageAccessType": "TENANT",
+    "artifactsList": [
+        {
+            "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/1c767056056de64d8030380d1b9f570d26bc15501a1e0e95",
+            "altId": null,
+            "type": "REGISTRY_SCHEMA",
+            "found": false,
+            "count": 0
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "atul-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "packageCapabilities": {
+        "capabilities": [
+            "VERSIONABLE"
+        ]
+    }
 }
 ```
