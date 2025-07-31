@@ -3,9 +3,9 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a un destino en Adobe Experience Platform, activar alertas y configurar acciones de marketing para el destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
+source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->* Para conectarse a un destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para conectarse a un destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para conectarse a un destino que admita exportaciones de conjuntos de datos, necesita los **[!UICONTROL permisos Ver destinos]** y **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 ## Información general {#overview}
@@ -54,15 +54,24 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Nombre de la cuenta"
->abstract="Escriba un nombre que le ayude a identificar fácilmente esta cuenta de destino en el futuro. Esto resulta especialmente útil si tiene varias conexiones al mismo tipo de destino."
+>abstract="Escriba un nombre que le ayude a identificar fácilmente esta cuenta de destino en el futuro. Esto resulta especialmente útil si tiene varias conexiones al mismo destino."
 
 El primer paso para conectarse a un destino es autenticarse en la plataforma de destino.
 
-Según el destino al que se esté conectando, es posible que se le dirija a la página del socio de destino para autenticarse, o que se le pida que introduzca las credenciales de autenticación directamente en el flujo de trabajo de Experience Platform. A continuación se muestra un ejemplo de la entrada requerida para autenticarse en un destino [!DNL Amazon S3]. En cada página de documentación de destino se proporcionan instrucciones detalladas acerca de la entrada necesaria (vea, por ejemplo, la sección de autenticación de [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) y [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Según el destino al que se esté conectando, es posible que se le dirija a la página del socio de destino para autenticarse, o que se le pida que introduzca las credenciales de autenticación directamente en el flujo de trabajo de Experience Platform.
+
+Al configurar una nueva conexión de destino, debe proporcionar un **[!UICONTROL Nombre de cuenta]** y, opcionalmente, una **[!UICONTROL Descripción]**. Estos campos están disponibles para todos los destinos.
+
+* **[!UICONTROL Nombre de cuenta]**: escriba un nombre que le ayude a identificar fácilmente esta cuenta de destino en el futuro. Esto resulta especialmente útil si tiene varias conexiones al mismo destino.
+* **[!UICONTROL Descripción]** (opcional): agregue cualquier detalle adicional que le ayude a usted o a su equipo a distinguir entre cuentas, como el propósito de la conexión o el contexto empresarial relevante.
+
+Proporcionar información clara y descriptiva en estos campos facilita la administración y selección de la cuenta de destino correcta al activar audiencias.
+
+A continuación se muestra un ejemplo de la entrada requerida para autenticarse en un destino [!DNL Amazon S3]. En cada página de documentación de destino se proporcionan instrucciones detalladas acerca de la entrada necesaria (vea, por ejemplo, la sección de autenticación de [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) y [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 Se requieren **[!DNL Amazon S3]y parámetros de autenticación opcionales**
 
-![Imagen que muestra los parámetros de entrada opcionales y requeridos al autenticarse en un destino de Amazon S3.](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
+![Imagen que muestra los parámetros de entrada opcionales y requeridos al autenticarse en un destino de Amazon S3.](../assets/ui/connect-destinations/s3-new-acc.png)
 
 ## Configurar parámetros de conexión {#set-up-connection-parameters}
 
@@ -116,7 +125,7 @@ Algunos destinos basados en archivos admiten la activación de audiencias a clie
 
 2. Seleccione **[!UICONTROL Guardar y salir]** para guardar la configuración de destino o seleccione **[!UICONTROL Siguiente]** para continuar con los datos de audiencia [flujo de activación](activation-overview.md).
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este documento, ha aprendido a utilizar la interfaz de usuario de Experience Platform para establecer una conexión con un destino. Como recordatorio, los parámetros de conexión disponibles y requeridos varían de un destino a otro. También debería consultar la página de documentación de destino en el [catálogo de destinos](/help/destinations/catalog/overview.md) para obtener información específica acerca de las entradas requeridas y las opciones disponibles por tipo de destino.
 
