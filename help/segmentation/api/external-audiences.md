@@ -1,13 +1,11 @@
 ---
 title: Punto final de API de audiencias externas
 description: Aprenda a utilizar la API de audiencias externas para crear, actualizar, activar y eliminar audiencias externas de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
+source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
 workflow-type: tm+mt
-source-wordcount: '2405'
-ht-degree: 4%
+source-wordcount: '2219'
+ht-degree: 5%
 
 ---
 
@@ -528,24 +526,23 @@ Puede recuperar todas las ejecuciones de ingesta para la audiencia externa selec
 
 **Formato de API**
 
-El siguiente punto de conexión admite varios parámetros de consulta para filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudarle a enfocar los resultados.
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**Parámetros de consulta**
+<!-- **Query parameters**
 
-+++ Una lista de parámetros de consulta disponibles.
++++ A list of available query parameters. 
 
-| Parámetro | Descripción | Ejemplo |
+| Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `limit` | Número máximo de elementos devueltos en la respuesta. Este valor puede variar de 1 a 40. De forma predeterminada, el límite se establece en 20. | `limit=30` |
-| `sortBy` | Orden en el que se ordenan los elementos devueltos. Puede ordenar por `name` o por `createdAt`. Además, puede agregar un signo `-` para ordenar por orden **descendente** en lugar de **ascendente**. De forma predeterminada, los elementos se ordenan por `createdAt` en orden descendente. | `sortBy=name` |
-| `property` | Un filtro para determinar qué ejecuciones de ingesta de audiencia se muestran. Puede filtrar según las siguientes propiedades: <ul><li>`name`: le permite filtrar por nombre de audiencia. Si utiliza esta propiedad, puede realizar la comparación mediante `=`, `!=`, `=contains` o `!=contains`. </li><li>`createdAt`: le permite filtrar por el tiempo de ingesta. Si usa esta propiedad, puede realizar la comparación mediante `>=` o `<=`.</li><li>`status`: le permite filtrar por el estado de la ejecución de ingesta. Si utiliza esta propiedad, puede realizar la comparación mediante `=`, `!=`, `=contains` o `!=contains`. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **Solicitud**
 
@@ -594,19 +591,23 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de ejecuciones 
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | Propiedad | Tipo | Descripción |
 | -------- | ---- | ----------- |
 | `runs` | Objeto | Un objeto que contiene la lista de ejecuciones de ingesta que pertenece a la audiencia. Encontrará más información sobre este objeto en la [sección de recuperación del estado de ingesta](#retrieve-ingestion-status). |
-| `_page` | Objeto | Objeto que contiene la información de paginación acerca de la lista de resultados. |
 
 +++
 
@@ -644,7 +645,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ais/external-audience/60ccea9
 
 Una respuesta correcta devuelve el estado HTTP 204 con un cuerpo de respuesta vacío.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer esta guía, ahora tiene una mejor comprensión de cómo crear, administrar y eliminar audiencias externas mediante las API de Experience Platform. Para obtener información sobre cómo usar audiencias externas con la interfaz de usuario de Experience Platform, lea la [documentación de Audience Portal](../ui/audience-portal.md).
 
