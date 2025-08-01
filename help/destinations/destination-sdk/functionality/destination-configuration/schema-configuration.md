@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar el esquema de socio para destinos creados con Destination SDK.
 title: Configuración del esquema de socio
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
+source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1910'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Este artículo describe todas las opciones de configuración de esquema admitida
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -106,7 +106,7 @@ Para crear un esquema estático con atributos de perfil, defina los atributos de
 | `segmentRequired` | Booleano | Requerido | Destination SDK requiere este parámetro y siempre se debe establecer en `true`. |
 | `identityRequired` | Booleano | Requerido | Se establece en `true` si los usuarios deben poder asignar [tipos de identidad](identity-namespace-configuration.md) de Experience Platform a los atributos definidos en la matriz `profileFields` |
 | `segmentNamespaceAllowList` | Matriz | Opcional | Permite a los usuarios asignar únicamente audiencias de las áreas de nombres de audiencia definidas en la matriz al destino. <br><br> En la mayoría de los casos no se recomienda el uso de este parámetro. En su lugar, use `"segmentNamespaceDenyList":[]` para permitir que se exporten todos los tipos de audiencias a su destino. <br><br> Si faltan `segmentNamespaceAllowList` y `segmentNamespaceDenyList` en la configuración, los usuarios solo podrán exportar audiencias que se originen del [servicio de segmentación](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` y `segmentNamespaceDenyList` se excluyen mutuamente. |
-| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe a los usuarios de la asignación de audiencias desde las áreas de nombres de audiencia definidas en la matriz al destino. <br><br>Adobe recomienda permitir la exportación de todas las audiencias, independientemente del origen, estableciendo `"segmentNamespaceDenyList":[]`. <br><br>Si faltan `segmentNamespaceAllowed` y `segmentNamespaceDenyList` en la configuración, los usuarios solo podrán exportar audiencias que se originen del [servicio de segmentación](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` y `segmentNamespaceDenyList` se excluyen mutuamente. |
+| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe a los usuarios de la asignación de audiencias desde las áreas de nombres de audiencia definidas en la matriz al destino. <br><br>Adobe recomienda permitir la exportación de todas las audiencias, independientemente del origen, estableciendo `"segmentNamespaceDenyList":[]`. <br><br>**Importante:** Si no especifica `segmentNamespaceDenyList` en su `schemaConfig` y no usa `segmentNamespaceAllowList`, el sistema establece automáticamente `segmentNamespaceDenyList` en `[]`. Esto evita la pérdida de audiencias personalizadas en el futuro. Por motivos de seguridad, Adobe recomienda establecer explícitamente `"segmentNamespaceDenyList":[]` en la configuración. <br><br>`segmentNamespaceAllowList` y `segmentNamespaceDenyList` se excluyen mutuamente. |
 
 {style="table-layout:auto"}
 
@@ -252,7 +252,7 @@ Para configurar el destino de modo que admita la activación de [audiencias gene
 
 Consulte las descripciones de las propiedades en la [tabla](#attributes-schema) más arriba en esta página para obtener más información acerca de la funcionalidad `segmentNamespaceDenyList`.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor qué tipos de esquema admite Destination SDK y cómo puede configurarlo.
 
