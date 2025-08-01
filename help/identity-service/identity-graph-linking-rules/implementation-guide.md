@@ -2,7 +2,7 @@
 title: Guía De Implementación De Reglas De Vinculación De Gráfico De Identidad
 description: Conozca los pasos recomendados a seguir al implementar los datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 6%
@@ -203,7 +203,11 @@ Una vez que tengas una mejor idea de cómo deseas que se comporte tu gráfico, v
 
 ![La página de exploración de identidades con el botón de configuración resaltado.](../images/implementation/settings.png "La página de exploración de identidades con el botón de configuración resaltado."){zoomable="yes"}
 
-Utilice la interfaz de usuario de configuración de identidad para designar las áreas de nombres únicas y configurar las áreas de nombres por orden de prioridad. Una vez que haya terminado de aplicar la configuración, debe esperar al menos seis horas antes de continuar con la ingesta de datos, ya que la nueva configuración tarda al menos seis horas en reflejarse en el servicio de identidad.
+Utilice la interfaz de usuario de configuración de identidad para designar las áreas de nombres únicas y configurar las áreas de nombres por orden de prioridad.
+
+>[!IMPORTANT]
+>
+>Una vez que haya terminado de aplicar la configuración, debe esperar al menos 24 horas para continuar con la ingesta de datos, ya que la nueva configuración tarda al menos 24 horas en reflejarse en el servicio de identidad.
 
 Para obtener más información, lea la [guía de interfaz de usuario de configuración de identidad](./identity-settings-ui.md).
 
@@ -287,7 +291,7 @@ Este ejemplo también muestra que Tom y Summer son dos entidades de persona dist
 
 >[!ENDTABS]
 
-## Pasos siguientes
+## Próximos pasos
 
 Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la siguiente documentación:
 

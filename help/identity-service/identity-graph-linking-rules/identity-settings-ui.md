@@ -2,10 +2,10 @@
 title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '665'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -85,9 +85,9 @@ A partir de aquí, debe confirmar lo siguiente antes de continuar con el paso fi
 >
 >* No habrá cambios en sus datos hasta que guarde su configuración de identidad.
 
-![Ventana de confirmación que muestra una advertencia sobre un retraso de seis horas antes de que se procesen las configuraciones.](../images/rules/complete.png)
+![Ventana de confirmación que muestra una advertencia sobre un retraso de 24 horas antes de que se procesen las configuraciones.](../images/rules/complete.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la siguiente documentación:
 

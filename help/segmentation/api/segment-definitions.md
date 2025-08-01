@@ -4,14 +4,18 @@ title: Punto final de API de definiciones de segmento
 description: El punto final de las definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación las definiciones de segmentos de su organización.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
+source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1558'
 ht-degree: 3%
 
 ---
 
 # Extremo de definiciones de segmento
+
+>[!WARNING]
+>
+>La creación de audiencias mediante entidades B2B mediante la API del servicio de segmentación está en desuso. Ya no puede crear audiencias con las siguientes entidades B2B: Cuenta, Relación cuenta-persona, Campaña, Miembro de campaña, Lista de marketing, Miembro de lista de marketing, Oportunidad y Relación oportunidad-persona.
 
 Adobe Experience Platform le permite crear definiciones de segmentos que definen un grupo de atributos o comportamientos específicos a partir de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Las definiciones de segmentos se aplican a perfiles para crear audiencias. Este objeto (definición de segmento) también se denomina predicado PQL. Los predicados de PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas de PQL.
 
@@ -23,7 +27,7 @@ Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experie
 
 ## Recuperación de una lista de definiciones de segmentos {#list}
 
-Puede recuperar una lista de todas las definiciones de segmentos de su organización realizando una solicitud de GET al extremo `/segment/definitions`.
+Puede recuperar una lista de todas las definiciones de segmentos de su organización realizando una petición GET al extremo `/segment/definitions`.
 
 **Formato de API**
 
@@ -162,7 +166,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de definiciones
 
 ## Crear una nueva definición de segmento {#create}
 
-Puede crear una nueva definición de segmento realizando una solicitud de POST al extremo `/segment/definitions`.
+Puede crear una nueva definición de segmento realizando una petición POST al extremo `/segment/definitions`.
 
 >[!IMPORTANT]
 >
@@ -338,7 +342,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
 
 ## Recuperación de una definición de segmento específica {#get}
 
-GET Puede recuperar información detallada sobre una definición de segmento específica realizando una solicitud al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea recuperar en la ruta de solicitud.
+Puede recuperar información detallada sobre una definición de segmento específica realizando una petición GET al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -427,7 +431,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Recuperación masiva de definiciones de segmentos {#bulk-get}
 
-Puede recuperar información detallada sobre varias definiciones de segmento especificadas realizando una solicitud de POST al extremo `/segment/definitions/bulk-get` y proporcionando los valores `id` de las definiciones de segmento en el cuerpo de la solicitud.
+Puede recuperar información detallada sobre varias definiciones de segmento especificadas realizando una petición POST al extremo `/segment/definitions/bulk-get` y proporcionando los valores `id` de las definiciones de segmento en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -570,11 +574,11 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
 
 ## Eliminar una definición de segmento específica {#delete}
 
-Puede solicitar que se elimine una definición de segmento específica realizando una solicitud de DELETE al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea eliminar en la ruta de solicitud.
+Puede solicitar eliminar una definición de segmento específica realizando una petición DELETE al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea eliminar en la ruta de solicitud.
 
 >[!NOTE]
 >
-> No se puede eliminar una definición de segmento utilizada en una activación de destino **1&rbrace;.**
+> No se puede eliminar una definición de segmento utilizada en una activación de destino **1}.**
 
 **Formato de API**
 
@@ -606,7 +610,7 @@ Una respuesta correcta devuelve el estado HTTP 200 sin mensaje.
 
 ## Actualizar una definición de segmento específica
 
-Puede actualizar una definición de segmento específica realizando una solicitud de PATCH al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea actualizar en la ruta de solicitud.
+Puede actualizar una definición de segmento específica realizando una petición PATCH al extremo `/segment/definitions` y proporcionando el ID de la definición de segmento que desea actualizar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -709,7 +713,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
 
 ## Convertir definición del segmento
 
-Puede convertir una definición de segmento entre `pql/text` y `pql/json` o `pql/json` a `pql/text` realizando una solicitud de POST al extremo `/segment/conversion`.
+Puede convertir una definición de segmento entre `pql/text` y `pql/json` o `pql/json` a `pql/text` realizando una petición POST al extremo `/segment/conversion`.
 
 **Formato de API**
 
@@ -774,6 +778,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
 
 +++
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, ahora tiene una mejor comprensión de cómo funcionan las definiciones de segmentos. Para obtener más información sobre cómo crear un segmento, lea el tutorial [crear un segmento](../tutorials/create-a-segment.md).

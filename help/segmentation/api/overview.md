@@ -3,9 +3,9 @@ title: Guía de API del servicio de segmentación
 description: La API del servicio de segmentación permite a los desarrolladores administrar mediante programación las operaciones de segmentación en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '614'
 ht-degree: 3%
 
 ---
@@ -29,6 +29,12 @@ Para obtener más información sobre cómo usar este extremo, lea la [guía de e
 Los trabajos de exportación son procesos asincrónicos que se utilizan para mantener los miembros de segmentos de audiencia en conjuntos de datos. Puede utilizar el extremo `/export/jobs` para recuperar todos los trabajos de exportación, crear un nuevo trabajo de exportación, recuperar detalles de un trabajo de exportación específico o cancelar un trabajo de exportación específico.
 
 Para obtener más información sobre el uso de este extremo, lea la [guía de extremo de trabajos de exportación](./export-jobs.md).
+
+## Audiencias externas
+
+Puede importar audiencias externas en Experience Platform, recuperar el estado de creación de una audiencia, actualizar una audiencia externa, iniciar una ejecución de ingesta de audiencia, recuperar un estado de ingesta de audiencia externa, enumerar ejecuciones de ingesta de audiencia y eliminar una audiencia externa mediante el extremo `/core/ais/external-audiences`.
+
+Para obtener más información sobre el uso de este extremo, lea la [guía de extremo de audiencias externas](./external-audiences.md).
 
 ## Previsualizaciones y estimaciones
 
@@ -60,6 +66,6 @@ Para obtener más información sobre el uso de este extremo, lea la [guía de ex
 
 La búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolverlos en tiempo casi real. Para comenzar a trabajar con la búsqueda de segmentos, consulte la [guía de extremo de búsqueda](segment-search.md)
 
-## Pasos siguientes
+## Próximos pasos
 
 Para empezar a usar la API [!DNL Segmentation Service], revise las distintas guías de extremos para ver los pasos detallados sobre cómo realizar llamadas a los distintos extremos del servicio. Para obtener más información sobre cómo trabajar con segmentos mediante la interfaz de usuario de [!DNL Experience Platform], consulte la [Guía del usuario de segmentación](../ui/overview.md).

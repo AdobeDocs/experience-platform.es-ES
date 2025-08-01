@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platform le permite acceder a los datos del perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como "perfiles", mediante la API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 4%
+source-wordcount: '1933'
+ht-degree: 3%
 
 ---
 
@@ -23,6 +23,25 @@ Adobe Experience Platform le permite acceder a los datos de [!DNL Real-Time Cust
 ## Introducción
 
 El extremo de API utilizado en esta guía forma parte de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revisa la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de [!DNL Experience Platform].
+
+>[!BEGINSHADEBOX]
+
+## Resolución de entidad
+
+Como parte de la actualización de la arquitectura, Adobe presenta la resolución de entidades para Cuentas y Oportunidades mediante la coincidencia de ID determinística basada en los datos más recientes. El trabajo de resolución de entidades se ejecuta a diario durante la segmentación por lotes, antes de evaluar audiencias de varias entidades con atributos B2B.
+
+Esta mejora permite a Experience Platform identificar y unificar varios registros que representan la misma entidad, lo que mejora la coherencia de los datos y permite una segmentación de audiencia más precisa.
+
+Anteriormente, Cuentas y oportunidades dependía de la resolución basada en gráficos de identidad que conectaba identidades, incluidas todas las ingestas históricas. En el nuevo método de resolución de entidades, las identidades se vinculan solo en función de los datos más recientes
+
+### ¿Cómo funciona la resolución de entidades?
+
+- **Antes**: Si se usó un número del Sistema de numeración universal de datos (DUNS) como identidad adicional y el número DUNS de la cuenta se actualizó en un sistema de origen como CRM, el identificador de la cuenta se vincula a los números DUNS antiguos y nuevos.
+- **Después**: Si el número DUNS se usó como identidad adicional y el número DUNS de la cuenta se actualizó en un sistema de origen como un CRM, el ID de cuenta solo se vincula al nuevo número DUNS, reflejando así el estado actual de la cuenta con mayor precisión.
+
+Como resultado de esta actualización, la API [!DNL Profile Access] ahora refleja la última vista del perfil de combinación una vez finalizado el ciclo de trabajo de resolución de una entidad. Además, los datos coherentes proporcionan casos de uso como segmentación, activación y análisis con una precisión y coherencia de datos mejoradas.
+
+>[!ENDSHADEBOX]
 
 ## Recuperación de una entidad {#retrieve-entity}
 
@@ -1221,7 +1240,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 Una respuesta correcta devuelve el estado HTTP 202 con un cuerpo de respuesta vacío.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir esta guía, ha accedido correctamente a [!DNL Real-Time Customer Profile] campos de datos, perfiles y datos de series temporales. Para obtener información sobre cómo tener acceso a otros recursos de datos almacenados en [!DNL Experience Platform], vea la [descripción general del acceso a datos](../../data-access/home.md).
 
