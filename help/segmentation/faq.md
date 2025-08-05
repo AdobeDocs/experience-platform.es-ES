@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 721024192b54fcbab11b483cc26fa84151bb61a7
+source-git-commit: b7bf7a2b7628f61231321205e2a6b9d675afce8b
 workflow-type: tm+mt
-source-wordcount: '4841'
+source-wordcount: '4828'
 ht-degree: 2%
 
 ---
@@ -120,7 +120,7 @@ Los atributos de enriquecimiento son atributos que provienen de un conjunto de d
 
 | Canal de activación | Audiencias de carga personalizada en CSV | Audiencias de la composición de audiencias |
 | --- | --- | --- |
-| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1&rbrace;.** |
+| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1}.** |
 | Adobe Journey Optimizer Campaigns | Ni los atributos de audiencia ni los de carga útil pueden activarse. | Se pueden activar tanto la audiencia como los atributos de ampliación. |
 
 ## Estados del ciclo vital {#lifecycle-states}
@@ -290,7 +290,7 @@ En este momento, no. Sin embargo, esta capacidad debería estar disponible en un
 
 ### ¿Puedo enviar audiencias desde Composición de audiencia a todos los canales y destinos de flujo descendente?
 
-En este momento, no. Actualmente, puede utilizar audiencias de Composición de audiencias en Campañas de Adobe Journey Optimizer y destinos de Real-Time CDP. En una versión futura se admitirán los Recorridos de Adobe Journey Optimizer.
+¡Sí! Puede utilizar audiencias de Composición de audiencias en Campañas de Adobe Journey Optimizer, Destinos de Real-Time CDP y Recorridos de Adobe Journey Optimizer.
 
 ### ¿Hay alguna barrera en el número de composiciones?
 
