@@ -1,25 +1,25 @@
 ---
-title: Esquemas en Real-time Customer Data Platform B2B Edition
-description: Descripción general de la función de los esquemas XDM (Experience Data Model) en Adobe Real-time Customer Data Platform B2B Edition.
+title: Esquemas en Real-Time Customer Data Platform B2B edition
+description: Una visión general de la función de los esquemas XDM (Experience Data Model) en Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 09f671af0d04251ab7b0a71528cb4b9745594b1c
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 13%
+source-wordcount: '251'
+ht-degree: 12%
 
 ---
 
-# Esquemas en Real-time Customer Data Platform B2B Edition
+# Esquemas en Real-Time Customer Data Platform B2B edition
 
-Adobe Real-time Customer Data Platform B2B Edition proporciona varias [clases de modelo de datos de experiencia (XDM)](../../xdm/schema/composition.md#class) estándar que capturan detalles sobre entidades de datos B2B esenciales, como cuentas, oportunidades, campañas y mucho más. Además, Real-Time CDP B2B Edition permite definir relaciones varios a uno entre estos esquemas para que puedan participar en casos de uso de segmentación avanzada.
+Adobe Real-Time Customer Data Platform B2B edition proporciona varias [clases de modelo de datos de experiencia (XDM)](../../xdm/schema/composition.md#class) estándar que capturan detalles sobre entidades de datos B2B esenciales, como cuentas, oportunidades, campañas y más. Además, Real-Time CDP B2B edition le permite definir relaciones varios a uno entre estos esquemas para que puedan participar en casos de uso de segmentación avanzada.
 
 >[!IMPORTANT]
 >
->Debe tener acceso a Real-Time CDP B2B Edition para que los esquemas B2B participen en [Perfil del cliente en tiempo real](../../profile/home.md).
+>Los esquemas B2B están disponibles para su uso en aplicaciones de Experience Platform (por ejemplo, en [Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition)). <br/>Sin embargo, debe tener acceso a Real-Time CDP B2B edition para que (los perfiles de) los esquemas B2B participen en [Perfil del cliente en tiempo real](../../profile/home.md).
 
-En Real-Time CDP B2B Edition se proporcionan las siguientes clases estándar:
+En Real-Time CDP B2B edition se proporcionan las siguientes clases estándar:
 
 * [Cuenta empresarial de XDM](../../xdm/classes/b2b/business-account.md)
 * [Relación de persona de la cuenta de negocio de XDM](../../xdm/classes/b2b/business-account-person-relation.md)
