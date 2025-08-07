@@ -3,26 +3,26 @@ title: Punto final de API de caducidad del conjunto de datos
 description: El extremo /ttl de la API de higiene de datos le permite programar la caducidad de los conjuntos de datos en Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ca6d7d257085da65b3f08376f0bd32e51e293533
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '2331'
 ht-degree: 2%
 
 ---
 
 # Extremo de caducidad del conjunto de datos
 
-El extremo `/ttl` de la API de higiene de datos le permite programar fechas de caducidad para conjuntos de datos en Adobe Experience Platform.
+Utilice el extremo `/ttl` en la API de higiene de datos para programar cuándo se deben eliminar los conjuntos de datos en Adobe Experience Platform.
 
-La caducidad de un conjunto de datos es solo una operación de eliminación con retraso programado. El conjunto de datos no está protegido mientras tanto, por lo que puede eliminarse por otros medios antes de que caduque.
+Una caducidad del conjunto de datos es una operación de eliminación retrasada. El conjunto de datos no está protegido mientras tanto y puede eliminarse por otros medios antes de su caducidad programada.
 
 >[!NOTE]
 >
 >Aunque la caducidad se especifica como un instante de tiempo específico, puede haber hasta 24 horas de retraso después de la caducidad antes de que se inicie la eliminación real. Una vez iniciada la eliminación, pueden pasar hasta siete días antes de que se hayan eliminado todos los seguimientos del conjunto de datos de los sistemas Experience Platform.
 
-En cualquier momento antes de que se inicie realmente la eliminación del conjunto de datos, puede cancelar la caducidad o modificar su hora de déclencheur. Después de cancelar la caducidad de un conjunto de datos, puede volver a abrirlo estableciendo una nueva caducidad.
+Antes de que comience la eliminación, puede cancelar la caducidad o cambiar su hora programada. Para volver a abrir una caducidad cancelada, establezca una nueva caducidad.
 
-Una vez iniciada la eliminación del conjunto de datos, su trabajo de caducidad se marcará como `executing` y no se podrá modificar más. El propio conjunto de datos puede recuperarse durante un máximo de siete días, pero solo a través de un proceso manual iniciado a través de una solicitud de servicio de Adobe. A medida que se ejecuta la solicitud, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez que los datos se eliminen de los tres servicios, la caducidad se marcará como `completed`.
+Una vez iniciada la eliminación, el trabajo de caducidad se marca como `executing` y ya no se puede modificar. El conjunto de datos puede recuperarse durante un máximo de siete días, pero solo a través de una solicitud de servicio manual de Adobe. Durante la eliminación, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real quitan cada uno el contenido del conjunto de datos por separado. Una vez completada la eliminación, la caducidad se marca como `completed`.
 
 >[!WARNING]
 >
@@ -44,7 +44,9 @@ El extremo utilizado en esta guía forma parte de la API de higiene de datos. An
 
 ## Enumerar caducidades del conjunto de datos {#list}
 
-Puede enumerar todas las caducidades de los conjuntos de datos de su organización realizando una petición GET. Los parámetros de consulta se pueden utilizar para filtrar la respuesta y obtener los resultados adecuados.
+Puede enumerar todas las caducidades de los conjuntos de datos configurados para su organización realizando una petición GET al extremo `/ttl`.
+
+Filtre los resultados con parámetros de consulta para devolver solo las caducidades que cumplan los criterios. Cada resultado incluye detalles de estado y configuración para cada caducidad del conjunto de datos.
 
 **Formato de API**
 
@@ -54,11 +56,20 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | Una lista de parámetros de consulta opcionales, con varios parámetros separados por `&` caracteres. Los parámetros comunes incluyen `limit` y `page` para fines de paginación. Para obtener una lista completa de los parámetros de consulta admitidos, consulte la [sección del apéndice](#query-params). |
+| `{QUERY_PARAMETERS}` | Una lista de parámetros de consulta opcionales, con varios parámetros separados por `&` caracteres. Los parámetros comunes incluyen `limit` y `page` para fines de paginación. Para obtener una lista completa de los parámetros de consulta admitidos, consulte la [sección del apéndice](#query-params) con una lista completa de los parámetros de consulta admitidos. Los parámetros más utilizados se incluyen a continuación, así como en el apéndice. |
+| `author` | Filtre por el usuario que actualizó o creó recientemente la caducidad del conjunto de datos. Admite patrones de tipo SQL (por ejemplo, `LIKE %john%`). |
+| `datasetId` | Filtrar las caducidades por un ID de conjunto de datos específico. |
+| `datasetName` | Un filtro que no distingue entre mayúsculas y minúsculas para las coincidencias de nombres de conjuntos de datos. |
+| `status` | Filtrar por una lista de estados separados por comas: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiryDate` | Filtre por caducidades con una fecha de caducidad específica. |
+| `limit` | Estipule el número máximo de resultados que desea devolver (1-100, predeterminado: 25). |
+| `page` | Pagine los resultados con un índice basado en cero (tamaño de página predeterminado: 50, máximo: 100). |
 
 {style="table-layout:auto"}
 
 **Solicitud**
+
+La siguiente solicitud recupera todas las caducidades del conjunto de datos actualizadas antes del 1 de agosto de 2021 y actualizadas por última vez por un usuario cuyo nombre coincida con &quot;Jane Doe&quot;.
 
 ```shell
 curl -X GET \
@@ -81,15 +92,17 @@ Una respuesta correcta enumera las caducidades resultantes del conjunto de datos
 {
   "results": [
     {
-      "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-      "datasetId": "629bd9125b31471b2da7645c",
-      "datasetName": "Sample Acme dataset",
-      "sandboxName": "hygiene-beta",
-      "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
+      "ttlId": "SD-c9f113f2-d751-44bc-bc20-9d5ca0b6ae15",
+      "datasetId": "3e9f815ae1194c65b2a4c5ea",
+      "datasetName": "Acme_Profile_Engagements",
+      "sandboxName": "acme-beta",
+      "displayName": "Engagement Data Retention Policy",
+      "description": "Scheduled expiry for Acme marketing data",
+      "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
       "status": "pending",
-      "expiry": "2050-01-01T00:00:00Z",
-      "updatedAt": "2023-06-09T16:52:44.136028Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
+      "expiry": "2027-01-12T17:15:31.000Z",
+      "updatedAt": "2026-12-15T12:40:20.000Z",
+      "updatedBy": "t.lannister@acme.com <t.lannister@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
     }
   ],
   "current_page": 0,
@@ -100,30 +113,43 @@ Una respuesta correcta enumera las caducidades resultantes del conjunto de datos
 
 | Propiedad | Descripción |
 | --- | --- |
-| `total_count` | Recuento de caducidades del conjunto de datos que coincidieron con los parámetros de la llamada a la lista. |
-| `results` | Contiene los detalles de las caducidades devueltas del conjunto de datos. Para obtener más información sobre las propiedades de la caducidad de un conjunto de datos, consulte la sección de respuesta para realizar una [llamada de búsqueda](#lookup). |
+| `results` | Matriz de configuraciones de caducidad de conjuntos de datos. |
+| `ttlId` | El identificador único de la configuración de caducidad del conjunto de datos. |
+| `datasetId` | El identificador único del conjunto de datos asociado con esta configuración. |
+| `datasetName` | Nombre del conjunto de datos. |
+| `sandboxName` | La zona protegida en la que se configura la caducidad de este conjunto de datos. |
+| `displayName` | Un nombre legible en lenguaje natural para la configuración de caducidad. |
+| `description` | Una descripción de la configuración de caducidad. |
+| `imsOrg` | Su identificador único de organización. |
+| `status` | El estado actual de la caducidad. Uno de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | La fecha y hora de caducidad programadas (formato ISO 8601). |
+| `updatedAt` | La marca de tiempo de la última actualización de esta configuración. |
+| `updatedBy` | El identificador y el correo electrónico del usuario o servicio que actualizó la configuración por última vez. |
+| `current_page` | Índice de la página de resultados actual (basado en cero). |
+| `total_pages` | Número total de páginas de resultados disponibles. |
+| `total_count` | Número total de registros de configuración de caducidad del conjunto de datos devueltos. |
 
 {style="table-layout:auto"}
 
 ## Búsqueda de una caducidad del conjunto de datos {#lookup}
 
-Para buscar la caducidad de un conjunto de datos, realice una petición GET con `{DATASET_ID}` o `{DATASET_EXPIRATION_ID}`.
+Recupere los detalles de una configuración de caducidad específica del conjunto de datos realizando una petición GET con el ID de caducidad del conjunto de datos o el ID del conjunto de datos como parámetro de ruta.
 
 >[!IMPORTANT]
 >
->`{DATASET_EXPIRATION_ID}` se conoce como `ttlId` en la respuesta. Ambos hacen referencia al identificador único para la caducidad del conjunto de datos.
+>Puede proporcionar una ID de caducidad del conjunto de datos (por ejemplo, `SD-xxxxxx-xxxx`) o una ID de conjunto de datos en la ruta. El `ttlId` en la respuesta es el identificador único para la caducidad del conjunto de datos.
 
 **Formato de API**
 
 ```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}
+GET /ttl/{ID}
+GET /ttl/{ID}?include=history
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{DATASET_ID}` | El ID del conjunto de datos cuya caducidad desea buscar. |
-| `{DATASET_EXPIRATION_ID}` | ID de caducidad del conjunto de datos. |
+| `{ID}` | El identificador único de la configuración de caducidad del conjunto de datos. Puede proporcionar una ID de caducidad del conjunto de datos o una ID de conjunto de datos. |
+| `include` | (Opcional) Si se establece en `history`, la respuesta incluye una matriz `history` con eventos de cambio para la configuración. |
 
 {style="table-layout:auto"}
 
@@ -150,29 +176,29 @@ Una respuesta correcta devuelve los detalles de la caducidad del conjunto de dat
     "datasetId": "62759f2ede9e601b63a2ee14",
     "datasetName": "XtVRwq9-38734",
     "sandboxName": "prod",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2024-05-11T15:12:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
     "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024.",
+    "imsOrg": "885737B25DC460C50A49411B@AdobeOrg",
+    "status": "pending",
+    "expiry": "2035-09-25T00:00:00Z",
+    "updatedAt": "2025-05-01T19:00:55.000Z",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
 }
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `ttlId` | ID de caducidad del conjunto de datos. |
-| `datasetId` | El ID del conjunto de datos al que se aplica esta caducidad. |
-| `datasetName` | El nombre para mostrar del conjunto de datos al que se aplica esta caducidad. |
-| `sandboxName` | El nombre de la zona protegida en la que se encuentra el conjunto de datos de destinatario. |
-| `imsOrg` | ID de su organización. |
-| `status` | El estado actual de caducidad del conjunto de datos. |
-| `expiry` | La fecha y hora programadas en las que se eliminará el conjunto de datos. |
-| `updatedAt` | Una marca de tiempo de la última vez que se actualizó la caducidad. |
-| `updatedBy` | El usuario que actualizó la caducidad por última vez. |
-| `displayName` | El nombre para mostrar de la solicitud de caducidad. |
-| `description` | Una descripción para la solicitud de caducidad. |
+| `ttlId` | El identificador único de la configuración de caducidad del conjunto de datos. |
+| `datasetId` | El identificador único del conjunto de datos. |
+| `datasetName` | Nombre del conjunto de datos. |
+| `sandboxName` | La zona protegida en la que se configura la caducidad del conjunto de datos. |
+| `displayName` | Un nombre en lenguaje natural para la configuración de caducidad del conjunto de datos. |
+| `description` | Descripción de la configuración de caducidad del conjunto de datos. |
+| `imsOrg` | El identificador único de organización asociado con esta configuración. |
+| `status` | El estado actual de la configuración de caducidad del conjunto de datos.<br>Uno de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | La marca de tiempo de caducidad programada para el conjunto de datos (formato ISO 8601). |
+| `updatedAt` | Marca de tiempo de la actualización más reciente. |
+| `updatedBy` | El identificador y el correo electrónico del usuario o servicio que actualizó la caducidad del conjunto de datos por última vez. |
 
 {style="table-layout:auto"}
 
@@ -180,7 +206,7 @@ Una respuesta correcta devuelve los detalles de la caducidad del conjunto de dat
 
 Al usar la [API de catálogo](../../catalog/api/getting-started.md) para buscar detalles del conjunto de datos, si este tiene una caducidad activa, se enumerará en `tags.adobe/hygiene/ttl`.
 
-El siguiente JSON representa una respuesta truncada para los detalles de un conjunto de datos del catálogo, que tiene un valor de caducidad de `32503680000000`. El valor de la etiqueta codifica la caducidad como un número entero de milisegundos desde el comienzo de la época Unix.
+El siguiente JSON muestra una respuesta de API de catálogo truncada para un conjunto de datos con un valor de caducidad de `32503680000000`. La etiqueta codifica la caducidad como el número de milisegundos desde la época de Unix.
 
 ```json
 {
@@ -200,11 +226,16 @@ El siguiente JSON representa una respuesta truncada para los detalles de un conj
 
 ## Crear una caducidad del conjunto de datos {#create}
 
-Para garantizar que los datos se eliminen del sistema después de un periodo especificado, programe una caducidad para un conjunto de datos específico proporcionando el ID del conjunto de datos y la fecha y hora de caducidad en formato ISO 8601.
-
-Para crear una caducidad del conjunto de datos, realice una petición POST como se muestra a continuación y proporcione los valores mencionados a continuación dentro de la carga útil.
+Cree una nueva configuración de caducidad del conjunto de datos para definir cuándo caducará un conjunto de datos y cuándo podrá eliminarse.\
+Proporcione el ID del conjunto de datos, la fecha de caducidad o la fecha-hora (en formato ISO 8601), un nombre para mostrar y (opcionalmente) una descripción.
 
 >[!NOTE]
+>
+>El valor de caducidad puede ser una fecha (AAAA-MM-DD) o una fecha y hora (AAAA-MM-DDTHH:MM:SSZ). Si proporciona solo una fecha, el sistema utiliza la medianoche UTC (00:00:00Z) de ese día. La caducidad debe ser de al menos 24 horas en el futuro.
+
+Para crear una caducidad del conjunto de datos, envíe una petición POST como se muestra a continuación.
+
+>[!TIP]
 >
 >Si recibe un error 404, asegúrese de que la solicitud no tenga barras diagonales adicionales. Una barra diagonal puede provocar el fallo de una petición POST.
 
@@ -219,68 +250,69 @@ POST /ttl
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/hygiene/ttl \
-  -H `Authorization: Bearer {ACCESS_TOKEN}`
-  -H `x-gw-ims-org-id: {ORG_ID}`
-  -H `x-api-key: {API_KEY}`
-  -H `Accept: application/json`
-  -d {
-      "datasetId": "5b020a27e7040801dedbf46e",
-      "expiry": "2030-12-31T23:59:59Z"
-      "displayName": "Delete Acme Data before 2025",
-      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
-      }
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "datasetId": "3e9f815ae1194c65b2a4c5ea",
+        "expiry": "2030-12-31",
+        "displayName": "Expiry rule for Acme customers",
+        "description": "Set expiration for Acme customer dataset"
+      }'
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `datasetId` | **Obligatorio**: el identificador del conjunto de datos de destino para el que desea programar una caducidad. |
-| `expiry` | **Requerido** Una fecha y hora en formato ISO 8601. Si la cadena no tiene un desplazamiento explícito de zona horaria, se asume que la zona horaria es UTC. La duración de los datos dentro del sistema se establece según el valor de caducidad proporcionado.<br>Nota:<ul><li>La solicitud fallará si ya existe una caducidad del conjunto de datos para él.</li><li>Esta fecha y hora deben ser al menos **24 horas en el futuro**.</li></ul> |
-| `displayName` | Un nombre para mostrar opcional para la solicitud de caducidad del conjunto de datos. |
-| `description` | Una descripción opcional para la solicitud de caducidad. |
+| `datasetId` | **Requerido.**: identificador único del conjunto de datos al que se aplicará la caducidad. |
+| `expiry` | **Requerido.** La fecha y hora de caducidad en formato ISO 8601. Define la duración de los datos dentro del sistema. Si solo se proporciona una fecha, el valor predeterminado es medianoche UTC (00:00:00Z). La caducidad **debe ser al menos 24 horas en el futuro**. <br>**NOTA**:<ul><li>La solicitud fallará si ya existe una caducidad del conjunto de datos para él.</li></ul> |
+| `displayName` | **Requerido.** Un nombre legible en lenguaje natural para la configuración de caducidad del conjunto de datos. |
+| `description` | Una descripción opcional para la configuración de caducidad del conjunto de datos. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y el nuevo estado de caducidad del conjunto de datos.
+Una respuesta correcta devuelve un estado HTTP 201 (Creado) y la nueva configuración de caducidad del conjunto de datos.
 
 ```json
 {
-  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-  "datasetId":   "5b020a27e7040801dedbf46e",
-  "datasetName": "Acme licensed data",
-  "sandboxName": "prod",
-  "imsOrg":      "{ORG_ID}",
-  "status":      "pending",
-  "expiry":      "2030-12-31T23:59:59Z",
-  "updatedAt":   "2021-08-19T11:14:16Z",
-  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "displayName": "Delete Acme Data before 2031",
-  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+  "ttlId": "SD-2aaf113e-3f17-4321-bf29-a2c51152b042",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Expiry rule for Acme customers",
+  "description": "Set expiration for Acme customer dataset",
+  "imsOrg": "{ORG_ID}",
+  "status": "pending",
+  "expiry": "2030-12-31T00:00:00Z",
+  "updatedAt": "2025-01-02T10:35:45.000Z",
+  "updatedBy": "s.stark@acme.com <s.stark@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `ttlId` | ID de caducidad del conjunto de datos. |
-| `datasetId` | El ID del conjunto de datos al que se aplica esta caducidad. |
-| `datasetName` | El nombre para mostrar del conjunto de datos al que se aplica esta caducidad. |
-| `sandboxName` | El nombre de la zona protegida en la que se encuentra el conjunto de datos de destinatario. |
-| `imsOrg` | ID de su organización. |
-| `status` | El estado actual de caducidad del conjunto de datos. |
-| `expiry` | La fecha y hora programadas en las que se eliminará el conjunto de datos. |
-| `updatedAt` | Una marca de tiempo de la última vez que se actualizó la caducidad. |
-| `updatedBy` | El usuario que actualizó la caducidad por última vez. |
-| `displayName` | Un nombre para mostrar para la solicitud de caducidad. |
-| `description` | Descripción de la solicitud de caducidad. |
+| `ttlId` | El identificador único de la configuración de caducidad del conjunto de datos creada. |
+| `datasetId` | El identificador único del conjunto de datos. |
+| `datasetName` | Nombre del conjunto de datos. |
+| `sandboxName` | La zona protegida en la que se configura la caducidad de este conjunto de datos. |
+| `displayName` | El nombre para mostrar de la configuración de caducidad del conjunto de datos. |
+| `description` | Descripción de la configuración de caducidad del conjunto de datos. |
+| `imsOrg` | El identificador único de organización asociado con esta configuración. |
+| `status` | El estado actual de la configuración de caducidad del conjunto de datos.<br>Uno de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | La marca de tiempo de caducidad programada para el conjunto de datos. |
+| `updatedAt` | La marca de tiempo de la actualización más reciente. |
+| `updatedBy` | El identificador y el correo electrónico del usuario o servicio que actualizó la configuración de caducidad del conjunto de datos por última vez. |
 
-Se produce un estado HTTP 400 (Solicitud incorrecta) si ya existe una caducidad del conjunto de datos para el conjunto de datos. Una respuesta incorrecta devolverá un estado HTTP 404 (no encontrado) si no existe dicha caducidad del conjunto de datos (o si no tiene acceso al conjunto de datos).
+Se produce un estado HTTP 400 (Solicitud incorrecta) si ya existe una caducidad del conjunto de datos para el conjunto de datos. Se produce un estado HTTP 404 (no encontrado) si no existe el conjunto de datos o si no tiene acceso a él.
 
-## Actualizar la caducidad de un conjunto de datos {#update}
+## Actualizar una configuración de caducidad del conjunto de datos {#update}
 
-Para actualizar una fecha de caducidad para un conjunto de datos, use una petición PUT y `ttlId`. Puede actualizar la información de `displayName`, `description` o `expiry`.
+Para actualizar una configuración de caducidad de conjunto de datos existente, realice una petición PUT a `/ttl/DATASET_EXPIRATION_ID`. Solo puede actualizar los campos `displayName`, `description` y `expiry` de la configuración. Las actualizaciones solo se permiten cuando el estado de caducidad es `pending`.
 
 >[!NOTE]
 >
->Si cambia la fecha y hora de caducidad, debe ser al menos 24 horas en el futuro. Este retraso obligatorio le ofrece la oportunidad de cancelar o volver a programar la caducidad y evitar la pérdida accidental de datos.
+>El campo `expiry` acepta una fecha (AAAA-MM-DD) o fecha y hora (AAAA-MM-DDTHH:MM:SSZ). Si solo se proporciona una fecha, el sistema utiliza la medianoche UTC (00:00:00Z) de ese día. La caducidad **debe ser al menos 24 horas en el futuro**.
 
 **Formato de API**
 
@@ -290,62 +322,70 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | El ID de la caducidad del conjunto de datos que desea cambiar. Nota: Esto se conoce como `ttlId` en la respuesta. |
+| `{DATASET_EXPIRATION_ID}` | El identificador único de la configuración de caducidad del conjunto de datos. **NOTA**: Esto se conoce como `ttlId` en la respuesta. |
 
 **Solicitud**
 
-La siguiente solicitud vuelve a programar una caducidad del conjunto de datos `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` para que se produzca a finales de 2024 (hora del meridiano de Greenwich). Si se encuentra la caducidad del conjunto de datos existente, esa caducidad se actualiza con el nuevo valor `expiry`.
+La siguiente solicitud actualiza la caducidad, el nombre para mostrar y la descripción de la caducidad del conjunto de datos `SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45`:
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2024-12-31T23:59:59Z",
-        "displayName": "Delete Acme Data before 2025",
-        "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+        "displayName": "Customer Dataset Expiry Rule",
+        "description": "Updated description for Acme customer dataset",
+        "expiry": "2031-06-15"
       }'
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `expiry` | **Requerido** Una fecha y hora en formato ISO 8601. Si la cadena no tiene un desplazamiento explícito de zona horaria, se asume que la zona horaria es UTC. La duración de los datos dentro del sistema se establece según el valor de caducidad proporcionado. Cualquier marca de tiempo de caducidad anterior para el mismo conjunto de datos se reemplazará por el nuevo valor de caducidad que haya proporcionado. Esta fecha y hora deben ser al menos **24 horas en el futuro**. |
-| `displayName` | Un nombre para mostrar para la solicitud de caducidad. |
-| `description` | Una descripción opcional para la solicitud de caducidad. |
+| `displayName` | (Opcional) Un nuevo nombre legible en lenguaje natural para la configuración de caducidad del conjunto de datos. |
+| `description` | (Opcional) Una nueva descripción para la configuración de caducidad del conjunto de datos. |
+| `expiry` | (Opcional) Una nueva fecha de caducidad o fecha y hora en formato ISO 8601. Si solo se proporciona una fecha, el valor predeterminado es medianoche UTC. La caducidad debe ser **al menos 24 horas en el futuro**. |
 
-{style="table-layout:auto"}
+>[!NOTE]
+>
+>Al menos uno de estos campos debe proporcionarse en la solicitud.
 
 **Respuesta**
 
-Una respuesta correcta devuelve el nuevo estado de caducidad del conjunto de datos y un estado HTTP 200 (OK) si se actualizó una caducidad preexistente.
+Una respuesta correcta devuelve el estado HTTP 200 (OK) y la configuración de caducidad del conjunto de datos actualizada.
 
 ```json
 {
-    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-    "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+  "ttlId": "SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Updated description for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "pending",
+  "expiry": "2031-06-15T00:00:00Z",
+  "updatedAt": "2031-05-01T14:11:12.000Z",
+  "updatedBy": "b.tarth@acme.com <b.tarth@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | Propiedad | Descripción |
 | --- | --- |
-| `ttlId` | ID de caducidad del conjunto de datos. |
-| `datasetId` | El ID del conjunto de datos al que se aplica esta caducidad. |
-| `imsOrg` | ID de su organización. |
-| `status` | El estado actual de caducidad del conjunto de datos. |
-| `expiry` | La fecha y hora programadas en las que se eliminará el conjunto de datos. |
-| `updatedAt` | Una marca de tiempo de la última vez que se actualizó la caducidad. |
-| `updatedBy` | El usuario que actualizó la caducidad por última vez. |
+| `ttlId` | El identificador único de la configuración de caducidad actualizada del conjunto de datos. |
+| `datasetId` | El identificador único del conjunto de datos. |
+| `datasetName` | Nombre del conjunto de datos. |
+| `sandboxName` | La zona protegida en la que se configura la caducidad de este conjunto de datos. |
+| `displayName` | El nombre para mostrar de la configuración de caducidad del conjunto de datos. |
+| `description` | Descripción de la configuración de caducidad del conjunto de datos. |
+| `imsOrg` | El ID de organización asociado con esta configuración. |
+| `status` | El estado actual de la configuración de caducidad del conjunto de datos.<br>Uno de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | La marca de tiempo de caducidad programada para el conjunto de datos. |
+| `updatedAt` | La marca de tiempo de la actualización más reciente. |
+| `updatedBy` | El identificador y el correo electrónico del usuario o servicio que actualizó la configuración de caducidad del conjunto de datos por última vez. |
 
 {style="table-layout:auto"}
 
@@ -353,31 +393,31 @@ Una respuesta incorrecta devolverá un estado HTTP 404 (no encontrado) si no exi
 
 ## Cancelar una caducidad del conjunto de datos {#delete}
 
-Puede cancelar la caducidad de un conjunto de datos realizando una petición DELETE.
+Cancele una configuración de caducidad del conjunto de datos pendiente realizando una petición DELETE a `/ttl/{ID}`.
 
 >[!NOTE]
 >
->Solo se pueden cancelar las caducidades del conjunto de datos que tengan un estado de `pending`. Si se intenta cancelar una caducidad que se ha ejecutado o que ya se ha cancelado, se devuelve un error HTTP 404.
+>Solo se pueden cancelar las caducidades del conjunto de datos en el estado `pending`. Si se intenta cancelar una caducidad que ya es `executing`, `completed` o `cancelled`, se devolverá HTTP 400 (Solicitud incorrecta).
 
 **Formato de API**
 
 ```http
-DELETE /ttl/{EXPIRATION_ID}
+DELETE /ttl/{ID}
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{EXPIRATION_ID}` | `ttlId` de la caducidad del conjunto de datos que desea cancelar. |
+| `{ID}` | El identificador único de la configuración de caducidad del conjunto de datos. Puede proporcionar una ID de caducidad del conjunto de datos o una ID de conjunto de datos. |
 
 {style="table-layout:auto"}
 
 **Solicitud**
 
-La siguiente solicitud cancela la caducidad de un conjunto de datos con el ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`:
+La siguiente solicitud cancela la caducidad de un conjunto de datos con el ID `SD-d4a7d918-283b-41fd-bfe1-4e730a613d21`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-587ea89369bf \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-d4a7d918-283b-41fd-bfe1-4e730a613d21 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -386,7 +426,71 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y el atributo `status` de la caducidad está establecido en `cancelled`.
+Una respuesta correcta devuelve el estado HTTP 200 (OK) y la configuración de caducidad del conjunto de datos cancelada. Observe que el atributo `status` de la caducidad está establecido en `cancelled`.
+
+```json
+{
+  "ttlId": "SD-d4a7d918-283b-41fd-bfe1-4e730a613d21",
+  "datasetId": "5a9e2c68d3b24f03b55a91ce",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Cancelled expiry configuration for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "cancelled",
+  "expiry": "2032-02-28T00:00:00Z",
+  "updatedAt": "2032-01-15T08:27:31.000Z",
+  "updatedBy": "s.clegane@acme.com <s.clegane@acme.com> 5A9E2C68D3B24F03B55A91CE@acme.com"
+}
+```
+
+| Propiedad | Descripción |
+|---|---|
+| `ttlId` | El identificador único de la configuración de caducidad del conjunto de datos eliminado. |
+| `datasetId` | El identificador único del conjunto de datos. |
+| `datasetName` | Nombre del conjunto de datos. |
+| `sandboxName` | Zona protegida donde se configura la caducidad de este conjunto de datos. |
+| `displayName` | El nombre para mostrar de la configuración de caducidad del conjunto de datos. |
+| `description` | Descripción de la configuración de caducidad del conjunto de datos. |
+| `imsOrg` | El identificador único de organización asociado con esta configuración. |
+| `status` | El estado actual de la configuración de caducidad del conjunto de datos.<br>Uno de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | La marca de tiempo de caducidad programada para el conjunto de datos. |
+| `updatedAt` | La marca de tiempo de la actualización más reciente. |
+| `updatedBy` | El identificador y el correo electrónico del usuario o servicio que actualizó la configuración de caducidad del conjunto de datos por última vez. |
+
+**Ejemplo 400 (Solicitud incorrecta) respuesta**
+
+Se produce un error 400 al intentar cancelar un conjunto de datos que tiene una configuración de caducidad de `executing`, `completed` o `cancelled`.
+
+```json
+{
+  "type": "http://ns.adobe.com/aep/errors/HYGN-3102-400",
+  "title": "The requested dataset already has an existing expiration. Additional detail: A TTL already exists for datasetId=686e9ca25ef7462aefe72c93",
+  "status": 400,
+  "report": {
+    "tenantInfo": {
+      "sandboxName": "prod",
+      "sandboxId": "not-applicable",
+      "imsOrgId": "{IMS_ORG_ID}"
+    },
+    "additionalContext": {
+      "Invoking Client ID": "acp_privacy_hygiene"
+    }
+  },
+  "error-chain": [
+    {
+      "serviceId": "HYGN",
+      "errorCode": "HYGN-3102-400",
+      "invokingServiceId": "acp_privacy_hygiene",
+      "unixTimeStampMs": 1754408150394
+    }
+  ]
+}
+```
+
+>[!NOTE]
+>
+>Se produce un error 404 al intentar cancelar una caducidad del conjunto de datos que ya es `completed` o `cancelled`.
 
 ## Apéndice
 

@@ -3,34 +3,34 @@ title: Punto final de API de cuota
 description: El punto final /quota en la API de higiene de datos le permite supervisar el uso de la administración avanzada del ciclo de vida de datos con respecto a los límites de cuotas mensuales de su organización para cada tipo de trabajo.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
+source-git-commit: 2c2907c5ed38ce4c87b1b73f96e1a0e64586cb97
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '372'
 ht-degree: 2%
 
 ---
 
 # Punto final de cuota
 
-El extremo `/quota` de la API de higiene de datos le permite supervisar el uso de la administración avanzada del ciclo de vida de datos en relación con los límites de cuota de su organización para cada tipo de trabajo.
+Use el extremo `/quota` en la API de higiene de datos para comprobar el uso y los límites actuales de su organización. Las cuotas varían en función de los derechos, como Privacy and Security Shield o Healthcare Shield.
 
-El uso de la cuota se rastrea para cada tipo de trabajo del ciclo vital de datos. Los límites de cuota reales dependen de los derechos de su organización y pueden revisarse periódicamente. La caducidad de los conjuntos de datos está sujeta a un límite estricto en el número de trabajos activos simultáneamente.
+Supervise el consumo de cuota actual para garantizar el cumplimiento de los límites organizativos para cada tipo de trabajo.
 
 ## Introducción
 
 El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, revise la [descripción general](./overview.md) para obtener la siguiente información:
 
-* Vínculos a documentación relacionada
-* Una guía para leer las llamadas de API de ejemplo en este documento
-* Información importante sobre los encabezados necesarios para realizar llamadas a cualquier API de Experience Platform
+* Vínculos de documentación relacionados
+* Cómo leer llamadas de API de muestra
+* Encabezados necesarios para las llamadas a la API de Experience Platform
 
 ## Cuotas y plazos de procesamiento {#quotas}
 
 Las solicitudes de eliminación de registros están sujetas a cuotas y expectativas de nivel de servicio en función de sus derechos de licencia. Estos límites se aplican a solicitudes de eliminación basadas en la interfaz de usuario y la API.
 
 >[!TIP]
-> 
->Este documento muestra cómo consultar el uso en relación con los límites basados en derechos. Para obtener una descripción completa de los niveles de cuota, los derechos de eliminación de registros y el comportamiento de SLA, consulte los documentos [eliminación de registros basada en la interfaz de usuario](../ui/record-delete.md#quotas) o[eliminación de registros basada en la API](./workorder.md#quotas).
+>
+>Este documento muestra cómo consultar el uso en relación con los límites basados en derechos. Para obtener una descripción completa de los niveles de cuota, los derechos de eliminación de registros y el comportamiento de SLA, consulte los documentos [eliminación de registros basada en la interfaz de usuario](../ui/record-delete.md#quotas) o [eliminación de registros basada en la API](./workorder.md#quotas).
 
 ## Enumerar cuotas {#list}
 
@@ -43,9 +43,15 @@ GET /quota
 GET /quota?quotaType={QUOTA_TYPE}
 ```
 
+>[!NOTE]
+>
+>El consumo de la cuota se restablece diaria y mensualmente el primero de cada mes a las 00:00 GMT.
+>
+>Solo las solicitudes aceptadas se contabilizan en la cuota. Las órdenes de trabajo rechazadas no reducen su cuota.
+
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUOTA_TYPE}` | Parámetro de consulta opcional que especifica el tipo de cuota que se va a recuperar. Si no se proporciona ningún parámetro `quotaType`, se devuelven todos los valores de cuota en la respuesta de la API. Los valores de tipo aceptados incluyen:<ul><li>`datasetExpirationQuota`: este objeto muestra el número de caducidades del conjunto de datos activas simultáneamente para su organización y la asignación total de caducidades. </li><li>`dailyConsumerDeleteIdentitiesQuota`: este objeto muestra el número total de solicitudes de eliminación de registros realizadas por su organización hoy y su asignación diaria total.<br>Nota: solo se cuentan las solicitudes aceptadas. Si se rechaza una orden de trabajo porque no supera la validación, esas eliminaciones de identidad no se contabilizan en la cuota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: este objeto muestra el número total de solicitudes de eliminación de registros realizadas por su organización este mes y su asignación mensual total.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: este objeto muestra el número total de solicitudes de actualización de registros realizadas por su organización este mes y su asignación mensual total.</li></ul> |
+| `{QUOTA_TYPE}` | Parámetro de consulta opcional que especifica el tipo de cuota que se va a recuperar. Si no se proporciona ningún parámetro `quotaType`, se devuelven todos los valores de cuota en la respuesta de la API. Los valores aceptados incluyen:<ul><li>`datasetExpirationQuota`: el número de caducidades activas del conjunto de datos y su asignación total.</li><li>`dailyConsumerDeleteIdentitiesQuota`: el número de eliminaciones de registros realizadas hoy y su cuota diaria.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: número de eliminaciones de registros este mes y su cuota mensual.</li></ul> |
 
 **Solicitud**
 
@@ -67,27 +73,21 @@ Una respuesta correcta devuelve los detalles de las cuotas del ciclo vital de da
   "quotas": [
     {
       "name": "datasetExpirationQuota",
-      "description": "The number of concurrently active Expiration Dataset Delete in all workorder requests for the organization.",
-      "consumed": 12,
-      "quota": 50
+      "description": "The number of concurrently active dataset-expiration delete operations in all work order requests for the organization.",
+      "consumed": 11,
+      "quota": 75
     },
     {
       "name": "dailyConsumerDeleteIdentitiesQuota",
-      "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
-      "consumed": 0,
-      "quota": 1000000
+      "description": "The consumed number of deleted identities in all work order requests for the organization for today.",
+      "consumed": 314,
+      "quota": 700000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
-      "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
-      "consumed": 841,
-      "quota": 2000000
-    },
-    {
-      "name": "monthlyUpdatedFieldIdentitiesQuota",
-      "description": "The consumed number of updated identities in all workorder requests for the organization for this month.",
-      "consumed": 0,
-      "quota": 0
+      "description": "The consumed number of deleted identities in all work order requests for the organization this month.",
+      "consumed": 2764,
+      "quota": 12000000
     }
   ]
 }
@@ -95,4 +95,8 @@ Una respuesta correcta devuelve los detalles de las cuotas del ciclo vital de da
 
 | Propiedad | Descripción |
 | -------- | ------- |
-| `quotas` | Muestra la información de cuota de cada tipo de trabajo del ciclo vital de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`: el tipo de trabajo del ciclo vital de datos:<ul><li>`expirationDatasetQuota`: caducidades del conjunto de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: eliminaciones de registros</li></ul></li><li>`description`: una descripción del tipo de trabajo del ciclo vital de datos.</li><li>`consumed`: número de trabajos de este tipo ejecutados en el período actual. El nombre del objeto indica el período de cuota.</li><li>`quota`: asignación para este tipo de trabajo para su organización. Para las eliminaciones y actualizaciones de registros, la cuota representa el número de trabajos que se pueden ejecutar para cada período mensual. Para las caducidades del conjunto de datos, la cuota representa el número de trabajos que pueden estar activos simultáneamente en un momento determinado.</li></ul> |
+| `quotas` | Muestra la información de cuota de cada tipo de trabajo del ciclo vital de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`</li><li>`description`</li><li>`consumed`</li><li>`quota`</li></ul> |
+| `name` | El identificador del tipo de cuota. |
+| `description` | Una descripción de los límites de esta cuota. |
+| `consumed` | Cantidad de cuota consumida actualmente. La cantidad consumida se restablece el primero del mes a las 00:00 GMT y a las 00:00 GMT para la cuota diaria. |
+| `quota` | Asignación máxima de este tipo de cuota para su organización. |
