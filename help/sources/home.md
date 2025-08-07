@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1643'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 ### Fuentes empresariales avanzadas {#advanced-enterprise-sources}
 
-Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fuente | Categoría | Tipo de ingesta | Nube |
 | --- | --- | --- | --- |
@@ -176,7 +176,7 @@ Puede utilizar las siguientes fuentes para introducir datos de la base de datos 
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | Lote | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Lote | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | Lote | Azure, AWS |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | Lote | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Lote | Azure, AWS |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Lote | Azure, AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Lote | Azure |
 
