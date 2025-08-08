@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
 workflow-type: tm+mt
 source-wordcount: '5188'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -130,8 +130,8 @@ Una vez asignados los grupos de informes, puede utilizar estos campos recién as
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Audiencias externas"
->abstract="Las audiencias importadas a través de la pestaña Audiencias ahora aparecen automáticamente en Audience Portal. Las audiencias introducidas desde Audience Manager, Customer Journey Analytics, Coincidencia de segmentos y otras integraciones personalizadas están fácilmente disponibles, sin necesidad de configurarlas primero en el Generador de segmentos. A partir del 1 de septiembre de 2025, todas las audiencias se recuperan exclusivamente mediante la búsqueda unificada y ya no se admite el flujo de trabajo anterior."
->additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+>abstract="Las audiencias importadas a través de la pestaña Audiencias ahora aparecen automáticamente en Audience Portal. Las audiencias ingeridas desde Audience Manager, Customer Journey Analytics, Coincidencia de segmentos y otras integraciones personalizadas están fácilmente disponibles, sin necesidad de configurarlas primero en el generador de segmentos. A partir del 1 de septiembre de 2025, todas las audiencias se recuperan exclusivamente mediante la búsqueda unificada y ya no se admite el flujo de trabajo anterior."
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de audiencias"
 
 >[!NOTE]
 >
@@ -330,7 +330,7 @@ La lista de restricciones de tiempo disponibles para esta operación difiere de 
 >[!NOTE]
 >
 >Al utilizar la restricción de tiempo &quot;Después&quot;, el último evento puede tener lugar durante más tiempo que el indicado en la restricción de tiempo. >
->&#x200B;>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
+>>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
 >
 >Además, estas dos restricciones de tiempo se pueden utilizar en coordinación entre sí.
 >

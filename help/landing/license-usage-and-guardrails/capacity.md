@@ -5,7 +5,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
@@ -20,12 +20,12 @@ Para obtener más información sobre las protecciones en Experience Platform, le
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Rendimiento de streaming"
->abstract="El valor de rendimiento de flujo mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al servicio Perfil, en sus zonas protegidas de producción y desarrollo."
+>abstract="El valor de rendimiento de streaming mide los eventos de entrada máximos combinados por segundo para el streaming de la ingesta al servicio Perfil, en sus zonas protegidas de producción y desarrollo."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="Recuento de audiencia de streaming"
->abstract="Número máximo de audiencias de streaming por zona protegida. Este número incluye el número de audiencias de Edge que tiene en la zona protegida."
+>abstract="Número máximo de audiencias de streaming por zona protegida. Este número incluye el número de audiencias de Edge que tiene en su zona protegida."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"

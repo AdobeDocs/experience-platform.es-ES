@@ -5,7 +5,7 @@ exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
 workflow-type: tm+mt
 source-wordcount: '1820'
-ht-degree: 2%
+ht-degree: 20%
 
 ---
 
@@ -26,19 +26,19 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 >[!NOTE]
 >
->La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Monitorización de métricas para la ingesta de perfiles de streaming {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Monitorización de la ingesta de perfiles de streaming"
->abstract="El panel de monitorización de perfiles de flujo continuo muestra información sobre el rendimiento, las tasas de ingesta y la latencia. Utilice este tablero para ver, comprender y analizar las métricas de procesamiento de datos. de sus perfiles de streaming en Experience Platform."
+>abstract="El panel de monitorización de perfiles de streaming muestra información sobre el rendimiento, las tasas de ingesta y la latencia. Utilice este tablero para ver, comprender y analizar las métricas de procesamiento de datos. de sus perfiles de streaming en Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_request_throughput"
->title="Rendimiento de solicitudes"
+>title="Solicitar rendimiento"
 >abstract="Esta métrica representa el número de eventos que entran en el sistema de ingesta por segundo."
 >text="Learn more in documentation"
 
@@ -57,7 +57,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_max_throughput"
 >title="Rendimiento máximo"
->abstract="Esta métrica representa el número máximo de solicitudes entrantes por segundo que entran en la ingesta de perfiles de flujo continuo."
+>abstract="Esta métrica representa el número máximo de solicitudes entrantes por segundo que entran en la ingesta de perfiles de streaming."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -88,7 +88,7 @@ Utilice la tabla de métricas para obtener información específica sobre los fl
 
 | Métrica | Descripción | Dimensiones | Frecuencia de medición |
 | --- | --- | --- | --- |
-| Rendimiento de solicitudes | Esta métrica representa el número de eventos que entran en el sistema de ingesta por segundo. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
+| Solicitar rendimiento | Esta métrica representa el número de eventos que entran en el sistema de ingesta por segundo. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
 | Rendimiento de procesamiento | Esta métrica representa el número de eventos que el sistema ingiere correctamente cada segundo. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
 | Latencia de ingesta de P95 | Esta métrica mide la latencia del percentil 95 desde el momento en que un evento llega a Experience Platform hasta el momento en que se incorpora correctamente en el almacén de perfiles. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
 | Rendimiento máximo | Esta métrica representa el número máximo de solicitudes entrantes por segundo que entran en la ingesta de perfiles de flujo continuo | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> |
