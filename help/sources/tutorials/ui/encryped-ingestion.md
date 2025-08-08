@@ -1,20 +1,15 @@
 ---
 title: Ingesta de datos cifrados en la IU de fuentes de Workspace
 description: Aprenda a introducir datos cifrados en el espacio de trabajo de la interfaz de usuario de fuentes.
-badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1436'
 ht-degree: 6%
 
 ---
 
 # Ingesta de datos cifrados en la interfaz de usuario de orígenes
-
->[!AVAILABILITY]
->
->La compatibilidad con la ingesta de datos cifrados en la interfaz de usuario de fuentes está en versión beta. La funcionalidad y la documentación están sujetas a cambios.
 
 Puede introducir archivos y carpetas de datos cifrados en Adobe Experience Platform mediante fuentes por lotes de almacenamiento en la nube. Con la ingesta de datos cifrados, puede aprovechar los mecanismos de cifrado asimétricos para transferir datos por lotes de forma segura a Experience Platform. Los mecanismos de cifrado asimétrico admitidos son PGP y GPG.
 
@@ -163,6 +158,6 @@ Complete los pasos restantes del flujo de trabajo de orígenes para terminar de 
 
 Puede seguir [haciendo actualizaciones en su flujo de datos](../ui/update-dataflows.md) una vez que se haya creado correctamente.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora puede ingerir datos cifrados de su fuente por lotes de almacenamiento en la nube en Experience Platform. Para obtener información sobre cómo ingerir datos cifrados mediante las API, lea la guía sobre [ingesta de datos cifrados mediante la [!DNL Flow Service] API](../api/encrypt-data.md). Para obtener información general acerca de las fuentes en Experience Platform, lea [descripción general de las fuentes](../../home.md).

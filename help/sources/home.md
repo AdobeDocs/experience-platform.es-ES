@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1643'
+source-wordcount: '1644'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 ### Fuentes empresariales avanzadas {#advanced-enterprise-sources}
 
-Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fuente | Categoría | Tipo de ingesta | Nube |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Base de datos | Lote | Azure |
 | [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Almacenamiento en la nube | Streaming | Azure, AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Base de datos | Lote | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Base de datos | Lote | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Base de datos | Lote | Azure, AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Almacenamiento en la nube | Streaming | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Base de datos | Streaming | Azure, AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | Base de datos | Lote | Azure, AWS |
