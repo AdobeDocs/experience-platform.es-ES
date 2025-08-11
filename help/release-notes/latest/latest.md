@@ -3,9 +3,9 @@ title: Notas de la versión de Adobe Experience Platform, julio de 2025
 description: Las notas de la versión de julio de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1574'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ Estas son las nuevas funciones y actualizaciones de las existentes en Adobe Expe
 
 La capacidad proporciona una vista completa de las [protecciones](../../rtcdp/guardrails/overview.md) de su organización y ofrece recomendaciones sobre cómo resolver posibles infracciones de la capacidad mediante la asignación de sus capacidades en un nivel de zona protegida. Con esta versión, puede ver su capacidad de ingesta de streaming y segmentación de streaming.
 
-Para obtener más información, lea [Descripción general de la capacidad](../../landing/license-usage-and-guardrails/capacity.md).
+Para obtener más información, lea la [información general sobre capacidad](../../landing/license-usage-and-guardrails/capacity.md).
 
 ## Destinos {#destinations}
 
@@ -53,7 +53,7 @@ Para obtener más información, lea [Descripción general de la capacidad](../..
 | Destino | Descripción |
 | --- | --- |
 | Disponibilidad limitada de la conexión [Segmentación por lista de clientes de Google + Display y Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) | Después de estar disponible brevemente para todos los clientes en junio, Adobe ha devuelto esta integración a una disponibilidad limitada. Actualmente, el acceso a este destino está restringido a los clientes que ya están habilitados, mientras que Adobe y Google trabajan para resolver los problemas de implementación. Si le interesa utilizar esta integración una vez que se reanude el despliegue más amplio, póngase en contacto con su representante de Adobe para expresar su intención. |
-| Actualización interna de [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) | Desde el viernes, 31 de julio de 2025, puede ver dos tarjetas [!DNL The Trade Desk] una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. <br><br>Se ha cambiado el nombre del conector de destino [!DNL The Trade Desk] existente a **[!UICONTROL (obsoleto) The Trade Desk]** y ya está disponible una nueva tarjeta con el nombre **[!UICONTROL The Trade Desk]**. Use la nueva conexión **[!UICONTROL The Trade Desk]** en el catálogo para nuevos flujos de datos de activación. <br><br>Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de Trade Desk]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br><br>Si está creando flujos de datos a través de la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar sus [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:<ul><li>ID de especificación de flujo: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>ID de especificación de conexión: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
+| Actualización interna de [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) | Desde el viernes, 31 de julio de 2025, puede ver dos tarjetas [!DNL The Trade Desk] una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. <br><br>Se ha cambiado el nombre del conector de destino [!DNL The Trade Desk] existente a **[!UICONTROL (obsoleto) The Trade Desk]** y ya está disponible una nueva tarjeta con el nombre **[!UICONTROL The Trade Desk]**. Use la nueva conexión **[!UICONTROL The Trade Desk]** en el catálogo para nuevos flujos de datos de activación. <br><br>Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) The Trade Desk]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br><br>Si está creando flujos de datos a través de la [API del servicio de flujo](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar su [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:<ul><li>ID de especificación de flujo: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>ID de especificación de conexión: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **Funcionalidad nueva o actualizada**
 
@@ -63,7 +63,7 @@ Para obtener más información, lea [Descripción general de la capacidad](../..
 | Información mejorada del flujo de datos para destinos Edge | La información del carril derecho para los destinos [Adobe Target](/help/destinations/catalog/personalization/adobe-target-v2.md) y [personalización](/help/destinations/catalog/personalization/custom-personalization.md) se ha mejorado para mostrar el nombre de la secuencia de datos, lo que ofrece una visibilidad más clara de las configuraciones de secuencia de datos asociadas y ayuda a reducir la confusión al revisar los flujos de datos existentes. El selector **[!UICONTROL ID de secuencia de datos]** de la pantalla de configuración de destino se ha actualizado a **[!UICONTROL Secuencia de datos]** para mejorar la claridad en la interfaz de usuario. |
 | Visibilidad de acciones de marketing en selección de destino | Las acciones de marketing ahora se muestran en el carril derecho de la pestaña **[[!UICONTROL Examinar]](/help/destinations/ui/destinations-workspace.md#browse)** del área de trabajo Destinos y en la página **[[!UICONTROL Ejecuciones de flujo de datos]](/help/dataflows/ui/monitor-destinations.md)**, lo que proporciona visibilidad inmediata de los cambios en las acciones de marketing sin necesidad de navegar a la página de vista. Este cambio supone una mejora en la experiencia del usuario al facilitar la verificación de las configuraciones de acciones de marketing durante la configuración del destino. |
 | [!BADGE Versión beta limitada]{type=Informative} Editar acciones de marketing para destinos | Ahora puede [editar acciones de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) para destinos existentes. La disponibilidad de esta función está actualmente limitada a su versión beta. Para solicitar acceso, póngase en contacto con su representante de Adobe. |
-| [!BADGE Versión beta limitada]{type=Informative} Editar destinos | Ahora puede [editar la configuración de destino](/help/destinations/ui/edit-destination.md) después de crearla. La disponibilidad de esta función está actualmente limitada a su versión beta. Para solicitar acceso, póngase en contacto con su representante de Adobe. |
+| [!BADGE Versión beta limitada]{type=Informative} Editar destinos | Ahora puede [editar la configuración de destinos](/help/destinations/ui/edit-destination.md) una vez creada. La disponibilidad de esta función está actualmente limitada a su versión beta. Para solicitar acceso, póngase en contacto con su representante de Adobe. |
 
 **Correcciones**
 
@@ -135,13 +135,13 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Fuente | Descripción |
 | --- | --- |
-| Compatibilidad con [!BADGE Beta]{type=Informative} para [!DNL Didomi] (SDK de streaming) | Utilice el origen [!DNL Didomi] para ingestar datos de administración de preferencias y consentimiento de [!DNL Didomi], lo que admite el cumplimiento de las regulaciones de privacidad y las estrategias de marketing basadas en el consentimiento. Lea la [[!DNL Didomi] información general de origen](../../sources/connectors/consent-and-preferences/didomi.md) para obtener información de cómo configurarlo. Para ver los pasos para crear una conexión de origen, lea la [[!DNL Didomi] guía de conexión de origen](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
+| Compatibilidad [!BADGE beta]{type=Informative} con [!DNL Didomi] (SDK de streaming) | Utilice el origen [!DNL Didomi] para ingestar datos de administración de preferencias y consentimiento de [!DNL Didomi], lo que admite el cumplimiento de las regulaciones de privacidad y las estrategias de marketing basadas en el consentimiento. Lea la [[!DNL Didomi] información general de origen](../../sources/connectors/consent-and-preferences/didomi.md) para obtener información de cómo configurarlo. Para ver los pasos para crear una conexión de origen, lea la [[!DNL Didomi] guía de conexión de origen](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
 
 **Funcionalidad nueva o actualizada**
 
 | Función | Descripción |
 | --- | --- |
 | Compatibilidad con la captura de datos de cambio en orígenes específicos mediante la API [!DNL Flow Service] | Ahora puede crear flujos de datos que permitan la captura de datos modificados para la ingesta incremental mediante conectores de origen. Esta función permite a los clientes introducir tipos de datos de cambio para la ingesta incremental, lo que mejora la actualización de los datos y reduce la sobrecarga de procesamiento. Para obtener más información, lea la documentación sobre el [uso de la captura de datos modificados para los orígenes](../../sources/tutorials/api/change-data-capture.md) |
-| Compatibilidad con la eliminación suave de registros en [!DNL Salesforce] | El origen [!DNL Salesforce] ahora admite la inclusión de registros eliminados de forma suave mediante un parámetro `includeDeletedObjects` opcional. Cuando se establece en true, los clientes pueden incluir registros eliminados temporalmente en sus consultas [!DNL Salesforce] e incluir estos registros en Experience Platform. Lea la documentación de fuentes de [[!DNL Salesforce] ](../../sources/connectors/crm/salesforce.md) para obtener más información. |
+| Compatibilidad con la eliminación suave de registros en [!DNL Salesforce] | La fuente [!DNL Salesforce] ahora admite la inclusión de registros eliminados de forma suave mediante un parámetro `includeDeletedObjects` opcional. Cuando se establece en true, los clientes pueden incluir registros eliminados de forma suave en sus consultas [!DNL Salesforce] e incluir estos registros en Experience Platform. Lea la documentación de fuentes de [[!DNL Salesforce]  ](../../sources/connectors/crm/salesforce.md) para obtener más información. |
 
 Para obtener más información, lea la [Información general de las fuentes](../../sources/home.md).
