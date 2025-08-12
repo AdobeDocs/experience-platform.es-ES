@@ -4,10 +4,10 @@ description: Una previsualización de las últimas notas de la versión para Ado
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 7e91181f71b84fdaf04a39e003cbbd415827e282
+source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 22%
+source-wordcount: '1116'
+ht-degree: 34%
 
 ---
 
@@ -27,102 +27,69 @@ ht-degree: 22%
 >- [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/latest)
 
-**Fecha de la versión: miércoles, 29 de julio de 2025**
+**Fecha de lanzamiento: Agosto de 2025**
 
 Estas son las nuevas funciones y actualizaciones de las existentes en Adobe Experience Platform:
 
+- [Alertas](#alerts)
 - [Destinos](#destinations)
-- [Ingesta de datos](#ingestion)
-- [Servicio de consultas](#query-service)
-- [Real-time CDP edición B2B](#b2b)
-- [Zonas protegidas](#sandboxes)
-- [Servicio de segmentación](#segmentation)
+- [Modelo de datos de experiencia (XDM)](#xdm)
+- [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
 
-## Destinos {#destinations}
+## Alertas {#alerts}
 
-[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
-
-**Destinos actualizados**
-
-| Destino | Descripción |
-| --- | --- |
-| Consolidación de tarjetas de destino de Marketo | Las tarjetas de destino de Marketo V2 y Marketo Engage Person Sync se han consolidado en una sola tarjeta de destino unificada. Esta consolidación simplifica el proceso de selección de destinos y proporciona una experiencia más optimizada para las integraciones de Marketo. |
-
-**Funcionalidad nueva o actualizada**
-
-| Función | Descripción |
-| --- | --- |
-| Información mejorada del flujo de datos para destinos Edge | La información mejorada del carril derecho para destinos de Adobe Target y Personalization personalizados ahora muestra el nombre del flujo de datos, lo que proporciona una visibilidad más clara de las configuraciones del flujo de datos asociadas y reduce las confusiones al revisar los flujos de datos existentes. El selector **[!UICONTROL Datastream ID]** de la pantalla de configuración de destino se ha actualizado a **[!UICONTROL Datastream]** para mejorar la claridad en la interfaz de usuario. |
-| Visibilidad de acciones de marketing en selección de destino | Las acciones de marketing ahora se muestran en el carril derecho de la pestaña **[!UICONTROL Examinar]** de destino y en la página **[!UICONTROL Ejecuciones de flujo de datos]**, lo que proporciona una visibilidad inmediata de los cambios de las acciones de marketing sin que sea necesario navegar a la página de vista. Esta mejora mejora mejora la experiencia del usuario al facilitar la verificación de las configuraciones de acciones de marketing durante la configuración del destino. |
-| (Beta limitada) Editar acciones de marketing para destinos | Ahora puede editar acciones de marketing para destinos existentes. Esta funcionalidad está en versión beta limitada. Para solicitar acceso, póngase en contacto con su representante de Adobe. |
-| (Beta limitada) Editar destinos | Ahora puede editar la configuración de destino después de crearla. Esta funcionalidad está en versión beta limitada. Para solicitar acceso, póngase en contacto con su representante de Adobe. |
-| Nombres de cuenta y descripciones para conexiones de destino | Ahora puede agregar nombres y descripciones de cuentas al conectarse a destinos, lo que permite una mejor administración de los destinos con varias cuentas. |
-
-**Correcciones**
-
-| Problema | Descripción |
-| --- | --- |
-| Funcionalidad de desplazamiento por categorías | Se ha corregido un problema en el cual el menú del lado de categorías del catálogo de destinos y fuentes no se desplazaba correctamente al pasar el ratón, lo que mejoraba la capacidad de navegación de los usuarios al examinar las categorías de destino. |
-
-Para obtener más información, consulte la [Información general sobre destinos](../destinations/home.md).
-
-## Ingesta de datos {#ingestion}
-
-Experience Platform proporciona un marco de trabajo completo de ingesta de datos que admite la ingesta de datos por lotes y de flujo continuo desde varias fuentes.
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a diferentes reglas de alertas a través de la pestaña [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia IU o a través de notificaciones por correo electrónico.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 | ------- | ----------- |
-| Compatibilidad con la monitorización de la ingesta de perfiles de streaming | Ya está disponible la monitorización en tiempo real de la ingesta de perfiles de flujo continuo, lo que proporciona transparencia en el rendimiento, la latencia y las métricas de calidad de los datos. Esto admite alertas proactivas y perspectivas procesables para ayudar a los ingenieros de datos a identificar infracciones de capacidad y problemas de ingesta. |
+| Alertas de capacidad de rendimiento de streaming | Tres nuevas alertas permiten a los usuarios suscribirse y configurar alertas para administrar y supervisar de forma proactiva el rendimiento de la capacidad de rendimiento de flujo continuo. Las nuevas alertas incluyen casos en los que el rendimiento de streaming alcanzó el 80 %, el 90 % o supera los límites de capacidad. Para obtener más información, lea la guía [reglas de alerta de capacidad](../observability/alerts/rules.md#capacity). |
 
-Para obtener más información, lea la [descripción general de la ingesta de datos](../ingestion/home.md).
+Para obtener más información sobre las alertas, lea la [[!DNL Observability Insights] información general](../observability/home.md).
 
-## Servicio de consultas {#query-service}
+## Destinos {#destinations}
 
-El servicio de consultas de Adobe Experience Platform proporciona una interfaz SQL sólida para el análisis y la exploración de datos en toda la plataforma.
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
-**Funciones nuevas o actualizadas**
+**Nuevos destinos**
 
-| Función | Descripción |
-| ------- | ----------- |
-| Administración de sesiones mejorada | Data Distiller ahora incluye funciones mejoradas de administración de sesiones, lo que proporciona un mejor control sobre las sesiones de los usuarios y una monitorización del rendimiento mejorada en los entornos de desarrollo y producción. |
-| Compatibilidad con credenciales que no caducan restricciones de caracteres de contraseña | Data Distiller ahora admite credenciales que no caducan con restricciones de caracteres específicas. Aunque las contraseñas requieren al menos un número, una letra minúscula, una letra mayúscula y un carácter especial, no se admite el signo de dólar ($). Los caracteres especiales recomendados incluyen `!, @, #, ^, or &`. |
-| Se ha mejorado la coherencia de rendimiento en entornos | El rendimiento de Data Distiller ahora es coherente entre los entornos limitados de desarrollo y producción, con recursos backend similares disponibles en ambos entornos. Las horas de cálculo consumidas pueden variar en función del volumen de datos y los recursos de cálculo back-end disponibles en el momento del procesamiento. |
+| Destino | Descripción |
+| --- | --- |
+| [!DNL Acxiom Real ID Audience] destino | Use el destino [!DNL Acxiom Real ID Audience Connection] para mejorar audiencias con la tecnología [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) y activar audiencias en varias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] y más. |
 
-Para obtener más información, lea [Introducción al servicio de consultas](../query-service/home.md).
 
-## Real-time CDP edición B2B {#b2b}
+**Destinos actualizados**
 
-Real-Time CDP B2B edition ofrece funciones completas de administración de datos de clientes B2B, lo que permite a las organizaciones crear perfiles unificados de clientes, crear audiencias B2B sofisticadas y activar datos en varios canales de marketing.
+| Destino | Descripción |
+| --- | --- |
+| Detalles de caducidad de autenticación para [!DNL LinkedIn] destinos | No vuelva a preocuparse por las credenciales caducadas. La información de caducidad de la cuenta ahora está visible directamente en la interfaz de Experience Platform, por lo que puede ver cuándo caducará la autenticación de [!DNL LinkedIn] y renovarla antes de que cause interrupciones en los flujos de datos. |
+| Compatibilidad con cifrado para [!DNL Data Landing Zone] destinos | Proteja los datos exportados con cifrado. Ahora puede adjuntar claves públicas con formato RSA para cifrar los archivos exportados, lo que le proporciona el mismo nivel de seguridad que otros destinos de almacenamiento en la nube para la información confidencial. |
+| Actualización interna de [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) | Desde el martes, 11 de agosto de 2025, puede ver dos tarjetas **[!DNL Microsoft Bing]** una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino **[!DNL Microsoft Bing]** existente a **[!UICONTROL (obsoleto) Microsoft Bing]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Microsoft Bing]**. Use la nueva conexión **[!UICONTROL Microsoft Bing]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de Microsoft Bing]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br><br>Si está creando flujos de datos a través de la [API del servicio de flujo](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar su [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:<ul><li>ID de especificación de flujo: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de especificación de conexión: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Después de esta actualización, es posible que experimente una **caída en el número de perfiles activados** en sus flujos de datos a [!DNL Microsoft Bing]. Esta caída se debe a la introducción del **requisito de asignación ECID** para todas las activaciones en esta plataforma de destino. |
+| Identificadores adicionales para [!DNL Amazon Ads] destinos | El destino de Amazon Ads ahora admite nuevas identidades (`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`). Estos campos están pensados para mejorar las tasas de coincidencia de audiencia y se pasan en texto sin formato, con hashing SHA256 opcional. |
+| [!DNL Marketo] consolidación de tarjetas de destino | Simplifique la configuración de destino de [!DNL Marketo] con nuestra tarjeta de destino unificada. Hemos consolidado [!DNL Marketo] tarjetas V2 y V3 en una opción optimizada, lo que facilita la elección del destino correcto y la introducción rápida. |
 
-**Funciones nuevas o actualizadas**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Actualización de la arquitectura B2B | Experience Platform actualiza a una nueva arquitectura B2B que introduce mejoras significativas en las audiencias de varias entidades con atributos B2B. Esta actualización consolida la compatibilidad con las políticas de combinación, mejora la precisión de los recuentos de audiencia y mejora las capacidades de resolución de entidades. |
-| Política de combinación Consolidación para audiencias de varias entidades | Las audiencias de varias entidades con atributos B2B ahora solo admiten una única política de combinación (la política de combinación predeterminada), en lugar de admitir varias políticas de combinación. Este cambio garantiza una composición de audiencia coherente y simplifica la administración de la lógica de combinación. |
-| Actualizaciones de restricciones de audiencia de cuenta | Las audiencias de cuenta ya no tienen las restricciones anteriores de una ventana retrospectiva de 30 días para eventos de experiencia, restricciones de entidad personalizadas o limitaciones al usar eventos de `inSegment`. Estas actualizaciones proporcionan una mayor flexibilidad para crear definiciones de audiencia B2B complejas. |
-| Recuentos de audiencia mejorados para entidades B2B | Las estimaciones del tamaño de la audiencia para audiencias con entidades B2B como Cuentas y Oportunidades son ahora exactas, según los resultados de segmentación en tiempo real. Esta mejora proporciona estimaciones más precisas y fiables para las audiencias que implican relaciones B2B complejas. |
-| Instantáneas de cuenta para miembros de audiencia | Los detalles de pertenencia a audiencias ahora se incluyen para las entidades de cuenta en las exportaciones de instantáneas, lo que permite el acceso al estado de audiencia de nivel de cuenta, las marcas de tiempo y los indicadores de pertenencia. Esto aporta paridad de características entre los modelos de segmentación de Perfil (persona) y Cuenta. |
-| Cambios en las herramientas de la zona protegida para audiencias de varias entidades | Ya no es compatible la importación de audiencias de varias entidades con entidades B2B y eventos de experiencia exportados antes de la migración. Estas audiencias no podrán importar la validación y no se podrán convertir automáticamente a la nueva arquitectura. Las audiencias deben volver a exportarse después de la migración antes de importarse en las zonas protegidas de destino. |
-| Degradaciones de API de entidad B2B | La creación de audiencias mediante API para entidades B2B (cuenta, oportunidad, relación cuenta-persona, relación oportunidad-persona, campaña, miembro de campaña, lista de marketing y miembro de lista de marketing) ya no se utiliza. Además, las operaciones de búsqueda y eliminación de la API de acceso a perfiles para estas entidades B2B también están en desuso. |
-| Actualizaciones del área de nombres de identidad para la resolución de entidades | Las entidades Cuenta y Oportunidad ahora usan la combinación basada en la prioridad temporal con áreas de nombres de identidad específicas (`b2b_account` para Cuenta, `b2b_opportunity` para Oportunidad). Todas las demás entidades se unifican con superposiciones de identidad principales combinadas mediante una combinación basada en la prioridad temporal. |
-
-Para obtener más información, lea la [descripción general de Real-Time CDP B2B edition](../rtcdp/b2b-overview.md).
-
-## Zonas protegidas {#sandboxes}
-
-Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo.
-
-**Funciones nuevas o actualizadas**
+**Funcionalidad nueva o actualizada**
 
 | Función | Descripción |
 | --- | --- |
-| Cambios en las importaciones de audiencias de varias entidades | La herramienta de zona protegida se ha actualizado para admitir la nueva actualización de la arquitectura B2B. Las audiencias de varias entidades que contienen entidades B2B y eventos de experiencia deben reexportarse después de la actualización de la arquitectura antes de importarse en los entornos limitados de destino mediante las herramientas de entorno limitado. La importación de versiones anteriores a la actualización no superará la validación. |
+| Ampliar las programaciones de exportación de conjuntos de datos para flujos de datos creados antes de noviembre de 2024 | Si su organización tiene flujos de datos de exportación de conjuntos de datos creados antes de noviembre de 2024, estos dejarán de funcionar el 1 de septiembre de 2025. Si necesita que los flujos de datos sigan exportando datos después del 1 de septiembre de 2025, debe ampliar sus programaciones para cada destino al que esté exportando conjuntos de datos, siguiendo los pasos de [esta guía](../destinations/ui/dataset-expiration-update.md). |
+| Funciones mejoradas de búsqueda, filtrado y etiquetado para destinos | Mejore su flujo de trabajo de administración de destinos con funciones mejoradas de búsqueda, filtrado y etiquetado en las pestañas Examinar y Cuentas. Ahora puede buscar flujos de datos y cuentas específicos por nombre, filtrar por varios criterios, incluida la plataforma de destino, el estado y las fechas, y crear etiquetas personalizadas para organizar los destinos. La ordenación de columnas también está disponible para campos clave como el último tiempo de ejecución del flujo de datos, lo que facilita la identificación y administración de las conexiones de destino. |
 
-Para obtener más información sobre las zonas protegidas, lea la [información general sobre zonas protegidas](../sandboxes/home.md).
+Para obtener más información, consulte la [Información general sobre destinos](../destinations/home.md).
+
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Esquemas basados en modelos | Simplifique el modelado de datos con esquemas basados en modelos. Ahora puede crear esquemas más fácilmente con ejemplos explicativos y directrices completas. Actualmente, esta función está disponible para los titulares de licencias de Campaign Orchestration y se ampliará a los clientes de Data Distiller en GA, lo que hace que el modelado de datos sea más accesible y eficiente. |
+
+Para obtener más información, lea la [descripción general de XDM](../xdm/home.md).
 
 ## Servicio de segmentación {#segmentation-service}
 
@@ -132,23 +99,49 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 | Función | Descripción |
 | ------- | ----------- |
-| API de audiencia externa | Puede utilizar la API de audiencias externas para importar mediante programación audiencias generadas externamente en Adobe Experience Platform. |
+| Estimaciones de audiencia | Las estimaciones de audiencia ahora se generan automáticamente en el Generador de segmentos. Este valor se actualiza siempre que se modifica la audiencia y siempre refleja las reglas de audiencia más recientes. |
+
+Para obtener más información, lea la [[!DNL Segmentation Service] información general](../segmentation/home.md).
 
 ## Fuentes {#sources}
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
-**Nuevos orígenes**
-
-| Fuente | Descripción |
-| --- | --- |
-| Compatibilidad con [!DNL Didomi] (Streaming SDK) | El conector de origen [!DNL Didomi] le permite introducir datos de administración de consentimiento de la plataforma de [!DNL Didomi], lo que admite el cumplimiento de las regulaciones de privacidad y las estrategias de marketing basadas en el consentimiento. |
-
 **Funcionalidad nueva o actualizada**
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con la captura de datos de cambio en fuentes seleccionadas | Ahora puede crear flujos de datos que permitan la captura de datos modificados para la ingesta incremental mediante conectores de origen. Esta capacidad permite a los clientes introducir tipos de datos de cambio para la ingesta incremental, lo que mejora la actualización de los datos y reduce la sobrecarga de procesamiento. |
-| Compatibilidad con la eliminación suave de registros en [!DNL Salesforce] | El origen [!DNL Salesforce] ahora admite la inclusión de registros eliminados de forma suave mediante un parámetro `includeDeletedObjects` opcional. Cuando se establece en true, los clientes pueden incluir registros eliminados temporalmente en sus consultas [!DNL Salesforce] e incluir estos registros en Experience Platform. |
+| [!BADGE Compatibilidad con vínculos privados de Beta]{type=Informative} en la interfaz de usuario de Azure | Mantenga sus datos seguros con conexiones de red privada. Ahora puede crear puntos de conexión privados y configurar flujos de datos que omitan la Internet pública, lo que le ofrece una seguridad mejorada y un aislamiento de red para sus datos confidenciales. |
+| [!DNL Marketo] actualizaciones de la documentación de origen | Obtenga una visibilidad completa de cómo se transforman los datos de [!DNL Marketo] al entrar en Experience Platform. Todas las asignaciones de campos ahora incluyen explicaciones detalladas de las transformaciones de datos, para que pueda comprender exactamente cómo `PersonID` se convierte en `leadID` y `eventType` se convierte en `activityType`. |
+| Compatibilidad con la autenticación principal de servicio para [!DNL Azure Blob Storage] | Ahora puede conectar su cuenta de [!DNL Azure Blob Storage] a Experience Platform con la autenticación de entidad de seguridad de servicio. |
 
 Para obtener más información, lea la [Información general de las fuentes](../sources/home.md).
+
+<!--
+
+## Query Service {#query-service}
+
+Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
+
+For more information, read the [Query Service overview](../query-service/home.md).
+
+## B2B CDP {#b2b-cdp}
+
+Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Lookup Support for B2B Classes Only | Streamline your B2B data access with focused lookup support. You can now look up Person (Profile), Experience Events, Account, and Opportunity entities directly through the Entities API. This simplified approach helps you access the most important B2B data more efficiently while reducing complexity. |
+| B2B Namespace and Schema Updates | Experience a cleaner, more streamlined B2B data model. We've simplified the B2B namespace and schema structure by removing complex relationship mappings and non-primary identity support for certain B2B classes. This makes your B2B data easier to work with and understand. |
+
+For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
+
+-->
