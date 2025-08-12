@@ -3,16 +3,38 @@ keywords: publicidad; bing;
 title: Conexión de Microsoft Bing
 description: Con el destino de conexión de Microsoft Bing, puede ejecutar campañas digitales de retargeting y segmentación de audiencia en toda la red de Advertising de Microsoft, incluida la publicidad de visualización, la búsqueda y la segmentación nativa.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '981'
 ht-degree: 10%
 
 ---
 
-# [!DNL Microsoft Bing] conexión {#bing-destination}
+# [!DNL Microsoft Bing] conexión {#bing-destination}
 
 ## Información general {#overview}
+
+
+>[!IMPORTANT]
+>
+>* Desde el martes, 11 de agosto de 2025, puede ver dos tarjetas **[!DNL Microsoft Bing]** una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino **[!DNL Microsoft Bing]** existente a **[!UICONTROL (obsoleto) Microsoft Bing]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Microsoft Bing]**.
+>* Use la nueva conexión **[!UICONTROL Microsoft Bing]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de Microsoft Bing]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción.
+>* Si está creando flujos de datos a través de la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar sus [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:
+>   * ID de especificación de flujo: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
+>   * ID de especificación de conexión: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>
+> Después de esta actualización, es posible que experimente una **caída en el número de perfiles activados** en sus flujos de datos a [!DNL Microsoft Bing].
+> > Esta caída se debe a la introducción del **requisito de asignación ECID** para todas las activaciones en esta plataforma de destino. Consulte la sección [asignación obligatoria](#mandatory-mappings) en esta página para obtener información detallada.
+>
+>**Qué cambió:**
+>
+>* La asignación ECID (Experience Cloud ID) ahora es **obligatoria** para todas las activaciones de perfil.
+>* Los perfiles sin asignación ECID se **eliminarán** de los flujos de datos de activación existentes.
+>
+>**Lo que debe hacer:**
+>
+>* Revise los datos de audiencia para confirmar que los perfiles tienen valores ECID válidos.
+>* Monitorice las métricas de activación para verificar los recuentos de perfiles esperados.
 
 Use el destino [!DNL Microsoft Bing] para enviar datos de perfil a [!DNL Microsoft Advertising Network] completo, incluidos [!DNL Display Advertising], [!DNL Search] y [!DNL Native].
 
@@ -31,6 +53,7 @@ Como especialista en marketing, quiero poder usar audiencias creadas a partir de
 | Identidad | Descripción |
 |---|---|
 | CRIADA | MICROSOFT ADVERTISING ID |
+| ECID | ID de Experience Cloud. Esta identidad es obligatoria para que la integración funcione correctamente, pero no se utiliza para la activación de audiencias. |
 
 {style="table-layout:auto"}
 
@@ -62,17 +85,17 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino con [!DNL Microsoft Bing] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=es) en el servicio de Experience Cloud ID en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si ya había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que configuró se transfieren a Experience Platform.
+>Si desea crear su primer destino con [!DNL Microsoft Bing] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de Experience Cloud ID en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si ya había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que configuró se transfieren a Experience Platform.
 
 Al configurar el destino, debe proporcionar la siguiente información:
 
 * [!UICONTROL ID de cuenta]: este es su [!DNL Bing Ads CID], en formato entero.
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -99,13 +122,22 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 En el paso [Programación de audiencias](../../ui/activate-segment-streaming-destinations.md#scheduling), debe asignar manualmente el nombre de la audiencia en el campo [!UICONTROL Id. de asignación]. Esto garantiza que los metadatos de la audiencia se pasen correctamente a [!DNL Bing].
 
 ![Imagen de la interfaz de usuario que muestra la pantalla de programación de audiencias con un ejemplo de cómo asignar el nombre de audiencia al identificador de asignación de Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### Asignaciones obligatorias {#mandatory-mappings}
+
+Todas las identidades de destino descritas en la sección [identidades admitidas](#supported-identities) son obligatorias y deben asignarse durante el proceso de activación de audiencia. Esto incluye lo siguiente:
+
+* **EMPLEADA DOMÉSTICA** (Microsoft Advertising ID)
+* **ECID** (Experience Cloud ID)
+
+Si no se asignan todas las identidades necesarias, no se puede completar el flujo de trabajo de activación. Cada identidad cumple un propósito específico en la integración y todas son necesarias para que el destino funcione correctamente.
 
 ## Datos exportados {#exported-data}
 
