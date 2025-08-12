@@ -2,10 +2,10 @@
 title: Monitorización de la ingesta de perfiles de streaming
 description: Aprenda a utilizar el tablero de monitorización para monitorizar la ingesta de perfiles de flujo continuo
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
+source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 20%
+source-wordcount: '1967'
+ht-degree: 19%
 
 ---
 
@@ -26,7 +26,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 >[!NOTE]
 >
->La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Monitorización de métricas para la ingesta de perfiles de streaming {#streaming-profile-metrics}
 
@@ -197,6 +197,28 @@ Si el límite actual de **1,500 eventos por segundo** es insuficiente, considere
 | Ingesta de datos innecesaria | La ingesta de datos no necesarios para la personalización aumenta el rendimiento sin añadir valor y desperdiciar recursos. Por ejemplo, la ingesta de todo el tráfico de análisis en perfiles independientemente de la relevancia. | El exceso de datos no relevantes crea ruido, lo que dificulta la identificación de puntos de datos impactantes. También puede causar fricción al definir y administrar audiencias y perfiles. | Introduzca solo los datos necesarios para sus casos de uso. Asegúrese de filtrar los datos innecesarios.<ul><li>**Adobe Analytics**: Use [filtrado de nivel de fila](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) para optimizar la ingesta de datos.</li><li>**Fuentes**: use la [[!DNL Flow Service] API para filtrar datos de nivel de fila](../../sources/tutorials/api/filter.md) para fuentes compatibles como [!DNL Snowflake] y [!DNL Google BigQuery].</li></li>**Flujo de datos de Edge**: configure [flujos de datos dinámicos](../../datastreams/configure-dynamic-datastream.md) para realizar el filtrado de nivel de fila del tráfico proveniente del SDK web.</li></ul> |
 
 {style="table-layout:auto"}
+
+### Preguntas frecuentes {#faq}
+
+Lea esta sección para obtener respuestas a las preguntas frecuentes acerca de la monitorización de la ingesta de perfiles de streaming.
+
+#### ¿Por qué mis métricas tienen un aspecto diferente entre los paneles Capacidad y Supervisión para el rendimiento de las solicitudes?
+
++++Respuesta
+
+El panel [!UICONTROL Monitorización] muestra métricas en tiempo real para su ingesta y procesamiento. Estos números son métricas exactas registradas en el momento de la actividad. Por el contrario, el tablero [!UICONTROL Capacity] utiliza un mecanismo de suavizado para el cálculo de la capacidad de rendimiento. Este mecanismo ayuda a reducir los picos de corta duración de calificarse instantáneamente como infracciones y garantiza que las alertas de capacidad se centren en tendencias sostenidas, en lugar de explosiones momentáneas.
+
+Debido al mecanismo de suavizado, es posible que observe:
+
+* Pequeños picos en [!UICONTROL Supervisión] que no aparecen en [!UICONTROL Capacity].
+* Valores ligeramente inferiores en [!UICONTROL Capacity] en comparación con [!UICONTROL Monitoring] a la misma marca de tiempo.
+
+Los dos paneles son precisos, pero están diseñados para propósitos diferentes.
+
+* [!UICONTROL Supervisión]: visibilidad operativa detallada momento a momento.
+* [!UICONTROL Capacidad]: vista estratégica para identificar patrones de uso e infracción.
+
++++
 
 ## Próximos pasos {#next-steps}
 
