@@ -2,7 +2,7 @@
 title: Uso de licencias y capacidad
 description: Obtenga información sobre el uso de licencias y los límites de capacidad en Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: b65765d8e93b13fbb3c2a3e44f47725b936223eb
+source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Dentro de estos servicios, se rastrean las siguientes barreras:
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
-La capacidad de rendimiento está en el nivel de **organización** y se puede distribuir a cada zona protegida. Por ejemplo, con las 1500 rps para el rendimiento de segmentación de streaming, puede establecer su zona protegida de producción en 1500 rps y su zona protegida de desarrollo en 150 rps.
+La capacidad de rendimiento está en el nivel de **organización** y se puede distribuir a cada zona protegida. Por ejemplo, con las 1500 rps para el rendimiento de segmentación de streaming, puede establecer su zona protegida de producción en 1350 rps y su zona protegida de desarrollo en 150 rps.
 
 Experience Platform calcula el rendimiento de la zona protegida en intervalos móviles de 15 minutos. Este rendimiento se mide en tiempo real y los datos se actualizan cada 60 segundos.
 

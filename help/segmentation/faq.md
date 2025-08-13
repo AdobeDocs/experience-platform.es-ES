@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b7bf7a2b7628f61231321205e2a6b9d675afce8b
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '4828'
+source-wordcount: '4849'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estas audiencias se configuran de forma centralizada y se mantienen en Experience Platform, y cualquier solución de Adobe puede acceder a ellas fácilmente. A continuación se muestra una lista de las preguntas más frecuentes sobre las audiencias y la segmentación.
 
-## Audience Portal
+## Portal de audiencias
 
 En la siguiente sección se enumeran las preguntas relacionadas con Audience Portal.
 
@@ -120,7 +120,7 @@ Los atributos de enriquecimiento son atributos que provienen de un conjunto de d
 
 | Canal de activación | Audiencias de carga personalizada en CSV | Audiencias de la composición de audiencias |
 | --- | --- | --- |
-| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1&rbrace;.** |
+| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1}.** |
 | Adobe Journey Optimizer Campaigns | Ni los atributos de audiencia ni los de carga útil pueden activarse. | Se pueden activar tanto la audiencia como los atributos de ampliación. |
 
 ## Estados del ciclo vital {#lifecycle-states}
@@ -293,6 +293,10 @@ En este momento, no. Sin embargo, esta capacidad debería estar disponible en un
 ¡Sí! Puede utilizar audiencias de Composición de audiencias en Campañas de Adobe Journey Optimizer, Destinos de Real-Time CDP y Recorridos de Adobe Journey Optimizer.
 
 ### ¿Hay alguna barrera en el número de composiciones?
+
+>[!IMPORTANT]
+>
+>Esta protección solo se aplica a las composiciones creadas con Composición de audiencia y **no se aplica** a las composiciones creadas con Composición de audiencia federada.
 
 En este momento, solo puede tener **10** composiciones publicadas por zona protegida. Se prevé aumentar esta protección en una versión futura.
 
