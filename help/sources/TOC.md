@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 8ba51f144e3120637d8c6027be85b1b4e6e5d613
+source-git-commit: 197cdc89abd292d87276d792201dedb2373f5564
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1056'
 ht-degree: 35%
 
 ---
@@ -356,6 +356,7 @@ ht-degree: 35%
    - [Suscripción a las alertas de fuentes](tutorials/ui/alerts.md)
    - [Guardar un flujo de datos como borrador](tutorials/ui/draft.md)
    - [Aplicación de etiquetas de acceso a un flujo de datos](tutorials/ui/labels.md)
+   - [Crear un extremo privado de Azure](tutorials/ui/private-link.md)
 - Fuentes de autoservicio (SDK por lotes) {#sdk}
    - [Información general](sources-sdk/overview.md)
    - Configurar la especificación de conexión {#config}
