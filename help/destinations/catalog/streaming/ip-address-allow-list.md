@@ -4,35 +4,51 @@ title: LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura datos de Experience Platform a la instancia de extremo de la API HTTP REST, Amazon Kinesis o Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 5c67466f5321038e75d22e216a8be2e745adac49
+source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
 
-# LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo {#ip-address-allowlist}
+
+# LISTA DE PERMITIDOS de direcciones IP para destinos basados en API de streaming {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. Adobe no notifica nuevos intervalos de IP.
-> * La lista de direcciones IP documentadas aquí *no* se aplica a ningún destino que usted genere con [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Información general {#overview}
 
-Los intervalos de IP documentados aquí se aplican a los siguientes destinos:
+Los intervalos de IP documentados en esta página se aplican a los siguientes destinos:
 
-* [Destino de API HTTP](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinos empresariales avanzados](../../destination-types.md#advanced-enterprise-destinations): [Destino API HTTP](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinos de exportación de audiencias de streaming](../../destination-types.md#streaming-destinations), como [Audiencia en tiempo real Pega CDH](/help/destinations/catalog/personalization/pega-v2.md), integraciones basadas en API con [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) y [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* Destinos públicos o privados creados mediante [Destination SDK](../../destination-sdk/getting-started.md)
 
 El tráfico saliente desde Experience Platform a estos destinos siempre pasa por las direcciones IP enumeradas en esta página.
 
-Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a su extremo HTTP, instancia [!DNL Amazon Kinesis] o instancia [!DNL Azure Event Hubs]. Esta funcionalidad es especialmente útil si el extremo HTTP se encuentra detrás de un cortafuegos empresarial o si los estándares de seguridad y conformidad de la empresa requieren que una lista de intervalos de IP esté incluida en la lista de permitidos.
+Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a los destinos enumerados arriba. Esta funcionalidad es especialmente útil si el extremo HTTP se encuentra detrás de un cortafuegos empresarial o si los estándares de seguridad y conformidad de la empresa requieren que una lista de intervalos de IP esté incluida en la lista de permitidos.
 
 Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
 
-Adobe recomienda añadir los siguientes intervalos de IP a una lista de permitidos antes de trabajar con los destinos mencionados en esta página. Si no se añade el intervalo de IP específico de su región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar estos destinos de flujo continuo.
+## Cuándo realizar la lista de permitidos de las direcciones IP en esta página {#when-to-allowlist}
+
+Si la directiva de organización requiere que lista de permitidos direcciones IP para el tráfico entrante, debe agregar los intervalos de IP de las siguientes categorías a la lista de permitidos antes de trabajar con los destinos mencionados anteriormente en esta página:
+
+1. Todas las [direcciones IP globales](#global)
+2. Además de las direcciones IP globales, añada las direcciones IP correspondientes a la región en la que está aprovisionado desde la lista situada más abajo en la página. Si no se añade el intervalo de IP específico de su región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar estos destinos de flujo continuo.
+
+## Direcciones IP globales {#global}
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`
+
+Además de estas direcciones IP globales, debe lista de permitidos las direcciones IP de la región donde su organización está aprovisionada de la lista siguiente.
 
 ## VA7: Clientes de EE. UU. y América {#us-americas}
 
@@ -209,3 +225,4 @@ El rango de IP siguiente se aplica a los clientes de Experience Platform que se 
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`
+
