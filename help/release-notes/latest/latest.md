@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: af669d58ac4031354e477954a8a733cf0bd7a64b
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 39%
@@ -41,7 +41,7 @@ Experience Platform le permite suscribirse a alertas basadas en eventos para div
 **Nuevas funciones**
 
 | Función | Descripción |
-| ------- | ----------- |
+| --- | --- |
 | Alertas de capacidad de rendimiento de streaming | Tres nuevas alertas permiten a los usuarios suscribirse y configurar alertas para administrar y supervisar de forma proactiva el rendimiento de la capacidad de rendimiento de flujo continuo. Las nuevas alertas incluyen casos en los que el rendimiento de streaming alcanzó el 80 %, el 90 % o supera los límites de capacidad. Para obtener más información, lea la guía [reglas de alerta de capacidad](../../observability/alerts/rules.md#capacity). |
 
 Para obtener más información sobre las alertas, lea la [[!DNL Observability Insights] información general](../../observability/home.md).
