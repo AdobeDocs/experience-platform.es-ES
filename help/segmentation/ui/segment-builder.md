@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
+source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
 workflow-type: tm+mt
-source-wordcount: '5188'
-ht-degree: 11%
+source-wordcount: '5174'
+ht-degree: 10%
 
 ---
 
@@ -330,7 +330,7 @@ La lista de restricciones de tiempo disponibles para esta operación difiere de 
 >[!NOTE]
 >
 >Al utilizar la restricción de tiempo &quot;Después&quot;, el último evento puede tener lugar durante más tiempo que el indicado en la restricción de tiempo. >
->&#x200B;>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
+>>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
 >
 >Además, estas dos restricciones de tiempo se pueden utilizar en coordinación entre sí.
 >
@@ -375,12 +375,12 @@ Para seleccionar una política de combinación para su definición de segmento, 
 
 ![El selector de políticas de combinación está resaltado. Esto le permite elegir qué política de combinación seleccionar para la definición del segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propiedades de definición del segmento {#segment-properties}
+## Propiedades de público {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Propiedades de definición del segmento"
->abstract="La sección de propiedades de la definición del segmento muestra una estimación del tamaño de la definición del segmento resultante, con el número de perfiles calificados en comparación con el número total de perfiles. Esto le permite ajustar la definición del segmento según sea necesario antes de crear el propio público."
+>title="Propiedades de público"
+>abstract="La sección de propiedades de audiencia muestra una estimación del tamaño de la audiencia resultante, con el número de perfiles cualificados en comparación con el número total de perfiles. Esto le permite ajustar la audiencia según sea necesario antes de crear la propia audiencia."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -391,12 +391,12 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Perfiles cualificados"
->abstract="Los perfiles cualificados indican el número real de perfiles que coinciden con las reglas de la definición del segmento. Este número se actualiza cada 24 horas, después de que se haya ejecutado el trabajo de evaluación de segmentos."
+>abstract="Los perfiles cualificados indican el número real de perfiles que coinciden con las reglas de la audiencia. Este número se actualiza cada 24 horas, después de que se haya ejecutado el trabajo de evaluación de segmentos."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Perfiles estimados"
->abstract="Los perfiles estimados indican un número aproximado de perfiles, en función del trabajo de muestra, que cumplirían las reglas de definición del segmento."
+>abstract="La estimación de perfiles indica un número aproximado de perfiles, según el trabajo de muestra, que cumplen los requisitos para las reglas de la audiencia."
 
 Al crear una definición de segmento, la sección **[!UICONTROL Propiedades de la audiencia]** en el lado derecho del espacio de trabajo muestra una estimación del tamaño de la definición de segmento resultante, que le permite ajustar la definición de segmento según sea necesario antes de crear la propia audiencia.
 
@@ -404,22 +404,22 @@ Al crear una definición de segmento, la sección **[!UICONTROL Propiedades de l
 
 La marca de tiempo de los perfiles cualificados indica el trabajo de evaluación de segmentos **por lotes** más reciente y se muestra **no** para las definiciones de segmentos evaluadas mediante streaming o segmentación de Edge. Si edita la definición del segmento, el número de perfiles cualificados seguirá siendo el mismo hasta que se ejecute el siguiente trabajo de evaluación de segmentos.
 
-**[!UICONTROL Perfiles estimados]** indica un número **aproximado** de perfiles, según el **trabajo de muestra**. Esto significa que los datos de muestra se proyectan en el conjunto de perfiles más grande, lo que se traduce en un número estimado que puede diferir del número real de perfiles cualificados. La muestra de perfil estimada tiene un intervalo de confianza del 95 %.
+**[!UICONTROL Perfiles estimados]** indica un **rango aproximado** de perfiles, basado en el **trabajo de muestra**. Esto significa que los datos de muestra se proyectan en el conjunto de perfiles más grande, lo que se traduce en un número estimado que puede diferir del número real de perfiles cualificados. La muestra de perfil estimada tiene un intervalo de confianza del 95 %.
 
 Este número se actualiza en dos situaciones:
 
-1. Hay un cambio superior al 5 % en los datos del cliente o el último trabajo de muestra tiene más de siete días.
+1. Hay un cambio superior al 3 % en los datos del cliente o el último trabajo de muestra tiene más de tres días.
 2. Se han modificado o eliminado las reglas de la audiencia.
 
-Al seleccionar la burbuja de información, se proporciona el umbral de error y el tiempo del trabajo de muestra más reciente.
+Al seleccionar la burbuja de información, se indica la fecha y la hora de ejecución del último trabajo de muestra.
 
 ![Los perfiles calificados y los perfiles estimados se resaltan en la sección de propiedades de Audiencia.](../images/ui/segment-builder/audience-estimates.png)
 
-En la sección **[!UICONTROL Propiedades de audiencia]** también puede especificar información importante acerca de la definición del segmento, incluido su nombre, descripción y tipo de evaluación. Los nombres de las definiciones de segmentos se utilizan para identificar la definición de segmentos entre las definidas por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
+En la sección **[!UICONTROL Propiedades de la audiencia]** también puede especificar información importante sobre la audiencia, como el nombre, la descripción y el tipo de evaluación. Los nombres se utilizan para identificar la definición del segmento entre los definidos por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
 
-A medida que vaya creando la definición del segmento, podrá obtener una vista previa paginada de la audiencia seleccionando **[!UICONTROL Ver perfiles]**.
+A medida que vaya creando la audiencia, podrá ver una vista previa paginada de la audiencia seleccionando **[!UICONTROL Ver perfiles]**.
 
-![Se resalta la sección de propiedades de la definición del segmento. Las propiedades de definición del segmento incluyen, entre otras, el nombre, la descripción y el método de evaluación de la definición del segmento.](../images/ui/segment-builder/segment-properties.png)
+![Se resalta la sección de propiedades de audiencia. Las propiedades de audiencia incluyen, entre otras, el nombre, la descripción y el método de evaluación.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -453,4 +453,4 @@ El Generador de segmentos proporciona un flujo de trabajo enriquecido que le per
 - Habilite todas las definiciones de segmentos para la segmentación programada.
 - Habilite las definiciones de segmento especificadas para la segmentación de flujo continuo.
 
-Para obtener más información acerca de [!DNL Segmentation Service], siga leyendo la documentación y complemente su aprendizaje viendo los vídeos relacionados. Para obtener más información acerca de las otras partes de la interfaz de usuario de [!DNL Segmentation Service], lea la [[!DNL Segmentation Service] guía del usuario](./overview.md)
+Para obtener más información acerca de [!DNL Segmentation Service], siga leyendo la documentación y complemente su aprendizaje viendo los vídeos relacionados. Para obtener más información acerca de las otras partes de la interfaz de usuario de [!DNL Segmentation Service], lea la [[!DNL Segmentation Service] guía del usuario](./overview.md).
