@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
+source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
 workflow-type: tm+mt
-source-wordcount: '4482'
+source-wordcount: '4497'
 ht-degree: 5%
 
 ---
@@ -237,6 +237,8 @@ Configure su período de retención preferido en el cuadro de diálogo de config
 >[!NOTE]
 > 
 >El período de retención mínimo del lago de datos es de 30 días. El período de retención mínimo del servicio de perfil es de un día.
+>
+>Además, solo puede actualizar el período de retención del servicio de perfil una vez cada 30 días.
 
 Para admitir la transparencia y la supervisión, se proporcionan marcas de tiempo para las **últimas** y **siguientes** ejecuciones de trabajos de retención de datos. Las marcas de tiempo le ayudan a comprender cuándo se produjo la última limpieza de datos y cuándo se programó la siguiente.
 
