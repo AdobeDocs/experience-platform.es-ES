@@ -1,9 +1,10 @@
 ---
 title: Uso Compartido De Paquetes Entre Organizaciones Mediante La Herramienta Sandbox
 description: Aprenda a utilizar la herramienta de zona protegida en Adobe Experience Platform para compartir paquetes entre diferentes organizaciones.
-source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
+exl-id: 02826a8d-f01d-44cb-9ae0-0fcde24de83e
+source-git-commit: 3183d265eda36df9b08d920ba731bd9e63d150cc
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -72,17 +73,34 @@ Utilice este flujo de trabajo/proceso para compartir paquetes entre su organizac
 >
 >Solo se pueden compartir los paquetes con el estado **Publicado**.
 
-Para compartir un paquete con una organización asociada aprobada, vaya a la pestaña [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]**. A continuación, seleccione los puntos suspensivos (`...`) junto al paquete y, a continuación, seleccione **[!UICONTROL Compartir paquete]** en el menú desplegable.
+#### Uso compartido de paquetes de varios objetos {#multi-object-packages}
+
+Para compartir un paquete de varios objetos con una organización asociada aprobada, vaya a la pestaña [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]**. A continuación, seleccione los puntos suspensivos (`...`) junto al paquete y, a continuación, seleccione **[!UICONTROL Compartir paquete]** en el menú desplegable.
 
 ![Lista de paquetes que muestra el menú desplegable con Compartir paquete resaltado.](../images/ui/sandbox-tooling/private-share-package.png)
 
-En el cuadro de diálogo **[!UICONTROL Compartir paquete]**, seleccione el paquete que desea compartir en el menú desplegable **[!UICONTROL Compartir configuración]** y, a continuación, seleccione **[!UICONTROL Confirmar]**.
+En el cuadro de diálogo **[!UICONTROL Compartir paquete]**, seleccione las organizaciones con las que compartir el paquete en la lista desplegable **[!UICONTROL Compartir configuración]** y, a continuación, seleccione **[!UICONTROL Confirmar]**.
 
 >[!TIP]
 >
 >Es posible seleccionar más de una organización. Las organizaciones seleccionadas aparecerán debajo del menú desplegable [!UICONTROL Compartir configuración].
 
 ![Cuadro de diálogo Compartir paquete con la configuración de Compartir y Confirmar resaltada.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+#### Compartir paquetes completos de zona protegida {#entire-sandbox-packages}
+
+Para compartir un paquete de zona protegida completo con una organización asociada aprobada, vaya a la pestaña [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]**. A continuación, seleccione los puntos suspensivos (`...`) junto al paquete y, a continuación, seleccione **[!UICONTROL Compartir paquete]** en el menú desplegable.
+
+![La ficha Paquetes muestra una lista de paquetes y el menú desplegable.](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+
+En el cuadro de diálogo **[!UICONTROL Compartir paquete]**, seleccione las organizaciones con las que compartir el paquete en la lista desplegable **[!UICONTROL Compartir configuración]** y, a continuación, seleccione **[!UICONTROL Confirmar]**.
+
+>[!TIP]
+>
+>Es posible seleccionar más de una organización. Las organizaciones seleccionadas aparecerán debajo del menú desplegable [!UICONTROL Compartir configuración].
+
+![Cuadro de diálogo Compartir paquete con la configuración de Compartir y Confirmar resaltada.](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+
 
 ## Paquetes públicos {#public-packages}
 
@@ -130,7 +148,7 @@ Para ver el estado actual de tu solicitud de uso compartido, ve al **[!UICONTROL
 
 ![La ficha Estado de uso compartido muestra una solicitud de carga útil pendiente.](../images/ui/sandbox-tooling/sharing-status.png)
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Este documento muestra cómo utilizar la función de herramientas de espacio aislado para compartir paquetes entre diferentes organizaciones. Para obtener más información, consulte la [guía de herramientas de espacio aislado](../ui/sandbox-tooling.md).
 
