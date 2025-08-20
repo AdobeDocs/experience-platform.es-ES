@@ -6,10 +6,10 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f038927d6a19db5e0187ccefd76d9ecc9df91b6a
+source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 43%
+source-wordcount: '787'
+ht-degree: 44%
 
 ---
 
@@ -92,6 +92,7 @@ ht-degree: 43%
          * [Notas de la versión](./extensions/client/client-data-layer/release-notes.md)
       * Adobe Content Analytics {#content-analytics}
          * [Información general](./extensions/client/content-analytics/overview.md)
+         * [Notas de la versión](./extensions/client/content-analytics/release-notes.md)
       * Adobe ContextHub {#contexthub}
          * [Información general](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -134,7 +135,7 @@ ht-degree: 43%
       * [Información de recursos de AEM](https://exchange.adobe.com/apps/ec/103406)
       * [Notificador JS del freno neumático](https://exchange.adobe.com/apps/ec/103342)
       * [!DNL Algolia] datos {#algolia-insights}
-         * [Información general de ](./extensions/client/algolia/overview.md)
+         * [Información general](./extensions/client/algolia/overview.md)
       * [Amplitud](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
       * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
