@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo exportar eventos de auditoría en 
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '168'
 ht-degree: 4%
 
 ---
@@ -43,4 +43,4 @@ curl -X POST \
 
 **Respuesta**
 
-Los resultados se generan en un archivo CSV para su exportación. Una respuesta correcta devuelve HTTP 307 sin cuerpo de respuesta. Se ha proporcionado un vínculo al archivo de exportación en el encabezado de respuesta `Location`.
+Los resultados se generan en un archivo CSV para la exportación; cada entrada representa un evento de auditoría principal o mejorado. Una respuesta correcta devuelve HTTP 307 sin cuerpo de respuesta. Se ha proporcionado un vínculo al archivo de exportación en el encabezado de respuesta `Location`.

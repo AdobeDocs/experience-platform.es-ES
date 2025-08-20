@@ -4,10 +4,10 @@ description: Descubra cómo los registros de auditoría le permiten ver quién r
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 32%
+source-wordcount: '1624'
+ht-degree: 29%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 32%
 Para aumentar la transparencia y la visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform le permite auditar la actividad del usuario para varios servicios y funcionalidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Experience Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
 
 En un sentido básico, un registro de auditoría indica a **quién** realizó **qué** acción y **cuándo**. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción.
+
+Cuando un usuario realiza una acción, se registran dos tipos de eventos de auditoría. Un evento principal captura el resultado de autorización de la acción, [!UICONTROL permitir] o [!UICONTROL denegar], mientras que un evento mejorado captura el resultado de ejecución, [!UICONTROL éxito] o [!UICONTROL error]. Se pueden vincular varios eventos mejorados al mismo evento principal. Por ejemplo, al activar un destino, el evento principal registra la autorización de la acción [!UICONTROL Actualización del destino], mientras que los eventos mejorados registran varias acciones [!UICONTROL Activar segmento].
 
 >[!NOTE]
 >
@@ -89,7 +91,7 @@ Puede ver los registros de auditoría de distintas características de Experienc
 
 Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminan del sistema. Si necesita datos de más de 365 días, debe exportar los registros a una cadencia regular para satisfacer los requisitos de directivas internas.
 
-El método que utiliza para solicitar los registros de auditoría cambia el período de tiempo permitido y el número de registros a los que tendrá acceso. [Exportar registros](#export-audit-logs) le permite retroceder 365 días (en intervalos de 90 días) a un máximo de 10.000 registros, mientras que la [interfaz de usuario del registro de actividad](#filter-audit-logs) de Experience Platform muestra los últimos 90 días hasta un máximo de 1000 registros.
+El método que utiliza para solicitar los registros de auditoría cambia el período de tiempo permitido y el número de registros a los que tendrá acceso. [Exportar registros](#export-audit-logs) le permite retroceder 365 días (en intervalos de 90 días) a un máximo de 10.000 registros de auditoría (ya sean principales o mejorados), donde como [IU del registro de actividad](#filter-audit-logs) en Experience Platform muestra los últimos 90 días a un máximo de 1000 eventos principales, cada uno de ellos con los eventos mejorados correspondientes.
 
 Seleccione un evento de la lista para ver los detalles en el carril derecho.
 
@@ -101,7 +103,7 @@ Seleccione el icono de canal (![Icono de filtro](/help/images/icons/filter.png))
 
 >[!NOTE]
 >
->La interfaz de usuario de Experience Platform solo muestra los últimos 90 días hasta un máximo de 1000 registros, independientemente de los filtros aplicados. Si necesita registrar más allá de eso (hasta un máximo de 365 días), necesitará [exportar los registros de auditoría](#export-audit-logs).
+>La IU de Experience Platform solo muestra los últimos 90 días hasta un máximo de 1000 eventos principales, cada uno con los eventos mejorados correspondientes, independientemente de los filtros aplicados. Si necesita registrar más allá de eso (hasta un máximo de 365 días), necesitará [exportar los registros de auditoría](#export-audit-logs).
 
 ![Panel de auditorías con el registro de actividad filtrado resaltado.](../../images/audit-logs/filters.png)
 
@@ -112,7 +114,7 @@ Los siguientes filtros están disponibles para eventos de auditoría en la inter
 | [!UICONTROL Categoría] | Utilice el menú desplegable para filtrar los resultados mostrados por [categoría](#category). |
 | [!UICONTROL Acción] | Filtrar por acción. Las acciones disponibles para cada servicio se pueden ver en la tabla de recursos anterior. |
 | [!UICONTROL Usuario] | Escriba el identificador de usuario completo (por ejemplo, `johndoe@acme.com`) para filtrar por usuario. |
-| [!UICONTROL Estado] | Filtre por si la acción se permitió (completó) o se denegó debido a la falta de [permisos de control de acceso](../../../access-control/home.md). |
+| [!UICONTROL Estado] | Filtrar eventos de auditoría por resultado: correcto, erróneo, permitido o denegado debido a la falta de [permisos de control de acceso](../../../access-control/home.md). Para una acción ejecutada, los eventos principales muestran [!UICONTROL Permitir] o [!UICONTROL Denegar]. Cuando el evento principal es [!UICONTROL Permitir], puede que haya adjuntado uno o más eventos mejorados que muestran **[!UICONTROL Éxito]** o **[!UICONTROL Error]**. Por ejemplo, una acción correcta muestra [!UICONTROL Permitir] en el evento principal y [!UICONTROL Éxito] en el evento mejorado adjunto. |
 | [!UICONTROL Fecha] | Seleccione una fecha de inicio o de finalización para definir un intervalo de fechas en el que filtrar los resultados. Los datos se pueden exportar con un periodo retrospectivo de 90 días (por ejemplo, del 15-12-2021 al 15-03-2022). Esto puede variar según el tipo de evento. |
 
 Para quitar un filtro, selecciona la &quot;X&quot; en el icono de la píldora para el filtro en cuestión o selecciona **[!UICONTROL Borrar todo]** para eliminar todos los filtros.
@@ -137,7 +139,7 @@ Para exportar la lista actual de registros de auditoría, seleccione **[!UICONTR
 
 >[!NOTE]
 >
->Los registros se pueden solicitar en intervalos de 90 días hasta 365 días antes. Sin embargo, la cantidad máxima de registros que se pueden devolver durante una sola exportación es de 10 000.
+>Los registros se pueden solicitar en intervalos de 90 días hasta 365 días antes. Sin embargo, la cantidad máxima de registros que se pueden devolver durante una sola exportación es de 10 000 eventos de auditoría (principales o mejorados).
 
 ![Se ha resaltado el panel Auditorías con el [!UICONTROL registro de descargas].](../../images/audit-logs/download.png)
 
@@ -167,7 +169,7 @@ Todas las acciones que puede realizar en la interfaz de usuario también se pued
 
 ## Administración de registros de auditoría para Adobe Admin Console
 
-Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/es/enterprise/using/audit-logs.html).
+Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Pasos siguientes y recursos adicionales
 
@@ -175,4 +177,4 @@ En esta guía se explica cómo administrar los registros de auditoría en Experi
 
 Para comprender mejor los registros de auditoría en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/344645?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
