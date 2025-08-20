@@ -1,9 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
-source-git-commit: 6b99f9f0bef18b8a4d04a18f817e300cc4c5d9a3
+exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
+source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1448'
 ht-degree: 39%
 
 ---
@@ -109,7 +110,7 @@ Para obtener más información sobre el servicio de catálogo, lea la [descripci
 
 | Función | Descripción |
 | --- | --- |
-| Funciones mejoradas de búsqueda, filtrado y etiquetado para destinos | Mejore su flujo de trabajo de administración de destinos con capacidades mejoradas de búsqueda, filtrado y etiquetado en las pestañas [Examinar](../../destinations/ui/destinations-workspace.md#browse) y [Cuentas](../../destinations/ui/destinations-workspace.md#accounts). Ahora puede buscar flujos de datos y cuentas específicos por nombre, filtrar por varios criterios, incluida la plataforma de destino, el estado y las fechas, y crear etiquetas personalizadas para organizar los destinos. La ordenación de columnas también está disponible para campos clave como el último tiempo de ejecución del flujo de datos, lo que facilita la identificación y administración de las conexiones de destino. |
+| Funciones mejoradas de búsqueda, filtrado y etiquetado para destinos | Mejore su flujo de trabajo de administración de destinos con capacidades mejoradas de búsqueda, filtrado y etiquetado en las pestañas [Examinar](../../destinations/ui/destinations-workspace.md#browse) y [Cuentas](../../destinations/ui/destinations-workspace.md#accounts). <br>: ahora puede buscar flujos de datos y cuentas específicos por nombre, filtrar por varios criterios, incluida la plataforma de destino, el estado y las fechas, y crear etiquetas personalizadas para organizar sus destinos. La ordenación de columnas también está disponible para campos clave como el último tiempo de ejecución del flujo de datos, lo que facilita la identificación y administración de las conexiones de destino. <br> ![Demostración animada de la búsqueda de un flujo de datos de destino en la ficha Examinar](../../destinations/assets/ui/workspace/search.gif) |
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
