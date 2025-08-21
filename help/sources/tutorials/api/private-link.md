@@ -1,17 +1,16 @@
 ---
-title: Compatibilidad con vínculos privados en orígenes
+title: Usar el vínculo privado de Azure para las fuentes en la API
 description: Obtenga información sobre cómo crear y utilizar vínculos privados para fuentes de Adobe Experience Platform
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
-ht-degree: 6%
+source-wordcount: '1380'
+ht-degree: 5%
 
 ---
 
-# Compatibilidad con vínculos privados en orígenes
+# Usar [!DNL Azure Private Link] para orígenes en la API
 
 >[!AVAILABILITY]
 >
@@ -22,11 +21,13 @@ ht-degree: 6%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Lea esta guía para obtener información sobre cómo establecer una conexión de extremo privado a fuentes basadas en Azure a través de un vínculo privado y permitir un mecanismo de transferencia de datos más seguro.
+Puede usar la característica [!DNL Azure Private Link] para crear extremos privados a los que conectarse los orígenes de Adobe Experience Platform. Conecte sus orígenes de forma segura a una red virtual mediante direcciones IP privadas, lo que elimina la necesidad de direcciones IP públicas y reduce la superficie de ataque.Simplifique la configuración de la red eliminando la necesidad de configuraciones complejas de firewall o traducción de direcciones de red, al tiempo que garantiza que el tráfico de datos solo llegue a los servicios aprobados.
 
-## Introducción 
+Lea esta guía para aprender a utilizar las API para crear y utilizar un extremo privado.
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+## Introducción
+
+Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
 * [Fuentes](../../home.md): Experience Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
 * [Zonas protegidas](../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
@@ -88,7 +89,7 @@ curl -X POST \
 
 Una respuesta correcta devuelve lo siguiente:
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
@@ -152,7 +153,7 @@ curl -X GET \
 
 Una respuesta correcta devuelve una lista de extremos privados de su organización.
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
@@ -229,7 +230,7 @@ curl -X GET \
 
 Una respuesta correcta devuelve una lista de todos los extremos privados que corresponden al origen con el id. de especificación de conexión: `4c10e202-c428-4796-9208-5f1f5732b1cf`.
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
@@ -306,7 +307,7 @@ curl -X GET \
 
 Una respuesta correcta devuelve el extremo privado con el identificador: `2c5699b0-b9b6-486f-8877-ee5e21fe9a9d`
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
@@ -371,7 +372,7 @@ curl -X GET \
 
 **Respuesta**
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
@@ -470,7 +471,7 @@ curl -X GET \
 
 **Respuesta**
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
@@ -581,7 +582,7 @@ curl -X POST \
 
 Una respuesta correcta devuelve el ID de la conexión base y la etiqueta generados recientemente.
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
@@ -628,7 +629,7 @@ curl -X GET \
 
 Una respuesta correcta devuelve una lista de conexiones vinculadas al extremo privado consultado.
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
@@ -740,7 +741,7 @@ curl -X GET \
 
 Una respuesta correcta devuelve todas las conexiones vinculadas a extremos privados.
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 ```json
 {
