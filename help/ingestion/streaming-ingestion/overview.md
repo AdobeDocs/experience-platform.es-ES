@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Resumen de ingesta de streaming
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 2%
+source-wordcount: '419'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de transmisión y describe los conceptos anteriores.
 
->[!VIDEO](https://video.tv.adobe.com/v/31628?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Registros de perfil de flujo y [!DNL ExperienceEvents]
 
@@ -39,7 +39,7 @@ Para obtener más información sobre cómo habilitar un conjunto de datos para [
 
 >[!IMPORTANT]
 >
->Las protecciones para la ingesta de transmisión se calculan en el nivel de organización y no en el de zona protegida. Esto significa que el uso de datos por zona protegida está enlazado al derecho de uso de licencias total que corresponde con toda la organización. Además, el uso de datos en entornos limitados de desarrollo está limitado al 10 % del total de perfiles. Para obtener más información acerca del derecho de uso de licencias, lea la [guía de prácticas recomendadas de administración de datos](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>Las protecciones para la ingesta de transmisión están enlazadas al derecho de uso de licencia total que corresponde a toda la organización. Además, el uso de datos en entornos limitados de desarrollo está limitado al 10 % del total de perfiles. Para obtener más información acerca del derecho de uso de licencias, lea la [guía de prácticas recomendadas de administración de datos](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Para obtener información sobre cómo establecer límites en el rendimiento de streaming, lee [Descripción general de la capacidad](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destino | Latencia esperada |
 | --------- | ---------------- |
