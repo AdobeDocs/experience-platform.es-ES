@@ -2,9 +2,9 @@
 title: Desarrollar una extensión
 description: Este documento proporciona una visión general del proceso de desarrollo de extensiones de etiquetas, con vínculos a documentación adicional para ver procesos más detallados.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
+source-git-commit: 73452d0735c6a040ddd25b4cd00cec4b91eaf7ae
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '447'
 ht-degree: 96%
 
 ---
@@ -24,8 +24,6 @@ Con esos conocimientos puede planificar los componentes que se deben proporciona
 Una vez establecido el plan, las directrices que se muestran a continuación pueden ayudarle a comprender el proceso de desarrollo de la extensión:
 
 * La [guía de introducción](../getting-started.md) y otros documentos de **desarrollo de extensiones** en la navegación izquierda son buenos materiales de referencia para comprender las extensiones. Incluyen detalles sobre qué pueden hacer las extensiones, cómo se almacena y pasa la información de usuario entre su extensión y Adobe Experience Platform, cómo se agrupa el código en las bibliotecas, y cómo se interpreta y utiliza el código de extensión en el explorador durante la ejecución.
-<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
-* La lista de reproducción de YouTube [Introducción a las extensiones](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) le guiará por el proceso de creación de paquetes de extensión.
 * [Explicación del esquema JSON](https://spacetelescope.github.io/understanding-json-schema/index.html#).
 * [JSON Lint/Validator](https://jsonlint.com/).
 * Extensión [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) para Chrome para resaltar e imprimir JSON y JSONP.
