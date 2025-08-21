@@ -35,7 +35,7 @@ Por ejemplo, el departamento Operaciones de marketing de una marca de servicios 
 
 * **Confirmar condiciones de uso:** Para poder configurar un nuevo destino de [!DNL Acxiom Real ID Audience Connection], debe leer y firmar el Contrato de condiciones de uso de [!DNL Acxiom's]. Recibirá el vínculo al acuerdo una vez que se haya completado el pedido de ventas ejecutado. Hasta que no firme el acuerdo, no verá la tarjeta de destino [!DNL Acxiom Real ID Audience Connection] en el catálogo de destino de Experience Platform. Después de aceptar y firmar el acuerdo, [!DNL Adobe] completará el proceso de incorporación y verá la tarjeta de destino [!DNL Acxiom Real ID Audience Connection].
 * **Conozca su ID de organización de Adobe:** Se necesita su ID de organización [!DNL Adobe] para completar las condiciones del contrato de usuario. Consulte el tema [!DNL Adobe's] *Organizaciones en Experience Cloud* para obtener detalles sobre cómo [ver su ID de organización](https://experienceleague.adobe.com/es/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Obtener licencia para [!DNL Acxiom's Real ID] producto:** Una vez obtenida la licencia, haga que Real ID de Acxiom esté disponible en Real-Time CDP. Consulte [Mejora de datos de Acxiom](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obtener más información.
+* **Obtener licencia para [!DNL Acxiom's Real ID] producto:** Una vez obtenida la licencia, haga que Real ID de Acxiom esté disponible en Real-Time CDP. Consulte [Mejora de datos de Acxiom](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obtener más información.
 
 
 ## Identidades admitidas {#supported-identities}
@@ -54,7 +54,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------------|----------------|----------------|
 | Servicio de segmentación | ✓ | Audiencias generadas a través del [servicio de segmentación](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home) de Experience Platform. |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience) en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/audience-portal#import-audience) en Experience Platform desde archivos CSV. |
 
 
 ## Destinos admitidos {#supported-destinations}
@@ -95,7 +95,7 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 
 
-Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Si está satisfecho con los resultados, seleccione **[!UICONTROL Finalizar]** pa
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
-Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/es/docs/experience-platform/data-governance/home).
 
 ## Resolución de problemas {#troubleshooting}
 
