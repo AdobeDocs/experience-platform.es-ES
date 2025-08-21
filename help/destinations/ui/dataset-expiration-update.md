@@ -2,15 +2,13 @@
 title: Ampliar las programaciones de exportación de conjuntos de datos para flujos de datos creados antes de noviembre de 2024
 description: Obtenga información sobre cómo ampliar la programación de exportación para los flujos de datos de exportación de conjuntos de datos creados antes de noviembre de 2024 que dejarán de funcionar el 1 de septiembre de 2025.
 type: Tutorial
-hide: true
-hidefromtoc: true
-source-git-commit: 08a1c6a1830ace4661ab6aa5b547c4473301ce84
+exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
+source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
 
 ---
-
 
 # Ampliar las programaciones de exportación de conjuntos de datos para flujos de datos creados antes de noviembre de 2024
 
