@@ -21,7 +21,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de transmisión y describe los conceptos anteriores.
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31628?quality=12&learn=on&captions=spa)
 
 ### Registros de perfil de flujo y [!DNL ExperienceEvents]
 
