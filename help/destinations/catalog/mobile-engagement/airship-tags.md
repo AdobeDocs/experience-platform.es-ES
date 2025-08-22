@@ -3,16 +3,24 @@ keywords: etiquetas de dirigible;destino de dirigible
 title: Conexión de etiquetas de dirigible
 description: Pase sin problemas los datos de audiencia de Adobe al dirigible como etiquetas de audiencia para segmentar dentro del dirigible.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 2%
+source-wordcount: '1082'
+ht-degree: 5%
 
 ---
 
-# [!DNL Airship Tags] conexión {#airship-tags-destination}
+# [!DNL Airship Tags] conexión {#airship-tags-destination}
 
 ## Información general
+
+>[!IMPORTANT]
+>
+>* Desde el viernes, 21 de agosto de 2025, puede ver dos tarjetas **[!DNL Airship Tags]** una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino **[!DNL Airship Tags]** existente a **[!UICONTROL (obsoleto) Etiquetas de dirigibles]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Etiquetas de dirigibles]**.
+>* Use la nueva conexión **[!UICONTROL Airship Tags]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de las etiquetas de dirigible]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción.
+>* Si está creando flujos de datos a través de la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar sus [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:
+>   * ID de especificación de flujo: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * ID de especificación de conexión: `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship] es la plataforma de participación del cliente líder, que le ayuda a entregar mensajes omnicanal significativos y personalizados a sus usuarios en cada etapa del ciclo de vida del cliente.
 
@@ -94,11 +102,11 @@ Almacene en déclencheur mensajes uno a uno en tiempo real cuando los usuarios e
 
 Por ejemplo, un retailer configura una audiencia específica de marca de jeans en Experience Platform. Que retailer ahora puede almacenar en déclencheur un mensaje móvil en cuanto alguien establece su preferencia de vaqueros para una marca específica.
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -126,7 +134,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
