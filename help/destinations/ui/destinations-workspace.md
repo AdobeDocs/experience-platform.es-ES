@@ -3,9 +3,9 @@ keywords: plataforma;destinos;espacio de trabajo de destinos;espacio de trabajo;
 title: Espacio de trabajo Destinos
 description: El espacio de trabajo Destinos consta de cinco secciones, Información general, Catálogo, Examinar, Cuentas y Vista de sistema. Se describen en las secciones siguientes.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 73d84174a9960e180a81c3db938f3f18f68f3beb
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '2235'
+source-wordcount: '2240'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Los destinos con la opción **[!UICONTROL Habilitado/Deshabilitado]** activada e
 > ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
 > 
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Activar audiencias](/help/images/icons/data-add.png) **[!UICONTROL Activar audiencias]** para exportar audiencias o conjuntos de datos a ese destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar control de destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino &#x200B;]**&#x200B;para editar las conexiones de destino existentes. Lea el tutorial sobre [editar destinos](/help/destinations/ui/edit-destination.md) para obtener más información.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar control de destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino ]**para editar las conexiones de destino existentes. Lea el tutorial sobre [editar destinos](/help/destinations/ui/edit-destination.md) para obtener más información.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar acciones de marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Editar acciones de marketing]** para [cambiar las acciones de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) para el destino seleccionado.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Eliminar control](/help/images/icons/delete.png) **[!UICONTROL Eliminar]** para [quitar](delete-destinations.md) una conexión existente a un destino.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use la vista ![Ver en el control de supervisión](/help/images/icons/monitoring.png) **[!UICONTROL Ver en el control de supervisión]** para ver la información de activación de este destino en el [panel de supervisión](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
@@ -128,7 +128,6 @@ Utilice la barra de búsqueda situada en la parte superior de la tabla para busc
 Utilice los filtros de la barra lateral izquierda para acotar la búsqueda.
 
 ![Filtros de destino en la ficha Examinar](../assets/ui/workspace/destination-filters.png)
-
 
 * **[!UICONTROL Plataforma de destino]**: filtre flujos de datos por plataformas de destino específicas (por ejemplo, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). Puede seleccionar varias plataformas simultáneamente.
 * **[!UICONTROL Tiene cualquier etiqueta]**: filtre flujos de datos que tengan etiquetas específicas asignadas. Esto le ayuda a organizar y buscar flujos de datos en función del etiquetado personalizado.
@@ -183,9 +182,9 @@ La ficha **[!UICONTROL Cuentas]** muestra detalles acerca de las conexiones que 
 
 >[!TIP]
 >
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Activar control](/help/images/icons/data-add.png)**[!UICONTROL Activar &#x200B;]**/**[!UICONTROL &#x200B; Activar audiencias &#x200B;]**/**[!UICONTROL &#x200B; Exportar conjuntos de datos &#x200B;]**&#x200B;para exportar audiencias o conjuntos de datos a ese destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Editar detalles](/help/images/icons/edit.png)**[!UICONTROL Editar detalles &#x200B;]**&#x200B;para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Eliminar control](/help/images/icons/delete.png)**[!UICONTROL Eliminar &#x200B;]**&#x200B;para [eliminar](delete-destination-account.md) una cuenta de destino existente.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Activar control](/help/images/icons/data-add.png)**[!UICONTROL Activar ]**/**[!UICONTROL  Activar audiencias ]**/**[!UICONTROL  Exportar conjuntos de datos ]**para exportar audiencias o conjuntos de datos a ese destino.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Editar detalles](/help/images/icons/edit.png)**[!UICONTROL Editar detalles ]**para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Eliminar control](/help/images/icons/delete.png)**[!UICONTROL Eliminar ]**para [eliminar](delete-destination-account.md) una cuenta de destino existente.
 
 ![Pestaña Cuentas](../assets/ui/workspace/accounts-tab.png)
 
@@ -197,7 +196,7 @@ La ficha **[!UICONTROL Cuentas]** muestra detalles acerca de las conexiones que 
 | [!UICONTROL Nombre de usuario] | El nombre de usuario que seleccionó en [conectar flujo de trabajo de destino](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Conexiones] | Representa el número de flujos de datos de destino únicos correctos conectados con información básica creada para un destino. |
 | [!UICONTROL Fecha de autorización] | La fecha en la que se autorizó la conexión con este destino. |
-| [!UICONTROL Fecha de caducidad] | La fecha en la que caducará la autorización de conexión a este destino. <br>**Importante**: Actualmente esta columna solo está disponible para la conexión de [Facebook](../catalog/social/facebook.md). |
+| [!UICONTROL Fecha de caducidad] | La fecha en la que caducará la autorización de conexión a este destino. <br>**Importante**: Actualmente, esta columna solo está disponible para las conexiones de [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md) y [Audiencias coincidentes de LinkedIn](../catalog/social/linkedin-b2b.md). |
 
 {style="table-layout:auto"}
 

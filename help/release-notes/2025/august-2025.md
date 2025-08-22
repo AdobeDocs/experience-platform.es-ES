@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: cb32846bcbd917f267cba587b60dc323f6bc7d96
+source-git-commit: d2b605925a8fd7ea06f198ba8a9f85747a2e585b
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 37%
+source-wordcount: '1643'
+ht-degree: 33%
 
 ---
 
@@ -98,13 +98,14 @@ Para obtener más información sobre el servicio de catálogo, lea la [descripci
 | Destino | Descripción |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) destino | Use el destino [!DNL Acxiom Real ID Audience Connection] para mejorar audiencias con la tecnología [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/) y activar audiencias en varias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] y más. |
+| Destino [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) mejorado | El destino [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) mejorado es una versión actualizada del conector [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) existente. Este nuevo conector incorpora funciones de sincronización de perfiles además de las funciones de sincronización de audiencias existentes del conector heredado, lo que proporciona una integración más estrecha con [!DNL Marketo Engage]. <br> El conector [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) quedará obsoleto en **marzo de 2026**. Para garantizar una transición sin problemas al nuevo destino de **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)**, revise los siguientes puntos clave y las acciones necesarias: <ul><li>Todos los usuarios de la versión actual de Marketo Engage **[!UICONTROL (heredada) (V2)]** deben migrar al nuevo destino de **[!UICONTROL Marketo Engage]** para marzo de 2026.</li><li> **Los flujos de datos existentes no se migrarán automáticamente.**: debes [configurar una nueva conexión](../../destinations/ui/connect-destination.md) al nuevo destino de **[!UICONTROL Marketo Engage]** y activar tus audiencias allí.</li></ul> |
 
 **Destinos actualizados**
 
 | Destino | Descripción |
 | --- | --- |
 | Actualización interna de [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | A partir del 11 de agosto de 2025, es posible que haya visto dos tarjetas de **[!DNL Microsoft Bing]** en paralelo en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino **[!DNL Microsoft Bing]** existente a **[!UICONTROL (obsoleto) Microsoft Bing]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Microsoft Bing]**. <br>: la actualización se completó y la tarjeta obsoleta se eliminó del catálogo de destino. Utilice la conexión **[!UICONTROL Microsoft Bing]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de Microsoft Bing]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br><br>Si está creando flujos de datos a través de la [API del servicio de flujo](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar su [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:<ul><li>ID de especificación de flujo: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de especificación de conexión: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Después de esta actualización, es posible que experimente una **caída en el número de perfiles activados** en sus flujos de datos a [!DNL Microsoft Bing]. Esta caída se debe a la introducción del **requisito de asignación ECID** para todas las activaciones en esta plataforma de destino. |
-
+| Detalles de caducidad de autenticación para [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) y [audiencias coincidentes de LinkedIn](../../destinations/catalog/social/linkedin-b2b.md) destinos | La información de caducidad de autenticación de [!DNL LinkedIn] destinos ahora está visible directamente en la interfaz de Experience Platform, por lo que puede ver cuándo caducará la autenticación y renovarla antes de que cause interrupciones en los flujos de datos. Puede supervisar las fechas de caducidad de los tokens desde la columna **[!UICONTROL Fecha de caducidad de la cuenta]** en las pestañas **[[!UICONTROL Cuentas]](../../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Examinar]](../../destinations/ui/destinations-workspace.md#browse)**. |
 
 **Funcionalidad nueva o actualizada**
 
