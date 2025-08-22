@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
+source-git-commit: cb32846bcbd917f267cba587b60dc323f6bc7d96
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 39%
+source-wordcount: '1470'
+ht-degree: 37%
 
 ---
 
@@ -102,7 +102,7 @@ Para obtener más información sobre el servicio de catálogo, lea la [descripci
 
 | Destino | Descripción |
 | --- | --- |
-| Actualización interna de [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | Desde el martes, 11 de agosto de 2025, puede ver dos tarjetas **[!DNL Microsoft Bing]** una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino **[!DNL Microsoft Bing]** existente a **[!UICONTROL (obsoleto) Microsoft Bing]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Microsoft Bing]**. Use la nueva conexión **[!UICONTROL Microsoft Bing]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de Microsoft Bing]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br><br>Si está creando flujos de datos a través de la [API del servicio de flujo](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar su [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:<ul><li>ID de especificación de flujo: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de especificación de conexión: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Después de esta actualización, es posible que experimente una **caída en el número de perfiles activados** en sus flujos de datos a [!DNL Microsoft Bing]. Esta caída se debe a la introducción del **requisito de asignación ECID** para todas las activaciones en esta plataforma de destino. |
+| Actualización interna de [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | A partir del 11 de agosto de 2025, es posible que haya visto dos tarjetas de **[!DNL Microsoft Bing]** en paralelo en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se ha cambiado el nombre del conector de destino **[!DNL Microsoft Bing]** existente a **[!UICONTROL (obsoleto) Microsoft Bing]** y ya tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Microsoft Bing]**. <br>: la actualización se completó y la tarjeta obsoleta se eliminó del catálogo de destino. Utilice la conexión **[!UICONTROL Microsoft Bing]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de Microsoft Bing]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción. <br><br>Si está creando flujos de datos a través de la [API del servicio de flujo](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar su [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:<ul><li>ID de especificación de flujo: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de especificación de conexión: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Después de esta actualización, es posible que experimente una **caída en el número de perfiles activados** en sus flujos de datos a [!DNL Microsoft Bing]. Esta caída se debe a la introducción del **requisito de asignación ECID** para todas las activaciones en esta plataforma de destino. |
 
 **Funcionalidad nueva o actualizada**
 
