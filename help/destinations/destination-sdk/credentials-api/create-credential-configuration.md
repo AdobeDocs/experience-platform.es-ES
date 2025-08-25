@@ -2,10 +2,10 @@
 description: Esta página ejemplifica la llamada de API utilizada para crear una Adobe Experience Platform Destination SDK de configuración de credenciales.
 title: Crear una configuración de credenciales
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 6%
+source-wordcount: '586'
+ht-degree: 7%
 
 ---
 
@@ -27,15 +27,15 @@ Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar
 
 Use este extremo de API para crear una configuración de credenciales únicamente si existe un sistema de autenticación global entre Adobe y la plataforma de destino y el cliente [!DNL Experience Platform] no necesita proporcionar credenciales de autenticación para conectarse a su destino. En este caso, debe crear una configuración de credenciales utilizando el extremo de API `/credentials`.
 
-Cuando use un sistema de autenticación global, debe establecer `"authenticationRule":"PLATFORM_AUTHENTICATION"` en la configuración de [envío de destino](../functionality/destination-configuration/destination-delivery.md) al [crear una nueva configuración de destino](../authoring-api/destination-configuration/create-destination-configuration.md).
+Cuando use un sistema de autenticación global, debe establecer `"authenticationRule":"PLATFORM_AUTHENTICATION"` en la configuración de [envío de destino](../functionality/destination-configuration/destination-delivery.md) al [crear una nueva configuración de destino](../authoring-api/destination-configuration/create-destination-configuration.md). A continuación, debe crear una [configuración de credenciales](../credentials-api/create-credential-configuration.md) y pasar el ID del objeto de credencial en el parámetro `authenticationId` en la configuración de [entrega de destino](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de credenciales {#get-started}
 
-Antes de continuar, revise la [guía](../getting-started.md) de introducción para obtener información importante que necesita saber para realizar llamadas a la API correctamente, incluido cómo obtener la permiso de creación de destino y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Crear una configuración de credenciales {#create}
 
@@ -94,7 +94,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 >[!TAB Amazon S3]
 
-**Crear una [!DNL Amazon S3] configuración de credenciales**
+**Crear una configuración de credencial [!DNL Amazon S3]**
 
 +++**Solicitud**
 
@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parámetro | Tipo | Descripción |
 | -------- | ----------- | ----------- |
-| `username` | Cadena | Configuración de credenciales inicio de sesión nombre de usuario |
+| `username` | Cadena | Nombre de usuario de inicio de sesión de configuración |
 | `sshKey` | Cadena | Clave SSH para SFTP con autenticación SSH |
 
 {style="table-layout:auto"}
@@ -207,9 +207,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 +++
 
->[!TAB Azure Blob Storage]
+>[!TAB Almacenamiento de blob de Azure]
 
-**Crear una [!DNL Azure Blob Storage] configuración de credenciales**
+**Crear una configuración de credencial [!DNL Azure Blob Storage]**
 
 +++Solicitud
 
@@ -248,6 +248,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cuándo usar el extremo de credenciales y cómo establecer una configuración de credenciales mediante el extremo de API `/authoring/credentials`. Lea [cómo usar Destination SDK para configurar su destino](../guides/configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración de su destino.

@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar las opciones de entrega de destino para los destinos creados con Destination SDK para indicar a dónde van los datos exportados y qué regla de autenticación se utiliza en la ubicación a la que llegan los datos.
 title: Envío de destino
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '641'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Este artículo describe todas las opciones de envío de destino admitidas que pu
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -48,7 +48,8 @@ Al configurar la entrega de destino, puede utilizar los parámetros descritos en
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `authenticationRule` | Cadena | Indica cómo debe conectarse [!DNL Experience Platform] a su destino. Valores compatibles:<ul><li>`CUSTOMER_AUTHENTICATION`: utilice esta opción si los clientes de Experience Platform inician sesión en el sistema mediante cualquiera de los métodos de autenticación descritos [aquí](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: utilice esta opción si existe un sistema de autenticación global entre Adobe y su destino y el cliente [!DNL Experience Platform] no necesita proporcionar credenciales de autenticación para conectarse a su destino. En este caso, debe crear un objeto de credenciales con la configuración de la API [credentials](../../credentials-api/create-credential-configuration.md). </li><li>`NONE`: utilice esta opción si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
+| `authenticationRule` | Cadena | Indica cómo debe conectarse [!DNL Experience Platform] a su destino. Valores compatibles:<ul><li>`CUSTOMER_AUTHENTICATION`: utilice esta opción si los clientes de Experience Platform inician sesión en el sistema mediante cualquiera de los métodos de autenticación descritos [aquí](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: utilice esta opción si existe un sistema de autenticación global entre Adobe y su destino y el cliente [!DNL Experience Platform] no necesita proporcionar credenciales de autenticación para conectarse a su destino. En este caso, debe crear un objeto de credenciales con la configuración de la API [credentials](../../credentials-api/create-credential-configuration.md) y establecer el parámetro `authenticationId` en el valor del ID del objeto de credenciales.</li><li>`NONE`: utilice esta opción si no se requiere autenticación para enviar datos a la plataforma de destino. </li></ul> |
+| `authenticationId` | Cadena | `instanceId` del identificador de configuración del objeto de credencial que se va a usar para la autenticación. Este parámetro solo es necesario cuando necesita especificar una configuración de credenciales determinada. |
 | `destinationServerId` | Cadena | `instanceId` del [servidor de destino](../../authoring-api/destination-server/create-destination-server.md) al que desea exportar los datos. |
 | `deliveryMatchers.type` | Cadena | <ul><li>Al configurar la entrega de destino para destinos basados en archivos, establezca siempre `SOURCE`.</li><li>Al configurar la entrega de destino para un destino de flujo continuo, no es necesaria la sección `deliveryMatchers`.</li></ul> |
 | `deliveryMatchers.value` | Cadena | <ul><li>Al configurar la entrega de destino para destinos basados en archivos, establezca siempre `batch`.</li><li>Al configurar la entrega de destino para un destino de flujo continuo, no es necesaria la sección `deliveryMatchers`.</li></ul> |
@@ -101,7 +102,33 @@ El ejemplo siguiente muestra cómo se debe configurar la entrega de destino para
 
 >[!ENDSHADEBOX]
 
-## Pasos siguientes {#next-steps}
+## Configuración de autenticación de plataforma {#platform-authentication}
+
+Al usar `PLATFORM_AUTHENTICATION`, debe especificar el parámetro `authenticationId` para vincular la configuración de destino a la configuración de credenciales.
+
+1. Establezca `destinationDelivery.authenticationRule` en `"PLATFORM_AUTHENTICATION"` en la configuración de destino
+2. [Cree el objeto de credencial](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md).
+3. Establezca el parámetro `authenticationId` en el valor `instanceId` del objeto de credencial.
+
+**Ejemplo de configuración con PLATFORM_AUTHENTICATION:**
+
+>[!BEGINSHADEBOX]
+
+```json
+{
+   "destinationDelivery":[
+      {
+         "authenticationRule":"PLATFORM_AUTHENTICATION",
+         "authenticationId":"<string-here>",
+         "destinationServerId":"<string-here>"
+      }
+   ]
+}
+```
+
+>[!ENDSHADEBOX]
+
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor cómo puede configurar las ubicaciones en las que el destino debe exportar los datos, tanto para los destinos de flujo continuo como basados en archivos.
 

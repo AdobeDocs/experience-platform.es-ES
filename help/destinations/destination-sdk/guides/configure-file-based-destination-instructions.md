@@ -2,9 +2,9 @@
 description: En esta página se muestran y describen los pasos para configurar un destino basado en archivos mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino basado en archivos
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '745'
 ht-degree: 1%
 
 ---
@@ -413,8 +413,7 @@ Dependiendo de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o
    * [Autenticación SFTP con clave SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Autenticación SFTP con contraseña](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Si seleccionó `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulte la [documentación de la API de configuración de credenciales](../credentials-api/create-credential-configuration.md#when-to-use).
-
+* Si seleccionó `"authenticationRule": "PLATFORM_AUTHENTICATION"`, debe crear una [configuración de credenciales](../credentials-api/create-credential-configuration.md) y pasar el identificador del objeto de credencial en el parámetro `authenticationId` de la configuración [entrega de destino](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 ## Paso 5: Prueba del destino {#test-destination}
 
@@ -423,7 +422,7 @@ Después de configurar el destino mediante los extremos de configuración de los
 Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear audiencias que activar en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
 * [Creación de una audiencia: página de documentación](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Crear una audiencia: tutorial en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es)
+* [Crear una audiencia: tutorial en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Paso 6: Publicación del destino {#publish-destination}
 

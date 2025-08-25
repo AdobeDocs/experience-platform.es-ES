@@ -2,10 +2,10 @@
 description: Esta página ejemplifica la llamada de API utilizada para actualizar una configuración de credenciales existente a través de Adobe Experience Platform Destination SDK.
 title: Actualizar una configuración de credenciales
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 5%
+source-wordcount: '610'
+ht-degree: 7%
 
 ---
 
@@ -27,11 +27,11 @@ Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar
 
 Use este extremo de API para crear una configuración de credenciales únicamente si existe un sistema de autenticación global entre Adobe y la plataforma de destino y el cliente [!DNL Experience Platform] no necesita proporcionar credenciales de autenticación para conectarse a su destino. En este caso, debe crear una configuración de credenciales utilizando el extremo de API `/credentials`.
 
-Cuando use un sistema de autenticación global, debe establecer `"authenticationRule":"PLATFORM_AUTHENTICATION"` en la configuración de [envío de destino](../functionality/destination-configuration/destination-delivery.md) al [crear una nueva configuración de destino](../authoring-api/destination-configuration/create-destination-configuration.md).
+Cuando use un sistema de autenticación global, debe establecer `"authenticationRule":"PLATFORM_AUTHENTICATION"` en la configuración de [envío de destino](../functionality/destination-configuration/destination-delivery.md) al [crear una nueva configuración de destino](../authoring-api/destination-configuration/create-destination-configuration.md). A continuación, debe crear una [configuración de credenciales](../credentials-api/create-credential-configuration.md) y pasar el ID del objeto de credencial en el parámetro `authenticationId` en la configuración de [entrega de destino](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de credenciales {#get-started}
 
@@ -254,6 +254,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la config
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo actualizar una configuración de credenciales mediante el punto de conexión de la API `/authoring/credentials`. Lee [cómo usar Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

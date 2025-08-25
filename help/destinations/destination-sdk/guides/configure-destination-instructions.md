@@ -2,9 +2,9 @@
 description: En esta página se muestran y describen los pasos para configurar un destino de flujo continuo mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino de flujo continuo
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -275,7 +275,7 @@ Dependiendo de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o
 
 Si seleccionó `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en la configuración de destino y el destino admite el método de autenticación OAuth 2, lea la [autenticación OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 
-Si seleccionó `"authenticationRule": "PLATFORM_AUTHENTICATION"`, debe crear una [configuración de credenciales](../credentials-api/create-credential-configuration.md).
+Si seleccionó `"authenticationRule": "PLATFORM_AUTHENTICATION"`, debe crear una [configuración de credenciales](../credentials-api/create-credential-configuration.md) y pasar el identificador del objeto de credencial en el parámetro `authenticationId` de la configuración [entrega de destino](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 ## Paso 6: Prueba del destino {#test-destination}
 
@@ -284,7 +284,7 @@ Después de configurar el destino mediante los extremos de configuración de los
 Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear segmentos que activará en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
 * [Creación de una página de documentación de audiencia](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Tutorial de vídeo Crear una audiencia](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es)
+* [Tutorial de vídeo Crear una audiencia](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Paso 7: Publicar el destino {#publish-destination}
 
