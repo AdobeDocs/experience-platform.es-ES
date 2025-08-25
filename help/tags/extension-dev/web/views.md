@@ -76,7 +76,7 @@ Las etiquetas llamárán al método `init` en cuanto la vista se haya cargado en
 | `company` | Un objeto que contiene `orgId` (su ID de Adobe Experience Cloud de 24 caracteres), `id` (el identificador único de su compañía dentro de la API de Reactor) y `tenantId` (el identificador único de una organización dentro del sistema de Identity Management de Adobe). |
 | `schema` | Objeto con el formato [Esquema JSON](https://json-schema.org/). Este objeto provendrá del [manifiesto de extensión](../manifest.md) y puede resultar útil para validar el formulario. |
 | `apiEndpoints` | Un objeto que contiene `reactor` y que contiene una referencia a la dirección web de la API de Reactor. |
-| `userConsentPermissions` | Objeto que contiene indicadores de consentimiento de [Datos de uso del producto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) de Adobe. Use el indicador almacenado en `globalDataCollectionAndUsage` para saber si su extensión tiene permiso para recopilar datos de clientes de *any*. |
+| `userConsentPermissions` | Objeto que contiene indicadores de consentimiento de [Datos de uso del producto](https://experienceleague.adobe.com/es/docs/core-services/interface/features/account-preferences#product-usage-data) de Adobe. Use el indicador almacenado en `globalDataCollectionAndUsage` para saber si su extensión tiene permiso para recopilar datos de clientes de *any*. |
 | `preferredLanguages` | Matriz de cadenas de idioma. |
 
 La vista debe utilizar esta información para procesar y administrar su formulario. Es probable que solo necesite tratar con `info.settings`, aunque también se proporciona la otra información por si es necesario.
