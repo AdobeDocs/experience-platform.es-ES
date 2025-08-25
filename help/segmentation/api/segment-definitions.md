@@ -578,7 +578,7 @@ Puede solicitar eliminar una definición de segmento específica realizando una 
 
 >[!NOTE]
 >
-> No se puede eliminar una definición de segmento utilizada en una activación de destino **1}.**
+> No se puede eliminar una definición de segmento utilizada en una activación de destino **1&rbrace;.**
 
 **Formato de API**
 
