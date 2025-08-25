@@ -2,10 +2,10 @@
 title: Vistas en extensiones web
 description: 'Obtenga información sobre cómo definir vistas para módulos de biblioteca en las extensiones web de Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 96%
+source-wordcount: '2148'
+ht-degree: 92%
 
 ---
 
@@ -68,15 +68,22 @@ Deberá modificar el contenido de cada uno de los métodos para adaptarlo a los 
 Las etiquetas llamárán al método `init` en cuanto la vista se haya cargado en el iframe. Se pasará un solo argumento (`info`) que debe ser un objeto que contenga las propiedades siguientes:
 
 | Propiedad | Descripción |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | Objeto que contiene opciones de configuración que se guardaron anteriormente desde esta vista. Si `settings` es `null`, quiere decir que el usuario está creando la configuración inicial en lugar de cargar una versión guardada. Si `settings` es un objeto, debe utilizarlo para rellenar la vista, ya que el usuario está optando por editar la configuración mantenida anteriormente. |
 | `extensionSettings` | Configuración guardada desde la vista de configuración de la extensión. Esto puede resultar útil para acceder a las opciones de configuración de extensión de vistas que no son la vista de configuración de extensión. Si la vista actual es la vista de configuración de la extensión, utilice `settings`. |
 | `propertySettings` | Objeto que contiene la configuración de la propiedad. Consulte la [guía del objeto turbine](../turbine.md#property-settings) para obtener más información sobre el contenido de este objeto. |
 | `tokens` | Objeto que contiene tokens de API. Para acceder a las API de Adobe desde la vista, normalmente deberá utilizar un token IMS en `tokens.imsAccess`. Este token solo estará disponible para las extensiones desarrolladas por Adobe. Si es usted un empleado de Adobe que representa una extensión creada por Adobe, [envíe un correo electrónico al equipo de ingenería de recopilación de datos](mailto:reactor@adobe.com) y proporcione el nombre de la extensión para que podamos añadirla a la lista de permitidos. |
-| `company` | Objeto que contiene una sola propiedad, `orgId`, que representa su Adobe Experience Cloud ID (cadena alfanumérica de 24 caracteres). |
+| `company` | Un objeto que contiene `orgId` (su ID de Adobe Experience Cloud de 24 caracteres), `id` (el identificador único de su compañía dentro de la API de Reactor) y `tenantId` (el identificador único de una organización dentro del sistema de Identity Management de Adobe). |
 | `schema` | Objeto con el formato [Esquema JSON](https://json-schema.org/). Este objeto provendrá del [manifiesto de extensión](../manifest.md) y puede resultar útil para validar el formulario. |
+| `apiEndpoints` | Un objeto que contiene `reactor` y que contiene una referencia a la dirección web de la API de Reactor. |
+| `userConsentPermissions` | Objeto que contiene indicadores de consentimiento de [Datos de uso del producto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) de Adobe. Use el indicador almacenado en `globalDataCollectionAndUsage` para saber si su extensión tiene permiso para recopilar datos de clientes de *any*. |
+| `preferredLanguages` | Matriz de cadenas de idioma. |
 
 La vista debe utilizar esta información para procesar y administrar su formulario. Es probable que solo necesite tratar con `info.settings`, aunque también se proporciona la otra información por si es necesario.
+
+>[!IMPORTANT]
+>
+>Para que su extensión sea compatible con el RGPD, asegúrese de utilizar el indicador `userConsentPermissions.globalDataCollectionAndUsage` para determinar si su extensión puede recopilar datos sobre el usuario.
 
 ### [!DNL validate]
 
