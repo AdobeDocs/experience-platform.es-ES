@@ -4,9 +4,9 @@ title: Punto final de API de definiciones de segmento
 description: El punto final de las definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación las definiciones de segmentos de su organización.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
+source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!WARNING]
 >
->La creación de audiencias mediante entidades B2B mediante la API del servicio de segmentación está en desuso. Ya no puede crear audiencias con las siguientes entidades B2B: Cuenta, Relación cuenta-persona, Campaña, Miembro de campaña, Lista de marketing, Miembro de lista de marketing, Oportunidad y Relación oportunidad-persona.
+>La creación de audiencias mediante entidades B2B mediante la API del servicio de segmentación está en desuso. Ya no puede crear audiencias con las siguientes entidades B2B: Cuenta, Relación cuenta-persona, Campaña, Miembro de campaña, Lista de marketing, Miembro de lista de marketing, Oportunidad y Relación oportunidad-persona. Para obtener más información, lea la guía sobre [Actualizaciones de la arquitectura de Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 Adobe Experience Platform le permite crear definiciones de segmentos que definen un grupo de atributos o comportamientos específicos a partir de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Las definiciones de segmentos se aplican a perfiles para crear audiencias. Este objeto (definición de segmento) también se denomina predicado PQL. Los predicados de PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o serie temporal que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas de PQL.
 
@@ -578,7 +578,7 @@ Puede solicitar eliminar una definición de segmento específica realizando una 
 
 >[!NOTE]
 >
-> No se puede eliminar una definición de segmento utilizada en una activación de destino **1&rbrace;.**
+> No se puede eliminar una definición de segmento utilizada en una activación de destino **1}.**
 
 **Formato de API**
 
