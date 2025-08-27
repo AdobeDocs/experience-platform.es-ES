@@ -5,18 +5,14 @@ type: Documentation
 description: Adobe Experience Platform le permite acceder a los datos del perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como "perfiles", mediante la API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 3%
 
 ---
 
 # Extremo de entidades (acceso a perfiles)
-
->[!IMPORTANT]
->
->La búsqueda de ExperienceEvent mediante la API de acceso al perfil quedará obsoleta. Utilice funciones como atributos calculados para casos de uso que requieran la búsqueda de ExperienceEvents. Para obtener más información sobre este cambio, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
 Adobe Experience Platform le permite acceder a los datos de [!DNL Real-Time Customer Profile] mediante las API RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a los perfiles mediante la interfaz de usuario de [!DNL Experience Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
 
@@ -44,6 +40,12 @@ Como resultado de esta actualización, la API [!DNL Profile Access] ahora reflej
 >[!ENDSHADEBOX]
 
 ## Recuperación de una entidad {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>Las siguientes entidades B2B ya no son compatibles con las solicitudes de búsqueda mediante la API: **Relación cuenta-persona, Relación oportunidad-persona, Campaña, Miembro de campaña, Lista de marketing y Miembro de lista de marketing**.
+>
+>La compatibilidad con estas entidades ha quedado obsoleta. Si tiene integraciones o flujos de trabajo existentes que dependen del acceso a estas entidades, actualícelos para utilizar tipos de entidades compatibles y garantizar la funcionalidad continua.
 
 Puede recuperar una entidad de perfil realizando una petición GET al extremo `/access/entities` junto con los parámetros de consulta necesarios.
 
@@ -372,7 +374,7 @@ POST /access/entities
 
 La siguiente solicitud recupera los nombres y direcciones de correo electrónico de varios clientes mediante una lista de identidades.
 
-+++Una solicitud de ejemplo para recuperar varias entidades.
++++Una solicitud de ejemplo para recuperar varias entidades
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
@@ -590,7 +592,7 @@ POST /access/entities
 
 La siguiente solicitud recupera las cuentas B2B solicitadas.
 
-+++Una solicitud de ejemplo para recuperar varias entidades.
++++Una solicitud de ejemplo para recuperar varias entidades
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
@@ -1202,6 +1204,19 @@ Una respuesta correcta devuelve la siguiente página de resultados. Esta respues
 +++
 
 ## Eliminar una entidad {#delete-entity}
+
+>[!IMPORTANT]
+>
+>Las solicitudes de eliminación para las siguientes entidades B2B han quedado obsoletas:
+>
+>- Cuenta
+>- Relación cuenta con la persona
+>- Oportunidad
+>- Relación entre oportunidad y la persona
+>- Campaign
+>- Miembro de campaña
+>- Lista de marketing
+>- Miembros de lista de marketing
 
 Puede eliminar una entidad del almacén de perfiles realizando una petición DELETE al extremo `/access/entities` junto con los parámetros de consulta necesarios.
 
