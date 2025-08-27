@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de segmentación de streaming
 description: Obtenga información sobre la segmentación de flujo continuo, incluido qué es, cómo crear una audiencia evaluada mediante la segmentación de flujo y cómo ver las audiencias creadas mediante la segmentación de flujo.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
 workflow-type: tm+mt
-source-wordcount: '2022'
-ht-degree: 2%
+source-wordcount: '2051'
+ht-degree: 3%
 
 ---
 
@@ -38,6 +38,10 @@ Cualquier definición de segmento **nueva o editada** que coincida con los sigui
 Para evaluar una audiencia con segmentación por streaming, **debe** estar restringida en un período de tiempo de 24 horas.
 
 ## Inclusión de datos por lotes en audiencias de streaming {#include-batch-data}
+
+>[!NOTE]
+>
+>Para mantener la precisión de la segmentación de flujo continuo al usar datos por lotes, asegúrese de que los datos por lotes sean **solamente** y de que se mantenga dentro de la audiencia por lotes y de que se haga referencia a ellos dentro de la audiencia de flujo continuo.
 
 Antes de esta actualización, podía crear una definición de audiencia de flujo continuo que combinara fuentes de datos de flujo y por lotes. Sin embargo, con la última actualización, la creación de una audiencia con fuentes de datos por lotes y de flujo continuo se evaluará mediante la segmentación por lotes.
 
@@ -102,7 +106,7 @@ Con la segmentación por streaming, la calificación de audiencia ahora se produ
 
 >[!IMPORTANT]
 >
->Para usar la segmentación de flujo continuo, **debe** usar una política de combinación que sea &quot;Activa en Edge&quot;. Para obtener más información sobre las políticas de combinación, lea la [descripción general de las políticas de combinación](../../profile/merge-policies/overview.md).
+>Para usar la segmentación de flujo continuo, **debe** usar una política de combinación que sea &quot;Activa en Edge&quot;. Para obtener más información sobre las políticas de combinación, consulte la [información general sobre políticas de combinación](../../profile/merge-policies/overview.md).
 
 Un conjunto de reglas será apto para la segmentación por streaming si cumple cualquiera de los criterios descritos en la siguiente tabla.
 
@@ -178,7 +182,7 @@ En este caso, debe crear una tercera audiencia de la siguiente manera:
 inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
-## Crear público {#create-audience}
+## Crear audiencia {#create-audience}
 
 Puede crear una audiencia que se evalúe mediante la segmentación de flujo continuo mediante la API del servicio de segmentación o a través de Audience Portal en la interfaz de usuario.
 
@@ -461,7 +465,7 @@ La métrica **[!UICONTROL Nueva audiencia actualizada]** está representada por 
 
 Para obtener más información sobre los detalles de la audiencia, lea la [descripción general del Portal de audiencias](../ui/audience-portal.md#audience-details).
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo funcionan las definiciones de segmentos habilitadas para streaming en Adobe Experience Platform y cómo monitorizar las definiciones de segmentos habilitadas para streaming.
 

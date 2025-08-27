@@ -2,9 +2,9 @@
 title: Guía de segmentación de Edge
 description: Aprenda a utilizar la segmentación de Edge para evaluar audiencias en Experience Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
+source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1148'
 ht-degree: 2%
 
 ---
@@ -26,6 +26,8 @@ Una consulta se puede evaluar con la segmentación de extremos si cumple cualqui
 >[!NOTE]
 >
 >Si la consulta coincide con cualquiera de los tipos de consulta de la tabla siguiente, se evaluará automáticamente mediante la segmentación de extremos. El sistema determina esta capacidad automáticamente en función de la expresión de consulta.
+>
+>Además, si la audiencia **solamente** contiene atributos de perfil, se evaluará diariamente. Si desea que la audiencia se evalúe en tiempo real, debe agregar datos de evento a la audiencia.
 
 | Tipo de consulta | Detalles | Consulta | Ejemplo |
 | ---------- | ------- | ----- | ------- |
@@ -42,7 +44,7 @@ Una definición de segmento **no** será elegible para la segmentación de Edge 
    - Sin embargo, si la definición del segmento contenida en el evento `inSegment` es solo de perfil, la definición del segmento **se** habilitará para la segmentación de Edge.
 - La definición del segmento utiliza &quot;Ignorar año&quot; como parte de sus restricciones de tiempo.
 
-## Crear público {#create-audience}
+## Crear audiencia {#create-audience}
 
 Puede crear una audiencia que se evalúe mediante la segmentación de Edge mediante la API del servicio de segmentación o a través de Audience Portal en la interfaz de usuario de.
 
@@ -323,7 +325,7 @@ La métrica **[!UICONTROL Nueva audiencia actualizada]** está representada por 
 
 Para obtener más información sobre los detalles de la audiencia, lea la [descripción general del Portal de audiencias](../ui/audience-portal.md#audience-details).
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica qué es la segmentación de Edge, así como cómo crear una definición de segmento que se pueda evaluar mediante la segmentación de Edge en Adobe Experience Platform.
 
