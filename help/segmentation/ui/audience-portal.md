@@ -454,7 +454,7 @@ También puede añadir algunos detalles adicionales a la audiencia generada exte
 
 >[!NOTE]
 >
->La caducidad de los datos personalizados establece el número de días que los perfiles permanecerán **1} en la pertenencia a audiencias.** Una vez finalizada la caducidad de los datos, los perfiles abandonan la pertenencia a la audiencia. Este valor puede establecerse de 1 a 180 días.
+>La caducidad de los datos personalizados establece el número de días que los perfiles permanecerán **1&rbrace; en la pertenencia a audiencias.** Una vez finalizada la caducidad de los datos, los perfiles abandonan la pertenencia a la audiencia. Este valor puede establecerse de 1 a 180 días.
 
 Después de rellenar los detalles de la audiencia, selecciona **[!UICONTROL Siguiente]**.
 
