@@ -1,15 +1,16 @@
 ---
-title: Crear Un Flujo De Datos Para Introducir Datos De Un CRM En Experience Platform
+title: Crear Un Flujo De Datos Para Introducir Datos De Source En Experience Platform
 description: Aprenda a utilizar la API de Flow Service para crear un flujo de datos e introducir datos de origen en Experience Platform.
-exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+hide: true
+hidefromtoc: true
+source-git-commit: 4e9448170a6c3eb378e003bcd7520cb0e573e408
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2137'
 ht-degree: 3%
 
 ---
 
-# Crear un flujo de datos para introducir datos de un CRM a Experience Platform
+# Creación de un flujo de datos para introducir datos desde un origen
 
 Lea esta guía para aprender a crear un flujo de datos e ingerir datos en Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -29,9 +30,9 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, lea la guía sobre [introducción a las API de Experience Platform](../../../../landing/api-guide.md).
 
-### Crear conexión base {#base}
+### Crear conexión base
 
-Para crear correctamente un flujo de datos para el origen, necesita una cuenta de origen totalmente autenticada y su ID de conexión base correspondiente. Si no tiene este identificador, visite el [catálogo de orígenes](../../../home.md) para encontrar una lista de orígenes para los que puede crear una conexión base.
+Debe tener una cuenta de origen totalmente autenticada y su ID de conexión base correspondiente para crear correctamente un flujo de datos para su origen. Si no tiene este identificador, visite el [catálogo de orígenes](../../../home.md) para obtener una lista de orígenes con los que puede crear una conexión base.
 
 ### Creación de un esquema XDM de destino {#target-schema}
 
@@ -106,7 +107,7 @@ Una respuesta correcta devuelve el ID del conjunto de datos de destinatario. Est
 
 +++
 
-## Crear una conexión de origen {#source}
+## Crear una conexión de origen
 
 Una conexión de origen define cómo se introducen los datos en Experience Platform desde un origen externo. Especifica el sistema de origen y el formato de los datos entrantes, y hace referencia a una conexión base que contiene detalles de autenticación. Cada conexión de origen es única para su organización.
 
@@ -133,8 +134,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "description": "A source connection for ACME contact data",
     "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "A source connection for ACME contact data",
     "data": {
       "format": "tabular"
     },
@@ -164,7 +165,8 @@ curl -X POST \
             "format": "date-time"
           }
         }
-      ]
+      ],
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -181,6 +183,7 @@ curl -X POST \
 | `data.format` | El formato de los datos. Establezca este valor en `tabular` para orígenes basados en tablas (como bases de datos, CRM y proveedores de automatización de marketing). |
 | `params.tableName` | El nombre de la tabla de la cuenta de origen que desea introducir en Experience Platform. |
 | `params.columns` | Las columnas de tabla específicas de datos que desea introducir en Experience Platform. |
+| `params.cdcEnabled` | Un valor booleano que indica si la captura del historial de cambios está habilitada o no. Esta propiedad es compatible con los siguientes orígenes de base de datos: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Para obtener más información, lea la guía sobre el uso de [cambiar la captura de datos en las fuentes](../change-data-capture.md). |
 | `connectionSpec.id` | Id. de especificación de conexión del origen que está utilizando. |
 
 **Respuesta**
@@ -194,7 +197,7 @@ Una respuesta correcta devuelve el ID de la conexión de origen. Este ID es nece
 }
 ```
 
-## Creación de una conexión de destino {#target}
+## Creación de una conexión de destino {#target-connection}
 
 Una conexión de destino representa la conexión con el destino donde aterrizan los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija asociado al lago de datos. Este id. de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -314,7 +317,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 }
 ```
 
-## Recuperar especificaciones de flujo de datos {#flow-specs}
+## Recuperar especificaciones de flujo de datos
 
 Para poder crear un flujo de datos, primero debe recuperar las especificaciones del flujo de datos que se correspondan con su origen. Para recuperar esta información, realice una petición GET al extremo `/flowSpecs` de la API [!DNL Flow Service].
 
@@ -342,7 +345,7 @@ curl -X GET \
 
 Una respuesta correcta devuelve los detalles de la especificación de flujo de datos responsable de importar datos de su origen a Experience Platform. La respuesta incluye la especificación de flujo única `id` necesaria para crear un nuevo flujo de datos.
 
-Para asegurarse de que está utilizando la especificación de flujo de datos correcta, compruebe la matriz `items.sourceConnectionSpecIds` en la respuesta. Confirme que el ID de especificación de conexión del origen se incluye en esta lista.
+Para asegurarse de que está utilizando la especificación de flujo de datos correcta, compruebe la matriz `items.sourceConnectionSpecIds` en la respuesta. Confirme que el ID de especificación de conexión de origen se incluye en esta lista.
 
 +++Seleccionar para ver
 
@@ -631,16 +634,16 @@ Para asegurarse de que está utilizando la especificación de flujo de datos cor
 
 +++
 
-## Creación de un flujo de datos {#dataflow}
+## Creación de un flujo de datos
 
 Un flujo de datos es una canalización configurada que transfiere datos entre servicios de Experience Platform. Define cómo se incorporan los datos desde fuentes externas (como bases de datos, almacenamiento en la nube o API), se procesan y se enrutan a conjuntos de datos de destino. Estos conjuntos de datos los utilizan servicios como Identity Service, Real-Time Customer Profile y Destinations para la activación y el análisis.
 
 Para crear un flujo de datos, debe tener valores para los siguientes elementos:
 
-* [ID de conexión de Source](#source)
-* [ID de conexión de destino](#target)
-* [ID de asignación](#mapping)
-* [ID de especificación de flujo de datos](#flow-specs)
+* ID de conexión de Source
+* ID de conexión de destino
+* ID de asignación
+* ID de especificación de flujo de datos
 
 Durante este paso, puede utilizar los siguientes parámetros en `scheduleParams` para configurar una programación de ingesta para el flujo de datos:
 
@@ -739,7 +742,7 @@ Una respuesta correcta devuelve el identificador (`id`) del flujo de datos reci�
 }
 ```
 
-### Utilice la interfaz de usuario para validar el flujo de trabajo de API {#validate-in-ui}
+### Utilice la interfaz de usuario para validar el flujo de trabajo de API
 
 Puede utilizar la interfaz de usuario de Experience Platform para validar la creación del flujo de datos. Vaya al catálogo *[!UICONTROL Sources]* en la interfaz de usuario de Experience Platform y, a continuación, seleccione **[!UICONTROL Dataflows]** de las pestañas del encabezado. A continuación, use la columna [!UICONTROL Nombre de flujo de datos] y busque el flujo de datos que creó con la API [!DNL Flow Service].
 

@@ -1,22 +1,22 @@
 ---
 title: Crear un flujo de datos para orígenes de base de datos mediante la API de Flow Service
 type: Tutorial
-description: Este tutorial trata los pasos para recuperar datos de una base de datos e ingerirlos en Experience Platform mediante conectores de origen y API.
+description: Aprenda a utilizar la API de Flow Service para crear un flujo de datos e introducir datos de su base de datos en Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1455'
 ht-degree: 3%
 
 ---
 
 # Crear un flujo de datos para orígenes de base de datos utilizando la API [!DNL Flow Service]
 
-Este tutorial trata los pasos para recuperar datos de un origen de base de datos y llevarlos a Experience Platform mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lea este tutorial para aprender a crear un flujo de datos e introducir datos de su base de datos en Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de base de datos. Si no tiene este identificador, consulte la [descripción general de orígenes](../../../home.md#database) para obtener una lista de orígenes de base de datos con los que puede crear una conexión base.
+>* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de base de datos. Si no tiene este identificador, visite el [catálogo de orígenes](../../../home.md#database) para obtener una lista de orígenes de base de datos con los que puede crear una conexión base.
 >* Para que Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC. La única marca de tiempo compatible con [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) es TIMESTAMP_NTZ con hora UTC.
 
 ## Introducción
