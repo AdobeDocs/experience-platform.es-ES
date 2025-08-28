@@ -4,7 +4,7 @@ title: Previsualizaciones y estimaciones de extremos de API
 description: A medida que se desarrollan las definiciones de segmentos, puede utilizar las herramientas de estimación y vista previa de Adobe Experience Platform para ver información de resumen a fin de asegurarse de aislar la audiencia esperada.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 2%
@@ -31,8 +31,8 @@ Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experie
 
 Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa el muestreo de datos depende del método de ingesta:
 
-* **Ingesta por lotes:** Para la ingesta por lotes, dentro de los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 5%, se ejecuta un trabajo para actualizar el recuento.
-* **Ingesta de transmisión:** Para los flujos de trabajo de transmisión de datos, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5%. En caso afirmativo, se activa automáticamente un trabajo para actualizar el recuento.
+* **Ingesta por lotes:** Para la ingesta por lotes, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 3%, se ejecuta un trabajo para actualizar el recuento.
+* **Ingesta de transmisión:** Para los flujos de trabajo de transmisión de datos, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 3%. En caso afirmativo, se activa automáticamente un trabajo para actualizar el recuento.
 
 El tamaño de la muestra de la exploración depende del número total de entidades del almacén de perfiles. Estos tamaños de muestra se representan en la siguiente tabla:
 
@@ -48,7 +48,7 @@ El tamaño de la muestra de la exploración depende del número total de entidad
 
 ## Crear una nueva vista previa {#create-preview}
 
-Puede crear una nueva vista previa realizando una solicitud de POST al extremo `/preview`.
+Puede crear una nueva vista previa realizando una petición POST al extremo `/preview`.
 
 >[!NOTE]
 >
@@ -114,7 +114,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) con detalles de la p
 
 ## Recuperación de los resultados de una previsualización específica {#get-preview}
 
-Puede recuperar información detallada sobre una vista previa específica realizando una solicitud de GET al extremo `/preview` y proporcionando el ID de vista previa en la ruta de solicitud.
+Puede recuperar información detallada sobre una vista previa específica realizando una petición GET al extremo `/preview` y proporcionando el ID de vista previa en la ruta de solicitud.
 
 **Formato de API**
 
@@ -199,7 +199,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Recuperar los resultados de un trabajo de estimación específico {#get-estimate}
 
-Una vez que haya creado un trabajo de vista previa, puede usar su `previewId` en la ruta de una solicitud de GET al extremo `/estimate` para ver información estadística sobre la definición del segmento, incluido el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
+Una vez que haya creado un trabajo de vista previa, puede usar su `previewId` en la ruta de una petición GET al extremo `/estimate` para ver información estadística sobre la definición del segmento, incluido el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
 
 **Formato de API**
 
@@ -271,6 +271,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de e
 
 +++
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, debería tener una mejor comprensión de cómo trabajar con vistas previas y estimaciones mediante la API de segmentación. Para obtener información sobre cómo acceder a las métricas relacionadas con los datos del perfil del cliente en tiempo real, como el número total de fragmentos de perfil y perfiles combinados en áreas de nombres específicas o el almacén de datos de perfil en su conjunto, visite la [guía de extremo de vista previa de perfil (`/previewsamplestatus`)](../../profile/api/preview-sample-status.md).

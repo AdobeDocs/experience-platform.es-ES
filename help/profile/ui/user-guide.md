@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '2219'
 ht-degree: 3%
@@ -22,7 +22,7 @@ Esta guía de interfaz de usuario requiere una comprensión de los distintos ser
 * [[!DNL Identity Service]](../../identity-service/home.md): habilita [!DNL Real-Time Customer Profile] al unir identidades de orígenes de datos dispares a medida que se incorporan en [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 
-## Información general de 
+## [!UICONTROL Información general]
 
 En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Información general]** que muestra el panel de perfil.
 
@@ -60,7 +60,7 @@ El recuento de perfiles también incluye perfiles con atributos (datos de regist
 
 #### Actualización de la métrica de recuento de perfiles
 
-Cuando la ingesta de registros en el almacén [!DNL Profile] aumenta o disminuye el recuento en más del 5 %, se activa un trabajo para actualizar el recuento. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. En caso afirmativo, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingesta por lotes, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento de perfiles.
+Cuando la ingesta de registros en el almacén [!DNL Profile] aumenta o disminuye el recuento en más del 3 %, se activa un trabajo para actualizar el recuento. Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 3 %. En caso afirmativo, se activa automáticamente un trabajo para actualizar el recuento de perfiles. Para la ingesta por lotes, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 3 %, se ejecuta un trabajo para actualizar el recuento de perfiles.
 
 ### [!UICONTROL Perfiles por área de nombres] {#profiles-by-namespace}
 
@@ -203,6 +203,6 @@ En el menú principal **[!UICONTROL Perfiles]**, seleccione la ficha **[!UICONTR
 
 Para obtener más información sobre los atributos calculados, lea la [descripción general de los atributos calculados](../computed-attributes/overview.md). Para obtener más información sobre cómo usar atributos calculados en la interfaz de usuario de Experience Platform, lea la [guía de la interfaz de usuario de atributos calculados](../computed-attributes/ui.md).
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer esta guía, sabe cómo ver y administrar los datos de perfil de su organización mediante la interfaz de usuario de Experience Platform. Para obtener información sobre cómo trabajar con datos de perfil usando las API de Experience Platform, consulte la [guía de la API del perfil del cliente en tiempo real](../api/overview.md).

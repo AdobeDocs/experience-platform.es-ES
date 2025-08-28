@@ -4,7 +4,7 @@ title: Creación de una definición de segmento mediante la API del servicio de 
 type: Tutorial
 description: Siga este tutorial para aprender a desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 6%
@@ -76,8 +76,8 @@ A medida que los datos habilitados para Perfil del cliente en tiempo real se inc
 
 La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
 
-- Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si se ha alcanzado este umbral, se activa automáticamente un trabajo de muestra para actualizar el recuento.
-- Para la ingesta por lotes, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del último trabajo de ejemplo correcto, así como una distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
+- Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 3 %. Si se ha alcanzado este umbral, se activa automáticamente un trabajo de muestra para actualizar el recuento.
+- Para la ingesta por lotes, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 3 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del último trabajo de ejemplo correcto, así como una distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
 
 El tamaño de la muestra depende del número total de entidades del almacén de perfiles. Estos tamaños de muestra se representan en la siguiente tabla:
 
@@ -102,6 +102,6 @@ Los procesos de estimación y vista previa se ejecutan de forma asíncrona, ya q
 Con la API [!DNL Segmentation Service], puede buscar el estado actual de un trabajo de vista previa por su ID. Si el estado es &quot;RESULT_READY&quot;, puede ver los resultados. Para buscar el estado actual de un trabajo de vista previa, lea la sección sobre [recuperación de una sección del trabajo de vista previa](../api/previews-and-estimates.md#get-preview) en la guía de vistas previas y extremos de estimaciones. Para consultar el estado actual de un trabajo de estimación, lea la sección sobre [recuperación de un trabajo de estimación](../api/previews-and-estimates.md#get-estimate) en la guía de vistas previas y extremos de estimación.
 
 
-## Pasos siguientes
+## Próximos pasos
 
 Una vez que haya desarrollado, probado y guardado su definición de segmento, puede crear un trabajo de segmento para crear una audiencia con la API [!DNL Segmentation Service]. Consulte el tutorial sobre [evaluación y acceso a los resultados del segmento](./evaluate-a-segment.md) para ver los pasos detallados sobre cómo hacerlo.
