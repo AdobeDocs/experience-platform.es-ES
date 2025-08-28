@@ -2,16 +2,20 @@
 title: Casos de uso de segmentación para Real-Time Customer Data Platform B2B edition
 description: Una descripción general de los distintos casos de uso de Adobe Real-Time Customer Data Platform B2B edition disponibles.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d819a7e72e873ef3a47f9bb7946e242cb5fb7a8a
+source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
 
 # Casos de uso de segmentación para Real-Time Customer Data Platform B2B edition
+
+>[!IMPORTANT]
+>
+>Ya no se admiten las audiencias que incluyen eventos de experiencia que hacen referencia a entidades B2B (como campañas y listas de marketing). Para obtener más información, lea la descripción general de las [actualizaciones de la arquitectura de Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 Este documento proporciona ejemplos de definiciones de segmentos en Adobe Real-Time Customer Data Platform B2B edition y cómo se pueden combinar distintos tipos de atributos para casos de uso B2B comunes. Para comprender cómo encajan los destinos en el flujo de trabajo B2B, consulte el [tutorial completo](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
