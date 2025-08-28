@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 80%
+source-wordcount: '1448'
+ht-degree: 78%
 
 ---
 
@@ -30,7 +30,6 @@ Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 - [Servicio de catálogo](#catalog-service)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
-- [Perfil del cliente en tiempo real](#profile)
 - [Zonas protegidas](#sandboxes)
 - [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
@@ -125,17 +124,20 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 Para obtener más información, lea la [información general sobre XDM](../../xdm/home.md).
 
-## Perfil del cliente en tiempo real {#profile}
+<!--
+## Real-Time Customer Profile {#profile}
 
-El Perfil del cliente en tiempo real proporciona una vista unificada y procesable de cada cliente mediante la consolidación de datos de todos los canales en un único perfil.
+Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
 
-**Funciones nuevas o actualizadas**
+**New or updated features**
 
-| Función | Descripción |
+| Feature | Description |
 | --- | --- |
-| Funcionalidad de búsqueda mejorada en la API de entidades | La API de entidades ahora es compatible con lo siguiente: <ul><li>Persona (perfil)</li><li>Eventos de experiencia</li><li>Cuenta</li><li>Oportunidad</li></ul> Esta actualización simplifica el uso de la API y ayuda a garantizar un rendimiento y una fiabilidad óptimos. Si ha utilizado antes búsquedas para otros tipos de entidades (incluidas tablas de unión y tipos de varias entidades personalizados), esta es una buena oportunidad para revisar el uso de la API y aprovechar la experiencia mejorada. Para obtener más información, lea la [guía de actualización de la arquitectura de Real-Time CDP B2B Edition](../../rtcdp/b2b-architecture-upgrade.md). |
+| Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
-Para obtener más información sobre el perfil del cliente en tiempo real, lea la [información general sobre el perfil](../../profile/home.md).
+For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## Zonas protegidas {#sandboxes}
 
