@@ -1,16 +1,18 @@
 ---
-title: Usar el vínculo privado de Azure para las fuentes en la API
+title: Compatibilidad con vínculos privados para fuentes en la API
 description: Obtenga información sobre cómo crear y utilizar vínculos privados para fuentes de Adobe Experience Platform
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1661'
 ht-degree: 4%
 
 ---
 
-# Usar [!DNL Azure Private Link] para orígenes en la API
+# Compatibilidad con vínculos privados para fuentes en la API
 
 >[!AVAILABILITY]
 >
@@ -21,7 +23,7 @@ ht-degree: 4%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Puede usar la característica [!DNL Azure Private Link] para crear extremos privados a los que conectarse los orígenes de Adobe Experience Platform. Conecte sus orígenes de forma segura a una red virtual mediante direcciones IP privadas, lo que elimina la necesidad de direcciones IP públicas y reduce la superficie de ataque.Simplifique la configuración de la red eliminando la necesidad de configuraciones complejas de firewall o traducción de direcciones de red, al tiempo que garantiza que el tráfico de datos solo llegue a los servicios aprobados.
+Puede utilizar la función Vínculo privado para crear extremos privados a los que se conectarán los orígenes de Adobe Experience Platform. Conecte sus fuentes de forma segura a una red virtual mediante direcciones IP privadas, lo que elimina la necesidad de direcciones IP públicas y reduce la superficie de ataque. Simplifique la configuración de la red eliminando la necesidad de configuraciones complejas de firewall o traducción de direcciones de red, a la vez que garantiza que el tráfico de datos solo llegue a los servicios aprobados.
 
 Lea esta guía para aprender a utilizar las API para crear y utilizar un extremo privado.
 

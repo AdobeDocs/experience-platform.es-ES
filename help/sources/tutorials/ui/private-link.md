@@ -1,16 +1,18 @@
 ---
-title: Uso de Azure Private Link para orígenes en la interfaz de usuario
+title: Compatibilidad Con Vínculos Privados Para Fuentes En La Interfaz De Usuario
 description: Aprenda a utilizar vínculos privados de Azure para las fuentes en la interfaz de usuario de Experience Platform.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: b88cf63e907b3f127f83304aa95f82300b47ce0b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
-# Usar [!DNL Azure Private Link] para orígenes en la interfaz de usuario
+# Compatibilidad con vínculos privados para orígenes en la interfaz de usuario
 
 >[!AVAILABILITY]
 >
@@ -21,13 +23,13 @@ ht-degree: 0%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Puede usar la característica [!DNL Azure Private Link] para crear extremos privados a los que conectarse los orígenes de Adobe Experience Platform. Conecte sus orígenes de forma segura a una red virtual mediante direcciones IP privadas, lo que elimina la necesidad de direcciones IP públicas y reduce la superficie de ataque.Simplifique la configuración de la red eliminando la necesidad de configuraciones complejas de firewall o traducción de direcciones de red, al tiempo que garantiza que el tráfico de datos solo llegue a los servicios aprobados.
+Puede utilizar la función Vínculos privados para crear extremos privados a los que se conectarán los orígenes de Adobe Experience Platform. Conecte sus fuentes de forma segura a una red virtual mediante direcciones IP privadas, lo que elimina la necesidad de direcciones IP públicas y reduce la superficie de ataque. Simplifique la configuración de la red eliminando la necesidad de configuraciones complejas de firewall o traducción de direcciones de red, a la vez que garantiza que el tráfico de datos solo llegue a los servicios aprobados.
 
 Lea esta guía para aprender a utilizar el espacio de trabajo de fuentes en la interfaz de usuario de Experience Platform para crear y utilizar un extremo privado.
 
 ## Crear un extremo privado
 
-Para comenzar con [!DNL Azure Private Link], vaya al catálogo *[!UICONTROL Sources]* de la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Extremos privados]** del menú de pestañas en el área de trabajo de orígenes.
+Para empezar a usar los vínculos privados, vaya al catálogo *[!UICONTROL Sources]* de la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Puntos finales privados]** en el menú de pestañas del área de trabajo de orígenes.
 
 ![El catálogo de orígenes con &quot;extremos privados&quot;.](../../images/tutorials/private-links/catalog.png)
 
