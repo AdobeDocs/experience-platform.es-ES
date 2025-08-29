@@ -2,10 +2,10 @@
 title: Crear Un Flujo De Datos Para Introducir Datos De Un CRM En Experience Platform
 description: Aprenda a utilizar la API de Flow Service para crear un flujo de datos e introducir datos de origen en Experience Platform.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 3%
+source-wordcount: '2112'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ Lea esta guía para aprender a crear un flujo de datos e ingerir datos en Adobe 
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Ingesta por lotes](../../../../ingestion/batch-ingestion/overview.md): Descubra cómo cargar grandes volúmenes de datos de forma eficaz por lotes.
+* [Ingesta por lotes](../../../../ingestion/batch-ingestion/overview.md): Descubra cómo cargar grandes volúmenes de datos por lotes de forma rápida y eficaz.
 * [Servicio de catálogo](../../../../catalog/datasets/overview.md): organice y realice un seguimiento de sus conjuntos de datos en Experience Platform.
 * [Preparación de datos](../../../../data-prep/home.md): transforme y asigne los datos entrantes para que coincidan con los requisitos de esquema.
 * [Flujos de datos](../../../../dataflows/home.md): configure y administre las canalizaciones que mueven sus datos de orígenes a destinos.
@@ -31,13 +31,13 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 ### Crear conexión base {#base}
 
-Para crear correctamente un flujo de datos para el origen, necesita una cuenta de origen totalmente autenticada y su ID de conexión base correspondiente. Si no tiene este identificador, visite el [catálogo de orígenes](../../../home.md) para encontrar una lista de orígenes para los que puede crear una conexión base.
+Para crear un flujo de datos para su origen, necesitará una cuenta de origen totalmente autenticada y su ID de conexión base correspondiente. Si no tiene este identificador, visite el [catálogo de orígenes](../../../home.md) para encontrar una lista de orígenes para los que puede crear una conexión base.
 
 ### Creación de un esquema XDM de destino {#target-schema}
 
 Un esquema del Modelo de datos de experiencia (XDM) proporciona una forma estandarizada de organizar y describir los datos de experiencia del cliente dentro de Experience Platform. Para introducir los datos de origen en Experience Platform, primero debe crear un esquema XDM de destino que defina la estructura y los tipos de datos que desea introducir. Este esquema sirve como modelo para el conjunto de datos de Experience Platform donde residirán los datos ingeridos.
 
-Se puede crear un esquema XDM de destino realizando una petición POST a la [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Lea las siguientes guías para obtener información detallada sobre los pasos para crear un esquema XDM de destino:
+Se puede crear un esquema XDM de destino realizando una petición POST a la [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, lea las siguientes guías:
 
 * [Cree un esquema con la API](../../../../xdm/api/schemas.md).
 * [Crear un esquema con la interfaz de usuario](../../../../xdm/tutorials/create-schema-ui.md).
@@ -46,7 +46,7 @@ Una vez creado, el esquema XDM de destino `$id` se requerirá más adelante para
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente a Experience Platform se almacenan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
+Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente estructurada como una tabla con columnas (esquema) y filas (campos). Los datos que se incorporan correctamente a Experience Platform se almacenan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
 
 Puede crear un conjunto de datos de destino realizando una petición POST a la [API del servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), al mismo tiempo que proporciona el ID del esquema de destino en la carga útil. Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, lea la guía sobre [crear un conjunto de datos mediante la API](../../../../catalog/api/create-dataset.md).
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Solicitud**
 
-El siguiente ejemplo muestra cómo crear un conjunto de datos de destinatario habilitado para la ingesta de Perfil del cliente en tiempo real. En esta solicitud, la propiedad `unifiedProfile` se establece en `true` (en el objeto `tags`), lo que indica a Experience Platform que incluya este conjunto de datos en el perfil del cliente en tiempo real.
+El siguiente ejemplo muestra cómo crear un conjunto de datos de destinatario habilitado para la ingesta de Perfil del cliente en tiempo real. En esta solicitud, la propiedad `unifiedProfile` se establece en `true` (en el objeto `tags`), lo que indica a Experience Platform que incluya el conjunto de datos en el perfil del cliente en tiempo real.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID del conjunto de datos de destinatario. Este ID se requiere más adelante para crear una conexión de destino.
+Una respuesta correcta devuelve el ID del conjunto de datos de destinatario. Este ID se necesita más adelante para crear una conexión de destino.
 
 ```json
 [
@@ -243,7 +243,7 @@ curl -X POST \
 
 ## Asignación {#mapping}
 
-A continuación, debe asignar los datos de origen al esquema de destino al que se adhiere el conjunto de datos de destino. Para crear una asignación, realice una petición POST al extremo `mappingSets` de la [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/), proporcione el ID de esquema XDM de destino y los detalles de los conjuntos de asignación que desee crear.
+A continuación, asigne los datos de origen al esquema de destino al que se adhiere el conjunto de datos de destino. Para crear una asignación, realice una petición POST al extremo `mappingSets` de la [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Incluya el ID del esquema XDM de destino y los detalles de los conjuntos de asignaciones que desee crear.
 
 **Formato de API**
 
@@ -635,7 +635,7 @@ Para asegurarse de que está utilizando la especificación de flujo de datos cor
 
 Un flujo de datos es una canalización configurada que transfiere datos entre servicios de Experience Platform. Define cómo se incorporan los datos desde fuentes externas (como bases de datos, almacenamiento en la nube o API), se procesan y se enrutan a conjuntos de datos de destino. Estos conjuntos de datos los utilizan servicios como Identity Service, Real-Time Customer Profile y Destinations para la activación y el análisis.
 
-Para crear un flujo de datos, debe tener valores para los siguientes elementos:
+Para crear un flujo de datos, deberá proporcionar valores para los siguientes elementos:
 
 * [ID de conexión de Source](#source)
 * [ID de conexión de destino](#target)
@@ -647,8 +647,8 @@ Durante este paso, puede utilizar los siguientes parámetros en `scheduleParams`
 | Parámetro de programación | Descripción |
 | --- | --- |
 | `startTime` | Tiempo de epoch (en segundos) en que debe iniciarse el flujo de datos. |
-| `frequency` | La frecuencia de la ingesta. Configure la frecuencia para indicar con qué frecuencia debe ejecutarse el flujo de datos. Puede establecer su frecuencia en: <ul><li>`once`: establezca su frecuencia en `once` para crear una ingesta única. Las configuraciones para intervalo y relleno no están disponibles al crear un flujo de datos de ingesta único. De forma predeterminada, la frecuencia de programación se establece en una vez.</li><li>`minute`: establezca su frecuencia en `minute` para programar el flujo de datos e ingerir datos por minuto.</li><li>`hour`: establezca su frecuencia en `hour` para programar el flujo de datos e ingerir datos por hora.</li><li>`day`: establezca su frecuencia en `day` para programar el flujo de datos e ingerir datos todos los días.</li><li>`week`: establezca su frecuencia en `week` para programar el flujo de datos e ingerir datos por semana.</li></ul> |
-| `interval` | Intervalo entre ingestas consecutivas (requerido para todas las frecuencias excepto `once`). Configure el intervalo para establecer el lapso de tiempo entre cada ingesta. Por ejemplo, si establece la frecuencia en día y configura el intervalo en 15, el flujo de datos se ejecutará cada 15 días. No puede establecer el intervalo en cero. El valor mínimo del intervalo aceptado para cada frecuencia es el siguiente:<ul><li>`once`: n/a</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
+| `frequency` | La frecuencia de la ingesta. Configure la frecuencia para indicar con qué frecuencia debe ejecutarse el flujo de datos. Puede establecer su frecuencia en: <ul><li>`once`: establezca su frecuencia en `once` para crear una ingesta única. La configuración de intervalo y relleno no está disponible para trabajos de ingesta únicos. De forma predeterminada, la frecuencia de programación se establece en una vez.</li><li>`minute`: establezca su frecuencia en `minute` para programar el flujo de datos e ingerir datos por minuto.</li><li>`hour`: establezca su frecuencia en `hour` para programar el flujo de datos e ingerir datos por hora.</li><li>`day`: establezca su frecuencia en `day` para programar el flujo de datos e ingerir datos todos los días.</li><li>`week`: establezca su frecuencia en `week` para programar el flujo de datos e ingerir datos por semana.</li></ul> |
+| `interval` | Intervalo entre ingestas consecutivas (requerido para todas las frecuencias excepto `once`). Configure el intervalo para establecer el lapso de tiempo entre cada ingesta. Por ejemplo, si la frecuencia se establece en día y el intervalo es 15, el flujo de datos se ejecutará cada 15 días. No puede establecer el intervalo en cero. El valor mínimo del intervalo aceptado para cada frecuencia es el siguiente:<ul><li>`once`: n/a</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
 | `backfill` | Indica si se deben introducir datos históricos anteriores a `startTime`. |
 
 {style="table-layout:auto"}
@@ -723,7 +723,7 @@ curl -X POST \
 | `transformations.params.mappingId` | ID de asignación generado en un paso anterior. |
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch (segundos desde Unix epoch). Determina cuándo comenzará la primera ejecución del flujo de datos. |
 | `scheduleParams.frequency` | Frecuencia con la que se ejecutará el flujo de datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day` o `week`. |
-| `scheduleParams.interval` | El intervalo entre ejecuciones de flujo de datos consecutivas, en función de la frecuencia seleccionada. Debe ser un entero distinto de cero. Por ejemplo, un intervalo de `15` con la frecuencia `minute` significa que el flujo de datos se ejecuta cada 15 minutos. |
+| `scheduleParams.interval` | El intervalo entre ejecuciones de flujo de datos consecutivas, en función de la frecuencia seleccionada. Debe ser un entero distinto de cero. Por ejemplo, si la frecuencia se establece en minutos y el intervalo es 15, el flujo de datos se ejecutará cada 15 minutos. |
 | `scheduleParams.backfill` | Un valor booleano (`true` o `false`) que determina si se deben introducir datos históricos (relleno) cuando se crea el flujo de datos por primera vez. |
 
 {style="table-layout:auto"}
@@ -755,11 +755,11 @@ Este tutorial lo guió a través del proceso de creación de un flujo de datos e
 
 ### Monitorización del flujo de datos
 
-Una vez creado el flujo de datos, puede monitorizar los datos que se están ingiriendo a través de él para ver información sobre las tasas de ingesta, el éxito y los errores. Para obtener más información sobre cómo supervisar el flujo de datos, visite el tutorial sobre [supervisar cuentas y flujos de datos](../../../../dataflows/ui/monitor-sources.md).
+Una vez creado el flujo de datos, puede monitorizar su rendimiento directamente en la interfaz de usuario de Experience Platform. Esto incluye el seguimiento de las tasas de ingesta, las métricas de éxito y cualquier error que se produzca. Para obtener más información sobre cómo supervisar el flujo de datos, visite el tutorial sobre [supervisar cuentas y flujos de datos](../../../../dataflows/ui/monitor-sources.md).
 
 ### Actualizar el flujo de datos
 
-Para actualizar configuraciones para la programación, asignación e información general de los flujos de datos, visite el tutorial sobre [actualización de flujos de datos de origen](../../api/update-dataflows.md).
+Para actualizar configuraciones para la programación, asignación o información general de sus flujos de datos, visite el tutorial sobre [actualización de flujos de datos de origen](../../api/update-dataflows.md).
 
 ## Eliminar el flujo de datos
 

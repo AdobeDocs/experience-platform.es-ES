@@ -3,9 +3,9 @@ title: Crear un flujo de datos para orígenes de base de datos mediante la API d
 type: Tutorial
 description: Aprenda a utilizar la API de Flow Service para crear un flujo de datos e introducir datos de su base de datos en Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ Lea este tutorial para aprender a crear un flujo de datos e introducir datos de 
 
 >[!NOTE]
 >
->* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de base de datos. Si no tiene este identificador, visite el [catálogo de orígenes](../../../home.md#database) para obtener una lista de orígenes de base de datos con los que puede crear una conexión base.
+>* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de base de datos. Si no tiene este identificador, visite el [catálogo de orígenes](../../../home.md#database) para ver una lista de orígenes de base de datos con los que puede crear una conexión base.
 >* Para que Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC. La única marca de tiempo compatible con [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) es TIMESTAMP_NTZ con hora UTC.
 
 ## Introducción
