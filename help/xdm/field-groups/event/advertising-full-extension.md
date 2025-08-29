@@ -103,8 +103,8 @@ El objeto conversionDetails captura información de seguimiento para las convers
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `trackingCode` | Cadena | El código de seguimiento de conversión del evento. Para obtener una lista de posibles formatos, consulte [Formatos de ID de AMO](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
-| `trackingIdentities` | Cadena | El EF ID o los detalles de identidad de seguimiento de un evento. Para obtener una lista de los posibles formatos, vea [Formatos EF ID](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
+| `trackingCode` | Cadena | El código de seguimiento de conversión del evento. Para obtener una lista de posibles formatos, consulte [Formatos de ID de AMO](https://experienceleague.adobe.com/es/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
+| `trackingIdentities` | Cadena | El EF ID o los detalles de identidad de seguimiento de un evento. Para obtener una lista de los posibles formatos, vea [Formatos EF ID](https://experienceleague.adobe.com/es/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
 | `conversionProperties` | Objeto | Mapa de propiedades de conversión, representadas como una matriz de cadenas de pares clave-valor (como `subscriptions=253`). |
 
 ## `fees` {#fees}
