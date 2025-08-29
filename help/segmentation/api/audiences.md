@@ -3,7 +3,7 @@ title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 3%
@@ -37,7 +37,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 Al recuperar una lista de audiencias, se pueden utilizar los siguientes parámetros de consulta:
 
-| Parámetro de consulta | Descripción | Ejemplo |
+| Parámetros de consulta | Descripción | Ejemplo |
 | --------------- | ----------- | ------- |
 | `start` | Especifica el desplazamiento inicial de las audiencias devueltas. | `start=5` |
 | `limit` | Especifica el número máximo de audiencias devueltas por página. | `limit=10` |
@@ -51,7 +51,7 @@ Al recuperar una lista de audiencias, se pueden utilizar los siguientes parámet
 
 La siguiente solicitud recupera las dos últimas audiencias creadas en su organización.
 
-+++Solicitud de ejemplo para recuperar una lista de audiencias.
++++Una solicitud de ejemplo para recuperar una lista de audiencias.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
@@ -166,7 +166,12 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -339,7 +344,7 @@ GET /audiences/{AUDIENCE_ID}
 
 **Solicitud**
 
-+++Una solicitud de ejemplo para recuperar una audiencia.
++++Una solicitud de ejemplo para recuperar una audiencia
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab \
@@ -355,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia especificada.
 
-+++Respuesta de ejemplo al recuperar una audiencia generada por Platform.
++++Una respuesta de ejemplo al recuperar una audiencia generada por Platform.
 
 ```json
 {
@@ -760,6 +765,6 @@ Una respuesta correcta devuelve el estado HTTP 207 con información sobre las au
 +++
 
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, ahora comprende mejor cómo crear, administrar y eliminar audiencias mediante la API de Adobe Experience Platform. Para obtener más información acerca de la administración de audiencias mediante la interfaz de usuario, lea la [guía de segmentación de la interfaz de usuario](../ui/overview.md).
