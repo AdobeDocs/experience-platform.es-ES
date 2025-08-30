@@ -2,12 +2,12 @@
 title: Bombora Intent
 description: Obtenga información sobre la fuente Bombora Intent en Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -77,18 +77,27 @@ Para obtener más información sobre estas credenciales, lea la [[!DNL Google Cl
 
 Lea esta sección para obtener información sobre el esquema [!DNL Bombora] y la estructura de datos.
 
-El esquema [!DNL Bombora] se llama **Intención de cuenta semanal**. Es la información de intención semanal (investigación anónima del comprador B2B y consumo de contenido) sobre cuentas y temas específicos. Los datos están en formato parquet.
+El esquema [!DNL Bombora] se llama **Intención de cuenta Bombora B2B**. Es la información de intención semanal (investigación anónima del comprador B2B y consumo de contenido) sobre cuentas y temas específicos. Los datos están en formato parquet.
 
-| Nombre del campo | Tipo de datos | Requerido | Clave empresarial | Notas |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | CADENA | VERDADERO | SÍ | El nombre canónico de la compañía. |
-| `Domain` | CADENA | VERDADERO | SÍ | El dominio de la cuenta identificada que muestra intención. |
-| `Topic_Id` | CADENA | VERDADERO | SÍ | Identificador del tema [!DNL Bombora]. |
-| `Topic_Name` | CADENA | VERDADERO | | Nombre del tema [!DNL Bombora]. |
-| `Cluster_Name` | CADENA | VERDADERO | | Nombre de clúster en [!DNL Bombora] para un tema determinado. |
-| `Cluster_Id` | CADENA | VERDADERO | | Identificador de clúster asociado a un tema determinado. |
-| `Composite_Score` | ENTERO | VERDADERO | | La puntuación compuesta representa el patrón de consumo de un dominio para un tema determinado durante un período de tiempo especificado. La puntuación compuesta se mide entre 0 y 100, donde 100 representa la puntuación más alta posible y 0 representa la puntuación más baja. Una puntuación compuesta de más de 60 representa un aumento en el interés por un dominio en un tema en particular. Esto también se conoce como &quot;oleada&quot;. |
-| `Partition_Date` | FECHA | VERDADERO | | La fecha de calendario de una instantánea. Esto se realiza semanalmente, al final de la semana, en formato `mm/dd/yyyy`. |
+* Clase: XDM [!DNL Bombora Account Intent]
+* Área de nombres - B2B [!DNL Bombora Account Intent]
+* Identidad principal: `intentID`
+* Relaciones: cuenta B2B
+
+| Nombre del campo | Tipo de datos | Descripción |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJETO | El sistema utiliza este campo para la auditoría del sistema de origen. |
+| `_id` | CADENA | El sistema utiliza este campo como identificador único. |
+| `accountDomain` | CADENA | Este campo contiene el dominio de la cuenta. |
+| `accountID` | CADENA | Este campo contiene el ID de cuenta B2B con el que está asociado este registro de intención. |
+| `bomboraAccountName` | CADENA | Este campo contiene el ID de la empresa en Bombora. |
+| `clusterID` | CADENA | Este campo contiene el ID de clúster. |
+| `clusterName` | CADENA | Este campo contiene el nombre del clúster. |
+| `compositeScore` | ENTERO | Este campo contiene la puntuación compuesta de intención. |
+| `intentID` | CADENA | Este campo contiene un valor único generado por el sistema. |
+| `partitionDate` | FECHA | Este campo contiene la fecha de partición. Esto se realiza semanalmente, al final de la semana, en formato `mm/dd/yyyy`. |
+| `topicID` | CADENA | Este campo contiene el ID del tema de intención de Bombora. |
+| `topicName` | CADENA | Este campo contiene el nombre del tema por intención de Bombora. |
 
 {style="table-layout:auto"}
 

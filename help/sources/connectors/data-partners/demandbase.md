@@ -2,12 +2,12 @@
 title: Demandbase Intent
 description: Obtenga información acerca del origen de Demandbase Intent en Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -60,25 +60,33 @@ Para obtener más información sobre estas credenciales, lea la [[!DNL Google Cl
 
 Lea esta sección para obtener información sobre el esquema [!DNL Demandbase] y la estructura de datos.
 
-El esquema [!DNL Demandbase] se llama **Intención de la compañía semanal**. Es la información de intención semanal (búsqueda anónima del comprador B2B y consumo de contenido) de la cuenta y las palabras clave especificadas. Los datos están en formato parquet.
+El esquema [!DNL Demandbase] se llama **Calidad de la cuenta de Demandbase B2B**. Es la información de intención semanal (búsqueda anónima del comprador B2B y consumo de contenido) de la cuenta y las palabras clave especificadas. Los datos están en formato parquet.
 
-| Nombre del campo | Tipo de datos | Requerido | Clave empresarial | Notas |
-| --- | --- | --- | --- | --- |
-| `company_id` | CADENA | VERDADERO | SÍ | El ID de empresa canónico. |
-| `domain` | CADENA | VERDADERO | SÍ | El dominio identificado de la cuenta que muestra la intención. |
-| `start_date` | FECHA | VERDADERO | SÍ | La fecha de inicio en la que se produjo la actividad por intención en el período de duración. |
-| `end_date` | FECHA | VERDADERO | SÍ | La fecha de finalización en la que se produjo la actividad por intención en el período de duración. |
-| `duration_type` | CADENA | VERDADERO | SÍ | El tipo de duración. Por lo general, este valor puede ser diario, semanal o mensual, según la duración de resumen elegida. Para esta muestra de datos, este valor es `week`. |
-| `keyword_set_id` | CADENA | VERDADERO | SÍ | ID del conjunto de palabras clave. Esto es único para un cliente determinado. |
-| `keyword_set` | CADENA | VERDADERO | SÍ | El nombre del conjunto de palabras clave. |
-| `keyword` | CADENA | VERDADERO | | La palabra clave Intent. |
-| `is_trending` | CADENA | VERDADERO | | El estado actual de una tendencia determinada. El estado de tendencia se mide como una ráfaga en la actividad por intención de tratamiento en la última semana en relación con los promedios de las siete semanas anteriores. |
-| `intent_strength` | ENUM[CADENA] | VERDADERO | | Una medida cuantificada de la intensidad por intención. Los valores aceptados incluyen: `HIGH`, `MED` y `LOW`. |
-| `num_people_researching` | ENTERO | VERDADERO | | Recuento de personas que pertenecen a `company_id` y que investigaron la palabra clave en los últimos siete días. |
-| `num_trending_days` | ENTERO | VERDADERO | | El número de días que la palabra clave fue tendencia en una duración determinada. |
-| `trending_score` | ENTERO | VERDADERO | | La puntuación de tendencia. |
-| `record_id` | CADENA | VERDADERO | | El ID único del registro principal. |
-| `partition_date` | FECHA | VERDADERO | | La fecha de calendario de la instantánea. Esto se realiza semanalmente, al final de la semana. |
+* Clase: XDM [!DNL Demandbase Account Intent]
+* Área de nombres - B2B [!DNL Demandbase Account Intent]
+* Identidad principal: `intentID`
+* Relaciones: cuenta B2B
+
+| Nombre del campo | Tipo de datos | Descripción |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJETO | Este campo contiene información de auditoría del sistema del origen externo. |
+| `_id` | CADENA | Es el identificador único del sistema para el registro. |
+| `accountDomain` | CADENA | Este campo contiene el dominio de la cuenta. |
+| `accountID` | CADENA | Este es el ID de cuenta B2B con el que está asociado este registro de intención. |
+| `demandbaseAccountID` | CADENA | Este es el identificador de la empresa en [!DNL Demandbase]. |
+| `durationType` | CADENA | Este campo especifica el tipo de periodo de validez por intención, por ejemplo, &quot;semana&quot;. |
+| `endDate` | FECHA | Es la fecha de finalización del periodo de validez de intención. |
+| `intentID` | CADENA | Es un valor único generado por el sistema para el registro de intención. |
+| `intentStrength` | CADENA | Este campo especifica el tipo de periodo de validez por intención, como &quot;DÍA&quot;, &quot;SEMANA&quot; o &quot;MES&quot;. |
+| `isTrending` | BOOLEANO | Este campo indica si la palabra clave es de tendencia, con posibles valores como Baja, Medium o Alta. |
+| `keyword` | CADENA | Este campo contiene la palabra clave o frase que indica la intención de [!DNL Demandbase]. |
+| `keywordSetID` | CADENA | Este es el identificador del conjunto de palabras clave. |
+| `keywordSetName` | CADENA | Es el nombre del conjunto de palabras clave. |
+| `numTrendingDays` | ENTERO | Este campo indica el número de días que la palabra clave ha sido tendencia. |
+| `partitionDate` | FECHA | Esta es la fecha de partición del registro. |
+| `peopleResearchingCount` | ENTERO | Este campo indica el número de personas que investigan la palabra clave. |
+| `startDate` | FECHA | Es la fecha de inicio del periodo de validez de intención. |
+| `trendingScore` | ENTERO | Este campo contiene la puntuación de tendencia de la palabra clave. |
 
 {style="table-layout:auto"}
 
