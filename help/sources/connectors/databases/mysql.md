@@ -3,9 +3,9 @@ title: Información general sobre el conector MySQL Source
 description: Aprenda a conectar MySQL a Adobe Experience Platform mediante API o la interfaz de usuario.
 last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Lea las siguientes secciones para completar la configuración de requisitos prev
 
 ### LISTA DE PERMITIDOS de direcciones IP
 
-Debe agregar direcciones IP específicas de la región a la lista de permitidos antes de conectar las fuentes a Experience Platform en Azure o Amazon Web Service (AWS). Para obtener más información, lea la guía de [inclusión en la lista de permitidos de direcciones IP para conectarse a Experience Platform en Azure y AWS](../../ip-address-allow-list.md).
+Debe agregar direcciones IP específicas de la región a la lista de permitidos antes de conectar las fuentes a Experience Platform en Azure o Amazon Web Service (AWS). Lea la guía de [inclusión en la lista de permitidos de direcciones IP para conectarse a Experience Platform en Azure y AWS](../../ip-address-allow-list.md) para obtener más información.
 
 ### Autenticar en Experience Platform en Azure {#azure}
 

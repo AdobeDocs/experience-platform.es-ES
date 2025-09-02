@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Información general sobre el conector Microsoft Dynamics Source
 description: Obtenga información sobre cómo conectar Microsoft Dynamics a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 3%
+source-wordcount: '284'
+ht-degree: 2%
 
 ---
 
-# Conector de Microsoft Dynamics
+# Fuente de [!DNL Microsoft Dynamics] 
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+[!DNL Microsoft Dynamics] es un conjunto de aplicaciones empresariales que puede utilizar para administrar sus operaciones de manera más eficaz. Ya sea que esté supervisando las relaciones con los clientes, las finanzas o las cadenas de suministro, [!DNL Microsoft Dynamics] le ofrece las herramientas para optimizar sus flujos de trabajo y tomar decisiones más inteligentes. La plataforma está diseñada para admitir la planificación de recursos empresariales y la administración de la relación con los clientes (CRM), lo que le permite unificar los procesos empresariales en un sistema integrado.
 
-[!DNL Experience Platform] proporciona soporte para la ingesta de datos desde un sistema CRM de terceros. La compatibilidad con proveedores CRM incluye [!DNL Microsoft Dynamics].
+Puede usar el origen [!DNL Microsoft Dynamics] para ingerir datos de su cuenta de [!DNL Microsoft Dynamics] en Adobe Experience Platform.
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Debe añadir direcciones IP específicas de la región a la lista de permitidos antes de conectar los orígenes a Experience Platform. Lea la guía de [inclusión en la lista de permitidos de direcciones IP para conectarse a Experience Platform](../../ip-address-allow-list.md) para obtener más información.
 
 ## Asignación de campos de [!DNL Microsoft Dynamics] a XDM
 
