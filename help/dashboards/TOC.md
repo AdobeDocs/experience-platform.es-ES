@@ -1,8 +1,8 @@
 ---
 audience: user
-user-guide-title: Ayuda de paneles de Adobe Experience Platform
-breadcrumb-title: Guía de paneles
-user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
+user-guide-title: Ayuda de paneles de control de Adobe Experience Platform
+breadcrumb-title: Guía de paneles de control
+user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles de control personalizables.
 feature: Dashboards
 role: Developer,User
 source-git-commit: 3582ce4f73887f03bbb9da72f96aab1be9b99614

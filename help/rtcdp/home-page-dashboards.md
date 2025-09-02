@@ -1,7 +1,7 @@
 ---
 keywords: resumen de métricas; resumen de métricas de rtcdp
 title: Página de inicio y paneles de Real-Time Customer Data Platform
-description: Conozca varios paneles, la página de inicio y la experiencia del primer usuario de Adobe Real-Time CDP.
+description: Conozca varios paneles de control, la página de inicio y la experiencia del primer usuario de Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
@@ -32,7 +32,7 @@ El widget [!UICONTROL Introducción al Perfil del cliente en tiempo real] se div
 
 ![Página de inicio de la interfaz de usuario de Experience Platform que muestra el widget de introducción](assets/platform-home/getting-started-widget.png)
 
-## Panel de métricas {#metrics-dashboard}
+## Panel de control de métricas {#metrics-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalProfiles"
