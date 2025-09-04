@@ -3,22 +3,18 @@ title: Ingesta de datos de pagos desde su cuenta de Stripe a Experience Platform
 description: Aprenda a introducir datos de pagos de su cuenta de Stripe en Experience Platform mediante la interfaz de usuario.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1637'
 ht-degree: 3%
 
 ---
 
 # Ingresar datos de pagos de su cuenta de [!DNL Stripe] en Experience Platform mediante la interfaz de usuario
 
->[!NOTE]
->
->El origen [!DNL Stripe] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
-
 Lea el siguiente tutorial para aprender a ingerir datos de pagos de su cuenta de [!DNL Stripe] en Adobe Experience Platform mediante la interfaz de usuario.
 
-## Introducción 
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -116,7 +112,7 @@ Si ya tiene un conjunto de datos, seleccione **[!UICONTROL Conjunto de datos exi
 
 >[!ENDTABS]
 
-+++Seleccione esta opción para habilitar la Ingesta de perfiles, los diagnósticos de error y la ingesta parcial.
++++Seleccione para habilitar la Ingesta de perfiles, diagnósticos de error e ingesta parcial.
 
 Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos de perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
 
@@ -180,7 +176,7 @@ Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]
 
 ![Paso de revisión del flujo de trabajo de orígenes.](../../../../images/tutorials/create/stripe/review.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de pagos de su origen de [!DNL Stripe] a Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
 

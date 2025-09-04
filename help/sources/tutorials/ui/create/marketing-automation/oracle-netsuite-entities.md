@@ -1,22 +1,15 @@
 ---
 title: Crear una  [!DNL Oracle NetSuite Entities] conexión de origen en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de entidades de Oracle NetSuite mediante la interfaz de usuario de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '689'
 ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen [!DNL Oracle NetSuite Entities] en la interfaz de usuario
-
->[!NOTE]
->
->El origen [!DNL Oracle NetSuite Entities] está en la versión beta. Consulte la [descripción general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Lea el siguiente tutorial para aprender a llevar los datos de contactos y clientes de su cuenta de [!DNL Oracle NetSuite Entities] a Adobe Experience Platform en la interfaz de usuario.
 
@@ -82,7 +75,7 @@ A continuación, seleccione el tipo de objeto que desea introducir en Experience
 
 >[!ENDTABS]
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Oracle NetSuite Entities]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos de automatización de marketing en Experience Platform](../../dataflow/marketing-automation.md).
 

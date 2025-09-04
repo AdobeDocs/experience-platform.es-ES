@@ -1,11 +1,10 @@
 ---
 title: Creación de una conexión base de PathFactory mediante la API de Flow Service
 description: Obtenga información sobre cómo autenticar su cuenta de PathFactory en Experience Platform mediante la API de Flow Service.
-badge: Beta
 exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -16,7 +15,7 @@ Una conexión base representa la conexión autenticada entre un origen y Adobe E
 
 Lea este documento para aprender a crear una conexión base para [!DNL PathFactory] mediante la [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
-## Introducción 
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -102,7 +101,7 @@ Una respuesta correcta devuelve la conexión recién creada, incluido su identif
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Siguiendo este tutorial, ha creado una conexión base [!DNL PathFactory] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 

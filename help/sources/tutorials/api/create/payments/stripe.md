@@ -3,22 +3,18 @@ title: Ingesta de datos de pagos de tu cuenta de  [!DNL Stripe] a Experience Pla
 description: Aprenda a introducir datos de pagos de su cuenta de Stripe en Experience Platform mediante la API de Flow Service
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2006'
 ht-degree: 2%
 
 ---
 
 # Ingesta de datos de pagos desde su cuenta de [!DNL Stripe] a Experience Platform mediante API
 
->[!NOTE]
->
->El origen [!DNL Stripe] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
-
 Lea el siguiente tutorial para aprender a ingerir los datos de pagos de [!DNL Stripe] en Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Introducción 
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -880,7 +876,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [ID de asignación](#mapping) generado en un paso anterior. |
 | `transformations.params.mappingVersion` | La versión correspondiente del ID de asignación. El valor predeterminado es `0`. |
 | `scheduleParams.startTime` | Hora a la que comenzará el flujo de datos. Debe proporcionar el valor de hora de inicio en formato de marca de tiempo Unix. |
-| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Puede configurar la frecuencia de ingesta para:  <ul><li>**Una vez**: establezca su frecuencia en `once` para crear una ingesta única. Las configuraciones para intervalo y relleno no están disponibles al crear un flujo de datos de ingesta único. De forma predeterminada, la frecuencia de programación se establece en una vez.</li><li>**Minuto**: establezca su frecuencia en `minute` para programar el flujo de datos e ingerir datos por minuto.</li><li>**Hora**: Establezca su frecuencia en `hour` para programar su flujo de datos e ingerir datos por hora.</li><li>**Día**: Establezca su frecuencia en `day` para programar su flujo de datos e ingerir datos por día.</li><li>**Semana**: establezca su frecuencia en `week` para programar el flujo de datos e ingerir datos por semana.</li></ul> |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Puede configurar la frecuencia de ingesta para:  <ul><li>**Una vez**: establezca su frecuencia en `once` para crear una ingesta única. Las configuraciones para intervalo y relleno no están disponibles al crear un flujo de datos de ingesta único. De forma predeterminada, la frecuencia de programación se establece en una vez.</li><li>**Minuto**: establezca su frecuencia en `minute` para programar el flujo de datos e ingerir datos por minuto.</li><li>**Hora**:Set su frecuencia a `hour` para programar su flujo de datos e ingerir datos por hora.</li><li>**Día**: Establezca su frecuencia en `day` para programar su flujo de datos e ingerir datos por día.</li><li>**Semana**: establezca su frecuencia en `week` para programar el flujo de datos e ingerir datos por semana.</li></ul> |
 | `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. Por ejemplo, si establece la frecuencia en día y configura el intervalo en 15, el flujo de datos se ejecutará cada 15 días. El valor del intervalo debe ser un entero distinto de cero. El valor mínimo del intervalo aceptado para cada frecuencia es el siguiente:<ul><li>**Una vez**: n/a</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Día**: 1</li><li>**Semana**: 1</li></ul> |
 
 **Respuesta**

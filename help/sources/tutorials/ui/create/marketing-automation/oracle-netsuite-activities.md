@@ -1,22 +1,15 @@
 ---
 title: Crear una  [!DNL Oracle NetSuite Activities] conexión de origen en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Actividades de Oracle NetSuite mediante la IU de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '607'
 ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen [!DNL Oracle NetSuite Activities] en la interfaz de usuario
-
->[!NOTE]
->
->El origen [!DNL Oracle NetSuite Activities] está en la versión beta. Consulte la [descripción general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Lea el siguiente tutorial para aprender a traer datos de eventos de su cuenta de [!DNL Oracle NetSuite Activities] a Adobe Experience Platform en la interfaz de usuario.
 
@@ -61,7 +54,7 @@ Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a co
 
 ![Captura de pantalla de la IU de Experience Platform para conectar la cuenta de actividades de Oracle NetSuite con una nueva cuenta](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Oracle NetSuite Activities]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/marketing-automation.md).
 

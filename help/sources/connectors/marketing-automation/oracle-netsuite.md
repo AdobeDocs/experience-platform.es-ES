@@ -2,22 +2,17 @@
 title: Información general sobre Oracle NetSuite Source
 description: Obtenga información sobre cómo conectar Oracle NetSuite a Adobe Experience Platform mediante API o la interfaz de usuario.
 last-substantial-update: 2024-01-30T00:00:00Z
-badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 2%
+source-wordcount: '738'
+ht-degree: 6%
 
 ---
 
 # [!DNL Oracle NetSuite]
 
->[!NOTE]
->
->El origen [!DNL Oracle NetSuite] está en la versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
-
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 Experience Platform es compatible con la ingesta de datos mediante un sistema de automatización de marketing de terceros. La compatibilidad con los proveedores de automatización de marketing incluye [!DNL Oracle NetSuite].
 

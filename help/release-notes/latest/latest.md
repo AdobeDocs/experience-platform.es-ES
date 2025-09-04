@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 97%
+source-wordcount: '1432'
+ht-degree: 92%
 
 ---
 
@@ -172,6 +172,9 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
+| Disponibilidad general de la fuente [!DNL Oracle NetSuite] | El origen [!DNL Oracle NetSuite] ya está disponible de forma general. Ahora puede conectar su cuenta de [!DNL Oracle NetSuite] a Experience Platform para introducir datos de actividades y entidades con el fin de realizar un análisis y una activación unificados. Para obtener más información, lea la [[!DNL Oracle NetSuite] información general](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
+| Disponibilidad general de la fuente [!DNL PathFactory] | El origen [!DNL PathFactory] ya está disponible de forma general. Puede conectar su cuenta de [!DNL PathFactory] a Experience Platform para introducir datos de visitantes, sesiones y vistas de página para llevar a cabo un análisis y una activación unificados. Para obtener más información, lea la [[!DNL PathFactory] información general](../../sources/connectors/marketing-automation/pathfactory.md). |
+| Disponibilidad general de la fuente [!DNL Stripe] | El origen [!DNL Stripe] ya está disponible de forma general. Puede conectar su cuenta de [!DNL Stripe] a Experience Platform para introducir datos de pagos y transacciones a fin de realizar un análisis y una activación unificados. Para obtener más información, lea la [[!DNL Stripe] información general](../../sources/connectors/payments/stripe.md). |
 | Autenticación mejorada para [!DNL Azure Blob Storage] | Ahora puede usar la autenticación basada en principal de servicio para conectar su fuente de [!DNL Azure Blob Storage] a Experience Platform. Utilice la autenticación basada en principal de servicio para mejorar la seguridad, facilitar la rotación de credenciales y conseguir un control de acceso más granular para su cuenta. Para obtener más información, lea la [[!DNL Azure Blob Storage] información general](../../sources/connectors/cloud-storage/blob.md). |
 
 Para obtener más información, lea la [Información general de las fuentes](../../sources/home.md).
