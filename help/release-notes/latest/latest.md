@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
-workflow-type: ht
-source-wordcount: '1339'
-ht-degree: 100%
+source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
+workflow-type: tm+mt
+source-wordcount: '1321'
+ht-degree: 97%
 
 ---
 
@@ -160,7 +160,7 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 | Función | Descripción |
 | ------- | ----------- |
-| Estimaciones de audiencia | Las estimaciones de audiencia ahora se generan automáticamente en el Generador de segmentos. Este valor se actualiza siempre que se modifica la audiencia y siempre refleja las reglas de audiencia más recientes. Además, la estimación ahora se mostrará como **rango** y se basa en el intervalo de confianza de los datos de muestreo. |
+| Estimaciones de audiencia | Las estimaciones de audiencia ahora se muestran como **rango**, que se basa en el intervalo de confianza de los datos de muestreo. Para obtener más información acerca de las estimaciones, lea la [guía del Generador de segmentos](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Para obtener más información, lea la [[!DNL Segmentation Service] información general](../../segmentation/home.md).
 

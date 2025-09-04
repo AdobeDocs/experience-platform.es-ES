@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
+source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
 workflow-type: tm+mt
-source-wordcount: '5174'
+source-wordcount: '5200'
 ht-degree: 10%
 
 ---
@@ -30,12 +30,12 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showfullxdmschema"
 >title="Mostrar esquema XDM completo"
->abstract="De forma predeterminada, solo se muestran los campos que contienen datos. Active esta opción para mostrar todos los campos del esquema XDM."
+>abstract="De forma predeterminada, solo se muestran los campos que contienen datos. Habilite esta opción para mostrar todos los campos del esquema XDM."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showdeprecatedfields"
 >title="Mostrar campos obsoletos"
->abstract="De forma predeterminada, no se muestran los campos XDM obsoletos. Active esta opción para mostrar los campos XDM obsoletos."
+>abstract="De forma predeterminada, no se muestran los campos XDM obsoletos. Habilite esta opción para mostrar los campos XDM obsoletos."
 
 Los componentes básicos de las definiciones de segmentos son los atributos y los eventos. Además, los atributos y eventos contenidos en las audiencias existentes pueden utilizarse como componentes para nuevas definiciones.
 
@@ -129,9 +129,9 @@ Una vez asignados los grupos de informes, puede utilizar estos campos recién as
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
->title="Audiencias externas"
->abstract="Las audiencias importadas a través de la pestaña Audiencias ahora aparecen automáticamente en Audience Portal. Las audiencias ingeridas desde Audience Manager, Customer Journey Analytics, Coincidencia de segmentos y otras integraciones personalizadas están fácilmente disponibles, sin necesidad de configurarlas primero en el generador de segmentos. A partir del 1 de septiembre de 2025, todas las audiencias se recuperan exclusivamente mediante la búsqueda unificada y ya no se admite el flujo de trabajo anterior."
->additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de audiencias"
+>title="Públicos externos"
+>abstract="Los públicos importados a través de la pestaña Públicos ahora aparecen automáticamente en Audience Portal. Las audiencias ingeridas desde Audience Manager, Customer Journey Analytics, Coincidencia de segmentos y otras integraciones personalizadas están fácilmente disponibles, sin necesidad de configurarlas primero en el generador de segmentos. A partir del 1 de septiembre de 2025, todos los públicos se recuperan exclusivamente mediante la búsqueda unificada y ya no se admite el flujo de trabajo anterior."
+>additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de públicos"
 
 >[!NOTE]
 >
@@ -194,7 +194,7 @@ Tenga en cuenta que se permite un máximo de 250 valores. Si supera esta cantida
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
 >title="Buscar actualizaciones"
->abstract="El sistema de búsqueda existente se ha actualizado para utilizar la búsqueda unificada. Búsqueda unificada le permite buscar en sus públicos de forma más sencilla y sólida la pertenencia al segmento."
+>abstract="El sistema de búsqueda existente se ha actualizado para utilizar la búsqueda unificada. Búsqueda unificada le permite buscar en sus públicos de forma más sencilla y sólida el abono al segmento."
 
 Puede arrastrar y soltar una audiencia de la ficha **[!UICONTROL Audiencia]** en el lienzo del generador de reglas para hacer referencia a la pertenencia a la audiencia en la nueva definición de segmento. Esto le permite incluir o excluir la pertenencia a audiencias como atributo en las nuevas reglas de definición de segmentos.
 
@@ -330,7 +330,7 @@ La lista de restricciones de tiempo disponibles para esta operación difiere de 
 >[!NOTE]
 >
 >Al utilizar la restricción de tiempo &quot;Después&quot;, el último evento puede tener lugar durante más tiempo que el indicado en la restricción de tiempo. >
->&#x200B;>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
+>>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
 >
 >Además, estas dos restricciones de tiempo se pueden utilizar en coordinación entre sí.
 >
@@ -386,7 +386,7 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualizar estimaciones"
 >abstract="Puede actualizar las estimaciones de la definición del segmento para ver inmediatamente una previsualización de cuántos perfiles cumplen los requisitos para la definición de segmento propuesta. Las estimaciones de público se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar un público"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
@@ -406,10 +406,7 @@ La marca de tiempo de los perfiles cualificados indica el trabajo de evaluación
 
 **[!UICONTROL Perfiles estimados]** indica un **rango aproximado** de perfiles, basado en el **trabajo de muestra**. Esto significa que los datos de muestra se proyectan en el conjunto de perfiles más grande, lo que se traduce en un número estimado que puede diferir del número real de perfiles cualificados. La muestra de perfil estimada tiene un intervalo de confianza del 95 %.
 
-Este número se actualiza en dos situaciones:
-
-1. Hay un cambio superior al 3 % en los datos del cliente o el último trabajo de muestra tiene más de tres días.
-2. Se han modificado o eliminado las reglas de la audiencia.
+Cuando realice cambios en las reglas de la audiencia, puede seleccionar el botón **[!UICONTROL Actualizar estimación]** para ver un recuento actualizado de los perfiles estimados. Sin embargo, este número sigue estando basado en el trabajo de muestra anterior. El trabajo de muestra se actualiza cuando hay un cambio mayor del 3 % en los datos del cliente o cuando el último trabajo de muestra tiene más de tres días.
 
 Al seleccionar la burbuja de información, se indica la fecha y la hora de ejecución del último trabajo de muestra.
 
