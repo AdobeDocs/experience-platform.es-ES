@@ -4,10 +4,10 @@ user-guide-title: Guía del asistente de IA en Adobe Experience Platform
 user-guide-description: Aprenda a utilizar el Asistente de IA para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 description: Este documento enumera la tabla de contenido del Asistente de IA en Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: 4aa2e4fb17d1c6ab9997ab7d0fbe7f5f5d0e5ad7
+source-git-commit: 40f7ea3e6477590dc2eed5af8aa9848901a8c204
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 31%
+source-wordcount: '118'
+ht-degree: 30%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 31%
 * [Guía de IU del asistente de IA](ui-guide.md)
 * [Privacidad, seguridad y gobernanza](privacy.md)
 * [Preguntas frecuentes](faq.md)
+* [Descargo de responsabilidad legal](legal-disclaimer.md)
 * Nuevas funciones {#new-features}
    * [Funciones del asistente de IA en Alpha y Beta](./new-features/alpha-beta.md)
    * [Monitorización de cambios significativos y previsión de audiencias](./new-features/audience-forecasting.md)
