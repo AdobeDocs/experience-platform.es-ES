@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
+source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2573'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 5%
 
 Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
 Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.29.0: 4 de septiembre de 2025
+
+**Nuevas características**
+
+- Se ha agregado compatibilidad con la recopilación de datos de anuncios de Adobe para Adobe Recorrido Analytics
+- Se ha agregado compatibilidad para registrar los detalles de la suscripción push en los perfiles del usuario.
+
+**Correcciones y mejoras**
+
+- Se ha corregido un problema en el cual se combinaban secciones de anulación de configuración en lugar de reemplazarse.
+- Se ha corregido un caso en el que la recopilación de vínculos enviaba todo el contenido del documento como nombre del vínculo.
+- Se ha corregido un problema en el cual algunas propuestas no se podían volver a procesar.
 
 ## Versión 2.28.1: viernes, 31 de julio de 2025
 
@@ -31,7 +44,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
-- Se ha mejorado la administración de identidades [1&rbrace; para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](identity/overview.md)
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](identity/overview.md)
 - Se ha resuelto un problema en el cual [contenido de personalización](personalization/rendering-personalization-content.md) con elementos de contenido de HTML no se podían procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
 - Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 

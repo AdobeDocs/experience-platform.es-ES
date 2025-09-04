@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Experience Platform Web SDK
 description: Extensión de etiqueta de Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
+source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 27%
+source-wordcount: '2947'
+ht-degree: 26%
 
 ---
 
@@ -13,6 +13,18 @@ ht-degree: 27%
 # Notas de la versión de Web SDK
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión de SDK, consulte las [notas de la versión de Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versión 2.32.0: 4 de septiembre de 2025
+
+**Nuevas funciones**
+
+- Contiene [versión 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) de Adobe Experience Platform Web SDK.
+- Se ha agregado compatibilidad con Adobe Advertising como nuevo componente de compilación personalizado. Configúrelo en la configuración de la extensión de y en enviar llamadas de evento.
+- Se ha agregado compatibilidad para registrar los detalles de la suscripción push en el perfil. Esto se realiza a través de una nueva acción, &quot;Detalles de la suscripción push&quot;
+
+**Correcciones y mejoras**
+
+- Se ha mejorado la edición de elementos de datos XDM cuando los esquemas o las zonas protegidas no están disponibles. Ahora puede editar elementos de datos de objetos y variables XDM incluso cuando no se encuentren los esquemas a los que se hace referencia o cuando no se pueda acceder a los entornos limitados. Esto resuelve los problemas que se producen normalmente durante las migraciones de la organización a nuevos centros de datos, donde los ID de esquema pueden cambiar y anteriormente provocaban que las interfaces de edición mostraran errores y se inutilizaran.
 
 ## Versión 2.31.1: viernes, 31 de julio de 2025
 
@@ -34,7 +46,6 @@ Este documento describe las notas de la versión de la extensión de etiquetas A
 **Problemas conocidos**
 
 - Después de la versión 2.31.0, se identificó un problema con el proceso de [compilación de componentes personalizados](/help/web-sdk/install/create-custom-build.md). Aunque las compilaciones personalizadas siguen funcionando, todos los componentes se incluyen actualmente en la compilación, lo que da como resultado un paquete de tamaño completo independientemente de la selección de componentes. Se está desarrollando una solución para este problema. Si se basa en la selección de componentes personalizados para minimizar el tamaño de la compilación, se recomienda esperar a una versión futura.
-
 
 ## Versión 2.30.1: miércoles, 27 de mayo de 2025
 
@@ -398,7 +409,7 @@ Contiene la versión 2.3.0 de la biblioteca del SDK web de Adobe Experience Plat
 - Actualización a Alloy 2.1.0 ([Notas de la versión](/help/web-sdk/release-notes.md))
 - Compatibilidad con el estándar de consentimiento IAB 2.0 en la acción `setConsent`.
 - Compatibilidad con la anulación del ID del conjunto de datos en la acción `sendEvent`.
-- Añada un nuevo elemento de datos del tipo `IdentityMap` que se pueda utilizar para rellenar la entrada de `identityMap` en el elemento de datos de objeto XDM que ahora está activado y en la acción `setConsent`.
+- Añada un nuevo elemento de datos del tipo `IdentityMap` que se pueda utilizar para rellenar la entrada de `identityMap` en el elemento de datos de objeto XDM que ahora está habilitado y en la acción `setConsent`.
 - Compatibilidad para pasar un mapa de identidad en la acción `setConsent`.
 - Compatibilidad con la selección de una zona protegida de Experience Platform en el elemento de datos del objeto XDM.
 
