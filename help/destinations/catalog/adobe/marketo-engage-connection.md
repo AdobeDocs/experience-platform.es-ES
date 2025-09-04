@@ -119,9 +119,9 @@ Marketo usa el **[!UICONTROL campo de deduplicación de Marketo]** que seleccion
 
 >[!IMPORTANT]
 > 
->* Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}.
+>* Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;.
 >
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -145,7 +145,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
    * **[!UICONTROL Audiencia y perfil]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo y mantener actualizada su información de perfil.
    * **[!UICONTROL Solo perfil]**: seleccione esta opción cuando desee mantener los perfiles de posibles clientes de Marketo actualizados con la información más reciente de Experience Platform.
    * **[!UICONTROL Solo audiencia]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo sin actualizar su información de perfil.
-* **[!UICONTROL Partición]**: *La selección de particiones solo está disponible al elegir **[!UICONTROL Solo perfil]**o **[!UICONTROL Tipos de sincronización de audiencia y perfil]***. Seleccione un ID de partición de Marketo asociado al espacio de trabajo elegido. Esto le permite especificar qué partición de posible cliente en Marketo recibirá los datos exportados. Si no elige una partición específica, los datos se enviarán a la partición **[!UICONTROL Default]** de Marketo.
+* **[!UICONTROL Partición]**: *La selección de particiones solo está disponible al elegir **[!UICONTROL Solo perfil]**&#x200B;o **[!UICONTROL Tipos de sincronización de audiencia y perfil]***. Seleccione un ID de partición de Marketo asociado al espacio de trabajo elegido. Esto le permite especificar qué partición de posible cliente en Marketo recibirá los datos exportados. Si no elige una partición específica, los datos se enviarán a la partición **[!UICONTROL Default]** de Marketo.
 * **[!UICONTROL Campo de anulación de duplicación de Marketo]**: seleccione el campo de anulación de duplicación de Marketo que desee utilizar al actualizar posibles clientes de Marketo existentes. Este selector muestra los campos que ha marcado como campos de anulación de duplicación en Marketo. Si desea que un campo específico de Marketo se muestre como un campo de anulación de duplicación, debe marcar el campo como [campo en el que se puede buscar](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) en Marketo.
 
   >[!NOTE]
@@ -166,7 +166,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
