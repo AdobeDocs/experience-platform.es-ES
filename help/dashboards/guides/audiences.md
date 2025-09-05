@@ -89,7 +89,7 @@ Se proporciona una carga de widget predeterminada para todas las instancias nuev
 >[!NOTE]
 >
 >El 26 de julio de 2023, los paneles de [!UICONTROL Perfiles], [!UICONTROL Audiencias] y [!UICONTROL Destinos] de Información general se restablecieron a una nueva carga de widget predeterminada para todos los usuarios que no modificaron sus vistas en los seis meses anteriores.
->Consulte la documentación en las secciones de widgets predeterminados de [Perfiles](./profiles.md#default-widgets) y [Destinos](./destinations.md#default-widgets) para obtener detalles sobre qué widgets se incluyen como parte de las cargas de widgets predeterminados. Puede seguir personalizando los widgets del tablero como antes.
+>>Consulte la documentación en las secciones de widgets predeterminados de [Perfiles](./profiles.md#default-widgets) y [Destinos](./destinations.md#default-widgets) para obtener detalles sobre qué widgets se incluyen como parte de las cargas de widgets predeterminados. Puede seguir personalizando los widgets del tablero como antes.
 
 ## Widgets de Customer AI {#customer-ai-audiences-widgets}
 
@@ -119,7 +119,7 @@ El modelo de IA que determina las puntuaciones de tendencia se elige del selecto
 
 Para ir a la página de detalles del modelo de inteligencia artificial aplicada al cliente seleccionado, seleccione **[!UICONTROL Ver detalles del modelo]**.
 
-![Se ha resaltado el panel Audiencias de Experience Platform con la distribución de puntuaciones] de la inteligencia artificial aplicada al cliente y el widget [!UICONTROL Ver detalles del modelo].(../images/segments/customer-ai-distribution-of-scores.png)
+![Se ha resaltado el panel Audiencias de Experience Platform con la distribución de puntuaciones[!UICONTROL  de la inteligencia artificial aplicada al cliente y el widget ]Ver detalles del modelo[!UICONTROL .]](../images/segments/customer-ai-distribution-of-scores.png)
 
 Aparecerá la página de información detallada del modelo.
 
@@ -184,7 +184,7 @@ Para obtener más información sobre fragmentos y perfiles combinados, consulte 
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="Tendencia de tamaño de audiencia"
+>title="Tendencia de tamaño de público"
 >abstract="Este widget proporciona información sobre el número total de perfiles que cumplen los criterios de **cualquier** definición de segmentos, según lo capturado durante la instantánea diaria, los últimos 30 días, 90 días o 12 meses."
 
 El widget de tendencia de tamaño de audiencia **[!UICONTROL Audience size]** proporciona una ilustración de gráfico de líneas para la cantidad total de perfiles que califican para la audiencia **any** durante un período de tiempo determinado. La tendencia del tamaño de la audiencia se puede visualizar en períodos de 30 días, 90 días y 12 meses. El período de tiempo se elige en un menú desplegable del widget. El tamaño de la audiencia se refleja en el eje y y el tiempo en el eje x.
@@ -295,6 +295,6 @@ El widget permite descubrir de un vistazo dónde y cuándo se está activando la
 
 ![Widget de activaciones programadas.](../images/audiences/scheduled-activations.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Siguiendo este documento, debería poder encontrar el panel [!UICONTROL Audiencias] y seleccionar una audiencia para verla. También debe comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con audiencias en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario del servicio de segmentación](../../segmentation/ui/overview.md).

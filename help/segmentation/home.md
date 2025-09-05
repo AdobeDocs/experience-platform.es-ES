@@ -34,7 +34,7 @@ Una vez definida conceptualmente una audiencia, se genera en [!DNL Experience Pl
 
 Puede crear audiencias de varias formas en Adobe Experience Platform, incluso mediante composiciones, definiciones de segmentos, datos federados y Data Distiller.
 
-### Composición del público
+### Composición de público
 
 Al componer directamente una audiencia en Experience Platform, puede utilizar Composición de audiencia. Para aprender a usar la Composición de audiencia con el fin de crear una audiencia, lea la [guía de Composición de audiencia](./ui/audience-composition.md) para obtener más información.
 
@@ -66,7 +66,7 @@ Además de las composiciones de audiencias y las definiciones de segmentos, pued
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Evaluación de streaming"
->abstract="La segmentación de streaming es un proceso continuo de selección de datos que actualiza las audiencias en respuesta a la actividad de los usuarios."
+>abstract="La segmentación de streaming es un proceso continuo de selección de datos que actualiza los públicos en respuesta a la actividad de los usuarios."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=es" text="Evaluar eventos en tiempo casi real con segmentación de streaming"
 
 Actualmente, Experience Platform admite tres métodos de evaluación de públicos: segmentación de streaming, segmentación por lotes y segmentación de Edge.
@@ -82,9 +82,9 @@ Para obtener más información acerca de la segmentación por transmisión, lea 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Evaluación por lotes"
->abstract="Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, el público se guarda y se almacena para que pueda exportarlo para utilizarlo."
+>abstract="Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir los públicos correspondientes. Una vez creado, el público se guarda y se almacena para que pueda exportarlo para utilizarlo."
 
-Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creada, la audiencia resultante se guarda y almacena para que pueda exportarla y utilizarla.
+Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir los públicos correspondientes. Una vez creada, la audiencia resultante se guarda y almacena para que pueda exportarla y utilizarla.
 
 Las audiencias por lotes se evalúan automáticamente cada 24 horas. Si desea evaluar una audiencia por lotes bajo demanda, puede utilizar un trabajo de segmentación. Para obtener más información acerca de los trabajos de segmentos, lea la [documentación de trabajos de segmentos](./api/segment-jobs.md).
 
@@ -172,7 +172,7 @@ Con la característica de segmentación avanzada de varias entidades, puede ampl
 
 [!DNL Segmentation Service] admite diversos tipos de datos primitivos y complejos. Encontrará información detallada, incluida una lista de tipos de datos admitidos, en la [guía de tipos de datos admitidos](./data-types.md).
 
-## Pasos siguientes
+## Próximos pasos
 
 [!DNL Segmentation Service] proporciona un flujo de trabajo consolidado para generar audiencias a partir de los datos de [!DNL Real-Time Customer Profile].
 

@@ -48,13 +48,13 @@ El lienzo de composición de audiencia consta de cuatro tipos diferentes de bloq
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
->title="Bloque de audiencia"
->abstract="El bloque Audiencia le permite añadir las subaudiencias que desee utilizar para componer la nueva audiencia."
+>title="Bloque de público"
+>abstract="El bloque Público le permite añadir los subpúblicos que desee utilizar para componer el nuevo público."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
 >title="Tipos de combinación"
->abstract="Los tipos de combinación determinan cómo se combinan las subaudiencias seleccionadas. Los valores admitidos son unión, intersección y superposición de exclusión."
+>abstract="Los tipos de combinación determinan cómo se combinan los subpúblicos seleccionados. Los valores admitidos son unión, intersección y superposición de exclusión."
 
 El tipo de bloque **[!UICONTROL Audiencia]** le permite agregar las subaudiencias que desee utilizar para crear su nueva audiencia mayor. De manera predeterminada, se incluye un bloque **[!UICONTROL Audience]** en la parte superior del lienzo de composición.
 
@@ -74,7 +74,7 @@ Para añadir audiencias al bloque Audiencia. seleccione **[!UICONTROL Agregar au
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que solo aparecerán **1&rbrace; audiencias definidas mediante la política de combinación predeterminada.**
+>Tenga en cuenta que solo aparecerán **1} audiencias definidas mediante la política de combinación predeterminada.**
 >
 >Además, solo se pueden usar **audiencias publicadas** creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencias y audiencias generadas externamente están disponibles **no**.
 
@@ -116,12 +116,12 @@ Después de agregar una regla personalizada, selecciona **[!UICONTROL Guardar]**
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
 >title="Excluir bloque"
->abstract="El bloque Excluir permite excluir de la composición audiencias o atributos especificados."
+>abstract="El bloque Excluir permite excluir de la composición públicos o atributos especificados."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
 >title="Tipo de exclusión"
->abstract="Puede excluir perfiles pertenecientes a una audiencia específica (Excluir por audiencia) o excluir perfiles en función de un atributo específico (Excluir por atributo)."
+>abstract="Puede excluir perfiles pertenecientes a un público específico (Excluir por público) o excluir perfiles en función de un atributo específico (Excluir por atributo)."
 
 El tipo de bloque **[!UICONTROL Exclude]** le permite excluir una subaudiencia o atributos especificados de su nueva audiencia mayor.
 
@@ -328,7 +328,7 @@ Al dividir la audiencia, puede hacerlo por porcentaje o por atributo.
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_percentage"
 >title="Dividido por porcentaje"
->abstract="La audiencia se puede dividir aleatoriamente en varias audiencias en función del número de rutas y porcentajes proporcionados."
+>abstract="El público se puede dividir aleatoriamente en varios públicos en función del número de rutas y porcentajes proporcionados."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
@@ -361,12 +361,12 @@ Además, puede habilitar la opción **[!UICONTROL Otros perfiles]** para crear u
 
 ![Se ha resaltado la opción Otros perfiles.](../images/ui/audience-composition/split-other-profiles.png)
 
-## Publicar la audiencia {#publish}
+## Publicar el público {#publish}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_publish"
 >title="Publicación"
->abstract="Puede publicar la composición para crear las audiencias resultantes en Adobe Experience Platform."
+>abstract="Puede publicar la composición para crear los públicos resultantes en Adobe Experience Platform."
 
 >[!IMPORTANT]
 >
@@ -380,6 +380,6 @@ Si se produce algún error al crear la audiencia, aparece una alerta que le perm
 
 ![El botón Publicar aparece resaltado y muestra cómo guardar y publicar la composición.](../images/ui/audience-composition/audience-alert.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Composición de audiencia proporciona un flujo de trabajo enriquecido que le permite crear composiciones a partir de los distintos tipos de bloques. Para obtener más información acerca de otras partes de la interfaz de usuario del servicio de segmentación, lea la [Guía del usuario del servicio de segmentación](./overview.md).

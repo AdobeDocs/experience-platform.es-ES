@@ -38,13 +38,13 @@ Para obtener más información sobre las protecciones en Experience Platform, le
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
->title="Recuento de audiencia de streaming"
->abstract="Número máximo de audiencias de streaming por zona protegida. Este número incluye el número de audiencias de Edge que tiene en su zona protegida."
+>title="Recuento de público de streaming"
+>abstract="Número máximo de públicos de streaming por zona protegida. Este número incluye el número de públicos de Edge que tiene en su zona protegida."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
->title="Audiencias de Edge"
->abstract="Número máximo de audiencias de Edge por zona protegida."
+>title="Públicos de Edge"
+>abstract="Número máximo de públicos de Edge por zona protegida."
 
 Actualmente, Capacity admite los siguientes servicios:
 

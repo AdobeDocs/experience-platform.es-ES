@@ -28,7 +28,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
    - [Trabajos de exportación](../../segmentation/api/export-jobs.md): un trabajo de exportación es un proceso asincrónico que se usa para mantener miembros de audiencia en conjuntos de datos.
 - [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-## Panel de monitorización de públicos {#monitoring-audiences-dashboard}
+## Panel de control de monitorización de públicos {#monitoring-audiences-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
@@ -165,7 +165,7 @@ Para la sección [!UICONTROL Audiencias], están disponibles las siguientes mét
 | **[!UICONTROL Nombre]** | Nombre de la audiencia que se está evaluando. |
 | **[!UICONTROL Recuento de perfiles]** | El número de perfiles que se están evaluando. |
 
-## Panel de monitorización de trabajos de segmentación {#monitoring-segmentation-jobs-dashboard}
+## Panel de control de monitorización de trabajos de segmentación {#monitoring-segmentation-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"

@@ -4,7 +4,7 @@ title: Monitorización de ingesta de lago de datos
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1461'
 ht-degree: 9%
 
 ---
@@ -19,7 +19,7 @@ Puede utilizar el panel de monitorización de la interfaz de usuario de Adobe Ex
 
 Lea este documento para aprender cómo puede utilizar el panel de monitorización para monitorizar todo el procesamiento de datos en el lago de datos, incluidas tanto la ingesta como la retención.
 
-## Introducción  {#get-started}
+## Introducción {#get-started}
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -30,7 +30,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
 * [Zonas protegidas](../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-## Uso del panel de monitorización para la ingesta del lago de datos
+## Uso del panel de control de monitorización para la ingesta del lago de datos
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -106,7 +106,7 @@ Para inspeccionar más a fondo un flujo de datos, seleccione el icono de filtro 
 
 A continuación, se le dirigirá a una interfaz que enumera todas las iteraciones de ejecución de flujo de datos del flujo de datos seleccionado.
 
-Las ejecuciones de flujo de datos representan una instancia de ejecución de flujo de datos. Por ejemplo, si un flujo de datos está programado para ejecutarse por hora a las 9:00, 10:00 y 11:00 a.m., tendría tres instancias de ejecución de flujo. Las ejecuciones de flujo son específicas de su organización particular.
+Las ejecuciones de flujo de datos representan una instancia de ejecución de flujo de datos. Por ejemplo, si un flujo de datos está programado para ejecutarse cada hora a las 9:00, las 10:00 y las 11:00 a.m., entonces tendrá tres instancias de ejecución de flujo. Las ejecuciones de flujo son específicas de su organización particular.
 
 Para inspeccionar métricas de una iteración de ejecución de flujo de datos específica, seleccione el icono de filtro ![filter](/help/images/icons/filter-add.png) junto al flujo de datos.
 
@@ -143,7 +143,7 @@ Utilice la sección [!UICONTROL Registros con errores] para ver las métricas de
 >
 >Solo puede utilizar diagnósticos de error si la función se ha habilitado durante el proceso de creación de la conexión de origen.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Siguiendo este tutorial, ha aprendido a monitorizar la tasa de ingesta del lago de datos mediante el tablero **[!UICONTROL Monitoring]**. También ha aprendido a identificar errores que causan errores de flujo de datos durante la ingesta. Consulte los siguientes documentos para obtener más información:
 

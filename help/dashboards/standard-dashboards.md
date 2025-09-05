@@ -46,13 +46,13 @@ El tablero en blanco recién creado aparecerá con el nombre elegido en la esqui
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Número máximo de widgets"
->abstract="Los tableros de servicio admiten hasta diez widgets. Después de añadir diez widgets al tablero, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris."
+>abstract="Los tableros de servicio admiten hasta diez widgets. Después de añadir diez widgets al panel de control de control, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris."
 
 En la nueva vista del panel, seleccione **[!UICONTROL Agregar nuevo widget]** para comenzar el proceso de creación del widget.
 
 >[!IMPORTANT]
 >
->Cada tablero admite hasta diez widgets. Después de añadir diez widgets al tablero, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris.
+>Cada tablero admite hasta diez widgets. Después de añadir diez widgets al panel de control de control, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris.
 
 ![Se ha resaltado el nuevo tablero vacío con la opción Agregar nuevo widget.](./images/standard-dashboards/add-new-widget.png)
 
@@ -182,4 +182,4 @@ Para descubrir las métricas y visualizaciones preconfiguradas disponibles para 
 
 Para comprender mejor los paneles de Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/3413780?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3622'
 ht-degree: 10%
 
 ---
@@ -86,10 +86,10 @@ Se muestra una lista de ejecuciones individuales y sus métricas particulares, j
 
 Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
-- **[!UICONTROL Inicio de ejecución del flujo de datos]**: Hora a la que se inició la ejecución del flujo de datos. Para las ejecuciones de flujo de datos de flujo continuo, Experience Platform captura métricas basadas en el inicio de la ejecución del flujo de datos en forma de métricas por hora. Esto significa que, para las ejecuciones de flujo de datos de streaming, si una ejecución de flujo de datos comenzó, por ejemplo, a las 22:30, la métrica muestra la hora de inicio a las 22:00 en la IU.
+- **[!UICONTROL Inicio de ejecución del flujo de datos]**: Hora a la que se inició la ejecución del flujo de datos. Para las ejecuciones de flujo de datos de flujo continuo, Experience Platform captura métricas basadas en el inicio de la ejecución del flujo de datos en forma de métricas por hora. Esto significa que, para las ejecuciones de flujo de datos de streaming, si una ejecución de flujo de datos comenzó, por ejemplo, a las 10:30PM, la métrica muestra la hora de inicio a las 10:00 p.m. en la interfaz de usuario.
 - **[!UICONTROL Tiempo de procesamiento]**: Cantidad de tiempo que tardó la ejecución del flujo de datos en procesarse.
    - Para **[!UICONTROL ejecuciones completadas]**, la métrica de tiempo de procesamiento siempre muestra una hora.
-   - Para las ejecuciones de flujo de datos que aún están en un estado **[!UICONTROL procesando]**, la ventana para capturar todas las métricas permanece abierta durante más de una hora para procesar todas las métricas que corresponden a la ejecución del flujo de datos. Por ejemplo, una ejecución de flujo de datos que comenzó a las 9:30 a.m. puede permanecer en un estado de procesamiento durante una hora y treinta minutos para capturar y procesar todas las métricas. Entonces, una vez que se cierre la ventana de procesamiento y el estado de ejecución del flujo de datos se actualice a **completado**, el tiempo de procesamiento mostrado se cambia a una hora.
+   - Para las ejecuciones de flujo de datos que aún están en un estado **[!UICONTROL procesando]**, la ventana para capturar todas las métricas permanece abierta durante más de una hora para procesar todas las métricas que corresponden a la ejecución del flujo de datos. Por ejemplo, una ejecución de flujo de datos que se inició a las 9:30 a. m. podría permanecer en un estado de procesamiento durante una hora y treinta minutos para capturar y procesar todas las métricas. Entonces, una vez que se cierre la ventana de procesamiento y el estado de ejecución del flujo de datos se actualice a **completado**, el tiempo de procesamiento mostrado se cambia a una hora.
 - **[!UICONTROL Perfiles recibidos]**: El número total de perfiles recibidos en el flujo de datos.
 - **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil que se activaron correctamente en el destino seleccionado como parte de la ejecución del flujo de datos. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
 - **[!UICONTROL Identidades excluidas]**: El número total de identidades de perfil que se excluyen de la activación en función de los atributos que faltan y la infracción de consentimiento.
@@ -125,7 +125,7 @@ Puede ver información sobre las identidades activadas, excluidas o fallidas des
 
 Actualmente, la monitorización a nivel de audiencia para destinos de streaming solo está disponible para los siguientes destinos:
 
-- [[!DNL (API) Oracle Eloqua] conexión](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+- [[!DNL (API) Oracle Eloqua] conexión](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
@@ -225,7 +225,7 @@ También puede seleccionar ver información enriquecida sobre un flujo de datos 
 >
 >Ahora puede ver información sobre el flujo de datos y sus ejecuciones de flujo de datos asociadas en el panel de monitorización. Lea la sección siguiente para obtener más información.
 
-## Panel de monitorización de destinos {#monitoring-destinations-dashboard}
+## Panel de control de monitorización de destinos {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
@@ -375,6 +375,6 @@ Cuando se selecciona **[!UICONTROL Audiencias]**, aparece una lista de las audie
 
 ![Vista de audiencias en la pantalla de detalles de ejecución del flujo de datos.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al seguir esta guía, ahora sabe cómo monitorizar los flujos de datos tanto para los destinos por lotes como para los de flujo continuo, incluida toda la información relevante, como el tiempo de procesamiento, la tasa de activación y el estado. Para obtener más información sobre los flujos de datos en Experience Platform, lea la [descripción general de los flujos de datos](../home.md). Para obtener más información acerca de los destinos, lea la [descripción general de los destinos](../../destinations/home.md).

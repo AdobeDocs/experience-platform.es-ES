@@ -66,7 +66,7 @@ Se proporciona una carga de widget predeterminada para todas las instancias nuev
 >[!NOTE]
 >
 >El 26 de julio de 2023, los paneles de [!UICONTROL Perfiles], [!UICONTROL Audiencias] y [!UICONTROL Destinos] de Información general se restablecieron a una nueva carga de widget predeterminada para todos los usuarios que no modificaron sus vistas en los seis meses anteriores.
->Consulte la documentación en las secciones de widgets predeterminados de [Perfiles](./profiles.md#default-widgets) y [Audiencias](./audiences.md#default-widgets) para obtener detalles sobre qué widgets se incluyen como parte de las cargas de widgets predeterminados. Puede seguir personalizando los widgets del tablero como antes.
+>>Consulte la documentación en las secciones de widgets predeterminados de [Perfiles](./profiles.md#default-widgets) y [Audiencias](./audiences.md#default-widgets) para obtener detalles sobre qué widgets se incluyen como parte de las cargas de widgets predeterminados. Puede seguir personalizando los widgets del tablero como antes.
 
 ## Widgets estándar {#standard-widgets}
 
@@ -172,7 +172,7 @@ Consulte la sección de requisitos previos para las [definiciones de términos u
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
->title="Tendencia de tamaño de audiencia"
+>title="Tendencia de tamaño de público"
 >abstract="Este widget ilustra la cantidad de perfiles contenidos en el público que se envía diariamente a la cuenta de destino. El primer menú desplegable ajusta el período de tiempo de la tendencia de público. El segundo menú desplegable del widget selecciona el público para su análisis. El destino se elige en el menú desplegable Información general."
 
 El widget **[!UICONTROL Tendencia de tamaño de audiencia]** muestra la relación del recuento de perfiles durante un período de tiempo para una audiencia que se ha asignado a esa cuenta de destino. El widget utiliza un gráfico de líneas para ilustrar el número de perfiles contenidos en la audiencia que se envían diariamente a la cuenta de destino.
@@ -209,7 +209,7 @@ Consulte la sección de requisitos previos para las [definiciones de términos u
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="Públicos asignados por identidad"
->abstract="Este widget proporciona una lista de los cinco públicos principales **asignados**. La lista se ordena de mayor a menor según el número de ID de origen que contienen los públicos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en el menú desplegable del widget dependen del destino elegido en la parte superior del panel de información general."
+>abstract="Este widget proporciona una lista de los cinco públicos principales **asignados**. La lista se ordena de mayor a menor según el número de ID de origen que contienen los públicos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en el menú desplegable del widget dependen del destino elegido en la parte superior del panel de control de información general."
 
 Este widget proporciona una lista de los cinco públicos principales **asignados**. La lista se ordena de mayor a menor según el número de ID de origen que contienen los públicos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable del widget cambiarán según el filtro de cuenta de destino elegido en la parte superior del panel de información general.
 
@@ -217,11 +217,11 @@ Este widget proporciona una lista de los cinco públicos principales **asignados
 
 El widget **[!UICONTROL Audiencias asignadas por identidad]** resalta de un vistazo la probabilidad de segmentar correctamente las oportunidades de perfil para una campaña dentro del destino elegido. Una campaña objetivo eficaz no depende del número de perfiles enviados al destino, sino del número de ID de origen que es probable que coincidan con los ID de destino para proporcionar datos útiles y procesables.
 
-### Audiencias comunes {#common-audiences}
+### Públicos comunes {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
->title="Audiencias comunes"
+>title="Públicos comunes"
 >abstract="Este widget proporciona una lista de los cinco públicos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en el menú desplegable del widget. La lista de públicos se ordena según la fecha de activación. El público activado más recientemente se muestra en la parte superior."
 
 El widget de **[!UICONTROL audiencias comunes]** proporciona una lista de las cinco audiencias principales activadas en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable del widget. La lista de públicos se ordena según la fecha de activación. El público activado más recientemente se muestra en la parte superior.
@@ -243,7 +243,7 @@ Seleccione **[!UICONTROL Audiencias]** para navegar a la pestaña [!UICONTROL Ex
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
 >title="Estado de público asignado"
->abstract="Este widget proporciona una lista de hasta 20 públicos asignados cuyos recuentos totales de perfiles se desvían por un factor de al menos una desviación estándar del tamaño de público medio de 30 días asignado a ese destino. Proporciona una métrica calculada para la dispersión de los tamaños de audiencia de la media durante los últimos 30 días. Los tamaños de audiencia se ordenan de mayor a menor."
+>abstract="Este widget proporciona una lista de hasta 20 públicos asignados cuyos recuentos totales de perfiles se desvían por un factor de al menos una desviación estándar del tamaño de público medio de 30 días asignado a ese destino. Proporciona una métrica calculada para la dispersión de los tamaños de público de la media durante los últimos 30 días. Los tamaños de público se ordenan de mayor a menor."
 
 El widget proporciona una lista de hasta 20 audiencias asignadas cuyo recuento total de perfiles, a partir de la última instantánea diaria, se desvía por un factor de al menos una desviación estándar del tamaño medio de audiencia asignado a ese destino a los 30 días.
 
@@ -266,7 +266,7 @@ Si una audiencia dentro del widget [!UICONTROL Estado de la audiencia asignada] 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_destinationscount"
 >title="Recuento de destinos"
->abstract="Este widget proporciona el número total de puntos finales disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos."
+>abstract="Este widget proporciona el número total de puntos finales disponibles en los que se puede activar y enviar un público dentro del sistema. Este número incluye destinos tanto activos como inactivos."
 
 El widget [!UICONTROL Recuento de destinos] proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos.
 
@@ -312,6 +312,6 @@ Este widget le ayuda a comprender el valor de sus destinos en función del núme
 
 Consulte la sección de requisitos previos para las [definiciones de términos utilizados](#prerequisites) en esta descripción.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este documento, ahora debería poder localizar el panel de destinos y comprender las métricas mostradas en los widgets disponibles. Para obtener más información sobre cómo trabajar con destinos en Experience Platform, consulte la [documentación de destinos](../../destinations/home.md).
