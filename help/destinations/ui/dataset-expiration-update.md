@@ -3,9 +3,9 @@ title: Ampliar las programaciones de exportación de conjuntos de datos para flu
 description: Obtenga información sobre cómo ampliar la programación de exportación para los flujos de datos de exportación de conjuntos de datos creados antes de noviembre de 2024 que dejarán de funcionar el 1 de septiembre de 2025.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
+source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -87,8 +87,6 @@ Ahora puede modificar la programación de exportación para que se extienda más
 
 ## ¿Qué sucede si me pierdo la fecha límite del 1 de septiembre de 2025? {#missed-deadline}
 
-Si los flujos de datos de exportación del conjunto de datos caducan el 1 de septiembre de 2025 y no ha ampliado sus programaciones, existe un período de gracia de **30 días** en el que puede ponerse en contacto con Adobe para volver a habilitar los flujos de datos sin perder datos. Esto incluye datos que no se exportaron entre el 1 de septiembre y la fecha en que se puso en contacto con Adobe.
+Si los flujos de datos de exportación del conjunto de datos caducaron el 1 de septiembre de 2025 y aún desea ampliarlos, siga los pasos de las secciones anteriores para ampliar su programación.
 
->[!IMPORTANT]
->
->Aunque Adobe proporciona este período de gracia, recomendamos encarecidamente ampliar sus programaciones antes de la fecha límite del 1 de septiembre de 2025 para garantizar exportaciones de datos ininterrumpidas y evitar cualquier posible interrupción del servicio.
+Si amplía la programación de exportación en un plazo de 30 días (o menos si el [tiempo de vida establecido en el conjunto de datos exportado](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) es inferior a 30 días), aún puede obtener un relleno de los datos que no se exportaron entre el 1 de septiembre y la fecha en que volvió a habilitar la exportación. Al establecer una nueva hora de finalización, *no* habrá primero una exportación de archivo completa. En su lugar, las exportaciones continuarán incrementalmente desde el punto en que se quedaron el 1 de septiembre.
