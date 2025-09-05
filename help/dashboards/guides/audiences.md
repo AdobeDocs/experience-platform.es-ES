@@ -89,7 +89,7 @@ Se proporciona una carga de widget predeterminada para todas las instancias nuev
 >[!NOTE]
 >
 >El 26 de julio de 2023, los paneles de [!UICONTROL Perfiles], [!UICONTROL Audiencias] y [!UICONTROL Destinos] de Información general se restablecieron a una nueva carga de widget predeterminada para todos los usuarios que no modificaron sus vistas en los seis meses anteriores.
->>Consulte la documentación en las secciones de widgets predeterminados de [Perfiles](./profiles.md#default-widgets) y [Destinos](./destinations.md#default-widgets) para obtener detalles sobre qué widgets se incluyen como parte de las cargas de widgets predeterminados. Puede seguir personalizando los widgets del tablero como antes.
+>&#x200B;>Consulte la documentación en las secciones de widgets predeterminados de [Perfiles](./profiles.md#default-widgets) y [Destinos](./destinations.md#default-widgets) para obtener detalles sobre qué widgets se incluyen como parte de las cargas de widgets predeterminados. Puede seguir personalizando los widgets del tablero como antes.
 
 ## Widgets de Customer AI {#customer-ai-audiences-widgets}
 
@@ -119,7 +119,7 @@ El modelo de IA que determina las puntuaciones de tendencia se elige del selecto
 
 Para ir a la página de detalles del modelo de inteligencia artificial aplicada al cliente seleccionado, seleccione **[!UICONTROL Ver detalles del modelo]**.
 
-![Se ha resaltado el panel Audiencias de Experience Platform con la distribución de puntuaciones[!UICONTROL  de la inteligencia artificial aplicada al cliente y el widget ]Ver detalles del modelo[!UICONTROL .]](../images/segments/customer-ai-distribution-of-scores.png)
+![Se ha resaltado el panel Audiencias de Experience Platform con la distribución de puntuaciones[!UICONTROL &#x200B; de la inteligencia artificial aplicada al cliente y el widget &#x200B;]Ver detalles del modelo[!UICONTROL .]](../images/segments/customer-ai-distribution-of-scores.png)
 
 Aparecerá la página de información detallada del modelo.
 
