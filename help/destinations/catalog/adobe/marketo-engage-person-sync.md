@@ -4,10 +4,10 @@ description: Utilice el conector de sincronización de personas de Marketo Engag
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 88864353d4872d62258914d6490b90331692fa96
+source-git-commit: 7d9f06f77f2265f3ae62542fd7fc1bd09d34d078
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 5%
+source-wordcount: '1127'
+ht-degree: 9%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->La tarjeta de destino **[!UICONTROL Marketo Engage Person Sync]** quedará obsoleta en **marzo de 2026**.
+>La tarjeta de destino **[!UICONTROL Marketo Engage Person Sync]** quedará obsoleta en **octubre de 2025**.
 >
 >Para garantizar una transición sin problemas al nuevo destino de **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, revise los siguientes puntos clave y las acciones necesarias:
 >
->* Todos los usuarios de **[!UICONTROL Marketo Engage Person Sync]** destinos deben migrar al nuevo destino de **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** para marzo de 2026.
->* **Los flujos de datos existentes no se migrarán automáticamente.**: debes [configurar una nueva conexión](marketo-engage-connection.md#connect-to-the-destination) al nuevo destino de **[!UICONTROL Marketo Engage]** y activar tus audiencias allí.
+>* Todos los usuarios deben **dejar de usar el destino de sincronización de personas de Marketo Engage** y migrar al nuevo destino de **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** para octubre de 2025.
+>* **Los flujos de datos existentes no se migrarán automáticamente.** Debe [configurar una nueva conexión](marketo-engage-connection.md#connect-to-the-destination) al nuevo destino de **[!UICONTROL Marketo Engage]** y activar sus audiencias allí.
 
 
 ## Información general {#overview}
@@ -72,13 +72,13 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->* Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;.
+>* Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}.
 
 Si su empresa tiene acceso a varias organizaciones, asegúrese de utilizar la misma organización tanto en Marketo Engage como en Real-Time CDP, donde está configurando el conector de destino en Marketo.  Si ya ha configurado un destino, puede seleccionar una cuenta existente de Marketo para usarla con la nueva configuración.  Si no es así, haga clic en el indicador Connector to Destination, que le permitirá establecer el nombre, la descripción y el ID de Marketo Munchkin del destino deseado.  El Munchkin ID de su instancia de Marketo se encuentra en el menú Administración->Munchkin.
 
 >[!IMPORTANT]
 >
->El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en la instancia y partición de Marketo.
+>El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en la instancia y partición de Marketo.
 
 ![Conectar con destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -89,7 +89,7 @@ Si su empresa tiene acceso a varias organizaciones, asegúrese de utilizar la mi
 * **[!UICONTROL Primer campo en el que se puede buscar]**: Campo en el que se debe deduplicar. El campo debe estar presente en cada registro de posibles clientes de la entrada. El valor predeterminado es correo electrónico
 * **[!UICONTROL Primer campo en el que se puede buscar]**: Campo secundario en el que se debe deduplicar. El campo debe estar presente en cada registro de posibles clientes de la entrada. Opcional
 
-Una vez seleccionada la instancia, también debe seleccionar la partición de posible cliente con la que desea integrar la configuración. Una [partición de posibles clientes](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) es un concepto de Marketo Engage que se usa para separar los registros de posibles clientes por motivo de negocio, como una marca o una región de ventas. Si su suscripción a Marketo no tiene la función Espacios de trabajo y particiones, o si no se han creado particiones adicionales en su suscripción, solo estará disponible la partición predeterminada. Una sola configuración solo puede actualizar los registros de posibles clientes que existan en su partición configurada.
+Una vez seleccionada la instancia, también debe seleccionar la partición de posible cliente con la que desea integrar la configuración. Una [partición de posibles clientes](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) es un concepto de Marketo Engage que se usa para separar los registros de posibles clientes por motivo de negocio, como una marca o una región de ventas. Si su suscripción a Marketo no tiene la función Espacios de trabajo y particiones, o si no se han creado particiones adicionales en su suscripción, solo estará disponible la partición predeterminada. Una sola configuración solo puede actualizar los registros de posibles clientes que existan en su partición configurada.
 
 >[!IMPORTANT]
 > 
@@ -111,7 +111,7 @@ Si no se encuentra ningún registro de posible cliente coincidente, se creará u
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
