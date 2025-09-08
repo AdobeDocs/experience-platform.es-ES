@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
 source-wordcount: '5248'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -330,7 +330,7 @@ La lista de restricciones de tiempo disponibles para esta operación difiere de 
 >[!NOTE]
 >
 >Al utilizar la restricción de tiempo &quot;Después&quot;, el último evento puede tener lugar durante más tiempo que el indicado en la restricción de tiempo. >
->&#x200B;>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
+>>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
 >
 >Además, estas dos restricciones de tiempo se pueden utilizar en coordinación entre sí.
 >
@@ -380,7 +380,7 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propiedades de público"
->abstract="La sección de propiedades de audiencia muestra una estimación del tamaño de la audiencia resultante, con el número de perfiles cualificados en comparación con el número total de perfiles. Esto le permite ajustar la audiencia según sea necesario antes de crear la propia audiencia."
+>abstract="La sección Propiedades del público muestra una estimación del tamaño del público resultante, y también el número de perfiles cualificados en comparación con el número total de perfiles. Esto le permite ajustar el público según sea necesario antes de crear el propio público."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -391,12 +391,12 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Perfiles cualificados"
->abstract="Los perfiles cualificados indican el número real de perfiles que coinciden con las reglas de la audiencia. Este número se actualiza cada 24 horas, después de que se haya ejecutado el trabajo de evaluación de segmentos."
+>abstract="Los perfiles cualificados indican el número real de perfiles que coinciden con las reglas del público. Este número se actualiza cada 24 horas, después de que se haya ejecutado el trabajo de evaluación de segmentos."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Perfiles estimados"
->abstract="La estimación de perfiles indica un número aproximado de perfiles, según el trabajo de muestra, que cumplen los requisitos para las reglas de la audiencia."
+>abstract="La estimación de perfiles indica un número aproximado de estos, en función del trabajo de muestra, que cumplirían los requisitos para las reglas del público."
 
 Al crear una definición de segmento, la sección **[!UICONTROL Propiedades de la audiencia]** en el lado derecho del espacio de trabajo muestra una estimación del tamaño de la definición de segmento resultante, que le permite ajustar la definición de segmento según sea necesario antes de crear la propia audiencia.
 
