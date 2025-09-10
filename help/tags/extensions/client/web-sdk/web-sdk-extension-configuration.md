@@ -19,7 +19,7 @@ En este documento se explica cómo configurar la extensión de etiqueta en la in
 
 ## Instalación de la extensión de etiquetas de Web SDK {#install}
 
-La extensión de etiquetas Web SDK necesita que haya una propiedad instalada en. Si aún no lo ha hecho, consulte la documentación de [creación de una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
+La extensión de etiquetas Web SDK necesita que haya una propiedad instalada en. Si aún no lo ha hecho, consulte la documentación de [creación de una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=es).
 
 Después de crear una propiedad, ábrala y seleccione la ficha **[!UICONTROL Extensiones]** en la barra lateral izquierda.
 
