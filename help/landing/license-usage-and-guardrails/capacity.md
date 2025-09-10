@@ -2,9 +2,9 @@
 title: Uso de licencias y capacidad
 description: Obtenga información sobre el uso de licencias y los límites de capacidad en Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
+source-git-commit: 568a0ba7707402496167145ce2673181b240496e
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1593'
 ht-degree: 6%
 
 ---
@@ -55,11 +55,13 @@ Dentro de estos servicios, se rastrean las siguientes barreras:
 
 - El número máximo de audiencias de streaming es de 500
    - De estas 500 audiencias de streaming, el número máximo de audiencias de Edge es de 150
-- El rendimiento máximo combinado de la segmentación por streaming es de 1500 registros por segundo (rps)
+- El rendimiento inicial combinado para la ingesta de transmisión es de 1500 registros por segundo (rps)
+   - Este rendimiento de flujo combinado mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al Perfil del cliente en tiempo real en los entornos limitados de producción y desarrollo.
+   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
-La capacidad de rendimiento está en el nivel de **organización** y se puede distribuir a cada zona protegida. Por ejemplo, con las 1500 rps para el rendimiento de segmentación de streaming, puede establecer su zona protegida de producción en 1350 rps y su zona protegida de desarrollo en 150 rps.
+La capacidad de rendimiento de flujo continuo está en el nivel de **organización** y se puede distribuir a cada zona protegida. Por ejemplo, con el rendimiento de 1500 rps para la ingesta de transmisión, puede establecer su zona protegida de producción en 1300 rps y su zona protegida de desarrollo en 200 rps.
 
 Experience Platform calcula el rendimiento de la zona protegida en intervalos móviles de 15 minutos. Este rendimiento se mide en tiempo real y los datos se actualizan cada 60 segundos.
 
@@ -202,11 +204,11 @@ Garantiza un rendimiento coherente durante los eventos de mayor actividad, evita
 
 +++
 
-### ¿Cuáles son las prácticas recomendadas para administrar el rendimiento de la segmentación de flujo continuo?
+### ¿Cuáles son las prácticas recomendadas para administrar el rendimiento de la ingesta de transmisión?
 
 +++ Respuesta
 
-Para administrar mejor el rendimiento de la segmentación de flujo, debe evaluar los conjuntos de datos para asegurarse de que priorizan los datos necesarios para la personalización.
+Para administrar mejor el rendimiento de la ingesta de transmisión, debe evaluar los conjuntos de datos para asegurarse de que priorizan los datos necesarios para la personalización.
 
 
 Si no se requiere procesamiento en tiempo real, debe utilizar la ingesta por lotes en lugar de la ingesta por flujo continuo.
