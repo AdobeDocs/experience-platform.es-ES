@@ -2,9 +2,9 @@
 title: Configuración de la extensión de etiquetas Web SDK
 description: Obtenga información sobre cómo configurar la extensión de etiquetas Experience Platform Web SDK en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 57b29c396531ee18c79fad7cce068ff3adf5f2a2
+source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
 workflow-type: tm+mt
-source-wordcount: '2965'
+source-wordcount: '3095'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ En este documento se explica cómo configurar la extensión de etiqueta en la in
 
 ## Instalación de la extensión de etiquetas de Web SDK {#install}
 
-La extensión de etiquetas Web SDK necesita que haya una propiedad instalada en. Si aún no lo ha hecho, consulte la documentación de [creación de una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=es).
+La extensión de etiquetas Web SDK necesita que haya una propiedad instalada en. Si aún no lo ha hecho, consulte la documentación de [creación de una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
 Después de crear una propiedad, ábrala y seleccione la ficha **[!UICONTROL Extensiones]** en la barra lateral izquierda.
 
@@ -42,13 +42,14 @@ Al crear una compilación personalizada de Web SDK, esta se utiliza en todas las
 >[!IMPORTANT]
 >
 >Al deshabilitar los componentes de Web SDK, se puede interrumpir la implementación existente. Cada vez que deshabilite un componente, asegúrese de probar la implementación a fondo para asegurarse de que todas las funcionalidades que necesita funcionan según lo esperado.
->&#x200B;>Cuando desactiva un componente, ya no puede editar su configuración.
+>>Cuando desactiva un componente, ya no puede editar su configuración.
 
 Para crear una compilación personalizada de Web SDK mediante la extensión de etiquetas de Web SDK, siga los pasos a continuación.
 
 1. En la página de configuración de la extensión de etiquetas, expanda la sección **[!UICONTROL Componentes de compilación personalizados]**.
 1. Active o desactive los componentes según sus necesidades. Puede seleccionar entre los siguientes componentes:
    * **[!UICONTROL Recopilador de actividades]**: este componente habilita la recopilación automática de vínculos y el seguimiento de Activity Map.
+   * **[!UICONTROL Advertising]**: este componente incluye todo el código de JavaScript necesario para Adobe Advertising. También agrega la configuración de [!UICONTROL Adobe Advertising] en la sección [!UICONTROL Instancias de SDK] y una configuración de [!UICONTROL Advertising] en las reglas de etiquetas para definir cómo se utilizan los datos de publicidad para la medición de atribuciones.
    * **[!UICONTROL Audiencias]**: Este componente habilita la integración de Audience Manager, incluidos los destinos basados en cookies y URL, y las sincronizaciones de ID.
    * **[!UICONTROL Consentimiento]**: este componente habilita las integraciones de consentimiento. Al deshabilitar este componente, se deshabilitan los siguientes elementos:
       * [Establecer tipo de acción de consentimiento](action-types.md#set-consent)
@@ -75,6 +76,11 @@ Las opciones de configuración en la parte superior de la página indican a Adob
 * **[!UICONTROL Nombre]**: la extensión de Adobe Experience Platform Web SDK admite varias instancias en la página. El nombre se utiliza para enviar datos a varias organizaciones con una configuración de etiquetas. El nombre de instancia predeterminado es `alloy`. Sin embargo, puede cambiar el nombre de la instancia a cualquier nombre de objeto de JavaScript válido.
 * **[!UICONTROL ID de organización de IMS]**: El ID de la organización a la que desea que se envíen los datos en Adobe. La mayoría de las veces, utilice el valor predeterminado que se rellena automáticamente. Cuando tenga varias instancias en la página, rellene este campo con el valor de la segunda organización a la que desee enviar datos.
 * **[!UICONTROL Dominio de Edge]**: Dominio desde el cual la extensión envía y recibe datos. Adobe recomienda utilizar un dominio de origen (CNAME) para esta extensión. El dominio de terceros predeterminado funciona para entornos de desarrollo, pero no es adecuado para entornos de producción. Las instrucciones sobre cómo configurar un CNAME de origen se enumeran [aquí](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
+* **[!UICONTROL Adobe Advertising]**: disponible cuando se selecciona el componente `Advertising`. Configuración solo para organizaciones con Adobe Advertising DSP:
+   * **[!UICONTROL Adobe Advertising DSP]**: Habilita el seguimiento de visualizaciones.
+   * **[!UICONTROL Anunciantes]**: disponible cuando [!UICONTROL Adobe Advertising DSP] está habilitado. Anunciantes para los que se va a habilitar el seguimiento de visualizaciones.
+   * **[!UICONTROL ID5 de socio]**: Opcional. Disponible cuando [!UICONTROL Adobe Advertising DSP] está habilitado. ID de socio ID5 de su organización. Esta configuración permite que Web SDK recopile ID5 universales.
+   * **[!UICONTROL Ruta de acceso JavaScript RampID]**: Opcional. Disponible cuando [!UICONTROL Adobe Advertising DSP] está habilitado. Ruta de acceso al código JavaScript [!DNL LiveRamp RampID] de su organización (`ats.js`).  Esta configuración permite que Web SDK recopile [!DNL RampID] ID universales.
 
 ## Configuración del flujo de datos {#datastreams}
 
@@ -117,10 +123,9 @@ Esta sección le permite definir el comportamiento de Web SDK cuando se trata de
 * **[!UICONTROL Usar cookies de terceros]**: cuando esta opción está habilitada, Web SDK intenta almacenar un identificador de usuario en una cookie de terceros. Si se realiza correctamente, el usuario se identifica como un solo usuario a medida que navega por varios dominios, en lugar de identificarse como un usuario independiente en cada dominio. Si esta opción está habilitada, es posible que SDK aún no pueda almacenar el identificador de usuario en una cookie de terceros si el explorador no admite cookies de terceros o si el usuario lo ha configurado para no permitir cookies de terceros. En este caso, SDK solo almacena el identificador en el dominio de origen.
 
   >[!IMPORTANT]
-  >&#x200B;>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
-  >&#x200B;>Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
+  >>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
+  >>Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
   >
-
 ## Configuración de la personalización {#personalization}
 
 Esta sección le permite configurar cómo desea ocultar determinadas partes de una página mientras se carga contenido personalizado. Esto garantiza que los visitantes solo vean la página personalizada.
@@ -200,13 +205,13 @@ La anulación de la configuración de la secuencia de datos es un proceso de dos
 1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](/help/datastreams/configure.md).
 2. A continuación, debe enviar las invalidaciones a Edge Network mediante un comando de Web SDK o utilizando la extensión de etiquetas de Web SDK.
 
-Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1&rbrace; para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
+Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1} para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
 
 Como alternativa a pasar las invalidaciones a través de un comando de Web SDK, puede configurarlas en la pantalla de extensión de etiquetas que se muestra a continuación.
 
 >[!IMPORTANT]
 >
->Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
+> Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
 
 ![Imagen que muestra las anulaciones de configuración de secuencia de datos usando la página de extensión de etiquetas Web SDK.](assets/datastream-overrides.png)
 
