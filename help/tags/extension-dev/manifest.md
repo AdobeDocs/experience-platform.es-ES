@@ -2,10 +2,10 @@
 title: Manifiesto de extensión
 description: Obtenga información sobre cómo configurar un archivo de manifiesto JSON que informe a Adobe Experience Platform sobre cómo utilizar correctamente su extensión.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
 workflow-type: tm+mt
-source-wordcount: '2606'
-ht-degree: 86%
+source-wordcount: '2652'
+ht-degree: 84%
 
 ---
 
@@ -22,7 +22,7 @@ Se puede encontrar un ejemplo `extension.json` en el repositorio de extensión [
 Un manifiesto de extensión debe constar de lo siguiente:
 
 | Propiedad | Descripción |
-| --- | --- |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name` | El nombre de la extensión. Debe ser único para todas las demás extensiones y debe cumplir con [reglas de nomenclatura](#naming-rules). **Las etiquetas lo utilizan como identificador y no debe cambiarse después de publicar la extensión.** |
 | `platform` | La plataforma para la extensión. El único valor aceptado en este momento es `web`. |
 | `version` | La versión de la extensión. Debe seguir el formato de versión [semver](https://semver.org/). Esto es coherente con [npm version field](https://docs.npmjs.com/files/package.json#version). |
@@ -30,6 +30,7 @@ Un manifiesto de extensión debe constar de lo siguiente:
 | `description` | La descripción de la extensión. Esto se mostrará a los usuarios de Experience Platform. Si la extensión permite a los usuarios implementar el producto en su sitio web, describa lo que hace el producto. No es necesario mencionar “etiquetas” ni “extensión”, pues los usuarios ya sabrán que están viendo una extensión de etiqueta. |
 | `iconPath` *(Opcional)* | La ruta relativa al icono que se mostrará para la extensión. No debe comenzar con una barra oblicua. Debe hacer referencia a un archivo SVG con una extensión `.svg`. La SVG debe ser cuadrada y Experience Platform puede escalarla. |
 | `author` | El autor es un objeto que debe estructurarse de la siguiente manera: <ul><li>`name`: nombre del autor de la extensión. También puede utilizar el nombre de la compañía aquí.</li><li>`url` *(opcional)*: dirección URL donde puede obtener más información sobre el autor de la extensión.</li><li>`email` *(opcional)*: dirección de correo electrónico del autor de la extensión.</li></ul>Esto es coherente con las reglas de [npm author field](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
+| `releaseNotesUrl` *(Opcional)* | Dirección URL de las notas de la versión de la extensión, si tiene una ubicación para publicar esta información. Esta URL se utilizará en la interfaz de usuario de etiquetas de Adobe para mostrar este vínculo durante la instalación y actualización de la extensión. Esta propiedad solo se admite para extensiones web y Edge. |
 | `exchangeUrl` *(necesario para extensiones públicas)* | Dirección URL del listado de la extensión en Adobe Exchange. Debe coincidir con el patrón `https://www.adobeexchange.com/experiencecloud.details.######.html`. |
 | `viewBasePath` | La ruta relativa al subdirectorio que contiene todas las vistas y los recursos relacionados con la vista (HTML, JavaScript, CSS e imágenes). Experience Platform alojará este directorio en un servidor web y cargará contenido de iframe desde él. Este campo es obligatorio y no debe comenzar con una barra oblicua. Por ejemplo, si todas sus vistas están contenidas en `src/view/`, el valor de `viewBasePath` sería `src/view/`. |
 | `hostedLibFiles` *(Opcional)* | Muchos de nuestros usuarios prefieren alojar todos los archivos relacionados con etiquetas en su propio servidor. Esto proporciona a los usuarios un mayor nivel de certeza con respecto a la disponibilidad de archivos en tiempo de ejecución y pueden analizar fácilmente el código para detectar vulnerabilidades de seguridad. Si la parte de biblioteca de la extensión necesita cargar archivos JavaScript en tiempo de ejecución, se recomienda utilizar esta propiedad para la lista de dichos archivos. Los archivos enumerados se alojarán con la biblioteca de tiempo de ejecución de la etiqueta. La extensión puede cargar los archivos mediante una URL recuperada mediante el método [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file).<br><br>Esta opción contiene una matriz con rutas relativas de archivos de biblioteca de terceros que deben alojarse. |
@@ -74,20 +75,20 @@ El objeto de configuración debe estructurarse de la siguiente manera:
       <td><code>schema</code></td>
       <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto válido que se está guardando desde la vista de configuración de la extensión. Dado que usted es el desarrollador de la vista de configuración, es su responsabilidad asegurarse de que cualquier objeto de configuración guardado coincida con este esquema. Este esquema también se utilizará para la validación cuando los usuarios intenten guardar datos mediante los servicios de Experience Platform.<br><br>A continuación, se muestra un objeto de esquema de ejemplo:
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Recomendamos utilizar una herramienta como <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> para probar manualmente el esquema.</td>
     </tr>
@@ -134,20 +135,20 @@ Una definición de tipo es un objeto que se utiliza para describir un evento, un
       <td><code>schema</code></td>
       <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto de configuración válido que el usuario puede guardar. Por lo general, el usuario configura y guarda la configuración a través de la interfaz de usuario de recopilación de datos. En estos casos, la vista de la extensión puede realizar los pasos necesarios para validar la configuración proporcionada por el usuario. Por otro lado, algunos usuarios eligen utilizar API de etiquetas directamente sin la ayuda de ninguna interfaz de usuario. El propósito de este esquema es permitir que Experience Platform valide correctamente que los objetos de configuración guardados por los usuarios, independientemente de si se utiliza una interfaz de usuario, están en un formato compatible con el módulo de biblioteca que actuará en el objeto de configuración durante la ejecución.<br><br>A continuación, se muestra un objeto de esquema de ejemplo:<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Recomendamos utilizar una herramienta como <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> para probar manualmente el esquema.</td>
     </tr>
