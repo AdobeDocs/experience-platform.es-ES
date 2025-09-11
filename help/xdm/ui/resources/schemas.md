@@ -172,7 +172,7 @@ Una vez agregado un grupo de campos a un esquema, puede quitar los campos global
 >[!IMPORTANT]
 >
 >Al seleccionar **[!UICONTROL Quitar]**, se elimina el campo del propio grupo de campos, lo que afecta a *todos* los esquemas que utilizan ese grupo de campos.
->>No utilice esta opción a menos que desee **quitar el campo de todos los esquemas que incluyen el grupo de campos**.
+>&#x200B;>No utilice esta opción a menos que desee **quitar el campo de todos los esquemas que incluyen el grupo de campos**.
 
 Para eliminar un campo del grupo de campos, selecciónelo en el lienzo y seleccione **[!UICONTROL Quitar]** en el carril derecho. Este ejemplo muestra el campo `taxId` del grupo **[!UICONTROL Detalles demográficos]**.
 
