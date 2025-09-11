@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
 source-wordcount: '1432'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
@@ -160,7 +160,7 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 | Función | Descripción |
 | ------- | ----------- |
-| Estimaciones de audiencia | Las estimaciones de audiencia ahora se muestran como **rango**, que se basa en el intervalo de confianza de los datos de muestreo. Para obtener más información acerca de las estimaciones, lea la [guía del Generador de segmentos](/help/segmentation/ui/segment-builder.md#audience-properties). |
+| Estimaciones de audiencia | Las estimaciones de público ahora se mostrarán como **rango**, que se basa en el intervalo de confianza de los datos de muestreo. Para obtener más información acerca de las estimaciones, lea la [Guía del generador de segmentos](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Para obtener más información, lea la [[!DNL Segmentation Service] información general](../../segmentation/home.md).
 
