@@ -4,9 +4,9 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
+source-git-commit: 6d8386b4d9ed64128c8d9a9537610f0fd07d74cd
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2852'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El destino de la API HTTP es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 
@@ -109,11 +109,11 @@ curl --location --request POST 'https://some-api.com/token' \
 
 * [Concesión de contraseña de OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
-## Conexión al destino {#connect-destination}
+## Conectar con el destino {#connect-destination}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). Al conectarse a este destino, debe proporcionar la siguiente información:
 
@@ -205,7 +205,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Encabezados]**: escriba los encabezados personalizados que desee incluir en las llamadas de destino, con este formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Punto final HTTP]**: Dirección URL del punto final HTTP al que desea enviar los datos de perfil.
 * **[!UICONTROL Parámetros de consulta]**: de forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Aplique este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Incluir nombres de segmentos]**: Cambie la opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
+* **[!UICONTROL Incluir nombres de segmentos]**: Cambie la opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. **Nota**: Los nombres de segmento solo se incluyen para los segmentos asignados al destino. Los segmentos no asignados que aparecen en la exportación no incluirán el campo `name`. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
 * **[!UICONTROL Incluir marcas de tiempo de segmentos]**: actívela si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
 
 ### Habilitar alertas {#enable-alerts}
@@ -218,7 +218,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* [La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones al destino de la API HTTP. [Más información](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -245,7 +245,7 @@ Con respecto a los datos que se exportan para un perfil determinado, es importan
 
 | Qué determina una exportación de destino | Qué se incluye en la exportación de destino |
 |---------|----------|
-| <ul><li>Los atributos y segmentos asignados sirven de referencia para una exportación de destino. Esto significa que si el estado de `segmentMembership` de un perfil cambia a `realized` o `exiting`, o si se actualiza cualquier atributo asignado, se iniciará una exportación de destino.</li><li>Dado que las identidades no se pueden asignar actualmente a destinos de API HTTP, los cambios en cualquier identidad de un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es el mismo valor o no. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>El objeto `segmentMembership` incluye el segmento asignado en el flujo de datos de activación, para el cual el estado del perfil ha cambiado después de un evento de calificación o salida de segmento. Tenga en cuenta que otros segmentos no asignados para los que el perfil cumple los requisitos pueden formar parte de la exportación de destino, si estos segmentos pertenecen a la misma [política de combinación](/help/profile/merge-policies/overview.md) que el segmento asignado en el flujo de datos de activación. </li><li>También se incluyen todas las identidades en el objeto `identityMap` (Experience Platform no admite actualmente la asignación de identidades en el destino de la API HTTP).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
+| <ul><li>Los atributos y segmentos asignados sirven de referencia para una exportación de destino. Esto significa que si el estado de `segmentMembership` de un perfil cambia a `realized` o `exiting`, o si se actualiza cualquier atributo asignado, se iniciará una exportación de destino.</li><li>Dado que las identidades no se pueden asignar actualmente a destinos de API HTTP, los cambios en cualquier identidad de un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es el mismo valor o no. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>El objeto `segmentMembership` incluye el segmento asignado en el flujo de datos de activación, para el cual el estado del perfil ha cambiado después de un evento de calificación o salida de segmento. Tenga en cuenta que otros segmentos no asignados para los que el perfil cumple los requisitos pueden formar parte de la exportación de destino, si estos segmentos pertenecen a la misma [política de combinación](/help/profile/merge-policies/overview.md) que el segmento asignado en el flujo de datos de activación. <br> **Importante**: Cuando la opción **[!UICONTROL Incluir nombres de segmentos]** está habilitada, los nombres de segmentos solo se incluyen para los segmentos que están asignados al destino. Los segmentos no asignados que aparecen en la exportación no incluirán el campo `name`, aunque la opción esté habilitada. </li><li>También se incluyen todas las identidades en el objeto `identityMap` (Experience Platform no admite actualmente la asignación de identidades en el destino de la API HTTP).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -333,10 +333,16 @@ A continuación se muestran más ejemplos de datos exportados, según la configu
             "mappingCreatedAt": 1649856570000,
             "mappingUpdatedAt": 1649856570000,
             "name": "First name equals John"
+          },
+          "354e086f-2e11-49a2-9e39-e5d9a76be683": {
+            "lastQualificationTime": "2020-04-15T02:41:50+0000",
+            "status": "realized"
           }
         }
       }
 ```
+
+**Nota**: En este ejemplo, el primer segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) está asignado al destino e incluye el campo `name`. El segundo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) no está asignado al destino y no incluye el campo `name`, aunque la opción **[!UICONTROL Incluir nombres de segmento]** esté habilitada.
 
 +++
 
