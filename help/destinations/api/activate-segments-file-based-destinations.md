@@ -4,9 +4,9 @@ title: Activar audiencias en destinos basados en archivos mediante la API de Flo
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '4911'
+source-wordcount: '4986'
 ht-degree: 3%
 
 ---
@@ -4752,6 +4752,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >[!ENDSHADEBOX]
 
 ### Agregar generación de manifiesto de archivo al destino existente {#add-file-manifest}
+
+Los archivos JSON de manifiesto contienen información sobre la ubicación de exportación, el tamaño de exportación, etc. Se ha asignado un nombre al manifiesto con el formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Ver [archivo de manifiesto de ejemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). El archivo de manifiesto incluye los campos siguientes:
+
+* `flowRunId`: la [ejecución de flujo de datos](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que generó el archivo exportado.
+* `scheduledTime`: la hora en UTC en que se exportó el archivo.
+* `exportResults.sinkPath`: ruta de acceso de la ubicación de almacenamiento en la que se deposita el archivo exportado.
+* `exportResults.name`: nombre del archivo exportado.
+* `size`: tamaño del archivo exportado, en bytes.
 
 Para agregar la generación de manifiesto de archivo a un destino existente, debe actualizar los parámetros de conexión de destino mediante la operación `PATCH`. Esto permite la generación de archivos de manifiesto para el destino, que proporciona metadatos sobre los archivos exportados.
 
