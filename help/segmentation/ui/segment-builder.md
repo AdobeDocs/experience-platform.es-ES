@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
 source-wordcount: '5248'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -130,7 +130,7 @@ Una vez asignados los grupos de informes, puede utilizar estos campos recién as
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Públicos externos"
->abstract="Los públicos importados a través de la pestaña Públicos ahora aparecen automáticamente en Audience Portal. Esto incluye audiencias introducidas desde Audience Manager, Customer Journey Analytics, Coincidencia de segmentos y otras integraciones personalizadas.<br/><br/>A finales de septiembre de 2025, las audiencias se recuperarán exclusivamente mediante la búsqueda unificada y ya no se admitirá el flujo de trabajo anterior. La coincidencia de segmentos permanece disponible solo para un pequeño número de clientes designados mientras realizamos la transición del servicio. El acceso para los nuevos clientes de Coincidencia de segmentos aún se puede habilitar a petición antes de que el servicio se haya retirado por completo.<br/><br/>En los casos de uso de colaboración de datos continua, Adobe recomienda pasar a Collaboration, que es la solución compatible a largo plazo."
+>abstract="Los públicos importados a través de la pestaña Públicos ahora aparecen automáticamente en Audience Portal. Esto incluye públicos introducidos desde Audience Manager, Customer Journey Analytics, Coincidencia de segmentos y otras integraciones personalizadas.<br/><br/>A finales de septiembre de 2025, los públicos se recuperarán exclusivamente mediante la búsqueda unificada y ya no se admitirá el flujo de trabajo anterior. La coincidencia de segmentos permanece disponible solo para un pequeño número de clientes designados mientras realizamos la transición del servicio. El acceso para los nuevos clientes de Coincidencia de segmentos aún se puede habilitar a petición antes de que el servicio se haya retirado por completo.<br/><br/>En los casos de uso de colaboración de datos en curso, Adobe recomienda pasar a Collaboration, que es la solución compatible a largo plazo."
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de públicos"
 
 >[!NOTE]
@@ -330,7 +330,7 @@ La lista de restricciones de tiempo disponibles para esta operación difiere de 
 >[!NOTE]
 >
 >Al utilizar la restricción de tiempo &quot;Después&quot;, el último evento puede tener lugar durante más tiempo que el indicado en la restricción de tiempo. >
->&#x200B;>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
+>>Por ejemplo, si tiene un evento de Vista de página y un evento de Cierre de compra y pone la restricción de tiempo &quot;Después de 1 hora&quot; entre estos dos eventos, se activaría una definición de segmento con un evento de Cierre de compra 2 horas después del evento de Vista de página.
 >
 >Además, estas dos restricciones de tiempo se pueden utilizar en coordinación entre sí.
 >
