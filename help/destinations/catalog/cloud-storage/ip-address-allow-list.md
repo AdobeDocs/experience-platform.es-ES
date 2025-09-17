@@ -3,9 +3,9 @@ title: LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en 
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a destinos de almacenamiento en la nube.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
+source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '305'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ La información del rango de IP de esta página se aplica a los siguientes conec
 
 >[!IMPORTANT]
 >
->Los rangos de IP documentados en esta página son *no* compatibles con los siguientes destinos de almacenamiento en la nube basado en archivos: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] y [!UICONTROL Data Landing Zone].
+>Los rangos de IP documentados en esta página son *no* compatibles con los siguientes destinos de almacenamiento en la nube basado en archivos: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone] y servidores SFTP alojados en Microsoft Azure.
 
 ## Información general {#overview}
 
