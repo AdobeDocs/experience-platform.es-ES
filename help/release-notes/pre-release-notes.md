@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
+source-git-commit: c592d007932835f5263d7f78b2e8155790313840
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 43%
+source-wordcount: '1217'
+ht-degree: 45%
 
 ---
 
@@ -46,9 +46,8 @@ Adobe Experience Platform AI Assistant es una experiencia conversacional que pue
 
 | Función | Descripción |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator es su asistente inteligente para aplicaciones de Experience Cloud. Cuando hace preguntas o solicita ayuda, Agent Orchestrator llama automáticamente a agentes especializados para que le obtengan las respuestas correctas. Agent Orchestrator recuerda el historial de sus conversaciones, lo que le permite basarse en preguntas anteriores de forma natural sin repetir el contexto, y combina las perspectivas de varios agentes para presentarle respuestas claras y unificadas. Puede utilizar las funcionalidades de Agent Orchestrator a través de la interfaz conversacional del asistente de IA. |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator es la capa inteligente que alimenta al asistente de IA. Cuando hace preguntas o solicita ayuda, Agent Orchestrator llama automáticamente a agentes especializados para que le obtengan las respuestas correctas. Agent Orchestrator recuerda el historial de sus conversaciones, lo que le permite basarse en preguntas anteriores de forma natural sin repetir el contexto, y combina las perspectivas de varios agentes para presentarle respuestas claras y unificadas. |
 | Audience Agent | Audience Agent le permite ver información sobre las audiencias, como la detección de cambios significativos en el tamaño de la audiencia, la detección de audiencias duplicadas, la exploración del inventario de audiencias y la recuperación del tamaño de estas. |
-| Agente de detección de campos | Field Discovery Agent ayuda a los usuarios a descubrir y comprender automáticamente los campos de datos de sus esquemas y conjuntos de datos. Este agente inteligente analiza la estructura de datos y proporciona perspectivas sobre el uso del campo, las relaciones y las recomendaciones para la optimización. |
 
 Para obtener más información, lea la [Información general sobre el Asistente de IA](../ai-assistant/home.md).
 
