@@ -4,7 +4,7 @@ title: Creación de una definición de segmento mediante la API del servicio de 
 type: Tutorial
 description: Siga este tutorial para aprender a desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Puede crear una nueva definición de segmento realizando una petición POST al e
 
 Para obtener una explicación detallada sobre cómo definir una definición de segmento, lea la [guía para desarrolladores de definiciones de segmento](../api/segment-definitions.md#create).
 
-## Calcular y previsualizar una audiencia {#estimate-and-preview-an-audience}
+## Calcular y previsualizar un público {#estimate-and-preview-an-audience}
 
 A medida que desarrolle su definición de segmento, puede usar las herramientas de estimación y vista previa dentro de [!DNL Real-Time Customer Profile] para ver información de resumen a fin de asegurarse de aislar la audiencia esperada. Las estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado y el intervalo de confianza. Las vistas previas proporcionan listas paginadas de perfiles aptos para una definición de segmento, lo que le permite comparar los resultados con lo que espera.
 
@@ -72,7 +72,7 @@ Existen dos pasos necesarios para obtener una vista previa o una estimación de 
 
 ### Cómo se generan las estimaciones
 
-A medida que los datos habilitados para Perfil del cliente en tiempo real se incorporan a Experience Platform, se almacenan en el almacén de datos de perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. Si el recuento de perfiles no cambia en más del 5 %, el trabajo de muestreo se ejecutará automáticamente semanalmente.
+A medida que los datos habilitados para Perfil del cliente en tiempo real se incorporan a Experience Platform, se almacenan en el almacén de datos de perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 3 %, se activa un trabajo de muestreo para actualizar el recuento. Si el recuento de perfiles no cambia en más del 3 %, el trabajo de muestreo se ejecutará automáticamente semanalmente.
 
 La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
 

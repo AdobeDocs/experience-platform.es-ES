@@ -4,7 +4,7 @@ title: Previsualizaciones y estimaciones de extremos de API
 description: A medida que se desarrollan las definiciones de segmentos, puede utilizar las herramientas de estimación y vista previa de Adobe Experience Platform para ver información de resumen a fin de asegurarse de aislar la audiencia esperada.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 2%
@@ -29,7 +29,7 @@ Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experie
 
 ## Cómo se generan las estimaciones
 
-Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa el muestreo de datos depende del método de ingesta:
+Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 3 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa el muestreo de datos depende del método de ingesta:
 
 * **Ingesta por lotes:** Para la ingesta por lotes, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 3%, se ejecuta un trabajo para actualizar el recuento.
 * **Ingesta de transmisión:** Para los flujos de trabajo de transmisión de datos, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 3%. En caso afirmativo, se activa automáticamente un trabajo para actualizar el recuento.
