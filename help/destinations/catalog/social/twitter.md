@@ -2,24 +2,16 @@
 title: Conexión de Audiencias personalizadas de Twitter
 description: Dirija su actividad a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 5b529a1af62c2745c3226029de1a1ff508bddfc7
+source-git-commit: ee7e85afd48f7b1c40f0152ad76c8c718b8f1432
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 8%
+source-wordcount: '855'
+ht-degree: 5%
 
 ---
 
 # [!DNL Twitter Custom Audiences] conexión
 
 ## Información general {#overview}
-
->[!IMPORTANT]
->
->* Desde el miércoles, 09 de septiembre de 2025, puede ver dos tarjetas **[!DNL Twitter Custom Audiences]** una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se cambió el nombre del conector de destino **[!DNL Twitter Custom Audiences]** existente a **[!UICONTROL (obsoleto) Audiencias personalizadas de Twitter]** y ahora tiene disponible una nueva tarjeta con el nombre **[!UICONTROL Audiencias personalizadas de Twitter]**.
->* Use la nueva conexión de **[!UICONTROL Audiencias personalizadas de Twitter]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino de **[!UICONTROL (obsoleto) audiencias personalizadas de Twitter]**, se actualizarán automáticamente, por lo que no es necesario que realice ninguna acción.
->* Si está creando flujos de datos a través de la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar sus [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:
->   * ID de especificación de flujo: `903da9e4-7cf5-442a-9498-a237e4f064f9`
->   * ID de especificación de conexión: `9eb18875-a095-4b89-854e-39b9e29ccd41`
 
 Dirija su actividad a sus seguidores y clientes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform.
 
@@ -32,7 +24,7 @@ Antes de configurar el destino [!DNL Twitter Custom Audiences], asegúrese de re
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Twitter Custom Audiences] admite la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es#getting-started).
+[!DNL Twitter Custom Audiences] admite la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
@@ -75,7 +67,7 @@ Dirija su actividad a sus seguidores y clientes actuales en Twitter y cree campa
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -113,7 +105,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

@@ -3,25 +3,16 @@ keywords: conexión de linkedin;conexión de linkedin;destinos de linkedin;linke
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para la segmentación, personalización y supresión de audiencias, en función de los correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 13b95db846d70c36233cf8ded491d19e1c93e4c0
+source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 7%
+source-wordcount: '1234'
+ht-degree: 5%
 
 ---
 
 # [!DNL LinkedIn Matched Audiences] conexión
 
 ## Información general {#overview}
-
->[!IMPORTANT]
->
->* Desde el miércoles, 09 de septiembre de 2025, puede ver dos tarjetas **[!DNL LinkedIn Matched Audiences]** una al lado de la otra en el catálogo de destinos. Esto se debe a una actualización interna del servicio de destinos. Se cambió el nombre del conector de destino **[!DNL LinkedIn Matched Audiences]** existente a **[!UICONTROL (obsoleto) LinkedIn Matched Audiences]** y ahora tiene disponible una nueva tarjeta con el nombre **[!UICONTROL LinkedIn Matched Audiences]**.
->* Use la nueva conexión **[!UICONTROL Audiencias coincidentes de LinkedIn]** en el catálogo para nuevos flujos de datos de activación. Si tiene flujos de datos activos en el destino **[!UICONTROL (obsoleto) de LinkedIn Matched Audiences]**, se actualizarán automáticamente, por lo que no se requiere que realice ninguna acción por su parte.
->* La nueva conexión de **[!UICONTROL Audiencias coincidentes de LinkedIn]** ya no admite [!DNL IDFA] identidades.
->* Si está creando flujos de datos a través de la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), debe actualizar sus [!DNL flow spec ID] y [!DNL connection spec ID] a los siguientes valores:
->   * ID de especificación de flujo: `963604d1-811d-4ce4-ac66-1fc78bde7c42`
->   * ID de especificación de conexión: `393a7ce1-e527-4fdb-8d99-0b11dc910279`
 
 Active perfiles para sus campañas [!DNL LinkedIn] de segmentación, personalización y supresión de audiencias en función de los correos electrónicos con hash y los ID móviles.
 
@@ -36,6 +27,11 @@ Una empresa de software organiza una conferencia y desea mantenerse en contacto 
 ## Identidades admitidas {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] admite la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
+
+>[!IMPORTANT]
+>
+>A partir de septiembre de 2025, el destino [!DNL LinkedIn Matched Audiences] ya no admite identidades [!DNL IDFA] (identificador para anunciantes).  Este cambio se debe a los requisitos de LinkedIn y no está relacionado con ninguna actualización del servicio de destino de Experience Platform.
+
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
@@ -96,7 +92,7 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 >[!NOTE]
 >
 >[!DNL Experience Platform] crea automáticamente un hash de los datos de las áreas de nombres sin hash tras la activación.
->&#x200B;> Los datos de origen de los atributos no se cifran automáticamente.
+>> Los datos de origen de los atributos no se cifran automáticamente.
 > 
 > Durante el paso de [Asignación de identidad](../../ui/activate-segment-streaming-destinations.md#mapping), cuando el campo de origen contenga atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente hash a los datos durante la activación.
 > 
@@ -108,13 +104,13 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL LinkedIn Matched Audiences] y activar audiencias.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -168,7 +164,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
