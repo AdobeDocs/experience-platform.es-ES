@@ -15,7 +15,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 > 
-> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]** Ver destinos **[!UICONTROL ,]** Activar destinos **[!UICONTROL ,]** Ver perfiles **[!UICONTROL y]** Ver segmentos[](/help/access-control/home.md#permissions).
+> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]** Ver destinos **[!UICONTROL ,]** Activar destinos **[!UICONTROL ,]** Ver perfiles **[!UICONTROL y]** Ver segmentos[&#128279;](/help/access-control/home.md#permissions).
 > * Para activar audiencias sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 > * Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 > 
@@ -64,7 +64,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >Este paso solo se aplica a algunos destinos de flujo de audiencia. Si el destino no tiene un paso de **[!UICONTROL Asignación]**, vaya a [programación de audiencias](#scheduling).
 >
 >Al activar audiencias en destinos de flujo continuo, también debe asignar *al menos un área de nombres de identidad de destino*, además de los atributos de perfil de destino. De lo contrario, las audiencias no se activarán en la plataforma de destino.
->> ![Imagen del paso de asignación que muestra una asignación obligatoria del área de nombres de identidad.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>&#x200B;> ![Imagen del paso de asignación que muestra una asignación obligatoria del área de nombres de identidad.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Algunos destinos de flujo de audiencia requieren que seleccione atributos de origen o áreas de nombres de identidad para asignar como identidades de destino en el destino.
