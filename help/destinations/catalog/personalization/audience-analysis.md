@@ -3,16 +3,18 @@ title: Destino de Audience Analysis
 description: Vea las audiencias para las que los clientes cumplen los requisitos en Customer Journey Analytics.
 badgeLimitedAvailability: label="Disponibilidad limitada" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+hide: true
+hidefromtoc: true
+source-git-commit: 4bd94c292a13a80405a3d726295ebd6eaf86aaaa
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '799'
 ht-degree: 3%
 
 ---
 
 # Destino de Audience Analysis
 
-El destino [!UICONTROL Análisis de audiencia] le permite enriquecer los datos de audiencia de Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en los informes de [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=es).
+El destino [!UICONTROL Análisis de audiencia] le permite enriquecer los datos de audiencia de Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en los informes de [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >
@@ -98,7 +100,7 @@ Cuando termine de seleccionar las acciones de marketing deseadas para el destino
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Una vez creado el destino, puede activar las audiencias que desee para el destino.
 
