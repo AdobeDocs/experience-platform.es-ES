@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo
 title: Guía de IU de preparación de datos
 description: Aprenda a utilizar las funciones de preparación de datos en la IU de Experience Platform para asignar archivos CSV a un esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1505'
 ht-degree: 1%
 
 ---
@@ -138,7 +138,7 @@ A continuación, utilice la ventana [!UICONTROL Cargar plantilla] para descargar
 
 ![Ventana de plantilla de carga que muestra opciones para descargar y cargar un archivo csv exportado de las asignaciones.](../images/ui/mapping/upload_template.png)
 
-+++Seleccione esta opción para ver un ejemplo de un archivo de asignación exportado
++++Seleccione para ver un ejemplo de un archivo de asignación exportado
 
 ![Archivo csv descargado de la plantilla de asignación.](../images/ui/mapping/mapping_csv_file.png)
 
@@ -152,9 +152,13 @@ Cuando termine, seleccione **[!UICONTROL Cargar archivo]** y seleccione el archi
 
 Una vez completadas las asignaciones, ahora puede seleccionar **[!UICONTROL Finalizar]** y continuar con el siguiente paso para completar el flujo de datos.
 
+>[!TIP]
+>
+>Una vez que haya terminado de crear las asignaciones, espere hasta 10 minutos antes de iniciar la ingesta de datos. Este periodo de espera garantiza que las nuevas asignaciones estén completamente guardadas y disponibles en el sistema.
+
 ![Interfaz de asignación con un conjunto completo de asignaciones.](../images/ui/mapping/completed_mappings.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora puede asignar correctamente un archivo CSV a un esquema XDM de destino mediante la interfaz de asignación en la interfaz de usuario de Experience Platform. Para obtener más información, lea los siguientes documentos:
 
