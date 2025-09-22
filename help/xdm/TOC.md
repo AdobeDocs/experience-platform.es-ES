@@ -5,10 +5,10 @@ breadcrumb-title: Guía del Modelo de datos de experiencia (XDM)
 user-guide-description: Explore una descripción general del sistema Modelo de datos de experiencia (XDM) en Experience Platform y aprenda a utilizar clases y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 48%
+source-wordcount: '703'
+ht-degree: 49%
 
 ---
 
@@ -112,6 +112,7 @@ ht-degree: 48%
       * [Detalles del cliente potencial del socio (ejemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * ExperienceEvent de XDM {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+      * [Extensión completa de Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
       * [Detalles de anuncios](./field-groups/event/advertising-details.md)
       * [Información de aplicación](./field-groups/event/application-details.md)
       * [Transferencias de saldo](./field-groups/event/balance-transfers.md)
