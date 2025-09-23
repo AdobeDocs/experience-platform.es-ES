@@ -4,10 +4,10 @@ title: Guía de IU de alertas
 description: Obtenga información sobre cómo administrar alertas en la interfaz de usuario de Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 57261ca37bf10e394f47ea4bb3c01856a18b197d
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 7%
+source-wordcount: '814'
+ht-degree: 8%
 
 ---
 
@@ -96,10 +96,12 @@ Los umbrales de alerta se pueden personalizar para los siguientes tipos de alert
 | Retraso de ejecución de flujo de destino | Umbral de retraso |
 | Retraso de ejecución del flujo del servicio de identidad | Umbral de retraso |
 | Retraso de ejecución de flujo de perfiles | Umbral de retraso |
+| Tasa de errores de ingesta de streaming de perfiles superada | Umbral de error |
+| Tasa de omisión de ingesta de flujo de perfil superada | Umbral de error |
 | Retraso de ejecución de flujo de orígenes | Umbral de retraso |
+| Tasa de error de ingesta de orígenes superada | Umbral de error |
 | Retraso de ejecución de consulta | Umbral de retraso |
 | Tasa de activación omitida superada | Umbral de error |
-| Tasa de error de ingesta de orígenes superada | Umbral de error |
 
 Seleccione los puntos suspensivos (**...**) junto al nombre de una regla y aparecerá un menú desplegable con los controles. Seleccione **[!UICONTROL Editar]**.
 
@@ -123,6 +125,6 @@ Seleccione una alerta de la lista y aparecerán más detalles en el carril derec
 
 ![Alerta resaltada que muestra detalles en el carril derecho.](../images/alerts/ui/history-details.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento proporciona información general sobre cómo ver y administrar las alertas en la interfaz de usuario de Experience Platform. Consulte la descripción general de [Observability Insights](../home.md) para obtener más información sobre las capacidades del servicio.
