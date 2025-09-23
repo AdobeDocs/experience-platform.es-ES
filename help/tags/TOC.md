@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
+source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '788'
 ht-degree: 44%
 
 ---
@@ -202,6 +202,8 @@ ht-degree: 44%
       * [Encuesta SDI](https://exchange.adobe.com/apps/ec/102991)
       * [Kit de herramientas SDI](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+      * [!DNL Snap Pixel] {#snap-pixel}
+         * [Información general](./extensions/client/snap-pixel/overview.md)
       * [Llave de almacenamiento](https://exchange.adobe.com/apps/ec/102990)
       * [ETIQUETAS por horizonte de bucle](https://exchange.adobe.com/apps/ec/106092)
       * [Recopilación de tealio](https://exchange.adobe.com/apps/ec/104217)
