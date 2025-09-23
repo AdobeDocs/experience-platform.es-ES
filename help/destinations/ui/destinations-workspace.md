@@ -3,10 +3,10 @@ keywords: plataforma;destinos;espacio de trabajo de destinos;espacio de trabajo;
 title: Espacio de trabajo Destinos
 description: El espacio de trabajo Destinos consta de cinco secciones, Información general, Catálogo, Examinar, Cuentas y Vista de sistema. Se describen en las secciones siguientes.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
+source-git-commit: ff566e6ec409d237d3831d787d7428859dd4b566
 workflow-type: tm+mt
-source-wordcount: '2240'
-ht-degree: 0%
+source-wordcount: '2369'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +79,7 @@ Los destinos con la opción **[!UICONTROL Habilitado/Deshabilitado]** activada e
 > ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
 > 
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Activar audiencias](/help/images/icons/data-add.png) **[!UICONTROL Activar audiencias]** para exportar audiencias o conjuntos de datos a ese destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar control de destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino &#x200B;]**&#x200B;para editar las conexiones de destino existentes. Lea el tutorial sobre [editar destinos](/help/destinations/ui/edit-destination.md) para obtener más información.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar control de destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino ]**para editar las conexiones de destino existentes. Lea el tutorial sobre [editar destinos](/help/destinations/ui/edit-destination.md) para obtener más información.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar acciones de marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Editar acciones de marketing]** para [cambiar las acciones de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) para el destino seleccionado.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Eliminar control](/help/images/icons/delete.png) **[!UICONTROL Eliminar]** para [quitar](delete-destinations.md) una conexión existente a un destino.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use la vista ![Ver en el control de supervisión](/help/images/icons/monitoring.png) **[!UICONTROL Ver en el control de supervisión]** para ver la información de activación de este destino en el [panel de supervisión](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
@@ -93,12 +93,13 @@ Consulte la tabla siguiente para obtener toda la información que se proporciona
 | Nombre | El nombre proporcionado para el flujo de activación a este destino. |
 | Tipo de datos | Tipo de datos admitidos por la conexión de destino. Tipos de datos admitidos: <ul><li>**[!UICONTROL Clientes]**</li><li>**[!UICONTROL Clientes potenciales]**</li><li>**[!UICONTROL Cuentas]**</li><li>**[!UICONTROL Conjuntos de datos]**</li></ul> |
 | [!UICONTROL Último estado de ejecución del flujo de datos] | El estado de la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
-| [!UICONTROL Última fecha de ejecución del flujo de datos] | Fecha y hora en la que se produjo la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
+| [!UICONTROL Última fecha de ejecución del flujo de datos] | Fecha y hora en la que se produjo la última ejecución del flujo de datos. Seleccione el encabezado de la columna para acceder a las opciones de ordenación (**[!UICONTROL Orden ascendente]**, **[!UICONTROL Orden descendente]**). Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
 | [!UICONTROL Destino] | La plataforma de destino seleccionada para el flujo de activación. |
-| [!UICONTROL Fecha de caducidad de la cuenta] | La fecha en la que caducará la autorización de conexión a este destino. <br>**Importante**: Actualmente esta columna solo está disponible para la conexión de [Facebook](../catalog/social/facebook.md). |
+| [!UICONTROL Fecha de caducidad de la cuenta] | La fecha en la que caducará la autorización de conexión a este destino. <br> Aparece un icono de advertencia ![Advertencia: el icono de caducidad de la cuenta](/help/images/icons/alert-expiration.png) antes de la fecha de caducidad para avisarle de que la conexión caducará y puede que sea necesario renovarla. Los flujos de datos a conexiones caducadas se detienen y debe volver a autenticarse para reanudar los flujos de trabajo de activación. <br>**Importante**: Actualmente, esta columna solo está disponible para las conexiones de [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) y [Audiencias coincidentes de LinkedIn](../catalog/social/linkedin-b2b.md). <br> ![Ejemplo de advertencia de caducidad de la cuenta en la ficha Examinar](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
 | [!UICONTROL Nombre de usuario] | Las credenciales de cuenta seleccionadas para el flujo de destino. |
 | [!UICONTROL Datos de activación] | Indica la cantidad de audiencias que se están activando en este destino. Seleccione este control para obtener más información sobre las audiencias activadas. Consulte [Datos de activación](/help/destinations/ui/destination-details-page.md#activation-data) en la página de detalles de destino para obtener más información sobre las audiencias activadas. |
-| [!UICONTROL Creado] | La fecha y la hora en formato UTC en que se creó el flujo de activación al destino. Seleccione el símbolo de flecha arriba/abajo para ordenar los flujos de activación por el más reciente primero o el más antiguo primero. |
+| [!UICONTROL Creado] | La fecha y la hora en que se creó el flujo de activación al destino. Seleccione el símbolo de flecha arriba/abajo para ordenar los flujos de activación por el más reciente primero o el más antiguo primero. |
+| [!UICONTROL Modificado] | La fecha y la hora en que se modificó por última vez el flujo de activación al destino. |
 | [!UICONTROL Estado] | `Enabled` o `Disabled`. Indica si los datos se están activando en este destino. |
 | [!UICONTROL Etiquetas de acceso] | Muestra cualquier etiqueta de acceso que se haya agregado a este flujo de datos de destino. Obtenga más información sobre [aplicar etiquetas de acceso a flujos de datos de destino](/help/access-control/abac/apply-access-labels-destinations.md). |
 | [!UICONTROL Etiquetas] | Muestra cualquier etiqueta añadida a este flujo de datos de destino. Utilice etiquetas para organizar y categorizar los flujos de datos para facilitar la administración. |
@@ -121,7 +122,7 @@ Utilice la barra de búsqueda situada en la parte superior de la tabla para busc
 >
 > Al buscar flujos de datos usando el cuadro de búsqueda, los resultados pueden incluir flujos de datos que sus [etiquetas de acceso de usuario](/help/access-control/abac/apply-access-labels-destinations.md) le impiden ver. Este comportamiento se corregirá en una actualización futura. Al seleccionar estos flujos de datos, no se muestra la información en el carril derecho y los usuarios sin acceso a las etiquetas requeridas no pueden realizar ninguna modificación, como asignar audiencias al flujo de datos o editar su programación.
 
-![Demostración animada de la búsqueda de un flujo de datos de destino en la ficha Examinar](../assets/ui/workspace/search.gif)
+![Demostración animada de la búsqueda de un flujo de datos de destino en la pestaña Examinar](../assets/ui/workspace/search.gif)
 
 ### Opciones de filtro {#filter-options-browse}
 
@@ -182,21 +183,21 @@ La ficha **[!UICONTROL Cuentas]** muestra detalles acerca de las conexiones que 
 
 >[!TIP]
 >
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Activar control](/help/images/icons/data-add.png)**[!UICONTROL Activar &#x200B;]**/**[!UICONTROL &#x200B; Activar audiencias &#x200B;]**/**[!UICONTROL &#x200B; Exportar conjuntos de datos &#x200B;]**&#x200B;para exportar audiencias o conjuntos de datos a ese destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Editar detalles](/help/images/icons/edit.png)**[!UICONTROL Editar detalles &#x200B;]**&#x200B;para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Eliminar control](/help/images/icons/delete.png)**[!UICONTROL Eliminar &#x200B;]**&#x200B;para [eliminar](delete-destination-account.md) una cuenta de destino existente.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Activar control](/help/images/icons/data-add.png)**[!UICONTROL Activar ]**/**[!UICONTROL  Activar audiencias ]**/**[!UICONTROL  Exportar conjuntos de datos ]**para exportar audiencias o conjuntos de datos a ese destino.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Editar detalles](/help/images/icons/edit.png)**[!UICONTROL Editar detalles ]**para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Plataforma] y use el control ![Eliminar control](/help/images/icons/delete.png)**[!UICONTROL Eliminar ]**para [eliminar](delete-destination-account.md) una cuenta de destino existente.
 
 ![Pestaña Cuentas](../assets/ui/workspace/accounts-tab.png)
 
 | Elemento | Descripción |
 |---|---|
-| [!UICONTROL Nombre] | El nombre que asignó a la cuenta de destino al [configurar](connect-destination.md#authenticate) el destino. |
+| [!UICONTROL Nombre] | El nombre que asignó a la cuenta de destino al [configurar](connect-destination.md#authenticate) el destino. Seleccione el encabezado de la columna para acceder a las opciones de ordenación (**[!UICONTROL Orden ascendente]**, **[!UICONTROL Orden descendente]**). |
 | [!UICONTROL Destino] | El conector de destino para el que ha configurado la conexión. |
 | [!UICONTROL Tipo de conexión] | Representa el tipo de conexión de cuenta al espacio de almacenamiento o destino. Según el destino, las opciones de autenticación son: <ul><li>Para destinos de marketing por correo electrónico: puede ser S3, FTP o Azure Blob.</li><li>Para destinos de publicidad en tiempo real: de servidor a servidor</li><li>Para destinos de almacenamiento en la nube de Amazon S3: clave de acceso </li><li>Para destinos de almacenamiento en la nube SFTP: autenticación básica para SFTP.</li><li>Autenticación OAuth 1 u OAuth 2</li><li>Autenticación de token de portador</li></ul> |
 | [!UICONTROL Nombre de usuario] | El nombre de usuario que seleccionó en [conectar flujo de trabajo de destino](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Conexiones] | Representa el número de flujos de datos de destino únicos correctos conectados con información básica creada para un destino. |
 | [!UICONTROL Fecha de autorización] | La fecha en la que se autorizó la conexión con este destino. |
-| [!UICONTROL Fecha de caducidad] | La fecha en la que caducará la autorización de conexión a este destino. <br>**Importante**: Actualmente, esta columna solo está disponible para las conexiones de [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md) y [Audiencias coincidentes de LinkedIn](../catalog/social/linkedin-b2b.md). |
+| [!UICONTROL Fecha de caducidad] | La fecha en la que caducará la autorización de conexión a este destino. <br> Un icono de advertencia ![La cuenta caducó el icono de advertencia.](/help/images/icons/alert-expiration.png) aparece antes de la fecha de caducidad para avisarle de que la conexión caducará y podría requerir renovación. Los flujos de datos a conexiones caducadas se detienen y debe volver a autenticarse para reanudar los flujos de trabajo de activación. <br>**Importante**: Actualmente esta columna solo está disponible para las conexiones de [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) y [Audiencias coincidentes de LinkedIn](../catalog/social/linkedin-b2b.md). <br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
