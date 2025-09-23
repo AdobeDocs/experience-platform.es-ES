@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;interfaz d
 title: Personalización de los detalles del perfil en la IU de
 description: Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos del perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e253be0c4e02b82bfc8926ac4531589782b9c8fe
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ Después de elegir modificar el panel, puede reordenar las tarjetas seleccionand
 ![El botón de cambio de tamaño está resaltado en la tarjeta Atributos básicos.](../images/profile-customization/resize.png)
 
 La tarjeta seleccionada se ajusta al tamaño deseado y las tarjetas adyacentes se cambian de posición de forma dinámica. Esto puede hacer que algunas tarjetas se muevan a filas adicionales, lo que requiere que se desplace hacia abajo para ver todas las tarjetas. Por ejemplo, cuando se cambia el tamaño de la tarjeta &quot;[!UICONTROL Atributos básicos]&quot;, la tarjeta &quot;[!UICONTROL Identidades vinculadas]&quot; ya no está visible en la fila superior y aparece en una nueva segunda fila dentro del perfil (no se muestra). Para devolver la tarjeta &quot;[!UICONTROL Identidades vinculadas]&quot; a la fila superior, puede arrastrarla y colocarla en la posición actual de la tarjeta &quot;[!UICONTROL Preferencias de canal]&quot;.
-
-![Se ha resaltado una tarjeta cuyo tamaño se ha cambiado.](../images/profile-customization/resized.png)
 
 ## Editar y eliminar tarjetas
 
@@ -70,8 +68,6 @@ Cuando vuelva a la pantalla **[!UICONTROL Editar widget]**, la lista de atributo
 
 Después de guardar, regresa a la ficha **[!UICONTROL Detalle]**, donde están visibles la tarjeta y los atributos actualizados.
 
-![Los atributos recién agregados se muestran en la tarjeta dentro del panel Perfil.](../images/profile-customization/added-attributes.png)
-
 ## Añadir una tarjeta nueva {#add-a-new-card}
 
 Para personalizar aún más el aspecto de los perfiles dentro de Experience Platform, puede seleccionar añadir nuevas tarjetas al panel y seleccionar los atributos que desee mostrar en esas tarjetas. Para empezar, seleccione **[!UICONTROL Modificar tablero]** en la ficha **[!UICONTROL Detalle]**.
@@ -100,14 +96,12 @@ Para guardar tu nueva tarjeta, primero debes proporcionar un **[!UICONTROL títu
 
 Después de guardar, volverá a la ficha **[!UICONTROL Detalle]**, donde podrá ver la nueva tarjeta y los atributos.
 
-![El nuevo widget se agrega al panel Perfil.](../images/profile-customization/added-widget.png)
-
 ## Restaurar tarjetas predeterminadas
 
 Si en cualquier momento decide que desea restaurar las tarjetas predeterminadas que se han eliminado desde entonces, tiene la capacidad de hacerlo de forma rápida y sencilla. En primer lugar, seleccione **[!UICONTROL Modificar tablero]** y, a continuación, seleccione **[!UICONTROL Restaurar tarjetas predeterminadas]**. Una vez que las tarjetas predeterminadas estén visibles, puede seleccionar **[!UICONTROL Guardar]** para guardar los cambios o seleccionar **[!UICONTROL Cancelar]** si no desea restaurar las tarjetas predeterminadas.
 
 ![El botón Restaurar tarjetas predeterminadas está resaltado en el panel Perfil.](../images/profile-customization/restore-default.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este documento, debería poder actualizar la vista de perfil de su organización, lo que incluye agregar y eliminar tarjetas, editar detalles y atributos de tarjetas, y reordenar y cambiar el tamaño de las tarjetas. Para obtener más información sobre cómo trabajar con datos de [!DNL Profile] en la interfaz de usuario de Experience Platform, consulte la [[!DNL Profile] guía del usuario](user-guide.md).
