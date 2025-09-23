@@ -1,21 +1,15 @@
 ---
 title: Importación de datos de prospección de Acxiom
 description: Obtenga información sobre cómo conectar los datos de prospección de Acxiom a Adobe Experience Platform y Adobe Real-time Customer Data Platform mediante la interfaz de usuario.
-last-substantial-update: 2024-02-21T00:00:00Z
-badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1844'
 ht-degree: 5%
 
 ---
 
 # Crear una conexión de origen y un flujo de datos de [!DNL Acxiom Prospecting Data Import] en la interfaz de usuario
-
->[!NOTE]
->
->El origen [!DNL Acxiom Prospecting Data Import] está en la versión beta. Lea [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 La importación de datos de prospecciones de [!DNL Acxiom] para Adobe Real-Time Customer Data Platform es un proceso para ofrecer las audiencias de clientes potenciales más productivas posibles. [!DNL Acxiom] toma los datos de origen de Real-Time CDP a través de una exportación segura y los ejecuta a través de un galardonado sistema de higiene y resolución de identidades. Esto genera un archivo de datos para utilizarlo como lista de supresión. Este archivo de datos se compara con la base de datos global Acxiom, que permite adaptar las listas de clientes potenciales para su importación.
 
@@ -173,7 +167,7 @@ Una vez que haya revisado el flujo de datos, haga clic en Finalizar y espere un 
 
 ![La página de revisión.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-review.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para traer datos por lotes de su origen de [!DNL Acxiom] a Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
 

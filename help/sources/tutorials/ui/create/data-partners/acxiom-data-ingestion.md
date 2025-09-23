@@ -1,21 +1,15 @@
 ---
 title: Ingesta de datos de Acxiom
 description: Utilice la Ingesta de datos de Acxiom para introducir datos de Acxiom en Real-Time CDP y enriquecer perfiles de origen. Utilice sus perfiles de origen enriquecidos con Acxiom para mejorar las audiencias y activarlos en todos los canales de marketing.
-last-substantial-update: 2024-03-19T00:00:00Z
-badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1817'
 ht-degree: 3%
 
 ---
 
 # Crear una conexión de origen y un flujo de datos de [!DNL Acxiom Data Ingestion] en la interfaz de usuario
-
->[!NOTE]
->
->El origen [!DNL Acxiom Data Ingestion] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Utilice el origen [!DNL Acxiom Data Ingestion] para introducir datos de [!DNL Acxiom] en Real-Time Customer Data Platform y enriquecer perfiles de origen. A continuación, puede usar sus perfiles de origen enriquecidos con [!DNL Acxiom] para mejorar las audiencias y activarlos en todos los canales de marketing.
 
@@ -125,7 +119,7 @@ Puede seleccionar **[!UICONTROL Búsqueda avanzada]** para ver una ventana de to
 
 >[!ENDTABS]
 
-+++Seleccione esta opción para habilitar la Ingesta de perfiles, los diagnósticos de error y la ingesta parcial.
++++Seleccione para habilitar la Ingesta de perfiles, diagnósticos de error e ingesta parcial.
 
 Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos de perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
 
@@ -176,7 +170,7 @@ Una vez que haya revisado el flujo de datos, haga clic en Finalizar y espere un 
 
 ![La página de revisión.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-review.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para traer datos por lotes de su origen de [!DNL Acxiom] a Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
 

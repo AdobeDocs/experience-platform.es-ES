@@ -1,20 +1,15 @@
 ---
 title: Crear una conexión de origen de SAP Commerce en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de SAP Commerce mediante la interfaz de usuario de Adobe Experience Platform.
-badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '959'
 ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen [!DNL SAP Commerce] en la interfaz de usuario
-
->[!NOTE]
->
->El origen [!DNL SAP Commerce] está en la versión beta. Consulte la [descripción general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 El siguiente tutorial lo acompañará durante los pasos para crear una conexión de origen de [!DNL SAP Commerce] con el fin de obtener contactos y datos de clientes de [[!DNL SAP] Facturación de suscripción](https://www.sap.com/products/financial-management/subscription-billing.html) mediante la interfaz de usuario de Adobe Experience Platform.
 
@@ -190,7 +185,7 @@ Para introducir datos de contacto, selecciona **[!UICONTROL Contactos]** como ti
 
 >[!ENDTABS]
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL SAP Commerce]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](../../dataflow/ecommerce.md).
 

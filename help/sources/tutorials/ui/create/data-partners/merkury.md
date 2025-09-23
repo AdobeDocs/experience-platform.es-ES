@@ -1,25 +1,19 @@
 ---
 title: Crear una conexión y un flujo de datos de Source de resolución de identidad empresarial de Mercury en la IU de
 description: Obtenga información sobre cómo crear una conexión de origen de resolución de identidad empresarial de Mercury mediante la IU de Adobe Experience Platform.
-last-substantial-update: 2023-12=12
-badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2128'
 ht-degree: 1%
 
 ---
 
 # Crear una conexión de origen y un flujo de datos de [!DNL Merkury Enterprise Identity Resolution] en la interfaz de usuario
 
->[!NOTE]
->
->El origen [!DNL Merkury Enterprise Identity Resolution] está en la versión beta. Lea [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
-
 Este tutorial proporciona los pasos para crear una conexión de origen y un flujo de datos de [!DNL Merkury Enterprise Identity Resolution] mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Introducción 
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -105,7 +99,7 @@ La siguiente tabla muestra los formatos de datos adecuados para los tipos de arc
 
 ### Seleccionar un delimitador de columna
 
-+++Seleccione esta opción para ver los pasos sobre cómo establecer un delimitador
++++Seleccione para ver los pasos sobre cómo establecer un delimitador
 
 Después de configurar el formato de datos, puede establecer un delimitador de columna al ingerir archivos delimitados. Seleccione la opción **[!UICONTROL Delimitador]** y, a continuación, seleccione un delimitador en el menú desplegable. El menú muestra las opciones utilizadas con más frecuencia para delimitadores, como una coma (`,`), una tabulación (`\t`) y una barra vertical (`|`).
 
@@ -214,7 +208,7 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 ![La página de revisión.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para traer datos por lotes de su origen de [!DNL Merkury] a Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
 
