@@ -1,16 +1,20 @@
 ---
-title: Conexión de Capillary a Experience Platform mediante la IU
+title: Conectar Capillary a Experience Platform mediante la interfaz de usuario
 description: Aprenda a conectar Capillary a Experience Platform mediante la interfaz de usuario de
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+badge: Beta
+exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '827'
 ht-degree: 5%
 
 ---
 
-# Conectar [!DNL Capillary] a Experience Platform mediante la interfaz de usuario
+# Conectar [!DNL Capillary Streaming Events] a Experience Platform mediante la interfaz de usuario
+
+>[!AVAILABILITY]
+>
+>El origen [!DNL Capillary Streaming Events] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Lea esta guía para obtener información sobre cómo conectar la base de datos de [!DNL Capillary] a Adobe Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario de Experience Platform.
 
@@ -74,13 +78,17 @@ Una vez configurado el conjunto de datos, debe proporcionar detalles sobre el fl
 | --- | --- |
 | Nombre de flujo de datos | Nombre del flujo de datos.  De forma predeterminada, se utiliza el nombre del archivo que se está importando. |
 | Descripción | (Opcional) Una breve descripción del flujo de datos. |
-| Alertas | Experience Platform puede producir alertas basadas en eventos a las que los usuarios pueden suscribirse; todas estas opciones incluyen un flujo de datos en ejecución para almacenarlas en déclencheur.  Para obtener más información, lea la [descripción general de las alertas](../../alerts.md) <ul><li>**Inicio de ejecución del flujo de datos de origen**: seleccione esta alerta para recibir una notificación cuando comience la ejecución del flujo de datos.</li><li>**Ejecución correcta del flujo de datos de origen**: seleccione esta alerta para recibir una notificación si el flujo de datos termina sin errores.</li><li>**Error al ejecutar el flujo de datos de origen**: seleccione esta alerta para recibir una notificación si la ejecución del flujo de datos termina con errores.</li></ul> |
+| Alertas | Experience Platform puede producir alertas basadas en eventos a las que los usuarios pueden suscribirse, estas opciones permiten que un flujo de datos en ejecución las almacene en déclencheur.  Para obtener más información, lea la [descripción general de las alertas](../../alerts.md) <ul><li>**Inicio de ejecución del flujo de datos de origen**: seleccione esta alerta para recibir una notificación cuando comience la ejecución del flujo de datos.</li><li>**Ejecución correcta del flujo de datos de origen**: seleccione esta alerta para recibir una notificación si el flujo de datos termina sin errores.</li><li>**Error al ejecutar el flujo de datos de origen**: seleccione esta alerta para recibir una notificación si la ejecución del flujo de datos termina con errores.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Asignación
 
-Utilice la interfaz de asignación para asignar los datos de origen a los campos de esquema adecuados antes de introducir datos en Experience Platform.  Para obtener más información, lea la guía de asignación [en la interfaz de usuario](../../../../../data-prep/ui/mapping.md).
+Utilice la interfaz de asignación para asignar los datos de origen a los campos de esquema adecuados antes de introducir datos en Experience Platform. Para obtener más información, lea la guía de asignación [en la interfaz de usuario](../../../../../data-prep/ui/mapping.md).
+
+>[!TIP]
+>
+>Puede descargar los [eventos y asignaciones de perfiles](../../../../images/tutorials/create/capillary/mappings.zip) para [!DNL Capillary] e [importar los archivos a la preparación de datos](../../../../../data-prep/ui/mapping.md#import-mapping) cuando esté listo para asignar los datos.
 
 ![Interfaz de asignación para capilar.](../../../../images/tutorials/create/capillary/mappings.png)
 

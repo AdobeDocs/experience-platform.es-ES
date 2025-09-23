@@ -1,16 +1,20 @@
 ---
 title: Conexión de Capillary a Experience Platform mediante la API de Flow Service
 description: Aprenda a conectar Capillary a Experience Platform mediante API.
-hide: true
-hidefromtoc: true
-source-git-commit: 7119ca51e0a4db09c8adb68bcde41ab3837439d1
+badge: Beta
+exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1150'
 ht-degree: 2%
 
 ---
 
 # Conectar [!DNL Capillary Streaming Events] a Experience Platform mediante la API [!DNL Flow Service]
+
+>[!AVAILABILITY]
+>
+>El origen [!DNL Capillary Streaming Events] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Lea esta guía para aprender a usar [!DNL Capillary Streaming Events] y la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) para transmitir datos de su cuenta de [!DNL Capillary] a Adobe Experience Platform.
 
@@ -39,7 +43,7 @@ Lea la guía sobre [introducción a las API de Experience Platform](../../../../
 4. Cree una **conexión de destino** para asegurarse de que sus datos aterrizan en el lago de datos.
 5. Use la preparación de datos para crear asignaciones que asignen los campos de origen de [!DNL Capillary] a los campos XDM correctos.
 6. Crear un flujo de datos con `sourceConnectionId`, `targetConnectionId` y `mappingID`
-7. Realice pruebas electrónicas con eventos de transacción/perfil de muestra únicos para verificar el flujo de datos.
+7. Pruebe con eventos de transacción/perfil de muestra únicos para verificar el flujo de datos.
 
 >[!ENDSHADEBOX]
 
@@ -230,9 +234,9 @@ Las transacciones capturan actividades comerciales. Vea la siguiente carga útil
 
 >[!ENDTABS]
 
-### Eventos admitidos
+<!--### Supported Events
 
-El origen [!DNL Capillary] admite los siguientes eventos:
+The [!DNL Capillary] source supports the following events:
 
 * `pointsIssued`
 * `tierDowngraded`
@@ -247,8 +251,7 @@ El origen [!DNL Capillary] admite los siguientes eventos:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### Migración de datos históricos
 
@@ -319,11 +322,15 @@ Asigne los campos capilares a los campos de esquema XDM correspondientes de la s
 
 | Esquema de origen | Esquema de público destinatario |
 |------------------------------|-------------------------------|
-| `identityMap.email.id` | `xdm:identityMap.email` |
-| `loyalty.points` | `xdm:loyaltyPoints` |
-| `loyalty.tier` | `xdm:loyaltyTier` |
+| `identityMap.email.id` | `xdm:identityMap.email[0].id` |
+| `loyalty.points` | `xdm:loyalty.points` |
+| `loyalty.tier` | `xdm:loyalty.tier` |
 | `commerce.order.priceTotal` | `xdm:commerce.order.priceTotal` |
 | `productLineItems.SKU` | `xdm:productListItems.SKU` |
+
+>[!TIP]
+>
+>Puede descargar los [eventos y asignaciones de perfiles](../../../../images/tutorials/create/capillary/mappings.zip) para [!DNL Capillary] e [importar los archivos a la preparación de datos](../../../../../data-prep/ui/mapping.md#import-mapping) cuando esté listo para asignar los datos.
 
 ### Creación de un flujo de datos {#flow}
 
