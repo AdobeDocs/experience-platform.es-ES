@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 43%
+source-wordcount: '1480'
+ht-degree: 41%
 
 ---
 
@@ -90,12 +90,9 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Función | Descripción |
 | ------- | ----------- |
 | Esquemas basados en modelos | Simplifique el modelado de datos con esquemas basados en modelos. Ahora puede crear esquemas más fácilmente con ejemplos explicativos y directrices completos. Actualmente, esta función está disponible para los titulares de licencias de Campaign Orchestration y se ampliará a los clientes de Data Distiller en GA, lo que hace que el modelado de datos sea más accesible y eficiente. La funcionalidad incluye compatibilidad con datos de series temporales y capacidades de captura de datos de cambios. |
+| Data Mirror | Introduzca cambios de nivel de fila de almacenes de datos en la nube (por ejemplo, Snowflake, Databricks, BigQuery) en Adobe Experience Platform mediante esquemas basados en modelos. Data Mirror elimina el ETL ascendente y conserva las relaciones, el control de versiones y las eliminaciones al duplicar las estructuras de base de datos existentes directamente en el lago de datos. Se admite el comportamiento de esquemas de series temporales y eventos de registro con capacidades de captura de datos modificados. Actualmente, esta función está disponible para los titulares de licencias de Campaign Orchestration y se ampliará con esta versión limitada, incluyendo también a los clientes de Customer Journey Analytics. Consulte la [documentación de Data Mirror](../../xdm/data-mirror/overview.md) para obtener más información. Póngase en contacto con su representante de Adobe para obtener acceso. |
 
 Para obtener más información, lea la [información general sobre XDM](../../xdm/home.md).
-<!--
-
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
--->
 
 ## Perfil del cliente en tiempo real {#profile}
 
@@ -138,7 +135,10 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | --- | --- |
 | Nuevas fuentes en General Availability | Las siguientes fuentes están ahora en General Availability: Se han actualizado varios conectores de fuente de Beta a GA: <ul><li>[Ingesta de datos de Acxiom](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Ingesta de datos de clientes potenciales de Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Estas fuentes ahora son totalmente compatibles y están listas para su uso en producción. |
 | [!DNL Snowflake]: compatibilidad con la autenticación de par de claves | Seguridad mejorada para conexiones de Snowflake compatible con la autenticación de par de claves. La autenticación básica (nombre de usuario y contraseña) dejará de usarse en noviembre de 2025, por lo que se recomienda a los clientes migrar a la autenticación de par de claves para mejorar la seguridad. Para obtener más información, consulte la [[!DNL Snowflake] documentación](../../sources/connectors/databases/snowflake.md). |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) para transmitir datos de fidelidad de su cuenta de [!DNL Capillary] a Experience Platform. |
 | Disponibilidad general de la compatibilidad con vínculos privados en las fuentes | Ahora puede usar **vínculos privados** para un grupo selecto de orígenes. Utilice esta función para crear un punto final privado al que se pueda conectar la fuente. Con los puntos finales privados, puede configurar conexiones y flujos de datos que omiten el internet público, lo que le ofrece una seguridad mejorada y un aislamiento de red para sus datos confidenciales. La compatibilidad con vínculos privados está disponible para las siguientes fuentes: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Para obtener más información, lea las guías sobre la creación de vínculos privados [en la API](../../sources/tutorials/api/private-link.md) y [en la interfaz de usuario](../../sources/tutorials/ui/private-link.md). |
 
 Para obtener más información, lea la [Información general de las fuentes](../../sources/home.md).
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->

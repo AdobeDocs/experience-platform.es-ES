@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 12%
+source-wordcount: '1674'
+ht-degree: 11%
 
 ---
 
@@ -61,7 +61,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 ### Fuentes empresariales avanzadas {#advanced-enterprise-sources}
 
-Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fuente | Categoría | Tipo de ingesta | Nube |
 | --- | --- | --- | --- |
@@ -219,13 +219,18 @@ Puede utilizar las siguientes fuentes para introducir datos del sistema local en
 
 {style="table-layout:auto"}
 
-### Lealtad {#loyalty}
+<!--
+### Loyalty {#loyalty}
 
-Puede utilizar las siguientes fuentes para introducir la lealtad de los datos a Experience Platform.
+You can use the following sources to ingest data loyalty to Experience Platform.
 
-| Fuente | Tipo de ingesta | Nube |
+| Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
+
+-->
 
 ### Automatización de marketing {#marketing-automation}
 
@@ -241,7 +246,6 @@ Puede utilizar las siguientes fuentes para introducir datos de automatización d
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Lote | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Lote | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Lote | Azure |
-| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Lote | Azure, AWS |
 
 {style="table-layout:auto"}

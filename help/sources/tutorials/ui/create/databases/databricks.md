@@ -1,26 +1,27 @@
 ---
-title: Conectar Azure Databricks A Experience Platform Mediante La IU
-description: Obtenga información sobre cómo conectar Azure Databricks a Experience Platform mediante la interfaz de usuario.
+title: Conectar Databricks A Experience Platform Mediante La IU
+description: Obtenga información sobre cómo conectar Databricks a Experience Platform mediante la interfaz de usuario.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2bd16d5a55c5bbeedbc6a6012d9f0229eee8433a
+exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '481'
 ht-degree: 4%
 
 ---
 
-# Conectar [!DNL Azure Databricks] a Experience Platform en la interfaz de usuario
+# Conectar [!DNL Databricks] a Experience Platform en la interfaz de usuario
 
 >[!AVAILABILITY]
 >
->* El origen [!DNL Azure Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
+>* El origen [!DNL Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
 >
->* El origen [!DNL Azure Databricks] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
+>* El origen [!DNL Databricks] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
 
-Lea esta guía para obtener información sobre cómo conectar su cuenta de [!DNL Azure Databricks] a Adobe Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario.
+Lea esta guía para obtener información sobre cómo conectar su cuenta de [!DNL Databricks] a Adobe Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario.
 
-## Introducción 
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -29,22 +30,22 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 ### Recopilar credenciales necesarias
 
-Proporcione valores para las siguientes credenciales a fin de conectar [!DNL Azure Databricks] a Experience Platform.
+Proporcione valores para las siguientes credenciales a fin de conectar [!DNL Databricks] a Experience Platform.
 
 | Credencial | Descripción |
 | --- | --- |
-| Dominio | La URL de su área de trabajo [!DNL Azure Databricks]. Por ejemplo, `https://adb-1234567890123456.7.azuredatabricks.net`. |
-| ID de clúster | El identificador de su clúster en [!DNL Azure Databricks]. Este clúster ya debe ser un clúster existente y debe ser un clúster interactivo. |
-| Token de acceso | El token de acceso que autentica su cuenta de [!DNL Azure Databricks]. Puede generar el token de acceso mediante el área de trabajo [!DNL Azure Databricks]. |
+| Dominio | La URL de su área de trabajo [!DNL Databricks]. Por ejemplo, `https://adb-1234567890123456.7.azuredatabricks.net`. |
+| ID de clúster | El identificador de su clúster en [!DNL Databricks]. Este clúster ya debe ser un clúster existente y debe ser un clúster interactivo. |
+| Token de acceso | El token de acceso que autentica su cuenta de [!DNL Databricks]. Puede generar el token de acceso mediante el área de trabajo [!DNL Databricks]. |
 | Base de datos | Nombre de la base de datos en el lago delta. |
 
-Para obtener más información, lea la [[!DNL Azure Databricks] información general](../../../../connectors/databases/databricks.md).
+Para obtener más información, lea la [[!DNL Databricks] información general](../../../../connectors/databases/databricks.md).
 
 ## Navegar por el catálogo de fuentes
 
 En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Fuentes]*. Elija una categoría o utilice la barra de búsqueda para encontrar el origen.
 
-Para conectarse a [!DNL Azure Databricks], vaya a la categoría *[!UICONTROL Bases de datos]*, seleccione la tarjeta de origen de **[!UICONTROL Azure Databricks]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
+Para conectarse a [!DNL Databricks], vaya a la categoría *[!UICONTROL Bases de datos]*, seleccione la tarjeta de origen de **[!UICONTROL Azure Databricks]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
 >[!TIP]
 >

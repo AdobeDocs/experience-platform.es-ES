@@ -1,7 +1,10 @@
 ---
 title: Conexión de la retransmisión a Experience Platform en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen personalizada del conector de retransmisión mediante la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: b16600888bd5e70dd97d67ceb265e3a1848d2a66
+hide: true
+hidefromtoc: true
+exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -80,5 +83,5 @@ Use estos valores para configurar el webhook en la **consola de retransmisión**
 
 ## Recursos adicionales
 
-* [Crear una nueva especificación de conexión mediante la API de Flow Service](https://experienceleague.adobe.com/es/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Conéctese a su origen mediante la interfaz de usuario](https://experienceleague.adobe.com/es/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Crear una nueva especificación de conexión mediante la API de Flow Service](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Conéctese a su origen mediante la interfaz de usuario](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

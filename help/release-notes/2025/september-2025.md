@@ -1,9 +1,10 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2025'
 description: Las notas de la versión de septiembre de 2025 de Adobe Experience Platform.
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1388'
 ht-degree: 43%
 
 ---
@@ -138,7 +139,10 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | --- | --- |
 | Nuevas fuentes en General Availability | Las siguientes fuentes están ahora en General Availability: Se han actualizado varios conectores de fuente de Beta a GA: <ul><li>[Ingesta de datos de Acxiom](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Ingesta de datos de clientes potenciales de Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Estas fuentes ahora son totalmente compatibles y están listas para su uso en producción. |
 | [!DNL Snowflake]: compatibilidad con la autenticación de par de claves | Seguridad mejorada para conexiones de Snowflake compatible con la autenticación de par de claves. La autenticación básica (nombre de usuario y contraseña) dejará de usarse en noviembre de 2025, por lo que se recomienda a los clientes migrar a la autenticación de par de claves para mejorar la seguridad. Para obtener más información, consulte la [[!DNL Snowflake] documentación](../../sources/connectors/databases/snowflake.md). |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) para transmitir datos de fidelidad de su cuenta de [!DNL Capillary] a Experience Platform. |
 | Disponibilidad general de la compatibilidad con vínculos privados en las fuentes | Ahora puede usar **vínculos privados** para un grupo selecto de orígenes. Utilice esta función para crear un punto final privado al que se pueda conectar la fuente. Con los puntos finales privados, puede configurar conexiones y flujos de datos que omiten el internet público, lo que le ofrece una seguridad mejorada y un aislamiento de red para sus datos confidenciales. La compatibilidad con vínculos privados está disponible para las siguientes fuentes: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Para obtener más información, lea las guías sobre la creación de vínculos privados [en la API](../../sources/tutorials/api/private-link.md) y [en la interfaz de usuario](../../sources/tutorials/ui/private-link.md). |
 
 Para obtener más información, lea la [Información general de las fuentes](../../sources/home.md).
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->
