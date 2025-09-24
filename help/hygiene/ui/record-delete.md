@@ -2,10 +2,10 @@
 title: Registrar solicitudes de eliminación (flujo de trabajo de IU)
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
+source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 7%
+source-wordcount: '2420'
+ht-degree: 5%
 
 ---
 
@@ -205,7 +205,70 @@ Una vez enviada la solicitud, se crea una orden de trabajo que aparece en la pes
 
 ![La ficha [!UICONTROL Registro] del área de trabajo [!UICONTROL Ciclo de vida de datos] con la nueva solicitud resaltada.](../images/ui/record-delete/request-log.png)
 
-## Pasos siguientes
+## Eliminación de registros de conjuntos de datos basados en modelos {#model-based-record-delete}
+
+Si el conjunto de datos que está eliminando es un esquema basado en modelos, revise las siguientes consideraciones para asegurarse de que los registros se eliminen correctamente y no se vuelvan a ingerir debido a discrepancias entre Experience Platform y el sistema de origen.
+
+### Comportamiento de eliminación de registros
+
+En la tabla siguiente se describe cómo se comportan las eliminaciones de registros en Experience Platform y en los sistemas de origen, según el método de ingesta y el cambio de la configuración de captura de datos.
+
+| Aspecto | Comportamiento |
+|---------------------|--------------------------------------------------------------------------|
+| Eliminación de plataforma | Los registros se eliminan del conjunto de datos de Experience Platform y del lago de datos. |
+| Retención de Source | Los registros permanecen en el sistema de origen a menos que se eliminen explícitamente allí. |
+| Impacto de actualización completa | Si se utiliza la actualización completa, los registros eliminados se pueden volver a ingerir a menos que se quiten o excluyan del origen. |
+| Cambio del comportamiento de captura de datos | Los registros marcados con `_change_request_type = 'd'` se eliminan durante la ingesta. Los registros no marcados se pueden volver a ingerir. |
+
+Para evitar la reingesta, aplique el mismo método de eliminación tanto en el sistema de origen como en Experience Platform, ya sea eliminando registros de ambos sistemas o incluyendo `_change_request_type = 'd'` para los registros que desea eliminar.
+
+### Cambiar las columnas de captura y control de datos
+
+Los esquemas basados en modelos que utilizan orígenes con captura de datos de cambio pueden utilizar la columna de control `_change_request_type` al distinguir eliminaciones de actualizaciones. Durante la ingesta, los registros marcados con `d` se eliminan del conjunto de datos, mientras que los marcados con `u` o sin la columna se tratan como actualizaciones. La columna `_change_request_type` se lee solo en el momento de la ingesta y no se almacena en el esquema de destino ni se asigna a campos XDM.
+
+>[!NOTE]
+>
+>La eliminación de registros a través de la IU del ciclo vital de datos no afecta al sistema de origen. Para quitar datos de ambas ubicaciones, elimínelos tanto en Experience Platform como en el origen.
+
+### Métodos de eliminación adicionales para esquemas basados en modelos
+
+Más allá del flujo de trabajo de eliminación de registros estándar, los esquemas basados en modelos admiten métodos adicionales para casos de uso específicos:
+
+* **Enfoque de conjunto de datos de copia segura**: duplique el conjunto de datos de producción y aplique eliminaciones a la copia para pruebas o reconciliación controladas antes de aplicar cambios a los datos de producción.
+* **Carga por lotes de solo eliminación**: cargue un archivo que contenga únicamente operaciones de eliminación para el mantenimiento de destino cuando necesite eliminar registros específicos sin que ello afecte a otros datos.
+
+### Compatibilidad del descriptor con operaciones de higiene {#descriptor-support}
+
+Los descriptores de esquema basados en modelos proporcionan metadatos esenciales para operaciones de higiene precisas:
+
+* **Descriptor de clave principal**: Identifica registros de forma exclusiva para actualizaciones o eliminaciones de destino, lo que garantiza que los registros correctos se vean afectados.
+* **Descriptor de versión**: garantiza que las eliminaciones y actualizaciones se apliquen en el orden cronológico correcto, lo que evita operaciones fuera de secuencia.
+* **Descriptor de marca de tiempo (esquemas de series de tiempo)**: alinea las operaciones de eliminación con los tiempos de ocurrencia de eventos en lugar de los tiempos de ingesta.
+
+>[!NOTE]
+>
+>Los procesos de higiene operan en el nivel del conjunto de datos. Para conjuntos de datos con perfil habilitado, es posible que se requieran flujos de trabajo de perfil adicionales para mantener la coherencia en el perfil del cliente en tiempo real.
+
+### Retención programada para esquemas basados en modelos
+
+Para obtener una higiene automatizada basada en la edad de los datos y no en identidades específicas, consulte [Administrar la retención del conjunto de datos de evento de experiencia (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) para obtener información sobre la retención programada en el nivel de fila en el lago de datos.
+
+>[!NOTE]
+>
+>La caducidad a nivel de fila solo se admite para conjuntos de datos que utilizan el comportamiento de series temporales.
+
+### Prácticas recomendadas para la eliminación de registros basados en modelos
+
+Para evitar una reingesta involuntaria y mantener la coherencia de los datos en todos los sistemas, siga estas prácticas recomendadas:
+
+* **Coordinar eliminaciones**: alinee las eliminaciones de registros con la configuración de captura de datos de cambio y la estrategia de administración de datos de origen.
+* **Monitorizar los flujos de captura de datos modificados**: después de eliminar los registros en Platform, supervise los flujos de datos y confirme que el sistema de origen quita los mismos registros o los incluye con `_change_request_type = 'd'`.
+* **Limpiar el origen**: Para los orígenes que usan la ingesta de actualización completa o los que no admiten eliminaciones mediante la captura de datos de cambio, elimine registros directamente del sistema de origen para evitar la reingesta.
+
+Para obtener más información sobre los requisitos de esquema, consulte [requisitos de descriptor de esquema basados en modelos](../../xdm/schema/model-based.md#model-based-schemas).\
+Para saber cómo funciona la captura de datos modificados con las fuentes, consulte [Habilitar la captura de datos modificados en las fuentes](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
+
+## Próximos pasos
 
 En este documento se explica cómo eliminar registros en la interfaz de usuario de Experience Platform. Para obtener información sobre cómo realizar otras tareas de administración del ciclo de vida de datos en la interfaz de usuario, consulte [Información general sobre la IU del ciclo de vida de datos](./overview.md).
 

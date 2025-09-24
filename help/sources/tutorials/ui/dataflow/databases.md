@@ -5,9 +5,9 @@ title: Creación de un flujo de datos con un Source de base de datos en la IU
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Experience Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para un origen de base de datos mediante la interfaz de usuario de Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1698'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,16 @@ Aparecerá el paso [!UICONTROL Mapping], que le proporcionará una interfaz para
 
 Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](../../../../data-prep/ui/mapping.md).
 
+>[!NOTE]
+>
+>Al asignar a esquemas basados en modelos, asegúrese de que los datos de origen incluyan los campos obligatorios, como una clave principal y un identificador de versión, o un identificador de marca de tiempo para esquemas de series temporales,
+
+Las columnas de control como `_change_request_type`, utilizadas para la captura de datos modificados, se leen durante la ingesta, pero no se almacenan en el esquema de destino.
+
+Los esquemas basados en modelos también admiten relaciones entre conjuntos de datos mediante asignaciones de clave principal y externa.
+
+Para obtener más información, consulte la [descripción general de Data Mirror](../../../../xdm/data-mirror/overview.md) y la [referencia técnica de esquemas basados en modelos](../../../../xdm/schema/model-based.md).
+
 Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
 
 ![asignación](../../../images/tutorials/dataflow/table-based/mapping.png)
@@ -123,7 +133,7 @@ Consulte la tabla siguiente para obtener más información sobre las configuraci
 Aparece el paso **[!UICONTROL Revisar]**, que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
 * **[!UICONTROL Conexión]**: muestra el tipo de origen, la ruta de acceso relevante del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
-* **[!UICONTROL Asignar campos de conjunto de datos y asignación]**: muestra en qué conjunto de datos se están ingiriendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
+* **[!UICONTROL Asignar campos de conjunto de datos y asignación]**: Muestra el conjunto de datos en el que se incorporarán los datos de origen, junto con el esquema asociado. Si utiliza un esquema basado en modelos, compruebe que los campos obligatorios, como la clave principal y el identificador de versión, estén asignados correctamente. Asegúrese también de que las columnas de control de captura de datos cambiadas están configuradas correctamente. Los conjuntos de datos que usan esquemas basados en modelos admiten varios modelos de datos y habilitan [cambiar los flujos de trabajo de captura de datos](../../api/change-data-capture.md).
 * **[!UICONTROL Programación]**: muestra el período activo, la frecuencia y el intervalo de la programación de ingesta.
 
 Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]** y espere un poco para que se cree el flujo de datos.
@@ -138,7 +148,7 @@ Una vez creado el flujo de datos, puede monitorizar los datos que se están ingi
 
 Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente mediante la función **[!UICONTROL Delete]** disponible en el área de trabajo **[!UICONTROL Flujos de datos]**. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre [eliminar flujos de datos en la interfaz de usuario](../delete.md).
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos del origen de la base de datos a Experience Platform. Los datos entrantes ahora pueden ser utilizados por servicios de flujo descendente [!DNL Experience Platform] como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 

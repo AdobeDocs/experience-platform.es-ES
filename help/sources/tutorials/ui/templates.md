@@ -3,9 +3,9 @@ description: Aprenda a utilizar plantillas en la IU de Adobe Experience Platform
 title: Creación de un flujo de datos de origen mediante plantillas en la IU
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2314'
 ht-degree: 10%
 
 ---
@@ -65,6 +65,12 @@ Aparece una ventana emergente que presenta la opción de examinar las plantillas
 
 * **Examinar plantillas**: Las plantillas de fuentes crean esquemas, identidades, conjuntos de datos y flujos de datos con reglas de asignación automáticamente. Puede personalizar estos recursos según sea necesario.
 * **Usar mis recursos existentes**: ingrese los datos usando los conjuntos de datos y esquemas existentes que creó. También puede crear nuevos conjuntos de datos y esquemas si es necesario.
+
+>[!NOTE]
+>
+>Las plantillas pueden generar automáticamente esquemas basados en modelos cuando se trabaja con fuentes que requieren flujos de trabajo de captura de datos modificados o admiten varios modelos de datos. Estos esquemas habilitan las funciones de Data Mirror para la sincronización de datos en tiempo real.\
+>Al utilizar plantillas con esquemas basados en modelos, los recursos generados automáticamente incluirán los campos clave principal, identificador de versión e identificador de marca de tiempo necesarios.\
+>Para obtener más información, consulte la [descripción general de Data Mirror](../../../xdm/data-mirror/overview.md) y la [referencia técnica de esquemas basados en modelos](../../../xdm/schema/model-based.md).
 
 Para usar recursos generados automáticamente, selecciona **[!UICONTROL Examinar plantillas]** y luego selecciona **[!UICONTROL Seleccionar]**.
 
@@ -259,7 +265,7 @@ Por último, revisa los detalles del flujo de datos y selecciona **[!UICONTROL G
 
 ![Paso de revisión de un flujo de datos de borrador.](../../images/tutorials/templates/review.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado flujos de datos, así como recursos como esquemas, conjuntos de datos y áreas de nombres de identidad mediante plantillas. Para obtener información general sobre las fuentes, visite [descripción general de las fuentes](../../home.md).
 
