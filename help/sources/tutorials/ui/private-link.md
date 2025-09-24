@@ -1,13 +1,10 @@
 ---
 title: Compatibilidad Con Vínculos Privados Para Fuentes En La Interfaz De Usuario
 description: Aprenda a utilizar vínculos privados de Azure para las fuentes en la interfaz de usuario de Experience Platform.
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -16,16 +13,29 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Esta función está en versión beta y actualmente solo es compatible con las siguientes fuentes:
+>Las siguientes fuentes admiten esta función:
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>Actualmente, la compatibilidad con enlaces privados solo está disponible para las organizaciones que han adquirido Adobe Healthcare Shield o Adobe Privacy &amp; Security Shield.
 
 Puede utilizar la función Vínculos privados para crear extremos privados a los que se conectarán los orígenes de Adobe Experience Platform. Conecte sus fuentes de forma segura a una red virtual mediante direcciones IP privadas, lo que elimina la necesidad de direcciones IP públicas y reduce la superficie de ataque. Simplifique la configuración de la red eliminando la necesidad de configuraciones complejas de firewall o traducción de direcciones de red, a la vez que garantiza que el tráfico de datos solo llegue a los servicios aprobados.
 
 Lea esta guía para aprender a utilizar el espacio de trabajo de fuentes en la interfaz de usuario de Experience Platform para crear y utilizar un extremo privado.
+
+>[!BEGINSHADEBOX]
+
+## Derecho de uso de licencias para compatibilidad con vínculos privados
+
+Las métricas de asignación de derechos de uso de licencias para la compatibilidad con vínculos privados en fuentes de son las siguientes:
+
+* Los clientes tienen derecho a hasta 2 TB por año de transferencia de datos a través de fuentes compatibles ([!DNL Azure Blob Storage], [!DNL ADLS Gen2] y [!DNL Azure File Storage]), en todas las zonas protegidas y organizaciones.
+* Cada organización puede tener un máximo de 10 extremos para todas las zonas protegidas de producción.
+* Cada organización puede tener un máximo de 1 extremo para todas las zonas protegidas de desarrollo.
+
+>[!ENDSHADEBOX]
 
 ## Crear un extremo privado
 
@@ -45,7 +55,6 @@ A continuación, elija el origen deseado y, a continuación, introduzca los valo
 | `subscriptionId` | El identificador asociado con su suscripción a [!DNL Azure]. Para obtener más información, lea la guía de [!DNL Azure] sobre [recuperación de los ID de suscripción e inquilino de [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | Nombre de su grupo de recursos en [!DNL Azure]. Un grupo de recursos contiene recursos relacionados para una solución [!DNL Azure]. Para obtener más información, lea la guía [!DNL Azure] sobre [administración de grupos de recursos](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceGroup` | El nombre del recurso. En [!DNL Azure], un recurso hace referencia a instancias como máquinas virtuales, aplicaciones web y bases de datos. Para obtener más información, lea la guía de [!DNL Azure] sobre [cómo entender al [!DNL Azure] administrador de recursos](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | Los nombres de dominio completos para su origen. **NOTA**: Esta propiedad solo es necesaria cuando se usa el origen [!DNL Snowflake]. |
 
 {style="table-layout:auto"}
 
