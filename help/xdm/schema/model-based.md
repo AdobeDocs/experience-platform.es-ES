@@ -71,7 +71,7 @@ Utilice un descriptor de clave principal para asegurarse de que cada registro se
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de versión y los descriptores de marca de tiempo aparecen como &quot;[!UICOTRNOL Identificador de versión]&quot; y &quot;[!UICOTRNOL Identificador de marca de tiempo]&quot; respectivamente.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de versión y los descriptores de marca de tiempo aparecen como &quot;[ !UICOTRNOL Identificador de versión]&quot; y &quot;[ !UICOTRNOL Identificador de marca de tiempo]&quot; respectivamente.
 
 **Ejemplo (un solo campo):**
 

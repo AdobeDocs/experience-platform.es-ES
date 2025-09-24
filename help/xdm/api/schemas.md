@@ -302,7 +302,7 @@ Cree primero el esquema con `POST /tenant/schemas`. A continuación, agregue los
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de versión y los descriptores de marca de tiempo aparecen como &quot;[!UICOTRNOL Identificador de versión]&quot; y &quot;[!UICOTRNOL Identificador de marca de tiempo]&quot; respectivamente.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de versión y los descriptores de marca de tiempo aparecen como &quot;[ !UICOTRNOL Identificador de versión]&quot; y &quot;[ !UICOTRNOL Identificador de marca de tiempo]&quot; respectivamente.
 
 <!-- >[!AVAILABILITY]
 >

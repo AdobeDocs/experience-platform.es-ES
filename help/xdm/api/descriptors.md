@@ -525,7 +525,7 @@ El descriptor de clave principal (`xdm:descriptorPrimaryKey`) aplica restriccion
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de versión aparece como &quot;[!UICOTRNOL Identificador de versión]&quot;.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de versión aparece como &quot;[ !UICOTRNOL Identificador de versión]&quot;.
 
 El descriptor de versión (`xdm:descriptorVersion`) designa un campo para detectar y evitar conflictos por eventos de cambio desordenados.
 
@@ -547,7 +547,7 @@ El descriptor de versión (`xdm:descriptorVersion`) designa un campo para detect
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de marca de tiempo aparece como &quot;[!UICOTRNOL Identificador de marca de tiempo]&quot;.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de marca de tiempo aparece como &quot;[ !UICOTRNOL Identificador de marca de tiempo]&quot;.
 
 El descriptor de marca de tiempo (`xdm:descriptorTimestamp`) designa un campo de fecha y hora como marca de tiempo para esquemas con `"meta:behaviorType": "time-series"`.
 
