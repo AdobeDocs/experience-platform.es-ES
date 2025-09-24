@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Extremo de API de esquemas
 description: El extremo /schemas de la API de Registro de esquemas le permite administrar mediante programación esquemas XDM dentro de la aplicación de experiencia.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 4%
@@ -302,7 +302,7 @@ Cree primero el esquema con `POST /tenant/schemas`. A continuación, agregue los
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de versión y los descriptores de marca de tiempo aparecen como &quot;[ !UICOTRNOL Identificador de versión]&quot; y &quot;[ !UICOTRNOL Identificador de marca de tiempo]&quot; respectivamente.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de versión y los descriptores de marca de tiempo aparecen como &quot;[!UICONTROL Identificador de versión]&quot; y &quot;[!UICONTROL Identificador de marca de tiempo]&quot; respectivamente.
 
 <!-- >[!AVAILABILITY]
 >

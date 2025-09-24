@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API de Registro de esquemas le permite administrar mediante programación descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 1%
@@ -525,7 +525,7 @@ El descriptor de clave principal (`xdm:descriptorPrimaryKey`) aplica restriccion
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de versión aparece como &quot;[ !UICOTRNOL Identificador de versión]&quot;.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de versión aparece como &quot;[!UICONTROL Identificador de versión]&quot;.
 
 El descriptor de versión (`xdm:descriptorVersion`) designa un campo para detectar y evitar conflictos por eventos de cambio desordenados.
 
@@ -547,7 +547,7 @@ El descriptor de versión (`xdm:descriptorVersion`) designa un campo para detect
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de marca de tiempo aparece como &quot;[ !UICOTRNOL Identificador de marca de tiempo]&quot;.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de marca de tiempo aparece como &quot;[!UICONTROL Identificador de marca de tiempo]&quot;.
 
 El descriptor de marca de tiempo (`xdm:descriptorTimestamp`) designa un campo de fecha y hora como marca de tiempo para esquemas con `"meta:behaviorType": "time-series"`.
 

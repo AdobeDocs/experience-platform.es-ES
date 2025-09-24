@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Esquemas basados en modelos
 description: Obtenga información acerca de los esquemas basados en modelos (también denominados esquemas relacionales) en Adobe Experience Platform, incluidas las funciones, los campos obligatorios, las relaciones y las limitaciones.
 badge: Disponibilidad limitada
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -37,7 +38,7 @@ Utilice esquemas basados en modelos para lo siguiente:
 
 ## Cómo difieren los esquemas basados en modelos de los esquemas XDM estándar
 
-Los esquemas XDM estándar en Experience Platform siguen uno de los tres comportamientos de datos: registro, serie temporal o ad hoc. Para ver definiciones y detalles, consulte [comportamientos de datos XDM](https://experienceleague.adobe.com/es/docs/experience-platform/xdm/home#data-behaviors).
+Los esquemas XDM estándar en Experience Platform siguen uno de los tres comportamientos de datos: registro, serie temporal o ad hoc. Para ver definiciones y detalles, consulte [comportamientos de datos XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 En el modelo tradicional, los esquemas de registros y series temporales participan en [esquemas de unión](../api/unions.md) (consulte también la [guía de la interfaz de usuario del esquema de unión](../../profile/ui/union-schema.md)). Estos esquemas evolucionan automáticamente a medida que se actualizan [grupos de campos](./composition.md#field-group) compartidos y los campos personalizados deben anidarse en un área de nombres de inquilino. Aunque es potente, este modelo puede ralentizar la incorporación, producir esquemas demasiado complejos con campos no utilizados y requerir una asignación o transformación de datos adicional. Estos factores aumentan la curva de aprendizaje y el esfuerzo de mantenimiento continuo.
 
@@ -71,7 +72,7 @@ Utilice un descriptor de clave principal para asegurarse de que cada registro se
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de versión y los descriptores de marca de tiempo aparecen como &quot;[ !UICOTRNOL Identificador de versión]&quot; y &quot;[ !UICOTRNOL Identificador de marca de tiempo]&quot; respectivamente.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de versión y los descriptores de marca de tiempo aparecen como &quot;[!UICONTROL Identificador de versión]&quot; y &quot;[!UICONTROL Identificador de marca de tiempo]&quot; respectivamente.
 
 **Ejemplo (un solo campo):**
 
@@ -210,4 +211,3 @@ Revise las siguientes limitaciones antes de utilizar esquemas basados en modelos
 * Las relaciones se limitan a uno a uno y a varios a uno.
 * La disponibilidad depende de la licencia o de la habilitación de funciones.
 * Las claves principales compuestas son necesarias para los esquemas de series temporales.
-

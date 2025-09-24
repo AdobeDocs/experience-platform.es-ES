@@ -3,9 +3,9 @@ title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '432'
 ht-degree: 6%
 
 ---
@@ -44,9 +44,6 @@ Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de
 
 >[!IMPORTANT]
 >
->Las solicitudes de eliminación de registros solo están disponibles para las organizaciones que han adquirido **Adobe Healthcare Shield**.
->
->
 >Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Son **no** para usar en solicitudes de derechos de titulares de datos (cumplimiento) relacionadas con normas de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento, usa [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
 La API de higiene de datos permite eliminar todos los registros asociados con una identidad en uno o todos los conjuntos de datos. Todas las tareas del ciclo de vida de datos que eliminan identidades están representadas por una construcción denominada orden de trabajo. Consulte la [guía de extremo de orden de trabajo](./workorder.md) para obtener detalles sobre cómo trabajar con eliminaciones de registros en la API.
@@ -55,6 +52,6 @@ La API de higiene de datos permite eliminar todos los registros asociados con un
 
 Su organización se limita a una cuota de trabajo mensual predeterminada para cada tipo de operación del ciclo vital de datos, que puede variar según la licencia. Consulte la [guía de extremo de cuota](./quota.md) para obtener más información sobre cómo ver el estado de cuota actual de los procesos del ciclo de vida de datos.
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo administrar las solicitudes del ciclo vital de datos mediante llamadas a la API. Para obtener información sobre cómo realizar estas acciones en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario del ciclo vital de datos](../ui/overview.md).
