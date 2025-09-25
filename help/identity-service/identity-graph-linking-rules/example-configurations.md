@@ -2,7 +2,7 @@
 title: Guía de configuración de reglas de vinculación de Identity Graph
 description: Obtenga información sobre los distintos tipos de implementación que puede configurar mediante las reglas de vinculación de gráficos de identidad.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
+source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -24,7 +24,7 @@ Los escenarios de gráficos de clientes se pueden agrupar en tres categorías di
 * **Intermedio**: [Las implementaciones intermedias](#intermediate-implementations) incluyen varias variables como **varios espacios de nombres entre dispositivos**, **identidades no únicas** y **varios espacios de nombres únicos**.
 * **Avanzadas**: [Las implementaciones avanzadas](#advanced-implementations) implican escenarios de gráficos complejos y de varias capas. Para implementaciones avanzadas, es esencial establecer la prioridad de área de nombres correcta para garantizar que se eliminen los vínculos adecuados, lo que evita el colapso del gráfico.
 
-## Introducción 
+## Introducción
 
 Antes de sumergirse en el siguiente documento, asegúrese de familiarizarse con varios conceptos importantes del servicio de identidad y [!DNL Identity Graph Linking Rules].
 
@@ -133,6 +133,7 @@ Lea esta sección para implementaciones intermedias de [!DNL Identity Graph Link
 >[!NOTE]
 >
 >Para completar las implementaciones siguientes, debe crear las siguientes áreas de nombres personalizadas con los símbolos de identidad (con distinción de mayúsculas y minúsculas) de:
+>
 >* `CRMID`
 >* `CChash` (es un área de nombres personalizada que representa un número de tarjeta de crédito con hash).
 
@@ -228,6 +229,7 @@ CRMID: Jill, CChash: undefined
 >[!NOTE]
 >
 >Para completar las implementaciones siguientes, debe crear áreas de nombres personalizadas con los símbolos de identidad (con distinción de mayúsculas y minúsculas) de:
+>
 >* `CRMID`
 >* `CRMIDhash`
 
@@ -477,6 +479,7 @@ loginID: JanePersonal, ECID: 222
 >[!NOTE]
 >
 >Para completar las implementaciones siguientes, debe crear áreas de nombres personalizadas con los símbolos de identidad (con distinción de mayúsculas y minúsculas) de:
+>
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
@@ -582,7 +585,7 @@ CRMID: Jane, loyaltyID: aaa, Email: jane@g
 
 >[!ENDTABS]
 
-## Pasos siguientes
+## Próximos pasos
 
 Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la siguiente documentación:
 

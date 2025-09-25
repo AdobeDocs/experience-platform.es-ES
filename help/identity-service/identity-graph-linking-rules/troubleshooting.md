@@ -2,9 +2,9 @@
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en Reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
 workflow-type: tm+mt
-source-wordcount: '3295'
+source-wordcount: '3451'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,27 @@ Existen varias razones que explican por qué los fragmentos de eventos de experi
    * Por ejemplo, un evento de experiencia debe contener un `_id` y un `timestamp`.
    * Además, `_id` debe ser único para cada evento (registro).
 
-En el contexto de la prioridad de área de nombres, el perfil rechazará cualquier evento que contenga dos o más identidades con la prioridad de área de nombres más alta. Por ejemplo, si GAID no está marcado como un área de nombres única y llegaron dos identidades con un área de nombres GAID y valores de identidad diferentes, Profile no almacenará ninguno de los eventos.
+En el contexto de la prioridad de área de nombres, el perfil rechazará cualquier evento que contenga dos o más identidades con la prioridad de área de nombres más alta en el **evento entrante dado**. Por ejemplo, supongamos que la configuración de identidad es la siguiente:
+
+| Área de nombres | Único por gráfico | Prioridad |
+| --- | --- | --- |
+| CRMID | ✔️ | 1 |
+| GAID | | 2 |
+| ECID | | 3 |
+
+Para cada escenario, supongamos que los Eventos de experiencia contienen los siguientes eventos:
+
+**Escenario 1: 2 GAID, 1 ECID**
+
+* En este escenario, un evento de experiencia entrante contiene 2 GAID y 1 ECID. Entre estas áreas de nombres, GAID se configura como el área de nombres con la prioridad de área de nombres más alta. Sin embargo, dado que hay 2 GAID, el perfil **no** almacena este evento de experiencia.
+
+**Escenario 2: 2 CRMID, 1 GAID**
+
+* En este escenario, un evento de experiencia entrante contiene 2 CRMID y 1 GAID. Entre estas áreas de nombres, CRMID se configura como el área de nombres con la prioridad de área de nombres más alta. Sin embargo, dado que hay 2 GAID, el perfil **no** almacena este evento de experiencia.
+
+**Escenario 3: 1 CRMID, 2 GAID**
+
+* En este escenario, un evento de experiencia entrante contiene 1 CRMID y 2 GAID. Entre estas áreas de nombres, CRMID se configura como el área de nombres con la prioridad de área de nombres más alta. Dado que solo hay un CRMID, el perfil introducirá los eventos de experiencia porque solo hay una instancia del área de nombres con la prioridad de área de nombres más alta.
 
 **Pasos para solucionar problemas**
 
