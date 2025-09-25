@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
+source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 59%
+source-wordcount: '1723'
+ht-degree: 58%
 
 ---
 
@@ -14,6 +14,15 @@ ht-degree: 59%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## 25 de septiembre de 2025
+
+Versión 3.4.4
+
+* Agregue el campo `releaseNotesUrl` al extension.json con esta página como valor.
+* Dependencias de auditoría.
+* Elimine Yarn y ponga el proceso de compilación en línea con nuestros otros repositorios de código abierto.
+
 
 ## 8 de mayo de 2025
 
@@ -38,7 +47,7 @@ Versión 3.4.1
    * KeyUp
 * Agrega la capacidad de probar con muchos valores (opciones &quot;Agregar otro&quot;) con los siguientes delegados:
    * Eventos
-      * Cambiar
+      * Cambio
    * Condiciones
       * Cookie
       * Landing Page
@@ -131,7 +140,7 @@ Versión 2.0.4
 
 * Se ha agregado compatibilidad con elementos de datos en varios campos. La compatibilidad con elementos de datos se ha añadido a los siguientes eventos: Tiempo en la página, Entra en la ventanilla, Pase de ratón y Tiempo de reproducción de medios. Así como las siguientes condiciones: Tiempo en el sitio y Comparación de valor
 * Añade compatibilidad con el comportamiento predeterminado para ctrl/cmd + clic y para clic con el botón central del ratón cuando se utiliza Demora del vínculo
-* **Se ha marcado la demora del vínculo en el evento de clic como que ya no es compatible.**: puede encontrar más información en el [Blog de recopilación de datos ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=es)para Adobe Experience Platform.
+* **Se ha marcado la demora del vínculo en el evento de clic como que ya no es compatible.**: puede encontrar más información en el [Blog de recopilación de datos ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)para Adobe Experience Platform.
 
 ## 6 de enero de 2021
 
