@@ -42,7 +42,7 @@ Al crear una compilación personalizada de Web SDK, esta se utiliza en todas las
 >[!IMPORTANT]
 >
 >Al deshabilitar los componentes de Web SDK, se puede interrumpir la implementación existente. Cada vez que deshabilite un componente, asegúrese de probar la implementación a fondo para asegurarse de que todas las funcionalidades que necesita funcionan según lo esperado.
->>Cuando desactiva un componente, ya no puede editar su configuración.
+>&#x200B;>Cuando desactiva un componente, ya no puede editar su configuración.
 
 Para crear una compilación personalizada de Web SDK mediante la extensión de etiquetas de Web SDK, siga los pasos a continuación.
 
@@ -124,9 +124,10 @@ Esta sección le permite definir el comportamiento de Web SDK cuando se trata de
 * **[!UICONTROL Usar cookies de terceros]**: cuando esta opción está habilitada, Web SDK intenta almacenar un identificador de usuario en una cookie de terceros. Si se realiza correctamente, el usuario se identifica como un solo usuario a medida que navega por varios dominios, en lugar de identificarse como un usuario independiente en cada dominio. Si esta opción está habilitada, es posible que SDK aún no pueda almacenar el identificador de usuario en una cookie de terceros si el explorador no admite cookies de terceros o si el usuario lo ha configurado para no permitir cookies de terceros. En este caso, SDK solo almacena el identificador en el dominio de origen.
 
   >[!IMPORTANT]
-  >>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
-  >>Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
+  >&#x200B;>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
+  >&#x200B;>Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
   >
+
 ## Configuración de la personalización {#personalization}
 
 Esta sección le permite configurar cómo desea ocultar determinadas partes de una página mientras se carga contenido personalizado. Esto garantiza que los visitantes solo vean la página personalizada.
@@ -206,7 +207,7 @@ La anulación de la configuración de la secuencia de datos es un proceso de dos
 1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](/help/datastreams/configure.md).
 2. A continuación, debe enviar las invalidaciones a Edge Network mediante un comando de Web SDK o utilizando la extensión de etiquetas de Web SDK.
 
-Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1} para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
+Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1&rbrace; para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
 
 Como alternativa a pasar las invalidaciones a través de un comando de Web SDK, puede configurarlas en la pantalla de extensión de etiquetas que se muestra a continuación.
 
