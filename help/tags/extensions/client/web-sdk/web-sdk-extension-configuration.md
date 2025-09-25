@@ -2,9 +2,9 @@
 title: Configuración de la extensión de etiquetas Web SDK
 description: Obtenga información sobre cómo configurar la extensión de etiquetas Experience Platform Web SDK en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3107'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ En este documento se explica cómo configurar la extensión de etiqueta en la in
 
 ## Instalación de la extensión de etiquetas de Web SDK {#install}
 
-La extensión de etiquetas Web SDK necesita que haya una propiedad instalada en. Si aún no lo ha hecho, consulte la documentación de [creación de una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=es).
+La extensión de etiquetas Web SDK necesita que haya una propiedad instalada en. Si aún no lo ha hecho, consulte la documentación de [creación de una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
 Después de crear una propiedad, ábrala y seleccione la ficha **[!UICONTROL Extensiones]** en la barra lateral izquierda.
 
@@ -42,7 +42,7 @@ Al crear una compilación personalizada de Web SDK, esta se utiliza en todas las
 >[!IMPORTANT]
 >
 >Al deshabilitar los componentes de Web SDK, se puede interrumpir la implementación existente. Cada vez que deshabilite un componente, asegúrese de probar la implementación a fondo para asegurarse de que todas las funcionalidades que necesita funcionan según lo esperado.
->&#x200B;>Cuando desactiva un componente, ya no puede editar su configuración.
+>>Cuando desactiva un componente, ya no puede editar su configuración.
 
 Para crear una compilación personalizada de Web SDK mediante la extensión de etiquetas de Web SDK, siga los pasos a continuación.
 
@@ -60,7 +60,8 @@ Para crear una compilación personalizada de Web SDK mediante la extensión de e
    * **[!UICONTROL Puente de Media Analytics]**: Este componente habilita Edge Network Streaming Media mediante la interfaz de Media Analytics. Al deshabilitar este componente, se deshabilitan los siguientes elementos:
       * [Obtener rastreador de Media Analytics](action-types.md#get-media-analytics-tracker) tipo de acción
    * **[!UICONTROL Personalization]**: este componente habilita las integraciones de Adobe Target y Adobe Journey Optimizer. Al deshabilitar este componente, se deshabilitan los siguientes elementos:
-      * [Aplicar propuesta de tipo action](action-types.md)
+      * [Aplicar propuestas](action-types.md#apply-propositions)tipo de acción
+   * **[!UICONTROL Notificaciones push]**: Este componente habilita las notificaciones push web para Adobe Journey Optimizer.
    * **[!UICONTROL Motor de reglas]**: Este componente habilita la toma de decisiones en el dispositivo de Adobe Journey Optimizer. Al deshabilitar este componente, se deshabilitan los siguientes elementos:
       * [Evaluar conjuntos de reglas](action-types.md#evaluate-rulesets) tipo de acción
       * [Suscribir elementos de conjunto de reglas](event-types.md#subscribe-ruleset-items) tipo de evento
@@ -123,10 +124,9 @@ Esta sección le permite definir el comportamiento de Web SDK cuando se trata de
 * **[!UICONTROL Usar cookies de terceros]**: cuando esta opción está habilitada, Web SDK intenta almacenar un identificador de usuario en una cookie de terceros. Si se realiza correctamente, el usuario se identifica como un solo usuario a medida que navega por varios dominios, en lugar de identificarse como un usuario independiente en cada dominio. Si esta opción está habilitada, es posible que SDK aún no pueda almacenar el identificador de usuario en una cookie de terceros si el explorador no admite cookies de terceros o si el usuario lo ha configurado para no permitir cookies de terceros. En este caso, SDK solo almacena el identificador en el dominio de origen.
 
   >[!IMPORTANT]
-  >&#x200B;>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
-  >&#x200B;>Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
+  >>Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en Web SDK.
+  >>Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
   >
-
 ## Configuración de la personalización {#personalization}
 
 Esta sección le permite configurar cómo desea ocultar determinadas partes de una página mientras se carga contenido personalizado. Esto garantiza que los visitantes solo vean la página personalizada.
@@ -206,7 +206,7 @@ La anulación de la configuración de la secuencia de datos es un proceso de dos
 1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](/help/datastreams/configure.md).
 2. A continuación, debe enviar las invalidaciones a Edge Network mediante un comando de Web SDK o utilizando la extensión de etiquetas de Web SDK.
 
-Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1&rbrace; para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
+Consulte la documentación sobre las anulaciones de configuración de la secuencia de datos [1} para obtener instrucciones detalladas sobre cómo anular las configuraciones de la secuencia de datos.](/help/datastreams/overrides.md)
 
 Como alternativa a pasar las invalidaciones a través de un comando de Web SDK, puede configurarlas en la pantalla de extensión de etiquetas que se muestra a continuación.
 
