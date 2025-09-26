@@ -3,10 +3,10 @@ title: Información general sobre el conector Snowflake Source
 description: Obtenga información sobre cómo conectar Snowflake a Adobe Experience Platform mediante API o la interfaz de usuario.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 573691db9f71fcbe8b5edd4ea647d718ab3784e4
+source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 0%
+source-wordcount: '1502'
+ht-degree: 3%
 
 ---
 
@@ -18,17 +18,88 @@ ht-degree: 0%
 >* De manera predeterminada, el origen [!DNL Snowflake] interpreta `null` como una cadena vacía. Póngase en contacto con su representante de Adobe para asegurarse de que los valores de `null` se escriban correctamente como `null` en Adobe Experience Platform.
 >* Para que Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC. La única marca de tiempo compatible con el origen [!DNL Snowflake] es TIMESTAMP_NTZ con la hora UTC.
 
->[!WARNING]
->
->La autenticación básica (o autenticación de clave de cuenta) para el origen [!DNL Snowflake] quedará obsoleta en noviembre de 2025. Debe pasar a la autenticación basada en pares de claves para seguir utilizando el origen e introduciendo datos de la base de datos en Experience Platform. Para obtener más información sobre la obsolescencia, lea la [[!DNL Snowflake] guía de prácticas recomendadas sobre cómo mitigar los riesgos de compromiso de credenciales](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
-
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 Experience Platform es compatible con la ingesta de datos desde una base de datos de terceros. Experience Platform puede conectarse a diferentes tipos de bases de datos, como relacionales, NoSQL o almacenes de datos. La compatibilidad con los proveedores de bases de datos incluye [!DNL Snowflake].
 
 ## Requisitos previos {#prerequisites}
 
 En esta sección se describen las tareas de configuración que debe realizar para poder conectar el origen de [!DNL Snowflake] a Experience Platform.
+
+### LISTA DE PERMITIDOS de direcciones IP
+
+Debe añadir direcciones IP específicas de la región a la lista de permitidos antes de conectar los orígenes a Experience Platform. Para obtener más información, lea la guía de [inclusión en la lista de permitidos de direcciones IP para conectarse a Experience Platform](../../ip-address-allow-list.md).
+
+### Recopilar credenciales necesarias
+
+Debe proporcionar valores para las siguientes propiedades de credenciales para autenticar el origen de [!DNL Snowflake].
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación de clave de cuenta (Azure)]
+
+Proporcione valores para las siguientes credenciales para conectar [!DNL Snowflake] a Experience Platform en Azure mediante la autenticación de clave de cuenta.
+
+| Credencial | Descripción |
+| ---------- | ----------- |
+| `account` | Un nombre de cuenta identifica de forma exclusiva una cuenta de su organización. En este caso, debe identificar una cuenta de forma exclusiva en diferentes organizaciones de [!DNL Snowflake]. Para ello, debe anteponer el nombre de su organización al nombre de la cuenta. Por ejemplo: `orgname-account_name`. Lee la sección sobre [cómo recuperar tu [!DNL Snowflake] identificador de cuenta](#retrieve-your-account-identifier) para obtener más instrucciones. Para obtener más información, consulte la [[!DNL Snowflake] documentación](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `warehouse` | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
+| `database` | La base de datos [!DNL Snowflake] contiene los datos que desea obtener de Experience Platform. |
+| `username` | El nombre de usuario de la cuenta [!DNL Snowflake]. |
+| `password` | Contraseña de la cuenta de usuario [!DNL Snowflake]. |
+| `role` | La función de control de acceso predeterminada que se usará en la sesión [!DNL Snowflake]. La función debe ser una función existente que ya se haya asignado al usuario especificado. La función predeterminada es `PUBLIC`. |
+| `connectionString` | Cadena de conexión utilizada para conectarse a la instancia [!DNL Snowflake]. El patrón de cadena de conexión de [!DNL Snowflake] es `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+
+>[!TAB Autenticación de par de claves (Azure)]
+
+Para utilizar la autenticación de par clave, genere primero un par clave RSA de 2048 bits. A continuación, proporcione valores para las siguientes credenciales para conectarse a Experience Platform en Azure mediante la autenticación de par de claves.
+
+| Credencial | Descripción |
+| --- | --- |
+| `account` | Un nombre de cuenta identifica de forma exclusiva una cuenta de su organización. En este caso, debe identificar una cuenta de forma exclusiva en diferentes organizaciones de [!DNL Snowflake]. Para ello, debe anteponer el nombre de su organización al nombre de la cuenta. Por ejemplo: `orgname-account_name`. Lee la sección sobre [cómo recuperar tu [!DNL Snowflake] identificador de cuenta](#retrieve-your-account-identifier) para obtener más instrucciones. Para obtener más información, consulte la [[!DNL Snowflake] documentación](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `username` | El nombre de usuario de su cuenta de [!DNL Snowflake]. |
+| `privateKey` | La clave privada codificada [!DNL Base64-] de su cuenta de [!DNL Snowflake]. Puede generar claves privadas cifradas o no cifradas. Si utiliza una clave privada cifrada, también debe proporcionar una frase de contraseña de clave privada al autenticarse con Experience Platform. Lea la sección sobre [recuperación de la clave privada](#retrieve-your-private-key) para obtener más información. |
+| `privateKeyPassphrase` | La frase de contraseña de clave privada es una capa adicional de seguridad que debe utilizar al autenticarse con una clave privada cifrada. No es necesario que proporcione la frase de contraseña si utiliza una clave privada no cifrada. |
+| `port` | Número de puerto que usa [!DNL Snowflake] al conectarse a un servidor a través de Internet. |
+| `database` | La base de datos [!DNL Snowflake] que contiene los datos que desea introducir en Experience Platform. |
+| `warehouse` | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
+
+Para obtener más información sobre estos valores, consulte la [[!DNL Snowflake] guía de autenticación de par clave](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!TAB Autenticación básica (AWS)]
+
+Proporcione valores para las siguientes credenciales a fin de conectar [!DNL Snowflake] a Experience Platform en AWS mediante autenticación básica.
+
+>[!WARNING]
+>
+>La autenticación básica (o autenticación de clave de cuenta) para el origen [!DNL Snowflake] quedará obsoleta en noviembre de 2025. Debe pasar a la autenticación basada en pares de claves para seguir utilizando el origen e introduciendo datos de la base de datos en Experience Platform. Para obtener más información sobre la obsolescencia, lea la [[!DNL Snowflake] guía de prácticas recomendadas sobre cómo mitigar los riesgos de compromiso de credenciales](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
+| Credencial | Descripción |
+| --- | --- |
+| `host` | La URL de host a la que se conecta su cuenta de [!DNL Snowflake]. |
+| `port` | Número de puerto que usa [!DNL Snowflake] al conectarse a un servidor a través de Internet. |
+| `username` | El nombre de usuario asociado con su cuenta de [!DNL Snowflake]. |
+| `password` | La contraseña asociada a su cuenta de [!DNL Snowflake]. |
+| `database` | Base de datos [!DNL Snowflake] de la que se extraerán los datos. |
+| `schema` | Nombre del esquema asociado con la base de datos [!DNL Snowflake]. Debe asegurarse de que el usuario al que desea otorgar acceso a la base de datos también tenga acceso a este esquema. |
+| `warehouse` | El almacén de [!DNL Snowflake] que está utilizando. |
+
+>[!TAB Autenticación de par de claves (AWS)]
+
+Para utilizar la autenticación de par clave, genere primero un par clave RSA de 2048 bits. A continuación, proporcione valores para las siguientes credenciales para conectarse a Experience Platform en AWS mediante la autenticación de par de claves.
+
+| Credencial | Descripción |
+| --- | --- |
+| `account` | Un nombre de cuenta identifica de forma exclusiva una cuenta de su organización. En este caso, debe identificar una cuenta de forma exclusiva en diferentes organizaciones de [!DNL Snowflake]. Para ello, debe anteponer el nombre de su organización al nombre de la cuenta. Por ejemplo: `orgname-account_name`. Lee la guía sobre [cómo recuperar tu [!DNL Snowflake] identificador de cuenta](#etrieve-your-account-identifier) para obtener instrucciones adicionales. Para obtener más información, consulte la [[!DNL Snowflake] documentación](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `username` | El nombre de usuario de su cuenta de [!DNL Snowflake]. |
+| `privateKey` | La clave privada del usuario [!DNL Snowflake], codificada en Base64 como una sola línea sin encabezados ni saltos de línea. Para prepararlo, copie el contenido del archivo PEM, quite las `BEGIN`/`END` líneas y todos los saltos de línea y, a continuación, codifique el resultado en base64. Lea la sección sobre [recuperación de la clave privada](#retrieve-your-private-key) para obtener más información. **Nota:** Actualmente no se admiten claves privadas cifradas para una conexión de AWS. |
+| `port` | Número de puerto que usa [!DNL Snowflake] al conectarse a un servidor a través de Internet. |
+| `database` | La base de datos [!DNL Snowflake] que contiene los datos que desea introducir en Experience Platform. |
+| `warehouse` | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
+
+Para obtener más información sobre estos valores, consulte la [[!DNL Snowflake] guía de autenticación de par clave](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!ENDTABS]
 
 ### Recuperación del identificador de cuenta {#retrieve-your-account-identifier}
 
@@ -101,10 +172,6 @@ Para verificar su rol y almacén:
 ![Interfaz de usuario de Snowflake donde puede comprobar su rol y almacén.](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
 Una vez codificada correctamente, puede utilizar esa clave privada codificada con [!DNL Base64] en Experience Platform para autenticar su cuenta de [!DNL Snowflake].
-
-## LISTA DE PERMITIDOS de direcciones IP
-
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 La siguiente documentación proporciona información sobre cómo conectar [!DNL Snowflake] a Experience Platform mediante API o la interfaz de usuario:
 
