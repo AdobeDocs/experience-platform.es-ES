@@ -1,11 +1,9 @@
 ---
 title: Conexión de Capillary a Experience Platform mediante la API de Flow Service
 description: Aprenda a conectar Capillary a Experience Platform mediante API.
-hide: true
-hidefromtoc: true
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
-source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
+source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 2%
