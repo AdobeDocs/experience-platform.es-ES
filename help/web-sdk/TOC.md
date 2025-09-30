@@ -6,10 +6,10 @@ breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
 role: Developer
-source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
+source-git-commit: c697d0e924545caf430382385797bde340b57d94
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 23%
+source-wordcount: '241'
+ht-degree: 27%
 
 ---
 
@@ -43,6 +43,7 @@ ht-degree: 23%
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
       * [prehiddenStyle](commands/configure/prehidingstyle.md)
+      * [pushNotifications](commands/configure/pushnotifications.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
@@ -63,13 +64,14 @@ ht-degree: 23%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [sendPushSubscription](commands/sendPushSubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Configurar anulaciones de secuencia de datos](commands/datastream-overrides.md)
    * [Respuestas de comando](commands/command-responses.md)
 
 * Identidad {#identity}
    * [Información general](identity/overview.md)
-   * [ID de dispositivos de origen](identity/first-party-device-ids.md)
+   * [ID de dispositivos propios](identity/first-party-device-ids.md)
    * [Uso compartido de ID de móviles a web y entre dominios](identity/id-sharing.md)
 
 * Personalización {#personalization}
