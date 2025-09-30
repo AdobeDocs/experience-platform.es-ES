@@ -4,9 +4,9 @@ title: Guía de IU de Esquema de unión
 type: Documentation
 description: En la interfaz de usuario (IU) de Adobe Experience Platform puede ver fácilmente cualquier esquema de unión dentro de su organización y previsualizar los campos, identidades, relaciones y esquemas de contribución para una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la interfaz de usuario de Experience Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 En la interfaz de usuario (IU) de Adobe Experience Platform puede ver fácilmente cualquier esquema de unión dentro de su organización y previsualizar los campos, identidades, relaciones y esquemas de contribución para una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la interfaz de usuario de Experience Platform.
 
-## Introducción
+## Introducción {#getting-started}
 
 Esta guía de interfaz de usuario requiere una comprensión de los distintos servicios de [!DNL Experience Platform] implicados en la administración de los datos del perfil del cliente en tiempo real. Antes de leer esta guía o de trabajar en la interfaz de usuario de, consulte la documentación de los siguientes servicios:
 
@@ -23,7 +23,14 @@ Esta guía de interfaz de usuario requiere una comprensión de los distintos ser
 * [[!DNL Identity Service]](../../identity-service/home.md): habilita [!DNL Real-Time Customer Profile] al unir identidades de orígenes de datos dispares a medida que se incorporan en [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 
-## Explicación de los esquemas de unión
+## Explicación de los esquemas de unión {#understanding-union-schemas}
+
+>[!CONTEXTUALHELP]
+>id="rtcdp_collaboration_union_schema"
+>title="Esquemas de unión"
+>abstract=""
+
+<!-- The above contextual help is used in the Collaboration UI for a read more link. -->
 
 El Perfil del cliente en tiempo real permite crear perfiles sólidos y centralizados que contienen atributos del cliente y eventos con marca de tiempo para cada interacción de clientes en todos los sistemas integrados con Adobe Experience Platform. El formato y la estructura de estos datos los proporcionan los esquemas XDM (Experience Data Model), cada uno de los cuales se basa en una clase XDM y contiene campos compatibles con esa clase.
 
@@ -31,13 +38,13 @@ Los esquemas se pueden crear para varios casos de uso, haciendo referencia a la 
 
 El trabajo con esquemas de unión requiere una comprensión profunda de los esquemas XDM. Para obtener más información, comience por leer los [conceptos básicos de la composición de esquemas](../../xdm/schema/composition.md).
 
-## Ver esquemas de unión
+## Ver esquemas de unión {#view-union-schemas}
 
 Para navegar a esquemas de unión en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Esquema de unión]**. Se abre la pestaña [!UICONTROL Esquema de unión] para mostrar el esquema de unión de la clase seleccionada actualmente.
 
 ![Se muestra la página Esquema de unión, con la ficha Perfil y Esquema de unión resaltadas.](../images/union-schema/landing.png)
 
-## Seleccionar una clase
+## Seleccionar una clase {#select-a-class}
 
 Para mostrar el esquema de unión de una clase XDM específica, seleccione la clase en la lista desplegable **[!UICONTROL Clase]**. Debido a que no todas las clases tienen esquemas de unión, solo las clases con esquemas de unión (es decir, las clases con esquemas que se han habilitado para el perfil) están disponibles en el desplegable.
 
@@ -45,7 +52,7 @@ Una vez seleccionada una clase, el esquema que se muestra se actualiza para refl
 
 ![Se resalta un menú desplegable que contiene las clases del esquema de unión.](../images/union-schema/class.png)
 
-## Explorar esquemas de unión
+## Explorar esquemas de unión {#explore-union-schemas}
 
 Puede explorar el esquema de unión desplazándose hacia arriba y hacia abajo para ver la estructura completa del esquema y seleccionando un corchete angular derecho (`>`) para expandir los campos anidados.
 
@@ -61,7 +68,7 @@ Para obtener más información sobre los conjuntos de datos, incluida la visuali
 
 ![Se resalta la lista de conjuntos de datos relacionados con el esquema.](../images/union-schema/datasets.png)
 
-## Ver esquemas colaboradores
+## Ver esquemas colaboradores {#view-contributing-schemas}
 
 También puede ver qué esquemas específicos están contribuyendo al esquema de unión seleccionando **[!UICONTROL Todos los esquemas que contribuyen]** para expandir la lista de esquemas. Según la clase que haya seleccionado y el número de esquemas que su organización haya creado en Experience Platform, puede ser una lista corta que contenga un solo esquema o una lista larga que contenga muchos esquemas.
 
@@ -71,7 +78,7 @@ Al seleccionar el nombre de un esquema específico, se resaltan los campos del e
 
 ![El esquema de contribución seleccionado está resaltado. Los campos que forman parte del esquema de contribución permanecen en negro, mientras que los campos que no forman parte del esquema de contribución aparecen atenuados.](../images/union-schema/select-schema.png)
 
-## Ver identidades
+## Ver identidades {#view-identities}
 
 A través de la interfaz de usuario puede ver una lista de identidades incluidas en el esquema de unión seleccionando **[!UICONTROL Identidades]** para expandir la lista.
 
@@ -83,7 +90,7 @@ El campo de identidad se resalta dentro del esquema de unión y los detalles de 
 
 ![La identidad seleccionada está resaltada. Los detalles sobre la identidad seleccionada se muestran en la barra lateral derecha.](../images/union-schema/select-identity.png)
 
-## Ver relaciones
+## Ver relaciones {#view-relationships}
 
 La interfaz de usuario del esquema de unión también permite ver las relaciones que se han definido para los esquemas en función de la clase de esquema seleccionada. La definición de una relación es una forma de conectar dos esquemas que pertenecen a clases diferentes para obtener perspectivas más complejas en los datos del cliente.
 
@@ -97,6 +104,6 @@ Si se selecciona un campo de relación de la lista, el esquema mostrado se actua
 
 ![La relación seleccionada está resaltada. El campo correspondiente para la relación también está resaltado.](../images/union-schema/select-relationship.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer esta guía, ahora sabe cómo ver y navegar por esquemas de unión mediante la interfaz de usuario de [!DNL Experience Platform]. Para obtener más información sobre los esquemas, incluido cómo se utilizan en Experience Platform, comience por leer la [descripción general del sistema XDM](../../xdm/home.md).
