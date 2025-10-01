@@ -4,10 +4,10 @@ type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Snowflake mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 3%
+source-wordcount: '1250'
+ht-degree: 2%
 
 ---
 
@@ -111,17 +111,25 @@ Para obtener más información sobre estos valores, consulte [este documento de 
 
 Para crear una nueva cuenta de [!DNL Snowflake] y conectarse a Experience Platform en AWS, asegúrese de que se encuentra en una zona protegida de VA6 y, a continuación, proporcione las credenciales necesarias para la autenticación.
 
+>[!BEGINTABS]
+
+>[!TAB Autenticación de par de claves]
+
+Para conectar usando pares de claves, selecciona **[!UICONTROL Autenticación KeyPair]**, proporciona tus credenciales de autenticación y luego selecciona **[!UICONTROL Conectarse al origen]**. Para obtener más información sobre estas credenciales, lea la [[!DNL Snowflake] descripción general por lotes](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
+![El nuevo paso de creación de cuenta para la autenticación de pares de claves.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+
+>[!TAB Autenticación básica]
+
+>[!WARNING]
+>
+>La autenticación básica (o autenticación de clave de cuenta) para el origen [!DNL Snowflake] quedará obsoleta en noviembre de 2025. Debe pasar a la autenticación basada en pares de claves para seguir utilizando el origen e introduciendo datos de la base de datos en Experience Platform. Para obtener más información sobre la obsolescencia, lea la [[!DNL Snowflake] guía de prácticas recomendadas sobre cómo mitigar los riesgos de compromiso de credenciales](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
+Para conectarse usando una combinación de nombre de usuario y contraseña, seleccione **[!UICONTROL Autenticación básica]**, proporcione sus credenciales de autenticación y luego seleccione **[!UICONTROL Conectarse al origen]**. Para obtener más información sobre estas credenciales, lea la [[!DNL Snowflake] descripción general por lotes](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
 ![Paso de nueva cuenta en el flujo de trabajo de orígenes donde puede conectar Snowflake a Experience Platform en AWS.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
-| Credencial | Descripción |
-| --- | --- |
-| Host | La URL de host a la que se conecta su cuenta de [!DNL Snowflake]. |
-| Puerto | Número de puerto que usa [!DNL Snowflake] al conectarse a un servidor a través de Internet. |
-| Nombre de usuario | El nombre de usuario asociado con su cuenta de [!DNL Snowflake]. |
-| Contraseña | La contraseña asociada a su cuenta de [!DNL Snowflake]. |
-| Base de datos | Base de datos [!DNL Snowflake] de la que se extraerán los datos. |
-| Esquema | Nombre del esquema asociado con la base de datos [!DNL Snowflake]. Debe asegurarse de que el usuario al que desea otorgar acceso a la base de datos también tenga acceso a este esquema. |
-| Almacén | El almacén de [!DNL Snowflake] que está utilizando. |
+>[!ENDTABS]
 
 ### Omitir vista previa de datos de ejemplo {#skip-preview-of-sample-data}
 
@@ -129,6 +137,6 @@ Durante el paso de selección de datos, puede encontrar un tiempo de espera al i
 
 El resto del flujo de trabajo sigue siendo el mismo. La única advertencia es que omitir la previsualización de datos puede impedir que los campos calculados y requeridos se validen automáticamente durante el paso de asignación y, a continuación, tendrá que validar manualmente esos campos durante la asignación.
 
-## Pasos siguientes
+## Próximos pasos
 
 Con este tutorial ha establecido una conexión con su cuenta de Snowflake. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en [!DNL Experience Platform]](../../dataflow/databases.md).
