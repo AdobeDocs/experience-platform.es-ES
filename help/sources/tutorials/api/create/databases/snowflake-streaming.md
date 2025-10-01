@@ -3,9 +3,9 @@ title: Conecte su cuenta de flujo continuo de Snowflake a Adobe Experience Platf
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Snowflake Streaming mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: a4a464f1f3b61311754a39f2a6e6a4ef21af3ab0
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '874'
 ht-degree: 5%
 
 ---
@@ -26,11 +26,13 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 * [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Experience Platform].
 * [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Para obtener información y configuración previas sobre el origen de flujo de [!DNL Snowflake]. Lea la [[!DNL Snowflake] descripción general del origen de transmisión](../../../../connectors/databases/snowflake-streaming.md).
-
 ### Uso de API de Experience Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Experience Platform, consulte la guía sobre [introducción a las API de Experience Platform](../../../../../landing/api-guide.md).
+
+### Recopilar credenciales necesarias
+
+Lea la [[!DNL Snowflake] descripción general](../../../../connectors/databases/snowflake-streaming.md#prerequisites) para obtener información sobre la autenticación.
 
 ## Crear una conexión base {#create-a-base-connection}
 
@@ -288,7 +290,7 @@ Una respuesta correcta devuelve su ID de flujo y su etiqueta correspondiente.
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado un flujo de datos de flujo continuo para los datos de [!DNL Snowflake] mediante la API [!DNL Flow Service]. Visite la siguiente documentación para obtener más información sobre las fuentes de Adobe Experience Platform:
 

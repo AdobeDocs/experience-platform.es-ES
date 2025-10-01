@@ -2,12 +2,11 @@
 title: Información general sobre el conector Source de Snowflake Streaming
 description: Obtenga información sobre cómo crear una conexión de origen y un flujo de datos para introducir datos de flujo continuo de la instancia de Snowflake a Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 1%
+source-wordcount: '1390'
+ht-degree: 3%
 
 ---
 
@@ -19,8 +18,7 @@ ht-degree: 1%
 >
 >* Ahora puede usar el origen de flujo continuo [!DNL Snowflake] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
 
-
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 Experience Platform proporciona compatibilidad para la transmisión de datos desde una base de datos de [!DNL Snowflake].
 
@@ -34,15 +32,19 @@ Utilizando [!DNL Kafka Connect], el origen de flujo [!DNL Snowflake] realiza un 
 
 En la siguiente sección se describen los pasos necesarios que se deben seguir para poder transmitir datos de la base de datos [!DNL Snowflake] a Experience Platform:
 
-### Actualice la lista de permitidos de direcciones IP
+### LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) para obtener más información.
+Debe añadir direcciones IP específicas de la región a la lista de permitidos antes de conectar los orígenes a Experience Platform. Para obtener más información, lea la guía de [inclusión en la lista de permitidos de direcciones IP para conectarse a Experience Platform](../../ip-address-allow-list.md).
 
 La siguiente documentación proporciona información sobre cómo conectar [!DNL Amazon Redshift] a Experience Platform mediante API o la interfaz de usuario:
 
 ### Recopilar credenciales necesarias
 
 Para que [!DNL Flow Service] se conecte con [!DNL Snowflake], debe proporcionar las siguientes propiedades de conexión:
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación básica]
 
 | Credencial | Descripción |
 | --- | --- |
@@ -54,7 +56,90 @@ Para que [!DNL Flow Service] se conecte con [!DNL Snowflake], debe proporcionar 
 | `role` | (Opcional) Una función personalizada que se puede proporcionar a un usuario para una conexión determinada. Si no se proporciona, el valor predeterminado es `public`. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL Snowflake] es `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-{style="table-layout:auto"}
+>[!TAB Autenticación de par de claves]
+
+Para utilizar la autenticación de par clave, debe generar un par clave RSA de 2048 bits y, a continuación, proporcionar los siguientes valores al crear una cuenta para el origen [!DNL Snowflake].
+
+| Credencial | Descripción |
+| --- | --- |
+| `account` | Un nombre de cuenta identifica de forma exclusiva una cuenta de su organización. En este caso, debe identificar una cuenta de forma exclusiva en diferentes organizaciones de [!DNL Snowflake]. Para ello, debe anteponer el nombre de su organización al nombre de la cuenta. Por ejemplo: `orgname-account_name`. Lee la guía sobre [cómo recuperar tu [!DNL Snowflake] identificador de cuenta](./snowflake.md#retrieve-your-account-identifier) para obtener instrucciones adicionales. Para obtener más información, consulte la [[!DNL Snowflake] documentación](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `username` | El nombre de usuario de su cuenta de [!DNL Snowflake]. |
+| `privateKey` | La clave privada codificada [!DNL Base64-] de su cuenta de [!DNL Snowflake]. Puede generar claves privadas cifradas o no cifradas. Si utiliza una clave privada cifrada, también debe proporcionar una frase de contraseña de clave privada al autenticarse con Experience Platform. Lee la guía sobre [recuperar tu [!DNL Snowflake] clave privada](./snowflake.md) para obtener más información. |
+| `passphrase` | La frase de contraseña es una capa adicional de seguridad que debe utilizar al autenticarse con una clave privada cifrada. No es necesario que proporcione la frase de contraseña si utiliza una clave privada no cifrada. |
+| `database` | La base de datos [!DNL Snowflake] que contiene los datos que desea introducir en Experience Platform. |
+| `warehouse` | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
+
+Para obtener más información sobre estos valores, consulte la [[!DNL Snowflake] guía de autenticación de par clave](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!ENDTABS]
+
+### Recuperación del identificador de cuenta {#retrieve-your-account-identifier}
+
+Para autenticar su instancia de [!DNL Snowflake] con Experience Platform, debe obtener su identificador de cuenta del panel de interfaz de usuario de [!DNL Snowflake].
+
+Siga estos pasos para encontrar el identificador de su cuenta:
+
+* Vaya a su cuenta en [[!DNL Snowflake] panel de interfaz de usuario de la aplicación](https://app.snowflake.com/).
+* En el panel de navegación izquierdo, seleccione **[!DNL Accounts]**, seguido de **[!DNL Active Accounts]** en el encabezado.
+* A continuación, seleccione el icono de información y, luego, seleccione y copie el nombre de dominio de la dirección URL actual.
+
+### Recuperación de la clave privada {#retrieve-your-private-key}
+
+Si planea usar la autenticación de par de claves para su conexión [!DNL Snowflake], debe generar una clave privada antes de conectarse a Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB Crear una clave privada cifrada]
+
+Para generar su clave privada [!DNL Snowflake] cifrada, ejecute el siguiente comando en el terminal:
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```
+
+Si lo consigue, debería recibir su clave privada en formato PEM.
+
+```shell
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIE6T...
+-----END ENCRYPTED PRIVATE KEY-----
+```
+
+>[!TAB Crear una clave privada no cifrada]
+
+Para generar la clave privada [!DNL Snowflake] sin cifrar, ejecute el siguiente comando en el terminal:
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
+```
+
+Si lo consigue, debería recibir su clave privada en formato PEM.
+
+```shell
+-----BEGIN PRIVATE KEY-----
+MIIE6T...
+-----END PRIVATE KEY-----
+```
+
+>[!ENDTABS]
+
+Después de generar la clave privada, codifíquela directamente en [!DNL Base64] sin realizar cambios en el formato o el contenido. Antes de codificar, asegúrese de que no haya espacios adicionales ni líneas en blanco (incluidas las líneas nuevas finales) al final de la clave privada.
+
+### Comprobar configuraciones
+
+Para poder crear una conexión de origen para los datos de [!DNL Snowflake], también debe asegurarse de que se cumplan las siguientes configuraciones:
+
+* El almacén predeterminado asignado a un usuario determinado debe ser el mismo que el almacén introducido al autenticarse en Experience Platform.
+* La función predeterminada asignada a un usuario determinado debe tener acceso a la misma base de datos que especificó al autenticarse en Experience Platform.
+
+Para verificar su rol y almacén:
+
+* Seleccione **[!DNL Admin]** en el panel de navegación izquierdo y luego seleccione **[!DNL Users & Roles]**.
+* Seleccione el usuario adecuado y, a continuación, seleccione los puntos suspensivos (`...`) en la esquina superior derecha.
+* En la ventana [!DNL Edit user] que aparece, vaya a [!DNL Default Role] para ver la función asociada con el usuario determinado.
+* En la misma ventana, vaya a [!DNL Default Warehouse] para ver el almacén asociado con el usuario determinado.
+
+Una vez codificada correctamente, puede utilizar esa clave privada codificada con [!DNL Base64] en Experience Platform para autenticar su cuenta de [!DNL Snowflake].
 
 ### Configurar las opciones de rol {#configure-role-settings}
 
@@ -85,7 +170,7 @@ Para obtener más información sobre la administración de roles y privilegios, 
    * La columna de marca de tiempo debe tener el formato de tipo: `TIMESTAMP_LTZ` o `TIMESTAMP_NTZ`. Si la columna de marca de tiempo se establece en `TIMESTAMP_NTZ`, la zona horaria correspondiente en la que se almacenan los valores se debe pasar a través del parámetro `timezoneValue`. Si no se proporciona, el valor predeterminado será UTC.
       * `TIMESTAMP_TZ` no se puede usar en una columna de marca de tiempo o en una asignación.
 
-## Pasos siguientes
+## Próximos pasos
 
 >[!NOTE]
 >

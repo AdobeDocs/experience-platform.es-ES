@@ -2,18 +2,18 @@
 title: Transmitir datos de la base de datos de Snowflake a Experience Platform mediante la interfaz de usuario
 description: Aprenda a transmitir datos de su base de datos de Snowflake a Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
+source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1451'
 ht-degree: 3%
 
 ---
 
 # Transmitir datos de su base de datos [!DNL Snowflake] a Experience Platform mediante la interfaz de usuario
 
-Aprenda a utilizar la interfaz de usuario para transmitir datos de la base de datos [!DNL Snowflake] a Adobe Experience Platform siguiendo esta guía.
+Lea esta guía para obtener información sobre cómo transmitir datos desde la base de datos de [!DNL Snowflake] a Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario.
 
-## Introducción 
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -30,7 +30,7 @@ Lea la guía sobre la configuración de [requisitos previos para [!DNL Snowflake
 
 En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En la categoría *Bases de datos*, seleccione **[!DNL Snowflake Streaming]** y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
+En la categoría *Bases de datos*, seleccione **[!DNL Snowflake Streaming]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
 
 >[!TIP]
 >
@@ -40,37 +40,33 @@ En la categoría *Bases de datos*, seleccione **[!DNL Snowflake Streaming]** y, 
 
 Aparecerá la página **[!UICONTROL Conectar cuenta de streaming de Snowflake]**. En esta página, puede usar credenciales nuevas o existentes.
 
->[!BEGINTABS]
+### Crear una nueva cuenta
 
->[!TAB Crear una nueva cuenta]
-
-Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y proporciona un nombre, una descripción opcional y tus credenciales.
-
-Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
+Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y proporciona un nombre y una descripción opcional para tu cuenta.
 
 ![La nueva interfaz de creación de cuentas del flujo de trabajo de orígenes.](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
-| Credencial | Descripción |
-| --- | --- |
-| Cuenta | El nombre de su cuenta de [!DNL Snowflake]. Para conocer las convenciones sobre los nombres de cuenta, lea la [[!DNL Snowflake Streaming] guía de autenticación](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
-| Almacén | Nombre de su almacén de [!DNL Snowflake]. Los almacenes administran la ejecución de consultas en [!DNL Snowflake]. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual para llevar los datos a Experience Platform. |
-| Base de datos | Nombre de su base de datos [!DNL Snowflake]. La base de datos contiene los datos que desea llevar a Experience Platform. |
-| Esquema | (Opcional) El esquema de base de datos asociado con su cuenta de [!DNL Snowflake]. |
-| Nombre de usuario | El nombre de usuario de su cuenta de [!DNL Snowflake]. |
-| Contraseña | Contraseña de su cuenta de [!DNL Snowflake]. |
-| Función | (Opcional) Una función personalizada que se puede proporcionar a un usuario para una conexión determinada. Si no se proporciona, el valor predeterminado es `public`. |
+>[!BEGINTABS]
 
-Para obtener más información acerca de la creación de cuentas, lea la sección sobre [configuración de funciones](../../../../connectors/databases/snowflake-streaming.md#configure-role-settings) en la descripción general de [!DNL Snowflake Streaming].
+>[!TAB Autenticación básica]
 
->[!TAB Usar una cuenta existente]
+Para usar [!UICONTROL Autenticación básica], seleccione **[!UICONTROL Autenticación básica para Snowflake]** y proporcione las credenciales de su cuenta de [!DNL Snowflake]. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y espere unos momentos para que se establezca la conexión.
 
-Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la cuenta que desee del catálogo de cuentas existente.
+Lea la información general de [!DNL Snowflake Streaming] para obtener más información sobre [recopilar las credenciales necesarias](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
-Seleccione **[!UICONTROL Siguiente]** para continuar.
+![La nueva interfaz de cuenta en el flujo de trabajo de orígenes, con la autenticación básica seleccionada.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
-![La página de selección de cuentas existente del catálogo de orígenes.](../../../../images/tutorials/create/snowflake-streaming/existing.png)
+>[!TAB Autenticación KeyPair]
+
+Para usar la autenticación [!UICONTROL KeyPair], selecciona **[!UICONTROL Autenticación KeyPair para Snowflake]** y proporciona las credenciales de tu cuenta de [!DNL Snowflake]. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y espere unos momentos para que se establezca la conexión.
+
+Lea la información general de [!DNL Snowflake Streaming] para obtener más información sobre [recopilar las credenciales necesarias](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+
+![La nueva interfaz de cuenta en el flujo de trabajo de orígenes, autenticación de par clave seleccionada](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
 >[!ENDTABS]
+
+Para usar una cuenta existente, elige **[!UICONTROL Cuenta existente]**, selecciona tu cuenta de la lista y selecciona **[!UICONTROL Siguiente]**.
 
 ## Seleccionar datos {#select-data}
 
@@ -83,8 +79,6 @@ Seleccione **[!UICONTROL Siguiente]** para continuar.
 Aparecerá el paso [!UICONTROL Seleccionar datos]. En este paso, debe seleccionar los datos que desea importar en Experience Platform, configurar las marcas de tiempo y las zonas horarias, y proporcionar un archivo de datos de origen de muestra para la ingesta de datos sin procesar.
 
 Utilice el directorio de base de datos que encontrará a la izquierda de la pantalla y seleccione la tabla que desea importar a Experience Platform.
-
-![Interfaz de datos de selección con una tabla de base de datos seleccionada.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
 A continuación, seleccione el tipo de columna de marca de tiempo de la tabla. Puede seleccionar entre dos tipos de columnas de marca de tiempo: `TIMESTAMP_NTZ` o `TIMESTAMP_LTZ`. Si selecciona un tipo de columna de `TIMESTAMP_NTZ`, también debe proporcionar una zona horaria. Las columnas no deben tener una restricción nula. Para obtener más información, lea la sección sobre [limitaciones y preguntas más frecuentes](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
@@ -108,13 +102,11 @@ A continuación, debe proporcionar información sobre el conjunto de datos y el 
 
 Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente a Experience Platform se conservan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
 
->[!BEGINTABS]
+Si tiene un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]** y, a continuación, utilice la opción **[!UICONTROL Búsqueda avanzada]** para ver una ventana de todos los conjuntos de datos de su organización, incluidos sus detalles respectivos, como si están habilitados para la ingesta en el Perfil del cliente en tiempo real.
 
->[!TAB Usar un nuevo conjunto de datos]
+![Interfaz de selección de conjuntos de datos existente.](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
 
 Para usar un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** y, a continuación, proporcione un nombre y una descripción opcional para su conjunto de datos. También debe seleccionar un esquema del Modelo de datos de experiencia (XDM) al que se adhiera el conjunto de datos.
-
-![La nueva interfaz de selección de conjuntos de datos.](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
 | Nuevos detalles del conjunto de datos | Descripción |
 | --- | --- |
@@ -122,28 +114,11 @@ Para usar un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de
 | Descripción | (Opcional) Una breve descripción general del nuevo conjunto de datos. |
 | Esquema | Una lista desplegable de esquemas que existen en su organización. También puede crear su propio esquema antes del proceso de configuración de origen. Para obtener más información, lea la guía sobre [creación de un esquema XDM en la interfaz de usuario](../../../../../xdm/tutorials/create-schema-ui.md). |
 
->[!TAB Usar un conjunto de datos existente]
-
-Si ya tiene un conjunto de datos, seleccione **[!UICONTROL Conjunto de datos existente]** y, a continuación, utilice la opción **[!UICONTROL Búsqueda avanzada]** para ver una ventana de todos los conjuntos de datos de su organización, incluidos sus detalles respectivos, como si están habilitados para su ingesta en el Perfil del cliente en tiempo real.
-
-![Interfaz de selección de conjuntos de datos existente.](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
-
->[!ENDTABS]
-
-+++Seleccione esta opción para habilitar la Ingesta de perfiles, los diagnósticos de error y la ingesta parcial.
-
-Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos de perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
-
-* **[!UICONTROL Diagnósticos de error]**: seleccione **[!UICONTROL Diagnósticos de error]** para indicar a la fuente que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
-* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
-
-+++
-
 ### Detalles del flujo de datos {#dataflow-details}
 
 Una vez configurado el conjunto de datos, debe proporcionar detalles sobre el flujo de datos, incluido un nombre, una descripción opcional y configuraciones de alerta.
 
-![El paso de configuración de detalles del flujo de datos.](../../../../images/tutorials/create/snowflake-streaming/dataflow-details.png)
+![El paso de configuración de detalles del flujo de datos.](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
 
 | Configuraciones de flujo de datos | Descripción |
 | --- | --- |
@@ -170,7 +145,7 @@ Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]
 
 ![Paso de revisión del flujo de trabajo de orígenes.](../../../../images/tutorials/create/snowflake-streaming/review.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos de flujo continuo para [!DNL Snowflake] datos. Para obtener recursos adicionales, lea la documentación siguiente.
 
