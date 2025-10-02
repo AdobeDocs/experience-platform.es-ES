@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conjuntos de asignaciones
 description: Aprenda a utilizar conjuntos de asignaciones con la preparación de datos de Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ El siguiente JSON es un ejemplo de un conjunto de asignaciones típico:
 ## Configuración de orígenes de asignación
 
 En una asignación, `source` puede ser un campo, expresión o valor estático. En función del tipo de origen dado, el valor se puede extraer de varias formas.
+
+>[!TIP]
+>
+>Espere hasta 10 minutos después de guardar las asignaciones antes de iniciar la ingesta de datos para asegurarse de que se hayan guardado completamente.
 
 ### Campo en datos de columnas
 
@@ -514,6 +518,6 @@ Si desea recorrer en bucle de forma iterativa las matrices y asignar los valores
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora debería comprender cómo se construyen los conjuntos de asignaciones, incluido cómo configurar asignaciones individuales dentro de un conjunto de asignaciones. Para obtener más información sobre otras características de la preparación de datos, lea [Información general sobre la preparación de datos](./home.md). Para aprender a utilizar conjuntos de asignaciones en la API de preparación de datos, lea la [Guía para desarrolladores de preparación de datos](./api/overview.md).
