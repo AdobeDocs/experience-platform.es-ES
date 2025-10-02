@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '2004'
 ht-degree: 4%
 
 ---
@@ -127,6 +127,8 @@ La sección **[!UICONTROL Perspectivas del perfil del cliente]** muestra una bre
 
 #### Widgets de datos de IA {#ai-insight-widgets}
 
+[!BADGE Alpha]{type=Informative} Esta característica se encuentra actualmente en Alpha.
+
 La sección **[!UICONTROL widgets de insight de IA]** muestra widgets generados por IA. Estos widgets proporcionan una visión rápida del perfil, en función de los datos del perfil, incluidos datos demográficos (como edad, sexo o ubicación), comportamientos del usuario (como historial de compras, actividad en el sitio web o participación en medios sociales), así como psicográficos (como intereses, preferencias o elecciones de estilo de vida). Todos los widgets de IA utilizan datos que **ya** existen en el perfil.
 
 ![Se muestra la sección de widgets de insight de IA.](../images/user-guide/ai-insight-widgets.png)
@@ -144,6 +146,8 @@ También puede alternar entre la visualización de los nombres de atributos como
 ![Se ha resaltado la opción para mostrar nombres en pantalla.](../images/user-guide/show-display-names.png)
 
 #### Widgets clasificados automáticamente {#auto-classified-widgets}
+
+[!BADGE Alpha]{type=Informative} Esta característica se encuentra actualmente en Alpha.
 
 La sección **[!UICONTROL Widgets clasificados automáticamente]** muestra widgets que aprovechan el esquema de unión para determinar los grupos de campos de origen a los que pertenece un atributo, lo que proporciona un contexto más claro sobre la procedencia de los datos. Puede utilizar la barra de búsqueda para buscar más fácilmente palabras clave dentro de los widgets.
 

@@ -2,9 +2,9 @@
 title: Uso de licencias y capacidad
 description: Obtenga información sobre el uso de licencias y los límites de capacidad en Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 568a0ba7707402496167145ce2673181b240496e
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1603'
 ht-degree: 6%
 
 ---
@@ -57,7 +57,7 @@ Dentro de estos servicios, se rastrean las siguientes barreras:
    - De estas 500 audiencias de streaming, el número máximo de audiencias de Edge es de 150
 - El rendimiento inicial combinado para la ingesta de transmisión es de 1500 registros por segundo (rps)
    - Este rendimiento de flujo combinado mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al Perfil del cliente en tiempo real en los entornos limitados de producción y desarrollo.
-   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
@@ -169,6 +169,12 @@ Además, puede consultar los flujos de datos y ver si puede optimizar su estrate
 | --- | --- | --- | --- |
 | Conversión de lote a flujo continuo | Las cargas de trabajo por lotes convertidas en flujo continuo pueden aumentar significativamente el rendimiento, lo que afecta al rendimiento y a la asignación de recursos. Por ejemplo, realizar una actualización de perfil masiva después de un evento sin límites de velocidad. | Las estrategias de streaming no son necesarias para los casos de uso por lotes cuando no se requiere un procesamiento de baja latencia. | Evaluar los requisitos de casos de uso. Para el marketing saliente por lotes, considere la posibilidad de usar [ingesta por lotes](/help/ingestion/batch-ingestion/overview.md) en lugar de la transmisión para administrar la ingesta de datos de manera más eficiente. |
 | Ingesta de datos innecesaria | La ingesta de datos no necesarios para la personalización aumenta el rendimiento sin añadir valor y desperdiciar recursos. Por ejemplo, la ingesta de todo el tráfico de análisis en perfiles independientemente de la relevancia. | El exceso de datos no relevantes crea ruido, lo que dificulta la identificación de puntos de datos impactantes. También puede causar fricción al definir y administrar audiencias y perfiles. | Introduzca solo los datos necesarios para sus casos de uso. Asegúrese de filtrar los datos innecesarios.<ul><li>**Adobe Analytics**: Use [filtrado de nivel de fila](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) para optimizar la ingesta de datos.</li><li>**Fuentes**: use la [[!DNL Flow Service] API para filtrar datos de nivel de fila](/help/sources/tutorials/api/filter.md) para fuentes compatibles como [!DNL Snowflake] y [!DNL Google BigQuery].</li></li>**Flujo de datos de Edge**: configure [flujos de datos dinámicos](/help/datastreams/configure-dynamic-datastream.md) para realizar el filtrado de nivel de fila del tráfico proveniente del SDK web.</li></ul> |
+
+## Vídeo introductorio {#video}
+
+El siguiente vídeo proporciona información general sobre Capacity.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Preguntas frecuentes {#faq}
 

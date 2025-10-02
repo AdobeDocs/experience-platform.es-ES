@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2025
 description: Las notas de la versión de agosto de 2025 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1507'
-ht-degree: 93%
+source-wordcount: '1508'
+ht-degree: 92%
 
 ---
 
@@ -102,7 +102,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 | Función | Descripción |
 | ------- | ----------- |
-| Mejoras del visor de perfiles | La versión de septiembre de 2025 de incluye las siguientes mejoras en el visor de perfiles. <ul><li>**Vista combinada**: los atributos, los eventos y los datos se han combinado en una sola vista.</li><li>**Información generada por IA**: la página de detalles del perfil ahora muestra información generada por IA, lo que le permite conocer detalles generados a partir de su perfil. Estos datos pueden incluir información como las puntuaciones de las tendencias y el análisis de tendencias.</li><li>**Actualización del estilo**: la página de detalles del perfil se ha actualizado visualmente.</li><li>**Examinar**: ahora puede explorar sus perfiles a través de un carrusel interactivo basado en tarjetas con búsqueda y personalización.</li></ul> |
+| [!BADGE Mejoras en el visor de perfiles Alpha]{type=Informative} | La versión de septiembre de 2025 de incluye las siguientes mejoras en el visor de perfiles. <ul><li>**Vista combinada**: los atributos, los eventos y los datos se han combinado en una sola vista.</li><li>**Información generada por IA**: la página de detalles del perfil ahora muestra información generada por IA, lo que le permite conocer detalles generados a partir de su perfil. Estos datos pueden incluir información como las puntuaciones de las tendencias y el análisis de tendencias.</li><li>**Actualización del estilo**: la página de detalles del perfil se ha actualizado visualmente.</li><li>**Examinar**: ahora puede explorar sus perfiles a través de un carrusel interactivo basado en tarjetas con búsqueda y personalización.</li></ul> |
 
 Para obtener más información, lea la [información general sobre el perfil del cliente en tiempo real](../../profile/home.md).
 
