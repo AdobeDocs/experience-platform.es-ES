@@ -57,7 +57,7 @@ Dentro de estos servicios, se rastrean las siguientes barreras:
    - De estas 500 audiencias de streaming, el número máximo de audiencias de Edge es de 150
 - El rendimiento inicial combinado para la ingesta de transmisión es de 1500 registros por segundo (rps)
    - Este rendimiento de flujo combinado mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al Perfil del cliente en tiempo real en los entornos limitados de producción y desarrollo.
-   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
