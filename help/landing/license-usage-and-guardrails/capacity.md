@@ -174,7 +174,7 @@ Además, puede consultar los flujos de datos y ver si puede optimizar su estrate
 
 El siguiente vídeo proporciona información general sobre Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475276/?learn=on&enablevpops&captions=spa)
 
 ## Preguntas frecuentes {#faq}
 
