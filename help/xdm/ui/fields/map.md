@@ -2,9 +2,9 @@
 title: Definición de campos de mapa en la IU
 description: Obtenga información sobre cómo definir un campo de asignación en la interfaz de usuario de Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c0421974493884488e4d639278106835ad1d8b1b
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform permite personalizar completamente la estructura de las clases personalizadas del modelo de datos de experiencia (XDM), los grupos de campos de esquema y los tipos de datos.
 
-También puede definir campos de asignación en el Editor de esquemas para modelar estructuras de datos flexibles y dinámicas o almacenar una colección de pares clave-valor.
+También puede definir campos de asignación en el Editor de esquemas para almacenar una colección de pares de clave-valor con claves dinámicas y flexibles.
 
 Al definir un nuevo campo en la interfaz de usuario (IU) de Experience Platform, utilice la lista desplegable **[!UICONTROL Tipo]** y seleccione &quot;**[!UICONTROL Mapa]**&quot; de la lista.
 
@@ -36,6 +36,8 @@ XDM impone las siguientes restricciones al uso de este tipo de datos:
 * Los tipos de mapa DEBEN incluir un campo `additionalProperties.type` que describa los valores que se pueden colocar en el mapa, ya sea `string` o `integer`.
 * La segmentación de varias entidades solo se puede definir en función de las claves de asignación y no de los valores.
 * Las audiencias de la cuenta no admiten mapas.
+* Las asignaciones definidas en objetos XDM personalizados están limitadas a un solo nivel. No se pueden crear las asignaciones anidadas. Esta restricción no se aplica a las asignaciones definidas en objetos XDM estándar.
+* No se admiten matrices de mapas.
 
 Asegúrese de utilizar únicamente campos de tipo mapa cuando sea absolutamente necesario, ya que presentan los siguientes inconvenientes de rendimiento:
 
@@ -46,7 +48,7 @@ Asegúrese de utilizar únicamente campos de tipo mapa cuando sea absolutamente 
 >
 >La interfaz de usuario de Experience Platform tiene limitaciones en la forma de extraer las claves de los campos de tipo mapa. Mientras que los campos de tipo objeto se pueden expandir, los mapas se muestran como un único campo. Los campos de asignación creados mediante la API de Registro de esquemas que no son tipos de datos de cadena o enteros se muestran como tipos de datos &quot;[!UICONTROL Complejos]&quot;.
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer este documento, ahora puede definir los campos de asignación en la interfaz de usuario de Experience Platform. Recuerde que solo puede utilizar clases y grupos de campos para agregar campos a esquemas. Para obtener más información sobre cómo administrar estos recursos en la interfaz de usuario, consulte las guías sobre la creación y edición de [clases](../resources/classes.md) y [grupos de campos](../resources/field-groups.md).
 

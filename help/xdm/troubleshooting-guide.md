@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de resolución de problemas del sistema XDM
 description: Encuentre respuestas a las preguntas frecuentes acerca del Modelo de datos de experiencia (XDM), incluidos pasos para resolver errores comunes de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2378'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Este documento proporciona respuestas a las preguntas más frecuentes sobre [!DNL Experience Data Model] (XDM) y el sistema XDM en Adobe Experience Platform, incluida una guía de solución de problemas para errores comunes. Si tiene alguna pregunta o solución de problemas relacionada con otros servicios de Experience Platform, consulte la [Guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model] (XDM)** es una especificación de código abierto que define esquemas estandarizados para la administración de experiencias del cliente. La metodología en la que se ha creado [!DNL Experience Platform], **Sistema XDM**, pone en funcionamiento [!DNL Experience Data Model] esquemas para que los usen los servicios de [!DNL Experience Platform]. **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful para acceder a **[!DNL Schema Library]** en [!DNL Experience Platform]. Consulte la [documentación de XDM](home.md) para obtener más información.
+**[!DNL Experience Data Model](XDM)** es una especificación de código abierto que define esquemas estandarizados para la administración de experiencias del cliente. La metodología en la que se ha creado [!DNL Experience Platform], **Sistema XDM**, pone en funcionamiento [!DNL Experience Data Model] esquemas para que los usen los servicios de [!DNL Experience Platform]. **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful para acceder a **[!DNL Schema Library]** en [!DNL Experience Platform]. Consulte la [documentación de XDM](home.md) para obtener más información.
 
 ## Preguntas frecuentes
 
@@ -63,11 +63,13 @@ Para obtener más información sobre los tipos de campo, consulte el documento s
 
 XDM impone las siguientes restricciones al uso de este tipo de datos:
 
-- Los tipos de mapa DEBEN ser de tipo objeto.
+- Los tipos de mapa DEBEN ser del tipo `object`.
 - Los tipos de mapa NO DEBEN tener propiedades definidas (es decir, definen objetos &quot;vacíos&quot;).
-- Los tipos de mapa DEBEN incluir un campo additionalProperties.type que describa los valores que se pueden colocar dentro del mapa, ya sea cadena o entero.
+- Los tipos de mapa DEBEN incluir un campo `additionalProperties.type` que describa los valores que se pueden colocar en el mapa, ya sea `string` o `integer`.
 - La segmentación de varias entidades solo se puede definir en función de las claves de asignación y no de los valores.
 - Las audiencias de la cuenta no admiten mapas.
+- Las asignaciones definidas en objetos XDM personalizados están limitadas a un solo nivel. No se pueden crear las asignaciones anidadas. Esta restricción no se aplica a las asignaciones definidas en objetos XDM estándar.
+- No se admiten matrices de mapas.
 
 Vea las [restricciones de uso para objetos de mapa](./ui/fields/map.md#restrictions) para obtener más detalles.
 
@@ -140,7 +142,7 @@ El esquema no se activa automáticamente para el perfil del cliente en tiempo re
 
 ### ¿Puedo eliminar esquemas con perfil habilitado?
 
-No puede eliminar un esquema una vez habilitado para el Perfil del cliente en tiempo real. Una vez que un esquema está habilitado para el perfil, no se puede deshabilitar ni eliminar, y los campos no se pueden eliminar del esquema. Por lo tanto, es crucial planificar y verificar cuidadosamente la configuración del esquema antes de habilitarla para el perfil. Sin embargo, puede eliminar un conjunto de datos con perfil habilitado. Encontrará información aquí: <https://experienceleague.adobe.com/es/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+No puede eliminar un esquema una vez habilitado para el Perfil del cliente en tiempo real. Una vez que un esquema está habilitado para el perfil, no se puede deshabilitar ni eliminar, y los campos no se pueden eliminar del esquema. Por lo tanto, es crucial planificar y verificar cuidadosamente la configuración del esquema antes de habilitarla para el perfil. Sin embargo, puede eliminar un conjunto de datos con perfil habilitado. Encontrará información aquí: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Si ya no desea que se use un esquema con perfil habilitado, se recomienda cambiar el nombre del esquema para incluir **No usar** o **Inactivo**.
 
