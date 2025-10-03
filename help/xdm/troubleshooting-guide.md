@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Este documento proporciona respuestas a las preguntas más frecuentes sobre [!DNL Experience Data Model] (XDM) y el sistema XDM en Adobe Experience Platform, incluida una guía de solución de problemas para errores comunes. Si tiene alguna pregunta o solución de problemas relacionada con otros servicios de Experience Platform, consulte la [Guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** es una especificación de código abierto que define esquemas estandarizados para la administración de experiencias del cliente. La metodología en la que se ha creado [!DNL Experience Platform], **Sistema XDM**, pone en funcionamiento [!DNL Experience Data Model] esquemas para que los usen los servicios de [!DNL Experience Platform]. **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful para acceder a **[!DNL Schema Library]** en [!DNL Experience Platform]. Consulte la [documentación de XDM](home.md) para obtener más información.
+**[!DNL Experience Data Model] (XDM)** es una especificación de código abierto que define esquemas estandarizados para la administración de experiencias del cliente. La metodología en la que se ha creado [!DNL Experience Platform], **Sistema XDM**, pone en funcionamiento [!DNL Experience Data Model] esquemas para que los usen los servicios de [!DNL Experience Platform]. **[!DNL Schema Registry]** proporciona una interfaz de usuario y una API RESTful para acceder a **[!DNL Schema Library]** en [!DNL Experience Platform]. Consulte la [documentación de XDM](home.md) para obtener más información.
 
 ## Preguntas frecuentes
 
