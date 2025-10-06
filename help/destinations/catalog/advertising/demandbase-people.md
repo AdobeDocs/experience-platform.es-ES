@@ -1,13 +1,13 @@
 ---
 title: Conexión de Demandbase People
 description: Utilice este destino para activar sus audiencias y enriquecerlas con datos de terceros de Demandbase, para otros casos de uso descendente en marketing y ventas.
-source-git-commit: df2cb1edbf998082fca961e6d9bb567a1ad3b7e6
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '819'
 ht-degree: 4%
 
 ---
-
 
 # Conexión de Demandbase People {#demandbase-people}
 
@@ -31,7 +31,7 @@ La conexión [!DNL Demandbase People] admite la activación de identidades descr
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| email | Direcciones de correo electrónico de texto sin formato | La conexión [!DNL Demandbase People] solo admite direcciones de correo electrónico de texto sin formato. |
+| correo electrónico | Direcciones de correo electrónico de texto sin formato | La conexión [!DNL Demandbase People] solo admite direcciones de correo electrónico de texto sin formato. |
 
 {style="table-layout:auto"}
 
@@ -64,11 +64,11 @@ Para exportar audiencias a Demandbase, necesita lo siguiente:
 1. Una cuenta de Demandbase.
 2. Un token de API de Demandbase. Puede generar un token de API con el usuario en Demandbase. Para generar un token, vaya a [Mi perfil > Token de API](https://web.demandbase.com/o/ad/at) después de iniciar sesión en su cuenta de Demandbase.
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;para obtener acceso. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el **[!UICONTROL permiso de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)para obtener acceso. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -95,10 +95,25 @@ Ahora está listo para activar sus audiencias en Demandbase People.
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
+
+### Asignaciones obligatorias {#mandatory-mappings}
+
+Al activar audiencias en el destino [!DNL Demandbase People], debe configurar las siguientes asignaciones de campos obligatorias en el paso de asignación:
+
+| Campo de origen | Campo de destino | Descripción |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | El identificador único de la persona |
+| `xdm: person.name.lastName` | `xdm: lastName` | El apellido de la persona |
+| `xdm: person.name.firstName` | `xdm: firstName` | El nombre de la persona |
+| `xdm: workEmail.address` | `Identity: email` | La dirección de correo electrónico de trabajo de la persona |
+
+![Asignaciones de personas de Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+Estas asignaciones son necesarias para que el destino funcione correctamente y deben configurarse antes de continuar con el flujo de trabajo de activación.
 
 ## Notas adicionales y llamadas importantes {#additional-notes}
 
