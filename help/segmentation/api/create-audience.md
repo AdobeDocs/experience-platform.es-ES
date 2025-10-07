@@ -3,17 +3,17 @@ title: Crear extremo de API de Audience
 description: Obtenga información sobre cómo crear los metadatos para una audiencia externa mediante la API.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '246'
 ht-degree: 7%
 
 ---
 
-
 # Crear extremo de audiencia
 
-Se puede usar el extremo POST `/audiences` para crear los metadatos de una audiencia externa. Debe utilizar este punto final si la ingesta de audiencias se va a administrar en un servicio independiente, como la ingesta por lotes.
+El extremo POST `/audiences` se puede usar para crear los metadatos de una audiencia externa, lo que permite que la audiencia sea visible en Audience Portal. Debe utilizar este punto final si la ingesta de audiencias se va a administrar en un servicio independiente, como la ingesta por lotes.
 
 ## Introducción
 

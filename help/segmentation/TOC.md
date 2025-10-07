@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree públicos a partir de los datos de su perfil del cliente en tiempo real utilizando definiciones de segmentos generadas por Adobe Experience Platform o fuentes externas.
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 40%
+source-wordcount: '207'
+ht-degree: 43%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 40%
 
 - [Resumen del servicio de segmentación](home.md)
 - [Tipos de datos de segmentación](data-types.md)
-- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=es#segmentation-guardrails)
+- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API de segmentación {#api}
    - [Información general](api/overview.md)
    - [Primeros pasos](api/getting-started.md)
    - [Crear metadatos de audiencia](api/create-audience.md)
    - [Públicos](api/audiences.md)
    - [Exportar trabajos](api/export-jobs.md)
-   - [Audiencias externas](api/external-audiences.md)
+   - [Públicos externos](api/external-audiences.md)
    - [Previsualizaciones y estimaciones](api/previews-and-estimates.md)
    - [Programaciones](api/schedules.md)
    - [Definiciones de segmentos](api/segment-definitions.md)
@@ -33,7 +33,7 @@ ht-degree: 40%
 - IU de segmentación {#ui}
    - [Información general](ui/overview.md)
    - [Tablero de audiencias](ui/audience-dashboard.md)
-   - [Audience Portal](ui/audience-portal.md)
+   - [Portal de públicos](ui/audience-portal.md)
    - [Composición de público](ui/audience-composition.md)
    - [Generador de segmentos](ui/segment-builder.md)
    - [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home)
@@ -62,7 +62,7 @@ ht-degree: 40%
    - [Segmentación de varias entidades](tutorials/multi-entity-segmentation.md)
    - [Respeto del consentimiento](tutorials/consents.md)
    - [Evaluación de una definición de segmento](tutorials/evaluate-a-segment.md)
-   - [Importación y uso de audiencias externas](tutorials/using-external-audiences.md)
+   - [Creación de audiencias externas](tutorials/create-external-audience.md)
    - [Creación de un conjunto de datos para exportar datos](tutorials/create-dataset-export-segment.md)
    - [Aplicar el cumplimiento de uso de datos para audiencias](tutorials/governance.md)
 - Profile Query Language {#pql}
