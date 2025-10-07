@@ -2,7 +2,7 @@
 title: Guía de resolución de problemas para reglas de vinculación de gráficos de identidad
 description: Obtenga información sobre cómo solucionar problemas comunes en Reglas de vinculación de gráficos de identidad.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
+source-git-commit: 10cdbef8281ec43a21af9fead80345f1c78b9d2c
 workflow-type: tm+mt
 source-wordcount: '3451'
 ht-degree: 0%
@@ -162,11 +162,11 @@ Para cada escenario, supongamos que los Eventos de experiencia contienen los sig
 
 **Escenario 2: 2 CRMID, 1 GAID**
 
-* En este escenario, un evento de experiencia entrante contiene 2 CRMID y 1 GAID. Entre estas áreas de nombres, CRMID se configura como el área de nombres con la prioridad de área de nombres más alta. Sin embargo, dado que hay 2 GAID, el perfil **no** almacena este evento de experiencia.
+* En este escenario, un evento de experiencia entrante contiene 2 CRMID y 1 GAID. Entre estas áreas de nombres, CRMID se configura como el área de nombres con la prioridad de área de nombres más alta. Sin embargo, dado que hay 2 CRMID, el perfil **no** almacena este evento de experiencia.
 
 **Escenario 3: 1 CRMID, 2 GAID**
 
-* En este escenario, un evento de experiencia entrante contiene 1 CRMID y 2 GAID. Entre estas áreas de nombres, CRMID se configura como el área de nombres con la prioridad de área de nombres más alta. Dado que solo hay un CRMID, el perfil introducirá los eventos de experiencia porque solo hay una instancia del área de nombres con la prioridad de área de nombres más alta.
+* En este escenario, un evento de experiencia entrante contiene 1 CRMID y 2 GAID. Entre estas áreas de nombres, CRMID se configura como el área de nombres con la prioridad de área de nombres más alta. Dado que solo hay un CRMID, el perfil introducirá los eventos de experiencia porque solo hay una identidad del área de nombres con la prioridad de área de nombres más alta.
 
 **Pasos para solucionar problemas**
 
