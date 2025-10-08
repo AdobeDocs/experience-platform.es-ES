@@ -1,11 +1,11 @@
 ---
 title: Amazon Ads
 description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido Amazon DSP (ADSP). Con el destino Amazon Ads en Adobe Experience Platform, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en Amazon DSP.
-last-substantial-update: 2025-01-07T00:00:00Z
+last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6afb8d56b8af8e5b0450f769414d3afcac1d58eb
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '2038'
 ht-degree: 2%
 
 ---
@@ -57,6 +57,13 @@ La conexión *[!DNL Amazon Ads]* admite la activación de identidades descritas 
 |---|---|---|
 | phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
 | email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| `firstName` | Nombre del usuario | Admite texto sin formato o SHA256. Si se usa texto sin formato, habilite [!UICONTROL Aplicar transformación] en la interfaz de usuario de Adobe. |
+| `lastName` | Apellidos del usuario | Admite texto sin formato o SHA256. Si se usa texto sin formato, habilite [!UICONTROL Aplicar transformación] en la interfaz de usuario de Adobe. |
+| `street` | Dirección de nivel de calle del usuario | Solo se admite la entrada con hash SHA256. Normalice antes del hash. **no** habilita la transformación del lado de Adobe. |
+| `city` | Ciudad del usuario | Admite texto sin formato o SHA256. Si se usa texto sin formato, habilite [!UICONTROL Aplicar transformación] en la interfaz de usuario de Adobe. |
+| `state` | Estado o provincia del usuario | Admite texto sin formato o SHA256. Si se usa texto sin formato, habilite [!UICONTROL Aplicar transformación] en la interfaz de usuario de Adobe. |
+| `zip` | Código postal del usuario | Admite texto sin formato o SHA256. Si se usa texto sin formato, habilite [!UICONTROL Aplicar transformación] en la interfaz de usuario de Adobe. |
+| `country` | País del usuario | Admite texto sin formato o SHA256. Si se usa texto sin formato, habilite [!UICONTROL Aplicar transformación] en la interfaz de usuario de Adobe. |
 
 {style="table-layout:auto"}
 
@@ -65,17 +72,17 @@ La conexión *[!DNL Amazon Ads]* admite la activación de identidades descritas 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
----------|----------|---------|
+| ---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino *[!DNL Amazon Ads]*. |
 | Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[](/help/access-control/home.md#permissions)5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -113,8 +120,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -128,6 +135,14 @@ La conexión [!DNL Amazon Ads] admite direcciones de correo electrónico con has
 * Para asignar números de teléfono con hash, seleccione el área de nombres de identidad `Phone_SHA256` como campo de origen.
 * Para asignar direcciones de correo electrónico o números de teléfono sin hash, seleccione las áreas de nombres de identidad correspondientes como campos de origen y marque la opción `Apply Transformation` para que Experience Platform aplique hash a las identidades en la activación.
 * *NUEVO a partir de la versión de septiembre de 2024*: Amazon Ads requiere que asigne un campo que contenga un valor `countryCode` en el formato ISO de 2 caracteres para facilitar el proceso de resolución de identidades (por ejemplo: EE. UU., GB, MX, CA, etc.). Las conexiones sin asignaciones de `countryCode` tendrán un impacto negativo en las tasas de coincidencia de identidad.
+
+>[!NOTE]
+>
+>Para utilizar estos campos:
+> 
+>* Todos los valores de identidad deben normalizarse antes de la ingesta. Consulte la [Guía de normalización](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* Se requiere hash SHA256, ya sea en el lado del cliente o habilitando la configuración de transformación de Adobe.
+>* La interfaz de usuario de Adobe proporciona una casilla de verificación para aplicar la transformación por campo de identidad durante la configuración del conector.
 
 Solo se selecciona un campo de destino determinado una vez en una configuración de destino del conector [!DNL Amazon Ads].  Por ejemplo, si envía un correo electrónico empresarial, no puede asignar también un correo electrónico personal en la misma configuración de destino.
 
@@ -159,7 +174,7 @@ Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las política
 
 Para obtener documentación de ayuda adicional, visite los siguientes [!DNL Amazon Ads] recursos de ayuda:
 
-* [Centro de ayuda de Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+* [Centro de ayuda de Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
 ## Changelog {#changelog}
 
@@ -169,6 +184,7 @@ Esta sección recoge la funcionalidad y las actualizaciones significativas de la
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
+| Octubre de 2025 | Se ha añadido la compatibilidad de con campos de identidad adicionales | Se ha agregado compatibilidad con identificadores personales adicionales, como `firstName`, `lastName`, `street`, `city`, `state`, `zip` y `country`. La asignación de estos campos puede mejorar las tasas de coincidencia de audiencia. |
 | Febrero de 2025 | Se ha agregado el requisito de agregar **[!UICONTROL Señal de consentimiento de Amazon Ads]** para exportar flujos de datos y promocionar el destino de la versión beta a la versión disponible de forma general. |
 | Mayo de 2024 | Actualización de funcionalidad y documentación | Se agregó la opción de asignación para exportar el parámetro `countryCode` en Amazon Ads. Use `countryCode` en el [paso de asignación](#map) para mejorar las tasas de coincidencia de identidad con Amazon. |
 | Marzo de 2024 | Actualización de funcionalidad y documentación | Se agregó la opción de exportar audiencias para usarlas en [!DNL Amazon Marketing Cloud] (AMC). |
