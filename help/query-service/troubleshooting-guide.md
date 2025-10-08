@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Preguntas frecuentes sobre el servicio de consultas y Data Distiller
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas y Data Distiller. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
+source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
 workflow-type: tm+mt
-source-wordcount: '5186'
-ht-degree: 0%
+source-wordcount: '5441'
+ht-degree: 1%
 
 ---
 
@@ -65,7 +65,7 @@ Una causa potencial es la función de autocompletar. La función procesa ciertos
 ### ¿Puedo usar [!DNL Postman] para la API del servicio de consultas?
 
 +++Respuesta
-Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/31627?captions=spa) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### ¿Hay un límite en el número máximo de filas devueltas por una consulta a través de la interfaz de usuario?
@@ -573,18 +573,6 @@ Existen tres métodos para restringir el acceso. Son las siguientes:
 Sí, se admiten los modos SSL. Consulte la [documentación sobre los modos SSL](./clients/ssl-modes.md) para obtener un desglose de los diferentes modos SSL disponibles y el nivel de protección que proporcionan.
 +++
 
-### ¿Utilizamos TLS 1.2 para todas las conexiones de clientes de Power BI al servicio de consultas?
-
-+++Respuesta
-Sí. Los datos en tránsito siempre son compatibles con HTTPS. La versión admitida actualmente es TLS1.2.
-+++
-
-### ¿Sigue usando https una conexión realizada en el puerto 80?
-
-+++Respuesta
-Sí, una conexión realizada en el puerto 80 sigue utilizando SSL. También puede utilizar el puerto 5432.
-+++
-
 ### ¿Puedo controlar el acceso a conjuntos de datos y columnas específicos para una conexión en particular? ¿Cómo se configura?
 
 +++Respuesta
@@ -615,35 +603,73 @@ Sí, puede usar el comando `CREATE VIEW` sin acceso a Data Distiller. Este coman
 Sí. Sin embargo, algunos clientes de terceros, como DbVisualizer, pueden requerir un identificador independiente antes y después de un bloque SQL para indicar que una parte de un script debe gestionarse como una sola instrucción. Encontrará más detalles en la [documentación de bloque anónimo](./key-concepts/anonymous-block.md) o en [la documentación oficial de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
+## TLS, acceso a puertos y cifrado {#tls-port-questions}
+
+### ¿Una conexión realizada en el puerto 80 sigue utilizando codificación HTTPS y TLS?
+
++++Respuesta
+Sí. Las conexiones del puerto 80 están protegidas con cifrado TLS, y el servicio requiere la aplicación de TLS. No se aceptan conexiones HTTP simples. Existe compatibilidad con el puerto 80 para dar cabida a ciertas directivas de red de clientes. Si su organización bloquea el puerto 80, utilice el puerto 5432 en su lugar. Ambos puertos requieren TLS y proporcionan la misma postura de seguridad.
++++
+
+### ¿Expone el servicio de consultas de Adobe los datos a través de HTTP sin cifrar (puerto 80)?
+
++++Respuesta
+No. Las conexiones en el puerto 80 requieren TLS y cualquier solicitud HTTP de texto sin formato se rechaza en el servidor. El puerto 5432 también es compatible y está cifrado TLS.
++++
+
+### ¿Es el uso del puerto 80 para Query Service y Data Distiller una configuración heredada?
+
++++Respuesta
+No. El puerto 80 con TLS obligatorio es una configuración compatible diseñada para clientes con requisitos de red específicos. No es un modo heredado o inseguro. Si su entorno restringe las conexiones salientes en el puerto 80, utilice el puerto 5432 en su lugar; ambos puertos aplican TLS.
++++
+
+### ¿Utilizamos TLS 1.2 para todas las conexiones de clientes de Power BI al servicio de consultas?
+
++++Respuesta
+Sí. Los datos en tránsito siempre están protegidos mediante HTTPS y la versión compatible actualmente es TLS 1.2. Todas las conexiones de Power BI al servicio de consultas requieren transporte cifrado.
++++
+
+### ¿El puerto 80 no está cifrado cuando se utiliza con Data Distiller?
+
++++Respuesta
+No. Data Distiller aplica TLS en el puerto 80 y rechaza cualquier solicitud HTTP de texto sin formato. El puerto 5432 también es compatible y está cifrado TLS.
++++
+
+### ¿Existen riesgos o limitaciones al utilizar el puerto 80 con Query Service o Data Distiller?
+
++++Respuesta
+Sí. TLS se aplica en el puerto 80 y no se admiten conexiones sin cifrar. Algunas organizaciones bloquean el tráfico saliente en el puerto 80 debido a restricciones de directiva. Si esto se aplica a su red, use el puerto 5432 en su lugar. Ambos puertos proporcionan el mismo nivel de seguridad porque TLS es necesario en todos los casos.
++++
+
 ## Data Distiller {#data-distiller}
 
 ### ¿Cómo se rastrea el uso de licencias de Data Distiller y dónde puedo ver esta información?
 
-+++Respuesta\
++++Respuesta  
 La métrica principal utilizada para rastrear el uso de consultas por lotes es Calcular hora. Tiene acceso a esta información y a su consumo actual a través del [tablero de uso de licencias](../dashboards/guides/license-usage.md).
 +++
 
 ### ¿Qué es una Compute Hour?
 
-+++Respuesta\
++++Respuesta  
 Las horas calculadas son la medida del tiempo que tardan los motores de servicios de consulta en leer, procesar y escribir datos en el lago de datos cuando se ejecuta una consulta por lotes.
 +++
 
 ### ¿Cómo se miden las horas calculadas?
 
-+++Respuesta\
++++Respuesta  
 Las horas calculadas se miden de forma acumulativa en todas las zonas protegidas autorizadas.
 +++
 
 ### ¿Por qué a veces noto una variación en el consumo de hora calculado incluso cuando ejecuto la misma consulta consecutivamente?
 
-+++Respuesta\
++++Respuesta  
 Calcular las horas de una consulta puede fluctuar debido a varios factores. Estos incluyen el volumen de datos procesado, la complejidad de las operaciones de transformación dentro de la consulta SQL, etc. El servicio de consulta escala el clúster en función de los parámetros anteriores para cada consulta, lo que puede provocar diferencias en las horas calculadas.
 +++
 
 ### ¿Es normal notar una reducción en las horas calculadas cuando ejecuto la misma consulta utilizando los mismos datos durante un largo período de tiempo? ¿Por qué podría estar pasando esto?
 
-+++Respuesta\
++++Respuesta  
 La infraestructura back-end se mejora constantemente para optimizar la utilización de Compute Hour y el tiempo de procesamiento. Como resultado, es posible que observe cambios con el tiempo a medida que se implementan las mejoras de rendimiento.
 +++
 
