@@ -2,9 +2,9 @@
 title: Uso de licencias y capacidad
 description: Obtenga información sobre el uso de licencias y los límites de capacidad en Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1621'
 ht-degree: 6%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 6%
 >   - Este permiso le permite **ver** el inicio de capacidad.
 >- **Administrar zonas protegidas**
 >   - Este permiso le permite **editar** sus asignaciones de capacidad.
+>   - Además, **debe** tener asignado acceso a todas las zonas protegidas para las que desee editar las asignaciones de capacidad.
 >
 >Encontrará más información sobre los permisos de Experience Platform en la [descripción general del control de acceso](/help/access-control/home.md#permissions)
 >
@@ -57,7 +58,7 @@ Dentro de estos servicios, se rastrean las siguientes barreras:
    - De estas 500 audiencias de streaming, el número máximo de audiencias de Edge es de 150
 - El rendimiento inicial combinado para la ingesta de transmisión es de 1500 registros por segundo (rps)
    - Este rendimiento de flujo combinado mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al Perfil del cliente en tiempo real en los entornos limitados de producción y desarrollo.
-   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
@@ -174,7 +175,7 @@ Además, puede consultar los flujos de datos y ver si puede optimizar su estrate
 
 El siguiente vídeo proporciona información general sobre Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475276/?learn=on&enablevpops&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Preguntas frecuentes {#faq}
 
