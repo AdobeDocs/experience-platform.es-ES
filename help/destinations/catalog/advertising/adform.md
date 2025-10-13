@@ -27,16 +27,16 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Ado
 
 Utilice este destino para enviar audiencias de Adobe Real-Time CDP a Adobe para su activación en función del Experience Cloud ID (ECID) y del ID de Fusion de Adobe. ID Fusion de Adobe es el servicio de resolución de ID de Adobe que le permite activar audiencias de origen basadas en el Experience Cloud ID (ECID).
 
-Un caso común es el redireccionamiento de los visitantes del sitio web a su sitio web o aplicación en función del Experience Cloud ID (ECID). Todo lo que debe hacer es enviar el Experience Cloud ID (ECID) a Adobe a través de las extensiones de [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) de Adobe disponibles. Después, puede compartir audiencias con Adobe Forms a través del destino de Adobe para la activación, únicamente en función del Experience Cloud ID (ECID).
+Un caso común es el redireccionamiento de los visitantes del sitio web a su sitio web o aplicación en función del Experience Cloud ID (ECID). Todo lo que debe hacer es enviar el Experience Cloud ID (ECID) a Adobe a través de las extensiones de [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform) de Adobe disponibles. Después, puede compartir audiencias con Adobe Forms a través del destino de Adobe para la activación, únicamente en función del Experience Cloud ID (ECID).
 
 ## Requisitos previos {#prerequisites}
 
 * Debe ser cliente de Adform existente para utilizar este destino.
 * Debe tener sus credenciales de conexión de datos de Adform Audience Base.
    * Si no tiene credenciales de conexión de datos de Adform Audience Base, póngase en contacto con su representante de Adform.
-* Para realizar la sincronización correctamente, necesita tener una conexión de [Flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) desde sus entidades al Seguimiento de sitios de Adobe.
+* Para realizar la sincronización correctamente, necesita tener una conexión de [Flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform) desde sus entidades al Seguimiento de sitios de Adobe.
    * Si no tiene una conexión de flujo de eventos o del lado del cliente desde sus entidades a Seguimiento de sitios de Adobe, póngase en contacto con su representante de Adform.
-   * Adform proporciona extensiones Adobe Experience Cloud para [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) y [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform proporciona extensiones Adobe Experience Cloud para [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) y [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Identidades admitidas {#supported-identities}
