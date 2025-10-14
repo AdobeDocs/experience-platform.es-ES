@@ -53,7 +53,7 @@ Una vez cargados los datos, puede usar la sección [!UICONTROL Vista previa de d
 
 A continuación, utilice la interfaz *[!UICONTROL Detalles del flujo de datos]* para proporcionar un **nombre** y una **descripción opcional** para su flujo de datos. Además, seleccione el **[!UICONTROL conjunto de datos de destino]** que desee usar. Puede crear un nuevo conjunto de datos o utilizar uno existente.
 
-![Interfaz de detalles del flujo de datos. ](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![Interfaz de detalles del flujo de datos. &#x200B;](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Asignación
 

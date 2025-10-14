@@ -158,7 +158,7 @@ Los campos numéricos están indicados por `type: number` y no tienen otras prop
 
 >[!NOTE]
 >
->Aunque los tipos `integer` hacen referencia específicamente a números enteros, los tipos [`number` ](#number) se utilizan para cualquier tipo numérico, ya sean números enteros o números de coma flotante. Consulte la [documentación del esquema JSON en tipos numéricos](https://json-schema.org/understanding-json-schema/reference/numeric.html) para obtener más información sobre los casos de uso de cada tipo.
+>Aunque los tipos `integer` hacen referencia específicamente a números enteros, los tipos [`number` &#x200B;](#number) se utilizan para cualquier tipo numérico, ya sean números enteros o números de coma flotante. Consulte la [documentación del esquema JSON en tipos numéricos](https://json-schema.org/understanding-json-schema/reference/numeric.html) para obtener más información sobre los casos de uso de cada tipo.
 
 Si lo desea, puede restringir el intervalo del entero agregando las propiedades `minimum` y `maximum` a la definición. Otros tipos numéricos admitidos por la interfaz de usuario del generador de esquemas son solo `integer` tipos con restricciones `minimum` y `maximum` específicas, como [[!UICONTROL Long]](#long), [[!UICONTROL Short]](#short) y [[!UICONTROL Byte]](#byte).
 
@@ -333,7 +333,7 @@ También puede definir todo el objeto haciendo referencia a un tipo de datos, si
 
 ## [!UICONTROL Mapa] {#map}
 
-Un campo de asignación es esencialmente un campo de tipo [`object` ](#object) con un conjunto de claves no restringido. Al igual que los objetos, las asignaciones tienen un valor `type` de `object`, pero su `meta:xdmType` se ha establecido explícitamente en `map`.
+Un campo de asignación es esencialmente un campo de tipo [`object` &#x200B;](#object) con un conjunto de claves no restringido. Al igual que los objetos, las asignaciones tienen un valor `type` de `object`, pero su `meta:xdmType` se ha establecido explícitamente en `map`.
 
 Un mapa **no debe** definir ninguna propiedad. **debe** definir un solo esquema `additionalProperties` para describir el tipo de valores contenidos en el mapa (cada mapa solo puede contener un único tipo de datos). El valor `type` debe ser `string` o `integer`.
 

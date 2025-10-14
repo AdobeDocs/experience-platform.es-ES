@@ -109,7 +109,7 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con el filtrado de entidades de actividad estándar en [!DNL Marketo Engage] | Puede usar la API de [!DNL Flow Service] para filtrar entidades de actividad estándar al ingerir datos del origen de [!DNL Marketo Engage]. Lea la guía sobre [filtrado de datos de actividad estándar de [!DNL Marketo] ](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) para obtener más información. |
+| Compatibilidad con el filtrado de entidades de actividad estándar en [!DNL Marketo Engage] | Puede usar la API de [!DNL Flow Service] para filtrar entidades de actividad estándar al ingerir datos del origen de [!DNL Marketo Engage]. Lea la guía sobre [filtrado de datos de actividad estándar de [!DNL Marketo] &#x200B;](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage) para obtener más información. |
 
 {style="table-layout:auto"}
 

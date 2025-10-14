@@ -13,8 +13,8 @@ ht-degree: 2%
 
 El extremo `/rpc/import` de la API [!DNL Schema Registry] le permite crear recursos del modelo de datos de experiencia (XDM) a partir de cargas de exportación generadas. Las cargas útiles de exportación se pueden crear a partir de dos fuentes:
 
-* El extremo [`/rpc/export` ](./export.md) crea cargas útiles de exportación a partir de recursos XDM existentes, lo que le permite compartir recursos entre zonas protegidas.
-* El extremo [`/rpc/csv2schema` ](./csv-to-schema.md) crea cargas útiles de exportación a partir de plantillas CSV.
+* El extremo [`/rpc/export` &#x200B;](./export.md) crea cargas útiles de exportación a partir de recursos XDM existentes, lo que le permite compartir recursos entre zonas protegidas.
+* El extremo [`/rpc/csv2schema` &#x200B;](./csv-to-schema.md) crea cargas útiles de exportación a partir de plantillas CSV.
 
 Una vez creada una carga útil de exportación, puede utilizar el extremo `/rpc/import` para generar el recurso (y todos los recursos dependientes) en la zona protegida que elija.
 

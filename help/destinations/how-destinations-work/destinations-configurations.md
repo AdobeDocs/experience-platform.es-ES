@@ -44,13 +44,13 @@ La configuración disponible para los usuarios al conectarse a un destino depend
 
 Por ejemplo, para [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations), un desarrollador de destino puede configurar qué identidades acepta su destino y solo esas identidades se mostrarán al usuario en el paso [asignación del flujo de trabajo de activación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), como se muestra a continuación:
 
-![Grabación de pantalla de la selección de identidad para el campo de destino en el paso de asignación del flujo de trabajo de activación. ](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![Grabación de pantalla de la selección de identidad para el campo de destino en el paso de asignación del flujo de trabajo de activación. &#x200B;](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 Del mismo modo, para [destinos basados en archivos](/help/destinations/destination-types.md#file-based), el desarrollador de destinos puede determinar qué [opciones de adición de nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) desea que estén disponibles para su destino, o qué [opciones de formato de archivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) desea que estén disponibles, y el usuario solo podrá seleccionar entre estas opciones, como se muestra a continuación:
 
 ![Grabación de pantalla de la opción de formato de archivo al conectarse a un destino basado en archivos.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![Grabación de pantalla de la opción de adición de nombre de archivo en el paso de programación del flujo de trabajo de activación. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Grabación de pantalla de la opción de adición de nombre de archivo en el paso de programación del flujo de trabajo de activación. &#x200B;](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 Obtenga más información acerca de las diferentes opciones y pasos disponibles en el flujo de trabajo de activación:
 

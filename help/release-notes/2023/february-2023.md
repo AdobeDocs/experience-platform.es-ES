@@ -84,7 +84,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Grupo de campos | [!UICONTROL Límites de restricción de frecuencia] | El grupo de campos [!UICONTROL Límites de restricción de frecuencia] [ se ha actualizado para admitir eventos repetidos y personalizados](https://github.com/adobe/xdm/pull/1641/files). |
+| Grupo de campos | [!UICONTROL Límites de restricción de frecuencia] | El grupo de campos [!UICONTROL Límites de restricción de frecuencia] [&#x200B; se ha actualizado para admitir eventos repetidos y personalizados](https://github.com/adobe/xdm/pull/1641/files). |
 | Tipo de datos | [!UICONTROL Remitente del reenvío web] | Se han [actualizado las propiedades del remitente del reenvío web actualizado para incluir `xdm:linkName` y `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectivamente, son el nombre y la región del elemento HTML seleccionado en la página anterior. |
 | Grupo de campos | [!UICONTROL Adobe CJM ExperienceEvent: detalles de interacción de mensajes] | [El campo [!UICONTROL URL del rastreador] se ha añadido](https://github.com/adobe/xdm/pull/1665/files) al [!UICONTROL Adobe CJM ExperienceEvent]. Este rastreador proporciona la URL seleccionada por el usuario. |
 | Grupo de campos | [!UICONTROL Adobe CJM ExperienceEvent: detalle de interacción de mensajes] | [La propiedad `meta:enum` vacía se ha eliminado](https://github.com/adobe/xdm/pull/1668/files) desde el campo [!UICONTROL Tipo de seguimiento] de la URL. |

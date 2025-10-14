@@ -181,4 +181,4 @@ Una respuesta correcta devuelve la conexión base recién creada junto con su ID
 Siguiendo este tutorial, ha creado una conexión base [!DNL Salesforce Service Cloud] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de éxito de los clientes a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/customer-success.md)
+* [Cree un flujo de datos para llevar los datos de éxito de los clientes a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/customer-success.md)

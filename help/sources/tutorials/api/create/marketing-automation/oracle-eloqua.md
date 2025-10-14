@@ -113,4 +113,4 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 Siguiendo este tutorial, ha creado una conexión base [!DNL Oracle Eloqua] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de automatización de marketing a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/marketing-automation.md)
+* [Cree un flujo de datos para llevar los datos de automatización de marketing a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/marketing-automation.md)

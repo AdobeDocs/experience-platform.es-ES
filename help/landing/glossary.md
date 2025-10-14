@@ -345,7 +345,7 @@ ht-degree: 0%
 
 **Política de combinación**: Las políticas de combinación son reglas que utiliza Experience Platform para determinar cómo se combinarán los fragmentos de datos de clientes de varios orígenes para crear un perfil individual. Cuando se produce un conflicto de datos, la política de combinación determina qué datos deben tener prioridad para su inclusión en el perfil.
 
-**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) mejora los derechos de privacidad de los consumidores con respecto a sus datos de salud. Exige revelaciones, consentimiento del consumidor y derechos de eliminación para los datos de salud, y prohíbe la venta de datos de salud sin autorización. Además, la ley hace ilegal el uso de geoperimetraje alrededor de las instalaciones de salud.
+**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) mejora los derechos de privacidad de los consumidores con respecto a sus datos de salud. Exige revelaciones, consentimiento del consumidor y derechos de eliminación para los datos de salud, y prohíbe la venta de datos de salud sin autorización. Además, la ley hace ilegal el uso de geoperimetraje alrededor de las instalaciones de salud.
 
 **Mixin**: Consulte &quot;Grupo de campos de esquema&quot;.
 

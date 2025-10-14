@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-En esta página se describen las reglas que debe seguir al [crear su página de ](./documentation-instructions.md) documentación de destino para asegurarse de que cumple los estándares de calidad de la documentación de Adobe Experience Platform.
+En esta página se describen las reglas que debe seguir al [crear su página de &#x200B;](./documentation-instructions.md) documentación de destino para asegurarse de que cumple los estándares de calidad de la documentación de Adobe Experience Platform.
 
 ## Directrices generales {#general-guidance}
 

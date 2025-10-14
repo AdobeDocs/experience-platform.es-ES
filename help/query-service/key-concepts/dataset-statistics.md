@@ -21,7 +21,7 @@ Para ver las estadísticas que se calcularon con el comando `ANALYZE TABLE COMPU
 
 >[!IMPORTANT]
 >
->Los comandos `COMPUTE STATISTICS`, `FILTERCONTEXT` y `FOR COLUMNS` no son compatibles con las tablas de almacenamiento acelerado. Actualmente, estas extensiones para el comando `ANALYZE TABLE` solo son compatibles con las tablas ADLS. Para obtener más información, consulte la [sección ](../sql/syntax.md#analyze-table) ANALYZE TABLE de la guía de sintaxis SQL.
+>Los comandos `COMPUTE STATISTICS`, `FILTERCONTEXT` y `FOR COLUMNS` no son compatibles con las tablas de almacenamiento acelerado. Actualmente, estas extensiones para el comando `ANALYZE TABLE` solo son compatibles con las tablas ADLS. Para obtener más información, consulte la [sección &#x200B;](../sql/syntax.md#analyze-table) ANALYZE TABLE de la guía de sintaxis SQL.
 
 Esta guía le ayuda a estructurar las consultas para que pueda calcular las estadísticas de columna de un conjunto de datos de ADLS. Con estos comandos, puede ver las estadísticas generadas en la sesión a través de un cliente SQL mediante una consulta SQL.
 

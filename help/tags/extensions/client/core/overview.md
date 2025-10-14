@@ -636,7 +636,7 @@ Esta acción almacena en déclencheur todas las reglas que usan un [evento de ll
 
 ![Captura de pantalla de una acción Déclencheur Direct Call en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-action.png)
 
-La acción se asigna directamente al método [`track` ](../../../ui/client-side/satellite-object.md#track) en el objeto `satellite`, al que se puede obtener acceso mediante código del lado del cliente.
+La acción se asigna directamente al método [`track` &#x200B;](../../../ui/client-side/satellite-object.md#track) en el objeto `satellite`, al que se puede obtener acceso mediante código del lado del cliente.
 
 ## Tipos de Data Elements de Extensión principal
 

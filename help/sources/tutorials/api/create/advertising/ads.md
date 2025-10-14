@@ -110,4 +110,4 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 Siguiendo este tutorial, ha creado una conexión base [!DNL Google Ads] mediante la API [!DNL Flow Service] y ha conectado su cuenta de [!DNL Google Ads] a Experience Platform. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de publicidad a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/advertising.md)
+* [Cree un flujo de datos para llevar los datos de publicidad a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/advertising.md)

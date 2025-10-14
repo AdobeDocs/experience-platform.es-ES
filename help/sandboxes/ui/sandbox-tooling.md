@@ -180,7 +180,7 @@ Se muestran las opciones para crear nuevos o utilizar los existentes. Selecciona
 
 El diálogo **[!UICONTROL Grupo de campos]** muestra una lista de grupos de campos disponibles para el objeto. Seleccione los grupos de campos requeridos y luego seleccione **[!UICONTROL Guardar]**.
 
-![Una lista de campos mostrados en el cuadro de diálogo [!UICONTROL Grupo de campos], que resalta la selección [!UICONTROL Guardar]. ](../images/ui/sandbox-tooling/field-group-list.png)
+![Una lista de campos mostrados en el cuadro de diálogo [!UICONTROL Grupo de campos], que resalta la selección [!UICONTROL Guardar]. &#x200B;](../images/ui/sandbox-tooling/field-group-list.png)
 
 Ha vuelto a la página [!UICONTROL Objeto Package y dependencias]. Aquí, seleccione **[!UICONTROL Finalizar]** para completar la importación del paquete.
 

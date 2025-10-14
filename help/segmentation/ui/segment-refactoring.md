@@ -24,7 +24,7 @@ Antes de la versión de enero de 2024, todas las restricciones temporales de niv
 
 Anteriormente, un evento individual podía tener varias reglas de restricción de tiempo adjuntas. Con esta actualización reciente, intentar agregar una restricción de tiempo a una regla dará como resultado **error**.
 
-![Se resalta la restricción de tiempo a nivel de regla. También se resalta el error que se produce posteriormente. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![Se resalta la restricción de tiempo a nivel de regla. También se resalta el error que se produce posteriormente. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 Ahora, las restricciones de tiempo solo se pueden aplicar en el nivel de lienzo o de tarjeta.
 

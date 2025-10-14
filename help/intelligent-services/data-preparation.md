@@ -368,4 +368,4 @@ En este documento se proporcionan instrucciones generales sobre cómo preparar l
 Una vez que haya rellenado correctamente un conjunto de datos con los datos de experiencia del cliente, puede usar [!DNL Intelligent Services] para generar perspectivas. Consulte los siguientes documentos para empezar:
 
 * [Descripción general de Attribution AI](./attribution-ai/overview.md)
-* [Información general sobre Customer AI ](./customer-ai/overview.md)
+* [Información general sobre Customer AI &#x200B;](./customer-ai/overview.md)

@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Exportar extremo
 
-Todos los recursos dentro de [!DNL Schema Library] están contenidos en una zona protegida específica dentro de Adobe Experience Platform. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones. El extremo `/rpc/export` de la API [!DNL Schema Registry] le permite generar una carga útil de exportación para cualquier esquema, grupo de campos de esquema o tipo de datos en [!DNL Schema Library] y, a continuación, utilizar esa carga útil para importar ese recurso (y todos los recursos dependientes) en una zona protegida y organización de destino a través del extremo [`/rpc/import` ](./import.md).
+Todos los recursos dentro de [!DNL Schema Library] están contenidos en una zona protegida específica dentro de Adobe Experience Platform. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones. El extremo `/rpc/export` de la API [!DNL Schema Registry] le permite generar una carga útil de exportación para cualquier esquema, grupo de campos de esquema o tipo de datos en [!DNL Schema Library] y, a continuación, utilizar esa carga útil para importar ese recurso (y todos los recursos dependientes) en una zona protegida y organización de destino a través del extremo [`/rpc/import` &#x200B;](./import.md).
 
 ## Introducción
 

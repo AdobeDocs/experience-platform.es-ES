@@ -86,7 +86,7 @@ Una vez agregado el nuevo campo calculado, seleccione **[!UICONTROL Asignar camp
 >
 >Las marcas de tiempo de Braze no se expresan en milisegundos, sino en segundos. Para que las marcas de tiempo de Experience Platform se reflejen con precisión, debe crear campos calculados en milisegundos. Un cálculo de &quot;tiempo * 1000&quot; se convertirá correctamente en milisegundos, adecuados para su asignación a un campo de marca de tiempo en Experience Platform.
 >
->![Creando un campo calculado para la marca de tiempo ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![Creando un campo calculado para la marca de tiempo &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![Asignación sin errores.](../../../../images/tutorials/create/braze/completed_mapping.png)
 

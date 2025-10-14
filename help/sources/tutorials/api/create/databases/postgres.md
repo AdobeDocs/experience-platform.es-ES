@@ -264,4 +264,4 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión b
 Ahora que ha creado una conexión entre su base de datos [!DNL PostgreSQL] y Experience Platform, puede continuar con los siguientes pasos y llevar los datos de [!DNL PostgreSQL] a Experience Platform. Para obtener más información, lea la siguiente documentación:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

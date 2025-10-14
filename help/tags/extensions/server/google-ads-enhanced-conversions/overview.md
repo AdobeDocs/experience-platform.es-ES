@@ -35,7 +35,7 @@ Las conversiones mejoradas aprovechan la API [!DNL Google Ads] para agregar dato
 >
 >Para asociar el evento de conversión del lado del cliente con los datos de origen enviados desde el reenvío de eventos, `transaction_ID` debe ser el mismo en ambas llamadas. Para obtener más información sobre dónde se debe proporcionar este valor para cada servicio, consulte las secciones sobre configuración de acciones de conversión para [tags](#conversion-action-tags) y [reenvío de eventos](#conversion-action-event-forwarding), respectivamente.
 
-Dado que el envío de eventos de conversión implica una implementación del lado del cliente y del lado del servidor, este documento cubre los pasos previos para configurar la extensión [[!DNL Google Global Site Tag] (gtag) del lado del cliente ](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag), además de la extensión [!DNL Enhanced Conversions] para el reenvío de eventos.
+Dado que el envío de eventos de conversión implica una implementación del lado del cliente y del lado del servidor, este documento cubre los pasos previos para configurar la extensión [[!DNL Google Global Site Tag] (gtag) del lado del cliente &#x200B;](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag), además de la extensión [!DNL Enhanced Conversions] para el reenvío de eventos.
 
 El siguiente vídeo proporciona una introducción a la extensión [!DNL Enhanced Conversions] y explica los pasos de implementación en un nivel superior:
 

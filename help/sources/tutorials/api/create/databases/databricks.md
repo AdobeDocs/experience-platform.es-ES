@@ -125,4 +125,4 @@ Una respuesta correcta devuelve la conexión recién creada, incluido el ID de l
 Al seguir este tutorial, ha creado correctamente una conexión entre su cuenta de [!DNL Databricks] y Experience Platform. Puede utilizar el ID de conexión base recién generado en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

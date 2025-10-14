@@ -30,7 +30,7 @@ Una empresa de software organiza una conferencia y desea mantenerse en contacto 
 
 >[!IMPORTANT]
 >
->A partir de septiembre de 2025, ya no podrá asignar [!DNL IDFA] como identidad de destino, puesto que [!DNL IDFA] ya no es compatible con el destino [!DNL LinkedIn Matched Audiences]. Consulte la [!DNL LinkedIn Matched Audiences]documentación[ de la integración de ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obtener más información. Este cambio se debe a los requisitos de LinkedIn y no está relacionado con ninguna actualización del servicio de destino de Experience Platform.
+>A partir de septiembre de 2025, ya no podrá asignar [!DNL IDFA] como identidad de destino, puesto que [!DNL IDFA] ya no es compatible con el destino [!DNL LinkedIn Matched Audiences]. Consulte la [!DNL LinkedIn Matched Audiences]documentación[&#x200B; de la integración de &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obtener más información. Este cambio se debe a los requisitos de LinkedIn y no está relacionado con ninguna actualización del servicio de destino de Experience Platform.
 
 
 | Identidad de destino | Descripción | Consideraciones |
@@ -164,7 +164,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

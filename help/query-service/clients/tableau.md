@@ -40,7 +40,7 @@ Asegúrese de marcar la casilla **[!UICONTROL Requerir SSL]** antes de intentar 
 
 >[!IMPORTANT]
 >
->Las estructuras de datos anidadas en herramientas de BI de terceros se pueden aplanar para mejorar su facilidad de uso y reducir la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos. Consulte la documentación sobre la característica [`FLATTEN` ](../key-concepts/flatten-nested-data.md) para obtener instrucciones sobre cómo activar esta configuración al conectarse a una base de datos.
+>Las estructuras de datos anidadas en herramientas de BI de terceros se pueden aplanar para mejorar su facilidad de uso y reducir la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos. Consulte la documentación sobre la característica [`FLATTEN` &#x200B;](../key-concepts/flatten-nested-data.md) para obtener instrucciones sobre cómo activar esta configuración al conectarse a una base de datos.
 
 Después de rellenar todas las credenciales, confirme la configuración para continuar. Ahora se ha conectado con Adobe Experience Platform.
 

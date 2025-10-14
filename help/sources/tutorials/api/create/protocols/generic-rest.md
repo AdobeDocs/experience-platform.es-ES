@@ -190,4 +190,4 @@ Una respuesta correcta devuelve la conexión base recién creada, incluido su id
 Siguiendo este tutorial, ha creado una conexión base [!DNL Generic REST API] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de los protocolos a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/protocols.md)
+* [Cree un flujo de datos para llevar los datos de los protocolos a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/protocols.md)

@@ -133,7 +133,7 @@ Autentique con la fuente de almacenamiento en la nube que elija. Durante el paso
 
 A continuación, seleccione un archivo de muestra de los datos de origen. Dado que los datos están cifrados, Experience Platform necesitará un archivo de muestra para crear un esquema XDM que se pueda asignar a los datos de origen.
 
-![: &quot;¿Está cifrado este archivo?&quot; y el botón &quot;Seleccionar archivo de muestra&quot; seleccionado. ](../../images/tutorials/edi/select_sample_file.png)
+![: &quot;¿Está cifrado este archivo?&quot; y el botón &quot;Seleccionar archivo de muestra&quot; seleccionado. &#x200B;](../../images/tutorials/edi/select_sample_file.png)
 
 Una vez seleccionado el archivo de muestra, configure las opciones de los datos, como el formato de datos, el delimitador y el tipo de compresión correspondientes. Espere un poco para que la interfaz de vista previa se represente completamente y, a continuación, seleccione **[!UICONTROL Guardar]**.
 

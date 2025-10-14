@@ -51,7 +51,7 @@ Consulte la documentación de [suscripción a eventos de Privacy Service](./priv
 
 ### Recuperar todos los trabajos basados en filtros {#retrieve-filtered-responses-for-all-jobs}
 
-Para recuperar todos los datos del trabajo de privacidad en función de los filtros especificados, **realice una solicitud de GET al extremo `/jobs`**. Esta llamada de API es útil para proporcionar una vista de alto nivel del estado actual del trabajo para grandes conjuntos de ID de trabajo con una sola solicitud. No contiene respuestas detalladas al producto, pero se pueden encontrar usando el extremo [`/jobs/{jobID}` ](#retrieve-detailed-responses-for-specific-jobs).
+Para recuperar todos los datos del trabajo de privacidad en función de los filtros especificados, **realice una solicitud de GET al extremo `/jobs`**. Esta llamada de API es útil para proporcionar una vista de alto nivel del estado actual del trabajo para grandes conjuntos de ID de trabajo con una sola solicitud. No contiene respuestas detalladas al producto, pero se pueden encontrar usando el extremo [`/jobs/{jobID}` &#x200B;](#retrieve-detailed-responses-for-specific-jobs).
 
 Una solicitud de GET al extremo `/jobs` se usa mejor para recopilar o comparar los datos de estado de un gran conjunto de ID de trabajo, pero **no** está pensada para actividades regulares de tipo de sondeo.
 

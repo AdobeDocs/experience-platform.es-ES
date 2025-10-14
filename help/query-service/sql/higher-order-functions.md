@@ -458,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 Los siguientes ejemplos de funciones de orden superior se explican como parte del caso de uso recuperar registros similares. En la sección correspondiente de ese documento se proporciona un ejemplo y una explicación del uso de cada función.
 
-El ejemplo de función [`transform` ](../use-cases/retrieve-similar-records.md#length-adjustment) cubre la tokenización de una lista de productos.
+El ejemplo de función [`transform` &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) cubre la tokenización de una lista de productos.
 
-El ejemplo de la función [`filter` ](../use-cases/retrieve-similar-records.md#filter-results) muestra una extracción más refinada y precisa de información relevante de los datos de texto.
+El ejemplo de la función [`filter` &#x200B;](../use-cases/retrieve-similar-records.md#filter-results) muestra una extracción más refinada y precisa de información relevante de los datos de texto.
 
 La función [`reduce`](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) proporciona una forma de derivar valores acumulativos o agregados, que pueden ser fundamentales en varios procesos analíticos y de planificación.

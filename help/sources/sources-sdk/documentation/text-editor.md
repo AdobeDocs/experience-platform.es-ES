@@ -63,7 +63,7 @@ Con el repositorio clonado en el equipo local y una nueva rama creada, ahora pue
 
 Adobe recomienda usar [Visual Studio Code](https://code.visualstudio.com/) e instalar la extensión de Adobe Markdown Authoring. Para instalar la extensión, inicie Visual Studio Code y, a continuación, seleccione la ficha **Extensiones** en el panel de navegación izquierdo.
 
-![ Extensión](../assets/extension.png)
+![&#x200B; Extensión](../assets/extension.png)
 
 A continuación, escriba `Adobe Markdown Authoring` en la barra de búsqueda y seleccione **Instalar** en la página que aparece.
 

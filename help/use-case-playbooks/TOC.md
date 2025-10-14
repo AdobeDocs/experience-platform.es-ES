@@ -19,7 +19,7 @@ ht-degree: 55%
    * [Información general](/help/use-case-playbooks/playbooks/overview.md)
    * [Aproveche los casos de uso de la experiencia del cliente para impulsar los objetivos empresariales](/help/use-case-playbooks/playbooks/business-use-case-framework.md)
    * [Navegar a los manuales de casos de uso](/help/use-case-playbooks/playbooks/navigate.md)
-   * [Introducción ](/help/use-case-playbooks/playbooks/get-started.md)
+   * [Introducción &#x200B;](/help/use-case-playbooks/playbooks/get-started.md)
    * [Manuales de casos de uso disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md)
    * [Elija entre una selección de libros de reproducción](/help/use-case-playbooks/playbooks/choose.md)
    * [Cree y comparta sus propios libros de reproducción](/help/use-case-playbooks/playbooks/author.md)
