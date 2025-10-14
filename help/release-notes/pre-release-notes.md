@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: c592d007932835f5263d7f78b2e8155790313840
+source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 45%
+source-wordcount: '944'
+ht-degree: 33%
 
 ---
 
@@ -25,41 +25,24 @@ ht-degree: 45%
 >- [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/latest)
 
-**Fecha de la versión: septiembre de 2025**
+**Fecha de la versión: octubre de 2025**
 
 Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 
-- [Asistente de IA](#ai-assistant)
 - [Alertas](#alerts)
 - [Destinos](#destinations)
-- [Modelo de datos de experiencia (XDM)](#xdm)
-- [Servicio de consultas](#query-service)
-- [Perfil del cliente en tiempo real](#profile)
 - [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
-
-## Asistente de IA {#ai-assistant}
-
-Adobe Experience Platform AI Assistant es una experiencia conversacional que puede utilizar para acelerar y optimizar los flujos de trabajo en las aplicaciones de Adobe Experience Cloud.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-| --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator es la capa inteligente que alimenta al asistente de IA. Cuando hace preguntas o solicita ayuda, Agent Orchestrator llama automáticamente a agentes especializados para que le obtengan las respuestas correctas. Agent Orchestrator recuerda el historial de sus conversaciones, lo que le permite basarse en preguntas anteriores de forma natural sin repetir el contexto, y combina las perspectivas de varios agentes para presentarle respuestas claras y unificadas. |
-| Audience Agent | Audience Agent le permite ver información sobre las audiencias, como la detección de cambios significativos en el tamaño de la audiencia, la detección de audiencias duplicadas, la exploración del inventario de audiencias y la recuperación del tamaño de estas. |
-
-Para obtener más información, lea la [Información general sobre el Asistente de IA](../ai-assistant/home.md).
 
 ## Alertas {#alerts}
 
 Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a diferentes reglas de alertas a través de la pestaña [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia IU o a través de notificaciones por correo electrónico.
 
-**Nuevas funciones**
+**Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Alertas de ingesta de perfil de streaming | Ahora puede suscribirse a dos nuevas alertas para la transmisión de ingesta a nivel de flujo de datos: <ul><li>Tasa de errores de ingesta de transmisión superada</li><li>Tasa de ingesta omitida de streaming superada</li></ul> Las alertas en plataforma o por correo electrónico le avisarán cuando se superen los umbrales para el umbral predeterminado o un umbral personalizado que defina. Para obtener más información, lea la guía [Alertas de perfil](../observability/alerts/rules.md#profile). |
+| Alerta de tasa de error de destino | Se ha agregado una nueva alerta para los destinos: **La tasa de error de destino supera el umbral**. Esta alerta le notifica cuando el número de registros con errores durante la activación de datos ha superado el umbral permitido, lo que le permite responder rápidamente a los problemas de activación. |
 
 {style="table-layout:auto"}
 
@@ -73,42 +56,19 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 
 | Destino | Descripción |
 | --- | --- |
-| Conector [!BADGE Beta]{type=Informative} [!DNL Snowflake Batch] | Ya está disponible un nuevo conector [!DNL Snowflake Batch] que proporciona una alternativa al conector de flujo continuo para casos de uso específicos. |
-| Destino [!DNL Adform] | [!DNL Adform] es un proveedor líder de soluciones programáticas de compra y venta de medios. Al conectar Adform a Adobe Experience Platform, puede activar las audiencias de origen a través de Adform, en función del Experience Cloud ID (ECID). |
-| Compatibilidad con cifrado [!DNL Data Landing Zone] | Ahora puede adjuntar claves públicas con formato RSA para cifrar los archivos exportados, lo que le proporciona el mismo nivel de seguridad que otros destinos de almacenamiento en la nube para la información confidencial. |
-| Detalles de caducidad de autenticación para [!DNL Pinterest] destinos | La información de caducidad de autenticación de los destinos de [!DNL Pinterest] ahora es visible directamente en la interfaz de Experience Platform, por lo que puede ver cuándo caducará la autenticación y renovarla antes de que cause interrupciones en los flujos de datos. Puede monitorizar las fechas de caducidad de los tókenes desde la columna **[!UICONTROL Fecha de caducidad de la cuenta]** en las pestañas **[[!UICONTROL Cuentas]](../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Examinar]](../destinations/ui/destinations-workspace.md#browse)**. |
+| [!DNL AdForm] | Use este destino para enviar audiencias de Adobe Real-Time CDP a [!DNL AdForm] para su activación en función del Experience Cloud ID (ECID) y del ID Fusion de [!DNL AdForm]. ID Fusion de [!DNL AdForm] es un servicio de resolución de ID que le permite activar audiencias de origen basadas en el Experience Cloud ID (ECID). |
+| `Amazon Ads` | Se ha agregado compatibilidad con identificadores personales adicionales, como `firstName`, `lastName`, `street`, `city`, `state`, `zip` y `country`. La asignación de estos campos como identidades de destino puede mejorar las tasas de coincidencia de audiencia. |
 
 **Funcionalidad nueva o actualizada**
 
 | Función | Descripción |
 | --- | --- |
-| Funciones mejoradas de administración de destinos en la IU de Experience Platform | Mejore su flujo de trabajo de administración de destinos con nuevas capacidades de ordenación en las fichas [[!UICONTROL Examinar]](../destinations/ui/destinations-workspace.md#browse) y [[!UICONTROL Cuentas]](../destinations/ui/destinations-workspace.md#accounts). Ahora también puede ver un indicador visual cuando la autenticación de la cuenta esté a punto de caducar. |
+| Compatibilidad con el cifrado del lado del servidor [!DNL AES256] en [!DNL Amazon S3] destinos | [!DNL Amazon S3] destinos ahora admiten el cifrado del lado del servidor [!DNL AES256], lo que proporciona una seguridad mejorada para los datos exportados. Puede configurar este método de cifrado al configurar o actualizar las conexiones de destino de [!DNL Amazon S3], asegurándose de que los datos se cifren en reposo mediante algoritmos de cifrado de [!DNL AES256] estándar del sector. Para obtener más información, consulte esta [[!DNL Amazon] documentación](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html). |
+| [Varios destinos nuevos que admiten la supervisión a nivel de audiencia](../dataflows/ui/monitor-destinations.md#audience-level-view) | Los siguientes destinos ahora admiten la monitorización a nivel de audiencia: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] participación de cuenta</li><li>[!DNL The Trade Desk]</li></ul> |
+| Corrección de protecciones de exportación de conjuntos de datos | Se ha implementado una corrección en las protecciones de exportación del conjunto de datos. Anteriormente, algunos conjuntos de datos que incluían una columna de marca de tiempo pero que _no eran_ basados en el esquema de eventos de experiencia XDM se trataban incorrectamente como conjuntos de datos de eventos de experiencia, lo que limitaba las exportaciones a una ventana retrospectiva de 365 días. La protección retrospectiva de 365 días documentada ahora se aplica exclusivamente a los conjuntos de datos de eventos de experiencia. Los conjuntos de datos que utilizan cualquier esquema distinto del esquema de eventos de experiencia XDM ahora se rigen por la protección de 10 000 millones de registros. Es posible que algunos clientes vean números de exportación aumentados para conjuntos de datos que, erróneamente, caen dentro de la ventana retrospectiva de 365 días. Esto permite exportar conjuntos de datos para flujos de trabajo predictivos que tienen una larga ventana retrospectiva. Para obtener más información, lea las [protecciones de exportación del conjunto de datos](../destinations/guardrails.md#dataset-exports). |
+| Informes mejorados a nivel de audiencia para destinos empresariales | Se ha mejorado la lógica de creación de informes en el nivel de audiencia para destinos empresariales. Después de esta versión, los clientes verán números de informes de audiencia más precisos que incluyen solo audiencias relevantes para el destino seleccionado. Este ajuste de monitorización garantiza que la creación de informes incluya solo audiencias asignadas en el flujo de datos, lo que proporciona una perspectiva más clara de la activación de datos real. Esto no afecta a la cantidad de datos que se activan, se trata simplemente de una mejora de la monitorización para mejorar la precisión de la creación de informes. |
 
 Para obtener más información, consulte la [Información general sobre destinos](../destinations/home.md).
-
-## Modelo de datos de experiencia (XDM) {#xdm}
-
-XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
-
-**Nuevas funciones**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Esquemas basados en modelos | Simplifique el modelado de datos con esquemas basados en modelos. Ahora puede crear esquemas más fácilmente con ejemplos explicativos y directrices completos. Actualmente, esta función está disponible para los titulares de licencias de Campaign Orchestration y se ampliará a los clientes de Data Distiller en GA, lo que hace que el modelado de datos sea más accesible y eficiente. La funcionalidad incluye compatibilidad con datos de series temporales y capacidades de captura de datos de cambios. |
-
-Para obtener más información, lea la [información general sobre XDM](../xdm/home.md).
-
-## Perfil del cliente en tiempo real {#profile}
-
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos los canales en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción del cliente.
-
-**Funciones actualizadas**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Mejoras del visor de perfiles | La versión de septiembre de 2025 de incluye las siguientes mejoras en el visualizador de perfiles. <ul><li>**Vista combinada**: los atributos, los eventos y las perspectivas se han combinado en una sola vista.</li><li>**Información generada por IA**: La página de detalles del perfil ahora muestra información generada por IA, lo que le permite conocer detalles generados a partir de su perfil. Estas perspectivas pueden incluir información como puntuaciones de tendencia y análisis de tendencias.</li><li>**Actualización de estilo**: la página de detalles del perfil se ha actualizado visualmente.</li><li>**Examinar**: ahora puede explorar sus perfiles a través de un carrusel interactivo basado en tarjetas con búsqueda y personalización.</li></ul> |
-
-Para obtener más información, lea la [Descripción general del perfil del cliente en tiempo real](../profile/home.md).
 
 ## Servicio de segmentación {#segmentation-service}
 
@@ -118,13 +78,7 @@ Para obtener más información, lea la [Descripción general del perfil del clie
 
 | Función | Descripción |
 | ------- | ----------- |
-| Audiencias de cuenta con eventos de experiencia en desuso | Después de la actualización de la arquitectura B2B, ya no se admiten las audiencias de cuenta con eventos de experiencia. En su lugar, utilice el nuevo enfoque de segmento de segmentos: cree una audiencia de Personas con Eventos de experiencia y, a continuación, consulte esa audiencia de Personas al crear una Audiencia de cuenta. Esto ofrece un enfoque más flexible y mantenible de la creación de audiencias B2B. |
-
-**Actualizaciones importantes**
-
-| Actualización | Descripción |
-| ------- | ----------- |
-| Estimaciones de audiencia: reversión de actualización automática | Se ha revertido la mejora de actualización automática para estimaciones de audiencia. Las estimaciones de audiencia se seguirán generando en el Generador de segmentos, pero se ha eliminado la funcionalidad de actualización automática. |
+| Monitorización de segmentación de streaming | La monitorización en tiempo real de la segmentación de streaming ofrece transparencia en la tasa de evaluación, la latencia y las métricas de calidad de datos en los niveles de zona protegida, conjunto de datos y audiencia. Esto admite alertas proactivas y perspectivas procesables para ayudar a los ingenieros de datos a identificar infracciones de capacidad y problemas de ingesta. Las métricas de monitorización incluyen la tasa de evaluación, la latencia de ingesta de P95, así como los registros recibidos, evaluados, fallidos y omitidos. Las funciones de vista por conjunto de datos y vista por audiencia proporcionan una visibilidad completa de los nuevos perfiles netos calificados y descalificados. |
 
 Para obtener más información, lea la [[!DNL Segmentation Service] información general](../segmentation/home.md).
 
@@ -132,11 +86,17 @@ Para obtener más información, lea la [[!DNL Segmentation Service] información
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
-**Funciones nuevas o actualizadas**
+**Fuentes nuevas o actualizadas**
 
-| Función | Descripción |
+| Fuente | Descripción |
 | --- | --- |
-| Nuevas fuentes en General Availability | Las siguientes fuentes están ahora en General Availability: Se han actualizado varios conectores de fuente de Beta a GA: <ul><li>[Ingesta de datos de Acxiom](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Ingesta de datos de clientes potenciales de Acxiom](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Estas fuentes ahora son totalmente compatibles y están listas para su uso en producción. |
-| [!DNL Snowflake]: compatibilidad con la autenticación de par de claves | Seguridad mejorada para conexiones de Snowflake compatible con la autenticación de par de claves. La autenticación básica (nombre de usuario y contraseña) dejará de usarse en noviembre de 2025, por lo que se recomienda a los clientes migrar a la autenticación de par de claves para mejorar la seguridad. |
+| [!BADGE Beta]{type=Informative} [!DNL Talon.one] orígenes de datos de fidelidad | Utilice las fuentes [!DNL Talon.One] para ingerir datos de fidelidad por lotes y de flujo continuo en Experience Platform. El conector admite la transmisión de datos de perfil, datos de transacción y datos de fidelidad, incluidos los puntos obtenidos, los puntos canjeados, los puntos caducados y los datos de nivel. |
+
+**Orígenes actualizados**
+
+| Fuente | Descripción |
+| --- | --- |
+| Disponibilidad general del origen [!DNL Google Ads] (solo API) | La versión de API del origen [!DNL Google Ads] está ahora en General Availability. La documentación de la API se ha actualizado para reflejar que la versión más reciente ahora es `v21`, y Experience Platform es compatible con todas las versiones v19 y posteriores. La versión de la interfaz de usuario permanece en versión beta y solo admite la ingesta única. Para utilizar la ingesta de datos incremental, utilice la ruta de la API. |
+| compatibilidad con la red virtual [!DNL Azure Event Hubs] | Adobe ahora admite explícitamente conexiones de red virtual a Azure Event Hubs, lo que permite la transferencia de datos a través de redes privadas en lugar de redes públicas. Los clientes pueden realizar una lista de permitidos de Experience Platform VNet para enrutar el tráfico de los Event Hubs de forma privada a través de la red troncal privada de Azure, lo que proporciona una seguridad y un cumplimiento mejorados para los flujos de trabajo de ingesta de datos. |
 
 Para obtener más información, lea la [Información general de las fuentes](../sources/home.md).
