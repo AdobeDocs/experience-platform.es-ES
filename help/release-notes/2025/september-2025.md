@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2025'
 description: Las notas de la versión de septiembre de 2025 de Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 98%
+source-wordcount: '1528'
+ht-degree: 92%
 
 ---
 
@@ -107,6 +107,12 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 | Función | Descripción |
 | ------- | ----------- |
 | [!BADGE Alpha]{type=Informative} Esta característica se encuentra actualmente en Alpha. Mejoras del visor de perfiles | La versión de septiembre de 2025 de incluye las siguientes mejoras en el visor de perfiles. <ul><li>**Vista combinada**: los atributos, los eventos y los datos se han combinado en una sola vista.</li><li>**Información generada por IA**: la página de detalles del perfil ahora muestra información generada por IA, lo que le permite conocer detalles generados a partir de su perfil. Estos datos pueden incluir información como las puntuaciones de las tendencias y el análisis de tendencias.</li><li>**Actualización del estilo**: la página de detalles del perfil se ha actualizado visualmente.</li><li>**Examinar**: ahora puede explorar sus perfiles a través de un carrusel interactivo basado en tarjetas con búsqueda y personalización.</li></ul> |
+
+**Actualizaciones importantes**
+
+| Actualización | Descripción |
+| ------ | ----------- |
+| Degradación de API de eliminación de perfil | La [API de eliminación de perfil](/help/profile/api/entities.md#delete-entity) quedará obsoleta a finales de octubre de 2025. Si desea realizar operaciones de eliminación de registros, puede usar en su lugar [Flujo de trabajo de la API de eliminación de registros del ciclo de vida de datos](/help/hygiene/api/workorder.md) o [Flujo de trabajo de la interfaz de usuario de eliminación de registros del ciclo de vida de datos](/help/hygiene/ui/record-delete.md). Los flujos de trabajo del ciclo de vida de datos proporcionan un seguimiento del ciclo de vida completo, así como cuotas mensuales con las que puede realizar vistas y administrar. <br/><br/>Una vez que el extremo haya quedado obsoleto, cualquier usuario que actualmente utilice este extremo seguirá teniendo acceso a este extremo. El fin de la vida útil de este servicio se anunciará por separado. Si tiene alguna pregunta, póngase en contacto con el Servicio de atención al cliente de Adobe. |
 
 Para obtener más información, lea la [información general sobre el perfil del cliente en tiempo real](../../profile/home.md).
 
