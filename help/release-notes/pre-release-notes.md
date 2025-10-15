@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
+source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 33%
+source-wordcount: '1008'
+ht-degree: 31%
 
 ---
 
@@ -57,7 +57,9 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 | Destino | Descripción |
 | --- | --- |
 | [!DNL AdForm] | Use este destino para enviar audiencias de Adobe Real-Time CDP a [!DNL AdForm] para su activación en función del Experience Cloud ID (ECID) y del ID Fusion de [!DNL AdForm]. ID Fusion de [!DNL AdForm] es un servicio de resolución de ID que le permite activar audiencias de origen basadas en el Experience Cloud ID (ECID). |
-| `Amazon Ads` | Se ha agregado compatibilidad con identificadores personales adicionales, como `firstName`, `lastName`, `street`, `city`, `state`, `zip` y `country`. La asignación de estos campos como identidades de destino puede mejorar las tasas de coincidencia de audiencia. |
+| [!DNL Amazon Ads] | Se ha agregado compatibilidad con identificadores personales adicionales, como `firstName`, `lastName`, `street`, `city`, `state`, `zip` y `country`. La asignación de estos campos como identidades de destino puede mejorar las tasas de coincidencia de audiencia. |
+| [!DNL Snowflake Batch] (disponibilidad limitada) | Cree un recurso compartido de datos de [!DNL Snowflake] activo para recibir actualizaciones diarias de la audiencia directamente como tablas compartidas en su cuenta. Actualmente, esta integración está disponible para las organizaciones de clientes aprovisionadas en la región de VA7. |
+| [!DNL Snowflake Streaming] (disponibilidad limitada) | Cree un recurso compartido de datos de [!DNL Snowflake] activo para recibir actualizaciones de audiencia de streaming directamente como tablas compartidas en su cuenta. Actualmente, esta integración está disponible para las organizaciones de clientes aprovisionadas en la región de VA7. |
 
 **Funcionalidad nueva o actualizada**
 
