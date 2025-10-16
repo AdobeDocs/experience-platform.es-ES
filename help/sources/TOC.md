@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1065'
 ht-degree: 34%
 
 ---
@@ -181,8 +181,6 @@ ht-degree: 34%
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - Lealtad {#loyalty}
-         - [Eventos de flujo capilar](tutorials/api/create/loyalty/capillary.md)
       - Automatización de marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
