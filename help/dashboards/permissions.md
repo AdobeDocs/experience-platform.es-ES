@@ -54,7 +54,7 @@ La siguiente matriz de control de acceso proporciona un desglose de los permisos
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] en el panel de navegación izquierdo. | N/A | **Se REQUIERE un permiso de &quot;Ver&quot; o &quot;Administrar&quot;** para cada tablero respectivo. | N/A | N/A |
 | [!DNL Dashboards] en el navegación izquierdo. | HABILITADO | **Se requiere al menos uno.** | N/A | N/A |
 | [!DNL Dashboards] [!DNL Inventory] <br/> (la ficha examinar) | HABILITADO | N/A | N/A | N/A |
-| [!DNL Dashboards][!DNL Integrations] <br/>pestaña (usado para instalar Power BI) | HABILITADO | **Se requiere al menos uno** | N/A | N/A |
+| [!DNL Dashboards]&#x200B;[!DNL Integrations] <br/>pestaña (usado para instalar Power BI) | HABILITADO | **Se requiere al menos uno** | N/A | N/A |
 | Power BI Install botón &amp; flujo de trabajo | HABILITADO | N/A | **OBLIGATORIO** | N/A |
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] paneles.<br/>Capacidad para editar esquemas de widgets y agregar nuevos atributos para la personalización de widgets | **Se requiere administrar tablero estándar** | **REQUERIDO (para cada tablero respectivo)** | N/A | N/A |
 | [!DNL License Usage Dashboard] | N/A | N/A | N/A | HABILITADO |
