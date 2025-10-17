@@ -2,9 +2,9 @@
 title: Ingesta bajo demanda de flujos de datos de origen en la interfaz de usuario
 description: Obtenga información sobre cómo crear flujos de datos bajo demanda para las conexiones de origen mediante la interfaz de usuario de Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fabacf273fb5774ddcee42d0cdcf12281eb0216b
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Este documento proporciona pasos sobre cómo crear flujos de datos bajo demanda 
 
 **¿Qué es una ejecución de flujo?**
 
-Las ejecuciones de flujo representan una instancia de ejecución de flujo de datos. Por ejemplo, si un flujo de datos está programado para ejecutarse por hora a las 9:00, 10:00 y 11:00 a.m., tendría tres instancias de ejecución de flujo. Las ejecuciones de flujo son específicas de su organización particular.
+Las ejecuciones de flujo representan una instancia de ejecución de flujo de datos. Por ejemplo, si un flujo de datos está programado para ejecutarse cada hora a las 9:00, las 10:00 y las 11:00 a.m., entonces tendrá tres instancias de ejecución de flujo. Las ejecuciones de flujo son específicas de su organización particular.
 
 >[!ENDSHADEBOX]
 
@@ -59,12 +59,16 @@ Seleccione **[!UICONTROL Programar]** y deje pasar unos momentos para que su flu
 
 Seleccione el nombre del flujo de datos para ver su actividad. Aquí verá una lista de las ejecuciones del flujo de datos que se han procesado. Puede volver a ejecutar iteraciones individuales de las ejecuciones de flujo de datos independientemente de si han fallado o se han realizado correctamente. Para las iteraciones de ejecución que han fallado, puede usar **[!UICONTROL Reintentar]** para iniciar de nuevo la ejecución después de diagnosticar y corregir cualquier error que se haya encontrado durante el proceso de creación.
 
+>[!TIP]
+>
+>Al reintentar una ejecución de flujo, solo se procesarán los archivos con marcas de tiempo que estén dentro del intervalo de la ejecución original.
+
 ![Se ejecuta una lista de flujos procesados para un flujo de datos seleccionado.](../../images/tutorials/on-demand/processed.png)
 
 Seleccione **[!UICONTROL Programado]** para ver una lista de las ejecuciones de flujo de datos programadas para una ingesta futura.
 
 ![Se ejecuta una lista de flujos programados para un flujo de datos seleccionado.](../../images/tutorials/on-demand/scheduled.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ha aprendido a crear ejecuciones de flujo bajo demanda para flujos de datos de fuentes existentes. Para obtener más información sobre las fuentes, lea [descripción general de las fuentes](../../home.md)
