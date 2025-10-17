@@ -6,10 +6,10 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
+source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 44%
+source-wordcount: '791'
+ht-degree: 43%
 
 ---
 
@@ -306,6 +306,7 @@ ht-degree: 44%
    * [Alojamiento de bibliotecas de terceros](./extension-dev/third-party-libraries.md)
    * [Variable gratuita Turbine](./extension-dev/turbine.md)
    * [Estándar de compatibilidad con versiones anteriores](./extension-dev/backwards-compatibility.md)
+   * [Extensiones privadas compartidas](./extension-dev/shared-private-extensions.md)
 * API de Reactor {#api}
    * [Información general](./api/overview.md)
    * [Autenticación y acceso a la API de Reactor](./api/getting-started.md)
