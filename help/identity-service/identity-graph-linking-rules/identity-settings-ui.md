@@ -19,7 +19,7 @@ La configuración de identidad es una característica de la interfaz de usuario 
 
 Vea el siguiente vídeo para obtener información adicional sobre el uso de la interfaz [!DNL Graph Simulation] en el área de trabajo de la interfaz de usuario del servicio de identidad:
 
->[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475965/?captions=spa&learn=on&enablevpops)
 
 Lea esta guía para aprender a configurar los ajustes de identidad en la interfaz de usuario.
 

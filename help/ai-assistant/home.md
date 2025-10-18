@@ -61,7 +61,7 @@ El conocimiento del producto hace referencia a conceptos y temas basados en la d
 
 Vea el siguiente vídeo para obtener información adicional sobre los conocimientos del producto AI Assistant:
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475933/?captions=spa&learn=on)
 
 ### Datos operativos {#operational-insights}
 

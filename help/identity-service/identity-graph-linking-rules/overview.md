@@ -101,7 +101,7 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/es/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Reglas de vinculación de gráficos de identidad: configuración de identidad" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Reglas de vinculación de gráficos de identidad: configuración de identidad"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475965/?captions=spa&format=jpeg&nocache=1747851655218" alt="Reglas de vinculación de gráficos de identidad: configuración de identidad"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

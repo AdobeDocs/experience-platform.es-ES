@@ -234,8 +234,8 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3436470/?learn=on" title="Obtener acceso al asistente de IA" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3436470/?format=jpeg&nocache=1732633204686" alt="Obtener acceso al asistente de IA"
+                    <a href="https://video.tv.adobe.com/v/3475922/?captions=spa&learn=on" title="Obtener acceso al asistente de IA" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475922/?captions=spa&format=jpeg&nocache=1732633204686" alt="Obtener acceso al asistente de IA"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -243,12 +243,12 @@ Vea los siguientes vídeos para conocer algunos de los aspectos fundamentales de
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" title="Obtener acceso al asistente de IA">Obtener acceso al Asistente de IA</a>
+                        <a href="https://video.tv.adobe.com/v/3475922/?captions=spa&learn=on" target="_blank" rel="referrer" title="Obtener acceso al asistente de IA">Obtener acceso al Asistente de IA</a>
                     </p>
                     <p class="is-size-6">Vea este vídeo para aprender cómo puede utilizar la interfaz de [!DNL Permissions] para obtener acceso al Asistente de IA.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3475922/?captions=spa&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                   </a>
                   <a href="./access.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -271,8 +271,8 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3438032/?learn=on" title="Reducción del tiempo de incorporación" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3438032/?format=jpeg&nocache=1732633205780" alt="Reducción del tiempo de incorporación"
+                    <a href="https://video.tv.adobe.com/v/3475933/?captions=spa&learn=on" title="Reducción del tiempo de incorporación" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475933/?captions=spa&format=jpeg&nocache=1732633205780" alt="Reducción del tiempo de incorporación"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -280,11 +280,11 @@ Vea los siguientes vídeos para obtener más información sobre los casos de uso
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" title="Reducción del tiempo de incorporación">Reducir el tiempo de incorporación</a>
+                        <a href="https://video.tv.adobe.com/v/3475933/?captions=spa&learn=on" target="_blank" rel="referrer" title="Reducción del tiempo de incorporación">Reducir el tiempo de incorporación</a>
                     </p>
                     <p class="is-size-6">Vea este vídeo para aprender a utilizar el conocimiento del producto AI Assistant para reducir el tiempo de incorporación.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3475933/?captions=spa&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ver</span>
                 </a>
             </div>
