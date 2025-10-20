@@ -2,9 +2,9 @@
 title: Lógica de vinculación del servicio de identidad
 description: Obtenga información acerca de cómo el servicio de identidad vincula identidades dispares para crear una vista completa de un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '966'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,10 @@ Existen dos tipos de identidades que se vinculan:
 
 * **Registros de perfil**: Estas identidades generalmente provienen de sistemas CRM.
 * **Eventos de experiencia**: Estas identidades generalmente provienen de la implementación de WebSDK o del origen de Adobe Analytics.
+
+>[!IMPORTANT]
+>
+>El servicio de identidad distingue entre mayúsculas y minúsculas. Por ejemplo, **abc<span>@gmail.com** y **ABC<span>@GMAIL.COM** se tratarían como dos identidades de correo electrónico independientes.
 
 ## Significado semántico del establecimiento de vínculos
 
@@ -70,7 +74,7 @@ Se incorporan un par de identidades en el gráfico y este par contiene:
 
 >[!TAB Se actualizó el gráfico]
 
-El servicio de identidad reconoce que CRMID:60013ABC ya existe en el gráfico y, por lo tanto, solo vincula el nuevo ECID
+El servicio de identidad reconoce que CRMID:60013ABC ya existe en su gráfico y, por lo tanto, solo vincula el nuevo ECID
 
 ![gráfico actualizado](../images/identity-settings/updated-graph.png)
 
@@ -111,10 +115,10 @@ La identidad principal de cada evento se determinará en función de [cómo conf
 
 En este ejemplo:
 
-* `t=1`, utilizó un equipo de escritorio (ECID:38652) y para ver la página principal examinar de forma anónima.
-* `t=2`, utilizó el mismo equipo de escritorio, inició sesión (CRMID:31260XYZ) y después buscó zapatos.
+* `t=1`, utilizó un equipo de escritorio (ECID:38652) y para ver la página de inicio examinar de forma anónima.
+* `t=2`, usó el mismo equipo de escritorio, inició sesión (CRMID:31260XYZ) y después buscó zapatos.
    * Una vez que el usuario ha iniciado sesión, el evento envía tanto ECID como CRMID al servicio de identidad.
-* `t=3`, utilizó un equipo portátil (ECID:44675) y navegó de forma anónima.
+* `t=3`, usó un equipo portátil (ECID:44675) y navegó de forma anónima.
 * `t=4`, utilizó el mismo equipo portátil, inició sesión (CRMID: 31260XYZ) y después vio el historial de compras.
 
 
@@ -133,7 +137,7 @@ En `timestamp=0`, tiene dos gráficos de identidad para dos clientes diferentes.
 
 >[!TAB marca de tiempo=1]
 
-En `timestamp=1`, un cliente usa un equipo portátil para visitar el sitio web de comercio electrónico, ver la página principal y examinar de forma anónima. Este evento de exploración anónima se identifica como ECID:38652. Dado que el servicio de identidad solo almacena eventos con al menos dos identidades, esta información no se almacena.
+En `timestamp=1`, un cliente usa un equipo portátil para visitar el sitio web de comercio electrónico, ver la página principal y examinar de forma anónima. Este evento de exploración anónimo se identifica como ECID:38652. Dado que el servicio de identidad solo almacena eventos con al menos dos identidades, esta información no se almacena.
 
 ![marca de tiempo-uno](../images/identity-settings/timestamp-one.png)
 
@@ -145,7 +149,7 @@ En `timestamp=2`, un cliente usa el mismo equipo portátil para visitar el sitio
 
 >[!TAB marca de tiempo=3]
 
-En `timestamp=3`, un cliente usa una tableta para visitar el sitio web de comercio electrónico y navegar de forma anónima. Este evento de exploración anónima se identifica como ECID:44675. Dado que el servicio de identidad solo almacena eventos con al menos dos identidades, esta información no se almacena.
+En `timestamp=3`, un cliente usa una tableta para visitar el sitio web de comercio electrónico y navegar de forma anónima. Este evento de exploración anónimo se identifica como ECID:44675. Dado que el servicio de identidad solo almacena eventos con al menos dos identidades, esta información no se almacena.
 
 ![marca de tiempo-tres](../images/identity-settings/timestamp-three.png)
 
