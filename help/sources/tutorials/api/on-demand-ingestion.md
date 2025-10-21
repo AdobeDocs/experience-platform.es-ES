@@ -3,20 +3,24 @@ keywords: Experience Platform;inicio;temas populares;servicio de flujo;
 title: Creación de una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 description: Obtenga información sobre cómo crear una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '823'
 ht-degree: 2%
 
 ---
 
 # Cree una ejecución de flujo para la ingesta bajo demanda utilizando la API [!DNL Flow Service]
 
-Las ejecuciones de flujo representan una instancia de ejecución de flujo. Por ejemplo, si un flujo está programado para ejecutarse por hora a las 9:00, 10:00 y 11:00 a.m., tendría tres instancias de ejecución de flujo. Las ejecuciones de flujo son específicas de su organización particular.
+Las ejecuciones de flujo representan una instancia de ejecución de flujo. Por ejemplo, si un flujo está programado para ejecutarse cada hora a las 9:00, las 10:00 y las 11:00 a.m., tendrá tres instancias de ejecución de flujo. Las ejecuciones de flujo son específicas de su organización particular.
 
 La ingesta bajo demanda permite crear una ejecución de flujo con un flujo de datos determinado. Esto permite a los usuarios crear una ejecución de flujo basada en parámetros determinados y un ciclo de ingesta sin tokens de servicio. La compatibilidad con la ingesta bajo demanda solo está disponible para orígenes por lotes.
 
 Este tutorial explica los pasos para usar la ingesta bajo demanda y crear una ejecución de flujo con la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>Al reintentar una ejecución de flujo, solo se procesarán los archivos con marcas de tiempo que estén dentro del intervalo de la ejecución original.
 
 ## Introducción
 
