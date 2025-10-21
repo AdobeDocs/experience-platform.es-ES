@@ -2,9 +2,9 @@
 title: Desarrollar una extensión
 description: Este documento proporciona una visión general del proceso de desarrollo de extensiones de etiquetas, con vínculos a documentación adicional para ver procesos más detallados.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 73452d0735c6a040ddd25b4cd00cec4b91eaf7ae
+source-git-commit: 36870fa5359b5382cb9f1e9a5220ce8311f0c45c
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '443'
 ht-degree: 96%
 
 ---
@@ -45,7 +45,6 @@ También encontrará una serie de herramientas npm para ayudarle con el desarrol
 Existen extensiones de ejemplo en GitHub que puede revisar o utilizar como proyectos iniciales:
 
 * [Extensión de ejemplo de Hello World](https://github.com/adobe/reactor-helloworld-extension)
-* [Extensión de ejemplo de Facebook](https://github.com/Adobe-Marketing-Cloud-Activation/extension-facebookpixel)
 * [Extensión de ejemplo de Typekit](https://github.com/jeffchasin/extension-typekit)
 * [Extensión de ejemplo de Pinterest](https://github.com/jeffchasin/extension-pinterest)
 
