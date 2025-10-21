@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de Adobe Experience Platform
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '8009'
+source-wordcount: '8170'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 **Atributos**: los atributos son características especificadas que representan un perfil.
 
-**Combinación de atributos**: Al definir una política de combinación mediante la API de Perfil del cliente en tiempo real, el objeto `attributeMerge` indica la forma en que la política de combinación dará prioridad a los atributos de perfil en caso de conflicto de datos. Equivale a seleccionar un [!UICONTROL método Merge] al definir una política de combinación en la interfaz de usuario de Experience Platform.
+**Combinación de atributos**: Al definir una política de combinación mediante la API de Perfil del cliente en tiempo real, el objeto `attributeMerge` indica la forma en que la política de combinación dará prioridad a los atributos de perfil en caso de conflicto de datos. Equivale a seleccionar un(a) [!UICONTROL Merge method] al definir una política de combinación en la interfaz de usuario de Experience Platform.
 
 **Inteligencia artificial aplicada a la atribución**: [!DNL Attribution AI] es un servicio inteligente con tecnología de Adobe Sensei que ofrece funciones de atribución multicanal algorítmicas en todo el ciclo de vida del cliente.
 
@@ -351,6 +351,8 @@ ht-degree: 0%
 
 **Módulo**: en el contexto de las etiquetas, un módulo es un fragmento de JavaScript ejecutable proporcionado por una extensión, que realiza acciones en un entorno de cliente sin necesidad de crear una regla.
 
+**MODPA**: El [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 otorga a los residentes de Maryland derechos como acceso, corrección, eliminación y portabilidad de datos. Los residentes pueden excluirse de la publicidad segmentada, las ventas de datos personales y la creación de perfiles. Los responsables del tratamiento deben proporcionar los avisos de privacidad y realizar evaluaciones de protección de datos para el tratamiento de alto riesgo. El MODPA se destaca por la prohibición de la geoperimetraje en torno a las instalaciones de salud mental o reproductiva. La ley se aplica a entidades que procesan datos de más de 35.000 consumidores, o a aquellas que procesan datos de más de 10.000 consumidores y obtienen más del 20% de sus ingresos por la venta de esos datos. La aplica el Fiscal General de Maryland.
+
 ## N
 
 **[!DNL New Zealand Privacy Act]**: [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controla cómo las agencias pueden recopilar, usar, revelar, almacenar y dar acceso a la información personal de los ciudadanos y organizaciones de Nueva Zelanda. En 2020, la última versión de la ley introdujo actualizaciones significativas a estas leyes de privacidad, incluidos nuevos delitos, el aumento de las multas, las notificaciones obligatorias por violaciones de datos y el aumento de los poderes del Comisionado de Privacidad.
@@ -377,17 +379,15 @@ ht-degree: 0%
 
 ## P
 
-**Ingesta parcial**: la ingesta parcial permite la ingesta de registros válidos de datos por lotes dentro de un umbral de error especificado. Se puede descargar o acceder a los diagnósticos de error para registros con errores en la descripción general de la ejecución del flujo de datos [!UICONTROL Monitoring] o [!UICONTROL Sources].
+**Ingesta parcial**: la ingesta parcial permite la ingesta de registros válidos de datos por lotes dentro de un umbral de error especificado. Se puede descargar o acceder a los diagnósticos de error para registros fallidos en la descripción general de la ejecución del flujo de datos [!UICONTROL Monitoring] o [!UICONTROL Sources].
 
 **Archivos de parquet**: Un archivo de parquet es un formato de archivo de almacenamiento en columnas con estructuras de datos anidadas complejas. Los archivos de parquet son necesarios para agregar datos y rellenar un conjunto de datos de esquema.
 
 **PDPA**: [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) se introdujo para proteger a los propietarios de datos tailandeses de la recopilación, el uso o la divulgación ilegales de sus datos personales. Inspirada en el RGPD de la Unión Europea, la normativa concede a los ciudadanos tailandeses el derecho de solicitar el acceso a sus datos personales almacenados o la eliminación de los mismos.
 
-<!-- Not yet released
-**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
--->
-
 **Ofertas personalizadas**: una oferta personalizada es un mensaje de marketing personalizable basado en reglas de elegibilidad y restricciones.
+
+**PIPA** (Corea del Sur): La [[!DNL Personal Information Protection Act] (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) regula el procesamiento y la protección de los datos personales de los residentes de Corea del Sur. La PIPA otorga derechos para ser informado, acceder, obtener copias y solicitar la corrección, eliminación o suspensión del procesamiento. Los responsables del tratamiento de datos personales deben especificar los fines de recopilación, tratar los datos de forma lícita en la medida mínima necesaria y garantizar la exactitud de los datos. PIPA también estableció la Comisión de Protección de Información Personal para investigar y hacer cumplir las regulaciones de protección de datos personales.
 
 **Ubicaciones**: una ubicación es la ubicación o el contexto en el que aparece una oferta para un usuario final.
 

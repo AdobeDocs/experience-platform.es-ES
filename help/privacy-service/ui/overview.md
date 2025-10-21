@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general de IU de Privacy Service
 description: Empiece a utilizar la interfaz de usuario de Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones de Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 20%
+source-wordcount: '223'
+ht-degree: 21%
 
 ---
 
@@ -30,17 +30,17 @@ La interfaz de usuario de Privacy Service le permite coordinar las solicitudes d
 >
 >Debe tener un Adobe ID para autenticarse en la interfaz de usuario de [!DNL Privacy Service].
 
-Para acceder a la interfaz de usuario, inicia sesión en [Adobe Experience Cloud](https://experience.adobe.com/) y selecciona **[!UICONTROL IU de privacidad]** en el menú de acceso rápido.
+Para acceder a la interfaz de usuario, inicia sesión en [Adobe Experience Cloud](https://experience.adobe.com/) y selecciona **[!UICONTROL Privacy Service]** en el menú de acceso rápido.
 
-![Se ha resaltado el panel de Experience Cloud con la interfaz de usuario de privacidad.](../images/ui-overview/quick-access.png)
+![Panel de Experience Cloud con Privacy Service resaltado.](../images/ui-overview/quick-access.png)
 
 
 ### Iniciando sesión desde [!DNL Experience Platform]
 
-Si tiene acceso a la interfaz de usuario de Adobe Experience Platform, también puede acceder a la interfaz de usuario de [!DNL Privacy Service] a través de la pestaña **[!UICONTROL Solicitudes]** en el panel de navegación izquierdo.
+Si tiene acceso a la interfaz de usuario de Adobe Experience Platform, también puede acceder a la interfaz de usuario de [!DNL Privacy Service] a través de la pestaña **[!UICONTROL Requests]** en el panel de navegación izquierdo.
 
 ![Interfaz de usuario de Adobe Experience Platform con solicitudes resaltadas en la barra de navegación izquierda.](../images/ui-overview/platform.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que ha iniciado sesión correctamente, consulte la [guía del usuario](user-guide.md) para ver los pasos sobre cómo realizar diversas operaciones con la interfaz de usuario de [!DNL Privacy Service].
