@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de Adobe Experience Platform
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '8170'
+source-wordcount: '8169'
 ht-degree: 0%
 
 ---
@@ -351,7 +351,7 @@ ht-degree: 0%
 
 **Módulo**: en el contexto de las etiquetas, un módulo es un fragmento de JavaScript ejecutable proporcionado por una extensión, que realiza acciones en un entorno de cliente sin necesidad de crear una regla.
 
-**MODPA**: El [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 otorga a los residentes de Maryland derechos como acceso, corrección, eliminación y portabilidad de datos. Los residentes pueden excluirse de la publicidad segmentada, las ventas de datos personales y la creación de perfiles. Los responsables del tratamiento deben proporcionar los avisos de privacidad y realizar evaluaciones de protección de datos para el tratamiento de alto riesgo. El MODPA se destaca por la prohibición de la geoperimetraje en torno a las instalaciones de salud mental o reproductiva. La ley se aplica a entidades que procesan datos de más de 35.000 consumidores, o a aquellas que procesan datos de más de 10.000 consumidores y obtienen más del 20% de sus ingresos por la venta de esos datos. La aplica el Fiscal General de Maryland.
+**MODPA**: El [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 otorga a los residentes de Maryland derechos como acceso, corrección, eliminación y portabilidad de datos. Los residentes pueden excluirse de la publicidad segmentada, las ventas de datos personales y la creación de perfiles. Los responsables del tratamiento deben proporcionar avisos de privacidad y realizar evaluaciones de protección de datos para el tratamiento de alto riesgo. El MODPA se destaca por la prohibición de la geoperimetraje en torno a las instalaciones de salud mental o reproductiva. La ley se aplica a entidades que procesan datos de más de 35.000 consumidores, o a aquellas que procesan datos de más de 10.000 consumidores y obtienen más del 20% de sus ingresos por la venta de esos datos. La aplica el Fiscal General de Maryland.
 
 ## N
 
