@@ -3,7 +3,7 @@ title: Crear un flujo de datos para orígenes de base de datos mediante la API d
 type: Tutorial
 description: Aprenda a utilizar la API de Flow Service para crear un flujo de datos e introducir datos de su base de datos en Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 3%
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | El ID de conexión del origen de la base de datos. |
 | `params.tableName` | Ruta del archivo de origen. |
-| `params.cdcEnabled` | Un valor booleano que indica si la captura del historial de cambios está habilitada. Cuando se utiliza con esquemas basados en modelos, change data capture realiza un seguimiento de las inserciones, actualizaciones y eliminaciones para mantener el conjunto de datos de destino sincronizado con el origen. Esta propiedad es compatible con los siguientes orígenes de base de datos: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Para obtener una descripción general de esta capacidad, consulte [Descripción general de Data Mirror](../../../../xdm/data-mirror/overview.md). Para obtener detalles de implementación, consulte [cambiar la captura de datos en la guía de fuentes](../change-data-capture.md) y [referencia técnica de esquemas basados en modelos](../../../../xdm/schema/model-based.md). |
+| `params.cdcEnabled` | Un valor booleano que indica si la captura del historial de cambios está habilitada. Cuando se utiliza con esquemas relacionales, change data capture realiza un seguimiento de las inserciones, actualizaciones y eliminaciones para mantener el conjunto de datos de destino sincronizado con el origen. Esta propiedad es compatible con los siguientes orígenes de base de datos: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Para obtener una descripción general de esta capacidad, consulte [Descripción general de Data Mirror](../../../../xdm/data-mirror/overview.md). Para obtener detalles de implementación, consulte [cambiar la captura de datos en la guía de fuentes](../change-data-capture.md) y [referencia técnica de esquemas relacionales](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id` | Identificador de especificación de conexión del origen de la base de datos. Consulte el [Apéndice](#appendix) para obtener una lista de los ID de especificación de base de datos. |
 
 **Respuesta**

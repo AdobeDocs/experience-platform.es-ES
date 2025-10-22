@@ -5,9 +5,9 @@ title: Creación de un flujo de datos con un Source de base de datos en la IU
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Experience Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para un origen de base de datos mediante la interfaz de usuario de Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1653'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ## Adición de datos
 
-Después de crear la cuenta de origen de la base de datos, aparece el paso **[!UICONTROL Agregar datos]**, que proporciona una interfaz para explorar la jerarquía de tablas de la cuenta de origen de la base de datos.
+Después de crear la cuenta de origen de base de datos, aparece el paso **[!UICONTROL Add data]**, que proporciona una interfaz para explorar la jerarquía de tablas de la cuenta de origen de base de datos.
 
 * La mitad izquierda de la interfaz es un navegador que muestra una lista de tablas de datos incluidas en su cuenta. La interfaz también incluye una opción de búsqueda que le permite identificar rápidamente los datos de origen que desea utilizar.
 * La mitad derecha de la interfaz es un panel de previsualización, que le permite previsualizar hasta 100 filas de datos.
@@ -44,33 +44,33 @@ Después de crear la cuenta de origen de la base de datos, aparece el paso **[!U
 >
 >La opción de búsqueda de datos de origen está disponible para todos los orígenes basados en tablas excepto Adobe Analytics, [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs].
 
-Cuando encuentre los datos de origen, seleccione la tabla y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+Cuando encuentre los datos de origen, seleccione la tabla y, a continuación, seleccione **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## Proporcionar detalles del flujo de datos
 
-La página [!UICONTROL Detalles del flujo de datos] le permite seleccionar si desea utilizar un conjunto de datos existente o uno nuevo. Durante este proceso, también puede configurar las opciones de [!UICONTROL Conjunto de datos del perfil], [!UICONTROL Diagnóstico de errores], [!UICONTROL Ingesta parcial] y [!UICONTROL Alertas].
+La página [!UICONTROL Dataflow detail] le permite seleccionar si desea utilizar un conjunto de datos existente o uno nuevo. Durante este proceso, también puede establecer la configuración de [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion] y [!UICONTROL Alerts].
 
 ![detalle de flujo de datos](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
 ### Usar un conjunto de datos existente
 
-Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]**. Puede recuperar un conjunto de datos existente mediante la opción [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable. Una vez seleccionado un conjunto de datos, proporcione un nombre y una descripción para el flujo de datos.
+Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Existing dataset]**. Puede recuperar un conjunto de datos existente mediante la opción [!UICONTROL Advanced search] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable. Una vez seleccionado un conjunto de datos, proporcione un nombre y una descripción para el flujo de datos.
 
 ![conjunto de datos existente](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
 
 ### Usar un nuevo conjunto de datos
 
-Para ingerir en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** y, a continuación, proporcione un nombre de conjunto de datos de salida y una descripción opcional. A continuación, seleccione un esquema al que asignar con la opción [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de esquemas existentes en el menú desplegable. Una vez seleccionado un esquema, proporcione un nombre y una descripción para el flujo de datos.
+Para realizar la ingesta en un nuevo conjunto de datos, seleccione **[!UICONTROL New dataset]** y, a continuación, proporcione un nombre de conjunto de datos de salida y una descripción opcional. A continuación, seleccione un esquema al que asignar con la opción [!UICONTROL Advanced search] o desplazándose por la lista de esquemas existentes en el menú desplegable. Una vez seleccionado un esquema, proporcione un nombre y una descripción para el flujo de datos.
 
 ![nuevo conjunto de datos](../../../images/tutorials/dataflow/table-based/new-dataset.png)
 
 ### Habilitar [!DNL Profile] y los diagnósticos de error
 
-A continuación, seleccione la opción **[!UICONTROL Conjunto de datos del perfil]** para habilitar su conjunto de datos para [!DNL Profile]. Esto le permite crear una vista integral de los atributos y comportamientos de una entidad. Los datos de todos los conjuntos de datos habilitados para [!DNL Profile] se incluirán en [!DNL Profile] y los cambios se aplicarán al guardar el flujo de datos.
+A continuación, seleccione la opción **[!UICONTROL Profile dataset]** para habilitar el conjunto de datos para [!DNL Profile]. Esto le permite crear una vista integral de los atributos y comportamientos de una entidad. Los datos de todos los conjuntos de datos habilitados para [!DNL Profile] se incluirán en [!DNL Profile] y los cambios se aplicarán al guardar el flujo de datos.
 
-[!UICONTROL Diagnósticos de error] permite la generación detallada de mensajes de error para cualquier registro erróneo que ocurra en su flujo de datos, mientras que [!UICONTROL Ingesta parcial] le permite ingerir datos que contengan errores, hasta un determinado umbral que usted defina manualmente. Consulte la [descripción general de la ingesta parcial por lotes](../../../../ingestion/batch-ingestion/partial.md) para obtener más información.
+[!UICONTROL Error diagnostics] permite la generación detallada de mensajes de error para cualquier registro erróneo que ocurra en el flujo de datos, mientras que [!UICONTROL Partial ingestion] le permite introducir datos que contengan errores, hasta un determinado umbral que defina manualmente. Consulte la [descripción general de la ingesta parcial por lotes](../../../../ingestion/batch-ingestion/partial.md) para obtener más información.
 
 ![perfil y errores](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
 
@@ -78,7 +78,7 @@ A continuación, seleccione la opción **[!UICONTROL Conjunto de datos del perfi
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de fuentes mediante la interfaz de usuario](../alerts.md).
 
-Cuando termine de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Next]**.
 
 ![alertas](../../../images/tutorials/dataflow/table-based/alerts.png)
 
@@ -90,21 +90,21 @@ Experience Platform proporciona recomendaciones inteligentes para campos asignad
 
 >[!NOTE]
 >
->Al asignar a esquemas basados en modelos, asegúrese de que los datos de origen incluyan los campos obligatorios, como una clave principal y un identificador de versión, o un identificador de marca de tiempo para esquemas de series temporales,
+>Al asignar a esquemas relacionales, asegúrese de que los datos de origen incluyan los campos obligatorios, como una clave principal y un identificador de versión, o un identificador de marca de tiempo para esquemas de series temporales,
 
 Las columnas de control como `_change_request_type`, utilizadas para la captura de datos modificados, se leen durante la ingesta, pero no se almacenan en el esquema de destino.
 
-Los esquemas basados en modelos también admiten relaciones entre conjuntos de datos mediante asignaciones de clave principal y externa.
+Los esquemas relacionales también admiten relaciones entre conjuntos de datos mediante asignaciones de clave principal y externa.
 
-Para obtener más información, consulte la [descripción general de Data Mirror](../../../../xdm/data-mirror/overview.md) y la [referencia técnica de esquemas basados en modelos](../../../../xdm/schema/model-based.md).
+Para obtener más información, consulte la [descripción general de Data Mirror](../../../../xdm/data-mirror/overview.md) y la [referencia técnica de esquemas relacionales](../../../../xdm/schema/relational.md).
 
-Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
+Una vez que los datos de origen se hayan asignado correctamente, seleccione **[!UICONTROL Next]**.
 
 ![asignación](../../../images/tutorials/dataflow/table-based/mapping.png)
 
 ## Programar ejecuciones de ingesta
 
-Aparece el paso [!UICONTROL Programación], que le permite configurar una programación de ingesta para introducir automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. De manera predeterminada, la programación se establece en `Once`. Para ajustar la frecuencia de ingesta, seleccione **[!UICONTROL Frecuencia]** y luego seleccione una opción en el menú desplegable.
+Aparece el paso [!UICONTROL Scheduling], que le permite configurar una programación de ingesta para que introduzca automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. De manera predeterminada, la programación se establece en `Once`. Para ajustar la frecuencia de ingesta, seleccione **[!UICONTROL Frequency]** y luego elija una opción en el menú desplegable.
 
 >[!TIP]
 >
@@ -124,19 +124,19 @@ Consulte la tabla siguiente para obtener más información sobre las configuraci
 | Intervalo | Una vez seleccionada una frecuencia, puede configurar la configuración del intervalo para establecer el lapso de tiempo entre cada ingesta. Por ejemplo, si establece la frecuencia en día y configura el intervalo en 15, el flujo de datos se ejecutará cada 15 días. No puede establecer el intervalo en cero. El valor mínimo del intervalo aceptado para cada frecuencia es el siguiente:<ul><li>**Una vez**: n/a</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Día**: 1</li><li>**Semana**: 1</li></ul> |
 | Hora de inicio | La marca de tiempo de la ejecución proyectada, presentada en la zona horaria UTC. |
 | Relleno | El relleno determina qué datos se incorporan inicialmente. Si el relleno está habilitado, todos los archivos actuales de la ruta especificada se introducirán durante la primera ingesta programada. Si se desactiva el relleno, solo se incorporarán los archivos que se carguen entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán. |
-| Cargar datos incrementales por | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. El campo que seleccione para **[!UICONTROL Cargar datos incrementales por]** debe tener sus valores de fecha y hora en la zona horaria UTC para cargar correctamente los datos incrementales. Todos los orígenes de lotes basados en tablas seleccionan datos incrementales comparando un valor de marca de tiempo de columna delta con el correspondiente tiempo UTC de la ventana de ejecución de flujo y copiando los datos del origen, si se encuentran nuevos datos dentro de la ventana de tiempo UTC. |
+| Cargar datos incrementales por | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. El campo que seleccione para **[!UICONTROL Load incremental data by]** debe tener sus valores de fecha y hora en la zona horaria UTC para cargar correctamente los datos incrementales. Todos los orígenes de lotes basados en tablas seleccionan datos incrementales comparando un valor de marca de tiempo de columna delta con el correspondiente tiempo UTC de la ventana de ejecución de flujo y copiando los datos del origen, si se encuentran nuevos datos dentro de la ventana de tiempo UTC. |
 
 ![relleno](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Revisión del flujo de datos
 
-Aparece el paso **[!UICONTROL Revisar]**, que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
+Aparece el paso **[!UICONTROL Review]**, que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
-* **[!UICONTROL Conexión]**: muestra el tipo de origen, la ruta de acceso relevante del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
-* **[!UICONTROL Asignar campos de conjunto de datos y asignación]**: Muestra el conjunto de datos en el que se incorporarán los datos de origen, junto con el esquema asociado. Si utiliza un esquema basado en modelos, compruebe que los campos obligatorios, como la clave principal y el identificador de versión, estén asignados correctamente. Asegúrese también de que las columnas de control de captura de datos cambiadas están configuradas correctamente. Los conjuntos de datos que usan esquemas basados en modelos admiten varios modelos de datos y habilitan [cambiar los flujos de trabajo de captura de datos](../../api/change-data-capture.md).
-* **[!UICONTROL Programación]**: muestra el período activo, la frecuencia y el intervalo de la programación de ingesta.
+* **[!UICONTROL Connection]**: muestra el tipo de origen, la ruta de acceso relevante del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
+* **[!UICONTROL Assign dataset & map fields]**: muestra el conjunto de datos en el que se incorporarán los datos de origen, junto con el esquema asociado. Si utiliza un esquema relacional, compruebe que los campos obligatorios, como la clave principal y el identificador de versión, estén asignados correctamente. Asegúrese también de que las columnas de control de captura de datos cambiadas están configuradas correctamente. Los conjuntos de datos que utilizan esquemas relacionales admiten varios modelos de datos y habilitan [cambiar flujos de trabajo de captura de datos](../../api/change-data-capture.md).
+* **[!UICONTROL Scheduling]**: muestra el período activo, la frecuencia y el intervalo de la programación de ingesta.
 
-Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]** y espere un poco para que se cree el flujo de datos.
+Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finish]** y espere un poco para que se cree el flujo de datos.
 
 ![revisión](../../../images/tutorials/dataflow/table-based/review.png)
 
@@ -146,7 +146,7 @@ Una vez creado el flujo de datos, puede monitorizar los datos que se están ingi
 
 ## Eliminar el flujo de datos
 
-Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente mediante la función **[!UICONTROL Delete]** disponible en el área de trabajo **[!UICONTROL Flujos de datos]**. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre [eliminar flujos de datos en la interfaz de usuario](../delete.md).
+Puede eliminar los flujos de datos que ya no son necesarios o que se crearon incorrectamente mediante la función **[!UICONTROL Delete]** disponible en el área de trabajo **[!UICONTROL Dataflows]**. Para obtener más información sobre cómo eliminar flujos de datos, consulte el tutorial sobre [eliminar flujos de datos en la interfaz de usuario](../delete.md).
 
 ## Próximos pasos
 

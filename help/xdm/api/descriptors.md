@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API de Registro de esquemas le permite administrar mediante programación descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2916'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,11 @@ El extremo `/descriptors` de la API [!DNL Schema Registry] le permite administra
 
 El extremo utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
-Además de los descriptores estándar, [!DNL Schema Registry] admite tipos de descriptor para esquemas basados en modelos, como **clave principal**, **versión** y **marca de tiempo**. Estas aplican exclusividad, controlan las versiones y definen los campos de serie temporal en el nivel de esquema. Si no está familiarizado con los esquemas basados en modelos, revise la [descripción general de Data Mirror](../data-mirror/overview.md) y la [referencia técnica de esquemas basados en modelos](../schema/model-based.md) antes de continuar.
+Además de los descriptores estándar, [!DNL Schema Registry] admite tipos de descriptor para esquemas relacionales, como **clave principal**, **versión** y **marca de tiempo**. Estas aplican exclusividad, controlan las versiones y definen los campos de serie temporal en el nivel de esquema. Si no está familiarizado con los esquemas relacionales, revise la [descripción general de Data Mirror](../data-mirror/overview.md) y la [referencia técnica de esquemas relacionales](../schema/relational.md) antes de continuar.
+
+>[!NOTE]
+>
+>Los esquemas relacionales se denominaban anteriormente esquemas basados en modelos en versiones anteriores de la documentación de Adobe Experience Platform. La funcionalidad del descriptor y los extremos de la API permanecen sin cambios. Solo se ha actualizado la terminología para una mayor claridad.
 
 >[!IMPORTANT]
 >
@@ -316,7 +320,7 @@ En las secciones siguientes se ofrece una descripción general de los tipos de d
 
 #### Descriptor de identidad {#identity-descriptor}
 
-Un descriptor de identidad indica que &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; es un campo [!DNL Identity] tal como lo describe [Experience Platform Identity Service](../../identity-service/home.md).
+Un descriptor de identidad indica que el &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; es un campo [!DNL Identity] tal como lo describe [Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -397,7 +401,7 @@ Utilice estas propiedades para declarar cómo se relaciona un campo de origen (c
 La API admite dos patrones:
 
 - `xdm:descriptorOneToOne`: relación estándar 1:1.
-- `xdm:descriptorRelationship`: patrón general para nuevos esquemas basados en modelos y trabajo (admite destinos de clave no principal, nomenclatura y cardinalidad).
+- `xdm:descriptorRelationship`: patrón general para nuevos esquemas relacionales y de trabajo (admite destinos de clave no principal, nomenclatura y cardinalidad).
 
 ##### Relación uno a uno (esquemas estándar)
 
@@ -427,9 +431,9 @@ En la tabla siguiente se describen los campos necesarios para definir un descrip
 | `xdm:destinationVersion` | La versión principal del esquema de referencia. |
 | `xdm:destinationProperty` | (Opcional) Ruta a un campo de destino dentro del esquema de referencia. Si se omite esta propiedad, cualquier campo que contenga un descriptor de identidad de referencia coincidente deducirá el campo de destino (consulte a continuación). |
 
-##### Relación general (esquemas basados en modelos y recomendados para nuevos proyectos)
+##### Relación general (esquemas relacionales y recomendados para nuevos proyectos)
 
-Utilice este descriptor para todas las nuevas implementaciones y para los esquemas basados en modelos. Permite definir la cardinalidad de la relación (por ejemplo, uno a uno o varios a uno), especificar nombres de relación y vincular a un campo de destino que no sea la clave principal (clave no principal).
+Utilice este descriptor para todas las implementaciones nuevas y para los esquemas relacionales. Permite definir la cardinalidad de la relación (por ejemplo, uno a uno o varios a uno), especificar nombres de relación y vincular a un campo de destino que no sea la clave principal (clave no principal).
 
 Los siguientes ejemplos muestran cómo definir un descriptor de relación general.
 
@@ -474,7 +478,7 @@ Siga estas directrices para decidir qué descriptor de relación aplicar:
 
 | Situación | Descriptor que utilizar |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| Nuevos esquemas basados en modelos o trabajos | `xdm:descriptorRelationship` |
+| Nuevos esquemas de trabajo o relacionales | `xdm:descriptorRelationship` |
 | Asignación de 1:1 existente en esquemas estándar | Continúe usando `xdm:descriptorOneToOne` a menos que necesite características compatibles únicamente con `xdm:descriptorRelationship`. |
 | Necesita cardinalidad de varios a uno u opcional (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
 | Se necesitan nombres o títulos de relación para la legibilidad de la interfaz de usuario/flujo descendente | `xdm:descriptorRelationship` |
@@ -493,13 +497,13 @@ La siguiente tabla compara las capacidades de los dos tipos de descriptor:
 | Cardinalidad | 1:1 | 1:1, 1:0, M:1, M:0 (informativo) |
 | Destino objetivo | Campo de identidad/explícito | Clave principal de forma predeterminada o clave no principal mediante `xdm:destinationProperty` |
 | Campos de nomenclatura | No compatible | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` y títulos |
-| Ajuste relacional | Limitado | Patrón principal para esquemas basados en modelos |
+| Ajuste relacional | Limitado | Patrón principal para esquemas relacionales |
 
 ##### Restricciones y validación
 
 Siga estos requisitos y recomendaciones al definir un descriptor de relación general:
 
-- Para esquemas basados en modelos, coloque el campo de origen (clave externa) en el nivel raíz. Se trata de una limitación técnica actual para la ingesta, no solo una recomendación de prácticas recomendadas.
+- Para los esquemas relacionales, coloque el campo de origen (clave externa) en el nivel raíz. Se trata de una limitación técnica actual para la ingesta, no solo una recomendación de prácticas recomendadas.
 - Asegúrese de que los tipos de datos de los campos de origen y destino sean compatibles (numérico, de fecha, booleano, de cadena).
 - Recuerde que la cardinalidad es informativa; el almacenamiento no la aplica. Especifique la cardinalidad en formato `<source>:<destination>`. Los valores aceptados son: `1:1`, `1:0`, `M:1` o `M:0`.
 
@@ -525,7 +529,7 @@ El descriptor de clave principal (`xdm:descriptorPrimaryKey`) aplica restriccion
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de versión aparece como &quot;[!UICONTROL Identificador de versión]&quot;.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de versión aparece como &quot;[!UICONTROL Version identifier]&quot;.
 
 El descriptor de versión (`xdm:descriptorVersion`) designa un campo para detectar y evitar conflictos por eventos de cambio desordenados.
 
@@ -547,7 +551,7 @@ El descriptor de versión (`xdm:descriptorVersion`) designa un campo para detect
 
 >[!NOTE]
 >
->En el Editor de esquemas de interfaz de usuario, el descriptor de marca de tiempo aparece como &quot;[!UICONTROL Identificador de marca de tiempo]&quot;.
+>En el Editor de esquemas de interfaz de usuario, el descriptor de marca de tiempo aparece como &quot;[!UICONTROL Timestamp identifier]&quot;.
 
 El descriptor de marca de tiempo (`xdm:descriptorTimestamp`) designa un campo de fecha y hora como marca de tiempo para esquemas con `"meta:behaviorType": "time-series"`.
 

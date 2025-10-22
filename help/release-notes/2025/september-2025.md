@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2025'
 description: Las notas de la versión de septiembre de 2025 de Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
+source-git-commit: 96b9fcd8bfb4ff62eb9d4adce2e486782d918344
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 92%
+source-wordcount: '1524'
+ht-degree: 85%
 
 ---
 
@@ -48,7 +48,7 @@ Para obtener más información, lea la [documentación de Agent Orchestrator](ht
 
 ## Alertas {#alerts}
 
-Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a diferentes reglas de alertas a través de la pestaña [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia IU o a través de notificaciones por correo electrónico.
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a distintas reglas de alerta a través de la ficha [!UICONTROL Alerts] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
 
 **Nuevas funciones**
 
@@ -70,14 +70,14 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 | --- | --- |
 | Conector [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) | Ya está disponible un nuevo conector [!DNL Snowflake Batch] que proporciona una alternativa al conector de streaming para casos de uso específicos. |
 | Compatibilidad con el cifrado de [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Ahora puede adjuntar claves públicas con formato RSA para cifrar los archivos exportados, lo que le proporciona el mismo nivel de seguridad que otros destinos de almacenamiento en la nube para la información confidencial. |
-| Detalles de caducidad de la autenticación para destinos de [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md)  | La información de caducidad de autenticación de los destinos de [!DNL Pinterest] ahora es visible directamente en la interfaz de Experience Platform, por lo que puede ver cuándo caducará la autenticación y renovarla antes de que cause interrupciones en los flujos de datos. Puede monitorizar las fechas de caducidad de los tókenes desde la columna **[!UICONTROL Fecha de caducidad de la cuenta]** en las pestañas **[[!UICONTROL Cuentas]](../../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Examinar]](../../destinations/ui/destinations-workspace.md#browse)**. |
+| Detalles de caducidad de la autenticación para destinos de [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md)  | La información de caducidad de autenticación de los destinos de [!DNL Pinterest] ahora es visible directamente en la interfaz de Experience Platform, por lo que puede ver cuándo caducará la autenticación y renovarla antes de que cause interrupciones en los flujos de datos. Puede supervisar las fechas de caducidad de los tokens desde la columna **[!UICONTROL Account expiration date]** en las pestañas **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)**. |
 
 **Funcionalidad nueva o actualizada**
 
 | Función | Descripción |
 | --- | --- |
-| Funciones mejoradas de administración de destinos en la IU de Experience Platform | Mejore su flujo de trabajo de administración de destinos con las nuevas funciones de ordenación en las pestañas [[!UICONTROL Examinar]](../../destinations/ui/destinations-workspace.md#browse) y [[!UICONTROL Cuentas]](../../destinations/ui/destinations-workspace.md#accounts). Ahora también puede ver un indicador visual cuando la autenticación de la cuenta esté a punto de caducar. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| Configuración de ancho de columna persistente | La configuración del ancho de columna ahora persiste al salir de una página y volver a ella. Por ejemplo, si ajusta la anchura de una columna en la pestaña [[!UICONTROL Examinar]](../../destinations/ui/destinations-workspace.md#browse), la anchura de la columna personalizada se mantendrá igual cuando salga de la pestaña y vuelva a ella. |
+| Funciones mejoradas de administración de destinos en la IU de Experience Platform | Mejore su flujo de trabajo de administración de destinos con nuevas capacidades de ordenación en las pestañas [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) y [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts). Ahora también puede ver un indicador visual cuando la autenticación de la cuenta esté a punto de caducar. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| Configuración de ancho de columna persistente | La configuración del ancho de columna ahora persiste al salir de una página y volver a ella. Por ejemplo, si ajusta el ancho de una columna en la ficha [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse), el ancho de columna personalizado seguirá siendo el mismo cuando salga de esa ficha y vuelva a ella. |
 
 Para obtener más información, consulte la [Información general sobre destinos](../../destinations/home.md).
 
@@ -89,13 +89,13 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Función | Descripción |
 | ------- | ----------- |
-| Esquemas basados en modelos | Simplifique el modelado de datos con esquemas basados en modelos. Ahora puede crear esquemas más fácilmente con ejemplos explicativos y directrices completos. En la actualidad, esta función está disponible para los titulares de licencias de orquestación de campañas y se ampliará a los clientes de Data Distiller a disponibilidad general, lo que hará que el modelado de datos sea más accesible y eficiente. La funcionalidad incluye compatibilidad con datos de series temporales y funciones de captura de datos de cambios. |
+| Esquemas relacionales | Simplifique el modelado de datos con esquemas relacionales (anteriormente conocidos como esquemas basados en modelos). Ahora puede crear esquemas más fácilmente con ejemplos explicativos y directrices completos. En la actualidad, esta función está disponible para los titulares de licencias de orquestación de campañas y se ampliará a los clientes de Data Distiller a disponibilidad general, lo que hará que el modelado de datos sea más accesible y eficiente. La funcionalidad incluye compatibilidad con datos de series temporales y funciones de captura de datos de cambios. |
 
 Para obtener más información, lea la [información general sobre XDM](../../xdm/home.md).
 
 <!--
 
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
+| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using relational schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
 -->
 
 ## Perfil del cliente en tiempo real {#profile}

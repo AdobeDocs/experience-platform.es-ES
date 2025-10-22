@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1666'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 ### Fuentes empresariales avanzadas {#advanced-enterprise-sources}
 
-Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Las siguientes fuentes están disponibles solo para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fuente | Categoría | Tipo de ingesta | Nube |
 | --- | --- | --- | --- |
@@ -282,15 +282,15 @@ Puede utilizar las siguientes fuentes para introducir datos de protocolo en Expe
 
 ## Control de acceso para orígenes en ingesta de datos
 
-Los permisos para las fuentes en la ingesta de datos se pueden administrar dentro de Adobe Admin Console. Puede obtener acceso a los permisos a través de la ficha **[!UICONTROL Permisos]** en un perfil de producto concreto. Desde el panel **[!UICONTROL Editar permisos]**, puede acceder a los permisos que pertenecen a las fuentes a través de la entrada de menú **[!UICONTROL ingesta de datos]**. El permiso **[!UICONTROL Ver fuentes]** concede acceso de solo lectura a las fuentes disponibles en la ficha **[!UICONTROL Catálogo]** y a las fuentes autenticadas en la ficha **[!UICONTROL Examinar]**, mientras que el permiso **[!UICONTROL Administrar fuentes]** concede acceso completo para leer, crear, editar y deshabilitar fuentes.
+Los permisos para las fuentes en la ingesta de datos se pueden administrar dentro de Adobe Admin Console. Puede acceder a los permisos a través de la ficha **[!UICONTROL Permissions]** en un perfil de producto concreto. Desde el panel **[!UICONTROL Edit Permissions]**, puede acceder a los permisos que pertenecen a las fuentes a través de la entrada de menú **[!UICONTROL data ingestion]**. El permiso **[!UICONTROL View Sources]** concede acceso de sólo lectura a los orígenes disponibles en la ficha **[!UICONTROL Catalog]** y a los orígenes autenticados en la ficha **[!UICONTROL Browse]**, mientras que el permiso **[!UICONTROL Manage Sources]** concede acceso completo a los orígenes de lectura, creación, edición y deshabilitación.
 
 En la tabla siguiente se describe cómo se comporta la interfaz de usuario en función de diferentes combinaciones de estos permisos:
 
 | Nivel de permisos | Descripción |
 | ---- | ----|
-| **[!UICONTROL Ver orígenes]** En | Conceda acceso de sólo lectura a los orígenes de cada tipo de origen en la ficha Catálogo, así como a las fichas Examinar, Cuentas y Flujo de datos. |
-| **[!UICONTROL Administrar Fuentes]** En | Además de las funciones incluidas en **[!UICONTROL Ver fuentes]**, concede acceso a la opción **[!UICONTROL Conectar Source]** en el **[!UICONTROL catálogo]** y a la opción **[!UICONTROL Seleccionar datos]** en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar fuentes]** también le permite habilitar o deshabilitar **[!UICONTROL Flujos de datos]** y editar sus programaciones. |
-| **[!UICONTROL Ver fuentes]** desactivadas y **[!UICONTROL Administrar fuentes]** desactivadas | Revocar todo acceso a orígenes. |
+| **[!UICONTROL View Sources]** Activado | Conceda acceso de sólo lectura a los orígenes de cada tipo de origen en la ficha Catálogo, así como a las fichas Examinar, Cuentas y Flujo de datos. |
+| **[!UICONTROL Manage Sources]** Activado | Además de las funciones incluidas en **[!UICONTROL View Sources]**, concede acceso a la opción **[!UICONTROL Connect Source]** en **[!UICONTROL Catalog]** y a la opción **[!UICONTROL Select Data]** en **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** también le permite habilitar o deshabilitar **[!UICONTROL DataFlows]** y editar sus programaciones. |
+| **[!UICONTROL View Sources]** desactivado y **[!UICONTROL Manage Sources]** desactivado | Revocar todo acceso a orígenes. |
 
 Para obtener más información acerca de los permisos disponibles otorgados mediante Permisos de Adobe, lea la [descripción general del control de acceso](../access-control/home.md).
 
@@ -308,11 +308,11 @@ Con el control de acceso basado en atributos, puede aplicar configuraciones de a
 
 - Aplique etiquetas a los campos de esquema para definir el acceso a campos de esquema específicos de su organización. Una vez establecido el acceso a campos de esquema específicos, los usuarios solo podrán crear asignaciones para los campos a los que tengan acceso.
 - Los usuarios sin las funciones adecuadas no podrán crear ni actualizar flujos de datos con asignaciones que impliquen campos de esquema inaccesibles. Además, los usuarios no autorizados no pueden actualizar, eliminar, habilitar ni deshabilitar flujos de datos existentes con campos de esquema inaccesibles.
-- Además, un flujo de datos debe tener exactamente el mismo ID y versión de esquema en su asignación, conjunto de datos de destino y conexión de destino. Esto se aplica tanto a esquemas XDM estándar como a esquemas basados en modelos.
+- Además, un flujo de datos debe tener exactamente el mismo ID y versión de esquema en su asignación, conjunto de datos de destino y conexión de destino. Esto se aplica tanto a esquemas XDM estándar como a esquemas relacionales.
 
 >[!NOTE]
 >
->Los esquemas basados en modelos tienen requisitos adicionales, incluidos los campos de clave principal y de identificador de versión. Para obtener más información, consulte la [descripción general del esquema basado en modelos](../xdm/schema/model-based.md).
+>Los esquemas relacionales tienen requisitos adicionales, incluidos los campos de clave principal y de identificador de versión. Para obtener más información, consulte la [descripción general del esquema relacional](../xdm/schema/relational.md).
 
 Para obtener más información sobre el control de acceso basado en atributos, lea la [descripción general del control de acceso basado en atributos](../access-control/abac/overview.md).
 

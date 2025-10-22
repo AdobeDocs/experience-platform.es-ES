@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general del sistema XDM
 description: La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. El modelo de datos de experiencia (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 7527732c91e55f6ffaefbf98c37a2c4aad3aa3b9
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2440'
 ht-degree: 3%
 
 ---
@@ -35,13 +35,13 @@ XDM proporciona una colección sólida de grupos de campos y tipos de datos est�
 
 Al construir esquemas en la interfaz de usuario de Experience Platform, los grupos de campos enumerados se muestran con una métrica de popularidad. Esta métrica está determinada por la frecuencia con la que otros usuarios de Experience Platform emplean el grupo de campos en sus esquemas. Cuanto mayor sea el número, más popular será el grupo de campos. De forma predeterminada, los resultados se muestran de los más populares a los menos populares, lo que le mantiene informado de las tendencias de modelado de datos en su industria.
 
-![La columna de popularidad del cuadro de diálogo [!UICONTROL Agregar grupo de campos].](./images/overview/popularity.png)
+![La columna de popularidad del cuadro de diálogo [!UICONTROL Add field group].](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
 Experience Platform proporciona una interfaz de usuario y una API RESTful desde las cuales puede ver y administrar todos los recursos relacionados con esquemas en Experience Platform **[!DNL Schema Library]**. [!DNL Schema Library] contiene componentes XDM estándar que Adobe pone a su disposición, así como recursos de socios y proveedores de Experience Platform cuyas aplicaciones utiliza.
 
-También puede crear y administrar nuevos esquemas y recursos exclusivos de su organización mediante el área de trabajo [!DNL Schema Registry API] o [!UICONTROL Esquemas] en la interfaz de usuario de Experience Platform.
+También puede crear y administrar nuevos esquemas y recursos que sean únicos para su organización mediante [!DNL Schema Registry API] o el espacio de trabajo [!UICONTROL Schemas] en la interfaz de usuario de Experience Platform.
 
 Para obtener más información sobre cómo administrar e interactuar con esquemas en Experience Platform, consulte la siguiente documentación:
 
@@ -69,7 +69,7 @@ Aunque puede definir sus propias clases dentro de [!DNL Schema Registry], se rec
 >
 >No hay clases estándar basadas en el comportamiento ad hoc. Los procesos de Experience Platform que los utilizan generan automáticamente esquemas ad hoc, pero también se pueden [crear manualmente mediante la API de Registro de esquemas](./tutorials/ad-hoc.md).
 
-### [!UICONTROL Perfil individual de XDM] {#xdm-individual-profile}
+### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
 [!UICONTROL XDM Individual Profile] es una clase basada en registros que forma una representación singular de los atributos de los sujetos identificados y parcialmente identificados. Los perfiles altamente identificados pueden utilizarse para comunicaciones personales o participaciones segmentadas. Los perfiles altamente identificados pueden contener información personal detallada como nombre, sexo, fecha de nacimiento, ubicación e información de contacto, incluidos números de teléfono y direcciones de correo electrónico.
 
@@ -79,7 +79,7 @@ A medida que un perfil crece, se convierte en un repositorio sólido de la infor
 
 Consulte la guía de referencia [[!UICONTROL XDM Individual Profile]](./classes/individual-profile.md) para obtener más información sobre la estructura y el caso de uso de los campos proporcionados por la clase.
 
-### [!UICONTROL ExperienceEvent de XDM] {#xdm-experience-event}
+### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
 ExperienceEvent de XDM es una clase basada en series temporales que se utiliza para capturar el estado del sistema cuando se produjo un evento (o conjunto de eventos), incluido el momento y la identidad del sujeto involucrado. Los Eventos de experiencia son registros fácticos e inmutables de lo que ocurrió en ese momento, y representan lo que sucedió sin agregación ni interpretación. Son esenciales para el análisis en el dominio del tiempo, ya que se pueden utilizar para analizar los cambios que se producen en un intervalo de tiempo determinado y para comparar varias ventanas de tiempo con el fin de rastrear las tendencias.
 
@@ -105,15 +105,19 @@ Para empezar a ingerir datos en Experience Platform, puede utilizar el servicio 
 
 Consulte la [descripción general del servicio de catálogo](../catalog/home.md) para obtener más información. Consulte la [Información general sobre la ingesta de datos](../ingestion/home.md) para obtener más información sobre la ingesta de datos de Adobe Experience Platform.
 
-### Data Mirror y esquemas basados en modelos {#model-based-schemas}
+### Data Mirror y esquemas relacionales {#relational-schemas}
 
 >[!AVAILABILITY]
 >
->Data Mirror y los esquemas basados en modelos están disponibles para los titulares de licencias de **campañas orquestadas** de Adobe Journey Optimizer. También están disponibles como una **versión limitada** para los usuarios de Customer Journey Analytics, según su licencia y la habilitación de características. Póngase en contacto con su representante de Adobe para obtener acceso.
+>Los esquemas relacionales y de Data Mirror están disponibles para los titulares de licencias de **campañas orquestadas** de Adobe Journey Optimizer. También están disponibles como una **versión limitada** para los usuarios de Customer Journey Analytics, según su licencia y la habilitación de características. Póngase en contacto con su representante de Adobe para obtener acceso.
 
-Data Mirror es una capacidad de Adobe Experience Platform que permite la sincronización avanzada de bases de datos mediante esquemas basados en modelos. Para obtener una descripción general completa de las funcionalidades de Data Mirror y los casos de uso, consulte la [descripción general de Data Mirror](./data-mirror/overview.md).
+>[!NOTE]
+>
+>Los esquemas relacionales se denominaban anteriormente esquemas basados en modelos en versiones anteriores de la documentación de Adobe Experience Platform. La funcionalidad sigue siendo la misma, pero la terminología ha cambiado para mayor claridad.
 
-Data Mirror funciona a través de esquemas basados en modelos, diseñados para patrones de datos estructurados de estilo relacional. Aplican claves principales, admiten identificadores de versión y definen relaciones de esquema a esquema mediante claves principales y externas. A diferencia de los esquemas XDM estándar, no requieren clases ni grupos de campos y están optimizados para cambiar los flujos de trabajo de ingesta de captura de datos.
+Data Mirror es una funcionalidad de Adobe Experience Platform que permite la sincronización avanzada de bases de datos mediante esquemas relacionales. Para obtener una descripción general completa de las funcionalidades de Data Mirror y los casos de uso, consulte la [descripción general de Data Mirror](./data-mirror/overview.md).
+
+Data Mirror funciona a través de esquemas relacionales, diseñados para patrones de datos estructurados de estilo relacional. Aplican claves principales, admiten identificadores de versión y definen relaciones de esquema a esquema mediante claves principales y externas. A diferencia de los esquemas XDM estándar, no requieren clases ni grupos de campos y están optimizados para cambiar los flujos de trabajo de ingesta de captura de datos.
 
 Para obtener más información sobre cómo definir relaciones de esquema a esquema, consulte la [documentación del extremo de descriptores](./api/descriptors.md).
 
@@ -124,7 +128,7 @@ Utilice Data Mirror cuando necesite:
 * Compatibilidad con análisis avanzados y orquestación de recorrido
 * Habilite un seguimiento de cambios preciso con actualizaciones y eliminaciones
 
-Para crear un esquema basado en modelos, seleccione **[!UICONTROL basado en modelos]** al crear un esquema. Los esquemas basados en modelos no utilizan clases ni grupos de campos. En su lugar, puede definir la estructura manualmente o cargar un archivo DDL. Los esquemas basados en modelos requieren una clave principal, un identificador de versión y, si corresponde, campos de identificador de marca de tiempo. A continuación, puede configurar campos adicionales y definir relaciones con otros esquemas.
+Para crear un esquema relacional, seleccione **[!UICONTROL Relational]** al crear un esquema. Los esquemas relacionales no utilizan clases ni grupos de campos. En su lugar, puede definir la estructura manualmente o cargar un archivo DDL. Los esquemas relacionales requieren una clave principal, un identificador de versión y, si corresponde, campos de identificador de marca de tiempo. A continuación, puede configurar campos adicionales y definir relaciones con otros esquemas.
 
 >[!NOTE]
 >
@@ -133,9 +137,9 @@ Para crear un esquema basado en modelos, seleccione **[!UICONTROL basado en mode
 Para ver los pasos detallados y las instrucciones de casos de uso, consulte:
 
 * [Información general de Data Mirror](./data-mirror/overview.md): capacidades, casos de uso y planificación de la implementación
-* [Referencia técnica de esquema basado en modelo](./schema/model-based.md): especificaciones técnicas y restricciones
-* [Tutorial de IU](./ui/resources/schemas.md#create-model-based-schema)
-* [Tutorial de API](./api/schemas.md#create-model-based-schema)
+* [Referencia técnica de esquema relacional](./schema/relational.md): especificaciones técnicas y restricciones
+* [Tutorial de IU](./ui/resources/schemas.md#create-relational-schema)
+* [Tutorial de API](./api/schemas.md#create-relational-schema)
 * [Documentación del descriptor (identificador)](./api/descriptors.md#relationship-descriptor)
 * [Habilitar cambio de captura de datos](../sources/tutorials/api/change-data-capture.md)
 
@@ -155,9 +159,9 @@ El perfil del cliente en tiempo real consume datos con formato de esquema basado
 
 El sistema mantiene una instancia de cada perfil del cliente, combinando los datos para formar una &quot;única fuente fiable&quot; para el individuo. Estos datos unificados se representan con lo que se conoce como &quot;esquema de unión&quot; (a veces denominado &quot;vista de unión&quot;). Un esquema de unión agrega los campos de todos los esquemas que implementan la misma clase en un único esquema. Al maquetar un esquema mediante la interfaz de usuario o la API de, puede activar el esquema para utilizarlo con el perfil del cliente en tiempo real y etiquetarlo para incluirlo en la unión. El esquema etiquetado participará en la definición del esquema que se envía al perfil.
 
-A medida que los datos de [!UICONTROL XDM Individual Profile] y [!UICONTROL XDM ExperienceEvent] se incorporan en el lago de datos, el perfil del cliente en tiempo real ingiere cualquier dato que se haya habilitado para su uso. Cuantas más interacciones y detalles se incorporen, más sólidos se volverán los perfiles individuales.
+A medida que los datos de [!UICONTROL XDM Individual Profile] y [!UICONTROL XDM ExperienceEvent] se incorporan al lago de datos, el perfil del cliente en tiempo real ingiere cualquier dato que se haya habilitado para su uso. Cuantas más interacciones y detalles se incorporen, más sólidos se volverán los perfiles individuales.
 
-Los datos del [!UICONTROL perfil individual de XDM] ayudan a informar y potenciar las acciones en cualquier canal o integración de productos de Adobe. Cuando se asocian con un historial completo de datos de comportamiento e interacción, estos datos se pueden utilizar para potenciar el aprendizaje automático. La API del perfil del cliente en tiempo real también se puede utilizar para enriquecer la funcionalidad de las soluciones de terceros, CRM y soluciones propietarias.
+Los datos de [!UICONTROL XDM Individual Profile] ayudan a informar y potenciar las acciones en cualquier canal o integración de productos de Adobe. Cuando se asocian con un historial completo de datos de comportamiento e interacción, estos datos se pueden utilizar para potenciar el aprendizaje automático. La API del perfil del cliente en tiempo real también se puede utilizar para enriquecer la funcionalidad de las soluciones de terceros, CRM y soluciones propietarias.
 
 Consulte la [descripción general del perfil del cliente en tiempo real](../profile/home.md) para obtener más información.
 
@@ -167,7 +171,7 @@ Consulte la [descripción general del perfil del cliente en tiempo real](../prof
 >
 >Data Science Workspace ya no se puede adquirir. Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
-Adobe Experience Platform Data Science Workspace utiliza aprendizaje automático e inteligencia artificial para obtener perspectivas de los datos almacenados en Experience Platform. Data Science Workspace permite a los científicos de datos crear fórmulas basadas en datos de [!UICONTROL XDM Individual Profile] y [!UICONTROL XDM ExperienceEvent] sobre los clientes y sus actividades. Estas recetas facilitan las predicciones, como la tendencia a comprar y las ofertas recomendadas que el individuo probablemente aprecie y utilice.
+Adobe Experience Platform Data Science Workspace utiliza aprendizaje automático e inteligencia artificial para obtener perspectivas de los datos almacenados en Experience Platform. Data Science Workspace permite a los científicos de datos crear fórmulas basadas en datos de [!UICONTROL XDM Individual Profile] y [!UICONTROL XDM ExperienceEvent] acerca de los clientes y sus actividades. Estas recetas facilitan las predicciones, como la tendencia a comprar y las ofertas recomendadas que el individuo probablemente aprecie y utilice.
 
 Con Data Science Workspace, los científicos de datos pueden crear fácilmente API de servicio inteligentes con tecnología de aprendizaje automático. Estos servicios funcionan con otras soluciones de Adobe, incluidas Adobe Target y Adobe Analytics Cloud, para ayudarle a automatizar experiencias digitales personalizadas y específicas.
 
@@ -181,4 +185,4 @@ Para conocer los principios de diseño y las prácticas recomendadas para crear 
 
 Para comprender mejor [!DNL XDM System] en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/38506?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

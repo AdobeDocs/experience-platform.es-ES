@@ -3,9 +3,9 @@ description: Aprenda a utilizar plantillas en la IU de Adobe Experience Platform
 title: Creación de un flujo de datos de origen mediante plantillas en la IU
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: f9e3c19fdfd4ca0e03fdf3b3a7b5e82b72490dbc
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2271'
 ht-degree: 10%
 
 ---
@@ -53,11 +53,11 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >abstract="Seleccione el tipo de negocio adecuado para su caso de uso. El acceso puede variar en función de la cuenta de suscripción a Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es" text="Información general sobre Real-Time CDP"
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources] y ver un catálogo de orígenes disponibles en Experience Platform.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources] y ver un catálogo de fuentes disponibles en Experience Platform.
 
-Utilice el menú *[!UICONTROL Categorías]* para filtrar orígenes por categoría. También puede introducir un nombre de origen en la barra de búsqueda para buscar un origen específico del catálogo.
+Utilice el menú *[!UICONTROL Categories]* para filtrar orígenes por categoría. También puede introducir un nombre de origen en la barra de búsqueda para buscar un origen específico del catálogo.
 
-Vaya a la categoría [!UICONTROL aplicaciones de Adobe] para ver la tarjeta de origen de [!DNL Marketo Engage] y, a continuación, seleccione [!UICONTROL Agregar datos] para empezar.
+Vaya a la categoría [!UICONTROL Adobe applications] para ver la tarjeta de origen [!DNL Marketo Engage] y, a continuación, seleccione [!UICONTROL Add data] para empezar.
 
 ![Catálogo del área de trabajo de orígenes con el origen de Marketo Engage resaltado.](../../images/tutorials/templates/catalog.png)
 
@@ -68,11 +68,11 @@ Aparece una ventana emergente que presenta la opción de examinar las plantillas
 
 >[!NOTE]
 >
->Las plantillas pueden generar automáticamente esquemas basados en modelos cuando se trabaja con fuentes que requieren flujos de trabajo de captura de datos modificados o admiten varios modelos de datos. Estos esquemas habilitan las funciones de Data Mirror para la sincronización de datos en tiempo real.\
->Al utilizar plantillas con esquemas basados en modelos, los recursos generados automáticamente incluirán los campos clave principal, identificador de versión e identificador de marca de tiempo necesarios.\
->Para obtener más información, consulte la [descripción general de Data Mirror](../../../xdm/data-mirror/overview.md) y la [referencia técnica de esquemas basados en modelos](../../../xdm/schema/model-based.md).
+>Las plantillas pueden generar automáticamente esquemas relacionales al trabajar con fuentes que requieran flujos de trabajo de captura de datos modificados o que admitan varios modelos de datos. Estos esquemas habilitan las funciones de Data Mirror para la sincronización de datos en tiempo real.\
+>Cuando se utilizan plantillas con esquemas relacionales, los recursos generados automáticamente incluyen los campos clave principal, identificador de versión e identificador de marca de tiempo necesarios.\
+>Para obtener más información, consulte la [descripción general de Data Mirror](../../../xdm/data-mirror/overview.md) y la [referencia técnica de esquemas relacionales](../../../xdm/schema/relational.md).
 
-Para usar recursos generados automáticamente, selecciona **[!UICONTROL Examinar plantillas]** y luego selecciona **[!UICONTROL Seleccionar]**.
+Para usar recursos generados automáticamente, seleccione **[!UICONTROL Browse templates]** y luego seleccione **[!UICONTROL Select]**.
 
 ![Ventana emergente con opciones para examinar plantillas o utilizar recursos existentes.](../../images/tutorials/templates/browse-templates.png)
 
@@ -84,13 +84,13 @@ Aparece el paso de autenticación, que le solicita que cree una nueva cuenta o q
 
 >[!TAB Usar una cuenta existente]
 
-Para usar una cuenta existente, seleccione [!UICONTROL Cuenta existente] y luego seleccione la cuenta que desee usar en la lista que aparece.
+Para usar una cuenta existente, seleccione [!UICONTROL Existing account] y luego seleccione la cuenta que desee usar en la lista que aparece.
 
 ![Página de selección de una cuenta existente a la que puede tener acceso con una lista de cuentas existentes.](../../images/tutorials/templates/existing-account.png)
 
 >[!TAB Crear una nueva cuenta]
 
-Para crear una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione los detalles de conexión de origen y las credenciales de autenticación de la cuenta. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
+Para crear una cuenta nueva, seleccione **[!UICONTROL New account]** y proporcione los detalles de conexión de origen y las credenciales de autenticación de la cuenta. Cuando termine, seleccione **[!UICONTROL Connect to source]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
 ![Página de autenticación de una nueva cuenta con detalles de conexión de origen y credenciales de autenticación de cuenta.](../../images/tutorials/templates/new-account.png)
 
@@ -188,7 +188,7 @@ Aparecerá la ventana de vista previa, que le permitirá explorar e inspeccionar
 
 ![Ventana de vista previa de datos de ejemplo.](../../images/tutorials/templates/preview-sample-data.png)
 
-A continuación, seleccione la plantilla que desee utilizar en la lista. Puede seleccionar varias plantillas y crear varios flujos de datos a la vez. Sin embargo, una plantilla solo se puede utilizar una vez por cuenta. Una vez que haya seleccionado las plantillas, seleccione **[!UICONTROL Finalizar]** y espere unos momentos para que se generen los recursos.
+A continuación, seleccione la plantilla que desee utilizar en la lista. Puede seleccionar varias plantillas y crear varios flujos de datos a la vez. Sin embargo, una plantilla solo se puede utilizar una vez por cuenta. Una vez que haya seleccionado las plantillas, seleccione **[!UICONTROL Finish]** y espere unos momentos para que se generen los recursos.
 
 Si selecciona uno o parte de los elementos de la lista de plantillas disponibles, todos los esquemas B2B y las áreas de nombres de identidad se generarán para garantizar que las relaciones B2B entre esquemas estén correctamente configuradas.
 
@@ -210,7 +210,7 @@ También puede establecer la frecuencia de ingesta en **Minuto**, **Hora**, **D�
 
 Durante este paso, también puede habilitar **relleno** y definir una columna para la ingesta incremental de datos. El relleno se utiliza para introducir datos históricos, mientras que la columna que defina para la ingesta incremental permite diferenciar los nuevos datos de los datos existentes.
 
-Una vez que haya completado la configuración de la programación de ingesta, seleccione **[!UICONTROL Finalizar]**.
+Una vez que haya completado la configuración de la programación de ingesta, seleccione **[!UICONTROL Finish]**.
 
 ![Interfaz de programación para plantillas de Dynamics y Salesforce con relleno habilitado.](../../images/tutorials/templates/backfill.png)
 
@@ -221,17 +221,17 @@ Una vez que haya completado la configuración de la programación de ingesta, se
 >title="Revise los recursos generados automáticamente"
 >abstract="La generación de todos los recursos puede tardar hasta cinco minutos. Si decide salir de la página, recibirá una notificación para regresar una vez que se hayan completado los recursos. Puede revisar los recursos una vez que se hayan generado y realizar configuraciones adicionales en el flujo de datos en cualquier momento."
 
-La página [!UICONTROL Revisar recursos de plantilla] muestra los recursos generados automáticamente como parte de la plantilla. En esta página, puede ver los esquemas, conjuntos de datos, áreas de nombres de identidad y flujos de datos generados automáticamente y asociados a la conexión de origen. La generación de todos los recursos puede tardar hasta cinco minutos. Si decide salir de la página, recibirá una notificación para regresar una vez que se hayan completado los recursos. Puede revisar los recursos una vez que se hayan generado y realizar configuraciones adicionales en el flujo de datos en cualquier momento.
+La página [!UICONTROL Review template assets] muestra los recursos generados automáticamente como parte de la plantilla. En esta página, puede ver los esquemas, conjuntos de datos, áreas de nombres de identidad y flujos de datos generados automáticamente y asociados a la conexión de origen. La generación de todos los recursos puede tardar hasta cinco minutos. Si decide salir de la página, recibirá una notificación para regresar una vez que se hayan completado los recursos. Puede revisar los recursos una vez que se hayan generado y realizar configuraciones adicionales en el flujo de datos en cualquier momento.
 
-De forma predeterminada, los flujos de datos generados automáticamente se establecen en estado de borrador para permitir una mayor personalización de las configuraciones, como las reglas de asignación o las frecuencias programadas. Seleccione los puntos suspensivos (`...`) junto al nombre del flujo de datos y, a continuación, seleccione **[!UICONTROL Previsualizar asignaciones]** para ver los conjuntos de asignaciones creados para el flujo de datos de borrador.
+De forma predeterminada, los flujos de datos generados automáticamente se establecen en estado de borrador para permitir una mayor personalización de las configuraciones, como las reglas de asignación o las frecuencias programadas. Seleccione los puntos suspensivos (`...`) junto al nombre del flujo de datos y, a continuación, seleccione **[!UICONTROL Preview mappings]** para ver los conjuntos de asignaciones creados para el flujo de datos de borrador.
 
 ![Ventana desplegable con la opción de asignaciones de vista previa seleccionada.](../../images/tutorials/templates/preview.png)
 
-Aparecerá una página de vista previa que le permitirá inspeccionar la relación de asignación entre los campos de datos de origen y los campos de esquema de destino. Una vez vistas las asignaciones del flujo de datos. Seleccione **[!UICONTROL Lo tengo.]**
+Aparecerá una página de vista previa que le permitirá inspeccionar la relación de asignación entre los campos de datos de origen y los campos de esquema de destino. Una vez vistas las asignaciones del flujo de datos. Seleccionar **[!UICONTROL Got it.]**
 
 ![Ventana de vista previa de asignación.](../../images/tutorials/templates/preview-mappings.png)
 
-Puede actualizar los flujos de datos en cualquier momento después de la ejecución. Seleccione los puntos suspensivos (`...`) junto al nombre del flujo de datos y, a continuación, seleccione **[!UICONTROL Actualizar flujo de datos]**. Se le redirige a la página de flujo de trabajo de fuentes, donde puede actualizar los detalles del flujo de datos, incluida la configuración de la ingesta parcial, los diagnósticos de error y las notificaciones de alerta, así como la asignación del flujo de datos.
+Puede actualizar los flujos de datos en cualquier momento después de la ejecución. Seleccione los puntos suspensivos (`...`) junto al nombre del flujo de datos y, a continuación, seleccione **[!UICONTROL Update dataflow]**. Se le redirige a la página de flujo de trabajo de fuentes, donde puede actualizar los detalles del flujo de datos, incluida la configuración de la ingesta parcial, los diagnósticos de error y las notificaciones de alerta, así como la asignación del flujo de datos.
 
 Puede utilizar la vista del editor de esquemas para realizar actualizaciones en el esquema generado automáticamente. Visite la guía de [con el editor de esquemas](../../../xdm/tutorials/create-schema-ui.md) para obtener más información.
 
@@ -239,29 +239,29 @@ Puede utilizar la vista del editor de esquemas para realizar actualizaciones en 
 
 >[!TIP]
 >
->Puede acceder a su flujo de datos de borrador a través de la página del catálogo [!UICONTROL Dataflows] en el área de trabajo de orígenes. Seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior y, a continuación, seleccione el flujo de datos que desee actualizar en la lista.
+>Puede acceder al flujo de datos de borrador a través de la página del catálogo [!UICONTROL Dataflows] en el área de trabajo de orígenes. Seleccione **[!UICONTROL Dataflows]** del encabezado superior y luego seleccione el flujo de datos que desea actualizar de la lista.
 >
 >![Una lista de flujos de datos existentes en el catálogo de flujos de datos del área de trabajo de orígenes.](../../images/tutorials/templates/dataflows.png)
 
 ### Publicación del flujo de datos
 
-Inicie el proceso de publicación a través del flujo de trabajo de fuentes. Después de seleccionar [!UICONTROL Actualizar flujo de datos], se le redirigirá al paso *[!UICONTROL Agregar datos]* del flujo de trabajo. Seleccione **[!UICONTROL Siguiente]** para continuar.
+Inicie el proceso de publicación a través del flujo de trabajo de fuentes. Después de seleccionar [!UICONTROL Update dataflow], se le redirige al paso *[!UICONTROL Add data]* del flujo de trabajo. Seleccione **[!UICONTROL Next]** para continuar.
 
 ![Paso para agregar datos para un flujo de datos de borrador](../../images/tutorials/templates/continue-draft.png)
 
-A continuación, confirme los detalles del flujo de datos y configure las opciones de diagnóstico de errores, ingesta parcial y notificaciones de alerta. Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+A continuación, confirme los detalles del flujo de datos y configure las opciones de diagnóstico de errores, ingesta parcial y notificaciones de alerta. Cuando termine, seleccione **[!UICONTROL Next]**.
 
 ![Paso de detalle del flujo de datos para un flujo de datos de borrador.](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
->Puede seleccionar **[!UICONTROL Guardar como borrador]** en cualquier momento para detener y guardar los cambios realizados en el flujo de datos.
+>Puede seleccionar **[!UICONTROL Save as draft]** en cualquier momento para detener y guardar los cambios realizados en el flujo de datos.
 
 Aparecerá el paso de asignación. Durante este paso, puede volver a configurar las configuraciones de asignación del flujo de datos. Para obtener una guía completa sobre las funciones de preparación de datos utilizadas para la asignación, visite la [guía de IU de preparación de datos](../../../data-prep/ui/mapping.md).
 
 ![Paso de asignación para un flujo de datos de borrador.](../../images/tutorials/templates/mapping.png)
 
-Por último, revisa los detalles del flujo de datos y selecciona **[!UICONTROL Guardar e ingerir]** para publicar el borrador.
+Por último, revise los detalles del flujo de datos y, a continuación, seleccione **[!UICONTROL Save & ingest]** para publicar el borrador.
 
 ![Paso de revisión de un flujo de datos de borrador.](../../images/tutorials/templates/review.png)
 
