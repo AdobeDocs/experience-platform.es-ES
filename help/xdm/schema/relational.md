@@ -38,7 +38,7 @@ Utilice esquemas relacionales para lo siguiente:
 
 ## Diferencia entre los esquemas relacionales y los esquemas XDM estándar
 
-Los esquemas XDM estándar en Experience Platform siguen uno de los tres comportamientos de datos: registro, serie temporal o ad hoc. Para ver definiciones y detalles, consulte [comportamientos de datos XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
+Los esquemas XDM estándar en Experience Platform siguen uno de los tres comportamientos de datos: registro, serie temporal o ad hoc. Para ver definiciones y detalles, consulte [comportamientos de datos XDM](https://experienceleague.adobe.com/es/docs/experience-platform/xdm/home#data-behaviors).
 
 En el modelo tradicional, los esquemas de registros y series temporales participan en [esquemas de unión](../api/unions.md) (consulte también la [guía de la interfaz de usuario del esquema de unión](../../profile/ui/union-schema.md)). Estos esquemas evolucionan automáticamente a medida que se actualizan [grupos de campos](./composition.md#field-group) compartidos y los campos personalizados deben anidarse en un área de nombres de inquilino. Aunque es potente, este modelo puede ralentizar la incorporación, producir esquemas demasiado complejos con campos no utilizados y requerir una asignación o transformación de datos adicional. Estos factores aumentan la curva de aprendizaje y el esfuerzo de mantenimiento continuo.
 
