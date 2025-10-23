@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: c024637ab73a3a1c3d2512f9879303b4e4d830a9
+source-git-commit: a4db84f5918e99b3c6dd63ff5a25063b89be2ba7
 workflow-type: tm+mt
 source-wordcount: '3484'
 ht-degree: 10%
@@ -329,8 +329,8 @@ Por ejemplo, está activando una audiencia denominada &quot;Miembros socio en Ca
 >   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
 >   - [[!DNL Salesforce Marketing Cloud] (API)](../../destinations/catalog/email-marketing/salesforce-marketing-cloud.md)
 >   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/warehouses/snowflake-batch.md)
 >   - [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md)
->   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
 >   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
 >   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Destinos por lotes (basados en archivos)

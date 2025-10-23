@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2025'
 description: Las notas de la versión de septiembre de 2025 de Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: 96b9fcd8bfb4ff62eb9d4adce2e486782d918344
+source-git-commit: 1e1e91a4006a55a94c64bbc8e89ff3e2e58c4918
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 85%
@@ -68,7 +68,7 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 
 | Destino | Descripción |
 | --- | --- |
-| Conector [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) | Ya está disponible un nuevo conector [!DNL Snowflake Batch] que proporciona una alternativa al conector de streaming para casos de uso específicos. |
+| Conector [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/warehouses/snowflake-batch.md) | Ya está disponible un nuevo conector [!DNL Snowflake Batch] que proporciona una alternativa al conector de streaming para casos de uso específicos. |
 | Compatibilidad con el cifrado de [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Ahora puede adjuntar claves públicas con formato RSA para cifrar los archivos exportados, lo que le proporciona el mismo nivel de seguridad que otros destinos de almacenamiento en la nube para la información confidencial. |
 | Detalles de caducidad de la autenticación para destinos de [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md)  | La información de caducidad de autenticación de los destinos de [!DNL Pinterest] ahora es visible directamente en la interfaz de Experience Platform, por lo que puede ver cuándo caducará la autenticación y renovarla antes de que cause interrupciones en los flujos de datos. Puede supervisar las fechas de caducidad de los tokens desde la columna **[!UICONTROL Account expiration date]** en las pestañas **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)**. |
 

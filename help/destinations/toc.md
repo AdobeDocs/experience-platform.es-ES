@@ -5,7 +5,7 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 73241750bdb310abf28cd4b1bcb4ba3ec43a6f39
+source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
 workflow-type: tm+mt
 source-wordcount: '1325'
 ht-degree: 6%
@@ -33,7 +33,7 @@ ht-degree: 6%
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
    * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de datos](/help/destinations/api/export-datasets.md)
-   * [Ordenar y filtrar respuestas API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=es#use-cases)
+   * [Ordenar y filtrar respuestas API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guías de IU {#ui}
    * [Espacio de trabajo Destinos](./ui/destinations-workspace.md)
    * [Crear una nueva conexión de destino](./ui/connect-destination.md)
@@ -71,7 +71,7 @@ ht-degree: 6%
       * [(Heredado) (V2) Conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Conexión de sincronización de personas de Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es)
+      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Conexión de composición de audiencia federada](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos de Advertising{#advertising}
       * [(Beta) Conexión de Audiencia de Acxiom](./catalog/advertising/acxiom-audience-connection.md)
@@ -146,8 +146,6 @@ ht-degree: 6%
       * [Zona de aterrizaje de datos](./catalog/cloud-storage/data-landing-zone.md)
       * [Almacenamiento en la nube de Google](./catalog/cloud-storage/google-cloud-storage.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
-      * [(Beta) Conexión de flujo Snowflake](./catalog/cloud-storage/snowflake.md)
-      * [(Beta) Conexión por lotes de Snowflake](./catalog/cloud-storage/snowflake-batch.md)
       * [LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube basados en archivos](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos de administración de la relación con los clientes (CRM) {#crm}
       * [Conexión Hubspot](./catalog/crm/hubspot.md)
@@ -237,6 +235,9 @@ ht-degree: 6%
       * [Conexión de Medallia](./catalog/voice/medallia-connector.md)
       * [Extensión de Medallia](./catalog/voice/medallia.md)
       * [Extensión de bandeja de entrada de URL Talk](./catalog/voice/talkurl.md)
+   * Destinos de almacén {#warehouse}
+      * [Conexión por lotes de Snowflake](./catalog/warehouses/snowflake-batch.md)
+      * [Conexión de flujo Snowflake](./catalog/warehouses/snowflake.md)
 * Destination SDK {#destination-sdk}
    * [Información general](./destination-sdk/overview.md)
    * [Requisitos previos de integración](./destination-sdk/integration-prerequisites.md)
