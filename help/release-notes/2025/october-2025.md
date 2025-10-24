@@ -1,10 +1,10 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: octubre de 2025'
 description: Las notas de la versión de octubre de 2025 de Adobe Experience Platform.
-source-git-commit: 7f37ba35111f6fa96d1889d74a66e32302b8ab85
+source-git-commit: 0191fc8419c696d8cd114a5eb575b8cc0a815a72
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 24%
+source-wordcount: '1159'
+ht-degree: 26%
 
 ---
 
@@ -27,7 +27,8 @@ Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 - [Agent Orchestrator](#agent-orchestrator)
 - [Alertas](#alerts)
 - [Destinos](#destinations)
-- [Orígenes](#sources)
+- [Real-time CDP B2B Edition](#b2b)
+- [Fuentes](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
 
@@ -82,6 +83,18 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 {style="table-layout:auto"}
 
 Para obtener más información, consulte la [Información general sobre destinos](../../destinations/home.md).
+
+## Real-time CDP B2B Edition {#b2b}
+
+Real-Time CDP B2B Edition ofrece funciones completas de administración de datos de clientes B2B, lo que permite a las organizaciones crear perfiles unificados de clientes, crear públicos B2B sofisticados y activar datos en varios canales de marketing.
+
+**Funcionalidad nueva o actualizada**
+
+| Función | Descripción |
+| --- | --- |
+| Obsolescencia de la compatibilidad con B2B para relaciones no estándar entre entidades B2B | A partir de enero de 2026, Real-Time CDP B2B edition dejará de admitir **relaciones no estándar** entre entidades B2B. Por lo tanto, se recomienda actualizar las entidades B2B para que utilicen las relaciones estándar descritas en la [guía de esquemas y áreas de nombres B2B](../../rtcdp/schemas/b2b.md). |
+
+{style="table-layout:auto"}
 
 ## Fuentes {#sources}
 
