@@ -1,10 +1,10 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: octubre de 2025'
 description: Las notas de la versión de octubre de 2025 de Adobe Experience Platform.
-source-git-commit: 57cb9f5e57c83576a125ec2de5eb3e4526d5b572
+source-git-commit: 7f37ba35111f6fa96d1889d74a66e32302b8ab85
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 25%
+source-wordcount: '1068'
+ht-degree: 24%
 
 ---
 
@@ -77,15 +77,11 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 | [Varios destinos nuevos que admiten la supervisión a nivel de audiencia](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Los siguientes destinos ahora admiten la monitorización a nivel de audiencia: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] participación de cuenta</li><li>[!DNL The Trade Desk]</li></ul> |
 | Corrección de protecciones de exportación de conjuntos de datos | Se ha implementado una corrección en las protecciones de exportación del conjunto de datos. Anteriormente, algunos conjuntos de datos que incluían una columna de marca de tiempo pero que _no eran_ basados en el esquema de eventos de experiencia XDM se trataban incorrectamente como conjuntos de datos de eventos de experiencia, lo que limitaba las exportaciones a una ventana retrospectiva de 365 días. La protección retrospectiva de 365 días documentada ahora se aplica exclusivamente a los conjuntos de datos de eventos de experiencia. Los conjuntos de datos que utilizan cualquier esquema distinto del esquema de eventos de experiencia XDM ahora se rigen por la protección de 10 000 millones de registros. Es posible que algunos clientes vean números de exportación aumentados para conjuntos de datos que, erróneamente, caen dentro de la ventana retrospectiva de 365 días. Esto permite exportar conjuntos de datos para flujos de trabajo predictivos que tienen una larga ventana retrospectiva. Para obtener más información, lea las [protecciones de exportación del conjunto de datos](../../destinations/guardrails.md#dataset-exports). |
 | Informes mejorados a nivel de audiencia para destinos empresariales | Después de esta versión, los clientes verán números de informes de audiencia más precisos que incluyen solo audiencias relevantes para el destino seleccionado. Este ajuste de monitorización garantiza que la creación de informes incluya solo audiencias asignadas en el flujo de datos, lo que proporciona una perspectiva más clara de la activación de datos real. Esto no afecta a la cantidad de datos que se activan, se trata simplemente de una mejora de la monitorización para mejorar la precisión de la creación de informes. |
+| Flujos de datos desactivados en la IU debido a etiquetas de acceso | Para solucionar el problema de que algunos usuarios veían páginas en blanco porque los flujos de datos de destino a los que no tenían acceso estaban completamente ocultos, la interfaz de usuario ahora muestra esos flujos de datos restringidos en un estado atenuado en lugar de omitirlos por completo. Para obtener más información, lea la documentación sobre [uso de etiquetas de acceso para administrar el acceso de los usuarios a los flujos de datos de destino](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know). |
 
 {style="table-layout:auto"}
 
 Para obtener más información, consulte la [Información general sobre destinos](../../destinations/home.md).
-
-<!--
-| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
-| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
--->
 
 ## Fuentes {#sources}
 

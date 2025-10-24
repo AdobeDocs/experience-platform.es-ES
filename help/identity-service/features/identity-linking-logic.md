@@ -2,7 +2,7 @@
 title: Lógica de vinculación del servicio de identidad
 description: Obtenga información acerca de cómo el servicio de identidad vincula identidades dispares para crear una vista completa de un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -23,10 +23,6 @@ Existen dos tipos de identidades que se vinculan:
 * **Registros de perfil**: Estas identidades generalmente provienen de sistemas CRM.
 * **Eventos de experiencia**: Estas identidades generalmente provienen de la implementación de WebSDK o del origen de Adobe Analytics.
 
->[!IMPORTANT]
->
->El servicio de identidad distingue entre mayúsculas y minúsculas. Por ejemplo, **abc<span>@gmail.com** y **ABC<span>@GMAIL.COM** se tratarían como dos identidades de correo electrónico independientes.
-
 ## Significado semántico del establecimiento de vínculos
 
 Una identidad representa una entidad real. Si hay un vínculo establecido entre dos identidades, significa que las dos identidades están asociadas. A continuación se muestran algunos ejemplos que ilustran este concepto:
@@ -44,6 +40,7 @@ Una identidad consta de un área de nombres de identidad y un valor de identidad
 
 * Un área de nombres de identidad es el contexto de un valor de identidad determinado para. Algunos ejemplos comunes de áreas de nombres de identidad son CRMID, Correo electrónico y Teléfono.
 * Un valor de identidad es la cadena que representa una entidad del mundo real. Por ejemplo: &quot;julien<span>@acme.com&quot; puede ser un valor de identidad para un área de nombres de correo electrónico y 555-555-1234 puede ser un valor de identidad correspondiente para un área de nombres de teléfono.
+* El servicio de identidad distingue entre mayúsculas y minúsculas. Por ejemplo, **julien<span>@gmail.com** y **JULIEN<span>@GMAIL.COM** se tratarían como dos identidades de correo electrónico independientes.
 
 >[!TIP]
 >
