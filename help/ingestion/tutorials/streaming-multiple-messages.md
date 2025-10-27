@@ -5,9 +5,9 @@ title: Enviar varios mensajes en una única solicitud HTTP
 type: Tutorial
 description: Este documento proporciona un tutorial para enviar varios mensajes a Adobe Experience Platform dentro de una sola solicitud HTTP mediante la ingesta por flujo continuo.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31c00e69dd92f7c3232e09f02da36c60cd8cf486
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1483'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Después de registrar una conexión de flujo continuo, usted, como productor de 
 
 El siguiente ejemplo muestra cómo enviar varios mensajes a un conjunto de datos específico dentro de una única solicitud HTTP. Inserte la ID del conjunto de datos en el encabezado del mensaje para que ese mensaje se incorpore directamente en él.
 
-Puede obtener el ID de un conjunto de datos existente mediante la interfaz de usuario de [!DNL Experience Platform] o mediante una operación de listado en la API. La ID del conjunto de datos se puede encontrar en [Experience Platform](https://platform.adobe.com). Para ello, vaya a la pestaña **[!UICONTROL Conjuntos de datos]**, haga clic en el conjunto de datos para el que desee la ID y copie la cadena del campo de ID del conjunto de datos en la pestaña **[!UICONTROL Información]**. Consulte la [descripción general del servicio de catálogo](../../catalog/home.md) para obtener información sobre cómo recuperar conjuntos de datos mediante la API.
+Puede obtener el ID de un conjunto de datos existente mediante la interfaz de usuario de [!DNL Experience Platform] o mediante una operación de listado en la API. La ID del conjunto de datos se puede encontrar en [Experience Platform](https://platform.adobe.com). Para ello, vaya a la pestaña **[!UICONTROL Datasets]**, haga clic en el conjunto de datos para el que desee la ID y copie la cadena del campo de ID del conjunto de datos en la pestaña **[!UICONTROL Info]**. Consulte la [descripción general del servicio de catálogo](../../catalog/home.md) para obtener información sobre cómo recuperar conjuntos de datos mediante la API.
 
 En lugar de utilizar un conjunto de datos existente, puede crear uno nuevo. Lea el tutorial [Crear un conjunto de datos con API](../../catalog/api/create-dataset.md) para obtener más información sobre cómo crear un conjunto de datos con API.
 
@@ -68,7 +68,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -78,7 +78,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -127,7 +127,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -137,7 +137,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -244,7 +244,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -254,7 +254,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -303,7 +303,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -314,7 +314,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
         "datasetId": "{DATASET_ID}",
@@ -324,7 +324,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -373,7 +373,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -383,7 +383,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -498,7 +498,7 @@ Error en el segundo mensaje porque carecía de cuerpo de mensaje. La solicitud d
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -523,11 +523,11 @@ Lea la guía [recuperación de lotes con errores](../quality/retrieve-failed-bat
 
 Los mensajes que superen la validación de DCCS se transmitirán a [!DNL Experience Platform]. En [!DNL Experience Platform], la validación de flujo prueba los mensajes por lotes antes de ingerirlos en [!DNL Data Lake]. El estado de los lotes, independientemente de si son correctos o no, aparece dentro del conjunto de datos especificado por `{DATASET_ID}`.
 
-Puede ver el estado de los mensajes por lotes que se transmitieron correctamente a [!DNL Experience Platform] mediante la [IU de Experience Platform](https://platform.adobe.com). Para ello, vaya a la pestaña **[!UICONTROL Conjuntos de datos]**, haga clic en el conjunto de datos al que está transmitiendo y compruebe la pestaña **[!UICONTROL Actividad de conjuntos de datos]**.
+Puede ver el estado de los mensajes por lotes que se transmitieron correctamente a [!DNL Experience Platform] mediante la [IU de Experience Platform](https://platform.adobe.com). Para ello, vaya a la pestaña **[!UICONTROL Datasets]**, haga clic en el conjunto de datos al que está transmitiendo y marque la pestaña **[!UICONTROL Dataset Activity]**.
 
 Los mensajes por lotes que pasan la validación de flujo continuo en [!DNL Experience Platform] se incorporan en [!DNL Data Lake]. Los mensajes están disponibles para su análisis o exportación.
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que sabe cómo enviar varios mensajes en una sola solicitud y comprobar cuándo los mensajes se incorporan correctamente en el conjunto de datos de destino, puede empezar a transmitir sus propios datos a [!DNL Experience Platform]. Para obtener información general sobre cómo consultar y recuperar datos ingeridos de [!DNL Experience Platform], consulte la guía [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md).
 
