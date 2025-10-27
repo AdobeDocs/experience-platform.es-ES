@@ -2,9 +2,9 @@
 title: Prácticas recomendadas de licencia de administración de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
+source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
 workflow-type: tm+mt
-source-wordcount: '2338'
+source-wordcount: '2957'
 ht-degree: 1%
 
 ---
@@ -67,7 +67,7 @@ Al obtener la licencia de Experience Platform, se le otorgan derechos de uso de 
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían según la licencia que haya adquirido su organización.
 
-## Panel de uso de licencias
+## Panel de control de uso de licencias
 
 La interfaz de usuario de Adobe Experience Platform proporciona un panel a través del cual puede ver una instantánea de los datos relacionados con las licencias de su organización para Experience Platform. Los datos del tablero se muestran exactamente como aparecen en el momento específico en el que se tomó la instantánea. La instantánea no es una aproximación ni una muestra de datos y el panel no se actualiza en tiempo real.
 
@@ -175,3 +175,99 @@ A continuación se muestra una lista de algunas prácticas recomendadas que pued
 * Configure [caducidades de eventos de experiencia](../../catalog/datasets/user-guide.md#data-retention-policy) y [caducidades de datos de perfiles seudónimos](../../profile/pseudonymous-profiles.md) para datos de alta frecuencia como datos web.
 * Configure las políticas de retención de [tiempo de vida (TTL) para los conjuntos de datos de evento de experiencia](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) en el lago de datos a fin de eliminar automáticamente los registros obsoletos y optimizar el uso del almacenamiento en línea con las autorizaciones.
 * Compruebe periódicamente [informes de composición de perfiles](#profile-store-composition-reports) para comprender su composición de almacén de perfiles. Esto le permite comprender las fuentes de datos que más contribuyen al consumo de licencias.
+
+## Caso de uso: Cumplimiento de la licencia
+
+### Por qué considerar este caso de uso
+
+Al garantizar el cumplimiento de las **disposiciones sobre uso de licencias** tanto para el lago de datos como para el almacenamiento del perfil, puede evitar sobrecargas con seguridad, optimizar los costos y alinear las políticas de retención de datos con los requisitos de su empresa.
+
+### Requisitos previos y planificación
+
+Tenga en cuenta los siguientes requisitos previos en el proceso de planificación:
+
+* **Acceso y permisos**:
+   * Asegúrese de que tiene el permiso **Administrar conjuntos de datos** para usar el TTL de Experience Event.
+   * Asegúrese de que tiene **Administrar configuración de perfil** para usar el TTL de perfil seudónimo.
+* **Comprensión de la directiva de retención de datos**:
+   * Políticas organizativas relativas a la retención y el cumplimiento de datos
+   * Necesidades empresariales para las ventanas retrospectivas de segmentación y análisis de datos
+
+### Funcionalidad de la interfaz de usuario, componentes de Experience Platform y productos de Experience Cloud que utilizará
+
+Para implementar correctamente este caso de uso, debe utilizar varias áreas de Adobe Experience Platform. Asegúrese de que tiene los permisos de control de acceso basados en atributos necesarios para todas estas áreas o pida al administrador del sistema que los conceda.
+
+* Panel de uso de licencias: vea el uso actual de las autorizaciones en el nivel de zona protegida.
+* Administración de conjuntos de datos: supervise y administre directivas de retención a nivel de conjunto de datos.
+* Audiencias (Perfil del cliente en tiempo real): Asegúrese de que la ventana retrospectiva de las reglas de segmentación se ajuste a las ventanas de retención de datos.
+* Monitorización y alertas: realice un seguimiento de las actualizaciones y reciba información sobre las operaciones de retención de conjuntos de datos.
+
+### Cómo lograr el caso de uso: Instrucciones paso a paso
+
+Lea las secciones siguientes, que incluyen vínculos a documentación adicional, para completar cada uno de los pasos de la descripción general de alto nivel anterior.
+
+**Compruebe el uso actual de su licencia**
+
+En primer lugar, vaya al **tablero de uso de licencias** y revise el uso de autorizaciones en el nivel de espacio aislado.
+
+>[!BEGINTABS]
+
+>[!TAB Zona protegida de producción]
+
+Utilice la interfaz [!UICONTROL Metrics] para ver las métricas de uso de licencias. La interfaz muestra información para la zona protegida de producción de forma predeterminada.
+
+![La interfaz de usuario del tablero de uso de licencias muestra las métricas de uso de licencias para una zona protegida de producción.](../images/data-management/prod-sandbox.png)
+
+>[!TAB Entorno aislado de desarrollo]
+
+Seleccione [!UICONTROL Development] para ver las métricas de uso de licencias relacionadas con las zonas protegidas de desarrollo.
+
+![La interfaz de usuario del tablero de uso de licencias muestra sus métricas de uso de licencias para zonas protegidas de desarrollo.](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
+
+Para obtener más información, lea la documentación de [usando el tablero de uso de licencias](../../dashboards/guides/license-usage.md).
+
+**Analizar el uso del almacenamiento en el nivel de conjunto de datos**
+
+Utilice la **vista de exploración de conjuntos de datos** para revisar las métricas de uso de conjuntos de datos tanto para el lago de datos como para el perfil del cliente en tiempo real. Seleccione los encabezados de columna de **[!UICONTROL Data Lake Storage]** o **[!UICONTROL Profile Storage]** y, a continuación, seleccione **[!UICONTROL Sort Descending]** en el panel emergente.
+
+>[!BEGINTABS]
+
+>[!TAB Almacenamiento del lago de datos]
+
+Los conjuntos de datos del lago de datos se ordenan por tamaño de almacenamiento. Utilice esta función para identificar los mayores consumidores de almacenamiento en el lago de datos.
+
+![Los conjuntos de datos del lago de datos se ordenaron de mayor a menor.](../images/data-management/data-lake-storage.png)
+
+>[!TAB Almacenamiento de perfiles]
+
+Los conjuntos de datos del perfil se ordenan por tamaño de almacenamiento. Utilice esta función para identificar los mayores consumidores de almacenamiento en el perfil.
+
+![Los conjuntos de datos del perfil se ordenaron de mayor a menor.](../images/data-management/profile-storage.png)
+
+>[!ENDTABS]
+
+**Evaluar y configurar regla de retención**
+
+A continuación, determine si los conjuntos de datos tienen las políticas de retención adecuadas en función de los límites de licencia y los requisitos empresariales para Analytics y la segmentación. Para ver la directiva de retención de un conjunto de datos, seleccione los puntos suspensivos (`...`) junto al conjunto de datos y, a continuación, seleccione **[!UICONTROL Set data retention policy]**.
+
+![Panel emergente con opciones de conjunto de datos, incluido &quot;Establecer directiva de retención de datos&quot;](../images/data-management/set-retention-policy.png)
+
+Aparecerá la interfaz *[!UICONTROL Set dataset retention]*. Utilice esta interfaz para configurar una política de retención para el conjunto de datos. También puede utilizarlo para ver cuánto espacio de almacenamiento está consumiendo su conjunto de datos en el lago de datos o en el perfil.
+
+![Interfaz de &quot;retención del conjunto de datos establecido&quot;.](../images/data-management/dataset-retention.png)
+
+Puede analizar más a fondo el impacto de la retención del conjunto de datos mediante el pronóstico de impacto. Seleccione **[!UICONTROL View ExperienceEvent data distribution]** para ver un gráfico que muestra su período de retención y el porcentaje total de almacenamiento que está establecido para que caduque.
+
+Cuando termine, seleccione **[!UICONTROL Save]**
+
+![El pronosticador de impacto desde la interfaz de retención del conjunto de datos.](../images/data-management/impact-forecaster.png)
+
+**Validar cambios de retención**
+
+Una vez aplicadas las directivas de retención, puede utilizar las siguientes herramientas para validar los cambios:
+
+* [Métricas de uso del conjunto de datos](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) en la vista de exploración del conjunto de datos.
+* El [tablero de monitorización](../../dataflows/ui/monitor.md) para ver y analizar el impacto de la retención.
+* El [tablero de uso de licencias](../../dashboards/guides/license-usage.md) para ver instantáneas diarias, tendencias predictivas y perspectivas a nivel de zona protegida.
