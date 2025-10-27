@@ -1,8 +1,8 @@
 ---
 title: Adform
 description: Adform es un proveedor líder de soluciones programáticas de compra y venta de medios. Al conectar Adform a Adobe Experience Platform, puede activar las audiencias de origen mediante Adform en función del Experience Cloud ID (ECID).
-last-substantial-update: 2025-10-22T00:00:00Z
-source-git-commit: f7fd7a83f6d047877697b72e78ac0d4b08c0ff00
+last-substantial-update: 2025-10-23T00:00:00Z
+source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 3%
@@ -28,16 +28,16 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Ado
 
 Utilice este destino para enviar audiencias de Adobe Real-Time CDP a Adobe para su activación en función del Experience Cloud ID (ECID) y del ID de Fusion de Adobe. ID Fusion de Adobe es el servicio de resolución de ID de Adobe que le permite activar audiencias de origen basadas en el Experience Cloud ID (ECID).
 
-Un caso común es el redireccionamiento de los visitantes del sitio web a su sitio web o aplicación en función del Experience Cloud ID (ECID). Todo lo que debe hacer es enviar el Experience Cloud ID (ECID) a Adobe a través de las extensiones de [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform) de Adobe disponibles. Después, puede compartir audiencias con Adobe Forms a través del destino de Adobe para la activación, únicamente en función del Experience Cloud ID (ECID).
+Un caso común es el redireccionamiento de los visitantes del sitio web a su sitio web o aplicación en función del Experience Cloud ID (ECID). Todo lo que debe hacer es enviar el Experience Cloud ID (ECID) a Adobe a través de las extensiones de [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) de Adobe disponibles. Después, puede compartir audiencias con Adobe Forms a través del destino de Adobe para la activación, únicamente en función del Experience Cloud ID (ECID).
 
 ## Requisitos previos {#prerequisites}
 
 * Debe ser cliente de Adform existente para utilizar este destino.
 * Debe tener sus credenciales de conexión de datos de Adform Audience Base.
    * Si no tiene credenciales de conexión de datos de Adform Audience Base, póngase en contacto con su representante de Adform.
-* Para realizar la sincronización correctamente, necesita tener una conexión de [Flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform) desde sus entidades al Seguimiento de sitios de Adobe.
+* Para realizar la sincronización correctamente, necesita tener una conexión de [Flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) desde sus entidades al Seguimiento de sitios de Adobe.
    * Si no tiene una conexión de flujo de eventos o del lado del cliente desde sus entidades a Seguimiento de sitios de Adobe, póngase en contacto con su representante de Adform.
-   * Adform proporciona extensiones Adobe Experience Cloud para [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) y [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform proporciona extensiones Adobe Experience Cloud para [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) y [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Identidades admitidas {#supported-identities}
@@ -76,7 +76,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -110,7 +110,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
