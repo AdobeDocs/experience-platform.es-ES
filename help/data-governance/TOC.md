@@ -5,10 +5,10 @@ breadcrumb-title: Guía de gobernanza de datos
 user-guide-description: Haga cumplir las restricciones del uso de datos mediante el uso de etiquetas, acciones de marketing y políticas de gobernanza.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6e9ea451eafd08a72a5f26dabe229fdb7c6c909d
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 53%
+source-wordcount: '105'
+ht-degree: 50%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 53%
    * [Información general](policies/overview.md)
    * [Administración de directivas en la IU](policies/user-guide.md)
    * [Crear una política en la API](policies/create.md)
+   * [Referencia de creación de reglas de política de consentimiento](policies/consent-policy-rule-building-reference.md)
 * Aplicación de políticas {#enforcement}
    * [Información general](enforcement/overview.md)
    * [Aplicación automática](enforcement/auto-enforcement.md)
@@ -39,7 +40,7 @@ ht-degree: 53%
    * [Primeros pasos](api/getting-started.md)
    * [Etiquetas](api/labels.md)
    * [Políticas](api/policies.md)
-   * [Acciones de marketing](api/marketing-actions.md)
+   * [Acción de marketing](api/marketing-actions.md)
    * [Evaluación](api/evaluation.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
