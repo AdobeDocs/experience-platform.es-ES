@@ -5,9 +5,9 @@ breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree públicos a partir de los datos de su perfil del cliente en tiempo real utilizando definiciones de segmentos generadas por Adobe Experience Platform o fuentes externas.
 feature: Segments
 role: User
-source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
+source-git-commit: 0f1ccaf9ea698737eccc25cec6f5b46b7184fc11
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '210'
 ht-degree: 43%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 43%
 
 - [Resumen del servicio de segmentación](home.md)
 - [Tipos de datos de segmentación](data-types.md)
-- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=es#segmentation-guardrails)
+- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API de segmentación {#api}
    - [Información general](api/overview.md)
    - [Primeros pasos](api/getting-started.md)
@@ -35,6 +35,7 @@ ht-degree: 43%
    - [Tablero de audiencias](ui/audience-dashboard.md)
    - [Portal de públicos](ui/audience-portal.md)
    - [Composición de público](ui/audience-composition.md)
+   - [Mejoras de Composición de audiencia](ui/composition-enchancements.md)
    - [Generador de segmentos](ui/segment-builder.md)
    - [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home)
    - [Actualización de la restricción temporal de Ignorar año](ui/ignore-year.md)
