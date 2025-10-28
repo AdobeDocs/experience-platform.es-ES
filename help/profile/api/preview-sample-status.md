@@ -4,9 +4,9 @@ title: Punto final de API de previsualización de estado de muestra (previsualiz
 description: El punto final de vista previa del estado de muestra de la API de Perfil del cliente en tiempo real le permite obtener una vista previa de la última muestra correcta de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar informes que muestren la superposición de conjuntos de datos, la superposición de identidades y perfiles no enlazados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2904'
 ht-degree: 1%
 
 ---
@@ -37,12 +37,12 @@ Para obtener más información sobre los perfiles y su función en Experience Pl
 
 ## Activación del trabajo de muestra
 
-A medida que los datos habilitados para el perfil del cliente en tiempo real se incorporan en [!DNL Experience Platform], se almacenan dentro del almacén de datos del perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
+A medida que los datos habilitados para el perfil del cliente en tiempo real se incorporan en [!DNL Experience Platform], se almacenan dentro del almacén de datos del perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 3 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
 
-* Para **flujos de trabajo de datos de streaming**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si es así, se activa automáticamente un trabajo de muestra para actualizar el recuento.
-* Para la **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del último trabajo de ejemplo correcto, así como una distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
+* Para **flujos de trabajo de datos de streaming**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 3 %. Si es así, se activa automáticamente un trabajo de muestra para actualizar el recuento.
+* Para la **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 3 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del último trabajo de ejemplo correcto, así como una distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
 
-El recuento de perfiles y los perfiles por métricas de área de nombres también están disponibles en la sección [!UICONTROL Perfiles] de la interfaz de usuario de Experience Platform. Para obtener información sobre cómo obtener acceso a los datos del perfil mediante la interfaz de usuario, visite la [[!DNL Profile] guía de la interfaz de usuario](../ui/user-guide.md).
+El recuento de perfiles y los perfiles por métricas de área de nombres también están disponibles en la sección [!UICONTROL Profiles] de la interfaz de usuario de Experience Platform. Para obtener información sobre cómo obtener acceso a los datos del perfil mediante la interfaz de usuario, visite la [[!DNL Profile] guía de la interfaz de usuario](../ui/user-guide.md).
 
 ## Ver el último estado de muestra {#view-last-sample-status}
 
@@ -299,7 +299,7 @@ La respuesta incluye una matriz `data`, con objetos individuales que contienen l
 | `fullIDsFragmentCount` | Número total de fragmentos de perfil en el área de nombres. |
 | `fullIDsCount` | Número total de perfiles combinados en el área de nombres. |
 | `fullIDsPercentage` | `fullIDsCount` como porcentaje del total de perfiles combinados (el valor `totalRows` devuelto en el [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
-| `code` | El `code` del área de nombres. Esto se encuentra al trabajar con áreas de nombres mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md), y también se denomina [!UICONTROL símbolo de identidad] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
+| `code` | El `code` del área de nombres. Esto se encuentra al trabajar con áreas de nombres mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md), y también se denomina [!UICONTROL Identity symbol] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
 | `value` | El valor `id` del área de nombres. Esto se puede encontrar al trabajar con áreas de nombres usando la [API del servicio de identidad](../../identity-service/api/list-namespaces.md). |
 
 ## Generar el informe de superposición de conjuntos de datos
@@ -445,7 +445,7 @@ Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de superpos
 | Propiedad | Descripción |
 |---|---|
 | `data` | El objeto `data` contiene listas separadas por comas con combinaciones únicas de códigos de área de nombres de identidad y sus respectivos recuentos de perfiles. |
-| Códigos de área de nombres | `code` es una forma abreviada de cada nombre de área de nombres de identidad. Se puede encontrar una asignación de cada `code` a su `name` mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md). `code` también se conoce como [!UICONTROL símbolo de identidad] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
+| Códigos de área de nombres | `code` es una forma abreviada de cada nombre de área de nombres de identidad. Se puede encontrar una asignación de cada `code` a su `name` mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md). `code` también se conoce como [!UICONTROL Identity symbol] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | La marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 
 ### Interpretación del informe de superposición de área de nombres de identidad
@@ -591,7 +591,7 @@ Este informe proporciona la siguiente información:
 * Hay 1734 perfiles no enlazados que contienen un solo fragmento de perfil del área de nombres de identidad de ECID.
 * Hay 28 591 eventos asociados con los 1734 perfiles no enlazados que contienen un solo fragmento de perfil del área de nombres de identidad de ECID.
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el almacén de perfiles y ejecutar varios informes sobre los datos, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre sus definiciones de segmento. Esta información le ayuda a aislar la audiencia esperada. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones mediante la API de segmentación, visita la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
 
