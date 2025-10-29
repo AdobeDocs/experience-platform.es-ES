@@ -158,4 +158,4 @@ Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las política
 
 ## Recursos adicionales {#additional-resources}
 
-* [Conector de Source de flujo RainFocus](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [Conector de Source de flujo RainFocus](https://experienceleague.adobe.com/es/docs/experience-platform/sources/connectors/analytics/rainfocus)
