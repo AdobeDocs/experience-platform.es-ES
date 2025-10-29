@@ -4,7 +4,7 @@ description: Obtenga información sobre el uso de licencias y los límites de ca
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1605'
 ht-degree: 6%
 
 ---
@@ -35,7 +35,7 @@ Para obtener más información sobre las protecciones en Experience Platform, le
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Rendimiento de streaming"
->abstract="El valor de rendimiento de streaming mide los eventos de entrada máximos combinados por segundo para el streaming de la ingesta al servicio Perfil, en sus zonas protegidas de producción y desarrollo."
+>abstract="El valor de rendimiento de streaming mide los eventos de entrada máximos combinados por segundo para la ingesta de streaming al servicio Perfil, en sus zonas protegidas de producción y desarrollo."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -58,7 +58,7 @@ Dentro de estos servicios, se rastrean las siguientes barreras:
    - De estas 500 audiencias de streaming, el número máximo de audiencias de Edge es de 150
 - El rendimiento inicial combinado para la ingesta de transmisión es de 1500 registros por segundo (rps)
    - Este rendimiento de flujo combinado mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al Perfil del cliente en tiempo real en los entornos limitados de producción y desarrollo.
-   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
@@ -72,7 +72,7 @@ Si su uso supera el 100% de su capacidad con licencia, se considerará que ha in
 
 ## Acceso {#access}
 
-Para acceder a la descripción general de la capacidad, seleccione **[!UICONTROL Uso de la licencia]** seguido de **[!UICONTROL Capacidad]**.
+Para acceder al resumen de Capacity, seleccione **[!UICONTROL License usage]** seguido de **[!UICONTROL Capacity]**.
 
 ![El método para acceder a la sección Capacity está resaltado.](/help/landing/images/capacity/access-capacity.png)
 
@@ -82,7 +82,7 @@ Se muestra la página de información general de capacidad, con información que
 
 ### Historial de alertas {#alert-history}
 
-La sección **[!UICONTROL Historial de alertas]** muestra una lista de las brechas de capacidad más recientes dentro de su organización.
+La sección **[!UICONTROL Alert history]** muestra una lista de las brechas de capacidad más recientes dentro de su organización.
 
 ![Se muestra la sección Historial de alertas.](/help/landing/images/capacity/alert-history.png)
 
@@ -92,7 +92,7 @@ La sección **[!UICONTROL Historial de alertas]** muestra una lista de las brech
 | Alerta | La capacidad que se ha incumplido en la zona protegida. |
 | Marca de tiempo | Los datos y la hora en que se produjo la infracción. |
 
-Para ver un historial completo de las alertas de su organización, seleccione el ![icono de tres puntos](/help/images/icons/more.png), seguido de **[!UICONTROL Ver todo]**.
+Para ver un historial completo de las alertas de su organización, seleccione el ![icono de tres puntos](/help/images/icons/more.png), seguido de **[!UICONTROL View all]**.
 
 ![Se muestra el historial completo de alertas de una organización.](/help/landing/images/capacity/full-alert-history.png)
 
@@ -127,7 +127,7 @@ Se muestra la página Detalles del rendimiento de flujo continuo. Puede ver un g
 
 ![Se muestra la página de rendimiento de flujo continuo, con información detallada sobre el rendimiento de flujo para la zona protegida seleccionada.](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
-Para actualizar las capacidades de rendimiento de flujo continuo de la organización, seleccione **[!UICONTROL Asignar capacidades]**.
+Para actualizar las capacidades de rendimiento de flujo continuo de la organización, seleccione **[!UICONTROL Allocate capacities]**.
 
 ![El botón Asignar capacidades está resaltado en la página de detalles de rendimiento de flujo continuo.](/help/landing/images/capacity/select-allocate.png)
 
@@ -141,11 +141,11 @@ Aparecerá la página de asignación. En esta página, puede establecer las capa
 >
 >Si el valor no está en el orden de 100, se redondea hacia arriba o hacia abajo en consecuencia.
 
-Después de actualizar las asignaciones de capacidad, seleccione **[!UICONTROL Guardar]** para finalizar las actualizaciones. Tenga en cuenta que los cambios pueden tardar hasta 10 minutos en reflejarse en su organización.
+Después de actualizar las asignaciones de capacidad, seleccione **[!UICONTROL Save]** para finalizar las actualizaciones. Tenga en cuenta que los cambios pueden tardar hasta 10 minutos en reflejarse en su organización.
 
 #### Recuento de público {#audience-count}
 
-Las secciones **[!UICONTROL Recuento de audiencias de streaming]** y **[!UICONTROL Recuento de audiencias de Edge]** muestran el número de audiencias de streaming y Edge dentro de la zona protegida, así como el número máximo de audiencias de streaming y Edge permitidas dentro de la zona protegida.
+Las secciones **[!UICONTROL Streaming audience count]** y **[!UICONTROL Edge audience count]** muestran el número de audiencias de streaming y de Edge dentro de la zona protegida, así como la cantidad máxima de audiencias de streaming y Edge permitidas dentro de la zona protegida.
 
 ![Se muestran las secciones Recuentos de audiencias.](/help/landing/images/capacity/audience-count.png)
 
@@ -175,7 +175,7 @@ Además, puede consultar los flujos de datos y ver si puede optimizar su estrate
 
 El siguiente vídeo proporciona información general sobre Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475276/?learn=on&enablevpops&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Preguntas frecuentes {#faq}
 
