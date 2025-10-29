@@ -99,7 +99,7 @@ El siguiente vídeo también muestra los pasos para configurar un destino de Mar
 >* Las dos limitaciones indicadas en el vídeo ya no se aplican. Ahora puede asignar muchos otros campos de atributos de perfil además de la información de pertenencia a audiencias compatible en el momento de grabar el vídeo. También puede exportar a Marketo miembros de la audiencia que aún no existan en sus listas estáticas de Marketo y que se añadirán a las listas.
 >* En el **[!UICONTROL Schedule audience step]** del flujo de trabajo de activación, en Marketo V1, necesitaba agregar manualmente un **[!UICONTROL Mapping ID]** para exportar correctamente los datos a Marketo. Este paso manual ya no es necesario en Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440161?captions=spa&quality=12)
 
 ## Supervisar destino {#monitor-destination}
 

@@ -157,7 +157,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar audiencias.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa)
 
 >[!NOTE]
 >

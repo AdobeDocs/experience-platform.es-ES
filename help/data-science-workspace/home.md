@@ -200,4 +200,4 @@ Para obtener información adicional, como un flujo de trabajo diario completo, c
 
 El siguiente vídeo está diseñado para que entienda mejor [!DNL Data Science Workspace].
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412910?captions=spa&quality=12&enable10seconds=on&speedcontrol=on)
