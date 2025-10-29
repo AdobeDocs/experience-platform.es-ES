@@ -431,7 +431,7 @@ Experience Platform proporciona a las empresas un marco sólido para centralizar
 
    - Debe evaluar cuidadosamente si implementar **varios ID de organización o varios entornos limitados** en función de la residencia de datos, el cumplimiento y las necesidades operacionales.
 
-   - **ID de organización** ofrecen aislamiento total**, mientras que las configuraciones de varias zonas protegidas proporcionan flexibilidad operativa dentro de un marco de gobernanza compartido**.
+   - **ID de organización** ofrecen aislamiento total&#x200B;**, mientras que las configuraciones de varias zonas protegidas proporcionan flexibilidad operativa dentro de un marco de gobernanza compartido**.
 
 ## Pensamientos finales
 
