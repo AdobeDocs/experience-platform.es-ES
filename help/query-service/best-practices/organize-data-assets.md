@@ -2,7 +2,7 @@
 title: Prácticas recomendadas para la organización de recursos de datos en el servicio de consultas
 description: Este documento describe un medio lógico de organizar los datos para facilitar su uso con el servicio de consultas.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Al listar todas las bases de datos bajo `dbname="all"` se muestran tres bases de
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 databaseB
 databaseC
@@ -78,7 +78,7 @@ Al enumerar todos los esquemas de `dbname="all"` se muestran los tres esquemas r
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
@@ -90,14 +90,14 @@ Cuando establece una conexión de [!DNL PostgreSQL] con `dbname="databaseA"`, pu
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
  
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 ```
@@ -108,20 +108,20 @@ La notación de puntos permite acceder a todas las tablas asociadas con un esque
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 
 
 SHOW tables;
 name       | type
-----------------------
+|----------------------
 dataset1| table
 dataset2| table
 dataset3| table
@@ -168,6 +168,6 @@ Hay tres consideraciones importantes que se deben tener en cuenta al eliminar un
 DROP SCHEMA databaseA.schema2;
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora comprende mejor las prácticas recomendadas con respecto a la organización y estructura de los recursos de datos para su uso con el servicio de consultas de Adobe Experience Platform. Se recomienda seguir aprendiendo las prácticas recomendadas del servicio de consultas leyendo la [documentación de anulación de duplicación de datos](../key-concepts/deduplication.md).

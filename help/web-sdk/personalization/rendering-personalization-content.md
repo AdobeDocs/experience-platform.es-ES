@@ -3,7 +3,7 @@ title: Procesar contenido personalizado mediante Adobe Experience Platform Web S
 description: Obtenga información sobre cómo procesar contenido personalizado con Adobe Experience Platform Web SDK.
 keywords: personalización;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -16,7 +16,7 @@ Adobe Experience Platform Web SDK admite la recuperación de contenido personali
 
 Además, Web SDK potencia las funciones de personalización de la misma página y de la página siguiente a través de destinos de personalización Adobe Experience Platform, como [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y la [conexión de personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-SDK puede recuperar y procesar automáticamente el contenido creado en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es) de Adobe Target y en la [interfaz de usuario de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=es) de Adobe Journey Optimizer. SDK no puede procesar automáticamente el contenido creado en el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es) de Adobe Target, el [Canal de experiencias basado en código](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer o Offer Decisioning. En su lugar, debe solicitar este contenido mediante SDK y, a continuación, procesarlo manualmente.
+SDK puede recuperar y procesar automáticamente el contenido creado en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) de Adobe Target y en la [interfaz de usuario de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) de Adobe Journey Optimizer. SDK no puede procesar automáticamente el contenido creado en el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) de Adobe Target, el [Canal de experiencias basado en código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer o Offer Decisioning. En su lugar, debe solicitar este contenido mediante SDK y, a continuación, procesarlo manualmente.
 
 ## Representación automática del contenido {#automatic}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Caso de uso 2: Procesar propuestas que no tienen selector
 
-Este caso de uso se aplica a las experiencias creadas con [!DNL Target Form-based Experience Composer] o el [Canal de experiencia basado en código](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer.
+Este caso de uso se aplica a las experiencias creadas con [!DNL Target Form-based Experience Composer] o el [Canal de experiencia basado en código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) de Adobe Journey Optimizer.
 
 Debe proporcionar el selector, la acción y el ámbito en la llamada a `applyPropositions`.
 
@@ -388,9 +388,9 @@ alloy("sendEvent", {
                     "_experience": {
                         "decisioning": {
                             "propositions": [{
-                              	"id": id,
+                                "id": id,
                                 "scope": scope,
-                              	"scopeDetails": scopeDetails
+                                  "scopeDetails": scopeDetails
                             }],
                             "propositionEventType": {
                                 "display": 1

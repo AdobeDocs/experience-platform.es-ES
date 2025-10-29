@@ -3,14 +3,14 @@ title: Conexión de Google Cloud Storage
 description: Obtenga información sobre cómo conectarse a Google Cloud Storage y activar audiencias o exportar conjuntos de datos.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1176'
 ht-degree: 2%
 
 ---
 
-# [!DNL Google Cloud Storage] conexión
+# [!DNL Google Cloud Storage] conexión
 
 ## Información general {#overview}
 
@@ -37,9 +37,9 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | Está exportando todos los miembros de un segmento, junto con los campos de esquema aplicables, tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frecuencia de exportación | **[!UICONTROL Lote]** | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+|---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Profile-based]** | Está exportando todos los miembros de un segmento, junto con los campos de esquema aplicables, tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frecuencia de exportación | **[!UICONTROL Batch]** | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -58,35 +58,35 @@ Al exportar *conjuntos de datos*, Experience Platform crea un archivo de `.parqu
 
 ## Configuración de requisitos previos para conectar su cuenta de [!DNL Google Cloud Storage] {#prerequisites}
 
-Para conectar Experience Platform a [!DNL Google Cloud Storage], primero debe habilitar la interoperabilidad para su cuenta de [!DNL Google Cloud Storage]. Para obtener acceso a la configuración de interoperabilidad, abra [!DNL Google Cloud Platform] y seleccione **[!UICONTROL Configuración]** en la opción **[!UICONTROL Almacenamiento en la nube]** del panel de navegación.
+Para conectar Experience Platform a [!DNL Google Cloud Storage], primero debe habilitar la interoperabilidad para su cuenta de [!DNL Google Cloud Storage]. Para acceder a la configuración de interoperabilidad, abra [!DNL Google Cloud Platform] y seleccione **[!UICONTROL Settings]** en la opción **[!UICONTROL Cloud Storage]** del panel de navegación.
 
 ![Panel de Google Cloud Platform con Almacenamiento en la nube y Configuración resaltados.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
-Aparecerá la página **[!UICONTROL Configuración]**. Desde aquí puede ver información sobre el identificador de proyecto [!DNL Google] y detalles sobre la cuenta [!DNL Google Cloud Storage]. Para acceder a la configuración de interoperabilidad, seleccione **[!UICONTROL Interoperabilidad]** en el encabezado superior.
+Aparecerá la página **[!UICONTROL Settings]**. Desde aquí puede ver información sobre el identificador de proyecto [!DNL Google] y detalles sobre la cuenta [!DNL Google Cloud Storage]. Para acceder a la configuración de interoperabilidad, seleccione **[!UICONTROL Interoperability]** en el encabezado superior.
 
 ![La ficha Interoperabilidad resaltada en el panel de Google Cloud Platform.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
-La página **[!UICONTROL Interoperabilidad]** contiene información sobre la autenticación, las claves de acceso y el proyecto predeterminado asociado a su cuenta de servicio. Para generar un nuevo identificador de clave de acceso y una clave de acceso secreta para su cuenta de servicio, seleccione **[!UICONTROL Crear una clave para una cuenta de servicio]**.
+La página **[!UICONTROL Interoperability]** contiene información sobre la autenticación, las claves de acceso y el proyecto predeterminado asociado a su cuenta de servicio. Para generar un nuevo identificador de clave de acceso y una clave de acceso secreta para su cuenta de servicio, seleccione **[!UICONTROL Create a Key for a Service Account]**.
 
 ![Cree una clave para un control de cuenta de servicio resaltado en el panel de Google Cloud Platform.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
 Puede usar el identificador de clave de acceso y la clave de acceso secreta generados recientemente para conectar su cuenta de [!DNL Google Cloud Storage] a Experience Platform.
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](/help/destinations/ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Id. de clave de acceso]**: cadena alfanumérica de 61 caracteres usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Experience Platform. Para obtener información sobre cómo obtener este valor, lea la sección [requisitos previos](#prerequisites) más arriba.
-* **[!UICONTROL Clave de acceso secreta]**: cadena de 40 caracteres codificada en Base64 que se usa para autenticar su cuenta de [!DNL Google Cloud Storage] en Experience Platform. Para obtener información sobre cómo obtener este valor, lea la sección [requisitos previos](#prerequisites) más arriba.
-* **[!UICONTROL Clave de cifrado]**: de forma opcional, puede adjuntar la clave pública con formato RSA para agregar el cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
+* **[!UICONTROL Access key ID]**: cadena alfanumérica de 61 caracteres usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Experience Platform. Para obtener información sobre cómo obtener este valor, lea la sección [requisitos previos](#prerequisites) más arriba.
+* **[!UICONTROL Secret access key]**: cadena de 40 caracteres codificada en Base64 usada para autenticar su cuenta de [!DNL Google Cloud Storage] en Experience Platform. Para obtener información sobre cómo obtener este valor, lea la sección [requisitos previos](#prerequisites) más arriba.
+* **[!UICONTROL Encryption key]**: de forma opcional, puede adjuntar la clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
 
   ![Imagen que muestra un ejemplo de una clave PGP correctamente formateada en la interfaz de usuario](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -96,13 +96,13 @@ Para obtener más información sobre estos valores, lea la guía [Claves HMAC de
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-* **[!UICONTROL Nombre]**: rellene el nombre preferido para este destino.
-* **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña está usando este destino.
-* **[!UICONTROL Nombre del contenedor]**: Escriba el nombre del contenedor [!DNL Google Cloud Storage] que usará este destino.
-* **[!UICONTROL Ruta de carpeta]**: escriba la ruta de acceso a la carpeta de destino que alojará los archivos exportados.
-* **[!UICONTROL Tipo de archivo]**: seleccione el formato que Experience Platform debe usar para los archivos exportados. Al seleccionar la opción [!UICONTROL CSV], también puede [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que Experience Platform debe usar para los archivos exportados.
-* **[!UICONTROL Incluir archivo de manifiesto]**: Active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de la exportación, etc. Se ha asignado un nombre al manifiesto con el formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Ver [archivo de manifiesto de ejemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). El archivo de manifiesto incluye los campos siguientes:
+* **[!UICONTROL Name]**: rellene el nombre preferido para este destino.
+* **[!UICONTROL Description]**: Opcional. Por ejemplo, puede mencionar para qué campaña está usando este destino.
+* **[!UICONTROL Bucket name]**: escriba el nombre del bloque [!DNL Google Cloud Storage] que utilizará este destino.
+* **[!UICONTROL Folder path]**: escriba la ruta a la carpeta de destino que alojará los archivos exportados.
+* **[!UICONTROL File type]**: seleccione el formato que Experience Platform debe usar para los archivos exportados. Al seleccionar la opción [!UICONTROL CSV], también puede [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: seleccione el tipo de compresión que Experience Platform debe utilizar para los archivos exportados.
+* **[!UICONTROL Include manifest file]**: Active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc. Se ha asignado un nombre al manifiesto con el formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Ver [archivo de manifiesto de ejemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). El archivo de manifiesto incluye los campos siguientes:
    * `flowRunId`: la [ejecución de flujo de datos](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que generó el archivo exportado.
    * `scheduledTime`: la hora en UTC en que se exportó el archivo.
    * `exportResults.sinkPath`: ruta de acceso de la ubicación de almacenamiento en la que se deposita el archivo exportado.
@@ -113,7 +113,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ### Permisos necesarios de [!DNL Google Cloud Storage] {#required-google-cloud-storage-permission}
 
@@ -135,18 +135,18 @@ Más información sobre [control de acceso y permisos](https://cloud.google.com/
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Programación
 
-En el paso **[!UICONTROL Programación]**, puede [configurar la programación de exportación](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) para su destino [!DNL Google Cloud Storage] y también [configurar el nombre de los archivos exportados](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+En el paso **[!UICONTROL Scheduling]**, puede [configurar la programación de exportación](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) para su destino [!DNL Google Cloud Storage] y también [configurar el nombre de los archivos exportados](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 
 ### Asignar atributos e identidades {#map}
 
-En el paso **[!UICONTROL Asignación]**, puede seleccionar qué campos de atributo e identidad desea exportar para sus perfiles. También puede seleccionar cambiar los encabezados del archivo exportado por cualquier nombre descriptivo que desee. Para obtener más información, vea el [paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) en el tutorial de la interfaz de usuario para activar destinos por lotes.
+En el paso **[!UICONTROL Mapping]**, puede seleccionar qué campos de atributo e identidad desea exportar para sus perfiles. También puede seleccionar cambiar los encabezados del archivo exportado por cualquier nombre descriptivo que desee. Para obtener más información, vea el [paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) en el tutorial de la interfaz de usuario para activar destinos por lotes.
 
 ## Validación de la exportación de datos correcta {#exported-data}
 

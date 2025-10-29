@@ -3,10 +3,10 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 2%
+source-wordcount: '1885'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,9 @@ Algunos ejemplos de destinos Edge son las conexiones [Adobe Target](../../destin
 
 >[!IMPORTANT]
 > 
-> * Para activar los datos y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [para ver los destinos](/help/access-control/home.md#permissions).
-> * Para activar datos sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de vista de destinos]**, **[!UICONTROL activar segmento sin asignación]**, **[!UICONTROL ver perfiles]** y **[!UICONTROL ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+>* Para activar datos sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita los permisos de **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [control de acceso](/help/access-control/home.md#permissions).
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 > 
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
@@ -39,11 +39,11 @@ Para obtener una breve descripción general sobre cómo configurar la conexión 
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449796/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Vea el siguiente vídeo para obtener una breve descripción general de cómo compartir audiencias y atributos de perfil en Adobe Target y destinos de personalización personalizados.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447358/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Casos de uso {#use-cases}
 
@@ -77,7 +77,7 @@ Una empresa de venta y alquiler de viviendas quiere personalizar su página de i
 
 El primer paso para configurar el destino de personalización es configurar una secuencia de datos para Experience Platform Web SDK. Esto se realiza en la IU de recopilación de datos.
 
-Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]**, asegúrese de que tanto **[!UICONTROL Segmentación de Edge]** como **[!UICONTROL Destinos de Personalization]** estén seleccionados.
+Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]**, asegúrese de que tanto **[!UICONTROL Edge Segmentation]** como **[!UICONTROL Personalization Destinations]** están seleccionados.
 
 >[!TIP]
 >
@@ -95,7 +95,7 @@ Después de crear la conexión de destino, debe crear una política de combinaci
 >
 >Actualmente, los destinos perimetrales solo admiten la activación de audiencias que usen la [directiva de combinación activa en Edge](../../segmentation/ui/segment-builder.md#merge-policies) establecida como predeterminada. Si asigna audiencias que utilizan una política de combinación diferente a destinos Edge, esas audiencias no se evalúan.
 
-Siga las instrucciones de [creación de una política de combinación](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) y asegúrese de habilitar la opción **[!UICONTROL Política de combinación activa en Edge]**.
+Siga las instrucciones de [creación de una política de combinación](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) y asegúrese de habilitar la opción **[!UICONTROL Active-On-Edge Merge Policy]**.
 
 ### Creación de una nueva audiencia en Experience Platform {#create-audience}
 
@@ -118,15 +118,15 @@ Según el destino que esté configurando, consulte los siguientes artículos par
 
 Después de completar los requisitos previos, ahora puede seleccionar el destino de personalización de Edge que desea utilizar para la personalización de la misma página y de la página siguiente.
 
-1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione la pestaña **[!UICONTROL Catálogo]**.
+1. Vaya a **[!UICONTROL Connections > Destinations]** y seleccione la ficha **[!UICONTROL Catalog]**.
 
    ![Ficha Catálogo de destino resaltada en la interfaz de usuario de Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Seleccione **[!UICONTROL Activar audiencias]** en la tarjeta correspondiente al destino de personalización en el que desee activar las audiencias, como se muestra en la imagen siguiente.
+1. Seleccione **[!UICONTROL Activate audiences]** en la tarjeta correspondiente al destino de personalización en el que desea activar las audiencias, como se muestra en la siguiente imagen.
 
    ![Activar el control de audiencia resaltado en una tarjeta de destino del catálogo.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. Seleccione la conexión de destino que desee usar para activar las audiencias y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+1. Seleccione la conexión de destino que desee usar para activar las audiencias y luego seleccione **[!UICONTROL Next]**.
 
    ![Seleccionar paso de destino en el flujo de trabajo de activación.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
@@ -134,14 +134,14 @@ Después de completar los requisitos previos, ahora puede seleccionar el destino
 
 ## Selección de audiencias {#select-audiences}
 
-Utilice las casillas de verificación de la izquierda de los nombres de audiencia para seleccionar las audiencias que desea activar en el destino y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+Utilice las casillas de verificación de la izquierda de los nombres de audiencia para seleccionar las audiencias que desea activar en el destino y luego seleccione **[!UICONTROL Next]**.
 
-Para seleccionar las audiencias que desea activar en el destino, utilice las casillas de verificación que aparecen a la izquierda de los nombres de audiencia y luego seleccione **[!UICONTROL Siguiente]**.
+Para seleccionar las audiencias que desea activar en el destino, utilice las casillas de verificación a la izquierda de los nombres de audiencia y luego seleccione **[!UICONTROL Next]**.
 
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
-* **[!UICONTROL Servicio de segmentación]**: Audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
-* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Segmentation Service]**: audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
+* **[!UICONTROL Custom upload]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
 ![Seleccione el paso de audiencias del flujo de trabajo de activación con varias audiencias resaltadas.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 >[!IMPORTANT]
 >
->Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Personalization personalizado]** requiere que uses la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) al configurar el destino para la personalización basada en atributos. Todas las llamadas a la API de Edge Network deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
+>Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Custom Personalization]** requiere que use la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) al configurar el destino para la personalización basada en atributos. Todas las llamadas a la API de Edge Network deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 >
 ><br>Si ya utiliza Web SDK o Mobile SDK para la integración, puede recuperar atributos mediante la API de Edge Network agregando una integración del lado del servidor.
 >
@@ -164,13 +164,13 @@ Añadir atributos es opcional y aún puede continuar con el siguiente paso y hab
 
 ### Seleccionar atributos de origen {#select-source-attributes}
 
-Para agregar atributos de origen, seleccione el control **[!UICONTROL Agregar nuevo campo]** en la columna **[!UICONTROL Campo de Source]** y busque o navegue hasta el campo de atributo XDM que desee, como se muestra a continuación.
+Para agregar atributos de origen, seleccione el control **[!UICONTROL Add new field]** en la columna **[!UICONTROL Source field]** y busque o navegue hasta el campo de atributo XDM deseado, como se muestra a continuación.
 
 ![Grabación de pantalla que muestra cómo seleccionar un atributo de destino en el paso de asignación.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Seleccionar atributos de destino {#select-target-attributes}
 
-Para agregar atributos de destino, seleccione el control **[!UICONTROL Agregar nuevo campo]** en la columna **[!UICONTROL Campo de destino]** y escriba el nombre de atributo personalizado al que desea asignar el atributo de origen.
+Para agregar atributos de destino, seleccione el control **[!UICONTROL Add new field]** en la columna **[!UICONTROL Target field]** y escriba el nombre de atributo personalizado al que desea asignar el atributo de origen.
 
 >[!NOTE]
 >
@@ -180,31 +180,31 @@ Para agregar atributos de destino, seleccione el control **[!UICONTROL Agregar n
 
 ## Programar exportación de público {#scheduling}
 
-De manera predeterminada, la página [!UICONTROL Programación de audiencias] muestra solamente las audiencias recién seleccionadas que eligió en el flujo de activación actual.
+De manera predeterminada, la página [!UICONTROL Audience schedule] muestra solamente las audiencias recién seleccionadas que eligió en el flujo de activación actual.
 
-Para ver todas las audiencias que se están activando en su destino, use la opción de filtrado y deshabilite el filtro **[!UICONTROL Mostrar solo nuevas audiencias]**.
+Para ver todas las audiencias que se están activando en su destino, utilice la opción de filtrado y deshabilite el filtro **[!UICONTROL Show new audiences only]**.
 
 ![Filtro de todas las audiencias resaltado.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
-En la página **[!UICONTROL Programación de audiencias]**, seleccione cada audiencia y luego use los selectores **[!UICONTROL Fecha de inicio]** y **[!UICONTROL Fecha de finalización]** para configurar el intervalo de tiempo para enviar datos a su destino.
+En la página **[!UICONTROL Audience schedule]**, seleccione cada audiencia y, a continuación, utilice los selectores **[!UICONTROL Start date]** y **[!UICONTROL End date]** para configurar el intervalo de tiempo para enviar datos a su destino.
 
 ![Paso de programación de audiencia del flujo de trabajo de activación con las fechas de inicio y finalización resaltadas.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
-Seleccione **[!UICONTROL Siguiente]** para ir a la página [!UICONTROL Revisar].
+Seleccione **[!UICONTROL Next]** para ir a la página [!UICONTROL Review].
 
 ## Revisar {#review}
 
-En la página **[!UICONTROL Revisar]**, puedes ver un resumen de tu selección. Seleccione **[!UICONTROL Cancelar]** para dividir el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar su selección y comenzar a enviar datos al destino.
+En la página **[!UICONTROL Review]**, puede ver un resumen de su selección. Seleccione **[!UICONTROL Cancel]** para dividir el flujo, **[!UICONTROL Back]** para modificar la configuración o **[!UICONTROL Finish]** para confirmar la selección y comenzar a enviar datos al destino.
 
 ![Resumen de la selección en el paso de revisión.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
-Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué directivas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Lea acerca de [evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
+Si su organización compró **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL View applicable consent policies]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Lea acerca de [evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
-En el paso **[!UICONTROL Revisar]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
+En el paso **[!UICONTROL Review]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
 
 ![Ejemplo de infracción de directiva de datos.](../assets/common/data-policy-violation.png)
 
@@ -214,7 +214,7 @@ En este paso puede utilizar los filtros disponibles en la página para mostrar s
 
 ![Grabación de pantalla que muestra los filtros de audiencia disponibles en el paso de revisión.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
-Si está satisfecho con su selección y no se han detectado infracciones de directivas, seleccione **[!UICONTROL Finalizar]** para confirmar su selección y comenzar a enviar datos al destino.
+Si está satisfecho con su selección y no se han detectado infracciones de directivas, seleccione **[!UICONTROL Finish]** para confirmar su selección y comenzar a enviar datos al destino.
 
 <!--
 

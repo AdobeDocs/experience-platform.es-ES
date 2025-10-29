@@ -2,7 +2,7 @@
 title: Administrar tipos de datos de matriz y asignación con funciones de orden superior
 description: Obtenga información sobre cómo administrar tipos de datos de matrices y asignaciones con funciones de orden superior en el servicio de consultas. Se proporcionan ejemplos con casos de uso comunes.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
  productListItems | price_in_inr
--------------------+----------------
+|-------------------+----------------
 (8376, NULL, NULL) | 611448.0
 {(Burbank Hills Jeans, NULL, NULL), (Thermomax Steel, NULL, NULL), (Bruin Point Shearling Boots, NULL, NULL), (Uintas Pro Ski Gloves, NULL, NULL), (Timberline Survival Knife, NULL, NULL), (Thermomax Steel, NULL, NULL), (Timpanogos Scarf, NULL, NULL), (Lost Prospector Beanie, NULL, NULL), (Timpanogos Scarf, NULL, NULL), (Uintas Pro Ski Gloves, NULL, NULL)} | {0.0,0.0.0.0,0,0,0,0,0,0,0,0,0,0,0,0,0.0}
 (84763,NULL, NULL) | 6187699.0
@@ -80,7 +80,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
 productListItems
------------------
+|-----------------
 {(123679, NULL,NULL)}
 {(123679, NULL, NULL)}
 {(123679, NULL, NULL), (150196, NULL, NULL)}
@@ -120,7 +120,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
 productListItems | _filter
------------------+---------
+|-----------------+---------
 (123679, NULL, NULL) (123679, NULL, NULL)
 (1346, NULL, NULL) |
 (98347, NULL, NULL) |
@@ -159,7 +159,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
 productListItems | max_value
------------------+---------
+|-----------------+---------
 (123679, NULL, NULL) | 247358
 (1346,NULL, NULL) | 2692
 (98347, NULL, NULL) | 196694
@@ -193,7 +193,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
 productListItems     | zip_with
----------------------+---------
+|---------------------+---------
                      | {(1,NULL), (2,NULL), (3,NULL),(4,NULL), (5,NULL)}
 (123679, NULL, NULL) | {(1,123679), (2,NULL), (3,NULL), (4,NULL), (5,NULL)}
                      | {(1,NULL), (2,NULL),(3,NULL),(4,NULL), (5,NULL)}
@@ -232,7 +232,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)"]
@@ -278,7 +278,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)"]
@@ -321,7 +321,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)",2 -> "(123679, NULL, NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)",2 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)",2 -> "(98347, NULL, NULL)"]
@@ -363,7 +363,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
                                                                   identitymap                                            |  element_at(identitymap, AAID) 
--------------------------------------------------------------------------------------------------------------------------+-------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------+-------------------------------------
 [AAID -> "(3617FBB942466D79-5433F727AD6A0AD, false)",ECID -> "(67383754798169392543508586197135045866,true)"]            | (3617FBB942466D79-5433F727AD6A0AD, false) 
 [AAID -> "[AAID -> "(533F56A682C059B1-396437F68879F61D, false)",ECID -> "(91989370462250197735311833131353001213,true)"] | (533F56A682C059B1-396437F68879F61D, false) 
 [AAID -> "(22E195F8A8ECCC6A-A39615C93B72A9F, false)",ECID -> "(57699241367342030964647681192998909474,true)"]            | (22E195F8A8ECCC6A-A39615C93B72A9F, false) 
@@ -401,7 +401,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
                                                                   identitymap                                            |  size(identitymap) 
--------------------------------------------------------------------------------------------------------------------------+-------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------+-------------------------------------
 [AAID -> "(3617FBB942466D79-5433F727AD6A0AD, false)",ECID -> "(67383754798169392543508586197135045866,true)"]            |      2  
 [AAID -> "[AAID -> "(533F56A682C059B1-396437F68879F61D, false)",ECID -> "(91989370462250197735311833131353001213,true)"] |      2  
 [AAID -> "(22E195F8A8ECCC6A-A39615C93B72A9F, false)",ECID -> "(57699241367342030964647681192998909474,true)"]            |      2  
@@ -439,7 +439,7 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 ```console
 productListItems     | array_distinct(productListItems)
----------------------+---------------------------------
+|---------------------+---------------------------------
                      |
 (123679, NULL, NULL) | (123679, NULL, NULL)
                      |
@@ -458,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 Los siguientes ejemplos de funciones de orden superior se explican como parte del caso de uso recuperar registros similares. En la sección correspondiente de ese documento se proporciona un ejemplo y una explicación del uso de cada función.
 
-El ejemplo de función [`transform` &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) cubre la tokenización de una lista de productos.
+El ejemplo de función [`transform` ](../use-cases/retrieve-similar-records.md#length-adjustment) cubre la tokenización de una lista de productos.
 
-El ejemplo de la función [`filter` &#x200B;](../use-cases/retrieve-similar-records.md#filter-results) muestra una extracción más refinada y precisa de información relevante de los datos de texto.
+El ejemplo de la función [`filter` ](../use-cases/retrieve-similar-records.md#filter-results) muestra una extracción más refinada y precisa de información relevante de los datos de texto.
 
 La función [`reduce`](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) proporciona una forma de derivar valores acumulativos o agregados, que pueden ser fundamentales en varios procesos analíticos y de planificación.

@@ -4,14 +4,14 @@ title: Conexión LINE
 description: El destino LINE le permite añadir perfiles a la audiencia de Experience Platform y ofrecer experiencias personalizadas a los usuarios conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1147'
 ht-degree: 2%
 
 ---
 
-# [!DNL LINE] conexión
+# [!DNL LINE] conexión
 
 ## Información general {#overview}
 
@@ -36,7 +36,7 @@ Tenga en cuenta los siguientes requisitos previos de [!DNL LINE] para exportar d
 Debe registrarse y crear una cuenta de [!DNL LINE], si todavía no la tiene. Para crear una cuenta de:
 
 1. Vaya a la página [!DNL LINE] [inicio de sesión en la cuenta](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F)
-2. Seleccione **[!UICONTROL Crear una cuenta]**.
+2. Seleccione **[!UICONTROL Create an account]**.
 
 #### Reunir [!DNL LINE channel access token (long-lived)] de la consola para desarrolladores de [!DNL LINE] {#gather-credentials}
 
@@ -66,53 +66,54 @@ Consulte la [[!DNL LINE] documentación](https://developers.line.biz/en/docs/mes
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino [!DNL LINE]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Profile-based]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino [!DNL LINE]. |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 >
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-En **[!UICONTROL destinos]** > **[!UICONTROL catálogo]**, busque [!DNL LINE]. También puede encontrarlo en la categoría **[!UICONTROL Participación móvil]**.
+En **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** buscar [!DNL LINE]. También puede ubicarlo en la categoría **[!UICONTROL Mobile engagement]**.
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
+Para autenticarse en el destino, seleccione **[!UICONTROL Connect to destination]**.
 ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo autenticarse.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Rellene los campos obligatorios siguientes.
-* **[!UICONTROL Token de portador]**: Su [!DNL LINE Channel access token (long-lived)] de la consola para desarrolladores de [!DNL LINE]. Consulte la sección [recopilar credenciales](#gather-credentials).
 
-Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el estado **[!UICONTROL Conectado]** con una marca de verificación verde. A continuación, puede continuar con el paso siguiente.
+* **[!UICONTROL Bearer token]**: su [!DNL LINE Channel access token (long-lived)] de la consola para desarrolladores de [!DNL LINE]. Consulte la sección [recopilar credenciales](#gather-credentials).
+
+Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el estado **[!UICONTROL Connected]** con una marca de verificación verde. A continuación, puede continuar con el paso siguiente.
 
 ### Rellenar detalles de destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra los detalles del destino.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
-* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Tipo de audiencia]**: seleccione **[!UICONTROL ID para anunciantes(IFA)]** si las identidades que desea exportar son del tipo *ID para anunciantes(IFA)*. Seleccione **[!UICONTROL ID de usuario de LINE]** si las identidades que desea exportar son del tipo *ID de usuario de LINE*. Consulte la sección [Identidades admitidas](#supported-identities) para obtener más información sobre los tipos de identidad.
+* **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
+* **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL Audience Type]**: seleccione **[!UICONTROL ID for Advertisers(IFAs)]** si las identidades que desea exportar son del tipo *ID para anunciantes(IFA)*. Seleccione **[!UICONTROL LINE user IDs]** si las identidades que desea exportar son del tipo *ID de usuario de LINE*. Consulte la sección [Identidades admitidas](#supported-identities) para obtener más información sobre los tipos de identidad.
 
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -141,11 +142,11 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 
 1. En [!DNL LINE], inicie sesión en [Manager console](https://manager.line.biz/).
 
-1. A continuación, vaya a **[!UICONTROL Controles de datos]** > **[!UICONTROL Audiencias]** y compruebe que el nombre coincida con la audiencia seleccionada en la columna **[!UICONTROL Nombre de audiencia]**.
+1. A continuación, vaya a **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]** y compruebe que el nombre coincida con la audiencia seleccionada en la columna **[!UICONTROL Audience name]**.
 
 1. El volumen actualizado coincidiría con el recuento dentro del segmento.
 
-1. La columna *Tipo* mencionará **[!UICONTROL ID de usuario]** si las identidades que exportó son del tipo *ID de usuario*. De manera similar, la columna *Type* mencionará **[!UICONTROL ID de anuncio móvil]** si las identidades que exportó son del tipo *IDFA*.
+1. La columna *Tipo* mencionará **[!UICONTROL UserID]** si las identidades que exportó son del tipo *Id. de usuario*. De manera similar, la columna *Type* mencionará **[!UICONTROL Mobile ad Id]** si las identidades que exportó son del tipo *IDFA*.
 
 A continuación se muestra un ejemplo de configuración en [!DNL LINE]:
 ![Captura de pantalla de la interfaz de usuario LINE que muestra el volumen de audiencia.](../../assets/catalog/mobile-engagement/line/audience-volume.png)

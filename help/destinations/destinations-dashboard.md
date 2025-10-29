@@ -3,20 +3,24 @@ keywords: Experience Platform;interfaz de usuario;IU;personalización;tablero de
 title: Tablero de destinos
 description: La interfaz de usuario de Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización.
 type: Documentation
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
 
-# Panel [!UICONTROL Destinos] {#destinations-dashboard}
+# [!UICONTROL Destinations] panel {#destinations-dashboard}
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización, tal como se capturan durante una instantánea diaria.
 
-Para obtener instrucciones detalladas sobre cómo acceder al panel de destinos de la interfaz de usuario e interactuar con él, así como para obtener más información sobre las métricas disponibles que se muestran en el panel, visite la [guía del panel de destinos](../dashboards/guides/destinations.md).
+<!--
+Broken links; this article is not in TOC
 
-Para obtener una descripción general de todas las características de los paneles de Experience Platform, comience por leer la [descripción general de los paneles](../../dashboards/home.md).
+For detailed instructions on how to access and interact with the destinations dashboard in the UI, as well as to learn more about the available metrics displayed in the dashboard, please visit the [destinations dashboard guide](../dashboards/guides/destinations.md).  
+
+For an overview of all of the dashboard features within Experience Platform, please begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ![](images/destinations-dashboard/dashboard-overview.png)
+-->

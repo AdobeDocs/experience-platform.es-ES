@@ -4,16 +4,16 @@ title: Elija entre una selección de libros de reproducción
 description: Aprenda a elegir el manual adecuado para su caso de uso y active los libros de reproducción.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 92%
+source-wordcount: '738'
+ht-degree: 87%
 
 ---
 
 # Elija entre una selección de libros de reproducción
 
-Para usar un libro de reproducción, selecciona **[!UICONTROL Libros de reproducción]** en el panel de navegación izquierdo. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
+Para usar un libro de reproducción, seleccione **[!UICONTROL Playbooks]** en el panel de navegación izquierdo. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
 
 ## Búsqueda y filtrado {#search-and-filter}
 
@@ -35,7 +35,7 @@ Experimente con los filtros y la opción de búsqueda y encuentre el manual de t
 
 ## Vista del manual de tácticas y generación de recursos {#view-playbook-generate-assets}
 
-Antes de decidirse por un manual de tácticas y crear instancias de este, debería inspeccionarlo para asegurarse de que se ajusta a sus necesidades. Para ayudarle a comprender mejor los casos de uso que abarcan, todos los manuales de tácticas contienen las secciones que se enumeran a continuación. Cuando esté listo para continuar y generar recursos, seleccione **[!UICONTROL Crear instancia]**.
+Antes de decidirse por un manual de tácticas y crear instancias de este, debería inspeccionarlo para asegurarse de que se ajusta a sus necesidades. Para ayudarle a comprender mejor los casos de uso que abarcan, todos los manuales de tácticas contienen las secciones que se enumeran a continuación. Cuando esté listo para continuar y generar recursos, seleccione **[!UICONTROL Create Instance]**.
 
 ### Diagrama de ideas {#mindmap}
 
@@ -55,10 +55,10 @@ El diagrama de ideas comienza con una definición de a quién se llega en el rec
 Inspeccione la sección de resumen para comprender qué recursos se generan una vez que crea instancias desde el manual de tácticas. Los recursos que se generan para cada manual de tácticas se adaptan al caso de uso que este habilita. A continuación, obtendrá más información acerca de todos los elementos de la sección de resumen.
 
 | Elemento | Descripción |
----------|----------|
-| **[!UICONTROL Público objetivo]** | Describe las personas a las que quiera llegar a través de este manual de tácticas. |
-| **[!UICONTROL Canales de marketing]** | Describe los canales utilizados para llegar a las personas objetivo en el manual de tácticas. |
-| **[!UICONTROL Recursos técnicos]** | Una lista de los recursos técnicos que se generan después de crear instancias del manual de tácticas. Los recursos generados difieren en cada manual de tácticas, según el caso de uso. Algunos manuales de tácticas pueden generar esquemas, segmentos y recorridos. Otros, destinos. Consulte la sección [Comprensión de los recursos generados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) más adelante en la guía. Trata la creación y reutilización de instancias para obtener más información acerca de cómo puede utilizar y reutilizar los recursos generados. |
+|---------|----------|
+| **[!UICONTROL Target audience]** | Describe las personas a las que quiera llegar a través de este manual de tácticas. |
+| **[!UICONTROL Marketing Channels]** | Describe los canales utilizados para llegar a las personas objetivo en el manual de tácticas. |
+| **[!UICONTROL Technical assets]** | Una lista de los recursos técnicos que se generan después de crear instancias del manual de tácticas. Los recursos generados difieren en cada manual de tácticas, según el caso de uso. Algunos manuales de tácticas pueden generar esquemas, segmentos y recorridos. Otros, destinos. Consulte la sección [Comprensión de los recursos generados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) más adelante en la guía. Trata la creación y reutilización de instancias para obtener más información acerca de cómo puede utilizar y reutilizar los recursos generados. |
 
 {style="table-layout:auto"}
 
@@ -70,11 +70,11 @@ Baje hasta la sección de instancias para leer la información general de las in
 
 | Elemento | Descripción |
 |---------|----------|
-| **[!UICONTROL Nombre]** | Nombre de la instancia basado en el manual de tácticas. Puede personalizar el nombre y la descripción de una instancia. Lea la sección sobre [cómo editar metadatos de instancia](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) para obtener más información. |
-| **[!UICONTROL Estado]** | Indica el estado de la instancia. Una instancia **[!UICONTROL enviada]** está lista para su uso. |
-| **[!UICONTROL Creado]** | Indica cuándo se creó la instancia. |
-| **[!UICONTROL Creado por]** | Indica quién creó la instancia. |
-| **[!UICONTROL Última modificación]** | Indica la última modificación de la instancia. |
+| **[!UICONTROL Name]** | Nombre de la instancia basado en el manual de tácticas. Puede personalizar el nombre y la descripción de una instancia. Lea la sección sobre [cómo editar metadatos de instancia](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) para obtener más información. |
+| **[!UICONTROL Status]** | Indica el estado de la instancia. Una instancia de **[!UICONTROL submitted]** está lista para usarse. |
+| **[!UICONTROL Created]** | Indica cuándo se creó la instancia. |
+| **[!UICONTROL Created By]** | Indica quién creó la instancia. |
+| **[!UICONTROL Last Modified]** | Indica la última modificación de la instancia. |
 
 {style="table-layout:auto"}
 
@@ -82,4 +82,4 @@ Baje hasta la sección de instancias para leer la información general de las in
 
 ## Pasos siguientes: creación de una instancia del manual de tácticas {#next-steps-create-instance}
 
-Cuando desee usar un manual de tácticas y crear una instancia, seleccione **[!UICONTROL Crear instancia]** para proceder y generar recursos técnicos. Lea la guía [Creación, uso compartido y reutilización de instancias de manuales de tácticas](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obtener más información.
+Cuando esté listo para continuar con un libro de reproducción y crear una instancia, seleccione **[!UICONTROL Create Instance]** para continuar con el libro de reproducción y generar recursos técnicos. Lea la guía [Creación, uso compartido y reutilización de instancias de manuales de tácticas](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obtener más información.

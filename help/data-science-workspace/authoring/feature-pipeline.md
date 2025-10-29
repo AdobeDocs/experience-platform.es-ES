@@ -4,7 +4,7 @@ title: Creación de una canalización de funciones mediante la SDK de creación 
 type: Tutorial
 description: Adobe Experience Platform le permite crear canalizaciones de funciones personalizadas para realizar ingeniería de funciones a escala a través del tiempo de ejecución de Sensei Machine Learning Framework. En este documento se describen las distintas clases que se encuentran en una canalización de funciones y se proporciona un tutorial paso a paso para crear una canalización de funciones personalizada mediante la SDK de creación de modelos en PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%
@@ -40,6 +40,7 @@ El siguiente flujo de trabajo tiene lugar cuando se ejecuta una canalización de
 ## Introducción
 
 Para ejecutar una fórmula en cualquier organización, se requiere lo siguiente:
+
 - Un conjunto de datos de entrada.
 - El esquema del conjunto de datos.
 - Un esquema transformado y un conjunto de datos vacío basado en ese esquema.
@@ -438,7 +439,7 @@ Una vez finalizado, realice una petición GET a `/experiments/{EXPERIMENT_ID}` p
 
 Una vez finalizada la puntuación, la canalización de funciones debe estar operativa.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 

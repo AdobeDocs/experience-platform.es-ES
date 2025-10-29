@@ -1,65 +1,66 @@
 ---
-keywords: Experience Platform; recomendación fórmula del producto; Data Science Espacio de trabajo; temas populares; Recetas; Pre versión fórmula
+keywords: Experience Platform;fórmula de recomendación de producto;Data Science Workspace;temas populares;fórmulas;fórmula de precompilación
 solution: Experience Platform
 title: Fórmula de recomendación de productos
-description: La Recommendations fórmula productos le permite proporcionar recomendaciones de productos personalizadas que se adaptan a las necesidades e intereses de sus clientes. Con un modelo de predicción preciso, el historial de compras de un cliente puede proporcionarle conocimiento sobre qué productos pueden interesarle.
+description: La fórmula de recomendaciones de productos le permite proporcionar recomendaciones de productos personalizadas que se adaptan a las necesidades y los intereses de sus clientes. Con un modelo de predicción preciso, el historial de compras de un cliente puede proporcionarle insight sobre qué productos pueden interesarle.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 2%
 
 ---
 
-# recomendación fórmula del producto
+# Fórmula de recomendación de productos
 
 >[!NOTE]
 >
->La Espacio de trabajo de ciencia de datos ya no está disponible para su compra.
+>Data Science Workspace ya no se puede adquirir.
 >
->Esta documentación está destinada a clientes existentes con derechos previos a Data Science Espacio de trabajo.
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
-La Recommendations fórmula productos le permite proporcionar recomendaciones de productos personalizadas que se adaptan a las necesidades e intereses de sus clientes. Con un modelo de predicción preciso, el historial de compras de un cliente puede proporcionarle conocimiento sobre qué productos pueden interesarle.
+La fórmula de recomendaciones de productos le permite proporcionar recomendaciones de productos personalizadas que se adaptan a las necesidades y los intereses de sus clientes. Con un modelo de predicción preciso, el historial de compras de un cliente puede proporcionarle insight sobre qué productos pueden interesarle.
 
-## ¿Para quién está diseñado este fórmula?
+## ¿Para quién está diseñada esta receta?
 
-En la actualidad, un minorista puede oferta una multitud de productos, dando a sus clientes muchas opciones que también pueden obstaculizar a sus clientes búsqueda. Debido a las limitaciones de tiempo y esfuerzo, los clientes pueden no encontrar el producto que desean, lo que resulta en compras con un alto nivel de disonancia cognitiva o ninguna compra en absoluto.
+En la actualidad, una retailer puede ofrecer una multitud de productos, ofreciendo a sus clientes muchas opciones que también pueden dificultar la búsqueda. Debido a restricciones de tiempo y esfuerzo, es posible que los clientes no encuentren el producto que desean, lo que resulta en compras con un alto nivel de disonancia cognitiva o ninguna compra en absoluto.
 
-## ¿Qué hace este fórmula?
+## ¿Qué hace esta receta?
 
-El Recommendations fórmula de productos utiliza el aprendizaje automático para analizar las interacciones de un cliente con los productos en el pasado y generar un lista personalizado de recomendaciones de productos de forma rápida y sin esfuerzo. Esto optimiza el proceso de descubrimiento de productos y elimina las búsquedas largas, improductivas e irrelevantes para sus clientes. Como resultado, el Recommendations fórmula del producto puede mejorar el experiencia de compra general de un cliente, lo que lleva a una mayor participación y una mayor lealtad de marca.
+La fórmula Recomendaciones de productos utiliza el aprendizaje automático para analizar las interacciones de un cliente con productos en el pasado y generar una lista personalizada de recomendaciones de productos de forma rápida y sencilla. Esto optimiza el proceso de descubrimiento de productos y elimina las búsquedas largas, improductivas e irrelevantes para sus clientes. Como resultado, la fórmula de Recomendaciones de productos puede mejorar la experiencia de compra general de un cliente, lo que produce una mayor participación y una lealtad de marca más fuerte.
 
-## ¿Qué debo hacer para comenzar?
+## ¿Cómo empiezo?
 
-Puede comenzar siguiendo el tutorial de laboratorio de Adobe Experience Platform (consulte el vincular de laboratorio a continuación). Este tutorial le mostrará cómo crear el Recommendations fórmula de producto en un bloc de notas de Jupyter siguiendo el [bloc de notas para fórmula](../jupyterlab/create-a-model.md) flujo de trabajo e implementando el fórmula en [!DNL Experience Platform] [!DNL Data Science Workspace].
+Puede empezar siguiendo el tutorial de Adobe Experience Platform Lab (consulte el vínculo Lab a continuación). Este tutorial le mostrará cómo crear la fórmula de recomendaciones de productos en un Jupyter Notebook siguiendo el flujo de trabajo de [bloc de notas a fórmula](../jupyterlab/create-a-model.md) e implementando la fórmula en [!DNL Experience Platform] [!DNL Data Science Workspace].
 
-* [Laboratorio: Predecir el futuro con la ciencia de datos Espacio de trabajo](https://expleague.azureedge.net/labs/L777/index.html)
+* [Laboratorio: predecir el futuro con Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Recursos de laboratorio](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
-## esquema de datos
+## Esquema de datos
 
-Este fórmula utiliza esquemas XDM personalizados [para modelar los datos de](../../xdm/schema/field-dictionary.md) entrada y salida:
+Esta fórmula usa [esquemas XDM](../../xdm/schema/field-dictionary.md) personalizados para modelar los datos de entrada y salida:
 
-### Datos de entrada esquema
+### Esquema de datos de entrada
 
 | Nombre del campo | Tipo |
 | --- | --- |
-| Id. de elemento | Cadena |
-| Tipo de interacción | Cadena |
+| itemId | Cadena |
+| interactionType | Cadena |
 | timestamp | Cadena |
-| Id de usuario | Cadena |
+| userId | Cadena |
 
-### Output datos esquema
+### Esquema de datos de salida
 
 | Nombre del campo | Tipo |
 | --- | --- |
-| Recomendaciones | Cadena |
-| Id de usuario | Entero |
+| Recommendations | Cadena |
+| userId | Entero |
 
 ## Algoritmo
 
-El Recommendations fórmula de productos utiliza el filtrado colaborativo para generar un lista personalizado de recomendaciones de productos para sus clientes. El filtrado colaborativo, a diferencia de un enfoque basado en contenido, no requiere información sobre un producto específico, sino que utiliza las preferencias históricas de un cliente en un conjunto de productos. Esta poderosa técnica recomendación utiliza dos simples suposiciones:
-* Hay clientes con intereses similares, que se pueden agrupar comparando sus comportamientos de compra y navegación.
-* Es más probable que un cliente esté interesado en un recomendación basado en clientes similares en términos de su comportamiento de compra y navegación.
+La fórmula de Recomendaciones de productos utiliza el filtrado colaborativo para generar una lista personalizada de recomendaciones de productos para sus clientes. El filtrado colaborativo, a diferencia de un enfoque basado en contenido, no requiere información sobre un producto específico, sino que utiliza las preferencias históricas de un cliente en un conjunto de productos. Esta potente técnica de recomendación utiliza dos suposiciones simples:
 
-Este proceso se divide en dos pasos principales. En primer lugar, defina un subconjunto de clientes similares. Luego, dentro de ese conjunto, identifique características similares entre esos clientes para devolver un recomendación para el cliente destino.
+* Hay clientes con intereses similares y pueden agruparse comparando sus comportamientos de compra y de navegación.
+* Es más probable que un cliente esté interesado en una recomendación basada en clientes similares en términos de su comportamiento de compra y navegación.
+
+Este proceso se divide en dos pasos principales. En primer lugar, defina un subconjunto de clientes similares. A continuación, dentro de ese conjunto, identifique funciones similares entre esos clientes para devolver una recomendación para el cliente objetivo.

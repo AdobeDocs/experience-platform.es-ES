@@ -2,9 +2,9 @@
 title: Cargar e implementar pruebas de extremo a extremo para una extensión
 description: Obtenga información sobre cómo validar, cargar y probar la extensión en Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2344'
 ht-degree: 84%
 
 ---
@@ -63,10 +63,10 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > De forma predeterminada, el cargador espera credenciales de Adobe I/O para un flujo de Oauth de servidor a servidor. Las credenciales heredadas de `jwt-auth`
-> se puede usar ejecutando `npx @adobe/reactor-uploader@v5.2.0` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
-> para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> > se puede usar ejecutando `npx @adobe/reactor-uploader@v5.2.0` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
+> > para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-El cargador solo requiere que introduzca unos pocos datos. `clientId` y `clientSecret` se pueden recuperar de la consola de Adobe I/O. Vaya a la [página Integraciones](https://console.adobe.io/integrations) en la consola de I/O. Seleccione la organización correcta en el menú desplegable, busque la integración correcta y seleccione **[!UICONTROL Ver]**.
+El cargador solo requiere que introduzca unos pocos datos. `clientId` y `clientSecret` se pueden recuperar de la consola de Adobe I/O. Vaya a la [página Integraciones](https://console.adobe.io/integrations) en la consola de I/O. Seleccione la organización correcta en el menú desplegable, busque la integración correcta y seleccione **[!UICONTROL View]**.
 
 - ¿Cuál es su `clientId`? Copie y pegue esto desde la consola de I/O.
 - ¿Cuál es su `clientSecret`? Copie y pegue esto desde la consola de I/O.
@@ -82,11 +82,11 @@ El paquete de extensión se cargará y el cargador le proporcionará el ID del e
 >
 >Si tiene pensado ejecutar el cargador con frecuencia, poner toda esta información cada vez que lo haga puede ser un lastre. También puede pasarla como argumento desde la línea de comandos. Consulte la sección [Command Line Arguments (argumentos de la línea de comandos)](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) de los documentos de NPM para obtener más información.
 
-Si desea administrar la carga de su extensión directamente mediante la API, consulte las llamadas de ejemplo para [crear](../../api/endpoints/extension-packages.md/#create) o [actualizar](../../api/endpoints/extension-packages.md#update) un paquete de extensión en los documentos de la API para obtener más información.
+Si desea administrar la carga de su extensión directamente mediante la API, consulte las llamadas de ejemplo para [crear](../../api/endpoints/extension-packages.md#create) o [actualizar](../../api/endpoints/extension-packages.md#update) un paquete de extensión en los documentos de la API para obtener más información.
 
 ## Creación de una propiedad de desarrollo {#property}
 
-Después de iniciar sesión en la interfaz de usuario y seleccionar **[!UICONTROL Etiquetas]** en la navegación izquierda, se muestra la pantalla [!UICONTROL Propiedades]. Una propiedad es un contenedor para las etiquetas que desea implementar y se puede utilizar en uno o varios sitios.
+Después de iniciar sesión en la interfaz de usuario y seleccionar **[!UICONTROL Tags]** en la navegación izquierda, se muestra la pantalla [!UICONTROL Properties]. Una propiedad es un contenedor para las etiquetas que desea implementar y se puede utilizar en uno o varios sitios.
 
 ![](../images/getting-started/properties-screen.png)
 

@@ -5,10 +5,10 @@ title: Ingesta de datos de Parquet desde un sistema de almacenamiento en la nube
 type: Tutorial
 description: Este tutorial utiliza la API de Flow Service para guiarle por los pasos para introducir datos de Apache Parquet desde un sistema de almacenamiento en la nube de terceros.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 10%
+source-wordcount: '1072'
+ht-degree: 13%
 
 ---
 
@@ -29,11 +29,11 @@ Las secciones siguientes proporcionan información adicional que necesitará con
 
 ### Lectura de llamadas de API de muestra
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -259,7 +259,10 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Para poder ingerir datos externos en [!DNL Experience Platform], primero debe adquirirse una conexión base del conjunto de datos [!DNL Experience Platform].
 
-Para crear una conexión base de conjunto de datos, siga los pasos descritos en el [tutorial de conexión base de conjunto de datos](./create-dataset-base-connection.md).
+<!--
+broken link. this file not in TOC.
+To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](./create-dataset-base-connection.md).
+-->
 
 Siga los pasos descritos en la guía para desarrolladores hasta que haya creado una conexión base de conjunto de datos. Obtenga y almacene el identificador único (`$id`) y continúe usándolo como el identificador de conexión base en el siguiente paso para crear una conexión de destino.
 
@@ -425,7 +428,7 @@ Una respuesta correcta devuelve el identificador (`id`) del flujo de datos reci�
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado un conector de origen para recopilar datos de Parquet de su sistema de almacenamiento en la nube de terceros de forma programada. Los datos entrantes ahora pueden ser utilizados por servicios de flujo descendente [!DNL Experience Platform] como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 

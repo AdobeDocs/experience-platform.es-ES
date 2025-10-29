@@ -2,7 +2,7 @@
 title: Cálculo de estadísticas de conjuntos de datos
 description: Este documento describe cómo calcular las estadísticas de nivel de columna en conjuntos de datos de Azure Data Lake Storage (ADLS) con comandos SQL.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Para ver las estadísticas que se calcularon con el comando `ANALYZE TABLE COMPU
 
 >[!IMPORTANT]
 >
->Los comandos `COMPUTE STATISTICS`, `FILTERCONTEXT` y `FOR COLUMNS` no son compatibles con las tablas de almacenamiento acelerado. Actualmente, estas extensiones para el comando `ANALYZE TABLE` solo son compatibles con las tablas ADLS. Para obtener más información, consulte la [sección &#x200B;](../sql/syntax.md#analyze-table) ANALYZE TABLE de la guía de sintaxis SQL.
+>Los comandos `COMPUTE STATISTICS`, `FILTERCONTEXT` y `FOR COLUMNS` no son compatibles con las tablas de almacenamiento acelerado. Actualmente, estas extensiones para el comando `ANALYZE TABLE` solo son compatibles con las tablas ADLS. Para obtener más información, consulte la [sección ](../sql/syntax.md#analyze-table) ANALYZE TABLE de la guía de sintaxis SQL.
 
 Esta guía le ayuda a estructurar las consultas para que pueda calcular las estadísticas de columna de un conjunto de datos de ADLS. Con estos comandos, puede ver las estadísticas generadas en la sesión a través de un cliente SQL mediante una consulta SQL.
 
@@ -78,7 +78,7 @@ El resultado de las estadísticas calculadas puede ser similar al ejemplo siguie
 
 ```console
  columnName                                                 |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
-------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
+|------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
@@ -102,7 +102,7 @@ A continuación se muestra un ejemplo del resultado de `SHOW STATISTICS`.
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
-----------------------+---------------+-----------+-----------------------------+--------------------
+|----------------------+---------------+-----------+-----------------------------+--------------------
 adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
 demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
@@ -150,6 +150,6 @@ Puede combinar el límite de columnas y el filtro para crear consultas computaci
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este documento, ahora comprende mejor cómo generar estadísticas de nivel de columna a partir de un conjunto de datos ADLS mediante una consulta SQL. Se recomienda leer la [guía de sintaxis SQLl](../sql/syntax.md) para descubrir más características del servicio de consultas de Adobe Experience Platform.

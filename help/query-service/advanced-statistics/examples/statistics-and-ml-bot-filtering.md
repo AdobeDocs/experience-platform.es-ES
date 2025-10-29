@@ -1,7 +1,8 @@
 ---
 title: Filtrado de bots mediante estadísticas y aprendizaje automático
 description: Aprenda a utilizar las estadísticas de Data Distiller y el aprendizaje automático para identificar y filtrar la actividad de bots y garantizar un análisis preciso y una integridad de datos mejorada.
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -168,7 +169,7 @@ Este segundo ejemplo se basa en el filtrado SQL básico mediante la incorporaci�
 
 En primer lugar, prepare un conjunto de datos con estructuras planas y anidadas que el modelo de aprendizaje automático pueda utilizar (como se ha descrito anteriormente). Encontrará más instrucciones sobre cómo hacerlo en la [Documentación sobre trabajar con estructuras de datos anidadas](../../key-concepts/nested-data-structures.md). Agrupe los datos por marca de tiempo, ID de usuario y nombre de página web para identificar patrones en la actividad de bots.
 
-### Utilizar las cláusulas TRANSFORM y OPTIONS para la creación de modelos {#transform-and-preprocess}
+### Uso de cláusulas TRANSFORM y OPTIONS para la creación de modelos {#transform-and-preprocess}
 
 Para transformar su conjunto de datos y configurar su modelo de aprendizaje automático de forma eficaz, siga los pasos a continuación. Los pasos detallan cómo gestionar valores nulos, preparar funciones y definir los parámetros del modelo para un rendimiento óptimo.
 
@@ -179,7 +180,7 @@ Para transformar su conjunto de datos y configurar su modelo de aprendizaje auto
 1. Para rellenar valores nulos en columnas numéricas, de cadena y booleanas, use las funciones `numeric_imputer`, `string_imputer` y `boolean_imputer` respectivamente. Este paso garantiza que el algoritmo de aprendizaje automático pueda procesar los datos sin errores.
 2. Aplique transformaciones de funciones para preparar los datos para el modelado. Aplique `binarized`, `quantile_discretizer` o `string_indexer` para categorizar o estandarizar las columnas. A continuación, agregue el resultado de los imputadores (`numeric_imputer` y `string_imputer`) en transformadores subsiguientes como `string_indexer` o `quantile_discretizer` para crear características significativas.
 3. Utilice la función `vector_assembler` para combinar las columnas transformadas en una sola columna de característica. Luego escale las características usando `min_max_scaler` para normalizar los valores y obtener un mejor rendimiento del modelo. Nota: En el ejemplo de SQL, la última transformación mencionada dentro de la cláusula TRANSFORM se convierte en la columna de función utilizada por el modelo de aprendizaje automático.
-4. Especifique el tipo de modelo y cualquier otro hiperparámetro en la cláusula de OPTIONS. Por ejemplo, `decision_tree_classifier` se eligió aquí debido a que se trata de un problema de clasificación. Otros parámetros como `max_depth` se han ajustado (`MAX_DEPTH=4`) para ajustar el modelo y obtener un mejor rendimiento.
+4. Especifique el tipo de modelo y cualquier otro hiperparámetro en la cláusula OPTIONS. Por ejemplo, `decision_tree_classifier` se eligió aquí debido a que se trata de un problema de clasificación. Otros parámetros como `max_depth` se han ajustado (`MAX_DEPTH=4`) para ajustar el modelo y obtener un mejor rendimiento.
 5. Combine características y etiquete los datos de salida. Utilice la cláusula SELECT para especificar el conjunto de datos para aprendizaje. Esta cláusula debe incluir las columnas de características (`count_per_id`, `web`, `id`) y la columna de etiqueta (`isBot`), que indica si es probable que una acción sea un bot.
 
 Su instrucción puede tener un aspecto similar al ejemplo siguiente.
@@ -209,7 +210,7 @@ En los resultados que se muestran a continuación, el modelo `bot_filtering_mode
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ La respuesta incluye métricas como precisión, precisión, recuperación y AUC-
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ La respuesta incluye predicciones para cada usuario (`id`) junto con detalles so
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0
@@ -320,6 +321,6 @@ Para liberar recursos y asegurarse de que solo se mantienen los modelos relevant
 DROP MODEL bot_filtering_model;
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ha aprendido a identificar y filtrar la actividad de bots mediante SQL y técnicas de aprendizaje automático mediante métodos de Data Distiller. A continuación, aplique estos conceptos a sus conjuntos de datos y automatice el reciclaje del modelo para una mejora continua.

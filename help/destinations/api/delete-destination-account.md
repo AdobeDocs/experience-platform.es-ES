@@ -5,10 +5,10 @@ title: Eliminación de una cuenta de destino mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo eliminar una cuenta de destino mediante la API de Flow Service.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 16%
+source-wordcount: '762'
+ht-degree: 21%
 
 ---
 
@@ -35,11 +35,11 @@ Las secciones siguientes proporcionan información adicional que necesitará con
 
 ### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ### Recopilación de valores para los encabezados obligatorios {#gather-values-for-required-headers}
 
-Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -64,7 +64,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 El primer paso para eliminar una cuenta de destino es averiguar el ID de conexión que corresponde a la cuenta de destino que desea eliminar.
 
-En la interfaz de usuario de Experience Platform, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]** y seleccione la cuenta que desee eliminar seleccionando el número en la columna **[!UICONTROL Destinos]**.
+En la interfaz de usuario de Experience Platform, vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** y seleccione la cuenta que desee eliminar seleccionando el número en la columna **[!UICONTROL Destinations]**.
 
 ![Seleccionar cuenta de destino para eliminar](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
@@ -147,7 +147,8 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Antes de eliminar la cuenta de destino, debe eliminar cualquier flujo de datos existente en la cuenta de destino.
->Para eliminar flujos de datos existentes, consulte las páginas siguientes:
+>>Para eliminar flujos de datos existentes, consulte las páginas siguientes:
+>
 >* [Use la interfaz de usuario de Experience Platform](../ui/delete-destinations.md) para eliminar flujos de datos existentes;
 >* [Use la API de Flow Service](delete-destination-dataflow.md) para eliminar los flujos de datos existentes.
 
@@ -182,6 +183,6 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo e
 
 Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha utilizado correctamente la API [!DNL Flow Service] para eliminar las cuentas de destino existentes. Para obtener más información sobre el uso de destinos, consulte [descripción general de destinos](/help/destinations/home.md).

@@ -1,13 +1,13 @@
 ---
 title: Uso compartido de paquetes de extensiones privadas en la API de Reactor
 description: Obtenga información sobre cómo autorizar a otras empresas para que compartan paquetes de extensión privados en la API de Reactor.
-source-git-commit: ea9a2bb00d3ce59e28ea4cda0d30945e77aa95cb
+exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 3%
 
 ---
-
 
 # Uso compartido de paquetes de extensiones privadas
 
@@ -66,7 +66,7 @@ El estado inicial de la autorización se encuentra en la fase `pending_approval`
 
 ## Aprobar una autorización {#approve-authorization}
 
-Para aprobar una autorización, debe tener los derechos de `manage_properties`. Como empresa autorizada, deberá enviar una solicitud de PATCH a la autorización de uso del paquete de extensión, incluido el `ID` de la autorización y establecer el estado en `approved`.
+Para aprobar una autorización, debe tener los derechos de `manage_properties`. Como empresa autorizada, deberá enviar una solicitud PATCH a la autorización de uso del paquete de extensiones, incluido el `ID` de la autorización y establecer el estado en `approved`.
 
 **Formato de API**
 
@@ -94,10 +94,10 @@ curl -X PATCH \
   -d '{
         "data": {
           "attributes": {
-	          "state": "approved"
-	        },
-	        "id": ":extension_package_usage_authorization_id",
-	        "type": "extension_package_usage_authorizations"
+            "state": "approved"
+            },
+            "id": ":extension_package_usage_authorization_id",
+            "type": "extension_package_usage_authorizations"
         }
       }
 ```
@@ -126,7 +126,7 @@ DELETE //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORI
 
 **Solicitud**
 
-La siguiente solicitud de DELETE elimina los privilegios de autorización de una compañía.
+La siguiente solicitud de DELETE elimina los privilegios de autorización de una empresa.
 
 ```shell
 curl -X DELETE \

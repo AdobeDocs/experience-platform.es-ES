@@ -2,7 +2,7 @@
 description: Aprenda a utilizar la API de prueba de destino para probar si el destino de flujo continuo está configurado correctamente y verificar la integridad de los flujos de datos a su destino configurado.
 title: Prueba del destino de flujo continuo con perfiles de muestra
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Esta página enumera y describe todas las operaciones de API que puede realizar mediante el extremo de API `/authoring/testing/destinationInstance/`, para comprobar si el destino está configurado correctamente y para comprobar la integridad de los flujos de datos al destino configurado. Para obtener una descripción de la funcionalidad admitida por este extremo, lea [Probar la configuración de destino](streaming-destination-testing-overview.md).
 
-Las solicitudes se realizan en el extremo de prueba con o sin agregar perfiles a la llamada. Si no envía ningún perfil en la solicitud, Adobe los generará internamente para usted y los agregará a la solicitud.
+Las solicitudes se realizan en el extremo de prueba con o sin agregar perfiles a la llamada. Si no envía ningún perfil en la solicitud, Adobe los generará internamente y los agregará a la solicitud.
 
 Puede usar la [API de generación de perfiles de muestra](sample-profile-generation-api.md) para crear perfiles que se usarán en solicitudes a la API de prueba de destino.
 
@@ -26,9 +26,9 @@ Puede usar la [API de generación de perfiles de muestra](sample-profile-generat
 
 >[!IMPORTANT]
 >
->* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=es) para obtener más información.
-> * Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=es).
->![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino &#x200B;](../../assets/testing-api/get-destination-instance-id.png)
+>* Para utilizar esta API, debe tener una conexión existente con su destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obtener más información.
+>* Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>  >![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino ](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introducción a las operaciones de API de prueba de destino {#get-started}
 
@@ -36,7 +36,7 @@ Antes de continuar, revisa la [guía de introducción](../../getting-started.md)
 
 ## Pruebe la configuración de destino sin añadir perfiles a la llamada {#test-without-adding-profiles}
 
-Puede probar la configuración de destino realizando una solicitud de POST al extremo `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` y proporcionando el ID de instancia de destino del destino que está probando.
+Puede probar la configuración de destino realizando una petición POST al extremo `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` y proporcionando el ID de instancia de destino del destino que está probando.
 
 **Formato de API**
 
@@ -158,15 +158,15 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la respuesta de la 
 | -------- | ----------- |
 | `aggregationKey` | Incluye información sobre la directiva de agregación configurada para el destino. Para obtener más información, lea la [política de agregación](../../functionality/destination-configuration/aggregation-policy.md). |
 | `traceId` | Un identificador único para la operación. Cuando encuentre errores, puede compartir este ID con el equipo de Adobe para la resolución de problemas. |
-| `results.httpCalls.request` | Incluye la solicitud que se envió por Adobe a su destino. |
-| `results.httpCalls.response` | Incluye la respuesta recibida por el Adobe desde su destino. |
+| `results.httpCalls.request` | Incluye la solicitud que Adobe envió a su destino. |
+| `results.httpCalls.response` | Incluye la respuesta recibida por Adobe desde su destino. |
 | `inputProfiles` | Incluye los perfiles que se exportaron en la llamada a su destino. Los perfiles coinciden con el esquema de origen. |
 
 {style="table-layout:auto"}
 
 ## Pruebe la configuración de destino con perfiles añadidos a la llamada {#test-with-added-profiles}
 
-Puede probar la configuración de destino realizando una solicitud de POST al extremo `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` y proporcionando el ID de instancia de destino del destino que está probando.
+Puede probar la configuración de destino realizando una petición POST al extremo `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` y proporcionando el ID de instancia de destino del destino que está probando.
 
 **Formato de API**
 
@@ -324,6 +324,6 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la respuesta de la 
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
-## Pasos siguientes
+## Próximos pasos
 
-Después de leer este documento, ahora sabe cómo probar el destino. Ahora puede usar el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) del Adobe para crear una página de documentación para su destino.
+Después de leer este documento, ahora sabe cómo probar el destino. Ahora puede usar el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) de Adobe para crear una página de documentación para su destino.

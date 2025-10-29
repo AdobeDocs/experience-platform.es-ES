@@ -3,14 +3,14 @@ keywords: crm;CRM;destinos de crm;Divulgación;Destino de crm de divulgación
 title: Conexión de divulgación
 description: El destino de Divulgación le permite exportar los datos de su cuenta y activarlos dentro de Divulgación para sus necesidades comerciales.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
 
-# [!DNL Outreach] conexión
+# [!DNL Outreach] conexión
 
 ## Información general {#overview}
 
@@ -28,7 +28,7 @@ Como experto en marketing, puede ofrecer experiencias personalizadas a sus posib
 
 ### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL Outreach], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Outreach], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
 Consulte la documentación de Adobe para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
@@ -82,25 +82,25 @@ Consulte la [[!DNL Outreach] documentación](https://api.outreach.io/api/v2/docs
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li> Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Cada estado de segmento de [!DNL Outreach] se actualiza con el estado de audiencia correspondiente de Experience Platform, según el valor de [!UICONTROL ID de asignación] proporcionado durante el paso [programación de audiencias](#schedule-segment-export-example).</li></ul> |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li> Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+|---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Profile-based]** | <ul><li> Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Cada estado de segmento de [!DNL Outreach] se actualiza con el estado de audiencia correspondiente de Experience Platform, según el valor de [!UICONTROL Mapping ID] proporcionado durante el paso de [programación de audiencias](#schedule-segment-export-example).</li></ul> |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | <ul><li> Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
-> Para conectarse al destino, necesita el **[!UICONTROL permiso Administrar destinos]** [control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> Para conectarse al destino, necesita el **[!UICONTROL Manage Destinations]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-En **[!UICONTROL destinos]** > **[!UICONTROL catálogo]**, busque [!DNL Outreach]. También puede ubicarlo en la categoría CRM.
+En **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** buscar [!DNL Outreach]. También puede ubicarlo en la categoría CRM.
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
+Para autenticarse en el destino, seleccione **[!UICONTROL Connect to destination]**.
 
 ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo autenticarse en Outreach.](../../assets/catalog/crm/outreach/authenticate-destination.png)
 
@@ -112,8 +112,8 @@ A continuación, proporcione la contraseña.
 
 ![Captura de pantalla de la interfaz de usuario de Alcance que muestra el campo para ingresar el paso de contraseña para autenticarse en Alcance.](../../assets/catalog/crm/outreach/authenticate-destination-login-password.png)
 
-* **[!UICONTROL Nombre de usuario]**: Correo electrónico de su cuenta de [!DNL Outreach].
-* **[!UICONTROL Contraseña]**: La contraseña de su cuenta de [!DNL Outreach].
+* **[!UICONTROL Username]**: correo electrónico de su cuenta [!DNL Outreach].
+* **[!UICONTROL Password]**: la contraseña de su cuenta de [!DNL Outreach].
 
 Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el estado **Conectado** con una marca de verificación verde. A continuación, puede continuar con el paso siguiente.
 
@@ -122,21 +122,21 @@ Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo rellenar los detalles del destino de la divulgación.](../../assets/catalog/crm/outreach/destination-details.png)
 
-* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
+* **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
 
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -144,15 +144,14 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL Outreach], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Experience Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL Outreach], siga estos pasos:
 
-1. En el paso [!UICONTROL Asignación], haga clic en **[!UICONTROL Agregar nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
+1. En el paso [!UICONTROL Mapping], haga clic en **[!UICONTROL Add new mapping]**. Verá una nueva fila de asignación en la pantalla.
    ![Captura de pantalla de la IU de Experience Platform que muestra cómo agregar nueva asignación](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
-1. En la ventana [!UICONTROL Seleccionar campo de origen], elija la categoría **[!UICONTROL Seleccionar área de nombres de identidad]** y agregue las asignaciones que desee.
+1. En la ventana [!UICONTROL Select source field], elija la categoría **[!UICONTROL Select identity namespace]** y agregue las asignaciones que desee.
    ![Captura de pantalla de IU de Experience Platform que muestra la asignación de Source](../../assets/catalog/crm/outreach/source-mapping.png)
 
-1. En la ventana [!UICONTROL Seleccionar campo de destino], seleccione el tipo de campo de destino al que desea asignar el campo de origen.
-   * **[!UICONTROL Seleccionar área de nombres de identidad]**: seleccione esta opción para asignar el campo de origen a un área de nombres de identidad de la lista.
-
+1. En la ventana [!UICONTROL Select target field], seleccione el tipo de campo de destino al que desea asignar el campo de origen.
+   * **[!UICONTROL Select identity namespace]**: seleccione esta opción para asignar el campo de origen a un área de nombres de identidad de la lista.
      ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la asignación de destino mediante OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Agregue la siguiente asignación entre su esquema de perfil XDM y su instancia [!DNL Outreach]:
@@ -161,8 +160,7 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
      |---|---|---|
      | `Oid` | `OutreachId` | Sí |
 
-   * **[!UICONTROL Seleccionar atributos personalizados]**: seleccione esta opción para asignar el campo de origen a un atributo personalizado que defina en el campo [!UICONTROL Nombre de atributo]. Consulte la [[!DNL Outreach] documentación del cliente potencial](https://api.outreach.io/api/v2/docs#prospect) para obtener una lista completa de los atributos admitidos.
-
+   * **[!UICONTROL Select custom attributes]**: seleccione esta opción para asignar el campo de origen a un atributo personalizado que defina en el campo [!UICONTROL Attribute name]. Consulte la [[!DNL Outreach] documentación del cliente potencial](https://api.outreach.io/api/v2/docs#prospect) para obtener una lista completa de los atributos admitidos.
      ![Captura de pantalla de la IU de Experience Platform que muestra la asignación de destino con LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Por ejemplo, según los valores que desee actualizar, agregue la siguiente asignación entre el esquema de perfil XDM y la instancia [!DNL Outreach]:
@@ -173,18 +171,17 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
      | `person.name.lastName` | `lastName` |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
-
      ![Ejemplo de captura de pantalla de IU de Experience Platform que muestra asignaciones de destino.](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Programar exportación de audiencias y ejemplo {#schedule-segment-export-example}
 
 * Al realizar el paso [Programar exportación de audiencias](../../ui/activate-segment-streaming-destinations.md), debe asignar manualmente las audiencias de Experience Platform al atributo de campo personalizado en [!DNL Outreach].
 
-* Para ello, seleccione cada segmento e introduzca el valor numérico correspondiente que corresponde al campo *Campo personalizado `N` Etiqueta* de [!DNL Outreach] en el campo **[!UICONTROL ID de asignación]**.
+* Para ello, seleccione cada segmento e introduzca el valor numérico correspondiente que corresponde al campo *Campo personalizado `N` Etiqueta* de [!DNL Outreach] en el campo **[!UICONTROL Mapping ID]**.
 
   >[!IMPORTANT]
   >
-  > * El valor numérico *(`N`)* utilizado en [!UICONTROL ID. de asignación] debe coincidir con la clave de atributo personalizada sufijo con el valor numérico en [!DNL Outreach]. Ejemplo: *Etiqueta de campo personalizado `N`*.
+  > * El valor numérico *(`N`)* utilizado en [!UICONTROL Mapping ID] debe coincidir con la clave de atributo personalizada sufijo con el valor numérico dentro de [!DNL Outreach]. Ejemplo: *Etiqueta de campo personalizado `N`*.
   > * Solo es necesario especificar el valor numérico, no la etiqueta de campo personalizado completa.
   > * [!DNL Outreach] admite un máximo de 150 campos de etiquetas personalizados.
   > * Consulte [[!DNL Outreach] documentación de clientes potenciales](https://api.outreach.io/api/v2/docs#prospect) para obtener detalles.
@@ -201,10 +198,10 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
-1. Seleccione **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** para navegar a la lista de destinos.
+1. Seleccione **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** para navegar a la lista de destinos.
    ![Captura de pantalla de la IU de Experience Platform que muestra destinos de exploración.](../../assets/catalog/crm/outreach/browse-destinations.png)
 
-1. Seleccione el destino y valide que el estado es **[!UICONTROL enabled]**.
+1. Seleccione el destino y valide que el estado sea **[!UICONTROL enabled]**.
    ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la ejecución del flujo de datos de destinos para el destino seleccionado.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
 1. Cambie a la ficha **[!DNL Activation data]** y, a continuación, seleccione un nombre de audiencia.
@@ -213,7 +210,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro del segmento.
    ![Captura de pantalla de la IU de Experience Platform que muestra el resumen del segmento.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Inicie sesión en el sitio web de [!DNL Outreach], luego vaya a la página [!DNL Apps] > [!DNL Contacts] y compruebe si se han agregado los perfiles de la audiencia. Puede ver que cada estado de audiencia en [!DNL Outreach] se actualizó con el estado de audiencia correspondiente de Experience Platform, según el valor de [!UICONTROL ID de asignación] proporcionado durante el paso [programación de audiencia](#schedule-segment-export-example).
+1. Inicie sesión en el sitio web de [!DNL Outreach], luego vaya a la página [!DNL Apps] > [!DNL Contacts] y compruebe si se han agregado los perfiles de la audiencia. Puede ver que cada estado de audiencia de [!DNL Outreach] se actualizó con el estado de audiencia correspondiente de Experience Platform, según el valor de [!UICONTROL Mapping ID] proporcionado durante el paso de [programación de audiencias](#schedule-segment-export-example).
 
 ![Captura de pantalla de la interfaz de usuario de Outreach que muestra la página de Prospects de Outreach con los estados de audiencia actualizados.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
@@ -227,7 +224,7 @@ Al comprobar la ejecución de un flujo de datos, es posible que vea el siguiente
 
 ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra el error de solicitud incorrecto.](../../assets/catalog/crm/outreach/error.png)
 
-Para corregir este error, compruebe que la [!UICONTROL ID de asignación] proporcionada en Experience Platform para la audiencia [!DNL Outreach] sea válida y exista en [!DNL Outreach].
+Para corregir este error, compruebe que el [!UICONTROL Mapping ID] proporcionado en Experience Platform para la audiencia [!DNL Outreach] sea válido y exista en [!DNL Outreach].
 
 ## Recursos adicionales {#additional-resources}
 

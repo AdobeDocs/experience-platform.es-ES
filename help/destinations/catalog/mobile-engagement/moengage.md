@@ -3,14 +3,14 @@ title: Conexión de Moengage
 description: Moengage es una plataforma de participación del cliente que potencia las interacciones centradas en el cliente entre consumidores y marcas en tiempo real.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
 
-# [!DNL Moengage] conexión
+# [!DNL Moengage] conexión
 
 ## Información general {#overview}
 
@@ -49,23 +49,23 @@ Para poder enviar los datos de Adobe Experience Platform a [!DNL Moengage], teng
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (user_id, anonymous_id) junto con los atributos personalizados definidos por ha exportado a [!DNL Moengage]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Tipo de exportación | **[!UICONTROL Profile-based]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (user_id, anonymous_id) junto con los atributos personalizados definidos por ha exportado a [!DNL Moengage]. |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Connect to destination]**.
 
 ![Autenticación de destino Moengage](../../assets/catalog/mobile-engagement/moengage/authentication.png)
 
@@ -73,26 +73,27 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 ![Autenticación de destino Moengage](../../assets/catalog/mobile-engagement/moengage/settings.png)
-* **[!UICONTROL NOMBRE DE USUARIO]**: ID DE APLICACIÓN DE DATOS de la página de configuración del tablero [!DNL Moengage].
-* **[!UICONTROL CONTRASEÑA]**: CLAVE DE APLICACIÓN DE DATOS de la página de configuración del tablero [!DNL Moengage].
+
+* **[!UICONTROL USERNAME]**: ID de aplicación de datos de la página de configuración del tablero [!DNL Moengage].
+* **[!UICONTROL PASSWORD]**: CLAVE DE APLICACIÓN DE DATOS de la página de configuración del tablero [!DNL Moengage].
 
 ![Autenticación de destino Moengage](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
 
-* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Región]**: tu aplicación *centro de datos*.
+* **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
+* **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL Region]**: su aplicación *centro de datos*.
 
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar segmentos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de segmentos de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
@@ -104,36 +105,38 @@ La asignación consiste en crear un vínculo entre los campos de esquema [!DNL E
 
 Para asignar correctamente los campos XDM a los campos de destino [!DNL Moengage], siga estos pasos:
 
-En el paso [!UICONTROL Asignación], seleccione **[!UICONTROL Casilla]**.
+En el paso [!UICONTROL Mapping], seleccione **[!UICONTROL Checkbox]**.
 
 ![Asignación de adición de destino de Moengage](../../assets/catalog/mobile-engagement/moengage/segments.png)
 
-En el paso [!UICONTROL Asignación], seleccione **[!UICONTROL Agregar nueva asignación]**.
+En el paso [!UICONTROL Mapping], seleccione **[!UICONTROL Add new mapping]**.
 
 ![Asignación de adición de destino de Moengage](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 
-En la sección [!UICONTROL Campo de Source], seleccione el botón de flecha situado junto al campo vacío.
+En la sección [!UICONTROL Source Field], seleccione el botón de flecha situado junto al campo vacío.
 
 ![Asignación de Source de destino Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
-En la ventana [!UICONTROL Seleccionar campo de origen], puede elegir entre dos categorías de campos XDM:
-* [!UICONTROL Seleccionar atributos]: utilice esta opción para asignar un campo específico del esquema XDM al atributo [!DNL Moengage].
+En la ventana [!UICONTROL Select source field], puede elegir entre dos categorías de campos XDM:
+
+* [!UICONTROL Select attributes]: utilice esta opción para asignar un campo específico del esquema XDM al atributo [!DNL Moengage].
 
 ![Atributo Source De Asignación De Destino Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
 
-Elija su campo de origen y luego seleccione **[!UICONTROL Seleccionar]**.
+Elija su campo de origen y luego seleccione **[!UICONTROL Select]**.
 
-En la sección [!UICONTROL Campo de destino], seleccione el icono de asignación a la derecha del campo.
+En la sección [!UICONTROL Target Field], seleccione el icono de asignación a la derecha del campo.
 
 ![Asignación De Destino De Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
-En la ventana [!UICONTROL Seleccionar campo de destino], puede elegir entre dos categorías de campos de destino:
-* [!UICONTROL Seleccionar área de nombres de identidad]: utilice esta opción para asignar [!DNL Experience Platform] áreas de nombres de identidad a [!DNL Moengage] áreas de nombres de identidad.
-* [!UICONTROL Seleccionar atributos personalizados]: utilice esta opción para asignar atributos XDM a atributos personalizados [!DNL Moengage] que haya definido en su cuenta de [!DNL Moengage]. <br> También puede utilizar esta opción para cambiar el nombre de los atributos XDM existentes a [!DNL Moengage]. Por ejemplo, si se asigna un atributo XDM `lastName` a un atributo `Last_Name` personalizado en [!DNL Moengage], se creará el atributo `Last_Name` en [!DNL Moengage], si aún no existe, y se le asignará el atributo XDM `lastName`.
+En la ventana [!UICONTROL Select target field], puede elegir entre dos categorías de campos de destino:
+
+* [!UICONTROL Select identity namespace]: utilice esta opción para asignar [!DNL Experience Platform] áreas de nombres de identidad a [!DNL Moengage] áreas de nombres de identidad.
+* [!UICONTROL Select custom attributes]: utilice esta opción para asignar atributos XDM a atributos [!DNL Moengage] personalizados que definió en su cuenta de [!DNL Moengage]. <br> También puede utilizar esta opción para cambiar el nombre de los atributos XDM existentes a [!DNL Moengage]. Por ejemplo, si se asigna un atributo XDM `lastName` a un atributo `Last_Name` personalizado en [!DNL Moengage], se creará el atributo `Last_Name` en [!DNL Moengage], si aún no existe, y se le asignará el atributo XDM `lastName`.
 
 ![Campos de asignación de destino Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 
-Elija su campo de destino y luego seleccione **[!UICONTROL Seleccionar]**.
+Elija su campo de destino y luego seleccione **[!UICONTROL Select]**.
 
 Ahora debería ver la asignación de campos en la lista.
 

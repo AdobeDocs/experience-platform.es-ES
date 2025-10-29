@@ -5,9 +5,9 @@ title: Analizar los datos con Notebooks
 type: Tutorial
 description: Este tutorial se centra en cómo utilizar Jupyter Notebooks, creados dentro de Data Science Workspace, para acceder, explorar y visualizar sus datos.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ De forma predeterminada, la fórmula Tensorflow funciona en un clúster de GPU y
 
 ### Crear nuevo bloc de notas
 
-En la interfaz de usuario [!DNL Adobe Experience Platform], seleccione [!UICONTROL Ciencia de datos] en el menú superior para llevarlo al Workspace de ciencia de datos. Desde esta página, seleccione [!DNL JupyterLab] para abrir el lanzador [!DNL JupyterLab]. Debería ver una página similar a esta.
+En la interfaz de usuario [!DNL Adobe Experience Platform], seleccione [!UICONTROL Data Science] en el menú superior para llevarlo al Workspace de ciencia de datos. Desde esta página, seleccione [!DNL JupyterLab] para abrir el lanzador [!DNL JupyterLab]. Debería ver una página similar a esta.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
@@ -120,6 +120,7 @@ Si reinicia el núcleo y vuelve a ejecutar todas las celdas, debería obtener la
 ### Exploración de los datos
 
 Ahora que podemos acceder a sus datos, vamos a centrarnos en los datos en sí mediante el uso de estadísticas y visualización. El conjunto de datos que estamos utilizando es un conjunto de datos de minoristas que proporciona información variada sobre 45 tiendas diferentes en un día determinado. Algunas características de un(a) `date` y `store` dado(a) incluyen las siguientes:
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -161,6 +162,7 @@ Esto significa que 22 tiendas son de `storeType` `A`, 17 son `storeType` `B` y 6
 #### Visualización de datos
 
 Ahora que conocemos los valores de nuestros marcos de datos, queremos complementarlos con visualizaciones para que las cosas sean más claras y fáciles de identificar. Los gráficos también son útiles para transmitir los resultados a una audiencia. Algunas bibliotecas de [!DNL Python] que son útiles para la visualización incluyen:
+
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [embarcar](https://seaborn.pydata.org/)
@@ -198,9 +200,10 @@ Utilizando el mismo conjunto de datos de venta minorista, podemos generar la mat
 Observe la diagonal de 1 en el centro. Esto muestra que, al comparar una variable consigo misma, tiene una correlación positiva completa. La correlación positiva fuerte tendrá una magnitud más cercana a 1 mientras que las correlaciones débiles estarán más cerca de 0. La correlación negativa se muestra con un coeficiente negativo que muestra una tendencia inversa.
 
 
-## Pasos siguientes
+## Próximos pasos
 
 Este tutorial explica cómo crear un nuevo Jupyter Notebook en el Workspace de ciencia de datos y cómo acceder a los datos de forma externa, así como desde [!DNL Adobe Experience Platform]. Específicamente, hemos seguido los siguientes pasos:
+
 - Crear nuevo Jupyter Notebook
 - Acceso a conjuntos de datos y esquemas
 - Explorar conjuntos de datos

@@ -2,9 +2,9 @@
 keywords: Experience Platform;receta de ventas minoristas;Data Science Workspace;temas populares;recetas;receta previa a la compilación
 solution: Experience Platform
 title: Fórmula de ventas minoristas
-description: La fórmula de ventas minoristas permite predecir la previsión de ventas de todas las tiendas predefinidas para un período de tiempo determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre las políticas de demanda y precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
+description: La fórmula de ventas minoristas permite predecir la previsión de ventas de todas las tiendas predefinidas para un período de tiempo determinado. Con un modelo de predicción preciso, retailer podría encontrar la relación entre las políticas de demanda y precios y tomar decisiones de precios optimizados para maximizar las ventas y los ingresos.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%
@@ -19,16 +19,17 @@ ht-degree: 2%
 >
 >Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
-La fórmula de ventas minoristas permite predecir la previsión de ventas de todas las tiendas predefinidas para un período de tiempo determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre las políticas de demanda y precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
+La fórmula de ventas minoristas permite predecir la previsión de ventas de todas las tiendas predefinidas para un período de tiempo determinado. Con un modelo de predicción preciso, retailer podría encontrar la relación entre las políticas de demanda y precios y tomar decisiones de precios optimizados para maximizar las ventas y los ingresos.
 
 El siguiente documento responderá preguntas como las siguientes:
+
 * ¿Para quién está diseñada esta receta?
 * ¿Qué hace esta receta?
 * ¿Cómo empiezo?
 
 ## ¿Para quién está diseñada esta receta?
 
-Un minorista se enfrenta a muchos desafíos para seguir siendo competitivo en el mercado actual. Su marca busca impulsar las ventas anuales de su marca minorista, pero hay muchas decisiones que tomar para minimizar sus costes operativos. Un suministro excesivo aumenta los costes de inventario, mientras que un suministro insuficiente aumenta el riesgo de perder clientes en relación con otras marcas. ¿Necesita pedir más suministros para los próximos meses? ¿Cómo decide el precio óptimo de sus productos para mantener los objetivos de ventas semanales?
+Un retailer se enfrenta a muchos desafíos para seguir siendo competitivo en el mercado actual. Su marca busca impulsar las ventas anuales de su marca minorista, pero hay muchas decisiones que tomar para minimizar sus costes operativos. Un suministro excesivo aumenta los costes de inventario, mientras que un suministro insuficiente aumenta el riesgo de perder clientes en relación con otras marcas. ¿Necesita pedir más suministros para los próximos meses? ¿Cómo decide el precio óptimo de sus productos para mantener los objetivos de ventas semanales?
 
 ## ¿Qué hace esta receta?
 

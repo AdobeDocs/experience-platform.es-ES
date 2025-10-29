@@ -2,10 +2,10 @@
 title: Conexión de Marketo Engage
 description: Marketo Engage es la única solución de administración de la experiencia del cliente (CXM) integral para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 1a87ad8259803886b9a1c60f1cdc50942ba49173
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 1%
+source-wordcount: '1873'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL 
 
 El equipo de marketing quiere ejecutar una campaña de recuperación de los posibles clientes que no hayan estado involucrados en más de 90 días pero que ya existan en Marketo.
 
-Pueden activar las audiencias en Marketo Engage y usar el tipo de sincronización **[!UICONTROL Solo audiencia]**.
+Pueden activar las audiencias en Marketo Engage y utilizar el tipo de sincronización **[!UICONTROL Audience Only]**.
 
 ### Casos de uso de sincronización de audiencia y perfil {#audience-profile-sync-use-cases}
 
@@ -35,17 +35,17 @@ Pueden activar las audiencias en Marketo Engage y usar el tipo de sincronizació
 
 El equipo de marketing desea iniciar una campaña de renovación de la participación para los contactos de Marketo existentes que hayan mostrado interés en función de las visitas al sitio web. También desean actualizar la información de posibles clientes (como las preferencias, la información demográfica), pero no crear ninguna persona nueva en Marketo.
 
-Pueden activar las audiencias en Marketo Engage y usar el tipo de sincronización **[!UICONTROL Audiencia y Perfil]** combinado con la acción **[!UICONTROL Actualizar solo personas existentes]** para asegurarse de que se dirigen únicamente a las audiencias que ya existen en Marketo.
+Pueden activar las audiencias en Marketo Engage y usar el tipo de sincronización **[!UICONTROL Audience and Profile]** combinado con la acción **[!UICONTROL Update existing persons only]** para asegurarse de que se dirigen únicamente a las audiencias que ya existen en Marketo.
 
 **Reactivar y ampliar el alcance con sincronización de perfil completa**
 
 El equipo de marketing desea activar una audiencia de interés del producto para una nueva campaña. Aunque muchos de los perfiles ya existen en Marketo, algunos son nuevos y solo están presentes en Real-Time CDP. Para las personas existentes, quieren asegurarse de que actualizan a esas personas en Marketo, pero también crear nuevos perfiles.
 
-Pueden activar sus audiencias en Marketo Engage y utilizar el tipo de sincronización **[!UICONTROL Audiencia y Perfil]** combinado con la acción **[!UICONTROL Actualizar personas existentes y crear nuevas]** para asegurarse de que se dirigen a los posibles clientes existentes de Marketo y de que crean nuevos destinatarios para las nuevas audiencias exportadas desde Real-Time CDP.
+Pueden activar sus audiencias en Marketo Engage y utilizar el tipo de sincronización **[!UICONTROL Audience and Profile]** combinado con la acción **[!UICONTROL Update existing and create new persons]** para asegurarse de que se dirigen a los posibles clientes existentes de Marketo y crean nuevos para las nuevas audiencias exportadas de Real-Time CDP.
 
 ## Requisitos previos {#prerequisites}
 
-* El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en su instancia y partición de Marketo.
+* El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en su instancia y partición de Marketo.
 * Al configurar este destino, solo estarán disponibles las instancias de Marketo Engage en la misma organización de Adobe Real-Time CDP.
 * Solo las instancias de Marketo Engage que tienen sus usuarios administrados en Adobe Admin Console pueden utilizar este destino.
 
@@ -86,32 +86,32 @@ Audiencias compatibles por tipo de datos de audiencia:
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Está exportando todos los miembros de una audiencia con los identificadores (correo electrónico, ECID) utilizados en el destino [!DNL Marketo Engage]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Audience export]** | Está exportando todos los miembros de una audiencia con los identificadores (correo electrónico, ECID) utilizados en el destino [!DNL Marketo Engage]. |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Comportamiento de coincidencia de posibles clientes {#lead-matching}
 
-Comprender cómo funciona la coincidencia de posibles clientes de Marketo le ayuda a elegir la configuración correcta para su caso de uso. El comportamiento de coincidencia depende de la configuración seleccionada de **[!UICONTROL Tipo de sincronización]** y **[!UICONTROL Acción de persona]**.
+Comprender cómo funciona la coincidencia de posibles clientes de Marketo le ayuda a elegir la configuración correcta para su caso de uso. El comportamiento de coincidencia depende de la configuración seleccionada de **[!UICONTROL Sync Type]** y **[!UICONTROL Person Action]**.
 
-Marketo usa el **[!UICONTROL campo de deduplicación de Marketo]** que seleccionó para hacer coincidir los perfiles de Experience Platform con los posibles clientes de Marketo existentes. El proceso de coincidencia busca en todas las particiones de la instancia de Marketo para encontrar los posibles clientes existentes. Consulte la tabla siguiente para comprender cómo se crean y actualizan los posibles clientes en la instancia de Marketo según la configuración seleccionada.
+Marketo usa los **[!UICONTROL Marketo deduplication field]** que seleccionó para hacer coincidir perfiles de Experience Platform con posibles clientes de Marketo existentes. El proceso de coincidencia busca en todas las particiones de la instancia de Marketo para encontrar los posibles clientes existentes. Consulte la tabla siguiente para comprender cómo se crean y actualizan los posibles clientes en la instancia de Marketo según la configuración seleccionada.
 
 | Tipo de sincronización | Acción de persona | Comportamiento de coincidencia |
 |-----------|---------------|-------------------|
-| **[!UICONTROL Solo perfil]** | **[!UICONTROL Actualizar personas existentes y crear nuevas]** | <ul><li>Actualiza los posibles clientes existentes con nuevos datos de perfil</li><li>Crea nuevos posibles clientes en la partición seleccionada para perfiles no coincidentes</li></ul> |
-| **[!UICONTROL Solo perfil]** | **[!UICONTROL Actualizar solo personas existentes]** | <ul><li>Actualiza los posibles clientes existentes con nuevos datos de perfil</li><li>No se han creado nuevos posibles clientes para perfiles no coincidentes</li></ul> |
-| **[!UICONTROL Solo audiencia]** | N/A | <ul><li>Añade posibles clientes existentes a listas de audiencia</li><li>No se han creado nuevos posibles clientes para perfiles no coincidentes</li></ul> |
-| **[!UICONTROL Audiencia y perfil]** | **[!UICONTROL Actualizar personas existentes y crear nuevas]** | <ul><li>Actualiza los posibles clientes existentes con nuevos datos de perfil</li><li>Añade posibles clientes existentes a listas de audiencia</li><li>Crea nuevos posibles clientes en la partición seleccionada para perfiles no coincidentes</li><li>Agrega nuevos posibles clientes a las listas de audiencia</li></ul> |
-| **[!UICONTROL Audiencia y perfil]** | **[!UICONTROL Actualizar solo personas existentes]** | <ul><li>Actualiza los posibles clientes existentes con nuevos datos de perfil</li><li>Añade posibles clientes existentes a listas de audiencia</li><li>No se han creado nuevos posibles clientes para perfiles no coincidentes</li></ul> |
+| **[!UICONTROL Profile only]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Actualiza los posibles clientes existentes con nuevos datos de perfil</li><li>Crea nuevos posibles clientes en la partición seleccionada para perfiles no coincidentes</li></ul> |
+| **[!UICONTROL Profile only]** | **[!UICONTROL Update existing persons only]** | <ul><li>Actualiza los posibles clientes existentes con nuevos datos de perfil</li><li>No se han creado nuevos posibles clientes para perfiles no coincidentes</li></ul> |
+| **[!UICONTROL Audience only]** | N/A | <ul><li>Añade posibles clientes existentes a listas de audiencia</li><li>No se han creado nuevos posibles clientes para perfiles no coincidentes</li></ul> |
+| **[!UICONTROL Audience and profile]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Actualiza los posibles clientes existentes con nuevos datos de perfil</li><li>Añade posibles clientes existentes a listas de audiencia</li><li>Crea nuevos posibles clientes en la partición seleccionada para perfiles no coincidentes</li><li>Agrega nuevos posibles clientes a las listas de audiencia</li></ul> |
+| **[!UICONTROL Audience and profile]** | **[!UICONTROL Update existing persons only]** | <ul><li>Actualiza los posibles clientes existentes con nuevos datos de perfil</li><li>Añade posibles clientes existentes a listas de audiencia</li><li>No se han creado nuevos posibles clientes para perfiles no coincidentes</li></ul> |
 
 {style="table-layout:auto"}
 
 ### Consideraciones importantes
 
 * **Selección del campo de anulación de duplicación**: elija un campo que esté disponible de forma consistente y que sea único en los perfiles de sus clientes (por ejemplo: dirección de correo electrónico, ID de cliente)
-* **Administración de particiones**: Al crear nuevos posibles clientes, se colocan en la partición seleccionada (o en la partición **[!UICONTROL predeterminada]** si no seleccionó ninguna)
+* **Administración de particiones**: Al crear nuevos posibles clientes, se colocan en la partición seleccionada (o en la partición **[!UICONTROL Default]** si no seleccionó ninguna)
 * **Administración de duplicados**: si varios posibles clientes de Marketo coinciden con el mismo perfil, solo se actualizará el último posible cliente actualizado
 * **Coincidencia entre particiones**: El sistema busca en todas las particiones los posibles clientes existentes, independientemente de la partición que haya seleccionado para los nuevos posibles clientes
 
@@ -119,15 +119,15 @@ Marketo usa el **[!UICONTROL campo de deduplicación de Marketo]** que seleccion
 
 >[!IMPORTANT]
 > 
->* Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;.
+>* Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
+Para autenticarse en el destino, seleccione **[!UICONTROL Connect to destination]**.
 
 ![Captura de pantalla que muestra cómo autenticarse en el destino](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png)
 
@@ -137,37 +137,37 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 ![Captura de pantalla de muestra que muestra cómo rellenar los detalles de tu destino](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png)
 
-* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
+* **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL Munchkin ID]**: seleccione el [!DNL Marketo Munchkin ID] que desee usar para este destino.
 * **[!UICONTROL Workspace ID]**: seleccione su ID de Marketo Workspace.
-* **[!UICONTROL Tipo de sincronización]**: seleccione el tipo de sincronización que desea usar para este destino:
-   * **[!UICONTROL Audiencia y perfil]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo y mantener actualizada su información de perfil.
-   * **[!UICONTROL Solo perfil]**: seleccione esta opción cuando desee mantener los perfiles de posibles clientes de Marketo actualizados con la información más reciente de Experience Platform.
-   * **[!UICONTROL Solo audiencia]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo sin actualizar su información de perfil.
-* **[!UICONTROL Partición]**: *La selección de particiones solo está disponible al elegir **[!UICONTROL Solo perfil]**&#x200B;o **[!UICONTROL Tipos de sincronización de audiencia y perfil]***. Seleccione un ID de partición de Marketo asociado al espacio de trabajo elegido. Esto le permite especificar qué partición de posible cliente en Marketo recibirá los datos exportados. Si no elige una partición específica, los datos se enviarán a la partición **[!UICONTROL Default]** de Marketo.
-* **[!UICONTROL Campo de anulación de duplicación de Marketo]**: seleccione el campo de anulación de duplicación de Marketo que desee utilizar al actualizar posibles clientes de Marketo existentes. Este selector muestra los campos que ha marcado como campos de anulación de duplicación en Marketo. Si desea que un campo específico de Marketo se muestre como un campo de anulación de duplicación, debe marcar el campo como [campo en el que se puede buscar](https://experienceleague.adobe.com/es/docs/marketo-developer/marketo/rest/lead-database/lead-database) en Marketo.
+* **[!UICONTROL Sync type]**: seleccione el tipo de sincronización que desea utilizar para este destino:
+   * **[!UICONTROL Audience and profile]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo y mantener actualizada la información de su perfil.
+   * **[!UICONTROL Profile only]**: seleccione esta opción cuando desee mantener los perfiles de posibles clientes de Marketo actualizados con la información más reciente de Experience Platform.
+   * **[!UICONTROL Audience only]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo sin actualizar su información de perfil.
+* **[!UICONTROL Partition]**: *La selección de particiones solo está disponible al elegir **[!UICONTROL Profile only]**o **[!UICONTROL Audience and profile]**tipos de sincronización*. Seleccione un ID de partición de Marketo asociado al espacio de trabajo elegido. Esto le permite especificar qué partición de posible cliente en Marketo recibirá los datos exportados. Si no elige una partición específica, los datos se enviarán a la partición **[!UICONTROL Default]** en Marketo.
+* **[!UICONTROL Marketo deduplication field]**: seleccione el campo de anulación de duplicación de Marketo que desee utilizar al actualizar posibles clientes de Marketo existentes. Este selector muestra los campos que ha marcado como campos de anulación de duplicación en Marketo. Si desea que un campo específico de Marketo se muestre como un campo de anulación de duplicación, debe marcar el campo como [campo en el que se puede buscar](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) en Marketo.
 
   >[!NOTE]
   >
   >Marketo `Lead ID` e Experience Cloud ID (`ECID`) no son compatibles con la deduplicación.
 
-* **[!UICONTROL Acción de la persona]**: seleccione la acción de Marketo que desee realizar al exportar datos.
-   * **[!UICONTROL Actualizar clientes existentes y crear personas nuevas]**: seleccione esta opción para actualizar los posibles clientes de Marketo existentes y crear nuevos posibles clientes para los miembros de la audiencia que no estén ya en Marketo. Se crearán nuevos posibles clientes en la partición seleccionada. Si no seleccionó ninguna partición, se crearán nuevos posibles clientes en la partición **[!UICONTROL Default]**.
-   * **[!UICONTROL Actualizar solo personas existentes]**: seleccione esta opción cuando solo desee actualizar los posibles clientes existentes de Marketo sin crear nuevos posibles clientes. Si varios posibles clientes coinciden con el mismo perfil, solo el posible cliente de Marketo actualizado más recientemente se actualizará con los datos de Experience Platform.
+* **[!UICONTROL Person Action]**: seleccione la acción de Marketo que desee realizar al exportar datos.
+   * **[!UICONTROL Update existing and create new persons]**: seleccione esta opción para actualizar los posibles clientes existentes de Marketo y crear nuevos posibles clientes para los miembros de la audiencia que aún no estén en Marketo. Se crearán nuevos posibles clientes en la partición seleccionada. Si no seleccionó una partición, se crearán nuevos posibles clientes en la partición **[!UICONTROL Default]**.
+   * **[!UICONTROL Update existing persons only]**: seleccione esta opción cuando solo desee actualizar los posibles clientes existentes de Marketo sin crear nuevos. Si varios posibles clientes coinciden con el mismo perfil, solo el posible cliente de Marketo actualizado más recientemente se actualizará con los datos de Experience Platform.
 
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, lea la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

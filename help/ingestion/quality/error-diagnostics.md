@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Recuperación de diagnósticos de error de ingesta de datos
 description: Este documento proporciona información sobre la monitorización de la ingesta por lotes y la gestión de los errores de ingesta parcial por lotes, así como una referencia para los tipos de ingesta parcial por lotes.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '976'
-ht-degree: 9%
+ht-degree: 13%
 
 ---
 
@@ -26,11 +26,11 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 ### Lectura de llamadas de API de muestra
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -293,7 +293,7 @@ Si el lote tiene uno o más errores y tiene habilitados los diagnósticos de err
 >}
 >```
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 En este tutorial se explica cómo monitorizar los errores de ingesta parcial por lotes. Para obtener más información sobre la ingesta por lotes, lea la [guía para desarrolladores de ingesta por lotes](../batch-ingestion/api-overview.md).
 

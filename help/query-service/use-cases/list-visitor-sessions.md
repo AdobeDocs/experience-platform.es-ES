@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;servi
 title: Enumeración de las vistas de página de un usuario
 description: Obtenga información sobre cómo escribir consultas que utilizan eventos de experiencia para crear una lista de las últimas 100 páginas que ha utilizado un usuario especificado.
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Los resultados de esta consulta se pueden ver a continuación.
 
 ```console
       timestamp       |  referrerType  |                            referrer                                |                 pageName            |  A  |  B  |  C  | pageViews
-----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
+|----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
 2019-11-08 17:15:28.0 | typed_bookmark |                                                                    |                                     |     |     |     |
 2019-11-08 17:53:05.0 | social         | http://www.reddit.com                                              | Home                                |     |     |     |          1.0
 2019-11-08 17:53:45.0 | typed_bookmark |                                                                    | Kids                                |     |     |     |          1.0
@@ -63,7 +63,7 @@ Los resultados de esta consulta se pueden ver a continuación.
 2019-11-08 20:14:05.0 | typed_bookmark |                                                                    | Seasonal Sale                       |     |     |     |          1.0
 ```
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este documento, entiende mejor cómo usar el servicio de consultas con [!DNL Experience Events] para enumerar las vistas de página como un usuario especificado.
 

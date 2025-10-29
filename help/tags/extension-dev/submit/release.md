@@ -2,10 +2,10 @@
 title: Lanzamiento de una extensión
 description: Obtenga información sobre cómo publicar de forma privada o pública una extensión de etiqueta en Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 2152cf98d9809654cca7abd7b8469a72e8387b2a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 67%
+source-wordcount: '478'
+ht-degree: 64%
 
 ---
 
@@ -38,10 +38,10 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > De forma predeterminada, el publicador espera credenciales de Adobe I/O para un flujo de Oauth de servidor a servidor. Las credenciales heredadas de `jwt-auth`
-> se puede usar ejecutando `npx @adobe/reactor-releaser@v3.1.3` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
-> para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> > se puede usar ejecutando `npx @adobe/reactor-releaser@v3.1.3` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
+> > para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
-El publicador requiere que introduzca solo unos pocos datos. `clientId` y `clientSecret` se pueden recuperar de la consola de Adobe I/O. Vaya a la [página Integraciones](https://console.adobe.io/integrations) en la consola de I/O. Seleccione la organización correcta en el menú desplegable, busque la integración correcta y seleccione **[!UICONTROL Ver]**.
+El publicador requiere que introduzca solo unos pocos datos. `clientId` y `clientSecret` se pueden recuperar de la consola de Adobe I/O. Vaya a la [página Integraciones](https://console.adobe.io/integrations) en la consola de I/O. Seleccione la organización correcta en el menú desplegable, busque la integración correcta y seleccione **[!UICONTROL View]**.
 
 - ¿Cuál es su `clientId`? Copie y pegue esto desde la consola de I/O.
 - ¿Cuál es su `clientSecret`? Copie y pegue esto desde la consola de I/O.
@@ -49,7 +49,7 @@ El publicador requiere que introduzca solo unos pocos datos. `clientId` y `clien
 El publicador leerá los campos `name` y `platform` de su manifiesto de extensión y consultará la API para obtener un paquete de extensión coincidente en la disponibilidad de desarrollo.
 El publicador le pedirá que confirme que ha encontrado el paquete de extensión correcto que desea publicar en disponibilidad privada.
 
-Si desea realizar el lanzamiento de su extensión de manera privada directamente mediante la API, consulte la llamada de ejemplo de [lanzamiento privado de un paquete de extensión](../../api/endpoints/extension-packages.md/#private-release) en los documentos de la API para obtener más información.
+Si desea realizar el lanzamiento de su extensión de manera privada directamente mediante la API, consulte la llamada de ejemplo de [lanzamiento privado de un paquete de extensión](/help/tags/api/endpoints/extension-packages.md#private-release) en los documentos de la API para obtener más información.
 
 ## Lanzamiento público
 

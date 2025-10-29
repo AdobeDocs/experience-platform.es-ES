@@ -2,24 +2,24 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;funciones definidas por adobe;sql;
 solution: Experience Platform
 title: Funciones SQL definidas por Adobe en el servicio de consultas
-description: Este documento proporciona información sobre las funciones definidas por el Adobe disponibles en Adobe Experience Platform Query Service.
+description: Este documento proporciona información sobre las funciones definidas por Adobe disponibles en Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 2%
 
 ---
 
-# Funciones SQL definidas por el Adobe en el servicio de consultas
+# Funciones SQL definidas por Adobe en el servicio de consultas
 
-Las funciones definidas por el Adobe, en lo sucesivo denominadas ADF, son funciones predefinidas en Adobe Experience Platform Query Service que ayudan a realizar tareas comunes relacionadas con la empresa en los datos de [!DNL Experience Event]. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=es) y [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=es) como las que se encuentran en Adobe Analytics.
+Las funciones definidas por Adobe, denominadas en este documento ADF, son funciones prediseñadas en Adobe Experience Platform Query Service que ayudan a realizar tareas comunes relacionadas con la empresa en datos de [!DNL Experience Event]. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) y [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) como las que se encuentran en Adobe Analytics.
 
-Este documento proporciona información para las funciones definidas por el Adobe disponibles en [!DNL Query Service].
+Este documento proporciona información para las funciones definidas por Adobe disponibles en [!DNL Query Service].
 
 >[!NOTE]
 >
->El ID del Experience Cloud (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
+>El Experience Cloud ID (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
 
 ## Funciones de ventana {#window-functions}
 
@@ -47,7 +47,7 @@ Cuando trabaja con datos de [!DNL Experience Event] procedentes de un sitio web,
 
 Esta agrupación, o sesionización de datos, ayuda a asociar los eventos para descubrir más contexto sobre la experiencia del cliente.
 
-Para obtener más información acerca de la creación de sesiones en Adobe Analytics, consulte la documentación de [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=es).
+Para obtener más información acerca de la creación de sesiones en Adobe Analytics, consulte la documentación de [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Sintaxis de consulta**
 
@@ -82,7 +82,7 @@ LIMIT 10
 
 ```console
                 id                |       timestamp       |      session       
-----------------------------------+-----------------------+--------------------
+|----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
@@ -147,7 +147,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isLaunch |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
@@ -212,7 +212,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isExit   |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
@@ -281,7 +281,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
------------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -333,7 +333,7 @@ LIMIT 10
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
------------------------------------+-----------------------+-------------------------------------+---------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -401,7 +401,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_since_registration 
------------------------------------+------------------------------------
+|-----------------------------------+------------------------------------
                                    |                                   
  Account Registration|Confirmation |                                0.0
  Seasonal                          |                   5.47029702970297
@@ -463,7 +463,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
------------------------------------+------------------------------------------
+|-----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
  Men                               |                       -9.465295629820051
  Equipment                         |                       -9.682098765432098
@@ -479,12 +479,12 @@ LIMIT 10
 
 Para la consulta de ejemplo dada, los resultados se dan en la columna `average_minutes_until_order_confirmation`. El valor dentro de la columna `average_minutes_until_order_confirmation` es la diferencia de tiempo entre los eventos actual y siguiente. La unidad de tiempo se definió previamente en `{TIME_UNIT}`.
 
-## Pasos siguientes
+## Próximos pasos
 
 Con las funciones descritas aquí, puede escribir consultas para acceder a sus propios conjuntos de datos de [!DNL Experience Event] mediante [!DNL Query Service]. Para obtener más información sobre la creación de consultas en [!DNL Query Service], consulte la documentación sobre [creación de consultas](../best-practices/writing-queries.md).
 
 ## Recursos adicionales
 
-El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente SQL. Además, el vídeo también utiliza ejemplos que implican propiedades individuales en un objeto XDM, utilizando funciones definidas por el Adobe y utilizando CREATE TABLE AS SELECT (CTAS).
+El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente SQL. Además, el vídeo también utiliza ejemplos que implican propiedades individuales en un objeto XDM, utilizando funciones definidas por Adobe y utilizando CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/34045?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

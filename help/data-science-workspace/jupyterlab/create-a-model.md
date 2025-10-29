@@ -5,9 +5,9 @@ title: Creación de un modelo con JupyterLab Notebooks
 type: Tutorial
 description: Este tutorial le guiará por los pasos necesarios para crear una fórmula con la plantilla de creador de fórmulas de cuadernos de JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -35,23 +35,23 @@ Antes de continuar con este tutorial, debe crear los esquemas y conjuntos de dat
 
 ## Introducción al entorno de bloc de notas [!DNL JupyterLab]
 
-La creación de una fórmula desde cero se puede realizar dentro de [!DNL Data Science Workspace]. Para empezar, ve a [Adobe Experience Platform](https://platform.adobe.com) y selecciona la pestaña **[!UICONTROL Notebooks]** que hay a la izquierda. Para crear un nuevo bloc de notas, seleccione la plantilla Generador de fórmulas de [!DNL JupyterLab Launcher].
+La creación de una fórmula desde cero se puede realizar dentro de [!DNL Data Science Workspace]. Para empezar, vaya a [Adobe Experience Platform](https://platform.adobe.com) y seleccione la pestaña **[!UICONTROL Notebooks]** a la izquierda. Para crear un nuevo bloc de notas, seleccione la plantilla Generador de fórmulas de [!DNL JupyterLab Launcher].
 
-El bloc de notas [!UICONTROL Generador de fórmulas] le permite ejecutar ejecuciones de entrenamiento y puntuación dentro del bloc de notas. Esto le proporciona la flexibilidad para realizar cambios en los métodos `train()` y `score()` entre la ejecución de experimentos en los datos de entrenamiento y puntuación. Una vez que esté satisfecho con los resultados de la formación y la puntuación, puede crear una fórmula y, además, publicarla como modelo utilizando la fórmula para modelar la funcionalidad.
+El bloc de notas [!UICONTROL Recipe Builder] le permite ejecutar ejecuciones de formación y puntuación dentro del bloc de notas. Esto le proporciona la flexibilidad para realizar cambios en los métodos `train()` y `score()` entre la ejecución de experimentos en los datos de entrenamiento y puntuación. Una vez que esté satisfecho con los resultados de la formación y la puntuación, puede crear una fórmula y, además, publicarla como modelo utilizando la fórmula para modelar la funcionalidad.
 
 >[!NOTE]
 >
->El bloc de notas [!UICONTROL Generador de fórmulas] admite trabajar con todos los formatos de archivo, pero actualmente la funcionalidad Crear fórmula solo admite [!DNL Python].
+>El bloc de notas [!UICONTROL Recipe Builder] admite trabajar con todos los formatos de archivo, pero actualmente la funcionalidad Crear fórmula sólo admite [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-Al seleccionar el bloc de notas [!UICONTROL Generador de fórmulas] del iniciador, el bloc de notas se abre en una nueva ficha.
+Al seleccionar el bloc de notas [!UICONTROL Recipe Builder] del iniciador, el bloc de notas se abre en una nueva ficha.
 
-En la nueva pestaña del bloc de notas de la parte superior, se carga una barra de herramientas que contiene tres acciones adicionales: **[!UICONTROL Entrenar]**, **[!UICONTROL Puntuación]** y **[!UICONTROL Crear fórmula]**. Estos iconos sólo aparecen en el bloc de notas [!UICONTROL Generador de fórmulas]. Se proporciona más información sobre estas acciones [en la sección de formación y puntuación](#training-and-scoring) después de crear la fórmula en el bloc de notas.
+En la nueva ficha del bloc de notas de la parte superior, se carga una barra de herramientas que contiene tres acciones adicionales: **[!UICONTROL Train]**, **[!UICONTROL Score]** y **[!UICONTROL Create Recipe]**. Estos iconos sólo aparecen en el bloc de notas [!UICONTROL Recipe Builder]. Se proporciona más información sobre estas acciones [en la sección de formación y puntuación](#training-and-scoring) después de crear la fórmula en el bloc de notas.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Introducción al bloc de notas [!UICONTROL Generador de fórmulas]
+## Introducción al bloc de notas [!UICONTROL Recipe Builder]
 
 En la carpeta de recursos proporcionada hay un modelo de tendencia de Luma `propensity_model.ipynb`. Con la opción Cargar bloc de notas en JupyterLab, cargue el modelo proporcionado y abra el bloc de notas.
 
@@ -69,7 +69,7 @@ El resto de este tutorial abarca los siguientes archivos predefinidos en el bloc
 
 El siguiente tutorial de vídeo explica el portátil del modelo de tendencia de Luma:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452495?captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### Archivo de requisitos {#requirements-file}
 
@@ -139,6 +139,7 @@ Para obtener un tutorial detallado sobre el uso del cargador de datos `platform_
 ### Fuentes externas {#external-sources}
 
 Esta sección muestra cómo importar un archivo JSON o CSV a un objeto pandas. La documentación oficial de la biblioteca de pandas se puede encontrar aquí:
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -178,6 +179,7 @@ def load(config_properties):
 >[!NOTE]
 >
 >Como se menciona en la [sección del archivo de configuración](#configuration-files), se establecen los siguientes parámetros de configuración al obtener acceso a los datos de Experience Platform mediante `client_context = get_client_context(config_properties)`:
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -257,7 +259,7 @@ El archivo `datasaver.py` contiene la función `save()` y se usa para guardar la
 
 Cuando haya terminado de realizar cambios en el bloc de notas y desee entrenar la fórmula, puede seleccionar los botones asociados en la parte superior de la barra para crear una ejecución de formación en la celda. Al seleccionar el botón, aparece un registro de comandos y salidas del script de formación en el bloc de notas (en la celda `evaluator.py`). Conda instala primero todas las dependencias y, a continuación, se inicia la formación.
 
-Tenga en cuenta que debe ejecutar la formación al menos una vez antes de poder ejecutar la puntuación. Si se selecciona el botón **[!UICONTROL Ejecutar puntuación]**, se puntuará el modelo entrenado que se generó durante la formación. El script de puntuación aparece en `datasaver.py`.
+Tenga en cuenta que debe ejecutar la formación al menos una vez antes de poder ejecutar la puntuación. Si se selecciona el botón **[!UICONTROL Run Scoring]**, la puntuación se obtendrá en el modelo entrenado que se generó durante la formación. El script de puntuación aparece en `datasaver.py`.
 
 Para fines de depuración, si desea ver el resultado oculto, agregue `debug` al final de la celda de salida y vuelva a ejecutarlo.
 
@@ -265,15 +267,15 @@ Para fines de depuración, si desea ver el resultado oculto, agregue `debug` al 
 
 ## Crear una fórmula {#create-recipe}
 
-Cuando haya terminado de editar la fórmula y esté satisfecho con la salida de formación/puntuación, puede crear una fórmula a partir del bloc de notas seleccionando **[!UICONTROL Crear fórmula]** en la parte superior derecha.
+Cuando haya terminado de editar la fórmula y esté satisfecho con la salida de formación/puntuación, puede crear una fórmula a partir del bloc de notas seleccionando **[!UICONTROL Create Recipe]** en la parte superior derecha.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Después de seleccionar **[!UICONTROL Crear fórmula]**, se le pedirá que escriba un nombre de fórmula. Este nombre representa la fórmula real creada en [!DNL Experience Platform].
+Después de seleccionar **[!UICONTROL Create Recipe]**, se le pedirá que escriba un nombre de fórmula. Este nombre representa la fórmula real creada en [!DNL Experience Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Una vez que selecciones **[!UICONTROL Ok]**, comienza el proceso de creación de la fórmula. Esto puede tardar algún tiempo y se muestra una barra de progreso en lugar del botón Crear fórmula. Una vez finalizado, puede seleccionar el botón **[!UICONTROL Ver fórmulas]** para llevarlo a la ficha **[!UICONTROL Recetas]** en **[!UICONTROL Modelos ML]**
+Una vez que seleccione **[!UICONTROL Ok]**, comenzará el proceso de creación de la fórmula. Esto puede tardar algún tiempo y se muestra una barra de progreso en lugar del botón Crear fórmula. Una vez finalizado, puede seleccionar el botón **[!UICONTROL View Recipes]** para llevarlo a la ficha **[!UICONTROL Recipes]** en **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -283,8 +285,8 @@ Una vez que selecciones **[!UICONTROL Ok]**, comienza el proceso de creación de
 > - No edite la línea `%%writefile` en la parte superior de las celdas del archivo
 > - No cree fórmulas en distintos blocs de notas al mismo tiempo
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
-Al completar este tutorial, ha aprendido a crear un modelo de aprendizaje automático en el bloc de notas [!UICONTROL Creador de fórmulas]. También ha aprendido a utilizar el bloc de notas en el flujo de trabajo de fórmulas.
+Al completar este tutorial, ha aprendido a crear un modelo de aprendizaje automático en el bloc de notas [!UICONTROL Recipe Builder]. También ha aprendido a utilizar el bloc de notas en el flujo de trabajo de fórmulas.
 
 Para continuar aprendiendo a trabajar con recursos dentro de [!DNL Data Science Workspace], visite la lista desplegable de fórmulas y modelos de [!DNL Data Science Workspace].

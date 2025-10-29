@@ -3,10 +3,10 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión de personalización personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de audiencia de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a audiencias de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 9%
+source-wordcount: '923'
+ht-degree: 10%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 9%
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
-| Mayo de 2023 | Actualización de funcionalidad y documentación | En mayo de 2023, la conexión de **[!UICONTROL Personalización personalizada]** admite la [personalización basada en atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) y está disponible para todos los clientes. |
+| Mayo de 2023 | Actualización de funcionalidad y documentación | A partir de mayo de 2023, la conexión **[!UICONTROL Custom personalization]** admite la [personalización basada en atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) y está disponible para todos los clientes. |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, debe usar la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) al configurar el destino de **[!UICONTROL Personalization personalizado]** para la personalización basada en atributos. Todas las llamadas a la API de Edge Network deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
+>Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, debe usar la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) al configurar el destino **[!UICONTROL Custom Personalization]** para la personalización basada en atributos. Todas las llamadas a la API de Edge Network deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 >
 ><br>Puede recuperar atributos de perfil a través de la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) agregando una integración del lado del servidor que utiliza la misma secuencia de datos que ya está utilizando para su implementación de SDK web o móvil.
 >
@@ -59,9 +59,9 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 | Elemento | Tipo | Notas |
----------|----------|---------|
+|---------|----------|---------|
 | Tipo de exportación | **[!DNL Profile request]** | Está solicitando todas las audiencias asignadas en el destino de personalización personalizado para un solo perfil. Se pueden configurar diferentes destinos de personalización personalizados para diferentes [flujos de datos de recopilación de datos de Adobe](../../../datastreams/overview.md). |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Conectar con el destino {#connect}
 
@@ -73,7 +73,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -81,22 +81,22 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
-* **[!UICONTROL Nombre]**: rellene el nombre preferido para este destino.
-* **[!UICONTROL Descripción]**: escribe una descripción para el destino. Por ejemplo, puede mencionar para qué campaña está usando este destino. Este campo es opcional.
-* **[!UICONTROL Alias de integración]**: Este valor se envía a Experience Platform Web SDK como nombre de objeto JSON.
-* **[!UICONTROL Flujo de datos]**: determina en qué flujo de datos de recopilación de datos se incluirán las audiencias en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Consulte [Configuración de una secuencia de datos](../../../datastreams/overview.md) para obtener más información.
+* **[!UICONTROL Name]**: rellene el nombre preferido para este destino.
+* **[!UICONTROL Description]**: escriba una descripción para el destino. Por ejemplo, puede mencionar para qué campaña está usando este destino. Este campo es opcional.
+* **[!UICONTROL Integration alias]**: este valor se envía a Experience Platform Web SDK como nombre de objeto JSON.
+* **[!UICONTROL Datastream]**: esto determina en qué secuencia de datos de recopilación de datos se incluirán las audiencias en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Consulte [Configuración de una secuencia de datos](../../../datastreams/overview.md) para obtener más información.
 
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar perfiles y audiencias para destinos personalizados Edge](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -160,11 +160,11 @@ alloy("sendEvent", {
   });
 ```
 
-### Respuesta de ejemplo para [!UICONTROL Personalization personalizado con atributos]
+### Respuesta de ejemplo para [!UICONTROL Custom Personalization With Attributes]
 
-Al usar **[!UICONTROL Personalization personalizado con atributos]**, la respuesta de la API será similar al ejemplo siguiente.
+Al usar **[!UICONTROL Custom Personalization With Attributes]**, la respuesta de la API será similar al ejemplo siguiente.
 
-La diferencia entre **[!UICONTROL Personalization personalizado con atributos]** y **[!UICONTROL Personalization personalizado]** es la inclusión de la sección `attributes` en la respuesta de la API.
+La diferencia entre **[!UICONTROL Custom Personalization With Attributes]** y **[!UICONTROL Custom Personalization]** es la inclusión de la sección `attributes` en la respuesta de la API.
 
 ```json
 [

@@ -3,9 +3,9 @@ title: Extremo de API de búsqueda de segmentos
 description: En la API del servicio de segmentación de Adobe Experience Platform, la búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolvérselos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye llamadas de API de ejemplo para realizar acciones básicas mediante la API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1178'
 ht-degree: 2%
 
 ---
@@ -217,15 +217,17 @@ Una respuesta correcta devuelve el estado HTTP 200 con información estructural 
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, ahora comprende mejor cómo funciona la búsqueda de segmentos.
 
 ## Apéndice {#appendix}
 
-Las secciones siguientes proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. AAM Por lo tanto, para buscar una definición de segmento denominada o [!DNL Platform], debe utilizar la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
+Las secciones siguientes proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. Por lo tanto, para buscar una definición de segmento llamada AAM o [!DNL Platform], debe usar la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
 
->  Para prácticas recomendadas, la expresión de búsqueda debe estar codificada en el HTML, como en el ejemplo anterior.
+>[!NOTE]
+>
+>Para prácticas recomendadas, la expresión de búsqueda debe estar codificada en HTML, como en el ejemplo anterior.
 
 ### Campos de búsqueda {#search-fields}
 
@@ -244,7 +246,9 @@ En la tabla siguiente se enumeran los campos en los que se puede buscar dentro d
 
 En la tabla siguiente se enumeran los aspectos específicos del funcionamiento de las consultas de búsqueda al utilizar la API de búsqueda de segmentos.
 
->  Los siguientes ejemplos se muestran en un formato no codificado en el HTML para una mejor claridad. Para obtener prácticas recomendadas, el HTML de codifica la expresión de búsqueda.
+>[!NOTE]
+>
+>Los siguientes ejemplos se muestran en un formato no codificado en HTML para una mejor claridad. Para conocer las prácticas recomendadas, HTML debe codificar la expresión de búsqueda.
 
 | Ejemplo de expresión de búsqueda | Descripción |
 | ------------------------- | ----------- |

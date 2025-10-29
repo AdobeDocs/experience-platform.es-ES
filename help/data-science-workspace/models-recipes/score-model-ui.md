@@ -5,9 +5,9 @@ title: Puntuación de un modelo en la IU de Workspace de ciencia de datos
 type: Tutorial
 description: La puntuación en Adobe Experience Platform Data Science Workspace se puede lograr alimentando los datos de entrada en un modelo entrenado existente. A continuación, los resultados de puntuación se almacenan y pueden verse en un conjunto de datos de salida especificado como un nuevo lote.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '641'
 ht-degree: 1%
 
 ---
@@ -32,21 +32,21 @@ Este tutorial requiere un modelo entrenado. Si no tiene un modelo entrenado, sig
 
 ## Crear una nueva ejecución de puntuación
 
-Se crea una ejecución de puntuación mediante configuraciones optimizadas de una ejecución aprendizaje previamente completada y evaluada. El conjunto de configuraciones óptimas para un modelo generalmente se determina revisando aprendizaje ejecutando métricas de evaluación.
+Se crea una ejecución de puntuación utilizando configuraciones optimizadas de una ejecución de formación previamente completada y evaluada. El conjunto de configuraciones óptimas de un modelo se suele determinar revisando las métricas de evaluación de ejecución de formación.
 
 Busque la ejecución de formación más óptima para utilizar sus configuraciones de puntuación. A continuación, abra la ejecución de formación deseada seleccionando el hipervínculo adjunto a su nombre.
 
 ![Seleccionar ejecución de formación](../images/models-recipes/score/select-run.png)
 
-En la ficha **[!UICONTROL Evaluación]** de la ejecución de formación, seleccione **[!UICONTROL Puntuación]** en la parte superior derecha de la pantalla. Comienza un nuevo flujo de trabajo de puntuación.
+En la ficha **[!UICONTROL Evaluation]** de la ejecución de formación, seleccione **[!UICONTROL Score]** en la parte superior derecha de la pantalla. Comienza un nuevo flujo de trabajo de puntuación.
 
 ![](../images/models-recipes/score/training_run_overview.png)
 
-Seleccione el conjunto de datos de puntuación de entrada y seleccione **[!UICONTROL Siguiente]**.
+Seleccione el conjunto de datos de puntuación de entrada y seleccione **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/score/scoring_input.png)
 
-Seleccione el conjunto de datos de puntuación de salida, que es el conjunto de datos de salida dedicado donde se almacenan los resultados de puntuación. Confirme su selección y seleccione **[!UICONTROL Siguiente]**.
+Seleccione el conjunto de datos de puntuación de salida, que es el conjunto de datos de salida dedicado donde se almacenan los resultados de puntuación. Confirme la selección y seleccione **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/score/scoring_results.png)
 
@@ -55,25 +55,26 @@ Tenga en cuenta que no puede quitar los parámetros heredados definidos durante 
 
 ![configuración](../images/models-recipes/score/configuration.png)
 
-Revise y confirme las configuraciones de puntuación y seleccione **[!UICONTROL Finalizar]** para crear y ejecutar la ejecución de puntuación. Se le dirigirá a la ficha **[!UICONTROL Ejecuciones de puntuación]** y se mostrará la nueva ejecución de puntuación con el estado **[!UICONTROL Pendiente]**.
+Revise y confirme las configuraciones de puntuación y seleccione **[!UICONTROL Finish]** para crear y ejecutar la ejecución de puntuación. Se le dirigirá a la ficha **[!UICONTROL Scoring Runs]** y se mostrará la nueva ejecución de puntuación con el estado **[!UICONTROL Pending]**.
 
 ![ficha ejecuciones de puntuación](../images/models-recipes/score/scoring_runs_tab.png)
 
 Una ejecución de puntuación se puede mostrar con uno de los siguientes estados:
+
 - Pendiente
 - Completar
 - Error
 - Ejecutando
 
-Los estados se actualizan automáticamente. Continúe con el paso siguiente si el estado es **[!UICONTROL Completado]** o **[!UICONTROL Error]**.
+Los estados se actualizan automáticamente. Continúe con el paso siguiente si el estado es **[!UICONTROL Complete]** o **[!UICONTROL Failed]**.
 
 ## Ver resultados de puntuación
 
-Para vista resultados de puntuación, inicio seleccionando una carrera aprendizaje.
+Para ver los resultados de la puntuación, comience seleccionando una ejecución de formación.
 
-![Seleccionar aprendizaje ejecutar](../images/models-recipes/score/select-run.png)
+![Seleccionar ejecución de formación](../images/models-recipes/score/select-run.png)
 
-Se le redirigirá a la página **[!UICONTROL Evaluación]** de ejecuciones de formación. Cerca de la parte superior de la página de evaluación de la ejecución de formación, seleccione la ficha **[!UICONTROL Ejecuciones de puntuación]** para ver una lista de las ejecuciones de puntuación existentes.
+Se le redirigirá a la página de ejecuciones de formación **[!UICONTROL Evaluation]**. Cerca de la parte superior de la página de evaluación de la ejecución de formación, seleccione la pestaña **[!UICONTROL Scoring Runs]** para ver una lista de las ejecuciones de puntuación existentes.
 
 ![página de evaluación](../images/models-recipes/score/view_scoring_runs.png)
 
@@ -81,15 +82,15 @@ A continuación, seleccione una ejecución de puntuación para ver los detalles 
 
 ![ejecutar detalles](../images/models-recipes/score/view_details.png)
 
-Si la ejecución de puntuación seleccionada tiene el estado &quot;Completada&quot; o &quot;Fallida&quot;, está disponible el vínculo **[!UICONTROL Ver registros de actividad]**. Si falla una ejecución de puntuación, los registros de ejecución pueden proporcionar información útil para determinar el motivo del error. Para descargar los registros de ejecución, seleccione **[!UICONTROL Ver registros de actividad]**.
+Si la ejecución de puntuación seleccionada tiene el estado &quot;Completada&quot; o &quot;Fallida&quot;, el vínculo **[!UICONTROL View Activity Logs]** pasa a estar disponible. Si falla una ejecución de puntuación, los registros de ejecución pueden proporcionar información útil para determinar el motivo del error. Para descargar los registros de ejecución, seleccione **[!UICONTROL View Activity Logs]**.
 
 ![Seleccionar registros de vista](../images/models-recipes/score/view_logs.png)
 
-Aparece la ventana emergente **[!UICONTROL Ver registros de actividad]**. Seleccione una URL para descargar automáticamente los registros asociados.
+Aparece la ventana emergente **[!UICONTROL View activity logs]**. Seleccione una URL para descargar automáticamente los registros asociados.
 
 ![](../images/models-recipes/score/activity_logs.png)
 
-También tiene la opción de ver los resultados de puntuación seleccionando **[!UICONTROL Vista previa del conjunto de datos de resultados de puntuación]**.
+También tiene la opción de ver los resultados de puntuación seleccionando **[!UICONTROL Preview scoring results dataset]**.
 
 ![Seleccionar resultados de vista previa](../images/models-recipes/score/view_results.png)
 
@@ -97,8 +98,8 @@ Se proporciona una previsualización del conjunto de datos de salida.
 
 ![resultados de vista previa](../images/models-recipes/score/preview_results.png)
 
-Para obtener el conjunto completo de resultados de puntuación, seleccione el vínculo **[!UICONTROL Conjunto de datos de resultados de puntuación]** que se encuentra en la columna derecha.
+Para obtener el conjunto completo de resultados de puntuación, seleccione el vínculo **[!UICONTROL Scoring Results Dataset]** que se encuentra en la columna derecha.
 
-## Pasos siguientes
+## Próximos pasos
 
-Este tutorial guiarle a través de los pasos para puntuar los datos utilizando un modelo entrenado en [!DNL Data Science Workspace]. Siga el tutorial de [publicar un modelo como servicio en el IU](./publish-model-service-ui.md) para permitir que los usuarios de su organización puntúen datos proporcionando un acceso fácil a un servicio de aprendizaje automático.
+Este tutorial lo guió para puntuar los datos mediante un modelo entrenado en [!DNL Data Science Workspace]. Siga el tutorial de [publicación de un modelo como servicio en la interfaz de usuario](./publish-model-service-ui.md) para permitir que los usuarios de su organización puntúen los datos proporcionando un acceso fácil a un servicio de aprendizaje automático.

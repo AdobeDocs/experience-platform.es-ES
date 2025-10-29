@@ -2,7 +2,7 @@
 title: Ejemplos de conjuntos de datos
 description: Los conjuntos de datos de ejemplo del servicio de consultas le permiten realizar consultas exploratorias de big data con un tiempo de procesamiento muy reducido a costa de la precisión de la consulta. Esta guía proporciona información sobre cómo administrar los ejemplos para el procesamiento aproximado de consultas
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -18,12 +18,12 @@ Dado que muchos usuarios no necesitan una respuesta exacta para una operación d
 Para ayudarle a administrar los ejemplos para un procesamiento de consultas aproximado, el Servicio de consultas admite las siguientes operaciones para ejemplos de conjuntos de datos:
 
 - [Ejemplos de conjuntos de datos](#dataset-samples)
-   - [Introducción {#get-started}](#getting-started-get-started)
-   - [Crear una muestra de conjunto de datos aleatorio uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [Opcionalmente, especifique un criterio de filtro {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [Ver la lista de muestras {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
-   - [Consultar el conjunto de datos de ejemplo {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
-   - [Eliminar muestras del conjunto de datos {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
+   - [Introducción](#getting-started-get-started)
+   - [Crear una muestra de conjunto de datos aleatorio uniforme](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Especificar opcionalmente un criterio de filtro](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Ver la lista de muestras](#view-the-list-of-samples-view-list-of-samples)
+   - [Consultar el conjunto de datos de ejemplo](#query-the-sample-dataset-query-sample-datasets)
+   - [Eliminar muestras de conjuntos de datos](#delete-dataset-samples-delete-a-sample)
 
 ## Introducción {#get-started}
 
@@ -83,7 +83,7 @@ La lista de ejemplos de conjuntos de datos se muestra con el formato del ejemplo
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```

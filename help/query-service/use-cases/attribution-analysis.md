@@ -2,7 +2,7 @@
 title: Análisis de atribución
 description: En este documento se explica cómo puede utilizar el servicio de consulta para crear una técnica de medición de la eficacia de marketing basada en el modelo de atribución de marketing de primer y último contacto.
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -19,10 +19,10 @@ Los ejemplos de SQL de este documento son consultas que se utilizan normalmente 
 
 * [Información general sobre el conector de origen de Adobe Analytics para los datos del grupo de informes](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [La documentación de asignaciones de campos de Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) proporciona más información sobre la ingesta y asignación de datos de análisis para su uso con el servicio de consultas.
-* [Descripción general del Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=es)
-* [Guía del panel de atribución de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=es).
+* [Información general de Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Guía del panel de atribución de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-Encontrará una explicación de los parámetros dentro de la función `OVER()` en la sección [funciones de ventana](../sql/adobe-defined-functions.md#window-functions). El [Glosario de términos de Commerce y de marketing de Adobe](https://business.adobe.com/glossary/index.html) también puede ser útil.
+Encontrará una explicación de los parámetros dentro de la función `OVER()` en la sección [funciones de ventana](../sql/adobe-defined-functions.md#window-functions). El [Glosario de términos de Commerce y Adobe Marketing](https://business.adobe.com/glossary/index.html) también puede ser útil.
 
 Para cada uno de los siguientes casos de uso, se proporciona un ejemplo de consulta SQL parametrizado como plantilla para que la personalice. Proporcione parámetros dondequiera que vea `{ }` en los ejemplos de SQL que le interese evaluar.
 
@@ -72,7 +72,7 @@ La siguiente consulta devuelve el valor de atribución de primer contacto y los 
 
 >[!NOTE]
 >
->El ID del Experience Cloud (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
+>El Experience Cloud ID (ECID) también se conoce como MCID y sigue utilizándose en áreas de nombres.
 
 **Sintaxis de consulta**
 
@@ -102,7 +102,7 @@ En los resultados siguientes, el código de seguimiento inicial `em:946426` se t
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:06:12.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:02.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:55.0 |              | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
@@ -149,7 +149,7 @@ En los resultados que se muestran a continuación, el código de seguimiento del
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:06:12.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:06:12.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:02.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:55.0 |              | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
@@ -200,7 +200,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id               |       timestamp       | trackingCode |                   first_touch                   
-----------------------------------+-----------------------+--------------+-------------------------------------------------
+|----------------------------------+-----------------------+--------------+-------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -251,7 +251,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -302,7 +302,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+------------------------------------------------
+|-----------------------------------+-----------------------+--------------+------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
@@ -351,7 +351,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)

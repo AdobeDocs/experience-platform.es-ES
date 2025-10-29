@@ -5,7 +5,7 @@ title: Crear el esquema de ventas minoristas y el conjunto de datos
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales de Adobe Experience Platform Data Science Workspace. Una vez finalizados, el esquema y los conjuntos de datos de ventas minoristas estarán disponibles para usted y los miembros de su organización en Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 2%
@@ -26,6 +26,7 @@ Este tutorial le proporciona los requisitos previos y los recursos necesarios pa
 ## Introducción
 
 Antes de iniciar este tutorial, debe cumplir los siguientes requisitos previos:
+
 - Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización en [!DNL Experience Platform], comuníquese con el administrador del sistema antes de continuar.
 - Autorización para hacer llamadas a la API [!DNL Experience Platform]. Complete el tutorial [Autenticar y acceder a las API de Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para obtener los siguientes valores y poder completar correctamente este tutorial:
    - Autorización: `{ACCESS_TOKEN}`
@@ -33,7 +34,7 @@ Antes de iniciar este tutorial, debe cumplir los siguientes requisitos previos:
    - x-gw-ims-org-id: `{ORG_ID}`
    - Secreto de cliente: `{CLIENT_SECRET}`
    - Certificado de cliente: `{PRIVATE_KEY}`
-- Datos de muestra y archivos de origen para la [fórmula de ventas minoristas](../pre-built-recipes/retail-sales.md). Descargue los recursos necesarios para este y otros [!DNL Data Science Workspace] tutoriales desde el [repositorio Git público de Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
+- Datos de muestra y archivos de origen para la [fórmula de ventas minoristas](../pre-built-recipes/retail-sales.md). Descargue los recursos necesarios para este y otros [!DNL Data Science Workspace] tutoriales del [repositorio Git público de Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
 - [Python >= 2.7](https://www.python.org/downloads/) y los siguientes [!DNL Python] paquetes:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
@@ -109,7 +110,7 @@ El esquema y los conjuntos de datos de ventas minoristas se crean automáticamen
    >
    >El script puede tardar varios minutos en completarse.
 
-## Pasos siguientes
+## Próximos pasos
 
 Una vez completado correctamente el script de bootstrap, los esquemas y conjuntos de datos de entrada y salida de ventas minoristas se pueden ver en [!DNL Experience Platform]. Ver el [tutorial de vista previa de datos de esquema](./preview-schema-data.md)
 para obtener más información.
@@ -117,6 +118,7 @@ para obtener más información.
 También ha ingerido correctamente datos de muestra de ventas minoristas en [!DNL Experience Platform] mediante el script de arranque proporcionado.
 
 Para seguir trabajando con los datos introducidos:
+
 - [Analice sus datos con Jupyter Notebooks](../jupyterlab/analyze-your-data.md)
    - Utilice Jupyter Notebooks en Data Science Workspace para acceder, explorar, visualizar y comprender sus datos.
 - [Empaquetar archivos de origen en una fórmula](./package-source-files-recipe.md)

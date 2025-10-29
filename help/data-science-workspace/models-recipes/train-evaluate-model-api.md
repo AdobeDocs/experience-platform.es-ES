@@ -5,7 +5,7 @@ title: Entrenar y evaluar un modelo con la API de aprendizaje automático de Sen
 type: Tutorial
 description: Este tutorial muestra cómo crear, entrenar y evaluar un modelo mediante llamadas a la API de aprendizaje automático de Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Este tutorial muestra cómo crear, entrenar y evaluar un modelo mediante llamada
 
 Siga la fórmula [Importar una fórmula empaquetada mediante la API](./import-packaged-recipe-api.md) para crear un motor, lo cual es necesario para entrenar y evaluar un modelo mediante la API.
 
-Siga el [tutorial de autenticación de API de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para empezar a realizar llamadas de API.
+Siga el [tutorial de autenticación de la API de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para empezar a realizar llamadas a la API.
 
 En el tutorial, ahora debe tener los siguientes valores:
 
@@ -438,6 +438,7 @@ La llamada de GET proporcionará el estado en el parámetro `state` como se mues
 `{EXPERIMENT_ID}`: ID que representa el experimento en el que se encuentra la ejecución del experimento.
 
 Además del estado `DONE`, otros estados incluyen:
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`
@@ -493,7 +494,7 @@ La respuesta representa el modelo entrenado que se creó.
 
 ### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un experimento programado antes de su `endTime`, se puede hacer consultando una solicitud del DELETE a `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su `endTime`, se puede hacer consultando una petición DELETE al `{EXPERIMENT_ID}`
 
 **Solicitud**
 
@@ -524,6 +525,6 @@ A continuación se muestra la respuesta que notifica que el experimento se ha el
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Este tutorial trata sobre cómo consumir las API para crear un motor, un experimento, ejecuciones de experimentos programadas y modelos formados. En el [próximo ejercicio](./score-model-api.md), hará predicciones al puntuar un nuevo conjunto de datos usando el modelo entrenado de mayor rendimiento.

@@ -2,11 +2,11 @@
 keywords: Experience Platform;guía para desarrolladores;Data Science Workspace;temas populares;aprendizaje automático en tiempo real;
 solution: Experience Platform
 title: Información general sobre el aprendizaje automático en tiempo real
-description: El aprendizaje automático en tiempo real puede mejorar en gran medida la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible aprovechando la inferencia en tiempo real y el aprendizaje continuo en el Edge Network Experience Platform.
+description: El aprendizaje automático en tiempo real puede mejorar en gran medida la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible gracias a la inferencia en tiempo real y al aprendizaje continuo en Experience Platform Edge Network.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '574'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ Cree un modelo de aprendizaje automático en tiempo real creándolo desde cero o
 
 ### Implementación
 
-Implemente su modelo en [!DNL Edge Network] para crear un servicio de aprendizaje automático en tiempo real en la [!UICONTROL Galería de servicios] mediante el extremo de la API de predicción.
+Implemente su modelo en [!DNL Edge Network] para crear un servicio de aprendizaje automático en tiempo real en [!UICONTROL Service Gallery] mediante el extremo de la API de predicción.
 
 ### Inferencia
 
@@ -65,7 +65,8 @@ El aprendizaje automático en tiempo real se encuentra actualmente en fase alfa.
 
 >[!NOTE]
 >
-> Limitaciones del Alpha:
+> Limitaciones de Alpha:
+>
 > - Actualmente, solo se admiten modelos basados en ONNX.
 > - Las funciones utilizadas en los nodos no se pueden serializar. Por ejemplo, una función lambda utilizada en un nodo Pandas.
 > - Hay una suspensión de 20 segundos después de que la implementación de [!DNL Edge] se realice manualmente.
@@ -81,6 +82,6 @@ El aprendizaje automático en tiempo real se encuentra actualmente en fase alfa.
 | **Nodos de creación** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **Tiempos de ejecución de puntuación** | ONNX |
 
-## Pasos siguientes
+## Próximos pasos
 
 Puede empezar por seguir la guía de [introducción](./getting-started.md). Esta guía le explica cómo configurar todos los requisitos previos necesarios para crear un modelo de aprendizaje automático en tiempo real.

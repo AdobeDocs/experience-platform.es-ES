@@ -5,7 +5,7 @@ title: Directrices generales para la ejecución de consultas en el servicio de c
 type: Tutorial
 description: Este documento describe los detalles importantes que deben conocerse al escribir consultas en Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 2%
@@ -86,7 +86,7 @@ Las dos consultas de ejemplo anteriores devuelven un objeto aplanado, en lugar d
 
 ```console
               endUserIds._experience.mcid   
---------------------------------------------------------
+|--------------------------------------------------------
  (48168239533518554367684086979667672499,"(ECID)",true)
 (1 row)
 ```
@@ -109,7 +109,7 @@ LIMIT 1
 
 ```console
      endUserIds._experience.mcid.id 
-----------------------------------------
+|----------------------------------------
  48168239533518554367684086979667672499
 (1 row)
 ```
@@ -165,7 +165,7 @@ FROM
 
 >[!NOTE]
 >
->No se pueden usar comillas dobles **1&rbrace; con el acceso al campo de notación de puntos.**
+>No se pueden usar comillas dobles **1} con el acceso al campo de notación de puntos.**
 
 ### Comillas anteriores
 
@@ -210,7 +210,7 @@ El comando `\d` muestra la vista estándar [!DNL PostgreSQL] para enumerar tabla
 ```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
---------+-----------------+-------+----------
+|--------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres
  public | luma_postvalues | table | postgres
 (2 rows)
@@ -222,7 +222,7 @@ El comando `SHOW TABLES` es un comando personalizado que proporciona informació
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
------------------+--------------------------+----------------+-------------+----------
+|-----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues | 5c86b896b3c162151785b43c | Luma midValues |             | false
 (2 rows)
@@ -237,7 +237,7 @@ El ejemplo siguiente muestra la información de esquema de la tabla `luma_midval
 ```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
--------------------+-----------------------------+-----------+----------+---------
+|-------------------+-----------------------------+-----------+----------+---------
  timestamp         | timestamp                   |           |          | 
  _id               | text                        |           |          | 
  productlistitems  | anyarray                    |           |          | 
@@ -262,7 +262,7 @@ El ejemplo siguiente muestra información adicional para la columna `web` y se i
 ```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
-----------------+-----------------------------------+-----------+----------+---------
+|----------------+-----------------------------------+-----------+----------+---------
  webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
  webreferrer    | web_webreferrer                   |           |          | 
 ```
@@ -317,7 +317,7 @@ El servicio de consulta admite la anulación de duplicación de datos o la elimi
 
 El servicio de consulta estandariza los datos persistentes en Adobe Experience Platform mediante el formato de marca de tiempo UTC. Para obtener más información sobre cómo traducir el requisito de zona horaria a y desde una marca de tiempo UTC, consulte la sección de [preguntas frecuentes sobre cómo cambiar la zona horaria a y desde una marca de tiempo UTC](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, se le han presentado algunas consideraciones importantes al escribir consultas con [!DNL Query Service]. Para obtener más información sobre cómo usar la sintaxis SQL para escribir sus propias consultas, lea la [documentación sobre sintaxis SQL](../sql/syntax.md).
 

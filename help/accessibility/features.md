@@ -4,7 +4,7 @@ title: Funciones generales de accesibilidad en Experience Platform
 type: Documentation
 description: Obtenga más información acerca de las funciones de accesibilidad generales que admite Adobe Experience Platform, como la navegación mediante el teclado, las paletas de color y el contraste, y la compatibilidad con tecnología de asistencia.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
@@ -24,6 +24,7 @@ Los usuarios con discapacidad suelen depender del hardware y el software, conoci
 Experience Platform se esfuerza por admitir la accesibilidad total del teclado.
 
 Los siguientes elementos de navegación facilitan la accesibilidad:
+
 * El tabulador permite desplazarse entre elementos de la interfaz de usuario, secciones y grupos de menús.
 * Las teclas de flecha se mueven dentro de los grupos de menús para definir el enfoque en elementos activos individuales.
 * Mayús + Tab se mueve hacia atrás en el orden de tabulación.

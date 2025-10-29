@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;servi
 title: Enumeración de visitantes por número de vistas de página
 description: Obtenga información sobre cómo escribir consultas que utilizan eventos de experiencia para recuperar una lista de visitantes organizada por el número de vistas de página.
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Los resultados de la consulta se muestran en la siguiente tabla.
 
 ```console
                id                  | pageViews
------------------------------------+-----------
+|-----------------------------------+-----------
  457C3510571E5930-69AA721C4CBF9339 |     706.0
  776F85658792C017-6491FE6570382A01 |     700.0
  6BEC9C6AB52E779F-28F5B023113F2C85 |     654.0
@@ -48,7 +48,7 @@ Los resultados de la consulta se muestran en la siguiente tabla.
 (10 rows)
 ```
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este documento, entiende mejor cómo usar el servicio de consultas con [!DNL Experience Events] para enumerar a los usuarios que han visto la mayoría de las páginas.
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;servi
 title: Ver un informe de resumen de un visitante específico
 description: El siguiente documento proporciona ejemplos de consultas que implican eventos de experiencia en el servicio de consultas de Adobe Experience Platform.
 exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 1%
@@ -43,11 +43,11 @@ Los resultados de la consulta se muestran en la siguiente tabla.
 
 ```console
                id                 | pageViews |   A   |   B   |   C   | viewedParkas
-----------------------------------+-----------+-------+-------+-------+--------------
+|----------------------------------+-----------+-------+-------+-------+--------------
 457C3510571E5930-69AA721C4CBF9339 |     706.0 | 83.0  |  7.0  | 38.0  |          22
 ```
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este documento, entiende mejor cómo usar el servicio de consultas con [!DNL Experience Events] para ver un informe agregado de valores de análisis para un usuario especificado.
 

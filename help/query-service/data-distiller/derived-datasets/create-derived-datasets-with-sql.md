@@ -2,7 +2,7 @@
 title: Crear conjuntos de datos derivados con SQL
 description: Obtenga información sobre cómo utilizar SQL para crear un conjunto de datos derivado habilitado para el perfil y cómo utilizar el conjunto de datos para el perfil del cliente en tiempo real y el servicio de segmentación.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -167,7 +167,7 @@ A continuación se muestra un ejemplo de la salida de este comando:
 
 ```sql
        name          |        dataSetId         |     dataSet    | description | labels 
----------------------+--------------------------+----------------+-------------+----------
+|---------------------+--------------------------+----------------+-------------+----------
  luma_midvalues      | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues     | 5c86b896b3c162151785b43c | Luma midValues |             | false
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >La creación del grupo de campos mediante SQL fallará si el indicador `label` no se proporciona en la instrucción o si el grupo de campos ya existe.
->Asegúrese de que la consulta incluye una cláusula `IF NOT EXISTS` para evitar que la consulta falle porque el grupo de campos ya existe.
+>>Asegúrese de que la consulta incluye una cláusula `IF NOT EXISTS` para evitar que la consulta falle porque el grupo de campos ya existe.
 
 Un ejemplo del mundo real podría parecer similar al que se ve a continuación.
 
@@ -227,7 +227,7 @@ A continuación se muestra un ejemplo de la salida de este comando:
 
 ```sql
        name                      |        fieldgroupId                             |     owner      |
----------------------------------+-------------------------------------------------+-----------------
+|---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
  AJO Classification Fields       | _experience.journeyOrchestration.classification | Luma midValues |
@@ -235,6 +235,6 @@ A continuación se muestra un ejemplo de la salida de este comando:
 (4 rows)
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer este documento, tiene una mejor comprensión de cómo utilizar SQL para crear un perfil y un conjunto de datos habilitado para la actualización basado en conjuntos de datos derivados. Ya está listo para usar este conjunto de datos con flujos de trabajo de ingesta por lotes para realizar actualizaciones en los datos de perfil. Para obtener más información acerca de la ingesta de datos en Adobe Experience Platform, comience por leer la [descripción general de la ingesta de datos](../../../ingestion/home.md).

@@ -1,7 +1,8 @@
 ---
 title: Predecir la pérdida de clientes con una regresión logística basada en SQL
 description: Aprenda a predecir la pérdida de clientes mediante la regresión logística basada en SQL. Esta guía cubre todo el proceso, desde la creación del modelo hasta la evaluación y la predicción. Obtenga información procesable del comportamiento de compra de los clientes para implementar estrategias de retención proactivas y optimizar las decisiones comerciales.
-source-git-commit: 95c7ad3f8eb86cacd42077008824eea9e25b4db0
+exl-id: 3b18870d-104c-4dce-8549-a6818dc40d24
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 1%
@@ -45,7 +46,7 @@ Para generar predicciones de cancelación por parte del cliente, el modelo depen
 | `timestamp` | La fecha y hora exactas de cada evento de compra. |
 | `commerce.order.purchaseID` | Un valor obligatorio que confirma una compra completada. |
 
-El conjunto de datos debe contener registros históricos estructurados de transacciones de clientes, y cada fila representa un evento de compra. Cada evento debe incluir marcas de hora en un formato de fecha y hora adecuado compatible con la función SQL `DATEDIFF` (por ejemplo, AAAA-MM-DD HH:MI:SS). Además, cada registro debe contener un identificador de Experience Cloud válido (`ECID`) en el campo `identityMap` para identificar a los clientes de forma única.
+El conjunto de datos debe contener registros históricos estructurados de transacciones de clientes, y cada fila representa un evento de compra. Cada evento debe incluir marcas de hora en un formato de fecha y hora adecuado compatible con la función SQL `DATEDIFF` (por ejemplo, AAAA-MM-DD HH:MI:SS). Además, cada registro debe contener un Experience Cloud ID (`ECID`) válido en el campo `identityMap` para identificar a los clientes de forma única.
 
 >[!TIP]
 >
@@ -128,7 +129,7 @@ El conjunto de datos de salida contiene métricas relacionadas con el cliente y 
 
 ```console
  customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
---------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
+|--------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
   100001      | 25              | 1250.00       | 50.00            | 540               | 20                       | 10                 | 0       
   100002      | 3               | 90.00         | 30.00            | 120               | 95                       | 1                  | 1       
   100003      | 60              | 7200.00       | 120.00           | 800               | 5                        | 24                 | 0       
@@ -203,7 +204,7 @@ El resultado de la evaluación incluye métricas de rendimiento clave, como AUC-
 
 ```console
  auc_roc | accuracy | precision | recall 
----------+----------+-----------+--------
+|---------+----------+-----------+--------
 1        | 0.99998  |  1        |  1      
 ```
 
@@ -279,7 +280,7 @@ El conjunto de datos de salida incluye funciones clave del cliente y su estado d
 
 ```console
  total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
------------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
+|-----------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
  2               | 299           | 149.5           | 0                 | 13                        | 1                  | 0       | 0
  1               | 710           | 710.00          | 0                 | 149                       | 1                  | 1       | 1
  1               | 19.99         | 19.99           | 0                 | 30                        | 1                  | 0       | 0
@@ -292,7 +293,7 @@ El conjunto de datos de salida incluye funciones clave del cliente y su estado d
 |---------------|-------------------------------------------------------------------------------|
 | `prediction` | El estado de cancelación previsto por el cliente en función del modelo (0 = no cancelado, 1 = cancelado). |
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora ha aprendido a crear, evaluar y utilizar un modelo basado en SQL para predecir la pérdida de clientes. Con esta base, puede analizar el comportamiento de los clientes, identificar a los clientes en riesgo e implementar estrategias de retención proactivas para mejorar la retención de clientes. Para mejorar y aplicar aún más el modelo de predicción de pérdida, tenga en cuenta los siguientes pasos:
 

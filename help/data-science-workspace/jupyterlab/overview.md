@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general de JupyterLab
 description: JupyterLab es una interfaz de usuario basada en web para el proyecto Jupyter y está totalmente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con Jupyter Notebooks, código y datos. Este documento proporciona información general sobre JupyterLab y sus funciones, así como instrucciones para realizar acciones comunes.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1831'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ En las secciones siguientes se proporciona información acerca de las caracterí
 
 ### Acceder a [!DNL JupyterLab] {#access-jupyterlab}
 
-En [Adobe Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Notebooks]** de la columna de navegación izquierda. Espere un tiempo para que [!DNL JupyterLab] se inicialice por completo.
+En [Adobe Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Notebooks]** en la columna de navegación izquierda. Espere un tiempo para que [!DNL JupyterLab] se inicialice por completo.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -112,7 +112,7 @@ El área de trabajo principal de [!DNL JupyterLab] le permite organizar document
 
 ### Configuración de GPU y servidor de memoria en [!DNL Python]/R
 
-En [!DNL JupyterLab], seleccione el icono de engranaje en la esquina superior derecha para abrir *Configuración del servidor de portátiles*. Puede activar la GPU y asignar la cantidad de memoria que necesite mediante el control deslizante. La cantidad de memoria que puede asignar depende de la cantidad que haya aprovisionado su organización. Seleccione **[!UICONTROL Actualizar configuraciones]** para guardar.
+En [!DNL JupyterLab], seleccione el icono de engranaje en la esquina superior derecha para abrir *Configuración del servidor de portátiles*. Puede activar la GPU y asignar la cantidad de memoria que necesite mediante el control deslizante. La cantidad de memoria que puede asignar depende de la cantidad que haya aprovisionado su organización. Seleccione **[!UICONTROL Update configs]** para guardar.
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ En [!DNL JupyterLab], seleccione el icono de engranaje en la esquina superior de
 
 ### Terminar y reiniciar [!DNL JupyterLab]
 
-En [!DNL JupyterLab], puede finalizar su sesión para evitar que se usen más recursos. Comience por seleccionar el **icono de energía** ![icono de energía](/help/images/icons/power.png) y, a continuación, seleccione **[!UICONTROL Apagar]** de la ventana emergente que aparece para finalizar su sesión. Las sesiones de Notebook finalizan automáticamente después de 12 horas de inactividad.
+En [!DNL JupyterLab], puede finalizar su sesión para evitar que se usen más recursos. Comience por seleccionar el **icono de energía** ![icono de energía](/help/images/icons/power.png) y, a continuación, seleccione **[!UICONTROL Shut Down]** de la ventana emergente que aparece para finalizar su sesión. Las sesiones de Notebook finalizan automáticamente después de 12 horas de inactividad.
 
-Para reiniciar [!DNL JupyterLab], selecciona el **icono de reinicio** ![icono de reinicio](/help/images/icons/restart.png) que se encuentra directamente a la izquierda del icono de encendido y, a continuación, selecciona **[!UICONTROL Reiniciar]** de la ventana emergente que aparece.
+Para reiniciar [!DNL JupyterLab], seleccione el **icono de reinicio** ![icono de reinicio](/help/images/icons/restart.png) ubicado directamente a la izquierda del icono de encendido y, a continuación, seleccione **[!UICONTROL Restart]** de la ventana emergente que aparece.
 
 ![finalizar jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -253,7 +253,7 @@ Para abrir un nuevo *lanzador*, haz clic en **Archivo > Nuevo lanzador**. Tambi�
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-## Pasos siguientes
+## Próximos pasos
 
 Para obtener más información sobre cada uno de los blocs de notas compatibles y cómo utilizarlos, visite la guía para desarrolladores de [acceso a datos de los blocs de notas de Jupyterlab](./access-notebook-data.md). Esta guía se centra en cómo utilizar cuadernos de JupyterLab para acceder a sus datos, incluidos los datos de lectura, escritura y consulta. La guía de acceso a datos también contiene información sobre la cantidad máxima de datos que puede leer cada bloc de notas compatible.
 
@@ -264,6 +264,7 @@ Para obtener una lista de los paquetes admitidos en Python, R y PySpark, copie y
 ![ejemplo](../images/jupyterlab/user-guide/libraries.PNG)
 
 Además, se utilizan las siguientes dependencias, pero no se enumeran:
+
 * CUDA 11.2
 * CUDNN 8.1
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general de Data Science Workspace
 description: Esta guía proporciona información general sobre los conceptos clave relacionados con Data Science Workspace en Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '2411'
 ht-degree: 0%
@@ -33,6 +33,7 @@ Las empresas actuales otorgan una alta prioridad a la extracción de big data pa
 Por importante que sea, pasar de los datos a las perspectivas puede suponer un coste elevado. Por lo general, requiere científicos de datos calificados que lleven a cabo una investigación de datos intensiva y laboriosa para desarrollar modelos o fórmulas de aprendizaje automático que impulsen los servicios inteligentes. El proceso es largo, la tecnología es compleja y los científicos de datos calificados pueden ser difíciles de encontrar.
 
 Con [!DNL Data Science Workspace], Adobe Experience Platform le permite incorporar IA centrada en las experiencias en toda la empresa, lo que optimiza y acelera la conversión de datos a perspectivas a código con:
+
 - Un marco de aprendizaje automático y tiempo de ejecución
 - Acceso integrado a los datos almacenados en Adobe Experience Platform
 - Esquema de datos unificado creado en [!DNL Experience Data Model] (XDM)
@@ -185,7 +186,7 @@ Una vez que haya seleccionado la fórmula mejor preparada para satisfacer las ne
 
 Se puede configurar un servicio inteligente publicado para que se entrene automáticamente de vez en cuando con nuevos datos a medida que estén disponibles. Esto garantiza que su servicio mantenga su eficiencia y eficacia a medida que pasa el tiempo.
 
-## Pasos siguientes
+## Próximos pasos
 
 [!DNL Data Science Workspace] ayuda a optimizar y simplificar el flujo de trabajo de la ciencia de datos, desde la recopilación de datos hasta los algoritmos y los servicios inteligentes para los científicos de datos de todos los niveles de habilidad. Con las sofisticadas herramientas que proporciona [!DNL Data Science Workspace], puede reducir considerablemente el tiempo que transcurre desde los datos hasta las perspectivas.
 
@@ -199,4 +200,4 @@ Para obtener información adicional, como un flujo de trabajo diario completo, c
 
 El siguiente vídeo está diseñado para que entienda mejor [!DNL Data Science Workspace].
 
->[!VIDEO](https://video.tv.adobe.com/v/3412910?quality=12&enable10seconds=on&speedcontrol=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)

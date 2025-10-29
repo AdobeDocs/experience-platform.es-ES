@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Acceso a datos en Jupyterlab Notebooks
 description: Esta guía se centra en cómo utilizar Jupyter Notebooks, creados dentro de Data Science Workspace para acceder a sus datos.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3346'
+source-wordcount: '3274'
 ht-degree: 3%
 
 ---
@@ -154,13 +154,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Escribir en un conjunto de datos en Python {#write-python}
 
-Para escribir en un conjunto de datos de su bloc de notas de JupyterLab, seleccione la pestaña Icono de datos (resaltada a continuación) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Conjuntos de datos]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Escribir datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+Para escribir en un conjunto de datos de su bloc de notas de JupyterLab, seleccione la pestaña Icono de datos (resaltada a continuación) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Write Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Use **[!UICONTROL Escribir datos en Notebook]** para generar una celda de escritura con el conjunto de datos seleccionado.
-- Use **[!UICONTROL Explorar datos en Notebook]** para generar una celda de lectura con el conjunto de datos seleccionado.
-- Use **[!UICONTROL Datos de consulta en Notebook]** para generar una celda de consulta básica con el conjunto de datos seleccionado.
+- Use **[!UICONTROL Write Data in Notebook]** para generar una celda de escritura con el conjunto de datos seleccionado.
+- Use **[!UICONTROL Explore Data in Notebook]** para generar una celda de lectura con el conjunto de datos seleccionado.
+- Use **[!UICONTROL Query Data in Notebook]** para generar una celda de consulta básica con el conjunto de datos seleccionado.
 
 También puede copiar y pegar la siguiente celda de código. Reemplazar `{DATASET_ID}` y `{PANDA_DATAFRAME}`.
 
@@ -179,7 +179,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Antes de usar [!DNL Query Service] en [!DNL JupyterLab], asegúrese de que tiene una comprensión de la [[!DNL Query Service] sintaxis SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
-La consulta de datos mediante [!DNL Query Service] requiere que proporcione el nombre del conjunto de datos de destino. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante **[!UICONTROL Explorador de datos]**. Haga clic con el botón derecho en la lista de conjuntos de datos y haga clic en **[!UICONTROL Consultar datos en Notebook]** para generar dos celdas de código en su bloc de notas. Estas dos celdas se describen con más detalle a continuación.
+La consulta de datos mediante [!DNL Query Service] requiere que proporcione el nombre del conjunto de datos de destino. Puede generar las celdas de código necesarias buscando el conjunto de datos deseado mediante **[!UICONTROL Data explorer]**. Haga clic con el botón derecho en la lista de conjuntos de datos y haga clic en **[!UICONTROL Query Data in Notebook]** para generar dos celdas de código en su bloc de notas. Estas dos celdas se describen con más detalle a continuación.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Escribir en un conjunto de datos en R {#write-r}
 
-Para escribir en un conjunto de datos de su bloc de notas de JupyterLab, seleccione la pestaña Icono de datos (resaltada a continuación) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Conjuntos de datos]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Escribir datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+Para escribir en un conjunto de datos de su bloc de notas de JupyterLab, seleccione la pestaña Icono de datos (resaltada a continuación) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Write Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Use **[!UICONTROL Escribir datos en Notebook]** para generar una celda de escritura con el conjunto de datos seleccionado.
-- Use **[!UICONTROL Explorar datos en Notebook]** para generar una celda de lectura con el conjunto de datos seleccionado.
+- Use **[!UICONTROL Write Data in Notebook]** para generar una celda de escritura con el conjunto de datos seleccionado.
+- Use **[!UICONTROL Explore Data in Notebook]** para generar una celda de lectura con el conjunto de datos seleccionado.
 
 Como alternativa, puede copiar y pegar la siguiente celda de código:
 
@@ -402,10 +402,10 @@ Un comando mágico [!DNL Data Science Workspace] personalizado para leer o escri
 
 Puede generar automáticamente los ejemplos anteriores en la compra de JupyterLab mediante el siguiente método:
 
-Seleccione la pestaña Icono de datos (resaltada a continuación) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Conjuntos de datos]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Escribir datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+Seleccione la pestaña Icono de datos (resaltada a continuación) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Write Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
 
-- Use **[!UICONTROL Explorar datos en Notebook]** para generar una celda de lectura.
-- Use **[!UICONTROL Escribir datos en Notebook]** para generar una celda de escritura.
+- Use **[!UICONTROL Explore Data in Notebook]** para generar una celda de lectura.
+- Use **[!UICONTROL Write Data in Notebook]** para generar una celda de escritura.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -534,10 +534,12 @@ df1.show(10)
 
 Puede generar automáticamente el ejemplo anterior en la compra de JupyterLab mediante el siguiente método:
 
-Seleccione la pestaña Icono de datos (resaltada a continuación) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Conjuntos de datos]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+Seleccione la pestaña Icono de datos (resaltada a continuación) en la navegación izquierda de JupyterLab. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Datasets]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explore Data in Notebook]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas.
+
 Y
-- Use **[!UICONTROL Explorar datos en Notebook]** para generar una celda de lectura.
-- Use **[!UICONTROL Escribir datos en Notebook]** para generar una celda de escritura.
+
+- Use **[!UICONTROL Explore Data in Notebook]** para generar una celda de lectura.
+- Use **[!UICONTROL Write Data in Notebook]** para generar una celda de escritura.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
@@ -639,7 +641,7 @@ val timedf = spark.sql("""
 timedf.show()
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento abarcaba las directrices generales para acceder a conjuntos de datos mediante cuadernos de JupyterLab. Para obtener ejemplos más detallados sobre la consulta de conjuntos de datos, visite la documentación de [Query Service in JupyterLab Notebooks](./query-service.md). Para obtener más información sobre cómo explorar y visualizar sus conjuntos de datos, visite el documento de [análisis de los datos mediante blocs de notas](./analyze-your-data.md).
 
