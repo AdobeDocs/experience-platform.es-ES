@@ -147,7 +147,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Antes de eliminar la cuenta de destino, debe eliminar cualquier flujo de datos existente en la cuenta de destino.
->>Para eliminar flujos de datos existentes, consulte las páginas siguientes:
+>&#x200B;>Para eliminar flujos de datos existentes, consulte las páginas siguientes:
 >
 >* [Use la interfaz de usuario de Experience Platform](../ui/delete-destinations.md) para eliminar flujos de datos existentes;
 >* [Use la API de Flow Service](delete-destination-dataflow.md) para eliminar los flujos de datos existentes.

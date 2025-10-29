@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >La creación del grupo de campos mediante SQL fallará si el indicador `label` no se proporciona en la instrucción o si el grupo de campos ya existe.
->>Asegúrese de que la consulta incluye una cláusula `IF NOT EXISTS` para evitar que la consulta falle porque el grupo de campos ya existe.
+>&#x200B;>Asegúrese de que la consulta incluye una cláusula `IF NOT EXISTS` para evitar que la consulta falle porque el grupo de campos ya existe.
 
 Un ejemplo del mundo real podría parecer similar al que se ve a continuación.
 

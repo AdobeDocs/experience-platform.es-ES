@@ -38,8 +38,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > De forma predeterminada, el publicador espera credenciales de Adobe I/O para un flujo de Oauth de servidor a servidor. Las credenciales heredadas de `jwt-auth`
-> > se puede usar ejecutando `npx @adobe/reactor-releaser@v3.1.3` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
-> > para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> &#x200B;> se puede usar ejecutando `npx @adobe/reactor-releaser@v3.1.3` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
+> &#x200B;> para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
 El publicador requiere que introduzca solo unos pocos datos. `clientId` y `clientSecret` se pueden recuperar de la consola de Adobe I/O. Vaya a la [página Integraciones](https://console.adobe.io/integrations) en la consola de I/O. Seleccione la organización correcta en el menú desplegable, busque la integración correcta y seleccione **[!UICONTROL View]**.
 

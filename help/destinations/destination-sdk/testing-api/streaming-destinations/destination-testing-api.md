@@ -28,7 +28,7 @@ Puede usar la [API de generación de perfiles de muestra](sample-profile-generat
 >
 >* Para utilizar esta API, debe tener una conexión existente con su destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obtener más información.
 >* Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
->  >![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino ](../../assets/testing-api/get-destination-instance-id.png)
+>  &#x200B;>![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino &#x200B;](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introducción a las operaciones de API de prueba de destino {#get-started}
 

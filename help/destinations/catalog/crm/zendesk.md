@@ -104,7 +104,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -160,7 +160,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento dentro del segmento.
    ![Ejemplo de captura de pantalla de la IU de Experience Platform que muestra el segmento.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Inicie sesión en el sitio web de [!DNL Zendesk] y luego vaya a la página de **[!UICONTROL Contacts]** para comprobar si se han agregado los perfiles de la audiencia. Esta lista se puede configurar para mostrar columnas para los campos adicionales creados con los estados de audiencia**[!UICONTROL Mapping ID]** y audiencia.
+1. Inicie sesión en el sitio web de [!DNL Zendesk] y luego vaya a la página de **[!UICONTROL Contacts]** para comprobar si se han agregado los perfiles de la audiencia. Esta lista se puede configurar para mostrar columnas para los campos adicionales creados con los estados de audiencia&#x200B;**[!UICONTROL Mapping ID]** y audiencia.
    ![Captura de pantalla de la interfaz de usuario de Zendesk que muestra la página Contactos con los campos adicionales creados con el nombre de audiencia.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. También puede explorar en profundidad una página individual de **[!UICONTROL Person]** y comprobar la sección **[!UICONTROL Additional fields]** que muestra el nombre y los estados de audiencia.

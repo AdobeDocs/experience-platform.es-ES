@@ -77,7 +77,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 >[!NOTE]
 >
 >La inclusión en la lista de permitidos es obligatoria antes de configurar su primer destino de [!DNL Google Ads] en Experience Platform. Asegúrese de que el proceso de inclusión en la lista de permitidos descrito a continuación haya sido completado por [!DNL Google] antes de crear un destino.
->>La excepción a esta regla es para clientes de [Audience Manager](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html). Si ya ha creado una conexión con este destino de Google en Audience Manager, no es necesario volver a pasar por el proceso de inclusión en la lista de permitidos y puede continuar con los siguientes pasos.
+>&#x200B;>La excepción a esta regla es para clientes de [Audience Manager](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html). Si ya ha creado una conexión con este destino de Google en Audience Manager, no es necesario volver a pasar por el proceso de inclusión en la lista de permitidos y puede continuar con los siguientes pasos.
 
 Antes de crear el destino [!DNL Google Ads] en Experience Platform, debe ponerse en contacto con [!DNL Google] para que Adobe se incluya en la lista de proveedores de datos permitidos y para que se agregue su cuenta a la lista de permitidos. Póngase en contacto con [!DNL Google] y proporcione la siguiente información:
 
@@ -113,7 +113,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
