@@ -5,7 +5,7 @@ breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree públicos a partir de los datos de su perfil del cliente en tiempo real utilizando definiciones de segmentos generadas por Adobe Experience Platform o fuentes externas.
 feature: Segments
 role: User
-source-git-commit: 0f1ccaf9ea698737eccc25cec6f5b46b7184fc11
+source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 43%
@@ -17,7 +17,7 @@ ht-degree: 43%
 
 - [Resumen del servicio de segmentación](home.md)
 - [Tipos de datos de segmentación](data-types.md)
-- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=es#segmentation-guardrails)
+- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API de segmentación {#api}
    - [Información general](api/overview.md)
    - [Primeros pasos](api/getting-started.md)
@@ -35,7 +35,7 @@ ht-degree: 43%
    - [Tablero de audiencias](ui/audience-dashboard.md)
    - [Portal de públicos](ui/audience-portal.md)
    - [Composición de público](ui/audience-composition.md)
-   - [Mejoras de Composición de audiencia](ui/composition-enchancements.md)
+   - [Mejoras de Composición de audiencia](ui/composition-enhancements.md)
    - [Generador de segmentos](ui/segment-builder.md)
    - [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home)
    - [Actualización de la restricción temporal de Ignorar año](ui/ignore-year.md)
@@ -63,7 +63,7 @@ ht-degree: 43%
    - [Segmentación de varias entidades](tutorials/multi-entity-segmentation.md)
    - [Respeto del consentimiento](tutorials/consents.md)
    - [Evaluación de una definición de segmento](tutorials/evaluate-a-segment.md)
-   - [Creación de audiencias externas](tutorials/create-external-audience.md)
+   - [Creación de una audiencia externa](tutorials/create-external-audience.md)
    - [Creación de un conjunto de datos para exportar datos](tutorials/create-dataset-export-segment.md)
    - [Aplicar el cumplimiento de uso de datos para audiencias](tutorials/governance.md)
 - Profile Query Language {#pql}
