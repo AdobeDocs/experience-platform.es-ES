@@ -77,13 +77,13 @@ Puede definir controles de acceso con funciones y permisos para controlar el acc
 
 Considere la posibilidad de un ingeniero de datos que puede no necesitar acceso a todas las funcionalidades de las aplicaciones basadas en plataformas y de Experience Platform. Normalmente son responsables de la creación de definiciones de datos (esquemas), la configuración de fuentes de datos para la ingesta de datos y la creación de conjuntos de datos. Sin embargo, es posible que no sean la misma persona que crea y activa audiencias para experiencias de cliente personalizadas. Para este usuario, cree una función, añada los permisos adecuados y conceda acceso solo a la funcionalidad requerida. Por el contrario, un experto en marketing no estaría creando esquemas e ingiriendo datos, sino centrándose en la creación y activación de audiencias para permitir experiencias personalizadas con los clientes.
 
-Si lo desea, puede añadir controles de acceso granulares para limitar el acceso a campos específicos del perfil unificado del cliente con control de acceso basado en atributos o capacidad de control de acceso de nivel de campo. Son mecanismos de gobernanza en Experience Platform que le permiten restringir el acceso a los atributos de datos en función de etiquetas predefinidas. Con el control de acceso a nivel de campo, los datos de identificación personal se pueden controlar y el acceso está restringido en todos los flujos de trabajo de Experience Platform y de la aplicación. Para obtener más información sobre las capacidades de control de acceso, consulte la [documentación de control de acceso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
+Si lo desea, puede añadir controles de acceso granulares para limitar el acceso a campos específicos del perfil unificado del cliente con control de acceso basado en atributos o capacidad de control de acceso de nivel de campo. Son mecanismos de gobernanza en Experience Platform que le permiten restringir el acceso a los atributos de datos en función de etiquetas predefinidas. Con el control de acceso a nivel de campo, los datos de identificación personal se pueden controlar y el acceso está restringido en todos los flujos de trabajo de Experience Platform y de la aplicación. Para obtener más información sobre las capacidades de control de acceso, consulte la [documentación de control de acceso](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home).
 
 ![Controles de acceso CDP, configurar permisos de funciones](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **Ciclo de vida de desarrollo con zonas protegidas de desarrollo**
 
-Una zona protegida de desarrollo se comporta del mismo modo que una zona protegida de producción en todos los aspectos funcionales. Es diferente, ya que tendrá algunas protecciones contractuales para mantenerle dentro de los límites de su licencia. Está diseñado exclusivamente para desarrollo y pruebas con perfiles que no sean de producción, y admite hasta el 10 % de la asignación de perfiles con licencia (medida acumulativamente en todos los entornos limitados de desarrollo autorizados). Para obtener detalles y protecciones adicionales, consulte la [documentación de información general sobre las zonas protegidas](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/home) y la [página de descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) para obtener detalles sobre las autorizaciones.
+Una zona protegida de desarrollo se comporta del mismo modo que una zona protegida de producción en todos los aspectos funcionales. Es diferente, ya que tendrá algunas protecciones contractuales para mantenerle dentro de los límites de su licencia. Está diseñado exclusivamente para desarrollo y pruebas con perfiles que no sean de producción, y admite hasta el 10 % de la asignación de perfiles con licencia (medida acumulativamente en todos los entornos limitados de desarrollo autorizados). Para obtener detalles y protecciones adicionales, consulte la [documentación de información general sobre las zonas protegidas](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/home) y la [página de descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) para obtener detalles sobre las autorizaciones.
 
 Puede tener varios entornos limitados de desarrollo (hasta 4 en este ejemplo empresarial, ya que estamos utilizando un entorno limitado de producción) para el ciclo de vida de desarrollo y prueba.
 
@@ -99,7 +99,7 @@ Con la función de herramientas de zona protegida, puede seleccionar varios obje
 
 Tiene la opción de utilizar las API de Experience Platform para automatizar implementaciones y tareas de configuración de zonas protegidas. Las API permiten un control programable de las tareas repetitivas, como exportar, importar o modificar las configuraciones de la zona protegida, lo que proporciona flexibilidad si prefiere flujos de trabajo automatizados.
 
-Para obtener más información sobre las herramientas de zonas protegidas, consulte la [documentación de herramientas de zonas protegidas](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Para obtener más información sobre las herramientas de zonas protegidas, consulte la [documentación de herramientas de zonas protegidas](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Crear un paquete](./images/whitepaper/create-package.png) | ![Paquetes de lista CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,7 +226,7 @@ Además, puede utilizar Coincidencia de segmentos de Experience Platform, una fu
 
 Este servicio de uso compartido de segmentos permite que dos o más usuarios intercambien datos de segmentos de una manera segura, controlada y compatible con la privacidad.
 
-Para obtener más información sobre la función Coincidencia de segmentos, consulte la [documentación sobre Coincidencia de segmentos](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
+Para obtener más información sobre la función Coincidencia de segmentos, consulte la [documentación sobre Coincidencia de segmentos](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Una combinación de enfoques para operaciones globales, regionales y específicas de la marca
 
