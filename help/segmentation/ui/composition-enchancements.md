@@ -3,7 +3,7 @@ title: Mejoras en la composición de audiencias
 description: Obtenga información acerca de las mejoras realizadas en la Composición de audiencia con enriquecimiento de audiencia y activación más rápida.
 hide: true
 hidefromtoc: true
-source-git-commit: 9c790f0b47161301fa8c02c4afb7edfb925e1499
+source-git-commit: 065990790307124e0992731139abe9641a742a1b
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
@@ -48,12 +48,16 @@ Tenga en cuenta los siguientes detalles y protecciones al utilizar el enriquecim
 - El primer bloque utilizado en la composición **debe** ser una audiencia basada en reglas.
 - Usted **no puede** utilizar ninguna otra operación dentro de la composición.
 - Una vez publicado, **no puede** editar la composición en la audiencia basada en reglas.
+
    - Usted *puede* copiar la composición en un borrador y editar el borrador si desea realizar cambios en la composición base o en la audiencia basada en reglas.
+
 - Solo se puede usar la matriz de objetos **one** para generar la carga útil de enriquecimiento en una sola audiencia
+
    - La matriz de carga útil se puede anidar dentro de un objeto (hasta siete capas dentro del esquema de perfil), pero **no se puede** contener en otra matriz.
    - La matriz de carga útil **debe** tener 50 filas o menos.
    - Todas las columnas de salida de la carga **deben** ser de un tipo primitivo.
    - Solo se muestran las primeras **veinte** columnas de la matriz.
+
 - Solo hay **diez** composiciones de audiencia disponibles para usar en este momento
 
 ## Activación más rápida {#faster-activation}
