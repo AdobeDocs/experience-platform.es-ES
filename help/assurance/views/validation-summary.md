@@ -57,7 +57,7 @@ Se espera que la función de validación devuelva un objeto que contenga lo sigu
 | :--- | :--- | :--- |
 | `message` | Cadena | El mensaje de validación que se mostrará en los resultados del resumen. |
 | `events` | Matriz | Una matriz de uuid de evento para registrar como coincidentes o no coincidentes. |
-| `links` | Matriz | Una matriz de `ValidationResultLink` objetos para hacer referencia a la documentación y otros recursos `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
+| `links` | Matriz | Una matriz de `ValidationResultLink` objetos para hacer referencia a la documentación y otros recursos `{( type: 'doc'`&vert;`'product', url: String )}` |
 | `result` | Cadena | Este es el resultado de validación y se espera que sea una de las cadenas enumeradas: “coincidente”, “no coincidente”, “desconocido” |
 
 ## Vista de los resultados de validación
