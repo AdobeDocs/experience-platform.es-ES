@@ -5,7 +5,7 @@ title: Creación de un modelo con JupyterLab Notebooks
 type: Tutorial
 description: Este tutorial le guiará por los pasos necesarios para crear una fórmula con la plantilla de creador de fórmulas de cuadernos de JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 0%
@@ -69,7 +69,7 @@ El resto de este tutorial abarca los siguientes archivos predefinidos en el bloc
 
 El siguiente tutorial de vídeo explica el portátil del modelo de tendencia de Luma:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452495?captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### Archivo de requisitos {#requirements-file}
 
@@ -93,7 +93,7 @@ Para el portátil del modelo de tendencia de Luma, no es necesario actualizar lo
 
 Los archivos de configuración `training.conf` y `scoring.conf` se utilizan para especificar los conjuntos de datos que desea utilizar para aprendizaje y puntuación, así como para agregar hiperparámetros. Existen configuraciones independientes para la formación y la puntuación.
 
-Para que un modelo ejecute la formación, debe proporcionar `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` y `tenantId`. Además, para la puntuación, debe proporcionar `scoringDataSetId`, `tenantId` y `scoringResultsDataSetId `.
+Para que un modelo ejecute la formación, debe proporcionar `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` y `tenantId`. Además, para la puntuación, debe proporcionar `scoringDataSetId`, `tenantId` y `scoringResultsDataSetId`.
 
 Para encontrar los ID de esquema y conjunto de datos, vaya a la pestaña de datos ![Data tab](../images/jupyterlab/create-recipe/dataset-tab.png) en blocs de notas en la barra de navegación izquierda (debajo del icono de la carpeta). Se deben proporcionar tres ID de conjunto de datos diferentes. `scoringResultsDataSetId` se usa para almacenar los resultados de puntuación del modelo y debe ser un conjunto de datos vacío. Estos conjuntos de datos se crearon anteriormente en el paso [Recursos necesarios](#assets).
 

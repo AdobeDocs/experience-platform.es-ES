@@ -4,9 +4,9 @@ title: Programa el extremo de API
 description: Los programas son una herramienta que se puede utilizar para ejecutar automáticamente trabajos de segmentación por lotes una vez al día.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2088'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Los extremos utilizados en esta guía forman parte de la API [!DNL Adobe Experie
 
 ## Recuperación de una lista de programaciones {#retrieve-list}
 
-Puede recuperar una lista de todas las programaciones de su organización realizando una solicitud de GET al extremo `/config/schedules`.
+Puede recuperar una lista de todas las programaciones de su organización realizando una petición GET al extremo `/config/schedules`.
 
 **Formato de API**
 
@@ -110,14 +110,14 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de programacion
 | `children.type` | El tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
 | `children.properties` | Objeto que contiene propiedades adicionales relacionadas con la programación. |
 | `children.properties.segments` | Usar `["*"]` garantiza que todos los segmentos se incluyan. |
-| `children.schedule` | Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
+| `children.schedule` | Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;`0 0 1 * *`&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
 | `children.state` | Cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
 +++
 
 ## Crear una nueva programación {#create}
 
-Puede crear una nueva programación realizando una solicitud de POST al extremo `/config/schedules`.
+Puede crear una nueva programación realizando una petición POST al extremo `/config/schedules`.
 
 **Formato de API**
 
@@ -127,7 +127,7 @@ POST /config/schedules
 
 **Solicitud**
 
-+++ Una solicitud de ejemplo para crear una programación.
++++ Una solicitud de ejemplo para crear una programación. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Requerido.**: tipo de trabajo como cadena. Los dos tipos admitidos son &quot;batch_segmentation&quot; y &quot;export&quot;. |
 | `properties` | **Requerido.** Un objeto que contiene propiedades adicionales relacionadas con la programación. |
 | `properties.segments` | **Requerido cuando `type` es igual a &quot;batch_segmentation&quot;.** al usar `["*"]` se asegura de que se incluyan todos los segmentos. |
-| `schedule` | *Opcional.* Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. <br><br>Si no se proporciona esta cadena, se generará automáticamente una programación generada por el sistema. |
+| `schedule` | *Opcional.* Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;`0 0 1 * *`&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. <br><br>Si no se proporciona esta cadena, se generará automáticamente una programación generada por el sistema. |
 | `state` | *Opcional.* Una cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
 +++
@@ -195,7 +195,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la programaci
 
 ## Recuperar una programación específica {#get}
 
-Puede recuperar información detallada sobre una programación específica realizando una solicitud de GET al extremo `/config/schedules` y proporcionando el ID de la programación que desea recuperar en la ruta de solicitud.
+Puede recuperar información detallada sobre una programación específica realizando una petición GET al extremo `/config/schedules` y proporcionando el ID de la programación que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -209,7 +209,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Solicitud**
 
-+++ Una solicitud de ejemplo para recuperar una programación.
++++ Una solicitud de ejemplo para recuperar una programación. 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
@@ -257,16 +257,16 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | `type` | El tipo de trabajo como cadena. Los dos tipos compatibles son `batch_segmentation` y `export`. |
 | `properties` | Objeto que contiene propiedades adicionales relacionadas con la programación. |
 | `properties.segments` | Usar `["*"]` garantiza que todos los segmentos se incluyan. |
-| `schedule` | Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
+| `schedule` | Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;`0 0 1 * *`&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
 | `state` | Cadena que contiene el estado de programación. Los dos estados admitidos son `active` y `inactive`. De manera predeterminada, el estado se establece en `inactive`. |
 
 +++
 
 ## Actualizar los detalles de una programación específica {#update}
 
-Puede actualizar una programación específica realizando una solicitud de PATCH al extremo `/config/schedules` y proporcionando el ID de la programación que está intentando actualizar en la ruta de solicitud.
+Puede actualizar una programación específica realizando una petición PATCH al extremo `/config/schedules` y proporcionando el ID de la programación que está intentando actualizar en la ruta de solicitud.
 
-La solicitud del PATCH le permite actualizar el [estado](#update-state) o la [programación cron](#update-schedule) para una programación individual.
+La solicitud de PATCH le permite actualizar el [estado](#update-state) o la [programación cron](#update-schedule) para una programación individual.
 
 **Formato de API**
 
@@ -354,7 +354,7 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
 ## Eliminar una programación específica
 
-Puede solicitar que se elimine una programación específica realizando una solicitud de DELETE al extremo `/config/schedules` y proporcionando el identificador de la programación que desea eliminar en la ruta de solicitud.
+Puede solicitar eliminar una programación específica realizando una petición DELETE al extremo `/config/schedules` y proporcionando el ID de la programación que desea eliminar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -384,7 +384,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, ahora tiene una mejor comprensión de cómo funcionan los horarios.
 
@@ -406,9 +406,9 @@ En una cadena de expresión cron, el primer campo representa los segundos, el se
 | Minutes | Sí | 0-59 | `, - * /` |
 | Horas | Sí | 0-23 | `, - * /` |
 | Día del mes | Sí | 1-31 | `, - * ? / L W` |
-| Mes | Sí | 1 A 12 DE ENERO A DICIEMBRE | `, - * /` |
+| Month | Sí | 1 A 12 DE ENERO A DICIEMBRE | `, - * /` |
 | Día de la semana | Sí | 1-7, SUN-SAT | `, - * ? / L #` |
-| Año | No | Vacío, 1970-2099 | `, - * /` |
+| Year | No | Vacío, 1970-2099 | `, - * /` |
 
 >[!NOTE]
 >
@@ -434,10 +434,10 @@ La siguiente tabla muestra cadenas de expresión cron de muestra y explica qué 
 | Expresión | Explicación |
 | ---------- | ----------- |
 | `0 0 13 * * ?` | El evento se activará a la 1 p. m. todos los días. |
-| `0 30 9 * * ? 2022` | El evento se activará todos los días a las 9:30 a. m. en el año 2022. |
-| `0 * 18 * * ?` | El evento se activará cada minuto, empezando a las 6 PM y terminando a las 6:59 PM, todos los días. |
+| `0 30 9 * * ? 2022` | El evento se activará todos los días a las 9:30AM del año 2022. |
+| `0 * 18 * * ?` | El evento se activará cada minuto, a partir de las 6 p. m. y hasta las 6:59PM, todos los días. |
 | `0 0/10 17 * * ?` | El evento se activará cada 10 minutos, comenzando a las 5 PM y terminando a las 6 PM, todos los días. |
-| `0 13,38 5 ? 6 WED` | El evento se activará a las 5:13AM y a las 5:38AM todos los miércoles en junio. |
-| `0 30 12 ? * 4#3` | El evento se activará a las 12:30 p.m. el tercer miércoles de cada mes. |
-| `0 30 12 ? * 6L` | El evento se activará a las 12:30 p.m. del último viernes de cada mes. |
-| `0 45 11 ? * MON-THU` | El evento se activará a las 11:45 a.m. todos los lunes, martes, miércoles y jueves. |
+| `0 13,38 5 ? 6 WED` | El evento se activará a las 5:13AM y 5:38AM todos los miércoles de junio. |
+| `0 30 12 ? * 4#3` | El evento se activará a las 12:30PM del tercer miércoles de cada mes. |
+| `0 30 12 ? * 6L` | El evento se activará a las 12:30PM del último viernes de cada mes. |
+| `0 45 11 ? * MON-THU` | El evento se activará a las 11:45AM todos los lunes, martes, miércoles y jueves. |

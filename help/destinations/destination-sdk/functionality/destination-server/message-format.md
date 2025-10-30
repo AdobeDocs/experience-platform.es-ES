@@ -2,7 +2,7 @@
 description: Esta página aborda el formato de mensaje y la transformación de perfil en datos exportados de Adobe Experience Platform a destinos.
 title: Formato del mensaje
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2489'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Requisitos previos: conceptos de Adobe Experience Platform {#prerequisites}
 
-Para comprender el formato de mensaje y el proceso de configuración y transformación de perfiles en el lado del Adobe, familiarícese con los siguientes conceptos de Experience Platform:
+Para comprender el formato de mensaje y el proceso de configuración y transformación de perfiles en Adobe, familiarícese con los siguientes conceptos de Experience Platform:
 
 * **Modelo de datos de experiencia (XDM)**. [Información general de XDM](../../../../xdm/home.md) y [Cómo crear un esquema XDM en Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Clase**. [Cree y edite clases en la interfaz de usuario](../../../../xdm/ui/resources/classes.md).
@@ -22,7 +22,7 @@ Para comprender el formato de mensaje y el proceso de configuración y transform
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -39,7 +39,7 @@ Esta página aborda el formato de mensaje y la transformación de perfil en dato
 
 Adobe Experience Platform exporta datos a un número significativo de destinos, en varios formatos. Algunos ejemplos de tipos de destinos son plataformas publicitarias (Google), redes sociales (Facebook) y ubicaciones de almacenamiento en la nube (Amazon S3, Azure Event Hubs).
 
-El Experience Platform puede ajustar el formato de mensaje de los perfiles exportados para que coincida con el formato esperado de su lado. Para comprender esta personalización, son importantes los siguientes conceptos:
+Experience Platform puede ajustar el formato de mensaje de los perfiles exportados para que coincida con el formato esperado de su lado. Para comprender esta personalización, son importantes los siguientes conceptos:
 
 * El esquema XDM de origen (1) y destino (2) en Adobe Experience Platform
 * El formato de mensaje esperado del lado del socio (3), y
@@ -92,15 +92,15 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Teniendo en cuenta el formato del mensaje, las transformaciones correspondientes son las siguientes:
 
-| Atributo en el esquema XDM del socio en el lado del Adobe | Transformación | Atributo en el mensaje HTTP de su lado |
+| Atributo en el esquema XDM del socio en el lado de Adobe | Transformación | Atributo en el mensaje HTTP de su lado |
 |---------|----------|---------|
-| `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
+| `_your_custom_schema.firstName` | `attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
 {style="table-layout:auto"}
 
-## Estructura de perfil en el Experience Platform {#profile-structure}
+## Estructura de perfil en Experience Platform {#profile-structure}
 
 Para comprender los ejemplos que se muestran a continuación en la página, es importante conocer la estructura de un perfil en Experience Platform.
 
@@ -178,7 +178,7 @@ Esta sección proporciona varios ejemplos de cómo se realizan estas transformac
 
 1. Ejemplos de transformación simples. Descubra cómo funciona la creación de plantillas con transformaciones sencillas para los campos [Atributos de perfil](#attributes), [Pertenencia a audiencias](#segment-membership) e [Identidad](#identities).
 2. Ejemplos de complejidad aumentada de plantillas que combinan los campos anteriores: [Cree una plantilla que envíe audiencias e identidades](./message-format.md#segments-and-identities) y [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](#segments-identities-attributes).
-3. Plantillas que incluyen la clave de agregación. Cuando usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, Experience Platform agrupa los perfiles exportados a su destino según criterios como ID de audiencia, estado de audiencia o áreas de nombres de identidad.
+3. Plantillas que incluyen la clave de agregación. Cuando usa [la agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, Experience Platform agrupa los perfiles exportados a su destino en función de criterios como ID de audiencia, estado de audiencia o áreas de nombres de identidad.
 
 ### Atributos de perfil {#attributes}
 
@@ -492,7 +492,7 @@ Perfil 2:
 
 ### Creación de una plantilla que envíe audiencias e identidades {#segments-and-identities}
 
-Esta sección proporciona un ejemplo de una transformación utilizada comúnmente entre el esquema XDM de Adobe y el esquema de destino de socio.
+Esta sección proporciona un ejemplo de una transformación utilizada comúnmente entre el esquema XDM de Adobe y el esquema de destino del socio.
 El ejemplo siguiente muestra cómo transformar el formato de pertenencia e identidades de la audiencia y mostrarlos en su destino.
 
 **Entrada**
@@ -659,7 +659,7 @@ El(la) `json` siguiente representa los datos exportados fuera de Adobe Experienc
 
 ### Crear una plantilla que envíe segmentos, identidades y atributos de perfil {#segments-identities-attributes}
 
-Esta sección proporciona un ejemplo de una transformación utilizada comúnmente entre el esquema XDM de Adobe y el esquema de destino de socio.
+Esta sección proporciona un ejemplo de una transformación utilizada comúnmente entre el esquema XDM de Adobe y el esquema de destino del socio.
 
 Otro caso de uso común es la exportación de datos que contienen miembros de la audiencia, identidades (por ejemplo: dirección de correo electrónico, número de teléfono, ID de publicidad) y atributos de perfil. Para exportar datos de esta manera, consulte el ejemplo siguiente:
 
@@ -861,7 +861,7 @@ El(la) `json` siguiente representa los datos exportados fuera de Adobe Experienc
 
 Cuando usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino según criterios como ID de audiencia, alias de audiencia, pertenencia de audiencia o áreas de nombres de identidad.
 
-En la plantilla de transformación de mensajes, puede acceder a las claves de agregación mencionadas anteriormente, como se muestra en los ejemplos de las secciones siguientes. Utilice claves de agregación para estructurar el mensaje HTTP exportado fuera del Experience Platform de modo que coincida con el formato y los límites de velocidad esperados por el destino.
+En la plantilla de transformación de mensajes, puede acceder a las claves de agregación mencionadas anteriormente, como se muestra en los ejemplos de las secciones siguientes. Utilice claves de agregación para estructurar el mensaje HTTP exportado desde Experience Platform de modo que coincida con los límites de formato y velocidad esperados por el destino.
 
 #### Usar clave de agregación de ID de audiencia en la plantilla {#aggregation-key-segment-id}
 
@@ -1199,13 +1199,13 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 ### Referencia: Contexto y funciones utilizadas en las plantillas de transformación {#reference}
 
-El contexto proporcionado a la plantilla contiene `input` (los perfiles/datos exportados en esta llamada) y `destination` (datos sobre el destino al que el Adobe está enviando datos, válidos para todos los perfiles).
+El contexto proporcionado a la plantilla contiene `input` (los perfiles/datos exportados en esta llamada) y `destination` (datos sobre el destino al que Adobe está enviando datos, válidos para todos los perfiles).
 
 En la tabla siguiente se proporcionan descripciones de las funciones de los ejemplos anteriores.
 
 | Función | Descripción | Ejemplo |
 |---------|----------|----------|
-| `input.profile` | El perfil, representado como [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Sigue el esquema XDM de socio mencionado anteriormente en esta página. |
+| `input.profile` | El perfil, representado como [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Sigue el esquema XDM de socio mencionado anteriormente en esta página. |  |
 | `hasSegments` | Esta función toma un mapa de ID de audiencia de área de nombres como parámetro. La función devuelve `true` si hay al menos una audiencia en el mapa (independientemente de su estado) y `false` en caso contrario. Puede utilizar esta función para decidir si desea iterar en un mapa de audiencias o no. | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | Mapa de ID de audiencia en un área de nombres de Adobe Experience Platform específica a alias de audiencia en el sistema del socio. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | Mapa de nombres de audiencia en áreas de nombres de Adobe Experience Platform específicas a nombres de audiencia en el sistema del socio. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
@@ -1218,13 +1218,13 @@ En la tabla siguiente se proporcionan descripciones de las funciones de los ejem
 
 {style="table-layout:auto"}
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo se transforman los datos exportados fuera de Experience Platform. A continuación, lea las siguientes páginas para completar sus conocimientos sobre la creación de plantillas de transformación de mensajes para su destino:
 
 * [Creación y prueba de una plantilla de transformación de mensajes](../../testing-api/streaming-destinations/create-template.md)
 * [Procesar operaciones de API de plantilla](../../testing-api/streaming-destinations/render-template-api.md)
-* [Funciones de transformación compatibles en Destination SDK](../destination-server/supported-functions.md)
+* [Funciones de transformación compatibles con Destination SDK](../destination-server/supported-functions.md)
 
 Para obtener más información acerca de los demás componentes del servidor de destino, consulte los siguientes artículos:
 

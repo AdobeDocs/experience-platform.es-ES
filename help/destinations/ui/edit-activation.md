@@ -4,9 +4,9 @@ title: Editar flujos de datos de activación
 type: Tutorial
 description: Siga los pasos de este artículo para editar un flujo de datos de activación existente en Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ En Adobe Experience Platform, puede configurar varios componentes de flujos de d
 
 Siga los pasos a continuación para examinar los flujos de datos de activación existentes e identificar el que desea editar.
 
-1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Examinar]** en el encabezado superior para ver los flujos de datos de destino existentes.
+1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Browse]** en el encabezado superior para ver los flujos de datos de destino existentes.
 
    ![Destinos de exploración](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -40,21 +40,21 @@ Siga los pasos a continuación para examinar los flujos de datos de activación 
 
    ![Seleccionar destino](../assets/ui/edit-activation/destination-select.png)
 
-4. Aparecerá la página **[!UICONTROL Flujo de datos ejecuta]** para el destino, mostrando sus controles disponibles. Según el tipo de destino, puede realizar varias operaciones de flujo de datos. Consulte las secciones siguientes para cada operación de flujo de datos admitida.
+4. Aparecerá la página **[!UICONTROL Dataflow runs]** del destino, con sus controles disponibles. Según el tipo de destino, puede realizar varias operaciones de flujo de datos. Consulte las secciones siguientes para cada operación de flujo de datos admitida.
 
 ## Habilitar o deshabilitar flujos de datos de activación {#enable-disable-dataflows}
 
-Utilice la opción **[!UICONTROL Habilitado]/[!UICONTROL Deshabilitado]** para iniciar o pausar todas las exportaciones de datos al destino.
+Utilice la opción **[!UICONTROL Enabled]/[!UICONTROL Disabled]** para iniciar o pausar todas las exportaciones de datos al destino.
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción de ejecución de flujo de datos habilitada/deshabilitada.](../assets/ui/edit-activation/enable-toggle.png)
 
 ## Añadir audiencias a un flujo de datos de activación {#add-audiences}
 
-Seleccione **[!UICONTROL Activar audiencias]** en el carril derecho para cambiar las audiencias que se enviarán al destino. Esta acción lo lleva al flujo de trabajo de activación.
+Seleccione **[!UICONTROL Activate audiences]** en el carril derecho para cambiar qué audiencias enviar al destino. Esta acción lo lleva al flujo de trabajo de activación.
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
 
-En el paso **[!UICONTROL Seleccionar audiencias]** del flujo de trabajo de activación, puede quitar audiencias existentes o agregar nuevas audiencias al flujo de trabajo de activación.
+En el paso **[!UICONTROL Select audiences]** del flujo de trabajo de activación, puede quitar audiencias existentes o agregar nuevas audiencias al flujo de trabajo de activación.
 
 El flujo de trabajo de activación difiere ligeramente según el tipo de destino. Para obtener más información sobre los flujos de trabajo de activación para cada tipo de destino, lea las siguientes guías:
 
@@ -64,13 +64,14 @@ El flujo de trabajo de activación difiere ligeramente según el tipo de destino
 
 ## Editar la programación de activación y la frecuencia de exportación {#edit-schedule-frequency}
 
-Seleccione **[!UICONTROL Activar audiencias]** en el carril derecho. Esta acción lo lleva al flujo de trabajo de activación.
+Seleccione **[!UICONTROL Activate audiences]** en el carril derecho. Esta acción lo lleva al flujo de trabajo de activación.
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
 
 Seleccione el paso **[!UICONTROL Scheduling]** del flujo de trabajo de activación para editar la programación de activación y la frecuencia de exportación del flujo de datos. Este paso le permite configurar la frecuencia con la que se exportan los datos al destino.
 
 En el paso **[!UICONTROL Scheduling]** del flujo de trabajo de activación, puede:
+
 * Ajuste la frecuencia de exportación.
 * Establezca o modifique las fechas de inicio y finalización del flujo de datos de activación, etc.
 
@@ -82,7 +83,7 @@ Las operaciones de programación que puede realizar varían ligeramente según e
 
 ## Editar atributos e identidades asignados {#edit-mapped-attributes}
 
-Seleccione **[!UICONTROL Activar audiencias]** en el carril derecho. Esta acción lo lleva al flujo de trabajo de activación.
+Seleccione **[!UICONTROL Activate audiences]** en el carril derecho. Esta acción lo lleva al flujo de trabajo de activación.
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
 
@@ -102,7 +103,7 @@ El flujo de trabajo de activación difiere ligeramente según el tipo de destino
 
 ## Adición de conjuntos de datos a un flujo de datos de activación {#add-datasets}
 
-Seleccione **[!UICONTROL Exportar conjuntos de datos]** en el carril derecho para seleccionar conjuntos de datos adicionales para exportarlos a su destino. Esta opción lo lleva al [flujo de trabajo de exportación del conjunto de datos](export-datasets.md).
+Seleccione **[!UICONTROL Export datasets]** en el carril derecho para seleccionar conjuntos de datos adicionales para exportar a su destino. Esta opción lo lleva al [flujo de trabajo de exportación del conjunto de datos](export-datasets.md).
 
 >[!NOTE]
 >
@@ -118,29 +119,29 @@ Seleccione **[!UICONTROL Exportar conjuntos de datos]** en el carril derecho par
 
 Puede añadir o eliminar las acciones de marketing que configure al conectarse inicialmente al destino.
 
-Seleccione **[!UICONTROL Editar acciones de marketing]** en el carril derecho para abrir la pantalla de selección de acciones de marketing.
+Seleccione **[!UICONTROL Edit marketing actions]** en el carril derecho para abrir la pantalla de selección de acciones de marketing.
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Editar acciones de marketing.](../assets/ui/edit-activation/edit-marketing-actions.png)
 
-Seleccione las acciones de marketing aplicables y, a continuación, seleccione **[!UICONTROL Guardar]** para aplicar los cambios.
+Seleccione las acciones de marketing aplicables y, a continuación, seleccione **[!UICONTROL Save]** para aplicar los cambios.
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la pantalla Editar acciones de marketing.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
 
 
 ## Aplicación de etiquetas de acceso {#apply-access-labels}
 
-Seleccione **[!UICONTROL Aplicar etiquetas de acceso]** para editar las etiquetas de uso de datos para los datos exportados. Consulte la [documentación de etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener más información.
+Seleccione **[!UICONTROL Apply access labels]** para editar las etiquetas de uso de datos de los datos exportados. Consulte la [documentación de etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener más información.
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción de ejecución Exportar conjuntos de datos del flujo de datos.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Editar nombres y descripciones de flujo de datos de activación {#edit-names-descriptions}
 
-Para editar el nombre y la descripción del flujo de datos de activación, use los campos **[!UICONTROL Nombre de destino]** y **[!UICONTROL Descripción]**.
+Para editar el nombre y la descripción del flujo de datos de activación, utilice los campos **[!UICONTROL Destination name]** y **[!UICONTROL Description]**.
 
 ![Detalles del destino](../assets/ui/edit-activation/edit-destination-name-description.png)
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL destinos]** para actualizar los flujos de datos de destino existentes.
+Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL destinations]** para actualizar los flujos de datos de destino existentes.
 
 Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../catalog/overview.md).

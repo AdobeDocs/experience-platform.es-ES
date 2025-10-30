@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación de modelos con Adobe Experience Platform SDK
 description: Este tutorial le proporciona información sobre la conversión de data_access_sdk_python al nuevo Python platform_sdk en Python y R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---
@@ -161,7 +161,7 @@ El nuevo SDK [!DNL Experience Platform] admite las siguientes operaciones:
 | Menor que (`<`) | `lt()` |
 | Menor o igual que (`<=`) | `le()` |
 | Y (`&`) | `And()` |
-| O (`|`) | `Or()` |
+| O ( &amp;vert; ) | `Or()` |
 
 ## Filtrar por columnas seleccionadas {#filter-by-selected-columns}
 
@@ -224,6 +224,6 @@ dataset_writer <- psdk$dataset_writer$DatasetWriter(client_context, dataset)
 write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Una vez configurado el cargador de datos `platform_sdk`, los datos se preparan y se dividen en los conjuntos de datos `train` y `val`. Para obtener más información acerca de la preparación de datos y la ingeniería de características, visite la sección sobre [preparación de datos e ingeniería de características](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula con [!DNL JupyterLab] blocs de notas.

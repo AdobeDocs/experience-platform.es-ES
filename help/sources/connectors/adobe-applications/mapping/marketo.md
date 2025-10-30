@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Asignación de campos para Marketo Engage Source
 description: Las siguientes tablas contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3b21d952da603b519c9919b08467cd5c6091f235
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1451'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ Lea la documentación sobre [clase de evento de experiencia XDM](../../../../xdm
 
 >[!NOTE]
 >
->El campo de origen `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` es un campo calculado que debe agregarse usando la opción **[!UICONTROL Agregar campo calculado]** en la interfaz de usuario de Experience Platform. Lea el tutorial sobre [agregar campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
+>El campo de origen `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` es un campo calculado que debe agregarse usando la opción **[!UICONTROL Add calculated field]** en la interfaz de usuario de Experience Platform. Lea el tutorial sobre [agregar campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
 
 | Campo de origen de Marketo | ID de tipo de actividad | Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
@@ -37,7 +37,7 @@ Lea la documentación sobre [clase de evento de experiencia XDM](../../../../xdm
 | `leadId` |  | `personID` | `personKey.sourceID` |  |
 |  |  | `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identidad principal. MUNCHKIN_ID se reemplazará como parte de la API de exploración |
 | `activityTypeId` |  | `eventType` | `eventType` |  |
-| <ul><li>Si <code>activityTypeId</code> es 1, 2, 3, 9, 10 u 11 → marca <code>productionBy</code> como <strong>self</strong>.</li><li>Si <code>activityTypeId</code> es la marca de → <code>producida por&rbrace; 6, 7, 8, 12, 21, 22, 24, 25, 27, 32, 34, 35, 36, 46, 101, 104, 110, 113, 114 o 115</code> como <strong>sistema</strong>.</li><li>Para todos los demás valores → marca <code>productionBy</code> como <strong>self</strong>.</li></ul> |  | `producedBy` | `producedBy` |  |
+| <ul><li>Si <code>activityTypeId</code> es 1, 2, 3, 9, 10 u 11 → marca <code>productionBy</code> como <strong>self</strong>.</li><li>Si <code>activityTypeId</code> es la marca de → <code>producida por} 6, 7, 8, 12, 21, 22, 24, 25, 27, 32, 34, 35, 36, 46, 101, 104, 110, 113, 114 o 115</code> como <strong>sistema</strong>.</li><li>Para todos los demás valores → marca <code>productionBy</code> como <strong>self</strong>.</li></ul> |  | `producedBy` | `producedBy` |  |
 | `activityDate` |  | `timestamp` | `timestamp` |  |
 | `attributes.Webpage URL` |  | `web.webPageDetails.URL` | `web.webPageDetails.URL` |  |
 | `attributes.User Agent` |  | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |  |
@@ -66,7 +66,7 @@ Lea la documentación sobre [clase de evento de experiencia XDM](../../../../xdm
 | primaryAttributeValueId cuando activityTypeId en (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → MENSAJE BLOQUEADO</li><li>1003 → SPAM BLOQUEADO EN SOURCE</li><li>1004 → SPAM BLOQUEADO EN EL MENSAJE</li><li>2003 → DIRECCIÓN DE CORREO ELECTRÓNICO NO VÁLIDA</li><li>ERROR DE DIRECCIÓN DE CORREO ELECTRÓNICO → 2001</li><li>* → RAZÓN DESCONOCIDA DE LA DEVOLUCIÓN</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → MENSAJE NO ACEPTADO</li><li>3001 → BUZÓN LLENO</li><li>TIEMPO DE ESPERA DE → 3004</li><li>ERROR DE DNS DE → 4003</li><li>4002 MENSAJE DE → DEMASIADO GRANDE</li><li>4006 → INFRACCIÓN DE DIRECTIVA</li><li>4999 → FALLO TRANSITORIO</li><li>9999 → RESPUESTA INCORRECTA RECIBIDA</li><li>* → RAZÓN DESCONOCIDA DE LA DEVOLUCIÓN SUAVE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → MENSAJE BLOQUEADO</li><li>1003 → SPAM BLOQUEADO EN SOURCE</li><li>1004 → SPAM BLOQUEADO EN EL MENSAJE</li><li>2003 → DIRECCIÓN DE CORREO ELECTRÓNICO NO VÁLIDA</li><li>ERROR DE DIRECCIÓN DE CORREO ELECTRÓNICO → 2001</li><li>*` &rarr;`RAZÓN DESCONOCIDA DE LA DEVOLUCIÓN</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → MENSAJE NO ACEPTADO</li><li>3001 → BUZÓN LLENO</li><li>TIEMPO DE ESPERA DE → 3004</li><li>ERROR DE DNS DE → 4003</li><li>4002 MENSAJE DE → DEMASIADO GRANDE</li><li>4006 → INFRACCIÓN DE DIRECTIVA</li><li>4999 → FALLO TRANSITORIO</li><li>9999 → RESPUESTA INCORRECTA RECIBIDA</li><li>*→ UN MOTIVO DESCONOCIDO DE RECHAZO LEVE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |

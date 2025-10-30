@@ -5,7 +5,7 @@ title: Creación de un flujo de datos para fuentes de comercio electrónico medi
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de comercio electrónico de terceros e ingerirlos en Experience Platform mediante conectores de origen y API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 3%
@@ -645,7 +645,7 @@ Una respuesta correcta devuelve el ID `id` del flujo de datos recién creado.
 
 Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para obtener más información sobre cómo supervisar flujos de datos, consulte el tutorial sobre [supervisión de flujos de datos en la API](../monitor.md)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado un conector de origen para recopilar datos de comercio electrónico de forma programada. Los datos entrantes ahora pueden ser utilizados por servicios de flujo descendente [!DNL Experience Platform] como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 

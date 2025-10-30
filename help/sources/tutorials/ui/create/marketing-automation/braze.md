@@ -4,10 +4,10 @@ description: Obtenga información sobre cómo crear un flujo de datos para su cu
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '971'
+ht-degree: 1%
 
 ---
 
@@ -47,19 +47,19 @@ Si ya tiene una conexión de [!DNL Braze], puede omitir el resto de este documen
 >
 >Debe crear un esquema del Modelo de datos de experiencia (XDM) si es la primera vez que crea una conexión de [!DNL Braze Currents]. Si ya ha creado un esquema para [!DNL Braze Currents], puede omitir este paso y continuar con [conectando su cuenta a Experience Platform](#connect).
 
-En la interfaz de usuario de Experience Platform, utilice la navegación izquierda y, a continuación, seleccione **[!UICONTROL Esquemas]** para acceder al área de trabajo de [!UICONTROL Esquemas]. A continuación, seleccione **[!UICONTROL Crear esquema]** y luego seleccione **[!UICONTROL Evento de experiencia]**. Para continuar, seleccione **[!UICONTROL Siguiente]**.
+En la interfaz de usuario de Experience Platform, utilice la navegación izquierda y, a continuación, seleccione **[!UICONTROL Schemas]** para acceder al área de trabajo [!UICONTROL Schemas]. A continuación, seleccione **[!UICONTROL Create schema]** y luego seleccione **[!UICONTROL Experience Event]**. Para continuar, seleccione **[!UICONTROL Next]**.
 
 ![Esquema completado.](../../../../images/tutorials/create/braze/schema.png)
 
-Proporcione un nombre y una descripción para el esquema. A continuación, utilice el panel [!UICONTROL Composition] para configurar los atributos de esquema. En [!UICONTROL Grupos de campos], seleccione **[!UICONTROL Agregar]** y agregue el grupo de campos [!UICONTROL Evento de usuario de corrientes de Bear]. Cuando termine, seleccione **[!UICONTROL Guardar]**.
+Proporcione un nombre y una descripción para el esquema. A continuación, utilice el panel [!UICONTROL Composition] para configurar los atributos de esquema. En [!UICONTROL Field groups], seleccione **[!UICONTROL Add]** y agregue el grupo de campos [!UICONTROL Braze Currents User Event]. Cuando termine, seleccione **[!UICONTROL Save]**.
 
 Para obtener más información sobre los esquemas, lea la guía para [crear esquemas en la interfaz de usuario](../../../../../xdm/tutorials/create-schema-ui.md).
 
 ## Conecte su cuenta de [!DNL Braze] a Experience Platform {#connect}
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En la categoría *Automatización de mercadotecnia*, seleccione **[!UICONTROL Corrientes de Bear]** y, a continuación, **[!UICONTROL Agregar datos]**.
+En la categoría *Automatización de marketing*, seleccione **[!UICONTROL Braze Currents]** y, a continuación, seleccione **[!UICONTROL Add data]**.
 
 ![El catálogo de orígenes de la interfaz de usuario de Experience Platform con el origen de las corrientes de Blease seleccionado.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -78,19 +78,19 @@ La asignación tendrá los siguientes problemas que deben resolverse.
 
 En los datos de origen, *id* se asignará incorrectamente a *_braze.appID*. Debe cambiar el campo de asignación de destino a *_id* en el nivel raíz del esquema. A continuación, asegúrese de que *properties.is_amp* esté asignado a *_braze.messaging.email.isAMP*.
 
-A continuación, elimine la asignación *time* to *timestamp*, luego seleccione el icono de agregar (`+`) y luego seleccione **[!UICONTROL Agregar campo calculado]**. En el cuadro proporcionado, escriba *time \* 1000* y seleccione **[!UICONTROL Guardar]**.
+A continuación, elimine la asignación *time* to *timestamp*, luego seleccione el icono de agregar (`+`) y luego seleccione **[!UICONTROL Add calculated field]**. En el cuadro proporcionado, escriba *time \* 1000* y seleccione **[!UICONTROL Save]**.
 
-Una vez agregado el nuevo campo calculado, seleccione **[!UICONTROL Asignar campo de destino]** junto al nuevo campo de origen y asígnelo a *timestamp* en el nivel raíz del esquema. Luego debe seleccionar **[!UICONTROL Validar]** para asegurarse de que no haya más errores.
+Una vez agregado el nuevo campo calculado, seleccione **[!UICONTROL Map target field]** junto al nuevo campo de origen y asígnelo a *timestamp* en el nivel raíz del esquema. Debe seleccionar **[!UICONTROL Validate]** para asegurarse de que no tiene más errores.
 
 >[!IMPORTANT]
 >
 >Las marcas de tiempo de Braze no se expresan en milisegundos, sino en segundos. Para que las marcas de tiempo de Experience Platform se reflejen con precisión, debe crear campos calculados en milisegundos. Un cálculo de &quot;tiempo * 1000&quot; se convertirá correctamente en milisegundos, adecuados para su asignación a un campo de marca de tiempo en Experience Platform.
 >
->![Creando un campo calculado para la marca de tiempo &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![Creando un campo calculado para la marca de tiempo](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![Asignación sin errores.](../../../../images/tutorials/create/braze/completed_mapping.png)
 
-Cuando termine, seleccione **[!UICONTROL Siguiente]**. Utilice la página de revisión para confirmar los detalles del flujo de datos y, a continuación, seleccione **[!UICONTROL Finalizar]**.
+Cuando termine, seleccione **[!UICONTROL Next]**. Utilice la página de revisión para confirmar los detalles del flujo de datos y, a continuación, seleccione **[!UICONTROL Finish]**.
 
 ### Recopilar credenciales necesarias
 
@@ -109,6 +109,6 @@ Una vez creada la conexión, debe recopilar los siguientes valores de credencial
 
 En [!DNL Braze Dashboard], vaya a Integraciones de socios **->** Exportación de datos y, a continuación, seleccione **[!DNL Create New Current]**. Se le pedirá que proporcione un nombre para el conector, información de contacto para las notificaciones sobre el conector y las credenciales enumeradas anteriormente. Seleccione los eventos que desea recibir, opcionalmente configure las exclusiones/transformaciones de campo que desee y luego seleccione **[!DNL Launch Current]**.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL Braze]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para incorporar datos del sistema de automatización de marketing a [!DNL Experience Platform]](../../dataflow/marketing-automation.md).

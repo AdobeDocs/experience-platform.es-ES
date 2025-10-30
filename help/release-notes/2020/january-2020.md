@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 25%
+source-wordcount: '887'
+ht-degree: 26%
 
 ---
 
@@ -54,7 +54,7 @@ Las nuevas regulaciones legales y organizativas otorgan a los usuarios el derech
 | Nuevos puntos finales de API | La ruta de acceso base para la API [!DNL Privacy Service] se ha actualizado de `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
 | Nueva propiedad de `regulation` requerida | Al crear nuevos trabajos en la API de [!DNL Privacy Service], se debe proporcionar una propiedad de `regulation` en la carga útil de la solicitud para indicar en qué regulación se debe realizar el seguimiento del trabajo. Los valores aceptados son `gdpr` y `ccpa`. |
 | Compatibilidad con [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ahora acepta solicitudes de acceso o eliminación de Adobe [!DNL Primetime Authentication], usando `primetimeAuthentication` como valor de producto. |
-| Mejoras en la IU de Privacy Service | Páginas de seguimiento de trabajos independientes para las regulaciones del RGPD y CCPA. Nuevo menú desplegable **Tipo de regulación** para cambiar entre los datos de seguimiento para el RGPD y la CCPA. |
+| Mejoras en la IU de Privacy Service | Páginas de seguimiento de trabajos independientes para las regulaciones del RGPD y CCPA. Nuevo menú desplegable **Tipo de regulación** para cambiar entre el seguimiento de datos de RGPD y CCPA. |
 
 **Problemas conocidos**
 
@@ -81,7 +81,7 @@ Adobe Experience Platform puede ingerir datos de orígenes externos y, al mismo 
 | Categoría | Permiso | Descripción |
 |--- | --- | ---|
 | Ingesta de datos | Administrar fuentes | Acceso para leer, crear, editar y deshabilitar orígenes. |
-| Ingesta de datos | Ver orígenes | Acceso de solo lectura a orígenes disponibles en la ficha **[!UICONTROL Catálogo]** y orígenes autenticados en la ficha **[!UICONTROL Examinar]**. |
+| Ingesta de datos | Ver orígenes | Acceso de sólo lectura a orígenes disponibles en la ficha **[!UICONTROL Catalog]** y a orígenes autenticados en la ficha **[!UICONTROL Browse]**. |
 
 **Problemas conocidos**
 
@@ -104,7 +104,7 @@ En [Real-Time CDP](../../rtcdp/overview.md), los destinos son integraciones pred
 | Categoría | Permiso | Descripción |
 |--- | --- | ---|
 | Destinos | Administrar destinos | Acceso para leer, crear, editar y deshabilitar destinos. |
-| Destinos | Ver destinos | Acceso de solo lectura a destinos disponibles en la ficha **[!UICONTROL Catálogo]** y destinos autenticados en la ficha **Examinar**. |
+| Destinos | Ver destinos | Acceso de solo lectura a destinos disponibles en la ficha **[!UICONTROL Catalog]** y destinos autenticados en la ficha **Examinar**. |
 | Destinos | Activar destinos | Capacidad para activar datos en destinos. Este permiso requiere que se añada &quot;Administrar destinos&quot; o &quot;Ver destinos&quot; al perfil del producto. |
 
 **Problemas conocidos**

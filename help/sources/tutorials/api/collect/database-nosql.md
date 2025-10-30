@@ -3,7 +3,7 @@ title: Crear un flujo de datos para orígenes de base de datos mediante la API d
 type: Tutorial
 description: Aprenda a utilizar la API de Flow Service para crear un flujo de datos e introducir datos de su base de datos en Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 3%

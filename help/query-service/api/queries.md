@@ -5,7 +5,7 @@ title: Extremo de API de consultas
 description: Las siguientes secciones describen las llamadas que puede realizar mediante el extremo /queries en la API del servicio de consultas.
 role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Las siguientes secciones describen las llamadas que puede realizar mediante el e
 
 ### Recuperación de una lista de consultas
 
-Puede recuperar una lista de todas las consultas de su organización realizando una solicitud de GET al extremo `/queries`.
+Puede recuperar una lista de todas las consultas de su organización realizando una petición GET al extremo `/queries`.
 
 **Formato de API**
 
@@ -120,7 +120,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pa
 
 ### Creación de una consulta
 
-Puede crear una nueva consulta realizando una solicitud de POST al extremo `/queries`.
+Puede crear una nueva consulta realizando una petición POST al extremo `/queries`.
 
 **Formato de API**
 
@@ -227,7 +227,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la
 
 ### Recuperación de una consulta por ID
 
-Puede recuperar información detallada sobre una consulta específica realizando una solicitud de GET al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de solicitud.
+Puede recuperar información detallada sobre una consulta específica realizando una petición GET al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de acceso de la solicitud.
 
 **Formato de API**
 
@@ -298,7 +298,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ### Cancelar o eliminar una consulta
 
-Puede solicitar que se cancele o elimine de forma suave una consulta especificada realizando una solicitud de PATCH al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de acceso de la solicitud.
+Puede solicitar cancelar o eliminar una consulta especificada realizando una petición PATCH al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de acceso de la solicitud.
 
 **Formato de API**
 
@@ -329,7 +329,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `op` | Tipo de operación que se va a realizar en el recurso. Los valores aceptados son `cancel` y `soft_delete`. Para cancelar la consulta, debe establecer el parámetro op con el valor `cancel `. Tenga en cuenta que la operación de eliminación suave impide que se devuelva la consulta en solicitudes de GET, pero no la elimina del sistema. |
+| `op` | Tipo de operación que se va a realizar en el recurso. Los valores aceptados son `cancel` y `soft_delete`. Para cancelar la consulta, debe establecer el parámetro op con el valor `cancel`. Tenga en cuenta que la operación de eliminación suave impide que se devuelva la consulta en solicitudes de GET, pero no la elimina del sistema. |
 
 **Respuesta**
 

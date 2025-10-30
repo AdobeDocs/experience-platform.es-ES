@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo dar formato a las solicitudes HTTP enviadas al extremo. Utilice el extremo /authoring/destination-servers para configurar las especificaciones de creación de plantillas del servidor de destino en Adobe Experience Platform Destination SDK.
 title: Plantillas de especificaciones para destinos creados con Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 2%
@@ -26,7 +26,7 @@ Puede configurar las especificaciones de la plantilla para su destino a través 
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -76,7 +76,7 @@ Consulte a continuación un ejemplo de una plantilla de solicitud HTTP, junto co
 
 {style="table-layout:auto"}
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor qué es una especificación de plantilla y cómo puede configurarla.
 

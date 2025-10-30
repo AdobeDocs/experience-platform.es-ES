@@ -2,10 +2,10 @@
 description: Esta página ejemplifica la llamada de API utilizada para crear una plantilla de audiencia a través de Adobe Experience Platform Destination SDK.
 title: Creación de una plantilla de audiencia
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '623'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ Para obtener una descripción detallada de las funcionalidades que puede configu
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
@@ -283,6 +283,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla 
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer este documento, sabe cuándo usar plantillas de audiencia y cómo configurar una plantilla de audiencia mediante el extremo de API `/authoring/audience-templates`. Lee [cómo usar Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

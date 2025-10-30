@@ -2,9 +2,9 @@
 title: Extensión de capa de datos de Google
 description: Obtenga información acerca de la extensión de etiqueta de capa de datos del cliente de Google en Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 12%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 12%
 
 La extensión de capa de datos de Google le permite utilizar una capa de datos de Google en la implementación de etiquetas. La extensión se puede usar de forma independiente o simultánea con las soluciones de Google y con la biblioteca de código abierto [Data Layer Helper Library](https://github.com/google/data-layer-helper) de Google.
 
-La biblioteca de ayuda proporciona una funcionalidad impulsada por eventos similar a la capa de datos del cliente de Adobe (ACDL). Los elementos de datos, las reglas y las acciones de la extensión de capa de datos de Google proporcionan una funcionalidad similar a las de la [extensión ACDL](../client-data-layer/overview.md).
+La biblioteca de ayuda proporciona una funcionalidad impulsada por eventos similar a la de la capa de datos del cliente de Adobe (ACDL). Los elementos de datos, las reglas y las acciones de la extensión de capa de datos de Google proporcionan una funcionalidad similar a las de la [extensión ACDL](../client-data-layer/overview.md).
 
 ## Instalación
 
-Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario de recopilación de datos y seleccione **[!UICONTROL Capa de datos de Google]**.
+Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario de recopilación de datos y seleccione **[!UICONTROL Google Data Layer]**.
 
 Una vez instalada, la extensión crea o accede a una capa de datos en cada carga de la biblioteca de etiquetas de Adobe Experience Platform.
 
@@ -29,13 +29,14 @@ El nombre predeterminado de la capa de datos es el nombre predeterminado de Goog
 
 >[!NOTE]
 >
->No importa si el código de Adobe o Google se carga primero y crea la capa de datos. Ambos sistemas se comportan del mismo modo: cree la capa de datos si no está presente o utilice la capa de datos existente.
+>No importa si el código de Google o Adobe se carga primero y crea la capa de datos. Ambos sistemas se comportan del mismo modo: cree la capa de datos si no está presente o utilice la capa de datos existente.
 
 ## Eventos
 
 >[!NOTE]
 >
 >La palabra _event_ se sobrecarga cuando se utiliza una capa de datos controlada por evento en las etiquetas de Adobe Experience Platform. _Los eventos_ pueden ser:
+>
 > - Eventos de etiquetas de Adobe Experience Platform (biblioteca cargada, etc.).
 > - Eventos de JavaScript.
 > - Datos insertados en la capa de datos con la palabra clave _event_.

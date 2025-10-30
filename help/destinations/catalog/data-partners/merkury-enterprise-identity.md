@@ -3,10 +3,10 @@ title: Destino de identidad empresarial de Merkury
 description: Obtenga información sobre cómo crear una conexión de destino de Enterprise Identity de Mercury mediante la interfaz de usuario de Adobe Experience Platform.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: a5452183-289c-49c3-9574-e09b0153dc00
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1469'
-ht-degree: 4%
+source-wordcount: '1462'
+ht-degree: 3%
 
 ---
 
@@ -46,8 +46,8 @@ El destino [!DNL Merkury Enterprise Identity] proporciona la capacidad de transf
 
 >[!IMPORTANT]
 >
->* Para conectarse al destino, necesita **Ver destinos** y **Administrar destinos**, **Activar destinos**, **Ver perfiles** y **Ver segmentos** [[permisos de control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions). Lea [[descripción general del control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/ui/overview) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **Ver gráfico de identidad** [[permiso de control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions).\![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
+>* Para conectarse al destino, necesita **Ver destinos** y **Administrar destinos**, **Activar destinos**, **Ver perfiles** y **Ver segmentos** [[permisos de control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lea [[descripción general del control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **Ver gráfico de identidad** [[permiso de control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
 
 ## Identidades admitidas {#supported-identities}
 
@@ -56,8 +56,8 @@ El destino [!DNL Merkury Enterprise Identity] proporciona la capacidad de transf
 | GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
 | ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
-| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Experience Platform] aplique automáticamente el hash a los datos durante la activación. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
 | extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
 
 {style="table-layout:auto"}
@@ -66,10 +66,10 @@ El destino [!DNL Merkury Enterprise Identity] proporciona la capacidad de transf
 
 Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-| **Audiencia** | **Compatible** | **Descripción** | **origen** |
-|---|---|---|---|
+| **Audiencia** | **Compatible** | **Descripción** |
+|---|---|---|
 | Servicio de segmentación | ✓ | Audiencias generadas a través de Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
-| Cargas personalizadas | x | Audiencias [[importadas]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | x | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -80,17 +80,17 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | **Audiencia** | **Compatible** | **Origen de la descripción** |
 |---|---|---|      
 | Servicio de segmentación | ✓ | Audiencias generadas a través de Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
-| Cargas personalizadas | X | Audiencias [[importadas]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | X | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
-## Conexión al destino
+## Conectar con el destino
 
 >[!IMPORTANT]
 >
->Para conectarse al destino, necesita **Ver destinos** y **Administrar y activar destinos de conjuntos de datos** [[permisos de control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions). Lea [[descripción general del control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/ui/overview) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita **Ver destinos** y **Administrar y activar destinos de conjuntos de datos** [[permisos de control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lea [[descripción general del control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en [[tutorial de configuración de destino]](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/connect-destination). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
+Para conectarse a este destino, siga los pasos descritos en [[tutorial de configuración de destino]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino
 
@@ -136,7 +136,7 @@ Las cuentas ya definidas con el destino de identidad de empresa de Merkury apare
 
 ### Habilitar alertas
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/alerts).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
 Cuando termine de proporcionar detalles para la conexión de destino, seleccione **Siguiente**.
 
@@ -147,7 +147,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 >* Para activar los datos, necesita los permisos de control de acceso de **Ver destinos**, **Activar destinos**, **Ver perfiles** y **Ver segmentos**. Lea la descripción general del control de acceso o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar identidades, necesita el permiso de control de acceso **Ver gráfico de identidad**.
 
-Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Sugerencias de asignación
 
@@ -176,8 +176,8 @@ Para comprobar si los datos se han exportado correctamente, compruebe el contene
 
 ## Uso de datos y gobernanza
 
-Todos los destinos de Adobe Experience Platform cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo Adobe Experience Platform aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/es/docs/experience-platform/data-governance/home).
+Todos los destinos de Adobe Experience Platform cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo Adobe Experience Platform aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para exportar datos de perfil de Experience Platform a su ubicación de S3 administrada de [!DNL Merkury]. A continuación, debe ponerse en contacto con su representante de [!DNL Merkury] y proporcionarle el nombre de la cuenta, los nombres de archivo y la ruta de acceso del bloque para que se pueda configurar el procesamiento.

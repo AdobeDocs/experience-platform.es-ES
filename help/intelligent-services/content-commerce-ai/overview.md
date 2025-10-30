@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre etiquetado de contenido
 description: El etiquetado de contenido es un conjunto de servicios de IA que le permiten extraer funciones inteligentes del contenido, organizar, optimizar el flujo de contenido y ofrecer experiencias personalizadas y más impactantes a sus clientes.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '322'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -31,16 +31,19 @@ El contenido es un componente esencial de estas experiencias. Para responder mej
 La visión general del etiquetado de contenido se divide en tres pasos para lograr una participación óptima del cliente y maximizar los KPI impulsados por el cliente.
 
 **Paso 1: Comprender el contenido**
+
 - Extraiga funciones inteligentes y metadatos.
 - Organizar el contenido (etiquetar, categorizar, agrupar, anular la duplicación).
 - Asociar datos de contenido con recursos.
 
 **Paso 2: Comprender al cliente**
+
 - Asociar las acciones del cliente con funciones de contenido.
 - Obtenga las preferencias y afinidades del cliente a partir del contenido y las acciones.
 - Añadir preferencias al perfil del cliente.
 
 **Paso 3: Habilitando la optimización de experiencias**
+
 - Utilice el perfil del cliente para ofrecer experiencias mejoradas y personalizadas, en la sesión y para las experiencias posteriores.
 - Utilice las funciones de contenido para obtener información sobre los comportamientos de los clientes que impulsan los KPI.
 - Utilice perspectivas de contenido para mejorar la creación, creación y selección de contenido.

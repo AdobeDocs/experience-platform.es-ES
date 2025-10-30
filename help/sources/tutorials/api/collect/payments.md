@@ -5,7 +5,7 @@ title: Creación de un flujo de datos para fuentes de pagos mediante la API de F
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación de pagos e ingerirlos en Experience Platform mediante conectores de origen y API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 3%
@@ -699,7 +699,7 @@ Una respuesta correcta devuelve el ID `id` del flujo de datos recién creado.
 
 Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para obtener más información sobre cómo supervisar flujos de datos, consulte el tutorial sobre [supervisión de flujos de datos en la API](../monitor.md)
 
-## Pasos siguientes
+## Próximos pasos
 
 Siguiendo este tutorial, ha creado un conector de origen para recopilar datos de una aplicación de pagos de forma programada. Ahora los servicios de Experience Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
 

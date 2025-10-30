@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de resolución de problemas de ingesta por lotes
 description: Esta documentación le ayudará a responder a las preguntas más frecuentes sobre las API de ingesta de datos por lotes de Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 1%
@@ -189,7 +189,7 @@ Un lote puede, en su ciclo de vida, pasar por los siguientes estados:
 | Inactivo | x | El lote se ha promocionado correctamente, pero se ha revertido o ha caducado. El lote ya no estará disponible para el consumo descendente, pero los datos subyacentes permanecerán en Principal hasta que se hayan retenido, archivado o eliminado de otra forma. |
 | Cargando | | El cliente está escribiendo datos para el lote. El lote está **no** listo para la promoción, en este momento. |
 | Cargado | | El cliente ha completado la escritura de datos para el lote. El lote está listo para la promoción. |
-| Retenido | | Los datos se han sacado de Principal y en un archivo designado en el lago de datos de Adobe. |
+| Retenido | | Los datos se han eliminado de Principal y en un archivo designado en Adobe Data Lake. |
 | Ensayo | | El cliente ha indicado correctamente el lote para la promoción y los datos se están almacenando en zona intermedia para su consumo descendente. |
 | Intentando de nuevo | | El cliente ha indicado el lote para su promoción, pero debido a un error, un servicio de monitorización de lotes está reintentando el lote. Este estado se puede utilizar para indicar a los clientes que puede haber un retraso en la ingesta de los datos. |
 | Parado | | El cliente ha indicado el lote para la promoción, pero después de `n` reintentos de un servicio de supervisión de lotes, la promoción de lotes se ha detenido. |
@@ -272,4 +272,4 @@ Existen dos razones por las que las métricas pueden no estar disponibles en el 
 | 200 | El lote se ha aceptado para su procesamiento y pasará a un estado final, como Activo o Error. Una vez enviado, el lote se puede supervisar mediante el extremo `GetBatch`. |
 | 400 | Solicitud incorrecta. Se devuelve si faltan fragmentos o si hay trozos superpuestos en un lote. |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

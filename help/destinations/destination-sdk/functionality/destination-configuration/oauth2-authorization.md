@@ -1,8 +1,8 @@
 ---
-description: En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por el Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para el destino.
+description: En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para su destino.
 title: Autorización de OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 2%
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 Destination SDK admite varios métodos de autorización para el destino. Entre ellas se encuentra la opción de autenticarse en el destino mediante el [marco de autorización de OAuth 2](https://tools.ietf.org/html/rfc6749).
 
-En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por el Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para el destino.
+En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para su destino.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -33,7 +33,7 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 
 ### Requisitos previos en el sistema {#prerequisites}
 
-Como primer paso, debe crear una aplicación en el sistema para Adobe Experience Platform o, de lo contrario, registrar un Experience Platform en el sistema. El objetivo es generar un ID de cliente y un secreto de cliente, que son necesarios para autenticar al Experience Platform en el destino.
+Como primer paso, debe crear una aplicación en el sistema para Adobe Experience Platform o, de lo contrario, registrar Experience Platform en el sistema. El objetivo es generar un ID de cliente y un secreto de cliente, que son necesarios para autenticar Experience Platform en su destino.
 
 Como parte de esta configuración en su sistema, necesita las URL de redireccionamiento/llamada de retorno de OAuth 2 de Adobe Experience Platform, que puede obtener de la lista siguiente.
 
@@ -49,6 +49,7 @@ Como parte de esta configuración en su sistema, necesita las URL de redireccion
 >El paso para registrar una URL de redireccionamiento/llamada de retorno para Adobe Experience Platform en su sistema solo es necesario para el tipo de concesión [OAuth 2 con código de autorización](#authorization-code). Para los otros dos tipos de concesión admitidos (contraseña y credenciales de cliente), puede omitir este paso.
 
 Al final de este paso, debería tener:
+
 * Un ID de cliente;
 * Un secreto de cliente;
 * URL de devolución de llamada de Adobe (para la concesión del código de autorización).
@@ -59,11 +60,11 @@ Para configurar la autorización de OAuth 2 para su destino en Experience Platfo
 
 ## Tipos de concesión de OAuth 2 admitidos {#oauth2-grant-types}
 
-El Experience Platform admite los tres tipos de concesión de OAuth 2 que aparecen en la siguiente tabla. Si tiene una configuración de OAuth 2 personalizada, Adobe puede admitirla con la ayuda de campos personalizados en la integración. Consulte las secciones de cada tipo de concesión para obtener más información.
+Experience Platform admite los tres tipos de concesión de OAuth 2 que se indican en la siguiente tabla. Si tiene una configuración personalizada de OAuth 2, Adobe puede admitirla con la ayuda de campos personalizados en la integración. Consulte las secciones de cada tipo de concesión para obtener más información.
 
 >[!IMPORTANT]
 >
->* Proporcione los parámetros de entrada como se indica en las secciones siguientes. Los sistemas internos del Adobe se conectan al sistema de autorización de su plataforma y obtienen parámetros de salida, que se utilizan para autenticar al usuario y mantener la autorización en su destino.
+>* Proporcione los parámetros de entrada como se indica en las secciones siguientes. Los sistemas internos de Adobe se conectan al sistema de autorización de su plataforma y obtienen parámetros de salida, que se utilizan para autenticar al usuario y mantener la autorización en su destino.
 >* Los parámetros de entrada resaltados en negrita en la tabla son parámetros obligatorios en el flujo de autorización de OAuth 2. Los demás parámetros son opcionales. Hay otros parámetros de entrada personalizados que no se muestran aquí, pero que se describen en detalle en las secciones [Personalizar la configuración de OAuth 2](#customize-configuration) y [Actualización de token de acceso](#access-token-refresh).
 
 | Concesión de OAuth 2 | Entradas | Salidas |
@@ -74,11 +75,12 @@ El Experience Platform admite los tres tipos de concesión de OAuth 2 que aparec
 
 {style="table-layout:auto"}
 
-En la tabla anterior se enumeran los campos que se utilizan en los flujos de OAuth 2 estándar. Además de estos campos estándar, varias integraciones de socios pueden requerir entradas y salidas adicionales. El Adobe ha diseñado un marco de autorización de OAuth 2 flexible para Destination SDK que puede gestionar variaciones del patrón de campos estándar anterior y, al mismo tiempo, admitir un mecanismo para regenerar automáticamente salidas no válidas, como tokens de acceso caducados.
+En la tabla anterior se enumeran los campos que se utilizan en los flujos de OAuth 2 estándar. Además de estos campos estándar, varias integraciones de socios pueden requerir entradas y salidas adicionales. Adobe ha diseñado un marco de autorización de OAuth 2 flexible para Destination SDK que puede gestionar variaciones del patrón de campos estándar anterior y, al mismo tiempo, admitir un mecanismo para regenerar automáticamente salidas no válidas, como tokens de acceso caducados.
 
-La salida en todos los casos incluye un token de acceso, que el Experience Platform utiliza para autenticar y mantener la autorización en el destino.
+La salida de todos los casos incluye un token de acceso, que Experience Platform utiliza para autenticar y mantener la autorización de su destino.
 
-El sistema que el Adobe ha diseñado para la autorización de OAuth 2:
+El sistema que Adobe ha diseñado para la autorización de OAuth 2:
+
 * Admite las tres concesiones de OAuth 2, teniendo en cuenta cualquier variación en ellas, como campos de datos adicionales, llamadas de API no estándar y más.
 * Admite tokens de acceso con distintos valores de duración, ya sea 90 días, 30 minutos o cualquier otro valor de duración especificado.
 * Admite flujos de autorización de OAuth 2 con o sin tokens de actualización.
@@ -123,13 +125,13 @@ Para configurar este método de autorización para su destino, agregue las sigui
 | `refreshTokenUrl` | Cadena | *Opcional.*: la dirección URL de su lado que emite tokens de actualización. A menudo, `refreshTokenUrl` es el mismo que `accessTokenUrl`. |
 | `clientId` | Cadena | El ID de cliente que el sistema asigna a Adobe Experience Platform. |
 | `clientSecret` | Cadena | Secreto de cliente que el sistema asigna a Adobe Experience Platform. |
-| `scope` | Lista de cadenas | *Opcional*. Establezca el ámbito de lo que el token de acceso permite que Experience Platform realice en los recursos. Ejemplo: &quot;leer, escribir&quot;. |
+| `scope` | Lista de cadenas | *Opcional*. Establezca el ámbito de lo que el token de acceso permite que Experience Platform realice en sus recursos. Ejemplo: &quot;leer, escribir&quot;. |
 
 {style="table-layout:auto"}
 
 ## OAuth 2 con concesión de contraseña
 
-Para la concesión de contraseña de OAuth 2 (lea las [especificaciones de los estándares RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), el Experience Platform requiere el nombre de usuario y la contraseña del usuario. En el flujo de autorización, Experience Platform intercambia estas credenciales por un token de acceso y, opcionalmente, un token de actualización.
+Para la concesión de contraseña de OAuth 2 (lea las [especificaciones de los estándares RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform requiere el nombre de usuario y la contraseña del usuario. En el flujo de autorización, Experience Platform intercambia estas credenciales por un token de acceso y, opcionalmente, un token de actualización.
 Adobe utiliza las entradas estándar siguientes para simplificar la configuración de destino, con la capacidad de anular los valores:
 
 | Concesión de OAuth 2 | Entradas | Salidas |
@@ -140,7 +142,7 @@ Adobe utiliza las entradas estándar siguientes para simplificar la configuraci�
 
 >[!NOTE]
 >
-> No es necesario que agregue ningún parámetro para `username` y `password` en la configuración siguiente. Cuando agregue `"grant": "OAUTH2_PASSWORD"` a la configuración de destino, el sistema solicitará al usuario que proporcione un nombre de usuario y una contraseña en la interfaz de usuario del Experience Platform cuando se autentique en el destino.
+> No es necesario que agregue ningún parámetro para `username` y `password` en la configuración siguiente. Cuando agregue `"grant": "OAUTH2_PASSWORD"` a la configuración de destino, el sistema solicitará al usuario que proporcione un nombre de usuario y una contraseña en la interfaz de usuario de Experience Platform cuando se autentique en el destino.
 
 Para configurar este método de autorización para su destino, agregue las siguientes líneas a su configuración cuando [cree una configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
@@ -166,7 +168,7 @@ Para configurar este método de autorización para su destino, agregue las sigui
 | `accessTokenUrl` | Cadena | La dirección URL del sitio, que emite tokens de acceso y, opcionalmente, tokens de actualización. |
 | `clientId` | Cadena | El ID de cliente que el sistema asigna a Adobe Experience Platform. |
 | `clientSecret` | Cadena | Secreto de cliente que el sistema asigna a Adobe Experience Platform. |
-| `scope` | Lista de cadenas | *Opcional*. Establezca el ámbito de lo que el token de acceso permite que Experience Platform realice en los recursos. Ejemplo: &quot;leer, escribir&quot;. |
+| `scope` | Lista de cadenas | *Opcional*. Establezca el ámbito de lo que el token de acceso permite que Experience Platform realice en sus recursos. Ejemplo: &quot;leer, escribir&quot;. |
 
 {style="table-layout:auto"}
 
@@ -208,7 +210,7 @@ Para configurar este método de autorización para su destino, agregue las sigui
 | `refreshTokenUrl` | Cadena | *Opcional.*: la dirección URL de su lado que emite tokens de actualización. A menudo, `refreshTokenUrl` es el mismo que `accessTokenUrl`. |
 | `clientId` | Cadena | El ID de cliente que el sistema asigna a Adobe Experience Platform. |
 | `clientSecret` | Cadena | Secreto de cliente que el sistema asigna a Adobe Experience Platform. |
-| `scope` | Lista de cadenas | *Opcional*. Establezca el ámbito de lo que el token de acceso permite que Experience Platform realice en los recursos. Ejemplo: &quot;leer, escribir&quot;. |
+| `scope` | Lista de cadenas | *Opcional*. Establezca el ámbito de lo que el token de acceso permite que Experience Platform realice en sus recursos. Ejemplo: &quot;leer, escribir&quot;. |
 
 {style="table-layout:auto"}
 
@@ -365,7 +367,7 @@ Puede usar los siguientes parámetros en `authenticationDataFields` para persona
 | `authenticationDataFields.description` | Cadena | Descripción del campo de datos personalizados que ha configurado. |
 | `authenticationDataFields.type` | Cadena | Define el tipo del campo de datos personalizados. <br> Valores aceptados: `string`, `boolean`, `integer` |
 | `authenticationDataFields.isRequired` | Booleano | Especifica si el campo de datos personalizados es necesario en el flujo de autorización. |
-| `authenticationDataFields.format` | Cadena | Al seleccionar `"format":"password"`, el Adobe cifra el valor del campo de datos de autorización. Cuando se utiliza con `"fieldType": "CUSTOMER"`, esto también oculta la entrada en la interfaz de usuario cuando el usuario escribe en el campo. |
+| `authenticationDataFields.format` | Cadena | Al seleccionar `"format":"password"`, Adobe cifra el valor del campo de datos de autorización. Cuando se utiliza con `"fieldType": "CUSTOMER"`, esto también oculta la entrada en la interfaz de usuario cuando el usuario escribe en el campo. |
 | `authenticationDataFields.fieldType` | Cadena | Indica si la entrada procede del socio (usted) o del usuario, cuando configuran el destino en Experience Platform. |
 | `authenticationDataFields.value` | Cadena. Booleano. Entero | El valor del campo de datos personalizado. El valor coincide con el tipo elegido de `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | Cadena | Indica a qué campo de la ruta de respuesta de API se hace referencia. |
@@ -374,9 +376,9 @@ Puede usar los siguientes parámetros en `authenticationDataFields` para persona
 
 ## Actualización de token de acceso {#access-token-refresh}
 
-El Adobe ha diseñado un sistema que actualiza los tokens de acceso caducados sin que sea necesario que el usuario vuelva a iniciar sesión en su plataforma. El sistema puede generar un nuevo token para que la activación en su destino continúe sin problemas para el cliente.
+Adobe ha diseñado un sistema que actualiza los tokens de acceso caducados sin que sea necesario que el usuario vuelva a iniciar sesión en su plataforma. El sistema puede generar un nuevo token para que la activación en su destino continúe sin problemas para el cliente.
 
-Para configurar la actualización de tokens de acceso, es posible que tenga que configurar una solicitud HTTP con plantilla que permita al Adobe obtener un nuevo token de acceso mediante un token de actualización. Si el token de acceso ha caducado, el Adobe toma la solicitud con plantilla proporcionada por usted y agrega los parámetros proporcionados. Utilice el parámetro `accessTokenRequest` para configurar un mecanismo de actualización de token de acceso.
+Para configurar la actualización de tokens de acceso, es posible que tenga que configurar una solicitud HTTP con plantilla que permita a Adobe obtener un nuevo token de acceso mediante un token de actualización. Si el token de acceso ha caducado, Adobe toma la solicitud con plantilla proporcionada por usted y agrega los parámetros que ha proporcionado. Utilice el parámetro `accessTokenRequest` para configurar un mecanismo de actualización de token de acceso.
 
 
 ```json
@@ -452,7 +454,7 @@ Puede usar los siguientes parámetros en `accessTokenRequest` para personalizar 
 |---------|----------|------|
 | `accessTokenRequest.destinationServerType` | Cadena | Usar `URL_BASED`. |
 | `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | Cadena | <ul><li>Use `PEBBLE_V1` si usa plantillas para el valor de `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Use `NONE` si el valor del campo `accessTokenRequest.urlBasedDestination.url.value` es una constante. </li></li> |
-| `accessTokenRequest.urlBasedDestination.url.value` | Cadena | Dirección URL donde el Experience Platform solicita el token de acceso. |
+| `accessTokenRequest.urlBasedDestination.url.value` | Cadena | Dirección URL donde Experience Platform solicita el token de acceso. |
 | `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Cadena | <ul><li>Use `PEBBLE_V1` si usa plantillas para los valores de `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Use `NONE` si el valor del campo `accessTokenRequest.httpTemplate.requestBody.value` es una constante. </li></li> |
 | `accessTokenRequest.httpTemplate.requestBody.value` | Cadena | Utilice el lenguaje de plantilla para personalizar los campos de la solicitud HTTP al extremo del token de acceso. Para obtener información sobre cómo usar la creación de plantillas para personalizar campos, consulte la sección [convenciones de creación de plantillas](#templating-conventions). |
 | `accessTokenRequest.httpTemplate.httpMethod` | Cadena | Especifica el método HTTP utilizado para llamar al extremo del token de acceso. En la mayoría de los casos, este valor es `POST`. |
@@ -470,19 +472,19 @@ Puede usar los siguientes parámetros en `accessTokenRequest` para personalizar 
 
 ## Convenciones de plantilla {#templating-conventions}
 
-Según la personalización de la autorización, es posible que deba acceder a los campos de datos de la respuesta de autorización, como se muestra en la sección anterior. Para ello, familiarícese con el [idioma de creación de plantillas Pebble](https://pebbletemplates.io/) que usa el Adobe y consulte las convenciones de creación de plantillas a continuación para personalizar su implementación de OAuth 2.
+Según la personalización de la autorización, es posible que deba acceder a los campos de datos de la respuesta de autorización, como se muestra en la sección anterior. Para ello, familiarícese con el [idioma de creación de plantillas Pebble](https://pebbletemplates.io/) que usa Adobe y consulte las convenciones de creación de plantillas a continuación para personalizar su implementación de OAuth 2.
 
 
 | Prefijo | Descripción | Ejemplo |
 |---------|----------|---------|
-| authData | Acceda al valor de cualquier campo de datos de socio o cliente. | ``{{ authData.accessToken }}`` |
-| response.body | cuerpo de respuesta HTTP | ``{{ response.body.access_token }}`` |
-| response.status | Estado de respuesta HTTP | ``{{ response.status }}`` |
-| response.headers | Encabezados de respuesta HTTP | ``{{ response.headers.server[0] }}`` |
-| userContext | Acceder a información sobre el intento de autorización actual | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authorization attempt `</li></ul> |
+| authData | Acceda al valor de cualquier campo de datos de socio o cliente. | `{{ authData.accessToken }}` |
+| response.body | cuerpo de respuesta HTTP | `{{ response.body.access_token }}` |
+| response.status | Estado de respuesta HTTP | `{{ response.status }}` |
+| response.headers | Encabezados de respuesta HTTP | `{{ response.headers.server[0] }}` |
+| userContext | Acceder a información sobre el intento de autorización actual | <ul><li>`{{ userContext.sandboxName }}`</li><li>`{{ userContext.sandboxId }}`</li><li>`{{ userContext.imsOrgId }}`</li><li>`{{ userContext.client }} // the client executing the authorization attempt`</li></ul> |
 
 {style="table-layout:auto"}
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este artículo, ahora comprende los patrones de autorización de OAuth 2 admitidos por Adobe Experience Platform y sabe cómo configurar su destino con compatibilidad con la autorización de OAuth 2. A continuación, puede configurar el destino compatible con OAuth 2 mediante Destination SDK. Lee [Usar Destination SDK para configurar tu destino](../../guides/configure-destination-instructions.md) para los siguientes pasos.

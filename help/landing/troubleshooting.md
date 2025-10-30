@@ -9,7 +9,7 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 4%
@@ -73,11 +73,15 @@ Muchas operaciones de PATCH en las API [!DNL Experience Platform] utilizan caden
 Dependiendo de si utiliza la interfaz de usuario o la API, se aplican los siguientes requisitos del sistema:
 
 **Para operaciones basadas en la IU:**
+
 - Un navegador web estándar y moderno. Aunque se recomienda la versión más reciente de [!DNL Chrome], también se admiten las versiones principales actuales y anteriores de [!DNL Firefox], [!DNL Internet Explorer] y Safari.
+
    - Cada vez que se lanza una nueva versión principal, [!DNL Experience Platform] comienza a admitir la versión más reciente, mientras que se abandona la compatibilidad con la tercera versión más reciente.
+
 - Todos los exploradores deben tener habilitadas las cookies y JavaScript.
 
 **Para interacciones de API y desarrollador:**
+
 - Un entorno de desarrollo para desarrollar integraciones de REST, streaming y webhook.
 
 ## Errores y solución de problemas {#errors-and-troubleshooting}
@@ -155,7 +159,7 @@ Este mensaje de error se muestra cuando el valor del encabezado de clave de API 
 
 Este mensaje de error se muestra cuando falta un encabezado de organización (`x-gw-ims-org-id`) en una solicitud de API. Asegúrese de que el encabezado esté incluido con el ID de su organización antes de intentarlo de nuevo.
 
-### El perfil no es válido. {#profile-is-not-valid}
+### El perfil no es válido {#profile-is-not-valid}
 
 ```json
 {
@@ -201,6 +205,7 @@ Este mensaje de error se muestra cuando una solicitud de POST, PUT o PATCH tiene
 ```
 
 Este mensaje de error se muestra en cualquiera de los dos casos siguientes:
+
 - Cuando se pasa un encabezado de identificador de organización incorrecto o mal formado (`x-gw-ims-org-id`) en una solicitud de API. Asegúrese de que se incluye el ID correcto de su organización antes de intentarlo de nuevo.
 - Cuando su cuenta (representada por las credenciales de autenticación proporcionadas) no esté asociada a un perfil de producto para Experience Platform. Siga los pasos de [generación de credenciales de acceso](./api-authentication.md#authentication-for-each-session) en el tutorial de autenticación de la API de Experience Platform para agregar Experience Platform a su cuenta y actualizar las credenciales de autenticación según corresponda.
 
@@ -208,7 +213,7 @@ Este mensaje de error se muestra en cualquiera de los dos casos siguientes:
 
 A continuación se muestra una lista de guías de solución de problemas y documentación de referencia de API para las API [!DNL Experience Platform]. Cada guía de solución de problemas proporciona respuestas a las preguntas más frecuentes y soluciones a problemas específicos de los servicios individuales de [!DNL Experience Platform]. Los documentos de referencia de la API proporcionan una guía completa de todos los extremos disponibles para cada servicio y muestran cuerpos de solicitudes, respuestas y códigos de error de muestra que puede recibir.
 
-| Servicio | Referencia de API | Resolución de problemas |
+| Servicio | Referencia de la API | Resolución de problemas |
 | --- | --- | --- |
 | Control de acceso | [API de control de acceso](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guía de solución de problemas de control de acceso](../access-control/troubleshooting-guide.md) |
 | Ingesta de datos de Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guía de solución de problemas de ingesta por lotes](../ingestion/batch-ingestion/troubleshooting.md) |

@@ -2,7 +2,7 @@
 description: Aprenda a utilizar la API de prueba de destino para probar la configuración de destino de flujo continuo antes de publicarla.
 title: Resumen de API de prueba de destino de streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -16,7 +16,7 @@ Como parte de Destination SDK, Adobe proporciona herramientas para desarrollador
 
 Para **comprobar si el destino está configurado correctamente y comprobar la integridad de los flujos de datos al destino configurado**, use la *herramienta de prueba de destino*. Con esta herramienta, puede probar la configuración de destino enviando mensajes al punto final de la API de REST.
 
-A continuación se ilustra cómo encaja la prueba de destino en el [flujo de trabajo de configuración de destino](../../guides/configure-destination-instructions.md) en Destination SDK:
+A continuación se ilustra cómo encaja probar el destino en el [flujo de trabajo de configuración de destino](../../guides/configure-destination-instructions.md) en Destination SDK:
 
 ![Gráfico de dónde encaja el paso de prueba de destino en el flujo de trabajo de configuración de destino](../../assets/testing-api/test-destination-step.png)
 
@@ -25,10 +25,12 @@ A continuación se ilustra cómo encaja la prueba de destino en el [flujo de tra
 Utilice la herramienta de prueba de destino para probar la configuración de destino enviando mensajes al extremo del socio que ha proporcionado en la [configuración del servidor](../../authoring-api/destination-server/create-destination-server.md).
 
 Antes de usar la herramienta, asegúrese de lo siguiente:
+
 * Configure su destino siguiendo los pasos descritos en [flujo de trabajo de configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md) y
 * Establezca una conexión con su destino, tal como se detalla en [Cómo obtener el identificador de instancia de destino](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
 
 Con esta herramienta, después de haber configurado el destino, puede:
+
 * Comprobar si el destino está configurado correctamente;
 * Compruebe la integridad de los flujos de datos al destino configurado.
 
@@ -43,13 +45,14 @@ Puede realizar llamadas al extremo de la API de prueba de destino con o sin agre
 Si no agrega ningún perfil a la solicitud, Adobe los generará internamente para usted y los agregará a la solicitud. Si desea generar perfiles para usarlos en esta solicitud, consulte la [Referencia de API de generación de perfiles de muestra](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Debe generar perfiles basados en el esquema XDM de origen, como se muestra en la [referencia de API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Tenga en cuenta que el esquema de origen es el [esquema de unión](../../../../profile/ui/union-schema.md) de la zona protegida que está utilizando.
 
 La respuesta contiene el resultado del procesamiento de la solicitud de destino. La solicitud incluye tres secciones principales:
-* La solicitud generada por el Adobe para el destino.
+
+* La solicitud generada por Adobe para el destino.
 * La respuesta recibida desde su destino.
-* La lista de perfiles enviados en la solicitud, ya sean [agregados por usted en la solicitud](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles) o generados por el Adobe si [el cuerpo de la solicitud de prueba de destino estaba vacío](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
+* La lista de perfiles enviados en la solicitud, ya sean [agregados por usted en la solicitud](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles) o generados por Adobe si [el cuerpo de la solicitud de prueba de destino estaba vacío](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->El Adobe puede generar varios pares de solicitud y respuesta. Por ejemplo, si envía 10 perfiles a un destino que tiene un valor `maxUsersPerRequest` de 7, habrá una solicitud con 7 perfiles y otra solicitud con 3 perfiles.
+>Adobe puede generar varios pares de solicitud y respuesta. Por ejemplo, si envía 10 perfiles a un destino que tiene un valor `maxUsersPerRequest` de 7, habrá una solicitud con 7 perfiles y otra solicitud con 3 perfiles.
 
 **Solicitud de muestra con parámetro de perfiles en el cuerpo**
 
@@ -230,6 +233,6 @@ Tenga en cuenta que el contenido del parámetro `results.httpCalls` es específi
 
 Para obtener descripciones de los parámetros de solicitud y respuesta, consulte [Operaciones de API de prueba de destino](../../testing-api/streaming-destinations/destination-testing-api.md).
 
-## Pasos siguientes
+## Próximos pasos
 
-Después de probar el destino y confirmar que está configurado correctamente, use la [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración al Adobe y revisarla.
+Después de probar el destino y confirmar que está configurado correctamente, use la [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración a Adobe para que la revise.

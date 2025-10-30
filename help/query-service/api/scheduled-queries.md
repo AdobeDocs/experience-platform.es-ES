@@ -5,9 +5,9 @@ title: Extremo de programaciones
 description: En las siguientes secciones se describen las distintas llamadas a la API que puede realizar para consultas programadas con la API del servicio de consultas.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1409'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Las consultas creadas con una cuenta de usuario personal fallarán si se revoca 
 >
 >Consideraciones importantes al administrar consultas programadas:<ul><li>Las consultas programadas fallarán si la cuenta (técnica o de usuario) utilizada para crearlas pierde el acceso o los permisos.</li><li>Las consultas programadas deben desactivarse antes de eliminarse mediante la API o la interfaz de usuario.</li><li>No se admite la programación indefinida sin fecha de finalización; siempre se debe especificar una fecha de finalización.</li></ul>
 
-Para obtener instrucciones detalladas sobre los requisitos de cuenta, la configuración de permisos y la administración de consultas programadas, consulte la [documentación de programaciones de consultas](../ui/query-schedules.md#technical-account-user-requirements). Para obtener instrucciones paso a paso sobre cómo crear y configurar una cuenta técnica, consulte [Configuración de Developer Console](https://experienceleague.adobe.com/es/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) y [Configuración de cuenta técnica de extremo a extremo](https://experienceleague.adobe.com/es/docs/platform-learn/tutorial-comprehensive-technical/setup).
+Para obtener instrucciones detalladas sobre los requisitos de cuenta, la configuración de permisos y la administración de consultas programadas, consulte la [documentación de programaciones de consultas](../ui/query-schedules.md#technical-account-user-requirements). Para obtener instrucciones paso a paso sobre cómo crear y configurar una cuenta técnica, consulte [Configuración de Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) y [Configuración de cuenta técnica de extremo a extremo](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Llamadas de API de muestra
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | La consulta SQL que se ejecutará en la programación definida. |
 | `query.name` | Nombre de la consulta programada. |
 | `query.description` | Una descripción opcional para la consulta programada. |
-| `schedule.schedule` | La programación cron para la consulta. Consulte [Crontab.guru](https://crontab.guru/) para ver una forma interactiva de crear, validar y comprender expresiones cron. En este ejemplo, &quot;30 * * *&quot; significa que la consulta se ejecutará cada hora en la marca de 30 minutos.<br><br>Como alternativa, puede utilizar las siguientes expresiones abreviadas:<ul><li>`@once`: la consulta solo se ejecuta una vez.</li><li>`@hourly`: la consulta se ejecuta cada hora al comienzo de la hora. Esto equivale a la expresión cron `0 * * * *`.</li><li>`@daily`: la consulta se ejecuta una vez al día a medianoche. Esto equivale a la expresión cron `0 0 * * *`.</li><li>`@weekly`: la consulta se ejecuta una vez a la semana, el domingo a medianoche. Esto equivale a la expresión cron `0 0 * * 0`.</li><li>`@monthly`: la consulta se ejecuta una vez al mes, el primer día del mes, a medianoche. Esto equivale a la expresión cron `0 0 1 * *`.</li><li>`@yearly`: la consulta se ejecuta una vez al año, el 1 de enero a medianoche. Esto equivale a la expresión cron `0 0 1 1 *`. |
+| `schedule.schedule` | La programación cron para la consulta. Consulte [Crontab.guru](https://crontab.guru/) para ver una forma interactiva de crear, validar y comprender expresiones cron. En este ejemplo, &quot;`30 * * * *`&quot; significa que la consulta se ejecutará cada hora en la marca de 30 minutos.<br><br>Como alternativa, puede utilizar las siguientes expresiones abreviadas:<ul><li>`@once`: la consulta solo se ejecuta una vez.</li><li>`@hourly`: la consulta se ejecuta cada hora al comienzo de la hora. Esto equivale a la expresión cron `0 * * * *`.</li><li>`@daily`: la consulta se ejecuta una vez al día a medianoche. Esto equivale a la expresión cron `0 0 * * *`.</li><li>`@weekly`: la consulta se ejecuta una vez a la semana, el domingo a medianoche. Esto equivale a la expresión cron `0 0 * * 0`.</li><li>`@monthly`: la consulta se ejecuta una vez al mes, el primer día del mes, a medianoche. Esto equivale a la expresión cron `0 0 1 * *`.</li><li>`@yearly`: la consulta se ejecuta una vez al año, el 1 de enero a medianoche. Esto equivale a la expresión cron `0 0 1 1 *`. |
 | `schedule.startDate` | La fecha de inicio de la consulta programada, escrita como marca de tiempo UTC. |
 
 **Respuesta**

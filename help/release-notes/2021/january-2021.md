@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '722'
 ht-degree: 27%
 
 ---
@@ -78,8 +78,8 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | ------- | ----------- |
 | Mejoras en el conector de origen de Adobe Audience Manager | Ahora puede filtrar y seleccionar segmentos de origen individuales de Audience Manager para introducirlos en Experience Platform, así como filtrar los rasgos de origen. Consulte el tutorial sobre [creación de un conector de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
 | [!DNL Google BigQuery] mejoras en el conector de origen | Ahora puede ingerir archivos de más de 10 GB en una ejecución de flujo utilizando el conector de origen [!DNL BigQuery]. Consulte la [[!DNL BigQuery] descripción general del conector de origen](../../sources/connectors/databases/bigquery.md) para obtener más información. |
-| Compatibilidad con tipos de datos complejos para almacenamiento en la nube | Ahora puede introducir tipos de datos complejos, como matrices en archivos JSON, al utilizar un conector de origen de almacenamiento en la nube. Consulte los tutoriales sobre la creación de un flujo de datos de almacenamiento en la nube [en la interfaz de usuario](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) o [mediante la API [!DNL Flow Service] 4&rbrace; para obtener más información.](../../sources/tutorials/api/collect/cloud-storage.md) |
+| Compatibilidad con tipos de datos complejos para almacenamiento en la nube | Ahora puede introducir tipos de datos complejos, como matrices en archivos JSON, al utilizar un conector de origen de almacenamiento en la nube. Consulte los tutoriales sobre la creación de un flujo de datos de almacenamiento en la nube [en la interfaz de usuario](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) o [mediante la API [!DNL Flow Service] 4} para obtener más información.](../../sources/tutorials/api/collect/cloud-storage.md) |
 | Compatibilidad con la autenticación basada en claves principales de servicio para el origen [!DNL Microsoft Dynamics] | Ahora puede autenticarse en su cuenta de [!DNL Dynamics] mediante una clave principal de servicio como alternativa a la autenticación basada en contraseña. Consulte la [[!DNL Dynamics] descripción general del conector de origen](../../sources/connectors/crm/ms-dynamics.md) para obtener más información. |
-| Compatibilidad de la IU con separadores personalizados en fuentes de almacenamiento en la nube | Ahora puede establecer un delimitador de columna personalizado, como una coma (`,`), una tabulación (`\t`) o una barra vertical (`|`), para recopilar archivos delimitados en la interfaz de usuario. Consulte el tutorial sobre [creación de un flujo de datos con un conector de origen de almacenamiento en la nube](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obtener más información |
+| Compatibilidad de la IU con separadores personalizados en fuentes de almacenamiento en la nube | Ahora puede establecer un delimitador de columna personalizado, como una coma (`,`), una tabulación (`\t`) o una barra vertical (&amp;vert;), para recopilar archivos delimitados en la interfaz de usuario. Consulte el tutorial sobre [creación de un flujo de datos con un conector de origen de almacenamiento en la nube](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obtener más información |
 
 Para obtener más información sobre las fuentes, consulte [descripción general de las fuentes](../../sources/home.md).

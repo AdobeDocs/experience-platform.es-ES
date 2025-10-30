@@ -2,9 +2,9 @@
 title: Información general sobre la extensión Splunk
 description: Obtenga información acerca de la extensión Splunk para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '958'
 ht-degree: 1%
 
 ---
@@ -61,13 +61,13 @@ Seleccione **Extensiones** en el panel de navegación izquierdo. En **Instalado*
 
 ![Botón Configurar para la extensión Splunk que se está seleccionando en la interfaz de usuario](../../../images/extensions/server/splunk/configure.png)
 
-Para la **[!UICONTROL URL del Recopilador de eventos HTTP]**, escribe la dirección y el puerto de la instancia de la plataforma Splunk. En **[!UICONTROL Token de acceso]**, escriba su valor [!DNL Event Collector Token]. Cuando termine, seleccione **[!UICONTROL Guardar]**.
+Para **[!UICONTROL HTTP Event Collector URL]**, escribe la dirección y el puerto de la instancia de la plataforma Splunk. En **[!UICONTROL Access Token]**, escriba el valor [!DNL Event Collector Token]. Cuando termine, seleccione **[!UICONTROL Save]**.
 
 ![Opciones de configuración completadas en la interfaz de usuario](../../../images/extensions/server/splunk/input.png)
 
 ## Configuración de una regla de reenvío de eventos {#config_rule}
 
-Comience a crear una nueva regla de reenvío de eventos [rule](../../../ui/managing-resources/rules.md) y configure sus condiciones como desee. Al seleccionar las acciones de la regla, selecciona la extensión [!UICONTROL Splunk] y, a continuación, selecciona el tipo de acción [!UICONTROL Crear evento]. Aparecen controles adicionales para configurar aún más el evento Splunk.
+Comience a crear una nueva regla de reenvío de eventos [rule](../../../ui/managing-resources/rules.md) y configure sus condiciones como desee. Al seleccionar las acciones para la regla, seleccione la extensión [!UICONTROL Splunk] y, a continuación, seleccione el tipo de acción [!UICONTROL Create Event]. Aparecen controles adicionales para configurar aún más el evento Splunk.
 
 ![Definir configuración de acción](../../../images/extensions/server/splunk/action-configurations.png)
 
@@ -75,13 +75,13 @@ El siguiente paso es asignar las propiedades del evento Splunk a los elementos d
 
 | Nombre del campo | Descripción |
 | --- | --- |
-| [!UICONTROL Evento &#x200B;]<br><br>**(OBLIGATORIO)** | Indique cómo desea proporcionar los datos de evento. Los datos de evento se pueden asignar a la clave `event` dentro del objeto JSON en la solicitud HTTP o pueden ser texto sin procesar. La clave `event` está en el mismo nivel dentro del paquete de eventos JSON que las claves de metadatos. Dentro de los llaves clave-valor de `event`, los datos pueden estar en cualquier formulario que necesite (como una cadena, un número, otro objeto JSON, etc.). |
+| [!UICONTROL Event]<br><br>**(OBLIGATORIO)** | Indique cómo desea proporcionar los datos de evento. Los datos de evento se pueden asignar a la clave `event` dentro del objeto JSON en la solicitud HTTP o pueden ser texto sin procesar. La clave `event` está en el mismo nivel dentro del paquete de eventos JSON que las claves de metadatos. Dentro de los llaves clave-valor de `event`, los datos pueden estar en cualquier formulario que necesite (como una cadena, un número, otro objeto JSON, etc.). |
 | [!UICONTROL Host] | El nombre de host del cliente desde el que envía los datos. |
-| [!UICONTROL Tipo de Source] | Tipo de origen que se asigna a los datos de evento. |
+| [!UICONTROL Source Type] | Tipo de origen que se asigna a los datos de evento. |
 | [!UICONTROL Source] | Valor de origen que se asigna a los datos de evento. Por ejemplo, si está enviando datos desde una aplicación que está desarrollando, establezca esta clave en el nombre de la aplicación. |
-| [!UICONTROL Índice] | Nombre del índice de los datos del evento. El índice que especifique aquí debe estar dentro de la lista de índices permitidos si el token tiene el parámetro indexes establecido. |
-| [!UICONTROL Fecha] | La hora del evento. El formato de hora predeterminado es la hora de UNIX (en el formato `<sec>.<ms>`) y depende de la zona horaria local. Por ejemplo, `1433188255.500` indica 1433188255 segundos y 500 milisegundos después de epoch o lunes, 1 de junio de 2015, a las 7:50:55 PM GMT. |
-| [!UICONTROL Campos] | Especifique un objeto JSON sin procesar o un conjunto de pares clave-valor que contengan campos personalizados explícitos que se definirán en el momento del índice.  La clave `fields` no se aplica a los datos sin procesar.<br><br>Las solicitudes que contienen la propiedad `fields` deben enviarse al extremo `/collector/event`; de lo contrario, no se indizarán. Para obtener más información, consulte la documentación de Splunk sobre [extracciones de campos indexados](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Index] | Nombre del índice de los datos del evento. El índice que especifique aquí debe estar dentro de la lista de índices permitidos si el token tiene el parámetro indexes establecido. |
+| [!UICONTROL Time] | La hora del evento. El formato de hora predeterminado es la hora de UNIX (en el formato `<sec>.<ms>`) y depende de la zona horaria local. Por ejemplo, `1433188255.500` indica 1433188255 segundos y 500 milisegundos después de epoch o lunes, 1 de junio de 2015, a las 7:50:55 PM GMT. |
+| [!UICONTROL Fields] | Especifique un objeto JSON sin procesar o un conjunto de pares clave-valor que contengan campos personalizados explícitos que se definirán en el momento del índice.  La clave `fields` no se aplica a los datos sin procesar.<br><br>Las solicitudes que contienen la propiedad `fields` deben enviarse al extremo `/collector/event`; de lo contrario, no se indizarán. Para obtener más información, consulte la documentación de Splunk sobre [extracciones de campos indexados](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Validación de datos en Splunk {#validate}
 
@@ -89,7 +89,7 @@ Después de crear y ejecutar la regla de reenvío de eventos, valide si el event
 
 ![Los datos de evento aparecen en la interfaz de usuario de Splunk durante la validación](../../../images/extensions/server/splunk/splunk-data.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento explica cómo instalar y configurar la extensión de reenvío de eventos Splunk en la interfaz de usuario. Para obtener más información sobre la recopilación de datos de eventos en Splunk, consulte la documentación oficial:
 

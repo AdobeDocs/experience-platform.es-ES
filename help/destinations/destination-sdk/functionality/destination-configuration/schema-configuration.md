@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar el esquema de socio para destinos creados con Destination SDK.
 title: Configuración del esquema de socio
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1912'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Este artículo describe todas las opciones de configuración de esquema admitida
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -167,6 +167,7 @@ Por ejemplo, puede hacer que el campo de dirección de correo electrónico se en
 >[!NOTE]
 >
 >Actualmente se admiten las siguientes combinaciones de asignaciones requeridas:
+>
 >* Puede configurar un campo de origen y un campo de destino obligatorios. En este caso, los usuarios no pueden editar ni seleccionar ninguno de los dos campos y solo pueden ver la selección.
 >* Solo puede configurar un campo de destino requerido. En este caso, los usuarios podrán seleccionar un campo de origen para asignarlo al destino.
 >
@@ -203,7 +204,7 @@ El ejemplo siguiente muestra las asignaciones de origen y destino requeridas. Cu
 
 {style="table-layout:auto"}
 
-Como resultado, las secciones **[!UICONTROL Campo de Source]** y **[!UICONTROL Campo de destino]** de la interfaz de usuario de Experience Platform aparecen atenuadas.
+Como resultado, las secciones **[!UICONTROL Source field]** y **[!UICONTROL Target field]** de la interfaz de usuario de Experience Platform aparecen atenuadas.
 
 ![Imagen de las asignaciones requeridas en el flujo de activación de la interfaz de usuario.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +234,7 @@ El ejemplo siguiente muestra una asignación de destino requerida. Si solo se es
 
 {style="table-layout:auto"}
 
-Como resultado, la sección **[!UICONTROL Campo de destino]** de la interfaz de usuario de Experience Platform aparece atenuada, mientras que la sección **[!UICONTROL Campo de Source]** está activa y los usuarios pueden interactuar con ella. Las opciones **[!UICONTROL Clave obligatoria]** y **[!UICONTROL Clave de anulación de duplicación]** están activas y los usuarios no pueden cambiarlas.
+Como resultado, la sección **[!UICONTROL Target field]** de la interfaz de usuario de Experience Platform aparece atenuada, mientras que la sección **[!UICONTROL Source field]** está activa y los usuarios pueden interactuar con ella. Las opciones **[!UICONTROL Mandatory key]** y **[!UICONTROL Deduplication key]** están activas y los usuarios no pueden cambiarlas.
 
 ![Imagen de las asignaciones requeridas en el flujo de activación de la interfaz de usuario.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

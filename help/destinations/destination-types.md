@@ -3,9 +3,9 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Por último, las conexiones también se pueden distinguir entre destinos públic
 
 ## Conexiones {#connections}
 
-**[!UICONTROL Exportación de perfiles]**, **[!UICONTROL Exportación de audiencias de streaming]** y **[!DNL Edge Personalization]** destinos en los datos del evento de captura de Adobe Experience Platform, combínelos con otras fuentes de datos para formar el [Perfil del cliente en tiempo real](../profile/home.md), aplique la segmentación y exporte audiencias y perfiles calificados a destinos.
+Los destinos **[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** y **[!DNL Edge Personalization]** de los datos de evento de captura de Adobe Experience Platform los combinan con otras fuentes de datos para formar el [perfil del cliente en tiempo real](../profile/home.md), aplicar la segmentación y exportar audiencias y perfiles calificados a destinos.
 
 ## Destinos de exportación de perfil {#profile-export}
 
@@ -41,7 +41,7 @@ Los destinos de exportación de perfiles reciben datos sin procesar, a menudo co
 
 >[!IMPORTANT]
 >
->Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+>Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 Utilice los conectores de datos de destino empresariales avanzados para ofrecer perfiles de Adobe Real-Time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros para la sincronización de datos, el análisis y más casos de uso de enriquecimiento de perfiles.
 
@@ -71,7 +71,7 @@ Obtenga más información sobre cómo [configurar destinos de personalización p
 
 El siguiente vídeo le muestra las particularidades de los dos tipos de destinos:
 
->[!VIDEO](https://video.tv.adobe.com/v/32690?quality=12&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Tipos de audiencias exportadas {#exported-audiences-types}
 

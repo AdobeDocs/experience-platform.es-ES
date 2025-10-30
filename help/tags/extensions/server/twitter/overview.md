@@ -4,10 +4,10 @@ title: Extensión de reenvío de eventos de Twitter
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en Twitter para los requisitos de su empresa.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 3%
+source-wordcount: '999'
+ht-degree: 2%
 
 ---
 
@@ -55,7 +55,7 @@ Para conectar el Experience Platform a [!DNL Twitter], se requieren las siguient
 
 Para instalar la extensión, [cree una propiedad de reenvío de eventos](../../../ui/event-forwarding/overview.md#properties) o elija una propiedad existente para editar en su lugar.
 
-Seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Catálogo]**, seleccione **[!UICONTROL Instalar]** en la tarjeta de la extensión [!DNL Twitter].
+Seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Catalog]**, seleccione **[!UICONTROL Install]** en la tarjeta de la extensión [!DNL Twitter].
 
 ![Catálogo que muestra la extensión [!DNL Twitter] que resalta la instalación.](../../../images/extensions/server/twitter/install.png)
 
@@ -65,13 +65,13 @@ Seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo. En
 
 En la siguiente pantalla, escriba los siguientes [valores de configuración](#configuration-details) que recopiló anteriormente de [!DNL Twitter]:
 
-* **[!UICONTROL Id. de píxel]**
-* **[!UICONTROL Clave de consumidor]**
-* **[!UICONTROL Secreto del consumidor]**
+* **[!UICONTROL Pixel Id]**
+* **[!UICONTROL Consumer Key]**
+* **[!UICONTROL Consumer Secret]**
 * **[!UICONTROL Token]**
-* **[!UICONTROL Secreto de token]**
+* **[!UICONTROL Token Secret]**
 
-Cuando termine, seleccione **[!UICONTROL Guardar]**.
+Cuando termine, seleccione **[!UICONTROL Save]**.
 
 Pantalla de configuración de ![[!DNL Twitter] para la extensión [!DNL Twitter].](../../../images/extensions/server/twitter/configure.png)
 
@@ -79,41 +79,41 @@ Pantalla de configuración de ![[!DNL Twitter] para la extensión [!DNL Twitter]
 
 Una vez configurados todos los elementos de datos, puede empezar a crear reglas de reenvío de eventos que determinan cuándo y cómo se enviarán los eventos a [!DNL Twitter].
 
-Cree una nueva [regla](../../../ui/managing-resources/rules.md) en su propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, agregue una nueva acción y establezca la extensión en **[!UICONTROL Twitter]**. Para enviar eventos de Edge Network a [!DNL Twitter], establezca **[!UICONTROL Tipo de acción]** en **[!UICONTROL Enviar conversión web].**
+Cree una nueva [regla](../../../ui/managing-resources/rules.md) en su propiedad de reenvío de eventos. En **[!UICONTROL Actions]**, agregue una nueva acción y establezca la extensión en **[!UICONTROL Twitter]**. Para enviar eventos de Edge Network a [!DNL Twitter], establezca **[!UICONTROL Action Type]** en **[!UICONTROL Send Web Conversion].**
 
 Después de la selección, aparecen controles adicionales para configurar aún más el evento. Debe asignar las propiedades de evento [!DNL Twitter] a los elementos de datos que creó anteriormente. Para obtener más información, consulte la [[!DNL Twitter] API de conversiones web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
 ![El [!DNL Twitter] está creando una regla de evento de conversión.](../../../images/extensions/server/twitter/action-configuration.png)
 
-**[!UICONTROL Identificación de usuario]**
+**[!UICONTROL User Identification]**
 
 | Nombre del campo | Descripción | Ejemplo | Requerido |
 | --- | --- | --- | --- |
-| [!UICONTROL [!DNL Twitter] Clic ID] | [!DNL Twitter] ID de clic según se analizó en la URL de pulsación. | 26l6412g5p4iyj65a2oic2ayg2 | Obligatorio si no se añade ningún otro identificador. |
-| [!UICONTROL Correo electrónico] | Una dirección de correo electrónico con hash SHA256. El texto debe escribirse en minúsculas y los espacios iniciales o finales deben eliminarse antes del hash. | eventforwarding@example.com | Obligatorio si no se añade ningún otro identificador. |
-| [!UICONTROL Teléfono] | El teléfono sirve como identificador para coincidir con el evento de conversión. El número de teléfono debe tener el formato E164 [+][código de país][código de área][local phone number] antes del hash. | +911234567875 | Obligatorio si no se añade ningún otro identificador. |
+| [!UICONTROL [!DNL Twitter] Click ID] | [!DNL Twitter] ID de clic según se analizó en la URL de pulsación. | `26l6412g5p4iyj65a2oic2ayg2` | Obligatorio si no se añade ningún otro identificador. |
+| [!UICONTROL Email] | Una dirección de correo electrónico con hash SHA256. El texto debe escribirse en minúsculas y los espacios iniciales o finales deben eliminarse antes del hash. | `eventforwarding@example.com` | Obligatorio si no se añade ningún otro identificador. |
+| [!UICONTROL Phone] | El teléfono sirve como identificador para coincidir con el evento de conversión. El número de teléfono debe tener el formato E164 `[+][country code][area code][local phone number]` antes del hash. | `+911234567875` | Obligatorio si no se añade ningún otro identificador. |
 
-**[!UICONTROL Datos de conversión]**
+**[!UICONTROL Conversion Data]**
 
 | Nombre del campo | Descripción | Ejemplo | Requerido |
 | --- | --- | --- | --- |
-| [!UICONTROL Tiempo de conversión] | Fecha-hora como cadena en formato ISO 8601 o `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | 2022-02-18T01:14:00.603Z | Sí |
-| [!UICONTROL Id. de evento] | El ID en base 36 de un evento específico. Este identificador debe coincidir con un evento preconfigurado contenido en su cuenta publicitaria de [!DNL Twitter]. Esto se conoce como ID del evento correspondiente en el Administrador de eventos. | o87ne o tw-o8z6j-o87ne (tw-pixel_id-event-id) | Sí |
-| [!UICONTROL Número de elementos] | El número de artículos que se compran en el evento. Debe ser un número positivo mayor que 0. | 4 | No |
-| [!UICONTROL Moneda] | La moneda de los artículos que se compran en el evento. Esto se expresa en ISO-4217 y, si no se proporciona, el valor predeterminado es USD. | USD | No |
-| [!UICONTROL Valor] | El valor del precio de los artículos que se compran en el evento. | 100,00 | No |
-| [!UICONTROL ID de conversión] | Identificador de un evento de conversión que se puede utilizar para la deduplicación entre conversiones de API de conversión y píxeles web en la misma etiqueta de evento. | 23294827 | No |
-| [!UICONTROL Descripción] | Una descripción con cualquier información adicional sobre las conversiones. | Probar conversión | No |
+| [!UICONTROL Conversion Time] | Fecha-hora como cadena en formato ISO 8601 o `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | 2022-02-18T01:14:00.603Z | Sí |
+| [!UICONTROL Event Id] | El ID en base 36 de un evento específico. Este identificador debe coincidir con un evento preconfigurado contenido en su cuenta publicitaria de [!DNL Twitter]. Esto se conoce como ID del evento correspondiente en el Administrador de eventos. | o87ne o tw-o8z6j-o87ne (tw-pixel_id-event-id) | Sí |
+| [!UICONTROL Number of Items] | El número de artículos que se compran en el evento. Debe ser un número positivo mayor que 0. | 4 | No |
+| [!UICONTROL Currency] | La moneda de los artículos que se compran en el evento. Esto se expresa en ISO-4217 y, si no se proporciona, el valor predeterminado es USD. | USD | No |
+| [!UICONTROL Value] | El valor del precio de los artículos que se compran en el evento. | 100,00 | No |
+| [!UICONTROL Conversion ID] | Identificador de un evento de conversión que se puede utilizar para la deduplicación entre conversiones de API de conversión y píxeles web en la misma etiqueta de evento. | 23294827 | No |
+| [!UICONTROL Description] | Una descripción con cualquier información adicional sobre las conversiones. | Probar conversión | No |
 
 ## Validar datos dentro de [!DNL Twitter]
 
 Una vez creada y ejecutada la regla de reenvío de eventos, valide si el evento enviado a la API [!DNL Twitter] se muestra según lo esperado en la interfaz de usuario de [!DNL Twitter].
 
-Si la recopilación de eventos y la integración de [!DNL Experience Platform] se realizaron correctamente, verá eventos dentro del [!DNL Twitter] [!UICONTROL administrador de eventos].
+Si la colección de eventos y la integración de [!DNL Experience Platform] se realizaron correctamente, verá eventos dentro de [!DNL Twitter] [!UICONTROL Events manager].
 
 ![Administrador de eventos [!DNL Twitter]](../../../images/extensions/server/twitter/event-manager.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo enviar eventos de conversión a [!DNL Twitter] mediante el reenvío de eventos. Para obtener más información sobre estas tecnologías subyacentes, consulte la documentación oficial:
 

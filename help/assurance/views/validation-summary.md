@@ -2,10 +2,10 @@
 title: Vista del editor de validación
 description: Esta guía detalla información acerca de la vista Editor de validación en Adobe Experience Platform Assurance.
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 100%
+source-wordcount: '496'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +15,7 @@ El Editor de validación permite administrar rápida y fácilmente las funciones
 
 ## Introducción al Editor de validación
 
-Después de [configurar Assurance](../tutorials/implement-assurance.md), en la vista **[!UICONTROL Inicio]**, seleccione **[!UICONTROL Editor de validación]**.
+Después de [configurar Assurance](../tutorials/implement-assurance.md), en la vista **[!UICONTROL Home]**, seleccione **[!UICONTROL Validation Editor]**.
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -23,7 +23,7 @@ Después de [configurar Assurance](../tutorials/implement-assurance.md), en la v
 
 Esta función le permite crear, editar o eliminar funciones de validación para sus sesiones de Adobe Experience Platform Assurance.
 
-1. Seleccione **[!UICONTROL Crear una nueva validación]**.
+1. Seleccione **[!UICONTROL Create a New Validation]**.
 2. Introduzca un **nombre** para identificar la validación, proporcione una **categoría** y una **descripción**.
 3. Edite el código en el editor para validar los eventos de la sesión de Assurance.
 
@@ -57,7 +57,7 @@ Se espera que la función de validación devuelva un objeto que contenga lo sigu
 | :--- | :--- | :--- |
 | `message` | Cadena | El mensaje de validación que se mostrará en los resultados del resumen. |
 | `events` | Matriz | Una matriz de uuid de evento para registrar como coincidentes o no coincidentes. |
-| `links` | Matriz | Una matriz de objetos de `ValidationResultLink` para hacer referencia a documentación y otros recursos `{( type: 'doc'|'product', url: String )}` |
+| `links` | Matriz | Una matriz de `ValidationResultLink` objetos para hacer referencia a la documentación y otros recursos `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
 | `result` | Cadena | Este es el resultado de validación y se espera que sea una de las cadenas enumeradas: “coincidente”, “no coincidente”, “desconocido” |
 
 ## Vista de los resultados de validación

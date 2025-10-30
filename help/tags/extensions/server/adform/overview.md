@@ -3,10 +3,11 @@ keywords: integración de adform; adform;
 title: Integración de Adform para retargeting no autenticado
 description: Esta integración de Adobe Experience Platform le permite redireccionar a los usuarios en función de ECID.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 23da6e12b1f5bdc37240d7aa11a44e040b29e3f7
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '726'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -47,7 +48,7 @@ Antes de integrar Adobe con Adobe, asegúrese de que se cumplen los siguientes r
 2. **CDP o SKU de conexión**: para habilitar una comunicación perfecta del lado del cliente y del servidor, debe tener el Prime de Adobe Customer Data Platform (CDP) o el SKU de Ultimate, o el SKU de conexión.
 
 3. **Configuración de Adobe Experience Platform Edge Network**:
-   * Asegúrese de que Edge Network esté configurado para admitir el reenvío de eventos en tiempo real para el redireccionamiento fuera del sitio. Consulte la [Guía de introducción al reenvío de eventos](https://experienceleague.adobe.com/es/docs/experience-platform/tags/event-forwarding/getting-started) de Adobe para obtener más información.
+   * Asegúrese de que Edge Network esté configurado para admitir el reenvío de eventos en tiempo real para el redireccionamiento fuera del sitio. Consulte la [Guía de introducción al reenvío de eventos](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) de Adobe para obtener más información.
    * Este paso es crucial para transmitir datos al extremo del lado del servidor de Adobe de forma eficaz.
 
 Una vez cumplidos estos requisitos previos, puede seguir configurando e implementando la extensión [!DNL Adform].
@@ -105,6 +106,7 @@ La extensión debe estar adjunta a una regla para funcionar correctamente. Si no
 ## Validación e implementación
 
 Asegúrese de que la extensión esté instalada y configurada correctamente y de que todos los elementos de datos necesarios estén asignados, lo que incluye:
+
 * [ECID](/help/identity-service/features/ecid.md)
 * Nombre de página
 * URL de referencia
@@ -113,6 +115,6 @@ Asegúrese de que la extensión esté instalada y configurada correctamente y de
 
 Una vez que ingrese todos los campos requeridos y termine la prueba, seleccione **build** para implementar la extensión.
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora debería saber cómo se integra Adobe con las capacidades del lado del servidor de Adobe y puede evaluar la viabilidad de la integración dentro de su infraestructura existente. Para obtener más información, consulte [Documentación oficial de Adobe](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud).

@@ -2,7 +2,7 @@
 description: Esta página proporciona toda la información necesaria para enviar un destino de producción para su revisión cuando se crea con Destination SDK.
 title: Enviar un destino de productos para su revisión
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 0%
@@ -263,6 +263,7 @@ Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI)
 El catálogo de destinos incluye un logotipo para cada tarjeta de destino. En el correo electrónico de envío, incluya una imagen con el logotipo de su destino.
 
 Los requisitos de imagen son:
+
 * **Formato**: `SVG`
 * **Tamaño**: menos de 2 MB
 

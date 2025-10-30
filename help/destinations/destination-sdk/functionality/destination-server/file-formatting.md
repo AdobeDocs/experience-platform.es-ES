@@ -1,8 +1,8 @@
 ---
-description: Obtenga información sobre cómo configurar las opciones de formato de archivo para destinos basados en archivos creados con Adobe Experience Platform Destination SDK a través del punto de conexión /destination-servers.
+description: Aprenda a configurar las opciones de formato de archivo para los destinos basados en archivos creados con Adobe Experience Platform Destination SDK mediante el punto de conexión /destination-servers.
 title: Configuración de formato de archivo
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 2%
@@ -35,7 +35,7 @@ Esta página describe todos los valores de formato de archivo admitidos para los
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -48,7 +48,7 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 
 ## Parámetros admitidos {#supported-parameters}
 
-Puede modificar varias propiedades de los archivos exportados para que coincidan con los requisitos del sistema de recepción de archivos del destino, de modo que se lean e interpreten de forma óptima los archivos recibidos del Experience Platform.
+Puede modificar varias propiedades de los archivos exportados para que coincidan con los requisitos del sistema de recepción de archivos del destino, a fin de leer e interpretar de forma óptima los archivos recibidos de Experience Platform.
 
 >[!NOTE]
 >
@@ -129,7 +129,7 @@ En el siguiente ejemplo de configuración, todas las opciones de CSV están pred
 
 ## Opciones de CSV donde los usuarios pueden seleccionar opciones de configuración {#file-configuration-templating-pebble}
 
-En el ejemplo de configuración que se muestra a continuación, ninguna de las opciones de CSV está predefinida. El `value` en cada uno de los parámetros `csvOptions` se configura en un campo de datos del cliente correspondiente a través del extremo `/destinations` (por ejemplo, [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) para la opción de formato de archivo `quote`) y los usuarios pueden utilizar la interfaz de usuario del Experience Platform para seleccionar entre las distintas opciones que configure en el campo de datos del cliente correspondiente. Puede ver el aspecto de estas opciones en la documentación de [opciones de formato de archivo para destinos basados en archivos](../../../ui/batch-destinations-file-formatting-options.md).
+En el ejemplo de configuración que se muestra a continuación, ninguna de las opciones de CSV está predefinida. El `value` en cada uno de los parámetros `csvOptions` se configura en un campo de datos del cliente correspondiente a través del extremo `/destinations` (por ejemplo, [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) para la opción de formato de archivo `quote`) y los usuarios pueden utilizar la interfaz de usuario de Experience Platform para seleccionar entre las distintas opciones que configure en el campo de datos del cliente correspondiente. Puede ver el aspecto de estas opciones en la documentación de [opciones de formato de archivo para destinos basados en archivos](../../../ui/batch-destinations-file-formatting-options.md).
 
 ```json
 {
@@ -199,12 +199,12 @@ A continuación se muestra una referencia completa de todas las opciones de form
 | `csvOptions.timestampFormat.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece la cadena que indica un formato de marca de tiempo. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece un solo carácter utilizado para omitir el escape del carácter de comillas. | `\` cuando los caracteres de escape y comillas son diferentes. `\0` cuando el carácter de escape y el carácter de comillas son iguales. | - | - |
 | `csvOptions.emptyValue.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece la representación de cadena de un valor vacío. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | Opcional | Indica el número máximo de filas por archivo exportado, entre 1 000 000 y 10 000 000 de filas. | 5.000.000 |
-| `includeFileManifest` | Opcional | Habilita la compatibilidad para exportar un manifiesto de archivo junto con las exportaciones de archivo. El archivo JSON de manifiesto contiene información sobre la ubicación de exportación, el tamaño de exportación, etc. Se ha asignado un nombre al manifiesto con el formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Ver [archivo de manifiesto de ejemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). El archivo de manifiesto incluye los campos siguientes: <ul><li>`flowRunId`: la [ejecución de flujo de datos](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que generó el archivo exportado.</li><li>`scheduledTime`: la hora en UTC en que se exportó el archivo. </li><li>`exportResults.sinkPath`: ruta de acceso de la ubicación de almacenamiento en la que se deposita el archivo exportado. </li><li>`exportResults.name`: nombre del archivo exportado.</li><li>`size`: tamaño del archivo exportado, en bytes.</li></ul> |
+| `maxFileRowCount` | Opcional | Indica el número máximo de filas por archivo exportado, entre 1 000 000 y 10 000 000 de filas. | 5.000.000 | - | - |
+| `includeFileManifest` | Opcional | Habilita la compatibilidad para exportar un manifiesto de archivo junto con las exportaciones de archivo. El archivo JSON de manifiesto contiene información sobre la ubicación de exportación, el tamaño de exportación, etc. Se ha asignado un nombre al manifiesto con el formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Ver [archivo de manifiesto de ejemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). El archivo de manifiesto incluye los campos siguientes: <ul><li>`flowRunId`: la [ejecución de flujo de datos](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que generó el archivo exportado.</li><li>`scheduledTime`: la hora en UTC en que se exportó el archivo. </li><li>`exportResults.sinkPath`: ruta de acceso de la ubicación de almacenamiento en la que se deposita el archivo exportado. </li><li>`exportResults.name`: nombre del archivo exportado.</li><li>`size`: tamaño del archivo exportado, en bytes.</li></ul> | - | - |
 
 {style="table-layout:auto"}
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor cómo funciona el formato de archivos en una configuración de servidor de destino y cómo puede configurarlo.
 

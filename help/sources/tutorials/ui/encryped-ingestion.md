@@ -2,9 +2,9 @@
 title: Ingesta de datos cifrados en la IU de fuentes de Workspace
 description: Aprenda a introducir datos cifrados en el espacio de trabajo de la interfaz de usuario de fuentes.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1414'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ Puede introducir archivos y carpetas de datos cifrados en Adobe Experience Platf
 
 Lea esta guía para obtener información sobre cómo ingerir datos cifrados con fuentes por lotes de almacenamiento en la nube mediante la interfaz de usuario.
 
-## Introducción 
+## Introducción
 
 Antes de continuar con este tutorial, lea los siguientes documentos para comprender mejor las siguientes funciones y conceptos de Experience Platform.
 
@@ -51,19 +51,19 @@ Puede crear el par de claves de cifrado a través de la interfaz de usuario de E
 
 >[!ENDSHADEBOX]
 
-En la interfaz de usuario de Experience Platform, vaya al área de trabajo de orígenes y, a continuación, seleccione [!UICONTROL Pares de claves] en el encabezado superior.
+En la interfaz de usuario de Experience Platform, navegue hasta el área de trabajo de orígenes y, a continuación, seleccione [!UICONTROL Key Pairs] en el encabezado superior.
 
 ![El catálogo de orígenes con el encabezado &quot;Pares de claves&quot; seleccionado.](../../images/tutorials/edi/catalog.png)
 
-Se le dirigirá a una página que muestra una lista de pares de claves de cifrado existentes en su organización. Esta página proporciona información sobre el título, el ID, el tipo, el algoritmo de cifrado, la caducidad y el estado de una clave determinada. Para crear un nuevo par de claves, seleccione **[!UICONTROL Crear clave]**.
+Se le dirigirá a una página que muestra una lista de pares de claves de cifrado existentes en su organización. Esta página proporciona información sobre el título, el ID, el tipo, el algoritmo de cifrado, la caducidad y el estado de una clave determinada. Para crear un nuevo par de claves, seleccione **[!UICONTROL Create Key]**.
 
 ![La página Pares de claves, con &quot;clave de cifrado&quot; seleccionada como tipo de clave y el botón &quot;crear clave&quot; seleccionado.](../../images/tutorials/edi/encryption_key_page.png)
 
-A continuación, elija el tipo de clave que desea crear. Para crear una clave de cifrado, seleccione **[!UICONTROL Clave de cifrado]** y, a continuación, seleccione **[!UICONTROL Continuar]**.
+A continuación, elija el tipo de clave que desea crear. Para crear una clave de cifrado, seleccione **[!UICONTROL Encryption Key]** y después **[!UICONTROL Continue]**.
 
 ![Ventana de creación de claves, con la clave de cifrado seleccionada.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-Proporcione un título y una frase de contraseña para la clave de cifrado. La frase de contraseña es una capa adicional de protección para las claves de cifrado. Una vez creada, Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. Cuando termine, seleccione **[!UICONTROL Crear]**.
+Proporcione un título y una frase de contraseña para la clave de cifrado. La frase de contraseña es una capa adicional de protección para las claves de cifrado. Una vez creada, Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. Cuando termine, seleccione **[!UICONTROL Create]**.
 
 ![Ventana de creación de clave de cifrado, donde se proporciona un título y una frase de contraseña.](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -71,7 +71,7 @@ Si se ejecuta correctamente, aparecerá una nueva ventana que muestra la nueva c
 
 ![Ventana que muestra información sobre el par de claves de cifrado recién creado.](../../images/tutorials/edi/encryption_key_details.png)
 
-Para ver información sobre una clave de cifrado existente, seleccione los puntos suspensivos (`...`) junto al título de la clave. Seleccione **[!UICONTROL Detalles de clave]** para ver la clave pública y el identificador de clave. Alternativamente, si desea eliminar su clave de cifrado, seleccione **[!UICONTROL Eliminar]**.
+Para ver información sobre una clave de cifrado existente, seleccione los puntos suspensivos (`...`) junto al título de la clave. Seleccione **[!UICONTROL Key details]** para ver la clave pública y el identificador de clave. Como alternativa, si desea eliminar la clave de cifrado, seleccione **[!UICONTROL Delete]**.
 
 ![Página de pares de claves, donde se muestra una lista de claves de cifrado. Se seleccionaron los puntos suspensivos junto a &quot;acme-encryption-key&quot; y la lista desplegable muestra opciones para ver los detalles de la clave o eliminar las claves.](../../images/tutorials/edi/configuration_options.png)
 
@@ -90,11 +90,11 @@ Una clave de verificación de firma es otro mecanismo de cifrado que implica una
 
 >[!ENDSHADEBOX]
 
-Para crear una clave de verificación de firma, seleccione **[!UICONTROL Clave de verificación de firma]** en la ventana de selección de tipo de clave y, a continuación, seleccione **[!UICONTROL Continuar]**.
+Para crear una clave de verificación de firma, seleccione **[!UICONTROL Sign Verification Key]** en la ventana de selección de tipo de clave y luego seleccione **[!UICONTROL Continue]**.
 
 ![Ventana de selección de tipo de clave donde se selecciona la clave de verificación de firma.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
-A continuación, proporcione un título y una clave PGP codificada en [!DNL Base64] como clave pública y seleccione **[!UICONTROL Crear]**.
+A continuación, proporcione un título y una clave PGP codificada en [!DNL Base64] como clave pública y seleccione **[!UICONTROL Create]**.
 
 ![La ventana Crear clave de verificación de firma.](../../images/tutorials/edi/create_sign_verification_key.png)
 
@@ -127,15 +127,15 @@ Puede introducir datos cifrados mediante los siguientes orígenes por lotes de a
 * [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
 * [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-Autentique con la fuente de almacenamiento en la nube que elija. Durante el paso de selección de datos del flujo de trabajo, seleccione el archivo o carpeta cifrados que desee introducir y, a continuación, habilite la opción **[!UICONTROL Is the file encryption]**.
+Autentique con la fuente de almacenamiento en la nube que elija. Durante el paso de selección de datos del flujo de trabajo, seleccione el archivo o la carpeta cifrados que desee introducir y, a continuación, active la opción **[!UICONTROL Is the file encrypted]**.
 
 ![Paso &quot;seleccionar datos&quot; del flujo de trabajo de orígenes, donde se selecciona un archivo de datos cifrado para la ingesta.](../../images/tutorials/edi/select_data.png)
 
 A continuación, seleccione un archivo de muestra de los datos de origen. Dado que los datos están cifrados, Experience Platform necesitará un archivo de muestra para crear un esquema XDM que se pueda asignar a los datos de origen.
 
-![: &quot;¿Está cifrado este archivo?&quot; y el botón &quot;Seleccionar archivo de muestra&quot; seleccionado. &#x200B;](../../images/tutorials/edi/select_sample_file.png)
+![: &quot;¿Está cifrado este archivo?&quot; alternancia habilitada y el botón &quot;Seleccionar archivo de muestra&quot; seleccionado](../../images/tutorials/edi/select_sample_file.png).
 
-Una vez seleccionado el archivo de muestra, configure las opciones de los datos, como el formato de datos, el delimitador y el tipo de compresión correspondientes. Espere un poco para que la interfaz de vista previa se represente completamente y, a continuación, seleccione **[!UICONTROL Guardar]**.
+Una vez seleccionado el archivo de muestra, configure las opciones de los datos, como el formato de datos, el delimitador y el tipo de compresión correspondientes. Espere un poco para que la interfaz de vista previa se represente completamente y, a continuación, seleccione **[!UICONTROL Save]**.
 
 ![Se ha seleccionado una muestra para la ingesta y la vista previa del archivo está completamente cargada.](../../images/tutorials/edi/file_preview.png)
 
@@ -147,7 +147,7 @@ Si también utilizó el par de claves de verificación de firma para proporciona
 
 ![El título de la clave de verificación de firma del identificador de clave que corresponde con el cifrado de verificación de firma.](../../images/tutorials/edi/custom_key_id.png)
 
-Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine, seleccione **[!UICONTROL Next]**.
 
 Complete los pasos restantes del flujo de trabajo de orígenes para terminar de crear el flujo de datos.
 

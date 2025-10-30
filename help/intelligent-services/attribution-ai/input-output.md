@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Entrada y salida en Attribution AI
 description: En el siguiente documento se describen los diferentes insumos y productos utilizados en la inteligencia artificial aplicada a la atribución.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2467'
 ht-degree: 3%
 
 ---
@@ -64,6 +64,7 @@ Los conjuntos de datos de evento de experiencia (EE) no necesitan tener explíci
 >[!IMPORTANT]
 >
 > La cantidad mínima de datos necesaria para que la inteligencia artificial aplicada a la atribución funcione es la siguiente:
+>
 > - Debe proporcionar datos durante al menos 3 meses (90 días) para ejecutar un buen modelo.
 > - Necesita al menos 1000 conversiones.
 
@@ -102,9 +103,10 @@ Inteligencia artificial aplicada a la atribución genera puntuaciones de atribuc
 
 >[!NOTE]
 >
-> Puede ver cualquier columna de creación de informes que desee del conjunto de datos de entrada en el conjunto de datos de salida de puntuación solo si alguna de las siguientes opciones es verdadera:
-> - La columna de creación de informes se incluye en la página de configuración como parte de la configuración de punto de contacto o de definición de conversión.
-> - La columna de creación de informes se incluye en columnas de conjuntos de datos de puntuación adicionales.
+>Puede ver cualquier columna de creación de informes que desee del conjunto de datos de entrada en el conjunto de datos de salida de puntuación solo si alguna de las siguientes opciones es verdadera:
+>
+>- La columna de creación de informes se incluye en la página de configuración como parte de la configuración de punto de contacto o de definición de conversión.
+>- La columna de creación de informes se incluye en columnas de conjuntos de datos de puntuación adicionales.
 
 La siguiente tabla describe los campos de esquema en la salida de ejemplo de puntuaciones sin procesar:
 
@@ -137,18 +139,18 @@ La siguiente tabla describe los campos de esquema en la salida de ejemplo de pun
 | identity, objeto | False | Contiene los detalles del usuario utilizado para generar el modelo como `id` y `namespace`. |
 | id (cadena) | True | ID de identidad del usuario, como ID de cookie, ID de Adobe Analytics (AAID) o ID de Experience Cloud (ECID, también conocido como MCID o como ID de visitante), etc. <br> **Ejemplo:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Área de nombres de identidad utilizada para crear las rutas y, por lo tanto, el modelo. <br> **Ejemplo:** aaid |
-| touchpointsDetail (matriz de objetos) | True | La lista de detalles del punto de contacto que llevan a la conversión ordenada por | incidencia de punto de contacto o marca de tiempo. |
+| touchpointsDetail (matriz de objetos) | True | La lista de detalles de punto de contacto que llevan a la conversión ordenada por ocurrencia de punto de contacto o marca de tiempo. |
 | touchpointName (String) | True | Nombre del punto de contacto que se configuró durante la configuración. <br> **Ejemplo:** PAID_SEARCH_CLICK |
 | score, objeto | True | Contribución de punto de contacto a esta conversión como puntuación. Para obtener más información sobre las puntuaciones producidas dentro de este objeto, consulte la sección [puntuaciones de atribución agregadas](#aggregated-attribution-scores). |
 | touchPoint, objeto | True | Metadatos de Touchpoint. Para obtener más información sobre las puntuaciones generadas dentro de este objeto, consulte la sección [puntuaciones agregadas](#aggregated-scores). |
 
 ### Visualización de rutas de puntuación sin procesar (IU) {#raw-score-path}
 
-Puede ver la ruta a las puntuaciones sin procesar en la interfaz de usuario. Comience por seleccionar **[!UICONTROL Esquemas]** en la interfaz de usuario de Experience Platform, luego busque y seleccione su esquema de puntuaciones de inteligencia artificial aplicada a la atribución en la pestaña **[!UICONTROL Examinar]**.
+Puede ver la ruta a las puntuaciones sin procesar en la interfaz de usuario. Comience por seleccionar **[!UICONTROL Schemas]** en la interfaz de usuario de Experience Platform, luego busque y seleccione su esquema de puntuaciones de inteligencia artificial aplicada a la atribución en la pestaña **[!UICONTROL Browse]**.
 
 ![Elija su esquema](./images/input-output/schemas_browse.png)
 
-A continuación, seleccione un campo en la ventana **[!UICONTROL Structure]** de la interfaz de usuario, y se abrirá la pestaña **[!UICONTROL Field properties]**. Dentro de **[!UICONTROL Propiedades del campo]** está el campo de ruta que se asigna a las puntuaciones sin procesar.
+A continuación, seleccione un campo dentro de la ventana **[!UICONTROL Structure]** de la interfaz de usuario, y se abrirá la pestaña **[!UICONTROL Field properties]**. En **[!UICONTROL Field properties]** está el campo de ruta que se asigna a las puntuaciones sin procesar.
 
 ![Elegir un esquema](./images/input-output/field_properties.png)
 
@@ -238,6 +240,6 @@ La siguiente tabla asigna las puntuaciones agregadas a las puntuaciones sin proc
 > - Inteligencia artificial aplicada a la atribución aprovecha los conjuntos de datos de Experience Platform. Para admitir solicitudes de derechos de consumidor que una marca pueda recibir, las marcas deben utilizar Experience Platform Privacy Service para enviar solicitudes de acceso y eliminación de consumidores con el fin de eliminar sus datos en el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real.
 > - Todos los conjuntos de datos que utilizamos para la entrada/salida de modelos seguirán las directrices de Experience Platform. El cifrado de datos de Experience Platform se aplica a los datos en reposo y en tránsito. Consulte la documentación para obtener más información sobre el [cifrado de datos](../../../help/landing/governance-privacy-security/encryption.md)
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Una vez que haya preparado los datos y haya establecido todas sus credenciales y esquemas, comience por seguir la [guía del usuario de inteligencia artificial aplicada a la atribución](./user-guide.md). Esta guía le explica cómo crear una instancia para la inteligencia artificial aplicada a la atribución.

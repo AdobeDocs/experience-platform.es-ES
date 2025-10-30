@@ -4,7 +4,7 @@ title: Extremo de API de trabajos de segmento
 description: El extremo de trabajos de segmento de la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación los trabajos de segmento de su organización.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 3%
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | Especifica el desplazamiento inicial para los trabajos de segmento devueltos. | `start=1` |
 | `limit` | Especifica el número de trabajos de segmento devueltos por página. | `limit=20` |
 | `status` | Filtra los resultados según el estado. Los valores admitidos son NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELED | `status=NEW` |
-| `sort` | Ordena los trabajos de segmento devueltos. Está escrito en el formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `sort` | Ordena los trabajos de segmento devueltos. Está escrito en el formato `[attributeName]:[desc|asc]`. `sort=creationTime:desc` |
 | `property` | Filtra los trabajos de segmento y obtiene coincidencias exactas para el filtro dado. Se puede escribir en cualquiera de los siguientes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtrado en la clave del objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtrado dentro de la matriz</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
@@ -70,7 +70,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de 
 >
 >La siguiente respuesta se ha truncado para el espacio y solo mostrará el primer trabajo devuelto.
 
-+++ Una respuesta de ejemplo al recuperar una lista de trabajos de segmentos.
++++ Una respuesta de ejemplo al recuperar una lista de trabajos de segmentos. 
 
 ```json
 {
@@ -604,6 +604,6 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 Una respuesta correcta devuelve el estado HTTP 204 con un cuerpo de respuesta vacío.
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, ahora tiene una mejor comprensión de cómo funcionan los trabajos de segmentos.

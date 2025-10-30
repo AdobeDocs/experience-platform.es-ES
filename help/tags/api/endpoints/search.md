@@ -2,10 +2,10 @@
 title: Extremo de la búsqueda
 description: Aprenda a realizar llamadas al extremo de la búsqueda en la API de Reactor.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '652'
-ht-degree: 97%
+ht-degree: 94%
 
 ---
 
@@ -33,8 +33,9 @@ Todas las consultas tienen ámbitos de la empresa actual y propiedades accesible
 >[!IMPORTANT]
 >
 >La funcionalidad de búsqueda tiene las siguientes advertencias y excepciones:
+>
 >* meta no se puede buscar y no se devuelve en los resultados de búsqueda.
->* Campos de esquema para delegados de paquetes de extensiones (acciones, condiciones, etc.) se pueden buscar como texto, no como una estructura de datos anidada.
+>* Los campos de esquema para los delegados de paquetes de extensiones (acciones, condiciones, etc.) se pueden buscar como texto, no como una estructura de datos anidada.
 >* Actualmente, las consultas de rango solo admiten números enteros.
 
 Para obtener información detallada sobre cómo utilizar esta funcionalidad, consulte la [guía de búsqueda](../guides/search.md).
@@ -45,7 +46,7 @@ El extremo utilizado en esta guía forma parte de la [API de Reactor](https://ww
 
 ## Realizar una búsqueda {#perform}
 
-Puede realizar una búsqueda realizando una solicitud de POST.
+Puede realizar una búsqueda realizando una petición POST.
 
 **Formato de API**
 
@@ -233,7 +234,7 @@ La siguiente tabla desglosa las convenciones de coincidencia para los tipos de c
 | Enteros | Coincidencia exacta |
 | Float | Coincidencia exacta |
 | Marcas de hora | Coincidencia exacta (formato DateTime) |
-| Mostrar nombres | Texto con análisis de términos parciales, sin distinción entre mayúsculas y minúsculas |
+| Nombres para mostrar | Texto con análisis de términos parciales, sin distinción entre mayúsculas y minúsculas |
 
 Existen convenciones adicionales para campos específicos que aparecen en la API:
 

@@ -2,7 +2,7 @@
 title: Extensión de la capa de datos del cliente de Adobe
 description: Obtenga información acerca de la extensión de la etiqueta de capa de datos del cliente de Adobe en Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 91%
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Instalación
 
-Para instalar la extensión, vaya al catálogo de extensiones en la IU del Experience Platform o en la IU de recopilación de datos y seleccione Capa de datos del cliente de Adobe.
+Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos y seleccione Capa de datos del cliente de Adobe.
 
 ![Vista de extensión ACDL en el catálogo](./images/catalog.png)
 
@@ -51,12 +51,12 @@ Si selecciona esta opción, el oyente de eventos escucha cualquier cambio realiz
 
 El oyente rastrearía los siguientes eventos push de ejemplo:
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 El siguiente ejemplo de evento push no sería rastreado por el oyente:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### Escuchar todos los eventos
 
@@ -64,8 +64,8 @@ Si selecciona esta opción, el oyente de eventos escucha cualquier evento insert
 
 El oyente rastrearía los siguientes eventos push de ejemplo:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 El siguiente ejemplo de evento push no sería rastreado por el oyente:
 

@@ -3,9 +3,9 @@ title: Integración de la extensión de API de eventos web de Adobe TikTok
 description: Esta API de eventos web de Adobe Experience Platform le permite compartir interacciones de sitios web directamente con TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1044'
 ht-degree: 2%
 
 ---
@@ -22,29 +22,29 @@ Debe tener un [!DNL TikTok] válido para la cuenta empresarial a fin de crear un
 
 Debe iniciar sesión en su cuenta empresarial para configurar [!DNL TikTok] píxeles mediante la configuración de socio. Para realizar esto, siga los pasos a continuación:
 
-1. Vaya a la pestaña **[!UICONTROL Assets]** y seleccione **[!UICONTROL Evento]**.
-2. En Eventos web, seleccione **[!UICONTROL Administrar]**.
-3. Seleccione **[!UICONTROL Configurar eventos web]**.
-4. Seleccione **[!UICONTROL Configuración de socio]** como método de conexión.
+1. Vaya a la ficha **[!UICONTROL Assets]** y seleccione **[!UICONTROL Event]**.
+2. En Eventos web, seleccione **[!UICONTROL Manage]**.
+3. Seleccione **[!UICONTROL Set Up Web Events]**.
+4. Seleccione **[!UICONTROL Partner Setup]** como método de conexión.
 
 Consulte la guía de [Introducción a Pixel](https://ads.tiktok.com/help/article/get-started-pixel) para obtener más información sobre cómo configurar el píxel [!DNL TikTok].
 
-Puede generar un token de acceso una vez que el píxel se haya creado correctamente. Para ello, vaya al píxel y seleccione la pestaña **[!UICONTROL Configuración]**. En la API de eventos, seleccione **[!UICONTROL Generar token de acceso]**.
+Puede generar un token de acceso una vez que el píxel se haya creado correctamente. Para ello, vaya al píxel y seleccione la pestaña **[!UICONTROL Settings]**. En la API de eventos, seleccione **[!UICONTROL Generate Access Token]**.
 
 Consulte la [[!DNL TikTok] guía de introducción](https://business-api.tiktok.com/portal/docs?id=1739584855420929) para obtener más información sobre cómo configurar el código de píxel y el token de acceso.
 
 ## Instale y configure la extensión de la API de eventos web [!DNL TikTok] {#install}
 
-Para instalar la extensión, seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Catálogo]**, seleccione la extensión de la API **[!UICONTROL TikTok Web Events]** y, a continuación, seleccione **[!UICONTROL Instalar]**.
+Para instalar la extensión, seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Catalog]**, seleccione **[!UICONTROL TikTok Web Events API Extension]** y luego seleccione **[!UICONTROL Install]**.
 
 ![Catálogo de extensiones que muestra la tarjeta de extensión [!DNL TikTok] que resalta la instalación.](../../../images/extensions/server/tiktok/install-extension.png)
 
 En la siguiente pantalla, escriba los siguientes valores de configuración que generó anteriormente desde el Administrador de anuncios de [!DNL TikTok]:
 
-* **[!UICONTROL Código en píxeles]**
-* **[!UICONTROL Token de acceso]**
+* **[!UICONTROL Pixel Code]**
+* **[!UICONTROL Access Token]**
 
-Cuando termine, seleccione **[!UICONTROL Guardar]**.
+Cuando termine, seleccione **[!UICONTROL Save]**.
 
 Pantalla de configuración de ![[!DNL TikTok] para la extensión de API de eventos web [!DNL TikTok].](../../../images/extensions/server/tiktok/configure.png)
 
@@ -52,13 +52,13 @@ Pantalla de configuración de ![[!DNL TikTok] para la extensión de API de event
 
 Una vez configurados todos los elementos de datos, puede empezar a crear reglas de reenvío de eventos que determinan cuándo y cómo se enviarán los eventos a [!DNL TikTok].
 
-Cree una nueva [regla](../../../ui/managing-resources/rules.md) en su propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, agregue una nueva acción y establezca la extensión en **[!UICONTROL Extensión de la API de eventos web de TikTok]**. Para enviar eventos de Edge Network a [!DNL TikTok], establezca **[!UICONTROL Tipo de acción]** en **[!UICONTROL Enviar evento de API de eventos web de TikTok].**
+Cree una nueva [regla](../../../ui/managing-resources/rules.md) en su propiedad de reenvío de eventos. En **[!UICONTROL Actions]**, agregue una nueva acción y establezca la extensión en **[!UICONTROL TikTok Web Events API Extension]**. Para enviar eventos de Edge Network a [!DNL TikTok], establezca **[!UICONTROL Action Type]** en **[!UICONTROL Send TikTok Web Events API Event].**
 
-![Se está seleccionando el tipo de acción [!UICONTROL Enviar evento de API de eventos web de TikTok] para una regla [!DNL TikTok] en la IU de recopilación de datos.](../../../images/extensions/server/tiktok/select-action.png)
+![Se está seleccionando el tipo de acción [!UICONTROL Send TikTok Web Events API Event] para una regla [!DNL TikTok] en la IU de recopilación de datos.](../../../images/extensions/server/tiktok/select-action.png)
 
-Después de la selección, aparecen controles adicionales para configurar aún más el evento, como se describe a continuación. Una vez finalizado, seleccione **[!UICONTROL Conservar cambios]** para guardar la regla.
+Después de la selección, aparecen controles adicionales para configurar aún más el evento, como se describe a continuación. Una vez finalizado, seleccione **[!UICONTROL Keep Changes]** para guardar la regla.
 
-**[!UICONTROL Eventos web y parámetros]**
+**[!UICONTROL Web Events and Parameters]**
 
 Los eventos y parámetros web contienen información general sobre el evento. Los eventos estándar son compatibles con las herramientas de integración de [!DNL TikTok] y se pueden usar para generar informes, optimizar conversiones y crear audiencias.
 
@@ -72,7 +72,7 @@ Los eventos y parámetros web contienen información general sobre el evento. Lo
 
 ![La sección [!DNL Web Events and Parameters] muestra datos de ejemplo introducidos en los campos.](../../../images/extensions/server/tiktok/configure-web-events-parameters.png)
 
-**[!UICONTROL Parámetros de contexto de usuario]**
+**[!UICONTROL User Context Parameters]**
 
 Los parámetros de contexto de usuario contienen información de cliente que se usa para hacer coincidir eventos de visitantes web con [!DNL TikTok] usuarios. La inclusión de varios tipos de datos coincidentes permite aumentar la precisión de los modelos de segmentación y optimización.
 
@@ -81,7 +81,7 @@ Los parámetros de contexto de usuario contienen información de cliente que se 
 | Dirección IP | Dirección IP pública del explorador sin hash. Se admite direcciones IPv4 e IPv6. Se reconocen tanto las formas completas como las comprimidas de las direcciones IPv6. |
 | Agente de usuario | El agente de usuario sin hash del dispositivo del usuario. |
 | Correo electrónico | Dirección de correo electrónico del contacto asociado con el evento de conversión. |
-| Teléfono | El número de teléfono debe tener el formato E164 [+][código de país][código de área][local phone number] antes del hash. |
+| Teléfono | El número de teléfono debe tener el formato E164 `[+][country code][area code][local phone number]` antes del hash. |
 | ID de cookies | Si usa Pixel SDK, guardará automáticamente un identificador único en la cookie `_ttp` si las cookies están habilitadas. El valor `_ttp` se puede extraer y utilizar para este campo. |
 | ID externo | Cualquier identificador único, como ID de usuario, ID de cookie externas, etc., debe tener un cifrado hash con SHA256. |
 | ID de clic TikTok | El `ttclid` que se agrega a la dirección URL de la página de aterrizaje cada vez que se selecciona un anuncio en [!DNL TikTok]. |
@@ -92,7 +92,7 @@ Los parámetros de contexto de usuario contienen información de cliente que se 
 
 ![La sección [!DNL User Context Parameters] muestra datos de ejemplo introducidos en los campos.](../../../images/extensions/server/tiktok/configure-user-context-parameters.png)
 
-**[!UICONTROL Parámetros de propiedades]**
+**[!UICONTROL Properties Parameters]**
 
 Utilice los parámetros de propiedades para configurar propiedades compatibles adicionales.
 
@@ -124,6 +124,6 @@ Al enviar eventos compartidos, asegúrese de que cada evento incluya un ID de p�
 
 Consulte la documentación de [!DNL TikTok] sobre [Anulación de duplicación de eventos](https://ads.tiktok.com/help/article/event-deduplication) para obtener más información sobre este proceso.
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo enviar datos de eventos del lado del servidor a [!DNL TikTok] mediante la extensión de API de eventos web [!DNL TikTok]. Para obtener más información sobre las capacidades de reenvío de eventos en [!DNL Adobe Experience Platform], consulte la [descripción general del reenvío de eventos](../../../ui/event-forwarding/overview.md).

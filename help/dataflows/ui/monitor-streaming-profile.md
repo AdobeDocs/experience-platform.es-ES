@@ -2,9 +2,9 @@
 title: Monitorización de la ingesta de perfiles de streaming
 description: Aprenda a utilizar el tablero de monitorización para monitorizar la ingesta de perfiles de flujo continuo
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1932'
 ht-degree: 19%
 
 ---
@@ -26,7 +26,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 >[!NOTE]
 >
->La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Monitorización de métricas para la ingesta de perfiles de streaming {#streaming-profile-metrics}
 
@@ -91,7 +91,7 @@ Utilice la tabla de métricas para obtener información específica sobre los fl
 | Solicitar rendimiento | Esta métrica representa el número de eventos que entran en el sistema de ingesta por segundo. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
 | Rendimiento de procesamiento | Esta métrica representa el número de eventos que el sistema ingiere correctamente cada segundo. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
 | Latencia de ingesta de P95 | Esta métrica mide la latencia del percentil 95 desde el momento en que un evento llega a Experience Platform hasta el momento en que se incorpora correctamente en el almacén de perfiles. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
-| Rendimiento máximo | Esta métrica representa el número máximo de solicitudes entrantes por segundo que entran en la ingesta de perfiles de flujo continuo | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> |
+| Rendimiento máximo | Esta métrica representa el número máximo de solicitudes entrantes por segundo que entran en la ingesta de perfiles de flujo continuo | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> |  |
 | Registros ingeridos | Esta métrica representa el número total de registros ingeridos en el almacén de perfiles en un período de tiempo configurado. | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> | <ul><li>Zona protegida/Flujo de datos: Monitorización en tiempo real con una actualización de datos cada 60 segundos.</li><li>Ejecución de flujo de datos: Agrupado en 15 minutos.</li></ul> |
 | Error de registros | Esta métrica representa el número total de registros que no se pudieron ingerir en el almacén de perfiles, dentro de un intervalo de tiempo configurado, debido a errores. | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> | <ul><li>Zona protegida/Flujo de datos: Monitorización en tiempo real con una actualización de datos cada 60 segundos.</li><li>Ejecución de flujo de datos: Agrupado en 15 minutos.</li></ul> |
 | Registros omitidos | Esta métrica representa el número total de registros que se perdieron dentro de un período de tiempo configurado, debido a infracciones de configuración o capacidad. | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> | <ul><li>Zona protegida/Flujo de datos: Monitorización en tiempo real con una actualización de datos cada 60 segundos.</li><li>Ejecución de flujo de datos: Agrupado en 15 minutos.</li></ul> |
@@ -101,31 +101,31 @@ Utilice la tabla de métricas para obtener información específica sobre los fl
 
 ## Uso del tablero de monitorización para la ingesta de perfiles de streaming
 
-Para acceder al panel de monitorización para la ingesta de perfiles de streaming, ve a la interfaz de usuario de Experience Platform, selecciona **[!UICONTROL Monitorización]** en el panel de navegación izquierdo y, a continuación, selecciona **[!UICONTROL Transmisión de extremo a extremo]**.
+Para acceder al panel de monitorización para la ingesta de perfiles de streaming, vaya a la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Monitoring]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Streaming end-to-end]**.
 
 ![Panel de monitorización para la transmisión de la ingesta de perfiles.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Consulte el encabezado superior del panel para obtener la tarjeta de métricas *[!UICONTROL Perfil]*. Utilice esta pantalla para ver información sobre los registros introducidos, fallidos y omitidos, así como información sobre el estado actual del rendimiento de la solicitud y la latencia.
+Consulte el encabezado superior del panel para la tarjeta de métricas *[!UICONTROL Profile]*. Utilice esta pantalla para ver información sobre los registros introducidos, fallidos y omitidos, así como información sobre el estado actual del rendimiento de la solicitud y la latencia.
 
 ![La tarjeta de perfil.](../assets/ui/streaming-profiles/profile-card.png)
 
 A continuación, utilice la interfaz para ver información detallada sobre las métricas de ingesta de perfiles de flujo continuo. Utilice la función de calendario para alternar entre diferentes marcos de tiempo. Puede seleccionar uno de los siguientes períodos de tiempo preconfigurados:
 
-* [!UICONTROL Últimas 6 horas]
-* [!UICONTROL Últimas 12 horas]
-* [!UICONTROL Últimas 24 horas]
-* [!UICONTROL Últimos 7 días]
-* [!UICONTROL Últimos 30 días]
+* [!UICONTROL Last 6 hours]
+* [!UICONTROL Last 12 hours]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
 También puede configurar manualmente su propio periodo de tiempo mediante el calendario.
 
-Puede utilizar tres categorías de métricas diferentes en el panel de monitorización para la transmisión de la ingesta de perfiles: [!UICONTROL Rendimiento], [!UICONTROL Ingesta] y [!UICONTROL Latencia].
+Puede utilizar tres categorías de métricas diferentes en el panel de monitorización para la ingesta de perfiles de flujo continuo: [!UICONTROL Throughput], [!UICONTROL Ingestion] y [!UICONTROL Latency].
 
 >[!BEGINTABS]
 
 >[!TAB Rendimiento]
 
-Seleccione **[!UICONTROL Rendimiento]** para ver información sobre la cantidad de datos que Experience Platform está procesando durante un período de tiempo configurado. Consulte esta métrica para evaluar la eficiencia y la capacidad del sistema.
+Seleccione **[!UICONTROL Throughput]** para ver información sobre la cantidad de datos que Experience Platform está procesando durante un período de tiempo configurado. Consulte esta métrica para evaluar la eficiencia y la capacidad del sistema.
 
 ![Panel con la pantalla configurada como &quot;rendimiento&quot;.](../assets/ui/streaming-profiles/throughput.png)
 
@@ -135,7 +135,7 @@ Seleccione **[!UICONTROL Rendimiento]** para ver información sobre la cantidad 
 
 >[!TAB Ingesta]
 
-**Ingesta**: seleccione **[!UICONTROL Ingesta]** para ver información sobre los trabajos de ingesta en su zona protegida. Estos trabajos de ingesta se miden en tres métricas diferentes.
+**Ingesta**: seleccione **[!UICONTROL Ingestion]** para ver información sobre los trabajos de ingesta en su zona protegida. Estos trabajos de ingesta se miden en tres métricas diferentes.
 
 ![Panel con la pantalla establecida en &quot;ingesta&quot;.](../assets/ui/streaming-profiles/ingestion.png)
 
@@ -145,7 +145,7 @@ Seleccione **[!UICONTROL Rendimiento]** para ver información sobre la cantidad 
 
 >[!TAB Latencia]
 
-Seleccione **[!UICONTROL Latencia]** para ver información sobre la cantidad de tiempo que Experience Platform tarda en responder a una solicitud o completar una operación en un período de tiempo determinado.
+Seleccione **[!UICONTROL Latency]** para ver información sobre la cantidad de tiempo que Experience Platform tarda en responder a una solicitud o completar una operación en un período de tiempo determinado.
 
 ![Panel con la pantalla establecida en &quot;latencia&quot;.](../assets/ui/streaming-profiles/latency.png)
 
@@ -155,7 +155,7 @@ Seleccione **[!UICONTROL Latencia]** para ver información sobre la cantidad de 
 
 La tabla de flujo de datos enumera todas las actividades de ingesta de transmisión con su conjunto correspondiente de métricas para el Perfil del cliente en tiempo real. Cada flujo de datos se enumera con su conjunto de datos correspondiente.
 
-Si se está acercando a los límites de su capacidad de nivel de espacio aislado, puede consultar la columna [!UICONTROL Rendimiento máximo] para identificar cualquier flujo de datos existente que contribuya a sus tasas de consumo. Lea la [sección de prácticas recomendadas](#best-practices) para obtener más información sobre las prácticas recomendadas de administración de flujo de datos.
+Si se está acercando a los límites de la capacidad de nivel de zona protegida, puede consultar la columna [!UICONTROL Max throughput] para identificar cualquier flujo de datos existente que contribuya a sus tasas de consumo. Lea la [sección de prácticas recomendadas](#best-practices) para obtener más información sobre las prácticas recomendadas de administración de flujo de datos.
 
 Para monitorizar los datos que se están ingiriendo en un flujo de datos específico, seleccione el icono de filtro ![filter](/help/images/icons/filter-add.png) junto al nombre del flujo de datos.
 
@@ -206,17 +206,17 @@ Lea esta sección para obtener respuestas a las preguntas frecuentes acerca de l
 
 +++Respuesta
 
-El panel [!UICONTROL Monitorización] muestra métricas en tiempo real para su ingesta y procesamiento. Estos números son métricas exactas registradas en el momento de la actividad. Por el contrario, el tablero [!UICONTROL Capacity] utiliza un mecanismo de suavizado para el cálculo de la capacidad de rendimiento. Este mecanismo ayuda a reducir los picos de corta duración de calificarse instantáneamente como infracciones y garantiza que las alertas de capacidad se centren en tendencias sostenidas, en lugar de explosiones momentáneas.
+El panel [!UICONTROL Monitoring] muestra métricas en tiempo real para su ingesta y procesamiento. Estos números son métricas exactas registradas en el momento de la actividad. Por el contrario, el tablero [!UICONTROL Capacity] utiliza un mecanismo de suavizado para el cálculo de la capacidad de rendimiento. Este mecanismo ayuda a reducir los picos de corta duración de calificarse instantáneamente como infracciones y garantiza que las alertas de capacidad se centren en tendencias sostenidas, en lugar de explosiones momentáneas.
 
 Debido al mecanismo de suavizado, es posible que observe:
 
-* Pequeños picos en [!UICONTROL Supervisión] que no aparecen en [!UICONTROL Capacity].
-* Valores ligeramente inferiores en [!UICONTROL Capacity] en comparación con [!UICONTROL Monitoring] a la misma marca de tiempo.
+* Pequeños picos en [!UICONTROL Monitoring] que no aparecen en [!UICONTROL Capacity].
+* Valores ligeramente inferiores en [!UICONTROL Capacity] comparados con [!UICONTROL Monitoring] en la misma marca de tiempo.
 
 Los dos paneles son precisos, pero están diseñados para propósitos diferentes.
 
-* [!UICONTROL Supervisión]: visibilidad operativa detallada momento a momento.
-* [!UICONTROL Capacidad]: vista estratégica para identificar patrones de uso e infracción.
+* [!UICONTROL Monitoring]: visibilidad operativa detallada momento a momento.
+* [!UICONTROL Capacity]: vista estratégica para identificar patrones de uso e infracción.
 
 +++
 

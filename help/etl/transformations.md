@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Transformaciones de ETL de muestra
 description: Este artículo muestra el siguiente ejemplo de transformaciones que puede encontrar un desarrollador de extracción, transformación, carga (ETL).
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '452'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Este artículo muestra el siguiente ejemplo de transformaciones que puede encont
 
 ### Archivos de muestra
 
-Los archivos CSV y JSON de muestra están disponibles en el repositorio público ETL Reference [!DNL GitHub] mantenido por el Adobe:
+Los archivos CSV y JSON de muestra están disponibles en el repositorio público ETL Reference [!DNL GitHub] que mantiene Adobe:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [perfiles_CRM.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Asignación
 
 Los requisitos de asignación para los datos CRM se describen en la siguiente tabla e incluyen las siguientes transformaciones:
+
 - Columnas de identidad a propiedades de `identityMap`
 - Fecha de nacimiento (DOB) del año y mes-día
 - Cadenas a dobles o enteros cortos.
@@ -56,8 +57,8 @@ Los requisitos de asignación para los datos CRM se describen en la siguiente ta
 | EMAIL | personalEmail.address | Copiar como cadena |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copie como cadena en la matriz CRMID en identityMap y establezca Principal como falso |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, principal: false}] | Copie como cadena en la primera entrada de la matriz de ECID en identityMap y establezca Principal como falso |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Copie como cadena en la matriz LOYALTYID en identityMap y establezca Principal como verdadero |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Copie como cadena a la segunda entrada en la matriz de ECID en identityMap y establezca Principal en false |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, principal:true}] | Copie como cadena en la matriz LOYALTYID en identityMap y establezca Principal como verdadero |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, principal:false}] | Copie como cadena a la segunda entrada en la matriz de ECID en identityMap y establezca Principal en false |
 | TELÉFONO | homePhone.number | Copiar como cadena |
 | CALLE | homeAddress.street1 | Copiar como cadena |
 | CIUDAD | homeAddress.city | Copiar como cadena |
@@ -284,9 +285,9 @@ Los requisitos de asignación para la matriz de identidades se describen en la s
 
 | Campo de identidad | Campo identityMap | Tipo de datos |
 | -------------- | ----------------- | --------- |
-| identidades[0].id | identityMap[Correo electrónico][{"id"}] | copiar como cadena |
-| identidades[1].id | identityMap[CRMID][{"id"}] | copiar como cadena |
-| identidades[2].id | identityMap[LOYALTYID][{"id"}] | copiar como cadena |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | copiar como cadena |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | copiar como cadena |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | copiar como cadena |
 
 ### XDM de salida
 

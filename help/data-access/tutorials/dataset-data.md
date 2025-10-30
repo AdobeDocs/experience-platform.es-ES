@@ -5,10 +5,10 @@ title: Ver datos del conjunto de datos mediante la API de acceso a datos
 type: Tutorial
 description: Obtenga información sobre cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos en Adobe Experience Platform. Este documento presenta algunas de las características únicas de la API de acceso a datos, como la paginación y las descargas parciales.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1365'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -24,7 +24,7 @@ Las secciones siguientes proporcionan información adicional que necesita saber 
 
 ### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ### Recopilación de valores para los encabezados obligatorios
 
@@ -428,7 +428,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{FILE_ID} ` | El identificador del archivo. |
+| `{FILE_ID}` | El identificador del archivo. |
 | `{FILE_NAME}` | El nombre del archivo (por ejemplo, profiles.parquet) |
 
 **Solicitud**

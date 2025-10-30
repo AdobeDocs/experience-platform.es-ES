@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1889'
 ht-degree: 8%
@@ -17,11 +17,13 @@ ht-degree: 8%
 **Fecha de lanzamiento: martes, 18 de noviembre de 2019**
 
 Nuevas funciones de Adobe Experience Platform:
+
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
 Actualizaciones de funciones existentes:
+
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Real-Time Customer Profile]](#profile)
@@ -48,7 +50,7 @@ Para obtener más información, consulte la [documentación de Real-Time Custome
 
 | Función | Descripción |
 |---|---|
-| Destinos | Integraciones prediseñadas con plataformas de destino admitidas por [!DNL Real-Time Customer Data Platform] de Adobe que activan los datos a esos socios de forma práctica. Consulte [Destinos](#destinations) a continuación para obtener más información. |
+| Destinos | Integraciones prediseñadas con plataformas de destino admitidas por [!DNL Real-Time Customer Data Platform] de Adobe que activan los datos a esos socios de forma fluida. Consulte [Destinos](#destinations) a continuación para obtener más información. |
 | Panel de métricas de página de inicio | La página de inicio de Real-Time Customer Data Platform (Real-Time CDP) incluye un panel de métricas que muestra información sobre perfiles y segmentos. La página de inicio también contiene vínculos a materiales de aprendizaje. Consulte la sección sobre [métricas de Real-Time Customer Data Platform](#real-time-customer-data-platform-metrics) a continuación. |
 | Fuentes | Puede introducir datos de una variedad de fuentes, como soluciones de Adobe, almacenamiento basado en la nube, software de terceros y CRM. Consulte la sección [Fuentes](#sources) más abajo para obtener más información. |
 
@@ -64,7 +66,7 @@ Para obtener más información, consulte [Resumen de las métricas de Real-Time 
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino admitidas por Real-Time Customer Data Platform de Adobe que activan los datos a dichos socios de forma fluida. Para obtener más información, lea el artículo [Información general sobre destinos](../../destinations/home.md).
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino admitidas por Real-Time Customer Data Platform de Adobe que activan los datos a esos socios de forma fluida. Para obtener más información, lea el artículo [Información general sobre destinos](../../destinations/home.md).
 
 **Destinos disponibles**
 
@@ -148,7 +150,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 | Limpiar los datos de un conjunto de datos determinado | Los usuarios ahora pueden eliminar los datos de un conjunto de datos o lote determinado mediante la API de trabajos del sistema [!DNL Profile]. |
 | Mejoras en las consultas de Edge [!DNL Profile] | Ahora las aplicaciones pueden consultar Edge [!DNL Profile] por cualquiera de las identidades de un perfil determinado. |
 | Configurar políticas de combinación por proyección | Las aplicaciones ahora pueden configurar políticas de combinación por proyección para generar una vista de los datos regida por una política de combinación específica. |
-| Atributos calculados | Los atributos calculados calculan automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados operan en el nivel de perfil para acumular valores como &quot;compra total&quot;, &quot;valor de duración&quot; o &quot;estado del canal&quot; en función de un evento entrante, un evento entrante y datos de perfil, o un evento entrante, datos de perfil y eventos históricos. |
+| Atributos calculados | Los atributos calculados calculan automáticamente el valor de los campos en función de otros valores, cálculos y expresiones. Los atributos calculados funcionan en el nivel de perfil para acumular valores como &quot;compra total&quot;, &quot;valor de duración&quot; o &quot;estado de funnel&quot; en función de un evento entrante, un evento entrante y datos de perfil, o un evento entrante, datos de perfil y eventos históricos. |
 
 **Corrección de errores**
 
@@ -164,7 +166,7 @@ Para obtener más información sobre [!DNL Real-Time Customer Profile], incluido
 
 Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten generar segmentos y audiencias a partir de los datos de [!DNL Real-Time Customer Profile]. Estos segmentos se configuran centralmente y se mantienen en [!DNL Experience Platform], lo que hace que cualquier aplicación de Adobe pueda acceder a ellos fácilmente.
 
-[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de serie temporal que representen las interacciones de los clientes con su marca.
 
 | Función | Descripción |
 | -----------| ---------- |

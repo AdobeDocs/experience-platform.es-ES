@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform para empresas de varias regiones y marcas
 description: Aprenda a dotar a sus equipos de implementación de las herramientas y las perspectivas necesarias para navegar de forma eficaz por las complejidades de Adobe Experience Platform.
-source-git-commit: e930b070f18e220cc1fa97bb0183520d495f33be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '5325'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Adobe Experience Platform está a la vanguardia de las soluciones transformadora
 
 Experience Platform le permite representar la estructura y controlar los datos de su empresa para implementaciones escalables y flexibles. La implementación de aplicaciones de Platform es un recorrido significativo que requiere planificación estratégica y consideraciones cuidadosas, especialmente si trabaja en dominios globales, regionales y específicos de la marca o en una combinación de todos estos aspectos.
 
-Este documento técnico sirve como referencia y ofrece un punto de vista del producto y un conjunto de directrices. Su objetivo principal es potenciar a usted y a sus equipos de implementación con las herramientas y las perspectivas necesarias para navegar de forma eficaz por las complejidades de Experience Platform. Al proporcionar un marco estructurado para evaluar sus requisitos específicos, consideraciones y casos de uso reales, le proporciona los conocimientos necesarios para desbloquear todo el potencial de Experience Platform y las aplicaciones basadas en plataformas. A medida que lea las secciones siguientes, encontrará perspectivas y recomendaciones inestimables para optimizar el proceso de implementación y aumentar la capacidad de su organización para ofrecer experiencias excepcionales a su audiencia, a la vez que proporciona la gobernanza y los controles para mantener la privacidad y el cumplimiento.
+Este documento técnico sirve como referencia y ofrece un punto de vista del producto y un conjunto de directrices. Su objetivo principal es potenciar a usted y a sus equipos de implementación con las herramientas y las perspectivas necesarias para navegar de forma eficaz por las complejidades de Experience Platform. Al proporcionar un marco estructurado para evaluar sus requisitos específicos, consideraciones y casos de uso reales, le proporciona los conocimientos necesarios para desbloquear todo el potencial de Experience Platform y las aplicaciones basadas en plataformas. Al leer las secciones siguientes, encontrará perspectivas y recomendaciones inestimables para optimizar el proceso de implementación y aumentar la capacidad de su organización para ofrecer experiencias excepcionales a su audiencia, a la vez que proporciona la gobernanza y los controles para mantener la privacidad y el cumplimiento.
 
 ![Perfil CDP unificado](./images/whitepaper/CDPoverview.png)
 
@@ -28,14 +28,17 @@ Si gestiona una empresa con varias marcas y regiones, es probable que tenga requ
 Al explorar las opciones de implementación, debe comprender y tener en cuenta los perfiles que interactuarán con Experience Platform y las aplicaciones basadas en plataformas. El diseño de su experiencia en función de sus funciones e intereses garantiza una implementación exitosa. Estas son tres personas clave que debe tener en cuenta a la hora de explorar las opciones:
 
 **Mary, la especialista en mercadotecnia:**
+
 - Enfoque: adquisición de clientes y personalización de experiencias a escala.
 - Objetivos: Crear perfiles completos, mejorar la eficacia de los medios.
 
 **Ted, el técnico**
+
 - Enfoque: Administración de datos organizativos.
 - Objetivos: Garantizar el cumplimiento, administrar los silos de datos y dar servicio a varias líneas de negocio.
 
 **Dan, el arquitecto de datos**
+
 - Enfoque: precisión y calidad de los datos.
 - Objetivos: Garantizar la privacidad y confianza de los datos, diseñar esquemas y modelos de datos y administrar fuentes de datos.
 
@@ -77,13 +80,13 @@ Puede definir controles de acceso con funciones y permisos para controlar el acc
 
 Considere la posibilidad de un ingeniero de datos que puede no necesitar acceso a todas las funcionalidades de las aplicaciones basadas en plataformas y de Experience Platform. Normalmente son responsables de la creación de definiciones de datos (esquemas), la configuración de fuentes de datos para la ingesta de datos y la creación de conjuntos de datos. Sin embargo, es posible que no sean la misma persona que crea y activa audiencias para experiencias de cliente personalizadas. Para este usuario, cree una función, añada los permisos adecuados y conceda acceso solo a la funcionalidad requerida. Por el contrario, un experto en marketing no estaría creando esquemas e ingiriendo datos, sino centrándose en la creación y activación de audiencias para permitir experiencias personalizadas con los clientes.
 
-Si lo desea, puede añadir controles de acceso granulares para limitar el acceso a campos específicos del perfil unificado del cliente con control de acceso basado en atributos o capacidad de control de acceso de nivel de campo. Son mecanismos de gobernanza en Experience Platform que le permiten restringir el acceso a los atributos de datos en función de etiquetas predefinidas. Con el control de acceso a nivel de campo, los datos de identificación personal se pueden controlar y el acceso está restringido en todos los flujos de trabajo de Experience Platform y de la aplicación. Para obtener más información sobre las capacidades de control de acceso, consulte la [documentación de control de acceso](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home).
+Si lo desea, puede añadir controles de acceso granulares para limitar el acceso a campos específicos del perfil unificado del cliente con control de acceso basado en atributos o capacidad de control de acceso de nivel de campo. Son mecanismos de gobernanza en Experience Platform que le permiten restringir el acceso a los atributos de datos en función de etiquetas predefinidas. Con el control de acceso a nivel de campo, los datos de identificación personal se pueden controlar y el acceso está restringido en todos los flujos de trabajo de Experience Platform y de la aplicación. Para obtener más información sobre las capacidades de control de acceso, consulte la [documentación de control de acceso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
 ![Controles de acceso CDP, configurar permisos de funciones](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **Ciclo de vida de desarrollo con zonas protegidas de desarrollo**
 
-Una zona protegida de desarrollo se comporta del mismo modo que una zona protegida de producción en todos los aspectos funcionales. Es diferente, ya que tendrá algunas protecciones contractuales para mantenerle dentro de los límites de su licencia. Está diseñado exclusivamente para desarrollo y pruebas con perfiles que no sean de producción, y admite hasta el 10 % de la asignación de perfiles con licencia (medida acumulativamente en todos los entornos limitados de desarrollo autorizados). Para obtener detalles y protecciones adicionales, consulte la [documentación de información general sobre las zonas protegidas](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/home) y la [página de descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) para obtener detalles sobre las autorizaciones.
+Una zona protegida de desarrollo se comporta del mismo modo que una zona protegida de producción en todos los aspectos funcionales. Es diferente en que tendrá algunas protecciones contractuales para mantenerlo dentro de los límites de su licencia. Está diseñado exclusivamente para desarrollo y pruebas con perfiles que no sean de producción, y admite hasta el 10 % de la asignación de perfiles con licencia (medida acumulativamente en todos los entornos limitados de desarrollo autorizados). Para obtener detalles y protecciones adicionales, consulte la [documentación de información general sobre las zonas protegidas](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/home) y la [página de descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) para obtener detalles sobre las autorizaciones.
 
 Puede tener varios entornos limitados de desarrollo (hasta 4 en este ejemplo empresarial, ya que estamos utilizando un entorno limitado de producción) para el ciclo de vida de desarrollo y prueba.
 
@@ -99,7 +102,7 @@ Con la función de herramientas de zona protegida, puede seleccionar varios obje
 
 Tiene la opción de utilizar las API de Experience Platform para automatizar implementaciones y tareas de configuración de zonas protegidas. Las API permiten un control programable de las tareas repetitivas, como exportar, importar o modificar las configuraciones de la zona protegida, lo que proporciona flexibilidad si prefiere flujos de trabajo automatizados.
 
-Para obtener más información sobre las herramientas de zonas protegidas, consulte la [documentación de herramientas de zonas protegidas](https://experienceleague.adobe.com/es/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Para obtener más información sobre las herramientas de zonas protegidas, consulte la [documentación de herramientas de zonas protegidas](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Crear un paquete](./images/whitepaper/create-package.png) | ![Paquetes de lista CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,11 +229,11 @@ Además, puede utilizar Coincidencia de segmentos de Experience Platform, una fu
 
 Este servicio de uso compartido de segmentos permite que dos o más usuarios intercambien datos de segmentos de una manera segura, controlada y compatible con la privacidad.
 
-Para obtener más información sobre la función Coincidencia de segmentos, consulte la [documentación sobre Coincidencia de segmentos](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/segment-match/overview).
+Para obtener más información sobre la función Coincidencia de segmentos, consulte la [documentación sobre Coincidencia de segmentos](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Una combinación de enfoques para operaciones globales, regionales y específicas de la marca
 
-Muchas empresas con varias marcas operan a escala global y, como tales, a menudo buscan una combinación de enfoques de administración de datos unificados y aislados. En este escenario, buscan separar los datos de varias regiones o países. Las marcas dentro de la organización pueden esperar operar exclusivamente en los datos asociados con su marca específica, todo dentro de los mismos límites de datos de una geografía o país. Este enfoque permite una gestión centralizada de los datos regionales o nacionales, al tiempo que facilita las operaciones de datos y marketing específicas de la marca. Es un modelo que combina las ventajas de la administración unificada de datos con la necesidad de un aislamiento específico de la marca y la región.
+Muchas empresas con varias marcas operan a escala global y, como tales, a menudo buscan una combinación de enfoques de administración de datos unificados y aislados. En este escenario, buscan separar los datos de varias regiones o países. Las marcas dentro de la organización pueden esperar operar exclusivamente en los datos asociados con su marca específica, todo dentro de los mismos límites de datos de una geografía o país. Este enfoque permite una gestión centralizada de los datos regionales o nacionales, al tiempo que facilita las operaciones de datos y marketing específicas de la marca. Es un modelo que combina las ventajas de la administración unificada de datos con la necesidad de aislamiento específico de la marca y la región.
 
 Experience Platform, consciente de estos requisitos variables, puede configurarse para proporcionarle una solución de administración de datos flexible y altamente adaptable, que garantice que las empresas de varias marcas y regiones puedan representar su negocio dentro de la plataforma de forma eficaz. Tanto si el objetivo es maximizar los datos colectivos de los clientes, mantener un aislamiento estricto de los datos o lograr un equilibrio entre los dos, Experience Platform está equipado para satisfacer las diversas necesidades de su empresa.
 
@@ -285,23 +288,23 @@ Esquema de perfil individual de XDM:
 ```
 \- PII
 \- Germany
-	\- name --> Label: "Germany"
-	\- email --> Label: "Germany"
-	\- birthdate --> Label: "Germany"
+    \- name --> Label: "Germany"
+    \- email --> Label: "Germany"
+    \- birthdate --> Label: "Germany"
 
 \- France
-	\- name --> Label: "France"
-	\- email --> Label: "France"
-	\- birthdate --> Label: "France"
+    \- name --> Label: "France"
+    \- email --> Label: "France"
+    \- birthdate --> Label: "France"
 
 \- Netherland
-	\- name --> Label: "Netherland", "Germany"
-	\- email --> Label: "Netherland", "Germany"
-	\- birthdate --> Label: "Netherland", "Germany"
+    \- name --> Label: "Netherland", "Germany"
+    \- email --> Label: "Netherland", "Germany"
+    \- birthdate --> Label: "Netherland", "Germany"
 
 \- Loyalty
-	\- member
-	\- registrationDate
+    \- member
+    \- registrationDate
 ```
 
 ###### Audiencias: Utilice el control de acceso basado en atributos: Control de acceso de nivel de objeto para controlar el acceso a audiencias específicas de marca/país
@@ -431,7 +434,7 @@ Experience Platform proporciona a las empresas un marco sólido para centralizar
 
    - Debe evaluar cuidadosamente si implementar **varios ID de organización o varios entornos limitados** en función de la residencia de datos, el cumplimiento y las necesidades operacionales.
 
-   - **ID de organización** ofrecen aislamiento total&#x200B;**, mientras que las configuraciones de varias zonas protegidas proporcionan flexibilidad operativa dentro de un marco de gobernanza compartido**.
+   - **ID de organización** ofrecen aislamiento total**, mientras que las configuraciones de varias zonas protegidas proporcionan flexibilidad operativa dentro de un marco de gobernanza compartido**.
 
 ## Pensamientos finales
 

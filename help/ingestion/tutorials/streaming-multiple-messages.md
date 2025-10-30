@@ -5,7 +5,7 @@ title: Enviar varios mensajes en una única solicitud HTTP
 type: Tutorial
 description: Este documento proporciona un tutorial para enviar varios mensajes a Adobe Experience Platform dentro de una sola solicitud HTTP mediante la ingesta por flujo continuo.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 31c00e69dd92f7c3232e09f02da36c60cd8cf486
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 1%
@@ -219,6 +219,7 @@ Antes de continuar con este tutorial, se recomienda revisar primero la guía [re
 El siguiente ejemplo muestra lo que sucede cuando el lote incluye mensajes válidos y no válidos.
 
 La carga útil solicitada es una matriz de objetos JSON que representan el evento en el esquema XDM. Tenga en cuenta que deben cumplirse las siguientes condiciones para que la validación del mensaje se realice correctamente:
+
 - El campo `imsOrgId` del encabezado del mensaje debe coincidir con la definición de entrada. Si la carga de la solicitud no incluye un campo `imsOrgId`, el [!DNL Data Collection Core Service] (DCCS) agregará el campo automáticamente.
 - El encabezado del mensaje debe hacer referencia a un esquema XDM existente creado en la interfaz de usuario de [!DNL Experience Platform].
 - El campo `datasetId` debe hacer referencia a un conjunto de datos existente en [!DNL Experience Platform], y su esquema debe coincidir con el esquema proporcionado en el objeto `header` dentro de cada mensaje incluido en el cuerpo de la solicitud.

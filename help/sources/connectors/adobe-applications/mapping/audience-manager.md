@@ -2,9 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;asignación de Audience Manager;asignación de audience manager
 solution: Experience Platform
 title: Asignación de campos para el conector de Adobe Audience Manager Source
-description: Obtenga información sobre cómo asignar datos de Adobe Audience Manager (datos de tiempo real, integrados y de perfil) a los campos correspondientes del modelo de datos de experiencia (XDM) para el conector de origen del Audience Manager.
+description: Obtenga información sobre cómo asignar datos de Adobe Audience Manager (datos de tiempo real, integrados y de perfil) a los campos correspondientes del modelo de datos de experiencia (XDM) para el conector de origen de Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Tipo: datos en tiempo real
 | `requestIds[]` | `ExperienceEvent.endUserIds` - *Solo para áreas de nombres presentes en endUserIds y solo el primer valor.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds: *Solo para áreas de nombres presentes en endUserIds y solo el primer valor.* |
-| `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+| `trait[]` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
 | `timestamps` | `ExperienceEvent.timeStamp` |

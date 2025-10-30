@@ -5,7 +5,7 @@ title: Transmitir datos de series temporales mediante las API de ingesta de tran
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 2%
@@ -402,7 +402,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del [!DNL Profil
 | -------- | ----------- |
 | `{CONNECTION_ID}` | El `inletId` de la conexión de flujo continuo creada anteriormente. |
 | `xactionId` | Identificador único generado del lado del servidor para el registro que acaba de enviar. Este ID ayuda a Adobe a rastrear el ciclo vital de este registro a través de varios sistemas y con la depuración. |
-| `receivedTimeMs`: marca de tiempo (epoch en milisegundos) que muestra a qué hora se recibió la solicitud. |
+| `receivedTimeMs`: marca de tiempo (epoch en milisegundos) que muestra a qué hora se recibió la solicitud. |  |
 | `syncValidation.status` | Dado que se agregó el parámetro de consulta `syncValidation=true`, este valor aparecerá. Si la validación se realizó correctamente, el estado será `pass`. |
 
 ## Recuperar los datos de series temporales recién introducidos
@@ -507,7 +507,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de las entidades
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora comprende cómo ingerir datos de registro en [!DNL Experience Platform] mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede empezar a monitorizar los datos ingeridos a través de la interfaz de usuario de [!DNL Experience Platform]. Para obtener más información, lea la guía [supervisión de la ingesta de datos](../quality/monitor-data-ingestion.md).
 

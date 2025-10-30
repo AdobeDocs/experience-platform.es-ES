@@ -5,7 +5,7 @@ title: Creación de un flujo de datos para fuentes de automatización de marketi
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de automatización de marketing e introducirlos en Adobe Experience Platform mediante conectores de origen y API.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 3%
@@ -654,7 +654,7 @@ Una respuesta correcta devuelve el identificador (`id`) del flujo de datos reci�
 
 Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para obtener más información sobre cómo supervisar flujos de datos, consulte el tutorial sobre [supervisión de flujos de datos en la API](../monitor.md)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado un conector de origen para recopilar datos de un sistema de automatización de marketing de forma programada. Ahora los servicios de Experience Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
 

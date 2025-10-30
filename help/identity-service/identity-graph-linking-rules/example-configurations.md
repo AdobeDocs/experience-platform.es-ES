@@ -2,7 +2,7 @@
 title: Guía de configuración de reglas de vinculación de Identity Graph
 description: Obtenga información sobre los distintos tipos de implementación que puede configurar mediante las reglas de vinculación de gráficos de identidad.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -407,6 +407,7 @@ Lea esta sección para ver las implementaciones avanzadas de [!DNL Identity Grap
 >[!NOTE]
 >
 >Para completar las implementaciones siguientes, debe crear áreas de nombres personalizadas con los símbolos de identidad (con distinción de mayúsculas y minúsculas) de:
+>
 >* `CRMID`
 >* `loginID`
 

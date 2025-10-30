@@ -2,9 +2,9 @@
 title: Herramientas de zona protegida
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 76e1edf7ed78cffdb8f858d5685836c452dd6dd3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3728'
+source-wordcount: '3524'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ La característica de herramientas de zona protegida permite exportar objetos [!
 
 >[!BEGINSHADEBOX]
 
-### Cambios en las importaciones de audiencias de varias entidades
+### Cambios en las importaciones de públicos de varias entidades
 
 Con las [actualizaciones de arquitectura B2B](../../rtcdp/b2b-architecture-upgrade.md), ya no podrá importar audiencias de varias entidades con atributos B2B y eventos de experiencia si un paquete que incluía estas audiencias se publicó antes de la actualización. Estas audiencias no se importarán correctamente y no se pueden convertir automáticamente a la nueva arquitectura.
 
@@ -41,7 +41,7 @@ En la tabla siguiente se enumeran [!DNL Adobe Real-Time Customer Data Platform] 
 | Plataforma | Objeto | Detalles |
 | --- | --- | --- |
 | Plataforma de datos del cliente | Fuentes | <ul><li>Las credenciales de la cuenta de origen no se replican en la zona protegida de destino por motivos de seguridad y deberán actualizarse manualmente.</li><li>El flujo de datos de origen se copia en estado de borrador de forma predeterminada.</li></ul> |
-| Plataforma de datos del cliente | Públicos | <ul><li>Solo se admite el tipo de **[!UICONTROL servicio de segmentación]** de la **[!UICONTROL Audiencia del cliente]**.</li><li>Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación.</li><li> El sistema seleccionará automáticamente la política de combinación predeterminada en la zona protegida de destino con la misma clase XDM al comprobar las dependencias de la política de combinación.</li><li>Si se detecta un objeto existente con el mismo nombre al importar audiencias, las herramientas de espacio aislado siempre reutilizarán el objeto existente para evitar la proliferación de objetos.</li></ul> |
+| Plataforma de datos del cliente | Públicos | <ul><li>Solo se admite el tipo **[!UICONTROL Customer Audience]** **[!UICONTROL Segmentation service]**.</li><li>Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación.</li><li> El sistema seleccionará automáticamente la política de combinación predeterminada en la zona protegida de destino con la misma clase XDM al comprobar las dependencias de la política de combinación.</li><li>Si se detecta un objeto existente con el mismo nombre al importar audiencias, las herramientas de espacio aislado siempre reutilizarán el objeto existente para evitar la proliferación de objetos.</li></ul> |
 | Plataforma de datos del cliente | Identidades | <ul><li>El sistema deduplicará automáticamente las áreas de nombres de identidad estándar de Adobe al crear en la zona protegida de destino.</li><li>Las audiencias solo se pueden copiar cuando todos los atributos de las reglas de audiencia están habilitados en el esquema de unión. Los esquemas necesarios deben moverse y habilitarse primero para el perfil unificado.</li></ul> |
 | Plataforma de datos del cliente | Esquemas/ Grupos de campos/ Tipos de datos | <ul><li>Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación.</li><li>Tiene la flexibilidad de importar esquemas sin la opción de perfil unificado habilitada. Las mayúsculas y minúsculas perimetrales de las relaciones de esquema no se incluyen en el paquete.</li><li>Si se detecta un objeto existente con el mismo nombre al importar esquemas o grupos de campos, las herramientas de espacio aislado siempre reutilizarán el objeto existente para evitar la proliferación de objetos.</li></ul> |
 | Plataforma de datos del cliente | Conjuntos de datos | Los conjuntos de datos se copian con la configuración del perfil unificado deshabilitada de forma predeterminada. |
@@ -65,12 +65,12 @@ La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualment
 | [!DNL Adobe Journey Optimizer] | Público | | Una audiencia se puede copiar como un objeto dependiente del objeto de recorrido. Puede seleccionar crear una audiencia nueva o reutilizar una existente en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Esquema | | Los esquemas utilizados en el recorrido se pueden copiar como objetos dependientes. Puede seleccionar crear un nuevo esquema o reutilizar uno existente en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Política de combinación | | Las políticas de combinación utilizadas en el recorrido se pueden copiar como objetos dependientes. En la zona protegida de destino, **no puede** crear una nueva política de combinación, solo puede usar una existente. |
-| [!DNL Adobe Journey Optimizer] |  Recorrido  | Los objetos siguientes utilizados en el recorrido se copian como objetos dependientes. Durante el flujo de trabajo de importación, puede elegir **[!UICONTROL Crear nuevo]** o **[!UICONTROL Usar existente]** para cada uno: <ul><li>Públicos</li><li>Detalles del lienzo</li><li>Plantillas de contenido</li><li>Acciones personalizadas</li><li>Fuentes de datos</li><li>Eventos</li><li>Grupos de campos</li><li>Fragmentos</li><li>Esquemas</li></ul> | Si selecciona **[!UICONTROL Usar]** existente durante el proceso de importación para copiar un recorrido en otra zona protegida, las acciones personalizadas existentes que elija **deben** coincidir exactamente con la acción personalizada de origen. Si no coinciden, el nuevo recorrido generará errores que no se pueden resolver.<br>El sistema copia los eventos y los detalles del evento utilizados en la recorrido y crea una nueva versión en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] |  Recorrido  | Los objetos siguientes utilizados en el recorrido se copian como objetos dependientes. Durante el flujo de trabajo de importación, puede elegir **[!UICONTROL Create new]** o **[!UICONTROL Use existing]** para cada uno: <ul><li>Públicos</li><li>Detalles del lienzo</li><li>Plantillas de contenido</li><li>Acciones personalizadas</li><li>Fuentes de datos</li><li>Eventos</li><li>Grupos de campos</li><li>Fragmentos</li><li>Esquemas</li></ul> | Cuando selecciona **[!UICONTROL Use existing]** durante el proceso de importación para copiar un recorrido en otra zona protegida, las acciones personalizadas existentes que elija **deben** coincidir exactamente con la acción personalizada de origen. Si no coinciden, el nuevo recorrido generará errores que no se pueden resolver.<br>El sistema copia los eventos y los detalles del evento utilizados en la recorrido y crea una nueva versión en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Acción | | Los mensajes push y de correo electrónico utilizados en el recorrido se pueden copiar como objetos dependientes. No se comprueba la integridad de las actividades de acción de canal utilizadas en los campos de recorrido que se utilizan para la personalización en el mensaje. Los bloques de contenido no se copian.<br><br>Se puede copiar la acción de actualización de perfil utilizada en el recorrido. Las acciones personalizadas se pueden añadir a un paquete de forma independiente. Los detalles de acción utilizados en el recorrido también se copian. Siempre se crea una nueva versión en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Acciones personalizadas |  | Las acciones personalizadas se pueden añadir a un paquete de forma independiente. Una vez asignada una acción personalizada a un recorrido, ya no se puede editar. Para realizar actualizaciones en las acciones personalizadas, debe: <ul><li>mover acciones personalizadas antes de migrar un recorrido</li><li>actualizar configuraciones (como encabezados de solicitud, parámetros de consulta y autenticación) para acciones personalizadas después de la migración</li><li>migrar objetos de recorrido con las acciones personalizadas agregadas durante el primer paso</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Plantilla de contenido | | Una plantilla de contenido se puede copiar como un objeto dependiente del objeto de recorrido. Las plantillas independientes le permiten reutilizar fácilmente contenido personalizado en todas las campañas y recorridos de Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragmento | Todos los fragmentos anidados. | Un fragmento se puede copiar como un objeto dependiente del objeto de recorrido. Los fragmentos son componentes reutilizables a los que se puede hacer referencia en uno o varios correos electrónicos en campañas y recorridos de Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campañas | Los siguientes objetos utilizados en la campaña se copian como objetos dependientes: <ul><li>Campañas</li><li>Públicos</li><li>Esquemas</li><li>Plantillas de contenido</li><li>Fragmentos</li><li>Mensaje/Contenido</li><li>Configuración de canal</li><li>Objetos de decisión unificados</li><li>Configuración/variantes del experimento</li></ul> | <ul><li>Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>El sistema detectará y reutilizará automáticamente un objeto de configuración de canal existente en la zona protegida de destino si existe una configuración idéntica. Si no se encuentra ninguna configuración que coincida, la configuración del canal se omite durante la importación y los usuarios deben actualizar manualmente la configuración del canal en la zona protegida de destino para este recorrido.</li><li>Los usuarios pueden reutilizar los experimentos y las audiencias existentes en la zona protegida de Target como objetos dependientes de las campañas seleccionadas.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campañas | Los siguientes objetos utilizados en la campaña se copian como objetos dependientes: <ul><li>Campañas</li><li>Públicos</li><li>Esquemas</li><li>Plantillas de contenido</li><li>Fragmentos</li><li>Mensaje/Contenido</li><li>Configuración de canal</li><li>Objetos de decisión unificados</li><li>Configuración/variantes del experimento</li></ul> | <ul><li>Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>El sistema detectará y reutilizará automáticamente un objeto de configuración de canal existente en la zona protegida de destino si existe una configuración idéntica. Si no se encuentra ninguna configuración que coincida, la configuración del canal se omite durante la importación y los usuarios deben actualizar manualmente la configuración del canal en la zona protegida de destino para este recorrido.</li><li>Los usuarios pueden reutilizar los experimentos y las audiencias existentes en la zona protegida de Target como objetos dependientes de las campañas seleccionadas.</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Toma de decisiones | Los objetos siguientes deben estar presentes en la zona protegida de destino antes de copiar los objetos de Decisioning: <ul><li>Atributos de perfil utilizados en objetos de Decisioning</li><li>El grupo de campos de atributos de oferta personalizados</li><li>Los esquemas de flujos de datos utilizados para atributos de contexto en reglas, clasificación o límite.</li></ul> | <ul><li>Actualmente no se admite la copia de fórmulas de clasificación que utilicen modelos de IA.</li><li>Los elementos de decisión (artículos de oferta) no se incluyen automáticamente. Para asegurarse de que se transfieran, agréguelos manualmente con la opción **Agregar al paquete**.</li><li>Las directivas que utilizan una estrategia de selección requieren que los elementos de decisión asociados se agreguen manualmente durante el proceso de copia. Las directivas que utilizan elementos de decisión manuales o de reserva tendrán esos elementos incluidos automáticamente como dependencias directas.</li><li>Los elementos de decisión se deben copiar primero, antes que cualquier otro objeto relacionado.</li></ul> |
 
 Atributos de perfil utilizados en objetos de Decisioning,
@@ -110,39 +110,39 @@ Este ejemplo documenta el proceso de exportación de un esquema y su adición a 
 
 ### Agregar un objeto a un nuevo paquete {#add-object-to-new-package}
 
-Seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]**, que enumera los esquemas disponibles. A continuación, seleccione los puntos suspensivos (`...`) junto al esquema seleccionado y aparecerá un menú desplegable con los controles. Seleccione **[!UICONTROL Agregar al paquete]** en la lista desplegable.
+Seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Browse]**, que enumera los esquemas disponibles. A continuación, seleccione los puntos suspensivos (`...`) junto al esquema seleccionado y aparecerá un menú desplegable con los controles. Seleccione **[!UICONTROL Add to package]** de la lista desplegable.
 
-![Lista de esquemas que muestra el menú desplegable que resalta el control [!UICONTROL Agregar al paquete].](../images/ui/sandbox-tooling/add-to-package.png)
+![Lista de esquemas que muestran el menú desplegable que resalta el control [!UICONTROL Add to package].](../images/ui/sandbox-tooling/add-to-package.png)
 
-En el cuadro de diálogo **[!UICONTROL Agregar al paquete]**, seleccione la opción **[!UICONTROL Crear nuevo paquete]**. Proporcione un [!UICONTROL Nombre] para el paquete y una [!UICONTROL Descripción] opcional y, a continuación, seleccione **[!UICONTROL Agregar]**.
+En el cuadro de diálogo **[!UICONTROL Add to package]**, seleccione la opción **[!UICONTROL Create new package]**. Proporcione un [!UICONTROL Name] para el paquete y un [!UICONTROL Description] opcional, y después seleccione **[!UICONTROL Add]**.
 
-![Cuadro de diálogo [!UICONTROL Agregar al paquete] con [!UICONTROL Crear nuevo paquete] seleccionado y resaltando [!UICONTROL Agregar].](../images/ui/sandbox-tooling/create-new-package.png)
+![Se seleccionó el cuadro de diálogo [!UICONTROL Add to package] con [!UICONTROL Create new package] y se resaltó [!UICONTROL Add].](../images/ui/sandbox-tooling/create-new-package.png)
 
 Ha vuelto al entorno **[!UICONTROL Schemas]**. Ahora puede añadir objetos adicionales al paquete que ha creado siguiendo los pasos que se indican a continuación.
 
 ### Añadir un objeto a un paquete existente y publicarlo {#add-object-to-existing-package}
 
-Para ver una lista de los esquemas disponibles, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]**. A continuación, seleccione los puntos suspensivos (`...`) junto al esquema seleccionado para ver las opciones de control en un menú desplegable. Seleccione **[!UICONTROL Agregar al paquete]** en la lista desplegable.
+Para ver una lista de los esquemas disponibles, seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Browse]**. A continuación, seleccione los puntos suspensivos (`...`) junto al esquema seleccionado para ver las opciones de control en un menú desplegable. Seleccione **[!UICONTROL Add to package]** de la lista desplegable.
 
-![Lista de esquemas que muestra el menú desplegable que resalta el control [!UICONTROL Agregar al paquete].](../images/ui/sandbox-tooling/add-to-package.png)
+![Lista de esquemas que muestran el menú desplegable que resalta el control [!UICONTROL Add to package].](../images/ui/sandbox-tooling/add-to-package.png)
 
-Aparecerá el cuadro de diálogo **[!UICONTROL Agregar al paquete]**. Seleccione la opción **[!UICONTROL Paquete existente]**, luego seleccione la lista desplegable **[!UICONTROL Nombre del paquete]** y seleccione el paquete requerido. Finalmente, selecciona **[!UICONTROL Agregar]** para confirmar tus opciones.
+Aparecerá el cuadro de diálogo **[!UICONTROL Add to package]**. Seleccione la opción **[!UICONTROL Existing package]**, luego seleccione la lista desplegable **[!UICONTROL Package name]** y seleccione el paquete requerido. Finalmente, seleccione **[!UICONTROL Add]** para confirmar sus opciones.
 
-Cuadro de diálogo ![[!UICONTROL Agregar al paquete], que muestra un paquete seleccionado del menú desplegable.](../images/ui/sandbox-tooling/add-to-existing-package.png)
+Cuadro de diálogo ![[!UICONTROL Add to package], que muestra un paquete seleccionado de la lista desplegable.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-Se muestra la lista de objetos añadidos al paquete. Para publicar el paquete y hacer que esté disponible para su importación en entornos limitados, seleccione **[!UICONTROL Publicar]**.
+Se muestra la lista de objetos añadidos al paquete. Para publicar el paquete y hacer que esté disponible para su importación en entornos limitados, seleccione **[!UICONTROL Publish]**.
 
-![Una lista de objetos en el paquete, destacando la opción [!UICONTROL Publicar].](../images/ui/sandbox-tooling/publish-package.png)
+![Una lista de objetos en el paquete, destacando la opción [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package.png)
 
-Seleccione **[!UICONTROL Publicar]** para confirmar la publicación del paquete.
+Seleccione **[!UICONTROL Publish]** para confirmar la publicación del paquete.
 
-![Cuadro de diálogo de confirmación de paquete de publicación, en el que se resalta la opción [!UICONTROL Publicar].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Cuadro de diálogo de confirmación de paquete de publicación, en el que se resalta la opción [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
 >Una vez publicado, el contenido del paquete no se puede cambiar. Para evitar problemas de compatibilidad, asegúrese de que se han seleccionado todos los recursos necesarios. Si es necesario realizar cambios, debe crear un nuevo paquete.
 
-Ha vuelto a la ficha **[!UICONTROL Paquetes]** del entorno [!UICONTROL Zonas protegidas], donde puede ver el nuevo paquete publicado.
+Ha vuelto a la ficha **[!UICONTROL Packages]** en el entorno [!UICONTROL Sandboxes], donde puede ver el nuevo paquete publicado.
 
 ![Lista de paquetes de espacio aislado que resalta el nuevo paquete publicado.](../images/ui/sandbox-tooling/published-packages.png)
 
@@ -152,39 +152,39 @@ Ha vuelto a la ficha **[!UICONTROL Paquetes]** del entorno [!UICONTROL Zonas pro
 >
 >Todas las acciones de importación se registran en los registros de auditoría.
 
-Para importar el paquete en una zona protegida de destino, vaya a la pestaña Zonas protegidas **[!UICONTROL Examinar]** y seleccione la opción más (+) junto al nombre de la zona protegida.
+Para importar el paquete en una zona protegida de destino, vaya a la pestaña Zonas protegidas **[!UICONTROL Browse]** y seleccione la opción más (+) junto al nombre de la zona protegida.
 
-![La pestaña **[!UICONTROL Examinar]** de las zonas protegidas resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-sandboxes.png)
+![La ficha **[!UICONTROL Browse]** de las zonas protegidas resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-En el menú desplegable, seleccione el **[!UICONTROL nombre del paquete]** que desee importar a la zona protegida de destino. Agregue un **[!UICONTROL nombre de trabajo]**, que se usará para la supervisión futura. De forma predeterminada, el perfil unificado se desactiva cuando se importan los esquemas del paquete. Cambie **Habilitar esquemas para el perfil** para habilitar esto y luego seleccione **[!UICONTROL Siguiente]**.
+En el menú desplegable, seleccione el **[!UICONTROL Package name]** que desee importar a la zona protegida de destino. Agregue un(a) **[!UICONTROL Job name]**, que se usará(n) para la supervisión futura. De forma predeterminada, el perfil unificado se desactiva cuando se importan los esquemas del paquete. Cambie **Habilitar esquemas para el perfil** para habilitar esto y luego seleccione **[!UICONTROL Next]**.
 
-![La página de detalles de importación que muestra la selección desplegable [!UICONTROL Nombre del paquete]](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
+![La página de detalles de importación que muestra la selección desplegable [!UICONTROL Package name]](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-La página [!UICONTROL Objeto de paquete y dependencias] proporciona una lista de todos los recursos incluidos en este paquete. El sistema detecta automáticamente los objetos dependientes necesarios para importar correctamente los objetos padre seleccionados. Los atributos que faltan se muestran en la parte superior de la página. Seleccione **[!UICONTROL Ver detalles]** para obtener un desglose más detallado.
+La página [!UICONTROL Package object and dependencies] proporciona una lista de todos los recursos incluidos en este paquete. El sistema detecta automáticamente los objetos dependientes necesarios para importar correctamente los objetos padre seleccionados. Los atributos que faltan se muestran en la parte superior de la página. Seleccione **[!UICONTROL View details]** para obtener un desglose más detallado.
 
-![La página [!UICONTROL Objeto de paquete y dependencias] muestra los atributos que faltan.](../images/ui/sandbox-tooling/missing-attributes.png)
+![La página [!UICONTROL Package object and dependencies] muestra los atributos que faltan.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Los objetos dependientes se pueden reemplazar por objetos existentes en la zona protegida de destino, lo que permite reutilizar objetos existentes en lugar de crear una nueva versión. Por ejemplo, al importar un paquete que incluye esquemas, puede reutilizar el grupo de campos personalizados existente y las áreas de nombres de identidad en la zona protegida de destino. Alternativamente, al importar un paquete que incluya Recorridos, puede reutilizar segmentos existentes en la zona protegida de Target.
 >
->Actualmente, las herramientas de zona protegida no admiten la actualización o sobrescritura de objetos existentes. Puede elegir crear un objeto nuevo o seguir utilizando el objeto existente sin modificaciones. Si se detecta un objeto existente con el mismo nombre, las herramientas de espacio aislado siempre reutilizarán el objeto existente, incluso si selecciona la opción [!UICONTROL Crear nuevo] para evitar la proliferación de objetos.
+>Actualmente, las herramientas de zona protegida no admiten la actualización o sobrescritura de objetos existentes. Puede elegir crear un objeto nuevo o seguir utilizando el objeto existente sin modificaciones. Si se detecta un objeto existente con el mismo nombre, las herramientas de espacio aislado siempre reutilizarán el objeto existente, incluso si selecciona la opción [!UICONTROL Create new] para evitar la proliferación de objetos.
 
 Para utilizar un objeto existente, seleccione el icono de lápiz situado junto al objeto dependiente.
 
-![La página [!UICONTROL Objeto de paquete y dependencias] muestra una lista de recursos incluidos en el paquete.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![La página [!UICONTROL Package object and dependencies] muestra una lista de recursos incluidos en el paquete.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
-Se muestran las opciones para crear nuevos o utilizar los existentes. Seleccionar **[!UICONTROL Usar]** existente.
+Se muestran las opciones para crear nuevos o utilizar los existentes. Seleccione **[!UICONTROL Use existing]**.
 
-![La página [!UICONTROL Objeto de paquete y dependencias] que muestra las opciones de objeto dependiente [!UICONTROL Crear nuevo] y [!UICONTROL Usar existente].](../images/ui/sandbox-tooling/use-existing-object.png)
+![La página [!UICONTROL Package object and dependencies] muestra las opciones de objeto dependiente [!UICONTROL Create new] y [!UICONTROL Use existing].](../images/ui/sandbox-tooling/use-existing-object.png)
 
-El diálogo **[!UICONTROL Grupo de campos]** muestra una lista de grupos de campos disponibles para el objeto. Seleccione los grupos de campos requeridos y luego seleccione **[!UICONTROL Guardar]**.
+El cuadro de diálogo **[!UICONTROL Field group]** muestra una lista de grupos de campos disponibles para el objeto. Seleccione los grupos de campos requeridos y luego seleccione **[!UICONTROL Save]**.
 
-![Una lista de campos mostrados en el cuadro de diálogo [!UICONTROL Grupo de campos], que resalta la selección [!UICONTROL Guardar]. &#x200B;](../images/ui/sandbox-tooling/field-group-list.png)
+![Una lista de campos mostrados en el cuadro de diálogo [!UICONTROL Field group], que resalta la selección [!UICONTROL Save].](../images/ui/sandbox-tooling/field-group-list.png)
 
-Ha vuelto a la página [!UICONTROL Objeto Package y dependencias]. Aquí, seleccione **[!UICONTROL Finalizar]** para completar la importación del paquete.
+Ha vuelto a la página [!UICONTROL Package object and dependencies]. Desde aquí, seleccione **[!UICONTROL Finish]** para completar la importación del paquete.
 
-![La página [!UICONTROL Objeto de paquete y dependencias] muestra una lista de los recursos incluidos en el paquete, destacando [!UICONTROL Finalizar].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![La página [!UICONTROL Package object and dependencies] muestra una lista de los recursos incluidos en el paquete, destacando [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## Exportar e importar una zona protegida completa
 
@@ -199,19 +199,19 @@ Puede exportar todos los tipos de objetos admitidos en un paquete de zona proteg
 
 ### Exportar toda una zona protegida {#export-entire-sandbox}
 
-Para exportar una zona protegida completa, ve a la pestaña [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]** y selecciona **[!UICONTROL Crear paquete]**.
+Para exportar una zona protegida completa, vaya a la pestaña [!UICONTROL Sandboxes] **[!UICONTROL Packages]** y seleccione **[!UICONTROL Create package]**.
 
-![La ficha [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]** que resalta [!UICONTROL Crear paquete].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+![La ficha [!UICONTROL Sandboxes] **[!UICONTROL Packages]** que resalta [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-Seleccione **[!UICONTROL Zona protegida completa]** para el [!UICONTROL Tipo de paquete] en el cuadro de diálogo [!UICONTROL Crear paquete]. Proporcione un [!UICONTROL nombre de paquete] para su nuevo paquete y seleccione la **[!UICONTROL zona protegida]** en la lista desplegable. Finalmente, selecciona **[!UICONTROL Crear]** para confirmar tus entradas.
+Seleccione **[!UICONTROL Entire sandbox]** para [!UICONTROL Type of package] en el cuadro de diálogo [!UICONTROL Create package]. Proporcione un [!UICONTROL Package name] para el nuevo paquete y seleccione el **[!UICONTROL Sandbox]** en la lista desplegable. Finalmente, seleccione **[!UICONTROL Create]** para confirmar las entradas.
 
-![El cuadro de diálogo [!UICONTROL Crear paquete] muestra los campos completados y resalta [!UICONTROL Crear].](../images/ui/sandbox-tooling/create-package-dialog.png)
+![Cuadro de diálogo [!UICONTROL Create package] que muestra los campos completados y resalta [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
 
 El paquete se ha creado correctamente, seleccione **[!UICONTROL Publish]** para publicar el paquete.
 
 ![Lista de paquetes de espacio aislado que resalta el nuevo paquete publicado.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-Ha vuelto a la ficha **[!UICONTROL Paquetes]** del entorno [!UICONTROL Zonas protegidas], donde puede ver el nuevo paquete publicado.
+Ha vuelto a la ficha **[!UICONTROL Packages]** en el entorno [!UICONTROL Sandboxes], donde puede ver el nuevo paquete publicado.
 
 ### Importar todo el paquete de zona protegida {#import-entire-sandbox-package}
 
@@ -219,29 +219,29 @@ Ha vuelto a la ficha **[!UICONTROL Paquetes]** del entorno [!UICONTROL Zonas pro
 >
 >Todos los objetos se importarán en la zona protegida de destino como objetos nuevos. Se recomienda importar un paquete de zona protegida completo en una zona protegida vacía.
 
-Para importar el paquete en una zona protegida de destino, vaya a la pestaña [!UICONTROL Zonas protegidas] **[!UICONTROL Examinar]** y seleccione la opción más (+) junto al nombre de la zona protegida.
+Para importar el paquete en una zona protegida de destino, vaya a la pestaña [!UICONTROL Sandboxes] **[!UICONTROL Browse]** y seleccione la opción más (+) junto al nombre de la zona protegida.
 
-![La pestaña **[!UICONTROL Examinar]** de las zonas protegidas resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+![La ficha **[!UICONTROL Browse]** de las zonas protegidas resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
 
-En el menú desplegable, seleccione la zona protegida completa usando la lista desplegable **[!UICONTROL Nombre del paquete]**. Agregue un **[!UICONTROL nombre de trabajo]**, que se usará para la supervisión futura y una **[!UICONTROL descripción de trabajo]** opcional; a continuación, seleccione **[!UICONTROL Siguiente]**.
+En el menú desplegable, seleccione la zona protegida completa mediante la lista desplegable **[!UICONTROL Package name]**. Agregue un(a) **[!UICONTROL Job name]**, que se usará(n) para la supervisión futura y un(a) **[!UICONTROL Job description]** opcional(a), y luego seleccione **[!UICONTROL Next]**.
 
-![La página de detalles de importación que muestra la selección desplegable [!UICONTROL Nombre del paquete]](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+![La página de detalles de importación que muestra la selección desplegable [!UICONTROL Package name]](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
 
 >[!NOTE]
 >
 >Debe tener permisos completos para todos los objetos incluidos en el paquete. Si no tiene permisos, la operación de importación fallará y aparecerán mensajes de error.
 
-Se le dirigirá a la página [!UICONTROL Objeto del paquete y dependencias], donde podrá ver el número de objetos y dependencias que se importan y excluyen. Aquí, seleccione **[!UICONTROL Importar]** para completar la importación del paquete.
+Se le dirigirá a la página [!UICONTROL Package object and dependencies], donde podrá ver el número de objetos y dependencias que son objetos importados y excluidos. Desde aquí, seleccione **[!UICONTROL Import]** para completar la importación del paquete.
 
-![La página [!UICONTROL Objeto de paquete y dependencias] muestra el mensaje en línea de los tipos de objeto no admitidos, destacando [!UICONTROL Importar].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+![La página [!UICONTROL Package object and dependencies] muestra el mensaje en línea de los tipos de objeto no admitidos, destacando [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
-Espere un poco para que se complete la importación. El tiempo para finalizar puede variar según el número de objetos del paquete. Puede supervisar el trabajo de importación desde la ficha [!UICONTROL Zonas protegidas] **[!UICONTROL Trabajos]**.
+Espere un poco para que se complete la importación. El tiempo para finalizar puede variar según el número de objetos del paquete. Puede supervisar el trabajo de importación desde la ficha [!UICONTROL Sandboxes] **[!UICONTROL Jobs]**.
 
 ## Monitorización de detalles de importación {#view-import-details}
 
-Para ver los detalles importados, vaya a la pestaña [!UICONTROL Zonas protegidas] **[!UICONTROL Trabajos]** y seleccione el paquete en la lista. También puede utilizar la barra de búsqueda para buscar el paquete.
+Para ver los detalles importados, vaya a la pestaña [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** y seleccione el paquete en la lista. También puede utilizar la barra de búsqueda para buscar el paquete.
 
-![La pestaña [!UICONTROL Trabajos] de las zonas protegidas resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/imports-tab.png)
+![La pestaña [!UICONTROL Jobs] de las zonas protegidas resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/imports-tab.png)
 
 <!--### View imported objects {#view-imported-objects}
 
@@ -255,17 +255,17 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-Seleccione **[!UICONTROL Ver resumen de importación]** en el panel de detalles derecho de la ficha **[!UICONTROL Trabajos]** del entorno de zonas protegidas.
+Seleccione **[!UICONTROL View import summary]** en el panel de detalles derecho de la pestaña **[!UICONTROL Jobs]** del entorno de entornos limitados.
 
-![La pestaña [!UICONTROL Importaciones] de las zonas protegidas resalta la selección [!UICONTROL Ver detalles de importación] en el panel derecho.](../images/ui/sandbox-tooling/view-import-details.png)
+![La ficha [!UICONTROL Imports] de las zonas protegidas resalta la selección [!UICONTROL View import details] en el panel derecho.](../images/ui/sandbox-tooling/view-import-details.png)
 
-El cuadro de diálogo **[!UICONTROL Resumen de importación]** muestra un desglose de las importaciones con el progreso como porcentaje.
+El cuadro de diálogo **[!UICONTROL Import summary]** muestra un desglose de las importaciones con progreso como porcentaje.
 
 >[!NOTE]
 >
 >Puede ver una lista de objetos navegando a páginas de inventario específicas.
 
-![El cuadro de diálogo [!UICONTROL Importar detalles] muestra un desglose detallado de las importaciones.](../images/ui/sandbox-tooling/import-details.png)
+![El cuadro de diálogo [!UICONTROL Import details] muestra un desglose detallado de las importaciones.](../images/ui/sandbox-tooling/import-details.png)
 
 Cuando finaliza la importación, se recibe una notificación en la interfaz de usuario de Experience Platform. Puede acceder a estas notificaciones desde el icono de alertas. Puede navegar a la resolución de problemas desde aquí si un trabajo no se ha realizado correctamente.
 
@@ -304,31 +304,31 @@ Siga los pasos a continuación para aprender a utilizar las herramientas de zona
 
 Siga estos pasos si el caso de uso implica objetos existentes en la zona protegida de origen que requieren actualizaciones de configuración, después de haberse empaquetado e importado a otras zonas protegidas.
 
-En primer lugar, actualice el objeto en la zona protegida de origen. Por ejemplo, vaya al área de trabajo **[!UICONTROL Esquemas]**, seleccione el esquema y agregue un nuevo grupo de campos.
+En primer lugar, actualice el objeto en la zona protegida de origen. Por ejemplo, vaya al área de trabajo **[!UICONTROL Schemas]**, seleccione el esquema y agregue un nuevo grupo de campos.
 
 ![El área de trabajo de esquema con un esquema actualizado.](../images/ui/sandbox-tooling/update-schema.png)
 
-Una vez que haya actualizado el esquema, vaya a **[!UICONTROL Zonas protegidas]**, seleccione **[!UICONTROL Paquetes]** y, a continuación, busque el paquete existente.
+Una vez que haya actualizado el esquema, vaya a **[!UICONTROL Sandboxes]**, seleccione **[!UICONTROL Packages]** y, a continuación, busque el paquete existente.
 
 ![Interfaz de herramientas de zona protegida con un paquete seleccionado](../images/ui/sandbox-tooling/select-package.png)
 
-Utilice la interfaz de paquetes para comprobar los cambios. Seleccione **[!UICONTROL Buscar actualizaciones]** para ver cualquier cambio en los artefactos del paquete. A continuación, seleccione **[!UICONTROL Ver diferencia]** para recibir un resumen detallado de todos los cambios realizados en los artefactos.
+Utilice la interfaz de paquetes para comprobar los cambios. Seleccione **[!UICONTROL Check for updates]** para ver cualquier cambio en los artefactos del paquete. A continuación, seleccione **[!UICONTROL View diff]** para recibir un resumen detallado de todos los cambios realizados con sus artefactos.
 
 ![Interfaz del paquete con el botón de diferencia de vista seleccionado.](../images/ui/sandbox-tooling/view-diff.png)
 
-Aparecerá la interfaz [!UICONTROL Ver diff]. Consulte este peaje para obtener información sobre los artefactos de origen y destino, así como los cambios que se les deben aplicar.
+Aparecerá la interfaz [!UICONTROL View diff]. Consulte este peaje para obtener información sobre los artefactos de origen y destino, así como los cambios que se les deben aplicar.
 
 ![Resumen de cambios.](../images/ui/sandbox-tooling/summary-of-changes.png)
 
-Durante este paso, también puede seleccionar [!UICONTROL Resumir con IA] para obtener un resumen paso a paso de todos los cambios.
+Durante este paso, también puede seleccionar [!UICONTROL Summarize with AI] para obtener un resumen paso a paso de todos los cambios.
 
 ![Resumen con IA habilitada.](../images/ui/sandbox-tooling/ai-summary.png)
 
-Cuando esté listo, selecciona **[!UICONTROL Actualizar paquete]** y, a continuación, selecciona **[!UICONTROL Confirmar]** en la ventana emergente que aparece. Una vez completado el trabajo, puede actualizar la página y seleccionar **[!UICONTROL Ver historial]** para comprobar la versión del paquete.
+Cuando esté listo, seleccione **[!UICONTROL Update package]** y luego seleccione **[!UICONTROL Confirm]** en la ventana emergente que aparece. Una vez completado el trabajo, puede actualizar la página y seleccionar **[!UICONTROL View history]** para comprobar la versión del paquete.
 
 ![Ventana de confirmación.](../images/ui/sandbox-tooling/confirm-changes.png)
 
-Para importar los cambios, vuelva al directorio [!UICONTROL Paquetes] y seleccione los puntos suspensivos (`...`) junto al paquete. A continuación, seleccione **[!UICONTROL Importar paquete]**. Experience Platform selecciona automáticamente [!UICONTROL Actualizar objetos existentes]. Compruebe los cambios y, a continuación, seleccione **[!UICONTROL Finalizar]**.
+Para importar los cambios, vuelva al directorio [!UICONTROL Packages] y seleccione los puntos suspensivos (`...`) junto al paquete. A continuación, seleccione **[!UICONTROL Import package]**. Experience Platform selecciona automáticamente [!UICONTROL Update existing objects]. Compruebe los cambios y seleccione **[!UICONTROL Finish]**.
 
 >[!NOTE]
 >
@@ -344,7 +344,7 @@ Siga estos pasos si el caso de uso implica aplicar cambios de configuración a o
 
 En primer lugar, cree y publique un nuevo paquete con el objeto actualizado.
 
-A continuación, importe el paquete en la zona protegida de destino que contiene los objetos que también desea actualizar. Durante el proceso de importación, seleccione **[!UICONTROL Actualizar objetos existentes]** y, a continuación, utilice el navegador de objetos para seleccionar manualmente los objetos de destino a los que desea aplicar las actualizaciones.
+A continuación, importe el paquete en la zona protegida de destino que contiene los objetos que también desea actualizar. Durante el proceso de importación, seleccione **[!UICONTROL Update existing objects]** y, a continuación, utilice el navegador de objetos para seleccionar manualmente los objetos de destino a los que desea aplicar las actualizaciones.
 
 >[!NOTE]
 >
@@ -353,7 +353,7 @@ A continuación, importe el paquete en la zona protegida de destino que contiene
 
 ![Interfaz del objetivo de importación con marcadores de posición para los objetos de destino que se van a actualizar.](../images/ui/sandbox-tooling/update-existing-objects.png)
 
-Una vez identificados los objetos de destino que desea actualizar, seleccione **[!UICONTROL Finalizar]**.
+Una vez identificados los objetos de destino que desea actualizar, seleccione **[!UICONTROL Finish]**.
 
 ![Los objetos de destino seleccionados.](../images/ui/sandbox-tooling/add-updated-objects.png)
 
@@ -361,7 +361,7 @@ Una vez identificados los objetos de destino que desea actualizar, seleccione **
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender las herramientas de la zona protegida, y describe cómo crear un nuevo paquete, publicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446086/?learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Próximos pasos
 

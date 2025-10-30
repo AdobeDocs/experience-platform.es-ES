@@ -3,7 +3,7 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '4506'
 ht-degree: 12%
@@ -466,7 +466,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave
 
@@ -533,6 +533,7 @@ Actualmente no se admite la selección de áreas de nombres de identidad para ex
 ![Asignación no compatible que muestra exportaciones de identidad.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 Como solución temporal si necesita agregar áreas de nombres de identidad a los archivos exportados durante la versión beta, puede:
+
 * Utilice los destinos de almacenamiento en la nube heredados para los flujos de datos donde desee incluir áreas de nombres de identidad en las exportaciones
 * Cargue identidades como atributos en Experience Platform para luego exportarlas a sus destinos de almacenamiento en la nube.
 

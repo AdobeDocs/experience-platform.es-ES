@@ -2,10 +2,10 @@
 title: Tipos de evento para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo evento para una extensión web en Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 70%
+ht-degree: 72%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En una regla de etiqueta, un evento es una actividad que debe producirse para que se active una regla. Por ejemplo, una extensión web podría proporcionar un tipo de evento de &quot;gesto&quot; que supervise la producción de un determinado gesto táctil o movimiento del ratón. Una vez que se produce el gesto, la lógica de evento activaría la regla.
 
@@ -27,7 +27,7 @@ Este documento explica cómo definir tipos de eventos para una extensión web en
 
 Los tipos de eventos se definen mediante extensiones y suelen consistir en lo siguiente:
 
-1. Una [vista](./views.md) que se muestra en la IU del Experience Platform y en la IU de recopilación de datos y que permite a los usuarios modificar la configuración del evento.
+1. Una [vista](./views.md) que se muestra en la IU de Experience Platform y en la IU de recopilación de datos y que permite a los usuarios modificar la configuración del evento.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y supervisar que se produzca una determinada actividad.
 
 Las `module.exports` aceptan los parámetros `settings` y `trigger`. Esto permite la personalización del tipo de evento.
@@ -95,7 +95,7 @@ Esto puede resultar útil para los expertos en marketing que intentan acceder a 
 
 ### [!DNL element]
 
-Si existe una fuerte relación entre un elemento y el evento que se produjo, se recomienda establecer la propiedad `element` en el nodo DOM del elemento. Por ejemplo: supongamos que la extensión proporciona un tipo de evento `click` y que permite a los expertos en marketing modificar la configuración para que la regla se active únicamente si se selecciona un elemento con el ID de `herobanner`. En este caso, si el usuario selecciona el banner a pantalla completa, se recomienda llamar a `trigger` y establecer `element` en el nodo DOM del banner a pantalla completa.
+Si existe una fuerte relación entre un elemento y el evento que se produjo, se recomienda establecer la propiedad `element` en el nodo DOM del elemento. Por ejemplo: supongamos que la extensión proporciona un tipo de evento `click` y que permite a los expertos en marketing modificar la configuración para que la regla se active únicamente si se selecciona un elemento con el ID de `herobanner`. En este caso, si el usuario selecciona el banner principal, se recomienda llamar a `trigger` y establecer `element` en el nodo DOM del banner principal.
 
 ```js
 trigger({
