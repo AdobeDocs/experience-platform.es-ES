@@ -114,7 +114,7 @@ Este documento proporciona un catálogo de mensajes de error, descripciones y re
 | `1350-400` | Solicitud incorrecta | No se ha proporcionado ningún operador para el filtro en origen. Proporcione una solicitud de filtro válida con el operador adecuado e inténtelo de nuevo. |
 | `1351-400` | Solicitud incorrecta | El operador proporcionado {operator} no es compatible con el filtro en el origen para este conector. Proporcione un operador válido e inténtelo de nuevo. |
 | `1352-400` | Solicitud incorrecta | El operador proporcionado {operator} no se puede asignar a ningún operador nativo admitido para {ql}. Proporcione un operador válido e inténtelo de nuevo. |
-| `1353-400` | Solicitud incorrecta | El filtro en origen aún no es compatible con el conector {connectorType}. Compruebe los conectores admitidos en la documentación: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
+| `1353-400` | Solicitud incorrecta | El filtro en origen aún no es compatible con el conector {connectorType}. Compruebe los conectores admitidos en la documentación: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=es. |
 | `1354-400` | Solicitud incorrecta | El idioma de consulta {ql} todavía no es compatible con el filtro en origen. Proporcione un idioma de consulta válido e inténtelo de nuevo. |
 | `1355-400` | Solicitud incorrecta | El tipo de filtro proporcionado no es válido. El tipo de filtro admitido es: PQL. Indique uno válido e inténtelo de nuevo. |
 | `1356-400` | Solicitud incorrecta | El formato de filtro proporcionado no es válido. El admitido es: pql/json. Indique uno válido e inténtelo de nuevo. |
