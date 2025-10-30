@@ -71,7 +71,7 @@ Obtenga más información sobre cómo [configurar destinos de personalización p
 
 El siguiente vídeo le muestra las particularidades de los dos tipos de destinos:
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32690?captions=spa&quality=12)
 
 ## Tipos de audiencias exportadas {#exported-audiences-types}
 
