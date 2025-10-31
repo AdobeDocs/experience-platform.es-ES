@@ -2,9 +2,9 @@
 title: Asignación de campos para el conector de Adobe Analytics Source
 description: Asigne campos de Adobe Analytics a campos XDM mediante el conector de Source de Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
-source-wordcount: '3854'
+source-wordcount: '3838'
 ht-degree: 5%
 
 ---
@@ -197,7 +197,7 @@ Lea esta sección para obtener información sobre los campos de asignación de A
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | número | Señalización menor de Mobile Services. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | cadena | UUID de señalización de Mobile Services. |
 | `mobileinstalls` | `application.firstLaunches` | Objeto | Se activa en la primera ejecución después de la instalación o reinstalación `{id (string), value (number)}` |
-| `mobileupgrades` | `application.upgrades` | Objeto | Notifica el número de actualizaciones de aplicaciones. Los déclencheur se ejecutan por primera vez después de la actualización o cada vez que cambia el número de versión. | `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Objeto | Notifica el número de actualizaciones de aplicaciones. Los déclencheur se ejecutan por primera vez después de la actualización o cada vez que cambia el número de versión. `{id (string), value (number)}` |
 | `mobilelaunches` | `application.launches` | Objeto | El número de veces que se ha iniciado la aplicación.  `{id (string), value (number)}` |
 | `mobilecrashes` | `application.crashes` | Objeto | `{id (string), value (number)}` |
 | `mobilemessageclicks` | `directMarketing.clicks` | Objeto | `{id (string), value (number)}` |
@@ -224,13 +224,13 @@ Los campos seleccionados procedentes de ADC deben transformarse, lo que requiere
 
 | Fuente de datos | Campo XDM | Tipo de XDM | Descripción |
 | --- | --- | --- | --- |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objeto | Propiedades personalizadas de Analytics, configuradas para ser props de lista. Contiene una lista delimitada de valores. | {} |
-| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objeto | Utilizado por variables de jerarquía. Contiene una lista delimitada de valores. | {values (array), delimiter (string)} |
-| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | matriz | Variables de lista personalizadas de Analytics. Contiene una lista delimitada de valores. | {value (string), key (string)} |
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objeto | Propiedades personalizadas de Analytics, configuradas para ser props de lista. Contiene una lista delimitada de valores. `{}` |
+| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objeto | Utilizado por variables de jerarquía. Contiene una lista delimitada de valores. `{values (array), delimiter (string)}` |
+| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | matriz | Variables de lista personalizadas de Analytics. Contiene una lista delimitada de valores.  `{value (string), key (string)}` |
 | `m_color` | `device.colorDepth` | entero | El ID de profundidad de color, que se basa en el valor de la columna c_color. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | Booleano | Variable utilizada en la dimensión Compatibilidad con cookies. |
-| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objeto | Eventos de comercio estándar activados en la visita. | {id (cadena), value (número)} |
-| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Objeto | Eventos personalizados activados en la visita. | {id (objeto), value (objeto)} |
+| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objeto | Eventos de comercio estándar activados en la visita. `{id (string), value (number)}` |
+| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Objeto | Eventos personalizados activados en la visita. `{id (Object), value (Object)}` |
 | `m_geo_country` | `placeContext.geo.countryCode` | cadena | Abreviatura del país del que provino la visita basada en la dirección IP. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | número | |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | número | |
