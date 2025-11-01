@@ -2,9 +2,9 @@
 title: Asignación de campos para el conector de Adobe Analytics Source
 description: Asigne campos de Adobe Analytics a campos XDM mediante el conector de Source de Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3832'
 ht-degree: 5%
 
 ---
@@ -242,7 +242,7 @@ Los campos seleccionados procedentes de ADC deben transformarse, lo que requiere
 | `m_page_type` | `web.webPageDetails.isErrorPage` | Booleano | Variable que se utiliza para rellenar la dimensión Páginas no encontradas. Esta variable debe estar vacía o debe contener &quot;ErrorPage&quot;. |
 | `m_pagename_no_url` | `web.webPageDetails.name` | número | El nombre de la página (si está configurado). Si no se especifica ninguna página, este valor se deja vacío. |
 | `m_paid_search` | `search.isPaid` | Booleano | Un indicador que se establece si la visita coincide con la detección de búsquedas de pago. |
-| `m_product_list` | `productListItems[].items` | matriz | La lista de productos, tal como se transmite mediante la variable products. | {SKU (cadena), cantidad (entero), priceTotal (número)} |
+| `m_product_list` | `productListItems[].items` | matriz | La lista de productos, tal como se transmite mediante la variable products. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | cadena | ID numérica que representa el tipo de referente de la visita.<br/>`1`: Dentro del sitio<br/>`2`: Otros sitios web<br/>`3`: Motores de búsqueda<br/>`4`: Disco duro<br/>`5`: USENET<br/>`6`: Escritos o marcadores (sin referente)<br/>`7`: correo electrónico<br/>`8`: Sin JavaScript<br/>`9`: Redes sociales |
 | `m_search_engine` | `search.searchEngine` | cadena | El ID numérico que representa el motor de búsqueda que refirió al visitante a su sitio. |
 | `post_currency` | `commerce.order.currencyCode` | cadena | El código de moneda que se utilizó durante la transacción. |

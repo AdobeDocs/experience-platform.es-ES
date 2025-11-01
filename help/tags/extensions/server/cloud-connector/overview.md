@@ -2,10 +2,10 @@
 title: Información general sobre la extensión Cloud Connector
 description: Obtenga información acerca de la extensión de reenvío de eventos de Cloud Connector en Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: e832694fed5dbb86b5ed544473d6a79e500a6222
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 79%
+source-wordcount: '1681'
+ht-degree: 75%
 
 ---
 
@@ -25,7 +25,7 @@ En esta sección se describe el tipo de acción Enviar datos disponible en la ex
 
 ### Tipo de solicitud
 
-Para seleccionar el tipo de solicitud que requiere el extremo, seleccione el tipo adecuado en la lista desplegable [!UICONTROL Tipo de solicitud].
+Para seleccionar el tipo de solicitud que requiere el extremo, seleccione el tipo adecuado en la lista desplegable [!UICONTROL Request Type].
 
 | Método | Descripción |
 |---|---|
@@ -45,15 +45,15 @@ Utilice cada una de estas fichas (Parámetros de Consulta, Encabezados y Element
 
 #### Parámetros de consulta
 
-Defina una clave y un valor para cada par clave-valor que desee enviar como parámetro de cadena de consulta. Para introducir manualmente un elemento de datos, utilice la tokenización del elemento de datos para el reenvío de eventos. Para hacer referencia al valor de un elemento de datos llamado &quot;siteSection&quot; como clave o valor, escriba `{{siteSection}}`. O bien, seleccione el elemento de datos creado anteriormente seleccionándolo en el menú desplegable.
+Defina una clave y un valor para cada par clave-valor que desee enviar como parámetro de cadena de consulta. Para introducir manualmente un elemento de datos, utilice la tokenización del elemento de datos para el reenvío de eventos. Para hacer referencia al valor de un elemento de datos denominado &quot;siteSection&quot; como clave o valor, escriba `{{siteSection}}`. O bien, seleccione el elemento de datos creado anteriormente seleccionándolo en el menú desplegable.
 
-Para agregar más parámetros de consulta, seleccione **[!UICONTROL Añadir otro]**.
+Para agregar más parámetros de consulta, seleccione **[!UICONTROL Add Another]**.
 
 #### Encabezados
 
-Defina una clave y un valor para cada par clave-valor que desee enviar como encabezado. Para introducir manualmente un elemento de datos, utilice la tokenización del elemento de datos para el reenvío de eventos. Para hacer referencia al valor de un elemento de datos llamado &quot;pageName&quot; como clave o valor, escriba `{{pageName}}`. O bien, seleccione el elemento de datos creado anteriormente seleccionándolo en el menú desplegable.
+Defina una clave y un valor para cada par clave-valor que desee enviar como encabezado. Para introducir manualmente un elemento de datos, utilice la tokenización del elemento de datos para el reenvío de eventos. Para hacer referencia al valor de un elemento de datos denominado &quot;pageName&quot; como clave o valor, escriba `{{pageName}}`. O bien, seleccione el elemento de datos creado anteriormente seleccionándolo en el menú desplegable.
 
-Para agregar más encabezados, seleccione **[!UICONTROL Añadir otro]**.
+Para agregar más encabezados, seleccione **[!UICONTROL Add Another]**.
 
 En la siguiente tabla se hace una lista de los encabezados predefinidos. No está limitado a estos encabezados y puede agregar sus propios encabezados personalizados si es necesario, pero están disponibles para su comodidad.
 
@@ -90,12 +90,12 @@ En la siguiente tabla se hace una lista de los encabezados predefinidos. No est�
 | [Si-Nomodificado-Desde](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
 | [Máx-Avanza](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
 | [Origen](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Origin) | |
-| [Pragma](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Pragma) | Encabezado específico para la implementación que puede tener varios efectos en cualquier parte de la cadena de solicitud y respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP/1.0 donde el encabezado Caché-Control aún no está presente. | |
-| [Autorización de proxy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Intervalo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte de un documento que el servidor debe devolver. | |
-| [Remitente](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Referer) | Dirección de la página web anterior desde la que se siguió un vínculo a la página solicitada actualmente. | |
+| [Pragma](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Pragma) | Encabezado específico para la implementación que puede tener varios efectos en cualquier parte de la cadena de solicitud y respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP/1.0 donde el encabezado Caché-Control aún no está presente. |
+| [Autorización de proxy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |  |
+| [Intervalo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte de un documento que el servidor debe devolver. |
+| [Remitente](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Referer) | Dirección de la página web anterior desde la que se siguió un vínculo a la página solicitada actualmente. |
 | TE | Especifica las codificaciones de transferencia que el agente de usuario está dispuesto a aceptar. (Podría llamarlo `Accept-Transfer-Encoding` de manera informal, lo cual sería más intuitivo). |
-| Actualizar | El documento RFC relevante para el campo de encabezado [`Upgrade` es RFC 7230, sección 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). El estándar establece reglas para actualizar o cambiar a un protocolo diferente en la conexión actual de cliente, servidor y protocolo de transporte. Por ejemplo, este estándar de encabezado permite a un cliente cambiar de HTTP 1.1 a HTTP 2.0, suponiendo que el servidor decida reconocer e implementar el campo de encabezado `Upgrade`. No se pide a ninguna de las partes que acepte los términos especificados en el campo de encabezado `Upgrade`. Se puede utilizar en encabezados de cliente y de servidor. Si se especifica el campo de encabezado `Upgrade`, el remitente DEBE enviar también el campo de encabezado `Connection` con la opción `upgrade` especificada. | |
+| Actualizar | El documento RFC relevante para el campo de encabezado [`Upgrade` es RFC 7230, sección 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). El estándar establece reglas para actualizar o cambiar a un protocolo diferente en la conexión actual de cliente, servidor y protocolo de transporte. Por ejemplo, este estándar de encabezado permite a un cliente cambiar de HTTP 1.1 a HTTP 2.0, suponiendo que el servidor decida reconocer e implementar el campo de encabezado `Upgrade`. No se pide a ninguna de las partes que acepte los términos especificados en el campo de encabezado `Upgrade`. Se puede utilizar en encabezados de cliente y de servidor. Si se especifica el campo de encabezado `Upgrade`, el remitente DEBE enviar también el campo de encabezado `Connection` con la opción `upgrade` especificada. |
 | [User-Agent](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/User-Agent) | Contiene una cadena característica que permite a los pares de protocolo de red identificar el tipo de aplicación, el sistema operativo, el proveedor de software o la versión de software del agente de usuario de software solicitante. |
 | [Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Añadido por proxies, tanto los proxies hacia delante como los de atrás, y puede aparecer en los encabezados de solicitud y en los encabezados de respuesta. |
 | [Advertencia](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Información general de advertencia sobre posibles problemas. |
@@ -104,19 +104,19 @@ En la siguiente tabla se hace una lista de los encabezados predefinidos. No est�
 
 #### Cuerpo como JSON
 
-Defina una clave y un valor para cada par clave-valor que desee enviar en el cuerpo de la solicitud. Para introducir manualmente un elemento de datos, utilice la tokenización del elemento de datos para el reenvío de eventos. Para hacer referencia al valor de un elemento de datos denominado &quot;appSection&quot; como clave o valor, introduzca `{{appSection}}`. O bien, seleccione el elemento de datos creado anteriormente seleccionándolo en el menú desplegable.
+Defina una clave y un valor para cada par clave-valor que desee enviar en el cuerpo de la solicitud. Para introducir manualmente un elemento de datos, utilice la tokenización del elemento de datos para el reenvío de eventos. Para hacer referencia al valor de un elemento de datos denominado &quot;appSection&quot; como clave o valor, escriba `{{appSection}}`. O bien, seleccione el elemento de datos creado anteriormente seleccionándolo en el menú desplegable.
 
-Para añadir pares clave-valor adicionales, seleccione **[!UICONTROL Añadir otro]**.
+Para añadir pares clave-valor adicionales, seleccione **[!UICONTROL Add Another]**.
 
 #### Cuerpo como sin procesar
 
-Defina una clave y un valor para cada par clave-valor que desee enviar en el cuerpo de la solicitud. Para introducir manualmente un elemento de datos, utilice la tokenización del elemento de datos para el reenvío de eventos. Para hacer referencia al valor de un elemento de datos denominado &quot;appSection&quot; como clave o valor, introduzca `{{appSection}}`. O bien, seleccione el elemento de datos creado anteriormente seleccionándolo en el menú desplegable. Puede añadir uno o más elementos de datos.
+Defina una clave y un valor para cada par clave-valor que desee enviar en el cuerpo de la solicitud. Para introducir manualmente un elemento de datos, utilice la tokenización del elemento de datos para el reenvío de eventos. Para hacer referencia al valor de un elemento de datos denominado &quot;appSection&quot; como clave o valor, escriba `{{appSection}}`. O bien, seleccione el elemento de datos creado anteriormente seleccionándolo en el menú desplegable. Puede añadir uno o más elementos de datos.
 
 ### Avanzadas
 
 Las acciones dentro de las reglas en el reenvío de eventos se ejecutan secuencialmente. Podría haber situaciones en las que desee recuperar datos de un origen externo que no esté presente en el evento entrante desde el cliente y, luego, tomar esta respuesta y transformar o enviar estos datos a un destino final en una acción posterior dentro de una sola regla. La sección avanzada Guardar la respuesta de solicitud lo habilita.
 
-Para guardar el cuerpo de respuesta de un extremo, marque la casilla **[!UICONTROL Guardar la respuesta de solicitud]** y defina una clave de respuesta en el campo de texto.
+Para guardar el cuerpo de respuesta de un extremo, marque la casilla **[!UICONTROL Save the request response]** y defina una clave de respuesta en el campo de texto.
 
 Si definió la clave de respuesta como `productDetails`, haga referencia a estos datos en un elemento de datos y, a continuación, haga referencia a este elemento de datos en una acción posterior dentro de la misma regla. Para crear un elemento de datos que haga referencia a `productDetail`, cree un elemento de datos de tipo `path` e introduzca la siguiente ruta:
 
@@ -134,7 +134,7 @@ El certificado [!DNL mTLS] es una credencial digital que prueba la identidad de 
 
 Para instalar la extensión, [cree una propiedad de reenvío de eventos](../../../ui/event-forwarding/overview.md#properties) o seleccione una propiedad existente para editar en su lugar.
 
-Seleccione **[!UICONTROL Extensiones]** en el panel izquierdo. En la ficha **[!UICONTROL Catálogo]**, seleccione la tarjeta **[!UICONTROL Conector de Adobe Cloud]** y, a continuación, seleccione **[!UICONTROL Instalar]**.
+Seleccione **[!UICONTROL Extensions]** en el panel izquierdo. En la ficha **[!UICONTROL Catalog]**, seleccione la tarjeta **[!UICONTROL Adobe Cloud Connector]** y después seleccione **[!UICONTROL Install]**.
 
 ![Catálogo de extensiones que muestra la tarjeta de extensión [!DNL Adobe Cloud Connector] que resalta la instalación.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -146,19 +146,19 @@ Seleccione **[!UICONTROL Extensiones]** en el panel izquierdo. En la ficha **[!U
 
 Después de instalar la extensión, puede crear una regla de reenvío de eventos que use [!DNL mTLS] y agregarla a la biblioteca.
 
-Cree una nueva regla [rule](../../../ui/managing-resources/rules.md) de reenvío de eventos en su propiedad de reenvío de eventos. Proporcione un nombre para la regla y en **[!UICONTROL Acciones]**, agregue una acción nueva y establezca la extensión en **[!UICONTROL Conector de Adobe Cloud]**. A continuación, seleccione **[!UICONTROL Realizar llamada de recuperación]** para **[!UICONTROL Tipo de acción]**.
+Cree una nueva regla [rule](../../../ui/managing-resources/rules.md) de reenvío de eventos en su propiedad de reenvío de eventos. Proporcione un nombre para la regla y en **[!UICONTROL Actions]** agregue una nueva acción y establezca la extensión en **[!UICONTROL Adobe Cloud Connector]**. A continuación, seleccione **[!UICONTROL Make Fetch Call]** para **[!UICONTROL Action Type]**.
 
 ![La vista Reglas de propiedad de reenvío de eventos, con los campos necesarios para agregar una configuración de acción de regla de reenvío de eventos resaltada.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Después de realizar la selección, aparecerán controles adicionales para configurar el método y el destino de la solicitud [!DNL mTLS]. Para habilitar el uso de certificados activos en los entornos, seleccione **[!UICONTROL Habilitar en[!DNL mTLS]]** y, a continuación, seleccione **[!UICONTROL Conservar cambios]** para guardar la regla.
+Después de realizar la selección, aparecerán controles adicionales para configurar el método y el destino de la solicitud [!DNL mTLS]. Para habilitar el uso de certificados activos en los entornos, seleccione **[!UICONTROL Enable in [!DNL mTLS]]**, luego seleccione **[!UICONTROL Keep Changes]** para guardar la regla.
 
 ![La vista Reglas de propiedad de reenvío de eventos, con los campos de control adicionales y mantenga los cambios resaltados.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
-La nueva regla ya está lista. Seleccione **[!UICONTROL Guardar en biblioteca]** y, a continuación, seleccione **[!UICONTROL Generar]** para implementarlo. La solicitud [!DNL mTLS] ya está activa y disponible en su biblioteca.
+La nueva regla ya está lista. Seleccione **[!UICONTROL Save to Library]**, luego seleccione **[!UICONTROL Build]** para implementarlo. La solicitud [!DNL mTLS] ya está activa y disponible en su biblioteca.
 
 ![Regla de reenvío de eventos con la opción Guardar en biblioteca y compilación resaltadas.](../../../images/extensions/server/cloud-connector/save-build.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo configurar reglas mTLS en el reenvío de eventos. Para obtener más información sobre la configuración de mTLS en un entorno, consulte la guía [Seguridad de la capa de transporte mutuo ([!DNL mTLS])](../cloud-connector/mtls.md).
 

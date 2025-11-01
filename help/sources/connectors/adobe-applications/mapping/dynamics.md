@@ -2,7 +2,7 @@
 title: Campos de asignación de Microsoft Dynamics
 description: Las siguientes tablas contienen las asignaciones entre los campos de origen de Microsoft Dynamics y sus campos XDM correspondientes.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 8%
@@ -222,7 +222,7 @@ Las tablas siguientes contienen las asignaciones entre [!DNL Microsoft Dynamics]
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | El valor de `"${CRM_ORG_ID}"` se reemplazará automáticamente. |
-| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
+| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |  |
 | `listmemberid` | `marketingListMemberKey.sourceID` |  |
 | `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identidad principal. El valor de `"${CRM_ORG_ID}"` se reemplazará automáticamente. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |  |

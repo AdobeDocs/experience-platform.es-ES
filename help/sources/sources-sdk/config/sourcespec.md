@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Configuración de las especificaciones de origen para orígenes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '2090'
 ht-degree: 1%
@@ -229,36 +229,36 @@ Consulte el [apéndice](#source-spec) para ver un ejemplo de una especificación
 
 | Propiedad | Descripción | Ejemplo |
 | --- | --- | --- |
-| `sourceSpec.attributes` | Contiene información sobre el origen específico de la interfaz de usuario o la API de. |
-| `sourceSpec.attributes.uiAttributes` | Muestra información sobre el origen específico de la interfaz de usuario. |
+| `sourceSpec.attributes` | Contiene información sobre el origen específico de la interfaz de usuario o la API de. |  |
+| `sourceSpec.attributes.uiAttributes` | Muestra información sobre el origen específico de la interfaz de usuario. |  |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Un atributo booleano que indica si el origen requiere más comentarios de los clientes para agregar a su funcionalidad. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Define la categoría del origen. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Define el icono utilizado para la renderización del origen en la interfaz de usuario de Experience Platform. | `mailchimp-icon.svg` |
-| `sourceSpec.attributes.uiAttributes.description` | Muestra una breve descripción del origen. |
-| `sourceSpec.attributes.uiAttributes.label` | Muestra la etiqueta que se utilizará para la renderización del origen en la interfaz de usuario de Experience Platform. |
-| `sourceSpec.attributes.spec.properties.urlParams` | Contiene información sobre la ruta de acceso del recurso de URL, el método y los parámetros de consulta admitidos. |
+| `sourceSpec.attributes.uiAttributes.description` | Muestra una breve descripción del origen. |  |
+| `sourceSpec.attributes.uiAttributes.label` | Muestra la etiqueta que se utilizará para la renderización del origen en la interfaz de usuario de Experience Platform. |  |
+| `sourceSpec.attributes.spec.properties.urlParams` | Contiene información sobre la ruta de acceso del recurso de URL, el método y los parámetros de consulta admitidos. |  |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Define la ruta del recurso desde la que se recuperan los datos. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Define el método HTTP que se utilizará para realizar la solicitud al recurso para recuperar los datos. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Define los parámetros de consulta admitidos que se pueden utilizar para anexar la dirección URL de origen al realizar una solicitud de obtención de datos. **Nota**: cualquier valor de parámetro proporcionado por el usuario debe tener el formato de marcador de posición. Por ejemplo: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` se anexará a la dirección URL de origen como: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Define los encabezados que deben proporcionarse en la solicitud HTTP a la URL de origen al recuperar los datos. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | Este atributo se puede configurar para enviar el cuerpo HTTP a través de una petición POST. |
+| `sourceSpec.attributes.spec.properties.bodyParams` | Este atributo se puede configurar para enviar el cuerpo HTTP a través de una petición POST. |  |
 | `sourceSpec.attributes.spec.properties.contentPath` | Define el nodo que contiene la lista de elementos que se deben ingerir en Experience Platform. Este atributo debe seguir una sintaxis de ruta JSON válida y señalar a una matriz en particular. | Vea la sección [recursos adicionales](#content-path) para ver un ejemplo del recurso contenido en una ruta de contenido. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | La ruta que señala a los registros de colección que se van a ingerir en Experience Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Esta propiedad le permite identificar elementos específicos del recurso identificado en la ruta de contenido que se excluirán de la ingesta. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Esta propiedad permite especificar explícitamente los atributos individuales que desea conservar. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Esta propiedad le permite anular el valor del nombre de atributo especificado en `contentPath`. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Esta propiedad permite acoplar dos matrices y transformar datos de recursos en recursos de Experience Platform. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Esta propiedad permite acoplar dos matrices y transformar datos de recursos en recursos de Experience Platform. |  |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Ruta de acceso que señala a los registros de colección que desea acoplar. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Esta propiedad permite identificar elementos específicos del recurso identificado en la ruta de entidad que se excluirán de la ingesta. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Esta propiedad permite especificar explícitamente los atributos individuales que desea conservar. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Esta propiedad le permite anular el valor del nombre de atributo especificado en `explodeEntityPath`. | `activity` |
-| `sourceSpec.attributes.spec.properties.paginationParams` | Define los parámetros o campos que se deben proporcionar para obtener un vínculo a la página siguiente desde la respuesta de página actual del usuario o durante la creación de una dirección URL de página siguiente. |
+| `sourceSpec.attributes.spec.properties.paginationParams` | Define los parámetros o campos que se deben proporcionar para obtener un vínculo a la página siguiente desde la respuesta de página actual del usuario o durante la creación de una dirección URL de página siguiente. |  |
 | `sourceSpec.attributes.spec.properties.paginationParams.type` | Muestra el tipo de paginación compatible con el origen. | <ul><li>`OFFSET`: este tipo de paginación le permite analizar los resultados especificando un índice desde el que iniciar la matriz resultante y un límite en la cantidad de resultados devueltos.</li><li>`POINTER`: este tipo de paginación le permite usar una variable `pointer` para señalar a un elemento en particular que debe enviarse con una solicitud. La paginación de tipo de puntero requiere una ruta en la carga útil que dirija a la página siguiente.</li><li>`CONTINUATION_TOKEN`: este tipo de paginación le permite anexar los parámetros de consulta o encabezado con un token de continuación para recuperar los datos de retorno restantes del origen que no se devolvieron inicialmente debido a un máximo predeterminado.</li><li>`PAGE`: este tipo de paginación le permite anexar el parámetro de consulta con un parámetro de paginación para recorrer los datos devueltos por páginas, empezando desde la página cero.</li><li>`NONE`: este tipo de paginación se puede usar para orígenes que no admiten ninguno de los tipos de paginación disponibles. El tipo de paginación `NONE` devuelve todos los datos de respuesta después de una solicitud.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Nombre del límite a través del cual la API puede especificar el número de registros que se recuperarán en una página. | `limit` o `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | El número de registros que se recuperarán en una página. | `limit=10` o `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Nombre del atributo de desplazamiento. Esto es necesario si el tipo de paginación está establecido en `offset`. | `offset` |
 | `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | Nombre del atributo de puntero. Esto requiere una ruta json al atributo que señalará a la página siguiente. Esto es necesario si el tipo de paginación está establecido en `pointer`. | `pointer` |
-| `sourceSpec.attributes.spec.properties.scheduleParams` | Contiene parámetros que definen los formatos de programación admitidos para el origen. Los parámetros de programación incluyen `startTime` y `endTime`, lo que le permite establecer intervalos de tiempo específicos para ejecuciones por lotes, lo que garantiza que no se recuperen los registros recuperados en una ejecución por lotes anterior. |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | Contiene parámetros que definen los formatos de programación admitidos para el origen. Los parámetros de programación incluyen `startTime` y `endTime`, lo que le permite establecer intervalos de tiempo específicos para ejecuciones por lotes, lo que garantiza que no se recuperen los registros recuperados en una ejecución por lotes anterior. |  |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Define el nombre del parámetro de hora de inicio | `since_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Define el nombre del parámetro de hora de finalización | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Define el formato admitido para `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
@@ -657,6 +657,6 @@ A continuación se muestra un ejemplo de esquema personalizado que puede agregar
 ```
 
 
-## Pasos siguientes
+## Próximos pasos
 
 Una vez rellenadas las especificaciones de origen, puede configurar las especificaciones de exploración del origen que desee integrar en Experience Platform. Consulte el documento sobre [configuración de las especificaciones de exploración](./explorespec.md) para obtener más información.

@@ -1,11 +1,11 @@
 ---
-title: Cree una nueva especificación de conexión para el SDK de streaming mediante la API de Flow Service
+title: Cree una nueva especificación de conexión para Streaming SDK mediante la API de Flow Service
 description: El siguiente documento proporciona pasos sobre cómo crear una especificación de conexión mediante la API de Flow Service e integrar una nueva fuente a través de fuentes de autoservicio.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '744'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->El SDK de flujo de fuentes de autoservicio está en versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
+>Fuentes de autoservicio Streaming SDK está en versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Una especificación de conexión representa la estructura de un origen. Contiene información sobre los requisitos de autenticación de una fuente, define cómo se pueden explorar e inspeccionar los datos de la fuente y proporciona información sobre los atributos de una fuente determinada. El extremo `/connectionSpecs` de la API [!DNL Flow Service] le permite administrar mediante programación las especificaciones de conexión dentro de su organización.
 
-El siguiente documento proporciona pasos sobre cómo crear una especificación de conexión mediante la API [!DNL Flow Service] e integrar un nuevo origen a través de fuentes de autoservicio (SDK de streaming).
+El siguiente documento proporciona pasos sobre cómo crear una especificación de conexión mediante la API [!DNL Flow Service] e integrar una nueva fuente a través de fuentes de autoservicio (Streaming SDK).
 
 ## Introducción
 
@@ -26,7 +26,7 @@ Antes de continuar, revisa la [guía de introducción](./getting-started.md) par
 
 ## Recopilar artefactos
 
-Para crear una nueva fuente de flujo continuo mediante fuentes de autoservicio, primero debe coordinarse con Adobe, solicitar un repositorio Git privado y alinearse con Adobe en los detalles relacionados con la etiqueta, descripción, categoría e icono de la fuente.
+Para crear una nueva fuente de flujo continuo mediante fuentes de autoservicio, primero debe coordinarse con Adobe, solicitar un repositorio de Git privado y alinearse con Adobe en los detalles sobre la etiqueta, la descripción, la categoría y el icono de la fuente.
 
 Una vez proporcionado, debe estructurar el repositorio Git privado de esta manera:
 
@@ -42,10 +42,10 @@ Una vez proporcionado, debe estructurar el repositorio Git privado de esta maner
 | Artefactos (nombres de archivo) | Descripción | Ejemplo |
 | --- | --- | --- |
 | {your_source} | El nombre de su origen. Esta carpeta debe contener todos los artefactos relacionados con su origen, dentro de su repositorio Git privado. | `medallia` |
-| {your_source}-category.txt | Categoría a la que pertenece el origen, con formato de archivo de texto. **Nota**: Si crees que tu fuente no se ajusta a ninguna de las categorías anteriores, ponte en contacto con tu representante de Adobe para discutir. | `medallia-category.txt` Dentro del archivo, especifique la categoría de su origen, como: `streaming`. |
-| {your_source}-description.txt | Breve descripción de la fuente. | [!DNL Medallia] es un origen de automatización de marketing que puede usar para llevar datos de [!DNL Medallia] al Experience Platform. |
-| {your_source}-icon.svg | La imagen que se utilizará para representar el origen en el catálogo de fuentes de Experience Platform. Este icono debe ser un archivo de SVG. |
-| {your_source}-label.txt | Nombre del origen tal como debería aparecer en el catálogo de orígenes de Experience Platform. | Medallia |
+| {your_source}-category.txt | Categoría a la que pertenece el origen, con formato de archivo de texto. **Nota**: Si crees que tu fuente no se ajusta a ninguna de las categorías anteriores, ponte en contacto con tu representante de Adobe para discutir el tema. | `medallia-category.txt` Dentro del archivo, especifique la categoría de su origen, como: `streaming`. |
+| {your_source}-description.txt | Breve descripción de la fuente. | [!DNL Medallia] es un origen de automatización de marketing que puede usar para llevar datos de [!DNL Medallia] a Experience Platform. |
+| {your_source}-icon.svg | La imagen que se utilizará para representar el origen en el catálogo de fuentes de Experience Platform. Este icono debe ser un archivo SVG. |  |
+| {your_source}-label.txt | Nombre de la fuente tal como debería aparecer en el catálogo de fuentes de Experience Platform. | Medallia |
 | {your_source}-connectionSpec.json | Archivo JSON que contiene la especificación de conexión del origen. Inicialmente, este archivo no es necesario, ya que se rellenará la especificación de conexión al completar esta guía. | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
@@ -54,7 +54,7 @@ Una vez proporcionado, debe estructurar el repositorio Git privado de esta maner
 >
 >Durante el período de prueba de la especificación de conexión, en lugar de valores de clave, puede usar `text` en la especificación de conexión.
 
-Una vez añadidos los archivos necesarios al repositorio Git privado, debe crear una solicitud de extracción (PR) para que el Adobe la revise. Cuando se apruebe y fusione su PR, se le proporcionará un ID que se puede utilizar para que la especificación de conexión haga referencia a la etiqueta, la descripción y el icono de su fuente.
+Una vez añadidos los archivos necesarios al repositorio Git privado, debe crear una solicitud de extracción (PR) para que Adobe la revise. Cuando se apruebe y fusione su PR, se le proporcionará un ID que se puede utilizar para que la especificación de conexión haga referencia a la etiqueta, la descripción y el icono de su fuente.
 
 A continuación, siga los pasos descritos a continuación para configurar la especificación de conexión. Para obtener instrucciones adicionales sobre las diferentes funcionalidades que puede agregar a su origen, como programación avanzada, esquema personalizado o diferentes tipos de paginación, consulte la guía sobre [configuración de especificaciones de origen](../config/sourcespec.md).
 
@@ -72,7 +72,7 @@ Una vez que haya recopilado los artefactos necesarios, copie y pegue la plantill
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/es-ES/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -144,7 +144,7 @@ Consulte los siguientes documentos para obtener más información sobre las secc
 * [Configuración de la especificación de origen](../config/sourcespec.md)
 * [Configuración de la especificación de exploración](../config/explorespec.md)
 
-Con la información de especificación actualizada, puede enviar la nueva especificación de conexión realizando una solicitud de POST al extremo `/connectionSpecs` de la API [!DNL Flow Service].
+Con la información de especificación actualizada, puede enviar la nueva especificación de conexión realizando una petición POST al extremo `/connectionSpecs` de la API [!DNL Flow Service].
 
 **Formato de API**
 
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/es-ES/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ Una respuesta correcta devuelve la especificación de conexión recién creada, 
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/es-ES/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false
@@ -319,7 +319,7 @@ Una respuesta correcta devuelve la especificación de conexión recién creada, 
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que ha creado una nueva especificación de conexión, debe agregar su ID de especificación de conexión correspondiente a una especificación de flujo existente. Consulte el tutorial sobre [actualización de especificaciones de flujo](./update-flow-specs.md) para obtener más información.
 

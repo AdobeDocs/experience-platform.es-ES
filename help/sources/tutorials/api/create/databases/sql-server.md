@@ -3,7 +3,7 @@ title: Crear una conexión base de Microsoft SQL Server mediante la API de Flow 
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor SQL Server de Microsoft mediante la API de Flow Service.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 5%
@@ -16,7 +16,7 @@ Una conexión base representa la conexión autenticada entre un origen y Adobe E
 
 Lea este tutorial para aprender a crear una conexión base para [!DNL Microsoft SQL Server] mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Introducción 
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -32,7 +32,7 @@ Para conectarse a [!DNL Microsoft SQL Server], debe proporcionar la siguiente pr
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
 | `connectionString` | La cadena de conexión asociada a su cuenta de [!DNL Microsoft SQL Server]. El patrón de la cadena de conexión depende de si está utilizando un nombre de servidor o de instancia para el origen de datos:<ul><li>Cadena de conexión con nombre de servidor: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Cadena de conexión con nombre de instancia:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL Microsoft SQL Server] es `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL Microsoft SQL Server] es `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |  |
 
 Para obtener más información sobre cómo obtener una cadena de conexión, consulte este [[!DNL Microsoft SQL Server] documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
@@ -95,9 +95,9 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Siguiendo este tutorial, ha creado una conexión base [!DNL Microsoft SQL Server] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/database-nosql.md)

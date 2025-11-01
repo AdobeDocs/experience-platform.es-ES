@@ -4,9 +4,9 @@ description: Aprenda a conectar Didomi a Adobe Experience Platform mediante la i
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Debe añadir direcciones IP específicas de la región a la lista de permitidos 
 
 ### Configuración de permisos en Experience Platform
 
-Debe tener los permisos para **[!UICONTROL Ver fuentes]** y **[!UICONTROL Administrar fuentes]** habilitados en su cuenta para conectar su cuenta de [!DNL Didomi] a Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../access-control/ui/overview.md).
+Debe tener los permisos **[!UICONTROL View Sources]** y **[!UICONTROL Manage Sources]** habilitados para su cuenta a fin de conectar su cuenta de [!DNL Didomi] a Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../access-control/ui/overview.md).
 
 ### Recopilar credenciales de API de Adobe
 
@@ -51,9 +51,9 @@ Lea la guía sobre [introducción a las API de Experience Platform](../../../lan
 
 Un esquema **Experience Data Model (XDM)** define la estructura de los datos que enviará de [!DNL Didomi] (por ejemplo, ID de usuario y propósitos de consentimiento) a Experience Platform.
 
-Para crear un esquema, seleccione [!UICONTROL Esquemas] en la navegación izquierda de la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Crear esquema]**. A continuación, seleccione **[!UICONTROL Estándar]** como tipo de esquema y, a continuación, seleccione **[!UICONTROL Manual]** para crear manualmente los campos. Seleccione una clase base para el esquema y proporcione un nombre para el esquema.
+Para crear un esquema, seleccione [!UICONTROL Schemas] en el panel de navegación izquierdo de la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Create schema]**. A continuación, seleccione **[!UICONTROL Standard]** como tipo de esquema y luego seleccione **[!UICONTROL Manual]** para crear manualmente los campos. Seleccione una clase base para el esquema y proporcione un nombre para el esquema.
 
-Una vez creado, actualice el esquema añadiendo cualquiera de los campos obligatorios. Asegúrese de que al menos un campo sea un campo [!UICONTROL Identidad] para informar a Experience Platform sobre los valores de identidad principales. Por último, asegúrese de habilitar la opción [!UICONTROL Perfil] para almacenar correctamente sus datos.
+Una vez creado, actualice el esquema añadiendo cualquiera de los campos obligatorios. Asegúrese de que al menos un campo sea un campo [!UICONTROL Identity] para informar a Experience Platform sobre los valores de identidad principales. Por último, asegúrese de habilitar la opción [!UICONTROL Profile] para almacenar correctamente los datos.
 
 ![create-schema](../../images/tutorials/create/didomi/create-schema.png)
 
@@ -67,7 +67,7 @@ Para obtener más información, lea la guía sobre [creación de esquemas en la 
 
 Se usa un **conjunto de datos** en Experience Platform para almacenar datos entrantes basados en el esquema que defina.
 
-Para crear un conjunto de datos, seleccione [!UICONTROL Conjuntos de datos] en la navegación izquierda de la interfaz de usuario de Experience Platform y, a continuación, seleccione **[!UICONTROL Crear conjunto de datos]**. A continuación, seleccione **[!UICONTROL Crear conjunto de datos a partir del esquema]** y luego seleccione el esquema que desea asociar con el nuevo conjunto de datos.
+Para crear un conjunto de datos, seleccione [!UICONTROL Datasets] en la navegación izquierda de la interfaz de usuario de Experience Platform y, a continuación, seleccione **[!UICONTROL Create dataset]**. A continuación, seleccione **[!UICONTROL Create dataset from schema]** y luego seleccione el esquema que desea asociar con el nuevo conjunto de datos.
 
 ![create-dataset](../../images/tutorials/create/didomi/create-dataset.png)
 
@@ -82,7 +82,7 @@ Para garantizar la compatibilidad con Experience Platform, su webhook debe cumpl
 | Campo | Descripción | Ejemplo |
 | --- | --- | --- | 
 | Secreto del cliente | La clave secreta asociada a las credenciales de la API de Adobe. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
-| Clave de API | Clave de API pública utilizada para autenticar solicitudes en los servicios de Adobe. |
+| Clave de API | Clave de API pública utilizada para autenticar solicitudes en los servicios de Adobe. |  |
 | Tipo de concesión | Método mediante el cual una aplicación obtiene un token de acceso del servidor de autorización. Establezca este valor en `client_credentials`. | `client_credentials` |
 | Ámbito | Los ámbitos de autorización definen los permisos o niveles de acceso específicos que una aplicación solicita al proveedor de API. | `openid,AdobeID,read_organizations,additional_info.projectedProductContext,session` |
 | Encabezado de autenticación | Encabezados adicionales necesarios para la solicitud de token de Adobe. | `{"Content-type": "application/x-www-form-urlencoded"}` |

@@ -2,7 +2,7 @@
 title: Mensajes de error de origen
 description: Obtenga información acerca de los mensajes de error que pueden surgir al utilizar Flow Service para las fuentes.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 48%
@@ -24,8 +24,8 @@ Este documento proporciona un catálogo de mensajes de error, descripciones y re
 | `1004-415` | Tipo de medios no compatible | El formato de carga útil proporcionado no es compatible. Compruebe la solicitud e inténtelo de nuevo. |
 | `1005-500` | Error interno | Se ha producido un error interno desconocido. Inténtelo de nuevo y póngase en contacto con el servicio de atención al cliente si el problema persiste. |
 | `1006-408` | Se ha agotado el tiempo de espera de la solicitud | Error al procesar la solicitud. Se agotó el tiempo de espera. Inténtelo de nuevo y póngase en contacto con el servicio de atención al cliente si el problema persiste. |
-| `1007-400` | Parámetro de encabezado no válido | Se recibió un parámetro de encabezado no válido: {headerName}. Compruebe los parámetros del encabezado e inténtelo de nuevo. |
-| `1008-401` | | Token de autorización no válido | El token de autorización no tiene acceso a esta organización o la organización no existe. Asegúrese de que la organización existe o póngase en contacto con el administrador para obtener acceso. |
+| `1007-400` | Parámetro de encabezado no válido | Se recibió un parámetro de encabezado no válido: `{headerName}`. Compruebe los parámetros del encabezado e inténtelo de nuevo. |
+| `1008-401` | Token de autorización no válido | El token de autorización no tiene acceso a esta organización o la organización no existe. Asegúrese de que la organización existe o póngase en contacto con el administrador para obtener acceso. |
 | `1009-403` | Falta el ID de organización de IMS o está vacío | El encabezado de la solicitud de ID de la organización falta o está vacío. Actualice el valor del encabezado e inténtelo de nuevo. |
 | `1010-500` | detailed-message no válido | El parámetro del mensaje detallado no se ha proporcionado correctamente. Compruébelo e inténtelo de nuevo. |
 | `1011-503` | Servicio no disponible | El servicio no está disponible temporalmente. Inténtelo de nuevo y póngase en contacto con el servicio de atención al cliente si el problema persiste. |
@@ -44,7 +44,7 @@ Este documento proporciona un catálogo de mensajes de error, descripciones y re
 | `1104-504` | Se ha agotado el tiempo de espera de la puerta de enlace | Se ha agotado el tiempo de espera de la puerta de enlace. Inténtelo de nuevo y póngase en contacto con el servicio de atención al cliente si el problema persiste. |
 | `1105-401` | No autorizado | El usuario no está autorizado. {detailedMessage} |
 | `1106-403` | Prohibido | No se permite la operación solicitada. {detailedMessage} |
-| `1107-412` | Error de condición previa | La condición definida por los encabezados If-Unmodified-Since o If-None-Match no se cumple. {detailedMessage} |
+| `1107-412` | Error de condición previa | La condición definida por los encabezados If-Unmodified-Since o If-None-Match no se cumple. `{detailedMessage}` |
 
 ## Errores de cifrado
 
@@ -114,7 +114,7 @@ Este documento proporciona un catálogo de mensajes de error, descripciones y re
 | `1350-400` | Solicitud incorrecta | No se ha proporcionado ningún operador para el filtro en origen. Proporcione una solicitud de filtro válida con el operador adecuado e inténtelo de nuevo. |
 | `1351-400` | Solicitud incorrecta | El operador proporcionado {operator} no es compatible con el filtro en el origen para este conector. Proporcione un operador válido e inténtelo de nuevo. |
 | `1352-400` | Solicitud incorrecta | El operador proporcionado {operator} no se puede asignar a ningún operador nativo admitido para {ql}. Proporcione un operador válido e inténtelo de nuevo. |
-| `1353-400` | Solicitud incorrecta | El filtro en origen aún no es compatible con el conector {connectorType}. Compruebe los conectores admitidos en la documentación: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=es. |
+| `1353-400` | Solicitud incorrecta | El filtro en origen aún no es compatible con el conector {connectorType}. Compruebe los conectores admitidos en la documentación: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
 | `1354-400` | Solicitud incorrecta | El idioma de consulta {ql} todavía no es compatible con el filtro en origen. Proporcione un idioma de consulta válido e inténtelo de nuevo. |
 | `1355-400` | Solicitud incorrecta | El tipo de filtro proporcionado no es válido. El tipo de filtro admitido es: PQL. Indique uno válido e inténtelo de nuevo. |
 | `1356-400` | Solicitud incorrecta | El formato de filtro proporcionado no es válido. El admitido es: pql/json. Indique uno válido e inténtelo de nuevo. |
