@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Configuración de las especificaciones de origen para orígenes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2107'
 ht-degree: 1%
 
 ---
@@ -231,6 +231,7 @@ Consulte el [apéndice](#source-spec) para ver un ejemplo de una especificación
 | --- | --- | --- |
 | `sourceSpec.attributes` | Contiene información sobre el origen específico de la interfaz de usuario o la API de. |  |
 | `sourceSpec.attributes.uiAttributes` | Muestra información sobre el origen específico de la interfaz de usuario. |  |
+| `sourceSpec.attributes.uiAttributes.isPreview` | Un atributo booleano que indica si el origen se muestra como una previsualización (no para producción/disponibilidad general). | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Un atributo booleano que indica si el origen requiere más comentarios de los clientes para agregar a su funcionalidad. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Define la categoría del origen. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Define el icono utilizado para la renderización del origen en la interfaz de usuario de Experience Platform. | `mailchimp-icon.svg` |
