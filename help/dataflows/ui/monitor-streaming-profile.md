@@ -2,16 +2,16 @@
 title: Monitorización de la ingesta de perfiles de streaming
 description: Aprenda a utilizar el tablero de monitorización para monitorizar la ingesta de perfiles de flujo continuo
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
-source-wordcount: '1932'
-ht-degree: 19%
+source-wordcount: '1835'
+ht-degree: 18%
 
 ---
 
 # Monitorización de la ingesta de perfiles de streaming
 
-Puede utilizar el panel de monitorización de la interfaz de usuario de Adobe Experience Platform para llevar a cabo una monitorización en tiempo real de la ingesta de perfiles de streaming dentro de la organización. Utilice esta función para acceder a una mayor transparencia en las métricas de rendimiento, latencia y calidad de datos relacionadas con los datos de flujo continuo. Además, utilice esta función para alertas proactivas y la recuperación de perspectivas procesables para ayudar a identificar posibles infracciones de capacidad y problemas de ingesta de datos.
+Puede utilizar el panel de monitorización de la interfaz de usuario de Adobe Experience Platform para llevar a cabo una monitorización en tiempo real de la ingesta de perfiles de streaming dentro de la organización. Utilice esta función para acceder a una mayor transparencia en el rendimiento y en las métricas de calidad de datos relacionadas con los datos de streaming. Además, utilice esta función para alertas proactivas y la recuperación de perspectivas procesables para ayudar a identificar posibles infracciones de capacidad y problemas de ingesta de datos.
 
 Lea la siguiente guía para aprender a utilizar el panel de monitorización con el fin de rastrear tasas y métricas para los trabajos de ingesta de perfiles de streaming en su organización.
 
@@ -21,19 +21,19 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 * [Flujos de datos](../home.md): Los flujos de datos representan trabajos de datos que transfieren información a través de Experience Platform. Se configuran en varios servicios para facilitar el movimiento de datos desde los conectores de origen a los conjuntos de datos de destino, así como al servicio de identidad, el perfil del cliente en tiempo real y los destinos.
 * [Perfil del cliente en tiempo real](../../profile/home.md): El perfil del cliente en tiempo real combina datos de varias fuentes (en línea, sin conexión, CRM y de terceros) en una sola vista procesable de cada cliente, lo que permite experiencias coherentes y personalizadas en todos los puntos de contacto.
-* [Ingesta de transmisión](../../ingestion/streaming-ingestion/overview.md): la transmisión de transmisión para Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes generando un perfil del cliente en tiempo real para cada uno de sus clientes individuales. palo de golfLa ingesta de transmisión juega un papel clave en la creación de estos perfiles con la menor latencia posible.
+* [Ingesta de transmisión](../../ingestion/streaming-ingestion/overview.md): la transmisión de transmisión para Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes generando un perfil del cliente en tiempo real para cada uno de sus clientes individuales. .
 * [Capacidades](../../landing/license-usage-and-guardrails/capacity.md): en Experience Platform, las capacidades le permiten saber si su organización ha superado alguna de sus protecciones y le proporcionan información sobre cómo solucionar estos problemas.
 
 >[!NOTE]
 >
->La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Monitorización de métricas para la ingesta de perfiles de streaming {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Monitorización de la ingesta de perfiles de streaming"
->abstract="El panel de control de monitorización de perfiles de streaming muestra información sobre el rendimiento, las tasas de ingesta y la latencia. Utilice este panel de control para ver, comprender y analizar las métricas de procesamiento de datos. de sus perfiles de streaming en Experience Platform."
+>abstract="El panel de monitorización de perfiles de flujo continuo muestra información sobre el rendimiento y las tasas de ingesta. Utilice este panel de control para ver, comprender y analizar las métricas de procesamiento de datos. de sus perfiles de streaming en Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -90,7 +90,6 @@ Utilice la tabla de métricas para obtener información específica sobre los fl
 | --- | --- | --- | --- |
 | Solicitar rendimiento | Esta métrica representa el número de eventos que entran en el sistema de ingesta por segundo. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
 | Rendimiento de procesamiento | Esta métrica representa el número de eventos que el sistema ingiere correctamente cada segundo. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
-| Latencia de ingesta de P95 | Esta métrica mide la latencia del percentil 95 desde el momento en que un evento llega a Experience Platform hasta el momento en que se incorpora correctamente en el almacén de perfiles. | Zona protegida/Flujo de datos | Monitorización en tiempo real con actualización de datos cada 60 segundos. |
 | Rendimiento máximo | Esta métrica representa el número máximo de solicitudes entrantes por segundo que entran en la ingesta de perfiles de flujo continuo | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> |  |
 | Registros ingeridos | Esta métrica representa el número total de registros ingeridos en el almacén de perfiles en un período de tiempo configurado. | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> | <ul><li>Zona protegida/Flujo de datos: Monitorización en tiempo real con una actualización de datos cada 60 segundos.</li><li>Ejecución de flujo de datos: Agrupado en 15 minutos.</li></ul> |
 | Error de registros | Esta métrica representa el número total de registros que no se pudieron ingerir en el almacén de perfiles, dentro de un intervalo de tiempo configurado, debido a errores. | <ul><li>Zona protegida/Flujo de datos</li><li>Ejecución de flujo de datos</li></ul> | <ul><li>Zona protegida/Flujo de datos: Monitorización en tiempo real con una actualización de datos cada 60 segundos.</li><li>Ejecución de flujo de datos: Agrupado en 15 minutos.</li></ul> |
@@ -105,7 +104,7 @@ Para acceder al panel de monitorización para la ingesta de perfiles de streamin
 
 ![Panel de monitorización para la transmisión de la ingesta de perfiles.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Consulte el encabezado superior del panel para la tarjeta de métricas *[!UICONTROL Profile]*. Utilice esta pantalla para ver información sobre los registros introducidos, fallidos y omitidos, así como información sobre el estado actual del rendimiento de la solicitud y la latencia.
+Consulte el encabezado superior del panel para la tarjeta de métricas *[!UICONTROL Profile]*. Utilice esta pantalla para ver información sobre los registros introducidos, fallidos y omitidos, así como información sobre el estado actual del rendimiento de la solicitud.
 
 ![La tarjeta de perfil.](../assets/ui/streaming-profiles/profile-card.png)
 
@@ -119,7 +118,7 @@ A continuación, utilice la interfaz para ver información detallada sobre las m
 
 También puede configurar manualmente su propio periodo de tiempo mediante el calendario.
 
-Puede utilizar tres categorías de métricas diferentes en el panel de monitorización para la ingesta de perfiles de flujo continuo: [!UICONTROL Throughput], [!UICONTROL Ingestion] y [!UICONTROL Latency].
+Puede utilizar dos categorías de métricas diferentes en el panel de monitorización para la ingesta de perfiles de flujo continuo: [!UICONTROL Throughput] y [!UICONTROL Ingestion].
 
 >[!BEGINTABS]
 
@@ -142,12 +141,6 @@ Seleccione **[!UICONTROL Throughput]** para ver información sobre la cantidad d
 * **Registros ingeridos**: Cantidad total de registros creados en un período de tiempo determinado. Esta métrica representa los procesos de ingesta de datos correctos en la zona protegida.
 * **Registros omitidos**: El número total de registros que no se ingirieron debido a errores.
 * **Registros omitidos**: El número total de registros que se quitaron debido a una infracción de los límites de capacidad.
-
->[!TAB Latencia]
-
-Seleccione **[!UICONTROL Latency]** para ver información sobre la cantidad de tiempo que Experience Platform tarda en responder a una solicitud o completar una operación en un período de tiempo determinado.
-
-![Panel con la pantalla establecida en &quot;latencia&quot;.](../assets/ui/streaming-profiles/latency.png)
 
 >[!ENDTABS]
 
