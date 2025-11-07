@@ -3,18 +3,14 @@ solution: Experience Platform
 title: Audiencias con similitud
 description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experience Platform mediante audiencias de similitud.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
+source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2250'
 ht-degree: 9%
 
 ---
 
 # Guía de audiencias similares
-
->[!AVAILABILITY]
->
->Las perspectivas y audiencias de similitud solo están disponibles en la **edición B2C**.
 
 >[!IMPORTANT]
 >
@@ -85,15 +81,15 @@ Los paquetes de complementos, que estarán disponibles más adelante, aumentan l
 
 ## Acceso {#access}
 
-Para confirmar si tiene acceso a audiencias de similitud, seleccione cualquier audiencia dentro de Audience Portal y compruebe si la pestaña **[!UICONTROL Información de similitud]** está visible.
+Para confirmar si tiene acceso a audiencias de similitud, seleccione cualquier audiencia dentro de Audience Portal y compruebe si la pestaña **[!UICONTROL Look-alike insights]** está visible.
 
 ## Ver perspectivas de similitud {#view}
 
-La información sobre similitudes está integrada en la página de detalles de audiencia. Para ver las perspectivas de similitud de una audiencia, selecciona **[!UICONTROL Audiencias]** en la barra de navegación izquierda, seguido de **[!UICONTROL Examinar]** y la audiencia para la que quieras ver las perspectivas.
+La información sobre similitudes está integrada en la página de detalles de audiencia. Para ver las perspectivas de similitud de una audiencia, seleccione **[!UICONTROL Audiences]** en la barra de navegación izquierda, seguido de **[!UICONTROL Browse]**, y la audiencia para la que desea ver las perspectivas.
 
 ![Se resalta el botón Audiencias, así como la audiencia base que se está usando para el modelado de similitudes.](../images/types/lookalike/browse.png)
 
-Aparecerá la página de detalles de la audiencia. Seleccione la pestaña **[!UICONTROL Información sobre similitudes]** para ver la información sobre similitudes de la audiencia. Se muestra la página **[!UICONTROL Información sobre similitudes]**. Esta página tiene tres elementos principales: el gráfico de similitud y alcance, las audiencias de similitud y los factores influyentes.
+Aparecerá la página de detalles de la audiencia. Seleccione la ficha **[!UICONTROL Look-alike insights]** para ver las perspectivas de similitud de la audiencia. Se muestra la página **[!UICONTROL Look-alike insights]**. Esta página tiene tres elementos principales: el gráfico de similitud y alcance, las audiencias de similitud y los factores influyentes.
 
 ![Se resalta la pestaña Información sobre similitudes, que muestra información sobre similitudes para la audiencia base.](../images/types/lookalike/look-alike-insights.png)
 
@@ -155,17 +151,17 @@ Estos contenedores se vuelven a calcular regularmente para garantizar que los da
 >
 >Usted **no puede** usar una audiencia de similitud como audiencia base para otra audiencia de similitud. Es decir, **no puede** crear audiencias de similitud encadenadas.
 
-Para crear una audiencia de similitud, debe seleccionar la audiencia en la que desea basar la audiencia de similitud. Para acceder a tu lista de audiencias disponibles, selecciona **[!UICONTROL Audiencias]** en la barra de navegación izquierda, seguido de **[!UICONTROL Examinar]**. Aparecerá la lista de audiencias. En esta página, puede seleccionar la audiencia que desee utilizar como audiencia base.
+Para crear una audiencia de similitud, debe seleccionar la audiencia en la que desea basar la audiencia de similitud. Para acceder a su lista de audiencias disponibles, seleccione **[!UICONTROL Audiences]** en la barra de navegación izquierda, seguido de **[!UICONTROL Browse]**. Aparecerá la lista de audiencias. En esta página, puede seleccionar la audiencia que desee utilizar como audiencia base.
 
 ![Se resalta el botón Audiencias, así como la audiencia base que se está usando para el modelado de similitudes.](../images/types/lookalike/browse.png)
 
-En la página de detalles de audiencia, seleccione **[!UICONTROL Crear audiencia de similitud]** para comenzar el proceso de creación de una audiencia de similitud.
+En la página de detalles de audiencia, seleccione **[!UICONTROL Create look-alike audience]** para comenzar el proceso de creación de una audiencia de similitud.
 
-![El botón [!UICONTROL Crear audiencia de similitud] está resaltado.](../images/types/lookalike/create-look-alike-audience.png)
+![El botón [!UICONTROL Create look-alike audience] está resaltado.](../images/types/lookalike/create-look-alike-audience.png)
 
-Aparecerá la ventana emergente **[!UICONTROL Crear una audiencia similar]**. En esta página, puede establecer el porcentaje de similitud para la audiencia de similitud.
+Aparece la ventana emergente **[!UICONTROL Create a look-alike audience]**. En esta página, puede establecer el porcentaje de similitud para la audiencia de similitud.
 
-![Se muestra la ventana emergente [!UICONTROL Crear una audiencia similar].](../images/types/lookalike/create-audience.png)
+![Se muestra la ventana emergente [!UICONTROL Create a look-alike audience].](../images/types/lookalike/create-audience.png)
 
 Puede establecer este porcentaje de similitud de tres formas diferentes:
 
@@ -175,17 +171,17 @@ Puede establecer este porcentaje de similitud de tres formas diferentes:
 
 También puede actualizar los detalles sobre la audiencia de similitud, incluido su nombre y descripción. De forma predeterminada, el nombre de la audiencia de similitud se genera en función del nombre de la audiencia base y el porcentaje de similitud especificado anteriormente.
 
-![La información básica se resalta en la ventana emergente [!UICONTROL Crear una audiencia de similitud].](../images/types/lookalike/basic-info.png)
+![La información básica está resaltada en la ventana emergente [!UICONTROL Create a look-alike audience].](../images/types/lookalike/basic-info.png)
 
-Seleccione **[!UICONTROL Crear]** para terminar de crear su audiencia de similitud.
+Seleccione **[!UICONTROL Create]** para terminar de crear su audiencia de similitud.
 
-![El botón Crear está resaltado en la ventana emergente [!UICONTROL Crear una audiencia similar].](../images/types/lookalike/create-audience.png)
+![El botón de creación está resaltado en la ventana emergente [!UICONTROL Create a look-alike audience].](../images/types/lookalike/create-audience.png)
 
-Se puede acceder a la audiencia de similitud recién creada en la sección **[!UICONTROL Audiencias de similitud]** de la página de detalles de audiencia, y también está disponible en el Portal de audiencias y para otros usos posteriores. Tenga en cuenta que la audiencia de similitud tardará un poco en recibir la puntuación. Hasta que se clasifique, el recuento de perfiles parecerá ser 0.
+Se puede acceder a la audiencia de similitud recién creada en la sección **[!UICONTROL Look-alike audiences]** de la página de detalles de audiencia, y también está disponible en Audience Portal y para otros usos posteriores. Tenga en cuenta que la audiencia de similitud tardará un poco en recibir la puntuación. Hasta que se clasifique, el recuento de perfiles parecerá ser 0.
 
 ## Ver detalles de audiencias similares {#view-details}
 
-Para ver los detalles de una audiencia de similitud, seleccione la audiencia de similitud en la sección **[!UICONTROL Audiencias de similitud]** de la audiencia base.
+Para ver los detalles de una audiencia de similitud, seleccione la audiencia de similitud en la sección **[!UICONTROL Look-alike audiences]** de la audiencia base.
 
 ![Se resalta la sección de audiencias de similitud.](../images/types/lookalike/select-laa.png)
 
@@ -209,6 +205,6 @@ La etiqueta estándar &quot;C9&quot; se puede utilizar para etiquetar datos que 
 
 De manera predeterminada, si una audiencia base no tiene etiquetas de contrato, el proceso de modelado para audiencias de similitud excluirá **cualquier campo, conjunto de datos o audiencia** en función de la política de privacidad habilitada para su organización.
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, ha aprendido a ver perspectivas de similitud y a crear audiencias de similitud basadas en estas perspectivas. Para obtener más información sobre las audiencias en la interfaz de usuario de Adobe Experience Platform, lea la [Guía de la interfaz de usuario del servicio de segmentación](./overview.md).
