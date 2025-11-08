@@ -23,7 +23,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 
 ## Configuración del entorno de creación de GitHub {#set-up-environment}
 
-1. En su explorador, vaya a `https://github.com/AdobeDocs/experience-platform.en`.
+1. En su explorador, vaya a `https://github.com/AdobeDocs/experience-platform.es-ES`.
 1. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=es#fork-the-repository) el repositorio, haga clic en **Ramificar** como se muestra a continuación. Esto crea una copia del repositorio de Experience Platform en su cuenta de GitHub.
 
    ![Repositorio de documentación de Fork Adobe](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 
 1. En este punto, aparece una notificación que le solicita que firme el Acuerdo de licencia para colaboradores (CLA) de Adobe. Este es un paso obligatorio. Después de firmar el CLA, actualice la página PR y envíe la solicitud de extracción.
 
-1. Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la ficha **Solicitudes de extracción** en `https://github.com/AdobeDocs/experience-platform.en`.
+1. Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la ficha **Solicitudes de extracción** en `https://github.com/AdobeDocs/experience-platform.es-ES`.
 
    ![PR correcta](../assets/docs-framework/ssd-pr-successful.png)
 

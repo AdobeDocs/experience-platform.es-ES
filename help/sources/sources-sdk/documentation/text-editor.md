@@ -97,6 +97,6 @@ Asegúrese de que las ramas base y de comparación son correctas. Agregue una no
 
 ![crear-pr](../assets/create-pr.png)
 
-Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la pestaña solicitudes de extracción en https://github.com/AdobeDocs/experience-platform.en.
+Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la pestaña solicitudes de extracción en https://github.com/AdobeDocs/experience-platform.es-ES.
 
 ![confirmar-pr](../assets/confirm-pr.png)
