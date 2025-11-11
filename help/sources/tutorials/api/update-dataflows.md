@@ -2,9 +2,9 @@
 title: Actualización de flujos de datos mediante la API de Flow Service
 description: Obtenga información sobre cómo crear un flujo de datos, incluido su nombre, descripción y programación, mediante la API de Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 292fb89d457a86ee9f63cebd461abf1f2ecb9662
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '684'
 ht-degree: 3%
 
 ---
@@ -177,7 +177,9 @@ Para actualizar la programación de ejecución, el nombre y la descripción del 
 
 >[!IMPORTANT]
 >
->Se requiere el encabezado `If-Match` al realizar una petición PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de un flujo de datos.
+>* Se requiere el encabezado `If-Match` al realizar una petición PATCH. El valor de este encabezado es la versión única de la conexión que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de un flujo de datos.
+>
+>* No puede actualizar el `startTime` de un flujo de datos si ya se ha producido el `startTime` programado inicialmente. Esta limitación se aplica a los flujos de datos habilitados y deshabilitados.
 
 **Formato de API**
 
@@ -191,29 +193,29 @@ La siguiente solicitud actualiza la programación de ejecución del flujo, así 
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "Database Dataflow Feb2021"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Database dataflow for testing update API"
-            }
-        ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+  -d '[
+          {
+              "op": "replace",
+              "path": "/scheduleParams/frequency",
+              "value": "day"
+          },
+          {
+              "op": "replace",
+              "path": "/name",
+              "value": "Database Dataflow Feb2021"
+          },
+          {
+              "op": "replace",
+              "path": "/description",
+              "value": "Database dataflow for testing update API"
+          }
+      ]'
 ```
 
 | Propiedad | Descripción |
@@ -249,25 +251,25 @@ La siguiente solicitud actualiza el conjunto de asignaciones del flujo de datos.
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/transformations/0",
-            "value": {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
-                    "mappingVersion": 2
-                }
-            }
-        }
-    ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+  -d '[
+      {
+          "op": "replace",
+          "path": "/transformations/0",
+          "value": {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                  "mappingVersion": 2
+              }
+          }
+      }
+  ]'
 ```
 
 | Propiedad | Descripción |
@@ -289,6 +291,6 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha actualizado la información básica, la programación y los conjuntos de asignaciones del flujo de datos mediante la API [!DNL Flow Service]. Para obtener más información sobre el uso de conectores de origen, vea la [descripción general de orígenes](../../home.md).
