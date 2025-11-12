@@ -3,9 +3,9 @@ title: Creación de una conexión de Amazon Kinesis Source mediante la API de Fl
 description: Aprenda a conectar Adobe Experience Platform a una fuente de Amazon Kinesis mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 4%
 
 ---
@@ -170,6 +170,6 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 >
 >Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
-## Pasos siguientes
+## Próximos pasos
 
 Siguiendo este tutorial, ha creado una conexión de origen [!DNL Kinesis] mediante la API [!DNL Flow Service]. Puede usar este identificador de conexión de origen en el siguiente tutorial para [crear un flujo de datos de flujo continuo usando la [!DNL Flow Service] API](../../collect/streaming.md).

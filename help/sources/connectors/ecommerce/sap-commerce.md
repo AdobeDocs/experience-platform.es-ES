@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo conectar SAP Commerce a Adobe Expe
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '335'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ Además, si se ejecuta [!DNL SAP Commerce] para recuperar datos de clientes, tam
 
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-allow-list}
 
-Es posible que sea necesario agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Debe añadir direcciones IP específicas de la región a la lista de permitidos antes de conectar los orígenes a Experience Platform. Para obtener más información, lea la guía de [inclusión en la lista de permitidos de direcciones IP para conectarse a Experience Platform](../../ip-address-allow-list.md).
 
 ## Requisitos previos {#prerequisites}
 
@@ -69,7 +69,7 @@ Para poder llevar los datos de [!DNL SAP Commerce] a Experience Platform, primer
 
 +++
 
-## Pasos siguientes
+## Próximos pasos
 
 La siguiente documentación proporciona información sobre cómo conectar [!DNL SAP Commerce] a Experience Platform mediante API o la interfaz de usuario:
 

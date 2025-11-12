@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Plantilla de documentación de autoservicio para la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen YOURSOURCE mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -49,11 +49,11 @@ Para obtener más información sobre estas credenciales, consulte la documentaci
 
 ## Conecta tu cuenta de *YOURSOURCE*
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catalog] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En la categoría *CATEGORÍA DE TU FUENTE*, selecciona *TU FUENTE* y, a continuación, selecciona **[!UICONTROL Agregar datos]**.
+En la categoría *CATEGORÍA DE TU FUENTE*, selecciona *TU FUENTE* y, a continuación, selecciona **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
@@ -61,25 +61,25 @@ En la categoría *CATEGORÍA DE TU FUENTE*, selecciona *TU FUENTE* y, a continua
 
 ![catálogo](../assets/ui/catalog.png)
 
-Aparecerá la página **[!UICONTROL Conectar su cuenta de origen]**. En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá la página **[!UICONTROL Connect YOURSOURCE account]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Cuenta existente
 
-Para usar una cuenta existente, selecciona la cuenta de *YOURSOURCE* con la que deseas crear un nuevo flujo de datos y luego selecciona **[!UICONTROL Siguiente]** para continuar.
+Para usar una cuenta existente, selecciona la cuenta de *YOURSOURCE* con la que deseas crear un nuevo flujo de datos y luego selecciona **[!UICONTROL Next]** para continuar.
 
 ![existente](../assets/ui/existing.png)
 
 ### Nueva cuenta
 
-Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
+Si va a crear una cuenta nueva, seleccione **[!UICONTROL New account]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Connect to source]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
 ![nuevo](../assets/ui/new.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 *Los flujos de trabajo para los pasos restantes de la creación de un flujo de datos están modularizados. Si desea realizar alguna llamada específica con respecto a su origen, consulte la sección de recursos adicionales a continuación.*
 
-Siguiendo este tutorial, ha establecido una conexión con su cuenta de *YOURSOURCE*. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=es).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta de *YOURSOURCE*. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Recursos adicionales
 

@@ -2,9 +2,9 @@
 title: Source de zona de aterrizaje de datos
 description: Aprenda a conectar la zona de aterrizaje de datos a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -159,7 +159,7 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 >[!AVAILABILITY]
 >
->Esta sección se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/landing/multi-cloud).
+>Esta sección se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Siga los pasos a continuación para aprender a configurar su cuenta de [!DNL Data Landing Zone] para Experience Platform en Amazon Web Service (AWS).
 
@@ -305,7 +305,7 @@ Por último, vaya a la dirección URL generada para iniciar sesión directamente
 
 >[!IMPORTANT]
 >
->- Para conectarse al origen, necesita los permisos de control de acceso de **[!UICONTROL Ver orígenes]** y **[!UICONTROL Administrar orígenes]**. Para obtener más información, lea la [descripción general del control de acceso](../../../access-control/home.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>- Para conectarse al origen, necesita los permisos de control de acceso de **[!UICONTROL View Sources]** y **[!UICONTROL Manage Sources]**. Para obtener más información, lea la [descripción general del control de acceso](../../../access-control/home.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >
 >- Actualmente no se admiten vínculos privados al conectarse a Experience Platform mediante [!DNL Data Landing Zone]. Los únicos métodos admitidos para el acceso son los enumerados [aquí](#manage-the-contents-of-your-data-landing-zone).
 

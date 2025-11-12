@@ -3,9 +3,9 @@ title: Información general sobre Oracle NetSuite Source
 description: Obtenga información sobre cómo conectar Oracle NetSuite a Adobe Experience Platform mediante API o la interfaz de usuario.
 last-substantial-update: 2024-01-30T00:00:00Z
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '722'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ Vea la siguiente tabla para obtener más información sobre los dos orígenes de
 
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-allow-list}
 
-Es posible que sea necesario agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Debe añadir direcciones IP específicas de la región a la lista de permitidos antes de conectar los orígenes a Experience Platform. Para obtener más información, lea la guía de [inclusión en la lista de permitidos de direcciones IP para conectarse a Experience Platform](../../ip-address-allow-list.md).
 
 ## Requisitos previos {#prerequisites}
 

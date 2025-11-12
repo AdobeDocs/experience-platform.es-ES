@@ -3,9 +3,9 @@ title: Plantilla de autoservicio de documentación para la IU de SDK de streamin
 description: Aprenda a llevar los datos de flujo continuo de una fuente a Adobe Experience Platform mediante la interfaz de usuario de.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -53,11 +53,11 @@ Para obtener más información sobre estas credenciales, consulte la documentaci
 
 ## Conecta tu cuenta de *YOURSOURCE*
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catalog] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En la categoría **Transmisión**, seleccione *SU FUENTE* y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
+En la categoría **Transmisión**, seleccione *SU ORIGEN* y, a continuación, seleccione **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
@@ -67,18 +67,18 @@ En la categoría **Transmisión**, seleccione *SU FUENTE* y, a continuación, se
 
 ## Seleccionar datos
 
-Aparecerá el paso **[!UICONTROL Seleccionar datos]**, que proporciona una interfaz para que pueda seleccionar los datos que trae a Experience Platform.
+Aparecerá el paso **[!UICONTROL Select data]**, que proporciona una interfaz para que pueda seleccionar los datos que trae a Experience Platform.
 
 * La parte izquierda de la interfaz es un explorador que le permite ver los flujos de datos disponibles en su cuenta;
 * La parte derecha de la interfaz de le permite previsualizar hasta 100 filas de datos de un archivo JSON.
 
-Seleccione **[!UICONTROL Cargar archivos]** para cargar un archivo JSON desde su sistema local. También puede arrastrar y soltar el archivo JSON que desee cargar en el panel [!UICONTROL Arrastrar y soltar archivos].
+Seleccione **[!UICONTROL Upload files]** para cargar un archivo JSON desde su sistema local. También puede arrastrar y soltar el archivo JSON que desee cargar en el panel [!UICONTROL Drag and drop files].
 
 ![Paso para agregar datos del flujo de trabajo de orígenes.](../assets/streaming/add-data.png)
 
-Una vez cargado el archivo, la interfaz de vista previa se actualiza para mostrar una vista previa del esquema cargado. La interfaz de vista previa permite inspeccionar el contenido y la estructura de un archivo. También puede usar la utilidad [!UICONTROL Campo de búsqueda] para acceder a elementos específicos desde el esquema.
+Una vez cargado el archivo, la interfaz de vista previa se actualiza para mostrar una vista previa del esquema cargado. La interfaz de vista previa permite inspeccionar el contenido y la estructura de un archivo. También puede usar la utilidad [!UICONTROL Search field] para tener acceso a elementos específicos desde el esquema.
 
-Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine, seleccione **[!UICONTROL Next]**.
 
 ![Paso de vista previa del flujo de trabajo de orígenes.](../assets/streaming/preview.png)
 
@@ -86,7 +86,7 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 Aparecerá el paso **Detalle del flujo de datos**, que le proporcionará opciones para usar un conjunto de datos existente o establecer uno nuevo para su flujo de datos, así como la oportunidad de proporcionar un nombre y una descripción para su flujo de datos. Durante este paso, también puede configurar las opciones de Ingesta de perfiles, diagnósticos de error, ingesta parcial y alertas.
 
-Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine, seleccione **[!UICONTROL Next]**.
 
 ![Paso de detalle del flujo de datos del flujo de trabajo de origen.](../assets/streaming/dataflow-detail.png)
 
@@ -94,20 +94,20 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 Aparecerá el paso [!UICONTROL Mapping], que le proporcionará una interfaz para asignar los campos de origen del esquema de origen a sus campos XDM de destino adecuados en el esquema de destino.
 
-Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=es).
+Experience Platform proporciona recomendaciones inteligentes para campos asignados automáticamente en función del esquema o conjunto de datos de destino seleccionado. Puede ajustar manualmente las reglas de asignación para adaptarlas a sus casos de uso. En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignador y los campos calculados, consulte la [guía de la interfaz de usuario de la preparación de datos](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
-Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
+Una vez que los datos de origen se hayan asignado correctamente, seleccione **[!UICONTROL Next]**.
 
 ![Paso de asignación del flujo de trabajo de orígenes.](../assets/streaming/mapping.png)
 
 ## Revisar
 
-Aparece el paso **[!UICONTROL Revisar]**, que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
+Aparece el paso **[!UICONTROL Review]**, que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
-* **[!UICONTROL Conexión]**: muestra el tipo de origen, la ruta de acceso relevante del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
-* **[!UICONTROL Asignar campos de conjunto de datos y asignación]**: muestra en qué conjunto de datos se están ingiriendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
+* **[!UICONTROL Connection]**: muestra el tipo de origen, la ruta de acceso relevante del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
+* **[!UICONTROL Assign dataset & map fields]**: muestra a qué conjunto de datos se están ingiriendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
 
-Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finalizar]** y espere un poco para que se cree el flujo de datos.
+Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finish]** y espere un poco para que se cree el flujo de datos.
 
 ![Paso de revisión del flujo de trabajo de orígenes.](../assets/streaming/review.png)
 
@@ -115,15 +115,15 @@ Una vez que haya revisado el flujo de datos, haga clic en **[!UICONTROL Finaliza
 
 Con el flujo de datos de flujo continuo creado, ahora puede recuperar la URL del extremo de flujo continuo. Este punto de conexión se utilizará para suscribirse al webhook, lo que permitirá que el origen de flujo se comunique con Experience Platform.
 
-Para recuperar el extremo de flujo continuo, vaya a la página [!UICONTROL Actividad de flujo de datos] del flujo de datos que acaba de crear y copie el extremo desde la parte inferior del panel [!UICONTROL Propiedades].
+Para recuperar el extremo de flujo continuo, vaya a la página [!UICONTROL Dataflow activity] del flujo de datos que acaba de crear y copie el extremo desde la parte inferior del panel [!UICONTROL Properties].
 
 ![Punto final de flujo continuo en la actividad del flujo de datos.](../assets/testing/endpoint-test.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 *Los flujos de trabajo para los pasos restantes de la creación de un flujo de datos están modularizados. Si desea realizar alguna llamada específica con respecto a su origen, consulte la sección de recursos adicionales a continuación.*
 
-Siguiendo este tutorial, ha establecido una conexión con su cuenta de *YOURSOURCE*. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=es).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta de *YOURSOURCE*. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Recursos adicionales
 
