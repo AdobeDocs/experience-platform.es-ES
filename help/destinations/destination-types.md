@@ -3,9 +3,9 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d57af88cc9507e0164b044a7203c66fe9fd9240e
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Los destinos de exportación de perfiles reciben datos sin procesar, a menudo co
 
 >[!IMPORTANT]
 >
->Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+>Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 Utilice los conectores de datos de destino empresariales avanzados para ofrecer perfiles de Adobe Real-Time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros para la sincronización de datos, el análisis y más casos de uso de enriquecimiento de perfiles.
 
@@ -52,6 +52,12 @@ Los destinos empresariales avanzados incluyen:
 * [Destino de API HTTP](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
+* [Snowflake Streaming](catalog/warehouses/snowflake.md)
+* [Lote de Snowflake](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>Actualmente, los destinos de Snowflake solo están disponibles para los clientes estadounidenses. Si necesita acceso fuera de Estados Unidos, póngase en contacto con el equipo de la cuenta de Adobe.
 
 ### Destinos por lotes (basados en archivos) {#file-based}
 
@@ -71,7 +77,7 @@ Obtenga más información sobre cómo [configurar destinos de personalización p
 
 El siguiente vídeo le muestra las particularidades de los dos tipos de destinos:
 
->[!VIDEO](https://video.tv.adobe.com/v/32690?captions=spa&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Tipos de audiencias exportadas {#exported-audiences-types}
 
