@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
+source-git-commit: 28009ec826e76a9ef07f0c36ff1a7230ced812eb
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2744'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform le permite ofrecer experiencias multicanal personaliza
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 >
 >También puede usar el [servicio Capacity](../landing/license-usage-and-guardrails/capacity.md) para supervisar y establecer el rendimiento de flujo continuo y otros en Experience Platform.
 
@@ -126,14 +126,17 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 | Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Puede tener hasta 500 **audiencias de streaming activas** por zona protegida. Puede tener más de 500 audiencias de streaming por organización, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida **individual**. Esto incluye tanto a las audiencias de streaming como a las de Edge. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de streaming](/help/segmentation/methods/streaming-segmentation.md). |
 | Rendimiento de streaming en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación por flujo admite un valor máximo combinado de 1500 eventos entrantes por segundo en las zonas protegidas de producción y desarrollo. La segmentación por streaming puede tardar hasta 5 minutos en calificar un perfil para el abono a un segmento. Más información sobre [audiencias de streaming](/help/segmentation/methods/streaming-segmentation.md). |
 | Audiencias por lotes por zona protegida | 4000 | Protección de rendimiento | Puede tener hasta 4000 **audiencias por lotes activas** por zona protegida. Puede tener más de 4000 audiencias de lote por organización, siempre y cuando haya menos de 4000 audiencias de lote en cada zona protegida **individual**. Si intenta crear audiencias por lotes adicionales, el rendimiento del sistema puede verse afectado. |
-| Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | Puede crear un máximo de 50 audiencias de cuenta en una zona protegida. Después de llegar a 50 audiencias en una zona protegida, el control **[!UICONTROL Crear audiencia]** se deshabilita al intentar crear una nueva audiencia de cuenta. Más información sobre [audiencias de la cuenta](/help/segmentation/types/account-audiences.md). |
+| Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | Puede crear un máximo de 50 audiencias de cuenta en una zona protegida. Una vez que se llega a 50 audiencias en una zona protegida, el control **[!UICONTROL Create audience]** se deshabilita al intentar crear una nueva audiencia de cuenta. Más información sobre [audiencias de la cuenta](/help/segmentation/types/account-audiences.md). |
 | Composiciones publicadas por zona protegida | 10 | Protección de rendimiento | Puede tener un máximo de 10 composiciones publicadas en una zona protegida. Obtenga más información sobre [composición de audiencias en la guía de la interfaz de usuario](/help/segmentation/ui/audience-composition.md). **Nota**: las composiciones creadas con Composición de audiencia federada **no se cuentan** con esta protección. |
 | Tamaño máximo de audiencia | 30 por ciento | Protección de rendimiento | La pertenencia máxima recomendada de una audiencia es del 30 % del número total de perfiles en el sistema. Es posible crear audiencias con más del 30 % de los perfiles como miembros o varias audiencias grandes, pero esto afectará al rendimiento del sistema. |
 | Ejecuciones flexibles de evaluación de audiencias | 50 por año (zona protegida de producción)<br/>100 por año (zona protegida de desarrollo) | Protección impuesta por el sistema | Tiene un máximo de 50 ejecuciones de evaluación de audiencia flexibles por año por cada zona protegida de **producción**. Tiene un máximo de 100 ejecuciones de evaluación de audiencia flexibles por año por cada zona protegida de **desarrollo**. |
 | Ejecuciones flexibles de evaluación de audiencias | 2 al día | Protección impuesta por el sistema | Tiene un máximo de 2 ejecuciones por día por zona protegida. |
 | Audiencias por ejecución flexible de evaluación de audiencias | 20 | Protección impuesta por el sistema | Puede tener un máximo de 20 audiencias por ejecución de evaluación de audiencia flexible. |
+| Definiciones de segmentos por zona protegida B2B | 400 | Seguridad de rendimiento | Una organización puede tener más de 400 definiciones de segmentos en total, siempre y cuando haya menos de 400 definiciones de segmentos en cada zona protegida B2B individual. El intento de crear definiciones de segmento adicionales puede afectar al rendimiento del sistema. Para obtener más información, lea las [protecciones predeterminadas para Real-Time Customer Data Platform B2B edition](../rtcdp/b2b-guardrails.md). |
 
 {style="table-layout:auto"}
+
+Para obtener más información sobre las protecciones específicas de B2B, consulte la documentación de [protecciones predeterminadas para Real-Time Customer Data Platform B2B edition](../rtcdp/b2b-guardrails.md).
 
 ## Disponibilidad esperada
 
@@ -190,7 +193,7 @@ Se pueden habilitar varios grupos de informes para el perfil siempre y cuando se
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
