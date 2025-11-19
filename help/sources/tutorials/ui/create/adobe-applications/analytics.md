@@ -2,9 +2,9 @@
 title: Conectar Adobe Analytics A Experience Platform
 description: Aprenda a llevar los datos del grupo de informes de Adobe Analytics a Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: d9dad6b5da413740559e6c8de7392bc2e169d5d9
+source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2745'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 Es importante comprender los siguientes términos clave utilizados en este documento:
 
 * **Atributo estándar**: Los atributos estándar son cualquier atributo predefinido por Adobe. Contienen el mismo significado para todos los clientes y están disponibles en los grupos de campos Datos de origen de Analytics y Esquema de Analytics.
-* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizada en Analytics. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [documentación de Analytics sobre las variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=es) para obtener más información sobre las eVars.
+* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizada en Analytics. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [documentación de Analytics sobre las variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obtener más información sobre las eVars.
 * **Cualquier atributo de los grupos de campos personalizados**: Los atributos que se originan en grupos de campos creados por clientes están todos definidos por el usuario y no se consideran atributos estándar ni personalizados.
 
 ## Navegar por el catálogo de fuentes
@@ -112,6 +112,12 @@ Experience Platform detecta automáticamente la asignación para cualquier confl
 >Si hay conflictos de nombre entre el grupo de informes de origen y el esquema seleccionado, puede continuar con el flujo de datos de Analytics, reconociendo que los descriptores de campo no se cambiarán. También puede optar por crear un nuevo esquema con un conjunto de descriptores en blanco.
 
 ## Asignaciones personalizadas {#custom-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_analytics_import_mapping"
+>title="Descargar plantilla"
+>abstract="Descargue la plantilla csv para realizar la asignación sin conexión."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importar asignación"
 
 Puede utilizar las funciones de preparación de datos para agregar nuevas asignaciones personalizadas o campos calculados para atributos personalizados. Para agregar asignaciones personalizadas, seleccione **[!UICONTROL Custom]**.
 
@@ -319,5 +325,5 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la ingesta de dato
 >
 > La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430250?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
