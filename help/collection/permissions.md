@@ -52,7 +52,7 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 
 | Categoría | Permiso | Descripción |
 | --- | --- | --- |
-| Plataformas | Web | Concede acceso a propiedades [](../tags/ui/administration/companies-and-properties.md) web cuando se combina con otros derechos Propiedad. |
+| Plataformas | Web | Concede acceso a propiedades [&#128279;](../tags/ui/administration/companies-and-properties.md) web cuando se combina con otros derechos Propiedad. |
 | Plataformas | Dispositivo móvil | Otorga acceso a [propiedades móviles](../tags/ui/administration/companies-and-properties.md) cuando se combinan con otros derechos de propiedad. |
 | Plataformas | Edge | Otorga acceso a [propiedades Edge del reenvío de eventos](../tags/ui/event-forwarding/getting-started.md) cuando se combina con otros derechos de propiedad. |
 | Propiedades | (N/D) | Según las propiedades que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console.<br><br>Los derechos de propiedad asignados a un usuario sólo se aplican a las propiedades a las que se les ha concedido acceso a través de esta categoría de permisos. |

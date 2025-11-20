@@ -83,7 +83,7 @@ A continuación, continúe con [definir claves principales](../fields/identity.m
 
 >[!NOTE]
 >
->Una vez guardado, el campo [!UICONTROL Type] en la barra lateral [!UICONTROL  Schema properties] indica que se trata de un esquema [!UICONTROL Relational]. Esto también se indica en la barra lateral de detalles de la vista de inventario de esquema.
+>Una vez guardado, el campo [!UICONTROL Type] en la barra lateral [!UICONTROL &#x200B; Schema properties] indica que se trata de un esquema [!UICONTROL Relational]. Esto también se indica en la barra lateral de detalles de la vista de inventario de esquema.
 >![El lienzo del Editor de esquemas que muestra una estructura de esquema relacional vacía con el tipo relacional resaltado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Cargar un archivo DDL {#upload-ddl-file}
@@ -131,7 +131,7 @@ Para obtener información sobre cómo utilizar un algoritmo XML para recomendar 
 
 ### Creación manual esquema {#manual-creation}
 
-Aparecerá la [!UICONTROL Create schema] flujo de trabajo. Puede elegir una clase base para el esquema seleccionando , **[!UICONTROL Individual Profile]****[!UICONTROL Experience Event]**, o **[!UICONTROL Other]**, seguido de **[!UICONTROL Next]** para confirmar su elección. Consulte la [[!UICONTROL XDM individual profile]](../../classes/individual-profile.md) documentación para [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) obtener más información sobre estas clases.
+Aparecerá la [!UICONTROL Create schema] flujo de trabajo. Puede elegir una clase base para el esquema seleccionando , **[!UICONTROL Individual Profile]**&#x200B;**[!UICONTROL Experience Event]**, o **[!UICONTROL Other]**, seguido de **[!UICONTROL Next]** para confirmar su elección. Consulte la [[!UICONTROL XDM individual profile]](../../classes/individual-profile.md) documentación para [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) obtener más información sobre estas clases.
 
 ![El [!UICONTROL Create schema] flujo de trabajo con las tres opciones de clase y [!UICONTROL Next] resaltado.](../../images/ui/resources/schemas/schema-class-options.png)
 
@@ -199,7 +199,7 @@ Para su comodidad, el Editor de esquemas proporciona un conmutador para cambiar 
 
 ![El editor de esquemas con [!UICONTROL Show display names for fields] resaltado.](../../images/ui/resources/schemas/display-name-toggle.png)
 
-Los nombres para mostrar para los grupos de campos estándar son generados por el sistema, pero pueden personalizarse, como se describe en la sección Nombres[ para ](#display-names)mostrar. Los nombres para mostrar se reflejan en varias vistas IU, incluidas las vistas previas de mapas y conjunto de datos. La configuración predeterminada está desactivada y muestra los nombres de campo según sus valores originales.
+Los nombres para mostrar para los grupos de campos estándar son generados por el sistema, pero pueden personalizarse, como se describe en la sección Nombres[&#x200B; para &#x200B;](#display-names)mostrar. Los nombres para mostrar se reflejan en varias vistas IU, incluidas las vistas previas de mapas y conjunto de datos. La configuración predeterminada está desactivada y muestra los nombres de campo según sus valores originales.
 
 ## Adición de grupos de campos a un esquema {#add-field-groups}
 

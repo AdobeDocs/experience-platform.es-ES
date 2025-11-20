@@ -58,7 +58,7 @@ En esta sección se describen los tipos de audiencias que se pueden exportar a e
 
 | origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generan a través del servicio[ de segmentación Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Audiences generan a través del servicio[&#x200B; de segmentación Experience Platform](../../../segmentation/home.md). |
 | Cargas personalizadas | ✓ | [Audiences importados](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde CSV archivos. |
 
 {style="table-layout:auto"}
@@ -117,11 +117,11 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , **[!UICONTROL View Profiles]**, **[!UICONTROL View Segments]**, y [ ](/help/access-control/home.md#permissions)control de acceso. Lea la control de acceso descripción general[ o póngase en contacto con el ](/help/access-control/ui/overview.md)administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los **[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , **[!UICONTROL View Profiles]**, **[!UICONTROL View Segments]**, y [&#x200B; &#x200B;](/help/access-control/home.md#permissions)control de acceso. Lea la control de acceso descripción general[&#x200B; o póngase en contacto con el &#x200B;](/help/access-control/ui/overview.md)administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos](../../ui/activate-segment-streaming-destinations.md) de flujo continuo audiencia exportación para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-En el paso de programación[ de ](../../ui/activate-segment-streaming-destinations.md#scheduling)audiencia, debe asignar manualmente el nombre del audiencia en el [!UICONTROL Mapping ID] campo. Esto garantiza que audiencia metadatos se transmita correctamente a [!DNL Bing].
+En el paso de programación[&#x200B; de &#x200B;](../../ui/activate-segment-streaming-destinations.md#scheduling)audiencia, debe asignar manualmente el nombre del audiencia en el [!UICONTROL Mapping ID] campo. Esto garantiza que audiencia metadatos se transmita correctamente a [!DNL Bing].
 
 ![IU imagen que muestra la pantalla de programación de audiencia con un ejemplo de cómo asignar el nombre de audiencia al ID de Asignación de Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 

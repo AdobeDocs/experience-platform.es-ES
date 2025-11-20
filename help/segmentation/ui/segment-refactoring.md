@@ -20,7 +20,7 @@ ht-degree: 9%
 
 La versión de enero de 2024 para Adobe Experience Platform ha introducido cambios en el servicio de segmentación de Adobe Experience Platform que agregan nuevas restricciones en los casos en los que se pueden definir restricciones de tiempo. Estos cambios afectan a los segmentos recién creados o editados realizados con la IU del Generador de segmentos. Esta guía explica cómo mitigar estos cambios.
 
-Antes de la versión de enero de 2024, todas las restricciones temporales de nivel de regla, nivel de grupo y nivel de lienzo hacían referencia de forma redundante a la misma marca de tiempo. Para aclarar el uso de la restricción temporal, se han eliminado las restricciones temporales a nivel de regla y de grupo. Para dar cabida a este cambio, todas las restricciones de tiempo **deben** reescribirse como **restricciones de tiempo de nivel de lienzo** o de nivel de tarjeta **5}.**
+Antes de la versión de enero de 2024, todas las restricciones temporales de nivel de regla, nivel de grupo y nivel de lienzo hacían referencia de forma redundante a la misma marca de tiempo. Para aclarar el uso de la restricción temporal, se han eliminado las restricciones temporales a nivel de regla y de grupo. Para dar cabida a este cambio, todas las restricciones de tiempo **deben** reescribirse como **restricciones de tiempo de nivel de lienzo** o de nivel de tarjeta **5&rbrace;.**
 
 Anteriormente, un evento individual podía tener varias reglas de restricción de tiempo adjuntas. Con esta actualización reciente, intentar agregar una restricción de tiempo a una regla dará como resultado **error**.
 

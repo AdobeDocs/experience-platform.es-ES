@@ -48,7 +48,7 @@ Para obtener información sobre cómo generar definiciones de segmentos mediante
 
 >[!NOTE]
 >
->En caso de que se amplíe un esquema, todas las cargas futuras deben actualizar los campos recién añadidos en consecuencia. Para obtener más información sobre la [!DNL Experience Data Model] personalización (XDM), visita el tutorial Editor[ de ](../xdm/tutorials/create-schema-ui.md)esquemas.
+>En caso de que se amplíe un esquema, todas las cargas futuras deben actualizar los campos recién añadidos en consecuencia. Para obtener más información sobre la [!DNL Experience Data Model] personalización (XDM), visita el tutorial Editor[&#x200B; de &#x200B;](../xdm/tutorials/create-schema-ui.md)esquemas.
 >
 >Además, si un valor de caducidad de Evento de experiencia está habilitado en la conjunto de datos, esto podría afectar al abono de la definición de segmento creada. Lea la guía sobre [caducidades de eventos de](../profile/event-expirations.md) experiencias para obtener más información sobre cómo esta función puede afectar a segmentación.
 

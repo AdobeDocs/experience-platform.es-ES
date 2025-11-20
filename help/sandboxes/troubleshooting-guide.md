@@ -13,7 +13,7 @@ ht-degree: 9%
 
 # Solución de problemas de los entornos aislados guía
 
-Este documento proporciona respuestas a las preguntas más frecuentes sobre los entornos aislados en Adobe Experience Platform. Para preguntas y problemas relacionados con otros servicios Experience Platform, consulte el guía de solución de problemas de Experience Platform[](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre los entornos aislados en Adobe Experience Platform. Para preguntas y problemas relacionados con otros servicios Experience Platform, consulte el guía de solución de problemas de Experience Platform[&#128279;](../landing/troubleshooting.md).
 
 Los entornos aislados dividen una sola Experience Platform instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
 

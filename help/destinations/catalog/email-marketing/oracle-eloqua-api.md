@@ -43,7 +43,7 @@ Observe los elementos siguientes antes de autenticarse en el destino [!DNL Oracl
 
 | Credencial | Descripción |
 | --- | --- |
-| `Company Name` | Nombre compañía asociado a su [!DNL Oracle Eloqua] cuenta. <br>Más adelante utilizará el `Company Name` y [!DNL Oracle Eloqua] `Username` como una cadena concatenada que se utilizará como **[!UICONTROL Username]** al [ autenticarse en el destino](#authenticate). |
+| `Company Name` | Nombre compañía asociado a su [!DNL Oracle Eloqua] cuenta. <br>Más adelante utilizará el `Company Name` y [!DNL Oracle Eloqua] `Username` como una cadena concatenada que se utilizará como **[!UICONTROL Username]** al [&#x200B; autenticarse en el destino](#authenticate). |
 | `Username` | Nombre de usuario de su [!DNL Oracle Eloqua] cuenta. |
 | `Password` | El contraseña de su [!DNL Oracle Eloqua] cuenta. |
 | `Pod` | [!DNL Oracle Eloqua] Admite varios centros de datos, cada uno con un nombre de dominio único. [!DNL Oracle Eloqua] Se refiere a estos como &quot;pods&quot;, actualmente hay siete en total: P01, P02, P03, P04, P06, P07 y P08. Para obtener en qué POD se encuentra, inicio de sesión y [!DNL Oracle Eloqua] anote el URL en su explorador después de haber iniciado sesión correctamente. Por ejemplo, si la dirección URL de su explorador es `secure.p01.eloqua.com`, su `pod` es `p01`. Consulte la página [determinar su POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) para obtener más información. |
@@ -135,7 +135,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , **[!UICONTROL View Profiles]**, **[!UICONTROL View Segments]**, y [ ](/help/access-control/home.md#permissions)control de acceso. Lea la control de acceso descripción general[ o póngase en contacto con el ](/help/access-control/ui/overview.md)administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los **[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , **[!UICONTROL View Profiles]**, **[!UICONTROL View Segments]**, y [&#x200B; &#x200B;](/help/access-control/home.md#permissions)control de acceso. Lea la control de acceso descripción general[&#x200B; o póngase en contacto con el &#x200B;](/help/access-control/ui/overview.md)administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -213,7 +213,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
-Todos los [!DNL Adobe Experience Platform] destinos cumplen con las políticas de uso de datos al manejar sus datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] se aplica el gobierno de datos, consulte Información general[ sobre el ](/help/data-governance/home.md)gobierno de datos.
+Todos los [!DNL Adobe Experience Platform] destinos cumplen con las políticas de uso de datos al manejar sus datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] se aplica el gobierno de datos, consulte Información general[&#x200B; sobre el &#x200B;](/help/data-governance/home.md)gobierno de datos.
 
 ## Errores y solución de problemas {#errors-and-troubleshooting}
 

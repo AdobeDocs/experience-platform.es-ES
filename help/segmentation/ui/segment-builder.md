@@ -216,7 +216,7 @@ También puede ver una versión basada en código de una regla creada en [!DNL S
 
 La vista de código proporciona un botón que le permite copiar el valor de la definición del segmento para utilizarlo en las llamadas de API. Para obtener la última versión de la definición del segmento, asegúrese de haber guardado los cambios más recientes en la definición del segmento.
 
-![El botón Copiar código está resaltado, lo que le permite ](../images/ui/segment-builder/copy-code.png)
+![El botón Copiar código está resaltado, lo que le permite &#x200B;](../images/ui/segment-builder/copy-code.png)
 
 ### Funciones de agregación
 
@@ -430,7 +430,7 @@ También puede seleccionar el método de evaluación. Si sabe qué método de ev
 
 Aparece la ventana emergente [!UICONTROL Evaluation method eligibility]. Esta ventana emergente muestra los métodos de evaluación disponibles, que son por lotes, flujo continuo y Edge. La ventana emergente muestra qué métodos de evaluación son elegibles e inelegibles. Según los parámetros que haya utilizado en la definición del segmento, es posible que no cumpla los requisitos para determinados métodos de evaluación. Para obtener más información sobre los requisitos de cada método de evaluación, lea la [segmentación por transmisión](../methods/streaming-segmentation.md#query-types) o las descripciones generales de [segmentación por perímetros](../methods/edge-segmentation.md#query-types).
 
-También puede cambiar el método de evaluación de la definición del segmento una vez que haya terminado de crearla. Si cambia el método de evaluación de Edge o de Transmisión por lotes, **no** podrá cambiarlo de nuevo a Edge o Transmisión por lotes. El cambio en el método de evaluación **solo** surtirá efecto una vez que seleccione **[!UICONTROL Save]** en la ventana emergente. La cancelación del cuadro de diálogo mantendrá **** el método de evaluación original.
+También puede cambiar el método de evaluación de la definición del segmento una vez que haya terminado de crearla. Si cambia el método de evaluación de Edge o de Transmisión por lotes, **no** podrá cambiarlo de nuevo a Edge o Transmisión por lotes. El cambio en el método de evaluación **solo** surtirá efecto una vez que seleccione **[!UICONTROL Save]** en la ventana emergente. La cancelación del cuadro de diálogo mantendrá **&#x200B;**&#x200B;el método de evaluación original.
 
 ![Aparece el elemento emergente de idoneidad para el método de evaluación. Esto muestra qué métodos de evaluación son aptos e no aptos para la definición del segmento.](../images/ui/segment-builder/select-evaluation-method.png)
 
@@ -438,7 +438,7 @@ Si selecciona un método de evaluación no válido, se le pedirá que cambie las
 
 ![Se abre el método de evaluación. Si se selecciona un método de evaluación no apto, la ventana emergente explica por qué no es elegible.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
-Puede encontrar más información sobre los diferentes métodos de evaluación de definiciones de segmento en la descripción general[ segmentación](../home.md#evaluate-segments).
+Puede encontrar más información sobre los diferentes métodos de evaluación de definiciones de segmento en la descripción general[&#x200B; segmentación](../home.md#evaluate-segments).
 
 ## Próximos pasos {#next-steps}
 

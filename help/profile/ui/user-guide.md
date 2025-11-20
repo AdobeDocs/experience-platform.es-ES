@@ -215,7 +215,7 @@ En el menú principal **[!UICONTROL Profiles]** , seleccione el **[!UICONTROL Co
 
 ![Se resalta la pestaña Atributos calculados.](../images/user-guide/computed-attributes.png)
 
-Para obtener más información sobre los atributos calculados, lea la información general[ sobre los ](../computed-attributes/overview.md)atributos calculados. Para obtener más información sobre cómo utilizar los atributos calculados dentro del IU de Experience Platform, lea los [atributos calculados IU guía](../computed-attributes/ui.md).
+Para obtener más información sobre los atributos calculados, lea la información general[&#x200B; sobre los &#x200B;](../computed-attributes/overview.md)atributos calculados. Para obtener más información sobre cómo utilizar los atributos calculados dentro del IU de Experience Platform, lea los [atributos calculados IU guía](../computed-attributes/ui.md).
 
 ## Próximos pasos
 

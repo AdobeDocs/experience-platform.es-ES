@@ -94,7 +94,7 @@ Después de seleccionar una clase, aparecerá la [!UICONTROL Name and review] se
 
 Introduzca un lenguaje práctico [!UICONTROL Schema display name] en el campo de texto. Siguiente, escriba una descripción adecuada para ayudar a identificar su esquema. Cuando haya revisado la estructura esquema y esté satisfecho con la configuración, seleccione **[!UICONTROL Finish]** crear su esquema.
 
-![La [!UICONTROL Name and review] sección del [!UICONTROL Create schema] flujo de trabajo con , [!UICONTROL Schema display name][!UICONTROL Description]y [!UICONTROL Finish] resaltado.](../../images/ui/resources/classes/schema-details.png)
+![La [!UICONTROL Name and review] sección del [!UICONTROL Create schema] flujo de trabajo con , [!UICONTROL Schema display name]&#x200B;[!UICONTROL Description]y [!UICONTROL Finish] resaltado.](../../images/ui/resources/classes/schema-details.png)
 
 ## añadir campos a una clase {#add-fields}
 

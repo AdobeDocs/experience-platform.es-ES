@@ -15,8 +15,8 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 > 
-> * Para activar audiencias y habilitar el [paso de asignación de la flujo de trabajo, necesita los ](#mapping)**[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , , **[!UICONTROL View Profiles]**, y **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions) control de acceso.
-> * Para activar audiencias sin pasar por el paso de [asignación de la flujo de trabajo, necesita los ](#mapping)**[!UICONTROL View Destinations]****[!UICONTROL Activate Segment without Mapping]** permisos **[!UICONTROL View Profiles]** , , , y **[!UICONTROL View Segments]**[ control de acceso.](/help/access-control/home.md#permissions)
+> * Para activar audiencias y habilitar el [paso de asignación de la flujo de trabajo, necesita los &#x200B;](#mapping)**[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , , **[!UICONTROL View Profiles]**, y **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions) control de acceso.
+> * Para activar audiencias sin pasar por el paso de [asignación de la flujo de trabajo, necesita los &#x200B;](#mapping)**[!UICONTROL View Destinations]**&#x200B;**[!UICONTROL Activate Segment without Mapping]** permisos **[!UICONTROL View Profiles]** , , , y **[!UICONTROL View Segments]**&#x200B;[&#x200B; control de acceso.](/help/access-control/home.md#permissions)
 > * Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 > 
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
@@ -51,7 +51,7 @@ Para seleccionar las audiencias que desea activar en el destino, utilice las cas
 
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
-* **[!UICONTROL Segmentation Service]**: Audiences generan dentro de Experience Platform el servicio de segmentación. Consulte la documentación[ segmentación ](../../segmentation/ui/overview.md)para obtener más detalles.
+* **[!UICONTROL Segmentation Service]**: Audiences generan dentro de Experience Platform el servicio de segmentación. Consulte la documentación[&#x200B; segmentación &#x200B;](../../segmentation/ui/overview.md)para obtener más detalles.
 * **[!UICONTROL Custom upload]**: Audiences generan fuera de Experience Platform y se cargan en Experience Platform como archivos CSV. Para obtener más información sobre las audiencias externas, consulte la documentación sobre [la importación de audiencia](../../segmentation/ui/audience-portal.md#import-audience).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 

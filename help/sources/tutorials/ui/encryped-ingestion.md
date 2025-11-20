@@ -156,8 +156,8 @@ Complete los pasos restantes del flujo de trabajo de orígenes para terminar de 
 * [Configurar una programación de ingesta para el flujo de datos](../ui/dataflow/batch/cloud-storage.md#schedule-ingestion-runs)
 * [Revisión del flujo de datos](../ui/dataflow/batch/cloud-storage.md#review-your-dataflow)
 
-Puede seguir realizando actualizaciones en el flujo[ de ](../ui/update-dataflows.md)datos una vez que se haya creado correctamente.
+Puede seguir realizando actualizaciones en el flujo[&#x200B; de &#x200B;](../ui/update-dataflows.md)datos una vez que se haya creado correctamente.
 
 ## Próximos pasos
 
-Al leer este documento, ahora puede ingerir datos cifrados de su origen de lotes de nube almacenamiento a Experience Platform. Para obtener información sobre cómo ingerir datos cifrados mediante las API, lea la guía sobre [la ingesta de datos cifrados mediante la [!DNL Flow Service] API](../api/encrypt-data.md). Para obtener información general sobre las fuentes de Experience Platform, lea la descripción general[ de las ](../../home.md)fuentes.
+Al leer este documento, ahora puede ingerir datos cifrados de su origen de lotes de nube almacenamiento a Experience Platform. Para obtener información sobre cómo ingerir datos cifrados mediante las API, lea la guía sobre [la ingesta de datos cifrados mediante la [!DNL Flow Service] API](../api/encrypt-data.md). Para obtener información general sobre las fuentes de Experience Platform, lea la descripción general[&#x200B; de las &#x200B;](../../home.md)fuentes.

@@ -35,7 +35,7 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
 
    Para obtener más información sobre la diferencia entre estos controles, también puede consultar la sección [Catálogo](../ui/destinations-workspace.md#catalog) de la documentación del área de trabajo de destino.
 
-   Seleccione , **[!UICONTROL Set up]****[!UICONTROL Activate]** o , dependiendo **[!UICONTROL Activate audiences]** del control que haya disponible.
+   Seleccione , **[!UICONTROL Set up]**&#x200B;**[!UICONTROL Activate]** o , dependiendo **[!UICONTROL Activate audiences]** del control que haya disponible.
 
    ![Captura de pantalla del IU Experience Platform que muestra los Página del catálogo de destinos con el control Configuración resaltado.](../assets/ui/connect-destinations/set-up.png)
 
@@ -123,7 +123,7 @@ Algunos destinos basados en archivos admiten la activación de audiencias a clie
 
    ![Cuadro de diálogo Configurar nuevo destino con las acciones de marketing disponibles resaltadas. Los controles disponibles para completar el flujo de trabajo Conectar con destino también están resaltados.](../assets/ui/connect-destinations/governance.png)
 
-2. Seleccione **[!UICONTROL Save & Exit]** esta opción para guardar la configuración de destino o para **[!UICONTROL Next]** continuar con el flujo[ de activación de datos ](activation-overview.md)de audiencia.
+2. Seleccione **[!UICONTROL Save & Exit]** esta opción para guardar la configuración de destino o para **[!UICONTROL Next]** continuar con el flujo[&#x200B; de activación de datos &#x200B;](activation-overview.md)de audiencia.
 
 ## Próximos pasos {#next-steps}
 

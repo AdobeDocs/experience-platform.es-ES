@@ -70,7 +70,7 @@ Aparece una ventana emergente que presenta la opción de examinar las plantillas
 >
 >Las plantillas pueden generar automáticamente esquemas relacionales cuando se trabaja con orígenes que requieren flujos de trabajo de captura de datos modificados o que admiten varios modelos de datos. Estos esquemas habilitan las capacidades de Data Mirror para la sincronización de datos en tiempo real.\
 >Cuando se utilizan plantillas con esquemas relacionales, la activos generada automáticamente incluirá los campos obligatorios de clave principal, identificador de versión e identificador de marca de hora.\
->Para obtener más información, consulte la descripción general[ de Data Mirror y ](../../../xdm/data-mirror/overview.md)la [referencia](../../../xdm/schema/relational.md) técnica de los esquemas relacionales.
+>Para obtener más información, consulte la descripción general[&#x200B; de Data Mirror y &#x200B;](../../../xdm/data-mirror/overview.md)la [referencia](../../../xdm/schema/relational.md) técnica de los esquemas relacionales.
 
 Para usar recursos generados automáticamente, seleccione **[!UICONTROL Browse templates]** y luego seleccione **[!UICONTROL Select]**.
 
