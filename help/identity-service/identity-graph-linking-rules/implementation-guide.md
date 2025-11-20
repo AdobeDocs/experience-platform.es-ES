@@ -94,7 +94,7 @@ Durante el proceso previo a la implementación, debe asegurarse de que los event
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/es/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Si el sistema envía dos identificadores de persona, la implementación puede fa
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/es/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ En este ejemplo, puede suponer que el siguiente evento se envió a Experience Pl
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/",
+            "URL": "https://business.adobe.com/es/",
             "name": "Adobe Business"
         }
     }

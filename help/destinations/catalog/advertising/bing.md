@@ -80,7 +80,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino y [!DNL Microsoft Bing] no ha habilitado el [funcionalidad de sincronizar de ID en Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) servicio de ID en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Systems asesor o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Experience Platform.
+>Si desea crear su primer destino y [!DNL Microsoft Bing] no ha habilitado el [funcionalidad de sincronizar de ID en Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=es) servicio de ID en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Systems asesor o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Experience Platform.
 
 Al configurar el destino, debe proporcionar la siguiente información:
 
