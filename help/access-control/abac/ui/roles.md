@@ -57,7 +57,7 @@ Consulte las secciones sobre [administración de permisos para una función](#ma
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de una función nueva y a administrar usuarios para esa función.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475976/?captions=spa&learn=on)
 
 ## Duplicación de un rol
 

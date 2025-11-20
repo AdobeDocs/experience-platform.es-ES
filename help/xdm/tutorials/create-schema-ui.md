@@ -409,11 +409,11 @@ El esquema &quot;Miembros socio&quot; también está disponible para ser visto y
 
 El siguiente vídeo muestra cómo crear un esquema simple en la interfaz de usuario de [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430223?captions=spa&quality=12&learn=on)
 
 El siguiente vídeo tiene como objetivo reforzar su comprensión del trabajo con grupos y clases de campo.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413601?captions=spa&quality=12&learn=on)
 
 ## Apéndice
 
