@@ -2,18 +2,18 @@
 title: Información general sobre la extensión de la API de conversiones en tiempo real de Trade Desk
 description: Obtenga información acerca de la extensión de la API de Conversiones en tiempo real de Trade Desk para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: eb650da02ac69c5afbebfe6ba371cc19617f79d0
+source-git-commit: 8cf838b6f6794b52f80cb899945c066014e211c2
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 2%
+source-wordcount: '888'
+ht-degree: 1%
 
 ---
 
 # Información general sobre la extensión [!DNL The Trade Desk Real-Time Conversions API]
 
-Puede usar la extensión [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) para enviar datos del Edge Network de Adobe Experience Platform a [!DNL The Trade Desk] mediante las funciones de la API en sus reglas de [reenvío de eventos](../../../ui/event-forwarding/overview.md).
+Puede usar la extensión [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) para enviar datos de Adobe Experience Platform Edge Network a [!DNL The Trade Desk] mediante las funciones de la API en sus reglas de [reenvío de eventos](../../../ui/event-forwarding/overview.md).
 
-Con la extensión [!DNL The Trade Desk Real-Time Conversions API], puede aprovechar las capacidades de la API en sus reglas de [reenvío de eventos](../../../ui/event-forwarding/overview.md) para enviar datos a [!DNL The Trade Desk] desde el Edge Network de Adobe Experience Platform.
+Con la extensión [!DNL The Trade Desk Real-Time Conversions API], puede aprovechar las capacidades de la API en sus reglas de [reenvío de eventos](../../../ui/event-forwarding/overview.md) para enviar datos a [!DNL The Trade Desk] desde Adobe Experience Platform Edge Network.
 
 Lea este documento para obtener información sobre cómo instalar la extensión y utilizar sus funcionalidades en una regla de reenvío de eventos [rule](../../../ui/managing-resources/rules.md).
 
@@ -23,7 +23,7 @@ Lea este documento para obtener información sobre cómo instalar la extensión 
 
 ## Requisitos previos {#prerequisites}
 
-Para configurar [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi), debes tener un ID de anunciante, un ID de píxel de UP e ID de rastreador relevantes en tu cuenta de [!DNL The Trade Desk].
+Para configurar [!DNL The Trade Desk][[!DNL The Trade Desk Real-Time Conversions API], debes tener un ID de anunciante, un ID de píxel de UP e ID de rastreador relevantes en tu cuenta de ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
 
 >[!INFO]
 >
@@ -33,15 +33,15 @@ Para configurar [[!DNL The Trade Desk Real-Time Conversions API]](https://partne
 
 Para instalar la extensión, [cree una propiedad de reenvío de eventos](../../../ui/event-forwarding/overview.md#properties) o seleccione una propiedad existente para editar en su lugar.
 
-Seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Catálogo]**, seleccione la tarjeta de API **[!UICONTROL The Trade Desk]** Conversiones en tiempo real y, a continuación, seleccione **[!UICONTROL Instalar]**.
+Seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo. En la ficha **[!UICONTROL Catalog]**, seleccione la tarjeta de API **[!UICONTROL The Trade Desk]** de conversiones en tiempo real y, a continuación, seleccione **[!UICONTROL Install]**.
 
 ![Catálogo de extensiones que muestra la tarjeta de extensión [!DNL The Trade Desk] que resalta la instalación.](../../../images/extensions/server/tradedesk/install-extension.png)
 
-En la pantalla siguiente, escribe [!UICONTROL ID del anunciante] y, opcionalmente, [!UICONTROL ID de comerciante]. Puede pegar el ID directamente en estas entradas o utilizar un elemento de datos en su lugar. Estos servirán como valores predeterminados utilizados al realizar una llamada de evento a la API de conversiones en tiempo real de [!DNL The Trade Desk]. Seleccione **[!UICONTROL Guardar]** cuando haya terminado.
+En la siguiente pantalla, escriba [!UICONTROL Advertiser ID] y, opcionalmente, [!UICONTROL Merchant ID]. Puede pegar el ID directamente en estas entradas o utilizar un elemento de datos en su lugar. Estos servirán como valores predeterminados utilizados al realizar una llamada de evento a la API de conversiones en tiempo real de [!DNL The Trade Desk]. Seleccione **[!UICONTROL Save]** cuando haya terminado.
 
-Para obtener información sobre cómo crear elementos de datos y ponerlos a disposición de las extensiones de su propiedad de etiquetas, siga el tutorial [Crear elementos de datos](https://experienceleague.adobe.com/es/docs/platform-learn/data-collection/tags/create-data-elements).
+Para obtener información sobre cómo crear elementos de datos y ponerlos a disposición de las extensiones de su propiedad de etiquetas, siga el tutorial [Crear elementos de datos](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements).
 
-![Se ha resaltado la página de configuración de la extensión [!DNL The Trade Desk] con los campos [!UICONTROL ID del anunciante] e [!UICONTROL ID del comerciante].](../../../images/extensions/server/tradedesk/configure-extension.png)
+![Página de configuración de la extensión [!DNL The Trade Desk] con los campos [!UICONTROL Advertiser ID] y [!UICONTROL Merchant ID] resaltados.](../../../images/extensions/server/tradedesk/configure-extension.png)
 
 La extensión está instalada y ahora puede utilizar sus funcionalidades en las reglas de reenvío de eventos.
 
@@ -55,15 +55,15 @@ Considere la posibilidad de configurar varias reglas para enviar todas las [prop
 >
 >Los eventos deben enviarse en tiempo real o lo más cerca posible del tiempo real.
 
-Cree una nueva regla [rule](../../../ui/managing-resources/rules.md) de reenvío de eventos en su propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, agregue una nueva acción y establezca la extensión en **[!UICONTROL Trade Desk]**. A continuación, seleccione **[!UICONTROL Conversión en tiempo real]** para **[!UICONTROL Tipo de acción]**.
+Cree una nueva regla [rule](../../../ui/managing-resources/rules.md) de reenvío de eventos en su propiedad de reenvío de eventos. En **[!UICONTROL Actions]**, agregue una nueva acción y establezca la extensión en **[!UICONTROL The Trade Desk]**. A continuación, seleccione **[!UICONTROL Real Time Conversion]** para **[!UICONTROL Action Type]**.
 
 ![La vista Reglas de propiedad de reenvío de eventos, con los campos necesarios para agregar una configuración de acción de regla de reenvío de eventos resaltada.](../../../images/extensions/server/tradedesk/tradedesk-event-action.png)
 
-Después de la selección, aparecen controles adicionales para configurar aún más los datos de evento que se enviarán a [!DNL The Trade Desk]. Seleccione **[!UICONTROL Conservar cambios]** para guardar la regla.
+Después de la selección, aparecen controles adicionales para configurar aún más los datos de evento que se enviarán a [!DNL The Trade Desk]. Seleccione **[!UICONTROL Keep Changes]** para guardar la regla.
 
 Las opciones de configuración se dividen en tres secciones principales, como se describe a continuación:
 
-**[!UICONTROL Propiedades de solicitud básica]**
+**[!UICONTROL Basic Request Properties]**
 
 | Entrada | Descripción |
 | --- | --- |
@@ -86,20 +86,20 @@ Las opciones de configuración se dividen en tres secciones principales, como se
 
 Consulte la documentación para desarrolladores de [!DNL The Trade Desk] para obtener más información sobre las [propiedades de solicitud](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) aceptadas por la API de conversiones en tiempo real de [!DNL The Trade Desk].
 
-**[!UICONTROL Parámetros de solicitud de objeto]**
+**[!UICONTROL Object Request Parameters]**
 
 Objeto JSON que contiene más información. Tiene la opción de utilizar un conjunto reducido de entradas clave-valor o de proporcionar JSON sin procesar. Además, puede recuperar datos dinámicos de un elemento de datos seleccionando los discos (![Icono de disco](/help/images/icons/database.png)) a la derecha.
 
 
 ![La sección [!DNL Object Request Parameters] muestra los campos disponibles.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-Consulte la documentación de [Evento de conversiones en tiempo real](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) para obtener más información sobre [!UICONTROL Parámetros de solicitud de objeto] y sus propiedades.
+Consulte la documentación de [Evento de conversiones en tiempo real](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) para obtener más información sobre [!UICONTROL Object Request Parameters] y sus propiedades.
 
-**[!UICONTROL Anulaciones de configuración]**
+**[!UICONTROL Configuration Overrides]**
 
 >[!NOTE]
 >
->Los campos [!UICONTROL Anulaciones de configuración] le permiten establecer un(a) [!DNL Advertiser ID] y/o [!DNL Merchant ID] diferente en cada regla.
+>Los campos [!UICONTROL Configuration Overrides] le permiten establecer un(a) [!DNL Advertiser ID] y/o [!DNL Merchant ID] diferente en cada regla.
 
 | Entrada | Descripción |
 | --- | --- |
@@ -108,12 +108,12 @@ Consulte la documentación de [Evento de conversiones en tiempo real](https://pa
 
 ![La sección [!DNL Configuration Overrides] muestra los campos disponibles.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
-Cuando esté satisfecho con la regla, seleccione **[!UICONTROL Guardar en biblioteca]**. Por último, publique un nuevo reenvío de eventos [build](../../../ui/publishing/builds.md) para habilitar los cambios realizados en la biblioteca.
+Cuando esté satisfecho con la regla, seleccione **[!UICONTROL Save to Library]**. Por último, publique un nuevo reenvío de eventos [build](../../../ui/publishing/builds.md) para habilitar los cambios realizados en la biblioteca.
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo enviar datos de evento del lado del servidor a [!DNL The Trade Desk] mediante la extensión de API de conversiones en tiempo real de [!DNL The Trade Desk]. A partir de aquí, se recomienda ampliar la integración creando reglas distintas que envíen eventos de conversión específicos según corresponda por campaña. Para obtener más información sobre las capacidades de reenvío de eventos en [!DNL Adobe Experience Platform], lea la [descripción general del reenvío de eventos](../../../ui/event-forwarding/overview.md).
 
-Consulte la documentación de [!DNL The Trade Desk] sobre las [prácticas recomendadas para la API [!DNL The Trade Desk] conversiones en tiempo real](https://www.facebook.com/business/help/308855623839366?id=818859032317965) para obtener más información sobre cómo implementar de forma eficaz su integración.
+Consulte la documentación de [!DNL The Trade Desk] sobre las [prácticas recomendadas para la API [!DNL The Trade Desk] conversiones en tiempo real](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) para obtener más información sobre cómo implementar de forma eficaz su integración.
 
-Para obtener más información sobre cómo depurar la implementación con la herramienta de supervisión de Experience Platform Debugger y reenvío de eventos, lea la [descripción general del Adobe Experience Platform Debugger](../../../../debugger/home.md) y [Supervisar las actividades en el reenvío de eventos](../../../ui/event-forwarding/monitoring.md).
+Para obtener más información sobre cómo depurar la implementación con la herramienta de supervisión de Experience Platform Debugger y reenvío de eventos, lea la [descripción general de Adobe Experience Platform Debugger](../../../../debugger/home.md) y [Supervisar las actividades en el reenvío de eventos](../../../ui/event-forwarding/monitoring.md).
