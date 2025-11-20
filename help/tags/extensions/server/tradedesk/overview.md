@@ -23,7 +23,7 @@ Lea este documento para obtener información sobre cómo instalar la extensión 
 
 ## Requisitos previos {#prerequisites}
 
-Para configurar [!DNL The Trade Desk][[!DNL The Trade Desk Real-Time Conversions API], debes tener un ID de anunciante, un ID de píxel de UP e ID de rastreador relevantes en tu cuenta de ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
+Para configurar [!DNL The Trade Desk][[!DNL The Trade Desk Real-Time Conversions API], debes tener un ID de anunciante, un ID de píxel de UP e ID de rastreador relevantes en tu cuenta de &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
 
 >[!INFO]
 >
