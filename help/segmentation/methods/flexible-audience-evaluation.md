@@ -5,7 +5,7 @@ role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ Cuando ejecute una evaluación de audiencia flexible, tenga en cuenta las siguie
 
 Para utilizar la evaluación de audiencia flexible, debe tener los siguientes permisos:
 
-- **[!UICONTROL Evaluar segmento a una audiencia]** en la sección **[!DNL Profile Management]**.
+- **[!UICONTROL Evaluate Segment to an Audience]** en la sección **[!DNL Profile Management]**.
 
 Para obtener más información sobre el control de acceso basado en roles, lea la [descripción general del control de acceso](../../access-control/home.md).
 
@@ -300,15 +300,15 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 >[!TAB IU DE Experience Platform]
 
-Para ejecutar una evaluación de audiencia flexible dentro de la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Audiencias]** en la sección **[!UICONTROL Clientes]**.
+Para ejecutar una evaluación de audiencia flexible dentro de la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Audiences]** en la sección **[!UICONTROL Customers]**.
 
 ![El botón Audiencias de la sección Clientes está resaltado. Se muestra Audience Portal para perfiles de clientes.](../images/methods/fae/audience-portal.png)
 
-Se muestra Audience Portal, con una lista de todas las audiencias de personas de la organización. En Audience Portal, puede elegir las audiencias que desea evaluar y seleccionar **[!UICONTROL Evaluar audiencia]**.
+Se muestra Audience Portal, con una lista de todas las audiencias de personas de la organización. En Audience Portal, puede elegir las audiencias que desea evaluar y seleccionar **[!UICONTROL Evaluate audience]**.
 
 ![Se han seleccionado las audiencias en las que desea utilizar una evaluación de audiencia flexible.](../images/methods/fae/evaluate-audiences.png)
 
-Aparece la ventana emergente **[!UICONTROL Evaluar audiencias bajo demanda]**, que muestra la lista de audiencias que se evaluarán con el trabajo del segmento bajo demanda. Si una audiencia no puede evaluarse bajo demanda, se elimina automáticamente del trabajo de evaluación. Confirme que las audiencias de la lista son las que desea que se evalúen.
+Aparece la ventana emergente **[!UICONTROL Evaluate audiences on demand]**, que muestra la lista de audiencias que se evaluarán con el trabajo de segmento bajo demanda. Si una audiencia no puede evaluarse bajo demanda, se elimina automáticamente del trabajo de evaluación. Confirme que las audiencias de la lista son las que desea que se evalúen.
 
 ![Se muestran las audiencias que se pueden evaluar mediante una evaluación de audiencia flexible.](../images/methods/fae/evaluate-audiences-modal.png)
 
@@ -318,7 +318,7 @@ Después de confirmar que se enumeran las audiencias correctas, puede continuar 
 >
 >El estado del trabajo del segmento puede informarse como en &quot;En cola&quot; en el panel de monitorización. Puede ver el estado más actualizado del trabajo del segmento realizando una petición GET al extremo `/segment/jobs`, proporcionando el ID del trabajo del segmento en la ruta de solicitud. Puede encontrar más información sobre el uso de este extremo en la pestaña API.
 >
->Si ejecuta una evaluación de audiencia flexible y desea que la evaluación active la audiencia en un destino, debe asegurarse de que la frecuencia esté establecida en **[!UICONTROL Después de la evaluación del segmento]**. La ejecución de una evaluación de audiencia flexible en audiencias que ya están configuradas para activarse [después de la evaluación de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), activará las audiencias en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior.
+>Si ejecuta una evaluación de audiencia flexible y desea que la evaluación active la audiencia en un destino, debe asegurarse de que la frecuencia esté establecida en **[!UICONTROL After segment evaluation]**. La ejecución de una evaluación de audiencia flexible en audiencias que ya están configuradas para activarse [después de la evaluación de segmentos](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), activará las audiencias en cuanto finalice el trabajo de evaluación de audiencia flexible, independientemente de cualquier trabajo de activación diario anterior.
 
 >[!ENDTABS]
 
@@ -326,7 +326,7 @@ Después de confirmar que se enumeran las audiencias correctas, puede continuar 
 
 En el siguiente vídeo se muestra cómo acceder y utilizar la evaluación de audiencia flexible en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453643?&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Preguntas frecuentes {#faq}
 

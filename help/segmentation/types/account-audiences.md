@@ -1,12 +1,12 @@
 ---
 title: Audiencias de cuenta
 description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perfiles de cuenta en destinos de flujo descendente.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1498'
 ht-degree: 21%
 
 ---
@@ -35,11 +35,11 @@ Antes de empezar a usar las audiencias de cuenta, revise las diferencias entre l
 
 ## Acceso {#access}
 
-Para acceder a las audiencias de la cuenta, seleccione **[!UICONTROL Audiencias]** en la sección **[!UICONTROL Cuentas]**.
+Para acceder a las audiencias de la cuenta, seleccione **[!UICONTROL Audiences]** en la sección **[!UICONTROL Accounts]**.
 
 ![El botón Audiencias está resaltado en la sección Cuentas.](../images/types/account/select.png)
 
-Se muestra la página [!UICONTROL Examinar], que muestra una lista de todas las audiencias de la cuenta para la organización.
+Se muestra la página [!UICONTROL Browse], con una lista de todas las audiencias de la cuenta para la organización.
 
 ![Se muestran las audiencias de cuenta que pertenecen a la organización.](../images/types/account/browse.png)
 
@@ -53,19 +53,19 @@ También puede utilizar la funcionalidad de búsqueda y filtrado para buscar y o
 >
 >Las audiencias de la cuenta se evalúan mediante la segmentación **batch** y se evaluarán cada 24 horas.
 
-Para crear una audiencia de cuenta, selecciona **[!UICONTROL Crear audiencia]** en la página [!UICONTROL Examinar].
+Para crear una audiencia de cuenta, seleccione **[!UICONTROL Create audience]** en la página [!UICONTROL Browse].
 
-![El botón [!UICONTROL Crear audiencia] está resaltado en la página de exploración de audiencias de la cuenta.](../images/types/account/select-create-audience.png)
+![El botón [!UICONTROL Create audience] está resaltado en la página de exploración de audiencias de la cuenta.](../images/types/account/select-create-audience.png)
 
-Aparecerá el Generador de segmentos. Los atributos y audiencias de la cuenta se muestran en la barra de navegación izquierda. En la ficha [!UICONTROL Atributos], puede agregar atributos creados y personalizados por Experience Platform.
+Aparecerá el Generador de segmentos. Los atributos y audiencias de la cuenta se muestran en la barra de navegación izquierda. En la ficha [!UICONTROL Attributes], puede agregar atributos creados y personalizados por Experience Platform.
 
 ![Se muestra el Generador de segmentos. Observe que sólo se muestran los atributos y las audiencias.](../images/types/account/segment-builder.png)
 
-Al crear audiencias de cuenta, tenga en cuenta que los eventos se enumeran en **[!UICONTROL Personas]**, en lugar de ser su propia pestaña, ya que estos atributos están asociados a personas.
+Al crear audiencias de cuenta, tenga en cuenta que los eventos se enumeran en **[!UICONTROL People]**, en lugar de ser su propia pestaña, ya que estos atributos están asociados a personas.
 
-![Se resalta la ubicación para buscar eventos, que se encuentra dentro de la carpeta [!UICONTROL Personas].](../images/types/account/attributes.png)
+![Se resalta la ubicación para buscar eventos, que se encuentra dentro de la carpeta [!UICONTROL People].](../images/types/account/attributes.png)
 
-En la ficha [!UICONTROL Audiencias], puede agregar audiencias basadas en personas creadas anteriormente a partir de al crear su propia audiencia de cuenta.
+En la ficha [!UICONTROL Audiences], puede agregar audiencias basadas en personas creadas anteriormente a partir de al crear su propia audiencia de cuenta.
 
 ![La ficha Audiencias del Generador de segmentos está resaltada.](../images/types/account/audiences.png)
 
@@ -79,11 +79,11 @@ Para usar los tipos de relación alternativos, seleccione ![el icono de configur
 
 ![El icono de configuración está resaltado en la sección Campos.](../images/types/account/select-settings.png)
 
-En la ficha [!UICONTROL Configuración], seleccione **[!UICONTROL Mostrar selectores de relación]** en la sección **[!UICONTROL Relación de campos]**.
+En la ficha [!UICONTROL Settings], seleccione **[!UICONTROL Show relationship selectors]** en la sección **[!UICONTROL Relationship of fields]**.
 
 ![La opción Mostrar selectores de relación está seleccionada en la sección Relación de campos de la ficha Configuración.](../images/types/account/show-relation-selectors.png)
 
-Vuelva a seleccionar ![el icono de configuración](../../images/icons/settings.png) para volver a la ficha [!UICONTROL Campos]. Ahora puede ver la sección **[!UICONTROL Establecer relaciones]**, que le permite establecer cómo está conectada la cuenta a la persona y cómo está conectada la persona a la oportunidad.
+Vuelva a seleccionar ![el icono de configuración](../../images/icons/settings.png) para volver a la ficha [!UICONTROL Fields]. Ahora puede ver la sección **[!UICONTROL Establish relationships]**, que le permite establecer cómo se conecta la cuenta a la persona y cómo se conecta la persona a la oportunidad.
 
 ![Se resalta la sección Establecer relaciones, que muestra las opciones para conectar una cuenta a una persona y para conectar a una persona a una oportunidad.](../images/types/account/establish-relationships.png)
 
@@ -112,11 +112,11 @@ Después de establecer la relación deseada, puede agregar las personas-audienci
 
 Después de crear la audiencia de la cuenta, puede activarla en otros servicios descendentes.
 
-Seleccione la audiencia que desee activar, seguida de **[!UICONTROL Activar en destino]**.
+Seleccione la audiencia que desea activar, seguida de **[!UICONTROL Activate to destination]**.
 
-![El botón [!UICONTROL Activar en destino] está resaltado en el menú de acciones rápidas para la audiencia seleccionada.](../images/types/account/activate.png)
+![El botón [!UICONTROL Activate to destination] está resaltado en el menú de acciones rápidas de la audiencia seleccionada.](../images/types/account/activate.png)
 
-Aparecerá la página [!UICONTROL Activar destino]. Para obtener más información sobre el proceso de activación, incluidos los destinos admitidos y los detalles sobre las asignaciones de campos, lea el tutorial [activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md).
+Aparecerá la página [!UICONTROL Activate destination]. Para obtener más información sobre el proceso de activación, incluidos los destinos admitidos y los detalles sobre las asignaciones de campos, lea el tutorial [activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md).
 
 ## Próximos pasos {#next-steps}
 

@@ -49,9 +49,9 @@ Seleccione una política de la lista para ver su descripción y tipo. Si se sele
 
 ![](../images/policies/policy-details.png)
 
-## Crear una directiva personalizada {#create-policy}
+## Crear un directiva personalizado {#create-policy}
 
-Para crear una nueva directiva de uso de datos personalizada, seleccione **[!UICONTROL Create policy]** en la esquina superior derecha de la ficha **[!UICONTROL Browse]** en el área de trabajo **[!UICONTROL Policies]**.
+Para crear una nueva directiva personalizada de uso de datos, seleccione **[!UICONTROL Create policy]** en la esquina superior derecha de la **[!UICONTROL Browse]** pestaña en la **[!UICONTROL Policies]** espacio de trabajo.
 
 ![](../images/policies/create-policy-button.png)
 
@@ -63,13 +63,13 @@ Aparecerá el cuadro de diálogo [!UICONTROL Choose type of policy]. Seleccione 
 
 >[!NOTE]
 >
->Actualmente, las políticas de consentimiento solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Adobe Privacy &amp; Security Shield.
+>Actualmente, las políticas de consentimiento solo están disponibles para las organizaciones que han adquirido Adobe Systems Healthcare Shield o Adobe Systems Privacy &amp; Security Shield.
 
-Las políticas de gobernanza y consentimiento se pueden usar juntas para crear reglas sólidas para gobernar audiencias asignadas a un destino. Las políticas de consentimiento son de naturaleza inclusiva, lo que significa que dictan qué perfiles se pueden incluir en cada experiencia de marketing. Por el contrario, las directivas de gobernanza excluyen el uso de atributos etiquetados específicos para que no se configuren para la activación.
+Las políticas de gobierno y consentimiento se pueden usar juntas para crear reglas sólidas para gobernar audiencias asignadas a un destino. Las políticas de consentimiento son de naturaleza inclusiva, lo que significa que dictan qué perfiles se pueden incluir en cada marketing experiencia. Por el contrario, las políticas de gobernanza excluyen el uso de atributos etiquetados específicos de la configuración para activación.
 
-Con este comportamiento, puede configurar una combinación de directivas y reglas de consentimiento que incluyan los perfiles correctos, pero que impidan incluir datos que vayan en contra de las reglas organizativas establecidas. Un ejemplo de escenario sería, en el que desee excluir la inclusión de datos confidenciales pero que aún puedan dirigirse a usuarios con consentimiento para su marketing a través de los medios sociales. Los pasos necesarios para este escenario se describen en la infografía siguiente.
+Mediante este comportamiento, puede configurar una combinación de directivas y reglas de consentimiento que incluyan los perfiles correctos, pero que le impidan incluir datos que infrinjan las reglas organizativas establecidas. Un ejemplo de situación sería si desea excluir los datos confidenciales de la inclusión, pero aún puede destino usuarios consentidos para marketing a través de medios sociales. Los pasos necesarios para este escenario se describen en la infografía a continuación.
 
-![Infografía que describe los pasos para usar directivas de gobernanza y consentimiento juntas a fin de crear reglas sólidas para las audiencias de administración.](../images/policies/governance-and-consent-policies-infographic.png)
+![Una infografía que describe los pasos para usar las políticas de gobierno y consentimiento juntas para crear reglas sólidas para gobernar audiencias.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Creación de una política de gobernanza de datos {#create-governance-policy}
 
@@ -155,9 +155,9 @@ En la sección **[!UICONTROL Then]**, seleccione al menos un atributo de consent
 
 ![La interfaz de usuario del generador de directivas de consentimiento que muestra las secciones Si y Entonces, con Ver todo resaltado.](../images/policies/view-all.png)
 
-Si selecciona **[!UICONTROL View all]**, aparecerá el cuadro de diálogo **[!UICONTROL Select consent attribute]**. Seleccione los atributos de consentimiento que desea que compruebe esta directiva. Como alternativa, en este cuadro de diálogo, puede seleccionar **[!UICONTROL Advanced Schema search]** para elegir un campo primitivo anidado que se evaluará como parte de la directiva. Seleccione **[!UICONTROL Done]** para confirmar la configuración.
+Si selecciona **[!UICONTROL View all]**, aparecerá el cuadro de diálogo **[!UICONTROL Select consent attribute]**. Seleccione los atributos de consentimiento que desea que compruebe esta directiva. Como alternativa, desde este cuadro de diálogo, puede seleccionar **[!UICONTROL Advanced Schema search]** elegir un campo primitivo anidado para evaluarlo como parte del directiva. Seleccione **[!UICONTROL Done]** esta opción para confirmar la configuración.
 
-![Se resaltó el cuadro de diálogo Seleccionar atributo de consentimiento con un atributo y listo.](../images/policies/select-consent-attribute.png)
+![El cuadro de diálogo Seleccionar atributo de consentimiento con un atributo y listo, resaltado.](../images/policies/select-consent-attribute.png)
 
 ### Búsqueda avanzada de esquemas {#advanced-schema-search}
 
@@ -165,17 +165,17 @@ En el diálogo **[!UICONTROL Select consent attribute]**, seleccione **[!UICONTR
 
 ![Ruta de acceso de clic para navegar por la búsqueda de esquema avanzada.](../images/policies/consent-advanced-schema-search.gif)
 
-#### Campos de valor fijo para una condición de directiva {#fixed-value-fields}
+#### Campos de valor fijo para una condición directiva {#fixed-value-fields}
 
-Al seleccionar un campo de valor fijo como condición de directiva, el panel [!UICONTROL Selected attributes] muestra los valores predefinidos definidos definidos en el esquema de datos.
+Cuando selecciona un campo de valor fijo como condición directiva, el panel muestra los valores predefinidos definidos en el [!UICONTROL Selected attributes] esquema de datos.
 
 >[!NOTE]
 >
->Si un campo está configurado con un conjunto fijo de valores (por ejemplo, como una enumeración u otro vocabulario controlado), el generador de directivas aplica esa restricción para garantizar que las condiciones se evalúen únicamente en relación con datos válidos y estandarizados.
+>Si un campo se configura con un conjunto fijo de valores (por ejemplo, como una enumeración u otro vocabulario controlado), el generador de directiva aplica esa restricción para garantizar que las condiciones se evalúen solo con datos válidos y estandarizados.
 
-Para mantener la calidad y la coherencia de los datos, la IU procesa estos valores como casillas de verificación seleccionables en lugar de campos de texto libre. Este método reduce la validación manual y ayuda a que la directiva de consentimiento evalúe los datos de forma fiable.
+Para mantener la calidad y la coherencia de los datos, el IU representa estos valores como casillas de verificación seleccionables en lugar de campos de texto gratuito. Este enfoque reduce el validación manual y ayuda a su consentimiento directiva evaluar los datos de manera confiable.
 
-Para definir la condición, seleccione las casillas de verificación de los valores que desea que evalúe la directiva.
+Para definir la condición, seleccione las casillas de verificación de los valores que desea que el directiva evalúe.
 
 ![Se resaltó el cuadro de diálogo &#39;Seleccionar campo de esquema de unión&#39; con un campo de diagrama de esquema y las casillas de verificación de valor fijo disponibles.](../images/policies/select-schema-field.png)
 
@@ -195,9 +195,9 @@ En el diagrama de esquema de unión, seleccione un campo primitivo (como una cad
 
 En el panel **[!UICONTROL Selected attributes]**, configure cómo la directiva evalúa las claves de asignación seleccionando o desactivando la casilla de verificación **[!UICONTROL Find any matching item]**.
 
-| Opción | Acción | Comportamiento de política |
+| Opción | Acción | Comportamiento de políticas |
 | --- | --- | --- |
-| **[!UICONTROL Find any matching item]** casilla de verificación **seleccionada** | El campo de texto **[!UICONTROL within]** está deshabilitado. | La directiva comprueba **cada clave** del mapa. Cualquier clave en la que el campo anidado cumpla la condición de valor se considera una coincidencia para la directiva. Esto resulta útil para aplicar el cumplimiento global en atributos de clave dinámica. |
+| **[!UICONTROL Find any matching item]** la casilla de verificación está **seleccionada** | El **[!UICONTROL within]** campo de texto está desactivado. | El directiva comprueba **todas las claves** del mapa. Cualquier clave en la que el campo anidado cumpla la condición de valor se considera una coincidencia para la directiva. Esto resulta útil para aplicar el cumplimiento global en atributos de clave dinámica. |
 | **[!UICONTROL Find any matching item]** casilla de verificación **no seleccionada** | Debe escribir un nombre de clave específico en el campo de texto **[!UICONTROL within]**. | La directiva comprueba únicamente la clave de asignación especificada en el campo **[!UICONTROL within]**. Solo coinciden los perfiles en los que el campo anidado de una clave específica cumple con el valor definido. Esto resulta útil para directivas dirigidas a un programa específico o clave de frecuencia (por ejemplo, `frequencyMap.m1`). |
 
 Introduzca el valor del campo primitivo seleccionado que la directiva debe evaluar. Por ejemplo, si el tipo de campo es `Integer`, escriba un valor numérico.
@@ -257,7 +257,7 @@ Aparecerá el cuadro de diálogo **[!UICONTROL Create marketing action]**. Escri
 
 ![](../images/policies/create-marketing-action-details.png)
 
-La acción recién creada aparece en la ficha **[!UICONTROL Marketing actions]**. Ahora puede usar la acción de marketing al [crear nuevas políticas de uso de datos](#create-policy).
+La acción recién creada aparece en la ficha **[!UICONTROL Marketing actions]**. Ahora puede utilizar la acción marketing al [crear nuevas políticas](#create-policy) de uso de datos.
 
 ![](../images/policies/created-marketing-action.png)
 
@@ -275,7 +275,7 @@ Si ninguna política de uso existente está usando la acción de marketing, pued
 
 >[!NOTE]
 >
->Si se intenta eliminar una acción de marketing que está siendo utilizada por una directiva existente, aparecerá un mensaje de error que indica que se ha producido un error en el intento de eliminación.
+>Si se intenta eliminar una acción de marketing que está utilizando un directiva existente, aparecerá un mensaje de error que indicará que falló el intento de eliminación.
 
 ![](../images/policies/delete-marketing-action.png)
 
@@ -285,4 +285,4 @@ Este documento proporciona información general sobre cómo administrar las dire
 
 El siguiente vídeo proporciona una demostración de cómo trabajar con directivas de uso en la interfaz de usuario de [!DNL Experience Platform]:
 
->[!VIDEO](https://video.tv.adobe.com/v/37128?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

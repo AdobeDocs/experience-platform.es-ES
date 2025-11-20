@@ -5,8 +5,8 @@ hide: true
 hidefromtoc: true
 source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 5%
+source-wordcount: '368'
+ht-degree: 6%
 
 ---
 
@@ -54,8 +54,8 @@ La siguiente tabla proporciona información más detallada sobre las métricas q
 
 ## Uso del panel de monitorización para audiencias de streaming {#monitoring-dashboard}
 
-Para acceder al panel de monitorización de las audiencias de streaming, ve a la interfaz de usuario de Experience Platform, selecciona **[!UICONTROL Monitorización]** en el panel de navegación izquierdo y, a continuación, selecciona **[!UICONTROL Transmisión de extremo a extremo]**.
+Para acceder al panel de monitorización de las audiencias de streaming, vaya a la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Monitoring]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Streaming end-to-end]**.
 
 IMAGEN
 
-En la parte superior del panel se encuentra la tarjeta de métrica **[!UICONTROL Audiencias]**. Muestra información sobre **la tasa de evaluación** de las audiencias.
+En la parte superior del panel se encuentra la tarjeta de métrica **[!UICONTROL Audiences]**. Muestra información sobre **la tasa de evaluación** de las audiencias.

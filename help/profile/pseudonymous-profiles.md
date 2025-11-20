@@ -6,7 +6,7 @@ description: Este documento proporciona instrucciones generales para configurar 
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1260'
 ht-degree: 7%
 
 ---
@@ -49,15 +49,15 @@ Un perfil se considera para la caducidad de datos seudónimos si cumple las sigu
 >
 >Encontrará más información sobre los permisos de Experience Platform en la [descripción general del control de acceso](../access-control/home.md#permissions).
 
-Para agregar la caducidad de los datos de perfil seudónimos a tu organización, ve al panel Perfil y selecciona **[!UICONTROL Configuración]**.
+Para agregar la caducidad de los datos de perfil seudónimos a su organización, vaya al panel Perfil y seleccione **[!UICONTROL Settings]**.
 
 ![El botón Configuración del panel Perfil está resaltado.](./images/pseudonymous-profiles/profile-settings.png)
 
-Aparece la ventana emergente [!UICONTROL Configuración del perfil]. En esta ventana emergente, puede establecer el número de días para la caducidad de los datos de perfil seudónimos, así como el área de nombres de identidad utilizada para la caducidad de los datos.
+Aparece la ventana emergente [!UICONTROL Profile settings]. En esta ventana emergente, puede establecer el número de días para la caducidad de los datos de perfil seudónimos, así como el área de nombres de identidad utilizada para la caducidad de los datos.
 
 Para los entornos limitados de producción, la caducidad predeterminada de los datos de perfil seudónimos es de 14 días, con un mínimo de 1 día y un máximo de 365 días. Para los entornos limitados de desarrollo, la caducidad predeterminada de los datos de perfil seudónimos es de 3 días, con un mínimo de 1 día y un máximo de 365 días.
 
-Seleccione **[!UICONTROL Aplicar]** para guardar la configuración de caducidad de los datos.
+Seleccione **[!UICONTROL Apply]** para guardar la configuración de caducidad de los datos.
 
 ![La ventana emergente para agregar la caducidad de datos de perfil seudónimos a los perfiles de su organización. El botón Aplicar está resaltado.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
@@ -131,12 +131,12 @@ En un caso de uso típico, puede establecer la caducidad de los datos de Experie
 
 +++ Respuesta
 
-- El sistema de eliminación [&#128279;](../identity-service/guardrails.md) del servicio de identidad , que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
+- El sistema de eliminación [ del servicio de identidad ](../identity-service/guardrails.md), que es el primero en entrar y el primero en salir, podría eliminar los ECID del gráfico de identidad, que están almacenados en el servicio de identidad.
 - Si este comportamiento de eliminación provoca que se almacene un perfil solo de ECID en el Perfil del cliente en tiempo real (almacén de perfiles), la caducidad de los datos de perfil seudónimo eliminará este perfil del almacén de perfiles.
 
 +++
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, sabe cómo ver y crear caducidades de datos de perfil seudónimos. Para obtener más información sobre la administración de datos en Experience Platform en su conjunto, lea la [Guía de prácticas recomendadas para la asignación de licencias de administración de datos](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 

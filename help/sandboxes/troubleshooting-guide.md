@@ -11,15 +11,15 @@ ht-degree: 9%
 
 ---
 
-# Guía de solución de problemas de zonas protegidas
+# Solución de problemas de los entornos aislados guía
 
-Este documento proporciona respuestas a las preguntas frecuentes acerca de los entornos limitados de Adobe Experience Platform. Si tiene alguna pregunta o solución de problemas relacionada con otros servicios de Experience Platform, consulte la [Guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes sobre los entornos aislados en Adobe Experience Platform. Para preguntas y problemas relacionados con otros servicios Experience Platform, consulte el guía de solución de problemas de Experience Platform[](../landing/troubleshooting.md).
 
-Los entornos limitados dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
+Los entornos aislados dividen una sola Experience Platform instancia en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
 
-## ¿Qué es una zona protegida?
+## ¿Qué es un sandbox?
 
-Las zonas protegidas son particiones virtuales dentro de una única instancia de Experience Platform. Cada zona protegida mantiene su propia biblioteca independiente de recursos de Experience Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Todo el contenido y las acciones realizadas en una zona protegida se limitan únicamente a esa zona protegida y no afectan a ninguna otra. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
+Las zonas protegidas son particiones virtuales dentro de una única instancia de Experience Platform. Cada entorno limitado mantiene su propia biblioteca independiente de recursos Experience Platform (incluidos esquemas, conjuntos de datos, perfiles, etc.). Todo el contenido y las acciones realizadas en una zona protegida se limitan únicamente a esa zona protegida y no afectan a ninguna otra. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
 
 ## ¿Qué tipos de zonas protegidas están disponibles y cuáles son sus diferencias? {#sandbox-types}
 
@@ -29,9 +29,9 @@ Las zonas protegidas son particiones virtuales dentro de una única instancia de
 >abstract="El tipo de zona protegida indica si se trata de una zona protegida de producción o desarrollo. Las zonas protegidas de producción incluyen datos activos y las zonas protegidas de desarrollo se utilizan para pruebas y desarrollo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=es#create" text="Creación de una zona protegida en la interfaz de usuario"
 
-Hay dos tipos de zonas protegidas disponibles en Experience Platform:
+Hay dos tipos de sandbox disponibles en Experience Platform:
 
-* **Zona protegida de producción**: Una zona protegida de producción está pensada para utilizarse con perfiles en su entorno de producción. Experience Platform le permite crear varios entornos limitados de producción para proporcionar la funcionalidad adecuada para los datos sin perder el aislamiento operativo. Esta función le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Las zonas protegidas de producción admiten un volumen de perfiles de producción hasta el compromiso con licencia [!DNL Profile] (medido acumulativamente en todas las zonas protegidas de producción autorizadas). Tiene derecho a utilizar todo el volumen total de datos con licencia (medido acumulativamente en todas las zonas protegidas de producción autorizadas).
+* **Sandbox** de producción: Un sandbox de producción está diseñado para usarse con perfiles en su entorno de producción. Experience Platform le permite crear múltiples entornos limitados de producción para proporcionar la funcionalidad correcta para los datos y, al mismo tiempo, mantener el aislamiento operativo. Esta característica le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Los entornos limitados de producción admiten un volumen de perfiles de producción hasta su compromiso con licencia [!DNL Profile] (medido acumulativamente en todos sus entornos limitados de producción autorizados). Tiene derecho a utilizar todo el volumen total de datos con licencia (medido acumulativamente en todas las zonas protegidas de producción autorizadas).
 
 * **Entorno aislado de desarrollo**: Un entorno aislado de desarrollo es un entorno aislado que se puede usar exclusivamente para el desarrollo y las pruebas con perfiles que no sean de producción. Los entornos limitados de desarrollo admiten un volumen de perfiles que no son de producción de hasta el 10 % de la asignación [!DNL Profile] con licencia (medida de forma acumulativa en todos los entornos limitados de desarrollo autorizados). Tiene derecho a hasta:
    * Un trabajo de segmentación por lotes al día, por zona protegida de desarrollo;
@@ -39,15 +39,15 @@ Hay dos tipos de zonas protegidas disponibles en Experience Platform:
 
 Consulte la [información general sobre las zonas protegidas](./home.md) para obtener más detalles.
 
-## ¿Puedo acceder a un recurso desde más de una zona protegida?
+## ¿Puedo acceder a un recurso desde más de un entorno limitado?
 
-Los entornos limitados para pruebas son particiones aisladas de una sola instancia de Experience Platform, y cada entorno limitado mantiene su propia biblioteca independiente de recursos. No se puede acceder a un recurso que existe en una zona protegida desde ninguna otra, independientemente del tipo de zona protegida (producción o no producción).
+Las cajas de arena son particiones aisladas de una sola instancia de Experience Platform, y cada caja de arena mantiene su propia biblioteca independiente de recursos. No se puede acceder a un recurso que existe en un entorno limitado desde ningún otro entorno limitado, independientemente del tipo de entorno limitado (producción o no producción).
 
-## ¿Cuál es la zona protegida de producción predeterminada?
+## ¿Qué es el simulador de pruebas de producción predeterminado?
 
-La zona protegida de producción predeterminada es la primera zona protegida de producción que se crea cuando se aprovisiona una organización por primera vez. La zona protegida de producción predeterminada le permite introducir o consumir datos de Experience Platform, así como aceptar solicitudes que no incluyen valores para un nombre de zona protegida o un ID de zona protegida. La zona protegida de producción predeterminada se puede restablecer, pero no eliminar.
+El simulador de pruebas de producción predeterminado es el primer simulador de pruebas de producción que se crea cuando se aprovisiona una organización por primera vez. El espacio aislado de producción predeterminado le permite ingerir o consumir datos de Experience Platform, así como aceptar solicitudes que no incluyan valores para un nombre de espacio aislado o un ID de espacio aislado. El entorno de pruebas de producción predeterminado se puede restablecer pero no eliminar.
 
-## ¿Cuántas zonas protegidas de producción puedo tener?
+## ¿Cuántos sandboxes de producción puedo tener?
 
 Una instancia de Experience Platform admite varios entornos limitados de producción y desarrollo, y cada entorno limitado mantiene su propia biblioteca independiente de recursos de Experience Platform (incluidos esquemas, conjuntos de datos y perfiles).
 
@@ -55,19 +55,19 @@ Una licencia predeterminada de Experience Platform le concede un total de cinco 
 
 Las zonas protegidas de producción se pueden restablecer o eliminar, excepto las que también se están usando en Adobe Analytics para la característica [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es), o si Adobe Audience Manager también está usando el gráfico de identidades alojado en ellas para la característica [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=es).
 
-Puede actualizar el título de una zona protegida de producción. Sin embargo, no se puede cambiar el nombre de una zona protegida de producción.
+Puede actualizar el título de una zona protegida de producción. Sin embargo, no se puede cambiar el nombre de un entorno limitado de producción.
 
 >[!NOTE]
 >
->El nombre de la zona protegida se utiliza con fines de búsqueda en llamadas a la API, mientras que el título de la zona protegida se utiliza como nombre para mostrar.
+>El nombre del espacio aislado se usa con fines de búsqueda en las llamadas de API, mientras que el título del espacio aislado se usa como nombre para mostrar.
 
-## ¿Cuántas zonas protegidas de desarrollo puedo tener?
+## ¿Cuántos sandboxes de desarrollo puedo tener?
 
-Actualmente, Experience Platform permite que un máximo de 75 zonas protegidas (producción y desarrollo) estén activas dentro de una sola organización.
+Experience Platform actualmente permite que un máximo de 75 sandboxes totales (producción y desarrollo) estén activos dentro de una sola organización.
 
-Los entornos limitados de desarrollo admiten las funcionalidades de restablecimiento y eliminación.
+Los entornos limitados de desarrollo admiten funcionalidades de restablecimiento y eliminación.
 
-## Acabo de crear una zona protegida. ¿Cómo configuro permisos para los usuarios que trabajarán con esta zona protegida?
+## Acabo de crear un sandbox. ¿Cómo configuro permisos para los usuarios que trabajarán con esta zona protegida?
 
 Adobe Admin Console vincula a los usuarios a zonas protegidas y permisos mediante el uso de perfiles de producto. Después de crear una nueva zona protegida, vaya a la pestaña **Permisos** del perfil de producto al que desea conceder acceso y, a continuación, haga clic en **Zonas protegidas**. Desde aquí, puede agregar o quitar el acceso a la nueva zona protegida de la misma manera que otros permisos.
 

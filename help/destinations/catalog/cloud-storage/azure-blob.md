@@ -1,6 +1,6 @@
 ---
 title: Conexión de Azure Blob
-description: Cree una conexión saliente activa al almacenamiento del blob de Azure para exportar periódicamente archivos de datos CSV de Adobe Experience Platform.
+description: Crear una conexión saliente activa a la almacenamiento de Azure Blob para exportar periódicamente archivos de datos de CSV desde Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
 source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
@@ -31,9 +31,9 @@ Con la versión de Experience Platform de julio de 2023, el destino [!DNL Azure 
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esto tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): El marco de trabajo estandarizado por el cual Experience Platform organiza experiencia del cliente datos.
    * [Aspectos básicos de la composición de esquemas](../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -44,7 +44,7 @@ Si ya tiene un destino [!DNL Blob] válido, puede omitir el resto de este docume
 
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
-| Origen de audiencia | Admitido | Descripción |
+| origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
 | Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
@@ -58,7 +58,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 |---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Profile-based]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frecuencia de exportación | **[!UICONTROL Batch]** | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+| Exportar Frecuencia | **[!UICONTROL Batch]** | Lote destinos exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -69,11 +69,11 @@ Este destino admite exportaciones de conjuntos de datos. Para obtener informaci�
 * Cómo [exportar conjuntos de datos mediante la interfaz de usuario de Experience Platform](/help/destinations/ui/export-datasets.md).
 * Cómo [exportar conjuntos de datos mediante programación usando la API de Flow Service](/help/destinations/api/export-datasets.md).
 
-## Formato de archivo de los datos exportados {#file-format}
+## Archivo formato de los datos exportados {#file-format}
 
-Al exportar *datos de audiencia*, Experience Platform crea un archivo de `.csv`, `parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [formatos de archivo compatibles con la exportación](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) en el tutorial de activación de audiencia.
+Al exportar *audiencia datos*, Experience Platform crea un `.csv`, `parquet`, o `.json` archivo en la ubicación almacenamiento proporcionada. Para obtener más información acerca de los archivos, consulte la sección Formatos de archivo admitidos para la [exportación](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) en la tutorial activación audiencia.
 
-Al exportar *conjuntos de datos*, Experience Platform crea un archivo de `.parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la sección [verificar la exportación correcta del conjunto de datos](../../ui/export-datasets.md#verify) en el tutorial exportar conjuntos de datos.
+Al exportar *conjuntos* de datos, Experience Platform crea un `.parquet` archivo OR `.json` en la ubicación almacenamiento proporcionada. Para obtener más información acerca de los archivos, consulte la [sección Verificar la exportación](../../ui/export-datasets.md#verify) conjunto de datos correcta del tutorial Exportar conjuntos de datos.
 
 ## Conectar con el destino {#connect}
 
@@ -92,7 +92,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Connection string]**: la cadena de conexión es necesaria para acceder a los datos del almacenamiento del blob. El patrón de cadena de conexión [!DNL Blob] comienza con: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+* **[!UICONTROL Connection string]**: la cadena de conexión es necesaria para acceder a los datos del almacenamiento del blob. El [!DNL Blob] patrón de la cadena de conexión empieza por: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
    * Para obtener más información acerca de cómo configurar la cadena de conexión de [!DNL Blob], consulte [Configurar una cadena de conexión para una cuenta de almacenamiento de Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) en la documentación de Microsoft.
 * **[!UICONTROL Encryption key]**: de forma opcional, puede adjuntar la clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
 
@@ -100,9 +100,9 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 ### Rellenar detalles de destino {#destination-details}
 
-Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
+Para configurar los detalles del destino, rellene los campos opcionales y obligatorios que aparecen a continuación. Un asterisco junto al campo de la IU indica que el campo es obligatorio.
 
-* **[!UICONTROL Name]**: escriba un nombre que le ayude a identificar este destino.
+* **[!UICONTROL Name]**: Introduzca un nombre que le ayude a identificar este destino.
 * **[!UICONTROL Description]**: escriba una descripción para este destino.
 * **[!UICONTROL Folder path]**: escriba la ruta a la carpeta de destino que alojará los archivos exportados.
 * **[!UICONTROL Container]**: escriba el nombre del contenedor [!DNL Azure Blob Storage] que utilizará este destino.
@@ -112,7 +112,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
    * `flowRunId`: la [ejecución de flujo de datos](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que generó el archivo exportado.
    * `scheduledTime`: la hora en UTC en que se exportó el archivo.
    * `exportResults.sinkPath`: ruta de acceso de la ubicación de almacenamiento en la que se deposita el archivo exportado.
-   * `exportResults.name`: nombre del archivo exportado.
+   * `exportResults.name`: Nombre del archivo exportado.
    * `size`: tamaño del archivo exportado, en bytes.
 
 ### Habilitar alertas {#enable-alerts}
@@ -125,8 +125,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , **[!UICONTROL View Profiles]**, **[!UICONTROL View Segments]**, y [ ](/help/access-control/home.md#permissions)control de acceso. Lea la control de acceso descripción general[ o póngase en contacto con el ](/help/access-control/ui/overview.md)administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [control de acceso permiso](/help/access-control/home.md#permissions). <br> ![Seleccione el espacio de nombres de identidad resaltado en la flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el espacio de nombres de identidad resaltado en la flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

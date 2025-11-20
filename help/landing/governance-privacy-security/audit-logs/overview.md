@@ -6,7 +6,7 @@ feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1579'
 ht-degree: 29%
 
 ---
@@ -32,7 +32,7 @@ Para aumentar la transparencia y la visibilidad de las actividades realizadas en
 
 En un sentido básico, un registro de auditoría indica a **quién** realizó **qué** acción y **cuándo**. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción.
 
-Cuando un usuario realiza una acción, se registran dos tipos de eventos de auditoría. Un evento principal captura el resultado de autorización de la acción, [!UICONTROL permitir] o [!UICONTROL denegar], mientras que un evento mejorado captura el resultado de ejecución, [!UICONTROL éxito] o [!UICONTROL error]. Se pueden vincular varios eventos mejorados al mismo evento principal. Por ejemplo, al activar un destino, el evento principal registra la autorización de la acción [!UICONTROL Actualización del destino], mientras que los eventos mejorados registran varias acciones [!UICONTROL Activar segmento].
+Cuando un usuario realiza una acción, se registran dos tipos de eventos de auditoría. Un evento principal captura el resultado de autorización de la acción [!UICONTROL allow] o [!UICONTROL deny], mientras que un evento mejorado captura el resultado de ejecución [!UICONTROL success] o [!UICONTROL failure]. Se pueden vincular varios eventos mejorados al mismo evento principal. Por ejemplo, al activar un destino, el evento principal registra la autorización de la acción [!UICONTROL Destination Update], mientras que los eventos mejorados registran varias acciones [!UICONTROL Segment Activate].
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ La siguiente tabla indica qué acciones sobre qué recursos se registran en los 
 
 Cuando la función está habilitada para su organización, los registros de auditoría se recopilan automáticamente a medida que se produce la actividad. No es necesario habilitar manualmente la recopilación de registros.
 
-Para ver y exportar los registros de auditoría, debe contar con el permiso de control de acceso **[!UICONTROL Ver registro de actividad de usuario]** concedido (que se encuentra en la categoría [!UICONTROL Control de datos]). Para obtener información sobre cómo administrar permisos individuales para funciones de Experience Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
+Para ver y exportar los registros de auditoría, debe contar con el permiso de control de acceso **[!UICONTROL View User Activity Log]** concedido (que se encuentra en la categoría [!UICONTROL Data Governance]). Para obtener información sobre cómo administrar permisos individuales para funciones de Experience Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
 
 ## Administración de registros de auditoría en la interfaz de usuario {#managing-audit-logs-in-the-ui}
 
@@ -85,7 +85,7 @@ Para ver y exportar los registros de auditoría, debe contar con el permiso de c
 >title="Instrucciones"
 >abstract="<ul><li>Seleccione <b>Auditorías</b> en la navegación izquierda. El espacio de trabajo Auditorías muestra una lista de los registros grabados, ordenados por defecto del más al menos reciente.</li>   <li> NOTA: Los registros de auditoría se conservan durante 365 días, después de los cuales se eliminarán del sistema. Por lo tanto, solo podrá retroceder un máximo de 365 días. Si necesita consultar datos con más de 365 días de antigüedad, deberá exportar los registros con regularidad para cumplir los requisitos de su directiva interna. </li><li>Seleccione un evento de la lista para ver los detalles en el carril derecho. </li><li>Seleccione el icono de canal para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los filtros seleccionados. </li><li>Para exportar la lista actual de registros de auditoría, seleccione **Descargar registro**.</li><li>Para obtener más ayuda sobre esta función, consulte la <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=es">información general sobre registros de auditoría</a> en Experience League.</li></ul>"
 
-Puede ver los registros de auditoría de distintas características de Experience Platform en el espacio de trabajo **[!UICONTROL Auditorías]** de la interfaz de usuario de Experience Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de más reciente a menos reciente.
+Puede ver los registros de auditoría de distintas características de Experience Platform en el espacio de trabajo **[!UICONTROL Audits]** en la interfaz de usuario de Experience Platform. El espacio de trabajo muestra una lista de registros registrados, ordenados de forma predeterminada de más reciente a menos reciente.
 
 ![El panel Auditorías resalta las Auditorías en el menú de la izquierda.](../../images/audit-logs/audits.png)
 
@@ -99,7 +99,7 @@ Seleccione un evento de la lista para ver los detalles en el carril derecho.
 
 ### Filtrar registros de auditoría
 
-Seleccione el icono de canal (![Icono de filtro](/help/images/icons/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados.
+Seleccione el icono de funnel (![Icono de filtro](/help/images/icons/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados.
 
 >[!NOTE]
 >
@@ -111,13 +111,13 @@ Los siguientes filtros están disponibles para eventos de auditoría en la inter
 
 | Filtro | Descripción |
 | --- | --- |
-| [!UICONTROL Categoría] | Utilice el menú desplegable para filtrar los resultados mostrados por [categoría](#category). |
-| [!UICONTROL Acción] | Filtrar por acción. Las acciones disponibles para cada servicio se pueden ver en la tabla de recursos anterior. |
-| [!UICONTROL Usuario] | Escriba el identificador de usuario completo (por ejemplo, `johndoe@acme.com`) para filtrar por usuario. |
-| [!UICONTROL Estado] | Filtrar eventos de auditoría por resultado: correcto, erróneo, permitido o denegado debido a la falta de [permisos de control de acceso](../../../access-control/home.md). Para una acción ejecutada, los eventos principales muestran [!UICONTROL Permitir] o [!UICONTROL Denegar]. Cuando el evento principal es [!UICONTROL Permitir], puede que haya adjuntado uno o más eventos mejorados que muestran **[!UICONTROL Éxito]** o **[!UICONTROL Error]**. Por ejemplo, una acción correcta muestra [!UICONTROL Permitir] en el evento principal y [!UICONTROL Éxito] en el evento mejorado adjunto. |
-| [!UICONTROL Fecha] | Seleccione una fecha de inicio o de finalización para definir un intervalo de fechas en el que filtrar los resultados. Los datos se pueden exportar con un periodo retrospectivo de 90 días (por ejemplo, del 15-12-2021 al 15-03-2022). Esto puede variar según el tipo de evento. |
+| [!UICONTROL Category] | Utilice el menú desplegable para filtrar los resultados mostrados por [categoría](#category). |
+| [!UICONTROL Action] | Filtrar por acción. Las acciones disponibles para cada servicio se pueden ver en la tabla de recursos anterior. |
+| [!UICONTROL User] | Escriba el identificador de usuario completo (por ejemplo, `johndoe@acme.com`) para filtrar por usuario. |
+| [!UICONTROL Status] | Filtrar eventos de auditoría por resultado: correcto, erróneo, permitido o denegado debido a la falta de [permisos de control de acceso](../../../access-control/home.md). Para una acción ejecutada, los eventos principales muestran [!UICONTROL Allow] o [!UICONTROL Deny]. Cuando el evento principal es [!UICONTROL Allow], es posible que haya adjuntado uno o más eventos mejorados que muestran **[!UICONTROL Success]** o **[!UICONTROL Failure]**. Por ejemplo, una acción correcta muestra [!UICONTROL Allow] en el evento principal y [!UICONTROL Success] en el evento mejorado adjunto. |
+| [!UICONTROL Date] | Seleccione una fecha de inicio o de finalización para definir un intervalo de fechas en el que filtrar los resultados. Los datos se pueden exportar con un periodo retrospectivo de 90 días (por ejemplo, del 15-12-2021 al 15-03-2022). Esto puede variar según el tipo de evento. |
 
-Para quitar un filtro, selecciona la &quot;X&quot; en el icono de la píldora para el filtro en cuestión o selecciona **[!UICONTROL Borrar todo]** para eliminar todos los filtros.
+Para eliminar un filtro, seleccione la &quot;X&quot; en el icono de la píldora para el filtro en cuestión o seleccione **[!UICONTROL Clear all]** para eliminar todos los filtros.
 
 ![Se resaltó el panel Auditorías con el filtro sin cifrar.](../../images/audit-logs/clear-filters.png)
 
@@ -125,27 +125,27 @@ Los datos de registro de auditoría devueltos contienen la siguiente informació
 
 | Nombre de columna | Descripción |
 |---|---|
-| [!UICONTROL Marca de tiempo] | La fecha y hora exactas de la acción realizada en formato `month/day/year hour:minute AM/PM`. |
-| [!UICONTROL Nombre de recurso] | El valor del campo [!UICONTROL Nombre del recurso] depende de la categoría elegida como filtro. |
-| [!UICONTROL Categoría] | Este campo coincide con la categoría seleccionada en la lista desplegable de filtros. |
-| [!UICONTROL Acción] | Las acciones disponibles dependen de la categoría elegida como filtro. |
-| [!UICONTROL Usuario] | Este campo proporciona el ID de usuario que ejecutó la consulta. |
+| [!UICONTROL Timestamp] | La fecha y hora exactas de la acción realizada en formato `month/day/year hour:minute AM/PM`. |
+| [!UICONTROL Asset Name] | El valor del campo [!UICONTROL Asset Name] depende de la categoría elegida como filtro. |
+| [!UICONTROL Category] | Este campo coincide con la categoría seleccionada en la lista desplegable de filtros. |
+| [!UICONTROL Action] | Las acciones disponibles dependen de la categoría elegida como filtro. |
+| [!UICONTROL User] | Este campo proporciona el ID de usuario que ejecutó la consulta. |
 
 ![Panel de auditorías con el registro de actividad filtrado resaltado.](../../images/audit-logs/filtered.png)
 
 ### Exportar registros de auditoría {#export-audit-logs}
 
-Para exportar la lista actual de registros de auditoría, seleccione **[!UICONTROL Descargar registro]**.
+Para exportar la lista actual de registros de auditoría, seleccione **[!UICONTROL Download log]**.
 
 >[!NOTE]
 >
 >Los registros se pueden solicitar en intervalos de 90 días hasta 365 días antes. Sin embargo, la cantidad máxima de registros que se pueden devolver durante una sola exportación es de 10 000 eventos de auditoría (principales o mejorados).
 
-![Se ha resaltado el panel Auditorías con el [!UICONTROL registro de descargas].](../../images/audit-logs/download.png)
+![Panel de auditorías con [!UICONTROL Download log] resaltado.](../../images/audit-logs/download.png)
 
-En el cuadro de diálogo que aparece, seleccione el formato que prefiera (**[!UICONTROL CSV]** o **[!UICONTROL JSON]**) y, a continuación, seleccione **[!UICONTROL Descargar]**. El explorador descarga el archivo generado y lo guarda en el equipo.
+En el cuadro de diálogo que aparece, seleccione su formato preferido (**[!UICONTROL CSV]** o **[!UICONTROL JSON]**) y, a continuación, seleccione **[!UICONTROL Download]**. El explorador descarga el archivo generado y lo guarda en el equipo.
 
-![Se resaltó el cuadro de diálogo de selección de formato de archivo con [!UICONTROL Descargar].](../../images/audit-logs/select-download-format.png)
+![Cuadro de diálogo de selección de formato de archivo con [!UICONTROL Download] resaltado.](../../images/audit-logs/select-download-format.png)
 
 ## Habilitar alertas {#enable-alerts}
 
@@ -169,7 +169,7 @@ Todas las acciones que puede realizar en la interfaz de usuario también se pued
 
 ## Administración de registros de auditoría para Adobe Admin Console
 
-Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/es/enterprise/using/audit-logs.html).
+Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Pasos siguientes y recursos adicionales
 
@@ -177,4 +177,4 @@ En esta guía se explica cómo administrar los registros de auditoría en Experi
 
 Para comprender mejor los registros de auditoría en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/344645?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

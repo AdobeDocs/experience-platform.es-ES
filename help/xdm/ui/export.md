@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '636'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 11%
 
 Todos los recursos de la biblioteca de esquemas están contenidos en una zona protegida específica de una organización. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones.
 
-Para resolver esta necesidad, el área de trabajo [!UICONTROL Schemas] de la interfaz de usuario de Adobe Experience Platform le permite generar una carga útil de exportación para cualquier esquema de la biblioteca de esquemas. Esta carga útil se puede utilizar en una llamada a la API de Registro de esquemas para importar el esquema (y todos los recursos dependientes) en una organización y zona protegida de destino.
+Para resolver esta necesidad, el área de trabajo [!UICONTROL Schemas] de la interfaz de usuario de Adobe Experience Platform le permite generar una carga útil de exportación para cualquier esquema de la Biblioteca de esquemas. Esta carga útil se puede utilizar en una llamada a la API de Registro de esquemas para importar el esquema (y todos los recursos dependientes) en una organización y zona protegida de destino.
 
 >[!NOTE]
 >
@@ -32,17 +32,17 @@ Aunque la IU de Experience Platform permite exportar recursos XDM, debe utilizar
 
 ## Generación de una carga útil de exportación {#generate-export-payload}
 
-Las cargas útiles de exportación se pueden generar en la interfaz de usuario de Experience Platform desde el panel de detalles de la pestaña [!UICONTROL Examinar] o directamente desde el lienzo del esquema en el Editor de esquemas.
+Las cargas útiles de exportación se pueden generar en la interfaz de usuario de Experience Platform desde el panel de detalles de la pestaña [!UICONTROL Browse] o directamente desde el lienzo del esquema en el Editor de esquemas.
 
-Para generar una carga útil de exportación, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. En el área de trabajo [!UICONTROL Esquemas], seleccione la fila del esquema que desea exportar para mostrar los detalles del esquema en la barra lateral derecha.
+Para generar una carga útil de exportación, seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo. En el área de trabajo [!UICONTROL Schemas], seleccione la fila del esquema que desea exportar para mostrar los detalles del esquema en la barra lateral derecha.
 
 >[!TIP]
 >
 >Consulte la guía [Exploración de recursos XDM](./explore.md) para obtener más información sobre cómo encontrar el recurso XDM que está buscando.
 
-A continuación, seleccione el icono **[!UICONTROL Copiar JSON]** (![Copiar icono](/help/images/icons/copy.png)) de las opciones disponibles.
+A continuación, seleccione el icono **[!UICONTROL Copy JSON]** (![Copiar icono](/help/images/icons/copy.png)) de las opciones disponibles.
 
-![Se resaltó el área de trabajo de esquemas con una fila de esquema y [!UICONTROL Copiar a JSON].](../images/ui/export/copy-json.png)
+![Espacio de trabajo de esquemas con una fila de esquema y [!UICONTROL Copy to JSON] resaltado.](../images/ui/export/copy-json.png)
 
 Esto copia una carga útil JSON en el portapapeles, generada en función de la estructura de esquema. Para el esquema &quot;[!DNL Loyalty Members]&quot; mostrado arriba, se genera el siguiente JSON:
 
@@ -212,13 +212,13 @@ Esto copia una carga útil JSON en el portapapeles, generada en función de la e
 
 +++
 
-La carga útil también se puede copiar seleccionando [!UICONTROL Más] en la parte superior derecha del Editor de esquemas. Un menú desplegable proporciona dos opciones: [!UICONTROL Copiar estructura JSON] y [!UICONTROL Eliminar esquema].
+La carga útil también se puede copiar seleccionando [!UICONTROL More] en la parte superior derecha del Editor de esquemas. Un menú desplegable proporciona dos opciones, [!UICONTROL Copy JSON structure] y [!UICONTROL Delete schema].
 
 >[!NOTE]
 >
 >Un esquema no se puede eliminar cuando está habilitado para el perfil o tiene conjuntos de datos asociados.
 
-![Se ha resaltado el editor de esquemas con [!UICONTROL Más] y [!UICONTROL Copiar a JSON].](../images/ui/export/schema-editor-copy-json.png)
+![Se resaltó el editor de esquemas con [!UICONTROL More] y [!UICONTROL Copy to JSON].](../images/ui/export/schema-editor-copy-json.png)
 
 La carga útil adopta la forma de una matriz, y cada elemento de matriz es un objeto que representa un recurso XDM personalizado que se va a exportar. En el ejemplo anterior, se incluyen el grupo de campos personalizados [!DNL Loyalty details] y el esquema [!DNL Loyalty Members]. Los recursos principales empleados por el esquema no se incluyen en la exportación, ya que estos recursos están disponibles en todas las zonas protegidas y organizaciones.
 
@@ -228,6 +228,6 @@ Tenga en cuenta que cada instancia del ID de inquilino de su organización apare
 
 Una vez que haya copiado el JSON de exportación para el esquema, puede utilizarlo como carga para una petición POST al extremo `/rpc/import` en la API del Registro de esquemas. Consulte la [guía de extremo de importación](../api/import.md) para obtener detalles sobre cómo configurar la llamada para enviar el esquema a la organización y zona protegida deseadas.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir esta guía, ha exportado correctamente un esquema XDM a una organización o zona protegida diferente. Para obtener más información sobre las capacidades de la interfaz de usuario de [!UICONTROL Schemas], consulte la descripción general de la interfaz de usuario de [[!UICONTROL Schemas]](./overview.md).

@@ -53,7 +53,7 @@ Para obtener más información sobre cómo administrar e interactuar con esquema
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamientos de datos"
->abstract="Los datos que se van a usar en Experience Platform se agrupan en tres tipos de comportamiento: registro, serie temporal y ad hoc. Los esquemas de registro proporcionan información sobre los atributos de un asunto, mientras que los esquemas de series temporales capturan una instantánea del sistema en el momento en que se realizó una acción. Los esquemas ad hoc capturan campos que son áreas de nombres para uso exclusivo de un conjunto de datos. Consulte la documentación para obtener más información sobre los comportamientos de los datos en Experience Platform."
+>abstract="Los datos que se van a usar en Experience Platform se agrupan en tres tipos de comportamiento: registro, serie temporal y ad hoc. Los esquemas de registro proporcionan información sobre los atributos de un asunto, mientras que los esquemas de series temporales capturan una instantánea del sistema en el momento en que se realizó una acción. Los esquemas ad hoc capturan campos que son espacios de nombres para uso exclusivo de un conjunto de datos. Consulte la documentación para obtener más información sobre los comportamientos de los datos en Experience Platform."
 
 Los datos que se van a utilizar en Experience Platform se agrupan en tres tipos de comportamiento:
 
@@ -185,4 +185,4 @@ Para conocer los principios de diseño y las prácticas recomendadas para crear 
 
 Para comprender mejor [!DNL XDM System] en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/38506?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

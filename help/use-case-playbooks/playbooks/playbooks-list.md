@@ -25,9 +25,9 @@ Lea esta página para obtener una descripción general de todos los libros de re
 | Nombre del manual | Descripción |
 | ------------- |  ----------- |
 | Navegación abandonada: Productos | Empuje a los seguidores a volver a interactuar después de salir del sitio web o la aplicación después de examinar un producto. |
-| Exploración abandonada: producto | Empuje a los compradores a volver a interactuar después de abandonar su sitio web o aplicación después de navegar por un producto. |
-| Navegación abandonada: Reserva | Aconseje a los invitados a volver a participar después de salir de su sitio web o aplicación después de navegar por una reserva potencial. |
-| Carro abandonado: mercancía | Empuje a los seguidores a volver a participar después de salir del sitio web o la aplicación después de agregar mercancía al carro de compras. |
+| Exploración abandonada: producto | Nudge shoppers to re-engage after they leave your website or app after browsing a product. |
+| Abandoned Browsing: Reservation | Nudge guests to re-engage after they leave your website or app after browsing a potential reservation. |
+| Abandoned Cart: Merchandise | Empuje a los seguidores a volver a participar después de salir del sitio web o la aplicación después de agregar mercancía al carro de compras. |
 | Carro abandonado: producto | Empuje a los compradores a volver a participar después de abandonar su sitio web o aplicación después de agregar productos al carro de compras. |
 | Carro abandonado: reserva | Empuje a los invitados a volver a participar después de que abandonen su sitio web o aplicación después de agregar una nueva reserva al carro de compras. |
 | Recordatorio de llegada con la descarga de la aplicación para CTA | Recuerde a los huéspedes que deben registrarse y animarlos a descargar la aplicación para acceder a la información fácilmente. |
@@ -54,9 +54,9 @@ Lea esta página para obtener una descripción general de todos los libros de re
 | Enviar un mensaje de cumpleaños a los compradores | Reciba a los compradores en su cumpleaños con una oferta exclusiva. |
 | Envío de correos electrónicos a los nuevos seguidores | Dé la bienvenida a sus fans recién registrados por correo electrónico. |
 | Enviar correos electrónicos a los nuevos invitados | Dé la bienvenida a sus invitados recién registrados por correo electrónico. |
-| Envío de correos electrónicos a los nuevos compradores integrados | Dé la bienvenida a sus compradores recién registrados por correo electrónico. |
-| Recepción de viaje - Cierre de compra | Proporcione un recibo cuando los huéspedes se vayan. |
-| Ampliar las compras de un solo juego al comprador de minipaquetes | Empuje a los fans a convertir de compradores de entradas de juego único a compradores de paquetes de entradas de juego. |
+| Envío de correos electrónicos a los nuevos compradores integrados | Welcome your newly registered shoppers through email. |
+| Trip Receipt - Checkout | Provide a receipt when guests check out. |
+| Upsell Single Game Purchases to Mini Package Purchaser | Nudge fans to convert from single game ticket buyers to game ticket package purchasers. |
 | Bienvenido nuevo paquete de tickets | Mejore la experiencia del seguidor enviando un correo electrónico de bienvenida que fomente la descarga de la aplicación. |
 
 {style="table-layout:auto"}
@@ -83,6 +83,6 @@ Lea esta página para obtener una descripción general de todos los libros de re
 
 {style="table-layout:auto"}
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que está al tanto de los libros de reproducción disponibles, lea esta [guía](/help/use-case-playbooks/playbooks/choose.md) para entender cómo empezar a usar los libros de reproducción y elija el más adecuado para usted en la interfaz de usuario.

@@ -5,7 +5,7 @@ description: Este documento proporciona información sobre la administración de
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '258'
 ht-degree: 18%
 
 ---
@@ -22,7 +22,7 @@ Los zonas protegidas son particiones virtuales en una sola instancia de Experien
 
 ## Configuración de zonas protegidas
 
-Para ver los detalles y las funciones que tiene asignada/con una zona protegida, seleccione la pestaña **[!UICONTROL Zonas protegidas]**.
+Para ver los detalles y las funciones que tiene asignada/con una zona protegida, seleccione la pestaña **[!UICONTROL Sandboxes]**.
 
 ![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
@@ -32,10 +32,10 @@ La pestaña Detalles proporciona información general sobre la zona protegida. L
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-Seleccione la ficha **[!UICONTROL Roles]** para ver los roles a los que está asignada la zona protegida.
+Seleccione la ficha **[!UICONTROL Roles]** para ver las funciones a las que está asignada la zona protegida.
 
 ![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora ha aprendido a ver los detalles de la zona protegida y las funciones a las que está asignada actualmente. Para obtener información general de alto nivel sobre las zonas protegidas en Experience Platform, consulte la [documentación de información general sobre las zonas protegidas](../../sanboxes/../ui/overview.md).

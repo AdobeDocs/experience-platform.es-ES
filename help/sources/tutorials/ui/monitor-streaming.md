@@ -5,8 +5,8 @@ title: Monitorización de flujos de datos para fuentes de flujo en la IU
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 10%
+source-wordcount: '990'
+ht-degree: 11%
 
 ---
 
@@ -25,13 +25,13 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ## Monitorización de flujos de datos para fuentes de streaming
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catalog] muestra una variedad de orígenes con los que puede crear una cuenta.
 
-Para ver los flujos de datos existentes para las fuentes de flujo continuo, seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior.
+Para ver los flujos de datos existentes para las fuentes de flujo continuo, seleccione **[!UICONTROL Dataflows]** en el encabezado superior.
 
 ![catálogo](../../images/tutorials/monitor-streaming/catalog.png)
 
-La página [!UICONTROL Flujos de datos] contiene una lista de todos los flujos de datos existentes en su organización, incluida la información sobre sus datos de origen, el nombre de cuenta y el estado de ejecución del flujo de datos.
+La página [!UICONTROL Dataflows] contiene una lista de todos los flujos de datos existentes en su organización, incluida la información sobre sus datos de origen, el nombre de cuenta y el estado de ejecución del flujo de datos.
 
 Seleccione el nombre del flujo de datos que desea ver.
 
@@ -47,13 +47,13 @@ La siguiente tabla contiene más información sobre los estados de ejecución de
 | Error | El estado `Error` indica que el proceso de activación de un flujo de datos se ha interrumpido. |
 | Sin ejecuciones | El estado `No runs` indica que se creó el flujo de datos, pero que no se iniciaron ejecuciones de flujo de datos. |
 
-La página [!UICONTROL Actividad de flujo de datos] muestra información específica sobre el flujo de datos de streaming. El titular superior contiene el número acumulado de registros ingeridos y registros fallidos para todas las ejecuciones de flujo de datos de flujo continuo en el intervalo de fechas seleccionado.
+La página [!UICONTROL Dataflow Activity] muestra información específica sobre el flujo de datos de streaming. El titular superior contiene el número acumulado de registros ingeridos y registros fallidos para todas las ejecuciones de flujo de datos de flujo continuo en el intervalo de fechas seleccionado.
 
 ![actividad de flujo de datos](../../images/tutorials/monitor-streaming/dataflow-activity.png)
 
-De forma predeterminada, los datos mostrados contienen tasas de ingesta de los últimos siete días. Seleccione **[!UICONTROL Últimos 7 días]** para ajustar el lapso de tiempo de los registros mostrados.
+De forma predeterminada, los datos mostrados contienen tasas de ingesta de los últimos siete días. Seleccione **[!UICONTROL Last 7 days]** para ajustar el lapso de tiempo de los registros mostrados.
 
-Aparece una ventana emergente de calendario, que proporciona opciones para marcos de tiempo de ingesta alternativos. Puede configurar el lapso de tiempo de ejecución del flujo de datos para ver las ejecuciones de flujo de los siete días anteriores o de los últimos 30 días. Como alternativa, puede configurar el calendario interactivo para establecer un lapso de tiempo personalizado de su elección. Cuando termine, seleccione **[!UICONTROL Aplicar]**.
+Aparece una ventana emergente de calendario, que proporciona opciones para marcos de tiempo de ingesta alternativos. Puede configurar el lapso de tiempo de ejecución del flujo de datos para ver las ejecuciones de flujo de los siete días anteriores o de los últimos 30 días. Como alternativa, puede configurar el calendario interactivo para establecer un lapso de tiempo personalizado de su elección. Cuando termine, seleccione **[!UICONTROL Apply]**.
 
 ![calendario](../../images/tutorials/monitor-streaming/calendar.png)
 
@@ -89,24 +89,24 @@ La mitad inferior de la página muestra información sobre el número de registr
 
 Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 
-* **[!UICONTROL Inicio de ejecución del flujo de datos]**: La hora a la que comenzó la ejecución del flujo de datos.
-* **[!UICONTROL Tiempo de procesamiento]**: Cantidad de tiempo que tardó el flujo de datos en procesarse.
-* **[!UICONTROL Registros recibidos]**: El número total de registros recibidos en el flujo de datos desde un conector de origen.
-* **[!UICONTROL Registros ingeridos]**: El recuento total de registros ingeridos en [!DNL Data Lake].
-* **[!UICONTROL Registros con advertencias]**: El recuento total de registros con advertencias que se ingirieron. Todos los errores de transformación del asignador se registran como advertencias y las filas que se ingieren parcialmente se etiquetan como `success` con una advertencia. **Nota**: La compatibilidad con la ingesta de registros con advertencias solo está disponible para las fuentes de flujo continuo.
-* **[!UICONTROL Registros con errores]**: El número de registros que no se ingerieron en [!DNL Data Lake] debido a errores en los datos.
-* **[!UICONTROL Tasa de ingesta]**: La tasa de éxito de los registros ingeridos en [!DNL Data Lake]. Esta métrica es aplicable cuando [!UICONTROL Ingesta parcial] está habilitada.
-* **[!UICONTROL Estado]**: Representa el estado en el que se encuentra el flujo de datos: [!UICONTROL Completado] o [!UICONTROL Procesando]. [!UICONTROL Completado] significa que todos los registros de la ejecución del flujo de datos correspondiente se procesaron dentro del período de una hora. [!UICONTROL Procesando] significa que la ejecución del flujo de datos aún no ha finalizado.
+* **[!UICONTROL Dataflow run start]**: la hora a la que se inició la ejecución del flujo de datos.
+* **[!UICONTROL Processing time]**: cantidad de tiempo que tardó el flujo de datos en procesarse.
+* **[!UICONTROL Records Received]**: el número total de registros recibidos en el flujo de datos desde un conector de origen.
+* **[!UICONTROL Records Ingested]**: el recuento total de registros ingeridos en [!DNL Data Lake].
+* **[!UICONTROL Records with Warnings]**: el recuento total de registros con advertencias que se ingirieron. Todos los errores de transformación del asignador se registran como advertencias y las filas que se ingieren parcialmente se etiquetan como `success` con una advertencia. **Nota**: La compatibilidad con la ingesta de registros con advertencias solo está disponible para las fuentes de flujo continuo.
+* **[!UICONTROL Records Failed]**: el número de registros que no se ingerieron en [!DNL Data Lake] debido a errores en los datos.
+* **[!UICONTROL Ingestion Rate]**: tasa de éxito de registros ingeridos en [!DNL Data Lake]. Esta métrica es aplicable cuando [!UICONTROL Partial Ingestion] está habilitado.
+* **[!UICONTROL Status]**: representa el estado en el que se encuentra el flujo de datos: [!UICONTROL Completed] o [!UICONTROL Processing]. [!UICONTROL Completed] significa que todos los registros de la ejecución del flujo de datos correspondiente se procesaron dentro del período de una hora. [!UICONTROL Processing] significa que la ejecución del flujo de datos aún no ha finalizado.
 
-La página [!UICONTROL Información general sobre la ejecución del flujo de datos] contiene información adicional sobre el flujo de datos, como el ID de ejecución del flujo de datos correspondiente, el conjunto de datos de destino y el ID de organización.
+La página [!UICONTROL Dataflow run overview] contiene información adicional sobre el flujo de datos, como el ID de ejecución del flujo de datos correspondiente, el conjunto de datos de destino y el ID de organización.
 
-Una ejecución de flujo con errores también contiene el panel [!UICONTROL Errores de ejecución de flujo de datos], que muestra el error concreto que provocó el error de la ejecución, así como el recuento total de registros que fallaron.
+Una ejecución de flujo con errores también contiene el panel [!UICONTROL Dataflow run errors], que muestra el error concreto que provocó el error de la ejecución, así como el recuento total de registros con errores.
 
 ![información general sobre la ejecución del flujo de datos](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
 
 ### Visualización de registros con advertencias {#warnings}
 
-[!UICONTROL Registros con advertencias] muestra una lista de las advertencias de transformación del asignador que se produjeron durante la ejecución del flujo. Las filas que se incorporan parcialmente se consideran correctas y se anexan con advertencias si se encuentran errores de transformación del asignador.
+[!UICONTROL Records with warnings] muestra una lista de las advertencias de transformación del asignador que se produjeron durante la ejecución del flujo. Las filas que se incorporan parcialmente se consideran correctas y se anexan con advertencias si se encuentran errores de transformación del asignador.
 
 De forma predeterminada, todos los errores de transformación del asignador se consideran advertencias, excepto si son alguno de los siguientes:
 
@@ -114,17 +114,17 @@ De forma predeterminada, todos los errores de transformación del asignador se c
 * Referencias a atributos que no existen
 * No coinciden los tipos de datos XDM
 
-Para ver los diagnósticos de error, seleccione **[!UICONTROL Previsualizar diagnósticos de error]**.
+Para ver los diagnósticos de error, seleccione **[!UICONTROL Preview error diagnostics]**.
 
 ![registros con advertencias](../../images/tutorials/monitor-streaming/records-with-warnings.png)
 
-La ventana de [!UICONTROL Previsualización de diagnósticos de error] le permite obtener una vista previa de hasta 100 errores o advertencias con respecto a la ejecución del flujo de datos. Desde aquí, también puede descargar el manifiesto de error de ingesta para obtener más información, mediante la API [!DNL Data Access].
+La ventana [!UICONTROL Error diagnostics preview] le permite obtener una vista previa de hasta 100 errores o advertencias con respecto a la ejecución del flujo de datos. Desde aquí, también puede descargar el manifiesto de error de ingesta para obtener más información, mediante la API [!DNL Data Access].
 
 ![diagnósticos](../../images/tutorials/monitor-streaming/diagnostics.png)
 
-## Pasos siguientes
+## Próximos pasos
 
-Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo [!UICONTROL Sources] para supervisar los flujos de datos de flujo continuo e identificar los errores que provocaban errores en los flujos de datos. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo [!UICONTROL Sources] para supervisar los flujos de datos de flujo continuo e identificar los errores que produjeron errores en los flujos de datos. Consulte los siguientes documentos para obtener más información:
 
 * [Información general de fuentes](../../home.md)
 * [Resumen de flujos de datos](../../../dataflows/home.md)

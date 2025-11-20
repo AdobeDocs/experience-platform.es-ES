@@ -5,8 +5,8 @@ description: Este documento proporciona información sobre la administración de
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 24%
+source-wordcount: '238'
+ht-degree: 26%
 
 ---
 
@@ -33,14 +33,14 @@ Las etiquetas permiten categorizar conjuntos de datos y campos según las polít
 
 >[!NOTE]
 >
->Hay una sola lista de etiquetas para toda una organización. Para crear una etiqueta personalizada, necesitará los permisos de **[!UICONTROL Administrar etiquetas de uso]** en la zona protegida de producción. En este momento no se admite la eliminación de etiquetas.
+>Hay una sola lista de etiquetas para toda una organización. Para crear una etiqueta personalizada, necesitará **[!UICONTROL Manage Usage Labels]** permisos en la zona protegida de producción. En este momento no se admite la eliminación de etiquetas.
 
-Para crear una etiqueta nueva, selecciona la pestaña **[!UICONTROL Etiquetas]** en la barra lateral y selecciona **[!UICONTROL Crear etiqueta]**.
+Para crear una etiqueta nueva, seleccione la ficha **[!UICONTROL Labels]** en la barra lateral y seleccione **[!UICONTROL Create Label]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-Aparece el cuadro de diálogo **[!UICONTROL Crear una nueva etiqueta]**, que le solicita que escriba un nombre, un nombre descriptivo opcional y una descripción opcional.
+Aparece el cuadro de diálogo **[!UICONTROL Create a new label]**, que le pide que escriba un nombre, un nombre descriptivo opcional y una descripción opcional.
 
 ![información-etiqueta-nueva](../../images/flac-ui/new-label-info.png)
 
-Cuando termine, seleccione **[!UICONTROL Confirmar]**.
+Cuando termine, seleccione **[!UICONTROL Confirm]**.

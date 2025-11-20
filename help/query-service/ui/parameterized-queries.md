@@ -4,7 +4,7 @@ description: Aprenda a utilizar consultas parametrizadas en la interfaz de usuar
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '681'
 ht-degree: 11%
 
 ---
@@ -47,7 +47,7 @@ SELECT
 
 Para crear la consulta parametrizada en la interfaz de usuario de, vaya al Editor de consultas. Consulte la sección sobre [acceso al Editor de consultas](./user-guide.md#accessing-query-editor) para obtener más instrucciones.
 
-Utilice el comienzo `'$'` para introducir un parámetro de consulta en su consulta del editor de texto. A continuación, seleccione la pestaña **[!UICONTROL Parámetros de consulta]** junto a la [!UICONTROL Consola] para agregar el valor que falta para la clave. La consulta no se puede ejecutar si no agrega un valor a ninguna de las claves requeridas. Un icono de alerta (![Un icono de alerta.](/help/images/icons/alert.png)) aparece en la sección Parámetros de consulta junto a cualquier campo de entrada [!UICONTROL Value] vacío.
+Utilice el comienzo `'$'` para introducir un parámetro de consulta en su consulta del editor de texto. A continuación, seleccione la ficha **[!UICONTROL Query parameters]** junto a [!UICONTROL Console] para agregar el valor que falta para la clave. La consulta no se puede ejecutar si no agrega un valor a ninguna de las claves requeridas. Un icono de alerta (![Un icono de alerta.](/help/images/icons/alert.png)) aparece en la sección Parámetros de consulta junto a cualquier campo de entrada vacío [!UICONTROL Value].
 
 >[!NOTE]
 >
@@ -57,11 +57,11 @@ Utilice el comienzo `'$'` para introducir un parámetro de consulta en su consul
 
 >[!TIP]
 >
->Cambie las pestañas de [!UICONTROL Parámetros de consulta] a [!UICONTROL Consola] para ver el resultado de la consola de la consulta.
+>Cambie las fichas de [!UICONTROL Query parameters] a [!UICONTROL Console] para ver el resultado de la consola de la consulta.
 
 ## Utilice los detalles de registros de consulta para comprobar los valores de parámetros {#check-parameter-values}
 
-No se pueden guardar parámetros dentro de las plantillas porque los valores utilizados no son persistentes. Sin embargo, puede comprobar la página [!UICONTROL Detalles del registro de consultas] para encontrar los valores de parámetros utilizados en una ejecución de consulta. En este caso, los registros no indican que la consulta fuera una consulta parametrizada. Consulte la [documentación de registros de consulta](./query-logs.md) para obtener instrucciones sobre cómo encontrar los valores utilizados.
+No se pueden guardar parámetros dentro de las plantillas porque los valores utilizados no son persistentes. Sin embargo, puede comprobar la página [!UICONTROL Query log details] para encontrar los valores de parámetro utilizados en una ejecución de consulta. En este caso, los registros no indican que la consulta fuera una consulta parametrizada. Consulte la [documentación de registros de consulta](./query-logs.md) para obtener instrucciones sobre cómo encontrar los valores utilizados.
 
 ![La vista de registros de consulta con el SQL de una consulta parametrizada resaltada en la sección de detalles.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 
@@ -75,7 +75,7 @@ Los valores de parámetro se guardan al programar una consulta parametrizada. Pa
 >
 >El servicio de consulta admite instrucciones preparadas mediante el uso de consultas parametrizadas. Consulte la [guía de sintaxis de instrucciones preparadas](../sql/prepared-statements.md) para obtener más información sobre la sintaxis SQL implicada.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ha aprendido a parametrizar consultas en la interfaz de usuario de Adobe Experience Platform y a utilizarlas en ejecuciones de consultas programadas. El documento también resaltaba cómo comprobar los registros para los valores de parámetro utilizados en las ejecuciones de consultas.
 

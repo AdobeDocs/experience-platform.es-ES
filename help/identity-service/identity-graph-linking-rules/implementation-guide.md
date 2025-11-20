@@ -1,10 +1,10 @@
 ---
-title: Guía De Implementación De Reglas De Vinculación De Gráfico De Identidad
+title: Guía de implementación para las reglas de vinculación de gráficos de identidad
 description: Conozca los pasos recomendados a seguir al implementar los datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1944'
 ht-degree: 6%
 
 ---
@@ -17,12 +17,12 @@ ht-degree: 6%
 
 Lea este documento para obtener una guía paso a paso que puede seguir al implementar los datos con el servicio de identidad de Adobe Experience Platform.
 
-Descripción paso a paso:
+Esquema paso a paso:
 
-1. [Completar requisitos previos para la implementación](#prerequisites-for-implementation)
-2. [Crear las áreas de nombres de identidad necesarias](#namespace)
-3. [Utilice la herramienta de simulación de gráficos para familiarizarse con el algoritmo de optimización de identidad](#graph-simulation)
-4. [Utilice la interfaz de usuario de configuración de identidad para designar las áreas de nombres únicas y configurar las clasificaciones de prioridad de las áreas de nombres](#identity-settings)
+1. [Todas las aplicaciones requisitos previos para implementación](#prerequisites-for-implementation)
+2. [Crear los espacios de nombres de identidad necesarios](#namespace)
+3. [Utilice el gráfico simulación herramienta para familiarizarse con el algoritmo de optimización de identidad](#graph-simulation)
+4. [Usar el IU de configuración de identidad para designar los espacios de nombres únicos y configurar las clasificaciones de prioridad para los espacios de nombres](#identity-settings)
 5. [Creación de un esquema de modelo de datos de experiencia (XDM)](#schema)
 6. [Crear un conjunto de datos](#dataset)
 7. [Ingesta de datos en Experience Platform](#ingest)
@@ -31,13 +31,13 @@ Descripción paso a paso:
 
 En esta sección se describen los pasos previos que debe seguir antes de implementar [!DNL Identity Graph Linking Rules] en sus datos.
 
-### Área de nombres única
+### Espacio de nombres único
 
 #### Requisito de área de nombres de persona única {#single-person-namespace-requirement}
 
 Debe asegurarse de que el área de nombres única con la prioridad más alta esté siempre presente en todos los perfiles conocidos. Al hacerlo, el servicio de identidad puede detectar el identificador de persona adecuado en un gráfico determinado.
 
-+++Seleccione esta opción para ver un ejemplo de gráfico sin un área de nombres de identificador de persona individual
++++Seleccione esta opción para ver un ejemplo de un gráfico sin un área de nombres de identificador de persona individual
 
 Sin un área de nombres única que represente los identificadores de persona, puede terminar con un gráfico que se vincule a identificadores de persona diferentes para el mismo ECID. En este ejemplo, B2BCRM y B2CRM están vinculados al mismo ECID al mismo tiempo. Este gráfico sugiere que Tom, usando su cuenta de inicio de sesión B2C, compartió un dispositivo con Summer, usando su cuenta de inicio de sesión B2B. Sin embargo, el sistema reconocerá que este es un perfil (colapso de gráfico).
 
@@ -67,8 +67,8 @@ Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/cre
 Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará a Experience Platform contengan siempre un **único** identificador de persona, como un CRMID.
 
 * (Recomendado) Eventos autenticados con un identificador de persona único.
-* (No recomendado) Eventos autenticados con dos identificadores de persona únicos. Si tiene más de un identificador de persona único, puede encontrar un colapso de gráfico no deseado.
-* (No recomendado) Eventos autenticados sin ningún identificador de persona único. Si no tiene ningún identificador de persona único, los eventos no autenticados y autenticados se almacenarán con el ECID.
+* (No recomendado) Eventos autenticados con dos identificadores de persona únicos. Si tiene más de un identificador usuario único, puede producirse un colapso del gráfico no deseado.
+* (No recomendado) Eventos autenticados sin ningún identificador usuario único. Si no tiene ningún identificador usuario único, tanto los eventos autenticados como los no autenticados se almacenarán en el ECID.
 
 >[!BEGINTABS]
 
@@ -94,7 +94,7 @@ Durante el proceso previo a la implementación, debe asegurarse de que los event
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/es/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -133,14 +133,14 @@ Si el sistema envía dos identificadores de persona, la implementación puede fa
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/es/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
 }
 ```
 
-Sin embargo, es importante tener en cuenta que, aunque puede enviar dos identificadores de persona, no hay garantía de que se evite un colapso de gráfico no deseado debido a errores de implementación o datos. Considere el siguiente escenario:
+Sin embargo, es importante tener en cuenta que, aunque puede enviar dos identificadores de persona, no hay garantía de que se evite un colapso de gráfico no deseado debido a errores de implementación o datos. Imagine la siguiente situación:
 
 * `timestamp1` = John inicia sesión -> el sistema captura `CRMID: John, ECID: 111`. Sin embargo, `customerID: John` no está presente en esta carga útil de evento.
 * `timestamp2` = Jane inicia sesión -> el sistema captura `customerID: Jane, ECID: 111`. Sin embargo, `CRMID: Jane` no está presente en esta carga útil de evento.
@@ -169,7 +169,7 @@ En este ejemplo, puede suponer que el siguiente evento se envió a Experience Pl
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/es/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -182,14 +182,14 @@ En este ejemplo, puede suponer que el siguiente evento se envió a Experience Pl
 
 El primer paso en el proceso de implementación del servicio de identidad es garantizar que la cuenta de Experience Platform se añada a una función que esté aprovisionada con los permisos necesarios. El administrador puede configurar permisos para su cuenta navegando a la interfaz de usuario de permisos en Adobe Experience Cloud. A partir de ahí, la cuenta debe agregarse a una función con los siguientes permisos:
 
-* [!UICONTROL Ver configuración de identidad]: aplique este permiso para poder ver áreas de nombres únicas y su prioridad en la página de exploración del área de nombres de identidad.
-* [!UICONTROL Editar configuración de identidad]: aplique este permiso para poder editar y guardar la configuración de identidad.
+* [!UICONTROL View Identity Settings]: aplique este permiso para poder ver áreas de nombres únicas y prioridad de áreas de nombres en la página de exploración del área de nombres de identidad.
+* [!UICONTROL Edit Identity Settings]: aplique este permiso para poder editar y guardar la configuración de identidad.
 
 Para obtener más información sobre los permisos, lea la [guía de permisos](../../access-control/abac/ui/permissions.md).
 
-## Crear sus áreas de nombres de identidad {#namespace}
+## Crear los espacios de nombres de su identidad {#namespace}
 
-Si los datos lo requieren, primero debe crear los espacios de nombres adecuados para su organización. Para obtener información sobre cómo crear un área de nombres personalizada, lea la guía sobre [creación de un área de nombres personalizada en la interfaz de usuario](../features/namespaces.md#create-custom-namespaces).
+Si los datos lo requieren, primero debe crear los espacios de nombres adecuados para su organización. Para conocer los pasos sobre cómo crear un espacio de nombres personalizado, lea la guía sobre [cómo crear un espacio de nombres personalizado en el IU](../features/namespaces.md#create-custom-namespaces).
 
 ## Uso de la herramienta de simulación de gráficos {#graph-simulation}
 
@@ -197,13 +197,13 @@ A continuación, vaya a la [herramienta de simulación de gráficos](./graph-sim
 
 Mediante la creación de diferentes configuraciones, puede utilizar la herramienta de simulación de gráficos para aprender y comprender mejor cómo el algoritmo de optimización de identidad y determinadas configuraciones pueden afectar al comportamiento del gráfico.
 
-## Configuración de la identidad {#identity-settings}
+## Configurar los ajustes de identidad {#identity-settings}
 
-Una vez que tengas una mejor idea de cómo deseas que se comporte tu gráfico, ve a la [interfaz de usuario de configuración de identidad](./identity-settings-ui.md) en el área de trabajo de la interfaz de usuario del servicio de identidad. Para acceder a la interfaz de usuario de configuración de identidad, selecciona **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, selecciona **[!UICONTROL Configuración]**.
+Una vez que tenga una mejor idea de cómo desea que se comporte su gráfico, navegue hasta el [IU](./identity-settings-ui.md) de configuración de identidad en el IU de servicio de identidad espacio de trabajo. Para acceder al IU de configuración de identidad, seleccione **[!UICONTROL Identities]** entre el navegación izquierdo y, a continuación, seleccione **[!UICONTROL Settings]**.
 
-![La página de exploración de identidades con el botón de configuración resaltado.](../images/implementation/settings.png "La página de exploración de identidades con el botón de configuración resaltado."){zoomable="yes"}
+![Las identidades Página exploran con la configuración botón resaltada.](../images/implementation/settings.png "Las identidades Página exploran con la configuración botón resaltada."){zoomable="yes"}
 
-Utilice la interfaz de usuario de configuración de identidad para designar las áreas de nombres únicas y configurar las áreas de nombres por orden de prioridad.
+Utilice el IU de configuración de identidad para designar los espacios de nombres únicos y configurar los espacios de nombres por orden de prioridad.
 
 >[!IMPORTANT]
 >
@@ -243,15 +243,15 @@ Una vez que tenga todos los elementos enumerados arriba, puede empezar a ingerir
 
 >[!TIP]
 >
->Una vez introducidos los datos, la carga de datos sin procesar del XDM no cambia. Es posible que siga viendo las configuraciones de identidad principales en la interfaz de usuario. Sin embargo, estas configuraciones se sobrescribirán con la configuración de identidad.
+>Una vez introducidos los datos, la carga de datos sin procesar del XDM no cambia. Es posible que siga viendo las configuraciones de identidad principales en la interfaz de usuario. Sin embargo, la configuración de identidad anulará estas configuraciones.
 
-Para obtener cualquier comentario, use la opción **[!UICONTROL comentarios de Beta]** en el área de trabajo de la interfaz de usuario del servicio de identidad.
+Para cualquier comentario, utilice la **[!UICONTROL Beta feedback]** opción del IU de servicio de identidad espacio de trabajo.
 
 ## Validación de los gráficos {#validate}
 
 Utilice el panel de identidad para obtener información sobre el estado de los gráficos de identidad, como el recuento general de identidades y las tendencias del recuento de gráficos, el recuento de identidades por área de nombres y el recuento de gráficos por tamaño de gráfico. También puede utilizar el panel de identidad para ver las tendencias en gráficos con dos o más identidades, organizadas por área de nombres.
 
-Seleccione los puntos suspensivos (`...`) y, a continuación, seleccione **[!UICONTROL Ver más]** para obtener más información y para comprobar que no hay gráficos contraídos.
+Seleccione los puntos suspensivos (`...`) y, a continuación, seleccione **[!UICONTROL View more]** para obtener más información y para comprobar que no hay gráficos contraídos.
 
 ![Panel de identidad en el área de trabajo de IU del servicio de identidad.](../images/implementation/identity_dashboard.png "Panel de identidad en el área de trabajo de la interfaz de usuario del servicio de identidad."){zoomable="yes"}
 
@@ -273,7 +273,7 @@ El siguiente gráfico simula un escenario de ID de inicio de sesión &quot;colga
 
 En este ejemplo, `{loginID: ID_C}` se deja colgado y desenlazado a un CRMID. Por lo tanto, la entidad de la persona a la que se debe asociar este ID de inicio de sesión queda ambigua.
 
-![Ejemplo de gráfico con un escenario &quot;colgado&quot; de loginID.](../images/graph-examples/dangling_example.png "Ejemplo de gráfico con un escenario de loginID colgado."){zoomable="yes"}
+![Ejemplo de un gráfico con un escenario de ID de inicio de sesión &quot;colgante&quot;.](../images/graph-examples/dangling_example.png "Ejemplo de gráfico con un escenario de loginID colgado."){zoomable="yes"}
 
 >[!TAB loginID está vinculado a un CRMID]
 
@@ -293,12 +293,12 @@ Este ejemplo también muestra que Tom y Summer son dos entidades de persona dist
 
 ## Próximos pasos
 
-Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la siguiente documentación:
+Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la documentación siguiente:
 
 * [Información general de [!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Ejemplos de configuraciones de gráficos](./example-configurations.md)
-* [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad del área de nombres](./namespace-priority.md)
+* [Solución de problemas y preguntas más frecuentes](./troubleshooting.md)
+* [Prioridad del espacio de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)

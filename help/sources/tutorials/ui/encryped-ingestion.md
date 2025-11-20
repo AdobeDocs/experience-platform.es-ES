@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# Ingesta de datos cifrados en la interfaz de usuario de orígenes
+# Ingerir datos cifrados en las fuentes IU
 
-Puede introducir archivos y carpetas de datos cifrados en Adobe Experience Platform mediante fuentes por lotes de almacenamiento en la nube. Con la ingesta de datos cifrados, puede aprovechar los mecanismos de cifrado asimétricos para transferir datos por lotes de forma segura a Experience Platform. Los mecanismos de cifrado asimétrico admitidos son PGP y GPG.
+Puede ingerir archivos y carpetas de datos cifrados para Adobe Experience Platform utilizando nube orígenes almacenamiento por lotes. Con la ingesta de datos cifrados, puede impulsar mecanismos de cifrado asimétricos para transferir de forma segura los datos por lotes a Experience Platform. Los mecanismos de cifrado asimétrico admitidos son PGP y GPG.
 
 Lea esta guía para obtener información sobre cómo ingerir datos cifrados con fuentes por lotes de almacenamiento en la nube mediante la interfaz de usuario.
 
@@ -28,8 +28,8 @@ Antes de continuar con este tutorial, lea los siguientes documentos para compren
 * Cree un par de claves de cifrado con el espacio de trabajo de fuentes en la interfaz de usuario de Experience Platform.
    * Opcionalmente, también puede crear su propio par de claves de verificación de firma para proporcionar una capa adicional de seguridad a los datos cifrados.
 * Utilice la clave pública del par de claves de cifrado para cifrar los datos.
-* Coloque los datos cifrados en su almacenamiento en la nube. Durante este paso, también debe asegurarse de que tiene un archivo de muestra de los datos en el almacenamiento en la nube que se puede utilizar como referencia para asignar los datos de origen a un esquema Experience Data Model (XDM).
-* Utilice su origen de lote de almacenamiento en la nube e inicie el proceso de ingesta de datos en el espacio de trabajo de fuentes en la interfaz de usuario de Experience Platform.
+* Coloque sus datos cifrados en su almacenamiento nube. Durante este paso, también debe asegurarse de tener un archivo de muestra de sus datos en su almacenamiento de nube que pueda usarse como referencia para asignar sus datos de origen a un esquema de Modelo de datos de experiencia (XDM).
+* Utilice su nube almacenamiento origen por lotes y comience el proceso de ingesta de datos en los orígenes espacio de trabajo en el IU de Experience Platform.
 * Durante el proceso de creación de la conexión de origen, proporcione el ID de clave que corresponda a la clave pública que utilizó para cifrar los datos.
    * Si también ha utilizado el mecanismo de par de claves de verificación de firma, también debe proporcionar el ID de clave de verificación de firma que corresponda a los datos cifrados.
 * Continúe con los pasos de creación del flujo de datos.
@@ -45,7 +45,7 @@ Antes de continuar con este tutorial, lea los siguientes documentos para compren
 
 **¿Qué es un par de claves de cifrado?**
 
-Un par de claves de cifrado es un mecanismo de criptografía asimétrico que consta de una clave pública y una clave privada. La clave pública se utiliza para cifrar datos y la clave privada se utiliza para descifrar dichos datos.
+Un par de claves de cifrado es un mecanismo de criptografía asimétrica que consta de una clave pública y una clave privada. La clave pública se utiliza para cifrar datos y la clave privada se utiliza para descifrar dichos datos.
 
 Puede crear el par de claves de cifrado a través de la interfaz de usuario de Experience Platform. Cuando se genere, recibirá una clave pública y un ID de clave correspondiente. Utilice la clave pública para cifrar los datos y, a continuación, utilice el ID de clave para confirmar la identidad cuando esté ingiriendo los datos cifrados. La clave privada se envía automáticamente a Experience Platform, donde se almacena en un almacén seguro, y solo se utilizará una vez que los datos estén listos para descifrarse.
 
@@ -63,7 +63,7 @@ A continuación, elija el tipo de clave que desea crear. Para crear una clave de
 
 ![Ventana de creación de claves, con la clave de cifrado seleccionada.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-Proporcione un título y una frase de contraseña para la clave de cifrado. La frase de contraseña es una capa adicional de protección para las claves de cifrado. Una vez creada, Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. Cuando termine, seleccione **[!UICONTROL Create]**.
+Proporcione un título y una frase de contraseña para la clave de cifrado. La frase de contraseña es una capa adicional de protección para las claves de cifrado. Una vez creada, Experience Platform almacena la frase de contraseña en una bóveda segura diferente de la clave pública. Debe proporcionar una cadena no vacía como frase de contraseña. Cuando termine, seleccione **[!UICONTROL Create]**.
 
 ![Ventana de creación de clave de cifrado, donde se proporciona un título y una frase de contraseña.](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -71,9 +71,9 @@ Si se ejecuta correctamente, aparecerá una nueva ventana que muestra la nueva c
 
 ![Ventana que muestra información sobre el par de claves de cifrado recién creado.](../../images/tutorials/edi/encryption_key_details.png)
 
-Para ver información sobre una clave de cifrado existente, seleccione los puntos suspensivos (`...`) junto al título de la clave. Seleccione **[!UICONTROL Key details]** para ver la clave pública y el identificador de clave. Como alternativa, si desea eliminar la clave de cifrado, seleccione **[!UICONTROL Delete]**.
+Para ver información sobre una clave de cifrado existente, seleccione los puntos suspensivos (`...`) junto al título de la clave. Seleccione **[!UICONTROL Key details]** esta opción para vista la clave pública y el ID de clave. Como alternativa, si desea eliminar la clave de cifrado, seleccione **[!UICONTROL Delete]**.
 
-![Página de pares de claves, donde se muestra una lista de claves de cifrado. Se seleccionaron los puntos suspensivos junto a &quot;acme-encryption-key&quot; y la lista desplegable muestra opciones para ver los detalles de la clave o eliminar las claves.](../../images/tutorials/edi/configuration_options.png)
+![Los pares de claves Página, donde se muestra un lista de claves de cifrado. Se seleccionan los puntos suspensivos junto a &quot;acme-encryption-key&quot; y en el menú desplegable se muestran opciones para vista detalles clave o eliminar las claves.](../../images/tutorials/edi/configuration_options.png)
 
 ### Crear una clave de verificación de firma {#create-a-sign-verification-key}
 
@@ -92,9 +92,9 @@ Una clave de verificación de firma es otro mecanismo de cifrado que implica una
 
 Para crear una clave de verificación de firma, seleccione **[!UICONTROL Sign Verification Key]** en la ventana de selección de tipo de clave y luego seleccione **[!UICONTROL Continue]**.
 
-![Ventana de selección de tipo de clave donde se selecciona la clave de verificación de firma.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
+![Ventana de selección de tipo de clave en la que está seleccionada la clave de verificación de firmas.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
-A continuación, proporcione un título y una clave PGP codificada en [!DNL Base64] como clave pública y seleccione **[!UICONTROL Create]**.
+Siguiente, proporcione un título y una [!DNL Base64]clave PGP codificada como clave pública y, a continuación, seleccione .**[!UICONTROL Create]**
 
 ![La ventana Crear clave de verificación de firma.](../../images/tutorials/edi/create_sign_verification_key.png)
 
@@ -114,7 +114,7 @@ Si se ejecuta correctamente, aparecerá una nueva ventana en la que se mostrará
 >title="Seleccionar archivo de muestra"
 >abstract="Debe introducir un archivo de muestra al ingerir datos cifrados para crear una asignación."
 
-Puede introducir datos cifrados mediante los siguientes orígenes por lotes de almacenamiento en la nube:
+Puede ingerir datos cifrados mediante las siguientes nube almacenamiento orígenes de lotes:
 
 * [[!DNL Amazon S3]](../ui/create/cloud-storage/s3.md)
 * [[!DNL Azure Blob]](../ui/create/cloud-storage/blob.md)
@@ -145,9 +145,9 @@ Desde aquí, utilice el menú desplegable para seleccionar el título de clave p
 
 Si también utilizó el par de claves de verificación de firma para proporcionar una capa de cifrado adicional, habilite la opción de clave de verificación de firma y, a continuación, utilice la lista desplegable para seleccionar el ID de clave de verificación de firma que corresponda a la clave que utilizó para cifrar los datos.
 
-![El título de la clave de verificación de firma del identificador de clave que corresponde con el cifrado de verificación de firma.](../../images/tutorials/edi/custom_key_id.png)
+![El título de la clave de verificación de firma del ID de clave que corresponde con el cifrado de verificación de firma.](../../images/tutorials/edi/custom_key_id.png)
 
-Cuando termine, seleccione **[!UICONTROL Next]**.
+Cuando haya terminado, seleccione **[!UICONTROL Next]**.
 
 Complete los pasos restantes del flujo de trabajo de orígenes para terminar de crear el flujo de datos.
 
@@ -156,8 +156,8 @@ Complete los pasos restantes del flujo de trabajo de orígenes para terminar de 
 * [Configurar una programación de ingesta para el flujo de datos](../ui/dataflow/batch/cloud-storage.md#schedule-ingestion-runs)
 * [Revisión del flujo de datos](../ui/dataflow/batch/cloud-storage.md#review-your-dataflow)
 
-Puede seguir [haciendo actualizaciones en su flujo de datos](../ui/update-dataflows.md) una vez que se haya creado correctamente.
+Puede seguir realizando actualizaciones en el flujo[ de ](../ui/update-dataflows.md)datos una vez que se haya creado correctamente.
 
 ## Próximos pasos
 
-Al leer este documento, ahora puede ingerir datos cifrados de su fuente por lotes de almacenamiento en la nube en Experience Platform. Para obtener información sobre cómo ingerir datos cifrados mediante las API, lea la guía sobre [ingesta de datos cifrados mediante la [!DNL Flow Service] API](../api/encrypt-data.md). Para obtener información general acerca de las fuentes en Experience Platform, lea [descripción general de las fuentes](../../home.md).
+Al leer este documento, ahora puede ingerir datos cifrados de su origen de lotes de nube almacenamiento a Experience Platform. Para obtener información sobre cómo ingerir datos cifrados mediante las API, lea la guía sobre [la ingesta de datos cifrados mediante la [!DNL Flow Service] API](../api/encrypt-data.md). Para obtener información general sobre las fuentes de Experience Platform, lea la descripción general[ de las ](../../home.md)fuentes.

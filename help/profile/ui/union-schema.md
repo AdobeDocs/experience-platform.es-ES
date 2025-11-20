@@ -6,12 +6,12 @@ description: En la interfaz de usuario (IU) de Adobe Experience Platform puede v
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
 
-# Guía de IU de [!UICONTROL Union schema]
+# Guía de la interfaz de usuario de [!UICONTROL Union schema]
 
 En la interfaz de usuario (IU) de Adobe Experience Platform puede ver fácilmente cualquier esquema de unión dentro de su organización y previsualizar los campos, identidades, relaciones y esquemas de contribución para una clase específica. Esta guía proporciona información detallada sobre cómo ver y explorar esquemas de unión mediante la interfaz de usuario de Experience Platform.
 
@@ -40,15 +40,15 @@ El trabajo con esquemas de unión requiere una comprensión profunda de los esqu
 
 ## Ver esquemas de unión {#view-union-schemas}
 
-Para navegar a esquemas de unión en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Esquema de unión]**. Se abre la pestaña [!UICONTROL Esquema de unión] para mostrar el esquema de unión de la clase seleccionada actualmente.
+Para desplazarse a los esquemas de unión en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Profiles]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Union Schema]**. Se abre la pestaña [!UICONTROL Union Schema] para mostrar el esquema de unión de la clase seleccionada actualmente.
 
 ![Se muestra la página Esquema de unión, con la ficha Perfil y Esquema de unión resaltadas.](../images/union-schema/landing.png)
 
 ## Seleccionar una clase {#select-a-class}
 
-Para mostrar el esquema de unión de una clase XDM específica, seleccione la clase en la lista desplegable **[!UICONTROL Clase]**. Debido a que no todas las clases tienen esquemas de unión, solo las clases con esquemas de unión (es decir, las clases con esquemas que se han habilitado para el perfil) están disponibles en el desplegable.
+Para mostrar el esquema de unión de una clase XDM específica, seleccione la clase en la lista desplegable **[!UICONTROL Class]**. Debido a que no todas las clases tienen esquemas de unión, solo las clases con esquemas de unión (es decir, las clases con esquemas que se han habilitado para el perfil) están disponibles en el desplegable.
 
-Una vez seleccionada una clase, el esquema que se muestra se actualiza para reflejar el esquema de unión de la clase seleccionada. Por ejemplo, puede seleccionar **[!UICONTROL Perfil individual de XDM]** para ver el esquema de unión de esa clase.
+Una vez seleccionada una clase, el esquema que se muestra se actualiza para reflejar el esquema de unión de la clase seleccionada. Por ejemplo, puede seleccionar **[!UICONTROL XDM Individual Profile]** para ver el esquema de unión de esa clase.
 
 ![Se resalta un menú desplegable que contiene las clases del esquema de unión.](../images/union-schema/class.png)
 
@@ -70,7 +70,7 @@ Para obtener más información sobre los conjuntos de datos, incluida la visuali
 
 ## Ver esquemas colaboradores {#view-contributing-schemas}
 
-También puede ver qué esquemas específicos están contribuyendo al esquema de unión seleccionando **[!UICONTROL Todos los esquemas que contribuyen]** para expandir la lista de esquemas. Según la clase que haya seleccionado y el número de esquemas que su organización haya creado en Experience Platform, puede ser una lista corta que contenga un solo esquema o una lista larga que contenga muchos esquemas.
+También puede ver qué esquemas específicos están contribuyendo al esquema de unión seleccionando **[!UICONTROL All contributing schemas]** para expandir la lista de esquemas. Según la clase que haya seleccionado y el número de esquemas que su organización haya creado en Experience Platform, puede ser una lista corta que contenga un solo esquema o una lista larga que contenga muchos esquemas.
 
 ![Se resalta la lista de esquemas que contribuyen al esquema de unión.](../images/union-schema/contributing-schemas.png)
 
@@ -80,7 +80,7 @@ Al seleccionar el nombre de un esquema específico, se resaltan los campos del e
 
 ## Ver identidades {#view-identities}
 
-A través de la interfaz de usuario puede ver una lista de identidades incluidas en el esquema de unión seleccionando **[!UICONTROL Identidades]** para expandir la lista.
+A través de la interfaz de usuario puede ver una lista de identidades que se incluyen en el esquema de unión seleccionando **[!UICONTROL Identities]** para expandir la lista.
 
 ![Se resaltan las identidades que pertenecen al esquema de unión.](../images/union-schema/identities.png)
 
@@ -94,7 +94,7 @@ El campo de identidad se resalta dentro del esquema de unión y los detalles de 
 
 La interfaz de usuario del esquema de unión también permite ver las relaciones que se han definido para los esquemas en función de la clase de esquema seleccionada. La definición de una relación es una forma de conectar dos esquemas que pertenecen a clases diferentes para obtener perspectivas más complejas en los datos del cliente.
 
-Si se han establecido relaciones para la clase seleccionada, al seleccionar **[!UICONTROL Relaciones]** se muestra una lista de campos utilizados para crear relaciones. No todos los esquemas utilizan o necesitan relaciones definidas, por lo que es común que la sección de relaciones no contenga campos.
+Si se han establecido relaciones para la clase seleccionada, al seleccionar **[!UICONTROL Relationships]** se muestra una lista de campos utilizados para crear relaciones. No todos los esquemas utilizan o necesitan relaciones definidas, por lo que es común que la sección de relaciones no contenga campos.
 
 Para obtener más información acerca de las relaciones de esquema, incluido cómo definirlas mediante la interfaz de usuario, visite [este documento sobre las relaciones de esquema](../../xdm/tutorials/relationship-ui.md).
 

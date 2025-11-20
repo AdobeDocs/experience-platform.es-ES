@@ -4,8 +4,8 @@ description: Obtenga información sobre cómo crear y administrar paneles person
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 3%
+source-wordcount: '1553'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Crear un tablero personalizado
 
-Para crear un tablero personalizado, primero, navegue hasta el inventario del tablero. Seleccione **[!UICONTROL Paneles]** de la navegación izquierda de la interfaz de usuario de Experience Platform seguida de **[!UICONTROL Crear panel]**.
+Para crear un tablero personalizado, primero, navegue hasta el inventario del tablero. Seleccione **[!UICONTROL Dashboards]** de la navegación izquierda de la interfaz de usuario de Experience Platform seguido de **[!UICONTROL Create dashboard]**.
 
 ![Se resaltó el inventario de paneles con paneles en la navegación izquierda y &quot;Crear panel&quot;.](./images/standard-dashboards/create-dashboard.png)
 
@@ -33,7 +33,7 @@ Antes de agregar un tablero personalizado, el inventario de los tableros está v
 >To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
-Aparecerá el cuadro de diálogo [!UICONTROL Crear tablero]. Escriba un nombre descriptivo y descriptivo para la colección de widgets que desea crear y seleccione **[!UICONTROL Guardar]**.
+Aparecerá el cuadro de diálogo [!UICONTROL Create dashboard]. Escriba un nombre descriptivo y descriptivo para la colección de widgets que desea crear y seleccione **[!UICONTROL Save]**.
 
 ![Cuadro de diálogo Crear tablero.](./images/standard-dashboards/create-dashboard-dialog.png)
 
@@ -46,25 +46,25 @@ El tablero en blanco recién creado aparecerá con el nombre elegido en la esqui
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Número máximo de widgets"
->abstract="Los tableros de servicio admiten hasta diez widgets. Después de añadir diez widgets al panel de control de control, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris."
+>abstract="Los tableros de servicio admiten hasta diez widgets. Después de agregar diez widgets al panel, la opción [!UICONTROL Add new widget] se deshabilita y aparece en gris."
 
-En la nueva vista del panel, seleccione **[!UICONTROL Agregar nuevo widget]** para comenzar el proceso de creación del widget.
+En la nueva vista del panel, seleccione **[!UICONTROL Add new widget]** para comenzar el proceso de creación del widget.
 
 >[!IMPORTANT]
 >
->Cada tablero admite hasta diez widgets. Después de añadir diez widgets al panel de control de control, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris.
+>Cada tablero admite hasta diez widgets. Después de agregar diez widgets al panel, la opción [!UICONTROL Add new widget] se deshabilita y aparece en gris.
 
 ![Se ha resaltado el nuevo tablero vacío con la opción Agregar nuevo widget.](./images/standard-dashboards/add-new-widget.png)
 
 ### Compositor de widgets
 
-Aparecerá el espacio de trabajo del compositor de widgets. A continuación, seleccione **[!UICONTROL Seleccionar datos]** para elegir el modelo de datos desde el que desea agregar atributos a los widgets.
+Aparecerá el espacio de trabajo del compositor de widgets. A continuación, seleccione **[!UICONTROL Select data]** para elegir el modelo de datos desde el que desea agregar atributos a los widgets.
 
 ![Espacio de trabajo del compositor de widgets.](./images/standard-dashboards/widget-composer.png)
 
 #### Seleccionar modelo de datos {#select-data-model}
 
-Aparecerá el cuadro de diálogo [!UICONTROL Seleccionar modelo de datos]. Seleccione un modelo de datos de la columna izquierda para mostrar una lista de vista previa de todas las tablas disponibles. El modelo de datos preconfigurado para Real-Time Customer Data Platform se llama [!UICONTROL CDPInsights].
+Aparecerá el cuadro de diálogo [!UICONTROL Select data model]. Seleccione un modelo de datos de la columna izquierda para mostrar una lista de vista previa de todas las tablas disponibles. El modelo de datos preconfigurado para Real-Time Customer Data Platform se llama [!UICONTROL CDPInsights].
 
 >[!TIP]
 >
@@ -76,25 +76,25 @@ La lista de vista previa proporciona detalles sobre las tablas contenidas en el 
 
 | Campo de columna | Descripción |
 |---|---|
-| [!UICONTROL Título] | Nombre de la tabla. |
-| [!UICONTROL Tipo de tabla] | El tipo de tabla. Los tipos potenciales incluyen: `fact`, `dimension` y `none`. |
-| [!UICONTROL Registros] | El número de registros asociados con la tabla seleccionada. |
-| [!UICONTROL Búsquedas] | Número de tablas unidas a la tabla elegida. |
-| [!UICONTROL Atributos] | Número de atributos de la tabla seleccionada. |
+| [!UICONTROL Title] | Nombre de la tabla. |
+| [!UICONTROL Table type] | El tipo de tabla. Los tipos potenciales incluyen: `fact`, `dimension` y `none`. |
+| [!UICONTROL Records] | El número de registros asociados con la tabla seleccionada. |
+| [!UICONTROL Lookups] | Número de tablas unidas a la tabla elegida. |
+| [!UICONTROL Attributes] | Número de atributos de la tabla seleccionada. |
 
-Seleccione **[!UICONTROL Siguiente]** para confirmar la elección del modelo de datos. La vista siguiente muestra una lista de las tablas disponibles en el carril izquierdo. Seleccione una tabla para ver un desglose completo de los datos contenidos en la tabla seleccionada.
+Seleccione **[!UICONTROL Next]** para confirmar la elección del modelo de datos. La vista siguiente muestra una lista de las tablas disponibles en el carril izquierdo. Seleccione una tabla para ver un desglose completo de los datos contenidos en la tabla seleccionada.
 
 ### Rellenar widget {#populate-widget}
 
-El panel [!UICONTROL Vista previa] contiene fichas para [!UICONTROL Registros de muestra] y [!UICONTROL Atributos]. La ficha [!UICONTROL Registros de muestra] proporciona un subconjunto de los registros de la tabla seleccionada en una vista tabulada. La ficha [!UICONTROL Atributos] proporciona el nombre de atributo, el tipo de datos y la tabla de origen de todos los atributos asociados con la tabla seleccionada.
+El panel [!UICONTROL Preview] contiene fichas para [!UICONTROL Sample records] y [!UICONTROL Attributes]. La ficha [!UICONTROL Sample records] proporciona un subconjunto de los registros de la tabla seleccionada en una vista tabulada. La ficha [!UICONTROL Attributes] proporciona el nombre de atributo, el tipo de datos y la tabla de origen de todos los atributos asociados con la tabla seleccionada.
 
-Seleccione una tabla de la lista disponible en el carril izquierdo para proporcionar datos para el widget y seleccione **[!UICONTROL Seleccionar]** para volver al compositor de widgets.
+Seleccione una tabla de la lista disponible en el carril izquierdo para proporcionar datos para el widget y seleccione **[!UICONTROL Select]** para volver al compositor de widgets.
 
 ![Cuadro de diálogo Seleccionar datos con la selección resaltada.](./images/standard-dashboards/select-a-table.png)
 
 El compositor de widgets ahora se rellena con datos de la tabla elegida.
 
-El modelo de datos y la tabla seleccionada actualmente se muestran en la parte superior del carril izquierdo, y los atributos disponibles para crear el widget se enumeran en la columna [!UICONTROL Atributos]. Puede usar la barra de búsqueda para buscar atributos en lugar de desplazarse por la lista, o bien cambiar el modelo de datos seleccionado seleccionando el icono de lápiz (![Icono de lápiz.](/help/images/icons/edit.png)) en el carril izquierdo.
+El modelo de datos y la tabla seleccionada actualmente se muestran en la parte superior del carril izquierdo, y los atributos disponibles para crear el widget se enumeran en la columna [!UICONTROL Attributes]. Puede usar la barra de búsqueda para buscar atributos en lugar de desplazarse por la lista, o bien cambiar el modelo de datos seleccionado seleccionando el icono de lápiz (![Icono de lápiz.](/help/images/icons/edit.png)) en el carril izquierdo.
 
 ![Widget rellenado con datos dentro del Compositor de widgets.](./images/standard-dashboards/populated-widget-composer.png)
 
@@ -108,39 +108,39 @@ Seleccione el icono de agregar (![Un icono de agregar.](/help/images/icons/add-c
 
 ![El compositor de widgets con la lista desplegable de add-icon resaltada.](./images/standard-dashboards/attributes-dropdown.png)
 
-Para cambiar el tipo de gráfico del widget, selecciona la lista desplegable [!UICONTROL Marcas] y elige entre las opciones disponibles. Las opciones incluyen barras, puntos, marcas, líneas o áreas. Una vez seleccionada, se genera una visualización previa de la configuración actual del widget.
+Para cambiar el tipo de gráfico del widget, seleccione la lista desplegable [!UICONTROL Marks] y elija entre las opciones disponibles. Las opciones incluyen barras, puntos, marcas, líneas o áreas. Una vez seleccionada, se genera una visualización previa de la configuración actual del widget.
 
 ![Compositor de widgets con el menú desplegable Marcas resaltado.](./images/standard-dashboards/marks-dropdown.png)
 
-Al agregar un atributo como filtro, puede seleccionar qué valores desea incluir o excluir del widget. Después de agregar un filtro de la lista de atributos, aparece el cuadro de diálogo [!UICONTROL Filtro] en el que puede seleccionar o anular la selección de valores mediante su casilla de verificación.
+Al agregar un atributo como filtro, puede seleccionar qué valores desea incluir o excluir del widget. Después de agregar un filtro de la lista de atributos, aparece el cuadro de diálogo [!UICONTROL Filter], en el que puede seleccionar o anular la selección de valores mediante su casilla de verificación.
 
 ![Cuadro de diálogo de filtro para filtrar los valores de su widget.](./images/standard-dashboards/filter-dialog.png)
 
 #### Filtrado de datos históricos {#filter-historical-data}
 
-Para filtrar los datos históricos a partir de las perspectivas generadas por el widget, agregue el atributo `date_key` como filtro y seleccione **[!UICONTROL Fecha reciente]** seguida de **[!UICONTROL Aplicar]**. Este filtro garantiza que los datos utilizados para obtener perspectivas se tomen de la instantánea del sistema más reciente.
+Para filtrar los datos históricos a partir de las perspectivas generadas por el widget, agregue el atributo `date_key` como filtro y seleccione **[!UICONTROL Recent date]** seguido de **[!UICONTROL Apply]**. Este filtro garantiza que los datos utilizados para obtener perspectivas se tomen de la instantánea del sistema más reciente.
 
-![Se ha resaltado el cuadro de diálogo [!UICONTROL Filtro: date_key] con [!UICONTROL fecha reciente] y [!UICONTROL Aplicar].](./images/standard-dashboards/recent-date.png)
+![Se resaltó el cuadro de diálogo [!UICONTROL Filter: date_key] con [!UICONTROL Recent date] y [!UICONTROL Apply].](./images/standard-dashboards/recent-date.png)
 
-También puede crear un punto personalizado para filtrar los datos. Seleccione **[!UICONTROL Seleccionar fechas]** para ampliar el cuadro de diálogo con una lista de fechas disponibles. Use la casilla de verificación **[!UICONTROL Seleccionar todo]** para habilitar o deshabilitar todas las opciones disponibles, o bien active la casilla de verificación de cada día de forma individual. Finalmente, selecciona **[!UICONTROL Aplicar]** para confirmar tus opciones.
+También puede crear un punto personalizado para filtrar los datos. Seleccione **[!UICONTROL Select dates]** para ampliar el cuadro de diálogo con una lista de fechas disponibles. Utilice la casilla de verificación **[!UICONTROL Select all]** para habilitar o deshabilitar todas las opciones disponibles, o bien active la casilla de verificación de cada día de forma individual. Finalmente, seleccione **[!UICONTROL Apply]** para confirmar sus opciones.
 
 >[!NOTE]
 >
->Si el atributo `date_key` ya se agregó como filtro, seleccione los puntos suspensivos seguidos de **[!UICONTROL Editar]** en las opciones desplegables para cambiar el período de filtro.
+>Si el atributo `date_key` ya se agregó como filtro, seleccione los puntos suspensivos seguidos de **[!UICONTROL Edit]** en las opciones desplegables para cambiar el período de filtro.
 
-![El cuadro de diálogo [!UICONTROL Filtro: date_key] con casillas de verificación de día individuales marcadas y desmarcadas.](./images/standard-dashboards/select-dates.png)
+![El cuadro de diálogo [!UICONTROL Filter: date_key] con casillas de verificación de día individuales marcadas y desmarcadas.](./images/standard-dashboards/select-dates.png)
 
 ### Propiedades del widget
 
-Seleccione el icono de propiedades (![El icono de propiedades.](/help/images/icons/properties.png)) en el carril derecho para abrir el panel de propiedades. En el panel [!UICONTROL Propiedades], escriba un nombre para el widget en el campo de texto [!UICONTROL Título del widget].
+Seleccione el icono de propiedades (![El icono de propiedades.](/help/images/icons/properties.png)) en el carril derecho para abrir el panel de propiedades. En el panel [!UICONTROL Properties], escriba un nombre para el widget en el campo de texto [!UICONTROL Widget title].
 
 ![Panel de propiedades con el icono de propiedades y el campo de título del widget resaltado.](./images/standard-dashboards/properties-panel.png)
 
-Desde el panel de propiedades del widget, puede editar varios aspectos del widget. Dispone del control completo para editar la ubicación de la leyenda del widget. Para mover la leyenda, seleccione la lista desplegable [!UICONTROL Ubicación de la leyenda] y elija la ubicación que desee en la lista de opciones disponibles. También puede cambiar el nombre de la etiqueta asociada con la leyenda y el eje X o Y al escribir un nombre nuevo en el campo de texto [!UICONTROL Título de leyenda] o en el campo de texto [!UICONTROL Etiqueta del eje] respectivamente.
+Desde el panel de propiedades del widget, puede editar varios aspectos del widget. Dispone del control completo para editar la ubicación de la leyenda del widget. Para mover la leyenda, seleccione la lista desplegable [!UICONTROL Legend placement] y elija la ubicación que desee en la lista de opciones disponibles. También puede cambiar el nombre de la etiqueta asociada con la leyenda y el eje X o Y al escribir un nuevo nombre en el campo de texto [!UICONTROL Legend title] o en el campo de texto [!UICONTROL Axis label], respectivamente.
 
 #### Guarde el widget {#save-widget}
 
-Al guardar en el compositor de widgets, se guarda el widget localmente en el tablero. Si desea guardar el trabajo y reanudarlo más adelante, seleccione **[!UICONTROL Guardar]**. Un icono de verificación debajo del nombre del widget indica que el widget se ha guardado. Alternativamente, cuando esté satisfecho con el widget, seleccione **[!UICONTROL Guardar y cerrar]** para que el widget esté disponible para todos los demás usuarios con acceso a su panel. Seleccione **[!UICONTROL Cancelar]** para abandonar su trabajo y regresar a su tablero personalizado.
+Al guardar en el compositor de widgets, se guarda el widget localmente en el tablero. Si desea guardar su trabajo y reanudarlo más adelante, seleccione **[!UICONTROL Save]**. Un icono de verificación debajo del nombre del widget indica que el widget se ha guardado. Como alternativa, cuando esté satisfecho con el widget, seleccione **[!UICONTROL Save and close]** para que el widget esté disponible para todos los demás usuarios con acceso al tablero. Seleccione **[!UICONTROL Cancel]** para abandonar su trabajo y regresar a su tablero personalizado.
 
 ![Nueva confirmación de guardado del widget.](./images/standard-dashboards/save-confirmation.png)
 
@@ -148,7 +148,7 @@ Al guardar en el compositor de widgets, se guarda el widget localmente en el tab
 >
 >Seleccione el icono de propiedades (![El icono de propiedades.](/help/images/icons/properties.png)) junto al nombre del panel para ver detalles sobre su creación. Puede cambiar el nombre del panel en el cuadro de diálogo que aparece.
 
-Los widgets se pueden reorganizar y cambiar de tamaño en este espacio de trabajo. Seleccione **[!UICONTROL Guardar]** para conservar el nombre del tablero y el diseño configurado.
+Los widgets se pueden reorganizar y cambiar de tamaño en este espacio de trabajo. Seleccione **[!UICONTROL Save]** para conservar el nombre de tablero y el diseño configurado.
 
 ![Panel definido por el usuario con un widget personalizado y el botón Guardar resaltado.](./images/standard-dashboards/user-defined-dashboard.png)
 
@@ -172,7 +172,7 @@ A continuación, seleccione los puntos suspensivos en la parte superior derecha 
 
 >[!NOTE]
 >
->La duplicación le permite personalizar los atributos de un insight para crear un widget único sin tener que empezar desde cero. Si duplica un widget, aparecerá en el panel personalizado. A continuación, puede seleccionar los puntos suspensivos del nuevo widget, seguido de **[!UICONTROL Editar]**, para personalizar su insight.
+>La duplicación le permite personalizar los atributos de un insight para crear un widget único sin tener que empezar desde cero. Si duplica un widget, aparecerá en el panel personalizado. A continuación, puede seleccionar los puntos suspensivos del nuevo widget seguido de **[!UICONTROL Edit]** para personalizar el insight.
 
 ## Pasos siguientes y recursos adicionales
 
@@ -182,4 +182,4 @@ Para descubrir las métricas y visualizaciones preconfiguradas disponibles para 
 
 Para comprender mejor los paneles de Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/3413780?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

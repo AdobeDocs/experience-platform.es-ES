@@ -6,14 +6,14 @@ role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 81%
+source-wordcount: '769'
+ht-degree: 71%
 
 ---
 
 # Creación, uso compartido y reutilización de instancias de manuales de tácticas
 
-Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales de tácticas] > [!UICONTROL Manuales de tácticas]**. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
+Para usar un libro de reproducción, vaya a **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
 
 ## Creación de una instancia de manual de tácticas {#create-playbook-instance}
 
@@ -22,7 +22,7 @@ Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales 
 >title="Creación de una instancia"
 >abstract="Genere una lista de recursos como recorridos, públicos, esquemas o destinos para utilizarlos en escenarios de recorrido o activación."
 
-Antes de crear una instancia de libro de reproducción, explore los libros de reproducción disponibles para [elegir el libro de reproducción correcto](/help/use-case-playbooks/playbooks/choose.md). Cuando esté listo para continuar con un manual de tácticas y crear una instancia, seleccione **[!UICONTROL Crear instancia]** para proseguir y generar recursos técnicos.
+Antes de crear una instancia de libro de reproducción, explore los libros de reproducción disponibles para [elegir el libro de reproducción correcto](/help/use-case-playbooks/playbooks/choose.md). Cuando esté listo para continuar con un libro de reproducción y crear una instancia, seleccione **[!UICONTROL Create Instance]** para continuar con el libro de reproducción y generar recursos técnicos.
 
 ![Cree una instancia de un manual de tácticas.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -32,7 +32,7 @@ Esta acción genera varios recursos que puede utilizar para lograr el caso de us
 
 ### Uso de los controles de configuración para editar los nombres y las descripciones de las instancias {#edit-instance-metadata}
 
-Después de crear una instancia basada en un manual de tácticas, puede personalizarla para distinguirla de otras instancias creadas a partir del mismo manual de tácticas. Seleccione el control de configuración como se muestra a continuación. Edite el nombre, la descripción y las notas y seleccione **[!UICONTROL Guardar]** cuando haya terminado.
+Después de crear una instancia basada en un manual de tácticas, puede personalizarla para distinguirla de otras instancias creadas a partir del mismo manual de tácticas. Seleccione el control de configuración como se muestra a continuación. Edite el nombre, la descripción y las notas y seleccione **[!UICONTROL Save]** cuando haya terminado.
 
 ![Edite el nombre y la descripción de una instancia.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
@@ -42,12 +42,12 @@ Después de crear una instancia basada en un manual de tácticas, puede personal
 >
 >No hay necesidad de preocuparse. Este es un espacio seguro para experimentar y no se puede romper nada. Aún no hay datos asociados a ninguno de los recursos que cree. Primero debe introducir los datos para lograr los casos de uso.
 
-Es importante comprender que los recursos generados difieren según el caso de uso que active:
+Es importante comprender que los recursos generados difieren según el caso de uso que habilite:
 
 * Se generan diferentes recursos para diferentes tipos de manuales de tácticas. Estos recursos se crean específicamente para el caso de uso conseguido mediante el manual de tácticas. Por ejemplo, un manual genera un esquema, una audiencia, un recorrido y mensajes. Otro manual genera un esquema, una audiencia y un destino para activar los datos.
-* Los recursos en sí difieren entre los manuales de tácticas. Por ejemplo, para el manual de tácticas **[!UICONTROL Enviar un mensaje de cumpleaños a los invitados]**, el público que se crea tiene la regla `birthday=today AND year=any`.
+* Los recursos en sí difieren entre los manuales de tácticas. Por ejemplo, para el manual de **[!UICONTROL Send A Birthday Message To Guests]**, la audiencia que se crea tiene la regla `birthday=today AND year=any`.
 
-Para ilustrar un ejemplo, consulte el manual de tácticas **[!UICONTROL Carro de compras abandonado: mercancía]**, puede ver que se crea un recorrido específico que incluye los mensajes creados para este caso de uso.
+Para ilustrar un ejemplo, para el manual de **[!UICONTROL Abandoned Cart: Merchandise]**, puede ver que se ha creado un recorrido específico que incluye los mensajes creados para este caso de uso.
 
 ![Recorrido creado a partir del manual de tácticas de casos de uso.](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
 

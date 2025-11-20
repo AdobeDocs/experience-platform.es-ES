@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo conectar Adobe Experience Platform
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1202'
 ht-degree: 6%
 
 ---
@@ -26,11 +26,11 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 ## Conectar Adobe Campaign Managed Cloud Services a Experience Platform
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catalog] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede utilizar la barra de búsqueda para reducir los orígenes mostrados.
 
-En la categoría **[!UICONTROL aplicaciones de Adobe]**, seleccione **[!UICONTROL Adobe Campaign Managed Cloud Services]** y, a continuación, **[!UICONTROL Agregar datos]**.
+En la categoría **[!UICONTROL Adobe applications]**, seleccione **[!UICONTROL Adobe Campaign Managed Cloud Services]** y luego seleccione **[!UICONTROL Add data]**.
 
 ![Catálogo de orígenes que muestra la tarjeta de Adobe Campaign Managed Cloud Services.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -54,7 +54,7 @@ En la categoría **[!UICONTROL aplicaciones de Adobe]**, seleccione **[!UICONTRO
 >abstract="Nombre de la entidad definida en la base de datos de Adobe Campaign."
 >text="Learn more in documentation"
 
-Aparecerá el paso [!UICONTROL Seleccionar datos], que le proporcionará una interfaz para configurar su [!UICONTROL instancia de Adobe Campaign], [!UICONTROL asignación de destino] y [!UICONTROL nombre del esquema].
+Aparecerá el paso [!UICONTROL Select data], que le proporcionará una interfaz para configurar [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping] y [!UICONTROL Schema name].
 
 | Propiedad | Descripción |
 | --- | --- |
@@ -64,15 +64,15 @@ Aparecerá el paso [!UICONTROL Seleccionar datos], que le proporcionará una int
 
 ![Interfaz en la que puede configurar la instancia de Adobe Campaign, la asignación de destino y el nombre de esquema.](../../../../images/tutorials/create/campaign/select-data.png)
 
-Una vez que haya proporcionado los valores de la instancia de Campaign, la asignación de destino y el nombre del esquema, la pantalla se actualiza para mostrar una vista previa del esquema y un conjunto de datos de ejemplo. Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+Una vez que haya proporcionado los valores de la instancia de Campaign, la asignación de destino y el nombre del esquema, la pantalla se actualiza para mostrar una vista previa del esquema y un conjunto de datos de ejemplo. Cuando termine, seleccione **[!UICONTROL Next]**.
 
 ![Una vista previa de su jerarquía de esquema, así como una muestra de su conjunto de datos](../../../../images/tutorials/create/campaign/preview.png)
 
 ### Usar un conjunto de datos existente
 
-La página [!UICONTROL Detalles del flujo de datos] le permite seleccionar si desea utilizar un conjunto de datos existente o configurar uno nuevo para su flujo de datos.
+La página [!UICONTROL Dataflow detail] le permite seleccionar si desea utilizar un conjunto de datos existente o configurar un nuevo conjunto de datos para el flujo de datos.
 
-Para usar un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]**. Puede recuperar un conjunto de datos existente mediante la opción [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable.
+Para usar un conjunto de datos existente, seleccione **[!UICONTROL Existing dataset]**. Puede recuperar un conjunto de datos existente mediante la opción [!UICONTROL Advanced search] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable.
 
 Con un conjunto de datos seleccionado, proporcione un nombre para el flujo de datos y una descripción opcional.
 
@@ -80,7 +80,7 @@ Con un conjunto de datos seleccionado, proporcione un nombre para el flujo de da
 
 ### Usar un nuevo conjunto de datos
 
-Para usar un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** y, a continuación, proporcione un nombre de conjunto de datos de salida y una descripción opcional. A continuación, seleccione un esquema al que asignar con la opción [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de esquemas existentes en el menú desplegable. Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+Para usar un nuevo conjunto de datos, seleccione **[!UICONTROL New dataset]** y proporcione un nombre de conjunto de datos de salida y una descripción opcional. A continuación, seleccione un esquema al que asignar con la opción [!UICONTROL Advanced search] o desplazándose por la lista de esquemas existentes en el menú desplegable. Cuando termine, seleccione **[!UICONTROL Next]**.
 
 ![Interfaz que muestra la nueva opción del conjunto de datos.](../../../../images/tutorials/create/campaign/new-dataset.png)
 
@@ -88,7 +88,7 @@ Para usar un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de fuentes mediante la interfaz de usuario](../../alerts.md).
 
-Cuando termine de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Next]**.
 
 ![Selección de diferentes tipos de alerta que puede habilitar para el flujo de datos.](../../../../images/tutorials/create/campaign/alerts.png)
 
@@ -104,18 +104,18 @@ Experience Platform proporciona recomendaciones inteligentes para campos asignad
 >
 >Para cada audiencia, puede añadir hasta 20 campos para asignarlos a Adobe Campaign. Puede cambiar este límite actualizando el valor de la opción `NmsCdp_Aep_Sources_Max_Columns` en la carpeta Administration > Platform > Options del explorador de Campaign.
 
-Una vez que los datos de origen estén asignados correctamente, seleccione **[!UICONTROL Siguiente]**.
+Una vez que los datos de origen se hayan asignado correctamente, seleccione **[!UICONTROL Next]**.
 
 ![Árbol de asignación con cuatro campos de datos de origen asignados a sus campos de esquema XDM correspondientes.](../../../../images/tutorials/create/campaign/mapping.png)
 
 ### Revisión del flujo de datos
 
-Aparece el paso **[!UICONTROL Revisar]**, que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
+Aparece el paso **[!UICONTROL Review]**, que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
-* **[!UICONTROL Conexión]**: muestra el tipo de origen, la ruta de acceso relevante del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
-* **[!UICONTROL Asignar campos de conjunto de datos y asignación]**: muestra en qué conjunto de datos se están ingiriendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
+* **[!UICONTROL Connection]**: muestra el tipo de origen, la ruta de acceso relevante del archivo de origen elegido y la cantidad de columnas dentro de ese archivo de origen.
+* **[!UICONTROL Assign dataset & map fields]**: muestra a qué conjunto de datos se están ingiriendo los datos de origen, incluido el esquema al que se adhiere el conjunto de datos.
 
-Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]** y espere un poco para que se cree el flujo de datos.
+Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finish]** y espere un poco para que se cree el flujo de datos.
 
 ![Una página de revisión que muestra información de conexión y conjunto de datos.](../../../../images/tutorials/create/campaign/review.png)
 
@@ -123,7 +123,7 @@ Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]
 
 Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las tasas de ingesta y los lotes correctos y fallidos.
 
-Para comenzar a ver su actividad del conjunto de datos, seleccione **[!UICONTROL Flujos de datos]** en el catálogo de fuentes.
+Para comenzar a ver su actividad del conjunto de datos, seleccione **[!UICONTROL Dataflows]** en el catálogo de orígenes.
 
 ![Página del catálogo de orígenes con la ficha de encabezado de flujos de datos seleccionada.](../../../../images/tutorials/create/campaign/dataflows.png)
 
@@ -143,7 +143,7 @@ Esta página también le proporciona una interfaz para actualizar la descripció
 >No puede rellenar los registros de eventos antiguos con el origen de Adobe Campaign Managed Cloud Services. Si se requiere relleno, utilice un flujo de trabajo personalizado o una implementación personalizada para exportar datos a Amazon S3 o Azure Blob, o de Amazon S3 o Azure Blob a un conjunto de datos de Adobe Experience Platform.
 
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de los registros de envío y de seguimiento de Campaign v8 a Experience Platform. Ahora los servicios de Experience Platform descendentes como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
 

@@ -4,8 +4,8 @@ description: Obtenga información sobre cómo programar la caducidad de un conju
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 18%
+source-wordcount: '837'
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 18%
 >title="Eliminación de registros de cliente y conjuntos de datos no deseados o caducados"
 >abstract="<h2>Descripción</h2><p>Para administrar el ciclo de vida de los datos de Experience Platform que no están relacionados con el cumplimiento normativo, puede eliminar los registros del consumidor y programar las fechas de caducidad para los conjuntos de datos. Para crear o administrar solicitudes de interesados, consulte el bloque de casos de uso “Cumplimiento de las solicitudes de privacidad de los interesados”.</p>"
 
-El espacio de trabajo [[!UICONTROL Ciclo de vida de datos]](./overview.md) de la interfaz de usuario de Adobe Experience Platform le permite programar caducidades para conjuntos de datos. Cuando un conjunto de datos alcanza su fecha de caducidad, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez que los datos se eliminan de los tres servicios, la caducidad se marca como completada.
+El espacio de trabajo [[!UICONTROL Data Lifecycle]](./overview.md) de la interfaz de usuario de Adobe Experience Platform le permite programar caducidades para conjuntos de datos. Cuando un conjunto de datos alcanza su fecha de caducidad, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez que los datos se eliminan de los tres servicios, la caducidad se marca como completada.
 
 >[!WARNING]
 >
@@ -41,27 +41,27 @@ La administración avanzada del ciclo de vida de datos admite eliminaciones de c
 >title="Instrucciones"
 >abstract="<ul><li>Seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=es">Ciclo de vida de datos</a> en la navegación izquierda y, a continuación, seleccione <b>Crear solicitud</b>.</li><li>Si desea eliminar registros, haga lo siguiente:</li>   <li>Seleccione <b>Registro</b>.</li>   <li>Seleccione un conjunto de datos específico del que eliminar registros o elija la opción para eliminarlos de todos.</li>   <li>Proporcione las identidades de los consumidores cuyos registros deban eliminarse. Seleccione <b>Agregar identidad</b> para introducir las identidades de una en una o <b>Elegir archivos</b> para cargar un archivo JSON de identidades, en su lugar.</li>   <li>Si es necesario, seleccione <b>Plantilla</b> para ver el formato esperado del archivo JSON.</li><li>Consulte la documentación para obtener instrucciones si desea <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=es#schedule-dataset-expiration">programar fechas de caducidad para conjuntos de datos</a>.</li></ul>"
 
-Para crear una solicitud, seleccione **[!UICONTROL Crear solicitud]** en la página principal del área de trabajo.
+Para crear una solicitud, seleccione **[!UICONTROL Create request]** en la página principal del área de trabajo.
 
 >[!IMPORTANT]
 >
 >Los usuarios de Real-Time CDP, Adobe Journey Optimizer y Customer Journey Analytics tienen 20 órdenes de trabajo de caducidad de conjuntos de datos programados pendientes. Los usuarios de Healthcare Shield y Privacy and Security Shield tienen 50 órdenes de trabajo pendientes de vencimiento del conjunto de datos programado. Esto significa que puede tener 20 o 50 conjuntos de datos programados para eliminarse a la vez.<br>Por ejemplo, si tiene 20 caducidades programadas del conjunto de datos y un conjunto de datos se va a eliminar mañana, no puede establecer más caducidades hasta que se elimine ese conjunto de datos.
 
-![Se ha resaltado el área de trabajo [!UICONTROL Ciclo de vida de datos] con [!UICONTROL Crear solicitud].](../images/ui/ttl/create-request-button.png)
+![Espacio de trabajo [!UICONTROL Data Lifecycle] con [!UICONTROL Create request] resaltado.](../images/ui/ttl/create-request-button.png)
 
-Aparecerá el flujo de trabajo de creación de solicitudes. En la sección [!UICONTROL Acción solicitada], seleccione **[!UICONTROL Eliminar conjunto de datos]** para actualizar los controles para la programación de caducidad del conjunto de datos.
+Aparecerá el flujo de trabajo de creación de solicitudes. En la sección [!UICONTROL Requested Action], seleccione **[!UICONTROL Delete Dataset]** para actualizar los controles para la programación de caducidad del conjunto de datos.
 
-![Flujo de trabajo de creación de solicitud con la opción [!UICONTROL Eliminar conjunto de datos] resaltada.](../images/ui/ttl/dataset-selected.png)
+![Flujo de trabajo de creación de solicitud con la opción [!UICONTROL Delete dataset] resaltada.](../images/ui/ttl/dataset-selected.png)
 
 ### Seleccionar una fecha y un conjunto de datos {#select-date-and-dataset}
 
-En la sección **[!UICONTROL Acción solicitada]**, seleccione una fecha en la que desee eliminar el conjunto de datos. Puede escribir la fecha manualmente (con el formato `mm/dd/yyyy`) o seleccionar el icono de calendario (![Un icono de calendario.](/help/images/icons/calendar.png)) para seleccionar la fecha en un cuadro de diálogo.
+En la sección **[!UICONTROL Requested Action]**, seleccione una fecha en la que desee eliminar el conjunto de datos. Puede escribir la fecha manualmente (con el formato `mm/dd/yyyy`) o seleccionar el icono de calendario (![Un icono de calendario.](/help/images/icons/calendar.png)) para seleccionar la fecha en un cuadro de diálogo.
 
 ![Cuadro de diálogo de calendario con una fecha de caducidad seleccionada y resaltada para el conjunto de datos.](../images/ui/ttl/select-date.png)
 
-A continuación, en **[!UICONTROL Detalles del conjunto de datos]**, seleccione el icono de la base de datos (![El icono de la base de datos.](/help/images/icons/database.png)) para abrir un cuadro de diálogo de selección de conjunto de datos. Elija un conjunto de datos de la lista al que aplicar la caducidad y, a continuación, seleccione **[!UICONTROL Listo]**.
+A continuación, en **[!UICONTROL Dataset Details]**, seleccione el icono de base de datos (![El icono de base de datos.](/help/images/icons/database.png)) para abrir un cuadro de diálogo de selección de conjunto de datos. Elija un conjunto de datos de la lista al que aplicar la caducidad y, a continuación, seleccione **[!UICONTROL Done]**.
 
-![Cuadro de diálogo [!UICONTROL Seleccionar conjunto de datos] con un conjunto de datos seleccionado y [!UICONTROL Listo] resaltado.](../images/ui/ttl/select-dataset.png)
+![Cuadro de diálogo [!UICONTROL Select dataset] con un conjunto de datos seleccionado y [!UICONTROL Done] resaltado.](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
 >
@@ -69,13 +69,13 @@ A continuación, en **[!UICONTROL Detalles del conjunto de datos]**, seleccione 
 
 ### Enviar la solicitud {#submit-request}
 
-La sección [!UICONTROL Detalles del conjunto de datos] se rellena para incluir la identidad y el esquema principales para el conjunto de datos seleccionado. En **[!UICONTROL Solicitar configuración]**, escriba un nombre y una descripción opcional para la solicitud, seguidos de **[!UICONTROL Enviar]**.
+La sección [!UICONTROL Dataset Details] se rellena para incluir la identidad y el esquema principales para el conjunto de datos seleccionado. En **[!UICONTROL Request settings]**, escriba un nombre y una descripción opcional para la solicitud, seguido de **[!UICONTROL Submit]**.
 
-![Se completó una solicitud de caducidad del conjunto de datos con [!UICONTROL Solicitar configuración] y el botón [!UICONTROL Enviar] resaltados.](../images/ui/ttl/submit.png)
+![Se completó una solicitud de caducidad del conjunto de datos con los botones [!UICONTROL Request settings] y [!UICONTROL Submit] resaltados.](../images/ui/ttl/submit.png)
 
-Aparecerá un cuadro de diálogo [!UICONTROL Confirmar solicitud]. Se le pedirá que confirme el nombre del conjunto de datos y la fecha en la que se eliminará. Seleccione **[!UICONTROL Enviar]** para continuar.
+Aparecerá un cuadro de diálogo [!UICONTROL Confirm request]. Se le pedirá que confirme el nombre del conjunto de datos y la fecha en la que se eliminará. Seleccione **[!UICONTROL Submit]** para continuar.
 
-Una vez enviada la solicitud, se crea una orden de trabajo y aparece en la pestaña principal del espacio de trabajo [!UICONTROL Ciclo de vida de datos]. Desde aquí puede supervisar el estado de la orden de trabajo a medida que procesa la solicitud.
+Una vez enviada la solicitud, se crea una orden de trabajo y aparece en la pestaña principal del área de trabajo [!UICONTROL Data Lifecycle]. Desde aquí puede supervisar el estado de la orden de trabajo a medida que procesa la solicitud.
 
 >[!NOTE]
 >
@@ -83,11 +83,11 @@ Una vez enviada la solicitud, se crea una orden de trabajo y aparece en la pesta
 
 ## Editar o cancelar la caducidad de un conjunto de datos {#edit-or-cancel}
 
-Para editar o cancelar la caducidad de un conjunto de datos, seleccione **[!UICONTROL Conjunto de datos]** en la página principal del área de trabajo y seleccione la caducidad del conjunto de datos en la lista.
+Para editar o cancelar la caducidad de un conjunto de datos, seleccione **[!UICONTROL Dataset]** en la página principal del área de trabajo y seleccione la caducidad del conjunto de datos en la lista.
 
 En la página de detalles de la caducidad del conjunto de datos, el carril derecho muestra los controles para editar o cancelar la eliminación programada.
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento explica cómo programar la caducidad de los conjuntos de datos en la interfaz de usuario de Experience Platform. Para obtener información sobre cómo realizar otras tareas de minimización de datos en la interfaz de usuario, consulte la [descripción general de la interfaz de usuario del ciclo vital de datos](./overview.md).
 

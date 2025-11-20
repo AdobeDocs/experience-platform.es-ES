@@ -22,7 +22,7 @@ Como especialista en marketing, quiero enviar audiencias de Adobe Experience Pla
 
 ## Requisitos previos {#prerequisites}
 
-La conexión [!DNL LiveRamp - Onboarding] exporta archivos mediante el almacenamiento SFTP[&#x200B; de &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+La conexión [!DNL LiveRamp - Onboarding] exporta archivos mediante el almacenamiento SFTP[ de ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Para poder enviar datos de Experience Platform a [!DNL LiveRamp - Onboarding], necesita sus credenciales de [!DNL LiveRamp]. Póngase en contacto con su representante de [!DNL LiveRamp] para obtener sus credenciales, si aún no las tiene.
 
@@ -123,7 +123,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

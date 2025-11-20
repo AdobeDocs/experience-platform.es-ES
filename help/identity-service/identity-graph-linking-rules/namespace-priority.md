@@ -1,25 +1,25 @@
 ---
-title: Prioridad del área de nombres
+title: Prioridad del espacio de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2119'
 ht-degree: 2%
 
 ---
 
-# Prioridad del área de nombres {#namespace-priority}
+# Prioridad del espacio de nombres {#namespace-priority}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="Prioridad del área de nombres"
->abstract="La prioridad del área de nombres determina cómo se eliminan los vínculos del gráfico de identidad."
+>title="Prioridad del espacio de nombres"
+>abstract="La prioridad del espacio de nombres determina cómo se eliminan los vínculos del gráfico de identidad."
 
 Cada implementación de cliente es única y está diseñada para satisfacer los objetivos de una organización en particular y, como tal, la importancia de un área de nombres determinada varía según el cliente. Algunos ejemplos del mundo real son:
 
 * Su compañía podría considerar que cada dirección de correo electrónico representa una entidad de una sola persona y, por lo tanto, usar [configuración de identidad](./identity-settings-ui.md) para configurar el área de nombres de correo electrónico como única. Sin embargo, es posible que otra empresa desee representar las entidades de una sola persona como si tuvieran varias direcciones de correo electrónico y, por lo tanto, configurar el área de nombres de correo electrónico como no única. Estas empresas necesitarían utilizar otro área de nombres de identidad como única, como un área de nombres CRMID, para que pueda haber un identificador de una sola persona vinculado a las distintas direcciones de correo electrónico.
-* Puede recopilar el comportamiento en línea mediante un área de nombres de &quot;ID de inicio de sesión&quot;. Este ID de inicio de sesión podría tener una relación 1:1 con el CRMID, que luego almacena atributos de un sistema CRM y puede considerarse el área de nombres más importante. En este caso, está determinando que el área de nombres CRMID es una representación más precisa de una persona, mientras que el área de nombres de ID de inicio de sesión es la segunda más importante.
+* Puede recopilar el comportamiento en línea mediante un área de nombres de &quot;ID de inicio de sesión&quot;. Este ID de inicio de sesión podría tener una relación 1:1 con el CRMID, el cual a su vez almacenaría atributos de un sistema CRM y podría considerarse el área de nombres más importante. En este caso, está determinando que el área de nombres CRMID es una representación más precisa de una persona, mientras que el área de nombres de ID de inicio de sesión es la segunda más importante.
 
 Debe realizar configuraciones en Identity Service que reflejen la importancia de las áreas de nombres, ya que esto influye en la forma y división de los perfiles y sus gráficos de identidad relacionados.
 
@@ -65,7 +65,7 @@ La prioridad del área de nombres se puede configurar usando la [interfaz de usu
 
 ## Uso de prioridad de área de nombres
 
-Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Diagrama del ámbito de aplicación de prioridad de espacio de nombres.](../images/namespace-priority/application-scope.png "Diagrama del ámbito de aplicación de prioridad de espacio de nombres."){zoomable="yes"}
 
@@ -96,7 +96,7 @@ Esta sección proporciona un ejemplo de cómo la configuración de prioridad pue
 
 Supongamos que se establecen las siguientes configuraciones para una zona protegida determinada:
 
-| Área de nombres | Aplicación real del área de nombres | Prioridad |
+| Espacio de nombres | Aplicación real del área de nombres | Prioridad |
 | --- | --- | --- |
 | CRMID | Usuario | 1 |
 | IDFA | Dispositivo de hardware de Apple (iPhone, IPad, etc.) | 2 |
@@ -208,13 +208,13 @@ En un evento determinado, asegúrese de que todas las áreas de nombres que repr
 
 * **Aplicabilidad de eventos**: este comportamiento se aplica solo a los eventos enviados directamente a Edge Network (como WebSDK y Mobile SDK). Los eventos ingeridos desde [Experience Platform hub](../../landing/edge-and-hub-comparison.md), como los ingeridos con el origen de la API HTTP, otros orígenes de flujo continuo y orígenes por lotes, no están sujetos a esta limitación.
 * **Especificidad de segmentación de Edge**: Este comportamiento es específico de la segmentación de Edge. La segmentación por lotes y streaming son servicios independientes evaluados en el concentrador y no siguen el mismo proceso. Lea la [guía de segmentación de Edge](../../segmentation/methods/edge-segmentation.md) para obtener más información.
-* Lea las páginas de [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) y [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) para obtener más información.
+* Lea las páginas de [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) y [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) para obtener más información.
 
 #### Aplicaciones de Edge Network
 
 Para garantizar que las aplicaciones de Edge Network tengan acceso al perfil de Edge sin demora, asegúrese de que los eventos incluyan a `primary=true` en el CRMID. Esto garantiza la disponibilidad inmediata sin esperar las actualizaciones del gráfico de identidad desde el concentrador.
 
 * Las aplicaciones de Edge Network, como Adobe Target, Offer Decisioning y Destinos personalizados de Personalization, seguirán dependiendo de la identidad principal en los eventos para acceder a los perfiles del perfil de Edge.
-* Lea el [diagrama de arquitectura de Experience Platform Web SDK y Edge Network](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obtener más información sobre el comportamiento de Edge Network.
+* Lea el [diagrama de arquitectura de Experience Platform Web SDK y Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obtener más información sobre el comportamiento de Edge Network.
 * Lea la documentación sobre [tipos de elementos de datos](../../tags/extensions/client/web-sdk/data-element-types.md) y [datos de identidad en Web SDK](../../web-sdk/identity/overview.md) para obtener más información sobre cómo configurar la identidad principal en Web SDK.
 * Asegúrese de que el ECID esté incluido en el evento de experiencia. Si falta el ECID, se agregará a la carga útil de evento con `primary=true`, lo que puede dar lugar a resultados inesperados.

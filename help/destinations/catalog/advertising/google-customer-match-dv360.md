@@ -29,12 +29,12 @@ Con la capacidad recién introducida de poder usar audiencias de [!DNL Customer 
 >[!IMPORTANT]
 >
 > Google está publicando cambios en la [API de Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) y la [API de Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para admitir los requisitos relacionados con el cumplimiento y el consentimiento definidos en la [Ley de Mercados Digitales](https://digital-markets-act.ec.europa.eu/index_es) (DMA) de la Unión Europea ([Política de consentimiento del Usuario de la UE](https://www.google.com/about/company/user-consent-policy/)). La aplicación de estos cambios en los requisitos de consentimiento está activa desde el 6 de marzo de 2024.
-> &#x200B;><br/>
-> &#x200B;>Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.
-> &#x200B;><br/>
-> &#x200B;>Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no tienen que realizar ninguna acción.
-> &#x200B;><br/>
-> &#x200B;>Los clientes que no hayan adquirido Adobe Privacy &amp; Security Shield deben utilizar las funciones de [definición de segmento](../../../segmentation/home.md#segment-definitions) de [Generador de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar los perfiles no consentidos y así poder seguir utilizando los destinos de Real-Time CDP Google existentes sin interrupción.
+><br/>
+>Para adherirse a la política de consentimiento de usuario de la UE y seguir creando listas de audiencia para usuarios en el Espacio Económico Europeo (EEE), los anunciantes y socios deben asegurarse de que están pasando el consentimiento del usuario final al cargar datos de audiencia. Como socio de Google, Adobe le proporciona las herramientas necesarias para cumplir con estos requisitos de consentimiento según la DMA en la Unión Europea.
+><br/>
+>Los clientes que hayan adquirido Adobe Privacy &amp; Security Shield y hayan configurado una [política de consentimiento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar los perfiles no consentidos no tienen que realizar ninguna acción.
+><br/>
+>Los clientes que no hayan adquirido Adobe Privacy &amp; Security Shield deben utilizar las funciones de [definición de segmento](../../../segmentation/home.md#segment-definitions) de [Generador de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar los perfiles no consentidos y así poder seguir utilizando los destinos de Real-Time CDP Google existentes sin interrupción.
 
 ## Cuándo utilizar este destino
 
@@ -46,11 +46,11 @@ Hay varias integraciones con Google disponibles en el catálogo de destinos y pu
 
 ## Casos de uso {#use-cases}
 
-Para comprender mejor cómo y cuándo utilizar este destino, aquí hay casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante esta función.
+Para ayudarle a comprender mejor cómo y cuándo usar este destino, aquí hay ejemplos de casos de uso que Adobe Experience Platform clientes pueden resolver con esta característica.
 
 ### Caso de uso #1
 
-Una marca de ropa deportiva quiere llegar a los clientes existentes a través de [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Experience Platform y crear audiencias a partir de sus propios datos sin conexión. A continuación, puede enviar estas audiencias al destino [!DNL Google Customer Match + Display & Video 360] para su uso en [!DNL Google Display & Video 360] propiedades como [!DNL Search], [!DNL YouTube], [!DNL Gmail] y [!DNL Google Display Network].
+Un marca de ropa deportiva quiere llegar a los clientes [!DNL Google Search] existentes y [!DNL Google Shopping] personalizar ofertas y artículos en función de sus compras anteriores y su historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM a Experience Platform y crear audiencias a partir de sus propios datos sin conexión. A continuación, pueden enviar estas audiencias al [!DNL Google Customer Match + Display & Video 360] destino que se utilizarán en propiedades [!DNL Google Display & Video 360] como [!DNL Search], [!DNL YouTube], [!DNL Gmail], y el [!DNL Google Display Network].
 
 ### Caso de uso #2
 
@@ -64,10 +64,10 @@ Para promocionar la versión, cargan direcciones de correo electrónico desde su
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
-| IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
-| phone_sha256_e.164 | Números de teléfono en formato E164, con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono con hash y texto sin formato, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
-| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para direcciones de correo electrónico de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
+| GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando la identidad de origen sea un espacio de nombres GAID. |
+| IDFA | ID de Apple para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un espacio de nombres IDFA. |
+| phone_sha256_e.164 | Números de teléfono en E164 formato, con hash con el algoritmo SHA256 | Los números de teléfono con hash de texto sin formato y SHA256 son compatibles con Adobe Experience Platform. Siga las instrucciones de la sección Requisitos[ de ](#id-matching-requirements-id-matching-requirements)coincidencia de ID y use los espacios de nombres adecuados para texto sin formato y números de teléfono con hash, respectivamente. Cuando su campo de origen contenga atributos sin hash, marque la **[!UICONTROL Apply transformation]** opción para tener [!DNL Experience Platform] automáticamente hash los datos en activación. |
+| correo electrónico_lc_sha256 | Direcciones de correo electrónico con hash con el algoritmo SHA256 | Tanto las direcciones de correo electrónico con hash de texto sin formato como las direcciones de  SHA256 son compatibles con Adobe Experience Platform. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para direcciones de correo electrónico de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
 
 {style="table-layout:auto"}
 
@@ -150,18 +150,18 @@ Hay dos métodos para activar números de teléfono en [!DNL Google Customer Mat
 
 ### Requisitos de hash de correo electrónico {#hashing-requirements}
 
-Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede usar las direcciones de correo electrónico en borrar en Experience Platform y hacer que [!DNL Experience Platform] las hash en la activación.
+Puede hash correo electrónico direcciones antes de ingerirlas en Adobe Experience Platform, o usar correo electrónico direcciones claras en Experience Platform y tenerlas [!DNL Experience Platform] hash en activación.
 
-Para obtener más información sobre los requisitos de hash de Google y otras restricciones en la activación, consulte las siguientes secciones en la documentación de Google:
+Para obtener más información sobre los requisitos de hash de Google y otras restricciones de activación, consulte las siguientes secciones de la documentación de Google:
 
-* [[!DNL Customer Match] con dirección de correo electrónico, dirección o ID de usuario](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match] con dirección, dirección o ID de usuario correo electrónico](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
 * [[!DNL Customer Match] consideraciones](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
 * [[!DNL Customer Match] con número de teléfono](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
-* [[!DNL Customer Match] con ID de dispositivos móviles](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
+* [[!DNL Customer Match] con ID de dispositivo móvil](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
-Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la [descripción general de la ingesta por lotes](../../../ingestion/batch-ingestion/overview.md) y la [descripción general de la ingesta por transmisión](../../../ingestion/streaming-ingestion/overview.md).
+Para obtener información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la información general[ sobre la ingesta por lotes y la ](../../../ingestion/batch-ingestion/overview.md)información general[ sobre la ](../../../ingestion/streaming-ingestion/overview.md)ingesta de flujos.
 
-Si selecciona hash las direcciones de correo electrónico usted mismo, asegúrese de cumplir con los requisitos de Google descritos en los vínculos anteriores.
+Si selecciona hash las direcciones de correo electrónico usted mismo, asegúrese de cumplir con los requisitos de Google, descritos en los enlaces anteriores.
 
 <!-- ### Using custom namespaces {#custom-namespaces}
 
@@ -176,7 +176,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Conectar con el destino {#connect}
 
@@ -212,7 +212,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades* a destinos, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -265,8 +265,8 @@ Algunos destinos de Experience Platform tienen ciertas reglas y obligaciones par
 
 ### 400 Mensaje de error de solicitud incorrecto {#bad-request}
 
-Al configurar este destino, puede recibir el siguiente error:
+Al configurar este destino, es posible que reciba el siguiente error:
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Este error se produce cuando las cuentas de cliente no cumplen los [requisitos previos](#google-account-prerequisites). Para solucionar este problema, póngase en contacto con Google y asegúrese de que su cuenta esté incluida en la lista de permitidos y configurada para un nivel de permisos de [!DNL Standard] o superior. Consulte la [documentación de Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) para obtener más información.
+Este error se produce cuando las cuentas de cliente no cumplen los [requisitos previos](#google-account-prerequisites). Para solucionar este problema, póngase en contacto con Google y asegúrese de que su cuenta esté en la lista de permitidos y esté configurada para un [!DNL Standard] nivel permiso o superior. Consulte la documentación[ de ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)Google Ads para obtener más detalles.

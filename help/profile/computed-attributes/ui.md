@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo crear, ver y actualizar atributos 
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1497'
 ht-degree: 6%
 
 ---
@@ -28,50 +28,50 @@ Esta guía de interfaz de usuario requiere una comprensión de los distintos ser
 
 ## Ver atributos calculados {#view}
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Atributos calculados]** para ver una lista de los atributos calculados disponibles para su organización. Esto incluye información sobre el nombre, la descripción, la última fecha de evaluación y el último estado de evaluación del atributo calculado.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Profiles]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Computed attributes]** para ver una lista de los atributos calculados disponibles para su organización. Esto incluye información sobre el nombre, la descripción, la última fecha de evaluación y el último estado de evaluación del atributo calculado.
 
-![La sección [!UICONTROL Perfil] y las fichas [!UICONTROL Atributos calculados] están resaltadas, y muestran a los usuarios cómo acceder a la página de exploración de atributos calculados.](./images/ui/browse.png)
+![La sección [!UICONTROL Profile] y las fichas [!UICONTROL Computed attributes] están resaltadas, lo que muestra a los usuarios cómo acceder a la página de exploración de atributos calculados.](./images/ui/browse.png)
 
 Para seleccionar qué campos están visibles, puede seleccionar ![el icono de configuración de columnas](/help/images/icons/column-settings.png) para agregar o quitar los campos que desea mostrar.
 
 | Campo | Descripción |
 | ----- | ----------- |
-| [!UICONTROL Nombre] | El nombre para mostrar del atributo calculado. |
-| [!UICONTROL Descripción] | La descripción del atributo calculado. |
-| [!UICONTROL Método de evaluación] | El método de evaluación para el atributo calculado. En este momento, solo se admite **batch**. |
-| [!UICONTROL Última evaluación] | Esta marca de tiempo representa la última ejecución correcta de la evaluación. Solo los eventos que ocurrieron **antes de** de esta marca de tiempo se consideran en la última evaluación correcta. |
-| [!UICONTROL Último estado de evaluación] | El estado que indica si el atributo calculado se calculó correctamente o no en la última ejecución de evaluación. Los valores posibles incluyen **[!UICONTROL Success]** o **[!UICONTROL Failed]**. |
-| [!UICONTROL Frecuencia de actualización] | Una indicación de la frecuencia con la que se espera actualizar el atributo calculado. Los valores posibles incluyen horaria, diaria, semanal o mensual. |
-| [!UICONTROL Actualización rápida] | Valor que muestra si la actualización rápida está habilitada o no para este atributo de cálculo. Si la actualización rápida está habilitada, esto permite que el atributo calculado se actualice diariamente, en lugar de cada semana, cada dos semanas o mensualmente. Este valor solo es aplicable a atributos calculados con un periodo retroactivo mayor que una base semanal. |
-| [!UICONTROL Estado del ciclo vital] | El estado actual del atributo calculado. Hay tres estados posibles: <ul><li>**[!UICONTROL Borrador]:** El atributo calculado **aún no** tiene un campo creado en el esquema. En este estado, se puede editar el atributo calculado. </li><li>**[!UICONTROL Publicado]:** El atributo calculado tiene un campo creado en el esquema y está listo para usarse. En este estado, el atributo calculado **no se puede** editar.</li><li>**[!UICONTROL Inactivo]:** El atributo calculado está deshabilitado. Para obtener más información sobre el estado inactivo, lea la [página de preguntas frecuentes](./faq.md#inactive-status). </li> |
-| [!UICONTROL Creado] | Una marca de tiempo que muestra la fecha y la hora en que se creó el atributo calculado. |
-| [!UICONTROL Última modificación] | Una marca de tiempo que muestra la fecha y la hora de la última modificación del atributo calculado. |
+| [!UICONTROL Name] | El nombre para mostrar del atributo calculado. |
+| [!UICONTROL Description] | La descripción del atributo calculado. |
+| [!UICONTROL Evaluation method] | El método de evaluación para el atributo calculado. En este momento, solo se admite **batch**. |
+| [!UICONTROL Last evaluated] | Esta marca de tiempo representa la última ejecución correcta de la evaluación. Solo los eventos que ocurrieron **antes de** de esta marca de tiempo se consideran en la última evaluación correcta. |
+| [!UICONTROL Last evaluation status] | El estado que indica si el atributo calculado se calculó correctamente o no en la última ejecución de evaluación. Los valores posibles incluyen **[!UICONTROL Success]** o **[!UICONTROL Failed]**. |
+| [!UICONTROL Refresh frequency] | Una indicación de la frecuencia con la que se espera actualizar el atributo calculado. Los valores posibles incluyen horaria, diaria, semanal o mensual. |
+| [!UICONTROL Fast refresh] | Valor que muestra si la actualización rápida está habilitada o no para este atributo de cálculo. Si la actualización rápida está habilitada, esto permite que el atributo calculado se actualice diariamente, en lugar de cada semana, cada dos semanas o mensualmente. Este valor solo es aplicable a atributos calculados con un periodo retroactivo mayor que una base semanal. |
+| [!UICONTROL Lifecycle status] | El estado actual del atributo calculado. Hay tres estados posibles: <ul><li>**[!UICONTROL Draft]:** El atributo calculado **aún no** tiene un campo creado en el esquema. En este estado, se puede editar el atributo calculado. </li><li>**[!UICONTROL Published]:** El atributo calculado tiene un campo creado en el esquema y está listo para usarse. En este estado, el atributo calculado **no se puede** editar.</li><li>**[!UICONTROL Inactive]:** El atributo calculado está deshabilitado. Para obtener más información sobre el estado inactivo, lea la [página de preguntas frecuentes](./faq.md#inactive-status). </li> |
+| [!UICONTROL Created] | Una marca de tiempo que muestra la fecha y la hora en que se creó el atributo calculado. |
+| [!UICONTROL Last modified] | Una marca de tiempo que muestra la fecha y la hora de la última modificación del atributo calculado. |
 
-También puede filtrar los atributos calculados mostrados en función del estado del ciclo vital. Seleccione el icono ![canal](/help/images/icons/filter.png).
+También puede filtrar los atributos calculados mostrados en función del estado del ciclo vital. Seleccione el icono ![funnel](/help/images/icons/filter.png).
 
 ![El icono de filtro está resaltado.](./images/ui/select-filter.png)
 
-Ahora puede filtrar los atributos calculados por estado ([!UICONTROL Borrador], [!UICONTROL Publicado] e [!UICONTROL Inactivo]).
+Ahora puede filtrar los atributos calculados por estado ([!UICONTROL Draft], [!UICONTROL Published] y [!UICONTROL Inactive]).
 
-![Se resaltan las opciones por las que puede filtrar los atributos calculados. Estas opciones incluyen [!UICONTROL Borrador], [!UICONTROL Publicado] e [!UICONTROL Inactivo].](./images/ui/view-filters.png)
+![Se resaltan las opciones por las que puede filtrar los atributos calculados. Estas opciones incluyen [!UICONTROL Draft], [!UICONTROL Published] y [!UICONTROL Inactive].](./images/ui/view-filters.png)
 
 Además, puede seleccionar un atributo calculado para ver información más detallada al respecto. Para obtener más información sobre la página de detalles de atributos calculados, lea [ver la sección de detalles de un atributo calculado](#view-details).
 
 ## Creación de un atributo calculado {#create}
 
-Para crear un nuevo atributo calculado, seleccione **[!UICONTROL Crear atributo calculado]** para introducir el nuevo flujo de trabajo de atributos calculados.
+Para crear un nuevo atributo calculado, seleccione **[!UICONTROL Create computed attribute]** para introducir el nuevo flujo de trabajo de atributos calculados.
 
-![El botón [!UICONTROL Crear atributos calculados] está resaltado, y muestra a los usuarios cómo llegar a la página Crear un atributo calculado.](./images/ui/create.png)
+![El botón [!UICONTROL Create computed attributes] está resaltado y muestra a los usuarios cómo llegar a la página Crear un atributo calculado.](./images/ui/create.png)
 
-Aparecerá la página **[!UICONTROL Crear atributo calculado]**. En esta página, puede agregar la información básica del atributo calculado que desea crear.
+Aparecerá la página **[!UICONTROL Create computed attribute]**. En esta página, puede agregar la información básica del atributo calculado que desea crear.
 
 | Campo | Descripción |
 | ----- | ----------- |
-| [!UICONTROL Nombre para mostrar] | Nombre por el que se conocerá el atributo calculado. Debe mantener este nombre para mostrar único para cada atributo calculado. Como práctica recomendada, este nombre para mostrar debe contener identificadores relacionados con el atributo calculado. Por ejemplo, &quot;Suma de compras de zapatos en los últimos 7 días&quot;. |
-| [!UICONTROL Nombre de campo] | Un nombre que se utiliza para hacer referencia al atributo calculado en otros servicios descendentes. Este nombre se deriva automáticamente del nombre para mostrar y se escribe en camelCase. |
-| [!UICONTROL Descripción] | Descripción del atributo calculado que está intentando crear. |
+| [!UICONTROL Display name] | Nombre por el que se conocerá el atributo calculado. Debe mantener este nombre para mostrar único para cada atributo calculado. Como práctica recomendada, este nombre para mostrar debe contener identificadores relacionados con el atributo calculado. Por ejemplo, &quot;Suma de compras de zapatos en los últimos 7 días&quot;. |
+| [!UICONTROL Field name] | Un nombre que se utiliza para hacer referencia al atributo calculado en otros servicios descendentes. Este nombre se deriva automáticamente del nombre para mostrar y se escribe en camelCase. |
+| [!UICONTROL Description] | Descripción del atributo calculado que está intentando crear. |
 
-![Se resalta la sección [!UICONTROL Información básica] de la página [!UICONTROL Crear atributo calculado].](./images/ui/basic-information.png)
+![La sección [!UICONTROL Basic information] de la página [!UICONTROL Create computed attribute] está resaltada.](./images/ui/basic-information.png)
 
 Después de agregar los detalles del atributo calculado, puede empezar a definir las reglas.
 
@@ -79,7 +79,7 @@ Después de agregar los detalles del atributo calculado, puede empezar a definir
 
 Para crear una regla, primero seleccione los atributos de la sección **[!UICONTROL Events]** para filtrar los eventos en los que desea agregar. Actualmente, solo se admiten atributos de evento de tipo no matriz.
 
-![La sección [!UICONTROL Eventos] está resaltada.](./images/ui/events.png)
+![La sección [!UICONTROL Events] está resaltada.](./images/ui/events.png)
 
 Después de seleccionar el atributo que se va a utilizar en la definición de atributo calculada, puede elegir con qué se comparará este valor.
 
@@ -87,7 +87,7 @@ Después de seleccionar el atributo que se va a utilizar en la definición de at
 
 ### Aplicar función de agregación
 
-Ahora, puede aplicar una función al campo desde la salida condicional. En primer lugar, seleccione el tipo de función de agregación. Las opciones disponibles son [!UICONTROL Sum], [!UICONTROL Min], [!UICONTROL Max], [!UICONTROL Count] y [!UICONTROL Más reciente]. Encontrará más información sobre estas funciones en la [sección de funciones](./overview.md#functions) de la descripción general de los atributos calculados.
+Ahora, puede aplicar una función al campo desde la salida condicional. En primer lugar, seleccione el tipo de función de agregación. Las opciones disponibles son [!UICONTROL Sum], [!UICONTROL Min], [!UICONTROL Max], [!UICONTROL Count] y [!UICONTROL Most Recent]. Encontrará más información sobre estas funciones en la [sección de funciones](./overview.md#functions) de la descripción general de los atributos calculados.
 
 ![Se muestran las funciones de atributo calculadas.](./images/ui/select-function.png)
 
@@ -110,7 +110,7 @@ Después de aplicar la función de agregación, debe definir el período retroac
 
 Al aplicar la función de agregación, puede habilitar la actualización rápida si el período retroactivo es mayor de una semana.
 
-![La casilla de verificación [!UICONTROL Actualización rápida] está resaltada.](./images/ui/enable-fast-refresh.png)
+![La casilla de verificación [!UICONTROL Fast Refresh] está resaltada.](./images/ui/enable-fast-refresh.png)
 
 La actualización rápida permite mantener los atributos actualizados. Al habilitar esta opción, puede actualizar los atributos calculados diariamente, incluso para periodos retrospectivos más largos, lo que le permite reaccionar rápidamente a las actividades del usuario.
 
@@ -118,7 +118,7 @@ Para obtener más información sobre la actualización rápida, lea la [sección
 
 Una vez completados estos pasos, puede elegir guardar este atributo calculado como borrador o publicarlo inmediatamente.
 
-![Los botones [!UICONTROL Guardar como borrador] y [!UICONTROL Publicar] están resaltados.](./images/ui/draft-or-publish.png)
+![Los botones [!UICONTROL Save as draft] y [!UICONTROL Publish] están resaltados.](./images/ui/draft-or-publish.png)
 
 ## Visualización de los detalles de un atributo calculado {#view-details}
 
@@ -126,7 +126,7 @@ Para ver los detalles de un atributo calculado, seleccione el atributo calculado
 
 ![Un atributo calculado está resaltado.](./images/ui/select.png)
 
-El contenido de la página difiere según si el atributo calculado es **[!UICONTROL Publicado]** o en **[!UICONTROL Borrador]**.
+El contenido de la página difiere, dependiendo de si el atributo calculado es **[!UICONTROL Published]** o en **[!UICONTROL Draft]**.
 
 ### Atributo calculado publicado {#published}
 
@@ -142,9 +142,9 @@ Esta página muestra un resumen de los detalles del atributo calculado, así com
 
 ### Borrador de atributo calculado {#draft}
 
-Al seleccionar un atributo calculado de borrador, aparecerá la página **[!UICONTROL Editar atributos calculados]**. Esta página, similar a la página [!UICONTROL Crear atributos calculados], le permite editar la información básica del atributo calculado, así como su definición, antes de permitirle actualizar el borrador o publicarlo.
+Al seleccionar un atributo calculado de borrador, aparecerá la página **[!UICONTROL Edit computed attributes]**. Esta página, similar a la página [!UICONTROL Create computed attributes], le permite editar la información básica del atributo calculado, así como su definición, antes de permitirle actualizar el borrador o publicarlo.
 
-![Se muestra la página [!UICONTROL Editar atributos calculados].](./images/ui/edit.png)
+![Se muestra la página [!UICONTROL Edit computed attributes].](./images/ui/edit.png)
 
 ## Uso de atributos calculados {#usage}
 
@@ -162,6 +162,6 @@ Después de crear un atributo calculado, puede usar **publicados** atributos cal
 
 ![Se muestra el Generador de segmentos, que muestra un atributo calculado como parte de la composición de definición de segmento.](./images/ui/use-ca.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Para obtener más información sobre los atributos calculados, lea [descripción general de los atributos calculados](./overview.md). Para obtener información sobre cómo crear y configurar atributos calculados mediante la API, lea la [guía para desarrolladores de atributos calculados](./api.md).

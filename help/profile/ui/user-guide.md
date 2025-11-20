@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;API;perfil unificado;perfil unificado;perfil unificado;perfil unificado;rtcp;habilitar perfil;Habilitar perfil;esquema de unión;PERFIL DE UNIÓN;perfil de unión
-title: Guía de la IU del perfil del cliente en tiempo real
+keywords: Experience Platform; perfil; perfil del cliente en tiempo real; Solución de problemas; API; perfil unificada; Perfil unificado; unificado; Perfil; rtcp; habilitar perfil; Habilitar perfil; Unión esquema; PERFIL SINDICAL; unión perfil
+title: Guía de IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1921'
 ht-degree: 4%
 
 ---
 
 # Guía de la interfaz de usuario de [!DNL Real-Time Customer Profile]
 
-[!DNL Real-Time Customer Profile] crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con los datos de [!DNL Real-Time Customer Profile] en la interfaz de usuario (IU) de Adobe Experience Platform.
+[!DNL Real-Time Customer Profile] Crea una vista integral de cada uno de sus clientes individuales, combinando datos de múltiples canales, incluidos datos de en línea, sin conexión, CRM y terceros. Este documento sirve como guía para interactuar con [!DNL Real-Time Customer Profile] datos en la interfaz de usuario de Adobe Experience Platform (IU).
 
 ## Introducción
 
-Esta guía de interfaz de usuario requiere una comprensión de los distintos servicios de [!DNL Experience Platform] involucrados con la administración de [!DNL Real-Time Customer Profiles]. Antes de leer esta guía o de trabajar en la interfaz de usuario de, consulte la documentación de los siguientes servicios:
+Este IU guía requiere una comprensión de los diversos [!DNL Experience Platform] servicios involucrados con la gestión [!DNL Real-Time Customer Profiles]. Antes de leer este guía o trabajar en la IU, revise la documentación de los siguientes servicios:
 
-* [[!DNL Real-Time Customer Profile] descripción general](../home.md): proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de varias fuentes.
-* [[!DNL Identity Service]](../../identity-service/home.md): habilita [!DNL Real-Time Customer Profile] al unir identidades de orígenes de datos dispares a medida que se incorporan en [!DNL Experience Platform].
+* [[!DNL Real-Time Customer Profile] Descripción general](../home.md): proporciona un perfil del consumidor unificado y en tiempo real basado en datos agregados de múltiples fuentes.
+* [[!DNL Identity Service]](../../identity-service/home.md): Permite [!DNL Real-Time Customer Profile] unir identidades de orígenes de datos dispares a medida que se ingieren en [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 
-## [!UICONTROL Información general]
+## [!UICONTROL Overview]
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Información general]** que muestra el panel de perfil.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Profiles]** en el panel de navegación izquierdo para abrir la pestaña **[!UICONTROL Overview]** que muestra el panel de perfil.
 
 >[!NOTE]
 >
->Si su organización es nueva en Experience Platform y aún no ha creado conjuntos de datos de perfil o políticas de combinación activos, el panel [!UICONTROL Perfiles] no estará visible. En su lugar, la pestaña [!UICONTROL Información general] muestra vínculos y documentación para ayudarle a empezar con el Perfil del cliente en tiempo real.
+>Si su organización es nueva en Experience Platform y aún no ha creado conjuntos de datos de perfil o políticas de combinación activos, el panel [!UICONTROL Profiles] no estará visible. En su lugar, la pestaña [!UICONTROL Overview] muestra vínculos y documentación para ayudarle a empezar con el Perfil del cliente en tiempo real.
 
 ### Panel de control de perfil {#profile-dashboard}
 
@@ -38,9 +38,9 @@ Para obtener más información, visita la [guía de panel de perfil](../../dashb
 
 ![Se muestra el tablero de perfiles.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## [!UICONTROL Examinar] ficha
+## [!UICONTROL Browse]Ficha
 
-En la ficha **[!UICONTROL Examinar]**, puede ver sus perfiles en una vista de **tarjeta** o en una vista de **gráfico** seleccionando la opción.
+En la ficha **[!UICONTROL Browse]**, puede ver los perfiles en una vista de **tarjeta** o en una vista de **gráfico** seleccionando la opción.
 
 ![Se resaltó la opción de vista de gráfico y tarjeta.](../images/user-guide/card-graph-view.png)
 
@@ -48,45 +48,45 @@ Además, puede examinar los perfiles mediante una política de combinación o bu
 
 ![Se muestran los perfiles que pertenecen a la organización.](../images/user-guide/profile-browse.png)
 
-### Examinar por [!UICONTROL política de combinación]
+### Examinar por [!UICONTROL Merge policy]
 
-La ficha **[!UICONTROL Examinar]** está establecida en la directiva de combinación predeterminada para su organización de forma predeterminada. Para elegir una política de combinación diferente, seleccione el `X` junto al nombre de la política de combinación y, a continuación, utilice el selector para abrir el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**.
+La pestaña **[!UICONTROL Browse]** está configurada en la política de combinación predeterminada de su organización de forma predeterminada. Para elegir una política de combinación diferente, seleccione el `X` junto al nombre de la política de combinación y, a continuación, utilice el selector para abrir el cuadro de diálogo **[!UICONTROL Select merge policy]**.
 
 >[!NOTE]
 >
->Si no se ha seleccionado ninguna política de combinación, utilice el botón de selección situado junto al campo **[!UICONTROL Política de combinación]** para abrir el cuadro de diálogo de selección.
+>Si no se ha seleccionado ninguna política de combinación, utilice el botón de selección situado junto al campo **[!UICONTROL Merge policy]** para abrir el cuadro de diálogo de selección.
 
 ![El selector de políticas de combinación está resaltado.](../images/user-guide/browse-by-merge-policy.png)
 
-Para elegir una política de combinación del cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]**, seleccione el botón de opción situado junto al nombre de la política y, a continuación, utilice **[!UICONTROL Seleccionar]** para volver a la ficha [!UICONTROL Examinar]. A continuación, puede seleccionar **[!UICONTROL Ver]** para actualizar los perfiles de muestra y ver un muestreo de perfiles con la nueva política de combinación aplicada.
+Para elegir una política de combinación del cuadro de diálogo **[!UICONTROL Select merge policy]**, seleccione el botón de opción situado junto al nombre de la política y, a continuación, utilice **[!UICONTROL Select]** para volver a la pestaña [!UICONTROL Browse]. A continuación, puede seleccionar **[!UICONTROL View]** para actualizar los perfiles de muestra y ver un muestreo de perfiles con la nueva política de combinación aplicada.
 
 ![Se muestra un cuadro de diálogo en el que puede seleccionar la política de combinación por la que filtrar.](../images/user-guide/select-merge-policy.png)
 
 Los perfiles que se muestran representan una muestra de hasta 20 perfiles del almacén de perfiles de su organización, después de aplicar la política de combinación seleccionada. Los perfiles de muestra para la política de combinación seleccionada se actualizan cuando se agregan nuevos datos al almacén de perfiles de su organización.
 
-Para ver los detalles de uno de los perfiles de muestra, seleccione el **[!UICONTROL ID de perfil]**. Para obtener más información, consulte la sección más adelante en esta guía sobre [ver detalles del perfil](#profile-detail).
+Para ver los detalles de uno de los perfiles de muestra, seleccione **[!UICONTROL Profile ID]**. Para obtener más información, consulte la sección más adelante en esta guía sobre [ver detalles del perfil](#profile-detail).
 
 ![Se muestran perfiles de muestra que coinciden con la política de combinación.](../images/user-guide/profile-browse-table.png)
 
 Para obtener más información acerca de las políticas de combinación y su función en Experience Platform, consulte la [descripción general de las políticas de combinación](../merge-policies/overview.md).
 
-### Examinar por [!UICONTROL identidad] {#browse-identity}
+### Examinar por [!UICONTROL Identity] {#browse-identity}
 
-En la ficha **[!UICONTROL Examinar]**, puede usar un área de nombres de identidad para buscar un perfil específico por un valor de identidad. La exploración por una identidad requiere que proporcione una política de combinación, un área de nombres de identidad y un valor de identidad.
+En la ficha **[!UICONTROL Browse]**, puede usar un área de nombres de identidad para buscar un perfil específico por un valor de identidad. La exploración por una identidad requiere que proporcione una política de combinación, un área de nombres de identidad y un valor de identidad.
 
 ![El selector de políticas de combinación está resaltado.](../images/user-guide/browse-by-merge-policy.png)
 
-Si es necesario, use el selector **[!UICONTROL Política de combinación]** para abrir el cuadro de diálogo **[!UICONTROL Seleccionar política de combinación]** y elija la política de combinación que desee usar.
+Si es necesario, use el selector **[!UICONTROL Merge policy]** para abrir el cuadro de diálogo **[!UICONTROL Select merge policy]** y elegir la política de combinación que desee usar.
 
 ![Se muestra un cuadro de diálogo en el que puede seleccionar la política de combinación por la que filtrar.](../images/user-guide/select-merge-policy.png)
 
-A continuación, use el selector de **[!UICONTROL área de nombres de identidad]** para abrir el cuadro de diálogo **[!UICONTROL Seleccionar área de nombres de identidad]** y elija el área de nombres en el que desea buscar. Si su organización tiene muchas áreas de nombres, puede utilizar la barra de búsqueda del cuadro de diálogo para empezar a escribir el nombre de un área de nombres.
+A continuación, utilice el selector **[!UICONTROL Identity namespace]** para abrir el cuadro de diálogo **[!UICONTROL Select identity namespace]** y elegir el área de nombres mediante el cual desea realizar la búsqueda. Si su organización tiene muchas áreas de nombres, puede utilizar la barra de búsqueda del cuadro de diálogo para empezar a escribir el nombre de un área de nombres.
 
-Puede seleccionar un área de nombres para ver detalles adicionales o seleccionar el botón de opción para elegir un área de nombres. A continuación, puede usar **[!UICONTROL Select]** para continuar.
+Puede seleccionar un área de nombres para ver detalles adicionales o seleccionar el botón de opción para elegir un área de nombres. Puede usar **[!UICONTROL Select]** para continuar.
 
-![Se muestra un cuadro de diálogo en el que puede seleccionar el área de nombres de identidad por la que filtrar.](../images/user-guide/select-identity-namespace.png)
+![Se muestra un cuadro de diálogo en el que puede seleccionar el espacio de nombres de identidad por el que se va a filtrar.](../images/user-guide/select-identity-namespace.png)
 
-Después de seleccionar un [!UICONTROL área de nombres de identidad] y regresar a la ficha [!UICONTROL Examinar], puede escribir un **[!UICONTROL valor de identidad]** relacionado con el área de nombres que seleccionó.
+Después de seleccionar un(a) [!UICONTROL Identity namespace] y volver a la ficha [!UICONTROL Browse], puede escribir un(a) **[!UICONTROL Identity value]** relacionado con el área de nombres que seleccionó.
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ Después de seleccionar un [!UICONTROL área de nombres de identidad] y regresar
 
 ![El valor de identidad por el que desea filtrar está resaltado.](../images/user-guide/browse-identity.png)
 
-Una vez que se haya introducido un valor, seleccione **[!UICONTROL Ver]** y se devolverá un solo perfil que coincida con el valor. Seleccione **[!UICONTROL ID de perfil]** para ver un perfil.
+Una vez que haya introducido un valor, seleccione **[!UICONTROL View]** y se devolverá un solo perfil que coincida con el valor. Seleccione el **[!UICONTROL Profile ID]** botón para vista una perfil.
 
 ![El perfil que coincide con el valor de identidad está resaltado.](../images/user-guide/filtered-identity-value.png)
 
@@ -105,43 +105,43 @@ Una vez que se haya introducido un valor, seleccione **[!UICONTROL Ver]** y se d
 >title="Entidad no encontrada"
 >abstract="Esto significa que Experience Platform no ha podido encontrar la entidad solicitada. Para resolver este error, pruebe una de las siguientes soluciones:<ul><li>Asegúrese de que el ID de perfil correcto aparece en la dirección URL de la entidad a la que intenta acceder.</li><li>Asegúrese de que tiene la combinación correcta de organización y zona protegida para la entidad a la que intenta acceder.</li></ul>"
 
-Después de seleccionar un **[!UICONTROL ID de perfil]**, se abre la pestaña **[!UICONTROL Detalle]**. La información de perfil mostrada en la ficha **[!UICONTROL Detail]** se ha combinado a partir de varios fragmentos de perfil para formar una sola vista del cliente individual. Esto incluye detalles del cliente, como atributos básicos, identidades vinculadas y preferencias de canal.
+Después de seleccionar **[!UICONTROL Profile ID]**, se abre la ficha **[!UICONTROL Detail]**. La información de perfil mostrada en la ficha **[!UICONTROL Detail]** se ha combinado a partir de varios fragmentos de perfil para formar una sola vista del cliente individual. Esto incluye detalles del cliente, como atributos básicos, identidades vinculadas y preferencias de canal.
 
 Además, puede ver otros detalles sobre perfiles como sus [atributos](#attributes), [eventos](#events) y [pertenencia a audiencias](#audience-membership).
 
 ### Pestaña Detalles {#profile-detail}
 
-La ficha **[!UICONTROL Detalles]** proporciona información más detallada sobre el perfil seleccionado y está separada en cuatro secciones: Información del perfil del cliente, widgets de insight de IA, widgets personalizables y widgets autoclasificados.
+El **[!UICONTROL Details]** pestaña proporciona información más detallada sobre el perfil seleccionado y se divide en cuatro secciones: información de perfil del cliente, widgets de conocimiento de IA, widgets personalizables y widgets clasificados automáticamente.
 
-![Se muestra la página de detalles del perfil.](../images/user-guide/profile-details.png)
+![Se muestran los detalles perfil Página.](../images/user-guide/profile-details.png)
 
-Además, puede alternar si se muestran las perspectivas generadas por IA, mostrar los detalles de hub en comparación con edge y ver los detalles en la vista de gráfico.
+Además, puede alternar si se muestran los conocimientos generados por IA, mostrar los detalles del concentrador en comparación con el borde, así como vista los detalles en el gráfico vista.
 
 ![Se resaltan los toggles enumerados arriba (información generada por IA, datos de Hub o Edge y vista de tarjeta o gráfico).](../images/user-guide/profile-toggles.png)
 
 #### Datos sobre perfil de cliente {#customer-profile-insights}
 
-La sección **[!UICONTROL Perspectivas del perfil del cliente]** muestra una breve introducción a los atributos del perfil. Esto incluye el ID de perfil, el correo electrónico, el número de teléfono, el sexo, la fecha de nacimiento, así como las identidades y las pertenencias a audiencias del perfil.
+Esta **[!UICONTROL Customer profile insights]** sección muestra una breve introducción a los atributos del perfil. Esto incluye la identificación de perfil, el correo electrónico, el número de teléfono, el sexo, la fecha de nacimiento, así como las identidades y audiencia membresías de la perfil.
 
-![Se muestra la sección de perspectivas del perfil del cliente.](../images/user-guide/customer-profile-insights.png)
+![Se muestra la sección de información perfil del cliente.](../images/user-guide/customer-profile-insights.png)
 
 #### Widgets de datos de IA {#ai-insight-widgets}
 
-[!BADGE Alpha]{type=Informative} Esta característica se encuentra actualmente en Alpha.
+[!BADGE Alfa]{type=Informative} Esta característica se encuentra actualmente en Alpha.
 
-La sección **[!UICONTROL widgets de insight de IA]** muestra widgets generados por IA. Estos widgets proporcionan una visión rápida del perfil, en función de los datos del perfil, incluidos datos demográficos (como edad, sexo o ubicación), comportamientos del usuario (como historial de compras, actividad en el sitio web o participación en medios sociales), así como psicográficos (como intereses, preferencias o elecciones de estilo de vida). Todos los widgets de IA utilizan datos que **ya** existen en el perfil.
+La **[!UICONTROL AI insight widgets]** sección muestra widgets generados por AI. Estos widgets proporcionan información rápida sobre el perfil, basada en los datos de la perfil, incluidos los datos demográficos (como la edad, el sexo o la ubicación), los comportamientos usuario (como el historial de compras, el actividad del sitio web o medios sociales participación), así como la psicografía (como intereses, preferencias u opciones de estilo de vida). Todos los widgets de IA utilizan datos que **ya** existen en el perfil.
 
 ![Se muestra la sección de widgets de insight de IA.](../images/user-guide/ai-insight-widgets.png)
 
 #### Widgets personalizables {#customizable-widgets}
 
-La sección **[!UICONTROL Widgets personalizables]** muestra widgets que puede personalizar para que coincidan con sus necesidades comerciales. Puede agrupar atributos en widgets independientes, eliminar widgets no deseados o ajustar el diseño de los widgets.
+La sección **[!UICONTROL Customizable widgets]** muestra widgets que puede personalizar para que coincidan con sus necesidades comerciales. Puede agrupar atributos en widgets independientes, eliminar widgets no deseados o ajustar el diseño de los widgets.
 
 Los campos predeterminados mostrados también se pueden cambiar a nivel organizativo para mostrar los atributos de perfil preferidos. Para obtener más información acerca de cómo personalizar estos campos, incluidas instrucciones paso a paso para agregar y quitar atributos y cambiar el tamaño de los paneles del panel, lea la [guía de personalización de detalles de perfil](profile-customization.md).
 
 ![Se muestra la sección de widgets personalizables.](../images/user-guide/customizable-widgets.png)
 
-También puede alternar entre la visualización de los nombres de atributos como nombres para mostrar y sus nombres de rutas de campo. Para cambiar entre estas dos pantallas, seleccione la opción **[!UICONTROL Mostrar nombres para mostrar]**.
+También puede alternar entre la visualización de los nombres de atributos como nombres para mostrar y sus nombres de rutas de campo. Para cambiar entre estas dos pantallas, seleccione la opción **[!UICONTROL Show display names]**.
 
 ![Se ha resaltado la opción para mostrar nombres en pantalla.](../images/user-guide/show-display-names.png)
 
@@ -149,7 +149,7 @@ También puede alternar entre la visualización de los nombres de atributos como
 
 [!BADGE Alpha]{type=Informative} Esta característica se encuentra actualmente en Alpha.
 
-La sección **[!UICONTROL Widgets clasificados automáticamente]** muestra widgets que aprovechan el esquema de unión para determinar los grupos de campos de origen a los que pertenece un atributo, lo que proporciona un contexto más claro sobre la procedencia de los datos. Puede utilizar la barra de búsqueda para buscar más fácilmente palabras clave dentro de los widgets.
+La sección **[!UICONTROL Auto-classified widgets]** muestra widgets que aprovechan el esquema de unión para determinar los grupos de campos de origen a los que pertenece un atributo, lo que proporciona un contexto más claro sobre la procedencia de los datos. Puede utilizar la barra de búsqueda para buscar más fácilmente palabras clave dentro de los widgets.
 
 Estos widgets combinan datos de evento (con el widget de eventos de experiencia) y datos de atributos, lo que le permite tener una vista unificada del perfil. Puede usar estos widgets para explorar la estructura de los datos de su perfil y estructurar mejor sus [widgets personalizables](#customizable-widgets).
 
@@ -161,9 +161,9 @@ Estos widgets combinan datos de evento (con el widget de eventos de experiencia)
 
 ### Pestaña Atributos {#attributes}
 
-La ficha **[!UICONTROL Atributos]** proporciona una vista de lista que resume todos los atributos relacionados con un único perfil, una vez aplicada la política de combinación especificada.
+La ficha **[!UICONTROL Attributes]** proporciona una vista de lista que resume todos los atributos relacionados con un único perfil, una vez aplicada la política de combinación especificada.
 
-Estos atributos también se pueden ver como un objeto JSON al seleccionar **[!UICONTROL Ver JSON]**. Esto resulta útil para los usuarios que desean comprender mejor cómo se incorporan los atributos de perfil en Experience Platform.
+Estos atributos también se pueden ver como un objeto JSON al seleccionar hasta **[!UICONTROL View JSON]**. Esto resulta útil para los usuarios que desean comprender mejor cómo se incorporan los atributos de perfil en Experience Platform.
 
 ![La ficha Atributos está resaltada. Se muestran los atributos de perfil.](../images/user-guide/attributes.png)
 
@@ -175,27 +175,27 @@ Para obtener más información sobre los perfiles de Edge, lea la [documentació
 
 ### Pestaña Eventos {#events}
 
-La pestaña **[!UICONTROL Events]** contiene datos de los 100 ExperienceEvents más recientes asociados con el cliente. Estos datos pueden incluir aperturas de correo electrónico, actividades del carro de compras y vistas de páginas. Si se selecciona **[!UICONTROL Ver todo]** para cualquier evento individual, se obtienen campos y valores adicionales como parte del evento.
+La pestaña **[!UICONTROL Events]** contiene datos de los 100 ExperienceEvents más recientes asociados con el cliente. Estos datos pueden incluir aperturas de correo electrónico, actividades del carro de compras y vistas de páginas. Al seleccionar **[!UICONTROL View all]** cualquier evento individual, se capturan campos y valores adicionales como parte del evento.
 
-Los eventos también se pueden ver como un objeto JSON al seleccionar **[!UICONTROL Ver JSON]**. Esto resulta útil para comprender cómo se capturan los eventos en Experience Platform.
+Los eventos también se pueden ver como un objeto JSON al seleccionar hasta **[!UICONTROL View JSON]**. Esto resulta útil para comprender cómo se capturan los eventos en Experience Platform.
 
 ![La ficha Eventos está resaltada. Se muestran los eventos de perfil.](../images/user-guide/events.png)
 
 ### Pestaña Membresía de audiencia {#audience-membership}
 
-La ficha **[!UICONTROL Pertenencia a audiencias]** muestra una lista con el nombre y la descripción de las audiencias a las que pertenece actualmente el perfil de cliente individual. Esta lista se actualiza automáticamente a medida que el perfil cumple los requisitos de las audiencias o caduca. El recuento total de audiencias para las que el perfil está cualificado actualmente se muestra en la parte derecha de la pestaña.
+La ficha **[!UICONTROL Audience membership]** muestra una lista con el nombre y la descripción de las audiencias a las que pertenece actualmente el perfil de cliente individual. Esta lista se actualiza automáticamente a medida que el perfil cumple los requisitos de las audiencias o caduca. El recuento total de audiencias para las que el perfil está cualificado actualmente se muestra en la parte derecha de la pestaña.
 
 Para obtener más información sobre la segmentación en Experience Platform, consulte la [documentación del servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md).
 
 ![La ficha Pertenencia a audiencia está resaltada. Se muestran los detalles de pertenencia a audiencias del perfil.](../images/user-guide/audience-membership.png)
 
-Para ver la pertenencia de la audiencia a los perfiles disponibles en Edge, selecciona **[!UICONTROL Edge]** en el selector de ubicación de datos. Encontrará más información sobre la segmentación de Edge en la [guía de segmentación de Edge](../../segmentation/methods/edge-segmentation.md).
+Para ver la pertenencia a la audiencia de los perfiles disponibles en Edge, seleccione **[!UICONTROL Edge]** en el selector de ubicación de datos. Encontrará más información sobre la segmentación de Edge en la [guía de segmentación de Edge](../../segmentation/methods/edge-segmentation.md).
 
 ![El selector de ubicación de datos dentro de la ficha pertenencia a audiencias está resaltado.](../images/user-guide/audience-membership-select.png)
 
 ## Combinar políticas
 
-En el menú principal **[!UICONTROL Perfiles]**, seleccione la ficha **[!UICONTROL Políticas de combinación]** para ver una lista de las políticas de combinación que pertenecen a su organización. Cada directiva de la lista muestra su nombre, independientemente de si es o no la directiva de combinación predeterminada y la clase de esquema a la que se aplica.
+En el menú principal **[!UICONTROL Profiles]**, seleccione la pestaña **[!UICONTROL Merge Policies]** para ver una lista de las políticas de combinación que pertenecen a su organización. Cada directiva de la lista muestra su nombre, independientemente de si es o no la directiva de combinación predeterminada y la clase de esquema a la que se aplica.
 
 Para obtener más información acerca de las políticas de combinación, vea la [descripción general de las políticas de combinación](../merge-policies/overview.md).
 
@@ -203,7 +203,7 @@ Para obtener más información acerca de las políticas de combinación, vea la 
 
 ## Esquema de unión {#union-schema}
 
-En el menú principal **[!UICONTROL Perfiles]**, seleccione la pestaña **[!UICONTROL Esquema de unión]** para ver los esquemas de unión disponibles para los datos ingeridos. Un esquema de unión es una amalgamación de todos los campos [!DNL Experience Data Model] (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en [!DNL Real-Time Customer Profile].
+En el menú principal **[!UICONTROL Profiles]**, seleccione la pestaña **[!UICONTROL Union Schema]** para ver los esquemas de unión disponibles para los datos ingeridos. Un esquema de unión es una amalgamación de todos los campos [!DNL Experience Data Model] (XDM) de la misma clase, cuyos esquemas se han habilitado para su uso en [!DNL Real-Time Customer Profile].
 
 Para obtener más información sobre los esquemas de unión, visite la [guía de la interfaz de usuario del esquema de unión](union-schema.md).
 
@@ -211,11 +211,11 @@ Para obtener más información sobre los esquemas de unión, visite la [guía de
 
 ## Atributos calculados {#computed-attributes}
 
-En el menú principal **[!UICONTROL Perfiles]**, seleccione la ficha **[!UICONTROL Atributos calculados]** para ver una lista de atributos calculados que pertenecen a su organización.
+En el menú principal **[!UICONTROL Profiles]** , seleccione el **[!UICONTROL Computed attributes]** pestaña para vista una lista de atributos calculados que pertenecen a su organización.
 
-![La ficha Atributos calculados está resaltada.](../images/user-guide/computed-attributes.png)
+![Se resalta la pestaña Atributos calculados.](../images/user-guide/computed-attributes.png)
 
-Para obtener más información sobre los atributos calculados, lea la [descripción general de los atributos calculados](../computed-attributes/overview.md). Para obtener más información sobre cómo usar atributos calculados en la interfaz de usuario de Experience Platform, lea la [guía de la interfaz de usuario de atributos calculados](../computed-attributes/ui.md).
+Para obtener más información sobre los atributos calculados, lea la información general[ sobre los ](../computed-attributes/overview.md)atributos calculados. Para obtener más información sobre cómo utilizar los atributos calculados dentro del IU de Experience Platform, lea los [atributos calculados IU guía](../computed-attributes/ui.md).
 
 ## Próximos pasos
 

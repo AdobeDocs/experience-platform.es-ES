@@ -14,13 +14,13 @@ ht-degree: 12%
 
 Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Experience Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
-Este documento proporciona información general sobre [!DNL Segmentation Service] y la función que desempeña en Adobe Experience Platform.
+Este documento proporciona una descripción general de [!DNL Segmentation Service] la función que desempeña en Adobe Experience Platform.
 
 ## Introducción a [!DNL Segmentation Service]
 
-Debe comprender los siguientes términos clave utilizados en este documento:
+Debe comprender los siguientes términos clave utilizados a lo largo de este documento:
 
-- **Audiencia**: Una colección de personas que comparten comportamientos o características similares. Adobe Experience Platform puede generar esta colección de personas mediante definiciones de segmento (audiencia generada por Experience Platform) o desde fuentes externas (audiencia generada externamente).
+- **Audiencia**: Un colección de personas que comparten comportamientos y/o características similares. Esta colección de personas puede ser generada por Adobe Experience Platform utilizando definiciones de segmento (audiencia generada Platform experiencia) o a partir de fuentes externas (audiencia generadas externamente).
 - **Definición de segmento**: El conjunto de reglas que utiliza Adobe Experience Platform para describir las características clave o el comportamiento de una audiencia de destino.
 - **Segmento**: Acto de separar Perfiles en audiencias.
 
@@ -48,13 +48,13 @@ Para obtener información sobre cómo generar definiciones de segmentos mediante
 
 >[!NOTE]
 >
->En caso de que se amplíe un esquema, todas las cargas futuras deben actualizar los campos recién añadidos en consecuencia. Para obtener más información sobre cómo personalizar [!DNL Experience Data Model] (XDM), visite el [tutorial del editor de esquemas](../xdm/tutorials/create-schema-ui.md).
+>En caso de que se amplíe un esquema, todas las cargas futuras deben actualizar los campos recién añadidos en consecuencia. Para obtener más información sobre la [!DNL Experience Data Model] personalización (XDM), visita el tutorial Editor[ de ](../xdm/tutorials/create-schema-ui.md)esquemas.
 >
->Además, si un valor de caducidad de Evento de experiencia está habilitado en el conjunto de datos, esto podría afectar al abono de la definición de segmento creada. Lea la guía sobre [Caducidad de eventos de experiencia](../profile/event-expirations.md) para obtener más información sobre cómo esta característica puede afectar la segmentación.
+>Además, si un valor de caducidad de Evento de experiencia está habilitado en la conjunto de datos, esto podría afectar al abono de la definición de segmento creada. Lea la guía sobre [caducidades de eventos de](../profile/event-expirations.md) experiencias para obtener más información sobre cómo esta función puede afectar a segmentación.
 
 ### Composición de público federado {#fac}
 
-Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Adobe Federated Audience Composition para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenar esas audiencias en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
+Además de audiencia composiciones y definiciones de segmento, puede usar Adobe Systems composición de audiencias federadas para versión nuevas audiencias de conjuntos de datos empresariales sin copiar los datos subyacentes y tienda esas audiencias en Adobe Experience Platform portal de audiencias. También puede enriquecer audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos federados desde el almacén de datos empresarial. Lea la guía sobre [composición de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home) federadas.
 
 ## Evaluar públicos {#evaluate-segments}
 
@@ -104,7 +104,7 @@ Para obtener más información acerca de la segmentación de Edge, lea la [descr
 
 Para obtener información sobre cómo tener acceso a una audiencia exportada, consulte el [tutorial de evaluación de definición de segmento](./tutorials/evaluate-a-segment.md).
 
-## Metadatos de definición de segmento
+## Definición del segmento metadatos
 
 Los metadatos de definición de segmentos facilitan la indexación en el caso de que alguna de sus audiencias se vaya a reutilizar o combinar.
 
@@ -112,17 +112,17 @@ La composición de una definición de segmento (a través de la API o [!DNL Segm
 
 ### Nombres de definición de segmento
 
-Al crear una nueva definición de segmento, es necesario proporcionar un nombre. El nombre de la definición del segmento se usa para identificar una definición de segmento determinada entre la colección creada por [!DNL Segmentation Service]. Por lo tanto, los nombres de las definiciones de segmentos deben ser descriptivos, concisos y únicos.
+Al crear una nueva definición de segmento, es necesario proporcionar un nombre. El nombre de la definición del segmento se usa para identificar una definición de segmento determinada entre la colección creada por [!DNL Segmentation Service]. Por lo tanto, los nombres de definición de segmento deben ser descriptivos, concisos y únicos.
 
 >[!NOTE]
 >
->Al planificar una definición de segmento, recuerde que se puede hacer referencia a las definiciones de segmento desde cualquier otra definición de segmento y combinarlas con ella. Al seleccionar un nombre, considere la posibilidad de que la definición del segmento contenga partes reutilizables.
+>Al planificar una definición de segmento, recuerde que segmento definiciones pueden ser referenciadas y combinadas con cualquier otra definición segmento. Al seleccionar un nombre, considere la posibilidad de que su definición de segmento contenga porciones reutilizables.
 
 ### Combinar políticas
 
-Las políticas de combinación son reglas utilizadas por [!DNL Profile] para determinar cómo se priorizarán y combinarán los datos en una vista unificada en ciertas condiciones.
+Las directivas de combinación son reglas utilizadas por [!DNL Profile] para determinar cómo se priorizarán los datos y cómo se combinarán en un vista unificado bajo ciertas condiciones.
 
-Si no se define una política de combinación, se utilizará la política de combinación predeterminada [!DNL Experience Platform]. Si prefiere utilizar una política de combinación específica de su organización, puede crear la suya propia y marcarla como la predeterminada de su organización.
+Si no se define un directiva de combinación, se utiliza el directiva de combinación predeterminado [!DNL Experience Platform] . Si prefiere usar un directiva de combinación específico de su organización, puede crear el suyo propio y marcarlo como predeterminado de su organización.
 
 Encontrará más información sobre las políticas de combinación en la [guía de políticas de combinación](../profile/api/merge-policies.md).
 
@@ -146,7 +146,7 @@ Estas funciones avanzadas se analizan con más detalle en las siguientes seccion
 
 ### Segmentación secuencial {#sequential}
 
-Un recorrido de usuario estándar es de naturaleza secuencial. Adobe Experience Platform le permite definir una serie ordenada de audiencias para reflejar este recorrido y, por lo tanto, capturar secuencias de eventos a medida que se producen. Puede organizar los eventos en el orden que desee mediante la escala de tiempo del evento visual en [!DNL Segment Builder].
+Un viaje de usuario estándar es de naturaleza secuencial. Adobe Experience Platform le permite definir una serie ordenada de audiencias para reflejar este recorrido y, por lo tanto, capturar secuencias de eventos a medida que se producen. Puede organizar los eventos en el orden que desee mediante la escala de tiempo del evento visual en [!DNL Segment Builder].
 
 Un ejemplo de recorrido de cliente que requeriría segmentación secuencial sería vista de producto > adición de producto > cierre de compra > Sin compra.
 
@@ -154,15 +154,15 @@ Un ejemplo de recorrido de cliente que requeriría segmentación secuencial ser�
 
 La segmentación dinámica resuelve los problemas de escalabilidad a los que se enfrentan los especialistas en marketing tradicionalmente al crear audiencias para campañas de marketing.
 
-A diferencia de la segmentación estática, que requiere que capture de forma explícita y repetida todos los casos de uso posibles, la segmentación dinámica utiliza variables para crear la lógica de regla y expresar relaciones de forma dinámica.
+A diferencia de los segmentación estáticos que requieren que capture explícita y repetidamente todos los casos de uso posibles, segmentación dinámica usa variables para versión la lógica regla y expresar relaciones dinámicamente.
 
-Para ilustrar el valor de esta función de segmentación avanzada, considere la posibilidad de que un arquitecto de datos colabore con un experto en marketing para identificar a los clientes que realizaron compras fuera de su estado natal.
+Para ilustrar el valor de esta característica de segmentación avanzada, considere un arquitecto de datos que colabora con un experto en marketing para identificar a los clientes que realizaron compras fuera de su estado de origen.
 
-La segmentación estática requiere que defina segmentos individuales con un atributo de estado de inicio único antes de filtrar por eventos de compra que no sean iguales al estado de inicio. Una definición explícita de segmento de este tipo diría &quot;Busco personas de Utah donde el estado de su compra no sea Utah&quot;. La creación de una audiencia con este método requiere que defina una definición de segmento para cada estado de EE. UU., para un total de 50 segmentos.
+La segmentación estática requiere que defina segmentos individuales con un atributo de estado de inicio único, antes de filtrar por eventos de compra que no sean iguales al estado de inicio. Una definición segmento explícita de este tipo diría &quot;Estoy buscando personas de Utah donde el estado de su compra no es Utah&quot;. La creación de una audiencia con este método requiere que defina una definición de segmento para cada estado de EE. UU., para un total de 50 segmentos.
 
-Como resultado de las diferentes combinaciones de definiciones de segmentos que surgen inevitablemente a medida que se escala, el proceso manual necesario para la segmentación estática requiere más tiempo, lo que reduce su eficiencia general.
+Como resultado de las diferentes combinaciones de definiciones de segmento que surgen inevitablemente a medida que escala, el proceso manual requerido para el segmentación estático consume más tiempo, lo que reduce su eficiencia general.
 
-Al asignar una variable al atributo de estado de compra, la definición del segmento dinámico se simplifica a &quot;buscarme una compra en la que el estado de esa compra no sea igual al estado de inicio del cliente&quot;. Al hacerlo, puede consolidar 50 segmentos estáticos en una sola definición de segmento dinámico.
+Al asignar un variable al atributo de estado de compra, su definición de segmento dinámica se simplifica a &quot;búsqueme una compra en la que el estado de esa compra no sea igual al estado de origen del cliente&quot;. Al hacerlo, puede consolidar 50 segmentos estáticos en una sola definición de segmento dinámico.
 
 ### Segmentación de varias entidades {#multi-entity}
 

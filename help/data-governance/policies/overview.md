@@ -6,8 +6,8 @@ description: Las políticas de uso de datos son reglas que describen los tipos d
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
-ht-degree: 17%
+source-wordcount: '1207'
+ht-degree: 18%
 
 ---
 
@@ -22,16 +22,16 @@ Para que las etiquetas de uso de datos respalden con eficacia el cumplimiento, d
 
 Hay dos tipos de directivas disponibles:
 
-* **[!UICONTROL Política de control de datos]**: Restrinja la activación de datos en función de la acción de marketing que se esté realizando y de las etiquetas de uso de datos que lleven los datos en cuestión.
-* **[!UICONTROL Política de consentimiento]**: filtre los perfiles que se pueden activar a [destinos](../../destinations/home.md) según las preferencias o el consentimiento de sus clientes
+* **[!UICONTROL Data governance policy]**: restrinja la activación de datos en función de la acción de marketing que se esté realizando y las etiquetas de uso de datos que lleven los datos en cuestión.
+* **[!UICONTROL Consent policy]**: filtre los perfiles que se pueden activar a [destinos](../../destinations/home.md) según las preferencias o el consentimiento de sus clientes
 
 >[!NOTE]
 >
->Las políticas de uso de datos no se deben confundir con las [políticas de control de acceso](../../access-control/abac/end-to-end-guide.md#policy), que determinan si ciertos usuarios de Experience Platform de su organización pueden acceder a ciertos campos de datos y se configuran a través de la pestaña [!UICONTROL Permisos].
+>Las directivas de uso de datos no se deben confundir con las [directivas de control de acceso](../../access-control/abac/end-to-end-guide.md#policy), que determinan si determinados usuarios de Experience Platform de su organización pueden tener acceso a determinados campos de datos y se configuran mediante la ficha [!UICONTROL Permissions].
 
 Este documento proporciona información general de alto nivel sobre las políticas de uso de datos y proporciona vínculos a documentación adicional para trabajar con políticas en la interfaz de usuario o la API.
 
-## Acciones de marketing {#marketing-actions}
+## Acción de marketing {#marketing-actions}
 
 Las acciones de marketing (también denominadas casos de uso de marketing) en el contexto del marco de trabajo de control de datos, son acciones que puede realizar un consumidor de datos de [!DNL Experience Platform] y para las cuales su organización desea restringir el uso de datos. Como tal, una política de uso de datos se define de la siguiente manera:
 
@@ -57,7 +57,7 @@ Consulte el apéndice de este documento para obtener una lista de [acciones de m
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=es).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Administración de políticas de uso de datos {#manage}
@@ -72,7 +72,7 @@ Para obtener instrucciones paso a paso sobre cómo trabajar con acciones de mark
 
 Para obtener información sobre cómo trabajar con acciones y directivas de marketing en la interfaz de usuario de [!DNL Experience Platform], consulte la [guía del usuario sobre la directiva de uso de datos](./user-guide.md).
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento proporciona una introducción a las políticas de uso de datos dentro del marco de trabajo de control de datos. Ahora puede seguir leyendo la documentación del proceso vinculada a través de esta guía para obtener más información sobre cómo trabajar con políticas en la API y la IU.
 
@@ -95,7 +95,7 @@ En la tabla siguiente se describen las acciones de marketing principales que pro
 | Segmentación entre sitios | Una acción que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos in situ y datos externos o una combinación de datos de varias fuentes externas, se denomina datos entre sitios. Los datos entre sitios generalmente se recopilan y procesan para hacer deducciones sobre los intereses de los usuarios. |
 | Ciencia de datos | Una acción que utiliza datos para flujos de trabajo de ciencia de datos. Algunos contratos incluyen prohibiciones explícitas sobre el uso de datos para la ciencia de datos. A veces se formulan en términos que prohíben el empleo de datos para inteligencia artificial (IA), aprendizaje automático (ML) o modelado. |
 | Exportación de datos | Una acción que exporta datos a cualquier ubicación o destino fuera de los productos y servicios de Adobe. Por ejemplo: descargar datos en el equipo local, copiar datos de la pantalla, programar el envío de datos a una ubicación fuera de Adobe, Proyectos programados de Customer Journey Analytics, Descargar informes, API de informes, etc. |
-| Segmentación por correo electrónico | Una acción que utiliza datos en campañas de direccionamiento de correo electrónico. |
+| Segmentación por correo electrónico | Una acción que utiliza datos en campañas de segmentación de correo electrónico. |
 | Exportar a terceros | Una acción que exporta datos a procesadores y entidades que no tienen relaciones directas con los clientes. Muchos proveedores de datos tienen condiciones en los contratos que prohíben la exportación de datos desde el lugar donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales suelen restringir la transferencia de los datos que se reciben de ellas. |
 | Advertising in situ | Una acción que utiliza datos para anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, o para medir el envío y la eficacia de dichos anuncios. |
 | Personalization in situ | Una acción que utiliza datos para la personalización de contenido en el sitio. La personalización en el sitio es cualquier dato que se utiliza para hacer deducciones sobre los intereses de los usuarios, y se utiliza para seleccionar qué contenido o anuncios se muestran en función de esas deducciones. |

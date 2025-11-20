@@ -4,8 +4,8 @@ description: Aprenda a utilizar el Administrador de permisos en Adobe Experience
 exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 1%
+source-wordcount: '572'
+ht-degree: 7%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Para obtener acceso al [!UICONTROL Administrador de permisos], debe ser administrador de productos. Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema para obtener acceso.
+>Para tener acceso a [!UICONTROL Permission Manager], debe ser administrador de producto. Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema para obtener acceso.
 
-Use consultas simples en el [!UICONTROL Administrador de permisos] para crear informes concisos que le ayudarán a comprender la administración de acceso y a ahorrar tiempo en la validación de permisos de acceso en muchos flujos de trabajo y niveles de granularidad. Puede usar [!UICONTROL Administrador de permisos] para buscar usuarios que pertenezcan a un grupo de usuarios y que tengan privilegios de acceso especificados, así como roles que tengan etiquetas específicas.
+Use consultas simples en [!UICONTROL Permission Manager] para crear informes concisos que le ayuden a comprender la administración de acceso y a ahorrar tiempo en la validación de permisos de acceso en muchos flujos de trabajo y niveles de granularidad. Puede utilizar [!UICONTROL Permission Manager] para buscar usuarios que pertenezcan a un grupo de usuarios y que tengan privilegios de acceso especificados, así como roles que tengan etiquetas específicas.
 
 ## Realizar una búsqueda de usuarios dentro de un grupo de usuarios especificado {#search-users}
 
@@ -23,25 +23,25 @@ Use consultas simples en el [!UICONTROL Administrador de permisos] para crear in
 >id="platform_permission_manager"
 >title="Administrador de permisos"
 >abstract="Utilice los selectores desplegables de la página para obtener informes de nivel de acceso de diferentes niveles de granularidad para usuarios y funciones."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=es" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
-En la lista desplegable, seleccione el atributo **[!UICONTROL Usuarios]**.
+En la lista desplegable, seleccione el atributo **[!UICONTROL Users]**.
 
 ![Lista desplegable de atributos que resalta a los usuarios.](../../images/permission-manager/users-select.png)
 
-A continuación, seleccione el **[!UICONTROL grupo de usuarios]** que desee buscar mediante la lista desplegable.
+A continuación, seleccione el(la) **[!UICONTROL User Group]** que desee buscar mediante la lista desplegable.
 
 >[!INFO]
 >
->[!UICONTROL Grupo de usuarios] no es un campo obligatorio. Solo puede seleccionar un grupo de usuarios para cada informe.
+>[!UICONTROL User Group] no es un campo obligatorio. Solo puede seleccionar un grupo de usuarios para cada informe.
 
 ![Se resaltó la lista desplegable del grupo de usuarios.](../../images/permission-manager/user-group-select.png)
 
-Para un informe más granular, puede especificar el recurso con acciones en una zona protegida concreta. Seleccione el **[!UICONTROL recurso]**, **[!UICONTROL acciones]** y **[!UICONTROL zonas protegidas]** con la lista desplegable y, a continuación, seleccione **[!UICONTROL Mostrar resultados]**.
+Para un informe más granular, puede especificar el recurso con acciones en una zona protegida concreta. Seleccione **[!UICONTROL Resource]**, **[!UICONTROL Actions]** y **[!UICONTROL Sandboxes]** mediante la lista desplegable y luego seleccione **[!UICONTROL Show Results]**.
 
 >[!INFO]
 >
->[!UICONTROL El recurso], [!UICONTROL las acciones] y [!UICONTROL las zonas protegidas] no son campos obligatorios. Una acción o zona protegida se puede eliminar una vez agregada seleccionando **&#39;x&#39;** junto a la selección que desee eliminar.
+>[!UICONTROL Resource], [!UICONTROL Actions] y [!UICONTROL Sandboxes] no son campos obligatorios. Una acción o zona protegida se puede eliminar una vez agregada seleccionando **&#39;x&#39;** junto a la selección que desee eliminar.
 
 ![Se resaltaron el recurso, las acciones, las zonas protegidas y los resultados de la presentación](../../images/permission-manager/users-additional-attributes-select.png)
 
@@ -55,19 +55,19 @@ En la lista desplegable, seleccione el atributo **[!UICONTROL Roles]**.
 
 >[!INFO]
 >
->[!UICONTROL Etiquetas] no es un campo obligatorio. Puede seleccionar varias etiquetas, que se enumerarán debajo de esta lista desplegable una vez seleccionadas. Una vez agregada, se puede eliminar una etiqueta seleccionando **&#39;x&#39;** junto a la acción.
+>[!UICONTROL Labels] no es un campo obligatorio. Puede seleccionar varias etiquetas, que se enumerarán debajo de esta lista desplegable una vez seleccionadas. Una vez agregada, se puede eliminar una etiqueta seleccionando **&#39;x&#39;** junto a la acción.
 
 ![Lista desplegable de atributos que resalta los roles.](../../images/permission-manager/roles-select.png)
 
-A continuación, seleccione las **[!UICONTROL Etiquetas]** que quiera buscar mediante la lista desplegable.
+A continuación, seleccione el(la) **[!UICONTROL Labels]** que desee buscar mediante la lista desplegable.
 
 ![Se resaltó la lista desplegable Etiquetas.](../../images/permission-manager/roles-labels-select.png)
 
-Para un informe más granular, puede especificar el recurso con acciones en una zona protegida concreta. Seleccione el **[!UICONTROL recurso]**, **[!UICONTROL acciones]** y **[!UICONTROL zonas protegidas]** con la lista desplegable y, a continuación, seleccione **[!UICONTROL Mostrar resultados]**.
+Para un informe más granular, puede especificar el recurso con acciones en una zona protegida concreta. Seleccione **[!UICONTROL Resource]**, **[!UICONTROL Actions]** y **[!UICONTROL Sandboxes]** mediante la lista desplegable y luego seleccione **[!UICONTROL Show Results]**.
 
 >[!INFO]
 >
->[!UICONTROL El recurso], [!UICONTROL las acciones] y [!UICONTROL las zonas protegidas] no son campos obligatorios. Solo se puede seleccionar un [!UICONTROL recurso] para cada informe. Una acción o zona protegida se puede eliminar una vez agregada seleccionando **&#39;x&#39;** junto a la selección que desee eliminar.
+>[!UICONTROL Resource], [!UICONTROL Actions] y [!UICONTROL Sandboxes] no son campos obligatorios. Solo se puede seleccionar un(a) [!UICONTROL Resource] para cada informe. Una acción o zona protegida se puede eliminar una vez agregada seleccionando **&#39;x&#39;** junto a la selección que desee eliminar.
 
 ![Se resaltaron el recurso, las acciones, las zonas protegidas y los resultados de la presentación](../../images/permission-manager/roles-additional-attributes-select.png)
 
@@ -86,6 +86,6 @@ Se muestra la siguiente información para cada rol que coincida con sus criterio
 
 ![Se resaltó el informe generado basado en los atributos seleccionados](../../images/permission-manager/roles-report.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora ha aprendido a generar informes para usuarios y funciones. Para obtener más información sobre el control de acceso basado en atributos, consulte la [descripción general del control de acceso basado en atributos](../overview.md).

@@ -22,7 +22,7 @@ Los servicios inteligentes permiten a los analistas y profesionales de marketing
 
 El siguiente vídeo está diseñado para ayudarle a comprender los servicios inteligentes. En este vídeo, que utiliza ejemplos de casos de uso empresariales, se explica un flujo de trabajo de alto nivel y se describen las capacidades de la inteligencia artificial aplicada a la atribución y la inteligencia artificial aplicada al cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/36571?learn=on&quality=12&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Ventajas de los servicios inteligentes
 
@@ -58,6 +58,6 @@ Una vez que los modelos han terminado la formación y la puntuación, las puntua
 
 Por último, puede decidir qué acciones llevar a cabo con las predicciones, como consumir perspectivas, activar aplicaciones en [!DNL Adobe Experience Cloud] y crear paneles personalizados.
 
-## Pasos siguientes
+## Próximos pasos
 
 Actualmente, los servicios inteligentes ofrecen inteligencia artificial aplicada a la atribución y Customer AI. Inteligencia artificial aplicada a la atribución permite a los especialistas en marketing aumentar de forma inteligente la eficacia de marketing en varios canales y campañas. Para obtener más información acerca de Inteligencia artificial aplicada a la atribución, visite la [Descripción general de Inteligencia artificial aplicada a la atribución](./attribution-ai/overview.md). La inteligencia artificial aplicada al cliente permite a los especialistas en marketing hiperpersonalizar las experiencias de los clientes. Para obtener más información sobre la inteligencia artificial aplicada al cliente, visite la [Descripción general de la inteligencia artificial aplicada al cliente](./customer-ai/overview.md).

@@ -64,7 +64,7 @@ Un tipo de datos que puede considerar confidencial puede ser un tipo diferente d
 | **PSPD** | Los datos personales confidenciales permitidos (PSPD) se refieren a datos que Adobe le permite cargar de forma contractual y que se consideran &quot;confidenciales&quot;, &quot;categoría especial de datos&quot; o un término similar utilizado por las leyes aplicables. Esto excluye específicamente la información médica protegida (PHI) y otros datos de salud regulados. |
 | **RHD** | Datos que hacen referencia a información médica protegida (PHI) o información sobre un paciente que Adobe le permite cargar de forma contractual. |
 
-## Etiquetas de Partner Ecosystem {#partner}
+## Etiquetas del ecosistema de socios {#partner}
 
 Las etiquetas de ecosistema de socio se utilizan para categorizar los datos obtenidos de fuentes externas a su organización.
 
@@ -74,7 +74,7 @@ Esta etiqueta se utiliza para regular el uso de los datos de clientes potenciale
 | --- | --- |
 | **Terceros** | Los datos de terceros son datos que le proporciona un proveedor de datos de terceros. Un proveedor de datos de terceros es una entidad que ha celebrado un acuerdo con su organización que le autoriza a acceder, utilizar, mostrar y transmitir los datos de terceros junto con Experience Platform. |
 | **Enriquecimiento De Terceros** | Datos recopilados por una organización de terceros que no esté directamente relacionada con el interesado. La etiqueta debe aplicarse a datos de terceros que se utilizan para enriquecer perfiles de origen. |
-| **Prospección de terceros** | Datos recopilados por una organización de terceros que no esté directamente relacionada con el interesado. La etiqueta debe aplicarse a los datos de terceros utilizados para la parte superior de la prospección del canal para los clientes nuevos netos. |
+| **Prospección de terceros** | Datos recopilados por una organización de terceros que no esté directamente relacionada con el interesado. La etiqueta debe aplicarse a los datos de terceros utilizados para la parte superior de la prospección de funnel a los clientes nuevos netos. |
 
 ## Apéndice
 

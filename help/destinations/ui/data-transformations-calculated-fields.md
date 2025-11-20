@@ -5,7 +5,7 @@ description: Aprenda a utilizar la funcionalidad de campos calculados para reali
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1604'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ Para realizar varias transformaciones en los datos exportados a destinos de alma
 
 Para utilizar campos calculados para transformaciones de datos:
 
-1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectar con el destino de nube deseado, desactiva la **[[!UICONTROL opción [Exportar matrices, mapas, objetos]** y &#x200B;]](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectarse al destino de nube deseado, desactive la opción **[!UICONTROL Export arrays, maps, objects]** [2}.](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)
 2. Siga los [pasos de activación para los destinos de almacenamiento en la nube](/help/destinations/ui/activate-batch-profile-destinations.md) y vaya al paso [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Trabajar con campos calculados {#how-to-export-calculated-fields}
@@ -50,11 +50,11 @@ Para utilizar campos calculados para transformaciones de datos:
 >
 >Siempre que trabaje con campos calculados, además de cualquier función de transformación de datos que aplique, también debe utilizar la función `array_to_string` para concatenar campos en una cadena.
 
-En el paso de asignación del flujo de trabajo de activación para los destinos de almacenamiento en la nube, seleccione **[!UICONTROL Agregar campo calculado]**.
+En el paso de asignación del flujo de trabajo de activación para los destinos de almacenamiento en la nube, seleccione **[!UICONTROL Add calculated field]**.
 
 >[!TIP]
 >
->El control **[!UICONTROL Agregar campo calculado]** está deshabilitado para las conexiones de destino en las que el control **[!UICONTROL Exportar matrices, mapas y objetos]** estaba desactivado. [Más información](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
+>El control **[!UICONTROL Add calculated field]** está deshabilitado para las conexiones de destino en las que el control **[!UICONTROL Export arrays, maps, and objects]** estaba desactivado. [Más información](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![Agregue el campo calculado resaltado en el paso de asignación del flujo de trabajo de activación por lotes.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
@@ -66,17 +66,17 @@ Por ejemplo, utilice la función `array_to_string` en el campo `organizations` c
 
 ![Ventana modal de la funcionalidad de campo calculado con la función de matriz a cadena seleccionada.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
-Seleccione **[!UICONTROL Guardar]** para conservar el campo calculado y volver al paso de asignación.
+Seleccione **[!UICONTROL Save]** para conservar el campo calculado y volver al paso de asignación.
 
 ![Ventana modal de la funcionalidad de campo calculado con la función matriz a cadena seleccionada y el control Guardar resaltado.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
-Cuando vuelva al paso de asignación del flujo de trabajo, rellene el **[!UICONTROL campo de destino]** con el valor del encabezado de columna que desee para este campo en los archivos exportados.
+Cuando vuelva al paso de asignación del flujo de trabajo, rellene **[!UICONTROL Target field]** con el valor del encabezado de columna que desee para este campo en los archivos exportados.
 
 ![Paso de asignación con el campo de destino resaltado.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Seleccionar campo de destino 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
-Cuando esté listo, seleccione **[!UICONTROL Siguiente]** para continuar con el siguiente paso del flujo de trabajo de activación.
+Cuando esté listo, seleccione **[!UICONTROL Next]** para continuar con el siguiente paso del flujo de trabajo de activación.
 
 ![Paso de asignación con el campo de destino resaltado y un valor de destino rellenado.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->A diferencia de otras funciones descritas en esta página, para exportar elementos individuales de una matriz, *no necesita* para usar el control **[!UICONTROL Campos calculados]** en la interfaz de usuario.
+>A diferencia de otras funciones descritas en esta página, para exportar elementos individuales de una matriz, *no necesita* para usar el control **[!UICONTROL Calculated fields]** en la interfaz de usuario.
 
 Puede acceder al índice de una matriz para exportar un solo elemento de la matriz. Por ejemplo, similar al ejemplo anterior para la función `size_of`, si desea tener acceso y exportar solo la primera vez que un cliente ha comprado un determinado producto, puede utilizar `purchaseTime[0]` para exportar el primer elemento de la marca de tiempo, `purchaseTime[1]` para exportar el segundo elemento de la marca de tiempo, `purchaseTime[2]` para exportar el tercer elemento de la marca de tiempo, etc.
 

@@ -6,7 +6,7 @@ description: Obtenga información sobre cómo definir un campo de identidad en l
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '657'
 ht-degree: 6%
 
 ---
@@ -30,19 +30,19 @@ Los campos de identidad son un componente crucial en la forma en que se construy
 >title="Restricciones a la identidad principal"
 >abstract="Este esquema utiliza un grupo de campos destinado a utilizarse en una conexión de origen específica. La conexión requiere que identityMap se utilice como identidad principal y la ha establecido automáticamente."
 
-Al [definir un nuevo campo](./overview.md#define) en la interfaz de usuario, puede establecerlo como campo de identidad seleccionando la casilla de verificación **[!UICONTROL Identidad]** en el carril derecho.
+Al [definir un nuevo campo](./overview.md#define) en la interfaz de usuario, puede establecerlo como un campo de identidad al seleccionar la casilla de verificación **[!UICONTROL Identity]** en el carril derecho.
 
 ![](../../images/ui/fields/special/identity.png)
 
-Aparecerán controles adicionales después de seleccionar la casilla de verificación. Si desea que este campo sea la identidad principal del esquema, marque la casilla de verificación **[!UICONTROL Identidad principal]**.
+Aparecerán controles adicionales después de seleccionar la casilla de verificación. Si desea que este campo sea la identidad principal del esquema, seleccione la casilla de verificación **[!UICONTROL Primary identity]**.
 
 >[!NOTE]
 >
 >Un solo esquema puede tener muchos campos de identidad definidos, pero solo puede tener una identidad principal. Todos los campos de identidad (principales o de otro tipo) contribuyen al gráfico de identidad de un cliente individual, pero el Perfil del cliente en tiempo real solo utiliza la identidad principal como fuente fiable al combinar fragmentos de datos. Si desea habilitar un esquema para utilizarlo en el perfil, el esquema debe tener definida una identidad principal.
 
-En **[!UICONTROL área de nombres de identidad]**, utilice el menú desplegable para seleccionar el área de nombres adecuada para el campo de identidad. Se muestran las áreas de nombres estándar proporcionadas por Adobe, junto con cualquier área de nombres personalizada definida por su organización.
+En **[!UICONTROL Identity namespace]**, utilice el menú desplegable para seleccionar el área de nombres adecuada para el campo de identidad. Se muestran las áreas de nombres estándar proporcionadas por Adobe, junto con cualquier área de nombres personalizada definida por su organización.
 
-Cuando termine, seleccione **[!UICONTROL Aplicar]** para aplicar el cambio al esquema.
+Cuando termine, seleccione **[!UICONTROL Apply]** para aplicar el cambio al esquema.
 
 >[!IMPORTANT]
 >
@@ -52,13 +52,13 @@ Cuando termine, seleccione **[!UICONTROL Aplicar]** para aplicar el cambio al es
 
 El lienzo se actualiza para reflejar los cambios, y el campo seleccionado obtiene un símbolo de huella digital (![](/help/images/icons/identity-service.png)) para designarlo como identidad. En el carril izquierdo, el campo de identidad ahora aparece bajo el nombre de la clase o grupo de campos de esquema que proporciona el campo al esquema.
 
-Si el campo también se estableció como identidad principal, también se enumerará en **[!UICONTROL Campos obligatorios]** en el carril izquierdo. Si el campo de identidad está anidado en la estructura de esquema, todos los campos principales también se enumerarán como obligatorios.
+Si el campo también se estableció como identidad principal, también se enumerará en **[!UICONTROL Required fields]** en el carril izquierdo. Si el campo de identidad está anidado en la estructura de esquema, todos los campos principales también se enumerarán como obligatorios.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 
 Si ha definido una identidad principal para el esquema, ahora puede continuar con [habilitar el esquema para utilizarlo en el perfil del cliente en tiempo real](../resources/schemas.md#profile).
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo definir un campo de identidad en la interfaz de usuario. A medida que los datos se incorporan mediante este esquema, los gráficos de identidad de los clientes se actualizarán para reflejar los campos de identidad del esquema. Consulte la guía del [visor de gráficos de identidad](../../../identity-service/features/identity-graph-viewer.md) para obtener información sobre cómo explorar el gráfico privado de su organización en la interfaz de usuario.
 

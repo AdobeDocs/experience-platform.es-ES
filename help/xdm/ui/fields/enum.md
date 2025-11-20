@@ -6,7 +6,7 @@ description: Obtenga información sobre cómo definir enumeraciones y valores su
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1222'
 ht-degree: 8%
 
 ---
@@ -20,27 +20,27 @@ ht-degree: 8%
 
 En el Modelo de datos de experiencia (XDM), se puede dar a un campo de cadena un conjunto predefinido de valores aceptados o sugeridos para controlar mejor qué valores se incorporan a ese campo o cómo se comportará en la segmentación.
 
-**[!UICONTROL Enumeraciones]** restringen los valores que se pueden introducir para un campo de cadena a un conjunto predefinido. Si intenta introducir datos en un campo de enumeración y el valor no coincide con ninguno de los definidos en su configuración, se denegará la ingesta.
+**[!UICONTROL Enums]** limita los valores que se pueden introducir para un campo de cadena a un conjunto predefinido. Si intenta introducir datos en un campo de enumeración y el valor no coincide con ninguno de los definidos en su configuración, se denegará la ingesta.
 
-A diferencia de las enumeraciones, la opción **[!UICONTROL Valores sugeridos]** permite denotar un conjunto de valores recomendados para un campo de cadena que no restringen los valores que puede introducir. En su lugar, los valores sugeridos afectan a los valores predefinidos disponibles en la [IU de segmentación](../../../segmentation/ui/overview.md) al incluir el campo de cadena como atributo.
+A diferencia de las enumeraciones, la opción **[!UICONTROL Suggested values]** permite denotar un conjunto de valores recomendados para un campo de cadena que no restringen los valores que puede introducir. En su lugar, los valores sugeridos afectan a los valores predefinidos disponibles en la [IU de segmentación](../../../segmentation/ui/overview.md) al incluir el campo de cadena como atributo.
 
-Al [definir un nuevo campo](./overview.md#define) en la interfaz de usuario de Adobe Experience Platform y establecer el tipo en [!UICONTROL Cadena], se le da la opción de definir un [enum](#enum) o [valores sugeridos](#suggested-values) para ese campo.
+Al [definir un nuevo campo](./overview.md#define) en la interfaz de usuario de Adobe Experience Platform y establecer el tipo en [!UICONTROL String], se le da la opción de definir un [enum](#enum) o [valores sugeridos](#suggested-values) para ese campo.
 
 ![Imagen que muestra la opción Enumeración y valores sugeridos habilitada para un campo de cadena en la interfaz de usuario](../../images/ui/fields/enum/enum-options-selected.png)
 
 Este documento explica cómo definir enumeraciones y valores sugeridos en el área de trabajo de la interfaz de usuario de [!UICONTROL Schemas]. Para obtener información general rápida sobre las enumeraciones y los valores sugeridos, incluido cómo configurarlos en la interfaz de usuario y sus efectos descendentes, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/3413676/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Definir una enumeración {#enum}
 
-Seleccione **[!UICONTROL Enumeraciones y Valores sugeridos]**, luego seleccione **[!UICONTROL Enumeraciones]**. Aparecerán controles adicionales, que le permitirán especificar las restricciones de valor para la enumeración. Para agregar una restricción, seleccione **[!UICONTROL Agregar fila]**.
+Seleccione **[!UICONTROL Enums and Suggested Values]** y luego seleccione **[!UICONTROL Enums]**. Aparecerán controles adicionales, que le permitirán especificar las restricciones de valor para la enumeración. Para agregar una restricción, seleccione **[!UICONTROL Add row]**.
 
 ![Imagen que muestra la opción Enumeraciones seleccionada en la IU](../../images/ui/fields/enum/enum-add-row.png)
 
-En la columna **[!UICONTROL Value]**, debe proporcionar el valor exacto al que desea restringir el campo. Opcionalmente, también puede proporcionar un **[!UICONTROL Nombre para mostrar]** fácil de usar para la restricción, lo que afecta a la forma en que se representará el valor en la segmentación.
+En la columna **[!UICONTROL Value]**, debe proporcionar el valor exacto al que desea restringir el campo. Opcionalmente, también puede proporcionar un **[!UICONTROL Display Name]** fácil de usar para la restricción, lo que afecta a cómo se representará el valor en la segmentación.
 
-Continúe usando **[!UICONTROL Agregar fila]** para agregar las restricciones deseadas y las etiquetas opcionales a la enumeración o seleccione el icono de eliminación (![Imagen del icono de eliminación](/help/images/icons/remove-circle.png)) junto a una fila agregada anteriormente para quitarla. Cuando termine, seleccione **[!UICONTROL Aplicar]** para aplicar los cambios al esquema.
+Continúe usando **[!UICONTROL Add row]** para agregar las restricciones deseadas y las etiquetas opcionales a la enumeración o seleccione el icono de eliminación (![Imagen del icono de eliminación](/help/images/icons/remove-circle.png)) junto a una fila agregada anteriormente para quitarla. Cuando termine, seleccione **[!UICONTROL Apply]** para aplicar los cambios al esquema.
 
 ![Imagen que muestra los valores de enumeración y los nombres para mostrar rellenados para el campo de cadena en la interfaz de usuario](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -48,13 +48,13 @@ El lienzo se actualiza para reflejar los cambios. Cuando explore este esquema en
 
 ## Definir valores sugeridos {#suggested-values}
 
-Seleccione **[!UICONTROL Enumeraciones y valores sugeridos]**, luego seleccione **[!UICONTROL Valores sugeridos]** para que aparezcan controles adicionales. Desde aquí, seleccione **[!UICONTROL Agregar fila]** para empezar a agregar valores sugeridos.
+Seleccione **[!UICONTROL Enums and Suggested Values]** y, a continuación, seleccione **[!UICONTROL Suggested Values]** para que aparezcan controles adicionales. Desde aquí, seleccione **[!UICONTROL Add row]** para empezar a agregar valores sugeridos.
 
 ![Imagen que muestra la opción Valores sugeridos seleccionada en la IU](../../images/ui/fields/enum/suggested-add-row.png)
 
-En la columna **[!UICONTROL Nombre para mostrar]**, proporcione un nombre descriptivo para el valor tal como desea que aparezca en la interfaz de usuario de la segmentación. Para agregar más valores sugeridos, vuelva a seleccionar **[!UICONTROL Agregar fila]** y repita el proceso según sea necesario. Para quitar una fila agregada anteriormente, seleccione ![el icono Eliminar](/help/images/icons/remove-circle.png) que se encuentra junto a la fila en cuestión.
+En la columna **[!UICONTROL Display Name]**, proporcione un nombre descriptivo para el valor tal como desea que aparezca en la interfaz de usuario de la segmentación. Para agregar más valores sugeridos, vuelva a seleccionar **[!UICONTROL Add row]** y repita el proceso según sea necesario. Para quitar una fila agregada anteriormente, seleccione ![el icono Eliminar](/help/images/icons/remove-circle.png) que se encuentra junto a la fila en cuestión.
 
-Cuando termine, seleccione **[!UICONTROL Aplicar]** para aplicar los cambios al esquema.
+Cuando termine, seleccione **[!UICONTROL Apply]** para aplicar los cambios al esquema.
 
 ![Imagen que muestra los valores de enumeración y los nombres para mostrar rellenados para el campo de cadena en la interfaz de usuario](../../images/ui/fields/enum/suggested-confirm.png)
 
@@ -68,7 +68,7 @@ Algunos campos de componentes XDM estándar contienen sus propios valores sugeri
 
 ![Imagen que muestra los valores de enumeración y los nombres para mostrar rellenados para el campo de cadena en la interfaz de usuario](../../images/ui/fields/enum/suggested-standard.png)
 
-Para agregar nuevos valores sugeridos para un campo estándar, seleccione **[!UICONTROL Agregar fila]**. Para quitar un valor sugerido que su organización agregó anteriormente, seleccione ![el icono Eliminar](/help/images/icons/remove-circle.png) junto a la fila en cuestión.
+Para agregar nuevos valores sugeridos para un campo estándar, seleccione **[!UICONTROL Add row]**. Para quitar un valor sugerido que su organización agregó anteriormente, seleccione ![el icono Eliminar](/help/images/icons/remove-circle.png) junto a la fila en cuestión.
 
 ![Imagen que muestra los valores de enumeración y los nombres para mostrar rellenados para el campo de cadena en la interfaz de usuario](../../images/ui/fields/enum/suggested-standard-add.png)
 
@@ -120,7 +120,7 @@ Debido a las limitaciones actuales del sistema, hay dos casos en los que el sist
 1. La enumeración se define en un [campo de matriz](./array.md).
 1. La enumeración se define en más de un nivel de profundidad en la jerarquía de esquemas.
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo definir enumeraciones y valores sugeridos para campos de cadena en la interfaz de usuario. Para obtener información sobre cómo administrar enumeraciones y valores sugeridos mediante la API de Registro de esquemas, consulte el siguiente [tutorial](../../tutorials/suggested-values.md).
 

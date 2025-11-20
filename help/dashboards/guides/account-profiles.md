@@ -4,42 +4,42 @@ description: Adobe Experience Platform proporciona un tablero a través del cual
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2401'
+source-wordcount: '2249'
 ht-degree: 4%
 
 ---
 
 # Panel de perfiles de cuenta
 
-La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los perfiles de la cuenta, tal como se capturan durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel [!UICONTROL Perfiles de cuenta] en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el panel.
+La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los perfiles de la cuenta, tal como se capturan durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel [!UICONTROL Account Profiles] en la interfaz de usuario y proporciona más información sobre las visualizaciones mostradas en el panel.
 
-Este documento proporciona información general sobre las características del panel [!UICONTROL Perfiles de cuenta] y detalla la información estándar disponible. Consulte la [[!UICONTROL Guía de la interfaz de usuario de los perfiles de cuenta]](../../rtcdp/accounts/account-profile-ui-guide.md) para obtener información detallada sobre las funciones disponibles.
+This document provides an overview of the features within the [!UICONTROL Account Profiles] dashboard and details the available standard insights. See the [[!UICONTROL Account Profiles] UI guide](../../rtcdp/accounts/account-profile-ui-guide.md) for comprehensive details on its available features.
 
 ## Introducción
 
-Debe tener derecho a [Adobe Real-Time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) para acceder al panel de [!UICONTROL Perfiles de cuenta] de B2B.
+Debe tener derecho a [Adobe Real-Time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) para acceder al panel B2B [!UICONTROL Account Profiles].
 
 ## Datos de perfiles de cuenta {#data}
 
-El panel [!UICONTROL Perfiles de cuenta] muestra una instantánea de la información de la cuenta unificada. Esta información de cuenta proviene de varias fuentes en sus canales de marketing y en los diversos sistemas que su organización utiliza actualmente para almacenar la información de la cuenta del cliente.
+El panel [!UICONTROL Account Profiles] muestra una instantánea de la información de la cuenta unificada. Esta información de cuenta proviene de varias fuentes en sus canales de marketing y en los diversos sistemas que su organización utiliza actualmente para almacenar la información de la cuenta del cliente.
 
-Los datos de perfil de la instantánea muestran los datos exactamente como aparecen en el momento específico en el que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o una muestra de los datos, y el panel [!UICONTROL Perfiles de cuenta] no se actualiza en tiempo real.
+Los datos de perfil de la instantánea muestran los datos exactamente como aparecen en el momento específico en el que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o una muestra de los datos y el panel [!UICONTROL Account Profiles] no se actualiza en tiempo real.
 
 >[!NOTE]
 >
 >Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el tablero hasta que se tome la siguiente instantánea.
 
-## Explorar el panel [!UICONTROL Perfiles de cuenta] {#explore}
+## Explorar el tablero [!UICONTROL Account Profiles] {#explore}
 
-Para ir al panel de [!UICONTROL Perfiles de cuenta] en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Perfiles]** en [!UICONTROL Cuentas] en el panel de navegación izquierdo.
+Para navegar al panel [!UICONTROL Account Profiles] dentro de la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Profiles]** bajo [!UICONTROL Accounts] en el panel de navegación izquierdo.
 
 ![Se resaltó la interfaz de usuario de Experience Platform con perfiles de cuenta en la navegación izquierda y se mostró la pestaña de información general.](../images/account-profiles/account-profiles-dashboard.png)
 
-Desde el panel de [!UICONTROL Perfiles de cuenta], puede [examinar los perfiles de cuenta introducidos en su organización](#browse-account-profiles) o [ver la totalidad de los datos del perfil de cuenta de un vistazo mediante widgets](#standard-widgets).
+Desde el panel [!UICONTROL Account Profiles], puede [examinar los perfiles de cuenta introducidos en su organización](#browse-account-profiles) o [ver la totalidad de los datos del perfil de la cuenta de un vistazo mediante widgets](#standard-widgets).
 
 ### Filtro de fecha {#date-filter}
 
-La pestaña [!UICONTROL Información general] está compuesta por widgets que proporcionan métricas de solo lectura para transmitir información importante sobre los perfiles de tu cuenta. Seleccione el icono de calendario o las fechas para cambiar el filtro de fecha global de los widgets.
+La pestaña [!UICONTROL Overview] está compuesta por widgets que proporcionan métricas de solo lectura para transmitir información importante sobre los perfiles de la cuenta. Seleccione el icono de calendario o las fechas para cambiar el filtro de fecha global de los widgets.
 
 >[!IMPORTANT]
 >
@@ -49,19 +49,19 @@ La pestaña [!UICONTROL Información general] está compuesta por widgets que pr
 
 ### Configurar el servicio de coincidencia de cliente potencial con cuenta {#lead-to-account-matching-service}
 
-Seleccione **[!UICONTROL Configuración]** para configurar el servicio de coincidencia de cliente potencial con cuenta desde el cuadro de diálogo [!UICONTROL Configuración de la cuenta]. Para obtener información detallada sobre cómo configurar la coincidencia de cliente potencial con cuenta, consulte la [guía de la interfaz de usuario](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Para obtener más información sobre la coincidencia de cliente potencial con cuenta, consulte [coincidencia de cliente potencial con cuenta en la documentación de Real-Time CDP B2B](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Seleccione **[!UICONTROL Settings]** para configurar el servicio de coincidencia de cliente potencial con cuenta desde el cuadro de diálogo [!UICONTROL Account settings]. Para obtener información detallada sobre cómo configurar la coincidencia de cliente potencial con cuenta, consulte la [guía de la interfaz de usuario](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Para obtener más información sobre la coincidencia de cliente potencial con cuenta, consulte [coincidencia de cliente potencial con cuenta en la documentación de Real-Time CDP B2B](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ![Panel de perfiles de cuenta con la configuración resaltada.](../images/account-profiles/settings.png)
 
 ## Examinar perfiles de cuenta {#browse-account-profiles}
 
-Desde la pestaña [!UICONTROL Examinar], puede buscar y ver los perfiles de cuenta de solo lectura ingeridos en su organización. Utilice un ID de cuenta de un origen empresarial conectado o introduzca directamente los detalles de origen. Desde esta área de trabajo, puede ver información importante que pertenece al perfil de la cuenta, como, por ejemplo, su nombre, sector, ingresos y audiencia.
+Desde la pestaña [!UICONTROL Browse], puede buscar y ver los perfiles de cuenta de solo lectura introducidos en su organización. Utilice un ID de cuenta de un origen empresarial conectado o introduzca directamente los detalles de origen. Desde esta área de trabajo, puede ver información importante que pertenece al perfil de la cuenta, como, por ejemplo, su nombre, sector, ingresos y audiencia.
 
-Seleccione el [!UICONTROL ID de perfil] de los resultados mostrados en la ficha [!UICONTROL Examinar] para abrir la ficha [!UICONTROL Detalles] para el perfil de cuenta.
+Seleccione [!UICONTROL Profile ID] de los resultados mostrados en la ficha [!UICONTROL Browse] para abrir la ficha [!UICONTROL Details] para el perfil de cuenta.
 
 ![La ficha de exploración Perfiles de cuenta muestra los resultados y resalta el identificador de perfil.](../images/account-profiles/account-profiles-browse-tab.png)
 
-La información del perfil de cuenta que se muestra en la ficha [!UICONTROL Detalles] se ha combinado a partir de varios fragmentos de perfil para formar una sola vista de la cuenta individual. Consulte la documentación sobre [examinar perfiles de cuenta en Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para obtener más información sobre las funciones de visualización de perfiles de cuenta en la interfaz de usuario de Experience Platform.
+La información del perfil de cuenta que se muestra en la ficha [!UICONTROL Details] se ha combinado a partir de varios fragmentos de perfil para formar una sola vista de la cuenta individual. Consulte la documentación sobre [examinar perfiles de cuenta en Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para obtener más información sobre las funciones de visualización de perfiles de cuenta en la interfaz de usuario de Experience Platform.
 
 ## Widgets estándar {#standard-widgets}
 
@@ -76,54 +76,54 @@ Adobe proporciona widgets estándar que puede utilizar para visualizar diferente
 >
 >Si no proporciona un filtro de fecha, el comportamiento predeterminado de las perspectivas analiza los datos agregados desde el año anterior hasta hoy.
 
-Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
+To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
 * [Perfiles de cuenta añadidos](#account-profiles-added)
 * [Información general sobre clientes por cuenta](#customers-per-account-overview)
-   * [Resumen de oportunidades por cuenta](#opportunities-per-account-overview)
+   * [Opportunities per account overview](#opportunities-per-account-overview)
    * [Detalles de oportunidades por cuenta](#opportunities-per-account-detail)
    * [Detalles de clientes por cuenta](#customers-per-account-detail)
 * [Nuevas cuentas por sector](#accounts-by-industry)
 * [Nuevas cuentas por tipo](#accounts-by-type)
 * [Nuevas oportunidades por función de persona](#opportunities-by-person-role)
 * [Nuevas oportunidades por ingresos](#opportunities-by-revenue)
-* [Nuevas oportunidades por estado y etapa](#opportunities-by-status-&-stage)
-* [Nuevas oportunidades ganadas](#opportunities-won)
+* [New opportunities by status &amp; stage](#opportunities-by-status-&-stage)
+* [New opportunities won](#opportunities-won)
 * [Oportunidades añadidas](#opportunities-added)
 * [Distribución de puntuación predictiva](#predictive-scoring-distribution)
 * [Factores más influyentes de la puntuación predictiva](#predictive-scoring-top-influential-factors)
 
 ### Perfiles de cuenta añadidos {#account-profiles-added}
 
-El widget [!UICONTROL Perfiles de cuenta agregados] usa un gráfico de líneas para mostrar el número de perfiles de cuenta agregados cada día durante un período de tiempo. Utilice el filtro de fecha global situado en la parte superior del panel para determinar el periodo de análisis. Si no se proporciona ningún filtro de fecha, el comportamiento predeterminado enumera los perfiles de cuenta agregados para el año anterior a hoy. Los resultados se pueden utilizar para deducir una tendencia en el número de perfiles de cuenta añadidos.
+El widget [!UICONTROL Account profiles added] utiliza un gráfico de líneas para mostrar el número de perfiles de cuenta agregados cada día durante un período de tiempo. Utilice el filtro de fecha global situado en la parte superior del panel para determinar el periodo de análisis. Si no se proporciona ningún filtro de fecha, el comportamiento predeterminado enumera los perfiles de cuenta agregados para el año anterior a hoy. Los resultados se pueden utilizar para deducir una tendencia en el número de perfiles de cuenta añadidos.
 
-![Widget agregado de perfiles de cuenta.](../images/account-profiles/account-profiles-added.png)
+![The Account profiles added widget.](../images/account-profiles/account-profiles-added.png)
 
 ### Información general sobre clientes por cuenta {#customers-per-account-overview}
 
 >[!NOTE]
 >
->La descripción general de [!UICONTROL Clientes por cuenta] insight y sus gráficos de obtención de detalles ([!UICONTROL Clientes por detalle de cuenta], [!UICONTROL Resumen de oportunidades por cuenta], [!UICONTROL Oportunidades por detalle de cuenta]) no se ven afectados por ningún filtro de fecha global que pueda haber establecido.
+>El insight [!UICONTROL Customers per account overview] y sus gráficos de obtención de detalles ([!UICONTROL Customers per account detail], [!UICONTROL Opportunities per account overview], [!UICONTROL Opportunities per account detail]) no se ven afectados por ningún filtro de fecha global que pueda haber establecido.
 
-El gráfico [!UICONTROL Información general de clientes por cuenta] proporciona un resumen de las cuentas en función de sus tipos de clientes. Muestra una tabla de cuatro filas que clasifica las cuentas como clientes directos o indirectos, o como aquellas sin ellos. Proporciona el número total de cuentas para cada categoría. El gráfico ayuda a identificar la distribución de cuentas que tienen clientes directos frente a indirectos.
+El gráfico [!UICONTROL Customers per account overview] proporciona un resumen de las cuentas en función de sus tipos de clientes. Muestra una tabla de cuatro filas que clasifica las cuentas como clientes directos o indirectos, o como aquellas sin ellos. Proporciona el número total de cuentas para cada categoría. El gráfico ayuda a identificar la distribución de cuentas que tienen clientes directos frente a indirectos.
 
 Los clientes directos son perfiles de clientes que están vinculados directamente a una cuenta a través de la ruta `personComponents`. Esta relación es más directa e implica una conexión directa y explícita entre el cliente y la cuenta.
 
-Los clientes indirectos son perfiles de clientes vinculados a una cuenta a través de la ruta `Account-Person`. Esta relación es menos directa e implica una entidad intermedia o una conexión más compleja entre el cliente y la cuenta, normalmente a través de otras cuentas o relaciones.
+Los clientes indirectos son perfiles de clientes vinculados a una cuenta a través de la ruta `Account-Person`. This relationship is less straightforward and involves an intermediate entity or a more complex connection between the customer and the account, typically through other accounts or relationships.
 
 ![Widget de información general de clientes por cuenta.](../images/account-profiles/customers-per-account-overview-widget.png)
 
-Para obtener información más detallada, seleccione los puntos suspensivos (**...**) en el gráfico [!UICONTROL Información general de clientes por cuenta] y elija **[!UICONTROL Obtener detalles]** en el menú desplegable.
+Para obtener información más detallada, seleccione el elemento de elipse (**...**) en el gráfico [!UICONTROL Customers per account overview] y elija **[!UICONTROL Drill through]** en el menú desplegable.
 
 ![Widget de información general de Clientes por cuenta con el menú desplegable de elipse y Obtener detalles resaltados.](../images/account-profiles/customers-per-account-overview-dropdown.png)
 
 Aparecerá la vista de obtención de detalles. A continuación, explore los gráficos de obtención de detalles disponibles para comprender mejor la estructura de los datos B2B. Puede utilizar estos gráficos de obtención de detalles para identificar cuántos perfiles de cuenta no tienen perfiles de cliente vinculados o tienen uno o más perfiles de cliente asociados a ellos. También puede utilizarlas para identificar cuántos clientes directos o indirectos están asociados a sus cuentas.
 
-* [[!UICONTROL Clientes por detalle de cuenta]](#customers-per-account-detail)
-* [[!UICONTROL Resumen de cuentas por oportunidad]](#accounts-per-opportunity-overview)
-* [[!UICONTROL Oportunidades por detalle de cuenta]](#accounts-per-opportunity-detail)
+* [[!UICONTROL Customers per account detail]](#customers-per-account-detail)
+* [[!UICONTROL Accounts per opportunity overview]](#accounts-per-opportunity-overview)
+* [[!UICONTROL Opportunities per account detail]](#accounts-per-opportunity-detail)
 
-### [!UICONTROL Desplazarse entre las vistas del panel] {#dashboard-view-navigation}
+### [!UICONTROL Navigate between dashboard views] {#dashboard-view-navigation}
 
 Para cambiar entre la obtención de detalles y el panel Perfiles de cuenta, seleccione el icono de carpeta (![Un icono de carpeta.](../images/account-profiles/folder-icon.png)) seguido de la vista correcta en el menú desplegable.
 
@@ -131,69 +131,69 @@ Para cambiar entre la obtención de detalles y el panel Perfiles de cuenta, sele
 
 Para obtener más información sobre la obtención de detalles en la interfaz de usuario de Experience Platform, consulte la [Guía de obtención de detalles](../sql-insights-query-pro-mode/drill-through.md).
 
-#### [!UICONTROL Clientes por detalle de cuenta] {#customers-per-account-detail}
+#### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
 
-El gráfico [!UICONTROL Clientes por detalle de cuenta] proporciona detalles más granulares sobre el número de cuentas asociadas con diferentes tipos de clientes. Muestra una tabla de tres columnas que detalla el número de cuentas por tipo de cliente (directo o indirecto) y el rango de clientes asociados a ellas. Este gráfico le ayuda a comprender cómo se distribuyen los clientes entre diferentes categorías de clientes y el número total de cuentas asociadas a cada una.
+El gráfico [!UICONTROL Customers per account detail] proporciona detalles más granulares sobre el número de cuentas asociadas con diferentes tipos de clientes. Muestra una tabla de tres columnas que detalla el número de cuentas por tipo de cliente (directo o indirecto) y el rango de clientes asociados a ellas. Este gráfico le ayuda a comprender cómo se distribuyen los clientes entre diferentes categorías de clientes y el número total de cuentas asociadas a cada una.
 
 ![Widget de detalles de clientes por cuenta.](../images/account-profiles/customers-per-account-detail.png)
 
-#### [!UICONTROL Resumen de oportunidades por cuenta] {#opportunities-per-account-overview}
+#### [!UICONTROL Opportunities per account overview] {#opportunities-per-account-overview}
 
-El gráfico [!UICONTROL Resumen de oportunidades por cuenta] presenta un resumen de las cuentas que tienen o no oportunidades. Esta tabla de dos filas ayuda a determinar rápidamente el número de cuentas asociadas a las oportunidades, lo que proporciona una instantánea de la participación de las oportunidades en todas las cuentas.
+El gráfico [!UICONTROL Opportunities per account overview] presenta un resumen de las cuentas que tienen o no oportunidades. Esta tabla de dos filas ayuda a determinar rápidamente el número de cuentas asociadas a las oportunidades, lo que proporciona una instantánea de la participación de las oportunidades en todas las cuentas.
 
 ![Widget de información general de oportunidades por cuenta.](../images/account-profiles/opportunities-per-account-overview.png)
 
-#### [!UICONTROL Oportunidades por detalle de cuenta] {#opportunities-per-account-detail}
+#### [!UICONTROL Opportunities per account detail] {#opportunities-per-account-detail}
 
-El gráfico [!UICONTROL Oportunidades por detalle de cuenta] ofrece un desglose más detallado de las cuentas en función del número de oportunidades que tengan. La tabla muestra el número de cuentas agrupadas por intervalos de recuento de oportunidades, como 1-10 oportunidades o más de 100 oportunidades. Este gráfico le ayuda a identificar cómo se distribuyen las cuentas según la cantidad de oportunidades que administran.
+El gráfico [!UICONTROL Opportunities per account detail] ofrece un desglose más detallado de las cuentas en función de la cantidad de oportunidades que tengan. La tabla muestra el número de cuentas agrupadas por intervalos de recuento de oportunidades, como 1-10 oportunidades o más de 100 oportunidades. Este gráfico le ayuda a identificar cómo se distribuyen las cuentas según la cantidad de oportunidades que administran.
 
 ![Widget de oportunidades por detalle de cuenta.](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### Nuevas cuentas por sector {#accounts-by-industry}
 
-El widget [!UICONTROL Nuevas cuentas por sector] muestra el número total de cuentas en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las diferentes industrias que componen este total. Una clave codificada por colores proporciona un desglose de todas las industrias incluidas. Los recuentos individuales de cada sector se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
+El widget [!UICONTROL New accounts by industry] muestra el número total de cuentas en una sola métrica dentro de un gráfico de anillo. El gráfico de anillo ilustra la composición relativa de las diferentes industrias que componen este total. Una clave codificada por colores proporciona un desglose de todas las industrias incluidas. Los recuentos individuales de cada sector se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 
 ![Widget de nuevas cuentas por sector.](../images/account-profiles/new-accounts-by-industry.png)
 
 ### Nuevas cuentas por tipo {#accounts-by-type}
 
-El widget [!UICONTROL Nuevas cuentas por tipo] muestra el número total de cuentas en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de los distintos tipos de cuenta que componen este total. Una clave con códigos de color proporciona un desglose de todos los tipos de cuenta incluidos. Los recuentos individuales de cada tipo de cuenta se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
+El widget [!UICONTROL New accounts by type] muestra el número total de cuentas en una sola métrica dentro de un gráfico de anillo. El gráfico de anillo ilustra la composición relativa de los distintos tipos de cuenta que componen este total. Una clave con códigos de color proporciona un desglose de todos los tipos de cuenta incluidos. Los recuentos individuales de cada tipo de cuenta se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 
 ![Widget de nuevas cuentas por tipo.](../images/account-profiles/new-accounts-by-type.png)
 
-### Nuevas oportunidades por función de persona {#opportunities-by-person-role}
+### New opportunities by person role {#opportunities-by-person-role}
 
-El widget [!UICONTROL Nuevas oportunidades por función de persona] muestra la cantidad total de tus oportunidades en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las funciones que componen este número total de oportunidades. Una clave codificada por colores proporciona un desglose de todas las funciones incluidas. Los recuentos individuales de cada rol se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico de anillo.
+The [!UICONTROL New opportunities by person role] widget displays the total number of your opportunities in a single metric inside a donut chart. The donut chart illustrates the relative makeup of roles that comprise this total number of opportunities. A color-coded key provides a breakdown of all the included roles. Individual counts for each role are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
 >[!NOTE]
 >
->El error [!UICONTROL No se encontraron datos] o [!UICONTROL No se pudo cargar] se debe a que la tabla de puente &quot;Oportunidad-Persona&quot; no se usa en su esquema. Si insight muestra uno de estos errores, compruebe el esquema de unión y asegúrese de que el grupo de campos Oportunidad-Persona esté introduciendo datos.
+>The [!UICONTROL No data found] or [!UICONTROL Unable to load] error is caused when the &#39;Opportunity-Person&#39; bridge-table is not used in your schema. If your insight displays one of these errors, check your union schema and ensure that the &#39;Opportunity-Person&#39; field group is ingesting data.
 
 ![Widget de nuevas oportunidades por función de persona.](../images/account-profiles/new-opportunities-by-person-role.png)
 
 ### Nuevas oportunidades por ingresos {#opportunities-by-revenue}
 
-El widget [!UICONTROL Nuevas oportunidades por ingresos] usa un gráfico de barras para ilustrar la cantidad total estimada de ingresos generados por sus oportunidades. El widget admite hasta seis oportunidades.
+El widget [!UICONTROL New opportunities by revenue] utiliza un gráfico de barras para ilustrar la cantidad total estimada de ingresos generados por sus oportunidades. El widget admite hasta seis oportunidades.
 
 Para ver un cuadro de diálogo que contiene el total de ingresos específico de una oportunidad, utilice el cursor para pasar el ratón sobre barras individuales.
 
 ![Widget de nuevas oportunidades por ingresos.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Nuevas oportunidades por estado y fase {#opportunities-by-status-&-stage}
+### Nuevas oportunidades por estado y etapa {#opportunities-by-status-&-stage}
 
-Este widget utiliza un gráfico de barras para ilustrar la cantidad de oportunidades que están abiertas o cerradas en todas las etapas del canal de marketing/ventas. El widget utiliza colores para diferenciar el escenario de las oportunidades. Una clave codificada por colores indica las etapas disponibles para las oportunidades.
+Este widget utiliza un gráfico de barras para ilustrar la cantidad de oportunidades que están abiertas o cerradas en todas las etapas del funnel de marketing/ventas. El widget utiliza colores para diferenciar el escenario de las oportunidades. Una clave codificada por colores indica las etapas disponibles para las oportunidades.
 
 ![Las nuevas oportunidades por estado y widget de fase.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
 ### Nuevas oportunidades ganadas {#opportunities-won}
 
-El widget [!UICONTROL Nuevas oportunidades ganadas] muestra el número total de oportunidades que se finalizaron correctamente en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las oportunidades que se ganan o no. Una clave codificada por colores distingue entre oportunidades ganadas y no ganadas. Los recuentos individuales de cada rol se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico de anillo.
+El widget [!UICONTROL New opportunities won] muestra el número total de oportunidades que se finalizaron correctamente en una sola métrica dentro de un gráfico circular. The donut chart illustrates the relative makeup of opportunities that are either won or not. A color-coded key distinguishes between won and not-won opportunities. Individual counts for each role are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
-![El widget de nuevas oportunidades ganadas.](../images/account-profiles/new-opportunities-won.png)
+![The New opportunities won widget.](../images/account-profiles/new-opportunities-won.png)
 
 ### Oportunidades añadidas {#opportunities-added}
 
-El widget [!UICONTROL Oportunidades agregadas] usa un gráfico de líneas para mostrar el número de oportunidades agregadas cada día durante un período de tiempo. Utilice el filtro de fecha global situado en la parte superior del panel para determinar el periodo de análisis. Si no se proporciona ningún filtro de fecha, el comportamiento predeterminado enumera las oportunidades agregadas para el año anterior a hoy. Los resultados se pueden utilizar para deducir una tendencia en el número de oportunidades agregadas.
+The [!UICONTROL Opportunities added] widget uses a line graph to display the number of opportunities added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the opportunities added for the year prior to today. Los resultados se pueden utilizar para deducir una tendencia en el número de oportunidades agregadas.
 
 <!-- Link to date filter documentation from Annamalai -->
 
@@ -201,9 +201,9 @@ El widget [!UICONTROL Oportunidades agregadas] usa un gráfico de líneas para m
 
 ### Distribución de puntuación predictiva {#predictive-scoring-distribution}
 
-El widget [!UICONTROL Distribución de puntuación predictiva] muestra la distribución de puntuación de todos los perfiles de cuenta para ayudarle a comprender el estado de su canalización de ventas de un vistazo. Los datos de puntuación se transmiten mediante un gráfico circular y un gráfico de columnas.
+The [!UICONTROL Predictive scoring distribution] widget shows the score distribution of all account profiles to help you understand the health of your sales pipeline at a glance. Los datos de puntuación se transmiten mediante un gráfico circular y un gráfico de columnas.
 
-El gráfico de anillo ilustra la proporción de los perfiles totales de la cuenta en cada uno de los bloques de compra alta, media y baja. La clave proporciona más detalles sobre las secciones con códigos de color, incluidos los intervalos del bloque de puntuación y el número de perfiles de cuenta en ese intervalo.
+The donut chart illustrates the proportion of your total account profiles in each of the high, medium, and low propensity to buy buckets. The key provides more details on the color-coded sections including the scoring bucket ranges and the number of account profiles in that range.
 
 El gráfico de columnas proporciona un desglose de puntuación más granular. Cada columna muestra el número de perfiles de cuenta en cada uno de los 20 bloques de incremento de cinco puntos.
 
@@ -217,7 +217,7 @@ El menú desplegable dentro del widget permite seleccionar el modelo de puntuaci
 
 ### Factores más influyentes de la puntuación predictiva {#predictive-scoring-top-influential-factors}
 
-El widget [!UICONTROL Factores más influyentes de puntuación predictiva] le ayuda a comprender los factores más significativos que impulsan las puntuaciones para cada bloque de tendencia.
+El widget [!UICONTROL Predictive scoring top influential factors] le ayuda a comprender los factores más significativos que impulsan las puntuaciones para cada bloque de tendencia.
 
 Este widget muestra los principales factores influyentes para cada uno de los bloques de alta, media y baja tendencia. Una barra para cada factor influyente indica el porcentaje de los perfiles de cuenta en ese bloque de tendencia que contiene el factor influyente específico.
 
@@ -231,12 +231,12 @@ El menú desplegable dentro del widget permite seleccionar el modelo de puntuaci
 
 ## Error de no se pueden cargar los datos {#errors}
 
-Si un widget muestra *[!UICONTROL No se puede cargar. Inténtelo de nuevo.]* esto se debe a que no hay datos disponibles para la entidad B2B. Por ejemplo, el widget mostrado debajo de [!UICONTROL Nuevas oportunidades por rol de persona], muestra el mensaje &quot;[!UICONTROL No se puede cargar. Inténtelo de nuevo.]&quot;, ya que esta zona protegida no tiene datos de oportunidades disponibles.
+Si un widget muestra *[!UICONTROL Unable to load. Try again.]*, esto se debe a que no hay datos disponibles para la entidad B2B. Por ejemplo, el widget que se muestra debajo de [!UICONTROL New opportunities by person role], muestra el mensaje &quot;[!UICONTROL Unable to load. Try again.]&quot;, ya que esta zona protegida no tiene datos de oportunidades disponibles.
 
 ![Error de no se puede cargar insight.](../images/account-profiles/unable-to-load.png)
 
 Para resolver el problema, debe ingerir datos de entidad B2B, como datos de *persona de la oportunidad*, en la zona protegida. Después de 48 horas, los datos se reflejan en los widgets.
 
-## Pasos siguientes
+## Próximos pasos
 
-Al seguir este documento, debería saber cómo localizar el panel de [!UICONTROL Perfiles de cuenta] y también comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con perfiles de cuenta como parte de los datos B2B en la interfaz de usuario de Experience Platform, consulte [descripción general de los perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, B2B edition.
+Al seguir este documento, debería saber cómo localizar el panel [!UICONTROL Account Profiles] y también comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con perfiles de cuenta como parte de los datos B2B en la interfaz de usuario de Experience Platform, consulte [descripción general de los perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) para Adobe Real-Time CDP, B2B edition.

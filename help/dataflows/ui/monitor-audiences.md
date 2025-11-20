@@ -5,7 +5,7 @@ type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1710'
 ht-degree: 4%
 
 ---
@@ -35,11 +35,11 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 >title="Públicos"
 >abstract="La vista de públicos contiene información sobre todos los públicos de su organización, con más detalles acerca de sus trabajos de activación y evaluación."
 
-Para acceder al panel **[!UICONTROL Audiencias]**, seleccione **[!UICONTROL Supervisión]** en el panel de navegación izquierdo. Una vez en la página **[!UICONTROL Supervisión]**, seleccione la tarjeta **[!UICONTROL Audiencias]**.
+Para acceder al panel **[!UICONTROL Audiences]**, seleccione **[!UICONTROL Monitoring]** en el panel de navegación izquierdo. Una vez en la página **[!UICONTROL Monitoring]**, seleccione la tarjeta **[!UICONTROL Audiences]**.
 
 ![La tarjeta Audiencias. Se muestra información sobre el último trabajo de evaluación y el último trabajo de exportación.](../assets/ui/monitor-audiences/audience-card.png)
 
-En el panel principal **[!UICONTROL Audiencias]**, la tarjeta **[!UICONTROL Audiencias]** muestra el estado y la fecha del último trabajo de evaluación y del último trabajo de exportación.
+En el panel principal **[!UICONTROL Audiences]**, la tarjeta **[!UICONTROL Audiences]** muestra el estado y la fecha del último trabajo de evaluación y del último trabajo de exportación.
 
 El propio panel contiene métricas tanto para audiencias como para trabajos de segmentación. De forma predeterminada, el tablero muestra las métricas de audiencia de las últimas 24 horas. Para obtener más información acerca de la vista de trabajos de segmentación, lea la sección [supervisión de trabajos de segmentación](#monitoring-segmentation-jobs-dashboard).
 
@@ -53,22 +53,22 @@ Las siguientes métricas están disponibles para esta vista de panel:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| **[!UICONTROL Nombre de audiencia]** | Nombre de la audiencia. |
-| **[!UICONTROL Tipo de datos]** | El tipo de datos de la audiencia. Los valores posibles incluyen **[!UICONTROL Customer]**, **[!UICONTROL Account]** y **[!UICONTROL Prospect]**. Puede ver para audiencias de un tipo de datos especificado usando el filtro [!UICONTROL Tipo de datos] sobre la banda de tarjetas. |
-| **[!UICONTROL Última marca de tiempo de evaluación]** | La fecha y la hora en que se ejecutó el último trabajo de evaluación de la audiencia. |
-| **[!UICONTROL Último estado de evaluación]** | El estado del último trabajo de evaluación de la audiencia. Los valores posibles incluyen **[!UICONTROL Éxito]**, **[!UICONTROL Sin ejecuciones]** y **[!UICONTROL Error]**. |
-| **[!UICONTROL Último método de evaluación]** | El método de evaluación de la audiencia. Dado que solo se admite la segmentación por lotes, el único valor posible es **[!UICONTROL Batch]**. |
-| **[!UICONTROL Últimos perfiles de evaluación]** | El número de perfiles que se evaluaron en el último trabajo de evaluación de la audiencia. |
-| **[!UICONTROL Marca de tiempo de la última activación]** | La fecha y la hora en que se ejecutó el último trabajo de activación de la audiencia. |
-| **[!UICONTROL Último estado de activación]** | El estado del último trabajo de activación de la audiencia. Los valores posibles incluyen **[!UICONTROL Éxito]**, **[!UICONTROL Sin ejecuciones]** y **[!UICONTROL Error]**. |
-| **[!UICONTROL Identidades de la última activación]** | El número de identidades que se activaron en el último trabajo de activación de la audiencia. |
-| **[!UICONTROL Destino de la última activación]** | El nombre del destino al que se activó el último trabajo de activación de la audiencia. |
+| **[!UICONTROL Audience name]** | Nombre de la audiencia. |
+| **[!UICONTROL Data type]** | El tipo de datos de la audiencia. Los valores posibles incluyen **[!UICONTROL Customer]**, **[!UICONTROL Account]** y **[!UICONTROL Prospect]**. Puede ver para audiencias de un tipo de datos especificado usando el filtro [!UICONTROL Data type] sobre la banda de tarjetas. |
+| **[!UICONTROL Last evaluation timestamp]** | La fecha y la hora en que se ejecutó el último trabajo de evaluación de la audiencia. |
+| **[!UICONTROL Last evaluation status]** | El estado del último trabajo de evaluación de la audiencia. Los valores posibles incluyen **[!UICONTROL Success]**, **[!UICONTROL No runs]** y **[!UICONTROL Failed]**. |
+| **[!UICONTROL Last evaluation method]** | El método de evaluación de la audiencia. Dado que solo se admite la segmentación por lotes, el único valor posible es **[!UICONTROL Batch]**. |
+| **[!UICONTROL Last evaluation profiles]** | El número de perfiles que se evaluaron en el último trabajo de evaluación de la audiencia. |
+| **[!UICONTROL Last activation timestamp]** | La fecha y la hora en que se ejecutó el último trabajo de activación de la audiencia. |
+| **[!UICONTROL Last activation status]** | El estado del último trabajo de activación de la audiencia. Los valores posibles incluyen **[!UICONTROL Success]**, **[!UICONTROL No runs]** y **[!UICONTROL Failed]**. |
+| **[!UICONTROL Last activation identities]** | El número de identidades que se activaron en el último trabajo de activación de la audiencia. |
+| **[!UICONTROL Last activation destination]** | El nombre del destino al que se activó el último trabajo de activación de la audiencia. |
 
 Puede filtrar los resultados a una audiencia específica y ver sus trabajos de segmentación seleccionando el icono de filtro (![El icono de filtro.](/help/images/icons/filter-add.png)). Los trabajos de segmentación se ordenan en orden cronológico y aparecen primero los trabajos de segmentación más recientes.
 
 ![El icono de filtro está resaltado. Si selecciona esta opción, podrá ver los trabajos de segmentación de la audiencia especificada.](../assets/ui/monitor-audiences/filter-audience.png)
 
-Aparecerá el tablero de audiencias filtradas. La tarjeta **[!UICONTROL Audiencias]** muestra el estado y la fecha del último trabajo de evaluación y del último trabajo de activación.
+Aparecerá el tablero de audiencias filtradas. La tarjeta **[!UICONTROL Audiences]** muestra el estado y la fecha del último trabajo de evaluación y del último trabajo de activación.
 
 ![La tarjeta Audiencias. Se muestra información sobre el último trabajo de evaluación y el último trabajo de activación.](../assets/ui/monitor-audiences/specified-audience-card.png)
 
@@ -80,14 +80,14 @@ Las siguientes métricas están disponibles para esta vista de panel:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| **[!UICONTROL Inicio del trabajo]** | La fecha y la hora en que se inició el trabajo de segmentación. |
-| **[!UICONTROL Tipo]** | Indica el tipo de trabajo de segmentación. Los dos tipos de trabajos admitidos son **activation** y **evaluation**. |
-| **[!UICONTROL Trabajo completado]** | La fecha y la hora en que se completó el trabajo de segmentación. |
-| **[!UICONTROL Tiempo de procesamiento]** | Cantidad de tiempo que tardó el trabajo de segmentación en completarse. |
-| **[!UICONTROL Estado del trabajo]** | El estado del trabajo de segmentación. Los valores admitidos son **[!UICONTROL Success]**, **[!UICONTROL In Progress]** y **[!UICONTROL Failed]**. |
-| **[!UICONTROL Recuento de perfiles]** | El número de perfiles que está evaluando el trabajo de segmentación. Cada usuario debe tener un perfil único. |
-| **[!UICONTROL Identidad activada]** | El número de identidades que está activando el trabajo de segmentación. Cada perfil puede tener varias identidades. Por ejemplo, un perfil puede tener un correo electrónico, un número de teléfono y un número de fidelidad como identidades. |
-| **[!UICONTROL Nombre de destino]** | El nombre del destino al que se está activando el trabajo de segmentación. |
+| **[!UICONTROL Job start]** | La fecha y la hora en que se inició el trabajo de segmentación. |
+| **[!UICONTROL Type]** | Indica el tipo de trabajo de segmentación. Los dos tipos de trabajos admitidos son **activation** y **evaluation**. |
+| **[!UICONTROL Job complete]** | La fecha y la hora en que se completó el trabajo de segmentación. |
+| **[!UICONTROL Processing time]** | Cantidad de tiempo que tardó el trabajo de segmentación en completarse. |
+| **[!UICONTROL Job status]** | El estado del trabajo de segmentación. Los valores admitidos son **[!UICONTROL Success]**, **[!UICONTROL In Progress]** y **[!UICONTROL Failed]**. |
+| **[!UICONTROL Profile count]** | El número de perfiles que está evaluando el trabajo de segmentación. Cada usuario debe tener un perfil único. |
+| **[!UICONTROL Identity activated]** | El número de identidades que está activando el trabajo de segmentación. Cada perfil puede tener varias identidades. Por ejemplo, un perfil puede tener un correo electrónico, un número de teléfono y un número de fidelidad como identidades. |
+| **[!UICONTROL Destination name]** | El nombre del destino al que se está activando el trabajo de segmentación. |
 
 Puede filtrar a un trabajo de segmentación específico y ver sus detalles seleccionando el icono de filtro (![El icono de filtro.](/help/images/icons/filter.png)). Existen dos tipos diferentes de trabajos de segmentación que se pueden filtrar: trabajos de activación y trabajos de evaluación.
 
@@ -101,17 +101,17 @@ Las siguientes métricas están disponibles para esta vista de panel:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| **[!UICONTROL Perfiles recibidos]** | Número total de perfiles recibidos en el flujo de activación. |
-| **[!UICONTROL Identidades activadas]** | Número total de identidades que se activaron correctamente en el destino, según los perfiles recibidos. |
-| **[!UICONTROL Identidades excluidas]** | Número total de identidades que se excluyeron de la activación en el destino, según los perfiles recibidos. Estas identidades podrían excluirse debido a la falta de atributos o violaciones del consentimiento. |
-| **[!UICONTROL Tamaño de los datos]** | El tamaño del flujo de datos que se está activando. |
-| **[!UICONTROL Total de archivos]** | Número total de archivos que se activan en el flujo de datos. |
-| **[!UICONTROL Estado]** | El estado actual del trabajo de activación. |
-| **[!UICONTROL Inicio de ejecución de flujo de datos]** | La fecha y la hora en que se inició el trabajo de activación. |
-| **[!UICONTROL Fin de ejecución de flujo de datos]** | La fecha y la hora en que finalizó el trabajo de activación. |
-| **[!UICONTROL ID de ejecución de flujo de datos]** | El ID del trabajo de activación actual. |
-| **[!UICONTROL ID de organización de IMS]** | El ID de la organización a la que pertenece el trabajo de activación. |
-| **[!UICONTROL Nombre de destino]** | El nombre del destino al que se activan los datos. |
+| **[!UICONTROL Profiles received]** | Número total de perfiles recibidos en el flujo de activación. |
+| **[!UICONTROL Identities activated]** | Número total de identidades que se activaron correctamente en el destino, según los perfiles recibidos. |
+| **[!UICONTROL Identities excluded]** | Número total de identidades que se excluyeron de la activación en el destino, según los perfiles recibidos. Estas identidades podrían excluirse debido a la falta de atributos o violaciones del consentimiento. |
+| **[!UICONTROL Size of data]** | El tamaño del flujo de datos que se está activando. |
+| **[!UICONTROL Total files]** | Número total de archivos que se activan en el flujo de datos. |
+| **[!UICONTROL Status]** | El estado actual del trabajo de activación. |
+| **[!UICONTROL Dataflow run start]** | La fecha y la hora en que se inició el trabajo de activación. |
+| **[!UICONTROL Dataflow run end]** | La fecha y la hora en que finalizó el trabajo de activación. |
+| **[!UICONTROL Dataflow run ID]** | El ID del trabajo de activación actual. |
+| **[!UICONTROL IMS org ID]** | El ID de la organización a la que pertenece el trabajo de activación. |
+| **[!UICONTROL Destination name]** | El nombre del destino al que se activan los datos. |
 
 En la sección audiencias puede ver una lista de audiencias que se activaron como parte del trabajo de activación.
 
@@ -121,11 +121,11 @@ Para la sección de audiencias, están disponibles las siguientes métricas:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| **[!UICONTROL Nombre]** | Nombre de la audiencia que se activó. |
-| **[!UICONTROL Identidades activadas]** | Número total de identidades que se activaron correctamente en el destino, según los perfiles recibidos. |
-| **[!UICONTROL Identidades excluidas]** | Número total de identidades que se excluyeron de la activación en el destino, según los perfiles recibidos. Estas identidades podrían excluirse debido a la falta de atributos o a una infracción de consentimiento. |
-| **[!UICONTROL Último estado de ejecución del flujo de datos]** | El estado del último trabajo de activación que se ejecutó para esa audiencia. |
-| **[!UICONTROL Última fecha de ejecución del flujo de datos]** | La fecha y la hora del último trabajo de activación que se ejecutó para esa audiencia. |
+| **[!UICONTROL Name]** | Nombre de la audiencia que se activó. |
+| **[!UICONTROL Identities activated]** | Número total de identidades que se activaron correctamente en el destino, según los perfiles recibidos. |
+| **[!UICONTROL Identities excluded]** | Número total de identidades que se excluyeron de la activación en el destino, según los perfiles recibidos. Estas identidades podrían excluirse debido a la falta de atributos o a una infracción de consentimiento. |
+| **[!UICONTROL Last dataflow run status]** | El estado del último trabajo de activación que se ejecutó para esa audiencia. |
+| **[!UICONTROL Last dataflow run date]** | La fecha y la hora del último trabajo de activación que se ejecutó para esa audiencia. |
 
 Además, puede ver detalles sobre los errores de ejecución del flujo de datos. En la sección de errores de ejecución del flujo de datos, puede ver las identidades que fallaron o las identidades excluidas. La sección de errores incluye detalles sobre el código de error y el número de identidades fallidas o excluidas.
 
@@ -141,29 +141,29 @@ Las siguientes métricas están disponibles para esta vista de panel:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| **[!UICONTROL Perfiles totales]** | Número total de perfiles que se están evaluando. |
-| **[!UICONTROL Estado]** | El estado del trabajo de evaluación. Los estados posibles para el trabajo de evaluación incluyen **[!UICONTROL Éxito]** y **[!UICONTROL Error]**. |
-| **[!UICONTROL Inicio del trabajo]** | La fecha y la hora en que se inició el trabajo de evaluación. |
-| **[!UICONTROL Fin del trabajo]** | La fecha y la hora en que finalizó el trabajo de evaluación. |
-| **[!UICONTROL Tipo de trabajo]** | El tipo de trabajo de segmentación. En este caso, siempre será un trabajo de **[!UICONTROL evaluación de segmentos]**. |
-| **[!UICONTROL Tipo de evaluación]** | El tipo de evaluación que se está realizando. Puede ser **[!UICONTROL Batch]** o **[!UICONTROL Streaming]**. |
-| **[!UICONTROL Id. de trabajo]** | El ID del trabajo de evaluación. |
-| **[!UICONTROL ID de organización de IMS]** | El ID de la organización a la que pertenece el trabajo de evaluación. |
-| **[!UICONTROL Nombre de audiencia]** | Nombre de la audiencia que se está evaluando. |
-| **[!UICONTROL ID de audiencia]** | El ID de la audiencia que se está evaluando. |
+| **[!UICONTROL Total profiles]** | Número total de perfiles que se están evaluando. |
+| **[!UICONTROL Status]** | El estado del trabajo de evaluación. Los estados posibles para el trabajo de evaluación incluyen **[!UICONTROL Success]** y **[!UICONTROL Failed]**. |
+| **[!UICONTROL Job start]** | La fecha y la hora en que se inició el trabajo de evaluación. |
+| **[!UICONTROL Job end]** | La fecha y la hora en que finalizó el trabajo de evaluación. |
+| **[!UICONTROL Job type]** | El tipo de trabajo de segmentación. En este caso, siempre será un trabajo de **[!UICONTROL Segment evaluation]**. |
+| **[!UICONTROL Evaluation type]** | El tipo de evaluación que se está realizando. Puede ser **[!UICONTROL Batch]** o **[!UICONTROL Streaming]**. |
+| **[!UICONTROL Job ID]** | El ID del trabajo de evaluación. |
+| **[!UICONTROL IMS org ID]** | El ID de la organización a la que pertenece el trabajo de evaluación. |
+| **[!UICONTROL Audience name]** | Nombre de la audiencia que se está evaluando. |
+| **[!UICONTROL Audience ID]** | El ID de la audiencia que se está evaluando. |
 
-En la sección [!UICONTROL Audiencias], puede ver una lista de audiencias que se están evaluando como parte del trabajo de evaluación. Puede filtrar la lista de audiencias por nombre mediante la barra de búsqueda.
+En la sección [!UICONTROL Audiences] puede ver una lista de audiencias que se evalúan como parte del trabajo de evaluación. Puede filtrar la lista de audiencias por nombre mediante la barra de búsqueda.
 
 >[!IMPORTANT]
 >
 >Actualmente, esta vista de panel admite hasta 800 métricas de audiencia.
 
-Para la sección [!UICONTROL Audiencias], están disponibles las siguientes métricas:
+Para la sección [!UICONTROL Audiences], están disponibles las siguientes métricas:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| **[!UICONTROL Nombre]** | Nombre de la audiencia que se está evaluando. |
-| **[!UICONTROL Recuento de perfiles]** | El número de perfiles que se están evaluando. |
+| **[!UICONTROL Name]** | Nombre de la audiencia que se está evaluando. |
+| **[!UICONTROL Profile count]** | El número de perfiles que se están evaluando. |
 
 ## Panel de control de monitorización de trabajos de segmentación {#monitoring-segmentation-jobs-dashboard}
 
@@ -172,7 +172,7 @@ Para la sección [!UICONTROL Audiencias], están disponibles las siguientes mét
 >title="Trabajos de segmentación"
 >abstract="La vista de trabajos de segmentación contiene información sobre los trabajos de evaluación y exportación de todos los públicos."
 
-Para acceder al panel **[!UICONTROL Trabajos de segmentación]**, seleccione **[!UICONTROL Trabajos de segmentación]** en el panel [!UICONTROL Audiencias]. El panel [!UICONTROL Supervisión] contiene métricas e información sobre los trabajos de evaluación y exportación.
+Para acceder al panel **[!UICONTROL Segmentation Jobs]**, seleccione **[!UICONTROL Segmentation jobs]** en el panel [!UICONTROL Audiences]. El panel [!UICONTROL Monitoring] contiene métricas e información sobre los trabajos de evaluación y exportación.
 
 >[!NOTE]
 >
@@ -180,14 +180,14 @@ Para acceder al panel **[!UICONTROL Trabajos de segmentación]**, seleccione **[
 
 ![Se muestra el panel de monitorización de trabajos de segmentación. Se resaltó el conmutador para cambiar entre Audiencias y Trabajos de segmentación.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
 
-Utilice el panel [!UICONTROL Trabajos de segmentación] para saber si la evaluación y exportación de perfiles se realiza a tiempo y sin excepciones, de modo que los servicios descendentes para la activación de destino puedan tener los datos de perfil evaluados más recientes.
+Utilice el panel [!UICONTROL Segmentation Jobs] para saber si la evaluación y exportación de perfiles se realiza a tiempo y sin excepciones, de modo que los servicios descendentes de activación de destino puedan tener los datos de perfil evaluados más recientes.
 
 Las siguientes métricas están disponibles para los trabajos de segmentación:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| **[!UICONTROL Trabajo de segmentación]** | Indica el nombre del trabajo de segmentación. |
-| **[!UICONTROL Tipo]** | Indica el tipo de trabajo de segmentación: exportación o evaluación. Tenga en cuenta que en ambos casos, el trabajo de segmentación evalúa o exporta **todas** las audiencias que pertenecen a una organización. Para obtener más información acerca de los trabajos de exportación, lea la guía del [extremo de trabajos de exportación](../../segmentation/api/export-jobs.md). Para obtener más información acerca de los trabajos de evaluación, lea el tutorial sobre [evaluación de una definición de segmento](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
-| **[!UICONTROL Inicio del trabajo]** | La fecha y la hora en que se inició el trabajo de segmentación. |
-| **[!UICONTROL Fin del trabajo]** | La fecha y la hora en que se completó el trabajo de segmentación. |
-| **[!UICONTROL Estado]** | El estado del trabajo completado. Los estados posibles para el trabajo de segmentación incluyen éxito o error. |
+| **[!UICONTROL Segmentation job]** | Indica el nombre del trabajo de segmentación. |
+| **[!UICONTROL Type]** | Indica el tipo de trabajo de segmentación: exportación o evaluación. Tenga en cuenta que en ambos casos, el trabajo de segmentación evalúa o exporta **todas** las audiencias que pertenecen a una organización. Para obtener más información acerca de los trabajos de exportación, lea la guía del [extremo de trabajos de exportación](../../segmentation/api/export-jobs.md). Para obtener más información acerca de los trabajos de evaluación, lea el tutorial sobre [evaluación de una definición de segmento](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
+| **[!UICONTROL Job start]** | La fecha y la hora en que se inició el trabajo de segmentación. |
+| **[!UICONTROL Job end]** | La fecha y la hora en que se completó el trabajo de segmentación. |
+| **[!UICONTROL Status]** | El estado del trabajo completado. Los estados posibles para el trabajo de segmentación incluyen éxito o error. |

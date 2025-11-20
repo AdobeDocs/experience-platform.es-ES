@@ -14,7 +14,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
 >title="Configuración del algoritmo"
->abstract="Configure un área de nombres único y una prioridad de área de nombres adaptada a las identidades ingeridas."
+>abstract="Configure un espacio de nombres único y una prioridad de espacio de nombres adaptada a las identidades ingeridas."
 
 Lea este documento para obtener más información acerca de los diferentes tipos de implementación que puede configurar con [!DNL Identity Graph Linking Rules].
 
@@ -30,8 +30,8 @@ Antes de sumergirse en el siguiente documento, asegúrese de familiarizarse con 
 
 * [Introducción al servicio de identidad](../home.md)
 * [Información general de [!DNL Identity Graph Linking Rules]](../identity-graph-linking-rules/namespace-priority.md)
-* [Prioridad del área de nombres](namespace-priority.md)
-* [Área de nombres única](overview.md#unique-namespace)
+* [Prioridad del espacio de nombres](namespace-priority.md)
+* [Espacio de nombres único](overview.md#unique-namespace)
 * [Simulación de gráficos](graph-simulation.md)
 
 ## Implementaciones básicas {#basic-implementations}
@@ -61,11 +61,11 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 Configure los siguientes ajustes en la interfaz de simulación de gráficos antes de simular el gráfico.
 
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del área de nombres |
+| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del espacio de nombres |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | ECID | ECID | COOKIE | | 2 |
-| IDFA | IDFA | DISPOSITIVO | | 3 |
+| IDFA | IDFA | DEVICE | | 3 |
 
 **Gráfico simulado**
 
@@ -152,7 +152,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 Configure los siguientes ajustes en la interfaz de simulación de gráficos antes de simular el gráfico.
 
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del área de nombres |
+| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del espacio de nombres |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | Chash | Chash | CROSS_DEVICE | | 2 |
@@ -239,7 +239,7 @@ Está ingiriendo un CRMID sin hash (sin conexión) y un CRMID con hash (en líne
 
 Configure los siguientes ajustes en la interfaz de simulación de gráficos antes de simular el gráfico.
 
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del área de nombres |
+| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del espacio de nombres |
 | --- | --- | --- | --- | --- | 
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
@@ -252,11 +252,11 @@ Simule las siguientes configuraciones en Simulación de gráficos. Puede crear s
 
 >[!BEGINTABS]
 
->[!TAB Dispositivo compartido]
+>[!TAB Shared device]
 
-John y Jane comparten un dispositivo.
+John and Jane share a device.
 
-**Modo de texto**
+**Text mode**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -269,16 +269,16 @@ CRMIDhash: Jane, ECID: 111
 
 >[!TAB Datos incorrectos]
 
-Debido a errores en el proceso de hash, se genera un CRMID con hash no único que se envía al servicio de identidad.
+Due to errors in the hashing process, a non-unique hashed CRMID is generated and sent to Identity Service.
 
-**Modo de texto**
+**Text mode**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
 CRMID: Jane, CRMIDhash: aaaa
 ```
 
-![Gráfico de un dispositivo compartido con un error en el proceso de hash, que genera un CRMID con hash no único.](../images/configs/intermediate/hashing-error.png)
+![A shared device graph with an error in the hashing process, leading to a non-unique hashed CRMID.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
 <!-- 
@@ -341,11 +341,11 @@ Email: jane@g, ECID: 111
 
 >[!ENDTABS] -->
 
-### Caso de uso: sus datos incluyen tres áreas de nombres únicas
+### Use case: Your data includes three unique namespaces
 
 >[!NOTE]
 >
->Para completar las implementaciones siguientes, debe crear un área de nombres personalizada con el símbolo de identidad (distingue mayúsculas de minúsculas) de: `CRMID`.
+>To complete the implementations below, you must create a custom namespace with the identity symbol (case sensitive) of: `CRMID`.
 
 El cliente define una entidad de una sola persona de la siguiente manera:
 
@@ -353,7 +353,7 @@ El cliente define una entidad de una sola persona de la siguiente manera:
 * Usuario final asociado a una dirección de correo electrónico con hash, de modo que los perfiles se puedan activar en destinos que admitan correo electrónico con hash (por ejemplo, [!DNL Facebook]).
 * Usuario final asociado a una dirección de correo electrónico, de modo que el personal de soporte pueda buscar su perfil en Real-Time CDP utilizando dicha dirección de correo electrónico.
 
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del área de nombres |
+| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del espacio de nombres |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | Correo electrónico | Correo electrónico | Correo electrónico | ✔️ | 2 |
@@ -402,16 +402,16 @@ La prioridad del área de nombres juega un papel crítico en escenarios de gráf
 
 Lea esta sección para ver las implementaciones avanzadas de [!DNL Identity Graph Linking Rules].
 
-### Caso de uso: necesita soporte para varias líneas de negocios
+### Use case: You need support for multiple lines of businesses
 
 >[!NOTE]
 >
->Para completar las implementaciones siguientes, debe crear áreas de nombres personalizadas con los símbolos de identidad (con distinción de mayúsculas y minúsculas) de:
+>To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
 >
 >* `CRMID`
 >* `loginID`
 
-Los usuarios finales tienen dos cuentas diferentes, una cuenta personal y una cuenta empresarial. Cada cuenta se identifica con un ID diferente. En esta situación, un gráfico típico tendría el siguiente aspecto:
+Your end-users have two different accounts, a personal account and a business account. Each account is identified by a different ID. En esta situación, un gráfico típico tendría el siguiente aspecto:
 
 **Modo de texto**
 
@@ -427,7 +427,7 @@ loginID: JohnBusiness, ECID: 222
 
 Configure los siguientes ajustes en la interfaz de simulación de gráficos antes de simular el gráfico.
 
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del área de nombres |
+| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del espacio de nombres |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | loginID | loginID | CROSS_DEVICE | | 2 |
@@ -506,7 +506,7 @@ CRMID: John, ECID: 111
 
 Configure los siguientes ajustes en la interfaz de simulación de gráficos antes de simular el gráfico.
 
-| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del área de nombres |
+| Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del espacio de nombres |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | loyaltyID | loyaltyID | CROSS_DEVICE | ✔️ | 2 |
@@ -515,15 +515,15 @@ Configure los siguientes ajustes en la interfaz de simulación de gráficos ante
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |
 
-**Ejercicio**
+**Exercise**
 
-Simule la siguiente configuración en Simulación de gráficos. Puede crear sus propios eventos o copiar y pegar mediante el modo de texto.
+Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
 
 >[!BEGINTABS]
 
->[!TAB Dispositivo compartido]
+>[!TAB Shared device]
 
-**Modo de texto**
+**Text mode**
 
 ```json
 CRMID: John, loyaltyID: John, Email: john@g
@@ -534,7 +534,7 @@ CRMID: John, ECID: 111
 CRMID: Jane, ECID: 111
 ```
 
-![Ejemplo de gráfico complejo del dispositivo compartido.](../images/configs/advanced/complex-shared-device.png)
+![A complex graph example of shared device.](../images/configs/advanced/complex-shared-device.png)
 
 >[!TAB El usuario final cambia su dirección de correo electrónico]
 
@@ -594,6 +594,6 @@ Para obtener más información sobre [!DNL Identity Graph Linking Rules], lea la
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad del área de nombres](./namespace-priority.md)
+* [Prioridad del espacio de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)

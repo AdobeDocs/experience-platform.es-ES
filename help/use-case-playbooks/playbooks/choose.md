@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Elija entre una selección de libros de reproducción
-description: Aprenda a elegir el manual adecuado para su caso de uso y active los libros de reproducción.
+title: Elija de una selección de libros de estrategias
+description: Aprenda a elegir el libro de estrategias adecuado para su caso de uso al habilitar playbooks.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
@@ -11,13 +11,13 @@ ht-degree: 87%
 
 ---
 
-# Elija entre una selección de libros de reproducción
+# Elija de una selección de libros de estrategias
 
-Para usar un libro de reproducción, seleccione **[!UICONTROL Playbooks]** en el panel de navegación izquierdo. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
+Para usar un libro de estrategias, seleccione **[!UICONTROL Playbooks]** entre el navegación izquierdo. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
 
 ## Búsqueda y filtrado {#search-and-filter}
 
-Utilice la ventana de búsqueda y los filtros disponibles en la página para buscar y elegir el manual adecuado para su caso de uso.
+Use la ventana búsqueda y los filtros disponibles en la Página para buscar y elegir el libro de estrategias adecuado para su caso de uso.
 
 Por ejemplo, puede filtrar los manuales de tácticas que puede aprovechar en función de la fase del canal de marketing objetivo: conversión, participación o retención. También puede filtrar los manuales de tácticas mostrados según su sector o la asignación de derechos de producto a la que tenga acceso: Adobe Journey Optimizer o Real-Time CDP.
 
@@ -35,7 +35,7 @@ Experimente con los filtros y la opción de búsqueda y encuentre el manual de t
 
 ## Vista del manual de tácticas y generación de recursos {#view-playbook-generate-assets}
 
-Antes de decidirse por un manual de tácticas y crear instancias de este, debería inspeccionarlo para asegurarse de que se ajusta a sus necesidades. Para ayudarle a comprender mejor los casos de uso que abarcan, todos los manuales de tácticas contienen las secciones que se enumeran a continuación. Cuando esté listo para continuar y generar recursos, seleccione **[!UICONTROL Create Instance]**.
+Antes de decidirse por un manual de tácticas y crear instancias de este, debería inspeccionarlo para asegurarse de que se ajusta a sus necesidades. Para ayudarle a comprender mejor los casos de uso que abarcan, todos los manuales de tácticas contienen las secciones que se enumeran a continuación. Cuando esté preparado para continuar y generar activos, seleccione **[!UICONTROL Create Instance]**.
 
 ### Diagrama de ideas {#mindmap}
 
@@ -71,7 +71,7 @@ Baje hasta la sección de instancias para leer la información general de las in
 | Elemento | Descripción |
 |---------|----------|
 | **[!UICONTROL Name]** | Nombre de la instancia basado en el manual de tácticas. Puede personalizar el nombre y la descripción de una instancia. Lea la sección sobre [cómo editar metadatos de instancia](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) para obtener más información. |
-| **[!UICONTROL Status]** | Indica el estado de la instancia. Una instancia de **[!UICONTROL submitted]** está lista para usarse. |
+| **[!UICONTROL Status]** | Indica el estado de la instancia. Un **[!UICONTROL submitted]** instancia está listo para usar. |
 | **[!UICONTROL Created]** | Indica cuándo se creó la instancia. |
 | **[!UICONTROL Created By]** | Indica quién creó la instancia. |
 | **[!UICONTROL Last Modified]** | Indica la última modificación de la instancia. |
@@ -82,4 +82,4 @@ Baje hasta la sección de instancias para leer la información general de las in
 
 ## Pasos siguientes: creación de una instancia del manual de tácticas {#next-steps-create-instance}
 
-Cuando esté listo para continuar con un libro de reproducción y crear una instancia, seleccione **[!UICONTROL Create Instance]** para continuar con el libro de reproducción y generar recursos técnicos. Lea la guía [Creación, uso compartido y reutilización de instancias de manuales de tácticas](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obtener más información.
+Cuando esté listo para continuar con un libro de estrategias y crear un instancia, seleccione **[!UICONTROL Create Instance]** continuar con el libro de estrategias y generar activos técnicos. Lea la guía [Creación, uso compartido y reutilización de instancias de manuales de tácticas](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obtener más información.

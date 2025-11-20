@@ -6,7 +6,7 @@ description: Administración de datos de Adobe Experience Platform le permite ad
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1619'
 ht-degree: 9%
 
 ---
@@ -90,8 +90,8 @@ Un ejemplo de acción de marketing puede ser el deseo de exportar un conjunto de
 
 Hay dos tipos de directivas disponibles:
 
-* **[!UICONTROL Política de control de datos]**: Restrinja la activación de datos en función de la acción de marketing que se esté realizando y de las etiquetas de uso de datos que lleven los datos en cuestión.
-* **[!UICONTROL Política de consentimiento]**: filtre los perfiles que se pueden activar a [destinos](../destinations/home.md) según las preferencias o el consentimiento de sus clientes.
+* **[!UICONTROL Data governance policy]**: restrinja la activación de datos en función de la acción de marketing que se esté realizando y las etiquetas de uso de datos que lleven los datos en cuestión.
+* **[!UICONTROL Consent policy]**: filtre los perfiles que se pueden activar a [destinos](../destinations/home.md) según las preferencias o el consentimiento de sus clientes.
 
 Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear directivas mediante la API del servicio de directivas o la interfaz de usuario de Experience Platform. Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la [descripción general de las políticas](./policies/overview.md).
 
@@ -99,7 +99,7 @@ Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pu
 >
 >Todas las políticas de uso de datos (incluidas las políticas principales proporcionadas por Adobe) están desactivadas de forma predeterminada. Para que una directiva individual se tenga en cuenta para la aplicación, debe habilitar manualmente esa directiva.
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento proporciona una introducción de alto nivel a la gobernanza de datos y al marco de trabajo de gobernanza de datos. Ahora puede continuar con la [guía del usuario sobre etiquetas de uso de datos](labels/user-guide.md) y empezar a agregar etiquetas de uso a sus datos de experiencia.
 
@@ -132,8 +132,8 @@ En la tabla siguiente se describen los términos clave relacionados con la gober
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender el marco de trabajo de control de datos.
 
->[!VIDEO](https://video.tv.adobe.com/v/32682?quality=12&enable10seconds=on&speedcontrol=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 En el siguiente vídeo se explica cómo aplicar etiquetas de uso de datos a los esquemas o a la totalidad de un conjunto de datos en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422794/?learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

@@ -6,7 +6,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2752'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El destino de la API HTTP es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 
@@ -36,18 +36,18 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | [Audiences importados](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde CSV archivos. |
 
 {style="table-layout:auto"}
 
-## Tipo y frecuencia de exportación {#export-type-frequency}
+## Tipo de exportación y Frecuencia {#export-type-frequency}
 
-Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+Consulte la tabla siguiente para obtener información sobre el tipo de exportación de destino y Frecuencia.
 
 | Elemento | Tipo | Notas |
 | ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla de asignación de [flujo de trabajo de activación de destino](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Profile-based]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla de asignación de [flujo de trabajo de activación de destino](../../ui/activate-segment-streaming-destinations.md#mapping). |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -56,7 +56,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 Para utilizar el destino de la API HTTP para exportar datos desde Experience Platform, debe cumplir los siguientes requisitos previos:
 
 * Debe tener un extremo HTTP que admita la API de REST.
-* El extremo HTTP debe admitir el esquema de perfil de Experience Platform. No se admite ninguna transformación a un esquema de carga útil de terceros en el destino de la API HTTP. Consulte la sección [datos exportados](#exported-data) para ver un ejemplo del esquema de salida de Experience Platform.
+* El extremo HTTP debe admitir el esquema de perfil Experience Platform. No se admite ningún transformación a un esquema de carga útil de terceros en el destino de la API HTTP. Consulte la sección de [datos](#exported-data) exportados para ver un ejemplo del esquema de salida Experience Platform.
 * El extremo HTTP debe admitir encabezados.
 * El extremo HTTP debe responder en 2 segundos para garantizar un procesamiento de datos adecuado y evitar errores de tiempo de espera.
 
@@ -87,7 +87,7 @@ Para cumplir los requisitos de seguridad y cumplimiento de normas de los cliente
 El destino de la API HTTP admite varios tipos de autenticación en el extremo HTTP:
 
 * Punto final HTTP sin autenticación;
-* Autenticación de token de portador;
+* Autenticación de token al portador;
 * Autenticación de [credenciales de cliente OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) con el formulario de cuerpo, con [!DNL client ID], [!DNL client secret] y [!DNL grant type] en el cuerpo de la solicitud HTTP, como se muestra en el ejemplo siguiente.
 
 ```shell
@@ -113,7 +113,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso]** de Ver destinos **[!UICONTROL y]** Administrar destinos[&#128279;](/help/access-control/home.md#permissions)5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). Al conectarse a este destino, debe proporcionar la siguiente información:
 
@@ -126,48 +126,48 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 #### Autenticación de token de portador {#bearer-token-authentication}
 
-Si selecciona el tipo de autenticación **[!UICONTROL Token de portador]** para conectarse a su extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectarse al destino]**:
+Si selecciona el tipo de autenticación **[!UICONTROL Bearer token]** para conectarse a su extremo HTTP, ingrese los campos siguientes y seleccione **[!UICONTROL Connect to destination]**:
 
 ![Imagen de la pantalla de la interfaz de usuario donde puede conectarse al destino de la API HTTP mediante la autenticación de token de portador.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
-* **[!UICONTROL Token de portador]**: inserte el token de portador para autenticarse en la ubicación HTTP.
+* **[!UICONTROL Bearer token]**: inserte el token de portador para autenticarse en la ubicación HTTP.
 
 #### Sin autenticación {#no-authentication}
 
-Si selecciona el tipo de autenticación **[!UICONTROL None]** para conectarse al extremo HTTP:
+Si selecciona el tipo de autenticación **[!UICONTROL None]** para conectarse a su extremo HTTP:
 
 ![Imagen de la pantalla de la interfaz de usuario donde puede conectarse al destino de la API HTTP sin utilizar autenticación.](../../assets/catalog/http/http-api-authentication-none.png)
 
-Cuando selecciona esta apertura de autenticación, solo necesita seleccionar **[!UICONTROL Conectarse al destino]** y se establece la conexión con su extremo.
+Cuando selecciona esta apertura de autenticación, solo necesita seleccionar **[!UICONTROL Connect to destination]** y se establece la conexión con el extremo.
 
 #### Autenticación de contraseña de OAuth 2 {#oauth-2-password-authentication}
 
-Si selecciona el tipo de autenticación **[!UICONTROL OAuth 2 Password]** para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectar con destino]**:
+Si selecciona el tipo de autenticación **[!UICONTROL OAuth 2 Password]** para conectarse a su extremo HTTP, ingrese los campos siguientes y seleccione **[!UICONTROL Connect to destination]**:
 
 ![Imagen de la pantalla de la interfaz de usuario donde puede conectarse al destino de la API HTTP mediante OAuth 2 con autenticación de contraseña.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL URL de token de acceso]**: URL del lado del usuario que emite tokens de acceso y, opcionalmente, tokens de actualización.
-* **[!UICONTROL ID de cliente]**: El [!DNL client ID] que su sistema asigna a Adobe Experience Platform.
-* **[!UICONTROL Secreto de cliente]**: El [!DNL client secret] que su sistema asigna a Adobe Experience Platform.
-* **[!UICONTROL Nombre de usuario]**: El nombre de usuario para acceder a su extremo HTTP.
-* **[!UICONTROL Contraseña]**: La contraseña para acceder a su extremo HTTP.
+* **[!UICONTROL Access Token URL]**: dirección URL del lado que emite tokens de acceso y, opcionalmente, tokens de actualización.
+* **[!UICONTROL Client ID]**: el [!DNL client ID] que su sistema asigna a Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: el [!DNL client secret] que su sistema asigna a Adobe Experience Platform.
+* **[!UICONTROL Username]**: el nombre de usuario para acceder al extremo HTTP.
+* **[!UICONTROL Password]**: contraseña para acceder al extremo HTTP.
 
 #### Autenticación de credenciales de cliente de OAuth 2 {#oauth-2-client-credentials-authentication}
 
-Si selecciona el tipo de autenticación **[!UICONTROL Credenciales del cliente de OAuth 2]** para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectar con destino]**:
+Si selecciona el tipo de **[!UICONTROL OAuth 2 Client Credentials]** autenticación para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Connect to destination]**:
 
-![Imagen de la pantalla de la interfaz de usuario donde puede conectarse al destino de la API HTTP mediante OAuth 2 con autenticación de credenciales de cliente.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Imagen pantalla del IU donde puede conectarse al destino de la API HTTP mediante OAuth 2 con autenticación de credenciales de cliente.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 > 
->Al usar la autenticación [!UICONTROL Credenciales del cliente de OAuth 2], la [!UICONTROL URL del token de acceso] puede tener un máximo de un parámetro de consulta. Si agrega una [!UICONTROL URL de token de acceso] con más parámetros de consulta, pueden surgir problemas al conectarse al punto de conexión.
+>Al utilizar la autenticación [!UICONTROL OAuth 2 Client Credentials], [!UICONTROL Access Token URL] puede tener un máximo de un parámetro de consulta. Si se agrega un(a) [!UICONTROL Access Token URL] con más parámetros de consulta, pueden producirse problemas al conectarse al extremo.
 
-* **[!UICONTROL URL de token de acceso]**: URL del lado del usuario que emite tokens de acceso y, opcionalmente, tokens de actualización.
-* **[!UICONTROL ID de cliente]**: El [!DNL client ID] que su sistema asigna a Adobe Experience Platform.
-* **[!UICONTROL Secreto de cliente]**: El [!DNL client secret] que su sistema asigna a Adobe Experience Platform.
-* **[!UICONTROL Tipo de credenciales de cliente]**: seleccione el tipo de concesión de credenciales de cliente de OAuth2 admitida por el extremo:
-   * **[!UICONTROL Formulario de cuerpo codificado]**: En este caso, [!DNL client ID] y [!DNL client secret] se incluyen *en el cuerpo de la solicitud* enviada a su destino. Para ver un ejemplo, consulte la sección [Tipos de autenticación admitidos](#supported-authentication-types).
-   * **[!UICONTROL Autorización básica]**: En este caso, [!DNL client ID] y [!DNL client secret] se incluyen *en un encabezado `Authorization`* después de ser codificados en Base64 y enviados a su destino. Para ver un ejemplo, consulte la sección [Tipos de autenticación admitidos](#supported-authentication-types).
+* **[!UICONTROL Access Token URL]**: dirección URL del lado que emite tokens de acceso y, opcionalmente, tokens de actualización.
+* **[!UICONTROL Client ID]**: el [!DNL client ID] que su sistema asigna a Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: el [!DNL client secret] que su sistema asigna a Adobe Experience Platform.
+* **[!UICONTROL Client Credentials Type]**: seleccione el tipo de concesión de credenciales de cliente OAuth2 admitida por el extremo:
+   * **[!UICONTROL Body Form Encoded]**: en este caso, [!DNL client ID] y [!DNL client secret] se incluyen *en el cuerpo de la solicitud* enviada a su destino. Para ver un ejemplo, consulte la sección [Tipos de autenticación admitidos](#supported-authentication-types).
+   * **[!UICONTROL Basic Authorization]**: en este caso, [!DNL client ID] y [!DNL client secret] se incluyen *en un encabezado `Authorization`* después de ser codificados en base64 y enviados a su destino. Para ver un ejemplo, consulte la sección [Tipos de autenticación admitidos](#supported-authentication-types).
 
 ### Rellenar detalles de destino {#destination-details}
 
@@ -200,32 +200,32 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 ![Imagen de la pantalla de la interfaz de usuario que muestra los campos completados para los detalles de destino HTTP.](../../assets/catalog/http/http-api-destination-details.png)
 
-* **[!UICONTROL Nombre]**: escriba un nombre para reconocer este destino en el futuro.
-* **[!UICONTROL Descripción]**: escribe una descripción que te ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Encabezados]**: escriba los encabezados personalizados que desee incluir en las llamadas de destino, con este formato: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL Punto final HTTP]**: Dirección URL del punto final HTTP al que desea enviar los datos de perfil.
-* **[!UICONTROL Parámetros de consulta]**: de forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Aplique este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Incluir nombres de segmentos]**: Cambie la opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. **Nota**: Los nombres de segmento solo se incluyen para los segmentos asignados al destino. Los segmentos no asignados que aparecen en la exportación no incluirán el campo `name`. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
-* **[!UICONTROL Incluir marcas de tiempo de segmentos]**: actívela si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
+* **[!UICONTROL Name]**: escriba un nombre para reconocer este destino en el futuro.
+* **[!UICONTROL Description]**: escriba una descripción que le ayude a identificar este destino en el futuro.
+* **[!UICONTROL Headers]**: escriba los encabezados personalizados que desee incluir en las llamadas de destino, con este formato: `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL HTTP Endpoint]**: la dirección URL del extremo HTTP al que desea enviar los datos de perfil.
+* **[!UICONTROL Query parameters]**: Opcionalmente, puede agregar parámetros de consulta al URL de punto final HTTP. Aplique este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`.
+* **[!UICONTROL Include Segment Names]**: Alterne si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. **Nota**: Los nombres de segmento solo se incluyen para los segmentos asignados al destino. Los segmentos no asignados que se muestran en la exportación no incluirán el `name` campo. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
+* **[!UICONTROL Include Segment Timestamps]**: cambie si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
 
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* [La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones al destino de la API HTTP. [Más información](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Atributos de destino {#attributes}
 
-En el paso [[!UICONTROL Seleccionar atributos]](../../ui/activate-streaming-profile-destinations.md#select-attributes), Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
+En el paso [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes), Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino.
 
 ## Comportamiento de exportación de perfil {#profile-export-behavior}
 
@@ -245,7 +245,7 @@ Con respecto a los datos que se exportan para un perfil determinado, es importan
 
 | Qué determina una exportación de destino | Qué se incluye en la exportación de destino |
 |---------|----------|
-| <ul><li>Los atributos y segmentos asignados sirven de referencia para una exportación de destino. Esto significa que si el estado de `segmentMembership` de un perfil cambia a `realized` o `exiting`, o si se actualiza cualquier atributo asignado, se iniciará una exportación de destino.</li><li>Dado que las identidades no se pueden asignar actualmente a destinos de API HTTP, los cambios en cualquier identidad de un perfil determinado también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es el mismo valor o no. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>El objeto `segmentMembership` incluye el segmento asignado en el flujo de datos de activación, para el cual el estado del perfil ha cambiado después de un evento de calificación o salida de segmento. Tenga en cuenta que otros segmentos no asignados para los que el perfil cumple los requisitos pueden formar parte de la exportación de destino, si estos segmentos pertenecen a la misma [política de combinación](/help/profile/merge-policies/overview.md) que el segmento asignado en el flujo de datos de activación. <br> **Importante**: Cuando la opción **[!UICONTROL Incluir nombres de segmentos]** está habilitada, los nombres de segmentos solo se incluyen para los segmentos que están asignados al destino. Los segmentos no asignados que aparecen en la exportación no incluirán el campo `name`, aunque la opción esté habilitada. </li><li>También se incluyen todas las identidades en el objeto `identityMap` (Experience Platform no admite actualmente la asignación de identidades en el destino de la API HTTP).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
+| <ul><li>Los atributos y segmentos asignados sirven de señal para una exportación de destino. Esto significa que si el `segmentMembership` estado de una perfil cambia o `realized` `exiting` se actualiza alguno de los atributos asignados, se iniciará una exportación de destino.</li><li>Dado que actualmente las identidades no se pueden asignar a destinos de API HTTP, los cambios en cualquier identidad en una perfil determinada también determinan las exportaciones de destino.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, independientemente de si es el mismo valor o no. Esto significa que la sobrescritura de un atributo se considera un cambio aunque el valor en sí no haya cambiado.</li></ul> | <ul><li>El objeto `segmentMembership` incluye el segmento asignado en el flujo de datos de activación, para el cual el estado del perfil ha cambiado después de un evento de calificación o salida de segmento. Tenga en cuenta que otros segmentos no asignados para los que el perfil cumple los requisitos pueden formar parte de la exportación de destino, si estos segmentos pertenecen a la misma [política de combinación](/help/profile/merge-policies/overview.md) que el segmento asignado en el flujo de datos de activación. <br> **Importante**: cuando la opción **[!UICONTROL Include Segment Names]** está habilitada, los nombres de segmento solo se incluyen para los segmentos asignados al destino. Los segmentos no asignados que aparecen en la exportación no incluirán el campo `name`, aunque la opción esté habilitada. </li><li>También se incluyen todas las identidades en el objeto `identityMap` (Experience Platform no admite actualmente la asignación de identidades en el destino de la API HTTP).</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -257,13 +257,13 @@ Una exportación de perfil al destino puede determinarse mediante un perfil que 
 
 Desde el punto de vista de los atributos de perfil, cualquier cambio en los cuatro atributos asignados anteriormente determinará una exportación de destino y cualquiera de los cuatro atributos asignados presentes en el perfil estará presente en la exportación de datos.
 
-## Relleno de datos históricos {#historical-data-backfill}
+## Datos históricos relleno {#historical-data-backfill}
 
-Al agregar una audiencia nueva a un destino existente o al crear un destino nuevo y asignarle audiencias, Experience Platform exporta al destino los datos de calificación de audiencias históricas. Los perfiles que cumplen los requisitos para la audiencia *antes de* que la audiencia se agregó al destino se exportan al destino en un plazo aproximado de una hora.
+Cuando agrega un nuevo audiencia a un destino existente, o cuando crea un nuevo destino y asigna audiencias a él, Experience Platform exporta datos históricos de calificación audiencia al destino. Los perfiles que cumplían los requisitos para el audiencia *antes* de que el audiencia se añadiera al destino se exportan al destino en un plazo aproximado de una hora.
 
 ## Datos exportados {#exported-data}
 
-Los datos de [!DNL Experience Platform] exportados llegan a su destino [!DNL HTTP] en formato JSON. Por ejemplo, la exportación siguiente contiene un perfil que se ha clasificado para un segmento determinado, es miembro de otros dos segmentos y ha salido de otro segmento. La exportación también incluye el atributo de perfil nombre, apellidos, fecha de nacimiento y dirección de correo electrónico personal. Las identidades de este perfil son ECID y correo electrónico.
+Los datos exportados [!DNL Experience Platform] llegan a su [!DNL HTTP] destino en JSON formato. Por ejemplo, la exportación siguiente contiene un perfil que cumple los requisitos para un segmento determinado, que es miembro de otros dos segmentos y que ha salido de otro segmento. La exportación también incluye el atributo de perfil nombre, apellidos, fecha de nacimiento y dirección de correo electrónico personal. Las identidades de este perfil son ECID y correo electrónico.
 
 ```json
 {
@@ -318,7 +318,7 @@ Los datos de [!DNL Experience Platform] exportados llegan a su destino [!DNL HTT
 }
 ```
 
-A continuación se muestran más ejemplos de datos exportados, según la configuración de la interfaz de usuario que seleccione en el flujo de destino de conexión para las opciones **[!UICONTROL Incluir nombres de segmentos]** e **[!UICONTROL Incluir marcas de tiempo de segmentos]**:
+A continuación se muestran más ejemplos de datos exportados, según la configuración de la interfaz de usuario que seleccione en el flujo de destino de conexión para las opciones **[!UICONTROL Include Segment Names]** y **[!UICONTROL Include Segment Timestamps]**:
 
 +++ La muestra de exportación de datos siguiente incluye nombres de audiencia en la sección `segmentMembership`
 
@@ -342,7 +342,7 @@ A continuación se muestran más ejemplos de datos exportados, según la configu
       }
 ```
 
-**Nota**: En este ejemplo, el primer segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) está asignado al destino e incluye el campo `name`. El segundo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) no está asignado al destino y no incluye el campo `name`, aunque la opción **[!UICONTROL Incluir nombres de segmento]** esté habilitada.
+**Nota**: En este ejemplo, el primer segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) está asignado al destino e incluye el campo `name`. El segundo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) no está asignado al destino y no incluye el campo `name`, aunque la opción **[!UICONTROL Include Segment Names]** esté habilitada.
 
 +++
 

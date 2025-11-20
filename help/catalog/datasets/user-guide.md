@@ -94,7 +94,7 @@ También puede eliminar un conjunto de datos o agregar uno para utilizarlo con e
 
 ## Acciones de conjuntos de datos en línea {#inline-actions}
 
-La IU de conjuntos de datos ahora ofrece colecciones de acciones en línea para cada conjunto de datos disponible. Seleccione los puntos suspensivos (...) de un conjunto de datos que desee administrar para ver las opciones disponibles en un menú emergente. Las acciones disponibles incluyen:
+La IU de conjuntos de datos ahora ofrece colecciones de acciones en línea para cada conjunto de datos disponible. Seleccione los puntos suspensivos (...) de un conjunto de datos que desee administrar para ver las opciones disponibles en un menú elemento emergente. Las acciones disponibles incluyen:
 
 * [[!UICONTROL Preview dataset]](#preview)
 * [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
@@ -104,9 +104,9 @@ La IU de conjuntos de datos ahora ofrece colecciones de acciones en línea para 
 * [[!UICONTROL Move to folders]](#move-to-folders)
 * [[!UICONTROL Delete]](#delete).
 
-Puede encontrar más información sobre estas acciones disponibles en sus secciones respectivas. Para aprender a administrar grandes cantidades de conjuntos de datos simultáneamente, consulte la sección [acciones masivas](#bulk-actions).
+Puede encontrar más información sobre estas acciones disponibles en sus respectivas secciones. Para aprender a administrar un gran número de conjuntos de datos simultáneamente, consulte la sección acciones [masivas](#bulk-actions) .
 
-### Previsualización de un conjunto de datos {#preview}
+### Vista previa un conjunto de datos {#preview}
 
 Puede obtener una vista previa de hasta 100 filas de datos de ejemplo para cualquier conjunto de datos, ya sea desde las opciones en línea de la pestaña [!UICONTROL Browse] o desde la vista [!UICONTROL Dataset activity].
 
@@ -200,11 +200,11 @@ Aparecerá el cuadro de diálogo [!UICONTROL Manage tags]. Escriba una breve des
 
 ![Cuadro de diálogo Administrar etiquetas con etiquetas personalizadas resaltadas.](../images/datasets/user-guide/manage-tags-dialog.png)
 
-El cuadro de diálogo [!UICONTROL Manage tags] también puede quitar etiquetas existentes de un conjunto de datos. Simplemente, seleccione la &quot;x&quot; junto a la etiqueta que desee eliminar y seleccione **[!UICONTROL Save]**.
+El [!UICONTROL Manage tags] cuadro de diálogo también puede eliminar etiquetas existentes de una conjunto de datos. Simplemente, seleccione la &quot;x&quot; junto a la etiqueta que desee eliminar y seleccione **[!UICONTROL Save]**.
 
-Una vez añadida una etiqueta a un conjunto de datos, los conjuntos de datos se pueden filtrar según la etiqueta correspondiente. Consulte la sección sobre cómo [filtrar conjuntos de datos por etiquetas](#enable-profile) para obtener más información.
+Una vez que se ha agregado un etiqueta a un conjunto de datos, los conjuntos de datos se pueden filtrar según el etiqueta correspondiente. Consulte la sección sobre cómo [filtrar conjuntos de datos por etiqueta](#enable-profile) para obtener más información.
 
-Para obtener más información sobre cómo clasificar objetos de negocio para facilitar la detección y la categorización, consulte la guía sobre [administración de taxonomías de metadatos](../../administrative-tags/ui/managing-tags.md). En esta guía se explica cómo los usuarios con los permisos adecuados pueden crear etiquetas predefinidas, asignarlas a categorías y administrar todas las operaciones de CRUD relacionadas en la interfaz de usuario de Experience Platform.
+Para obtener más información sobre cómo clasificar objetos de negocio para facilitar la detección y la categorización, consulte el guía sobre [administración de taxonomías](../../administrative-tags/ui/managing-tags.md) metadatos. Este guía explica cómo los usuarios con los permisos adecuados pueden crear etiquetas predefinidas, asignarlas a categorías y administrar todas las operaciones CRUD relacionadas en el IU Experience Platform.
 
 ### Establecer política de retención de datos {#data-retention-policy}
 
@@ -299,9 +299,9 @@ Puede colocar conjuntos de datos en carpetas para administrar mejor los conjunto
 
 ![El panel [!UICONTROL Datasets] con los puntos suspensivos y [!UICONTROL Move to folder] resaltados.](../images/datasets/user-guide/move-to-folder.png)
 
-Aparecerá el cuadro de diálogo [!UICONTROL Move] conjunto de datos a carpeta. Seleccione la carpeta a la que desee mover la audiencia y, a continuación, seleccione **[!UICONTROL Move]**. Una notificación emergente le informa de que el movimiento del conjunto de datos se ha realizado correctamente.
+Aparecerá el cuadro de diálogo [!UICONTROL Move] conjunto de datos a carpeta. Seleccione la carpeta a la que desea mover el audiencia y, a continuación, seleccione .**[!UICONTROL Move]** Una ventana emergente notificación informa de que la conjunto de datos movimiento se realizó correctamente.
 
-![Se resaltó el cuadro de diálogo del conjunto de datos [!UICONTROL Move] con [!UICONTROL Move].](../images/datasets/user-guide/move-dialog.png)
+![El [!UICONTROL Move] cuadro de diálogo conjunto de datos con [!UICONTROL Move] resaltado.](../images/datasets/user-guide/move-dialog.png)
 
 >[!TIP]
 >
@@ -353,7 +353,7 @@ De forma predeterminada, solo se muestran los conjuntos de datos en los que ha i
 
 ![Las opciones de filtro del área de trabajo Conjuntos de datos con la sección [!UICONTROL Show system datasets] resaltada.](../images/datasets/user-guide/show-system-datasets.png)
 
-### Filtrar conjuntos de datos habilitados para perfil {#filter-profile-enabled-datasets}
+### Filtrar conjuntos de datos con perfil habilitado {#filter-profile-enabled-datasets}
 
 Los conjuntos de datos que se han habilitado para los datos de perfil se utilizan para rellenar perfiles de clientes después de introducir los datos. Consulte la sección sobre [habilitar conjuntos de datos para el perfil](#enable-profile) para obtener más información.
 
@@ -394,13 +394,13 @@ Cuando se aplican acciones masivas a conjuntos de datos, se aplican las siguient
 
 ## Ordenar conjuntos de datos por fecha de creación {#sort}
 
-Los conjuntos de datos de la ficha [!UICONTROL Browse] se pueden ordenar por fechas en orden ascendente o descendente. Seleccione los encabezados de columna [!UICONTROL Created] o [!UICONTROL Last updated] para alternar entre ascendente y descendente. Una vez seleccionada, la columna lo indica con una flecha hacia arriba o hacia abajo a un lado del encabezado de la columna.
+Los conjuntos de datos de la [!UICONTROL Browse] pestaña pueden ordenarse por fechas ascendentes o de bajada. Seleccione los encabezados de [!UICONTROL Created] columna o [!UICONTROL Last updated] para alternar entre ascendente y de bajada. Una vez seleccionado, la columna lo indica con una flecha hacia arriba o abajo hacia el lado del encabezado de la columna.
 
-![La ficha Examinar del área de trabajo Conjuntos de datos con la columna Creado y Última actualización resaltada.](../images/datasets/user-guide/ascending-descending-columns.png)
+![La pestaña Examinar de los conjuntos de datos espacio de trabajo con la columna Creación y Última actualización resaltada.](../images/datasets/user-guide/ascending-descending-columns.png)
 
 ## Crear un conjunto de datos {#create}
 
-Para crear un nuevo conjunto de datos, comience seleccionando **[!UICONTROL Create dataset]** en el panel **[!UICONTROL Datasets]**.
+Para crear un nuevo conjunto de datos, inicio seleccionando **[!UICONTROL Create dataset]** en el **[!UICONTROL Datasets]** panel.
 
 ![El botón Crear conjunto de datos está resaltado.](../images/datasets/user-guide/select-create.png)
 
@@ -445,7 +445,7 @@ Aparecerá el paso **[!UICONTROL Add data]**. Cargue el archivo CSV arrastrándo
 
 ## Monitorización de la ingesta de datos
 
-En la interfaz de usuario [!DNL Experience Platform], seleccione **[!UICONTROL Monitoring]** en el panel de navegación izquierdo. El panel **[!UICONTROL Monitoring]** le permite ver los estados de los datos de entrada procedentes de la ingesta por lotes o de la transmisión. Para ver los estados de los lotes individuales, seleccione **[!UICONTROL Batch end-to-end]** o **[!UICONTROL Streaming end-to-end]**. Los paneles enumeran todas las ejecuciones de ingesta por lotes o de flujo continuo, incluidas las que se realizan correctamente, las que fallaron o las que aún están en curso. Cada lista proporciona detalles del lote, incluido el ID de lote, el nombre del conjunto de datos de destinatario y el número de registros introducidos. Si el conjunto de datos de destino está habilitado para [!DNL Profile], también se mostrará el número de registros de perfil e identidad ingeridos.
+En la interfaz de usuario [!DNL Experience Platform], seleccione **[!UICONTROL Monitoring]** en el panel de navegación izquierdo. El panel **[!UICONTROL Monitoring]** le permite ver los estados de los datos de entrada procedentes de la ingesta por lotes o de la transmisión. Para vista los estados de lotes individuales, seleccione o **[!UICONTROL Batch end-to-end]** **[!UICONTROL Streaming end-to-end]**. Los tableros lista todas las ejecuciones de ingesta de secuencias o por lotes, incluidas las que se realizan correctamente, las que han fallado o que aún están en curso. Cada listado proporciona detalles del lote, incluida la ID del lote, el nombre del destino conjunto de datos y la cantidad de registros ingeridos. Si el conjunto de datos de destino está activado para [!DNL Profile], también se muestra el número de registros de identidad y perfil ingeridos.
 
 ![Se muestra la pantalla de monitorización de lote de extremo a extremo. Tanto la supervisión como el lote a lote están resaltados.](../images/datasets/user-guide/batch-listing.png)
 

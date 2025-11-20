@@ -6,7 +6,7 @@ description: Esta guía del usuario proporciona información sobre cómo monitor
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '641'
 ht-degree: 4%
 
 ---
@@ -30,9 +30,9 @@ Esta guía del usuario proporciona pasos sobre cómo monitorizar los datos en la
 >
 >Para calcular el total de eventos en una fecha determinada, utilice la expresión de: `total events / day = ingestion rate * 60 * 60 * 24`.
 
-En la [IU de Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Supervisión]** en el menú de navegación de la izquierda, seguido de **[!UICONTROL Transmisión de extremo a extremo]**.
+En la [interfaz de usuario de Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitoring]** en el menú de navegación izquierdo, seguido de **[!UICONTROL Streaming end-to-end]**.
 
-Aparecerá la página de monitorización **[!UICONTROL Streaming end-to-end]**. Esta área de trabajo proporciona un gráfico que muestra la velocidad de los eventos transmitidos recibidos por [!DNL Experience Platform], un gráfico que muestra la velocidad de los eventos transmitidos que [[!DNL Real-Time Customer Profile]](../../profile/home.md) procesó correctamente, así como una lista detallada de los datos entrantes.
+Aparecerá la página de supervisión **[!UICONTROL Streaming end-to-end]**. Esta área de trabajo proporciona un gráfico que muestra la velocidad de los eventos transmitidos recibidos por [!DNL Experience Platform], un gráfico que muestra la velocidad de los eventos transmitidos que [[!DNL Real-Time Customer Profile]](../../profile/home.md) procesó correctamente, así como una lista detallada de los datos entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -72,9 +72,9 @@ Además, los registros con errores proporcionan detalles sobre los errores que s
 
 ## Monitorización de la ingesta de datos de extremo a extremo por lotes
 
-En [[!DNL Experience Platform UI]](https://platform.adobe.com), seleccione **[!UICONTROL Supervisión]** en el menú de navegación de la izquierda.
+En [[!DNL Experience Platform UI]](https://platform.adobe.com), seleccione **[!UICONTROL Monitoring]** en el menú de navegación de la izquierda.
 
-Aparecerá la página de monitorización **[!UICONTROL Lote de extremo a extremo]**, que muestra una lista de los lotes ingeridos anteriormente. Puede seleccionar cualquiera de los lotes para obtener información más detallada sobre ese registro.
+Aparece la página de supervisión **[!UICONTROL Batch end-to-end]**, que muestra una lista de los lotes ingeridos anteriormente. Puede seleccionar cualquiera de los lotes para obtener información más detallada sobre ese registro.
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 

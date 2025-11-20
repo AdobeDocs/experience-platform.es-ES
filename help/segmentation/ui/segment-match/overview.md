@@ -15,19 +15,19 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe introdujo [!DNL Segment Match] en 2021 para que los clientes colaboraran e intercambiaran audiencias. A principios de 2025, Adobe introdujo [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/home), el enfoque a largo plazo para cumplir con este caso de uso.
+>Adobe introdujo [!DNL Segment Match] en 2021 para que los clientes colaboraran e intercambiaran audiencias. A principios de 2025, Adobe Systems introdujo [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), que es el enfoque a largo plazo para satisfacer este caso de uso.
 >
->* Para clientes de Estados Unidos, Canadá, Australia y Nueva Zelanda: Adobe recomienda a los clientes de Real-Time CDP Prime y Ultimate realizar la transición de los casos de uso de colaboración de datos de [!DNL Segment Match] a Real-Time CDP Collaboration. Consulta la [documentación](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/home) y la [guía de inicio rápido](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/quick-start-guide) para Real-Time CDP Collaboration y ponte en contacto con el equipo de tu cuenta de Adobe para obtener más información.
+>* Para clientes de Estados Unidos, Canadá, Australia y Nueva Zelanda: Adobe recomienda a los clientes de Real-Time CDP Prime y Ultimate realizar la transición de los casos de uso de colaboración de datos de [!DNL Segment Match] a Real-Time CDP Collaboration. Consulta la [documentación](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) y la [guía de inicio rápido](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) para Real-Time CDP Collaboration y ponte en contacto con el equipo de tu cuenta de Adobe para obtener más información.
 >* Para clientes de todas las demás regiones geográficas: [!DNL Segment Match] es la opción recomendada hasta que Real-Time CDP Collaboration se publique en esas regiones geográficas en 2026.
 
-La coincidencia de segmentos de Adobe Experience Platform es un servicio de uso compartido de segmentos que permite a dos o más usuarios de Experience Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad. [!DNL Segment Match] usa estándares de privacidad de Experience Platform e identificadores personales como correos electrónicos con hash, números de teléfono con hash e identificadores de dispositivo como IDFA y GAID.
+La coincidencia de segmentos de Adobe Experience Platform es un servicio de uso compartido de segmentos que permite a dos o más usuarios de Experience Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad. [!DNL Segment Match] utiliza Experience Platform estándares de privacidad e identificadores personales como correos electrónicos hash, números de teléfono hash e identificadores de dispositivos gustar IDFA y GAID.
 
-Con [!DNL Segment Match] puede:
+Con [!DNL Segment Match] usted puede:
 
-* Administrar el proceso de superposición de identidades.
-* Ver estimaciones previas al uso compartido.
-* Aplique etiquetas de uso de datos para controlar si los datos se pueden compartir con los socios.
-* Mantenga la administración del ciclo vital de la audiencia compartida después de publicar una fuente y continúe con un intercambio dinámico de datos mediante la capacidad de agregar, eliminar y dejar de compartir.
+* Gestionar el proceso de superposición de identidades.
+* Ver estimaciones previas a la acción.
+* Aplicar etiquetas de uso de datos para controlar si los datos se pueden compartir con socios.
+* Mantenga la administración del ciclo de vida del audiencia compartido después de publicar un fuente y continúe un intercambio dinámico de datos a través de capacidades para agregar, eliminar y anular uso compartido.
 
 [!DNL Segment Match] utiliza un proceso de superposición de identidades para garantizar que el uso compartido de segmentos se realice de una manera segura y centrada en la privacidad. Una **identidad superpuesta** es una identidad que coincide tanto en el segmento como en el segmento de su socio seleccionado. Antes de compartir un segmento entre un remitente y un destinatario, el proceso de superposición de identidades comprueba si hay superposición en las áreas de nombres y comprueba el consentimiento entre el remitente y los destinatarios. Ambas comprobaciones de superposición deben pasar para que se comparta un segmento.
 
@@ -45,23 +45,23 @@ Las áreas de nombres de identidad son un componente de [Adobe Experience Platfo
 
 Una identidad completa incluye un valor de ID y un área de nombres. Al hacer coincidir los datos de los registros en los fragmentos de perfil (como cuando [!DNL Real-Time Customer Profile] combina datos de perfil), tanto el valor de identidad como el área de nombres deben coincidir.
 
-En el contexto de [!DNL Segment Match], las áreas de nombres se utilizan en el proceso de superposición al compartir datos.
+En el contexto de , los espacios de nombres se utilizan en el proceso de [!DNL Segment Match]superposición al compartir datos.
 
-La lista de áreas de nombres admitidas es la siguiente:
+Los lista de espacios de nombres admitidos son los siguientes:
 
-| Área de nombres | Descripción |
+| Espacio de nombres | Descripción |
 | --------- | ----------- |
-| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Experience Platform ofrece dos métodos para admitir la función hash en la recopilación de datos, a través de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=es#hashing-support) y a través de la [preparación de datos](../../../data-prep/functions.md#hashing). |
+| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Experience Platform ofrece dos métodos para admitir el hash durante recopilación de datos, a través [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) y a través de la preparación[ de ](../../../data-prep/functions.md#hashing)datos. |
 | Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben llevar un hash con los formatos SHA256 y E.164. |
-| ECID | Un área de nombres que representa un valor de Experience Cloud ID (ECID). Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte la [descripción general de ECID](../../../identity-service/features/ecid.md) para obtener más información. |
-| Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
-| ID de Google Ad | Un área de nombres que representa un Google Advertising ID. Consulte el siguiente documento sobre [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obtener más información. |
+| ECID | Un área de nombres que representa un valor de Experience Cloud ID (ECID). También se puede hacer referencia a este espacio de nombres mediante los siguientes alias: &quot;ID de Adobe Marketing Cloud&quot;, &quot;ID de Adobe Experience Cloud&quot;, &quot;ID de Adobe Experience Platform&quot;. Consulte la información general[ de ](../../../identity-service/features/ecid.md)ECID para obtener más información. |
+| ID de Apple (ID para anunciantes) | Un espacio de nombres que representa el ID de Apple para anunciantes. Consulte los siguientes documento sobre [anuncios](https://support.apple.com/en-us/HT202074) basados en interés para obtener más información. |
+| ID de Google Ad | Un espacio de nombres que representa un ID de publicidad de Google. Consulte los siguientes documento sobre el ID[ de publicidad de ](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)Google para obtener más información. |
 
-### Configuración del consentimiento
+### Configuración de consentimiento
 
-Debe proporcionar una configuración de consentimiento y establecer su valor predeterminado en `opt-in` o `opt-out` para una comprobación de consentimiento.
+Debe proporcionar una configuración de consentimiento y establecer su valor predeterminado en o `opt-in` `opt-out` para una comprobación de consentimiento.
 
-La comprobación de consentimiento de inclusión y exclusión determina si puede operar con el consentimiento para compartir datos de usuario de forma predeterminada. Si la configuración de consentimiento predeterminada se establece en `opt-out`, los datos de usuario se pueden compartir, a menos que un usuario se excluya explícitamente. Si el valor predeterminado es `opt-in`, los datos de usuario no se podrán compartir, a menos que un usuario se incluya explícitamente.
+La comprobación de inclusión y exclusión consentimiento determina si puede operar con el consentimiento para compartir datos usuario de forma predeterminada. Si la configuración predeterminada de consentimiento se establece en `opt-out`, usuario datos se pueden compartir, a menos que un usuario opte explícitamente por no participar. Si el valor predeterminado es `opt-in`, usuario datos no se podrán compartir a menos que un usuario lo incluya explícitamente.
 
 La configuración de consentimiento predeterminada para [!DNL Segment Match] está establecida en `opt-out`. Para aplicar un modelo de inclusión a sus datos, envíe una solicitud por correo electrónico al equipo de la cuenta de Adobe.
 
@@ -73,9 +73,9 @@ El último requisito previo que debe establecer es configurar una nueva etiqueta
 
 Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas recomiendan el etiquetado de los datos en cuanto se incorporan a Experience Platform o en cuanto los datos están disponibles para su uso en Experience Platform.
 
-[!DNL Segment Match] utiliza la etiqueta C11, una etiqueta de contrato específica de [!DNL Segment Match] que puede agregar manualmente a cualquier conjunto de datos o atributo para asegurarse de que se excluyen del proceso de uso compartido de socios de [!DNL Segment Match]. La etiqueta C11 indica datos que no deben usarse en [!DNL Segment Match] procesos. Después de determinar qué conjuntos de datos o campos desea excluir de [!DNL Segment Match] y agregar la etiqueta C11 en consecuencia, el flujo de trabajo [!DNL Segment Match] aplica automáticamente la etiqueta. [!DNL Segment Match] habilita automáticamente la directiva principal [!UICONTROL Restrict data sharing]. Para obtener instrucciones específicas sobre cómo aplicar etiquetas de uso de datos a los conjuntos de datos, consulte el tutorial sobre [administración de etiquetas de uso de datos en la interfaz de usuario](../../../data-governance/labels/user-guide.md).
+[!DNL Segment Match] utiliza la etiqueta C11, una etiqueta de contrato específica de [!DNL Segment Match] que puede agregar manualmente a cualquier conjunto de datos o atributo para asegurarse de que se excluyen del proceso de uso compartido de socios de [!DNL Segment Match]. La etiqueta C11 indica datos que no deben usarse en [!DNL Segment Match] procesos. Después de determinar qué conjuntos de datos o campos desea excluir de [!DNL Segment Match] y agregar la etiqueta C11 en consecuencia, el flujo de trabajo [!DNL Segment Match] aplica automáticamente la etiqueta. [!DNL Segment Match] habilita automáticamente la directiva principal [!UICONTROL Restrict data sharing]. Para obtener instrucciones específicas sobre cómo aplicar etiquetas de uso de datos a conjuntos de datos, consulte el tutorial sobre [la administración de etiquetas de uso de datos en el IU](../../../data-governance/labels/user-guide.md).
 
-Para obtener una lista de las etiquetas de uso de datos y sus definiciones, consulte el [glosario de etiquetas de uso de datos](../../../data-governance/labels/reference.md). Para obtener información acerca de las directivas de uso de datos, consulte la [descripción general de las directivas de uso de datos](../../../data-governance/policies/overview.md).
+Para obtener una lista de las etiquetas de uso de datos y sus definiciones, consulte el [glosario de etiquetas de uso de datos](../../../data-governance/labels/reference.md). Para obtener información sobre las directivas de uso de datos, consulte Información general sobre las políticas de uso de [](../../../data-governance/policies/overview.md)datos.
 
 ### Comprender los permisos de [!DNL Segment Match]
 
@@ -90,15 +90,15 @@ Consulte la [descripción general del control de acceso](../../../access-control
 
 ## [!DNL Segment Match] flujo de trabajo de extremo a extremo
 
-Una vez que haya configurado los datos de identidad y las áreas de nombres, la configuración de consentimiento y la etiqueta de uso de datos, podrá empezar a trabajar con [!DNL Segment Match] y sus características.
+Una vez que haya configurado los datos de identidad y los espacios de nombres, la configuración de consentimiento y la etiqueta de uso de datos, puede inicio trabajar con [!DNL Segment Match] sus características.
 
 ### Administrar socio
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Segments]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Feeds]** en el encabezado superior.
+En el Experience Platform IU, seleccione **[!UICONTROL Segments]** desde el navegación izquierdo y, a continuación, seleccione **[!UICONTROL Feeds]** desde el encabezado superior.
 
-![segment-feed.png](./images/segments-feed.png)
+![segments-fuente.png](./images/segments-feed.png)
 
-La página [!UICONTROL Feeds] contiene una lista de fuentes recibidas de socios, así como fuentes que ha compartido. Para ver una lista de socios existentes o establecer una conexión con un socio nuevo, seleccione **[!UICONTROL Manage partners]**.
+El [!UICONTROL Feeds] Página contiene una lista de fuentes recibidas de socios, así como fuentes que ha compartido. Para vista una lista de socios existentes o establecer una conexión con una nueva socio, seleccione **[!UICONTROL Manage partners]**.
 
 ![manage-partners.png](./images/manage-partners.png)
 
@@ -128,9 +128,9 @@ Para conectar un socio usando su [!UICONTROL connect ID], ingrese su valor de id
 >abstract="Los casos de uso de marketing restringidos ayudan a proporcionar orientación a sus socios para garantizar que los segmentos compartidos se utilizan correctamente según las restricciones de gobernanza de datos."
 >text="Learn more in documentation"
 
-Una **fuente** es una agrupación de datos (segmentos), las reglas para exponer o utilizar esos datos y las configuraciones que determinan cómo se comparan los datos con los datos de sus socios. Una fuente se puede administrar de forma independiente e intercambiar con otros usuarios de Experience Platform mediante [!DNL Segment Match].
+Una **fuente** es una agrupación de datos (segmentos), las reglas sobre cómo se pueden exponer o usar esos datos y las configuraciones que determinan cómo se comparan los datos con los datos de sus socios. Un fuente puede gestionarse de forma independiente e intercambiarse con otros usuarios Experience Platform a través de [!DNL Segment Match].
 
-Para crear una fuente nueva, seleccione **[!UICONTROL Create feed]** en el panel [!UICONTROL Feeds].
+Para crear una nueva fuente, selecciónela **[!UICONTROL Create feed]** en la [!UICONTROL Feeds] panel.
 
 ![crear-fuente.png](./images/create-feed.png)
 
@@ -161,16 +161,16 @@ Seleccione **[!UICONTROL Analyze by segment]** para ver el informe de estimacion
 
 ![analyze.png](./images/analyze.png)
 
-El informe de estimaciones de superposición le permite administrar las comprobaciones de superposición y consentimiento por socio y por segmento antes de compartir la fuente.
+El informe de estimaciones de superposición le permite administrar comprobaciones de superposición y consentimiento por socio y por segmento antes de compartir sus fuente.
 
 | Métricas | Descripción |
 | ------- | ----------- |
 | Identidades estimadas con consentimiento | Número total de identidades superpuestas que cumplen los requisitos de consentimiento configurados para su organización. |
 | Identidades superpuestas estimadas | El número de identidades que cumplen los requisitos para el segmento seleccionado y que también coinciden con el socio seleccionado. Estas identidades se muestran por área de nombres y no representan identidades de perfil individuales. Las estimaciones de superposición se basan en bocetos de perfil. |
 
-Cuando haya terminado, seleccione **[!UICONTROL Close]**.
+Cuando termine, seleccione **[!UICONTROL Close]**.
 
-![informe-superposición.png](./images/overlap-report.png)
+![overlap-report.png](./images/overlap-report.png)
 
 Una vez que haya seleccionado sus socios y visto su informe de estimaciones de superposición, seleccione **[!UICONTROL Next]** para continuar.
 
@@ -202,11 +202,11 @@ Para ver una fuente entrante, seleccione **[!UICONTROL Received]** en el encabez
 
 ![recibido.png](./images/received.png)
 
-Una vez que acepte una fuente compartida, puede empezar a utilizar los datos compartidos para generar nuevos segmentos.
+Una vez que acepte un fuente compartido, puede inicio utilizando los datos compartidos para versión nuevos segmentos.
 
 ## Próximos pasos
 
-Al leer este documento, ha conseguido comprender [!DNL Segment Match], sus capacidades y su flujo de trabajo de extremo a extremo. Consulte los siguientes documentos para obtener más información acerca de otros servicios de Platform:
+Al leer este documento, ha adquirido una comprensión de [!DNL Segment Match], sus capacidades y su flujo de trabajo de extremo a extremo. Consulte los siguientes documentos para obtener más información sobre otros servicios Platform:
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)

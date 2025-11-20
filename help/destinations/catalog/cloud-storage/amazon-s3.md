@@ -27,21 +27,21 @@ ht-degree: 14%
 
 ## Conectar con su almacenamiento de [!DNL Amazon S3] mediante API o IU {#connect-api-or-ui}
 
-* Para conectarse a su ubicación de almacenamiento [!DNL Amazon S3] mediante la interfaz de usuario de Experience Platform, lea las secciones [Conectarse al destino](#connect) y [Activar audiencias en este destino](#activate) a continuación.
-* Para conectarse mediante programación a la ubicación de almacenamiento [!DNL Amazon S3], lea la guía sobre cómo [activar audiencias en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
+* Para conectarse a [!DNL Amazon S3] la ubicación del almacenamiento mediante la interfaz de usuario de Experience Platform, lea las secciones [Conectar al destino](#connect) y [Activar audiencias en este destino](#activate) a continuación.
+* Para conectarse a la [!DNL Amazon S3] ubicación del almacenamiento mediante programación, lea la guía sobre cómo [activar audiencias en destinos basados en archivos mediante la API de servicio Flujo tutorial](../../api/activate-segments-file-based-destinations.md).
 
-## Audiencias compatibles {#supported-audiences}
+## Audiencias admitidas {#supported-audiences}
 
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiences generan a través del servicio[ de segmentación Experience Platform](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | [Audiences importados](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde CSV archivos. |
 
 {style="table-layout:auto"}
 
-## Tipo y frecuencia de exportación {#export-type-frequency}
+## Tipo de exportación y Frecuencia {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
@@ -117,7 +117,7 @@ Para ello, debe crear en la consola de AWS una función asumida para Adobe con l
 **Crear una directiva con los permisos necesarios**
 
 1. Abra la consola AWS y vaya a IAM > Políticas > Crear política
-2. Seleccione Editor de directivas > JSON y añada los permisos siguientes.
+2. Seleccione Editor de políticas > JSON y añada los permisos a continuación.
 
    ```json
    {
@@ -147,16 +147,16 @@ Para ello, debe crear en la consola de AWS una función asumida para Adobe con l
    }
    ```
 
-3. En la página siguiente, escriba un nombre para la directiva y guárdela como referencia. Necesitará este nombre de directiva al crear la función en el paso siguiente.
+3. En el siguiente Página, escriba un nombre para su directiva y guárdelo como referencia. Necesitará este nombre de directiva al crear el función en el siguiente paso.
 
 **Crear función de usuario en su cuenta de cliente de S3**
 
 1. Abra la consola AWS y vaya a IAM > Funciones > Crear nueva función
 2. Seleccione **tipo de entidad de confianza** > **cuenta de AWS**
-3. Seleccione **Una cuenta de AWS** > **Otra cuenta de AWS** e introduzca el identificador de la cuenta de Adobe: `670664943635`
-4. Añadir permisos mediante la directiva creada anteriormente
-5. Escriba un nombre de rol (por ejemplo, `destinations-role-customer`). El nombre de la función debe tratarse como confidencial, de forma similar a una contraseña. Puede contener hasta 64 caracteres y puede contener caracteres alfanuméricos y los siguientes caracteres especiales: `+=,.@-_`. A continuación, compruebe que:
-   * El id. de cuenta de Adobe `670664943635` está presente en la sección **[!UICONTROL Select trusted entities]**
+3. Seleccione **un cuenta** AWS > **otro cuenta** de AWS e introduzca el ID de cuenta de Adobe Systems: `670664943635`
+4. añadir permisos mediante el directiva creado anteriormente
+5. Introduzca un nombre función (por ejemplo, `destinations-role-customer`). El nombre función debe tratarse como confidencial, similar a un contraseña. Puede tener hasta 64 caracteres y puede contener caracteres alfanuméricos y los siguientes caracteres especiales: `+=,.@-_`. A continuación, verifique que:
+   * El Adobe Systems cuenta ID `670664943635` está presente en la **[!UICONTROL Select trusted entities]** sección
    * La directiva creada anteriormente está presente en **[!UICONTROL Permissions policy summary]**
 
 **Proporcione el rol que Adobe debe asumir**
@@ -167,10 +167,10 @@ Puede encontrar el ARN en la página principal después de crear la función en 
 
 **Verificar permisos de funciones y relaciones de confianza**
 
-Asegúrese de que la función tenga la configuración siguiente:
+Asegúrese de que su función tenga la siguiente configuración:
 
-* **Permisos**: la función debe tener permisos para acceder a S3 (ya sea acceso completo o los permisos mínimos proporcionados en el paso **Crear una directiva con los permisos requeridos** anterior)
-* **Relaciones de confianza**: el rol debe tener la cuenta raíz de Adobe (`670664943635`) en sus relaciones de confianza
+* **Permisos**: El función debe tener permisos para acceder a S3 (ya sea acceso completo o los permisos mínimos proporcionados en el **Crear un directiva con los permisos** requeridos paso anterior)
+* **Relaciones** de confianza: El función debe tener la raíz Adobe Systems cuenta (`670664943635`) en sus relaciones de confianza
 
 **Alternativa: restringir a un usuario de Adobe específico (opcional)**
 
@@ -192,7 +192,7 @@ Si prefiere no permitir la cuenta completa de Adobe, puede restringir el acceso 
 }
 ```
 
-Para obtener más información, consulte la [documentación de AWS sobre la creación de funciones](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Para obtener más información, consulte la documentación de AWS sobre la [creación de roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 
 
@@ -291,14 +291,14 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , **[!UICONTROL View Profiles]**, **[!UICONTROL View Segments]**, y [ ](/help/access-control/home.md#permissions)control de acceso. Lea la control de acceso descripción general[ o póngase en contacto con el ](/help/access-control/ui/overview.md)administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [control de acceso permiso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Validación de la exportación de datos correcta {#exported-data}
 
-Para comprobar si los datos se han exportado correctamente, compruebe el almacenamiento de [!DNL Amazon S3] y asegúrese de que los archivos exportados contienen las poblaciones de perfiles esperadas.
+Para comprobar si los datos se han exportado correctamente, compruebe su [!DNL Amazon S3] almacenamiento y asegúrese de que los archivos exportados contienen las poblaciones perfil esperadas.
 
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allow-list}
 

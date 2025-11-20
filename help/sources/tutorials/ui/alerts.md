@@ -5,14 +5,14 @@ title: Suscripción a alertas en contexto en la interfaz de usuario
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 7%
+source-wordcount: '809'
+ht-degree: 13%
 
 ---
 
 # Suscripción a alertas para flujos de datos de origen en la IU
 
-Adobe Experience Platform le permite suscribirse a alertas basadas en eventos relativas a actividades de Adobe Experience Platform. Las alertas reducen o eliminan la necesidad de sondear la [[!DNL Observability Insights] API](../../../observability/api/overview.md) para comprobar si un trabajo se ha completado, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se ha producido algún error.
+Adobe Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Adobe Experience Platform. Las alertas reducen o eliminan la necesidad de realizar sondeos en la [[!DNL Observability Insights] API](../../../observability/api/overview.md)  para comprobar si se ha completado un trabajo, si se ha alcanzado un determinado hito dentro de un flujo de trabajo o si se ha producido algún error.
 
 Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 
@@ -38,7 +38,7 @@ Este documento requiere un entendimiento práctico de los siguientes componentes
 >
 >Debe habilitar notificaciones instantáneas de correos electrónicos para su cuenta de Experience Platform a fin de recibir notificaciones de alerta basadas en correo electrónico para sus flujos de datos.
 
-Puede habilitar alertas para los flujos de datos durante el paso [!UICONTROL Detalle del flujo de datos] del flujo de trabajo de orígenes en el área de trabajo de orígenes.
+Puede habilitar alertas para los flujos de datos durante el paso [!UICONTROL Dataflow detail] del flujo de trabajo de orígenes en el área de trabajo de orígenes.
 
 ![detalle de flujo de datos](../../images/tutorials/alerts/dataflow-detail.png)
 
@@ -54,7 +54,7 @@ Las alertas disponibles para los flujos de datos de origen son:
 | Ejecución correcta de flujo de orígenes | Esta alerta le envía un mensaje cuando los datos de su origen se incorporan correctamente a Experience Platform. |
 | Error de ejecución de flujo de orígenes | Esta alerta le envía un mensaje si se produce un error en el flujo de datos. |
 
-Seleccione las alertas a las que desee suscribirse y, a continuación, seleccione **[!UICONTROL Siguiente]** para revisar y finalizar el flujo de datos.
+Seleccione las alertas a las que desee suscribirse y, a continuación, seleccione **[!UICONTROL Next]** para revisar y finalizar el flujo de datos.
 
 ![select-alerts](../../images/tutorials/alerts/select-alerts.png)
 
@@ -92,11 +92,11 @@ Seleccione el mensaje de alerta para ver información específica sobre el flujo
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-Aparece la página [!UICONTROL Resumen de ejecución de flujo de datos]. La mitad superior de la pantalla muestra una descripción general del flujo de datos, incluida información sobre sus atributos, el ID de ejecución del flujo de datos correspondiente y el resumen de errores de alto nivel.
+Aparecerá la página [!UICONTROL Dataflow run overview]. La mitad superior de la pantalla muestra una descripción general del flujo de datos, incluida información sobre sus atributos, el ID de ejecución del flujo de datos correspondiente y el resumen de errores de alto nivel.
 
 ![descripción general del flujo de datos](../../images/tutorials/alerts/dataflow-overview.png)
 
-La mitad inferior de la página muestra cualquier [!UICONTROL error de ejecución de flujo de datos] que se haya producido durante la fase de ejecución del flujo de datos. Desde aquí, puede obtener una vista previa de los diagnósticos de error o utilizar la [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para descargar los diagnósticos de error o el manifiesto de archivo que corresponda a su flujo de datos.
+La mitad inferior de la página muestra cualquier [!UICONTROL Dataflow run errors] que se haya producido durante la fase de ejecución del flujo de datos. Desde aquí, puede obtener una vista previa de los diagnósticos de error o utilizar la [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para descargar los diagnósticos de error o el manifiesto de archivo que corresponda a su flujo de datos.
 
 ![errores de ejecución de flujo de datos](../../images/tutorials/alerts/dataflow-run-error.png)
 
@@ -108,20 +108,20 @@ Las alertas de sus flujos de datos también se le envían por correo electrónic
 
 ![correo electrónico](../../images/tutorials/alerts/email.png)
 
-Similar a la alerta de interfaz de usuario, aparece la página [!UICONTROL Información general sobre la ejecución del flujo de datos], que le proporciona una interfaz para investigar cualquier error asociado con el flujo de datos.
+Similar a la alerta de interfaz de usuario, aparece la página [!UICONTROL Dataflow run overview], que le proporciona una interfaz para investigar cualquier error asociado con el flujo de datos.
 
 ![descripción general del flujo de datos](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## Suscripción y cancelación de la suscripción a alertas
 
-Puede suscribirse a más alertas o cancelar la suscripción a alertas establecidas para un flujo de datos existente en la página [!UICONTROL Flujos de datos]. Busque el flujo de datos que cree en la lista y, a continuación, seleccione los puntos suspensivos (`...`) para ver un menú desplegable de opciones. A continuación, seleccione **[!UICONTROL Suscribir alertas]** para modificar la configuración de alertas del flujo de datos.
+Puede suscribirse a más alertas o cancelar la suscripción a alertas establecidas para un flujo de datos existente en la página [!UICONTROL Dataflows]. Busque el flujo de datos que cree en la lista y, a continuación, seleccione los puntos suspensivos (`...`) para ver un menú desplegable de opciones. A continuación, seleccione **[!UICONTROL Subscribe alerts]** para modificar la configuración de alertas del flujo de datos.
 
 ![opciones](../../images/tutorials/alerts/options.png)
 
-Aparece una ventana emergente que le proporciona una lista de fuentes y alertas. Seleccione las alertas a las que desee suscribirse o anule la selección de las alertas cuya suscripción desee cancelar. Cuando termine, seleccione **[!UICONTROL Guardar]**.
+Aparece una ventana emergente que le proporciona una lista de fuentes y alertas. Seleccione las alertas a las que desee suscribirse o anule la selección de las alertas cuya suscripción desee cancelar. Cuando termine, seleccione **[!UICONTROL Save]**.
 
 ![guardar](../../images/tutorials/alerts/save.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento proporciona una guía paso a paso sobre cómo suscribirse a alertas en contexto para los flujos de datos de origen. Para obtener más información, consulte la [guía de la interfaz de usuario de alertas](../../../observability/alerts/ui.md).

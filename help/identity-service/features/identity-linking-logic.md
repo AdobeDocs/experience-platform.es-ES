@@ -32,7 +32,7 @@ Una identidad representa una entidad real. Si hay un vínculo establecido entre 
 | Un usuario final inicia sesión con un equipo. | CRMID y ECID están vinculados entre sí. | Una persona (CRMID) posee un dispositivo con un explorador (ECID). |
 | Un usuario final navega de forma anónima usando una iPhone | IDFA está vinculado con ECID. | El dispositivo de hardware de Apple (IDFA), como un iPhone, está asociado al explorador (ECID). |
 | Un usuario final inicia sesión con Google Chrome y luego Firefox. | CRMID está vinculado con dos ECID diferentes. | Una persona (CRMID) está asociada a dos exploradores web (**Nota**: cada explorador tendrá su propio ECID). |
-| Un ingeniero de datos introduce un registro CRM que incluye dos campos marcados como identidad: CRMID y Correo electrónico. | El CRMID y el correo electrónico están vinculados. | Una persona (CRMID) está asociada a la dirección de correo electrónico. |
+| Un ingeniero de datos ingiere un registro de CRM que incluye dos campos marcados como una identidad: CRMID y Correo electrónico. | CRMID y Email están vinculados. | Una persona (CRMID) está asociada a la dirección correo electrónico. |
 
 ## Explicación de la lógica de vinculación del servicio de identidad
 
@@ -58,11 +58,11 @@ Supongamos que tiene un gráfico de identidad existente con tres identidades vin
 * CORREO ELECTRÓNICO:julien<span>@acme.com
 * CRMID:60013ABC
 
-![gráfico existente](../images/identity-settings/existing-graph.png)
+![Gráfico existente](../images/identity-settings/existing-graph.png)
 
 >[!TAB Datos entrantes]
 
-Se incorporan un par de identidades en el gráfico y este par contiene:
+Se ingiere un par de identidades en el gráfico y este par contiene:
 
 * CRMID:60013ABC
 * ECID:100066526
@@ -106,7 +106,7 @@ La identidad principal de cada evento se determinará en función de [cómo conf
 
 >[!NOTE]
 >
->* Si selecciona el CRMID como principal, los eventos autenticados (eventos con mapa de identidad que contenga el CRMID y el ECID) tendrán una identidad principal de CRMID. Para eventos no autenticados (los eventos con el mapa de identidad que solo contiene ECID) tendrán una identidad principal de ECID. Adobe recomienda esta opción.
+>* Si selecciona el CRMID como principal, los eventos autenticados (eventos con mapa de identidad que contenga el CRMID y el ECID) tendrán una identidad principal de CRMID. Para eventos no autenticados (los eventos con el mapa de identidad que solo contiene ECID) tendrán una identidad principal de ECID. Adobe Systems recomienda esta opción.
 >
 >* Si selecciona el ECID como principal, independientemente del estado de autenticación, el ECID se convierte en la identidad principal.
 
@@ -144,13 +144,13 @@ En `timestamp=2`, un cliente usa el mismo equipo portátil para visitar el sitio
 
 ![marca de tiempo-dos](../images/identity-settings/timestamp-two.png)
 
->[!TAB marca de tiempo=3]
+>[!TAB timestamp=3]
 
-En `timestamp=3`, un cliente usa una tableta para visitar el sitio web de comercio electrónico y navegar de forma anónima. Este evento de exploración anónimo se identifica como ECID:44675. Dado que el servicio de identidad solo almacena eventos con al menos dos identidades, esta información no se almacena.
+En `timestamp=3` un cliente utiliza una tableta para visita su sitio web comercio electrónico y navegar de forma anónima. Esta evento de navegación anónima se identifica como ECID.:44675 Dado que el Servicio de identidad solo almacena eventos con al menos dos identidades, esta información no se almacena.
 
-![marca de tiempo-tres](../images/identity-settings/timestamp-three.png)
+![marca de tiempo tres](../images/identity-settings/timestamp-three.png)
 
->[!TAB marca de tiempo=4]
+>[!TAB timestamp=4]
 
 En `timestamp=4`, un cliente usa la misma tableta, inicia sesión en su cuenta (CRMID:31260XYZ) y ve su historial de compras. Este evento vincula su CRMID:31260XYZ con el identificador de cookie asignado a la actividad de navegación anónima, ECID:44675, y vincula ECID:44675 al gráfico de identidad del cliente dos.
 

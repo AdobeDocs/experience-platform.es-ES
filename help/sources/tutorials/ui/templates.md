@@ -27,7 +27,7 @@ ht-degree: 10%
 >
 >La documentación y las funcionalidades están sujetas a cambios.
 
-Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de ingesta de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a Experience Platform.
+Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de incorporación de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a Experience Platform.
 
 Con las plantillas, puede:
 
@@ -68,9 +68,9 @@ Aparece una ventana emergente que presenta la opción de examinar las plantillas
 
 >[!NOTE]
 >
->Las plantillas pueden generar automáticamente esquemas relacionales al trabajar con fuentes que requieran flujos de trabajo de captura de datos modificados o que admitan varios modelos de datos. Estos esquemas habilitan las funciones de Data Mirror para la sincronización de datos en tiempo real.\
->Cuando se utilizan plantillas con esquemas relacionales, los recursos generados automáticamente incluyen los campos clave principal, identificador de versión e identificador de marca de tiempo necesarios.\
->Para obtener más información, consulte la [descripción general de Data Mirror](../../../xdm/data-mirror/overview.md) y la [referencia técnica de esquemas relacionales](../../../xdm/schema/relational.md).
+>Las plantillas pueden generar automáticamente esquemas relacionales cuando se trabaja con orígenes que requieren flujos de trabajo de captura de datos modificados o que admiten varios modelos de datos. Estos esquemas habilitan las capacidades de Data Mirror para la sincronización de datos en tiempo real.\
+>Cuando se utilizan plantillas con esquemas relacionales, la activos generada automáticamente incluirá los campos obligatorios de clave principal, identificador de versión e identificador de marca de hora.\
+>Para obtener más información, consulte la descripción general[ de Data Mirror y ](../../../xdm/data-mirror/overview.md)la [referencia](../../../xdm/schema/relational.md) técnica de los esquemas relacionales.
 
 Para usar recursos generados automáticamente, seleccione **[!UICONTROL Browse templates]** y luego seleccione **[!UICONTROL Select]**.
 
@@ -103,7 +103,7 @@ Con la cuenta autenticada, ahora puede seleccionar la plantilla que desee utiliz
 +++[!DNL Marketo Engage] plantillas
 En la tabla siguiente se describen las plantillas disponibles para el origen [!DNL Marketo Engage].
 
-| [!DNL Marketo Engage] plantillas | Descripción |
+| [!DNL Marketo Engage] Plantillas | Descripción |
 | --- | --- |
 | Actividades | La plantilla Actividades captura instantáneas basadas en eventos de actividades como interacciones por correo electrónico, interacciones con sitios web y llamadas de ventas. |
 | Compañías | La plantilla Compañías captura los detalles de la cuenta empresarial, como la información de firmografía de la compañía, la ubicación y la información de facturación. |
@@ -111,7 +111,7 @@ En la tabla siguiente se describen las plantillas disponibles para el origen [!D
 | Oportunidades | La plantilla Oportunidades captura los detalles de la oportunidad comercial, como el tipo, la fase de ventas y las cuentas relacionadas. |
 | Roles de contacto de oportunidad | La plantilla Funciones de contacto de oportunidad captura detalles sobre las funciones de los posibles clientes asociados a una oportunidad concreta. |
 | Personas | La plantilla Personas captura atributos de personas individuales, como detalles demográficos, información de contacto y preferencias de consentimiento. |
-| Pertenencias al programa | La plantilla Miembros del programa captura los detalles de los contactos asociados con una campaña empresarial, incluidas las cadencias de nutrición y las respuestas de contacto. |
+| Membresías del programa | El plantilla de membresías del programa captura detalles de los contactos asociados con un campaña comercial, incluye cadencias de crianza y respuestas de contacto. |
 | Programas | La plantilla Programas captura los detalles de la campaña empresarial como el estado, los canales, los plazos y los costes. |
 | Pertenencias a lista estática | La plantilla Pertenencias a listas estáticas captura las relaciones entre las personas y su pertenencia a listas estáticas. |
 | Listas estáticas | La plantilla Lista estática captura listas instanciadas de personas para casos de uso específicos. |
@@ -138,10 +138,10 @@ En la tabla siguiente se describen las plantillas B2B disponibles para el origen
 
 +++
 
-+++[!DNL Salesforce] plantillas B2C
-En la tabla siguiente se describen las plantillas B2C disponibles para el origen [!DNL Salesforce].
++++[!DNL Salesforce] B2C plantillas
+La tabla siguiente describe las plantillas de B2C disponibles para el [!DNL Salesforce] origen.
 
-| [!DNL Salesforce] plantillas B2C | Descripción |
+| [!DNL Salesforce] B2C plantillas | Descripción |
 | --- | --- |
 | Contacto | La plantilla Contacto captura atributos para contactos como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
 | Posible cliente | La plantilla de posible cliente captura los atributos de los posibles clientes, como los detalles demográficos, la información de contacto y las entidades comerciales relacionadas. |
@@ -158,8 +158,8 @@ En la tabla siguiente se describen las plantillas B2B disponibles para el origen
 | Cuentas | La plantilla Cuenta captura los detalles de la cuenta empresarial, como la información de firmografía de la empresa, la ubicación y la información de facturación. |
 | Campañas | La plantilla Campañas captura los detalles de la cuenta empresarial, como la información de firmografía de la empresa, la ubicación y la información de facturación. |
 | Contactos | La plantilla Contacto captura atributos para contactos como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
-| Posibles clientes | La plantilla de posibles clientes captura los atributos de los posibles clientes, como los detalles demográficos, la información de contacto y las entidades comerciales relacionadas. |
-| Lista de marketing | La plantilla Lista de marketing captura un grupo de clientes existentes o potenciales creados para una campaña de marketing u otros fines de ventas. |
+| Conduce | La plantilla de posibles clientes captura atributos de clientes potenciales, como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
+| Lista de mercadotecnia | La plantilla Lista de marketing captura un grupo de clientes existentes o potenciales creados para una campaña de marketing u otros fines de ventas. |
 | Miembros de lista de marketing | Los miembros de la lista de marketing capturan los detalles de cualquier tipo de registro de cliente, como posibles clientes, cuentas o contactos, en una lista de marketing. |
 | Oportunidades | La plantilla Oportunidades captura los detalles de la oportunidad comercial, como el tipo, la fase de ventas y la cuenta relacionada. |
 | Roles de contacto de oportunidad | La plantilla Funciones de contacto de oportunidad captura detalles sobre las funciones de los posibles clientes asociados a una oportunidad concreta. |
@@ -173,7 +173,7 @@ En la tabla siguiente se describen las plantillas B2C disponibles para el origen
 
 | [!DNL Microsoft Dynamics] plantillas B2C | Descripción |
 | --- | --- |
-| Contacto | La plantilla Contacto captura atributos para contactos como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
+| Contacto | El plantilla de contactos captura atributos de contactos, como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
 | Posible cliente | La plantilla de posible cliente captura los atributos de los posibles clientes, como los detalles demográficos, la información de contacto y las entidades comerciales relacionadas. |
 
 {style="table-layout:auto"}
@@ -245,11 +245,11 @@ Puede utilizar la vista del editor de esquemas para realizar actualizaciones en 
 
 ### Publicación del flujo de datos
 
-Inicie el proceso de publicación a través del flujo de trabajo de fuentes. Después de seleccionar [!UICONTROL Update dataflow], se le redirige al paso *[!UICONTROL Add data]* del flujo de trabajo. Seleccione **[!UICONTROL Next]** para continuar.
+Inicie el proceso de publicación a través del flujo de trabajo de fuentes. Una vez que seleccione [!UICONTROL Update dataflow], se le redirigirá al *[!UICONTROL Add data]* paso del flujo de trabajo. Seleccione **[!UICONTROL Next]** para continuar.
 
-![Paso para agregar datos para un flujo de datos de borrador](../../images/tutorials/templates/continue-draft.png)
+![El paso Agregar datos para un borrador de flujo de datos](../../images/tutorials/templates/continue-draft.png)
 
-A continuación, confirme los detalles del flujo de datos y configure las opciones de diagnóstico de errores, ingesta parcial y notificaciones de alerta. Cuando termine, seleccione **[!UICONTROL Next]**.
+Siguiente, confirme los detalles del flujo de datos y configure las opciones para el diagnóstico de errores, la ingesta parcial y las notificaciones alerta. Cuando termine, seleccione **[!UICONTROL Next]**.
 
 ![Paso de detalle del flujo de datos para un flujo de datos de borrador.](../../images/tutorials/templates/dataflow-detail.png)
 
@@ -271,10 +271,10 @@ Al seguir este tutorial, ha creado flujos de datos, así como recursos como esqu
 
 ## Alertas y notificaciones {#alerts-and-notifications}
 
-Las plantillas son compatibles con las alertas de Adobe Experience Platform y puede utilizar el panel de notificaciones para recibir actualizaciones sobre el estado de los recursos y también para volver a la página de revisión.
+Las plantillas son compatibles con Adobe Experience Platform Alertas y puede utilizar el panel de notificaciones para recibir actualizaciones sobre el estado de su activos y también para volver al Página de revisión.
 
-Seleccione el icono de notificación en el encabezado superior de la interfaz de usuario de Experience Platform y, a continuación, seleccione la alerta de estado para ver los recursos que desea revisar.
+Seleccione el icono notificación, el encabezado superior de Experience Platform IU y, a continuación, seleccione el alerta de estado para ver los activos que desea revisar.
 
-![Se ha resaltado el panel de notificaciones en la interfaz de usuario de Experience Platform con una notificación que alerta de un flujo de datos con error.](../../images/tutorials/templates/notifications.png)
+![El panel de notificaciones de Experience Platform IU con un notificación alertando de un flujo de datos fallido resaltado.](../../images/tutorials/templates/notifications.png)
 
 Puede actualizar la configuración de alertas de las plantillas para recibir notificaciones por correo electrónico y en Experience Platform sobre el estado de los flujos de datos. Para obtener más información sobre la configuración de alertas, lea la guía de [cómo suscribirse a alertas para orígenes y flujos de datos](../ui/alerts.md).

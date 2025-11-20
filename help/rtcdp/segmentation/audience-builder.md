@@ -2,11 +2,11 @@
 title: Generador de audiencias en Real-Time Customer Data Platform
 description: Aprenda a utilizar el Generador de audiencias en Real-Time Customer Data Platform para crear audiencias.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '957'
 ht-degree: 9%
 
 ---
@@ -42,19 +42,19 @@ Puede seleccionar el ![icono de configuración](../../images/icons/settings.png)
 
 >[!NOTE]
 >
->La sección **[!UICONTROL Opciones de campo]** está actualmente en versión beta y solo está disponible para clientes seleccionados. Póngase en contacto con el servicio de atención al cliente de Adobe para obtener más información.
+>La sección **[!UICONTROL Field options]** está actualmente en fase beta y solo está disponible para clientes seleccionados. Póngase en contacto con el servicio de atención al cliente de Adobe para obtener más información.
 
-Se muestra la sección [!UICONTROL Configuración]. En esta sección, puede actualizar qué campos se muestran, así como la relación de los campos.
+Se muestra la sección [!UICONTROL Settings]. En esta sección, puede actualizar qué campos se muestran, así como la relación de los campos.
 
-Para las **[!UICONTROL opciones de campo]**, puede mostrar solo los campos que contienen datos o el esquema XDM completo.
+Para **[!UICONTROL Field options]**, puede mostrar solo los campos que contienen datos o el esquema XDM completo.
 
-Para la **[!UICONTROL relación de campos]**, puede usar las relaciones estándar para su organización o mostrar los selectores de relación.
+Para **[!UICONTROL Relationship of fields]**, puede usar las relaciones estándar de su organización o mostrar los selectores de relación.
 
 ![Se muestra el módulo de configuración.](../assets/segmentation/audience-builder/settings.png){width="300"}
 
 ### Atributos {#attributes}
 
-La pestaña [!UICONTROL Atributos] le permite examinar los atributos de cuenta que pertenecen a la clase de cuenta empresarial de XDM, así como las oportunidades y los atributos basados en personas. Cada carpeta se puede expandir para mostrar atributos adicionales, donde cada atributo es un mosaico que se puede arrastrar al [lienzo del generador de reglas](#rule-builder-canvas) en el centro del espacio de trabajo.
+La pestaña [!UICONTROL Attributes] le permite examinar los atributos de cuenta pertenecientes a la clase de cuenta empresarial de XDM, así como los atributos basados en oportunidades y personas. Cada carpeta se puede expandir para mostrar atributos adicionales, donde cada atributo es un mosaico que se puede arrastrar al [lienzo del generador de reglas](#rule-builder-canvas) en el centro del espacio de trabajo.
 
 ![La ficha Atributos se muestra en el Generador de audiencias](../assets/segmentation/audience-builder/attributes.png)
 
@@ -76,7 +76,7 @@ Para obtener una guía más detallada sobre el Generador de audiencias, lea la [
 
 ### Públicos {#audiences}
 
-La pestaña **[!UICONTROL Audiencias]** enumera todas las audiencias basadas en personas y en cuentas disponibles en Experience Platform.
+La pestaña **[!UICONTROL Audiences]** enumera todas las audiencias basadas en personas y en cuentas disponibles en Experience Platform.
 
 Puede situar el cursor sobre el ![icono de información](../../images/icons/info.png) situado junto a una audiencia para ver información sobre la audiencia, incluido su ID, descripción y jerarquía de carpetas para localizar la audiencia.
 
@@ -86,7 +86,7 @@ Puede situar el cursor sobre el ![icono de información](../../images/icons/info
 
 Una audiencia creada en el Generador de audiencias es una colección de reglas que se utilizan para describir las características o los comportamientos clave de una audiencia de destino. Estas reglas se crean mediante el lienzo del generador de reglas, ubicado en el centro del Generador de audiencias.
 
-Para agregar una regla nueva a la definición del segmento, arrastre un mosaico desde la ficha **[!UICONTROL Campos]** y suéltelo en el lienzo del generador de reglas.
+Para agregar una regla nueva a su definición de segmento, arrastre un mosaico desde la pestaña **[!UICONTROL Fields]** y suéltelo en el lienzo del generador de reglas.
 
 ![El lienzo del generador de reglas con un campo agregado.](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
@@ -100,25 +100,25 @@ Para obtener más información sobre los contenedores, lea la [documentación de
 
 ## Propiedades de público {#properties}
 
-La sección **[!UICONTROL Propiedades de audiencia]** muestra información sobre la audiencia, incluido un tamaño estimado de la audiencia. También puede especificar detalles sobre la audiencia, incluido su nombre, descripción y etiquetas.
+La sección **[!UICONTROL Audience properties]** muestra información sobre la audiencia, incluido un tamaño estimado de la audiencia. También puede especificar detalles sobre la audiencia, incluido su nombre, descripción y etiquetas.
 
 ![Se muestra la sección de propiedades de audiencia para la audiencia en el Generador de audiencias.](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
-**[!UICONTROL Cuentas calificadas]** indica el número real de cuentas que coinciden con las reglas de la audiencia. Este número se actualiza cada 24 horas, después de ejecutar el trabajo de segmentación.
+**[!UICONTROL Qualified accounts]** indica el número real de cuentas que coinciden con las reglas de la audiencia. Este número se actualiza cada 24 horas, después de ejecutar el trabajo de segmentación.
 
-**[!UICONTROL Cuentas estimadas]** indica el número aproximado de cuentas basadas en el trabajo de muestra. Puede actualizar este valor después de agregar nuevas reglas o condiciones y seleccionar **[!UICONTROL Actualizar estimación]**.
+**[!UICONTROL Estimated accounts]** indica el número aproximado de cuentas basadas en el trabajo de muestra. Puede actualizar este valor después de agregar nuevas reglas o condiciones y seleccionar **[!UICONTROL Refresh estimate]**.
 
 ![Se muestra la sección de estimaciones dentro de la sección de propiedades de la audiencia.](../assets/segmentation/audience-builder/account-estimates.png){width="300"}
 
-Puede seleccionar **[!UICONTROL Ver cuentas]** para ver un ejemplo de las cuentas que cumplen los requisitos para la audiencia con las reglas actuales.
+Puede seleccionar **[!UICONTROL View accounts]** para ver un ejemplo de las cuentas que cumplen los requisitos para la audiencia con las reglas actuales.
 
 ![El botón Ver cuentas está resaltado.](../assets/segmentation/audience-builder/view-accounts.png){width="300"}
 
-La **[!UICONTROL vista de código]** proporciona una descripción con código basado en texto de las reglas de la audiencia.
+**[!UICONTROL Code view]** proporciona una descripción de código basado en texto de las reglas de la audiencia.
 
 ![Versión de vista de código de la audiencia de la cuenta.](../assets/segmentation/audience-builder/code-view.png)
 
-Puede seleccionar **[!UICONTROL Aplicar etiquetas de acceso]** para aplicar las etiquetas de acceso relevantes para la audiencia. Encontrará más información sobre las etiquetas de acceso en la [guía de administración de etiquetas](../../access-control/abac/ui/labels.md){target="_blank"}.
+Puede seleccionar **[!UICONTROL Apply access labels]** para aplicar las etiquetas de acceso relevantes a la audiencia. Encontrará más información sobre las etiquetas de acceso en la [guía de administración de etiquetas](../../access-control/abac/ui/labels.md){target="_blank"}.
 
 ![Se muestra la ventana emergente Aplicar etiquetas de acceso y control de datos.](../assets/segmentation/audience-builder/apply-access-labels.png)
 

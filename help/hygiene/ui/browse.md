@@ -4,8 +4,8 @@ description: Obtenga información sobre cómo ver y administrar las solicitudes 
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 27%
+source-wordcount: '812'
+ht-degree: 26%
 
 ---
 
@@ -23,15 +23,15 @@ Esta guía explica cómo ver y administrar las órdenes de trabajo existentes en
 
 ## Enumerar y filtrar órdenes de trabajo existentes
 
-Cuando accede por primera vez al espacio de trabajo **[!UICONTROL Ciclo de vida de los datos]** en la interfaz de usuario, se muestra una lista de las órdenes de trabajo existentes junto con sus detalles básicos.
+Cuando accede por primera vez al espacio de trabajo **[!UICONTROL Data Lifecycle]** en la interfaz de usuario, se muestra una lista de las órdenes de trabajo existentes junto con sus detalles básicos.
 
-![Imagen que muestra el área de trabajo [!UICONTROL Ciclo de vida de datos] en la interfaz de usuario de Experience Platform](../images/ui/browse/work-order-list.png)
+![Imagen que muestra el área de trabajo [!UICONTROL Data Lifecycle] en la interfaz de usuario de Experience Platform](../images/ui/browse/work-order-list.png)
 
-La lista sólo muestra las órdenes de trabajo de una categoría cada vez. Seleccione **[!UICONTROL Consumidor]** para ver una lista de tareas de eliminación de registros y **[!UICONTROL Conjunto de datos]** para ver una lista de caducidades programadas de conjuntos de datos.
+La lista sólo muestra las órdenes de trabajo de una categoría cada vez. Seleccione **[!UICONTROL Consumer]** para ver una lista de tareas de eliminación de registros y **[!UICONTROL Dataset]** para ver una lista de caducidades programadas de conjuntos de datos.
 
-![Imagen que muestra la ficha [!UICONTROL Conjunto de datos]](../images/ui/browse/dataset-tab.png)
+![Imagen que muestra la ficha [!UICONTROL Dataset]](../images/ui/browse/dataset-tab.png)
 
-Seleccione el icono de canal (![Imagen del icono de canal](/help/images/icons/filter.png)) para ver una lista de filtros para las órdenes de trabajo mostradas.
+Seleccione el icono funnel (![Imagen del icono funnel](/help/images/icons/filter.png)) para ver una lista de filtros para las órdenes de trabajo mostradas.
 
 ![Imagen de los filtros de orden de trabajo mostrados](../images/ui/browse/filters.png)
 
@@ -43,9 +43,9 @@ Los siguientes filtros se aplican a las solicitudes de eliminación de registros
 
 | Filtro | Descripción |
 | --- | --- |
-| [!UICONTROL Estado] | Filtro basado en el estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completado]**: el trabajo se ha completado.</li><li>**[!UICONTROL Error]**: el trabajo encontró un error y no se pudo completar.</li><li>**[!UICONTROL Procesando]**: la solicitud se ha iniciado y se está procesando en este momento.</li></ul> |
-| [!UICONTROL Fecha de creación] | Filtro basado en el momento en que se realizó la orden de trabajo. |
-| [!UICONTROL Fecha de actualización] | Filtro basado en el momento en que se actualizó la orden de trabajo por última vez. Las creaciones se cuentan como actualizaciones. |
+| [!UICONTROL Status] | Filtro basado en el estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completed]**: el trabajo se completó.</li><li>**[!UICONTROL Failed]**: el trabajo encontró un error y no se pudo completar.</li><li>**[!UICONTROL Processing]**: la solicitud se inició y se está procesando en este momento.</li></ul> |
+| [!UICONTROL Date created] | Filtro basado en el momento en que se realizó la orden de trabajo. |
+| [!UICONTROL Date updated] | Filtro basado en el momento en que se actualizó la orden de trabajo por última vez. Las creaciones se cuentan como actualizaciones. |
 
 ### Filtros para caducidades de conjuntos de datos
 
@@ -53,10 +53,10 @@ Los siguientes filtros se aplican a las solicitudes de caducidad del conjunto de
 
 | Filtro | Descripción |
 | --- | --- |
-| [!UICONTROL Estado] | Filtro basado en el estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completado]**: el trabajo se ha completado.</li><li>**[!UICONTROL Pendiente]**: el trabajo se ha creado pero aún no se ha ejecutado. Una [solicitud de caducidad del conjunto de datos](./dataset-expiration.md) asume este estado antes de la fecha programada de eliminación. Una vez que llegue la fecha de eliminación, el estado se actualiza a [!UICONTROL Ejecutando] a menos que el trabajo se cancele de antemano.</li><li>**[!UICONTROL Ejecutando]**: la solicitud de caducidad del conjunto de datos se ha iniciado y se está procesando en este momento.</li><li>**[!UICONTROL Cancelado]**: el trabajo se ha cancelado como parte de una solicitud manual del usuario.</li></ul> |
-| [!UICONTROL Fecha de creación] | Filtro basado en el momento en que se realizó la orden de trabajo. |
-| [!UICONTROL Fecha de caducidad] | Filtrar solicitudes de caducidad de conjuntos de datos en función de la fecha de eliminación programada para el conjunto de datos en cuestión. |
-| [!UICONTROL Fecha de actualización] | Filtro basado en el momento en que se actualizó la orden de trabajo por última vez. Las creaciones y caducidades se cuentan como actualizaciones. |
+| [!UICONTROL Status] | Filtro basado en el estado actual de la orden de trabajo:<ul><li>**[!UICONTROL Completed]**: el trabajo se completó.</li><li>**[!UICONTROL Pending]**: el trabajo se ha creado, pero aún no se ha ejecutado. Una [solicitud de caducidad del conjunto de datos](./dataset-expiration.md) asume este estado antes de la fecha programada de eliminación. Una vez que llegue la fecha de eliminación, el estado se actualiza a [!UICONTROL Executing] a menos que el trabajo se cancele de antemano.</li><li>**[!UICONTROL Executing]**: la solicitud de caducidad del conjunto de datos se ha iniciado y se está procesando en este momento.</li><li>**[!UICONTROL Cancelled]**: el trabajo se canceló como parte de una solicitud manual del usuario.</li></ul> |
+| [!UICONTROL Date created] | Filtro basado en el momento en que se realizó la orden de trabajo. |
+| [!UICONTROL Expiration date] | Filtrar solicitudes de caducidad de conjuntos de datos en función de la fecha de eliminación programada para el conjunto de datos en cuestión. |
+| [!UICONTROL Date updated] | Filtro basado en el momento en que se actualizó la orden de trabajo por última vez. Las creaciones y caducidades se cuentan como actualizaciones. |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ Los siguientes filtros se aplican a las solicitudes de caducidad del conjunto de
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Respuesta de eliminación de registros"
->abstract="Cuando un proceso de eliminación de registros recibe una respuesta del sistema, estos mensajes se muestran en la sección **[!UICONTROL Resultado]** para obtener más información. Si se produce un problema mientras se procesa una orden de trabajo, en esta sección aparecerán mensajes de error relevantes para ayudarle a solucionar el problema. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
+>abstract="Cuando un proceso de eliminación de registros recibe una respuesta del sistema, estos mensajes se muestran en la sección **[!UICONTROL Result]**. Si se produce un problema mientras se procesa una orden de trabajo, en esta sección aparecerán mensajes de error relevantes para ayudarle a solucionar el problema. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 Seleccione el ID de una orden de trabajo de la lista para ver sus detalles.
 
@@ -85,7 +85,7 @@ Según el tipo de orden de trabajo seleccionada, se proporciona información y c
 
 ### Registrar detalles de eliminación {#record-delete}
 
-Los detalles de una solicitud de eliminación de registro incluyen su estado actual y el tiempo transcurrido desde que se realizó la solicitud. Cada solicitud también incluye una sección **[!UICONTROL Estado por servicio]** que proporciona detalles de estado individuales sobre cada servicio descendente involucrado en la eliminación. En el carril derecho, puede utilizar controles para actualizar el nombre y la descripción de la orden de trabajo.
+Los detalles de una solicitud de eliminación de registro incluyen su estado actual y el tiempo transcurrido desde que se realizó la solicitud. Cada solicitud también incluye una sección **[!UICONTROL Status by service]** que proporciona detalles de estado individuales sobre cada servicio descendente involucrado en la eliminación. En el carril derecho, puede utilizar controles para actualizar el nombre y la descripción de la orden de trabajo.
 
 ![Imagen que muestra la página de detalles de una orden de trabajo de eliminación de registros](../images/ui/browse/record-delete-details.png)
 
@@ -95,7 +95,7 @@ La página de detalles de una caducidad del conjunto de datos proporciona inform
 
 ![Imagen que muestra la página de detalles de una orden de trabajo de caducidad del conjunto de datos](../images/ui/browse/ttl-details.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo ver y administrar las solicitudes de trabajo del ciclo vital de datos existentes en la interfaz de usuario de Experience Platform. Para obtener información sobre la creación de sus propias órdenes de trabajo, consulte la siguiente documentación:
 

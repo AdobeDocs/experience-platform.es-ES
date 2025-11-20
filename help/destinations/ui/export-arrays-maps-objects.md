@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo exportar matrices, mapas y objetos
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1062'
 ht-degree: 13%
 
 ---
@@ -71,11 +71,11 @@ Además de las matrices, también puede exportar mapas y objetos de Experience P
 
 ## Requisitos previos {#prerequisites}
 
-[Conéctese](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado, avance en los [pasos de activación para los destinos de almacenamiento en la nube](/help/destinations/ui/activate-batch-profile-destinations.md) y vaya al paso [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Al conectarse al destino de nube deseado, debe seleccionar la opción **[!UICONTROL Exportar matrices, mapas, objetos]**. Obtenga más información en la sección siguiente.
+[Conéctese](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado, avance en los [pasos de activación para los destinos de almacenamiento en la nube](/help/destinations/ui/activate-batch-profile-destinations.md) y vaya al paso [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Al conectarse al destino de nube deseado, debe seleccionar la opción **[!UICONTROL Export arrays, maps, objects]** activada. Obtenga más información en la sección siguiente.
 
 >[!NOTE]
 >
->Para destinos de personalización de empresa y Edge, la compatibilidad de exportación para campos de tipo map está disponible sin necesidad de seleccionar una opción **[!UICONTROL Exportar matrices, mapas, objetos]**. Esta opción no está disponible o no es necesaria al conectarse a estos tipos de destinos.
+>Para destinos de personalización de empresa y Edge, la compatibilidad de exportación para campos de tipo mapa está disponible sin necesidad de seleccionar una opción **[!UICONTROL Export arrays, maps, objects]**. Esta opción no está disponible o no es necesaria al conectarse a estos tipos de destinos.
 
 ## Exportar matrices, mapas, objetos o alternar {#export-arrays-maps-objects-toggle}
 
@@ -84,7 +84,7 @@ Además de las matrices, también puede exportar mapas y objetos de Experience P
 >title="Exportación de matrices, mapas y objetos"
 >abstract="<p> Establezca esta configuración en <b>on</b> (activada) para habilitar la exportación de matrices, mapas y objetos a archivos JSON o Parquet. Puede seleccionar estos tipos de objeto en la vista del campo de origen del paso de asignación. Con la opción activada, no se puede utilizar la opción de campos calculados en el paso de asignación.</p><p>Si esta opción está <b>desactivada</b>, puede usar la opción de campos calculados y aplicar varias funciones de transformación de datos al activar públicos. Sin embargo, <i>no</i> puede exportar matrices, asignaciones y objetos a archivos JSON o Parquet y debe configurar un destino independiente para ese fin.</p>"
 
-Al conectarse a un destino de almacenamiento en la nube basado en archivos, puede activar o desactivar **[!UICONTROL Exportar matrices, mapas, objetos]**.
+Al conectarse a un destino de almacenamiento en la nube basado en archivos, puede activar o desactivar **[!UICONTROL Export arrays, maps, objects]**.
 
 ![Exporte matrices, mapas, objetos que se muestran con una configuración de activación o desactivación, así como resaltando la ventana emergente.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
@@ -98,7 +98,7 @@ Con esta configuración activada, puede exportar objetos completos (por ejemplo 
 
 ![Seleccione objetos mediante el selector de campo de origen en el paso de asignación del flujo de trabajo de activación.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-Con esta opción seleccionada, la interfaz de usuario impide que los usuarios usen campos calculados y el control **[!UICONTROL Agregar campos calculados]** está deshabilitado, como se muestra a continuación. Para utilizar campos calculados para transformaciones de datos, configure una conexión de destino con la opción desactivada.
+Con esta opción seleccionada, la interfaz de usuario impide que los usuarios usen campos calculados y el control **[!UICONTROL Add calculated fields]** está deshabilitado, como se muestra a continuación. Para utilizar campos calculados para transformaciones de datos, configure una conexión de destino con la opción desactivada.
 
 ![Se deshabilitó el control de campos calculados.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 

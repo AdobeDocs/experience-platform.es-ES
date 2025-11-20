@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1342'
 ht-degree: 9%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="Espacio de nombres de identidad de referencia"
->abstract="El área de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las relaciones de esquemas."
+>abstract="El espacio de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las relaciones de esquemas."
 
 La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en varios canales es una parte importante de Adobe Experience Platform. La definición de estas relaciones dentro de la estructura de los esquemas [!DNL Experience Data Model] (XDM) le permite obtener información compleja sobre los datos del cliente.
 
@@ -65,13 +65,13 @@ Las secciones siguientes describen la estructura de cada esquema utilizado en es
 
 ### Esquema [!DNL Loyalty Members]
 
-El esquema de origen &quot;[!DNL Loyalty Members]&quot; se basa en la clase [!DNL XDM Individual Profile], que contiene campos que describen a los miembros de un programa de fidelidad. Uno de estos campos, `personalEmail.addess`, sirve como identidad principal para el esquema en el área de nombres [!UICONTROL Email]. Como se ve en **[!UICONTROL Propiedades del esquema]**, este esquema se ha habilitado para su uso en [!DNL Real-Time Customer Profile].
+El esquema de origen &quot;[!DNL Loyalty Members]&quot; se basa en la clase [!DNL XDM Individual Profile], que contiene campos que describen a los miembros de un programa de fidelidad. Uno de estos campos, `personalEmail.addess`, sirve como identidad principal para el esquema en el área de nombres [!UICONTROL Email]. Como se ve en **[!UICONTROL Schema Properties]**, este esquema se ha habilitado para usarse en [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### Esquema [!DNL Hotels]
 
-El esquema de referencia &quot;[!DNL Hotels]&quot; se basa en una clase &quot;[!DNL Hotels]&quot; personalizada y contiene campos que describen un hotel. Para participar en una relación, el esquema de referencia también debe tener una identidad principal definida y habilitada para [!UICONTROL Perfil]. En este caso, `_tenantId.hotelId`actúa como identidad principal para el esquema, usando un área de nombres de identidad &quot;[!DNL Hotel ID]&quot; personalizada.
+El esquema de referencia &quot;[!DNL Hotels]&quot; se basa en una clase &quot;[!DNL Hotels]&quot; personalizada y contiene campos que describen un hotel. Para participar en una relación, el esquema de referencia también debe tener una identidad principal definida y habilitada para [!UICONTROL Profile]. En este caso, `_tenantId.hotelId`actúa como identidad principal para el esquema, usando un área de nombres de identidad &quot;[!DNL Hotel ID]&quot; personalizada.
 
 ![Habilitar para el perfil](../images/tutorials/relationship/hotels.png)
 
@@ -91,15 +91,15 @@ En el caso del esquema [!DNL Loyalty Members], se agregará un nuevo campo `pref
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Aparece un nuevo marcador de posición de campo en el lienzo. En **[!UICONTROL Propiedades del campo]**, proporcione un nombre de campo y un nombre para mostrar para el campo y establezca su tipo en &quot;[!UICONTROL Cadena]&quot;. En **[!UICONTROL Asignar a]**, seleccione un grupo de campos existente para ampliarlo, o escriba un nombre único para crear un nuevo grupo de campos. En este caso, se crea un nuevo grupo de campos [!DNL Preferred Hotel].
+Aparece un nuevo marcador de posición de campo en el lienzo. En **[!UICONTROL Field properties]**, proporcione un nombre de campo y un nombre para mostrar para el campo, y establezca su tipo en &quot;[!UICONTROL String]&quot;. En **[!UICONTROL Assign to]**, seleccione un grupo de campos existente para ampliar o escriba un nombre único para crear un nuevo grupo de campos. En este caso, se crea un nuevo grupo de campos [!DNL Preferred Hotel].
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Cuando termine, seleccione **[!UICONTROL Aplicar]**.
+Cuando termine, seleccione **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-El campo `preferredHotel` actualizado aparece en el lienzo, ubicado bajo un objeto `_tenantId` debido a que es un campo personalizado. Seleccione **[!UICONTROL Guardar]** para finalizar los cambios en el esquema.
+El campo `preferredHotel` actualizado aparece en el lienzo, ubicado bajo un objeto `_tenantId` debido a que es un campo personalizado. Seleccione **[!UICONTROL Save]** para finalizar los cambios en el esquema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -111,11 +111,11 @@ Una vez que el esquema de origen tenga definido un campo de referencia dedicado,
 >
 >Las relaciones solo se pueden admitir en campos de cadena o de matriz de cadenas.
 
-Seleccione el campo `preferredHotel` en el lienzo y, a continuación, seleccione **[!UICONTROL Agregar relación]** en la barra lateral **[!UICONTROL Propiedades del campo]**.
+Seleccione el campo `preferredHotel` en el lienzo y luego seleccione **[!UICONTROL Add relationship]** en la barra lateral **[!UICONTROL Field properties]**.
 
 ![Editor de esquemas con la relación Agregar resaltada en la barra lateral de propiedades del campo.](../images/tutorials/relationship/add-relationship.png)
 
-Aparecerá el cuadro de diálogo [!UICONTROL Agregar relación]. Desde este cuadro de diálogo, puede definir los parámetros necesarios para configurar un campo de relación. Para los usuarios de Real-Time CDP B2C, **solamente** puede establecer una relación uno a uno entre el esquema de origen y el de referencia.
+Aparecerá el cuadro de diálogo [!UICONTROL Add relationship]. Desde este cuadro de diálogo, puede definir los parámetros necesarios para configurar un campo de relación. Para los usuarios de Real-Time CDP B2C, **solamente** puede establecer una relación uno a uno entre el esquema de origen y el de referencia.
 
 >[!NOTE]
 >
@@ -123,36 +123,36 @@ Aparecerá el cuadro de diálogo [!UICONTROL Agregar relación]. Desde este cuad
 
 ![Cuadro de diálogo Agregar relación.](../images/tutorials/relationship/add-relationship-dialog.png)
 
-Utilice el menú desplegable de **[!UICONTROL Esquema de referencia]** y seleccione el esquema de referencia para la relación (&quot;[!DNL Hotels]&quot; en este ejemplo).
+Utilice el menú desplegable de **[!UICONTROL Reference schema]** y seleccione el esquema de referencia para la relación (&quot;[!DNL Hotels]&quot; en este ejemplo).
 
 >[!NOTE]
 >
 >En el menú desplegable esquema de referencia solo se incluyen los esquemas que contienen una identidad principal. Esta protección evita que cree accidentalmente una relación con un esquema que aún no está configurado correctamente.
 
-El área de nombres de identidad del esquema de referencia (en este caso, &quot;[!DNL Hotel ID]&quot;) se rellena automáticamente en **[!UICONTROL Área de nombres de identidad de referencia]**. Seleccione **[!UICONTROL Aplicar]** cuando haya terminado.
+El área de nombres de identidad del esquema de referencia (en este caso, &quot;[!DNL Hotel ID]&quot;) se rellena automáticamente en **[!UICONTROL Reference identity namespace]**. Seleccione **[!UICONTROL Apply]** cuando haya terminado.
 
 ![Cuadro de diálogo Agregar relación con los parámetros de relación configurados y Aplicar resaltados.](../images/tutorials/relationship/apply-relationship.png)
 
-El campo `preferredHotel` ahora se resalta como una relación en el lienzo, mostrando el nombre del esquema de referencia. Seleccione **[!UICONTROL Guardar]** para guardar los cambios y completar el flujo de trabajo.
+El campo `preferredHotel` ahora se resalta como una relación en el lienzo, mostrando el nombre del esquema de referencia. Seleccione **[!UICONTROL Save]** para guardar los cambios y completar el flujo de trabajo.
 
 ![El editor de esquemas con las referencias de relación y Guardar resaltados.](../images/tutorials/relationship/relationship-save.png)
 
 ### Editar un campo de relación existente {#edit-relationship}
 
-Para cambiar el esquema de referencia, seleccione un campo con una relación existente y, a continuación, seleccione **[!UICONTROL Editar relación]** en la barra lateral **[!UICONTROL Propiedades del campo]**.
+Para cambiar el esquema de referencia, seleccione un campo con una relación existente y luego seleccione **[!UICONTROL Edit relationship]** en la barra lateral **[!UICONTROL Field properties]**.
 
 ![Editor de esquemas con la relación de edición resaltada.](../images/tutorials/relationship/edit-relationship.png)
 
-Aparecerá el cuadro de diálogo [!UICONTROL Editar relación]. Desde aquí, puede seguir el proceso descrito en [definición de un campo de relación](#relationship-field) o eliminar la relación. Seleccione **[!UICONTROL Eliminar relación]** para eliminar la relación con el esquema de referencia.
+Aparecerá el cuadro de diálogo [!UICONTROL Edit relationship]. Desde aquí, puede seguir el proceso descrito en [definición de un campo de relación](#relationship-field) o eliminar la relación. Seleccione **[!UICONTROL Delete relationship]** para eliminar la relación con el esquema de referencia.
 
 ![Cuadro de diálogo Editar relación.](../images/tutorials/relationship/edit-relationship-dialog.png)
 
 ## Filtrar y buscar relaciones {#filter-and-search}
 
-Puede filtrar y buscar relaciones específicas dentro de sus esquemas desde la pestaña [!UICONTROL Relaciones] del área de trabajo [!UICONTROL Esquemas]. Puede utilizar esta vista para localizar y administrar rápidamente sus relaciones. Lea el documento sobre [explorar recursos de esquema](../ui/explore.md#lookup) para obtener instrucciones detalladas sobre las opciones de filtrado.
+Puede filtrar y buscar relaciones específicas dentro de sus esquemas desde la pestaña [!UICONTROL Relationships] del espacio de trabajo [!UICONTROL Schemas]. Puede utilizar esta vista para localizar y administrar rápidamente sus relaciones. Lea el documento sobre [explorar recursos de esquema](../ui/explore.md#lookup) para obtener instrucciones detalladas sobre las opciones de filtrado.
 
 ![La ficha Relaciones en el área de trabajo Esquemas.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente una relación uno a uno entre dos esquemas con el [!DNL Schema Editor]. Para ver los pasos sobre cómo definir relaciones mediante la API, consulte el tutorial de [definición de una relación mediante la API de Registro de esquemas](relationship-api.md).
