@@ -5,9 +5,9 @@ title: Actualización de flujos de datos de destino mediante la API de Flow Serv
 type: Tutorial
 description: Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante la API de Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2471'
 ht-degree: 4%
 
 ---
@@ -749,6 +749,14 @@ Los archivos exportados contienen el nombre de destino, el ID de audiencia de Ex
 ## Añadir un atributo de perfil a un flujo de datos {#add-profile-attribute}
 
 Para agregar un atributo de perfil al flujo de datos de destino, realice una petición PATCH a la API [!DNL Flow Service] y proporcione el identificador de flujo, la versión y el atributo de perfil que desee agregar.
+
+>[!IMPORTANT]
+>
+>**Requisitos de asignación específicos de destino**
+>
+>El método `profileSelectors` descrito en esta sección funciona para la mayoría de los destinos de streaming. Sin embargo, algunos destinos de streaming, como **Adobe Target**, requieren el flujo de trabajo del conjunto de asignaciones de preparación de datos.
+>
+>**Si los atributos de perfil no aparecen en la interfaz de usuario de Experience Platform después de una respuesta de API correcta (202)**, debe usar el método del conjunto de asignaciones documentado en [Activar audiencias en destinos por lotes](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 **Formato de API**
 

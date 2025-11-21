@@ -2,9 +2,9 @@
 title: Configuración de la detección de bots para flujos de datos
 description: Aprenda a configurar la detección de bots para flujos de datos a fin de diferenciar el tráfico humano del no humano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,19 @@ Esta puntuación de bots ayuda a las soluciones que reciben la solicitud a ident
 >
 >La detección de bots no elimina ninguna solicitud de bots. Solo actualiza el esquema XDM con la puntuación de bots y reenvía el evento al [servicio de secuencia de datos](configure.md) que configuró.
 >
->Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=es) y no usa la puntuación establecida por Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
+>Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) y no usa la puntuación establecida por Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
 
-Las reglas de detección de bots pueden tardar hasta 15 minutos en propagarse por Edge Network después de crearse.
+## Consideraciones técnicas {#technical-considerations}
+
+Antes de habilitar la detección de bots en sus flujos de datos, hay que tener en cuenta algunos puntos clave para garantizar resultados precisos y una implementación sin problemas:
+
+* La detección de bots se aplica solamente a las solicitudes no autenticadas enviadas a `edge.adobedc.net`.
+* Las solicitudes autenticadas enviadas a `server.adobedc.net` no se evalúan para el tráfico de bots, ya que el tráfico autenticado se considera confiable.
+* Las reglas de detección de bots pueden tardar hasta 15 minutos en propagarse por Edge Network después de crearse.
 
 ## Requisitos previos {#prerequisites}
 
-Para que la detección de bots funcione en la secuencia de datos, debe agregar el grupo de campos **[!UICONTROL Información de detección de bots]** al esquema. Consulte la documentación del [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para obtener información sobre cómo agregar campos y grupos a un esquema.
+Para que la detección de bots funcione en la secuencia de datos, debe agregar el grupo de campos **[!UICONTROL Bot Detection Information]** al esquema. Consulte la documentación del [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para obtener información sobre cómo agregar campos y grupos a un esquema.
 
 ## Configuración de la detección de bots para flujos de datos {#configure}
 
@@ -49,17 +55,17 @@ Vaya a la lista de flujos de datos y seleccione el flujo de datos al que desea a
 
 ![Interfaz de usuario de flujos de datos que muestra la lista de flujos de datos.](assets/bot-detection/datastream-list.png)
 
-En la página de detalles de la secuencia de datos, seleccione la opción **[!UICONTROL Detección de bots]** en el carril derecho.
+En la página de detalles de la secuencia de datos, seleccione la opción **[!UICONTROL Bot Detection]** en el carril derecho.
 
 ![Opción de detección de bots resaltada en la interfaz de usuario de flujos de datos.](assets/bot-detection/bot-detection.png)
 
-Se muestra la página **[!UICONTROL Reglas de detección de bots]**.
+Se muestra la página **[!UICONTROL Bot Detection Rules]**.
 
 ![Configuración de detección de bots en la página de configuración de secuencia de datos.](assets/bot-detection/bot-detection-page.png)
 
 Desde la página Reglas de detección de bots, puede configurar la detección de bots mediante las siguientes funcionalidades:
 
-* Usando [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Usando [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Creación de sus propias reglas de detección de bots.
 
 ### Utilice la Lista internacional de arañas web y bots de la IAB/ABC {#iab-list}
@@ -68,8 +74,8 @@ La [Lista Internacional de Arañas y Bots de la IAB/ABC](https://www.iab.com/gui
 
 Para configurar el flujo de datos para que utilice la Lista internacional de arañas web y bots de IAB/ABC:
 
-1. Alterne la opción **[!UICONTROL Usar la lista internacional de arañas web y bots de IAB/ABC para la detección de bots en esta secuencia de datos]**.
-2. Seleccione **[!UICONTROL Guardar]** para aplicar la configuración de detección de bots a su secuencia de datos.
+1. Alterne la opción **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]**.
+2. Seleccione **[!UICONTROL Save]** para aplicar la configuración de detección de bots a su secuencia de datos.
 
 ![Lista de bots y arañas IAB habilitada.](assets/bot-detection/bot-detection-list.png)
 
@@ -97,15 +103,15 @@ Si necesita reglas de detección de bots más granulares, puede combinar las con
 
 Para crear una regla de detección de bots, siga los pasos a continuación:
 
-1. Seleccione **[!UICONTROL Agregar nueva regla]**.
+1. Seleccione **[!UICONTROL Add New Rule]**.
 
    ![Pantalla de configuración de detección de bots con el botón Agregar nueva regla resaltado.](assets/bot-detection/bot-detection-new-rule.png)
 
-2. Escriba un nombre para la regla en el campo **[!UICONTROL Nombre de regla]**.
+2. Escriba un nombre para la regla en el campo **[!UICONTROL Rule Name]**.
 
    ![Pantalla de regla de detección de bots con el nombre de regla resaltado.](assets/bot-detection/rule-name.png)
 
-3. Seleccione **[!UICONTROL Agregar nueva condición de IP]** para agregar una nueva regla basada en IP. Puede definir la regla por dirección IP o por intervalo de direcciones IP.
+3. Seleccione **[!UICONTROL Add new IP condition]** para agregar una nueva regla basada en IP. Puede definir la regla por dirección IP o por intervalo de direcciones IP.
 
    ![Pantalla de regla de detección de bots con el campo de dirección IP resaltado.](assets/bot-detection/ip-address-rule.png)
 
@@ -115,7 +121,7 @@ Para crear una regla de detección de bots, siga los pasos a continuación:
    >
    >Las condiciones de IP se basan en una operación `OR` lógica. Una solicitud se marca como originada en un bot si coincide con cualquiera de las condiciones de IP definidas.
 
-4. Si desea agregar condiciones de encabezado a la regla, seleccione **[!UICONTROL Agregar grupo de condiciones de encabezado]** y, a continuación, seleccione los encabezados que desea que utilice la regla.
+4. Si desea agregar condiciones de encabezado a la regla, seleccione **[!UICONTROL Add header conditions group]** y, a continuación, los encabezados que desea que utilice la regla.
 
    ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/header-conditions.png)
 
@@ -123,7 +129,7 @@ Para crear una regla de detección de bots, siga los pasos a continuación:
 
    ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/header-condition-rule.png)
 
-5. Después de configurar las reglas de detección de bots que desee, seleccione **[!UICONTROL Guardar]** para que se apliquen las reglas a su secuencia de datos.
+5. Después de configurar las reglas de detección de bots que desee, seleccione **[!UICONTROL Save]** para que se apliquen las reglas al conjunto de datos.
 
    ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/bot-detection-save.png)
 
