@@ -65,7 +65,7 @@ Se muestra la página **[!UICONTROL Bot Detection Rules]**.
 
 Desde la página Reglas de detección de bots, puede configurar la detección de bots mediante las siguientes funcionalidades:
 
-* Usando [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Usando [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Creación de sus propias reglas de detección de bots.
 
 ### Utilice la Lista internacional de arañas web y bots de la IAB/ABC {#iab-list}
