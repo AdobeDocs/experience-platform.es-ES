@@ -47,12 +47,12 @@ ht-degree: 61%
    * [Destinos en Real-Time CDP edición B2B](destinations/b2b.md)
 * Mecanismos de protección {#guardrails}
    * [Introducción a las protecciones Real-Time CDP](guardrails/overview.md)
-   * [Protecciones para la ingesta de datos](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Protecciones para la ingesta de datos](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=es){target="_blank"}
    * [Protecciones para [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Protecciones para [!DNL Real-Time Customer Profile] datos y segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=es){target="_blank"}
-   * [Protecciones para [!DNL Identity Service] datos](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [Protecciones para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [Protecciones para la activación de datos mediante destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [Protecciones para [!DNL Identity Service] datos](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=es){target="_blank"}
+   * [Protecciones para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=es){target="_blank"}
+   * [Protecciones para la activación de datos mediante destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=es){target="_blank"}
 * Identidades {#identity}
    * [Identidades y espacios de nombres de identidad](profile/identities-overview.md)
 * Combinar políticas {#merge-policies}

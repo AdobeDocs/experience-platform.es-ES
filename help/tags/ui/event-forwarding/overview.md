@@ -30,7 +30,7 @@ Este documento proporciona información general de alto nivel sobre el reenvío 
 >
 >Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Experience Platform, consulte la [descripción general de la recopilación de datos](../../../collection/home.md).
 
-El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
+El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=es) ofrece las siguientes ventajas:
 
 **Rendimiento**:
 
