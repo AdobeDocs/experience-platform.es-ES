@@ -29,7 +29,7 @@ Inteligencia artificial aplicada a la atribución admite dos categorías de punt
 
 El siguiente vídeo está diseñado para ayudarle a comprender la inteligencia artificial aplicada a la atribución.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36562?captions=spa&learn=on&quality=12)
 
 ## Ejemplos de casos de uso empresariales
 
