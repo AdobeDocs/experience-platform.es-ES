@@ -7,7 +7,7 @@ role: User
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 33%
+ht-degree: 35%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 33%
 * [Caducidades de eventos de experiencia](event-expirations.md)
 * [Caducidad de perfil seudónimo](pseudonymous-profiles.md)
 * [Solicitud de marca de tiempo del cliente](customer-timestamp-ordering.md)
-* [!DNL Profile] API {#api}
+* API [!DNL Profile] {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
    * [Entidades (acceso de [!DNL Profile])](api/entities.md)
@@ -38,7 +38,7 @@ ht-degree: 33%
    * [Guía de API de atributos calculados](computed-attributes/api.md)
    * [Guía de IU de atributos calculados](computed-attributes/ui.md)
    * [Preguntas frecuentes](computed-attributes/faq.md)
-* Políticas de combinación {#merge-policies}
+* Combinar políticas {#merge-policies}
    * [Información general](merge-policies/overview.md)
    * [API de políticas de combinación](api/merge-policies.md)
    * [Guía de la IU de las políticas de combinación](merge-policies/ui-guide.md)
@@ -50,7 +50,7 @@ ht-degree: 33%
    * [Añadir datos al perfil del cliente en tiempo real](tutorials/add-profile-data.md)
    * [Configurar un conjunto de datos para el perfil](tutorials/dataset-configuration.md)
    * [Generar el informe de superposición de conjuntos de datos](tutorials/dataset-overlap-report.md)
-   * [Más tutoriales](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es)
+   * [Más tutoriales](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Procesamiento de solicitud de privacidad](privacy.md)
 * [[!DNL Profile] guía de solución de problemas](troubleshooting.md)
 * [Referencia de API de perfil](https://www.adobe.com/go/profile-apis-en)

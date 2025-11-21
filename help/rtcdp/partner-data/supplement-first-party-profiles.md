@@ -5,8 +5,8 @@ feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 77%
+source-wordcount: '1249'
+ht-degree: 72%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 77%
 
 >[!AVAILABILITY]
 >
->* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.
 
@@ -26,7 +26,7 @@ La mayoría de las marcas, incluso las que son ricas en datos de origen, pueden 
 
 Adobe Real-time Customer Data Platform puede ayudar a las marcas a complementar de forma responsable sus datos de origen con información, identificadores y atributos valiosos de uno o más socios de confianza.
 
-El Adobe entiende que no existe un enfoque único que se adapte a todos los casos y permite una interoperabilidad perfecta con los socios de datos e identidades para fomentar una participación individualizada y reflexiva en todas las etapas del ciclo de vida del cliente. Estas capacidades están respaldadas por un marco de trabajo de gobernanza de datos de confianza, que permite un control matizado sobre dónde y cómo se utilizan los datos de los socios. Por ejemplo, es posible que desee utilizar las perspectivas proporcionadas por el socio para la segmentación, pero no para la personalización.
+Adobe entiende que no existe un enfoque único que se adapte a todos los casos y permite una interoperabilidad perfecta con los socios de datos e identidad para fomentar una participación individualizada y reflexiva en todas las etapas del ciclo de vida del cliente. Estas capacidades están respaldadas por un marco de trabajo de gobernanza de datos de confianza, que permite un control matizado sobre dónde y cómo se utilizan los datos de los socios. Por ejemplo, es posible que desee utilizar las perspectivas proporcionadas por el socio para la segmentación, pero no para la personalización.
 
 Por ejemplo, siga los pasos descritos en este caso de uso cuando necesite enriquecer los registros de cliente con señales demográficas e intencionales.
 
@@ -41,13 +41,13 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 
 >[!WARNING]
 >
->Los atributos adicionales proporcionados por el socio introducidos en Real-Time CDP afectan a su *volumen total de datos*. Lea la [Descripción del producto de Real-time Customer Data Platform](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información sobre el volumen total de datos.
+>Los atributos adicionales proporcionados por el socio introducidos en Real-Time CDP afectan a su *volumen total de datos*. Lea la [Descripción del producto de Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información sobre el volumen total de datos.
 
 ## Tutorial de vídeo {#video-walkthrough}
 
 Vea el tutorial de vídeo a continuación para ver un tutorial sobre cómo complementar las audiencias de origen con atributos proporcionados por los socios:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452453/?learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
@@ -56,7 +56,7 @@ Vea el tutorial de vídeo a continuación para ver un tutorial sobre cómo compl
 1. Como **cliente**, adquiere licencias de atributos del **socio de datos**.
 2. Como **cliente**, puede ampliar los datos de perfil y el modelo de gobernanza para dar cabida a atributos proporcionados por **socios**.
 3. Como **cliente**, incorpora los públicos que desea enriquecer con el socio de datos. Por lo general, estos públicos están marcados por identificadores de entrada, como elementos de información de identificación personal (PII), como correo electrónico, nombre, dirección u otros.
-4. El **socio** anexa atributos con licencia para los perfiles con los que pueden coincidir. Opcionalmente, un [ID de socio](/help/identity-service/features/namespaces.md) se puede incluir e ingerir en el área de nombres de ID con ámbito de socio.
+4. El **socio** anexa atributos con licencia para los perfiles con los que pueden coincidir. Opcionalmente, un [ID de socio](/help/identity-service/features/namespaces.md) se puede incluir e ingerir en el espacio de nombres de ID con ámbito de socio.
 5. Como **cliente**, carga atributos del socio de datos en perfiles de clientes en Real-Time CDP.
 
 ## Cómo lograr el caso de uso: Instrucciones paso a paso {#step-by-step-instructions}
@@ -71,14 +71,14 @@ Este paso se trata en los [requisitos previos](#prerequisites-and-planning) y Ad
 
 En este punto, está ampliando el marco de trabajo de administración de datos en Real-Time CDP para dar cabida a los atributos proporcionados por los socios.
 
-Tiene la opción de crear un nuevo esquema de la clase **[!UICONTROL Perfil individual de XDM]** o ampliar un esquema existente del mismo tipo para incluir atributos proporcionados por socios. Adobe recomienda encarecidamente crear un esquema con un nuevo conjunto de grupos de campos que representen mejor los atributos adicionales del proveedor de datos. Esto garantiza que los esquemas de datos estén limpios y puedan evolucionar de forma independiente entre sí.
+Tiene la opción de crear un nuevo esquema de la clase **[!UICONTROL XDM Individual Profile]** o ampliar un esquema existente del mismo tipo para incluir atributos proporcionados por el socio. Adobe recomienda encarecidamente crear un esquema con un nuevo conjunto de grupos de campos que representen mejor los atributos adicionales del proveedor de datos. Esto garantiza que los esquemas de datos estén limpios y puedan evolucionar de forma independiente entre sí.
 
 Para incluir atributos proporcionados por el socio en un esquema, puede crear un nuevo grupo de campos con los atributos esperados o emplear uno de los grupos de campos preconfigurados proporcionados por Adobe.
 
 Lea las páginas de documentación siguientes para obtener más información:
 
 * [Conceptos básicos de composición de esquemas](/help/xdm/schema/composition.md)
-* [Información general de la clase [!UICONTROL Perfil individual de XDM]](/help/xdm/classes/individual-profile.md)
+* [Información general sobre la clase [!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md)
 * [Creación y edición de esquemas en la IU](/help/xdm/ui/resources/schemas.md)
 * [Creación y edición de grupos de campos de esquema en la IU](/help/xdm/ui/resources/field-groups.md)
 
@@ -99,7 +99,7 @@ También en este paso, piense en cómo cambia el modelo de gobernanza de datos a
 
 >[!TIP]
 >
->Si decide complementar los perfiles del cliente con un identificador basado en personas del proveedor de datos, puede crear un nuevo tipo de identidad de **[[!UICONTROL ID de socio]](/help/identity-service/features/namespaces.md)**.
+>Si decide complementar los perfiles de sus clientes con un identificador basado en personas del proveedor de datos, puede crear un nuevo tipo de identidad del tipo **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**.
 >
 >Obtenga más información acerca del ID de socio en la [sección tipos de identidad](/help/identity-service/features/namespaces.md).
 >Lea acerca de [cómo definir campos de identidad](/help/xdm/ui/fields/identity.md) en la interfaz de usuario de Experience Platform.

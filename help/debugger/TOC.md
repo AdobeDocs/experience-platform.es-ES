@@ -19,7 +19,7 @@ ht-degree: 50%
 * [Instalación de la extensión](./install-debugger.md)
 * [Configuración de la extensión](./configure-debugger.md)
 * [Pestaña Resumen](./summary.md)
-* Ficha Soluciones {#solutions}
+* Pestaña Soluciones {#solutions}
    * [Información general](./solutions/overview.md)
    * [Adobe Target](./solutions/target.md)
 * [Pestaña Registros](./logs.md)

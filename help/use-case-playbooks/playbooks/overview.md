@@ -6,7 +6,7 @@ role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '523'
 ht-degree: 30%
 
 ---
@@ -29,7 +29,7 @@ Lo que encontrará en esta guía de documentación:
 
 ## Información general {#overview}
 
-[!UICONTROL Los libros de reproducción de casos de uso] pueden ayudarle a superar el problema que se produce al empezar a usar Real-Time CDP o Adobe Journey Optimizer, cuando es posible que no sepa exactamente por qué empezar o cómo crear los recursos adecuados para lograr los casos de uso deseados.
+[!UICONTROL Use Case Playbooks] puede ayudarle a superar el problema que se produce al empezar a usar Real-Time CDP o Adobe Journey Optimizer, cuando es posible que no sepa exactamente por qué empezar o cómo crear los recursos adecuados para lograr los casos de uso deseados.
 
 Los manuales de casos de uso pueden ayudarle aquí mediante lo siguiente:
 
@@ -52,7 +52,7 @@ Vea este vídeo para aprender a descubrir, crear, publicar y solucionar problema
 
 ## Disponibilidad {#availability}
 
-Algunos [!UICONTROL libros de reproducción de casos de uso] están diseñados para casos de uso de Real-Time CDP, mientras que otros son los más adecuados para los clientes que utilizan Journey Optimizer. Examine el catálogo para encontrar los libros de reproducción más adecuados para su producto y caso de uso. Obtenga más información sobre Real-Time CDP y Journey Optimizer en las [descripciones de productos de Adobe](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es).
+Algunos [!UICONTROL Use Case Playbooks] están diseñados para casos de uso de Real-Time CDP, mientras que otros son los más adecuados para los clientes que utilizan Journey Optimizer. Examine el catálogo para encontrar los libros de reproducción más adecuados para su producto y caso de uso. Obtenga más información sobre Real-Time CDP y Journey Optimizer en las [descripciones de productos de Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=es).
 
 ## Guías de IU {#ui-guides}
 

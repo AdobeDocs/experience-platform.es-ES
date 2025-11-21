@@ -4,7 +4,7 @@ description: La API de Reactor permite a los desarrolladores administrar mediant
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1079'
 ht-degree: 92%
 
 ---
@@ -19,7 +19,7 @@ Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [Re
 
 ## Compañías
 
-Una compañía representa la organización de un usuario de etiquetas, normalmente un negocio. Estas compañías coinciden 1:1 con los ID de organización de. Los usuarios de API solo tendrán visibilidad de las empresas a las que tienen acceso.
+Una compañía representa la organización de un usuario de etiquetas, normalmente un negocio. Estas compañías coinciden con 1:1 con los identificadores de organización. Los usuarios de API solo tendrán visibilidad de las empresas a las que tienen acceso.
 
 Consulte la [guía de extremo de compañías](./endpoints/companies.md) para obtener información sobre cómo ver las empresas disponibles en la API.
 

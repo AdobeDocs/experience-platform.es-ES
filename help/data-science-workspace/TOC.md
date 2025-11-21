@@ -19,7 +19,7 @@ ht-degree: 33%
 * [Información general del espacio de trabajo de ciencia de datos](home.md)
 * [Acceso y funciones de Data Science Workspace](access-features-dsw.md)
 * [Tutorial del espacio de trabajo de ciencia de datos](walkthrough.md)
-* Portátiles de JupyterLab {#jupyterlab}
+* Portátiles JupyterLab {#jupyterlab}
    * [Información general](jupyterlab/overview.md)
    * [Acceso a datos](jupyterlab/access-notebook-data.md)
    * [Analice sus datos](jupyterlab/analyze-your-data.md)
@@ -34,19 +34,19 @@ ht-degree: 33%
    * [Experimentos](api/experiments.md)
    * [Modelos](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [Información](api/insights.md)
+   * [Insights](api/insights.md)
    * [Apéndice](api/appendix.md)
-* Fórmulas prediseñadas {#pre-built-recipes}
+* Fórmulas creadas previamente {#pre-built-recipes}
    * [Fórmula de recomendación de productos](pre-built-recipes/product-recommendations.md)
    * [Predicción de compra de productos](pre-built-recipes/product-purchase-prediction.md)
    * [Fórmula de ventas minoristas](pre-built-recipes/retail-sales.md)
-* Creando modelo {#authoring}
+* Creación de modelos {#authoring}
    * [SDK de creación de modelos](authoring/sdk.md)
    * [Creación de una canalización de funciones](authoring/feature-pipeline.md)
    * [Creación de modelos con Experience Platform SDK (Python)](authoring/platform-sdk.md)
    * [Acceso a datos en Python](authoring/python.md)
    * [Acceso a datos de Spark](authoring/spark.md)
-* Tutoriales de modelo y fórmula {#models-recipes}
+* Tutoriales de modelos y fórmulas {#models-recipes}
    * [Creación y publicación de un modelo de aprendizaje automático](models-recipes/create-publish-model.md)
    * [Creación de los esquemas y conjuntos de datos de Luma de demostración](models-recipes/create-luma-data.md)
    * [Crear el esquema y el conjunto de datos de ventas minoristas](models-recipes/create-retails-sales-dataset.md)

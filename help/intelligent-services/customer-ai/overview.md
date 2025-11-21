@@ -2,7 +2,7 @@
 keywords: Experience Platform;información general;inteligencia artificial aplicada al cliente;temas populares;información general de inteligencia artificial aplicada al cliente
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: Información general sobre Customer AI
+title: 'Información general sobre Customer AI '
 description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 landing-page-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
 short-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
@@ -44,12 +44,12 @@ El cliente no está diseñado para:
 
 El siguiente vídeo está diseñado para ayudarle a comprender la inteligencia artificial aplicada al cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/36461?learn=on&quality=12&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Funcionamiento
 
-La inteligencia artificial aplicada al cliente funciona analizando los datos de evento de experiencia del consumidor existentes para predecir puntuaciones de pérdida o tendencia de conversión. El Adobe se da cuenta de que la definición de pérdida y conversión no es uniforme en todos los casos de uso y, por este motivo, tiene la capacidad de definir objetivos de Target personalizados como un conjunto de condiciones. Puede configurar el objetivo predicho siempre y cuando el evento de interés esté presente en los datos de entrada de Evento de experiencia del consumidor.
+La inteligencia artificial aplicada al cliente funciona analizando los datos de evento de experiencia del consumidor existentes para predecir puntuaciones de pérdida o tendencia de conversión. Adobe es consciente de que la definición de pérdida y conversión no es uniforme en todos los casos de uso y, por este motivo, tiene la capacidad de definir objetivos de destinatario personalizados como un conjunto de condiciones. Puede configurar el objetivo predicho siempre y cuando el evento de interés esté presente en los datos de entrada de Evento de experiencia del consumidor.
 
-## Pasos siguientes
+## Próximos pasos
 
 Puede empezar por seguir la guía de [introducción](./getting-started.md). Esta guía le explica cómo configurar todos los requisitos previos necesarios para la inteligencia artificial aplicada al cliente. Si ya tiene todas sus credenciales y datos listos, visite [configurar una instancia de inteligencia artificial aplicada al cliente](./user-guide/configure.md). Proporciona los pasos para utilizar la inteligencia artificial aplicada al cliente.

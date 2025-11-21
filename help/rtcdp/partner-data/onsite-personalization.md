@@ -5,8 +5,8 @@ feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2676'
-ht-degree: 88%
+source-wordcount: '2568'
+ht-degree: 72%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 88%
 
 >[!AVAILABILITY]
 >
->Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Aprenda a utilizar el reconocimiento asistido por socios para ofrecer experiencias personalizadas a los visitantes de su propiedad web. Utilice este tutorial para comprender la secuencia de implementación de varios elementos en Experience Platform y otras soluciones de Experience Cloud para mostrar una experiencia personalizada a los visitantes autenticados y no autenticados.
 
@@ -64,7 +64,7 @@ Para implementar correctamente este caso de uso, debe utilizar varias áreas de 
 
 Vea el tutorial en vídeo a continuación para ver una introducción a cómo personalizar experiencias en el sitio para visitantes desconocidos:
 
->[!VIDEO](https://video.tv.adobe.com/v/3449255/?learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
@@ -81,21 +81,21 @@ Vea el tutorial en vídeo a continuación para ver una introducción a cómo per
 
 Lea las secciones siguientes, que incluyen vínculos a documentación adicional, para completar cada uno de los pasos de la información general de alto nivel anterior.
 
-### Administración de datos: cree un área de nombres de identidad, un esquema y un conjunto de datos para administrar atributos de datos {#data-management}
+### Administración de datos: cree un espacio de nombres de identidad, un esquema y un conjunto de datos para administrar atributos de datos {#data-management}
 
-Como preparación para conseguir que el caso de uso personalice la experiencia de los visitantes no autenticados, primero debe configurar la estructura de administración de datos en Real-Time CDP para recibir los datos entrantes de cualificación de público y evento en tiempo real.
+Como preparación para conseguir que el caso de uso personalice la experiencia de los visitantes no autenticados, primero debe configurar la estructura de administración de datos en Real-Time CDP para recibir los datos entrantes de calificación de público y evento en tiempo real.
 
-#### Crear área de nombres de identidad de ID de socio
+#### Crear espacio de nombres de identidad de ID de socio
 
-En primer lugar, debe crear un área de nombres de identidad de ID de socio. Vaya a **[!UICONTROL Cliente]** > **[!UICONTROL Identidades]** en el carril izquierdo, y luego seleccione **[!UICONTROL Crear área de nombres de identidad]** en la esquina superior derecha de la pantalla.
+En primer lugar, debe crear un espacio de nombres de identidad de ID de socio. Vaya a **[!UICONTROL Customer]** > **[!UICONTROL Identities]** en el carril izquierdo y, a continuación, seleccione **[!UICONTROL Create identity namespace]** en la esquina superior derecha de la pantalla.
 
-![El cuadro de diálogo Crear área de nombres de identidad con ID de socio resaltado.](/help/rtcdp/assets/partner-data/onsite-personalization/create-identity-namespace.png)
+![El cuadro de diálogo Crear espacio de nombres de identidad con ID de socio resaltado.](/help/rtcdp/assets/partner-data/onsite-personalization/create-identity-namespace.png)
 
-Obtenga más información sobre cómo [crear un área de nombres de identidad de ID de socio](/help/rtcdp/partner-data/prospecting.md#create-partner-id-namespace).
+Obtenga más información sobre cómo [crear un espacio de nombres de identidad de ID de socio](/help/rtcdp/partner-data/prospecting.md#create-partner-id-namespace).
 
 #### Creación de un esquema
 
-A continuación, cree un esquema de [!UICONTROL Evento de experiencia] para contener los datos de series temporales que más adelante recopilará de sus propiedades web y asegúrese de utilizar [!UICONTROL ExperienceEvent de XDM] como clase base para el esquema. Obtenga información sobre cómo [crear un esquema con la IU de Experience Platform](/help/xdm/ui/resources/schemas.md#create).
+A continuación, cree un esquema [!UICONTROL Experience Event] para contener los datos de series temporales que recopilará posteriormente de las propiedades web y asegúrese de utilizar [!UICONTROL XDM ExperienceEvent] como clase base para el esquema. Obtenga información sobre cómo [crear un esquema con la IU de Experience Platform](/help/xdm/ui/resources/schemas.md#create).
 
 ![Espacio de trabajo de esquemas con Crear esquema y evento de experiencia XDM resaltado.](/help/rtcdp/assets/partner-data/onsite-personalization/create-experience-event-schema.png)
 
@@ -103,7 +103,7 @@ A medida que crea su esquema y [añade grupos de campos al esquema](/help/xdm/ui
 
 Además, puede crear o reutilizar un grupo de campos existente y añadirlo a su esquema, para capturar la información proporcionada por el socio sobre el visitante. Lea cómo [crear un grupo de campos](/help/xdm/ui/resources/field-groups.md) y cómo [añadir campos](/help/xdm/ui/resources/field-groups.md) al grupo de campos. Por ejemplo, si espera personalizar con perspectivas proporcionadas por el socio, como el intervalo de edad, el estado laboral, el poder adquisitivo mensual o los comportamientos de compra, haga que su grupo de campo incluya campos adecuados.
 
-Suponiendo que el socio de datos proporcione un identificador estable para el visitante y que desee introducir ese identificador en Real-Time CDP, asegúrese de tener un campo con el nombre adecuado para el identificador en el grupo de campos personalizados. También debe marcar el campo como una identidad en el área de nombres de identidad que creó anteriormente. Recuerde también [permitir que el esquema se incluya en el perfil](/help/xdm/ui/resources/schemas.md#profile).
+Suponiendo que el socio de datos proporcione un identificador estable para el visitante y que desee introducir ese identificador en Real-Time CDP, asegúrese de tener un campo con el nombre adecuado para el identificador en el grupo de campos personalizados. También debe marcar el campo como una identidad en el espacio de nombres de identidad que creó anteriormente. Recuerde también [permitir que el esquema se incluya en el perfil](/help/xdm/ui/resources/schemas.md#profile).
 
 #### Crear un conjunto de datos
 
@@ -111,25 +111,25 @@ A continuación, debe crear un conjunto de datos para contener los datos de seri
 
 Lea el tutorial sobre [cómo crear un conjunto de datos](/help/catalog/datasets/user-guide.md#create) y recuerde seleccionar la opción para crear el conjunto de datos a partir de un esquema. Cree el conjunto de datos en función del esquema que creó en el paso anterior.
 
-Similar al paso para crear un esquema, debe habilitar el conjunto de datos para que se incluya en el [!UICONTROL Perfil del cliente en tiempo real]. Para obtener más información sobre cómo habilitar el conjunto de datos para utilizarlo en [!UICONTROL Perfil del cliente en tiempo real], lea el [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md#profile)
+De forma similar al paso al crear un esquema, debe habilitar la inclusión del conjunto de datos en [!UICONTROL Real-Time Customer Profile]. Para obtener más información acerca de cómo habilitar el conjunto de datos para su uso en [!UICONTROL Real-Time Customer Profile], lea el tutorial [crear esquema.](/help/xdm/tutorials/create-schema-ui.md#profile)
 
 ### Implementación de la recopilación de datos de evento en la propiedad web {#implement-data-collection}
 
-Después de ajustar la configuración de administración de datos, ahora debe implementar la [recopilación de datos](/help/collection/home.md) de evento en tiempo real en la propiedad web. Debe instrumentar la propiedad con la biblioteca de recopilación de datos de Adobe: [!UICONTROL SDK web]: para recopilar llamadas de evento en tiempo real y enviarlas de vuelta a Real-Time CDP. Este elemento consta de algunas tareas independientes entre varios componentes de recopilación de datos.
+Después de ajustar la configuración de administración de datos, ahora debe implementar la [recopilación de datos](/help/collection/home.md) de evento en tiempo real en la propiedad web. Debe instrumentar su propiedad con la biblioteca de recopilación de datos de Adobe [!UICONTROL Web SDK] para recopilar llamadas de evento en tiempo real y enviarlas de vuelta a Real-Time CDP. Este elemento consta de algunas tareas independientes entre varios componentes de recopilación de datos.
 
 >[!IMPORTANT]
 >
 >Para recuperar los atributos proporcionados por el socio, también debe *integrar su propiedad web con las API de socios u otros métodos para llamar y recuperar atributos de socios de datos en tiempo real*. Hable de este aspecto con su socio preferido, ya que no es objeto de este tutorial.
 
-En primer lugar, utilice el conmutador de aplicaciones en la esquina superior derecha de la pantalla para navegar hasta la sección **[!UICONTROL Recopilación de datos]**.
+En primer lugar, utilice el conmutador de aplicaciones en la esquina superior derecha de la pantalla para desplazarse a la sección **[!UICONTROL Data Collection]**.
 
 >[!TIP]
 >
->Póngase en contacto con el administrador del sistema para solicitar acceso si no puede ver [!UICONTROL Recopilación de datos] en el conmutador de aplicaciones.
+>Póngase en contacto con el administrador del sistema para solicitar acceso si no puede ver [!UICONTROL Data Collection] en el conmutador de aplicaciones.
 
 ![Cambiar aplicación para llegar a la sección de recopilación de datos.](/help/rtcdp/assets/partner-data/onsite-personalization/app-switcher-data-collection.png)
 
-La sección **[!UICONTROL Recopilación de datos]** de la interfaz de usuario tiene un aspecto similar al de la siguiente imagen.
+La sección **[!UICONTROL Data Collection]** de la interfaz de usuario tiene un aspecto similar al de la imagen siguiente.
 
 ![Sección de recopilación de datos de la interfaz de usuario de Experience Platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
@@ -137,11 +137,11 @@ La sección **[!UICONTROL Recopilación de datos]** de la interfaz de usuario ti
 
 Como primer paso en la sección de recopilación de datos, [cree una nueva secuencia de datos](/help/datastreams/configure.md). La secuencia de datos es la base de cómo se recopilan los datos y se enrutan correctamente a la aplicación de Adobe correcta, en este caso Experience Platform.
 
-A medida que crea la secuencia de datos, en el campo **[!UICONTROL Esquema del evento]**, seleccione el esquema que creó anteriormente.
+A medida que crea la secuencia de datos, en el campo **[!UICONTROL Event schema]**, seleccione el esquema que creó anteriormente.
 
 ![El selector de esquema de eventos se resalta al configurar una nueva secuencia de datos.](/help/rtcdp/assets/partner-data/onsite-personalization/event-schema-selector-datastream.png)
 
-[Seleccione el conjunto de datos de evento](/help/datastreams/configure.md#aep) que ha creado anteriormente desde la lista desplegable, marque las casillas junto a **[!UICONTROL Segmentación de Edge]** y **[!UICONTROL Destinos de personalización]** y seleccione **[!UICONTROL Guardar]**.
+[Seleccione el conjunto de datos de evento](/help/datastreams/configure.md#aep) que creó anteriormente desde el menú desplegable, marque las casillas junto a **[!UICONTROL Edge Segmentation]** y **[!UICONTROL Personalization Destinations]** y seleccione **[!UICONTROL Save]**.
 
 Tenga en cuenta que no tiene que seleccionar un conjunto de datos de perfil en este escenario, ya que está trayendo datos de series temporales basados en eventos.
 
@@ -149,21 +149,21 @@ Tenga en cuenta que no tiene que seleccionar un conjunto de datos de perfil en e
 
 Una propiedad es un contenedor que se rellena con extensiones, reglas, elementos de datos y bibliotecas mientras se implementan etiquetas en el sitio.
 
-Vaya a **[!UICONTROL Etiquetas]** y seleccione **[!UICONTROL Nueva propiedad]**.
+Vaya a **[!UICONTROL Tags]** y seleccione **[!UICONTROL New property]**.
 
 ![Creación de una etiqueta nueva.](/help/rtcdp/assets/partner-data/onsite-personalization/create-tag-property.png)
 
-Rellene los campos obligatorios y seleccione **[!UICONTROL Guardar]**.
+Rellene los campos obligatorios y seleccione **[!UICONTROL Save]**.
 
 ![Rellene los campos obligatorios para la nueva propiedad.](/help/rtcdp/assets/partner-data/onsite-personalization/tag-property-fields.png)
 
-Obtenga información completa sobre cómo [crear una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=es).
+Obtenga información completa sobre cómo [crear una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
-A continuación, debe instalar varias extensiones dentro de la propiedad. Seleccione la propiedad de etiquetas y vaya a la sección [!UICONTROL Extensiones].
+A continuación, debe instalar varias extensiones dentro de la propiedad. Seleccione la propiedad de etiquetas y vaya a la sección [!UICONTROL Extensions].
 
 ![Seleccione la nueva propiedad de etiquetas.](/help/rtcdp/assets/partner-data/onsite-personalization/select-tag-property.png)
 
-Observe que la extensión [!UICONTROL Núcleo] ya está instalada. Debe instalar dos extensiones adicionales, como se detalla en las secciones siguientes.
+Observe que la extensión [!UICONTROL Core] ya está instalada. Debe instalar dos extensiones adicionales, como se detalla en las secciones siguientes.
 
 ![Ver extensiones instaladas.](/help/rtcdp/assets/partner-data/onsite-personalization/view-existing-extensions.png)
 
@@ -173,19 +173,19 @@ Tenga en cuenta que este tutorial indica cómo puede instrumentar el sitio web c
 
 ![Vista de la extensión del SDK web en el catálogo de extensiones.](/help/rtcdp/assets/partner-data/onsite-personalization/web-sdk-extension.png)
 
-En la pantalla para configurar el SDK web, vaya a la sección **[!UICONTROL Secuencias de datos]** y proporcione información sobre la zona protegida de Experience Platform que está utilizando. Seleccione la zona protegida adecuada y la secuencia de datos creada en los pasos anteriores en el menú desplegable siguiente. Puede elegir los mismos valores de zona protegida y de secuencia de datos para todos los demás entornos. Deje el resto de configuraciones sin cambios y seleccione **[!UICONTROL Guardar]**.
+En la pantalla para configurar Web SDK, desplácese hasta la sección **[!UICONTROL Datastreams]** y proporcione información sobre la zona protegida de Experience Platform que está utilizando. Seleccione la zona protegida adecuada y la secuencia de datos creada en los pasos anteriores en el menú desplegable siguiente. Puede elegir los mismos valores de zona protegida y de secuencia de datos para todos los demás entornos. Deje el resto de la configuración sin cambios y seleccione **[!UICONTROL Save]**.
 
-Obtenga información completa sobre [cómo instalar el SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=es).
+Obtenga información completa sobre [cómo instalar el SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html).
 
 #### Instalar extensión del servicio de ID
 
-Utilice la [Extensión del servicio de ID de Experience Cloud](/help/tags/extensions/client/id-service/overview.md) para crear una identidad de origen única basada en dispositivos para los visitantes de todas las soluciones de Experience Cloud. Busque **[!UICONTROL Servicio de ID]** en el catálogo de extensiones e instálelo. Mantenga todos los ajustes predeterminados al instalar la extensión.
+Utilice la [Extensión del servicio de ID de Experience Cloud](/help/tags/extensions/client/id-service/overview.md) para crear una identidad de origen única basada en dispositivos para los visitantes de todas las soluciones de Experience Cloud. Busque **[!UICONTROL ID Service]** en el catálogo de extensiones e instálelo. Mantenga todos los ajustes predeterminados al instalar la extensión.
 
 ![Vista de la extensión del servicio de ID en el catálogo de extensiones.](/help/rtcdp/assets/partner-data/onsite-personalization/id-service-extension.png)
 
 #### Configuración de entornos
 
-A continuación, diríjase a la sección **[!UICONTROL Entornos]** en la navegación a la izquierda. En este paso, debe conectar el sitio web a la red de Adobe Edge para recuperar y entregar la información del visitante en tiempo real.
+A continuación, diríjase a la sección **[!UICONTROL Environments]** desde el panel de navegación izquierdo. En este paso, debe conectar el sitio web a la red de Adobe Edge para recuperar y entregar la información del visitante en tiempo real.
 
 Seleccione el icono de cuadro de la derecha para el entorno de desarrollo y copie la versión estándar del fragmento de código JavaScript que aparece en una ventana modal.
 
@@ -199,39 +199,39 @@ Los elementos de datos son los componentes básicos del diccionario de datos (o 
 
 Para los fines de este caso de uso, debe configurar dos elementos de datos.
 
-En primer lugar, configure un elemento `partnerData`. Vaya a la sección **[!UICONTROL Elementos de datos]** y seleccione **[!UICONTROL Crear nuevo elemento de datos]**.
+En primer lugar, configure un elemento `partnerData`. Vaya a la sección **[!UICONTROL Data Elements]** y seleccione **[!UICONTROL Create New Data Element]**.
 
 ![Crear un nuevo elemento de datos.](/help/rtcdp/assets/partner-data/onsite-personalization/create-data-element.gif)
 
-Asigne un nombre al elemento de datos `partnerData`, deje el valor de la [!UICONTROL extensión] como [!UICONTROL núcleo], y establezca el **[!UICONTROL tipo de elemento de datos]** como **[!UICONTROL variable JavaScript]**. Introduzca `partnerData` en el campo titulado **[!UICONTROL Nombre de variable JavaScript]** y seleccione **[!UICONTROL Guardar]**.
+Asigne un nombre al elemento de datos `partnerData`, deje el valor [!UICONTROL extension] como [!UICONTROL Core] y establezca **[!UICONTROL Data Element Type]** como **[!UICONTROL JavaScript Variable]**. Escriba `partnerData` en el campo titulado **[!UICONTROL JavaScript variable name]** y seleccione **[!UICONTROL Save]**.
 
 ![Selecciones resaltadas para configurar correctamente el elemento de datos partnerData.](/help/rtcdp/assets/partner-data/onsite-personalization/create-partnerdata-data-element.png)
 
-Para configurar el segundo elemento de datos, asigne el nombre `pageVisit` a la nueva variable, configure la **[!UICONTROL Extensión]** en **[!UICONTROL Adobe Experience Platform]** y elija **[!UICONTROL Objeto XDM]** como el tipo de datos.
+Para configurar el segundo elemento de datos, asigne un nombre a la nueva variable `pageVisit`, establezca **[!UICONTROL Extension]** en **[!UICONTROL Adobe Experience Platform]** y elija **[!UICONTROL XDM Object]** como tipo de datos.
 
 ![Selecciones resaltadas para configurar correctamente el elemento de datos pageVisit.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
-En el esquema, seleccione los atributos de terceros que corresponden a los valores que espera del socio de datos. A continuación, seleccione el botón de opción denominado **[!UICONTROL Proporcionar todo el objeto]**. Seleccione el icono que parece una base de datos y elija el elemento de datos `partnerData` que ha creado anteriormente.
+En el esquema, seleccione los atributos de terceros que corresponden a los valores que espera del socio de datos. A continuación, seleccione el botón de opción **[!UICONTROL Provide entire object]**. Seleccione el icono que parece una base de datos y elija el elemento de datos `partnerData` que ha creado anteriormente.
 
 #### Configuración de las reglas
 
-En la sección **[!UICONTROL Reglas]**, puede configurar el sitio web para enviar una solicitud de personalización a Adobe con los atributos cargados en los elementos de datos que acaba de crear. Más información sobre [creación de reglas](/help/tags/ui/managing-resources/rules.md).
+En la sección **[!UICONTROL Rules]**, puede configurar el sitio web para que envíe una solicitud de personalización a Adobe con los atributos cargados en los elementos de datos que acaba de crear. Más información sobre [creación de reglas](/help/tags/ui/managing-resources/rules.md).
 
-Seleccione **[!UICONTROL Crear nueva regla]**. Asigne un nombre a esta regla **[!UICONTROL Personalizar]** y seleccione el signo + situado junto a **[!UICONTROL Eventos]**. Seleccionar **[!UICONTROL Inferior de la página]** como el evento y guarde.
+Seleccione **[!UICONTROL Create new Rule]**. Asigne un nombre a esta regla **[!UICONTROL Personalize]** y seleccione el signo + situado junto a **[!UICONTROL Events]**. Seleccione **[!UICONTROL Page Bottom]** como evento y guarde.
 
 ![Selecciones para la parte de tipo de evento de una regla.](/help/rtcdp/assets/partner-data/onsite-personalization/add-events-rule.png)
 
-Seleccione el signo + situado junto a **[!UICONTROL Acciones]**. Actualice la extensión a **[!UICONTROL SDK web de Adobe Experience Platform]** y establezca **[!UICONTROL Tipo de acción]** en **[!UICONTROL Enviar evento]**.
+Seleccione el signo + situado junto a **[!UICONTROL Actions]**. Actualice la extensión a **[!UICONTROL Adobe Experience Platform Web SDK]** y establezca **[!UICONTROL Action Type]** en **[!UICONTROL Send event]**.
 
 ![Selecciones para la parte de tipo de acción de una regla.](/help/rtcdp/assets/partner-data/onsite-personalization/add-action-rule.png)
 
-Desde el selector desplegable **[!UICONTROL Tipo]** de la derecha, seleccione `web.webpagedetails.pageViews` como el tipo de evento.
+En el selector desplegable **[!UICONTROL Type]** de la derecha, seleccione `web.webpagedetails.pageViews` como tipo de evento.
 
 ![Seleccione tipo de evento.](/help/rtcdp/assets/partner-data/onsite-personalization/add-pageview-type-rule.png)
 
 Seleccione el icono de base de datos junto a los datos XDM y el elemento de datos `pageVisit`.
 
-Desplácese hacia abajo por la lista de configuraciones de acción y asegúrese de marcar la casilla titulada **[!UICONTROL Procesar decisiones de personalización visuales]**. Esto es importante para permitir que las experiencias entregadas mediante Adobe Target u otros productos similares se representen visualmente en la página web. Seleccione **[!UICONTROL Conservar cambios]** y luego **[!UICONTROL Guardar]** la regla.
+Desplácese hacia abajo por la lista de configuraciones de acción y asegúrese de marcar la casilla **[!UICONTROL Render visual personalization decisions]**. Esto es importante para permitir que las experiencias entregadas mediante Adobe Target u otros productos similares se representen visualmente en la página web. Seleccione **[!UICONTROL Keep Changes]** y luego **[!UICONTROL Save]** la regla.
 
 ![Seleccione la casilla de verificación Procesar decisiones de personalización visual.](/help/rtcdp/assets/partner-data/onsite-personalization/render-visual-personalization-toggle.png)
 
@@ -239,9 +239,9 @@ Desplácese hacia abajo por la lista de configuraciones de acción y asegúrese 
 
 Para implementar esta configuración en la página web, el siguiente paso es crear una biblioteca que incluya los recursos que acaba de crear. Más información sobre [configuración de un flujo de publicaciones](/help/tags/ui/publishing/publishing-flow.md).
 
-Seleccionar **[!UICONTROL Flujo de publicaciones]** y luego **[!UICONTROL Añadir biblioteca]**.
+Seleccione **[!UICONTROL Publishing Flow]** y luego **[!UICONTROL Add Library]**.
 
-Seleccione **[!UICONTROL Añadir todos los recursos modificados]**, asigne un nombre a la biblioteca y establezca el entorno en **[!UICONTROL Desarrollo]** y seleccione **[!UICONTROL Guardar y generar en desarrollo]**.
+Seleccione **[!UICONTROL Add all Changed Resources]**, asigne un nombre a la biblioteca, establezca el entorno en **[!UICONTROL Development]** y seleccione **[!UICONTROL Save & Build to Development]**.
 
 ![Crear biblioteca e implementarla en el entorno de desarrollo](/help/rtcdp/assets/partner-data/onsite-personalization/create-publishing-workflow.gif)
 
@@ -259,7 +259,7 @@ Ya está listo para crear y activar públicos para su personalización.
 
 #### Creación de audiencias y configuración de la segmentación de Edge
 
-En la interfaz de usuario de Experience Platform, vaya a **[!UICONTROL Cliente]** > **[!UICONTROL Audiencias]** y cree una audiencia para capturar a los visitantes del sitio web.
+En la interfaz de usuario de Experience Platform, vaya a **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** y cree una audiencia para capturar a los visitantes del sitio web.
 
 ![Vista de cómo navegar a las audiencias.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

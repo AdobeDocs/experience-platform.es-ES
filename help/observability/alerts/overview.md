@@ -6,18 +6,18 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 3%
+source-wordcount: '799'
+ht-degree: 12%
 
 ---
 
-# Resumen de alertas
+# Información general sobre alertas
 
 >[!NOTE]
 >
 >Dado que las alertas son compatibles con los entornos limitados de producción y desarrollo, puede suscribirse a ellas en cualquier entorno limitado. Cuando se restablece una zona protegida, también se restablecen todas las alertas de suscripción y, cuando se elimina una zona protegida, se eliminan todas las alertas de suscripción.
 
-Adobe Experience Platform le permite suscribirse a alertas basadas en eventos relativas a actividades de Adobe Experience Platform. Las alertas reducen o eliminan la necesidad de sondear la [[!DNL Observability Insights] API](../api/overview.md) para comprobar si un trabajo se ha completado, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se ha producido algún error.
+Adobe Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Adobe Experience Platform. Las alertas reducen o eliminan la necesidad de realizar sondeos en la [[!DNL Observability Insights] API](../api/overview.md)  para comprobar si se ha completado un trabajo, si se ha alcanzado un determinado hito dentro de un flujo de trabajo o si se ha producido algún error.
 
 Cuando se alcanza un determinado conjunto de condiciones en las operaciones de Experience Platform (como un posible problema cuando el sistema supera un umbral), Experience Platform puede enviar mensajes de alerta a cualquier usuario de su organización que se haya suscrito a ellos. Estos mensajes se pueden repetir a lo largo de un intervalo de tiempo predefinido hasta que se haya resuelto la alerta.
 
@@ -56,28 +56,28 @@ Las alertas se pueden recibir y administrar a través de dos canales:
 * [Adobe I/O Events](#events)
 * [IU de Experience Platform](#ui)
 
-### Eventos de E/S {#events}
+### I/O Events {#events}
 
-Las alertas se pueden enviar a un webhook configurado para facilitar la automatización eficaz de la monitorización de la actividad. Para recibir alertas a través de webhook, debe registrar su webhook para recibir alertas de Experience Platform en Adobe Developer Console. Consulte la guía [suscripción a notificaciones de eventos de Adobe I/O](./subscribe.md) para ver los pasos específicos.
+Las alertas pueden enviarse a un webhook configurado para facilitar la automatización eficaz de la supervisión de la actividad. Para recibir alertas a través de webhook, debe registrar su webhook para recibir alertas de Experience Platform en Adobe Developer Console. Consulte la guía [suscripción a notificaciones de eventos de Adobe I/O](./subscribe.md) para ver los pasos específicos.
 
 ### IU de Experience Platform {#ui}
 
 La interfaz de usuario de Experience Platform permite ver las alertas recibidas y administrar las reglas de alerta. El siguiente vídeo ofrece una introducción a estas funciones.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423918?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Para trabajar con alertas en la interfaz de usuario de Experience Platform, debe tener los siguientes permisos de control de acceso habilitados a través de Adobe Admin Console:
 
 | Permiso | Descripción |
 | --- | --- |
 | Ver alertas | Permite ver los mensajes de alerta recibidos. |
-| Ver historial de alertas* | Permite ver un historial de alertas recibidas a través de la ficha [!UICONTROL Alertas]. |
-| Administrar alertas* | Permite habilitar y deshabilitar reglas de alerta a través de la ficha [!UICONTROL Alertas]. |
-| Resolver alertas* | Permite resolver alertas activadas mediante la ficha [!UICONTROL Alertas]. |
+| Ver historial de alertas* | Permite ver un historial de alertas recibidas a través de la ficha [!UICONTROL Alerts]. |
+| Administrar alertas* | Permite habilitar y deshabilitar reglas de alerta a través de la ficha [!UICONTROL Alerts]. |
+| Resolver alertas* | Permite resolver alertas activadas mediante la ficha [!UICONTROL Alerts]. |
 
 {style="table-layout:auto"}
 
-**Para tener acceso a la ficha [!UICONTROL Alertas], también se le debe otorgar el permiso Ver alertas en combinación con uno de los demás permisos.*
+**Para tener acceso a la ficha [!UICONTROL Alerts], también se le debe otorgar el permiso Ver alertas en combinación con uno de los demás permisos.*
 
 >[!NOTE]
 >
@@ -91,8 +91,8 @@ Con el permiso Ver alertas, puede ver las alertas recibidas seleccionando el ico
 >
 > Seleccione una alerta para navegar a un panel relacionado y obtener información más detallada sobre por qué se ha activado la alerta.
 
-Además, la ficha [!UICONTROL Alertas] de la interfaz de usuario permite que los usuarios individuales se suscriban a tipos de alerta específicos y que los administradores habiliten o deshabiliten por completo las reglas de alerta. Consulte la [guía de la interfaz de usuario](./ui.md) para obtener más información sobre la administración de alertas.
+Además, la ficha [!UICONTROL Alerts] de la interfaz de usuario permite a los usuarios individuales suscribirse a tipos de alertas específicos y a los administradores habilitar o deshabilitar por completo las reglas de alerta. Consulte la [guía de la interfaz de usuario](./ui.md) para obtener más información sobre la administración de alertas.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, se le ha presentado a las alertas de Experience Platform y su función en el ecosistema de Experience Platform. Consulte la documentación del proceso relacionada con esta descripción general para obtener información sobre cómo recibir y administrar alertas.

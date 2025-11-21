@@ -65,7 +65,7 @@ A continuación se muestra una lista de servicios descendentes que utilizan conj
 * [Adobe Experience Platform Query Service](../../query-service/home.md): permite usar SQL estándar para consultar datos en [!DNL Experience Platform], unir conjuntos de datos dentro de [!DNL Data Lake] y capturar resultados de consultas como un nuevo conjunto de datos para usar en informes, [!DNL Data Science Workspace] o [!DNL Real-Time Customer Profile].
 * [Servicio Adobe Experience Platform Destinations](../../destinations/home.md): permite [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) al almacenamiento en la nube o a los destinos de marketing por correo electrónico deseados para realizar actividades de informes o ciencia de datos.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, se le ha informado sobre los usos principales de los conjuntos de datos en [!DNL Experience Platform], así como sobre los distintos servicios de [!DNL Experience Platform] que utilizan conjuntos de datos. Para obtener más información sobre las muchas formas en que se usan los conjuntos de datos en [!DNL Experience Platform], consulte la documentación del servicio vinculada a lo largo de esta descripción general.
 

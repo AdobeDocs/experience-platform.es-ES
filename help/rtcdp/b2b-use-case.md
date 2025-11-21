@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data pla
 title: Ejemplo de caso de uso para Real-Time Customer Data Platform B2B edition
 description: Este escenario de muestra proporciona un ejemplo para la configuración de la implementación de Adobe Real-time Customer Data Platform B2B Edition.
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -87,7 +87,7 @@ Por simplicidad y el propósito de este ejemplo, las personas están siendo iden
 
 Al utilizar los destinos Marketo Engage y LinkedIn, Bodea tiene una solución integral de administración de la experiencia del cliente (CXM) para su equipo de marketing. La audiencia creada en Experience Platform se inserta en el destino de Marketo donde aparece como una lista estática. A continuación, esta audiencia se añade automáticamente a una campaña de marketing de Marketo. Simultáneamente, la audiencia también puede enviarse a una campaña de marketing de LinkedIn a través de RT-CDP B2B edition.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, se le han presentado los tipos de objetivos y problemas que se pueden resolver con Real-Time CDP B2B edition.
 

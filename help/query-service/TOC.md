@@ -18,7 +18,7 @@ ht-degree: 26%
 - [Introducción al servicio de consultas](home.md)
 - [Empaquetado del servicio de consultas](packaging.md)
 - [Protecciones del servicio de consultas](guardrails.md)
-- Introducción  {#get-started}
+- Introducción {#get-started}
    - [Requisitos previos](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
    - [Información general](data-distiller/overview.md)

@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 56%
+ht-degree: 57%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 56%
    * Administrador de permisos {#permissions-manager}
       * [Información general](abac/permission-manager/overview.md)
       * [Permisos](abac/permission-manager/permissions.md)
-   * API de control de acceso basada en atributos {#abac-api}
+   * API de control de acceso basado en atributos {#abac-api}
       * [Información general](abac/api/overview.md)
       * [Primeros pasos](abac/api/getting-started.md)
       * [Funciones](abac/api/roles.md)
       * [Políticas](abac/api/policies.md)
       * [Productos](abac/api/products.md)
-* Interfaz de usuario de control de acceso {#ui}
+* IU de control de acceso {#ui}
    * [Información general](ui/overview.md)
    * [Seleccione un perfil de producto](ui/browse.md)
    * [Administración de permisos para un perfil de producto](ui/permissions.md)

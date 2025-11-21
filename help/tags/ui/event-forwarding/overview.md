@@ -5,7 +5,7 @@ feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1181'
 ht-degree: 9%
 
 ---
@@ -30,7 +30,7 @@ Este documento proporciona información general de alto nivel sobre el reenvío 
 >
 >Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Experience Platform, consulte la [descripción general de la recopilación de datos](../../../collection/home.md).
 
-El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=es) ofrece las siguientes ventajas:
+El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
 
 **Rendimiento**:
 
@@ -53,7 +53,7 @@ Mientras que las etiquetas recopilan datos de evento directamente desde el sitio
 
 ### Propiedades {#properties}
 
-El reenvío de eventos mantiene su propio almacén de propiedades separadas de las etiquetas, que puede ver en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos seleccionando **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo.
+El reenvío de eventos mantiene su propio almacén de propiedades separadas de las etiquetas, que puede ver en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos seleccionando **[!UICONTROL Event Forwarding]** en el panel de navegación izquierdo.
 
 >[!TIP]
 >
@@ -65,7 +65,7 @@ Todas las propiedades del reenvío de eventos enumeran **[!UICONTROL Edge]** com
 
 ### Extensiones {#extensions}
 
-El reenvío de eventos tiene su propio catálogo de extensiones compatibles, como la extensión [Core](../../extensions/server/core/overview.md) y la extensión [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Puede ver las extensiones disponibles para las propiedades de reenvío de eventos en la interfaz de usuario seleccionando **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Catálogo]**.
+El reenvío de eventos tiene su propio catálogo de extensiones compatibles, como la extensión [Core](../../extensions/server/core/overview.md) y la extensión [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Puede ver las extensiones disponibles para las propiedades de reenvío de eventos en la interfaz de usuario seleccionando **[!UICONTROL Extensions]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Catalog]**.
 
 Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
@@ -81,7 +81,7 @@ Aunque los elementos de datos se crean y configuran del mismo modo en el reenví
 
 Para hacer referencia a datos de Experience Platform Edge Network, debe crear un elemento de datos que proporcione una ruta válida a esos datos. Al crear el elemento de datos en la interfaz de usuario, seleccione **[!UICONTROL Core]** para la extensión y **[!UICONTROL Path]** para el tipo.
 
-El valor **[!UICONTROL Path]** para el elemento de datos debe seguir el patrón `arc.event.{ELEMENT}` (por ejemplo: `arc.event.xdm.web.webPageDetails.URL`). Esta ruta debe especificarse correctamente para que se envíen los datos.
+El valor **[!UICONTROL Path]** del elemento de datos debe seguir el patrón `arc.event.{ELEMENT}` (por ejemplo: `arc.event.xdm.web.webPageDetails.URL`). Esta ruta debe especificarse correctamente para que se envíen los datos.
 
 Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
@@ -119,6 +119,6 @@ El siguiente vídeo pretende ayudarle a comprender mejor las conexiones de Reenv
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429308)
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento proporciona una introducción de alto nivel al reenvío de eventos. Para obtener más información sobre cómo configurar esta característica para su organización, consulte la [guía de introducción](./getting-started.md).

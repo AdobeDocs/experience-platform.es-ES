@@ -28,7 +28,7 @@ ht-degree: 36%
       - [Guía de implementación de reglas de vinculación de gráficos de identidad](./identity-graph-linking-rules/implementation-guide.md)
       - [Guía de configuraciones](./identity-graph-linking-rules/example-configurations.md)
       - [Solución de problemas de reglas de vinculación de gráficos de identidad](./identity-graph-linking-rules/troubleshooting.md)
-      - [Prioridad del área de nombres](./identity-graph-linking-rules/namespace-priority.md)
+      - [Prioridad del espacio de nombres](./identity-graph-linking-rules/namespace-priority.md)
       - [IU de simulación de gráficos](./identity-graph-linking-rules/graph-simulation.md)
       - [IU de configuración de identidad](./identity-graph-linking-rules/identity-settings-ui.md)
    - [Información general de ECID](./features/ecid.md)
