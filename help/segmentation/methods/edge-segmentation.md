@@ -2,9 +2,9 @@
 title: Guía de segmentación de Edge
 description: Aprenda a utilizar la segmentación de Edge para evaluar audiencias en Experience Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
+source-git-commit: d93bf7a3b7447a71fa3ead96e5c35ec9cd2dd99a
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1191'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,9 @@ La segmentación de Edge es la capacidad de evaluar definiciones de segmentos en
 >
 > Los datos perimetrales se almacenarán en una ubicación del servidor perimetral más cercana a la ubicación donde se recopilaron. Estos datos también se pueden almacenar en una ubicación distinta a la designada como centro (o principal) del centro de datos de Adobe Experience Platform.
 >
-> Además, el motor de segmentación de Edge solo aceptará solicitudes en Edge donde haya **una** identidad principal marcada, lo cual es coherente con las identidades principales no basadas en Edge.
+> El motor de segmentación de Edge solo aceptará solicitudes en el perímetro donde haya **una** identidad principal marcada, lo cual es coherente con las identidades principales no basadas en Edge.
+>
+> Además, como la segmentación de Edge está diseñada para procesar solicitudes a escala, los servidores Edge cargan dinámicamente los metadatos necesarios. Como resultado, las primeras llamadas pueden experimentar latencia de &quot;inicio en frío&quot; independientemente del tipo de zona protegida. Durante esta ventana, las primeras llamadas de evaluación pueden provocar un tiempo de espera. Una breve ráfaga antes del calentamiento o una carga realista ayuda a eliminar los errores de prueba falsos positivos.
 
 ## Tipos de consultas de segmentación de Edge {#query-types}
 
@@ -151,15 +153,15 @@ Encontrará más información sobre el uso de este extremo en la [guía de extre
 
 >[!TAB Portal de públicos]
 
-En Audience Portal, seleccione **[!UICONTROL Crear audiencia]**.
+En Audience Portal, seleccione **[!UICONTROL Create audience]**.
 
 ![El botón Crear audiencia está resaltado en el Portal de audiencias.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
-Aparece una ventana emergente. Seleccione **[!UICONTROL Generar reglas]** para ingresar al Generador de segmentos.
+Aparece una ventana emergente. Seleccione **[!UICONTROL Build rules]** para ingresar al Generador de segmentos.
 
 ![El botón Generar reglas está resaltado en la ventana emergente Crear audiencia.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-En el Generador de segmentos, cree una definición de segmento que coincida con uno de los [tipos de consulta aptos](#eligible-query-types). Si la definición del segmento cumple los requisitos para la segmentación de Edge, podrá seleccionar **[!UICONTROL Edge]** como **[!UICONTROL método de evaluación]**.
+En el Generador de segmentos, cree una definición de segmento que coincida con uno de los [tipos de consulta aptos](#eligible-query-types). Si la definición del segmento cumple los requisitos para la segmentación de Edge, podrá seleccionar **[!UICONTROL Edge]** como **[!UICONTROL Evaluation method]**.
 
 ![Se muestra la definición del segmento. El tipo de evaluación está resaltado y muestra que la definición del segmento se puede evaluar mediante la segmentación de extremos.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -315,11 +317,11 @@ Después de seleccionar una audiencia en Audience Portal, aparece la página de 
 
 ![Se muestra la página de detalles de audiencia de una audiencia evaluada mediante la segmentación de extremos.](../images/methods/edge/audience-details.png)
 
-Para audiencias habilitadas para Edge, se muestra la tarjeta **[!UICONTROL Perfiles a lo largo del tiempo]**, que muestra el total de métricas calificadas y actualizadas de la nueva audiencia.
+Para audiencias habilitadas para Edge, se muestra la tarjeta **[!UICONTROL Profiles over time]**, que muestra el total de métricas calificadas y actualizadas de la nueva audiencia.
 
-La métrica **[!UICONTROL Total de audiencias calificadas]** representa el número total de audiencias calificadas, según las evaluaciones de Edge para esta audiencia.
+La métrica **[!UICONTROL Total qualified]** representa el número total de audiencias calificadas, según las evaluaciones de Edge para esta audiencia.
 
-La métrica **[!UICONTROL Nueva audiencia actualizada]** está representada por un gráfico de líneas que muestra el cambio en el tamaño de la audiencia a través de la segmentación de Edge. Puede ajustar el menú desplegable para mostrar las últimas 24 horas, la semana pasada o los últimos 30 días.
+La métrica **[!UICONTROL New audience updated]** está representada por un gráfico de líneas que muestra el cambio en el tamaño de la audiencia a través de la segmentación de Edge. Puede ajustar el menú desplegable para mostrar las últimas 24 horas, la semana pasada o los últimos 30 días.
 
 ![La tarjeta Perfiles a lo largo del tiempo está resaltada.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
