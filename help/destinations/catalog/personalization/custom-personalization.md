@@ -3,10 +3,10 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión de personalización personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de audiencia de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a audiencias de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
 workflow-type: tm+mt
-source-wordcount: '923'
-ht-degree: 10%
+source-wordcount: '992'
+ht-degree: 9%
 
 ---
 
@@ -40,6 +40,12 @@ Este destino requiere el uso de uno de los siguientes métodos de recopilación 
 * Use [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) si desea recopilar datos de su sitio web.
 * Use [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si desea recopilar datos de su aplicación móvil.
 * Use la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) si no usa [Web SDK](/help/web-sdk/home.md) o [SDK móvil](https://developer.adobe.com/client-sdks/documentation/), o si desea personalizar la experiencia del usuario según los atributos del perfil.
+
+>[!IMPORTANT]
+>
+>**Requisitos de personalización basados en atributos:** Si desea realizar personalizaciones basadas en atributos de perfil (no solo en la pertenencia a audiencias), **debe** utilizar la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) con integración autenticada del lado del servidor, independientemente de si también utiliza Web SDK o Mobile SDK para la recopilación de datos.
+>
+>Web SDK y Mobile SDK solo admiten la personalización basada en la pertenencia a audiencias. La API de Edge Network es **necesaria** para recuperar de forma segura los atributos de perfil para la personalización.
 
 >[!IMPORTANT]
 >
@@ -96,7 +102,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar perfiles y audiencias para destinos personalizados Edge](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
