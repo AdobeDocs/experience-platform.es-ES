@@ -1,14 +1,14 @@
 ---
 title: Conexión de Demandbase
 description: Utilice este destino para activar los públicos de su cuenta para los casos de uso de Account-Based Marketing (ABM). Anuncie para personas y funciones relevantes en sus cuentas de destino a través de B2B Demand Side Platform (DSP) de DemandBase. Las cuentas de destino también se pueden enriquecer con datos de terceros de Demandbase para otros casos de uso posteriores en marketing y ventas.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 17%
+source-wordcount: '785'
+ht-degree: 16%
 
 ---
 
@@ -61,7 +61,7 @@ Para exportar audiencias de cuenta a Demandbase, necesita lo siguiente:
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -89,7 +89,7 @@ Ahora está listo para activar sus audiencias en Demandbase.
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md) para obtener instrucciones sobre cómo activar audiencias de cuenta en este destino.
@@ -110,5 +110,7 @@ Estas asignaciones son necesarias para que el destino funcione correctamente y d
 
 ## Notas adicionales y llamadas importantes {#additional-notes}
 
-* Si una audiencia de cuenta con el mismo nombre se activó anteriormente en Demandbase, no puede volver a activarla a través de un flujo de datos diferente al destino de Demandbase.
-* Si ha exportado audiencias a Demandbase y las exportaciones se realizan correctamente en Experience Platform, pero no todos los datos llegan a Demandbase, es posible que haya encontrado una restricción de API en Demandbase. Póngase en contacto con ellos para obtener una aclaración.
+* **Nomenclatura de audiencias**: Si una audiencia de cuenta con el mismo nombre se activó anteriormente en Demandbase, no puede volver a activarla a través de un flujo de datos diferente al destino de Demandbase.
+* **Protecciones de API de Demandbase**: Si ha exportado audiencias a Demandbase y las exportaciones se realizaron correctamente en Experience Platform, pero no todos los datos llegan a Demandbase, es posible que haya encontrado una limitación de API en Demandbase. Póngase en contacto con ellos para obtener una aclaración.
+* **Eliminación de lista**: las listas de cuentas son únicas, por lo que no puede volver a crear una lista nueva con un nombre que ya esté en uso. Al eliminar cuentas de una lista, estas ya no estarán disponibles, pero no se eliminarán.
+* **Hora de activación**: la carga de datos en Demandbase está sujeta a un procesamiento nocturno.
