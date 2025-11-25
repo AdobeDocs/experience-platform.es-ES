@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 6583c85498a0106389a2e8b14b499cb1f6bafe75
 workflow-type: tm+mt
 source-wordcount: '1712'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Esta página proporciona límites predeterminados de uso y velocidad con respecto al comportamiento de activación. Al revisar las siguientes protecciones, se supone que se ha [conectado correctamente a los destinos](/help/destinations/ui/connect-destination.md).
 
@@ -98,7 +98,7 @@ Las siguientes protecciones se aplican a la activación a través de [destinos d
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
 | Número máximo de [destinos de personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Protección de rendimiento | Puede configurar flujos de datos a 10 destinos de personalización personalizados por zona protegida. |
-| Número máximo de atributos asignados a un destino de personalización por zona protegida | 30 | Protección impuesta por el sistema | Se puede asignar un máximo de 30 atributos en un flujo de datos a un destino de personalización por zona protegida. |
+| Número máximo de atributos asignados a un destino de personalización por zona protegida | 30 | Protección de rendimiento | Se puede asignar un máximo de 30 atributos en un flujo de datos a un destino de personalización por zona protegida. |
 | Número máximo de audiencias asignadas a un solo destino de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Protección de rendimiento | Puede activar un máximo de 50 audiencias en un flujo de activación para un único destino de Adobe Target. |
 
 {style="table-layout:auto"}
@@ -196,7 +196,7 @@ Detalles sobre los umbrales de restricción o las limitaciones para determinados
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
