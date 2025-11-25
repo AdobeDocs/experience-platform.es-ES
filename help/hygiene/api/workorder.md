@@ -3,9 +3,9 @@ title: Registrar órdenes de trabajo eliminadas
 description: Aprenda a utilizar el extremo /workorder en la API de higiene de datos para administrar las órdenes de trabajo de eliminación de registros en Adobe Experience Platform. Esta guía cubre las cuotas, los plazos de procesamiento y el uso de la API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
+source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2440'
 ht-degree: 2%
 
 ---
@@ -300,6 +300,110 @@ En la tabla siguiente se describen las propiedades de la respuesta.
 >[!NOTE]
 >
 >La propiedad action para registrar las órdenes de trabajo de eliminación es actualmente `identity-delete` en las respuestas de API. Si la API cambia para utilizar un valor diferente (como `delete_identity`), esta documentación se actualizará en consecuencia.
+
+## Conversión de listas de ID a JSON para solicitudes de eliminación de registros
+
+Para crear una orden de trabajo de eliminación de registros a partir de archivos CSV, TSV o TXT que contengan identificadores, puede utilizar scripts de conversión para producir las cargas JSON necesarias para el extremo `/workorder`. Este método es especialmente útil cuando se trabaja con archivos de datos existentes. Para obtener scripts listos para usar e instrucciones completas, visite el [repositorio de GitHub csv para la higiene de los datos](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+### Generar cargas JSON
+
+Los siguientes ejemplos de scripts de bash muestran cómo ejecutar los scripts de conversión en Python o Ruby:
+
+>[!BEGINTABS]
+
+>[!TAB Ejemplo para ejecutar el script de Python]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Ejemplo para ejecutar el script Ruby]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+En la tabla siguiente se describen los parámetros de los scripts de bash.
+
+| Parámetro | Descripción |
+| ---           | ---     |
+| `verbose` | Habilite la salida detallada. |
+| `column` | El índice (basado en 1) o nombre del encabezado de la columna que contiene los valores de identidad que se van a eliminar. Si no se especifica nada, el valor predeterminado será la primera columna. |
+| `namespace` | Un objeto con una propiedad `code` que especifica el área de nombres de identidad (por ejemplo, &quot;correo electrónico&quot;). |
+| `dataset-id` | El identificador único del conjunto de datos asociado con la orden de trabajo. Si la solicitud se aplica a todos los conjuntos de datos, este campo se establecerá en `ALL`. |
+| `description` | Descripción de la orden de trabajo de eliminación de registros. |
+| `output-dir` | El directorio para escribir la carga útil JSON de salida. |
+
+{style="table-layout:auto"}
+
+El ejemplo siguiente muestra una carga útil JSON correcta convertida desde un archivo CSV, TSV o TXT. Contiene registros asociados al área de nombres especificada y se utiliza para eliminar registros identificados por direcciones de correo electrónico.
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+En la tabla siguiente se describen las propiedades de la carga útil JSON.
+
+| Propiedad | Descripción |
+| ---          | ---     |
+| `action` | Acción solicitada para la orden de trabajo de eliminación de registros. El script de conversión establece automáticamente `delete_identity`. |
+| `datasetId` | El identificador único del conjunto de datos. |
+| `displayName` | Una etiqueta legible en lenguaje natural para esta orden de trabajo de eliminación de registros. |
+| `description` | Descripción de la orden de trabajo de eliminación de registros. |
+| `identities` | Una matriz de objetos, cada uno de los cuales contiene:<br><ul><li> `namespace`: un objeto con una propiedad `code` que especifica el área de nombres de identidad (por ejemplo, &quot;correo electrónico&quot;).</li><li> `id`: el valor de identidad que se eliminará para este área de nombres.</li></ul> |
+
+{style="table-layout:auto"}
+
+### Enviar los datos JSON generados al extremo `/workorder`
+
+Para enviar una solicitud, siga las instrucciones de la sección [crear una orden de trabajo de eliminación de registros](#create). Asegúrese de utilizar la carga útil JSON convertida como el cuerpo de la solicitud (`-d`) al enviar su solicitud POST de `curl` al extremo de la API `/workorder`.
 
 ## Recuperar detalles de una orden de trabajo de eliminación de registros específica {#lookup}
 
