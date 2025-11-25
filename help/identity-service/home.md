@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introducción al servicio de identidad
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
+source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
 workflow-type: tm+mt
 source-wordcount: '1574'
 ht-degree: 2%
@@ -105,14 +105,14 @@ Un gráfico de identidad es un mapa de relaciones entre diferentes áreas de nom
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender las identidades y los gráficos de identidad.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422777?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Explicación de la función que desempeña Identity Service en la infraestructura de Experience Platform
 
 El servicio de identidad desempeña una función vital en Experience Platform. Algunas de estas integraciones clave son las siguientes:
 
 * [Esquemas](../xdm/home.md): dentro de un esquema determinado, los campos de esquema marcados como identidad permiten crear gráficos de identidad.
-* [Conjuntos de datos](../catalog/datasets/overview.md): cuando un conjunto de datos está habilitado para su ingesta en el Perfil del cliente en tiempo real, los gráficos de identidad se generan a partir del conjunto de datos, dado que este tiene al menos dos campos marcados como identidad.
+* [Conjuntos de datos](../catalog/datasets/overview.md): cuando un conjunto de datos está habilitado para su ingesta en el Perfil del cliente en tiempo real, los gráficos de identidad se generan a partir del conjunto de datos, dado que el conjunto de datos tiene al menos dos campos marcados como identidad.
 * [Web SDK](../web-sdk/home.md): Web SDK envía eventos de experiencia a Adobe Experience Platform y el servicio de identidad genera un gráfico cuando existen dos o más identidades en el evento.
 * [Perfil del cliente en tiempo real](../profile/home.md): antes de combinar atributos y eventos para un perfil determinado, el perfil del cliente en tiempo real podría hacer referencia al gráfico de identidad. Para obtener más información, lea la guía de [comprensión de la relación entre el servicio de identidad y el perfil del cliente en tiempo real](./identity-and-profile.md).
 * [Destinos](../destinations/home.md): los destinos pueden enviar información de perfil a otros sistemas según un área de nombres de identidad, como correo electrónico con hash.
