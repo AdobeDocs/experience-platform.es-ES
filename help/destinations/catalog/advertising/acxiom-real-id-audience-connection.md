@@ -1,22 +1,22 @@
 ---
-title: Acxiom Real ID&trade; Audience Connection
-description: Use el destino  [!DNL Acxiom Real ID&trade; Audience Connection] para mejorar audiencias con la tecnología [!DNL Acxiom's Real ID] y activar audiencias en varias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] y más.
+title: Conexión de audiencia de Acxiom Real ID
+description: Use el destino  [!DNL Acxiom Real ID Audience Connection] para mejorar audiencias con la tecnología [!DNL Acxiom's Real ID] y activar audiencias en varias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] y más.
 badge: label="Beta" type="Informative"
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: 1013487e2c38aeb1e2b0388f0c317afdcf02ba62
+source-git-commit: fda542e62c448788099d63951277278a146fdfc8
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 3%
+source-wordcount: '920'
+ht-degree: 6%
 
 ---
 
-# [!DNL Acxiom Real ID™ Audience Connection] destino
+# Destino [!DNL Acxiom Real ID Audience Connection]
 
 >[!NOTE]
 >
->El destino [!DNL Acxiom Real ID™ Audience Connection] se encuentra en la versión beta. El equipo [!DNL Acxiom] crea y mantiene este conector de destino y esta página de documentación. Para cualquier consulta o solicitud de actualización, comuníquese directamente con Acxiom [aquí](mailto:acxiom-adobe-help@acxiom.com).
+>El destino [!DNL Acxiom Real ID Audience Connection] se encuentra en la versión beta. El equipo [!DNL Acxiom] crea y mantiene este conector de destino y esta página de documentación. Para cualquier consulta o solicitud de actualización, comuníquese directamente con Acxiom [aquí](mailto:acxiom-adobe-help@acxiom.com).
 
-Use el destino [!DNL Acxiom Real ID Audience Connection] para mejorar audiencias con la tecnología [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) y activar audiencias en varias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] y más.
+Use el destino [!DNL Acxiom Real ID Audience Connection] para mejorar las audiencias con la tecnología [Real ID](https://www.acxiom.com/real-id/real-id/) de [!DNL Acxiom's] y activar audiencias en varias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] y más.
 
 Este tutorial proporciona instrucciones para crear un conector de destino [!DNL Acxiom Real ID Audience Connection] mediante la interfaz de usuario [!DNL Adobe Experience Platform]. Este conector se utiliza para crear y distribuir audiencias a destinos seleccionados.
 
@@ -35,7 +35,7 @@ Por ejemplo, el departamento Operaciones de marketing de una marca de servicios 
 
 * **Confirmar condiciones de uso:** Para poder configurar un nuevo destino de [!DNL Acxiom Real ID Audience Connection], debe leer y firmar el Contrato de condiciones de uso de [!DNL Acxiom's]. Recibirá el vínculo al acuerdo una vez que se haya completado el pedido de ventas ejecutado. Hasta que no firme el acuerdo, no verá la tarjeta de destino [!DNL Acxiom Real ID Audience Connection] en el catálogo de destino de Experience Platform. Después de aceptar y firmar el acuerdo, [!DNL Adobe] completará el proceso de incorporación y verá la tarjeta de destino [!DNL Acxiom Real ID Audience Connection].
 * **Conozca su ID de organización de Adobe:** Se necesita su ID de organización [!DNL Adobe] para completar las condiciones del contrato de usuario. Consulte el tema [!DNL Adobe's] *Organizaciones en Experience Cloud* para obtener detalles sobre cómo [ver su ID de organización](https://experienceleague.adobe.com/es/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Obtener licencia para [!DNL Acxiom's Real ID] producto:** Una vez obtenida la licencia, haga que Real ID de Acxiom esté disponible en Real-Time CDP. Consulte [Mejora de datos de Acxiom](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obtener más información.
+* **Obtener licencia para [!DNL Acxiom's Real ID] producto:** Una vez obtenida la licencia, haga que Real ID de Acxiom esté disponible en Real-Time CDP. Consulte [Mejora de datos de Acxiom](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obtener más información.
 
 
 ## Identidades admitidas {#supported-identities}
@@ -54,7 +54,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------------|----------------|----------------|
 | Servicio de segmentación | ✓ | Audiencias generadas a través del [servicio de segmentación](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home) de Experience Platform. |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/audience-portal#import-audience) en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience) en Experience Platform desde archivos CSV. |
 
 
 ## Destinos admitidos {#supported-destinations}
@@ -90,12 +90,12 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso]** de [Ver gráfico de identidad](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 
 
-Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 >[!NOTE]
 >
@@ -114,25 +114,25 @@ Para que el destino [!DNL Acxiom Real ID Audience Connection] reciba correctamen
 
 
 
-En la columna **[!UICONTROL Campo de Source]**, escriba el nombre del atributo de origen que desea asignar al campo de destino correspondiente o seleccione el icono de flecha para abrir la pantalla **[!UICONTROL Seleccionar campo de origen]**. A continuación, seleccione **[!UICONTROL Siguiente]**.
+En la columna **[!UICONTROL Source Field]**, escriba el nombre del atributo de origen que desea asignar al campo de destino correspondiente o seleccione el icono de flecha para abrir la pantalla **[!UICONTROL  Select source field]**. A continuación, seleccione **[!UICONTROL Next]**.
 ![Pantalla de asignación](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
 Si no usa el esquema estándar [!DNL Adobe's], consulte la documentación de la [guía de la interfaz de usuario del servicio de consultas](../../../query-service/ui/overview.md) para obtener información sobre cómo usar el servicio de consultas para rellenar el esquema estándar [!DNL Adobe] con los nombres de los campos.
 
 
-### Revisión {#review}
+### Revisar {#review}
 
 Una vez que haya completado todos los pasos anteriores, tiene la oportunidad de revisar el estado de la conexión de destino y los detalles de audiencia antes de activarla (distribuirla). Las audiencias que seleccionó se mostrarán en la parte inferior de una lista. Cada audiencia será una llamada independiente a la API [!DNL Acxiom Real ID Audience Connection].
 
-Si está satisfecho con los resultados, seleccione **[!UICONTROL Finalizar]** para activar el destino.
+Si está satisfecho con los resultados, seleccione **[!UICONTROL Finish]** para activar el destino.
 
 ![Revise su audiencia](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png)
 
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
-Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/es/docs/experience-platform/data-governance/home).
+Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Resolución de problemas {#troubleshooting}
 
