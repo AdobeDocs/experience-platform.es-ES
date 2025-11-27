@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Solicitud**
 
-Esta solicitud actualiza el esquema Miembros socio para incluir los campos del grupo de campos [[!UICONTROL Demographic Details] ](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Esta solicitud actualiza el esquema Miembros socio para incluir los campos del grupo de campos [[!UICONTROL Demographic Details] &#x200B;](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
 Al agregar el grupo de campos `profile-person-details`, el esquema Miembros fieles ahora captura información demográfica para los miembros del programa de fidelidad, como su nombre, apellidos y cumpleaños.
 
