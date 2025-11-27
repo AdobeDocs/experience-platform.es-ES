@@ -2,9 +2,9 @@
 description: En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para su destino.
 title: Autorización de OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2182'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ En esta página se describen los distintos flujos de autorización de OAuth 2 ad
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -82,7 +82,7 @@ La salida de todos los casos incluye un token de acceso, que Experience Platform
 El sistema que Adobe ha diseñado para la autorización de OAuth 2:
 
 * Admite las tres concesiones de OAuth 2, teniendo en cuenta cualquier variación en ellas, como campos de datos adicionales, llamadas de API no estándar y más.
-* Admite tokens de acceso con distintos valores de duración, ya sea 90 días, 30 minutos o cualquier otro valor de duración especificado.
+* Admite tokens de acceso con distintos valores de duración. Adobe recomienda establecer el valor de duración del token en un mínimo de 24 horas.
 * Admite flujos de autorización de OAuth 2 con o sin tokens de actualización.
 
 ## OAuth 2 con código de autorización {#authorization-code}
