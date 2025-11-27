@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Restricciones de tipo de campo XDM
 description: Una referencia para las restricciones de tipo de campo en el Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8ddedb5ff8c12b05cdf39fa8dc2b59258389e522
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 2%
+source-wordcount: '635'
+ht-degree: 1%
 
 ---
 
@@ -49,7 +49,7 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Número]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -60,35 +60,35 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "tipo": "entero",
   "maximum": 9007199254740991,
   "mínimo": -9007199254740991
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Entero]</td>
+      <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "tipo": "entero",
   "maximum": 2147483648,
   "mínimo": -2147483648
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Corto]</td>
+      <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "tipo": "entero",
-  "maximum": 32768,
+  "maximum": 32767,
   "mínimo": -32768
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,22 +96,22 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "tipo": "entero",
   "máximo": 128,
   mínimo: -128
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Fecha]*</td>
+      <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "string",
   "format": "date"
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,15 +119,15 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "string",
   "format": "date-time"
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Booleano]</td>
+      <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "boolean"}</pre>
@@ -157,16 +157,16 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 
 | Tipo de XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL Cadena] | Tipo: `BYTE_ARRAY`<br>Anotación: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Número] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
-| [!UICONTROL Largo] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Entero] | Tipo: `INT32`<br>Anotación: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Corto] | Tipo: `INT32`<br>Anotación: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL String] | Tipo: `BYTE_ARRAY`<br>Anotación: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Number] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Long] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Integer] | Tipo: `INT32`<br>Anotación: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | Tipo: `INT32`<br>Anotación: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Tipo: `INT32`<br>Anotación: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Fecha] | Tipo: `INT32`<br>Anotación: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL Date] | Tipo: `INT32`<br>Anotación: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Anotación: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL Booleano] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Mapa] | `MAP`: el grupo <br><br> anotado (`<key-type>` debe ser `STRING`) | `MapType`<br><br>(`keyType` debe ser `StringType`) | `java.util.Map` |
+| [!UICONTROL Boolean] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Map] | `MAP`: el grupo <br><br> anotado (`<key-type>` debe ser `STRING`) | `MapType`<br><br>(`keyType` debe ser `StringType`) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -174,16 +174,16 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 
 | Tipo de XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL Cadena] | `String` | `System.String` | `String` |
-| [!UICONTROL Número] | `Double` | `System.Double` | `Number` |
-| [!UICONTROL Largo] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Entero] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Corto] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL String] | `String` | `System.String` | `String` |
+| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL Fecha] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL Booleano] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL Mapa] | `Map` | (N/D) | `object` |
+| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Map] | `Map` | (N/D) | `object` |
 
 {style="table-layout:auto"}
 
@@ -191,16 +191,16 @@ Las secciones siguientes describen cómo cada tipo XDM se asigna a otros formato
 
 | Tipo de XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL Cadena] | `string` | `String` | `string` |
-| [!UICONTROL Número] | `double` | `Double` | `double` |
-| [!UICONTROL Largo] | `long` | `Integer` | `int64` |
-| [!UICONTROL Entero] | `int` | `Integer` | `int32` |
-| [!UICONTROL Corto] | `int` | `Integer` | `int32` |
+| [!UICONTROL String] | `string` | `String` | `string` |
+| [!UICONTROL Number] | `double` | `Double` | `double` |
+| [!UICONTROL Long] | `long` | `Integer` | `int64` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
+| [!UICONTROL Short] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Fecha] | `date` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |
+| [!UICONTROL Date] | `date` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(milisegundos de Unix) | `int64`<br>(milisegundos de Unix) |
-| [!UICONTROL Booleano] | `bool` | `Integer`<br>(binario 0/1) | `bool` |
-| [!UICONTROL Mapa] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br>(binario 0/1) | `bool` |
+| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}
 

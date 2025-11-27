@@ -5,10 +5,10 @@ title: Creación de un esquema con la API de Registro de esquemas
 type: Tutorial
 description: Este tutorial utiliza la API de Registro de esquemas para guiarle por los pasos para componer un esquema con una clase estándar.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cc1c2edc8980c562e323357376c2594fd8ea482a
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 3%
+source-wordcount: '2853'
+ht-degree: 2%
 
 ---
 
@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Solicitud**
 
-Esta solicitud actualiza el esquema Miembros socio para incluir los campos del [[!UICONTROL grupo de campos Detalles demográficos]](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Esta solicitud actualiza el esquema Miembros socio para incluir los campos del grupo de campos [[!UICONTROL Demographic Details] ](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
 Al agregar el grupo de campos `profile-person-details`, el esquema Miembros fieles ahora captura información demográfica para los miembros del programa de fidelidad, como su nombre, apellidos y cumpleaños.
 
@@ -304,7 +304,7 @@ Los esquemas de miembros socio requieren dos grupos de campos estándar más, qu
 
 >[!TIP]
 >
->Vale la pena revisar todos los grupos de campos disponibles para familiarizarse con los campos incluidos en cada uno. Puede enumerar (GET) todos los grupos de campos disponibles para su uso con una clase particular realizando una solicitud con cada uno de los contenedores &quot;global&quot; e &quot;tenant&quot;, devolviendo solo aquellos grupos de campos en los que el campo &quot;meta:intendedToExtend&quot; coincide con la clase que está utilizando. En este caso, es la clase [!DNL XDM Individual Profile], por lo que se utiliza [!DNL XDM Individual Profile] `$id`:
+>Vale la pena revisar todos los grupos de campos disponibles para familiarizarse con los campos incluidos en cada uno. Puede enumerar (GET) todos los grupos de campos disponibles para su uso con una clase particular realizando una solicitud con cada uno de los contenedores &quot;global&quot; e &quot;tenant&quot;, devolviendo solo aquellos grupos de campos donde el campo &quot;meta:intendedToExtend&quot; coincide con la clase que está utilizando. En este caso, es la clase [!DNL XDM Individual Profile], por lo que se utiliza [!DNL XDM Individual Profile] `$id`:
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -325,8 +325,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 Esta solicitud actualiza el esquema de miembros socio para incluir los campos dentro de los siguientes grupos de campos estándar:
 
-* [[!UICONTROL Datos personales de contacto]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): Agrega información de contacto, como dirección particular, dirección de correo electrónico y teléfono particular.
-* [[!UICONTROL Detalles de fidelización]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): Agrega información de contacto, como dirección postal, dirección de correo electrónico y teléfono particular.
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): Agrega información de contacto, como dirección de casa, dirección de correo electrónico y teléfono particular.
+* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): Agrega información de contacto, como dirección de casa, dirección de correo electrónico y teléfono particular.
 
 ```SHELL
 curl -X PATCH \
@@ -420,7 +420,7 @@ El esquema de miembros socio ahora debe contener cuatro valores `$ref` en la mat
 
 ### Definir un nuevo grupo de campos
 
-Aunque el grupo de campos estándar [!UICONTROL Detalles de fidelidad] proporciona campos útiles relacionados con la fidelidad al esquema, hay campos de fidelidad adicionales que no se incluyen en ningún grupo de campos estándar.
+Aunque el grupo de campos estándar [!UICONTROL Loyalty Details] proporciona campos útiles relacionados con la lealtad al esquema, hay campos de lealtad adicionales que no se incluyen en ningún grupo de campos estándar.
 
 Para agregar estos campos, puede definir sus propios grupos de campos personalizados dentro del contenedor `tenant`. Estos grupos de campos son únicos para su organización y no son visibles ni editables por nadie fuera de su organización.
 
@@ -1368,7 +1368,53 @@ La respuesta es una lista filtrada de esquemas, que contiene solo los que cumple
 }
 ```
 
-## Pasos siguientes
+## Utilice la interfaz de usuario para validar el esquema {#validate-in-ui}
+
+Utilice la interfaz de usuario de Experience Platform para validar que el esquema que ha creado mediante la API [!DNL Schema Registry] tiene la estructura, las propiedades y la configuración de identidad correctas. Siga estos pasos:
+
+### Busque el esquema
+
+Para empezar, vaya a **[!UICONTROL Schemas]** > **[!UICONTROL Browse]**. Utilice el campo de entrada de texto para buscar el nombre del esquema (por ejemplo, `Campaign Member`) y seleccione el nombre del esquema en la tabla.
+
+![Vista de exploración de esquemas con el campo de entrada de texto resaltado para buscar y seleccionar el esquema.](../images/tutorials/create-schema/schemas-browse.png)
+
+### Confirmar la estructura del esquema
+
+El lienzo del esquema muestra la estructura completa del esquema. Compruebe que:
+
+* Todos los grupos de campos estándar que ha agregado aparecen en el lienzo.
+* El grupo de campos personalizados aparece en la estructura y se expande para mostrar sus campos.
+
+![El lienzo de esquema que muestra la estructura de esquema completa con los grupos de campos estándar y personalizados expandidos.](../images/tutorials/create-schema/schema-canvas.png)
+
+### Revisar propiedades del esquema
+
+A continuación, seleccione el nodo raíz del esquema para abrir el panel **[!UICONTROL Schema properties]** y confirmar los metadatos de la clave:
+
+* Esquema `$id`
+* Nombre para mostrar
+* Estado de habilitación del perfil
+
+El `$id` debe coincidir con el valor devuelto en su respuesta de API.
+
+>[!NOTE]
+>
+>La clase asignada (**[!UICONTROL XDM Business Campaign Members]** en este ejemplo) se muestra en el panel izquierdo **[!UICONTROL Composition]**.
+
+![La vista Editor de esquemas con la raíz de esquema seleccionada y el panel Propiedades del esquema abierto para revisar los metadatos de clave.](../images/tutorials/create-schema/review-schema-properties.png)
+
+### Validar campos de identidad
+
+Cada campo de identidad agregado al esquema se enumera en la sección **[!UICONTROL Identities]** del panel **[!UICONTROL Composition]**. Seleccione un campo de identidad para mostrar sus propiedades en el panel derecho. Para cada campo de identidad, confirme lo siguiente:
+
+* El área de nombres de identidad es correcta.
+* El campo se marca como la identidad principal cuando corresponde.
+
+![Sección Identidades del panel de composición con un campo de identidad seleccionado y sus propiedades de identidad mostradas en el panel derecho.](../images/tutorials/create-schema/identitiy-confirmation.png)
+
+Si la estructura, las propiedades y la configuración de identidad coinciden con la configuración de la API, ha creado y configurado correctamente el esquema mediante la API [!DNL Schema Registry].
+
+## Próximos pasos
 
 Al seguir este tutorial, ha compuesto correctamente un esquema utilizando tanto grupos de campos estándar como un grupo de campos definido. Ahora puede utilizar este esquema para crear un conjunto de datos e introducir datos de registro en Adobe Experience Platform.
 
@@ -1384,7 +1430,7 @@ La siguiente información complementa el tutorial de API.
 
 A lo largo de este tutorial, se crea un esquema para describir los miembros de un programa de fidelidad comercial.
 
-El esquema implementa la clase [!DNL XDM Individual Profile] y combina varios grupos de campos. Captura información sobre los miembros socio que usan los grupos de campo estándar [!DNL Demographic Details], [!UICONTROL Datos personales de contacto] y [!UICONTROL Detalles de fidelidad], así como a través de un grupo de campo de nivel de fidelidad personalizado que se define durante el tutorial.
+El esquema implementa la clase [!DNL XDM Individual Profile] y combina varios grupos de campos. Captura información sobre los miembros socio que utilizan los grupos de campo estándar [!DNL Demographic Details], [!UICONTROL Personal Contact Details] y [!UICONTROL Loyalty Details], así como a través de un grupo de campo de nivel de fidelidad personalizado que se define durante el tutorial.
 
 A continuación, se muestra el esquema de miembros socio completado en formato JSON:
 
