@@ -89,13 +89,13 @@ Una vez que haya [creado una nueva función](/help/access-control/abac/ui/permis
 
 ## Configuración de zonas protegidas y superficies de canal en Journey Optimizer {#configure-channel-surfaces}
 
-Si su organización tiene licencia para [Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/ajo-home) y desea utilizar los libros de reproducción diseñados para Journey Optimizer, configure las superficies de canal en su zona protegida. Las superficies de canal definen todos los parámetros técnicos necesarios para sus mensajes, como el tipo de correo electrónico, el nombre y el correo electrónico del remitente, las aplicaciones móviles, la configuración de SMS y mucho más. [Obtenga información sobre cómo configurar superficies de canal en Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
+Si su organización tiene licencia para [Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/ajo-home) y desea utilizar los libros de reproducción diseñados para Journey Optimizer, configure las superficies de canal en su zona protegida. Las superficies de canal definen todos los parámetros técnicos necesarios para sus mensajes, como el tipo de correo electrónico, el nombre y el correo electrónico del remitente, las aplicaciones móviles, la configuración de SMS y mucho más. [Obtenga información sobre cómo configurar superficies de canal en Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Para crear instancias de libros de reproducción en Journey Optimizer, debe configurar las superficies de canal para las notificaciones por correo electrónico, push y SMS.
 
 ### Superficie del canal de correo electrónico
 
-Vaya a `Channels` en la interfaz de Journey Optimizer. Configure subdominios y grupos de IP independientes para los correos electrónicos de marketing y la mensajería transaccional, si no están configurados ya. Estas son las prácticas recomendadas para garantizar que los mensajes transaccionales, como los correos electrónicos de confirmación de pedidos, lleguen a sus clientes. Escriba nombres, direcciones de correo electrónico y configuraciones adicionales. Seleccione **Enviar** en la parte superior derecha de la página para crear la superficie del canal de marketing. Lea la documentación sobre [cómo configurar las superficies de canal de correo electrónico](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Vaya a `Channels` en la interfaz de Journey Optimizer. Configure subdominios y grupos de IP independientes para los correos electrónicos de marketing y la mensajería transaccional, si no están configurados ya. Estas son las prácticas recomendadas para garantizar que los mensajes transaccionales, como los correos electrónicos de confirmación de pedidos, lleguen a sus clientes. Escriba nombres, direcciones de correo electrónico y configuraciones adicionales. Seleccione **Enviar** en la parte superior derecha de la página para crear la superficie del canal de marketing. Lea la documentación sobre [cómo configurar las superficies de canal de correo electrónico](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=es).
 
 ### Superficie del canal SMS
 
@@ -111,7 +111,7 @@ Confirme que las configuraciones de canal se hayan realizado desde la interfaz d
 
 A continuación, seleccione el canal, las plataformas y las aplicaciones que ha visto en las configuraciones de canal. Seleccione **Enviar** para crear la superficie del canal push.
 
-Lea la documentación sobre [cómo configurar las superficies de los canales push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
+Lea la documentación sobre [cómo configurar las superficies de los canales push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=es).
 
 ## Próximos pasos {#next-steps}
 
