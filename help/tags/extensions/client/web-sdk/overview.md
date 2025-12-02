@@ -17,4 +17,4 @@ Consulte [Introducción](getting-started.md) para obtener información sobre có
 
 Vea el siguiente vídeo para ver Adobe Experience Platform [!DNL Web SDK] y [!DNL Edge Network] en acción, usando una sola llamada para enviar datos a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] y [!DNL Target].
 
->[!VIDEO](https://video.tv.adobe.com/v/34148)
+>[!VIDEO](https://video.tv.adobe.com/v/3413664?captions=spa)
