@@ -16,7 +16,7 @@ El método `_satellite.getVisitorId()` devuelve una instancia del [servicio Adob
 >
 >Este método solo se aplica a las propiedades que incluyen la extensión de etiqueta de servicio de Experience Cloud ID independiente. No se aplica a las funciones del servicio de ID implícitas disponibles en la extensión de etiquetas de Web SDK. Consulte el comando [`getIdentity`](/help/collection/js/commands/getidentity.md) si necesita obtener una identidad de visitante mediante las funciones del servicio de ID implícitas de Web SDK.
 
-Si llama a este método con la extensión del servicio de ID instalada y publicada, se devuelve un objeto similar al objeto obtenido después de llamar al método [`Visitor.getInstance()`](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/getinstance). Si llama a este método cuando no se ha instalado o publicado la extensión del servicio de ID, el método devuelve `null`.
+Si llama a este método con la extensión del servicio de ID instalada y publicada, se devuelve un objeto similar al objeto obtenido después de llamar al método [`Visitor.getInstance()`](https://experienceleague.adobe.com/es/docs/id-service/using/id-service-api/methods/getinstance). Si llama a este método cuando no se ha instalado o publicado la extensión del servicio de ID, el método devuelve `null`.
 
 ```ts
 _satellite.getVisitorId(): Visitor | null
@@ -24,7 +24,7 @@ _satellite.getVisitorId(): Visitor | null
 
 ## Campos y métodos disponibles
 
-Consulte el servicio de Experience Cloud ID [Métodos](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/get-set) en la documentación del servicio de ID de visitante de Experience Cloud para ver qué campos y métodos están disponibles.
+Consulte el servicio de Experience Cloud ID [Métodos](https://experienceleague.adobe.com/es/docs/id-service/using/id-service-api/methods/get-set) en la documentación del servicio de ID de visitante de Experience Cloud para ver qué campos y métodos están disponibles.
 
 ```js
 // Retrieve a visitor's ECID

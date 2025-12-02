@@ -32,7 +32,7 @@ alloy("sendEvent", {
 
 ## Usar el objeto `data` con Adobe Analytics {#analytics}
 
-Puede utilizar el objeto `data` con Adobe Analytics para enviar datos a un grupo de informes sin un esquema XDM. Las variables se configuran para utilizar la misma sintaxis que las variables de AppMeasurement, lo que simplifica el proceso de actualización a Web SDK. Consulte [Asignación de variables de objetos de datos a Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) en la guía de implementación de Adobe Analytics para obtener más información.
+Puede utilizar el objeto `data` con Adobe Analytics para enviar datos a un grupo de informes sin un esquema XDM. Las variables se configuran para utilizar la misma sintaxis que las variables de AppMeasurement, lo que simplifica el proceso de actualización a Web SDK. Consulte [Asignación de variables de objetos de datos a Adobe Analytics](https://experienceleague.adobe.com/es/docs/analytics/implementation/aep-edge/data-var-mapping) en la guía de implementación de Adobe Analytics para obtener más información.
 
 ## Usar el objeto `data` mediante la extensión de etiqueta Web SDK
 

@@ -18,7 +18,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=es) para obtener una referencia consolidada de los cambios terminológicos.
 
 La extensión de Mailchimp [reenvío de eventos](../../../ui/event-forwarding/overview.md) envía eventos a la API de marketing de Mailchimp que puede almacenar en déclencheur correos electrónicos para campañas, recorridos o transacciones de marketing de Mailchimp.
 

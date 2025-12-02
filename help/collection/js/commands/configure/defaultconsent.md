@@ -61,7 +61,7 @@ Consulte la tabla siguiente para comprender cuándo se produce la recopilación 
 | `out` | `out` | No | Sí |
 | `out` | Sin configurar | No | No |
 
-Consulte [Cookies de Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) para obtener una lista de las cookies que establece la biblioteca.
+Consulte [Cookies de Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/es/docs/core-services/interface/data-collection/cookies/web-sdk) para obtener una lista de las cookies que establece la biblioteca.
 
 >[!NOTE]
 >
