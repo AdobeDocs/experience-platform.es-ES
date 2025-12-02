@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Estructura del grupo de campos {#structure}
 
-El grupo de campos [!UICONTROL Consents and Preferences] proporciona un único campo de tipo de objeto, `consents`, para capturar información de consentimiento y preferencia. Este campo amplía el tipo de datos [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] ](../../data-types/consents.md), eliminando el campo `adID` y agregando un campo de asignación `idSpecific`.
+El grupo de campos [!UICONTROL Consents and Preferences] proporciona un único campo de tipo de objeto, `consents`, para capturar información de consentimiento y preferencia. Este campo amplía el tipo de datos [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] &#x200B;](../../data-types/consents.md), eliminando el campo `adID` y agregando un campo de asignación `idSpecific`.
 
 ![](../../images/field-groups/consent.png)
 

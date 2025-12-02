@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # `edgeConfigOverrides` (comando `configure`)
 
-El objeto `edgeConfigOverrides` le permite anular los valores de configuración de los comandos que se ejecutan en la página actual. Este objeto es útil cuando tiene diferentes sitios web o subdominios para diferentes países o si tiene varios entornos limitados de Experience Platform para almacenar datos específicos de diferentes unidades comerciales. Si desea anular las opciones de configuración para un solo comando de la página, considere la posibilidad de utilizar el objeto [`edgeConfigOverrides` en el comando `sendEvent` ](../sendevent/edgeconfigoverrides.md).
+El objeto `edgeConfigOverrides` le permite anular los valores de configuración de los comandos que se ejecutan en la página actual. Este objeto es útil cuando tiene diferentes sitios web o subdominios para diferentes países o si tiene varios entornos limitados de Experience Platform para almacenar datos específicos de diferentes unidades comerciales. Si desea anular las opciones de configuración para un solo comando de la página, considere la posibilidad de utilizar el objeto [`edgeConfigOverrides` en el comando `sendEvent` &#x200B;](../sendevent/edgeconfigoverrides.md).
 
 El proceso de anulación de la configuración del conjunto de datos consta de dos pasos principales:
 

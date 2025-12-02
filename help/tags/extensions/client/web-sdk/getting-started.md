@@ -36,7 +36,8 @@ El [Modelo de datos de experiencia (XDM)](/help/xdm/home.md) es una especificaci
 
 ![Lienzo de esquema](assets/getting-started/schema-structure.png)
 
->[!NOTE]\
+>[!NOTE]
+>\
 >Una vez guardados, los esquemas solo permiten *cambios aditivos*. Consulte [evolución de esquema](/help/xdm/schema/composition.md#evolution) para obtener más información.
 
 ## Crear un flujo de datos {#datastream}

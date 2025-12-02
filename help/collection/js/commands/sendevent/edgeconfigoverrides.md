@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `edgeConfigOverrides` (comando `sendEvent`)
 
-El objeto `edgeConfigOverrides` le permite anular los valores de configuración sólo para el comando `sendEvent` actual. Este objeto es útil cuando tiene comandos específicos en la misma página que desea ejecutar con parámetros de configuración diferentes a los del resto de la implementación de Web SDK. Si desea anular las opciones de configuración de todos los comandos de una página determinada, considere la posibilidad de utilizar el objeto [`edgeConfigOverrides` en el comando `configure` ](../configure/edgeconfigoverrides.md).
+El objeto `edgeConfigOverrides` le permite anular los valores de configuración sólo para el comando `sendEvent` actual. Este objeto es útil cuando tiene comandos específicos en la misma página que desea ejecutar con parámetros de configuración diferentes a los del resto de la implementación de Web SDK. Si desea anular las opciones de configuración de todos los comandos de una página determinada, considere la posibilidad de utilizar el objeto [`edgeConfigOverrides` en el comando `configure` &#x200B;](../configure/edgeconfigoverrides.md).
 
 El proceso general de anulación de la configuración del flujo de datos consta de dos pasos principales:
 
