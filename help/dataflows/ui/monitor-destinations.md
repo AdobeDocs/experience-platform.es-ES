@@ -1,21 +1,21 @@
 ---
 description: Descubra cómo puede monitorizar los flujos de datos de sus destinos mediante la interfaz de usuario de Experience Platform.
 solution: Experience Platform
-title: Monitoree los flujos de datos para los destinos en la IU
+title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: a4db84f5918e99b3c6dd63ff5a25063b89be2ba7
+source-git-commit: d537284b804214fa8a37febab5f78335a590e9f5
 workflow-type: tm+mt
-source-wordcount: '3484'
+source-wordcount: '3541'
 ht-degree: 10%
 
 ---
 
-# Monitoree los flujos de datos para los destinos en el IU
+# Monitorización de flujos de datos para destinos en la IU
 
-Utilice los distintos destinos del catálogo de Experience Platform para activar sus datos de Experience Platform a innumerables socios externos. Experience Platform facilita el proceso de seguimiento el flujo de datos a sus destinos al proporcionar transparencia con los flujos de datos.
+Utilice los distintos destinos del catálogo de Experience Platform para activar los datos de Experience Platform en innumerables socios externos. Experience Platform facilita el proceso de seguimiento del flujo de datos a sus destinos al proporcionar transparencia con los flujos de datos.
 
-El panel de monitoreo le proporciona una representación visual del recorrido de un flujo de datos, incluido el destino al que se activan los datos, el tipo de datos que está viendo, los datos exportados por ejecución de flujo de datos y mucho más.
+El panel de monitorización le proporciona una representación visual del recorrido de un flujo de datos, incluido el destino al que se activan los datos, el tipo de datos que está viendo, los datos exportados por ejecución de flujo de datos y mucho más.
 
 Este tutorial proporciona instrucciones sobre cómo puede supervisar los flujos de datos directamente en el espacio de trabajo de destinos o utilizar el panel de monitorización para supervisar los flujos de datos de sus destinos mediante la interfaz de usuario de Experience Platform.
 
@@ -34,16 +34,16 @@ En el área de trabajo **[!UICONTROL Destinations]** dentro de la interfaz de us
 
 ![Seleccionar vista de destino con una conexión de destino resaltada](../assets/ui/monitor-destinations/select-destination.png)
 
-Aparece un lista de flujos de datos existentes. En esta página hay una lista de flujos de datos visibles, que incluye información sobre su destino, nombre de usuario, número de flujos de datos y estado.
+Aparecerá una lista de flujos de datos existentes. En esta página hay una lista de flujos de datos visibles, que incluye información sobre su destino, nombre de usuario, número de flujos de datos y estado.
 
 Consulte la siguiente tabla para obtener más información sobre los estados:
 
 | Estado | Descripción |
 | ------ | ----------- |
-| Habilitado | El `Enabled` estado indica que un flujo de datos está activo y está exportando datos de acuerdo con la programación en la que se proporcionó. |
-| Desactivado | El `Disabled` estado indica que un flujo de datos está inactivo y no está exportando ningún dato. |
-| Procesamiento | El `Processing` estado indica que un flujo de datos aún no está activo. Este estado se encuentra a menudo inmediatamente después de que se crea un nuevo flujo de datos. |
-| Error | El `Error` estado indica que se ha interrumpido el proceso de activación de un flujo de datos. |
+| Habilitado | El estado `Enabled` indica que un flujo de datos está activo y está exportando datos de acuerdo con la programación que se proporcionó. |
+| Desactivado | El estado `Disabled` indica que un flujo de datos está inactivo y no se está exportando ningún dato. |
+| Procesamiento | El estado `Processing` indica que un flujo de datos aún no está activo. Este estado suele encontrarse inmediatamente después de crear un nuevo flujo de datos. |
+| Error | El estado `Error` indica que el proceso de activación de un flujo de datos se ha interrumpido. |
 
 ### El flujo de datos se ejecuta para destinos de streaming {#dataflow-runs-for-streaming-destinations}
 
@@ -72,7 +72,7 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 >title="Error de identidades"
 >abstract="Recuento de identidades de perfiles individuales que fallaron para el destino seleccionado. Consulte los diagnósticos de errores para obtener más información."
 
-Para los destinos de flujo continuo, el [!UICONTROL Dataflow runs] pestaña proporciona una actualización cada hora para Métrica datos en las ejecuciones del flujo de datos. Las estadísticas más destacadas etiquetadas son para identidades.
+Para los destinos de streaming, la pestaña [!UICONTROL Dataflow runs] proporciona una actualización por hora para los datos de métricas en las ejecuciones del flujo de datos. Las estadísticas más destacadas etiquetadas son para identidades.
 
 Las identidades representan las diferentes facetas de un perfil. Por ejemplo, si un perfil contiene un número de teléfono y una dirección de correo electrónico, ese perfil tiene dos identidades.
 
@@ -81,6 +81,10 @@ Se muestra una lista de ejecuciones individuales y sus métricas particulares, j
 - **[!UICONTROL Identities activated]**: el número total de identidades de perfil activadas correctamente en el destino seleccionado. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
 - **[!UICONTROL Identities excluded]**: el número total de identidades de perfil que se omiten para la activación en función de los atributos que faltan y la infracción de consentimiento.
 - **[!UICONTROL Identities failed]**: el número total de identidades de perfil que no se activaron en el destino debido a errores.
+
+>[!NOTE]
+>
+>Los totales de identidades activadas, excluidas y fallidas representan una suma de todos los recuentos de ejecución de flujo de datos individuales. Dado que las ejecuciones del flujo de datos tienen un tiempo de vida (TTL) de 90 días, estos totales suelen cubrir aproximadamente los últimos 3 meses. A medida que las ejecuciones de flujo de datos más antiguas caducan y se eliminan del sistema, puede observar una disminución en los recuentos totales mostrados.
 
 ![El flujo de datos ejecuta detalles para los destinos de flujo continuo.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
@@ -92,14 +96,14 @@ Cada ejecución de flujo de datos individual muestra los siguientes detalles:
    - Para las ejecuciones de flujo de datos que siguen en estado **[!UICONTROL processing]**, la ventana para capturar todas las métricas permanece abierta durante más de una hora para procesar todas las métricas que corresponden a la ejecución de flujo de datos. Por ejemplo, una ejecución de flujo de datos que se inició a las 9:30 a. m. podría permanecer en un estado de procesamiento durante una hora y treinta minutos para capturar y procesar todas las métricas. La duración del tiempo de procesamiento se ve directamente afectada por los reintentos realizados como resultado de la respuesta fallida del destino. Entonces, una vez que se cierre la ventana de procesamiento y el estado de ejecución del flujo de datos se actualice a **completado**, el tiempo de procesamiento mostrado se cambia a una hora.
 - **[!UICONTROL Profiles received]**: el número total de perfiles recibidos en el flujo de datos.
 - **[!UICONTROL Identities activated]**: el número total de identidades de perfil que se activaron correctamente en el destino seleccionado como parte de la ejecución del flujo de datos. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
-- **[!UICONTROL Identities excluded]**: el número total de identidades de perfil que se excluyen de la activación debido a la falta de atributos y a la violación del consentimiento.
-- **[!UICONTROL Identities failed]** El número total de identidades de perfil que no se activan en el destino debido a errores.
+- **[!UICONTROL Identities excluded]**: el número total de identidades de perfil que se excluyen de la activación en función de los atributos que faltan y la infracción de consentimiento.
+- **[!UICONTROL Identities failed]**: el número total de identidades de perfil que no se activaron en el destino debido a errores.
 
   >[!IMPORTANT]
   >
-  > Desde marzo de 2025, Adobe está implementando gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre los sistema de informes de Experience Platform y las plataformas de destino.
+  > Desde marzo de 2025, Adobe está implementando gradualmente una actualización para aumentar la precisión de la creación de informes en los destinos de streaming. Esta mejora garantiza una mejor alineación entre los informes de Experience Platform y las plataformas de destino.
   >
-  > Antes de esta actualización, **[!UICONTROL Identities failed]** se incluían todos los activación reintentos. Después de esta actualización, sólo el último reintento de activación se incluye en el recuento total.
+  > Antes de esta actualización, **[!UICONTROL Identities failed]** incluía todos los reintentos de activación. Después de esta actualización, solo se incluye el último reintento de activación en el recuento total.
   > 
   > Esta mejora se aplica a todos los destinos de flujo continuo.
   > Tras esta mejora, es posible que los usuarios de destinos de flujo continuo vean una caída esperada en su recuento de **[!UICONTROL Identities failed]**.
@@ -115,7 +119,7 @@ La página de detalles de una ejecución de flujo de datos contiene información
 
 ![Detalles de flujo de datos para destinos de flujo continuo.](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-La página de detalles también muestra una lista de identidades que fallaron y las identidades que se excluyeron. Se muestra información tanto para las identidades fallidas como para las excluidas, incluido el código de error, el recuento de identidades y la descripción. De forma predeterminada, la lista muestra las identidades fallidas. Para mostrar las identidades omitidas, seleccione el **[!UICONTROL Identities excluded]** interruptor.
+La página de detalles también muestra una lista de identidades que fallaron y las identidades que se excluyeron. Se muestra información tanto para las identidades fallidas como para las excluidas, incluido el código de error, el recuento de identidades y la descripción. De forma predeterminada, la lista muestra las identidades fallidas. Para mostrar las identidades omitidas, seleccione la opción **[!UICONTROL Identities excluded]**.
 
 ![Registros de flujo de datos para destinos de flujo continuo con un mensaje de error resaltado.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
@@ -125,11 +129,11 @@ Puede ver información sobre las identidades activadas, excluidas o fallidas des
 
 La monitorización a nivel de audiencia para destinos de streaming solo está disponible para ciertos destinos. Consulte la sección [vista de nivel de audiencia](#audience-level-view) para obtener una lista de los destinos admitidos.
 
-![Supervisión a nivel de audiencia para destinos de streaming.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
+![Supervisión a nivel de audiencia para destinos de flujo continuo.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->Es posible que el **[!UICONTROL Profiles received]** **[!UICONTROL Audiences]** número del pestaña no siempre coincida con el número de perfiles recibidos para la ejecución del flujo de datos. Esto se debe a que una perfil determinada puede formar parte de más de una audiencia que se activa en la ejecución del flujo de datos.
+>Es posible que el número **[!UICONTROL Profiles received]** de la pestaña **[!UICONTROL Audiences]** no siempre coincida con el número de perfiles recibidos para la ejecución del flujo de datos. Esto se debe a que un perfil determinado puede formar parte de más de una audiencia que se activa en la ejecución del flujo de datos.
 
 ### El flujo de datos se ejecuta para destinos de lote {#dataflow-runs-for-batch-destinations}
 
@@ -154,9 +158,9 @@ La monitorización a nivel de audiencia para destinos de streaming solo está di
 >title="Identidades excluidas"
 >abstract="Recuento de registros de perfil individuales excluidos de la activación para el destino seleccionado en función de atributos que faltan y de la infracción de consentimiento."
 
-Para los destinos por lotes, el [!UICONTROL Dataflow runs] pestaña proporciona datos Métrica sobre las ejecuciones del flujo de datos. Se muestra un lista de ejecuciones individuales y sus métricas particulares, junto con los siguientes totales para las identidades:
+Para los destinos por lotes, la pestaña [!UICONTROL Dataflow runs] proporciona datos de métricas sobre las ejecuciones del flujo de datos. Se muestra una lista de ejecuciones individuales y sus métricas particulares, junto con los siguientes totales de identidades:
 
-- **[!UICONTROL Identities activated]**: El número total de identidades de perfil activadas correctamente en el destino seleccionado. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
+- **[!UICONTROL Identities activated]**: el número total de identidades de perfil activadas correctamente en el destino seleccionado. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
 - **[!UICONTROL Identities excluded]**: el recuento de identidades de perfil individuales excluidas de la activación para el destino seleccionado, en función de los atributos que faltan y la infracción de consentimiento.
 
 ![El flujo de datos ejecuta la vista para destinos por lotes.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -185,13 +189,13 @@ La página de detalles de un flujo de datos, además de los detalles que se mues
 
 ![Detalles de ejecución del flujo de datos para destinos por lotes.](../assets/ui/monitor-destinations/dataflow-batch.png)
 
-La página de detalles también muestra una lista de identidades que fallaron y las identidades que se excluyeron. Se muestra información sobre las identidades fallidas y excluidas, incluido el código y la descripción del error. De forma predeterminada, la lista muestra las identidades fallidas. Para mostrar las identidades excluidas, seleccione el **[!UICONTROL Identities excluded]** interruptor.
+La página de detalles también muestra una lista de identidades que fallaron y las identidades que se excluyeron. Se muestra información tanto para las identidades fallidas como para las excluidas, incluido el código de error y la descripción. De forma predeterminada, la lista muestra las identidades fallidas. Para mostrar las identidades excluidas, seleccione la opción **[!UICONTROL Identities excluded]**.
 
-![Registros de flujo de datos para destinos de lotes con un mensaje de error resaltado.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+![Registros de flujo de datos para destinos por lotes con un mensaje de error resaltado.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ### Ver en monitorización {#view-in-monitoring}
 
-También puede seleccionar vista información enriquecida sobre un determinado flujo de datos y su flujo de datos se ejecuta en el panel de supervisión. Para vista información sobre un flujo de datos en el panel de monitorización:
+También puede seleccionar ver información enriquecida sobre un flujo de datos determinado y su flujo de datos se ejecuta en el panel de monitorización. Para ver información sobre un flujo de datos en el panel de control:
 
 1. Vaya a la pestaña **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**
 2. Vaya al flujo de datos que desee inspeccionar.
@@ -214,7 +218,7 @@ También puede seleccionar vista información enriquecida sobre un determinado f
 >title="Activation"
 >abstract="La vista de activación de destino contiene información sobre el estado de activación de un público y las métricas obtenidas del perfil del cliente en tiempo real para generar identidades únicas."
 
-Para acceder al panel [!UICONTROL Monitoring], seleccione **[!UICONTROL Monitoring]** (![icono de supervisión](/help/images/icons/monitoring.png)) en el panel de navegación izquierdo. Una vez en la [!UICONTROL Monitoring] Página, seleccione [!UICONTROL Destinations]. El [!UICONTROL Monitoring] panel contiene métricas e información sobre los trabajos ejecutados en destino.
+Para acceder al panel [!UICONTROL Monitoring], seleccione **[!UICONTROL Monitoring]** (![icono de supervisión](/help/images/icons/monitoring.png)) en el panel de navegación izquierdo. Una vez en la página [!UICONTROL Monitoring], seleccione [!UICONTROL Destinations]. El panel [!UICONTROL Monitoring] contiene métricas e información sobre los trabajos de ejecución de destino.
 
 Utilice el panel [!UICONTROL Destinations] para obtener una idea general del estado de los flujos de activación. Comience por obtener perspectivas en un nivel agregado para todos los destinos de lote y flujo continuo y, a continuación, explore las vistas detalladas de flujos de datos, ejecuciones de flujos de datos y audiencias activadas para obtener una vista detallada de los datos de activación. Las pantallas del panel [!UICONTROL Monitoring] proporcionan información procesable a través de métricas y descripciones de error que le ayudarán a solucionar cualquier problema que pueda surgir en sus escenarios de activación.
 
@@ -222,16 +226,16 @@ Puede filtrar la información mostrada por tipo de datos: clientes, cuentas (sol
 
 ![Filtro de tipo de datos resaltado en la vista del panel de supervisión.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
-En el centro del panel está el [!UICONTROL Activation] panel, que contiene métricas y gráficos que muestran datos sobre la velocidad activación de los datos que se exportan a destinos de transmisión, así como sobre el flujo de datos por lotes fallido que se ejecuta a destinos por lotes.
+En el centro del tablero se encuentra el panel [!UICONTROL Activation], que contiene métricas y gráficos que muestran datos sobre la velocidad de activación de los datos que se exportan a destinos de flujo continuo, así como sobre las ejecuciones de flujo de datos por lotes fallidas a destinos por lotes.
 
-![Gráficos de flujo continuo y lotes activación resaltados en la vista de monitoreo.](../assets/ui/monitor-destinations/dashboard-graph.png)
+![Gráficos de activación por lotes y de transmisión resaltados en la vista de supervisión.](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
-De forma predeterminada, los datos mostrados contienen la información activación de las últimas 24 horas. Seleccione esta opción **[!UICONTROL Last 24 hours]** para ajustar el lapso de tiempo de registros mostrados. Entre las opciones disponibles se incluyen **[!UICONTROL Last 24 hours]**, **[!UICONTROL Last 7 days]**, y **[!UICONTROL Last 30 days]**. Como alternativa, puede seleccionar las fechas en el calendario elemento emergente ventana que aparece. Una vez seleccionadas las fechas, seleccione **[!UICONTROL Apply]** para ajustar el lapso de tiempo de la información mostrada.
+De forma predeterminada, los datos mostrados contienen la información de activación de las últimas 24 horas. Seleccione **[!UICONTROL Last 24 hours]** para ajustar el lapso de tiempo de los registros mostrados. Las opciones disponibles son **[!UICONTROL Last 24 hours]**, **[!UICONTROL Last 7 days]** y **[!UICONTROL Last 30 days]**. También puede seleccionar las fechas en la ventana emergente de calendario que aparece. Una vez seleccionadas las fechas, seleccione **[!UICONTROL Apply]** para ajustar el lapso de tiempo de la información mostrada.
 
 >[!NOTE]
 >
->La siguiente captura de pantalla muestra la velocidad de activación y el flujo de datos por lotes ejecutados durante los últimos 30 días, en lugar de las últimas 24 horas. Para ajustar el lapso de tiempo, seleccione **[!UICONTROL Last 30 days]**.
+>La siguiente captura de pantalla muestra la tasa de activación y las ejecuciones del flujo de datos por lotes durante los últimos 30 días en lugar de las últimas 24 horas. Puede ajustar el lapso de tiempo seleccionando **[!UICONTROL Last 30 days]**.
 
 ![Cambiar el control de intervalo de fecha retrospectiva resaltado para los destinos activados](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
@@ -283,13 +287,13 @@ Cuando se selecciona **[!UICONTROL Dataflow runs]**, puede ver una lista de ejec
 
 >[!INFO]
 >
->Para los flujos de datos a destinos de flujo continuo, una ejecución de flujo de datos se desglosa en ventanas por hora. Cada ventana por hora genera un ID de ejecución del flujo de datos correspondiente.
+>Para los flujos de datos a destinos de flujo continuo, una ejecución de flujo de datos se desglosa en ventanas por hora. Cada ventana por hora genera un ID de ejecución de flujo de datos correspondiente.
 >
->Para los flujos de datos a destinos por lotes, cada audiencia tiene una ejecución de flujo de datos correspondiente generada, basada en el audiencia activación Frecuencia programado. Por ejemplo, si configura una activación programada diaria para cinco audiencias en el mismo flujo de datos de destino, se generarán cinco ejecuciones de flujo de datos independientes cada día.
+>Para los flujos de datos a destinos por lotes, cada audiencia tiene generado una ejecución de flujo de datos correspondiente, en función de la frecuencia programada de activación de audiencia. Por ejemplo, si configura una activación programada diaria para cinco audiencias en el mismo flujo de datos de destino, se generarán cinco ejecuciones de flujo de datos independientes cada día.
 
 ![El flujo de datos ejecuta el panel con varias ejecuciones resaltadas.](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
-Utilice el **[!UICONTROL Show failures only]** botón de alternancia para mostrar solo las ejecuciones fallidas para un flujo de datos.
+Utilice la opción **[!UICONTROL Show failures only]** para mostrar solo las ejecuciones fallidas de un flujo de datos.
 
 ![El flujo de datos ejecuta la vista con la opción de mostrar solo los errores resaltada](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
@@ -335,7 +339,7 @@ Por ejemplo, está activando una audiencia denominada &quot;Miembros socio en Ca
 >   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Destinos por lotes (basados en archivos)
 > 
->- En el caso de los destinos por lotes, las métricas de nivel de audiencia solo se registran actualmente para las ejecuciones correctas del flujo de datos. No se registran para ejecuciones de flujo de datos fallidas y registros excluidos. Para las ejecuciones de flujo de datos a destinos de flujo continuo, las métricas se capturan y se muestran para los registros activados y excluidos.
+>- En el caso de los destinos por lotes, las métricas de nivel de audiencia solo se registran actualmente para ejecuciones de flujo de datos correctas. No se registran para ejecuciones de flujo de datos fallidas y registros excluidos. Para las ejecuciones de flujo de datos a destinos de flujo continuo, las métricas se capturan y se muestran para los registros activados y excluidos.
 
 ![Audiencias resaltadas en el panel de flujo de datos.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
