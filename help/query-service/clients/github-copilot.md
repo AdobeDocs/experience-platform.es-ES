@@ -2,9 +2,9 @@
 title: Conectar el copiloto de GitHub y el código de Visual Studio al servicio de consultas
 description: Obtenga información sobre cómo conectar el copiloto de GitHub y el código de Visual Studio con el servicio de consultas de Adobe Experience Platform.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 1%
 >
 >Antes de utilizar esta herramienta integrada, debe comprender qué datos se comparten con GitHub. Los datos compartidos incluyen información contextual sobre el código y los archivos que se están editando (&quot;indicadores&quot;) y detalles sobre las acciones del usuario (&quot;datos de participación del usuario&quot;).  Revise la declaración de privacidad de [[!DNL GitHub Copilot]](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) para obtener más información sobre los datos que recopilan. También debe tener en cuenta las implicaciones de seguridad de la participación en servicios de terceros, ya que es responsable de garantizar el cumplimiento de las políticas de gobernanza de datos de su organización. Adobe no se responsabiliza por cualquier preocupación o problema relacionado con los datos que pueda surgir del uso de esta herramienta. Consulte la documentación de GitHub para obtener más información.
 
-[!DNL GitHub Copilot], con tecnología OpenAI Codex, es una herramienta impulsada por IA que mejora su experiencia de codificación al sugerir fragmentos de código y funciones completas directamente dentro de su editor. Integrado con [!DNL Visual Studio Code] ([!DNL VS Code]), [!DNL Copilot] puede acelerar significativamente el flujo de trabajo, especialmente cuando se trabaja con consultas complejas. Siga esta guía para aprender a conectar [!DNL GitHub Copilot] y [!DNL VS Code] al servicio de consultas para escribir y administrar las consultas con mayor eficacia. Para obtener más información sobre [!DNL Copilot], visite la [página de productos Copilot de GitHub](https://github.com/pricing) y la [documentación oficial [!DNL Copilot] 5&rbrace;.](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+[!DNL GitHub Copilot], con tecnología OpenAI Codex, es una herramienta impulsada por IA que mejora su experiencia de codificación al sugerir fragmentos de código y funciones completas directamente dentro de su editor. Integrado con [!DNL Visual Studio Code] ([!DNL VS Code]), [!DNL Copilot] puede acelerar significativamente el flujo de trabajo, especialmente cuando se trabaja con consultas complejas. Siga esta guía para aprender a conectar [!DNL GitHub Copilot] y [!DNL VS Code] al servicio de consultas para escribir y administrar las consultas con mayor eficacia. Para obtener más información sobre [!DNL Copilot], visite la [página de productos Copilot de GitHub](https://github.com/pricing) y la [documentación oficial [!DNL Copilot] 5}.](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
 Este documento describe los pasos necesarios para conectar [!DNL GitHub Copilot] y [!DNL VS Code] con Adobe Experience Platform Query Service.
 
-## Introducción  {#get-started}
+## Introducción {#get-started}
 
 Esta guía requiere que ya tenga acceso a una cuenta de GitHub y que se haya registrado en [!DNL GitHub Copilot]. Puede [registrarse en el sitio web de GitHub](https://github.com/github-copilot/signup). También necesita [!DNL VS Code]. Puedes [descargar [!DNL VS Code] desde su sitio web oficial](https://code.visualstudio.com/download).
 
-Una vez que haya instalado [!DNL VS Code] y activado su suscripción a [!DNL Copilot], adquiera sus credenciales de conexión para Experience Platform. Estas credenciales se encuentran en la ficha [!UICONTROL Credentials] del área de trabajo de [!UICONTROL Queries] en la interfaz de usuario de Experience Platform. Lea la guía de credenciales de [para obtener información sobre cómo encontrar estos valores en la interfaz de usuario de Experience Platform](../ui/credentials.md). Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo [!UICONTROL Consultas].
+Una vez que haya instalado [!DNL VS Code] y activado su suscripción a [!DNL Copilot], adquiera sus credenciales de conexión para Experience Platform. Estas credenciales se encuentran en la ficha [!UICONTROL Credentials] del área de trabajo [!UICONTROL Queries] en la interfaz de usuario de Experience Platform. Lea la guía de credenciales de [para obtener información sobre cómo encontrar estos valores en la interfaz de usuario de Experience Platform](../ui/credentials.md). Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo de [!UICONTROL Queries].
 
 ### Extensiones [!DNL Visual Studio Code] requeridas {#required-extensions}
 
@@ -57,8 +57,8 @@ Aparecerá la vista [!DNL Connection Settings]. Escriba las credenciales de cone
 | [!DNL Connect using] | Utilice la opción **[!DNL Server and Port]** para especificar la dirección del servidor (nombre de host) y el número de puerto para establecer una conexión directa con Experience Platform |
 | [!DNL Server address] | Escriba el valor **[!UICONTROL Host]** proporcionado en las credenciales de Experience Platform Postgres, como `acmeprod.platform-query.adobe.io`. |
 | [!DNL Port] | Este valor suele ser `80` para los servicios de Experience Platform. |
-| [!DNL Database] | Escriba el valor **[!UICONTROL Database]** proporcionado en sus credenciales de Experience Platform Postgres, como `prod:all`. |
-| [!DNL Username] | Esta propiedad hace referencia a su ID de organización de. Introduzca el valor **[!UICONTROL Username]** proporcionado en sus credenciales de Experience Platform Postgres. |
+| [!DNL Database] | Escriba el valor **[!UICONTROL Database]** proporcionado en las credenciales de Experience Platform Postgres, como `prod:all`. |
+| [!DNL Username] | Esta propiedad hace referencia a su ID de organización de. Escriba el valor **[!UICONTROL Username]** proporcionado en las credenciales de Experience Platform Postgres. |
 | [!DNL Password] | Esta propiedad es su token de acceso. Escriba el valor **[!UICONTROL Password]** proporcionado en las credenciales de Experience Platform Postgres. |
 
 ![Área de trabajo del Asistente para la conexión con varios valores resaltados.](../images/clients/github-copilot/connection-settings.png)
@@ -99,7 +99,7 @@ Primero, asegúrese de que tiene instalada la versión más reciente de [!DNL VS
 
 ![Editor de [!DNL VS Code] con [!DNL GitHub Copilot Menu] mostrado y el icono [!DNL Copilot] y Editar configuración resaltados.](../images/clients/github-copilot/github-copilot-menu.png)
 
-Desplácese hacia abajo por las opciones y compruebe que la casilla de verificación está habilitada para la configuración [!DNL Enable Auto Completions].
+Desplácese hacia abajo por las opciones y asegúrese de que la casilla de verificación está habilitada para la configuración [!DNL Enable Auto Completions].
 
 ![Panel de configuración de [!DNL GitHub Copilot] con la casilla de verificación Habilitar finalizaciones automáticas seleccionada y resaltada.](../images/clients/github-copilot/enable-auto-completions.png)
 
@@ -149,6 +149,6 @@ Puede utilizar una interfaz de chat más tradicional con una barra lateral de ch
 
 También puede acceder al historial de chat seleccionando el icono del historial (![El icono del historial.](../images/clients/github-copilot/history-icon.png)) en la parte superior del panel de chat.
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora está listo para consultar de manera eficiente sus bases de datos de Experience Platform directamente desde su editor de código y usar las sugerencias de código con tecnología de IA de [!DNL GitHub Copilot] para agilizar la escritura y optimizar las consultas SQL. Para obtener más información sobre cómo escribir y ejecutar consultas, consulte las [instrucciones para la ejecución de consultas](../best-practices/writing-queries.md).

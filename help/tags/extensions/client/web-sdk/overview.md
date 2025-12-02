@@ -1,20 +1,20 @@
 ---
-title: Información general sobre la extensión de SDK web
-description: Obtenga información acerca de la extensión de etiqueta SDK web de Adobe Experience Platform.
+title: Información general sobre la extensión de etiquetas Web SDK
+description: Obtenga información acerca de la extensión de etiquetas Web SDK en Recopilación de datos de Adobe Experience Platform.
 exl-id: 2bc738b9-5939-47a6-a829-429937e4c673
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 70%
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
-# Información general sobre la extensión de SDK web de Adobe Experience Platform
+# Información general sobre la extensión Adobe Experience Platform Web SDK
 
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+La extensión de etiquetas Adobe Experience Platform Web SDK envía datos a Adobe Experience Cloud desde las propiedades web a través de Adobe Experience Platform Edge Network. La extensión Experience Platform Web SDK permite la transmisión de datos a la plataforma, la sincronización de identidades, la inclusión y la recopilación automática de datos de contexto.
 
-La extensión de SDK web de Adobe Experience Platform envía datos a Adobe Experience Cloud desde las propiedades web a través de Adobe Experience Platform Edge Network. La extensión Experience Platform Web SDK permite la transmisión de datos a la plataforma, la sincronización de identidades, la inclusión y la recopilación automática de datos de contexto.
+Consulte [Introducción](getting-started.md) para obtener información sobre cómo configurar e implementar esta extensión de etiqueta para empezar a recopilar datos.
 
-Para obtener más información sobre cómo configurar la extensión de Experience Platform Web SDK, consulte [Configurar la extensión de etiquetas de Web SDK](web-sdk-extension-configuration.md).
+Vea el siguiente vídeo para ver Adobe Experience Platform [!DNL Web SDK] y [!DNL Edge Network] en acción, usando una sola llamada para enviar datos a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] y [!DNL Target].
+
+>[!VIDEO](https://video.tv.adobe.com/v/34148)

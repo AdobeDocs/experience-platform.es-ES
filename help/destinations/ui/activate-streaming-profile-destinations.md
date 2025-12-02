@@ -4,9 +4,9 @@ type: Tutorial
 description: Obtenga información sobre cómo activar los datos de audiencia que tiene en Adobe Experience Platform enviando audiencias a destinos basados en perfiles de streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '717'
 ht-degree: 1%
 
 ---
@@ -16,8 +16,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
-> * Para activar los datos y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [para ver los destinos](/help/access-control/home.md#permissions).
-> * Para activar datos sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL permisos de vista de destinos]**, **[!UICONTROL activar segmento sin asignación]**, **[!UICONTROL ver perfiles]** y **[!UICONTROL ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> * Para activar los datos y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> * Para activar datos sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita los permisos de **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [control de acceso](/help/access-control/home.md#permissions).
 > 
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
@@ -37,15 +37,15 @@ Para activar los datos en los destinos, debes haber [conectado correctamente a u
 
 ## Seleccione su destino {#select-destination}
 
-1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione la pestaña **[!UICONTROL Catálogo]**.
+1. Vaya a **[!UICONTROL Connections > Destinations]** y seleccione la ficha **[!UICONTROL Catalog]**.
 
    ![Imagen que muestra la ficha de catálogo de destino.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Seleccione **[!UICONTROL Activar audiencias]** en la tarjeta correspondiente al destino donde desea activar las audiencias, como se muestra en la imagen siguiente.
+1. Seleccione **[!UICONTROL Activate audiences]** en la tarjeta correspondiente al destino donde desea activar sus audiencias, como se muestra en la siguiente imagen.
 
    ![Imagen que resalta el control Activar audiencias en la pestaña Catálogo de destinos.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. Seleccione la conexión de destino que desee usar para activar las audiencias y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+1. Seleccione la conexión de destino que desee usar para activar las audiencias y luego seleccione **[!UICONTROL Next]**.
 
    ![Imagen que muestra una selección de dos destinos a los que puede conectarse.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
@@ -53,37 +53,37 @@ Para activar los datos en los destinos, debes haber [conectado correctamente a u
 
 ## Selección de audiencias {#select-audiences}
 
-Para seleccionar las audiencias que desea activar en el destino, utilice las casillas de verificación que aparecen a la izquierda de los nombres de audiencia y luego seleccione **[!UICONTROL Siguiente]**.
+Para seleccionar las audiencias que desea activar en el destino, utilice las casillas de verificación a la izquierda de los nombres de audiencia y luego seleccione **[!UICONTROL Next]**.
 
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
-* **[!UICONTROL Servicio de segmentación]**: Audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de Audience Portal](../../segmentation/ui/audience-portal.md) para obtener más información.
-* **[!UICONTROL Carga personalizada]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Segmentation Service]**: audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de Audience Portal](../../segmentation/ui/audience-portal.md) para obtener más información.
+* **[!UICONTROL Custom upload]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
 ![Imagen que resalta la selección de casillas de verificación en el paso Seleccionar audiencias del flujo de trabajo de activación.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## Seleccionar atributos de perfil {#select-attributes}
 
-En el paso **[!UICONTROL Asignación]**, seleccione los atributos de perfil que desee enviar al destino de destino.
+En el paso **[!UICONTROL Mapping]**, seleccione los atributos de perfil que desea enviar al destino de destino.
 
-1. En la página **[!UICONTROL Seleccionar atributos]**, seleccione **[!UICONTROL Agregar nuevo campo]**.
+1. En la página **[!UICONTROL Select attributes]**, seleccione **[!UICONTROL Add new field]**.
 
    ![Imagen que resalta el control Agregar nuevo campo en el paso de asignación.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
-1. Seleccione la flecha a la derecha de la entrada **[!UICONTROL Campo de esquema]**.
+1. Seleccione la flecha a la derecha de la entrada **[!UICONTROL Schema field]**.
 
    ![Imagen que resalta cómo seleccionar un campo de origen en el paso de asignación.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. En la página **[!UICONTROL Seleccionar campo]**, seleccione los atributos XDM que desee enviar al destino y, a continuación, elija **[!UICONTROL Seleccionar]**.
+1. En la página **[!UICONTROL Select field]**, seleccione los atributos XDM que desee enviar al destino y, a continuación, elija **[!UICONTROL Select]**.
 
    ![Imagen que muestra una selección de campos XDM que puede seleccionar como campos de origen.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-1. Para agregar más campos, repita los pasos del 1 al 3 y después seleccione **[!UICONTROL Siguiente]**.
+1. Para agregar más campos, repita los pasos del 1 al 3 y después seleccione **[!UICONTROL Next]**.
 
 ## Revisar {#review}
 
-En la página **[!UICONTROL Revisar]**, puedes ver un resumen de tu selección. Seleccione **[!UICONTROL Cancelar]** para dividir el flujo, **[!UICONTROL Atrás]** para modificar la configuración o **[!UICONTROL Finalizar]** para confirmar su selección y comenzar a enviar datos al destino.
+En la página **[!UICONTROL Review]**, puede ver un resumen de su selección. Seleccione **[!UICONTROL Cancel]** para dividir el flujo, **[!UICONTROL Back]** para modificar la configuración o **[!UICONTROL Finish]** para confirmar la selección y comenzar a enviar datos al destino.
 
 ![Resumen de la selección en el paso de revisión.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
@@ -101,7 +101,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
-En el paso **[!UICONTROL Revisar]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
+En el paso **[!UICONTROL Review]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
 
 ![infracción de directiva de datos](../assets/common/data-policy-violation.png)
 
@@ -111,7 +111,7 @@ Además, en este paso puede utilizar los filtros disponibles en la página para 
 
 ![Grabación de pantalla que muestra los filtros de audiencia disponibles en el paso de revisión.](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
-Si está satisfecho con su selección y no se han detectado infracciones de directivas, seleccione **[!UICONTROL Finalizar]** para confirmar su selección y comenzar a enviar datos al destino.
+Si está satisfecho con su selección y no se han detectado infracciones de directivas, seleccione **[!UICONTROL Finish]** para confirmar su selección y comenzar a enviar datos al destino.
 
 ## Verificar activación de audiencia {#verify}
 

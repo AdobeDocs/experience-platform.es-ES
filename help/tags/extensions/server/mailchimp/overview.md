@@ -7,9 +7,9 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1251'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=es) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obtener una referencia consolidada de los cambios terminológicos.
 
 La extensión de Mailchimp [reenvío de eventos](../../../ui/event-forwarding/overview.md) envía eventos a la API de marketing de Mailchimp que puede almacenar en déclencheur correos electrónicos para campañas, recorridos o transacciones de marketing de Mailchimp.
 
@@ -79,17 +79,17 @@ En esta sección se enumeran los pasos para instalar y configurar la extensión 
 
 ### Crear un secreto y un elemento de datos
 
-En una propiedad de reenvío de eventos, [cree un [!UICONTROL token] secreto](../../../ui/event-forwarding/secrets.md#token) llamado `Mailchimp API Key`.
+En una propiedad de reenvío de eventos, [cree un secreto [!UICONTROL Token]](../../../ui/event-forwarding/secrets.md#token) llamado `Mailchimp API Key`.
 
 A continuación, [cree un elemento de datos](../../../ui/managing-resources/data-elements.md#create-a-data-element) con la extensión [!UICONTROL Core] y un tipo de elemento de datos [!UICONTROL Secret] para hacer referencia al secreto `Mailchimp API Key` que acaba de crear. Escriba `Mailchimp Token` como nombre del elemento de datos.
 
 ### Instalación y configuración de la extensión de
 
-En la misma propiedad de reenvío de eventos, seleccione **[!UICONTROL Extensiones],** y **[!UICONTROL Catálogo]** para mostrar las extensiones disponibles para la instalación. Aquí, busca la extensión Mailchimp y selecciona **[!UICONTROL Instalar]**.
+En la misma propiedad de reenvío de eventos, seleccione **[!UICONTROL Extensions],** y **[!UICONTROL Catalog]** para mostrar las extensiones disponibles para la instalación. Desde aquí, busque la extensión Mailchimp y seleccione **[!UICONTROL Install]**.
 
 ![Instalar la extensión de Mailchimp](../../../images/extensions/server/mailchimp/install.png)
 
-Aparece la pantalla de configuración. En **[!UICONTROL Nombre de dominio del prefijo del servidor de Mailchimp]**, escribe el dominio que copiaste anteriormente desde tu cuenta de Mailchimp, incluido tu prefijo de dominio único.
+Aparece la pantalla de configuración. En **[!UICONTROL Mailchimp Server Prefix Domain Name]**, introduce el dominio que copiaste anteriormente de tu cuenta de Mailchimp, incluido tu prefijo de dominio único.
 
 >[!IMPORTANT]
 >
@@ -97,7 +97,7 @@ Aparece la pantalla de configuración. En **[!UICONTROL Nombre de dominio del pr
 
 ![Configuración de extensión](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-En **[!UICONTROL Token de Mailchimp]**, seleccione el icono del elemento de datos y elija el elemento de datos `Mailchimp Token` que creó anteriormente. Seleccione **[!UICONTROL Guardar]** para guardar los cambios.
+En **[!UICONTROL Mailchimp token]**, seleccione el icono de elemento de datos y elija el elemento de datos `Mailchimp Token` que creó anteriormente. Seleccione **[!UICONTROL Save]** para guardar los cambios.
 
 La extensión de ya está instalada y configurada para su uso en la propiedad.
 
@@ -105,7 +105,7 @@ La extensión de ya está instalada y configurada para su uso en la propiedad.
 
 Al usar esta extensión en una [regla](../../../ui/managing-resources/rules.md), hay varios valores de datos que la extensión envía a Mailchimp con cada evento. Para una implementación típica, puede configurar la [extensión de Adobe Experience Platform Web SDK](../../client/web-sdk/overview.md) para enviar esos datos a [!DNL Experience Platform Edge Network] para que la utilice la extensión en la propiedad de reenvío de eventos.
 
-Los datos requeridos por esta extensión se pueden enviar desde Web SDK como datos XDM (con el objeto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md)) o como datos que no sean XDM (con el objeto [`data`](/help/web-sdk/commands/sendevent/data.md)).
+Los datos requeridos por esta extensión se pueden enviar desde Web SDK como datos XDM (con el objeto [`xdm`](/help/collection/js/commands/sendevent/xdm.md)) o como datos que no sean XDM (con el objeto [`data`](/help/collection/js/commands/sendevent/data.md)).
 
 Por ejemplo, si un cliente realiza una compra o se registra para un evento en su sitio, puede enviar un correo electrónico de confirmación a través de Mailchimp con esta extensión. Una vez que envía la información necesaria desde Web SDK a Edge Network, la extensión almacena en déclencheur el correo electrónico con Mailchimp.
 
@@ -132,7 +132,7 @@ La tabla siguiente proporciona más detalles para cada valor posible.
 >  
 >Los valores de **Ejemplo de ruta** anteriores son solo ejemplos. Los nombres de campo y las [rutas](../../../ui/event-forwarding/overview.md#data-element-path) a las que se hace referencia en esos elementos de datos pueden ser diferentes en su propiedad, según cómo haya asignado nombre y configurado Web SDK en los pasos anteriores.
 
-En la propiedad de reenvío de eventos puede crear un elemento de datos para cada uno de los campos descritos anteriormente. Una vez creada, puede hacer referencia a los elementos de datos en la acción [!UICONTROL Agregar evento] de esta extensión.
+En la propiedad de reenvío de eventos puede crear un elemento de datos para cada uno de los campos descritos anteriormente. Una vez creada, puede hacer referencia a los elementos de datos en la acción [!UICONTROL Add Event] de esta extensión.
 
 ![Agregar configuración de acción de evento](../../../images/extensions/server/mailchimp/action-configurations.png)
 

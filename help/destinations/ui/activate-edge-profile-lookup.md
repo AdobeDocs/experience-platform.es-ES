@@ -3,9 +3,9 @@ title: Búsqueda de atributos de perfil de Edge en tiempo real
 description: Aprenda a buscar atributos de perfil de Edge en tiempo real, mediante el destino de Personalization personalizado y la API de Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1838'
 ht-degree: 1%
 
 ---

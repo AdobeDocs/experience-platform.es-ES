@@ -6,9 +6,9 @@ description: Aprenda a configurar las operaciones y los esquemas de datos para t
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2509'
 ht-degree: 0%
 
 ---
@@ -42,8 +42,8 @@ Esta guía también requiere una comprensión práctica de los siguientes servic
 * [Modelo de datos de experiencia (XDM)](/help/xdm/home.md): El marco de trabajo estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
 * [Servicio de identidad de Adobe Experience Platform](/help/identity-service/home.md): resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 * [Perfil del cliente en tiempo real](/help/profile/home.md): Utiliza [!DNL Identity Service] para crear perfiles detallados de clientes a partir de sus conjuntos de datos en tiempo real. [!DNL Real-Time Customer Profile] extrae datos del lago de datos y conserva los perfiles de los clientes en su propio almacén de datos independiente.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): Una biblioteca JavaScript del lado del cliente que le permite integrar varios servicios de Experience Platform en su sitio web del lado del cliente.
-   * [Comandos de consentimiento de SDK](../../../../web-sdk/commands/setconsent.md): Un caso de uso que describe los comandos de SDK relacionados con el consentimiento que se muestran en esta guía.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md): Una biblioteca JavaScript del lado del cliente que le permite integrar varios servicios de Experience Platform en su sitio web del lado del cliente.
+   * [Comandos de consentimiento de SDK](/help/collection/js/commands/setconsent.md): Un caso de uso que describe los comandos de SDK relacionados con el consentimiento que se muestran en esta guía.
 * [Servicio de segmentación de Adobe Experience Platform](/help/segmentation/home.md): permite dividir los datos de [!DNL Real-Time Customer Profile] en grupos de personas que comparten características similares y responden de manera similar a las estrategias de marketing.
 
 Además de los servicios de Experience Platform enumerados arriba, también debería estar familiarizado con [destinos](/help/data-governance/home.md) y su función en el ecosistema de Experience Platform.
@@ -122,18 +122,18 @@ Una vez configurada la CMP para generar cadenas de consentimiento, se debe integ
 
 Para que SDK envíe datos a Experience Platform, primero debe crear un flujo de datos para Experience Platform. En la [documentación de SDK](/help/datastreams/overview.md) se proporcionan pasos específicos para crear un conjunto de datos.
 
-Después de proporcionar un nombre único para la secuencia de datos, selecciona el botón de alternancia situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los siguientes valores para completar el resto del formulario:
+Después de proporcionar un nombre único para el conjunto de datos, seleccione el botón de alternancia situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los siguientes valores para completar el resto del formulario:
 
 | Campo de secuencia de datos | Valor |
 | --- | --- |
-| [!UICONTROL espacio aislado] | Nombre de la zona protegida [sandbox](/help/sandboxes/home.md) de Experience Platform que contiene la conexión de flujo continuo y los conjuntos de datos necesarios para configurar la secuencia de datos. |
-| [!UICONTROL Entrada de transmisión] | Una conexión de flujo continuo válida para Experience Platform. Vea el tutorial sobre [creación de una conexión de flujo continuo](/help/ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
-| [!UICONTROL Conjunto de datos del evento] | Seleccione el conjunto de datos [!DNL XDM ExperienceEvent] creado en el [paso anterior](#datasets). Si ha incluido el grupo de campos [[!UICONTROL Consentimiento TCF 2.0 de IAB]](/help/xdm/field-groups/event/iab.md) en el esquema de este conjunto de datos, puede rastrear los eventos de cambio de consentimiento a lo largo del tiempo mediante el comando [`sendEvent`](#sendEvent), que almacena esos datos en este conjunto de datos. Tenga en cuenta que los valores de consentimiento almacenados en este conjunto de datos son **no** utilizados en flujos de trabajo de aplicación automáticos. |
-| [!UICONTROL Conjunto de datos del perfil] | Seleccione el conjunto de datos [!DNL XDM Individual Profile] creado en el [paso anterior](#datasets). Al responder a los vínculos de cambio de consentimiento de CMP mediante el comando [`setConsent`](#setConsent), los datos recopilados se almacenan en este conjunto de datos. Dado que este conjunto de datos tiene un perfil habilitado, los valores de consentimiento almacenados en este conjunto de datos se respetan durante los flujos de trabajo de aplicación automáticos. |
+| [!UICONTROL Sandbox] | Nombre de la zona protegida [sandbox](/help/sandboxes/home.md) de Experience Platform que contiene la conexión de flujo continuo y los conjuntos de datos necesarios para configurar la secuencia de datos. |
+| [!UICONTROL Streaming Inlet] | Una conexión de flujo continuo válida para Experience Platform. Vea el tutorial sobre [creación de una conexión de flujo continuo](/help/ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
+| [!UICONTROL Event Dataset] | Seleccione el conjunto de datos [!DNL XDM ExperienceEvent] creado en el [paso anterior](#datasets). Si ha incluido el grupo de campos [[!UICONTROL IAB TCF 2.0 Consent] ](/help/xdm/field-groups/event/iab.md) en el esquema de este conjunto de datos, puede realizar un seguimiento de los eventos de cambio de consentimiento a lo largo del tiempo mediante el comando [`sendEvent`](#sendEvent), que almacena esos datos en este conjunto de datos. Tenga en cuenta que los valores de consentimiento almacenados en este conjunto de datos son **no** utilizados en flujos de trabajo de aplicación automáticos. |
+| [!UICONTROL Profile Dataset] | Seleccione el conjunto de datos [!DNL XDM Individual Profile] creado en el [paso anterior](#datasets). Al responder a los vínculos de cambio de consentimiento de CMP mediante el comando [`setConsent`](#setConsent), los datos recopilados se almacenan en este conjunto de datos. Dado que este conjunto de datos tiene un perfil habilitado, los valores de consentimiento almacenados en este conjunto de datos se respetan durante los flujos de trabajo de aplicación automáticos. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-Cuando termine, seleccione **[!UICONTROL Guardar]** en la parte inferior de la pantalla y siga las indicaciones adicionales para completar la configuración.
+Cuando termine, seleccione **[!UICONTROL Save]** en la parte inferior de la pantalla y siga las indicaciones adicionales para completar la configuración.
 
 ### Realizar comandos de cambio de consentimiento
 
@@ -141,7 +141,7 @@ Una vez creado el conjunto de datos descrito en la sección anterior, puede empe
 
 #### Uso de los vínculos de cambio de consentimiento de CMP {#setConsent}
 
-Muchas CMP proporcionan vínculos predeterminados que escuchan eventos de cambio de consentimiento. Cuando se produzcan estos eventos, puede utilizar el comando [`setConsent`](/help/web-sdk/commands/setconsent.md) para actualizar los datos de consentimiento de ese cliente.
+Muchas CMP proporcionan vínculos predeterminados que escuchan eventos de cambio de consentimiento. Cuando se produzcan estos eventos, puede utilizar el comando [`setConsent`](/help/collection/js/commands/setconsent.md) para actualizar los datos de consentimiento de ese cliente.
 
 El comando `setConsent` espera dos argumentos:
 
@@ -197,7 +197,7 @@ También puede recopilar datos de consentimiento TCF 2.0 en cada evento activado
 
 >[!NOTE]
 >
->Para utilizar este método, debe haber agregado el grupo de campos Privacidad de Experience Event al esquema [!DNL XDM ExperienceEvent] habilitado para [!DNL Profile]. Consulte la sección sobre [actualización del esquema de ExperienceEvent](./dataset.md#event-schema) en la guía de preparación de conjuntos de datos para ver los pasos sobre cómo configurarlo.
+>Para utilizar este método, debe haber agregado el grupo de campos Privacidad de Experience Event al esquema [!DNL Profile] habilitado para [!DNL XDM ExperienceEvent]. Consulte la sección sobre [actualización del esquema de ExperienceEvent](./dataset.md#event-schema) en la guía de preparación de conjuntos de datos para ver los pasos sobre cómo configurarlo.
 
 El comando `sendEvent` debe utilizarse como llamada de retorno en los detectores de eventos adecuados del sitio web. El comando espera dos argumentos: (1) una cadena que indica el tipo de comando (en este caso, `sendEvent`) y (2) una carga útil que contiene un objeto `xdm` que proporciona los campos de consentimiento requeridos como JSON:
 
@@ -224,7 +224,7 @@ alloy("sendEvent", {
 
 ### Gestión de respuestas de SDK
 
-Muchos comandos de Web SDK devuelven promesas que indican si la llamada se realizó correctamente o no. A continuación, puede utilizar estas respuestas para lógicas adicionales, como mostrar mensajes de confirmación al cliente. Consulte [Respuestas de comandos](/help/web-sdk/commands/command-responses.md) para obtener más información.
+Muchos comandos de Web SDK devuelven promesas que indican si la llamada se realizó correctamente o no. A continuación, puede utilizar estas respuestas para lógicas adicionales, como mostrar mensajes de confirmación al cliente. Consulte [Respuestas de comandos](/help/collection/js/commands/command-responses.md) para obtener más información.
 
 ## Exportar segmentos {#export}
 
@@ -255,6 +255,6 @@ Una vez configurada la implementación de TCF 2.0 y exportados los segmentos a d
 >
 >Si hay varios ID que conforman un clúster y se aplica TCF 2.0, se excluye todo el clúster si incluso un único ID no contiene los propósitos y permisos de proveedor correctos.
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento abarcaba el proceso de configuración de las operaciones de datos de Experience Platform para cumplir con las obligaciones comerciales descritas en TCF 2.0. Consulte la descripción general de [gobernanza, privacidad y seguridad](../../overview.md) para obtener más información sobre las capacidades relacionadas con la privacidad de Experience Platform.

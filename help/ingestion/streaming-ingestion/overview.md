@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Resumen de ingesta de streaming
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
+source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 3%
@@ -21,7 +21,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de transmisión y describe los conceptos anteriores.
 
->[!VIDEO](https://video.tv.adobe.com/v/31628?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Registros de perfil de flujo y [!DNL ExperienceEvents]
 
@@ -33,13 +33,13 @@ Lea [crear una guía de conexión de flujo continuo](../tutorials/create-streami
 
 Una vez que sepa que los datos están limpios, puede habilitar los conjuntos de datos para [!DNL Real-Time Customer Profile] y [!DNL Identity Service].
 
-Para obtener más información sobre cómo habilitar un conjunto de datos para [!DNL Profile] y [!DNL Identity Service], lea la guía [configurar un conjunto de datos](../../profile/tutorials/dataset-configuration.md).
+Para obtener más información sobre cómo habilitar un conjunto de datos para [!DNL Profile] y [!DNL Identity Service], lea la guía [configurar un conjunto de datos](/help/profile/tutorials/dataset-configuration.md).
 
 ## ¿Cuál es la latencia esperada para la ingesta de transmisión en Experience Platform?
 
 >[!IMPORTANT]
 >
->Las protecciones para la ingesta de transmisión están enlazadas al derecho de uso de licencia total que corresponde a toda la organización. Además, el uso de datos en entornos limitados de desarrollo está limitado al 10 % del total de perfiles. Para obtener más información acerca del derecho de uso de licencias, lea la [guía de prácticas recomendadas de administración de datos](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Para obtener información sobre cómo establecer límites en el rendimiento de streaming, lee [Descripción general de la capacidad](../../landing/license-usage-and-guardrails/capacity.md).
+>Las protecciones para la ingesta de transmisión están enlazadas al derecho de uso de licencia total que corresponde a toda la organización. Además, el uso de datos en entornos limitados de desarrollo está limitado al 10 % del total de perfiles. Para obtener más información acerca del derecho de uso de licencias, lea la [guía de prácticas recomendadas de administración de datos](/help/landing/license-usage-and-guardrails/data-management-best-practices.md). Para obtener información sobre cómo establecer límites en el rendimiento de streaming, lee [Descripción general de la capacidad](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destino | Latencia esperada |
 | --------- | ---------------- |
@@ -61,4 +61,4 @@ La tabla siguiente muestra instrucciones sobre los límites de solicitudes por s
 
 ## Extensión de Adobe Experience Platform
 
-Puede utilizar la extensión de Adobe Experience Platform para crear una nueva conexión de flujo continuo. La extensión [!DNL Experience Platform] proporciona acciones para enviar señalizaciones con formato [!DNL Experience Data Model] (XDM) para la ingesta en tiempo real a [!DNL Experience Platform]. Visite la documentación de [Experience Platform Extension](../../tags/extensions/client/web-sdk/overview.md) para obtener más información.
+Puede utilizar la extensión de Adobe Experience Platform para crear una nueva conexión de flujo continuo. La extensión [!DNL Experience Platform] proporciona acciones para enviar señalizaciones con formato [!DNL Experience Data Model] (XDM) para la ingesta en tiempo real a [!DNL Experience Platform]. Visite la documentación de [Experience Platform Extension](/help/tags/extensions/client/web-sdk/overview.md) para obtener más información.

@@ -2,9 +2,9 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '5447'
+source-wordcount: '5425'
 ht-degree: 82%
 
 ---
@@ -116,7 +116,7 @@ Para ver las opciones avanzadas, consulte la sección [Opciones](#options) para 
 
 #### Hover
 
-Se activa el evento si el usuario pasa el ratón sobre un elemento especificado. Además, configure si la regla se activa inmediatamente o después de un número determinado de milisegundos. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
+Se activa el evento si el usuario pasa el puntero por encima de un elemento especificado. Además, configure si la regla se activa inmediatamente o después de un número determinado de milisegundos. Consulte la sección [Opciones](#options) para obtener más información sobre la configuración de eventos personalizables.
 
 ### Otros eventos
 
@@ -178,8 +178,8 @@ Cada uno de los tipos de eventos de formulario utiliza la siguiente configuraci�
 
 #### Specific Elements \| Any Element
 
-* Si selecciona **[!UICONTROL Elementos específicos]**, aparecen las opciones para seleccionar los elementos y los valores de propiedad.
-* Si selecciona **[!UICONTROL Cualquier elemento]**, no se necesitan más opciones para restringir los elementos.
+* Si selecciona **[!UICONTROL Specific Elements]**, aparecen las opciones para seleccionar los elementos y los valores de propiedad.
+* Si selecciona **[!UICONTROL Any Element]**, no se necesitan más opciones para reducir los elementos.
 
 #### Elements matching the CSS selector
 
@@ -205,7 +205,7 @@ Si selecciona esta opción, aparecerán disponibles los siguientes parámetros:
 
 * Ejecute esta regla incluso cuando el evento se origine a partir de un elemento descendiente
 * Permita que esta regla se ejecute incluso si el evento ya ha activado una regla para un elemento descendientes
-* Una vez ejecutada la regla, se impide que el evento active reglas dirigidas a elementos antecesores
+* Una vez ejecutada la regla, se impide que el evento active reglas segmentadas a elementos antecesores
 
 ## Tipos de condición de la Extensión principal
 
@@ -231,9 +231,9 @@ Especifique cualquier código personalizado que deba darse como condición del e
 
 Utilice el editor de código integrado para introducir el código personalizado:
 
-1. Seleccione **[!UICONTROL Abrir editor]**.
+1. Seleccione **[!UICONTROL Open Editor]**.
 1. Escriba el Custom Code.
-1. Seleccione **[!UICONTROL Guardar]**.
+1. Seleccione **[!UICONTROL Save]**.
 
 Una variable denominada `event` estará disponible automáticamente y podrá hacer referencia a ella desde su Custom Code. El objeto `event` contendrá información útil sobre el evento que activó la regla. La forma más sencilla de determinar qué datos de eventos están disponibles es registrar `event` en la consola desde el código personalizado:
 
@@ -327,7 +327,7 @@ Especifique el nombre y el valor de la variable JavaScript que debe darse para a
 
 Especifique la página en la que el usuario debe aterrizar para activar el evento.
 
-1. Especifique la página de aterrizaje.
+1. Especifique la página de destino.
 1. (Opcional) Habilite Regex si es una expresión regular.
 
 #### New/Returning Visitor
@@ -534,7 +534,7 @@ Especifique el número máximo de veces que la condición devuelve el valor “T
 
 Para la frecuencia máxima 1 de condición por sesión, se comparan estos dos elementos `localStorage`. Si `visitorTracking.sessionCount` es mayor que el recuento de `maxFrequency.session`, la condición de muestreo es verdadera. Si son iguales, la condición es falsa.
 
-`sessionCount` es un elemento `visitorTracking`, por lo que la API de visitante debe estar activada para que la condición de muestreo funcione.
+`sessionCount` es un elemento `visitorTracking`, por lo que la API de visitante debe estar habilitada para que la condición de muestreo funcione.
 
 #### Sampling
 
@@ -557,8 +557,8 @@ Proporcione el código que se ejecuta después de activar el evento y de evaluar
    * JavaScript
    * HTML
 1. Seleccione si desea ejecutar el código de acción globalmente.
-1. Seleccione **[!UICONTROL Abrir editor]**.
-1. Edite el código y, a continuación, haga clic en **[!UICONTROL Guardar]**.
+1. Seleccione **[!UICONTROL Open Editor]**.
+1. Edite el código y, a continuación, seleccione **[!UICONTROL Save]**.
 
 Cuando se selecciona JavaScript como idioma, estará disponible automáticamente una variable denominada `event` y podrá hacer referencia a ella desde su Custom Code. El objeto `event` contendrá información útil sobre el evento que activó la regla. La forma más sencilla de determinar qué datos de eventos están disponibles es registrar `event` en la consola desde el código personalizado:
 
@@ -636,7 +636,7 @@ Esta acción almacena en déclencheur todas las reglas que usan un [evento de ll
 
 ![Captura de pantalla de una acción Déclencheur Direct Call en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-action.png)
 
-La acción se asigna directamente al método [`track` &#x200B;](../../../ui/client-side/satellite-object.md#track) en el objeto `satellite`, al que se puede obtener acceso mediante código del lado del cliente.
+Esta acción se asigna directamente a [`_satellite.track()`](/help/collection/tags/track.md).
 
 ## Tipos de Data Elements de Extensión principal
 
@@ -853,7 +853,7 @@ Seleccione uno de los siguientes atributos de comportamiento del visitante:
 Algunos casos de uso común son:
 
 * Mostrar una encuesta después de que un visitante haya estado en el sitio durante cinco minutos
-* Si esta es la página de aterrizaje para la visita, rellenar una métrica de Analytics
+* Si esta es la página de destino para la visita, rellenar una métrica de Analytics
 * Mostrar una oferta nueva al visitante después de un determinado número de sesiones
 * Mostrar una sugerencia de suscripción al boletín en el caso de los visitantes nuevos
 

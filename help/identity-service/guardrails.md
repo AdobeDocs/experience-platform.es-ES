@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;solución de probl
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,9 @@ Este documento proporciona información sobre los límites de uso y tasa de dato
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
-## Introducción 
+## Introducción
 
 Los siguientes servicios de Experience Platform participan en el modelado de datos de identidad:
 
@@ -47,7 +47,7 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 
 En la tabla siguiente se describen las reglas existentes que debe seguir para garantizar una validación correcta del valor de identidad.
 
-| Área de nombres | Regla de validación | Comportamiento del sistema cuando se infringe la regla |
+| Espacio de nombres | Regla de validación | Comportamiento del sistema cuando se infringe la regla |
 | --- | --- | --- |
 | ECID | <ul><li>El valor de identidad de un ECID debe ser exactamente de 38 caracteres.</li><li>El valor de identidad de un ECID debe constar solo de números.</li></ul> | <ul><li>Si el valor de identidad de ECID no es exactamente de 38 caracteres, se omite el registro.</li><li>Si el valor de identidad de ECID contiene caracteres no numéricos, se omite el registro.</li></ul> |
 | No ECID | <ul><li>El valor de identidad no puede superar los 1024 caracteres.</li><li>Los valores de identidad no pueden ser &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ni ser una cadena vacía (por ejemplo: &quot;&quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Si el valor de identidad supera los 1024 caracteres, se omite el registro.</li><li>Se bloqueará la ingesta de la identidad.</li></ul> |
@@ -109,7 +109,7 @@ La eliminación solo se produce en los datos del servicio de identidad y no en e
 Si desea conservar los eventos autenticados con el CRMID, se recomienda cambiar los ID principales de ECID a CRMID. Lea los siguientes documentos para ver los pasos necesarios para implementar este cambio:
 
 * [Configurar el mapa de identidad para las etiquetas de Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Datos de identidad en Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
+* [Datos de identidad en Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
 
 ### Casos de ejemplo
 
@@ -137,7 +137,7 @@ En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una n
 * El diagrama siguiente supone que en `timestamp=50` existen 50 identidades en el gráfico de identidades.
 * `(...)` significa las otras identidades que ya están vinculadas en el gráfico.
 
-En este ejemplo, ECID:32110 se ingiere y se vincula a un gráfico grande en `timestamp=51`, por lo tanto se supera el límite de 50 identidades.
+En este ejemplo, ECID:32110 se ha introducido y se ha vinculado a un gráfico grande en `timestamp=51`, por lo que se ha superado el límite de 50 identidades.
 
 ![](./images/guardrails/before-split.png)
 
@@ -149,7 +149,7 @@ Como resultado, el servicio de identidad elimina la identidad más antigua en fu
 
 >[!TAB Salida de gráfico]
 
-Como resultado de la eliminación de ECID:35577, también se eliminan los extremos que vinculaban CRMID:60013 y CRMID:25212 con el ECID:35577 ahora eliminado. Este proceso de eliminación hace que el gráfico se divida en dos gráficos más pequeños.
+Como resultado de la eliminación de ECID:35577, también se eliminan los extremos que vincularon CRMID:60013 y CRMID:25212 con el ECID:35577 ahora eliminado. Este proceso de eliminación hace que el gráfico se divida en dos gráficos más pequeños.
 
 ![](./images/guardrails/after-split.png)
 
@@ -168,15 +168,15 @@ Como resultado de la eliminación de ECID:35577, también se eliminan los extrem
 
 En virtud de la lógica de eliminación, algunas identidades &quot;hub&quot; también se pueden eliminar. Estas identidades de concentrador hacen referencia a nodos que están vinculados a varias identidades individuales que, de lo contrario, se desvincularían.
 
-En el ejemplo siguiente, ECID:21011 se ingiere y se vincula al gráfico en `timestamp=51`, por lo tanto se supera el límite de 50 identidades.
+En el ejemplo siguiente, ECID:21011 se ingiere y se vincula al gráfico en `timestamp=51`, excediendo así el límite de 50 identidades.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
 >[!TAB Proceso de eliminación]
 
-Como resultado, el servicio de identidad elimina la identidad más antigua solo del gráfico de identidad, que en este caso es ECID:35577. La eliminación de ECID:35577 también provoca la eliminación de lo siguiente:
+Como resultado, el servicio de identidad solo elimina la identidad más antigua del gráfico de identidades, que en este caso es ECID:35577. La eliminación de ECID:35577 también resulta en la eliminación de lo siguiente:
 
-* El vínculo entre CRMID: 60013 y el ahora eliminado ECID:35577, lo que da como resultado un escenario de división de gráficos.
+* El vínculo entre CRMID: 60013 y el ECID :35577 ahora eliminado, lo que da como resultado un escenario de división de gráficos.
 * IDFA: 32110, IDFA: 02383 y las identidades restantes representadas por `(...)`. Estas identidades se eliminan porque, individualmente, no están vinculadas a ninguna otra identidad y, por lo tanto, no se pueden representar en un gráfico.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
@@ -189,7 +189,7 @@ Por último, el proceso de eliminación genera dos gráficos más pequeños.
 
 >[!ENDTABS]
 
-## Pasos siguientes
+## Próximos pasos
 
 Consulte la siguiente documentación para obtener más información sobre [!DNL Identity Service]:
 
@@ -199,7 +199,7 @@ Consulte la siguiente documentación para obtener más información sobre [!DNL 
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

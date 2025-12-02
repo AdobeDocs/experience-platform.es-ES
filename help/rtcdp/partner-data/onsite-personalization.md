@@ -3,7 +3,7 @@ title: Personalice experiencias en el sitio para visitantes desconocidos mediant
 description: Aprenda a utilizar el reconocimiento de visitantes asistido por socios para ofrecer experiencias personalizadas en el sitio a sus visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
 source-wordcount: '2568'
 ht-degree: 72%
@@ -14,7 +14,7 @@ ht-degree: 72%
 
 >[!AVAILABILITY]
 >
->Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Aprenda a utilizar el reconocimiento asistido por socios para ofrecer experiencias personalizadas a los visitantes de su propiedad web. Utilice este tutorial para comprender la secuencia de implementación de varios elementos en Experience Platform y otras soluciones de Experience Cloud para mostrar una experiencia personalizada a los visitantes autenticados y no autenticados.
 
@@ -47,7 +47,7 @@ Cuando planee utilizar atributos proporcionados por el socio para ofrecer experi
 Para implementar correctamente este caso de uso, debe utilizar varias áreas de Real-time Customer Data Platform y otras soluciones de Experience Cloud. Asegúrese de que dispone de los [permisos de control de acceso basados en atributos](/help/access-control/abac/overview.md) necesarios para todas estas áreas, o pídale al administrador del sistema que le conceda los permisos necesarios.
 
 * Recopilación de datos
-   * [SDK web de Adobe Experience Platform](/help/web-sdk/home.md)
+   * [SDK web de Adobe Experience Platform](/help/collection/js/js-overview.md)
    * [Etiquetas](/help/tags/home.md)
    * [Secuencias de datos](/help/datastreams/overview.md)
 * Administración de datos en Real-Time CDP
@@ -64,7 +64,7 @@ Para implementar correctamente este caso de uso, debe utilizar varias áreas de 
 
 Vea el tutorial en vídeo a continuación para ver una introducción a cómo personalizar experiencias en el sitio para visitantes desconocidos:
 
->[!VIDEO](https://video.tv.adobe.com/v/3449255/?captions=spa&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
@@ -157,7 +157,7 @@ Rellene los campos obligatorios y seleccione **[!UICONTROL Save]**.
 
 ![Rellene los campos obligatorios para la nueva propiedad.](/help/rtcdp/assets/partner-data/onsite-personalization/tag-property-fields.png)
 
-Obtenga información completa sobre cómo [crear una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=es).
+Obtenga información completa sobre cómo [crear una propiedad de etiqueta](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
 A continuación, debe instalar varias extensiones dentro de la propiedad. Seleccione la propiedad de etiquetas y vaya a la sección [!UICONTROL Extensions].
 
@@ -175,7 +175,7 @@ Tenga en cuenta que este tutorial indica cómo puede instrumentar el sitio web c
 
 En la pantalla para configurar Web SDK, desplácese hasta la sección **[!UICONTROL Datastreams]** y proporcione información sobre la zona protegida de Experience Platform que está utilizando. Seleccione la zona protegida adecuada y la secuencia de datos creada en los pasos anteriores en el menú desplegable siguiente. Puede elegir los mismos valores de zona protegida y de secuencia de datos para todos los demás entornos. Deje el resto de la configuración sin cambios y seleccione **[!UICONTROL Save]**.
 
-Obtenga información completa sobre [cómo instalar el SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=es).
+Obtenga información completa sobre [cómo instalar el SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html).
 
 #### Instalar extensión del servicio de ID
 

@@ -3,7 +3,7 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión de personalización personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de audiencia de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a audiencias de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 9%
@@ -37,9 +37,9 @@ Configure este destino para permitir que las plataformas de personalización ext
 
 Este destino requiere el uso de uno de los siguientes métodos de recopilación de datos, según la implementación:
 
-* Use [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) si desea recopilar datos de su sitio web.
+* Use [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) si desea recopilar datos de su sitio web.
 * Use [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si desea recopilar datos de su aplicación móvil.
-* Use la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) si no usa [Web SDK](/help/web-sdk/home.md) o [SDK móvil](https://developer.adobe.com/client-sdks/documentation/), o si desea personalizar la experiencia del usuario según los atributos del perfil.
+* Utilice la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/) si no utiliza Web SDK o Mobile SDK, o si desea personalizar la experiencia del usuario en función de los atributos del perfil.
 
 >[!IMPORTANT]
 >
@@ -102,13 +102,13 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar perfiles y audiencias para destinos personalizados Edge](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Datos exportados {#exported-data}
 
-Si usa [etiquetas en Adobe Experience Platform](../../../tags/home.md) para implementar Experience Platform Web SDK, use la funcionalidad [enviar evento completado](../../../tags/extensions/client/web-sdk/event-types.md) y la acción de código personalizado tendrá una variable `event.destinations` que puede usar para ver los datos exportados.
+Si usa [etiquetas en Adobe Experience Platform](/help/tags/home.md) para implementar Experience Platform Web SDK, use la funcionalidad [enviar evento completado](/help/tags/extensions/client/web-sdk/event-types.md) y la acción de código personalizado tendrá una variable `event.destinations` que puede usar para ver los datos exportados.
 
 Este es un valor de muestra para la variable `event.destinations`:
 
@@ -130,7 +130,7 @@ Este es un valor de muestra para la variable `event.destinations`:
 ]
 ```
 
-Si no usa [Tags](/help/tags/home.md) para implementar Experience Platform Web SDK, use [respuestas de comandos](/help/web-sdk/commands/command-responses.md) para ver los datos exportados.
+Si no usa [Tags](/help/tags/home.md) para implementar Experience Platform Web SDK, use [respuestas de comandos](/help/collection/js/commands/command-responses.md) para ver los datos exportados.
 
 La respuesta JSON de Adobe Experience Platform se puede analizar para encontrar el alias de integración correspondiente de la aplicación que está integrando con Adobe Experience Platform. Los ID de audiencia se pueden pasar al código de la aplicación como parámetros de segmentación. A continuación se muestra un ejemplo de cómo sería esto específico de la respuesta de destino.
 

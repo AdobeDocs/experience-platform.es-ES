@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Clase XDM ExperienceEvent
 description: Obtenga información acerca de la clase XDM ExperienceEvent y las prácticas recomendadas para el modelado de datos de evento.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
+source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
 workflow-type: tm+mt
-source-wordcount: '2783'
+source-wordcount: '2728'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ La propia clase [!DNL XDM ExperienceEvent] proporciona varios campos relacionado
 
 | Propiedad | Descripción |
 | --- | --- |
-| `_id`<br>**(obligatorio)** | El campo Clase de evento de experiencia `_id` identifica de forma exclusiva los eventos individuales que se incorporan a Adobe Experience Platform. Este campo se utiliza para realizar un seguimiento de la exclusividad de un evento individual, evitar la duplicación de datos y buscar ese evento en los servicios descendentes.<br><br>Cuando se detectan eventos duplicados, las aplicaciones y los servicios de Experience Platform pueden administrar la duplicación de forma diferente. Por ejemplo, los eventos duplicados en el servicio de perfiles se pierden si el evento con el mismo `_id` ya existe en el almacén de perfiles. Sin embargo, estos eventos se seguirán registrando en el lago de datos.<br><br>En algunos casos, `_id` puede ser un [Identificador único universal (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) o un [Identificador único global (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Si está transmitiendo datos desde una conexión de origen o ingiriendo directamente desde un archivo de Parquet, debe generar este valor concatenando una cierta combinación de campos que hagan que el evento sea único. Algunos ejemplos de eventos que se pueden concatenar son el ID principal, la marca de tiempo, el tipo de evento, etc. El valor concatenado debe ser una cadena con formato `uri-reference`, lo que significa que se deben eliminar los caracteres de dos puntos. Después, el valor concatenado debe tener un cifrado hash con SHA-256 u otro algoritmo de su elección.<br><br>Es importante distinguir que **este campo no representa una identidad relacionada con una persona individual**, sino más bien el registro de datos en sí. Los datos de identidad relacionados con una persona deben relegarse a [campos de identidad](../schema/composition.md#identity) proporcionados por grupos de campos compatibles. |
-| `eventMergeId` | Si se usa [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) para la ingesta de datos, representa el identificador del lote ingerido que provocó la creación del registro. El sistema rellena automáticamente este campo tras la ingesta de datos. No se admite el uso de este campo fuera del contexto de una implementación de Web SDK. |
+| `_id`<br>**(obligatorio)** | El campo Clase de evento de experiencia `_id` identifica de forma exclusiva los eventos individuales que se incorporan a Adobe Experience Platform. Este campo se utiliza para realizar un seguimiento de la exclusividad de un evento individual, evitar la duplicación de datos y buscar ese evento en los servicios descendentes.<br><br>Cuando se detectan eventos duplicados, las aplicaciones y los servicios de Experience Platform pueden administrar la duplicación de forma diferente. Por ejemplo, los eventos duplicados en el servicio de perfiles se pierden si el evento con el mismo `_id` ya existe en el almacén de perfiles. Sin embargo, estos eventos aún se registran en el lago de datos.<br><br>En algunos casos, `_id` puede ser un [Identificador único universal (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) o un [Identificador único global (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Si está transmitiendo datos desde una conexión de origen o ingiriendo directamente desde un archivo de Parquet, debe generar este valor concatenando una cierta combinación de campos que hagan que el evento sea único. Algunos ejemplos de eventos que se pueden concatenar son el ID principal, la marca de tiempo, el tipo de evento, etc. El valor concatenado debe ser una cadena con formato `uri-reference`, lo que significa que se deben eliminar los caracteres de dos puntos. Después, el valor concatenado debe tener un cifrado hash con SHA-256 u otro algoritmo de su elección.<br><br>Es importante distinguir que **este campo no representa una identidad relacionada con una persona individual**, sino más bien el registro de datos en sí. Los datos de identidad relacionados con una persona deben relegarse a [campos de identidad](../schema/composition.md#identity) proporcionados por grupos de campos compatibles. |
+| `eventMergeId` | Si se usa [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) para la ingesta de datos, representa el identificador del lote ingerido que provocó la creación del registro. El sistema rellena automáticamente este campo tras la ingesta de datos. No se admite el uso de este campo fuera del contexto de una implementación de Web SDK. |
 | `eventType` | Cadena que indica el tipo o la categoría del evento. Este campo se puede utilizar si desea distinguir distintos tipos de eventos dentro del mismo esquema y conjunto de datos, como distinguir un evento de vista de producto de un evento de complemento al carro de compras para una compañía minorista.<br><br>Los valores estándar para esta propiedad se proporcionan en la [sección del apéndice](#eventType), con descripciones de su caso de uso previsto. Este campo es una enumeración ampliable, lo que significa que también puede utilizar sus propias cadenas de tipo de evento para categorizar los eventos que está rastreando.<br><br>`eventType` le limita a utilizar un solo evento por visita en la aplicación y, por lo tanto, debe utilizar campos calculados para que el sistema sepa qué evento es el más importante. Para obtener más información, consulte la sección sobre [prácticas recomendadas para campos calculados](#calculated). |
 | `producedBy` | Valor de cadena que describe el productor o el origen del evento. Este campo se puede utilizar para filtrar ciertos productores de eventos si es necesario con fines de segmentación.<br><br>Algunos valores sugeridos para esta propiedad se proporcionan en la [sección del apéndice](#producedBy). Este campo es una enumeración extensible, lo que significa que también puede utilizar sus propias cadenas para representar a diferentes productores de eventos. |
 | `identityMap` | Campo de asignación que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los [conceptos básicos de la composición de esquemas](../schema/composition.md#identityMap) para obtener más información sobre su caso de uso. |
@@ -64,29 +64,29 @@ Si está transmitiendo datos a Experience Platform mediante una conexión de ori
 
 Adobe proporciona varios grupos de campos estándar para su uso con la clase [!DNL XDM ExperienceEvent]. A continuación se muestra una lista de algunos grupos de campos utilizados comúnmente para la clase:
 
-* [[!UICONTROL Extensión completa de Adobe Analytics ExperienceEvent]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL Extensión completa de Adobe Advertising Cloud ExperienceEvent]](../field-groups/event/advertising-full-extension.md)
-* [[!UICONTROL Transferencias de saldo]](../field-groups/event/balance-transfers.md)
-* [[!UICONTROL Detalles de marketing de campaña]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL Acciones de tarjeta]](../field-groups/event/card-actions.md)
-* [[!UICONTROL Detalles de canal]](../field-groups/event/channel-details.md)
-* [[!UICONTROL Detalles de Commerce]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL Detalles de depósito]](../field-groups/event/deposit-details.md)
-* [[!UICONTROL Detalles de intercambio de dispositivos]](../field-groups/event/device-trade-in-details.md)
-* [[!UICONTROL Reserva de restaurante]](../field-groups/event/dining-reservation.md)
-* [[!UICONTROL Detalles del identificador de usuario final]](../field-groups/event/enduserids.md)
-* [[!UICONTROL Detalles del entorno]](../field-groups/event/environment-details.md)
-* [[!UICONTROL Reserva de vuelo]](../field-groups/event/flight-reservation.md)
-* [[!UICONTROL Consentimiento de IAB TCF 2.0]](../field-groups/event/iab.md)
-* [[!UICONTROL Reserva de alojamiento]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL Detalles de interacción de MediaAnalytics]](../field-groups/event/mediaanalytics-interaction.md)
-* [[!UICONTROL Detalles de solicitud de presupuesto]](../field-groups/event/quote-request-details.md)
-* [[!UICONTROL Detalles de la reserva]](../field-groups/event/reservation-details.md)
-* [[!UICONTROL Detalles web]](../field-groups/event/web-details.md)
+* [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
+* [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)
+* [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
+* [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Deposit Details]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL Device Trade-In Details]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL Dining Reservation]](../field-groups/event/dining-reservation.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
+* [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics Interaction Details]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
+* [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre la clase [!UICONTROL XDM ExperienceEvent].
+La sección siguiente contiene información adicional sobre la clase [!UICONTROL XDM ExperienceEvent].
 
 ### Valores aceptados para `eventType` {#eventType}
 
@@ -126,7 +126,7 @@ En la tabla siguiente se describen los valores aceptados de `eventType`, junto c
 | `decisioning.propositionFetch` | Se utiliza para indicar que un evento se utiliza principalmente para recuperar la toma de decisiones. Adobe Analytics eliminará este evento automáticamente. |
 | `decisioning.propositionInteract` | Este tipo de evento se utiliza para rastrear interacciones, como clics, en contenido personalizado. |
 | `decisioning.propositionSend` | Este evento registra cuándo se ha decidido enviar a un cliente potencial una recomendación u oferta para su consideración. |
-| `decisioning.propositionTrigger` | Los eventos de este tipo se almacenan en el almacenamiento local mediante [Web SDK](../../web-sdk/home.md), pero no se envían a Experience Edge. Cada vez que se cumple un conjunto de reglas, se genera un evento y se almacena en el almacenamiento local (si esa configuración está habilitada). |
+| `decisioning.propositionTrigger` | Los eventos de este tipo se almacenan en el almacenamiento local de Web SDK, pero no se envían a Edge Network. Cada vez que se cumple un conjunto de reglas, se genera un evento y se almacena en el almacenamiento local (si esa configuración está habilitada). |
 | `delivery.feedback` | Este evento realiza un seguimiento de los eventos de comentarios de un envío, como un envío por correo electrónico. |
 | `directMarketing.emailBounced` | Este evento rastrea cuándo rebotó un correo electrónico a una persona. |
 | `directMarketing.emailBouncedSoft` | Este evento rastrea cuándo ha rebotado suavemente un correo electrónico a una persona. |

@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2024'
 description: Las notas de la versión de abril de 2024 de Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
-workflow-type: ht
-source-wordcount: '1896'
-ht-degree: 100%
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+workflow-type: tm+mt
+source-wordcount: '1893'
+ht-degree: 98%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 Actualizaciones de funciones existentes en Experience Platform:
 
-- [Paneles](#dashboards)
+- [Paneles de control](#dashboards)
 - [Recopilación de datos](#data-collection)
 - [Destinos](#destinations)
 - [Servicio de identidad](#identity-service)
@@ -29,9 +29,9 @@ Actualizaciones de funciones existentes en Experience Platform:
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
-## Paneles {#dashboards}
+## Paneles de control {#dashboards}
 
-Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
+Adobe Experience Platform proporciona varios paneles de control a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 **Funciones nuevas o actualizadas**
 
@@ -41,7 +41,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
+Para obtener más información sobre los paneles de control, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles de control](../../dashboards/home.md).
 
 ## Recopilación de datos {#data-collection}
 
@@ -52,7 +52,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Tipo | Función | Descripción |
 | --- | --- | --- |
 | Extensiones | Extensión de etiquetas [!DNL Acxiom Anonymous Visitor Insights] | Descubra de dónde provienen los visitantes de su sitio web con [!DNL Acxiom's Visitor Insights]. Al utilizar la tecnología de búsqueda de IP geográfica, Acxiom puede localizar la ubicación de navegadores anónimos. Una vez identificados, una búsqueda en la base de datos organizada genera perspectivas adicionales que se devuelven al explorador. Por lo tanto, los creadores de contenido pueden adaptar su contenido para que coincida con estos puntos de datos, lo que proporciona una experiencia más personalizada y atractiva para los visitantes, incluso si empezaron siendo desconocidos. |
-| Secuencias de datos | [Detección de bots de Edge Network](../../datastreams/bot-detection.md) | El tráfico proveniente de entidades no humanas, como programas automatizados, rastreadores web, arañas web o escáneres de secuencias de comandos, puede dificultar la identificación de eventos que ocurren desde visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos. <br>La detección de bots le permite identificar eventos generados por el [SDK web](../../web-sdk/home.md), el [SDK móvil](https://developer.adobe.com/client-sdks/home/) y [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/) como si estuvieran generados por arañas web y bots conocidos. Al configurar la detección de bots para sus flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud que desee clasificar como eventos de bots. <br> La identificación del tráfico de bots puede proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil. |
+| Secuencias de datos | [Detección de bots de Edge Network](../../datastreams/bot-detection.md) | El tráfico proveniente de entidades no humanas, como programas automatizados, rastreadores web, arañas web o escáneres de secuencias de comandos, puede dificultar la identificación de eventos que ocurren desde visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos. La detección de bots <br>le permite identificar eventos generados por [Adobe Experience Platform Data Collection](/help/collection/home.md) como generados por arañas web y bots conocidos. Al configurar la detección de bots para sus flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud que desee clasificar como eventos de bots. <br> La identificación del tráfico de bots puede proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil. |
 | SDK móvil | Lanzamiento de la versión principal | Se han lanzado nuevas versiones principales del SDK móvil para las plataformas siguientes: iOS Mobile Core 5.x y extensiones de iOS compatibles, Android Mobile Core 3.x y extensiones de Android compatibles, React Native Core 6.x y extensiones de React Native compatibles, Flutter Core 4.x y extensiones de Flutter compatibles. Estas versiones proporcionan varias funciones y mejoras nuevas, incluida la compatibilidad con el SDK de Android para Jetpack Compose, la compatibilidad con experiencias basadas en código de Adobe Journey Optimizer y la disponibilidad general de la extensión de mensajería de Adobe Journey Optimizer para Flutter. Para ver notas de la versión más detalladas, consulte [Notas de la versión del SDK móvil](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | SDK móvil | Privacidad | Debido a la actualización de la política de Apple, a partir del 1 de mayo de 2024, los desarrolladores deben implementar nuevas funciones de privacidad para enviarlas a App Store. Todos los clientes de Adobe que utilicen el SDK móvil deberán actualizar a la versión 5.x del SDK si desean recibir la aprobación de App Store después del 1 de mayo. |
 | SDK de Roku | SDK de Roku | La primera versión principal del SDK de Roku se ha lanzado con compatibilidad con los medios de streaming para Edge Network de Platform. |
@@ -61,7 +61,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 {style="table-layout:auto"}
 
-<!--| Web SDK | [Streaming Media Collection support in Web SDK](../../web-sdk/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](../../web-sdk/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/es/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
+<!--| Web SDK | [Streaming Media Collection support in Web SDK](/help/collection/js/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](/help/collection/js/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
 
 Para obtener más información acerca de las recopilaciones de datos, lea la [información general sobre recopilaciones de datos](../../collection/home.md).
 
@@ -89,7 +89,7 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 
 | Función | Descripción |
 | --- | --- |
-| Obsolescencia de los puntos finales `/orgs/{ORG}/` en la API | Los siguientes puntos finales de la [[!DNL Identity Service] API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) han quedado obsoletos:<ul><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities`</li><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities/{ID}`</li></ul> Puede utilizar los puntos finales `/idnamespace/identities` y `/idnamespace/identities/{ID}` para realizar las mismas tareas y recuperar todas las áreas de nombres de una organización o un área de nombres específica de una organización. |
+| Obsolescencia de los puntos finales `/orgs/{ORG}/` en la API | Los siguientes puntos finales de la [[!DNL Identity Service] API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) han quedado obsoletos:<ul><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities`</li><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities/{ID}`</li></ul> Puede utilizar los puntos finales `/idnamespace/identities` y `/idnamespace/identities/{ID}` para realizar las mismas tareas y recuperar todos los espacios de nombres de una organización o un espacio de nombres específico de una organización. |
 
 {style="table-layout:auto"}
 
@@ -97,13 +97,13 @@ Para obtener más información sobre el Servicio de identidad, consulte la [Info
 
 ## Monitorización {#monitoring}
 
-Utilice el panel de monitorización de la IU de Experience Platform para monitorizar el recorrido de los datos de las Fuentes, el servicio de identidad, el perfil del cliente en tiempo real, los públicos y los destinos.
+Utilice el panel de control de monitorización de la IU de Experience Platform para monitorizar el recorrido de los datos de las Fuentes, el servicio de identidad, el perfil del cliente en tiempo real, los públicos y los destinos.
 
 **Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Monitorización de la expansión del panel de control | Ahora puede utilizar el panel de control de monitorización para diferentes tipos de datos en función de su caso práctico comercial. Utilice el panel control de monitorización para monitorizar las actividades de tipo de datos de persona, cuenta y cliente potencial en fuentes, públicos y destinos. |
+| Monitorización de la expansión del panel de control | Ahora puede utilizar el panel de control de monitorización para diferentes tipos de datos en función de su caso práctico comercial. Utilice el panel de control de monitorización para monitorizar las actividades de tipo de datos de persona, cuenta y cliente potencial en fuentes, públicos y destinos. |
 
 {style="table-layout:auto"}
 

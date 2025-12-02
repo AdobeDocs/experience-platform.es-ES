@@ -2,10 +2,10 @@
 title: Referencia de extensiones de etiquetas
 description: Busque documentación sobre las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 8%
+ht-degree: 12%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 A continuación se muestra una lista de la documentación de las extensiones de etiquetas del lado del cliente. Para obtener una lista de las extensiones del lado del servidor disponibles, consulte [referencia de las extensiones de reenvío de eventos](../server/overview.md).
 
 >[!NOTE]
 >
->Cualquier nombre de extensión seguido de un asterisco (*) vincula al listado de la extensión en el Adobe Exchange, que contiene las instrucciones de instalación y uso. El resto de vínculos apuntan a la documentación de la extensión en Adobe Experience League.
+>Cualquier nombre de extensión seguido de un asterisco (*) vincula al listado de la extensión en Adobe Exchange, que contiene las instrucciones de instalación y uso. El resto de vínculos apuntan a la documentación de la extensión en Adobe Experience League.
 
 * [Métricas de velocidad del sitio accesibles](https://exchange.adobe.com/apps/ec/103053)*
 * [Personalizador de Activity Map](https://exchange.adobe.com/apps/ec/101531)*
@@ -28,29 +28,29 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics &amp; Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
-* [Adobe Analytics y Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
-* [Adobe Analytics y Salesforce](https://exchange.adobe.com/apps/ec/101530)*
+* [Adobe Analytics &amp; Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
+* [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Cadena de producto de Adobe Analytics](./product-string/overview.md)
 * [Generador de cadenas de producto de Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)*
-* [Adobe Analytics a través del SDK web de Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
+* [Adobe Analytics a través de Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Capa de datos del cliente de Adobe](./client-data-layer/overview.md)
-* [Adobe de ContextHub](./contexthub/overview.md)
+* [Adobe ContextHub](./contexthub/overview.md)
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Servicio de Adobe Experience Cloud ID](./id-service/overview.md)
 * [Demostración de Adobe Experience Platform](./platform-demo/overview.md)
 * [SDK web de Adobe Experience Platform](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
-* [Adobe Medium Analytics para audio y vídeo](./media-analytics/overview.md)
-* [Adobe Medium Analytics (SDK 3.x)](./media-analytics-3x/overview.md)
+* [Adobe Media Analytics para audio y vídeo](./media-analytics/overview.md)
+* [Adobe Media Analytics (3.x SDK)](./media-analytics-3x/overview.md)
 * [Privacidad de Adobe](./privacy/overview.md)
-* [Selector de grupo de informes de Adobe](https://exchange.adobe.com/apps/ec/100640)*
+* [Selector de grupos de informes de Adobe](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Kit de herramientas de Adobe Target](https://exchange.adobe.com/apps/ec/100640)*
 * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
-* AEM [Información de recursos de la](https://exchange.adobe.com/apps/ec/103406)*
+* [Información de recursos de AEM](https://exchange.adobe.com/apps/ec/103406)*
 * [Notificador JS del freno de aire](https://exchange.adobe.com/apps/ec/103342)*
 * [Amplitud](https://exchange.adobe.com/apps/ec/108010)*
 * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)*
@@ -65,7 +65,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Experiencias del guepardo](https://exchange.adobe.com/apps/ec/102759)*
 * [Tabla de clics](https://exchange.adobe.com/apps/ec/100082)*
 * [Complementos comunes de Analytics](./plugins/overview.md)
-* [Complementos comunes del SDK web](./web-sdk/web-sdk-plugins.md)
+* [Complementos comunes de Web SDK](web-sdk-plugins/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [CuadradoDeContenido](https://exchange.adobe.com/apps/ec/100364)*
 * [Administración de consentimiento de cookies por Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)*
@@ -77,7 +77,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Decibelio](https://exchange.adobe.com/apps/ec/100913)*
 * [Demandbase](https://exchange.adobe.com/apps/ec/101605)*
 * [Privacidad diferencial](https://exchange.adobe.com/apps/ec/104535)*
-* [Visores De Dynamic Media](https://exchange.adobe.com/apps/ec/103048)*
+* [Visores de Dynamic Media](https://exchange.adobe.com/apps/ec/103048)*
 * [Ayudante EDDL](https://exchange.adobe.com/apps/ec/107691)*
 * [OneTag parlante](https://exchange.adobe.com/apps/ec/101392)*
 * [ForeSee](https://exchange.adobe.com/apps/ec/100164)*
@@ -94,7 +94,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [Administrador de propiedades maestras](https://exchange.adobe.com/apps/ec/102992)*
 * [Monita](https://exchange.adobe.com/apps/ec/106544)*
-* [SDK digital de Nielsen](https://exchange.adobe.com/apps/ec/101361)*
+* [SDK digital Nielsen](https://exchange.adobe.com/apps/ec/101361)*
 * [Administración de consentimiento de OneTrust para cookies](https://exchange.adobe.com/apps/ec/100340)*
 * [Mermelada de Pepper](https://exchange.adobe.com/apps/ec/103587)*
 * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)*

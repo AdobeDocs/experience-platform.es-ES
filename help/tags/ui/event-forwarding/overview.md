@@ -3,7 +3,7 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información sobre el reenvío de eventos en Adobe Experience Platform, que le permite utilizar Experience Platform Edge Network para ejecutar tareas sin cambiar la implementación de las etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 9%
@@ -24,13 +24,13 @@ El reenvío de eventos en Adobe Experience Platform permite enviar datos de even
 
 Este documento proporciona información general de alto nivel sobre el reenvío de eventos en Experience Platform.
 
-![Reenvío de eventos en el ecosistema de recopilación de datos.](../../../collection/images/home/event-forwarding.png)
+![Reenvío de eventos en el ecosistema de recopilación de datos.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Experience Platform, consulte la [descripción general de la recopilación de datos](../../../collection/home.md).
+>Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Experience Platform, consulte la [descripción general de la recopilación de datos](/help/collection/home.md).
 
-El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=es) ofrece las siguientes ventajas:
+El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
 
 **Rendimiento**:
 
@@ -89,7 +89,7 @@ Puede ver los recursos adicionales disponibles para obtener más información so
 
 ### Reglas {#rules}
 
-La creación de reglas en las propiedades del reenvío de eventos funciona de forma similar a las etiquetas, con la diferencia clave de que no se pueden seleccionar eventos como componentes de regla. En su lugar, una regla de reenvío de eventos procesa todos los eventos que recibe del [conjunto de datos](../../../datastreams/overview.md) y reenvía esos eventos a los destinos si se cumplen ciertas condiciones.
+La creación de reglas en las propiedades del reenvío de eventos funciona de forma similar a las etiquetas, con la diferencia clave de que no se pueden seleccionar eventos como componentes de regla. En su lugar, una regla de reenvío de eventos procesa todos los eventos que recibe del [conjunto de datos](/help/datastreams/overview.md) y reenvía esos eventos a los destinos si se cumplen ciertas condiciones.
 
 Además, se aplica un tiempo de espera de 30 segundos a un solo evento cuando se procesa en todas las reglas (y, por lo tanto, en todas las acciones) dentro de una propiedad de reenvío de eventos. Esto significa que todas las reglas y todas las acciones de un solo evento deben completarse en este lapso de tiempo.
 

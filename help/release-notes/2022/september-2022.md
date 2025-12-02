@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2022'
 description: Las notas de la versión de septiembre de 2022 de Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '2774'
-ht-degree: 24%
+source-wordcount: '2723'
+ht-degree: 26%
 
 ---
 
@@ -35,9 +35,9 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 >
 >El control de acceso basado en atributos se habilitará a partir de octubre de 2022. Si desea ser uno de los primeros en adoptarlo, póngase en contacto con su representante de Adobe.
 
-El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Experience Platform específicos de su organización.
+El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios específicos de Experience Platform de su organización.
 
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y otros tipos personalizados de datos en todos los flujos de trabajo y recursos de Experience Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a datos personales confidenciales (SPD), información de identificación personal (PII) y otro tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
 
 | Función | Descripción |
 | --- | --- |
@@ -88,14 +88,14 @@ Para obtener más información sobre los distintos tipos de eventos específicos
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
+Adobe Experience Platform proporciona varios paneles de control a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 | Función | Descripción |
 | --- | --- |
 | Etiqueta en uso | Cuando se visualiza en la biblioteca de widgets, la etiqueta en uso identifica fácilmente la presencia de widgets existentes en el tablero. Esto facilita evitar la duplicación, aunque puede añadir el mismo widget más de una vez si lo desea. |
-| Paneles definidos por el usuario | Los paneles definidos por el usuario ayudan a acelerar las perspectivas y personalizar las visualizaciones, lo que le permite crear y administrar paneles personalizados. Con los paneles definidos por el usuario puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Lee la [guía de características](../../dashboards/standard-dashboards.md) para obtener más información. |
+| Paneles de control definidos por el usuario | Los paneles definidos por el usuario ayudan a acelerar las perspectivas y personalizar las visualizaciones, lo que le permite crear y administrar paneles personalizados. Con los paneles definidos por el usuario puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Lee la [guía de características](../../dashboards/standard-dashboards.md) para obtener más información. |
 | Modelo de datos de perspectivas de Customer Data Platform | La función del modelo de datos de perspectivas de la plataforma de datos del cliente (CDP) expone los modelos de datos y SQL que alimenta las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para los casos de uso de indicadores de rendimiento clave y marketing. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles definidos por el usuario. Lea la [guía de características del modelo de datos de perspectivas de CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) para obtener más información. |
-| Widget del informe de superposición de audiencia | Este widget está disponible tanto para paneles de [!UICONTROL Perfiles] como de [!UICONTROL Segmentos]. El informe proporciona una lista ordenada de audiencias clasificadas según los porcentajes de superposición más altos o más bajos para el segmento elegido. En el panel [!UICONTROL Perfiles] puede filtrar y ver la superposición de audiencias mediante una política de combinación a partir de todos los segmentos disponibles. Los paneles [!UICONTROL Segmentos] le permiten filtrar la superposición de audiencias según un segmento específico.<br>Use este análisis para generar nuevos segmentos de alto rendimiento y evitar enviar la misma audiencia a diferentes destinos. El informe también ayuda a identificar perspectivas ocultas para mejorar la segmentación o localizar perfiles únicos que perseguir. Lea las respectivas guías de los widgets [perfiles](../../dashboards/guides/profiles.md#audience-overlap-report) y [segmentos](../../dashboards/guides/audiences.md#audience-overlap-report) para obtener más información. |
+| Widget del informe de superposición de audiencia | Este widget está disponible tanto para paneles de [!UICONTROL Profiles] como de [!UICONTROL Segments]. El informe proporciona una lista ordenada de audiencias clasificadas según los porcentajes de superposición más altos o más bajos para el segmento elegido. En el panel [!UICONTROL Profiles] puede filtrar y ver la superposición de audiencias mediante una política de combinación a partir de todos los segmentos disponibles. Los paneles de [!UICONTROL Segments] le permiten filtrar la superposición de audiencias según un segmento específico.<br>Use este análisis para generar nuevos segmentos de alto rendimiento y evitar enviar la misma audiencia a diferentes destinos. El informe también ayuda a identificar perspectivas ocultas para mejorar la segmentación o localizar perfiles únicos que perseguir. Lea las respectivas guías de los widgets [perfiles](../../dashboards/guides/profiles.md#audience-overlap-report) y [segmentos](../../dashboards/guides/audiences.md#audience-overlap-report) para obtener más información. |
 
 Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashboards] Información general](../../dashboards/home.md).
 
@@ -107,11 +107,11 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| Integración de navegación izquierda en la IU de Experience Platform | Todas las funcionalidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas, el reenvío de eventos y las secuencias de datos) ahora también están disponibles a través de la navegación izquierda en Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre IU al trabajar con funciones de recopilación de datos en Experience Platform. |
-| Atribución de usuario en etiquetas y reenvío de eventos | Al enumerar [!UICONTROL Propiedades] disponibles en las etiquetas y el reenvío de eventos, cada propiedad enumerada ahora muestra cuándo se actualizó por última vez y qué usuario realizó la actualización. |
+| Integración de navegación izquierda en la IU de Experience Platform | Todas las funcionalidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas, el reenvío de eventos y las secuencias de datos) ahora también están disponibles a través de la navegación izquierda en Experience Platform, en la categoría **[!UICONTROL Data Collection]**. Esto elimina la necesidad de cambiar entre IU al trabajar con funciones de recopilación de datos en Experience Platform. |
+| Atribución de usuario en etiquetas y reenvío de eventos | Al enumerar [!UICONTROL Properties] disponibles en las etiquetas y el reenvío de eventos, cada propiedad de la lista ahora muestra cuándo se actualizó por última vez y qué usuario realizó la actualización. |
 | [[!DNL Snap Conversions API] extensión](https://exchange.adobe.com/apps/ec/108550) para reenvío de eventos | Ahora puede enviar datos a [!DNL Snapchat Conversions API] mediante una extensión de [reenvío de eventos](../../tags/ui/event-forwarding/overview.md). Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html). |
-| [Sugerencias del cliente agente de usuario en Web SDK](/help/web-sdk/use-cases/client-hints.md) | Web SDK ahora admite [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las sugerencias del cliente permiten a los propietarios de sitios web tener acceso a gran parte de la misma información disponible en la cadena [!DNL User-Agent], pero de una manera que preserva la privacidad. |
-| [Migración página por página de Web SDK](../../web-sdk/home.md#migrating-to-web-sdk) | Ahora puede migrar las propiedades web existentes desde otras bibliotecas de Experience Cloud, como [!DNL at.js], a Web SDK, página por página. Esto permite un enfoque gradual de la migración a Web SDK, sin necesidad de migrar todas las páginas a la vez. |
+| [Sugerencias del cliente agente de usuario en Web SDK](/help/collection/use-cases/client-hints.md) | Web SDK ahora admite [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las sugerencias del cliente permiten a los propietarios de sitios web tener acceso a gran parte de la misma información disponible en la cadena [!DNL User-Agent], pero de una manera que preserva la privacidad. |
+| Migración página por página de Web SDK | Ahora puede migrar las propiedades web existentes desde otras bibliotecas de Experience Cloud, como [!DNL at.js], a Web SDK, página por página. Esto permite un enfoque gradual de la migración a Web SDK, sin necesidad de migrar todas las páginas a la vez. |
 | [[!DNL Adobe Journey Optimizer] compatibilidad con flujos de datos](../../datastreams/overview.md#aep) | El servicio Adobe Experience Platform para flujos de datos ahora admite [!DNL Adobe Journey Optimizer]. Esta opción le permite usar canales entrantes web y basados en aplicaciones en [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
@@ -134,7 +134,7 @@ Para obtener más información sobre la recopilación de datos en Experience Pla
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=es). Tenga en cuenta que esta integración funciona con [Adobe Campaign versión 8.4 o superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=es#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Tenga en cuenta que esta integración funciona con [Adobe Campaign versión 8.4 o superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | El destino [!DNL Salesforce CRM] se ha actualizado para admitir actualizaciones de contactos y posibles clientes, así como mejoras de rendimiento para actualizaciones más rápidas. |
 
 {style="table-layout:auto"}
@@ -161,10 +161,10 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Campos de clasificación de AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | Propiedades de un elemento específico con el que se interactuó y que provocó que se activara el evento de la propuesta. |
-| Grupo de campo | [[!UICONTROL Detalles de interacción de Media Analytics]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | Rastrea interacciones de medios a lo largo del tiempo. |
-| Grupo de campo | [[!UICONTROL Información de detalles de medios]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Registra información de detalles de medios. |
-| Grupo de campo | [[!UICONTROL Evento de experiencia de Adobe CJM - Superficies]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Describe las superficies de los eventos de experiencia en Adobe Journey Optimizer. |
+| Grupo de campos | [[!UICONTROL AJO Classification Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | Propiedades de un elemento específico con el que se interactuó y que provocó que se activara el evento de la propuesta. |
+| Grupo de campo | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | Rastrea interacciones de medios a lo largo del tiempo. |
+| Grupo de campo | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Registra información de detalles de medios. |
+| Grupo de campo | [[!UICONTROL Adobe CJM ExperienceEvent - Surfaces]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Describe las superficies de los eventos de experiencia en Adobe Journey Optimizer. |
 
 {style="table-layout:auto"}
 
@@ -172,25 +172,25 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Comportamiento | [[!UICONTROL Serie temporal]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Valores agregados para `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Valores eliminados de `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| Comportamiento | [[!UICONTROL Time series]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Valores agregados para `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Valores eliminados de `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
 | Grupo de campo | (Múltiple) | [Se han actualizado varias descripciones de los campos](https://github.com/adobe/xdm/pull/1628/files) en todos los componentes de Journey Orchestration. |
 | Grupo de campo | (Múltiple) | [Se han actualizado los títulos de varios componentes de Adobe Workfront](https://github.com/adobe/xdm/pull/1634/files) para mantener la coherencia. |
-| Grupo de campo | [[!UICONTROL Campos de clasificación de AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Se actualizaron las áreas de nombres de varios campos a `xdm`. |
-| Grupo de campo | [[!UICONTROL Campos comunes de eventos de pasos de Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Se agregó un nuevo campo, `isReadSegmentTriggerStartEvent`. |
-| Grupo de campo | [[!UICONTROL Pronóstico del Tiempo]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Se ha cambiado el campo `xdm:uvIndex` a un tipo entero y se ha agregado el área de nombres `xdm` a varios campos en los que faltaba is. |
-| Grupo de campo | [[!UICONTROL Información de detalles de medios]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` y `xdm:implementationDetails` se han quitado del grupo de campos. |
+| Grupo de campo | [[!UICONTROL AJO Classification Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Se actualizaron las áreas de nombres de varios campos a `xdm`. |
+| Grupo de campo | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Se agregó un nuevo campo, `isReadSegmentTriggerStartEvent`. |
+| Grupo de campo | [[!UICONTROL Forecasted Weathers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Se ha cambiado el campo `xdm:uvIndex` a un tipo entero y se ha agregado el área de nombres `xdm` a varios campos en los que faltaba is. |
+| Grupo de campo | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` y `xdm:implementationDetails` se han quitado del grupo de campos. |
 | Tipo de datos | (Múltiple) | [Se han actualizado varios nombres de propiedades de medios](https://github.com/adobe/xdm/pull/1626/files) en varios tipos de datos para mantener la coherencia. |
-| Tipo de datos | [[!UICONTROL Detalles de implementación]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | Se han añadido nombres conocidos para flutter. |
-| Tipo de datos | [[!UICONTROL Detalles del punto de interés]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | El tipo de datos ahora puede aceptar una lista de pares de clave-valor de metadatos asociados con el punto de interés. |
-| Tipo de datos | [[!UICONTROL Acción de propuesta]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | Se cambió el nombre de [!DNL AJO Classification Fields] a [!UICONTROL Acción de propuesta]. |
-| Tipo de datos | [[!UICONTROL Tipo de evento de propuesta]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Se cambió el nombre de [!DNL AJO Classification Fields] a [!UICONTROL Acción de propuesta]. |
+| Tipo de datos | [[!UICONTROL Implementation details]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | Se han añadido nombres conocidos para flutter. |
+| Tipo de datos | [[!UICONTROL Point of interest details]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | El tipo de datos ahora puede aceptar una lista de pares de clave-valor de metadatos asociados con el punto de interés. |
+| Tipo de datos | [[!UICONTROL Proposition Action]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] cambió su nombre a [!UICONTROL Proposition Action]. |
+| Tipo de datos | [[!UICONTROL Proposition Event Type]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] cambió su nombre a [!UICONTROL Proposition Action]. |
 | (Múltiple) | (Múltiple) | Las propiedades experimentales se han [estabilizado en todos los componentes B2B](https://github.com/adobe/xdm/pull/1617/files). |
 | (Múltiple) | (Múltiple) | Las entidades de Adobe Journey Optimizer se han [estabilizado](https://github.com/adobe/xdm/pull/1625/files). |
 | (Múltiple) | (Múltiple) | Se han [actualizado las áreas de nombres de ciertos campos en varios componentes experimentales para mantener la coherencia](https://github.com/adobe/xdm/pull/1626/files). |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre XDM en Experience Platform, consulte la [descripción general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM en Experience Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
 
 ## Servicio de identidad {#identity-service}
 

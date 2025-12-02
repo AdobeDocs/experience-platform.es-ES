@@ -2,9 +2,9 @@
 title: Perfiles de Edge
 description: Obtenga información acerca de los perfiles de Edge, así como la terminología relacionada, las regiones disponibles para perfiles de Edge y los servicios disponibles para perfiles de Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 En Adobe Experience Platform, el perfil del cliente en tiempo real es la única fuente fiable para los datos de entidades. Estos datos de perfil se encuentran en un concentrador central y se ocupan de casos de uso que dependen de la exhaustividad e integridad de los datos. Sin embargo, en casos de uso más en tiempo real, en los que la sensibilidad temporal es más importante, los perfiles de Edge son la opción preferida. Los perfiles de Edge son perfiles ligeros que se sientan en los bordes y ayudan en casos de uso de personalización en tiempo real.
 
-Por ejemplo, las aplicaciones de Adobe como Adobe Target, Destino personalizado de Personalization y Adobe Campaign utilizan perímetros para ofrecer experiencias del cliente personalizadas en tiempo real. Los datos se enrutan a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos.
+Por ejemplo, las aplicaciones de Adobe como Adobe Target, Destino personalizado de Personalization y Adobe Campaign utilizan Edge para ofrecer experiencias del cliente personalizadas en tiempo real. Los datos se enrutan a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos.
 
 ## Terminología {#terminology}
 
@@ -53,9 +53,9 @@ El servicio de trabajo de proyección (MEPW) supervisa los cambios que se produc
 
 El servicio de perfil rápido (XPS) recupera los perfiles en los distintos extremos. Este servicio recibe solicitudes de soluciones de flujo descendente, como destinos de Adobe Target o Personalization personalizados, busca los perfiles de las bases de datos en los perímetros y envía el perfil solicitado a la solución solicitante. Si no se encuentra el perfil, se envía una solicitud de actualización al concentrador asociado.
 
-## Pasos siguientes
+## Próximos pasos
 
-Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre el Adobe Experience Edge, lea [descripción general del Edge Network](../web-sdk/home.md#edge-network).
+Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre Adobe Experience Edge, consulte [Resumen de recopilación de datos](/help/collection/home.md).
 
 ## Apéndice
 

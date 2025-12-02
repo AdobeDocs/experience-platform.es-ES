@@ -2,10 +2,10 @@
 title: Información general sobre la extensión Adobe Analytics
 description: Obtenga información acerca de la extensión de etiqueta de Adobe Analytics en Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 83%
+source-wordcount: '2308'
+ht-degree: 82%
 
 ---
 
@@ -21,9 +21,9 @@ Utilice esta referencia para obtener información sobre cómo configurar la exte
 
 Esta sección proporciona una referencia sobre las opciones disponibles al configurar la extensión de Adobe Analytics.
 
-Si la extensión de Adobe Analytics todavía no está instalada, abra su propiedad, seleccione **[!UICONTROL Extensiones > Catálogo]**, pase el cursor sobre la extensión de Adobe Analytics y seleccione **[!UICONTROL Instalar]**.
+Si la extensión de Adobe Analytics aún no está instalada, abra la propiedad, seleccione **[!UICONTROL Extensions > Catalog]**, pase el puntero por encima de la extensión de Adobe Analytics y seleccione **[!UICONTROL Install]**.
 
-Para configurar la extensión, abra la pestaña Extensiones, pase el puntero sobre la extensión y, a continuación, seleccione **[!UICONTROL Configurar]**.
+Para configurar la extensión, abra la pestaña Extensiones, pase el puntero por encima de la extensión y, a continuación, seleccione **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-analytics-config.png)
 
@@ -111,7 +111,7 @@ Seleccione una opción en la sección General de la página de configuración. L
 
 Habilita o deshabilita el rastreo en base a las cookies de privacidad de la UE.
 
-Al marcar la casilla de verificación Cumplimiento de la UE, aparece el campo [!UICONTROL Rastrear nombre de la cookie]. La cookie de seguimiento (Tracking Cookie) sobrescribe el nombre de la cookie de seguimiento predeterminada. Puede personalizar el nombre que utilizan las etiquetas para rastrear el estado de exclusión y recibir otras cookies.
+Al activar la casilla de verificación Cumplimiento de la UE, aparece el campo [!UICONTROL Tracking Cookie Name]. La cookie de seguimiento (Tracking Cookie) sobrescribe el nombre de la cookie de seguimiento predeterminada. Puede personalizar el nombre que utilizan las etiquetas para rastrear el estado de exclusión y recibir otras cookies.
 
 Cuando se carga una página, el sistema comprueba si hay una cookie denominada sat\_track configurada (o el nombre de cookie personalizado especificado en la página Editar propiedad). Consideremos la información siguiente:
 
@@ -224,7 +224,7 @@ Valor único que representa a un cliente en ambos sistemas (en línea y sin cone
 
 Consulte [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=es).
 
-### Área de nombres del visitante
+### Espacio de nombres del visitante
 
 Variable para identificar el dominio con el que se configuran las cookies.
 
@@ -311,7 +311,7 @@ Configure una o más [eVars](https://experienceleague.adobe.com/docs/analytics/i
 1. Especifique si desea configurar la eVar como valor (Set As) o Copiar (Duplicate From) otra eVar.
 1. Proporcione un valor Set As o seleccione la eVar que desee duplicar.
 1. (Opcional) Seleccione Añadir eVar para configurar más eVars.
-1. Seleccione **[!UICONTROL Conservar cambios]**.
+1. Seleccione **[!UICONTROL Keep Changes]**.
 
 #### Props
 
@@ -320,8 +320,8 @@ Configure una o varias [props](https://experienceleague.adobe.com/docs/analytics
 1. Seleccione una prop en la lista desplegable.
 1. Especifique si desea configurar la prop como valor (Set As) o Copiar (Duplicate From) otra eVar.
 1. Proporcione un valor Set As o seleccione la eVar con la que desee duplicar la prop.
-1. (Opcional) Seleccione **[!UICONTROL Añadir prop]** para establecer más props.
-1. Seleccione **[!UICONTROL Conservar cambios]**.
+1. (Opcional) Seleccione **[!UICONTROL Add prop]** para configurar más props.
+1. Seleccione **[!UICONTROL Keep Changes]**.
 
 #### Eventos
 
@@ -329,8 +329,8 @@ Configure uno o varios [eventos](https://experienceleague.adobe.com/docs/analyti
 
 1. Seleccione un evento en la lista desplegable.
 1. (Opcional) Seleccione o especifique un elemento de datos utilizado para la [serialización de eventos](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=es).
-1. (Opcional) Seleccione **[!UICONTROL Añadir evento]** para definir más eventos.
-1. Seleccione **[!UICONTROL Conservar cambios]**.
+1. (Opcional) Seleccione **[!UICONTROL Add event]** para configurar más eventos.
+1. Seleccione **[!UICONTROL Keep Changes]**.
 
 >[!TAB Vista JSON]
 
@@ -359,13 +359,13 @@ Especifique cada nivel en la jerarquía.
 
 Si lo desea, configure jerarquías adicionales.
 
-#### Nombre de página
+#### Nombre de la página
 
-Este valor hace referencia al nombre de una página determinada y corresponde a la variable [`pageName` &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=es) de Analytics.
+Este valor hace referencia al nombre de una página determinada y corresponde a la variable [`pageName` ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) de Analytics.
 
 >[!IMPORTANT]
 >
->En implementaciones de Adobe Experience Manager AEM, esta variable indica a los usuarios dónde almacenar el informe de Analytics recuperado. Para garantizar que los informes se conserven correctamente, la cadena del nombre de página debe tener el formato de una ruta al sitio separada por dos puntos.
+>En implementaciones de Adobe Experience Manager, esta variable indica a AEM dónde almacenar el informe de Analytics recuperado. Para garantizar que los informes se conserven correctamente, la cadena del nombre de página debe tener el formato de una ruta al sitio separada por dos puntos.
 >
 >Por ejemplo, una página web en `content/we-retail/language-masters/en/men.html` debe tener el valor de nombre de página `content:we-retail:language-masters:en:men`.
 
@@ -398,9 +398,9 @@ Utilice el editor para indicar el código personalizado de la página.
 
 **Configuración**
 
-1. Seleccione **[!UICONTROL Abrir editor]**.
+1. Seleccione **[!UICONTROL Open Editor]**.
 1. Escriba el Custom Code.
-1. Seleccione **[!UICONTROL Guardar]**.
+1. Seleccione **[!UICONTROL Save]**.
 
 ### Enviar baliza {#send-beacon}
 
@@ -426,7 +426,7 @@ Seleccione si no desea incrementar una vista de página.
    * Vínculo personalizado: Especifique el nombre del vínculo.
    * Vínculo de descarga: Especifique un nombre de archivo.
    * Vínculo de salida: Especifique la dirección URL de destino.
-1. Seleccione **[!UICONTROL Conservar cambios]**.
+1. Seleccione **[!UICONTROL Keep Changes]**.
 
 ### Borrar variables {#clear-variables}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 17825151f58548ab82d0ac44beacab06386f0a2d
+source-git-commit: 9bfad453b74afce848ca3b00cd66a2336edf8479
 workflow-type: tm+mt
-source-wordcount: '4295'
+source-wordcount: '4294'
 ht-degree: 4%
 
 ---
@@ -58,13 +58,13 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campañas orquestadas"
 >abstract="Active esta opción para permitir que el conjunto de datos seleccionado se utilice en campañas Adobe Journey Optimizer Orchestrated. El conjunto de datos debe utilizar un esquema relacional y solo se puede crear un conjunto de datos por esquema."
->additional-url="https://experienceleague.adobe.com/es/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Habilitar conjunto de datos para campañas orquestadas"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Habilitar conjunto de datos para campañas orquestadas"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="Habilitar para búsqueda"
 >abstract="Habilite este conjunto de datos para que la búsqueda utilice sus datos en Journey Optimizer para la personalización, la toma de decisiones y la orquestación de recorrido."
->additional-url="https://experienceleague.adobe.com/es/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Uso de datos de Adobe Experience Platform en Journey Optimizer"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Uso de datos de Adobe Experience Platform en Journey Optimizer"
 
 En la interfaz de usuario [!DNL Experience Platform], seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo para abrir el panel **[!UICONTROL Datasets]**. El panel enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere y el estado de la ejecución de la ingesta más reciente.
 
@@ -364,7 +364,7 @@ De forma predeterminada, solo se muestran los conjuntos de datos en los que ha i
 
 Los conjuntos de datos que se han habilitado para los datos de perfil se utilizan para rellenar perfiles de clientes después de introducir los datos. Consulte la sección sobre [habilitar conjuntos de datos para el perfil](#enable-profile) para obtener más información.
 
-Para filtrar el conjunto de datos en función de si se han habilitado para el perfil, active la casilla de verificación [!UICONTROL Yes] en las opciones de filtro.
+Para filtrar el conjunto de datos en función de si se han habilitado para el perfil, seleccione la casilla de verificación [!UICONTROL Yes] en las opciones de filtro.
 
 ![Las opciones de filtro del área de trabajo Conjuntos de datos con la sección [!UICONTROL Included in Profile] resaltada.](../images/datasets/user-guide/included-in-profile.png)
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;orígenes;recopilación de 
 title: Recopilación de datos de Adobe
 description: Este documento proporciona información general sobre la fuente de recopilación de datos de Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '291'
 ht-degree: 2%
 
 ---
@@ -18,11 +18,11 @@ La integración de fuentes de recopilación de datos de Adobe Experience Platfor
 
 ## Utilice el espacio de trabajo de orígenes para acceder a la recopilación de datos
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catalog] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En la categoría [!UICONTROL aplicaciones de Adobe], seleccione **[!UICONTROL Recopilación de datos de Adobe]** y, a continuación, seleccione **[!UICONTROL Configurar]**.
+En la categoría [!UICONTROL Adobe applications], seleccione **[!UICONTROL Adobe Data Collection]** y luego seleccione **[!UICONTROL Set up]**.
 
 ![recopilación de datos](./images/data-collection/catalog.png)
 
@@ -32,8 +32,8 @@ Un conjunto de datos es una configuración que indica a Edge Network dónde dese
 
 ![flujos de datos](./images/data-collection/datastreams.png)
 
-Para ver los pasos detallados sobre cómo configurar la recopilación de datos en la interfaz de usuario, consulte la [descripción general de la recopilación de datos](../../../collection/e2e.md).
+Para ver los pasos detallados sobre cómo configurar la recopilación de datos en la interfaz de usuario, consulte [Introducción a la extensión de etiquetas Web SDK](/help/tags/extensions/client/web-sdk/getting-started.md).
 
-## Pasos siguientes
+## Próximos pasos
 
-Al leer este documento, ha aprendido a acceder a la IU de recopilación de datos mediante el espacio de trabajo de fuentes. Para obtener más información sobre la recopilación de datos, consulte [Información general sobre la recopilación de datos](../../../collection/e2e.md).
+Al leer este documento, ha aprendido a acceder a la IU de recopilación de datos mediante el espacio de trabajo de fuentes. Para obtener más información sobre la recopilación de datos, consulte [Información general sobre la recopilación de datos](/help/collection/home.md).

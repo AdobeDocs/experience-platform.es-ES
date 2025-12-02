@@ -3,9 +3,9 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Para obtener una breve descripción general sobre cómo configurar la conexión 
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449796/?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Vea el siguiente vídeo para obtener una breve descripción general de cómo compartir audiencias y atributos de perfil en Adobe Target y destinos de personalización personalizados.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447358/?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Casos de uso {#use-cases}
 

@@ -2,10 +2,10 @@
 title: Configurar anulaciones de secuencia de datos
 description: Obtenga información sobre cómo configurar las anulaciones de flujos de datos en la interfaz de usuario de flujos de datos y activarlas mediante Web SDK o Mobile SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 57%
+source-wordcount: '1045'
+ht-degree: 53%
 
 ---
 
@@ -20,14 +20,14 @@ La anulación de la configuración del flujo de datos es un proceso de dos pasos
 1. Primero, debe definir la anulación de la configuración de la secuencia de datos en la [página de configuración de la secuencia de datos](configure.md).
 2. A continuación, debe enviar las invalidaciones a Edge Network de una de las siguientes maneras:
    * Mediante los comandos `sendEvent` o `configure` [Web SDK](#send-overrides).
-   * A través de la web SDK [extensión de etiqueta](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * A través de la web SDK [extensión de etiqueta](../tags/extensions/client/web-sdk/configure/configuration-overrides.md).
    * A través de la API de SDK móvil [sendEvent](#send-overrides) o mediante [reglas](#send-overrides).
 
 Este artículo explica el proceso de anulación de la configuración de la secuencia de datos de extremo a extremo para cada tipo de anulación admitida.
 
 >[!IMPORTANT]
 >
->Las invalidaciones de flujos de datos solo son compatibles con las integraciones de [Web SDK](../web-sdk/home.md) y [Mobile SDK](https://developer.adobe.com/client-sdks/home/). Las integraciones de la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) actualmente no admiten invalidaciones de flujos de datos.
+>Las integraciones de la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) actualmente no admiten invalidaciones de flujos de datos.
 ><br>
 >Las anulaciones de secuencias de datos deben utilizarse cuando necesite enviar datos diferentes a secuencias de datos diferentes. No utilice anulaciones de flujos de datos para casos de uso de personalización o datos de consentimiento.
 
@@ -62,7 +62,7 @@ Las anulaciones de configuración de secuencia de datos permiten modificar las s
 
 Para configurar las anulaciones de secuencia de datos para una secuencia de datos de Adobe Target, primero debe tener creada una secuencia de datos de Adobe Target. Siga las instrucciones para [configurar una secuencia de datos](configure.md) con el servicio [Adobe Target](configure.md#target).
 
-Una vez que haya creado la secuencia de datos, edite el servicio [Adobe Target](configure.md#target) que ha agregado y use la sección **[!UICONTROL Invalidaciones de token de propiedad]** para agregar las invalidaciones de secuencia de datos que desee, como se muestra en la siguiente imagen. Agregue un token de propiedad por línea.
+Una vez que haya creado el conjunto de datos, edite el servicio [Adobe Target](configure.md#target) que ha agregado y utilice la sección **[!UICONTROL Property Token Overrides]** para agregar las invalidaciones del conjunto de datos que desee, como se muestra en la siguiente imagen. Agregue un token de propiedad por línea.
 
 ![Captura de pantalla de la IU de secuencias de datos que muestra la configuración del servicio Adobe Target, con las anulaciones del token de propiedad resaltadas.](assets/overrides/override-target.png)
 
@@ -74,9 +74,9 @@ Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe 
 
 Para configurar las anulaciones de secuencias de datos para una secuencia de datos de Adobe Analytics, primero debe tener una secuencia de datos de [Adobe Analytics](configure.md#analytics) creada. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) con el servicio [Adobe Analytics](configure.md#analytics).
 
-Una vez que haya creado la secuencia de datos, edite el servicio [Adobe Analytics](configure.md#target) que ha agregado y utilice la sección **[!UICONTROL Anulaciones de grupos de informes]** para agregar las invalidaciones de secuencia de datos que desee, como se muestra en la siguiente imagen.
+Una vez que haya creado el conjunto de datos, edite el servicio [Adobe Analytics](configure.md#target) que ha agregado y utilice la sección **[!UICONTROL Report Suite Overrides]** para agregar las invalidaciones del conjunto de datos que desee, como se muestra en la siguiente imagen.
 
-Seleccione **[!UICONTROL Mostrar modo por lotes]** para habilitar la edición por lotes de las anulaciones del grupo de informes. Puede copiar y pegar una lista de anulaciones de grupos de informes introduciendo un grupo de informes por línea.
+Seleccione **[!UICONTROL Show Batch Mode]** para habilitar la edición por lotes de las invalidaciones del grupo de informes. Puede copiar y pegar una lista de anulaciones de grupos de informes introduciendo un grupo de informes por línea.
 
 ![Captura de pantalla de la IU de secuencias de datos que muestra la configuración del servicio de Adobe Analytics, con las anulaciones del grupo de informes resaltadas.](assets/overrides/override-analytics.png)
 
@@ -88,7 +88,7 @@ Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe 
 
 Para configurar las anulaciones de secuencias de datos para conjuntos de datos de evento de Experience Platform, primero debe tener una secuencia de datos de [Adobe Experience Platform](configure.md#aep) creada. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) con el servicio [Adobe Experience Platform](configure.md#aep).
 
-Una vez que haya creado la secuencia de datos, edite el servicio [Adobe Experience Platform](configure.md#aep) que ha agregado y seleccione la opción **[!UICONTROL Agregar conjunto de datos de evento]** para agregar uno o más conjuntos de datos de evento de anulación, como se muestra en la siguiente imagen.
+Una vez que haya creado la secuencia de datos, edite el servicio [Adobe Experience Platform](configure.md#aep) que ha agregado y seleccione la opción **[!UICONTROL Add Event Dataset]** para agregar uno o más conjuntos de datos de evento de anulación, como se muestra en la siguiente imagen.
 
 ![Captura de pantalla de la IU de secuencias de datos que muestra la configuración del servicio Adobe Experience Platform, con las anulaciones del conjunto de datos de evento resaltadas.](assets/overrides/override-aep.png)
 
@@ -100,9 +100,9 @@ Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe 
 
 Para configurar las anulaciones de secuencias de datos para los contenedores de sincronización de ID de terceros, primero debe haber creado una secuencia de datos. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) para crear una.
 
-Una vez creada la secuencia de datos, vaya a **[!UICONTROL Opciones avanzadas]** y habilite la opción **[!UICONTROL Sincronización de ID de terceros]**.
+Una vez que haya creado la secuencia de datos, vaya a **[!UICONTROL Advanced Options]** y habilite la opción **[!UICONTROL Third Party ID Sync]**.
 
-A continuación, utilice la sección **[!UICONTROL Anulaciones de ID de contenedor]** para añadir los ID de contenedor que desea que anulen la configuración predeterminada, como se muestra en la siguiente imagen.
+A continuación, utilice la sección **[!UICONTROL Container ID Overrides]** para agregar los ID de contenedor que desea que anulen la configuración predeterminada, como se muestra en la siguiente imagen.
 
 >[!IMPORTANT]
 >
@@ -118,7 +118,7 @@ Ahora debería tener configuradas las anulaciones del contenedor de sincronizaci
 
 Después de configurar las invalidaciones de secuencia de datos en la IU de recopilación de datos, puede enviarlas a Edge Network a través de Web SDK o Mobile SDK.
 
-* **Web SDK**: consulte [anulaciones de configuración de secuencia de datos](../web-sdk/commands/datastream-overrides.md#library) para obtener instrucciones de extensión de etiquetas y ejemplos de código de biblioteca JavaScript.
+* **Web SDK**: consulte [anulaciones de configuración de secuencia de datos](/help/collection/js/commands/configure/edgeconfigoverrides.md) para ver ejemplos de código de biblioteca JavaScript.
 * **SDK móvil**: Puede enviar anulaciones de ID de secuencia de datos mediante la [API sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) o mediante [Reglas](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## Ejemplo de carga útil {#payload-example}

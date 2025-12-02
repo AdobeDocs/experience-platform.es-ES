@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar las identidades de destino admitidas para los destinos creados con Destination SDK.
 title: Configuración del área de nombres de identidad
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '918'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Este artículo describe todas las opciones de configuración de áreas de nombre
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -62,8 +62,8 @@ Al definir las identidades de destino que admite su destino, puede utilizar los 
 | `acceptsAttributes` | Booleano | Opcional | Indica si los clientes pueden asignar atributos de perfil estándar a la identidad que está configurando. |
 | `acceptsCustomNamespaces` | Booleano | Opcional | Indica si los clientes pueden asignar áreas de nombres de identidad personalizadas al área de nombres de identidad que está configurando. |
 | `acceptedGlobalNamespaces` | - | Opcional | Indica qué [áreas de nombres de identidad estándar](../../../../identity-service/features/namespaces.md#standard) (por ejemplo, [!UICONTROL IDFA]) los clientes pueden asignar a la identidad que está configurando. |
-| `transformation` | Cadena | Opcional | Muestra la casilla de verificación [[!UICONTROL Aplicar transformación]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) en la interfaz de usuario de Experience Platform cuando el campo de origen es un atributo XDM o un área de nombres de identidad personalizada. Utilice esta opción para dar a los usuarios la capacidad de hash los atributos de origen en la exportación. Para habilitar esta opción, establezca el valor en `sha256(lower($))`. |
-| `requiredTransformation` | Cadena | Opcional | Cuando los clientes seleccionan este área de nombres de identidad de origen, la casilla de verificación [[!UICONTROL Aplicar transformación]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) se aplica automáticamente a la asignación y los clientes no pueden deshabilitarla. Para habilitar esta opción, establezca el valor en `sha256(lower($))`. |
+| `transformation` | Cadena | Opcional | Muestra la casilla de verificación [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) en la interfaz de usuario de Experience Platform, cuando el campo de origen es un atributo XDM o un área de nombres de identidad personalizada. Utilice esta opción para dar a los usuarios la capacidad de hash los atributos de origen en la exportación. Para habilitar esta opción, establezca el valor en `sha256(lower($))`. |
+| `requiredTransformation` | Cadena | Opcional | Cuando los clientes seleccionan este área de nombres de identidad de origen, la casilla de verificación [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) se aplica automáticamente a la asignación y los clientes no pueden deshabilitarla. Para habilitar esta opción, establezca el valor en `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 
@@ -144,7 +144,7 @@ Si el destino solo acepta datos con hash, puede configurar los atributos exporta
    }
 ```
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor cómo configurar las áreas de nombres de identidad para los destinos creados con Destination SDK.
 

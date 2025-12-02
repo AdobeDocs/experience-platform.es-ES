@@ -3,10 +3,10 @@ title: Activar audiencias de clientes potenciales en destinos
 type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de clientes potenciales en destinos
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 13%
+source-wordcount: '595'
+ht-degree: 14%
 
 ---
 
@@ -20,7 +20,7 @@ En este artículo se explica el flujo de trabajo necesario para exportar [audien
 
 ## Destinos admitidos {#supported-destinations}
 
-Vaya a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la ficha **[!UICONTROL Catálogo]**. Use el filtro **[!UICONTROL Tipos de datos]** y seleccione **[!UICONTROL Clientes potenciales]** para ver los destinos que admiten la activación de audiencias de clientes potenciales. Actualmente, la exportación de audiencias potenciales solo está disponible para destinos de almacenamiento en la nube.
+Vaya a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** y seleccione la ficha **[!UICONTROL Catalog]**. Utilice el filtro **[!UICONTROL Data types]** y seleccione **[!UICONTROL Prospects]** para ver los destinos que admiten la activación de audiencias de clientes potenciales. Actualmente, la exportación de audiencias potenciales solo está disponible para destinos de almacenamiento en la nube.
 
 ![Destinos que admiten audiencias de clientes potenciales.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -31,7 +31,7 @@ Vaya a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la f
 
 ### Permisos necesarios {#permissions}
 
-Para activar las audiencias de clientes potenciales, necesitas los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Activar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para activar audiencias de clientes potenciales, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Activate Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para asegurarse de que dispone de los permisos necesarios para activar las audiencias de clientes potenciales, consulte el catálogo de destinos. Si un destino tiene un control **[!UICONTROL Activate]**, usted cuenta con los permisos apropiados.
 
@@ -39,11 +39,11 @@ Para asegurarse de que dispone de los permisos necesarios para activar las audie
 
 Siga las instrucciones para seleccionar un destino al que exportar los conjuntos de datos:
 
-1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione la pestaña **[!UICONTROL Catálogo]**.
+1. Vaya a **[!UICONTROL Connections > Destinations]** y seleccione la ficha **[!UICONTROL Catalog]**.
 
    ![Pestaña Catálogo de destino con control de catálogo resaltado.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. Seleccione **[!UICONTROL Activar]** en la tarjeta correspondiente al destino al que desea exportar los conjuntos de datos.
+2. Seleccione **[!UICONTROL Activate]** en la tarjeta correspondiente al destino al que desee exportar los conjuntos de datos.
 
 >[!TIP]
 >
@@ -51,11 +51,11 @@ Siga las instrucciones para seleccionar un destino al que exportar los conjuntos
 
 ![Página de destino de Amazon S3 que puede exportar audiencias de perfil resaltadas.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
-1. Seleccione **[!UICONTROL Perspectivas de tipo de datos]**, seguido de la conexión de destino a la que desea exportar conjuntos de datos y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+1. Seleccione **[!UICONTROL Data type Prospects]**, seguido de la conexión de destino a la que desea exportar los conjuntos de datos y, a continuación, seleccione **[!UICONTROL Next]**.
 
 >[!TIP]
 > 
->Si desea configurar un nuevo destino para activar las audiencias de clientes potenciales, seleccione **[!UICONTROL Configurar nuevo destino]** para almacenar en déclencheur el flujo de trabajo [Conectarse al destino](/help/destinations/ui/connect-destination.md).
+>Si desea configurar un nuevo destino para activar las audiencias de clientes potenciales, seleccione **[!UICONTROL Configure new destination]** para almacenar en déclencheur el flujo de trabajo [Conectar con destino](/help/destinations/ui/connect-destination.md).
 
 ![Flujo de trabajo de activación de destino con control de clientes potenciales resaltado.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
@@ -63,7 +63,7 @@ Siga las instrucciones para seleccionar un destino al que exportar los conjuntos
 
 ## Seleccionar las audiencias de clientes potenciales {#select-prospect-audiences}
 
-Utilice las casillas de verificación de la izquierda de los nombres de audiencias de clientes potenciales para seleccionar las audiencias que desea exportar al destino y, a continuación, seleccione **[!UICONTROL Siguiente]**. Tenga en cuenta que solo se muestran las audiencias de clientes potenciales en esta vista y no se muestran otras audiencias.
+Utilice las casillas de verificación de la izquierda de los nombres de las audiencias de clientes potenciales para seleccionar las audiencias que desea exportar al destino y, a continuación, seleccione **[!UICONTROL Next]**. Tenga en cuenta que solo se muestran las audiencias de clientes potenciales en esta vista y no se muestran otras audiencias.
 
 ![Flujo de trabajo de exportación del conjunto de datos que muestra el paso Seleccionar audiencias, donde puede seleccionar qué audiencias de cliente potencial exportar.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 

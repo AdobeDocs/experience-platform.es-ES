@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2023'
 description: Las notas de la versión de abril de 2023 de Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '2010'
-ht-degree: 96%
+source-wordcount: '1983'
+ht-degree: 95%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->A partir del 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de pertenencia al segmento para eliminar la redundancia en el ciclo vital de los miembros del segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`. Para obtener más información sobre este cambio, lea la [sección Servicio de segmentación](#segmentation).
+>A partir del 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de abono al segmento para eliminar la redundancia en el ciclo vital de los miembros del segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`. Para obtener más información sobre este cambio, lea la [sección Servicio de segmentación](#segmentation).
 
 **Fecha de publicación: 26 de abril de 2023**
 
 Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
-- [Paneles](#dashboards)
+- [Paneles de control](#dashboards)
 - [Preparación de los datos](#data-prep)
 - [Recopilación de datos](#data-collection)
 - [Destinos](#destinations)
@@ -29,19 +29,19 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
-## Paneles {#dashboards}
+## Paneles de control {#dashboards}
 
-Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
+Adobe Experience Platform proporciona varios paneles de control a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 **Funciones nuevas o actualizadas** {#dashboards-new-updated-features}
 
 | Función | Descripción |
 | --- | --- |
-| Paneles definidos por el usuario | Ahora puede **filtrar datos históricos** desde las perspectivas del widget y utilizar datos recientes o un período de análisis personalizado. Si desea obtener más información, consulte la [guía de paneles definidos por el usuario](../../dashboards/standard-dashboards.md#filter-historical-data).<br>Ahora también puede **duplicar los widgets existentes**. Al personalizar un duplicado y editar sus atributos, puede evitar reiniciar desde el principio al crear un widget nuevo y único. Lea la [guía de duplicación de widgets](../../dashboards/standard-dashboards.md#duplicate-a-widget) para obtener más información. |
+| Paneles de control definidos por el usuario | Ahora puede **filtrar datos históricos** desde las perspectivas del widget y utilizar datos recientes o un período de análisis personalizado. Si desea obtener más información, consulte la [guía de paneles de control definidos por el usuario](../../dashboards/standard-dashboards.md#filter-historical-data).<br>Ahora también puede **duplicar los widgets existentes**. Al personalizar un duplicado y editar sus atributos, puede evitar reiniciar desde el principio al crear un widget nuevo y único. Lea la [guía de duplicación de widgets](../../dashboards/standard-dashboards.md#duplicate-a-widget) para obtener más información. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
+Para obtener más información sobre los paneles de control, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles de control](../../dashboards/home.md).
 
 ## Preparación de los datos {#data-prep}
 
@@ -66,8 +66,8 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| Ofuscación de direcciones IP para flujos de datos | Ahora puede definir opciones de ofuscación de IP parciales o completas en el nivel de flujo de datos en la variable [IU de configuración de secuencia de datos](../../datastreams/configure.md). <br><br>La configuración de ofuscación de IP en el nivel de flujo de datos tiene prioridad sobre cualquier ofuscación de IP configurada en Adobe Target y Audience Manager. <br><br>Los datos enviados a Adobe Analytics no se ven afectados por la configuración [!UICONTROL Ofuscación de IP] del nivel de conjunto de datos. Actualmente, Adobe Analytics recibe direcciones IP no ofuscadas. Para que Analytics reciba direcciones IP ofuscadas, debe configurar la ofuscación de IP por separado en Adobe Analytics. Este comportamiento se actualizará en futuras versiones.<br><br> Para obtener más información acerca de la ofuscación de IP e instrucciones sobre cómo configurarla, consulte la [documentación de configuración de secuencia de datos](../../datastreams/configure.md#advanced-options). |
-| [Anulaciones de configuración de secuencia de datos](../../datastreams/overrides.md) | Ahora puede definir opciones de configuración adicionales para flujos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tókenes de propiedades de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones de secuencia de datos es un proceso de dos pasos: <ol><li>En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](../../datastreams/configure.md).</li><li>A continuación, debe enviar las anulaciones a Edge Network mediante un comando del SDK web o la [extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) del SDK web.</li></ol> |
+| Ofuscación de direcciones IP para flujos de datos | Ahora puede definir opciones de ofuscación de IP parciales o completas en el nivel de flujo de datos en la variable [IU de configuración de secuencia de datos](../../datastreams/configure.md). <br><br>La configuración de ofuscación de IP en el nivel de flujo de datos tiene prioridad sobre cualquier ofuscación de IP configurada en Adobe Target y Audience Manager. <br><br>Los datos enviados a Adobe Analytics no se ven afectados por la configuración de nivel de secuencia de datos [!UICONTROL IP Obfuscation]. Actualmente, Adobe Analytics recibe direcciones IP no ofuscadas. Para que Analytics reciba direcciones IP ofuscadas, debe configurar la ofuscación de IP por separado en Adobe Analytics. Este comportamiento se actualizará en futuras versiones.<br><br> Para obtener más información acerca de la ofuscación de IP e instrucciones sobre cómo configurarla, consulte la [documentación de configuración de secuencia de datos](../../datastreams/configure.md#advanced-options). |
+| [Anulaciones de configuración de secuencia de datos](../../datastreams/overrides.md) | Ahora puede definir opciones de configuración adicionales para flujos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tókenes de propiedades de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones de secuencia de datos es un proceso de dos pasos: <ol><li>En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](../../datastreams/configure.md).</li><li>A continuación, debe enviar las anulaciones a Edge Network mediante un comando del SDK web o la [extensión de etiqueta](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) del SDK web.</li></ol> |
 | Secreto JWT de OAuth  | El [Secreto JWT de OAuth](https://experienceleague.adobe.com/es/docs/experience-platform/tags/event-forwarding/secrets) les permite a los clientes utilizar tókenes de Adobe y de servicio de Google para admitir interacciones de servidor a servidor en el reenvío de eventos. |
 | Extensión [!DNL Pinterest Conversions API] | La extensión de reenvío de eventos [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=es) permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Pinterest] en forma de eventos del lado del servidor que utilizan el [!DNL Pinterest Conversions API]. |
 
@@ -90,7 +90,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
 | Monitorización de flujo de datos para destinos de [!DNL Custom Personalization] y [!DNL Adobe Commerce] | <p> Ahora puede ver las métricas de activación de las conexiones de [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalización](../../destinations/catalog/personalization/custom-personalization.md) y [Personalización con atributos](../../destinations/catalog/personalization/custom-personalization.md). </p> <p>![Imagen de Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Métricas de Adobe Commerce"){width="100" zoomable="yes"}</p>  Consulte [Monitorización de flujos de datos en el espacio de trabajo Destinos](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) para obtener más información. |
-| Nuevo campo **[!UICONTROL Anexar ID de segmento al nombre del segmento]** para los destinos [!DNL Google Ad Manager] y [!DNL Google Ad Manager 360] | <p>Ahora puede hacer que el nombre del segmento en [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) y [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluya el ID de segmento de Experience Platform de la siguiente manera: `Segment Name (Segment ID)`.</p><p>![Anexar imagen de ID de segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nuevo campo Anexar ID de segmento a nombre de segmento "){width="100" zoomable="yes"}</p> |
+| Nuevo campo **[!UICONTROL Append segment ID to segment name]** para los destinos [!DNL Google Ad Manager] y [!DNL Google Ad Manager 360] | <p>Ahora puede hacer que el nombre del segmento en [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) y [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluya el ID de segmento de Experience Platform de la siguiente manera: `Segment Name (Segment ID)`.</p><p>![Anexar imagen de ID de segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nuevo campo Anexar ID de segmento a nombre de segmento "){width="100" zoomable="yes"}</p> |
 | Rellenos de público programados | <p>Para el destino [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), la activación de los rellenos de público en el destino está programada para realizarse de 24 a 48 horas después de que un segmento se asigne por primera vez a una conexión de destino. Esta actualización es en respuesta a la directiva de Google de esperar 24 horas hasta la ingesta de datos y mejorará las tasas de coincidencia entre Real-Time CDP y [!DNL Google Display & Video 360].</p> <p>Tenga en cuenta que esta es una configuración back-end aplicable solo a este destino y que no está relacionada con ninguna opción de programación configurable por el cliente en la interfaz de usuario.</p> |
 
 {style="table-layout:auto"}
@@ -123,7 +123,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Esquema | [[!UICONTROL Campos de clasificación de Adobe Target]](https://github.com/adobe/xdm/pull/1719/files) | Un nuevo esquema XDM para conjuntos de datos de clasificación de Target que contiene un conjunto de campos de metadatos para clasificar actividades y experiencias de Target. |
+| Esquema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1719/files) | Un nuevo esquema XDM para conjuntos de datos de clasificación de Target que contiene un conjunto de campos de metadatos para clasificar actividades y experiencias de Target. |
 
 {style="table-layout:auto"}
 
@@ -131,11 +131,11 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Extensión de unión de cuentas del servicio de perfil unificado de Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Se ha añadido un grupo de campos de extensión de cuenta para el Perfil del cliente en tiempo real que permite a los usuarios añadir la pertenencia al segmento en la unión de cuentas. |
-| Esquema | [[!UICONTROL Esquema del sistema de atributos calculados]](https://github.com/adobe/xdm/pull/1696/files) | El grupo de campos Atributos calculados utilizado por el Perfil del cliente en tiempo real se ha actualizado a un esquema global de solo lectura del sistema. |
-| Grupo de campos | Múltiple | Se han añadido varios eventos como campos para [[!UICONTROL Esquema de series de tiempo]](https://github.com/adobe/xdm/pull/1718/files). |
-| Grupo de campos | Detalles de fidelización del perfil | [Se ha corregido el título](https://github.com/adobe/xdm/pull/1717/files) para `xdm:upgradeDate` de “Nombre del programa” a “Fecha de actualización”. |
-| Grupo de campos | Múltiple | Varios campos de [[!UICONTROL Elemento de decisión]](https://github.com/adobe/xdm/pull/1714/files) se han actualizado para eliminar la jerarquía anidada doble. |
+| Grupo de campo | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files) | Se ha añadido un grupo de campos de extensión de cuenta para el Perfil del cliente en tiempo real que permite a los usuarios añadir el abono al segmento en la unión de cuentas. |
+| Esquema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1696/files) | El grupo de campos Atributos calculados utilizado por el Perfil del cliente en tiempo real se ha actualizado a un esquema global de solo lectura del sistema. |
+| Grupo de campos | Múltiple | Se agregaron varios eventos como campos para [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/pull/1718/files). |
+| Grupo de campos | Detalles de lealtad del perfil | [Se ha corregido el título](https://github.com/adobe/xdm/pull/1717/files) para `xdm:upgradeDate` de “Nombre del programa” a “Fecha de actualización”. |
+| Grupo de campos | Múltiple | Se han actualizado varios campos de [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1714/files) para quitar la jerarquía anidada doble. |
 
 {style="table-layout:auto"}
 
@@ -149,7 +149,7 @@ El compilado en Experience Platform, Real-time Customer Data Platform ([!DNL Rea
 
 | Función | Descripción |
 | ------- | ----------- |
-| Página de inicio de Real-Time CDP mejorada | La [Página de inicio de Real-Time CDP](https://experience.adobe.com) se ha mejorado con un aspecto actualizado y un rendimiento mejorado. La página de inicio ahora reconoce permisos y presenta widgets relevantes para las funciones a las que tiene acceso. Para obtener más información, lea la [Información general del panel de la página de inicio de Real-Time CDP](../../rtcdp/home-page-dashboards.md). |
+| Página de inicio de Real-Time CDP mejorada | La [Página de inicio de Real-Time CDP](https://experience.adobe.com) se ha mejorado con un aspecto actualizado y un rendimiento mejorado. La página de inicio ahora reconoce permisos y presenta widgets relevantes para las funciones a las que tiene acceso. Para obtener más información, lea la [Información general del panel de control de la página de inicio de Real-Time CDP](../../rtcdp/home-page-dashboards.md). |
 | Encuesta de autoidentificación | La encuesta de autoidentificación es un breve cuestionario que se presenta en la página de inicio de la interfaz de usuario de Adobe Experience Platform. Utilice la encuesta de autoidentificación para crear su perfil personal de Experience Platform y recibir directrices adaptadas en función de sus selecciones. Para obtener más información, lea la [Información general sobre la encuesta de autoidentificación](../../landing/self-identification.md). |
 
 Para obtener más información sobre [!DNL Real-Time CDP], consulte la [[!DNL Real-Time CDP] información general](../../rtcdp/overview.md).
@@ -162,7 +162,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 | Función | Descripción |
 | ------- | ----------- |
-| Caducidad de datos de perfil seudónimo | La caducidad de los datos de perfil seudónimo ya está disponible de forma general. Esta versión elimina continuamente los perfiles seudónimos antiguos de la instancia de Experience Platform una vez activadada. Para obtener más información acerca de esta función y los perfiles seudónimos, lea la [Guía de caducidad de datos de perfil seudónimo](../../profile/pseudonymous-profiles.md). |
+| Caducidad de datos de perfil seudónimo | La caducidad de los datos de perfil seudónimo ya está disponible de forma general. Esta versión elimina continuamente los perfiles seudónimos antiguos de la instancia de Experience Platform una vez habilitadada. Para obtener más información acerca de esta función y los perfiles seudónimos, lea la [Guía de caducidad de datos de perfil seudónimo](../../profile/pseudonymous-profiles.md). |
 
 {style="table-layout:auto"}
 
@@ -174,7 +174,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 | Función | Descripción |
 | ------- | ----------- |
-| Mapa de pertenencia al segmento | Como continuación del anuncio anterior, realizado en febrero, el 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de pertenencia al segmento para eliminar la redundancia en el ciclo vital de la pertenencia al segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`.<br/><br/> Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, API HTTP) y pueden tener procesos descendentes automatizados basados en el estado `Existing`. Si este es su caso, revise las integraciones posteriores. Si le interesa identificar perfiles recién cualificados más allá de un cierto tiempo, considere la posibilidad de utilizar una combinación del estado `Realized` y el `lastQualificationTime` en el mapa de pertenencia al segmento. Para obtener más información, póngase en contacto con su representante de Adobe. |
+| Mapa de abono al segmento | Como continuación del anuncio anterior, realizado en febrero, el 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de abono al segmento para eliminar la redundancia en el ciclo vital del abono al segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`.<br/><br/> Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, API HTTP) y pueden tener procesos descendentes automatizados basados en el estado `Existing`. Si este es su caso, revise las integraciones posteriores. Si le interesa identificar perfiles recién cualificados más allá de un cierto tiempo, considere la posibilidad de utilizar una combinación del estado `Realized` y el `lastQualificationTime` en el mapa de abono al segmento. Para obtener más información, póngase en contacto con su representante de Adobe. |
 
 {style="table-layout:auto"}
 

@@ -2,7 +2,7 @@
 title: Prioridad del espacio de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 2%
@@ -65,7 +65,7 @@ La prioridad del área de nombres se puede configurar usando la [interfaz de usu
 
 ## Uso de prioridad de área de nombres
 
-Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Actualmente, la prioridad del área de nombres influye en el comportamiento del sistema de Perfil del cliente en tiempo real. El diagrama siguiente ilustra este concepto. Para obtener más información, lea la guía sobre [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Diagrama del ámbito de aplicación de prioridad de espacio de nombres.](../images/namespace-priority/application-scope.png "Diagrama del ámbito de aplicación de prioridad de espacio de nombres."){zoomable="yes"}
 
@@ -82,7 +82,7 @@ Para estructuras de gráficos relativamente complejas, la prioridad del área de
    * Cualquier campo marcado como identidad principal en un esquema de clase de evento de experiencia XDM.
    * Configuración de identidad principal predeterminada en el conector de origen de Adobe Analytics (ECID o AAID).
 * Por otro lado, la prioridad **namespace no determina la identidad principal para los registros de perfil**.
-   * Para los registros de perfil, debe seguir definiendo los campos de identidad en el esquema, incluida la identidad principal. Lea la guía [definición de campos de identidad en la interfaz de usuario](../../xdm/ui/fields/identity.md) para obtener más información.
+   * Para los registros de perfil, debe seguir definiendo los campos de identidad en el esquema, incluida la identidad principal. Lea la guía [definición de campos de identidad en la interfaz de usuario](/help/xdm/ui/fields/identity.md) para obtener más información.
 
 >[!TIP]
 >
@@ -148,23 +148,23 @@ La eliminación de registros de higiene de datos solicita funciones de la siguie
 * Perfil del cliente en tiempo real: elimina cualquier fragmento de perfil con la identidad especificada como identidad principal. **La identidad principal del perfil se determinará ahora en función de la prioridad del área de nombres.**
 * Repositorio de datos: elimina cualquier registro con la identidad especificada como identidad principal. A diferencia del perfil del cliente en tiempo real, la identidad principal en el lago de datos se basa en la identidad principal especificada en WebSDK (`primary=true`) o en un campo marcado como identidad principal
 
-Para obtener más información, lea la [descripción general avanzada de la administración del ciclo vital](../../hygiene/home.md).
+Para obtener más información, lea la [descripción general avanzada de la administración del ciclo vital](/help/hygiene/home.md).
 
 ### Atributos calculados
 
-Si la configuración de identidad está habilitada, los atributos calculados utilizarán la prioridad de área de nombres para almacenar el valor de atributo calculado. Para un evento determinado, la identidad con la prioridad de área de nombres más alta tendrá el valor del atributo calculado escrito en ella. Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
+Si la configuración de identidad está habilitada, los atributos calculados utilizarán la prioridad de área de nombres para almacenar el valor de atributo calculado. Para un evento determinado, la identidad con la prioridad de área de nombres más alta tendrá el valor del atributo calculado escrito en ella. Para obtener más información, lea la [guía de IU de atributos calculados](/help/profile/computed-attributes/ui.md).
 
 ### Lago de datos
 
-La ingesta de datos en el lago de datos seguirá cumpliendo la configuración de identidad principal establecida en [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) y los esquemas.
+La ingesta de datos en el lago de datos seguirá cumpliendo la configuración de identidad principal establecida en [Web SDK](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) y los esquemas.
 
 El lago de datos no determinará la identidad principal en función de la prioridad del área de nombres. Por ejemplo, Adobe Customer Journey Analytics seguirá utilizando valores en el mapa de identidad incluso después de habilitar la prioridad del área de nombres (por ejemplo, agregando un conjunto de datos a una nueva conexión), ya que Customer Journey Analytics consume sus datos del lago de datos.
 
 ### Esquemas del modelo de datos de experiencia (XDM)
 
-Cualquier esquema que no sea un evento de experiencia XDM, como los perfiles individuales de XDM, seguirá respetando cualquier [campo que marque como identidad](../../xdm/ui/fields/identity.md).
+Cualquier esquema que no sea un evento de experiencia XDM, como los perfiles individuales de XDM, seguirá respetando cualquier [campo que marque como identidad](/help/xdm/ui/fields/identity.md).
 
-Para obtener más información sobre los esquemas XDM, lea la [descripción general de esquemas](../../xdm/home.md).
+Para obtener más información sobre los esquemas XDM, lea la [descripción general de esquemas](/help/xdm/home.md).
 
 ### Servicios inteligentes
 
@@ -175,7 +175,7 @@ Al seleccionar los datos, deberá especificar un área de nombres, que se utiliz
 
 Esta configuración resulta en calcular puntuaciones solo mediante eventos autenticados.
 
-Para obtener más información, lea los documentos sobre [Inteligencia artificial aplicada a la atribución](../../intelligent-services/attribution-ai/overview.md) y [Inteligencia artificial aplicada al cliente](../../intelligent-services/customer-ai/overview.md).
+Para obtener más información, lea los documentos sobre [Inteligencia artificial aplicada a la atribución](/help/intelligent-services/attribution-ai/overview.md) y [Inteligencia artificial aplicada al cliente](/help/intelligent-services/customer-ai/overview.md).
 
 ### Destinos creados por socios
 
@@ -184,7 +184,7 @@ Es posible que los resultados actualizados de descalificación de audiencia para
 * La calificación de audiencias se basa únicamente en la actividad anónima.
 * Los inicios de sesión en varios perfiles se producen en un corto período de tiempo.
 
-Para obtener más información sobre los destinos creados por el socio, lea la [descripción general de los destinos](../../destinations/home.md#adobe-built-and-partner-built-destinations).
+Para obtener más información sobre los destinos creados por el socio, lea la [descripción general de los destinos](/help/destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
@@ -193,7 +193,7 @@ Para obtener más información sobre los destinos creados por el socio, lea la [
 * Perfil del cliente en tiempo real: elimina cualquier fragmento de perfil con el valor de identidad especificado como identidad principal. **La identidad principal del perfil se determinará ahora en función de la prioridad del área de nombres.**
 * Lago de datos: elimina cualquier registro con la identidad especificada como identidad principal o secundaria.
 
-Para obtener más información, lea la [descripción general del servicio de privacidad](../../privacy-service/home.md).
+Para obtener más información, lea la [descripción general del servicio de privacidad](/help/privacy-service/home.md).
 
 ### Segmentación de Edge y aplicaciones de Edge Network
 
@@ -204,17 +204,17 @@ En el contexto de [!DNL Identity Graph Linking Rules], hay dos cambios de compor
 
 #### Segmentación de Edge
 
-En un evento determinado, asegúrese de que todas las áreas de nombres que representan una entidad de persona se incluyan en `identityMap` porque las [identidades enviadas como campos XDM](../../xdm/ui/fields/identity.md) se omiten y no se utilizan para el almacenamiento de metadatos de pertenencia a segmentos.
+En un evento determinado, asegúrese de que todas las áreas de nombres que representan una entidad de persona se incluyan en `identityMap` porque las [identidades enviadas como campos XDM](/help/xdm/ui/fields/identity.md) se omiten y no se utilizan para el almacenamiento de metadatos de pertenencia a segmentos.
 
-* **Aplicabilidad de eventos**: este comportamiento se aplica solo a los eventos enviados directamente a Edge Network (como WebSDK y Mobile SDK). Los eventos ingeridos desde [Experience Platform hub](../../landing/edge-and-hub-comparison.md), como los ingeridos con el origen de la API HTTP, otros orígenes de flujo continuo y orígenes por lotes, no están sujetos a esta limitación.
-* **Especificidad de segmentación de Edge**: Este comportamiento es específico de la segmentación de Edge. La segmentación por lotes y streaming son servicios independientes evaluados en el concentrador y no siguen el mismo proceso. Lea la [guía de segmentación de Edge](../../segmentation/methods/edge-segmentation.md) para obtener más información.
-* Lea las páginas de [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) y [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) para obtener más información.
+* **Aplicabilidad de eventos**: este comportamiento se aplica solo a los eventos enviados directamente a Edge Network (como WebSDK y Mobile SDK). Los eventos ingeridos desde [Experience Platform hub](/help/landing/edge-and-hub-comparison.md), como los ingeridos con el origen de la API HTTP, otros orígenes de flujo continuo y orígenes por lotes, no están sujetos a esta limitación.
+* **Especificidad de segmentación de Edge**: Este comportamiento es específico de la segmentación de Edge. La segmentación por lotes y streaming son servicios independientes evaluados en el concentrador y no siguen el mismo proceso. Lea la [guía de segmentación de Edge](/help/segmentation/methods/edge-segmentation.md) para obtener más información.
+* Lea las páginas de [Adobe Experience Platform y los diagramas de arquitectura de aplicaciones](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) y [Edge Network and hub comparison](/help/landing/edge-and-hub-comparison.md) para obtener más información.
 
 #### Aplicaciones de Edge Network
 
 Para garantizar que las aplicaciones de Edge Network tengan acceso al perfil de Edge sin demora, asegúrese de que los eventos incluyan a `primary=true` en el CRMID. Esto garantiza la disponibilidad inmediata sin esperar las actualizaciones del gráfico de identidad desde el concentrador.
 
 * Las aplicaciones de Edge Network, como Adobe Target, Offer Decisioning y Destinos personalizados de Personalization, seguirán dependiendo de la identidad principal en los eventos para acceder a los perfiles del perfil de Edge.
-* Lea el [diagrama de arquitectura de Experience Platform Web SDK y Edge Network](https://experienceleague.adobe.com/es/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obtener más información sobre el comportamiento de Edge Network.
-* Lea la documentación sobre [tipos de elementos de datos](../../tags/extensions/client/web-sdk/data-element-types.md) y [datos de identidad en Web SDK](../../web-sdk/identity/overview.md) para obtener más información sobre cómo configurar la identidad principal en Web SDK.
+* Lea el [diagrama de arquitectura de Experience Platform Web SDK y Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obtener más información sobre el comportamiento de Edge Network.
+* Lea la documentación sobre [tipos de elementos de datos](/help/tags/extensions/client/web-sdk/data-element-types.md) y [datos de identidad en Web SDK](/help/collection/use-cases/identity/id-overview.md) para obtener más información sobre cómo configurar la identidad principal en Web SDK.
 * Asegúrese de que el ECID esté incluido en el evento de experiencia. Si falta el ECID, se agregará a la carga útil de evento con `primary=true`, lo que puede dar lugar a resultados inesperados.

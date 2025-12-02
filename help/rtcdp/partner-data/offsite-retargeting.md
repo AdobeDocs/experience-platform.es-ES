@@ -3,9 +3,9 @@ title: Redireccionamiento fuera del sitio de visitantes no autenticados
 description: Obtenga información sobre cómo volver a dirigirse a usuarios no autenticados mediante los ID de cliente potencial para crear un atributo calculado que se pueda utilizar para crear una audiencia de usuarios no autenticados.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1358'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (Servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Aprenda a crear una audiencia de visitantes no autenticados y a redirigirlos mediante los ID duraderos proporcionados por los socios.
 
@@ -36,46 +36,46 @@ Cuando planee volver a dirigirse a visitantes no autenticados, tenga en cuenta l
 
 Además, para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP. Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o pídale al administrador del sistema que le conceda los permisos necesarios.
 
-- [Públicos](../../segmentation/home.md)
-- [Atributos calculados](../../profile/computed-attributes/overview.md)
-- [Destinos](../../destinations/home.md)
-- [SDK web](../../web-sdk/home.md)
+- [Públicos](/help/segmentation/home.md)
+- [Atributos calculados](/help/profile/computed-attributes/overview.md)
+- [Destinos](/help/destinations/home.md)
+- [Recopilación de datos](/help/collection/home.md)
 
 ## Obtención de datos de socios en Real-Time CDP {#get-data-in}
 
 Para crear una audiencia de visitantes no autenticados, primero deberá introducir los datos de su socio en Real-Time CDP.
 
-Para obtener información sobre la mejor manera de importar datos en Real-Time CDP mediante el SDK web, lea las [secciones de administración de datos y recopilación de datos de evento](./onsite-personalization.md#data-management) del caso de uso de personalización en el sitio.
+Para obtener información sobre la mejor manera de importar datos en Real-Time CDP mediante Web SDK, lea las [secciones de administración de datos y recopilación de datos de evento](./onsite-personalization.md#data-management) del caso de uso de personalización en el sitio.
 
 ## Reenvío de ID proporcionados por el socio {#bring-partner-ids-forward}
 
 Después de importar los ID proporcionados por el socio en un conjunto de datos de evento, deberá obtener estos datos en los registros de perfil. Puede hacerlo utilizando atributos calculados.
 
-Los atributos calculados permiten convertir rápidamente datos de comportamiento del perfil en valores agregados en el nivel de perfil. Como resultado, puede utilizar estas expresiones, como &quot;total de compra de por vida&quot; al perfil, lo que le permite utilizar fácilmente el atributo calculado dentro de sus audiencias. Encontrará más información sobre los atributos calculados en la [descripción general de los atributos calculados](../../profile/computed-attributes/overview.md).
+Los atributos calculados permiten convertir rápidamente datos de comportamiento del perfil en valores agregados en el nivel de perfil. Como resultado, puede utilizar estas expresiones, como &quot;total de compra de por vida&quot; al perfil, lo que le permite utilizar fácilmente el atributo calculado dentro de sus audiencias. Encontrará más información sobre los atributos calculados en la [descripción general de los atributos calculados](/help/profile/computed-attributes/overview.md).
 
-Para acceder a los atributos calculados, seleccione **[!UICONTROL Perfiles]** seguidos de **[!UICONTROL Atributos calculados]** y **[!UICONTROL Crear atributo calculado]**.
+Para acceder a los atributos calculados, seleccione **[!UICONTROL Profiles]** seguido de **[!UICONTROL Computed attributes]** y **[!UICONTROL Create computed attribute]**.
 
-![El botón [!UICONTROL Crear atributos calculados] está resaltado además de la ficha [!UICONTROL Atributos calculados] en el área de trabajo de [!UICONTROL Perfiles].](../assets/offsite-retargeting/create-ca.png)
+![El botón [!UICONTROL Create computed attributes] está resaltado además de la ficha [!UICONTROL Computed attributes] en el área de trabajo [!UICONTROL Profiles].](../assets/offsite-retargeting/create-ca.png)
 
-Aparecerá la página **[!UICONTROL Crear atributo calculado]**. En esta página, puede utilizar los componentes para crear el atributo calculado.
+Aparecerá la página **[!UICONTROL Create computed attribute]**. En esta página, puede utilizar los componentes para crear el atributo calculado.
 
 ![Se muestra el área de trabajo Crear un atributo calculado.](../assets/offsite-retargeting/ca-page.png)
 
 >[!NOTE]
 >
->Para obtener información más detallada sobre la creación de atributos calculados, lea la [guía de la interfaz de usuario de atributos calculados](../../profile/computed-attributes/ui.md).
+>Para obtener información más detallada sobre la creación de atributos calculados, lea la [guía de la interfaz de usuario de atributos calculados](/help/profile/computed-attributes/ui.md).
 
 Para este caso de uso, puede crear un atributo calculado que, si existe el ID del socio, obtenga el valor más reciente del ID del socio en las últimas 24 horas.
 
 Con la barra de búsqueda, puede encontrar y agregar el evento &quot;Id. de socio&quot; que [creó durante el caso de uso de personalización en el sitio](#get-data-in) al lienzo de atributos calculado.
 
-![La ficha [!UICONTROL Eventos] y la barra de búsqueda están resaltadas.](../assets/offsite-retargeting/ca-add-partner-id.png)
+![La ficha [!UICONTROL Events] y la barra de búsqueda están resaltadas.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
-Después de agregar el evento &quot;Id. de socio&quot; a la definición, establezca la condición de filtrado del evento en **[!UICONTROL Existe]**, establezca la condición de filtrado del evento en el valor **[!UICONTROL Más reciente]** del ID de socio agregado y con un período retroactivo de 24 horas.
+Después de agregar el evento &quot;ID de socio&quot; a la definición, establezca la condición de filtrado del evento en **[!UICONTROL Exists]**, establezca la condición de filtrado del evento en el valor **[!UICONTROL Most Recent]** del ID de socio agregado y con un período retroactivo de 24 horas.
 
 ![La definición del atributo calculado que desea crear está resaltada.](../assets/offsite-retargeting/ca-add-definition.png)
 
-Asigne al atributo calculado un nombre apropiado (como &quot;ID de socio&quot;) y una descripción y, a continuación, seleccione **[!UICONTROL Publish]** para completar el proceso de creación del atributo calculado.
+Asigne al atributo calculado un nombre adecuado (como &quot;ID de socio&quot;) y una descripción y, a continuación, seleccione **[!UICONTROL Publish]** para completar el proceso de creación del atributo calculado.
 
 ![La información básica del atributo calculado que desea crear está resaltada.](../assets/offsite-retargeting/ca-publish.png)
 
@@ -83,13 +83,13 @@ Asigne al atributo calculado un nombre apropiado (como &quot;ID de socio&quot;) 
 
 Ahora que ha creado el atributo calculado, puede utilizarlo para crear una audiencia. En este ejemplo, creará una audiencia compuesta por visitantes que visitaron su sitio web más de cinco veces este mes, pero que aún no se han registrado.
 
-Para crear una audiencia, seleccione **[!UICONTROL Audiencias]**, seguido de **[!UICONTROL Crear audiencia]**.
+Para crear una audiencia, seleccione **[!UICONTROL Audiences]**, seguido de **[!UICONTROL Create audience]**.
 
-![El botón [!UICONTROL Crear audiencia] está resaltado.](../assets/offsite-retargeting/create-audience.png)
+![El botón [!UICONTROL Create audience] está resaltado.](../assets/offsite-retargeting/create-audience.png)
 
-Aparece un cuadro de diálogo en el que se le pide que elija entre [!UICONTROL Componer audiencia] y [!UICONTROL Generar regla]. Seleccione **[!UICONTROL Generar regla]** seguida de **[!UICONTROL Crear]**.
+Aparece un cuadro de diálogo en el que se le pide que elija entre [!UICONTROL Compose audience] y [!UICONTROL Build rule]. Seleccione **[!UICONTROL Build rule]** seguido de **[!UICONTROL Create]**.
 
-![El botón [!UICONTROL Generar regla] está resaltado.](../assets/offsite-retargeting/select-build-rule.png)
+![El botón [!UICONTROL Build rule] está resaltado.](../assets/offsite-retargeting/select-build-rule.png)
 
 Aparecerá la página Generador de segmentos. En esta página, puede utilizar los componentes para crear su audiencia.
 
@@ -97,69 +97,69 @@ Aparecerá la página Generador de segmentos. En esta página, puede utilizar lo
 
 >[!NOTE]
 >
->Para obtener información más detallada sobre el uso del Generador de segmentos, lea la [Guía de la interfaz de usuario del Generador de segmentos](../../segmentation/ui/segment-builder.md).
+>Para obtener información más detallada sobre el uso del Generador de segmentos, lea la [Guía de la interfaz de usuario del Generador de segmentos](/help/segmentation/ui/segment-builder.md).
 
-Para lograr el objetivo de encontrar a estos visitantes, primero tendrás que agregar un evento de **[!UICONTROL Vista de página]** a tu audiencia. Seleccione la ficha **[!UICONTROL Eventos]** en **[!UICONTROL Campos]**, arrastre y suelte el evento **[!UICONTROL Vista de página]** y agréguelo al lienzo de la sección de eventos.
+Para lograr el objetivo de encontrar a estos visitantes, primero tendrá que agregar un evento **[!UICONTROL Page View]** a su audiencia. Seleccione la ficha **[!UICONTROL Events]** en **[!UICONTROL Fields]**, luego arrastre y suelte el evento **[!UICONTROL Page View]** y agréguelo al lienzo de sección de eventos.
 
-![La ficha [!UICONTROL Eventos] de la sección [!UICONTROL Campos] aparece resaltada mientras se muestra el evento [!UICONTROL Vista de página]7.](../assets/offsite-retargeting/add-page-view.png)
+![La ficha [!UICONTROL Events] de la sección [!UICONTROL Fields] está resaltada al mostrar el [!UICONTROL Page View]evento.](../assets/offsite-retargeting/add-page-view.png)
 
-Seleccione el evento **[!UICONTROL Vista de página]** que se acaba de agregar. Cambie el período retrospectivo de **[!UICONTROL En cualquier momento]** a **[!UICONTROL Este mes]** y cambie la regla de evento para incluir **Al menos 5**.
+Seleccione el evento **[!UICONTROL Page View]** recién agregado. Cambie el período retrospectivo de **[!UICONTROL Any time]** a **[!UICONTROL This month]** y cambie la regla de evento para incluir **al menos 5**.
 
-Se muestran ![detalles del evento [!UICONTROL Vista de página] agregado.](../assets/offsite-retargeting/edit-event.png)
+![Se muestran los detalles del evento [!UICONTROL Page View] agregado.](../assets/offsite-retargeting/edit-event.png)
 
 Después de agregar el evento, debe agregar un atributo. Dado que está trabajando con visitantes no autenticados, puede agregar el atributo calculado que acaba de crear. Este atributo calculado recién creado le permite vincular ID de socios a una audiencia.
 
-Para agregar el atributo calculado, en **[!UICONTROL Atributos]**, seleccione **[!UICONTROL Perfil individual de XDM]**, seguido de **[el ID de inquilino de su organización](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]** y **[!UICONTROL PartnerID]**. Ahora, agregue el **[!UICONTROL Valor]** del atributo calculado a la sección de atributos del lienzo.
+Para agregar el atributo calculado, en **[!UICONTROL Attributes]**, seleccione **[!UICONTROL XDM Individual Profile]**, seguido de **[el identificador de inquilino de su organización](/help/xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]** y **[!UICONTROL PartnerID]**. Ahora, agregue **[!UICONTROL Value]** del atributo calculado a la sección de atributos del lienzo.
 
 ![Se muestra la ruta de acceso a la carpeta para obtener acceso al atributo calculado.](../assets/offsite-retargeting/access-computed-attribute.png)
 
-Además, busque **[!UICONTROL Correo electrónico personal]** y agregue el atributo **[!UICONTROL Address]** debajo de **[!UICONTROL PartnerID]** a la sección de atributos del lienzo.
+Además, busque **[!UICONTROL Personal Email]** y agregue el atributo **[!UICONTROL Address]** por debajo de **[!UICONTROL PartnerID]** a la sección de atributos del lienzo.
 
-![El atributo calculado [!UICONTROL PartnerID] y el atributo [!UICONTROL Dirección de correo electrónico personal] están resaltados en el lienzo del Generador de segmentos.](../assets/offsite-retargeting/added-attributes.png)
+![El atributo calculado [!UICONTROL PartnerID] y el atributo [!UICONTROL Personal Email Address] aparecen resaltados en el lienzo del Generador de segmentos.](../assets/offsite-retargeting/added-attributes.png)
 
-Ahora que ha añadido sus atributos, debe establecer sus criterios de evaluación. Para **[!UICONTROL PartnerID]**, establezca el criterio en **[!UICONTROL existe]** y para **[!UICONTROL Dirección]**, establezca el criterio en **[!UICONTROL no existe]**.
+Ahora que ha añadido sus atributos, debe establecer sus criterios de evaluación. Para **[!UICONTROL PartnerID]**, establezca el criterio en **[!UICONTROL exists]** y para **[!UICONTROL Address]**, establezca el criterio en **[!UICONTROL does not exist]**.
 
 ![Se resaltan los valores correctos de los atributos.](../assets/offsite-retargeting/set-attribute-values.png)
 
-Ahora ha creado correctamente una audiencia que busca visitantes de alta intensidad que tienen un ID proporcionado por el socio, pero que aún no se han registrado en el sitio. Asigne a la audiencia el nombre &quot;Redireccionamiento de usuarios no autenticados&quot; y seleccione **[!UICONTROL Guardar]** para terminar de crear la audiencia.
+Ahora ha creado correctamente una audiencia que busca visitantes de alta intensidad que tienen un ID proporcionado por el socio, pero que aún no se han registrado en el sitio. Asigne a la audiencia el nombre &quot;Redireccionamiento de usuarios no autenticados&quot; y seleccione **[!UICONTROL Save]** para terminar de crear la audiencia.
 
 ![Se resaltan las propiedades de la audiencia.](../assets/offsite-retargeting/save-audience-properties.png)
 
 ## Activación de la audiencia {#activate-audience}
 
-Después de crear correctamente la audiencia, ahora puede activarla en destinos de flujo descendente. Seleccione **[!UICONTROL Audiencias]** en el carril de navegación izquierdo, busque la audiencia recién creada, seleccione el icono de puntos suspensivos y seleccione **[!UICONTROL Activar en destino]**.
+Después de crear correctamente la audiencia, ahora puede activarla en destinos de flujo descendente. Seleccione **[!UICONTROL Audiences]** en el carril de navegación izquierdo, busque la audiencia recién creada, seleccione el icono de puntos suspensivos y seleccione **[!UICONTROL Activate to destination]**.
 
-![El botón [!UICONTROL Activar en destino] está resaltado.](../assets/offsite-retargeting/activate-to-destination.png)
+![El botón [!UICONTROL Activate to destination] está resaltado.](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
 >
 >Todos los tipos de destino, incluidos los destinos basados en archivos, admiten la activación de audiencias con ID de socio.
 >
->Para obtener más información sobre cómo activar audiencias en un destino, lea la [descripción general de la activación](../../destinations/ui/activation-overview.md).
+>Para obtener más información sobre cómo activar audiencias en un destino, lea la [descripción general de la activación](/help/destinations/ui/activation-overview.md).
 
-Aparecerá la página **[!UICONTROL Activar destino]**. En esta página, puede seleccionar a qué destino desea activar el destino. Después de seleccionar el destino elegido, seleccione **[!UICONTROL Siguiente]**.
+Aparecerá la página **[!UICONTROL Activate destination]**. En esta página, puede seleccionar a qué destino desea activar el destino. Después de seleccionar el destino elegido, seleccione **[!UICONTROL Next]**.
 
 ![El destino al que desea activar la audiencia está resaltado.](../assets/offsite-retargeting/select-destination.png)
 
-Aparecerá la página **[!UICONTROL Scheduling]**. En esta página, puede crear una programación que determine la frecuencia con la que desea que se active la audiencia. Seleccione **[!UICONTROL Crear programación]** para crear una programación para la activación de audiencia.
+Aparecerá la página **[!UICONTROL Scheduling]**. En esta página, puede crear una programación que determine la frecuencia con la que desea que se active la audiencia. Seleccione **[!UICONTROL Create schedule]** para crear una programación para la activación de audiencia.
 
-![El botón [!UICONTROL Crear programación] está resaltado.](../assets/offsite-retargeting/select-create-schedule.png)
+![El botón [!UICONTROL Create schedule] está resaltado.](../assets/offsite-retargeting/select-create-schedule.png)
 
-Aparece la ventana emergente [!UICONTROL Programando]. En esta página, puede crear la programación de activación de audiencia. Después de configurar la programación, selecciona **[!UICONTROL Crear]** para continuar.
+Aparece la ventana emergente [!UICONTROL Scheduling]. En esta página, puede crear la programación de activación de audiencia. Después de configurar la programación, seleccione **[!UICONTROL Create]** para continuar.
 
 ![Se muestra la ventana emergente de configuración de programación.](../assets/offsite-retargeting/configure-schedule.png)
 
-Después de confirmar los detalles de la programación, seleccione **[!UICONTROL Siguiente]**.
+Después de confirmar los detalles de la programación, seleccione **[!UICONTROL Next]**.
 
 ![Se muestran los detalles de la programación.](../assets/offsite-retargeting/created-schedule.png)
 
-Aparecerá la página **[!UICONTROL Seleccionar atributos]**. En esta página, puede seleccionar qué atributos desea exportar junto con la audiencia activada. Como mínimo, debe incluir el ID de socio, ya que esto le permite identificar a los visitantes a los que planea redirigir. Seleccione **[!UICONTROL Agregar nueva asignación]** y busque el atributo calculado. Después de agregar los atributos necesarios, seleccione **[!UICONTROL Siguiente]**.
+Aparecerá la página **[!UICONTROL Select attributes]**. En esta página, puede seleccionar qué atributos desea exportar junto con la audiencia activada. Como mínimo, debe incluir el ID de socio, ya que esto le permite identificar a los visitantes a los que planea redirigir. Seleccione **[!UICONTROL Add new mapping]** y busque el atributo calculado. Después de agregar los atributos necesarios, seleccione **[!UICONTROL Next]**.
 
-![Tanto el botón [!UICONTROL Agregar nueva asignación] como el atributo calculado están resaltados.](../assets/offsite-retargeting/add-new-mapping.png)
+![Tanto el botón [!UICONTROL Add new mapping] como el atributo calculado están resaltados.](../assets/offsite-retargeting/add-new-mapping.png)
 
-Aparecerá la página **[!UICONTROL Revisar]**. En esta página, puede revisar los detalles de la activación de audiencia. Si está satisfecho con los detalles proporcionados, seleccione **[!UICONTROL Finalizar]**.
+Aparecerá la página **[!UICONTROL Review]**. En esta página, puede revisar los detalles de la activación de audiencia. Si está satisfecho con los detalles proporcionados, seleccione **[!UICONTROL Finish]**.
 
-![Se muestra la página [!UICONTROL Revisar], que muestra detalles de la activación de audiencia.](../assets/offsite-retargeting/review-destination-activation.png)
+![Se muestra la página [!UICONTROL Review] con los detalles de la activación de audiencia.](../assets/offsite-retargeting/review-destination-activation.png)
 
 Ahora ha activado una audiencia de usuarios no autenticados en un destino descendente para un nuevo objetivo.
 

@@ -2,10 +2,10 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1203'
-ht-degree: 53%
+source-wordcount: '1166'
+ht-degree: 43%
 
 ---
 
@@ -30,9 +30,9 @@ Existen dos casos de uso en los que la preparación de datos para la recopilaci�
 
 ## Envíe una capa de datos existente a Edge Network a través de WebSDK {#send-datalayer-via-websdk}
 
-La capa de datos existente debe enviarse usando el objeto [`data`](/help/web-sdk/commands/sendevent/data.md) dentro del comando `sendEvent`.
+La capa de datos existente debe enviarse usando el objeto [`data`](/help/collection/js/commands/sendevent/data.md) dentro del comando `sendEvent`.
 
-Si usa etiquetas, debe usar el campo **[!UICONTROL Datos]** del tipo de acción **[!UICONTROL Enviar evento]**, tal como se describe en la [documentación de extensión de etiquetas de Web SDK](/help/tags/extensions/client/web-sdk/action-types.md).
+Si está usando etiquetas, debe usar el campo **[!UICONTROL Data]** del tipo de acción [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
 
 El resto de esta guía se centrará en cómo asignar la capa de datos a los estándares XDM después de que el SDK web la haya enviado.
 
@@ -48,15 +48,15 @@ Esta guía explica cómo asignar los datos dentro de la interfaz de usuario. Par
 
 Para obtener una demostración rápida del proceso de preparación de datos para la recopilación de datos, consulte el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/345563?quality=12&enable10seconds=on&speedcontrol=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL Seleccionar datos] {#select-data}
+## [!UICONTROL Select data] {#select-data}
 
-Seleccione **[!UICONTROL Guardar y añadir asignación]** después de completar la configuración básica de una secuencia de datos y aparece el paso **[!UICONTROL Seleccionar datos]**. Desde aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que planea enviar a Experience Platform.
+Seleccione **[!UICONTROL Save and Add Mapping]** después de completar la configuración básica de una secuencia de datos y aparecerá el paso **[!UICONTROL Select data]**. Desde aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que planea enviar a Experience Platform.
 
 Para capturar propiedades directamente desde la capa de datos, el objeto JSON debe tener una sola propiedad raíz `data`. Las subpropiedades del objeto `data` deben construirse de manera que se asignen a las propiedades de la capa de datos que desee capturar. Seleccione la sección siguiente para ver un ejemplo de un objeto JSON con formato correcto con una raíz `data`.
 
-+++Archivo JSON de muestra con una raíz `data`
++++Archivo JSON de muestra con raíz `data`
 
 ```json
 {
@@ -121,7 +121,7 @@ Para capturar propiedades directamente desde la capa de datos, el objeto JSON de
 
 Para capturar propiedades de un elemento de datos de objeto XDM, se aplican las mismas reglas al objeto JSON, pero la propiedad raíz debe tener la clave `xdm` en su lugar. Seleccione la sección siguiente para ver un ejemplo de un objeto JSON con formato correcto con una raíz de `xdm`.
 
-+++Archivo JSON de muestra con la raíz `xdm`
++++Archivo JSON de muestra con raíz `xdm`
 
 ```json
 {
@@ -152,7 +152,7 @@ Para capturar propiedades de un elemento de datos de objeto XDM, se aplican las 
 
 +++
 
-Puede seleccionar la opción para cargar el objeto como un archivo o pegar el objeto sin procesar en el cuadro de texto proporcionado. Si el JSON es válido, se muestra un esquema de vista previa en el panel derecho. Haga clic en **[!UICONTROL Siguiente]** para continuar.
+Puede seleccionar la opción para cargar el objeto como un archivo o pegar el objeto sin procesar en el cuadro de texto proporcionado. Si el JSON es válido, se muestra un esquema de vista previa en el panel derecho. Seleccione **[!UICONTROL Next]** para continuar.
 
 ![Muestra JSON de datos entrantes esperados.](assets/data-prep/select-data.png)
 
@@ -160,7 +160,7 @@ Puede seleccionar la opción para cargar el objeto como un archivo o pegar el ob
 >
 > Utilice un objeto JSON de muestra que represente cada elemento de capa de datos que se pueda utilizar en cualquier página. Por ejemplo, no todas las páginas utilizan elementos de capa de datos del carro de compras. Sin embargo, los elementos de la capa de datos del carro de compras deben incluirse en este objeto JSON de muestra.
 
-## [!UICONTROL Asignación]
+## [!UICONTROL Mapping]
 
 Aparece el paso **[!UICONTROL Mapping]**, que le permite asignar los campos de los datos de origen al esquema de evento de destino en Experience Platform. Desde aquí, puede configurar la asignación de dos formas:
 
@@ -173,19 +173,19 @@ Aparece el paso **[!UICONTROL Mapping]**, que le permite asignar los campos de l
 
 ### Creación de reglas de asignación {#create-mapping}
 
-Para crear una regla de asignación, seleccione **[!UICONTROL Agregar nueva asignación]**.
+Para crear una regla de asignación, seleccione **[!UICONTROL Add new mapping]**.
 
 ![Agregando nueva asignación.](assets/data-prep/add-new-mapping.png)
 
-Seleccione el icono de origen (![Icono de origen](/help/images/icons/source.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el botón **[!UICONTROL Seleccionar]** para continuar.
+Seleccione el icono de origen (![Icono de origen](/help/images/icons/source.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el botón **[!UICONTROL Select]** para continuar.
 
 ![Seleccionando el campo que se va a asignar en el esquema de origen.](assets/data-prep/source-mapping.png)
 
-A continuación, seleccione el icono de esquema (![Icono de esquema](/help/images/icons/schema.png)) para abrir un cuadro de diálogo similar para el esquema de evento de destinatario. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Seleccionar]**.
+A continuación, seleccione el icono de esquema (![Icono de esquema](/help/images/icons/schema.png)) para abrir un cuadro de diálogo similar para el esquema de evento de destinatario. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Select]**.
 
 ![Seleccionando el campo que se va a asignar en el esquema de destino.](assets/data-prep/target-mapping.png)
 
-La página de asignación vuelve a aparecer y se muestra la asignación de campos completada. La sección **[!UICONTROL Asignación en curso]** se actualiza para reflejar el número total de campos que se han asignado correctamente.
+La página de asignación vuelve a aparecer y se muestra la asignación de campos completada. La sección **[!UICONTROL Mapping progress]** se actualiza para reflejar el número total de campos que se han asignado correctamente.
 
 ![Campo asignado correctamente con progreso reflejado.](assets/data-prep/field-mapped.png)
 
@@ -203,11 +203,11 @@ Si ha creado anteriormente una secuencia de datos, puede reutilizar sus reglas d
 >
 >La importación de reglas de asignación desde otro conjunto de datos sobrescribe las asignaciones de campo que haya agregado antes de la importación.
 
-Para empezar, seleccione **[!UICONTROL Importar asignación]**.
+Para empezar, seleccione **[!UICONTROL Import Mapping]**.
 
 ![Se está seleccionando el botón Importar asignación.](assets/data-prep/import-mapping-button.png)
 
-En el cuadro de diálogo que aparece, seleccione la secuencia de datos cuyas reglas de asignación desea importar. Una vez elegida la secuencia de datos, seleccione **[!UICONTROL Vista previa]**.
+En el cuadro de diálogo que aparece, seleccione la secuencia de datos cuyas reglas de asignación desea importar. Una vez elegido el conjunto de datos, seleccione **[!UICONTROL Preview]**.
 
 ![Seleccionando una secuencia de datos existente.](assets/data-prep/select-mapping-rules.png)
 
@@ -215,7 +215,7 @@ En el cuadro de diálogo que aparece, seleccione la secuencia de datos cuyas reg
 >
 >Las secuencias de datos solo se pueden importar dentro de la misma [zona protegida](../sandboxes/home.md). En otras palabras, no se puede importar una secuencia de datos de una zona protegida a otra.
 
-La siguiente pantalla muestra una previsualización de las reglas de asignación guardadas para la secuencia de datos seleccionada. Asegúrese de que las asignaciones mostradas sean las esperadas y, a continuación, seleccione **[!UICONTROL Importar]** para confirmar y agregar las asignaciones a la nueva secuencia de datos.
+La siguiente pantalla muestra una previsualización de las reglas de asignación guardadas para la secuencia de datos seleccionada. Asegúrese de que las asignaciones mostradas sean las esperadas y, a continuación, seleccione **[!UICONTROL Import]** para confirmar y agregar las asignaciones a la nueva secuencia de datos.
 
 ![Reglas de asignación para importar.](assets/data-prep/import-mapping-rules.png)
 
@@ -225,9 +225,9 @@ La siguiente pantalla muestra una previsualización de las reglas de asignación
 
 ### Finalización de la asignación
 
-Siga los pasos anteriores para asignar el resto de los campos al esquema de destino. Aunque no tiene que asignar todos los campos de origen disponibles, cualquier campo del esquema de destino definido como obligatorio debe asignarse para completar este paso. El contador **[!UICONTROL campos obligatorios]** indica cuántos campos obligatorios aún no están asignados en la configuración actual.
+Siga los pasos anteriores para asignar el resto de los campos al esquema de destino. Aunque no tiene que asignar todos los campos de origen disponibles, cualquier campo del esquema de destino definido como obligatorio debe asignarse para completar este paso. El contador **[!UICONTROL Required fields]** indica cuántos campos obligatorios aún no están asignados en la configuración actual.
 
-Una vez que el recuento de campos requerido llegue a cero y esté satisfecho con la asignación, seleccione **[!UICONTROL Guardar]** para finalizar los cambios.
+Una vez que el recuento de campos requerido llegue a cero y esté satisfecho con la asignación, seleccione **[!UICONTROL Save]** para finalizar los cambios.
 
 ![Asignación completa](assets/data-prep/mapping-complete.png)
 

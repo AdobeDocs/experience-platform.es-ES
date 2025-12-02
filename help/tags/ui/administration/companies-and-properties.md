@@ -2,10 +2,10 @@
 title: Propiedades
 description: Conozca cómo las extensiones, los entornos y las bibliotecas están organizados y agrupados para su organización en Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 94%
+source-wordcount: '1153'
+ht-degree: 90%
 
 ---
 
@@ -97,7 +97,7 @@ En esta sección se explica cómo crear o configurar una propiedad de etiqueta e
 
 Antes de comenzar, consulte [Prácticas recomendadas para la planificación de propiedades](companies-and-properties.md#best-practices-for-planning-properties) para obtener propiedades.
 
-Vaya a la página de su empresa y, a continuación, seleccione **[!UICONTROL Añadir propiedad]**, o bien escoja una propiedad existente de la lista y seleccione **[!UICONTROL Configurar]**.
+Navegue hasta su página de empresa y, a continuación, seleccione **[!UICONTROL Add Property]**, o bien seleccione una propiedad existente de la lista y seleccione **[!UICONTROL Configure]**.
 
 ![](../../images/property-settings.png)
 
@@ -111,10 +111,10 @@ Siga las instrucciones para crear una propiedad web.
 
    **Dominios:** la dirección URL base de los sitios en los que planee implementar esta propiedad.
 
-1. (Avanzado) **[!UICONTROL Ejecutar componentes de regla en secuencia]**: Seleccione esta casilla de verificación para que las condiciones y las acciones esperen a que se complete la anterior antes de ejecutarse.
-1. (Avanzado) **[!UICONTROL Devolver una cadena vacía para los elementos de datos que faltan:]** Si hace referencia a un elemento de datos que no existe dentro de una biblioteca, normalmente devolverá `undefined`. Seleccione esta casilla de verificación si desea que ese escenario devuelva una cadena vacía en su lugar.
-1. (Avanzado) **[!UICONTROL Configurar para desarrollo de extensiones:]** Seleccione esta casilla de verificación si planea instalar extensiones de desarrollo que su compañía esté desarrollando activamente.
-1. Seleccione **[!UICONTROL Guardar]**.
+1. (Avanzado) **[!UICONTROL Run rule components in sequence]**: Seleccione esta casilla de verificación para que las condiciones y las acciones esperen a que se complete la anterior antes de ejecutarse.
+1. (Avanzado) **[!UICONTROL Return an empty string for missing data elements:]** Si hace referencia a un elemento de datos que no existe dentro de una biblioteca, normalmente devolverá `undefined`. Active esta casilla de verificación si desea que ese escenario devuelva una cadena vacía en su lugar.
+1. (Avanzado) **[!UICONTROL Configure for extension development:]** Active esta casilla de verificación si planea instalar extensiones de desarrollo que su compañía esté desarrollando activamente.
+1. Seleccione **[!UICONTROL Save]**.
 
 ### Para dispositivos móviles
 
@@ -131,7 +131,7 @@ Siga las instrucciones para crear una propiedad móvil.
 
    * **Use HTTPS:** seleccione si todas las comunicaciones de datos deben enviarse por HTTP o HTTPS.
 
-1. Seleccione **[!UICONTROL Guardar]**.
+1. Seleccione **[!UICONTROL Save]**.
 
 Una vez creada la propiedad, Experience Platform agrega automáticamente un host predeterminado, un conjunto de entornos (Desarrollo, Ensayo y Producción) y las extensiones predeterminadas.
 
@@ -147,4 +147,4 @@ Siga los pasos a continuación para eliminar una propiedad de etiqueta.
 
    Puede seleccionar varias propiedades que desee eliminar.
 
-1. Seleccione **[!UICONTROL Eliminar]** y confirme la eliminación de la propiedad.
+1. Seleccione **[!UICONTROL Delete]** y confirme la eliminación de la propiedad.

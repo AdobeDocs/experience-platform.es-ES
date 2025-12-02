@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Envío De Actualizaciones Parciales De Fila Al Perfil Del Cliente En Tiempo Real Mediante La Preparación De Datos
 description: Obtenga información sobre cómo enviar actualizaciones parciales de fila al perfil del cliente en tiempo real mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---
@@ -271,8 +271,8 @@ A continuación se describe una lista de limitaciones conocidas que deben teners
 
 * El método de actualizaciones de flujo continuo solo se debe usar cuando se envíen actualizaciones de fila parciales a [!DNL Real-Time Customer Profile]. Las actualizaciones parciales de fila **no** son consumidas por el lago de datos.
 * El método de actualizaciones de streaming no admite la actualización, el reemplazo y la eliminación de identidades. Si no existen, se crean nuevas identidades. Por lo tanto, la operación `identity` siempre debe configurarse para crear. Si ya existe una identidad, la operación no es operativa.
-* Actualmente, el método de actualizaciones de streaming no admite [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) ni [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* Actualmente, el método de actualizaciones de streaming no admite [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) ni [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, debería haber comprendido cómo transmitir actualizaciones de filas en [!DNL Data Prep] para enviar actualizaciones de filas parciales a los datos de [!DNL Real-Time Customer Profile], a la vez que crea y vincula identidades con una sola solicitud de API. Para obtener más información sobre otras características de [!DNL Data Prep], lea la [[!DNL Data Prep] descripción general](./home.md). Para obtener información sobre cómo usar conjuntos de asignaciones en la API [!DNL Data Prep], lea la [[!DNL Data Prep] guía para desarrolladores](./api/overview.md).

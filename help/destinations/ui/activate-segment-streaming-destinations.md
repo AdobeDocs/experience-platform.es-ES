@@ -1,22 +1,22 @@
 ---
 title: Activar datos de audiencia en destinos de flujo continuo
 type: Tutorial
-description: Obtén información sobre cómo activar las audiencias que tienes en Adobe Experience Platform asignándolas a destinos de streaming.
+description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform asignándolas a destinos de flujo continuo.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 595856842a3890426bb196218bd8be4e321ff8aa
+source-git-commit: 2eb890f06097f1b9766408aad3b6ab11d5d12f9f
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 3%
 
 ---
 
 
-# Activar audiencias en destinos de streaming
+# Activar audiencias en destinos de flujo continuo
 
 >[!IMPORTANT]
 > 
-> * Para activar audiencias y habilitar el [paso de asignación de la flujo de trabajo, necesita los &#x200B;](#mapping)**[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , , **[!UICONTROL View Profiles]**, y **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions) control de acceso.
-> * Para activar audiencias sin pasar por el paso de [asignación de la flujo de trabajo, necesita los &#x200B;](#mapping)**[!UICONTROL View Destinations]**&#x200B;**[!UICONTROL Activate Segment without Mapping]** permisos **[!UICONTROL View Profiles]** , , , y **[!UICONTROL View Segments]**&#x200B;[&#x200B; control de acceso.](/help/access-control/home.md#permissions)
+> * Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> * Para activar audiencias sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 > * Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 > 
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
@@ -35,9 +35,9 @@ Para activar audiencias en destinos, debes haber [conectado correctamente a un d
 
    ![Pestaña Catálogo de destino que muestra varios destinos de streaming.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Seleccione **[!UICONTROL Activate audiences]** el tarjeta correspondiente al destino donde desea activar sus audiencias, como se muestra en la imagen siguiente.
+1. Seleccione **[!UICONTROL Activate audiences]** en la tarjeta correspondiente al destino donde desea activar sus audiencias, como se muestra en la siguiente imagen.
 
-   ![Activar el control resaltado en el catálogo de destinos.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![Activar control resaltado en el catálogo de destinos.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. Seleccione la conexión de destino que desee usar para activar las audiencias y luego seleccione **[!UICONTROL Next]**.
 
@@ -51,8 +51,8 @@ Para seleccionar las audiencias que desea activar en el destino, utilice las cas
 
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
-* **[!UICONTROL Segmentation Service]**: Audiences generan dentro de Experience Platform el servicio de segmentación. Consulte la documentación[&#x200B; segmentación &#x200B;](../../segmentation/ui/overview.md)para obtener más detalles.
-* **[!UICONTROL Custom upload]**: Audiences generan fuera de Experience Platform y se cargan en Experience Platform como archivos CSV. Para obtener más información sobre las audiencias externas, consulte la documentación sobre [la importación de audiencia](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Segmentation Service]**: audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
+* **[!UICONTROL Custom upload]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
 * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
 ![Varias audiencias resaltadas en el paso Seleccionar audiencias.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -75,7 +75,7 @@ Algunos destinos de flujo de audiencia requieren que seleccione atributos de ori
 
 1. Seleccione la flecha a la derecha de la entrada **[!UICONTROL Source field]**.
 
-   ![Seleccione el control de campo de origen resaltado.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![Seleccionar control de campo de origen resaltado.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. En la página **[!UICONTROL Select source field]**, utilice las opciones **[!UICONTROL Select attributes]** o **[!UICONTROL Select identity namespace]** para cambiar entre las dos categorías de campos de origen disponibles. De los atributos de perfil y las áreas de nombres de identidad de [!DNL XDM] disponibles, seleccione los que desee asignar al destino y, a continuación, elija **[!UICONTROL Select]**.
 
@@ -85,11 +85,11 @@ Algunos destinos de flujo de audiencia requieren que seleccione atributos de ori
 
 1. Seleccione el botón a la derecha de la entrada **[!UICONTROL Target field]**.
 
-   ![Seleccione destino campo resaltado.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![Seleccionar campo de destino resaltado.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
-1. En la **[!UICONTROL Select target field]** Página, seleccione el espacio de nombres de identidad destino al que desea asignar el campo de origen y elija **[!UICONTROL Select]**.
+1. En la página **[!UICONTROL Select target field]**, seleccione el área de nombres de identidad de destino al que desea asignar el campo de origen y elija **[!UICONTROL Select]**.
 
-   ![Seleccione destino campo Página mostrar las opciones disponibles para destino asignaciones de campo.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![Seleccione la página de campo de destino que muestra las opciones disponibles para las asignaciones de campo de destino.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. Para agregar más asignaciones, repita los pasos del 1 al 5.
 
@@ -121,11 +121,11 @@ Para ver todas las audiencias que se están activando en su destino, utilice la 
 
    ![Filtro de programación de audiencia resaltado.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
-   * Algunos destinos requieren que seleccione **[!UICONTROL Origin of audience]** para cada audiencia mediante el menú desplegable situado debajo de los selectores de calendario. Si su destino no incluye este selector, omita este paso.
+   * Algunos destinos requieren que seleccione **[!UICONTROL Origin of audience]** para cada audiencia mediante el menú desplegable situado debajo de los selectores de calendario. Si el destino no incluye este selector, omita este paso.
 
-     ![El menú desplegable ID de asignación resaltado.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![Se ha resaltado el menú desplegable de ID de asignación.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * Algunos destinos requieren que asigne [!DNL Experience Platform] manualmente las audiencias a sus homólogas en el destino destino. Para ello, seleccione cada audiencia y, a continuación, introduzca el ID de audiencia correspondiente desde la plataforma de destino en el **[!UICONTROL Mapping ID]** campo. Si su destino no incluye este campo, omita este paso.
+   * Algunos destinos requieren que asigne manualmente [!DNL Experience Platform] audiencias a su homólogo en el destino de destino. Para ello, seleccione cada audiencia e introduzca el ID de audiencia correspondiente de la plataforma de destino en el campo **[!UICONTROL Mapping ID]**. Si el destino no incluye este campo, omita este paso.
 
      ![Se ha resaltado el menú desplegable Origen de la audiencia.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
@@ -145,7 +145,7 @@ En la página **[!UICONTROL Review]**, puede ver un resumen de su selección. Se
 
 Si su organización compró **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL View applicable consent policies]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Lea acerca de [evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
-### Comprobaciones del directiva de uso de datos {#data-usage-policy-checks}
+### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
 En el paso **[!UICONTROL Review]**, Experience Platform también comprueba si hay alguna infracción de la directiva de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, lea acerca de [infracciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección de documentación de control de datos.
 
@@ -157,11 +157,11 @@ Además, en este paso puede utilizar los filtros disponibles en la página para 
 
 ![Grabación de pantalla que muestra los filtros de audiencia disponibles en el paso de revisión.](../assets/ui/activate-segment-streaming-destinations/filter-audiences-review-step.gif)
 
-Si está satisfecho con su selección y no se han detectado infracciones de directiva, seleccione **[!UICONTROL Finish]** confirmar su selección y inicio enviar datos al destino.
+Si está satisfecho con su selección y no se han detectado infracciones de directivas, seleccione **[!UICONTROL Finish]** para confirmar su selección y comenzar a enviar datos al destino.
 
-## Verificar audiencia activación {#verify}
+## Verificar activación de audiencia {#verify}
 
-Consulte la [documentación](../../dataflows/ui/monitor-destinations.md) de supervisión de destinos para obtener información detallada sobre cómo monitor el flujo de datos a sus destinos.
+Consulte la [documentación de supervisión de destino](../../dataflows/ui/monitor-destinations.md) para obtener información detallada sobre cómo supervisar el flujo de datos a sus destinos.
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Audience membership in the audience would be added and removed as users are qualified or disqualified for the activated audiences.
