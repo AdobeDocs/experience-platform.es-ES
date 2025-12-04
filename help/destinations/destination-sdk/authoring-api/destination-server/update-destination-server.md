@@ -2,10 +2,10 @@
 description: Esta página ejemplifica la llamada de API utilizada para actualizar una configuración de servidor de destino existente a través de Adobe Experience Platform Destination SDK.
 title: Actualizar la configuración de un servidor de destino
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
 workflow-type: tm+mt
 source-wordcount: '1103'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ Para obtener una descripción detallada de las capacidades que puede configurar 
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API del servidor de destino {#get-started}
 
@@ -238,7 +238,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },
@@ -557,7 +561,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    },
    "fileConfigurations": {
         "compression": {
@@ -754,7 +758,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la config
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo actualizar una configuración de servidor de destino a través del extremo de API de Destination SDK `/authoring/destination-servers`.
 

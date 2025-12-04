@@ -2,10 +2,10 @@
 description: Esta página ejemplifica la llamada de API utilizada para crear un servidor de destino a través de Adobe Experience Platform Destination SDK.
 title: Crear una configuración de servidor de destino
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
 workflow-type: tm+mt
 source-wordcount: '2040'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ Para obtener una descripción detallada de las capacidades que puede configurar 
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API del servidor de destino {#get-started}
 
@@ -248,7 +248,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },
@@ -579,7 +583,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    },
    "fileConfigurations": {
         "compression": {
@@ -948,7 +952,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo crear un nuevo servidor de destino a través del extremo de la API de Destination SDK `/authoring/destination-servers`.
 
