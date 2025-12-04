@@ -37,7 +37,7 @@ En el lado del servidor, una puerta de enlace perimetral unificada y un marco de
 
 Un sistema Edge consolidado le permite administrar campañas de publicidad, marketing y personalización en todos los canales. Reduce el coste total de propiedad y admite varios tipos de datos, lo que le permite asignar el modelo de datos para utilizarlo con varios productos de Experience Cloud.
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37261?captions=spa&quality=12&learn=on)
 
 ## Bibliotecas reemplazadas por Web SDK {#sdks}
 
