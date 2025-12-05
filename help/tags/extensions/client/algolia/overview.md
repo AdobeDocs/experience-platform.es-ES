@@ -2,9 +2,9 @@
 title: Información general sobre la extensión Algolia Tags
 description: Obtenga información acerca de la extensión de etiquetas Algolia en Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 904200c5d3ef2be58582e4679109390e8d4aebc1
+source-git-commit: 6eee26df3841a7829625361fc726bf59a278f867
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1954'
 ht-degree: 1%
 
 ---
@@ -32,9 +32,9 @@ Para conectar [!DNL Algolia] con Adobe Experience Platform, necesitará la sigui
 
 ## Instalar y configurar la extensión [!DNL Algolia] Insights {#install-configure}
 
-Para instalar la extensión [!DNL Algolia] Insights, vaya a la [!UICONTROL IU de recopilación de datos] y seleccione **[!UICONTROL Etiquetas]** en el panel de navegación izquierdo. Aquí, seleccione una propiedad a la que añadir la extensión o cree una nueva propiedad.
+Para instalar la extensión [!DNL Algolia] Insights, vaya a [!UICONTROL Data Collection UI] y seleccione **[!UICONTROL Tags]** en el panel de navegación izquierdo. Aquí, seleccione una propiedad a la que añadir la extensión o cree una nueva propiedad.
 
-Una vez que haya seleccionado o creado la propiedad deseada, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Catálogo]**. Busque la tarjeta de [!DNL Algolia] datos y, a continuación, seleccione **[!UICONTROL Instalar]**.
+Una vez que haya seleccionado o creado la propiedad deseada, seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Catalog]**. Busque la tarjeta [!DNL Algolia] datos y, a continuación, seleccione **[!UICONTROL Install]**.
 
 ![](../../../images/extensions/client/algolia/install.png)
 
@@ -42,12 +42,12 @@ En la vista de configuración que aparece, debe proporcionar los siguientes deta
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL ID de aplicación] | Escriba el [!UICONTROL ID de aplicación] que recopiló anteriormente en la sección [detalles de configuración](#configuration-details). |
-| [!UICONTROL Clave API de búsqueda] | Escriba la [!UICONTROL clave de API de búsqueda] que recopiló anteriormente en la sección [detalles de configuración](#configuration-details). |
-| [!UICONTROL Nombre de índice] | El [!UICONTROL Nombre de índice] contiene los productos o el contenido.  Este índice se utilizará como predeterminado. |
-| [!UICONTROL Elemento de datos de token de usuario] | El elemento de datos que devolverá el token de usuario. |
-| [!UICONTROL Elemento de datos de token de usuario autenticado] | Establezca el elemento de datos que devolverá el token de usuario autenticado. |
-| [!UICONTROL Moneda] | Seleccione un tipo de moneda. El valor predeterminado es `USD`. |
+| [!UICONTROL Application ID] | Escriba el [!UICONTROL Application Id] que recopiló anteriormente en la sección [detalles de configuración](#configuration-details). |
+| [!UICONTROL Search API Key] | Escriba el [!UICONTROL Search API Key] que recopiló anteriormente en la sección [detalles de configuración](#configuration-details). |
+| [!UICONTROL Index Name] | [!UICONTROL Index Name] contiene los productos o el contenido.  Este índice se utilizará como predeterminado. |
+| [!UICONTROL User Token Data Element] | El elemento de datos que devolverá el token de usuario. |
+| [!UICONTROL Authenticated User Token Data Element] | Establezca el elemento de datos que devolverá el token de usuario autenticado. |
+| [!UICONTROL Currency Code] | Introduzca el código de divisa en formato ISO-4217, como USD o EUR. Este campo admite elementos de datos. |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -61,33 +61,33 @@ En la vista de configuración que aparece, debe proporcionar los siguientes deta
 >
 >En la mayoría de los casos, se recomienda cargar [!DNL Algolia] Insights en todas las páginas del sitio.
 
-Agregue la acción **[!UICONTROL Cargar información]** a la regla de etiquetas siempre que tenga más sentido cargar [!DNL Algolia] información en función del contexto de la regla. Esta acción carga la biblioteca `search-insights.js` en la página.
+Agregue la acción **[!UICONTROL Load Insights]** a la regla de etiqueta siempre que tenga más sentido cargar [!DNL Algolia] información en función del contexto de la regla. Esta acción carga la biblioteca `search-insights.js` en la página.
 
-Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como [!UICONTROL extensión] y seleccione **[!UICONTROL Cargar información]** como [!UICONTROL Tipo de acción].
+Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como [!UICONTROL Extension] y seleccione **[!UICONTROL Load Insights]** como [!UICONTROL Action Type].
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Versión de biblioteca de Insight] | La versión de [!DNL Algolia] Insights. El valor predeterminado es `2.13.0`. |
-| [!UICONTROL Elemento de datos de exclusión de usuario] | Elemento de datos que captura la preferencia de seguimiento del usuario. |
-| [!UICONTROL Usar cookie de token de usuario] | Marque esta casilla para permitir que [!DNL Algolia] genere una cookie de token de usuario. De manera predeterminada, esta opción está establecida en `false`. |
+| [!UICONTROL Insight Library Version] | La versión de [!DNL Algolia] Insights. El valor predeterminado es `2.17.3`. |
+| [!UICONTROL User Opt Out Data Element] | Elemento de datos que captura la preferencia de seguimiento del usuario. |
+| [!UICONTROL Use User Token Cookie] | Marque esta casilla para permitir que [!DNL Algolia] genere una cookie de token de usuario. De manera predeterminada, esta opción está establecida en `true`. |
 
 ![](../../../images/extensions/client/algolia/load-insights.png)
 
 ### Clic {#clicked}
 
-Agregue la acción **[!UICONTROL Click]** a la regla de etiqueta para enviar los eventos en los que se hizo clic a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como la [!UICONTROL extensión] y seleccione **[!UICONTROL Se hizo clic]** como [!UICONTROL Tipo de acción].
+Agregue la acción **[!UICONTROL Click]** a la regla de etiqueta para enviar los eventos en los que se hizo clic a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como [!UICONTROL Extension] y seleccione **[!UICONTROL Clicked]** como [!UICONTROL Action Type].
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del evento] | El Nombre del evento que se puede utilizar para restringir aún más este evento de clic. |
-| [!UICONTROL Elemento de datos de detalles del evento] | El elemento de datos devuelve detalles del evento, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (opcional)</li><li>`position` (opcional)</li></ul> |
-| [!UICONTROL Elemento de datos de identificador de registro] | El id. de registro se utiliza como clave para los datos de evento almacenados en el almacenamiento del explorador durante un evento `click`. De forma predeterminada, la dirección URL de la página sirve como ID de registro. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva el ID de registro como una cadena. |
+| [!UICONTROL Event Name] | El Nombre del evento que se puede utilizar para restringir aún más este evento de clic. |
+| [!UICONTROL Event Details Data Element] | El elemento de datos devuelve detalles del evento en formato JSON, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (opcional)</li><li>`positions` (opcional)</li><li>`price` (opcional)</li><li>`quantity` (opcional)</li><li>`discount` (opcional)</li><li>`objectData` (opcional)</li><li>`currency` (opcional)</li></ul> |
+
 
 >[!NOTE]
 >
->Si se incluyen `queryID` y `position`, el evento se clasifica como **ID de objeto en los que se hizo clic después de la búsqueda**. De lo contrario, se clasifica como un evento **ID de objeto en el que se hizo clic**.
->&#x200B;><br>
->&#x200B;>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
+>Si se incluyen `queryID` y `positions`, el evento se clasifica como **ID de objeto en los que se hizo clic después de la búsqueda**. De lo contrario, se clasifica como un evento **ID de objeto en el que se hizo clic**.
+><br>
+>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -96,20 +96,18 @@ y guías de [ID de objetos en los que se hizo clic](https://www.algolia.com/doc/
 
 ### Convertido {#converted}
 
-Agregue la acción **[!UICONTROL Converted]** a la regla de etiquetas para enviar eventos convertidos a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como la [!UICONTROL extensión] y seleccione **[!UICONTROL Convertido]** como [!UICONTROL Tipo de acción].
+Agregue la acción **[!UICONTROL Converted]** a la regla de etiqueta para enviar eventos convertidos a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como [!UICONTROL Extension] y seleccione **[!UICONTROL Converted]** como [!UICONTROL Action Type].
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del evento] | Nombre del evento que se utilizará para restringir aún más este evento **convert**. |
-| [!UICONTROL Elemento de datos de detalles del evento] | El elemento de datos devuelve detalles del evento, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (opcional)</li></ul> |
-| [!UICONTROL Deshabilitar la eliminación de datos de evento] | En un evento de conversión, los datos de evento se eliminan del almacenamiento. Si estos datos son necesarios para eventos de conversión subsiguientes, deshabilite el proceso de eliminación para garantizar que los datos de evento permanezcan disponibles. |
-| [!UICONTROL Elemento de datos de identificador de registro] | El ID de registro se utiliza como clave para buscar los datos de evento almacenados en el almacenamiento del explorador. La dirección URL de la página es el identificador de registro predeterminado. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva el ID de registro como una cadena. |
+| [!UICONTROL Event Name] | Nombre del evento que se utilizará para restringir aún más este evento **convert**. |
+| [!UICONTROL Event Details Data Element] | El elemento de datos devuelve detalles del evento, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (opcional)</li><li>`recordID` (opcional)</li></ul> |
 
 >[!NOTE]
 >
 >Si el elemento de datos contiene `queryId`, el evento se clasifica como **Convertido después de la búsqueda**. De lo contrario, se clasificará como un evento **Converted**.
->&#x200B;><br>
->&#x200B;>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
+><br>
+>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -117,21 +115,20 @@ Para obtener más información sobre las categorías de eventos, consulte las gu
 
 ### Añadido al carro {#added-to-cart}
 
-Agregue la acción **[!UICONTROL Agregado al carro]** a la regla de etiquetas para enviar los eventos agregados al carro de compras a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como la [!UICONTROL Extensión] y seleccione **[!UICONTROL Añadido al carro]** como [!UICONTROL Tipo de acción].
+Agregue la acción **[!UICONTROL Added to Cart]** a la regla de etiqueta para enviar los eventos agregados al carro de compras a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como [!UICONTROL Extension] y seleccione **[!UICONTROL Added to cart]** como [!UICONTROL Action Type].
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del evento] | Nombre del evento que se utilizará para restringir aún más este evento **convert**. |
-| [!UICONTROL Elemento de datos de detalles del evento] | El elemento de datos devuelve detalles del evento, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (opcional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (opcional)</li></ul>. |
-| [!UICONTROL Moneda] | Seleccione un tipo de moneda. El valor predeterminado es `USD`. |
+| [!UICONTROL Event Name] | Nombre del evento que se utilizará para restringir aún más este evento **agregar al carro de compras**. |
+| [!UICONTROL Event Details Data Element] | El elemento de datos devuelve detalles del evento en formato JSON, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (opcional)</li><li>`queryID` (opcional)</li><li>`currency` (opcional)</li></ul>. |
 
 >[!NOTE]
 >
 >Si el elemento de datos contiene `queryId`, el evento se clasificará como **Se agregará a los identificadores de objeto del carro de compras después de la búsqueda**. De lo contrario, se clasificará como un evento **Se agregó al objeto de carro de compras ID**.
->&#x200B;><br>
->&#x200B;>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
->&#x200B;><br>
->&#x200B;>Si los elementos de datos predeterminados no cumplen con sus requisitos, se puede crear un elemento de datos personalizado para devolver los detalles de evento deseados.
+><br>
+>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
+><br>
+>Si los elementos de datos predeterminados no cumplen con sus requisitos, se puede crear un elemento de datos personalizado para devolver los detalles de evento deseados.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -139,21 +136,18 @@ Para obtener más información sobre las categorías de eventos, consulte las gu
 
 ### Adquirido {#purchased}
 
-Agregue la acción **[!UICONTROL Purchased]** a la regla de etiqueta para enviar los eventos comprados a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como la [!UICONTROL extensión] y seleccione **[!UICONTROL Adquirido]** como [!UICONTROL Tipo de acción].
+Agregue la acción **[!UICONTROL Purchased]** a la regla de etiqueta para enviar los eventos comprados a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como [!UICONTROL Extension] y seleccione **[!UICONTROL Purchased]** como [!UICONTROL Action Type].
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del evento] | Nombre del evento que se utilizará para restringir aún más este evento **purchase**. |
-| [!UICONTROL Elemento de datos de detalles del evento] | El elemento de datos devuelve detalles del evento, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (opcional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (opcional)</li></ul>. |
-| [!UICONTROL Moneda] | Seleccione un tipo de moneda. El valor predeterminado es `USD`. |
+| [!UICONTROL Event Name] | Nombre del evento que se utilizará para restringir aún más este evento **purchase**. |
+| [!UICONTROL Event Details Data Element] | El elemento de datos devuelve detalles del evento en formato JSON, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (opcional)</li><li>`queryID` (opcional)</li><li>`currency` (opcional)</li></ul>. |
 
 >[!NOTE]
 >
->Si el elemento de datos contiene `queryId`, el evento se clasificará como **ID de objeto adquiridos después de la búsqueda**. De lo contrario, se clasificará como un evento **ID de objeto adquiridos**.
->&#x200B;><br>
->&#x200B;>Si el elemento de datos no proporciona `indexName`, se usará el **Nombre de índice predeterminado** cuando se envíe el evento.
->&#x200B;><br>
->&#x200B;>Si los elementos de datos predeterminados no cumplen con sus requisitos, se puede crear un elemento de datos personalizado para devolver los detalles de evento deseados.
+>La acción Comprado recupera los datos de evento del almacenamiento del explorador en función de los ID de artículo comprados. Si alguno de los elementos comprados contiene `queryID` en sus datos almacenados, el evento se clasificará como **Id. de objeto comprados después de la búsqueda**. De lo contrario, se clasificará como un evento **ID de objeto adquiridos**.
+><br>
+>Este método permite que el evento de compra incluya automáticamente todo el contexto relevante (ID de consulta, nombre de índice, precio, cantidad, descuento) de las interacciones anteriores del usuario con los artículos.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
@@ -162,12 +156,12 @@ y [ID de objeto adquiridos](https://www.algolia.com/doc/api-reference/api-method
 
 ### Visto {#viewed}
 
-Agregue la acción **[!UICONTROL Visto]** a la regla de etiqueta para enviar los eventos comprados a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como [!UICONTROL extensión] y seleccione **[!UICONTROL Visto]** como [!UICONTROL Tipo de acción].
+Agregue la acción **[!UICONTROL Viewed]** a la regla de etiqueta para enviar los eventos comprados a [!DNL Algolia]. Cree una nueva regla de etiqueta o abra una existente. Defina las condiciones según sus necesidades, luego seleccione **[!UICONTROL Algolia]** como [!UICONTROL Extension] y seleccione **[!UICONTROL Viewed]** como [!UICONTROL Action Type].
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del evento] | Nombre del evento que se utilizará para restringir aún más este evento **view**. |
-| [!UICONTROL Elemento de datos de detalles del evento] | El elemento de datos devuelve detalles del evento, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+| [!UICONTROL Event Name] | Nombre del evento que se utilizará para restringir aún más este evento **view**. |
+| [!UICONTROL Event Details Data Element] | El elemento de datos devuelve detalles del evento en formato JSON, que incluyen: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]
 >
@@ -183,16 +177,35 @@ Para obtener más información sobre el evento de visualización, consulte la gu
 
 ### DataSet {#dataset}
 
-El elemento de datos DataSet recupera datos asociados con elementos HTML, que luego se utilizan en [!DNL Algolia] acciones.
+El elemento de datos DataSet recupera datos asociados con elementos HTML, que luego se utilizan en [!DNL Algolia] acciones. Este elemento de datos almacena automáticamente los datos de evento recuperados en el almacenamiento del explorador para su uso posterior (como en eventos de conversión o compra).
+
+**Configuración general:**
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre De Clase/Div Del Elemento De Visita] | El nombre del elemento HTML o el nombre de clase CSS que contiene los atributos del conjunto de datos, incluidos `data-insights-object-id` y opcionalmente `data-insights-query-id` y `data-insights-position` en el elemento HTML. |
-| [!UICONTROL Nombre de índice Nombre de elemento Div/Nombre de clase] | El nombre del elemento HTML o el nombre de clase CSS que tiene los atributos del conjunto de datos (`data-indexname`) en el elemento HTML. |
-| [!UICONTROL Elemento de datos de ID de consulta] | El ID de consulta se recupera del conjunto de datos en el elemento HTML. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva el ID de consulta como una cadena. |
-| [!UICONTROL Elemento de datos de ID de objeto] | Los ID de objeto se recuperan del conjunto de datos en el elemento HTML. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva los ID de objeto como una matriz. |
-| [!UICONTROL Elemento de datos de posiciones] | Las posiciones se recuperan del conjunto de datos en el elemento HTML. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva Positions como una matriz. |
-| [!UICONTROL Elemento de datos de nombre de índice] | El nombre del índice se recupera del conjunto de datos en el elemento HTML. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva el nombre del índice como una cadena. |
+| [!UICONTROL Hit Element Div/Class Name] | El nombre del elemento HTML o el nombre de clase CSS que contiene los atributos del conjunto de datos, incluidos `data-insights-object-id` y, opcionalmente, `data-insights-query-id` y `data-insights-position` en el elemento HTML. |
+| [!UICONTROL Index Name Element Div/Class Name] | El nombre del elemento HTML o el nombre de clase CSS que tiene los atributos del conjunto de datos (`data-indexname`) en el elemento HTML. |
+
+**Configuración de Commerce (opcional):**
+
+| Propiedad | Descripción |
+| --- | --- |
+| [!UICONTROL Price Data Element] | Elemento de datos que devuelve el precio del artículo. Si se proporciona, esto se incluirá en los datos de evento almacenados para los eventos de comercio. |
+| [!UICONTROL Quantity Data Element] | Elemento de datos que devuelve la cantidad del artículo. Si no se proporciona, el valor predeterminado es 1. |
+| [!UICONTROL Discount Data Element] | Elemento de datos que devuelve el valor decimal de descuento del artículo. |
+| [!UICONTROL Currency Code] | El código de divisa en formato ISO-4217. Si no se especifica ningún código de moneda, se utilizará la moneda predeterminada de la configuración de la extensión. |
+
+**Invalidaciones (opcionales):**
+
+Estos campos permiten anular el comportamiento predeterminado de recuperación de datos de los atributos del conjunto de datos de HTML.
+
+| Propiedad | Descripción |
+| --- | --- |
+| [!UICONTROL Record ID Data Element] | Anule el método predeterminado para utilizar la dirección URL de la página como ID de registro. El id. de registro se usa para almacenar y buscar los datos que se enviarán a [!DNL Algolia] para este producto/página. |
+| [!UICONTROL Query ID Data Element] | El ID de consulta se recupera del conjunto de datos en el elemento HTML. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva el ID de consulta como una cadena. |
+| [!UICONTROL Object IDs Data Element] | Los ID de objeto se recuperan del conjunto de datos en el elemento HTML. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva los ID de objeto como una matriz. |
+| [!UICONTROL Positions Data Element] | Las posiciones se recuperan del conjunto de datos en el elemento HTML. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva Positions como una matriz. |
+| [!UICONTROL Index Name Data Element] | El nombre del índice se recupera del conjunto de datos en el elemento HTML. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva el nombre del índice como una cadena. |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
 
@@ -204,7 +217,10 @@ Este elemento de datos devuelve:
   queryID,
   indexName,
   objectIDs,
-  positions
+  positions,
+  objectData,  // Optional: commerce data if price is provided
+  currency,    // Optional: if provided
+  recordID
 }
 ```
 
@@ -227,10 +243,10 @@ El elemento de datos de cadena de consulta extrae datos de la cadena de consulta
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del parámetro de ID de objeto] | Nombre del parámetro de consulta que contiene el ID de objeto. |
-| [!UICONTROL Nombre de parámetro de nombre de índice] | Nombre del parámetro de consulta que contiene el nombre del índice. |
-| [!UICONTROL Nombre del parámetro de ID de consulta] | Nombre del parámetro de consulta que contiene el ID de consulta. |
-| [!UICONTROL Nombre de parámetro de posición] | El nombre del parámetro de consulta que contiene la posición. |
+| [!UICONTROL Object ID Param Name] | Nombre del parámetro de consulta que contiene el ID de objeto. |
+| [!UICONTROL Index Name Param Name] | Nombre del parámetro de consulta que contiene el nombre del índice. |
+| [!UICONTROL Query ID Param Name] | Nombre del parámetro de consulta que contiene el ID de consulta. |
+| [!UICONTROL Position Param Name] | El nombre del parámetro de consulta que contiene la posición. |
 
 ![](../../../images/extensions/client/algolia/query-string.png)
 
@@ -241,42 +257,53 @@ Este elemento de datos devuelve:
   timestamp,
   queryID,
   indexName,
-  objectIDs
+  objectIDs,
+  positions
 }
 ```
 
-Ejemplo de HTML que contiene parámetros de consulta.
+Un ejemplo de HTML que contiene parámetros de consulta:
 
-```
+```html
 <a href="product.html?objectID=${hit.objectID}&queryID=${hit.__queryID}&indexName=${indexName}&position=${hit.position}">Read More</a>
 ```
 
 ### Almacenamiento {#storage}
 
-El elemento de datos de almacenamiento recupera datos del almacenamiento de sesión para usarlos en [!DNL Algolia] acciones.
+El elemento de datos de almacenamiento recupera datos del almacenamiento de sesión del explorador para usarlos en [!DNL Algolia] acciones. Este elemento de datos también se puede utilizar para aumentar los datos almacenados con información comercial adicional.
 
-Este elemento de datos recupera detalles de evento del almacenamiento de sesión. No se requiere ninguna configuración. Los datos se agregan automáticamente durante la acción del evento *click* y se eliminan durante la acción del evento *convert*.
+Este elemento de datos recupera detalles de evento que anteriormente se almacenaban en el almacenamiento de la sesión (normalmente por el elemento de datos DataSet durante los eventos de clic). Los datos se eliminan automáticamente durante los eventos de conversión a menos que la eliminación esté deshabilitada explícitamente.
+
+**Invalidaciones (opcionales):**
 
 | Propiedad | Descripción |
 | --- | --- |
-| [!UICONTROL Elemento de datos de identificador de registro] | El ID de registro se utiliza como clave para buscar los datos de evento almacenados en el almacenamiento del explorador. La dirección URL de la página es el identificador de registro predeterminado. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva el ID de registro como una cadena. |
+| [!UICONTROL Record ID Data Element] | El ID de registro se utiliza como clave para buscar los datos de evento almacenados en el almacenamiento del explorador. La dirección URL de la página es el identificador de registro predeterminado. Para anular este comportamiento, utilice esta propiedad para proporcionar un elemento de datos que devuelva el ID de registro como una cadena. |
+| [!UICONTROL Price Data Element] | Elemento de datos que devuelve el precio del artículo. Si se proporciona, se actualizarán los datos de evento almacenados con la información de precios. |
+| [!UICONTROL Quantity Data Element] | Elemento de datos que devuelve la cantidad del artículo. Si se proporciona, se actualizarán los datos de evento almacenados con la información de cantidad. |
+| [!UICONTROL Discount Data Element] | Elemento de datos que devuelve el valor decimal de descuento del artículo. Si se proporciona, se actualizarán los datos de evento almacenados con la información de descuento. |
+| [!UICONTROL Currency Code] | Introduzca el código de divisa en formato ISO-4217. Si se proporciona, se actualizarán los datos de evento almacenados con la información de moneda. |
 
 ![](../../../images/extensions/client/algolia/storage.png)
 
-Este elemento de datos devuelve lo que está almacenado en el almacenamiento de sesión.
+Este elemento de datos devuelve lo que se almacena en el almacenamiento de sesión, incluidos los datos de comercio aumentados:
 
 ```javascript
 {
   timestamp,
   queryID,
   indexName,
-  objectIDs
+  objectIDs,
+  positions,      // If available from original event
+  objectData,     // Optional: commerce data if price is provided
+  currency,       // Optional: if provided
+  recordID
 }
 ```
 
 ## Se hizo clic o se convirtió después de buscar {#clicked-converted-after-search}
 
-Los eventos *Se hizo clic después de la búsqueda* o *Convertidos después de la búsqueda* requieren un `queryId`, y `position` también se requiere para *Se hizo clic después de la búsqueda*. Estas propiedades están disponibles cuando el indicador `insights` está habilitado en los parámetros de consulta InstantSearch o Autocompletar. Consulte los siguientes recursos para aprender a configurar Insights para su sitio:
+Los eventos *Se hizo clic después de la búsqueda* o *Convertidos después de la búsqueda* requieren un `queryID`, y `positions` también se requiere para *Se hizo clic después de la búsqueda*. Estas propiedades están disponibles cuando el indicador `insights` está habilitado en los parámetros de consulta InstantSearch o Autocompletar. Consulte los siguientes recursos para aprender a configurar Insights para su sitio:
 
 * [Configurando datos en autocompletar](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
 * [Configuración de perspectivas en InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
