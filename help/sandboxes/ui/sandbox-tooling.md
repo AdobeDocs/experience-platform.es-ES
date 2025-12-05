@@ -1,11 +1,11 @@
 ---
-title: Herramientas de espacio aislado
-description: Exporte e importe sin problemas configuraciones de Sandbox entre sandboxes.
+title: Herramientas de zona protegida
+description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 84817abfbd5023310c37427f426684929cd57fe6
+source-git-commit: ee8c270c63cd9e61c28ea990914a96988524bc03
 workflow-type: tm+mt
-source-wordcount: '3539'
-ht-degree: 5%
+source-wordcount: '3431'
+ht-degree: 6%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Las herramientas de espacio aislado son una capacidad fundamental que admite y [!DNL Real-Time Customer Data Platform] [!DNL Journey Optimizer] mejora la eficiencia del ciclo de desarrollo y la precisión de la configuración.<br><br>Debe tener los dos permisos de control de acceso basados en roles siguientes para usar la característica de herramientas de zona protegida: <br>- `manage-sandbox` o `view-sandbox`<br>- `manage-package`
+>Las herramientas de espacio aislado son una capacidad fundamental que admite [!DNL Real-Time Customer Data Platform] y [!DNL Journey Optimizer] para mejorar la eficiencia del ciclo de desarrollo y la precisión de la configuración.<br><br>Debe tener los dos permisos de control de acceso basados en roles siguientes para usar la característica de herramientas de zona protegida: <br>- `manage-sandbox` o `view-sandbox`<br>- `manage-package`
 
 Mejore la precisión de la configuración en todos los entornos limitados y exporte e importe sin problemas las configuraciones de los entornos limitados con la función de herramientas para entornos limitados. Utilice las herramientas de zona protegida para reducir el tiempo de respuesta al valor del proceso de implementación y mover las configuraciones correctas a través de las zonas protegidas.
 
@@ -36,7 +36,7 @@ Para solucionar esta limitación, debe crear un nuevo paquete con las audiencias
 
 >[!ENDSHADEBOX]
 
-En la tabla siguiente se enumeran los [!DNL Adobe Real-Time Customer Data Platform] objetos que actualmente se admiten para las herramientas de simulador para pruebas:
+En la tabla siguiente se enumeran [!DNL Adobe Real-Time Customer Data Platform] objetos que actualmente se admiten en las herramientas de zona protegida:
 
 | Plataforma | Objeto | Detalles |
 | --- | --- | --- |
@@ -54,32 +54,24 @@ Los objetos siguientes se importan, pero están en estado de borrador o desactiv
 | Estado de importación | Flujo de datos de Source | Borrador |
 | Estado de importación |  Recorrido  | Borrador |
 | Perfil unificado | Conjunto de datos | Perfil unificado desactivado |
-| Políticas | Políticas de control de datos | Desactivado |
+| Políticas | Políticas de gobernanza de datos | Desactivado |
 
-### Adobe Systems objetos de Journey Optimizer {#abobe-journey-optimizer-objects}
+### Objetos Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
-La tabla siguiente enumera [!DNL Adobe Journey Optimizer] los objetos que actualmente se admiten para las herramientas y las limitaciones del simulador para pruebas:
+La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualmente son compatibles con las herramientas y limitaciones de la zona protegida:
 
 | Plataforma | Objeto | Objetos dependientes admitidos | Detalles |
 | --- | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Público | | Una audiencia se puede copiar como un objeto dependiente del objeto de recorrido. Puede seleccionar crear una audiencia nueva o reutilizar una existente en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Esquema | | Los esquemas utilizados en el recorrido se pueden copiar como objetos dependientes. Puede seleccionar crear un nuevo esquema o reutilizar uno existente en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Política de combinación | | Las políticas de combinación utilizadas en el recorrido se pueden copiar como objetos dependientes. En la zona protegida de destino, **no puede** crear una nueva política de combinación, solo puede usar una existente. |
-| [!DNL Adobe Journey Optimizer] |  Recorrido  | Los siguientes objetos utilizados en el recorrido se copian como objetos dependientes. Durante el flujo de trabajo de importación, puede elegir **[!UICONTROL Create new]** o **[!UICONTROL Use existing]** para cada uno: <ul><li>Públicos</li><li>Detalles del lienzo</li><li>Plantillas de contenido</li><li>Acciones personalizadas</li><li>Fuentes de datos</li><li>Eventos</li><li>Grupos de campos</li><li>Fragmentos</li><li>Esquemas</li></ul> | Cuando selecciona **[!UICONTROL Use existing]** durante el proceso de importación para copiar un recorrido en otra zona protegida, las acciones personalizadas existentes que elija **deben** coincidir exactamente con la acción personalizada de origen. Si no coinciden, el nuevo recorrido generará errores que no se pueden resolver.<br>El sistema copia los eventos y los detalles del evento utilizados en la recorrido y crea una nueva versión en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] |  Recorrido  | Los objetos siguientes utilizados en el recorrido se copian como objetos dependientes. Durante el flujo de trabajo de importación, puede elegir **[!UICONTROL Create new]** o **[!UICONTROL Use existing]** para cada uno: <ul><li>Públicos</li><li>Detalles del lienzo</li><li>Plantillas de contenido</li><li>Acciones personalizadas</li><li>Fuentes de datos</li><li>Eventos</li><li>Grupos de campos</li><li>Fragmentos</li><li>Esquemas</li></ul> | Cuando selecciona **[!UICONTROL Use existing]** durante el proceso de importación para copiar un recorrido en otra zona protegida, las acciones personalizadas existentes que elija **deben** coincidir exactamente con la acción personalizada de origen. Si no coinciden, el nuevo recorrido generará errores que no se pueden resolver.<br>El sistema copia los eventos y los detalles del evento utilizados en la recorrido y crea una nueva versión en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Acción | | Los mensajes push y de correo electrónico utilizados en el recorrido se pueden copiar como objetos dependientes. No se comprueba la integridad de las actividades de acción de canal utilizadas en los campos de recorrido que se utilizan para la personalización en el mensaje. Los bloques de contenido no se copian.<br><br>Se puede copiar la acción de actualización de perfil utilizada en el recorrido. Las acciones personalizadas se pueden añadir a un paquete de forma independiente. Los detalles de acción utilizados en el recorrido también se copian. Siempre se crea una nueva versión en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Acciones personalizadas |  | Las acciones personalizadas se pueden añadir a un paquete de forma independiente. Una vez asignada una acción personalizada a un recorrido, ya no se puede editar. Para realizar actualizaciones en las acciones personalizadas, debe: <ul><li>mover acciones personalizadas antes de migrar un recorrido</li><li>actualizar configuraciones (como encabezados de solicitud, parámetros de consulta y autenticación) para acciones personalizadas después de la migración</li><li>migrar objetos de recorrido con las acciones personalizadas agregadas durante el primer paso</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Plantilla de contenido | | Una plantilla de contenido se puede copiar como un objeto dependiente del objeto de recorrido. Las plantillas independientes le permiten reutilizar fácilmente contenido personalizado en todas las campañas y recorridos de Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragmento | Todos los fragmentos anidados. | Un fragmento se puede copiar como un objeto dependiente del objeto de recorrido. Los fragmentos son componentes reutilizables a los que se puede hacer referencia en uno o varios correos electrónicos en campañas y recorridos de Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campañas | Los siguientes objetos utilizados en la campaña se copian como objetos dependientes: <ul><li>Campañas</li><li>Públicos</li><li>Esquemas</li><li>Plantillas de contenido</li><li>Fragmentos</li><li>Mensaje/Contenido</li><li>Configuración de canal</li><li>Objetos de decisión unificados</li><li>Configuración/variantes del experimento</li></ul> | <ul><li>Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>El sistema detectará y reutilizará automáticamente un objeto de configuración de canal existente en la zona protegida de destino si existe una configuración idéntica. Si no se encuentra ninguna configuración que coincida, la configuración del canal se omite durante la importación y los usuarios deben actualizar manualmente la configuración del canal en la zona protegida de destino para este recorrido.</li><li>Los usuarios pueden reutilizar experimentos y audiencias existentes en el destino sandbox como objetos dependientes de campañas seleccionadas.</li></ul> |
-| [!DNL Adobe Journey Optimizer] | Toma de decisiones | Los siguientes objetos deben estar presentes en el entorno de pruebas de destino antes de copiar los objetos de toma de decisiones: <ul><li>Atributos de perfil utilizados en objetos de toma de decisiones</li><li>El grupo de campos de atributos de oferta personalizados</li><li>Los esquemas de flujos de datos utilizados para atributos de contexto en reglas, clasificación o límite.</li></ul> | <ul><li>Actualmente no se admite la copia de fórmulas de clasificación que utilicen modelos de IA.</li><li>Los elementos de decisión (artículos de oferta) no se incluyen automáticamente. Para asegurarse de que se transfieran, agréguelos manualmente con la opción **Agregar al paquete**.</li><li>Las directivas que utilizan una estrategia de selección requieren que los elementos de decisión asociados se agreguen manualmente durante el proceso de copia. Las directivas que utilizan elementos de decisión manuales o de reserva tendrán esos elementos incluidos automáticamente como dependencias directas.</li><li>Los elementos de decisión se deben copiar primero, antes que cualquier otro objeto relacionado.</li></ul> |
-
-Atributos de perfil utilizados en objetos de Decisioning,
-El grupo de campos de atributos de oferta personalizados,
-Los esquemas de flujos de datos utilizados para atributos de contexto en reglas, clasificación o límite.
-
-Las superficies (por ejemplo, los ajustes preestablecidos) no se copian. El sistema selecciona automáticamente la coincidencia más cercana posible en la zona protegida de destino en función del tipo de mensaje y el nombre de la superficie. Si no se encuentran superficies en la zona protegida de destino, la copia de superficie fallará, lo que provocará que la copia del mensaje falle porque un mensaje requiere que haya una superficie disponible para la configuración. En este caso, es necesario crear al menos una superficie para el canal derecho del mensaje para que funcione la copia.
-
-Los tipos de identidad personalizados no se admiten como objetos dependientes al exportar un recorrido.
+| [!DNL Adobe Journey Optimizer] | Campañas | Los siguientes objetos utilizados en la campaña se copian como objetos dependientes: <ul><li>Campañas</li><li>Públicos</li><li>Esquemas</li><li>Plantillas de contenido</li><li>Fragmentos</li><li>Mensaje/Contenido</li><li>Configuración de canal</li><li>Objetos de decisión unificados</li><li>Configuración/variantes del experimento</li></ul> | <ul><li>Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>El sistema detectará y reutilizará automáticamente un objeto de configuración de canal existente en la zona protegida de destino si existe una configuración idéntica. Si no se encuentra ninguna configuración que coincida, la configuración del canal se omite durante la importación y los usuarios deben actualizar manualmente la configuración del canal en la zona protegida de destino para este recorrido.</li><li>Los usuarios pueden reutilizar los experimentos y las audiencias existentes en la zona protegida de Target como objetos dependientes de las campañas seleccionadas.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Toma de decisiones | Los objetos siguientes deben estar presentes en la zona protegida de destino antes de copiar los objetos de Decisioning: <ul><li>Atributos de perfil utilizados en objetos de Decisioning</li><li>El grupo de campos de atributos de oferta personalizados</li><li>Los esquemas de flujos de datos utilizados para atributos de contexto en reglas, clasificación o límite.</li></ul> | <ul><li>Actualmente no se admite la copia de fórmulas de clasificación que utilicen modelos de IA.</li><li>Los elementos de decisión (artículos de oferta) no se incluyen automáticamente. Para asegurarse de que se transfieran, agréguelos manualmente con la opción **Agregar al paquete**.</li><li>Las directivas que utilizan una estrategia de selección requieren que los elementos de decisión asociados se agreguen manualmente durante el proceso de copia. Las directivas que utilizan elementos de decisión manuales o de reserva tendrán esos elementos incluidos automáticamente como dependencias directas.</li><li>Los elementos de decisión se deben copiar primero, antes que cualquier otro objeto relacionado.</li><li>Para obtener una lista completa de los objetos admitidos, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
 
 ## Exportación de objetos a un paquete {#export-objects}
 
@@ -160,13 +152,13 @@ En el menú desplegable, seleccione el **[!UICONTROL Package name]** que desee i
 
 ![La página de detalles de importación que muestra la selección desplegable [!UICONTROL Package name]](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-El [!UICONTROL Package object and dependencies] Página proporciona una lista de todos los activos incluidos en este paquete. El sistema detecta automáticamente los objetos dependientes necesarios para importar correctamente los objetos principales seleccionados. Los atributos que faltan se muestran en la parte superior del Página. Seleccione **[!UICONTROL View details]** esta opción para obtener una desglose más detallada.
+La página [!UICONTROL Package object and dependencies] proporciona una lista de todos los recursos incluidos en este paquete. El sistema detecta automáticamente los objetos dependientes necesarios para importar correctamente los objetos padre seleccionados. Los atributos que faltan se muestran en la parte superior de la página. Seleccione **[!UICONTROL View details]** para obtener un desglose más detallado.
 
-![La [!UICONTROL Package object and dependencies] Página muestra los atributos que faltan.](../images/ui/sandbox-tooling/missing-attributes.png)
+![La página [!UICONTROL Package object and dependencies] muestra los atributos que faltan.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
->Los objetos dependientes se pueden sustituir por otros existentes en el destino sandbox, lo que permite reutilizar objetos existentes en lugar de crear una nueva versión. Por ejemplo, al importar un paquete que incluya esquemas, puede reutilizar los espacios de nombres de identidad y grupo campos personalizados existentes en el entorno de pruebas de destino. Alternativamente, al importar un paquete que incluya Recorridos, puede reutilizar segmentos existentes en la zona protegida de Target.
+>Los objetos dependientes se pueden reemplazar por objetos existentes en la zona protegida de destino, lo que permite reutilizar objetos existentes en lugar de crear una nueva versión. Por ejemplo, al importar un paquete que incluye esquemas, puede reutilizar el grupo de campos personalizados existente y las áreas de nombres de identidad en la zona protegida de destino. Alternativamente, al importar un paquete que incluya Recorridos, puede reutilizar segmentos existentes en la zona protegida de Target.
 >
 >Actualmente, las herramientas de zona protegida no admiten la actualización o sobrescritura de objetos existentes. Puede elegir crear un objeto nuevo o seguir utilizando el objeto existente sin modificaciones. Si se detecta un objeto existente con el mismo nombre, las herramientas de espacio aislado siempre reutilizarán el objeto existente, incluso si selecciona la opción [!UICONTROL Create new] para evitar la proliferación de objetos.
 
@@ -184,9 +176,9 @@ El cuadro de diálogo **[!UICONTROL Field group]** muestra una lista de grupos d
 
 Ha vuelto a la página [!UICONTROL Package object and dependencies]. Desde aquí, seleccione **[!UICONTROL Finish]** para completar la importación del paquete.
 
-![El [!UICONTROL Package object and dependencies] Página muestra una lista de activos incluidos en el paquete, resaltando [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![La página [!UICONTROL Package object and dependencies] muestra una lista de los recursos incluidos en el paquete, destacando [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
-## Exportar e importar un sandbox completo
+## Exportar e importar una zona protegida completa
 
 >[!NOTE]
 >
@@ -279,14 +271,14 @@ Puede utilizar las herramientas de zona protegida para transferir configuracione
 >
 > Asegúrese de tener los siguientes requisitos previos antes de intentar transferir las configuraciones de objetos en diferentes zonas protegidas.
 >
->- Los permisos correspondientes para obtener acceso a las herramientas del simulador de pruebas.
->- Un objeto recién creado o actualizado (como un esquema) en el simulador de pruebas de origen.
+>- Los permisos adecuados para acceder a las herramientas de la zona protegida.
+>- Un objeto recién creado o actualizado (como un esquema) en la zona protegida de origen.
 
 >[!BEGINSHADEBOX]
 
-### Tipos de objeto admitidos para la operación de actualización
+### Tipos de objetos admitidos para la operación de actualización
 
-A continuación se admiten tipos de objeto para la actualización:
+Se admiten los siguientes tipos de objetos para la actualización:
 
 - Esquemas
 - Grupos de campo
@@ -361,7 +353,7 @@ Una vez identificados los objetos de destino que desea actualizar, seleccione **
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender las herramientas de la zona protegida, y describe cómo crear un nuevo paquete, publicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446086/?captions=spa&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Próximos pasos
 
