@@ -2,12 +2,12 @@
 title: Demandbase Intent
 description: Obtenga información acerca del origen de Demandbase Intent en Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: e223ea754a250956e65c3f526119a3ebd7bb067c
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1504'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Se debe agregar una lista de direcciones IP a una lista de permitidos antes de t
 
 ### Configuración de permisos en Experience Platform
 
-Debe tener los permisos para **[!UICONTROL Ver fuentes]** y **[!UICONTROL Administrar fuentes]** habilitados en su cuenta para conectar su cuenta de [!DNL Demandbase] a Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../access-control/abac/ui/permissions.md).
+Debe tener los permisos **[!UICONTROL View Sources]** y **[!UICONTROL Manage Sources]** habilitados para su cuenta a fin de conectar su cuenta de [!DNL Demandbase] a Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../access-control/abac/ui/permissions.md).
 
 ### Restricciones de nomenclatura para archivos y directorios
 
@@ -57,6 +57,10 @@ Las restricciones enumeradas a continuación deben tenerse en cuenta al nombrar 
 Para obtener más información sobre estas credenciales, lea la [[!DNL Google Cloud Storage] guía de claves HMAC](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para obtener información sobre cómo generar su propia clave de acceso, lea la [guía de requisitos previos de la [!DNL Google Cloud Storage] descripción general de origen](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
 ## Esquema [!DNL Demandbase]
+
+>[!IMPORTANT]
+>
+>Al crear un esquema de intención de cuenta de B2B Demandbase en la interfaz de usuario de Experience Platform, asegúrese de habilitar la ingesta de perfiles para el esquema. Para obtener más información, lea la guía sobre [creación y edición de esquemas en la interfaz de usuario](../../../xdm/ui/resources/schemas.md).
 
 Lea esta sección para obtener información sobre el esquema [!DNL Demandbase] y la estructura de datos.
 
