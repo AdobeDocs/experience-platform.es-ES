@@ -6,10 +6,10 @@ breadcrumb-title: Recopilación de datos
 user-guide-description: Obtenga información sobre cómo enviar datos a Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 31%
+source-wordcount: '139'
+ht-degree: 30%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 31%
 + BrightScript {#brightscript}
    + [Información general de BrightScript](brightscript/brs-overview.md)
 + JavaScript {#js}
-   + [Información general de JavaScript](js/js-overview.md)
+   + [Información general sobre Web SDK JavaScript](js/js-overview.md)
    + [Notas de la versión](js/release-notes.md)
    + Instalación {#install}
       + [Resumen de instalación](js/install/overview.md)
@@ -75,7 +75,7 @@ ht-degree: 31%
       + [Respuestas de comando](js/commands/command-responses.md)
    + [Enlaces de monitorización](js/monitoring-hooks.md)
    + [Preguntas frecuentes](js/faq.md)
-+ Etiquetas {#tags}
++ Etiquetas de JavaScript del lado del cliente {#tags}
    + [Información general](tags/overview.md)
    + [buildInfo](tags/buildinfo.md)
    + [compañía](tags/company.md)

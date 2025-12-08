@@ -1,26 +1,19 @@
 ---
-title: Información general de JavaScript
+title: Información general sobre la biblioteca JavaScript de Web SDK
 description: Envíe datos al Edge Network de Adobe Experience Platform mediante JavaScript.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
 
-# Información general de JavaScript
+# Información general sobre la biblioteca JavaScript de Web SDK
 
-**Adobe Experience Platform Web SDK** es una biblioteca JavaScript del lado del cliente que le permite enviar datos a Adobe Experience Platform Edge Network.
+**Adobe Experience Platform Web SDK** es una biblioteca JavaScript del lado del cliente que le permite enviar datos a Adobe Experience Platform Edge Network. Esta guía describe la ruta de implementación de la biblioteca Web SDK JavaScript (`alloy.js`), incluidos los conceptos básicos, la instalación, la configuración y los comandos. Para la extensión de etiquetas Web SDK en la interfaz de usuario de recopilación de datos, consulte la [extensión de etiquetas Web SDK](/help/tags/extensions/client/web-sdk/overview.md).
 
 Web SDK envía datos de forma independiente de las soluciones (XDM) a Experience Platform Edge Network, que a su vez asigna los datos a formatos y destinos específicos de la solución y los envía en tiempo real.
-
-Puede implementar Web SDK de dos maneras:
-
-* Implementación manual mediante la [biblioteca de JavaScript](install/library.md) (esta documentación)
-* La [extensión de etiqueta Web SDK](/help/tags/extensions/client/web-sdk/overview.md)
-
-Esta guía incluye instrucciones para interactuar con soluciones de Experience Cloud mediante la biblioteca JavaScript de Web SDK.
 
 ## Experience Platform Edge Network {#edge-network}
 
@@ -37,7 +30,7 @@ En el lado del servidor, una puerta de enlace perimetral unificada y un marco de
 
 Un sistema Edge consolidado le permite administrar campañas de publicidad, marketing y personalización en todos los canales. Reduce el coste total de propiedad y admite varios tipos de datos, lo que le permite asignar el modelo de datos para utilizarlo con varios productos de Experience Cloud.
 
->[!VIDEO](https://video.tv.adobe.com/v/37261?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## Bibliotecas reemplazadas por Web SDK {#sdks}
 

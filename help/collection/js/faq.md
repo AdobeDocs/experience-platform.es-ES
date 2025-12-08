@@ -2,7 +2,7 @@
 title: Preguntas frecuentes sobre Adobe Experience Platform Web SDK
 description: Obtenga respuestas a las preguntas frecuentes sobre Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 2%
@@ -67,9 +67,9 @@ Adobe Experience Platform Web SDK también puede enviar datos directamente a Ado
 
 **Tiempo de obtención del valor:** Adobe ha trabajado duro (y seguirá haciéndolo) para que sea lo más fácil posible implementar Web SDK mediante etiquetas y asignar datos del lado del cliente a XDM. Una vez finalizado ese trabajo, todas las demás soluciones de Adobe y servicios de Adobe Experience Platform se pueden activar o desactivar en el lado del servidor. Por ejemplo, si utiliza esto para Adobe Analytics y desea activar Target o Experience Platform, simplemente puede activar una opción en la configuración del flujo de datos y activar esos casos de uso.
 
-## ¿Qué es [!DNL alloy.js]?
+## ¿Qué es `alloy.js`?
 
-[!DNL alloy.js] es el nombre de la biblioteca Web SDK JavaScript. Se hace referencia a él dentro del código fuente y del nombre de archivo de SDK.
+`alloy.js` es el nombre de la biblioteca Web SDK JavaScript. Se hace referencia a él dentro del código fuente y del nombre de archivo de SDK.
 
 ## ¿Necesitan los clientes comprar Adobe Experience Platform para usar [!DNL Web SDK]?
 
@@ -78,7 +78,7 @@ No. Cualquier cliente de Adobe Digital Experience puede utilizar Adobe Experienc
 * Los clientes que *no* tengan acceso a Experience Platform o Real-time CDP y deseen usar [!DNL Web SDK] deberán configurar los permisos adecuados para crear esquemas y flujos de datos en la IU de recopilación de datos o la IU de Experience Platform.
 * Los clientes que tengan acceso a Experience Platform o Real-time CDP y deseen utilizar [!DNL Web SDK] deberán configurar los permisos adecuados para crear esquemas, conjuntos de datos, áreas de nombres de identidad y flujos de datos en la IU de recopilación de datos o la IU de Experience Platform.
 
-Para obtener más información sobre la configuración de estos permisos, consulte nuestra documentación sobre [administración de permisos de recopilación de datos](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=es).
+Para obtener más información sobre la configuración de estos permisos, consulte nuestra documentación sobre [administración de permisos de recopilación de datos](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## ¿Quién debe utilizar Web SDK?
 
@@ -98,7 +98,7 @@ Web SDK está disponible actualmente para el público en general y se puede util
 
 El SDK es gratuito y está alojado en Adobe de forma gratuita. Si es necesario, puede descargarlo y alojarlo en sus propios servidores sin coste alguno.
 
-Web SDK requiere acceso a [configuraciones de secuencia de datos](/help/datastreams/overview.md) y al generador de esquemas XDM[&#x200B; de Experience Platform para que los servidores de Adobe puedan gestionar correctamente los datos entrantes procedentes de SDK. &#x200B;](/help/xdm/tutorials/create-schema-ui.md) Si desea obtener acceso, póngase en contacto con el equipo de su cuenta de Adobe para iniciar el proceso de solicitud.
+Web SDK requiere acceso a [configuraciones de secuencia de datos](/help/datastreams/overview.md) y al generador de esquemas XDM[ de Experience Platform para que los servidores de Adobe puedan gestionar correctamente los datos entrantes procedentes de SDK. ](/help/xdm/tutorials/create-schema-ui.md) Si desea obtener acceso, póngase en contacto con el equipo de su cuenta de Adobe para iniciar el proceso de solicitud.
 
 ## ¿Qué casos de uso admite actualmente Web SDK?
 

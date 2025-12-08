@@ -1,15 +1,15 @@
 ---
-title: Referencia de objeto satélite
+title: Información general sobre las etiquetas de JavaScript del lado del cliente (_satellite)
 description: Obtenga información acerca del objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# `_satellite` referencia de objeto
+# Información general sobre las etiquetas de JavaScript del lado del cliente (`_satellite`)
 
 _Estas páginas describen cómo usar el objeto `_satellite`, que le permite administrar y personalizar la lógica de etiquetas mediante JavaScript. Consulte la [extensión de etiquetas Adobe Experience Platform Web SDK](/help/tags/extensions/client/web-sdk/overview.md) para obtener más información sobre cómo configurar la implementación en la IU de recopilación de datos._
 

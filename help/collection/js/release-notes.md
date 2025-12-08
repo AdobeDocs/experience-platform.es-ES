@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '2585'
+source-wordcount: '2584'
 ht-degree: 5%
 
 ---
@@ -50,7 +50,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
-- Se ha mejorado la administración de identidades [1&rbrace; para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
 - Se ha resuelto un problema en el cual el contenido de personalización con elementos de contenido de HTML no se podía procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
 - Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 
@@ -152,7 +152,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Nuevas funciones**
 
 - Se ha agregado compatibilidad con el seguimiento automático de interacción de propuestas.
-- Se ha añadido un script de compilación personalizada que proporciona un archivo alloy.js.
+- Se agregó un script de compilación personalizada que proporciona un archivo de `alloy.js`.
 - Se ha mejorado la recopilación de clics con Activity Map y la compatibilidad con la agrupación de eventos.
 
 ## Versión 2.20.0: miércoles, 21 de mayo de 2024
