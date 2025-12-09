@@ -63,4 +63,4 @@ Al seguir este tutorial, ha creado un conector de datos de clasificaciones de An
 
 * [Información general sobre el conector de origen Adobe Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Crear una conexión de origen de Analytics para los datos del grupo de informes en la IU](./analytics.md)
-* [Acerca de las clasificaciones](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [Acerca de las clasificaciones](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=es)
