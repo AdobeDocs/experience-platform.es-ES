@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo configurar una directiva de agregación para determinar cómo se deben agrupar y agrupar las solicitudes HTTP al destino.
 title: Política de agregación
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%
@@ -30,7 +30,7 @@ Después de leer este documento, consulte la documentación de [usando la creaci
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -60,7 +60,7 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
 | `aggregationType` | Cadena | Indica el tipo de directiva de agregación que debe utilizar el destino. Tipos de agregación admitidos: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | Entero | Experience Platform puede acumular varios perfiles exportados en una sola llamada HTTP. <br><br>Este valor indica el número máximo de perfiles que su extremo debe recibir en una sola llamada HTTP. Tenga en cuenta que se trata de una agregación de mejor esfuerzo. Por ejemplo, si especifica el valor 100, Experience Platform puede enviar cualquier número de perfiles inferior a 100 en una llamada. <br><br> Si el servidor no acepta varios usuarios por solicitud, establezca este valor en `1`. |
+| `bestEffortAggregation.maxUsersPerRequest` | Número entero | Experience Platform puede acumular varios perfiles exportados en una sola llamada HTTP. <br><br>Este valor indica el número máximo de perfiles que su extremo debe recibir en una sola llamada HTTP. Tenga en cuenta que se trata de una agregación de mejor esfuerzo. Por ejemplo, si especifica el valor 100, Experience Platform puede enviar cualquier número de perfiles inferior a 100 en una llamada. <br><br> Si el servidor no acepta varios usuarios por solicitud, establezca este valor en `1`. |
 | `bestEffortAggregation.splitUserById` | Booleano | Utilice este indicador si la llamada al destino debe dividirse por identidad. Establezca este indicador en `true` si el servidor solo acepta una identidad por llamada, para un área de nombres de identidad determinada. |
 
 {style="table-layout:auto"}
@@ -109,8 +109,8 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 |---------|----------|------|
 | `aggregationType` | Cadena | Indica el tipo de directiva de agregación que debe utilizar el destino. Tipos de agregación admitidos: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | Booleano | Utilice este indicador si la llamada al destino debe dividirse por identidad. Establezca este indicador en `true` si el servidor solo acepta una identidad por llamada, para un área de nombres de identidad determinada. |
-| `configurableAggregation.maxBatchAgeInSecs` | Entero | Este parámetro, que se usa junto con `maxNumEventsInBatch`, determina cuánto tiempo debe esperar Experience Platform hasta que se envíe una llamada de API al extremo. <ul><li>Valor mínimo (segundos): 1800</li><li>Valor máximo (segundos): 3600</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
-| `configurableAggregation.maxNumEventsInBatch` | Entero | Este parámetro, que se usa junto con `maxBatchAgeInSecs`, determina cuántos perfiles completos se deben agregar en una llamada de API. <ul><li>Valor mínimo: 1000</li><li>Valor máximo: 10 000</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10 000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
+| `configurableAggregation.maxBatchAgeInSecs` | Número entero | Este parámetro, que se usa junto con `maxNumEventsInBatch`, determina cuánto tiempo debe esperar Experience Platform hasta que se envíe una llamada de API al extremo. <ul><li>Valor mínimo (segundos): 301</li><li>Valor máximo (segundos): 3600</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
+| `configurableAggregation.maxNumEventsInBatch` | Número entero | Este parámetro, que se usa junto con `maxBatchAgeInSecs`, determina cuántos perfiles completos se deben agregar en una llamada de API. <ul><li>Valor mínimo: 1000</li><li>Valor máximo: 10 000</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10 000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
 | `configurableAggregation.aggregationKey` | - | Permite agregar los perfiles exportados asignados al destino en función de los parámetros que se describen a continuación. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Establezca este parámetro en `true` si desea agrupar los perfiles exportados a su destino por ID de audiencia. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Establezca este parámetro y `includeSegmentId` en `true`, si desea agrupar los perfiles exportados a su destino por ID de audiencia y estado de audiencia. |
@@ -120,7 +120,7 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 
 {style="table-layout:auto"}
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería tener una mejor comprensión de cómo puede configurar las directivas de agregación para su destino.
 
