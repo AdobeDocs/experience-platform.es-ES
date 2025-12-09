@@ -2,9 +2,9 @@
 title: Conectar Adobe Analytics A Experience Platform
 description: Aprenda a llevar los datos del grupo de informes de Adobe Analytics a Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2754'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 Es importante comprender los siguientes términos clave utilizados en este documento:
 
 * **Atributo estándar**: Los atributos estándar son cualquier atributo predefinido por Adobe. Contienen el mismo significado para todos los clientes y están disponibles en los grupos de campos Datos de origen de Analytics y Esquema de Analytics.
-* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizada en Analytics. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [documentación de Analytics sobre las variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=es) para obtener más información sobre las eVars.
+* **Atributo personalizado**: Los atributos personalizados son cualquier atributo de la jerarquía de variables personalizada en Analytics. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte la siguiente [documentación de Analytics sobre las variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obtener más información sobre las eVars.
 * **Cualquier atributo de los grupos de campos personalizados**: Los atributos que se originan en grupos de campos creados por clientes están todos definidos por el usuario y no se consideran atributos estándar ni personalizados.
 
 ## Navegar por el catálogo de fuentes
@@ -55,7 +55,7 @@ Puede ingerir grupos de informes de cualquier región (Estados Unidos, Reino Uni
 
 Se pueden realizar varias conexiones entrantes para colocar varios grupos de informes en la misma zona protegida. Si los grupos de informes tienen distintos esquemas para las variables (como eVars o eventos), deben asignarse a campos específicos en los grupos de campos personalizados y evitar conflictos de datos con [preparación de datos](../../../../../data-prep/ui/mapping.md). Los grupos de informes solo se pueden añadir a una sola zona protegida.
 
-Seleccione **[!UICONTROL Report suite]** y, a continuación, utilice la interfaz *[!UICONTROL Analytics source add data]* para navegar por la lista e identificar el grupo de informes de Analytics que desea introducir en Experience Platform. Seleccione **[!UICONTROL Next]** para continuar.
+Seleccione **[!UICONTROL Report suite]** y, a continuación, utilice la interfaz *[!UICONTROL Analytics source add data]* para navegar por la lista e identificar el grupo de informes de Analytics que desea introducir en Experience Platform. También puede buscar un grupo de informes específico. Seleccione **[!UICONTROL Next]** para continuar.
 
 ![Se ha seleccionado un grupo de informes de análisis para la ingesta y el botón &quot;Siguiente&quot; está resaltado](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -117,7 +117,7 @@ Experience Platform detecta automáticamente la asignación para cualquier confl
 >id="platform_analytics_import_mapping"
 >title="Descargar plantilla"
 >abstract="Descargue la plantilla csv para realizar la asignación sin conexión."
->additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importar asignación"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importar asignación"
 
 Puede utilizar las funciones de preparación de datos para agregar nuevas asignaciones personalizadas o campos calculados para atributos personalizados. Para agregar asignaciones personalizadas, seleccione **[!UICONTROL Custom]**.
 
@@ -325,5 +325,5 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la ingesta de dato
 >
 > La interfaz de usuario [!DNL Experience Platform] que se muestra en el siguiente vídeo no está actualizada. Consulte la documentación anterior para obtener las capturas de pantalla y la funcionalidad más recientes de la interfaz de usuario.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430250?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
