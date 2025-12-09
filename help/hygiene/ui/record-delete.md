@@ -2,9 +2,9 @@
 title: Registrar solicitudes de eliminación (flujo de trabajo de IU)
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2358'
 ht-degree: 6%
 
 ---
@@ -39,9 +39,9 @@ Aparecerá el flujo de trabajo de creación de solicitudes. De manera predetermi
 
 >[!IMPORTANT]
 > 
->Para mejorar la eficacia y reducir el coste de las operaciones de los conjuntos de datos, las organizaciones que se han trasladado al formato Delta pueden eliminar datos del servicio de identidad, del perfil del cliente en tiempo real y del lago de datos. Este tipo de usuario se conoce como migración delta. Los usuarios de organizaciones que se han migrado mediante delta pueden optar por eliminar los registros de uno o todos los conjuntos de datos. Los usuarios de organizaciones que no se han sometido a la migración delta no pueden eliminar selectivamente los registros de una sola conjunto de datos o de todos los conjuntos de datos, como se muestra en la imagen siguiente. En este caso, vaya a la [sección Proporcionar identidades](#provide-identities) del guía.
+>Para mejorar la eficacia y reducir el coste de las operaciones de los conjuntos de datos, las organizaciones que se han trasladado al formato Delta pueden eliminar datos del servicio de identidad, del perfil del cliente en tiempo real y del lago de datos. Este tipo de usuario se denomina migración delta. Los usuarios de organizaciones que se han migrado de forma delta pueden elegir eliminar registros de uno o de todos los conjuntos de datos. Los usuarios de organizaciones que no se han sometido a la migración delta no pueden eliminar selectivamente registros de un único conjunto de datos o de todos ellos, como se muestra en la siguiente imagen. En este caso, continúe a la sección [Proporcionar identidades](#provide-identities) de la guía.
 
-![La solicitud creación flujo de trabajo con la [!UICONTROL Delete record] opción seleccionada y resaltada.](../images/ui/record-delete/delete-record.png)
+![Flujo de trabajo de creación de solicitudes con la opción [!UICONTROL Delete record] seleccionada y resaltada.](../images/ui/record-delete/delete-record.png)
 
 ## Seleccionar conjuntos de datos {#select-dataset}
 
@@ -147,9 +147,9 @@ Las solicitudes de eliminación de registros están sujetas a límites diarios y
 
 ### Derecho de envío mensual por producto {#quota-limits}
 
-La tabla siguiente describe los límites de envío de identificadores por producto y nivel de autorización. Para cada producto, el límite mensual es el menor de dos valores: un límite máximo de identificador fijo o un umbral basado en porcentajes vinculado al volumen de datos con licencia.
+En la tabla siguiente se describen los límites de envío de identificadores por producto y nivel de asignación de derechos. Para cada producto, el límite mensual es el menor de dos valores: un límite de identificador fijo o un umbral basado en porcentajes y vinculado al volumen de datos con licencia.
 
-| Producto | Derechos Descripción | Límite mensual (el que sea menor) |
+| Producto | Descripción del derecho | Límite mensual (el que sea menor) |
 |----------|-------------------------|---------------------------------|
 | REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Sin el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 2 000 000 de identificadores o el 5 % de la audiencia direccionable |
 | REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Con el complemento Escudo de privacidad y seguridad o Escudo de atención sanitaria | 15 000 000 de identificadores o el 10 % de la audiencia direccionable |
@@ -160,13 +160,13 @@ La tabla siguiente describe los límites de envío de identificadores por produc
 >
 > La mayoría de las organizaciones tendrán límites mensuales más bajos en función de su audiencia direccionable real o de los derechos de fila de CJA.
 
-Las cuotas se restablecen el primer día de cada mes calendario. La **cuota no utilizada no** se transfiere.
+Las cuotas se restablecen el primer día de cada mes calendario. La cuota no utilizada **no** se transfiere.
 
 >[!NOTE]
 >
->Las cuotas se basan en los derechos mensuales con licencia de su organización para **los identificadores enviados**. Estos no son aplicados por las barandillas del sistema, pero pueden ser monitoreados y revisados.
+>Las cuotas se basan en los derechos mensuales con licencia de su organización para **identificadores enviados**. Estas no se aplican mediante protecciones del sistema, pero se pueden supervisar y revisar.
 >
->Record Eliminar es un **servicio** compartido. Su límite mensual refleja el derecho más alto en CDP en tiempo real, Adobe Systems Journey Optimizer, Customer Journey Analytics y cualquier complemento de Shield aplicable.
+>La eliminación de registros es un **servicio compartido**. Su límite mensual refleja el derecho más alto en Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics y cualquier complemento de Shield aplicable.
 
 ### Tiempos de procesamiento para los envíos de identificadores {#sla-processing-timelines}
 
@@ -209,10 +209,6 @@ Una vez enviada la solicitud, se crea una orden de trabajo y aparece en la ficha
 
 Si el conjunto de datos que está eliminando se basa en un esquema relacional, revise las siguientes consideraciones para asegurarse de que los registros se quiten correctamente y no se vuelvan a ingerir debido a discrepancias entre Experience Platform y el sistema de origen.
 
->[!NOTE]
->
->Los esquemas relacionales se denominaban anteriormente esquemas basados en modelos en versiones anteriores de la documentación de Adobe Experience Platform. La funcionalidad y el comportamiento de eliminación siguen siendo los mismos.
-
 ### Comportamiento de eliminación de registros
 
 En la tabla siguiente se describe cómo se comportan las eliminaciones de registros en Experience Platform y en los sistemas de origen, según el método de ingesta y el cambio de la configuración de captura de datos.
@@ -222,13 +218,13 @@ En la tabla siguiente se describe cómo se comportan las eliminaciones de regist
 | Eliminación de plataforma | Los registros se eliminan del conjunto de datos de Experience Platform y del lago de datos. |
 | Retención de Source | Los registros permanecen en el sistema de origen a menos que se eliminen explícitamente allí. |
 | Impacto de actualización completa | Si se utiliza la actualización completa, los registros eliminados se pueden volver a ingerir a menos que se quiten o excluyan del origen. |
-| Cambio del comportamiento de captura de datos | Los registros marcados con `_change_request_type = 'd'` se eliminan durante la ingesta. Los registros no marcados pueden volver a ingerirse. |
+| Cambio del comportamiento de captura de datos | Los registros marcados con `_change_request_type = 'd'` se eliminan durante la ingesta. Los registros no marcados se pueden volver a ingerir. |
 
-Para evitar la reingesta, aplique el mismo enfoque de eliminación tanto en el sistema de origen como en Experience Platform, ya sea eliminando registros de ambos sistemas o incluyendo `_change_request_type = 'd'` los registros que desea eliminar.
+Para evitar la reingesta, aplique el mismo método de eliminación tanto en el sistema de origen como en Experience Platform, ya sea eliminando registros de ambos sistemas o incluyendo `_change_request_type = 'd'` para los registros que desea eliminar.
 
-### Cambiar columnas de control y captura de datos
+### Cambiar las columnas de captura y control de datos
 
-Los esquemas relacionales que utilizan orígenes con captura de datos de cambio pueden utilizar la columna de control `_change_request_type` al distinguir eliminaciones de actualizaciones. Durante la ingesta, los registros marcados con `d` se eliminan del conjunto de datos, mientras que los marcados con `u` o sin la columna se tratan como upserts. La columna `_change_request_type` se lee solo en el momento de la ingesta y no se almacena en el esquema de destino ni se asigna a campos XDM.
+Los esquemas relacionales que utilizan orígenes con captura de datos de cambio pueden utilizar la columna de control `_change_request_type` al distinguir eliminaciones de actualizaciones. Durante la ingesta, los registros marcados con `d` se eliminan del conjunto de datos, mientras que los marcados con `u` o sin la columna se tratan como actualizaciones. La columna `_change_request_type` se lee solo en el momento de la ingesta y no se almacena en el esquema de destino ni se asigna a campos XDM.
 
 >[!NOTE]
 >
@@ -255,15 +251,15 @@ Los descriptores de esquema relacionales proporcionan metadatos esenciales para 
 
 ### Retención programada para esquemas relacionales
 
-Para la higiene automatizada basada en la antigüedad de los datos en lugar de identidades específicas, consulte [Administrar la retención de conjunto de datos de eventos de experiencia (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) para la retención programada a nivel de fila en el lago de datos.
+Para obtener una higiene automatizada basada en la edad de los datos y no en identidades específicas, consulte [Administrar la retención del conjunto de datos de evento de experiencia (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) para obtener información sobre la retención programada en el nivel de fila en el lago de datos.
 
 >[!NOTE]
 >
->La caducidad por nivel de fila solo se admite para conjuntos de datos que utilizan el comportamiento de series temporales.
+>La caducidad a nivel de fila solo se admite para conjuntos de datos que utilizan el comportamiento de series temporales.
 
 ### Prácticas recomendadas para la eliminación de registros relacionales
 
-Para evitar la reingesta involuntaria y mantener la coherencia de los datos en todos los sistemas, seguir estas prácticas recomendadas:
+Para evitar una reingesta involuntaria y mantener la coherencia de los datos en todos los sistemas, siga estas prácticas recomendadas:
 
 * **Coordinar eliminaciones**: alinee las eliminaciones de registros con la configuración de captura de datos de cambio y la estrategia de administración de datos de origen.
 * **Monitorizar los flujos de captura de datos modificados**: después de eliminar los registros en Platform, supervise los flujos de datos y confirme que el sistema de origen quita los mismos registros o los incluye con `_change_request_type = 'd'`.

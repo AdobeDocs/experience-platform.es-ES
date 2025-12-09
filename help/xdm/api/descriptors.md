@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API de Registro de esquemas le permite administrar mediante programación descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2882'
 ht-degree: 1%
 
 ---
@@ -35,10 +35,6 @@ El extremo `/descriptors` de la API [!DNL Schema Registry] le permite administra
 El extremo utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 Además de los descriptores estándar, [!DNL Schema Registry] admite tipos de descriptor para esquemas relacionales, como **clave principal**, **versión** y **marca de tiempo**. Estas aplican exclusividad, controlan las versiones y definen los campos de serie temporal en el nivel de esquema. Si no está familiarizado con los esquemas relacionales, revise la [descripción general de Data Mirror](../data-mirror/overview.md) y la [referencia técnica de esquemas relacionales](../schema/relational.md) antes de continuar.
-
->[!NOTE]
->
->Los esquemas relacionales se denominaban anteriormente esquemas basados en modelos en versiones anteriores de la documentación de Adobe Experience Platform. La funcionalidad del descriptor y los extremos de la API permanecen sin cambios. Solo se ha actualizado la terminología para una mayor claridad.
 
 >[!IMPORTANT]
 >

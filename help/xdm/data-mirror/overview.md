@@ -5,9 +5,9 @@ title: Información general de Data Mirror
 description: Descubra cómo Data Mirror permite la ingesta de cambios a nivel de fila desde bases de datos externas a Adobe Experience Platform mediante esquemas relacionales con exclusividad, relaciones y versiones forzadas.
 badge: Disponibilidad limitada
 exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,6 @@ ht-degree: 0%
 >[!AVAILABILITY]
 >
 >Los esquemas relacionales y de Data Mirror están disponibles para los titulares de licencias de **campañas orquestadas** de Adobe Journey Optimizer. También están disponibles como una **versión limitada** para los usuarios de Customer Journey Analytics, según su licencia y la habilitación de características. Póngase en contacto con su representante de Adobe para obtener acceso.
-
->[!NOTE]
->
->Los esquemas relacionales se denominaban anteriormente esquemas basados en modelos en versiones anteriores de la documentación de Adobe Experience Platform. La funcionalidad sigue siendo la misma.
 
 Data Mirror es una funcionalidad de Adobe Experience Platform que permite la ingesta de cambios a nivel de fila desde bases de datos externas al lago de datos mediante esquemas relacionales. Conserva las relaciones de datos, fuerza la exclusividad y admite el control de versiones sin requerir procesos de extracción, transformación y carga (ETL) en sentido ascendente.
 

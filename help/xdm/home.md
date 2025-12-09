@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general del sistema XDM
 description: La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. El modelo de datos de experiencia (XDM), impulsado por Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2411'
 ht-degree: 3%
 
 ---
@@ -111,10 +111,6 @@ Consulte la [descripción general del servicio de catálogo](../catalog/home.md)
 >
 >Los esquemas relacionales y de Data Mirror están disponibles para los titulares de licencias de **campañas orquestadas** de Adobe Journey Optimizer. También están disponibles como una **versión limitada** para los usuarios de Customer Journey Analytics, según su licencia y la habilitación de características. Póngase en contacto con su representante de Adobe para obtener acceso.
 
->[!NOTE]
->
->Los esquemas relacionales se denominaban anteriormente esquemas basados en modelos en versiones anteriores de la documentación de Adobe Experience Platform. La funcionalidad sigue siendo la misma, pero la terminología ha cambiado para mayor claridad.
-
 Data Mirror es una funcionalidad de Adobe Experience Platform que permite la sincronización avanzada de bases de datos mediante esquemas relacionales. Para obtener una descripción general completa de las funcionalidades de Data Mirror y los casos de uso, consulte la [descripción general de Data Mirror](./data-mirror/overview.md).
 
 Data Mirror funciona a través de esquemas relacionales, diseñados para patrones de datos estructurados de estilo relacional. Aplican claves principales, admiten identificadores de versión y definen relaciones de esquema a esquema mediante claves principales y externas. A diferencia de los esquemas XDM estándar, no requieren clases ni grupos de campos y están optimizados para cambiar los flujos de trabajo de ingesta de captura de datos.
@@ -185,4 +181,4 @@ Para conocer los principios de diseño y las prácticas recomendadas para crear 
 
 Para comprender mejor [!DNL XDM System] en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/38506?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

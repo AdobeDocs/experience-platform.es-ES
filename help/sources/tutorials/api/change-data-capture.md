@@ -2,9 +2,9 @@
 title: Habilite la captura de datos modificados para las conexiones de origen en la API
 description: Obtenga información sobre cómo habilitar la captura de datos de cambios para conexiones de origen en la API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -29,10 +29,6 @@ Ambos enfoques requieren Data Mirror con esquemas relacionales para preservar la
 >[!AVAILABILITY]
 >
 >Los esquemas relacionales y de Data Mirror están disponibles para los titulares de licencias de **campañas orquestadas** de Adobe Journey Optimizer. También están disponibles como una **versión limitada** para los usuarios de Customer Journey Analytics, según su licencia y la habilitación de características. Póngase en contacto con su representante de Adobe para obtener acceso.
-
->[!NOTE]
->
->Los esquemas relacionales se denominaban anteriormente esquemas basados en modelos en versiones anteriores de la documentación de Adobe Experience Platform. La funcionalidad y las capacidades de captura de datos de cambio siguen siendo las mismas.
 
 >[!NOTE]
 >
