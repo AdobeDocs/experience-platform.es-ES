@@ -136,8 +136,8 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender el marco de trabaj
 >
 >El vídeo hace referencia a la aplicación de etiquetas a campos de conjuntos de datos individuales. Este flujo de trabajo ha quedado obsoleto. [Las etiquetas deben aplicarse ahora en el nivel de campo de esquema](./e2e.md#labels). Los conceptos del vídeo siguen siendo precisos, pero el flujo de trabajo de etiquetado ha cambiado.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32682?captions=spa&quality=12&enable10seconds=on&speedcontrol=on)
 
 En el siguiente vídeo se explica cómo aplicar etiquetas de uso de datos a los esquemas o a la totalidad de un conjunto de datos en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422794/?captions=spa&learn=on)
