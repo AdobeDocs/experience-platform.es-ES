@@ -2,18 +2,14 @@
 title: Copiar recursos
 description: Aprenda a crear un nuevo recurso de etiquetas con la configuración de un recurso de etiquetas existente en Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '785'
 ht-degree: 87%
 
 ---
 
 # Copiar recursos
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 A veces, es conveniente crear un nuevo recurso con la configuración de un recurso existente. En estos casos, puede hacer una copia.
 
@@ -23,11 +19,11 @@ Copiar un recurso crea un duplicado de ese recurso en el destino especificado. E
 
 ## Inicio de una copia
 
-Puede iniciar una copia de una extensión consultando las extensiones instaladas, seleccionando la flecha desplegable del botón **[!UICONTROL Configurar]** y seleccionando **[!UICONTROL Copiar]**.
+Puede iniciar una copia de una extensión consultando las extensiones instaladas, seleccionando la flecha desplegable del botón **[!UICONTROL Configure]** y seleccionando **[!UICONTROL Copy]**.
 
 ![Copia de la extensión de Analytics](../../images/copy-initiate-extension.png)
 
-Para las propiedades, las reglas y los elementos de datos, simplemente seleccione el recurso que desee copiar y, a continuación, seleccione **[!UICONTROL Copiar]** en el menú de acciones.
+Para las propiedades, las reglas y los elementos de datos, simplemente seleccione el recurso que desee copiar y, a continuación, seleccione **[!UICONTROL Copy]** en el menú de acciones.
 
 ![Copia de mi regla de Analytics](../../images/copy-initiate-rule.png)
 
@@ -37,7 +33,7 @@ Si está copiando una regla o un elemento de datos, en el cuadro de diálogo Cop
 >
 >No se pueden copiar recursos a otra propiedad si una propiedad está configurada para el desarrollo de extensiones y la otra propiedad no.
 
-Una vez que haya configurado el comportamiento deseado, seleccione **[!UICONTROL Copiar]**.
+Una vez que haya configurado el comportamiento deseado, seleccione **[!UICONTROL Copy]**.
 
 ## Copia de propiedades
 

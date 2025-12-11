@@ -2,18 +2,14 @@
 title: Entornos
 description: Conozca el concepto de entornos de etiqueta y cómo funcionan dentro de Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1462'
-ht-degree: 96%
+source-wordcount: '1405'
+ht-degree: 97%
 
 ---
 
 # Entornos
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Los entornos de etiquetas definen varios aspectos clave de las compilaciones de biblioteca que usted implementa en su sitio web o aplicación:
 
@@ -53,7 +49,7 @@ Cada entorno tiene un conjunto de instrucciones para conectarlo a su aplicación
 >
 >Por ejemplo, el código incrustado de producción de una propiedad web admite el almacenamiento en caché del explorador, mientras que los códigos incrustados de desarrollo y ensayo no lo hacen. Como tal, no debe utilizar los códigos incrustados de desarrollo o ensayo en contextos de alto tráfico o producción.
 
-Para acceder a las instrucciones de instalación de un entorno, vaya a la pestaña **[!UICONTROL Entornos]** de la propiedad y, a continuación, seleccione el icono **[!UICONTROL Instalar]** de ese entorno.
+Para acceder a las instrucciones de instalación de un entorno, vaya a la pestaña **[!UICONTROL Environments]** de la propiedad y, a continuación, seleccione el icono **[!UICONTROL Install]** de ese entorno.
 
 ![](./images/environments/install-buttons.png)
 
@@ -81,7 +77,7 @@ La configuración del entorno asignado determina lo siguiente para las propiedad
 * **Configuración de archivo**: Si el sistema debe generar un conjunto de archivos implementables o comprimirlos en un formato de archivo.
 * **Código incrustado**: El código `<script>` que se va a incrustar en el HTML de las páginas del sitio web y que se utiliza para implementar la compilación de biblioteca en el tiempo de ejecución.
 
-En la pestaña [!UICONTROL Entornos], seleccione un entorno de la lista para mostrar sus controles de configuración.
+En la pestaña [!UICONTROL Environments], seleccione un entorno de la lista para mostrar sus controles de configuración.
 
 ![](./images/environments/environment-config.png)
 
@@ -97,7 +93,7 @@ Cuando se crea una compilación, esta se envía a la ubicación especificada par
 
 La mayoría de las compilaciones consta de varios archivos. Las compilaciones de varios archivos contienen un archivo de biblioteca principal (enlazado en el código incrustado) que contiene referencias internas a los demás archivos que se recuperan según se necesiten.
 
-El botón **[!UICONTROL Crear archivo]** permite alternar la configuración del archivo del entorno. De forma predeterminada, la opción de archivo está desactivada y la compilación se entrega en un formato que se ejecuta tal cual (JavaScript para propiedades web y JSON para propiedades móviles).
+El botón **[!UICONTROL Create archive]** permite alternar la configuración del archivo del entorno. De forma predeterminada, la opción de archivo está desactivada y la compilación se entrega en un formato que se ejecuta tal cual (JavaScript para propiedades web y JSON para propiedades móviles).
 
 Si decide activar la configuración del archivo, en la IU aparecerán opciones de configuración adicionales que le permitirán cifrar el archivo y definir una ruta de acceso a la biblioteca si utiliza alojamiento propio.
 
@@ -133,7 +129,7 @@ Cuando el explorador lee un código incrustado mediante una implementación sinc
 
 Los códigos incrustados sincrónicos constan de dos etiquetas `<script>` que deben colocarse dentro del HTML del sitio web. Una etiqueta `<script>` debe colocarse en el documento `<head>`, mientras que la otra debe colocarse justo antes de la etiqueta `</body>` de cierre.
 
-#### Incrustar actualizaciones de código
+#### Actualizaciones de código incrustado
 
 Dado que los códigos incrustados se generan en función de las configuraciones de entorno, algunos cambios de configuración actualizarán automáticamente el código incrustado del entorno en cuestión. Estos cambios incluyen:
 
@@ -149,19 +145,19 @@ Dado que los códigos incrustados se generan en función de las configuraciones 
 
 Cuando se crea por primera vez una propiedad, se asignan automáticamente tres entornos a una propiedad: desarrollo, ensayo y producción. Esto basta para ejecutar el flujo de trabajo de publicación. Sin embargo, puede añadir entornos de desarrollo adicionales si lo desea, ya que esto puede resultar útil en equipos más grandes en los que varios desarrolladores trabajen en diferentes proyectos al mismo tiempo.
 
-En la pestaña [!UICONTROL Entornos] de la propiedad, seleccione **[!UICONTROL Añadir entorno]**.
+En la pestaña [!UICONTROL Environments] de la propiedad, seleccione **[!UICONTROL Add Environment]**.
 
 ![](./images/environments/create-new.png)
 
-En la pantalla siguiente, seleccione la opción **[!UICONTROL Desarrollo]**.
+En la pantalla siguiente, seleccione la opción **[!UICONTROL Development]**.
 
 ![](./images/environments/create-development.png)
 
-La siguiente pantalla le permite asignar un nombre al nuevo entorno, seleccionar un host y elegir una configuración de archivo. Cuando termine, seleccione **[!UICONTROL Guardar]** para crear el entorno.
+La siguiente pantalla le permite asignar un nombre al nuevo entorno, seleccionar un host y elegir una configuración de archivo. Cuando termine, seleccione **[!UICONTROL Save]** para crear el entorno.
 
 ![](./images/environments/create-config.png)
 
-La pestaña [!UICONTROL Entornos] vuelve a aparecer y se muestran las instrucciones de instalación del nuevo entorno.
+La pestaña [!UICONTROL Environments] vuelve a aparecer y se muestran las instrucciones de instalación del nuevo entorno.
 
 ![](./images/environments/create-install.png)
 

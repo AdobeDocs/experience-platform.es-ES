@@ -2,18 +2,14 @@
 title: Información general sobre la extensión de Adobe Target
 description: Obtenga información sobre la extensión de etiquetas para Adobe Target en Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1126'
 ht-degree: 93%
 
 ---
 
 # Información general sobre la extensión de Adobe Target
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información sobre las opciones disponibles al utilizar esta extensión para generar una regla.
 
@@ -23,9 +19,9 @@ Utilice esta referencia para obtener información sobre las opciones disponibles
 >
 > La extensión Adobe Target requiere at.js. No es compatible con mbox.js.
 
-Si la extensión de Adobe Target todavía no está instalada, abra su propiedad, seleccione **[!UICONTROL Extensiones > Catálogo]**, coloque el puntero sobre la extensión de grupo de destinatarios y seleccione **[!UICONTROL Instalar]**.
+Si la extensión de Adobe Target todavía no está instalada, abra su propiedad, seleccione **[!UICONTROL Extensions > Catalog]**, pase el puntero por encima de la extensión de grupo de destinatarios y seleccione **[!UICONTROL Install]**.
 
-Para configurar la extensión, abra la pestaña [!UICONTROL Extensiones], pase el cursor sobre la extensión y, a continuación, seleccione **[!UICONTROL Configurar]**.
+Para configurar la extensión, abra la pestaña [!UICONTROL Extensions], coloque el puntero por encima de la extensión y, a continuación, seleccione **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-target-config.png)
 
@@ -72,7 +68,7 @@ Para obtener más información sobre cómo funciona la configuración de Timeout
 
 #### Otra configuración de at.js disponible en la interfaz de usuario de Target
 
-Varias configuraciones disponibles en la página [!UICONTROL Editar configuración de at.js] de la interfaz de usuario de Target no forman parte de su extensión. Aquí se sugieren soluciones alternativas:
+Varias configuraciones disponibles en la página [!UICONTROL Edit at.js settings] de la interfaz de usuario de Target no forman parte de la extensión de Target. Aquí se sugieren soluciones alternativas:
 
 * Crear automáticamente el mbox global: esta configuración se sustituye por la acción Fire Global Mbox de la extensión de Target.
 * Encabezado de la biblioteca: Esta configuración no forma parte de la extensión de Target. Coloque el código que se debe cargar antes de at.js en una acción Core Extension > Custom Code antes de utilizar la acción Load Target.

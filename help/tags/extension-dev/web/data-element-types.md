@@ -2,18 +2,14 @@
 title: Tipos de elementos de datos para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de elemento de datos para una extensión de etiqueta en una propiedad web.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '555'
 ht-degree: 67%
 
 ---
 
 # Tipos de elementos de datos para extensiones web
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En las etiquetas de recopilación de datos, los elementos de datos son esencialmente alias de datos de una página. Estos datos se pueden encontrar en parámetros de cadena de consulta, cookies, elementos DOM u otras ubicaciones. Las reglas pueden hacer referencia a un elemento de datos y este puede actuar como una abstracción para acceder a estos fragmentos de datos.
 
@@ -29,7 +25,7 @@ Este documento explica cómo definir los tipos de elementos de datos para una ex
 
 Los tipos de elementos de datos suelen consistir en lo siguiente:
 
-1. Una [vista](./views.md) que se muestra dentro de la IU del Experience Platform y la IU de recopilación de datos y que permite a los usuarios modificar la configuración del elemento de datos.
+1. Una [vista](./views.md) que se muestra dentro de la IU de Experience Platform y la IU de recopilación de datos y que permite a los usuarios modificar la configuración del elemento de datos.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y recuperar fragmentos de datos.
 
 Considere una situación en la que desee permitir que los usuarios recuperen un fragmento de datos de un elemento de almacenamiento local denominado `productName`. Es posible que el módulo tenga este aspecto:

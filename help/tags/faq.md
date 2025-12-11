@@ -2,18 +2,14 @@
 title: Guía de resolución de problemas de etiquetas
 description: Obtenga respuestas a las preguntas frecuentes sobre Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 78%
+source-wordcount: '987'
+ht-degree: 79%
 
 ---
 
 # Guía de solución de problemas con etiquetas
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](./term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Este documento proporciona respuestas a las preguntas frecuentes acerca de Adobe Experience Platform.
 

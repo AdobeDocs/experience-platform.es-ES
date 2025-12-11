@@ -2,18 +2,14 @@
 title: Administrar recursos
 description: Obtenga información acerca de cómo administrar varios recursos en Adobe Experience Platform, incluyendo extensiones, elementos de datos y reglas.
 exl-id: 3ec0078e-76a6-42ac-94cf-df9572b37b52
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 90%
+source-wordcount: '138'
+ht-degree: 100%
 
 ---
 
 # Administrar recursos
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En el contexto de las etiquetas en Experience Platform, la palabra “recursos” hace referencia a cualquiera de las siguientes opciones:
 

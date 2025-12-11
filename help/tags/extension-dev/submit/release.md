@@ -2,18 +2,14 @@
 title: Lanzamiento de una extensión
 description: Obtenga información sobre cómo publicar de forma privada o pública una extensión de etiqueta en Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 64%
+source-wordcount: '433'
+ht-degree: 60%
 
 ---
 
 # Lanzamiento de una extensión
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Una vez finalizadas las pruebas y la documentación, la extensión está lista para su lanzamiento. Actualmente, puede realizar dos tipos de lanzamientos:
 
@@ -38,8 +34,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > De forma predeterminada, el publicador espera credenciales de Adobe I/O para un flujo de Oauth de servidor a servidor. Las credenciales heredadas de `jwt-auth`
-> &#x200B;> se puede usar ejecutando `npx @adobe/reactor-releaser@v3.1.3` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
-> &#x200B;> para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> se puede usar ejecutando `npx @adobe/reactor-releaser@v3.1.3` hasta que quede obsoleto el 1 de enero de 2025. Los parámetros necesarios
+> para ejecutar la versión `jwt-auth` se puede encontrar [aquí](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
 El publicador requiere que introduzca solo unos pocos datos. `clientId` y `clientSecret` se pueden recuperar de la consola de Adobe I/O. Vaya a la [página Integraciones](https://console.adobe.io/integrations) en la consola de I/O. Seleccione la organización correcta en el menú desplegable, busque la integración correcta y seleccione **[!UICONTROL View]**.
 

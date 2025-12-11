@@ -2,18 +2,14 @@
 title: Información del lado del cliente
 description: Obtenga información sobre cómo administrar las operaciones de etiquetas en el lado del cliente de la aplicación web o móvil.
 exl-id: 54c66066-93f7-4311-a255-0825055d0dec
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '131'
 ht-degree: 100%
 
 ---
 
 # Información del lado del cliente
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Esta sección contiene información que resulta útil al administrar las operaciones de etiquetas del lado del cliente en Adobe Experience Platform.
 

@@ -2,20 +2,16 @@
 title: Implementación de bibliotecas de terceros
 description: Obtenga información acerca de los diferentes métodos para alojar bibliotecas de terceros dentro de sus extensiones de etiquetas de Adobe Experience Platform.
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 98%
+source-wordcount: '1270'
+ht-degree: 100%
 
 ---
 
 # Implementación de bibliotecas de terceros
 
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
-
-Uno de los principales objetivos de las extensiones de etiquetas en Adobe Experience Platform es permitir la implementación sencilla de las tecnologías de marketing (bibliotecas) existentes en su sitio web. Con las extensiones, puede implementar bibliotecas proporcionadas por redes de envío de contenido de terceros (CDN) sin tener que editar manualmente el HTML del sitio web.
+Uno de los principales objetivos de las extensiones de etiquetas en Adobe Experience Platform es permitir la implementación sencilla de las tecnologías de marketing (bibliotecas) existentes en su sitio web. Con las extensiones, puede implementar bibliotecas proporcionadas por redes de distribución de contenido (CDN) de terceros sin tener que editar manualmente el HTML del sitio web.
 
 Existen varios métodos para alojar bibliotecas de terceros (proveedores) en sus extensiones. Este documento proporciona información general de estos distintos métodos de implementación y detalla los pros y los contras de cada uno.
 
@@ -98,7 +94,7 @@ Los métodos disponibles son los siguientes:
    - [Proceso de carga de código base](#base-code-loading-process)
       - [Ejemplo de código base](#base-code-example)
    - [Opciones de implementación de etiquetas](#tags-implementation-options)
-      - [Cargar en tiempo de ejecución desde el host de proveedor {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [Cargar en tiempo de ejecución desde el host de proveedor](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [Cargar en tiempo de ejecución desde el host de biblioteca de etiquetas](#load-at-runtime-from-the-tag-library-host)
       - [Incrustar la biblioteca directamente](#embed-the-library-directly)
    - [Pasos siguientes](#next-steps)

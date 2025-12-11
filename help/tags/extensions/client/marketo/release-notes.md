@@ -2,18 +2,14 @@
 title: Notas de la versión de la extensión Munchkin de Marketo
 description: Últimas notas de la versión de la extensión de etiquetas de Munchkin de Marketo en Adobe Experience Platform.
 exl-id: 709265fc-f227-4995-8976-6170da60c89e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 87%
+source-wordcount: '101'
+ht-degree: 100%
 
 ---
 
 # Notas de la versión de la extensión Munchkin de Marketo
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## 2 de diciembre de 2020
 

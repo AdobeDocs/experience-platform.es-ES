@@ -2,18 +2,14 @@
 title: Elementos de datos
 description: Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 89%
+source-wordcount: '1549'
+ht-degree: 88%
 
 ---
 
 # Elementos de datos
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
 
@@ -56,7 +52,7 @@ Es posible utilizar los Data Elements en las secuencias de datos personalizadas 
 
 Los Data Elements constituyen los bloques generadores de las reglas. Los Data Elements le permiten crear un diccionario de datos (o mapa de datos) de elementos que se utilizan normalmente en una página, independientemente de su origen (cadenas de consultas, URL o valores de cookies), para cualquier objeto incluido en su sitio.
 
-1. En una página Propiedad, abra la pestaña [!UICONTROL Elementos de datos] y seleccione **[!UICONTROL Crear nuevo elemento de datos]**.
+1. Desde una página de propiedad, abra la pestaña [!UICONTROL Data Elements] y seleccione **[!UICONTROL Create New Data Element]**.
 1. Asigne un nombre al elemento de datos.
 1. Seleccione una extensión y un tipo.
 
@@ -85,9 +81,9 @@ Los Data Elements constituyen los bloques generadores de las reglas. Los Data El
    * Visitor
       * El valor se guarda de forma indefinida en el almacenamiento local del explorador.
 
-1. Seleccione **[!UICONTROL Guardar]**.
+1. Seleccione **[!UICONTROL Save]**.
 
-Al crear o editar elementos, puede guardar y desarrollar en su [biblioteca activa](../publishing/libraries.md#active-library). Esto guarda inmediatamente el cambio en la biblioteca y ejecuta una compilación. Se muestra el estado de la compilación. También puede crear una nueva biblioteca desde la lista desplegable [!UICONTROL Biblioteca activa].
+Al crear o editar elementos, puede guardar y desarrollar en su [biblioteca activa](../publishing/libraries.md#active-library). Esto guarda inmediatamente el cambio en la biblioteca y ejecuta una compilación. Se muestra el estado de la compilación. También puede crear una nueva biblioteca desde la lista desplegable [!UICONTROL Active Library].
 
 ## Tipos de Data Elements {#types-of-data-elements}
 
@@ -105,9 +101,9 @@ Se puede hacer referencia a cualquier cookie de dominio disponible en el campo d
 
 `cookieName`
 
-### Código personalizado
+### Custom Code
 
-Puede introducir código JavaScript personalizado en la IU si selecciona la opción [!UICONTROL Abrir editor] e inserta código en la ventana del editor.
+Puede introducirse JavaScript personalizado en la IU seleccionando [!UICONTROL Open Editor] e insertando código en la ventana del editor.
 
 Se debe incluir una sentencia de retorno en la ventana del editor para indicar qué valor debe establecerse como valor del elemento de datos. Si no se incluye una declaración de retorno, el elemento de datos se resuelve en `undefined`. Esto activa una alternativa para buscar un valor almacenado y, luego, un valor predeterminado si no hay ningún valor almacenado.
 
@@ -184,7 +180,7 @@ Si utiliza un objeto de recopilación de datos como parte de la capa de datos, s
 
 ### Almacenamiento local
 
-Proporcione el nombre del elemento de almacenamiento local en el campo [!UICONTROL Nombre del elemento de almacenamiento local].
+Proporcione el nombre del elemento de almacenamiento local en el campo [!UICONTROL Local Storage Item Name].
 
 El almacenamiento local proporciona a los exploradores una forma de almacenar información de página a página ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). El almacenamiento local funciona de forma muy similar a las cookies, pero es mucho más amplio y flexible.
 
@@ -203,11 +199,11 @@ Puede seleccionar uno de los siguientes atributos de página para usarlos en el 
 * Referrer
 * Title
 
-### Query string Parameter
+### Query string parameter
 
-Especifique un único parámetro de URL en el campo [!UICONTROL Parámetro de URL].
+Especifique un único URL Parameter en el campo [!UICONTROL URL Parameter].
 
-Solo es necesaria la sección de nombres y cualquier indicador especial como “?” o &quot;=&quot; debe omitirse.
+Solo es necesaria la sección de nombres y cualquier indicador especial como &quot;?&quot; o &quot;=&quot; debe omitirse.
 
 #### Ejemplo:
 
@@ -232,7 +228,7 @@ Máximo: 1000000000
 
 ### Almacenamiento de sesión
 
-Proporcione el nombre del elemento de almacenamiento de la sesión en el campo [!UICONTROL Nombre del elemento de almacenamiento de sesión].
+Proporcione el nombre del elemento de almacenamiento de sesión en el campo [!UICONTROL Session Storage Item Name].
 
 El almacenamiento de sesión es similar al almacenamiento local, excepto que los datos se descartan después de que finalice la sesión, mientras que el almacenamiento local o una cookie pueden retener los datos.
 
@@ -253,7 +249,7 @@ Seleccione uno de los siguientes atributos de comportamiento del visitante:
 Algunos casos de uso común son:
 
 * Mostrar una encuesta después de que un visitante haya estado en el sitio durante cinco minutos
-* Si ésta es la página de aterrizaje de la visita, rellene una métrica de [!DNL Analytics]
+* Si ésta es la página de destino de la visita, rellene una métrica de [!DNL Analytics]
 * Mostrar una oferta nueva al visitante después de un determinado número de sesiones
 * Mostrar una sugerencia de suscripción a la newsletter a los nuevos visitantes
 

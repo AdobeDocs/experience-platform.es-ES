@@ -2,18 +2,14 @@
 title: Información general sobre alojamientos administrados por Adobe
 description: Obtenga información acerca de la opción de alojamiento predeterminada para implementar compilaciones de biblioteca de etiquetas en Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1129'
 ht-degree: 82%
 
 ---
 
 # Información general sobre alojamientos administrados por Adobe
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Los hosts administrados por Adobe son la configuración de host predeterminada para implementar las compilaciones de biblioteca de etiquetas en Adobe Experience Platform. Al crear una nueva propiedad a través de la interfaz de usuario de recopilación de datos, se crea un host predeterminado administrado por Adobe.
 
@@ -96,8 +92,8 @@ La primera vez que se crea una propiedad en la IU de Experience Platform o en la
 >
 >Si el host administrado por Adobe predeterminado no está asignado de todos los entornos, se puede eliminar. Si desea volver a un host administrado por Adobe después de hacerlo, puede crear un nuevo host siguiendo estos pasos:
 >
->1. Seleccione la pestaña **[!UICONTROL Hosts]** de la propiedad y, a continuación, seleccione **[!UICONTROL Añadir host]**.
->1. Proporcione un nombre para el host, seleccione **[!UICONTROL Gestionado por Adobe]** como tipo de host y, a continuación, seleccione **[!UICONTROL Guardar]**.
+>1. Seleccione la pestaña **[!UICONTROL Hosts]** de la propiedad y, a continuación, seleccione **[!UICONTROL Add Host]**.
+>1. Proporcione un nombre para el host, seleccione **[!UICONTROL Managed by Adobe]** como tipo de host y, a continuación, seleccione **[!UICONTROL Save]**.
 >
 >A continuación, puede volver a asignar sus entornos al host administrado por Adobe según sus preferencias.
 

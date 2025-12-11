@@ -2,18 +2,14 @@
 title: Reglas
 description: Conozca cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2028'
-ht-degree: 73%
+source-wordcount: '1962'
+ht-degree: 74%
 
 ---
 
 # Reglas
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las etiquetas de Adobe Experience Platform siguen un sistema basado en reglas. Buscan la interacción de usuarios y datos asociados. Cuando se cumplen los criterios descritos en las reglas, la regla activa la extensión, script o el código del lado del cliente identificados.
 
@@ -55,12 +51,12 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
 >
 >Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
-1. Abra la pestaña [!UICONTROL Reglas] y seleccione **[!UICONTROL Crear nueva regla]**.
+1. Abra la pestaña [!UICONTROL Rules] y, a continuación, seleccione **[!UICONTROL Create New Rule]**.
 
    ![Ficha de reglas que resalta el campo de nombre.](../../images/launch-rule-builder.png)
 
 1. Asigne un nombre a la regla.
-1. Seleccione el icono de eventos **[!UICONTROL Añadir]**.
+1. Seleccione el icono Eventos **[!UICONTROL Add]**.
 1. Seleccione la extensión y uno de los tipos de evento disponibles para esa extensión y, a continuación, configure los ajustes del evento.
 
    ![Página de configuración de eventos de reglas.](../../images/rule-event-config.png)
@@ -81,7 +77,7 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
    >
    >Si esta ruta de acceso no se especifica correctamente, no se recopilarán datos.
 
-1. Establezca el parámetro Pedido y, a continuación, seleccione **[!UICONTROL Conservar cambios]**.
+1. Establezca el parámetro Pedido y, a continuación, seleccione **[!UICONTROL Keep Changes]**.
 
    El orden predeterminado para todos los componentes de la regla es 50. Si desea que uno se ejecute antes, asígnele un número inferior a 50.
 
@@ -91,7 +87,7 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
 
      Si desea que se ejecute más tarde, asígnele un número superior a 50. Para obtener más información sobre la ordenación, consulte [Ordenación de reglas](rules.md#rule-ordering).
 
-1. Seleccione el icono de condiciones **[!UICONTROL Add]** y, a continuación, seleccione un tipo de lógica, una extensión y un tipo de condición, y configure los ajustes de la condición. A continuación, seleccione **[!UICONTROL Conservar cambios]**.
+1. Seleccione el icono Condiciones **[!UICONTROL Add]** y, a continuación, seleccione un tipo de lógica, una extensión y un tipo de condición, y configure los ajustes de la condición. A continuación, seleccione **[!UICONTROL Keep Changes]**.
 
    ![Página de configuración de condiciones de reglas.](../../images/condition-settings.png)
 
@@ -106,18 +102,18 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
 
    Puede agregar tantas condiciones como desee. Varias condiciones en la misma regla se unen mediante AND.
 
-1. Seleccione el icono Acciones **[!UICONTROL Agregar]**, luego seleccione su extensión y uno de los tipos de acción disponibles para esa extensión, configure los ajustes de la acción y, a continuación, seleccione **[!UICONTROL Conservar cambios]**.
+1. Seleccione el icono Acciones **[!UICONTROL Add]**, luego seleccione la extensión y uno de los tipos de acción disponibles para esa extensión, configure los ajustes de la acción y seleccione **[!UICONTROL Keep Changes]**.
 
    ![Página de configuración de acciones de reglas.](../../images/action-settings.png)
 
    Los tipos de acciones disponibles dependen de la extensión seleccionada. Los ajustes de la acción diferirán según el tipo de acción.
 
-   (Avanzado) Espere a ejecutar la siguiente acción: esta opción está disponible cuando la secuenciación de componentes de regla está habilitada en la propiedad. Cuando está activado, las etiquetas no llaman a la siguiente acción hasta que esta se complete. Cuando está desactivada, la siguiente acción empieza a ejecutarse de inmediato. El valor predeterminado es **[!UICONTROL Activado]**.
+   (Avanzado) Espere a ejecutar la siguiente acción: esta opción está disponible cuando la secuenciación de componentes de regla está habilitada en la propiedad. Cuando está activado, las etiquetas no llaman a la siguiente acción hasta que esta se complete. Cuando está desactivada, la siguiente acción empieza a ejecutarse de inmediato. El valor predeterminado es **[!UICONTROL Checked]**.
 
    Tiempo de espera (avanzado): esta opción está disponible cuando la secuenciación de componentes de regla está habilitada en la propiedad. Define la cantidad máxima de tiempo permitida para que se complete la acción. Si se alcanza el tiempo de espera, la acción falla y las acciones posteriores de esta regla se eliminarán de la cola de procesamiento. El valor predeterminado es 2000 ms.
 
 
-1. Revise la regla y seleccione **[!UICONTROL Guardar regla]**.
+1. Revise la regla y, a continuación, seleccione **[!UICONTROL Save Rule]**.
 
    Posteriormente, en el momento de la [publicación](../publishing/overview.md), debe añadir esta regla a una biblioteca e implementarla.
 
@@ -167,7 +163,7 @@ Adobe no puede garantizar que se activen otras reglas y que se necesite el códi
 
 ## Secuencia de componentes de regla {#sequencing}
 
-El comportamiento del entorno de tiempo de ejecución depende de si **[!UICONTROL Ejecutar componentes de regla en la secuencia]** está activado o desactivado en la propiedad. Esta configuración determina si los componentes de una regla se pueden evaluar en paralelo (asincrónicamente) o en secuencia.
+El comportamiento del entorno de tiempo de ejecución depende de si **[!UICONTROL Run rule components in sequence]** está activado o desactivado en la propiedad. Esta configuración determina si los componentes de una regla se pueden evaluar en paralelo (asincrónicamente) o en secuencia.
 
 >[!IMPORTANT]
 >

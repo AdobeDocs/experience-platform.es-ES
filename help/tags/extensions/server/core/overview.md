@@ -3,18 +3,14 @@ title: Información general sobre la extensión del reenvío de eventos principa
 description: Obtenga información acerca de la extensión de reenvío de eventos principal en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1662'
 ht-degree: 97%
 
 ---
 
 # Información general sobre la extensión del reenvío de eventos principal
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 La extensión de reenvío de eventos principal proporciona los eventos, condiciones y tipos de datos predeterminados para el reenvío de eventos en Adobe Experience Platform.
 
@@ -28,9 +24,9 @@ Esta sección describe los tipos de condición disponibles en la Extensión prin
 
 Especifique cualquier Custom Code que deba darse como condición del evento. Utilice el editor de código integrado para introducir el código personalizado. El reenvío de eventos en Adobe Experience Platform es compatible con ES13.
 
-1. Seleccione **[!UICONTROL Abrir editor]**.
+1. Seleccione **[!UICONTROL Open Editor]**.
 1. Escriba el Custom Code.
-1. Seleccione **[!UICONTROL Guardar]**.
+1. Seleccione **[!UICONTROL Save]**.
 
 Para acceder al valor de un elemento de datos en el código personalizado, utilice el método `getDataElementValue`. Por ejemplo, para recuperar el valor de un elemento de datos denominado `productName`, escriba lo siguiente: 
 
@@ -48,15 +44,15 @@ utils.logger.log(context.arc.ruleStash);
 
 `ruleStash` es un objeto que recopila todos los resultados de los módulos de acción.
 
-Cada extensión tiene su propia área de nombres. Por ejemplo, si la extensión tiene el nombre `send-beacon`, todos los resultados de las acciones `send-beacon` se almacenan en el área de nombres `ruleStash['send-beacon']`.
+Cada extensión tiene su propio espacio de nombres. Por ejemplo, si la extensión tiene el nombre `send-beacon`, todos los resultados de las acciones `send-beacon` se almacenan en el espacio de nombres `ruleStash['send-beacon']`.
 
 ```javascript
 utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
 ```
 
-El área de nombres es única para cada extensión y tiene el valor `undefined` al principio.
+El espacio de nombres es único para cada extensión y tiene el valor `undefined` al principio.
 
-El área de nombres se sobrescribirá con el resultado devuelto por cada acción. No hay área de nombres en que se produzca algo excepcional. Por ejemplo, si tiene una extensión `transform` que contiene dos acciones: `generate-fullname` y `generate-fulladdress`, añada las dos acciones a una regla.
+El espacio de nombres se sobrescribirá con el resultado devuelto por cada acción. No hay espacio de nombres en que se produzca algo excepcional. Por ejemplo, si tiene una extensión `transform` que contiene dos acciones: `generate-fullname` y `generate-fulladdress`, añada las dos acciones a una regla.
 
 Si el resultado de la acción `generate-fullname` es `Firstname Lastname`, la cadena de reglas aparece de la siguiente manera una vez completada la acción:
 
@@ -76,7 +72,7 @@ Si el resultado de la acción `generate-address` es `3900 Adobe Way`, la pila de
 
 Observe que `Firstname Lastname` ya no existe dentro de la pila de reglas. Esto se debe a que la acción `generate-address` la sobrescribió con la dirección.
 
-Si desea almacenar los resultados de ambas acciones dentro del área de nombres `transform` en `ruleStash`, puede escribir el módulo de acción de manera similar al siguiente ejemplo:
+Si desea almacenar los resultados de ambas acciones dentro del espacio de nombres `transform` en `ruleStash`, puede escribir el módulo de acción de manera similar al siguiente ejemplo:
 
 ```javascript
 module.exports = (context) => {
@@ -141,11 +137,11 @@ Están disponibles los siguientes operadores de comparación de valores:
 
 **Is True:** La condición devuelve el valor “True” si se trata de una condición booleana con el valor “True”. El valor que proporcione no se convierte en booleano si es de cualquier otro tipo. Cualquier valor que no sea booleano con el valor “True” provoca que se devuelva el valor “False”.
 
-**Is Truthy:** La condición devuelve el valor “True” si el valor es “True” después de convertirse en un valor booleano. Consulte la [documentación sobre Truthy de MDN](https://developer.mozilla.org/es-ES/docs/Glossary/Truthy) para ver ejemplos de valores “Truthy”.
+**Is Truthy:** La condición devuelve el valor “True” si el valor es “True” después de convertirse en un valor booleano. Consulte la documentación [MDN&#39;s Truthy](https://developer.mozilla.org/es-ES/docs/Glossary/Truthy) de MDN para ver ejemplos de valores “Truthy”.
 
 **Is False:** La condición devuelve el valor “True” si se trata de una condición booleana con el valor “False”. El valor que proporcione no se convierte en booleano si es de cualquier otro tipo. Cualquier valor que no sea booleano con el valor “False” provoca que se devuelva el valor “False”.
 
-**Is Falsy:** La condición devuelve el valor “True” si el valor es “False” después de convertirse en un valor booleano. Consulte la [documentación sobre Falsy de MDN](https://developer.mozilla.org/es-ES/docs/Glossary/Falsy) para ver ejemplos de valores “falsy”.
+**Is Falsy:** La condición devuelve el valor “True” si el valor es “False” después de convertirse en un valor booleano. Consulte la documentación [MDN&#39;s Falsy](https://developer.mozilla.org/es-ES/docs/Glossary/Falsy) para ver ejemplos de valores “Falsy”.
 
 
 
@@ -158,8 +154,8 @@ En esta sección se describen los tipos de acción disponibles en la Extensión 
 Proporcione el código que se ejecuta después de activar el evento y de evaluar las condiciones. El reenvío de eventos en Adobe Experience Platform es compatible con ES13.
 
 1. Asigne un nombre al código de acción.
-1. Seleccione **[!UICONTROL Abrir editor]**.
-1. Edite el código y, a continuación, haga clic en **[!UICONTROL Guardar]**.
+1. Seleccione **[!UICONTROL Open Editor]**.
+1. Edite el código y, a continuación, haga clic en **[!UICONTROL Save]**.
 
 Para acceder al valor de un elemento de datos en el código personalizado, utilice el método `getDataElementValue`. Por ejemplo, para recuperar el valor de un elemento de datos denominado `productName`, escriba lo siguiente: 
 
@@ -181,13 +177,13 @@ Los tipos de Data Elements están determinados por la extensión. No hay límite
 
 Las secciones siguientes describen los tipos de Data Elements disponibles en la Extensión principal. Otras extensiones utilizan tipos de Data Elements diferentes.
 
-### Código personalizado
+### Custom Code
 
-Puede introducir código JavaScript personalizado en la IU si selecciona la opción **[!UICONTROL Abrir editor]** e inserta código en la ventana del editor.
+Puede introducirse JavaScript personalizado en la IU haciendo clic en **[!UICONTROL Open Editor]** e insertando código en la ventana del editor.
 
-Se debe incluir una sentencia de retorno en la ventana del editor para indicar qué valor se tiene que usar como valor del elemento de datos. Si no se incluye una sentencia de retorno o se devuelve el valor `null` o `undefined`, el valor predeterminado del elemento de datos refleja `null` o `undefined`.
+Se debe incluir una sentencia de retorno en la ventana del editor para indicar qué valor se tiene que usar como valor del elemento de datos. Si no se incluye una instrucción return o se devuelve el valor `null` o `undefined`, el valor predeterminado del elemento de datos reflejará `null` o `undefined`.
 
-Para acceder al valor de un elemento de datos en código personalizado, utilice el método `getDataElementValue`. Por ejemplo, para recuperar el valor de un elemento de datos denominado `productName`, escriba lo siguiente: 
+Para acceder al valor de un elemento de datos en el código personalizado, utilice el método `getDataElementValue`. Por ejemplo, para recuperar el valor de un elemento de datos denominado `productName`, escriba lo siguiente: 
 
 ```javascript
 getDataElementValue('productName') 

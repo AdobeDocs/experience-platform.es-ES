@@ -3,18 +3,14 @@ title: Información general sobre la extensión Microsoft Azure
 description: Obtenga información acerca de la extensión de Microsoft Azure para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 4%
+source-wordcount: '794'
+ht-degree: 0%
 
 ---
 
 # Información general sobre la extensión [!DNL Microsoft Azure]
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En [!DNL Microsoft Azure], [[!DNL Event Hubs]](https://azure.microsoft.com/en-us/products/event-hubs/#overview) es un servicio de entrada de datos en tiempo real y altamente escalable que le permite procesar y analizar las grandes cantidades de datos que producen sus dispositivos y aplicaciones conectados. Una vez que los datos se recopilan en un centro de eventos, se pueden transformar y almacenar mediante cualquier proveedor de análisis en tiempo real o adaptadores de almacenamiento por lotes.
 
@@ -26,33 +22,33 @@ Para usar esta extensión, debe tener una cuenta de [!DNL Azure] válida con acc
 
 ## Instalación de la extensión
 
-Para instalar la extensión Microsoft [!DNL Azure], vaya a la interfaz de usuario de recopilación de datos o de Experience Platform y seleccione **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo. Aquí, seleccione una propiedad a la que añadir la extensión o cree una nueva propiedad.
+Para instalar la extensión Microsoft [!DNL Azure], vaya a la interfaz de usuario de recopilación de datos o de Experience Platform y seleccione **[!UICONTROL Event Forwarding]** en el panel de navegación izquierdo. Aquí, seleccione una propiedad a la que añadir la extensión o cree una nueva propiedad.
 
-Una vez que haya seleccionado o creado la propiedad deseada, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Catálogo]**. Busque la tarjeta [!UICONTROL Microsoft Azure] y, a continuación, seleccione **[!UICONTROL Instalar]**.
+Una vez que haya seleccionado o creado la propiedad deseada, seleccione **[!UICONTROL Extensions]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Catalog]**. Busque la tarjeta [!UICONTROL Microsoft Azure] y después seleccione **[!UICONTROL Install]**.
 
-![Se está seleccionando el botón [!UICONTROL Instalar] para la extensión [!UICONTROL Microsoft Azure] en la IU de recopilación de datos.](../../../images/extensions/server/azure/install.png)
+![Se está seleccionando el botón [!UICONTROL Install] para la extensión [!UICONTROL Microsoft Azure] en la IU de recopilación de datos.](../../../images/extensions/server/azure/install.png)
 
 Dado que la extensión no tiene propiedades de configuración, se añade inmediatamente a la lista de extensiones instaladas. Ahora puede empezar a usar [!DNL Event Hub] tipos de acción al configurar reglas de reenvío de eventos.
 
 ## Configuración de una regla de reenvío de eventos {#rule}
 
-Comience a crear una nueva regla de reenvío de eventos y configure sus condiciones como desee. Al seleccionar las acciones de la regla, seleccione **[!UICONTROL Microsoft Azure]** para la extensión y, a continuación, seleccione **[!UICONTROL Enviar datos a los centros de eventos]** para el tipo de acción.
+Comience a crear una nueva regla de reenvío de eventos y configure sus condiciones como desee. Al seleccionar las acciones para la regla, seleccione **[!UICONTROL Microsoft Azure]** para la extensión y, a continuación, seleccione **[!UICONTROL Send Data to Event Hubs]** para el tipo de acción.
 
-![Se está seleccionando el tipo de acción [!UICONTROL Enviar datos a los centros de eventos] para una regla en la IU de recopilación de datos.](../../../images/extensions/server/azure/select-action-type.png)
+![Se está seleccionando el tipo de acción [!UICONTROL Send Data to Event Hubs] para una regla en la IU de recopilación de datos.](../../../images/extensions/server/azure/select-action-type.png)
 
 El panel derecho se actualiza para mostrar las opciones de configuración de cómo se deben enviar los datos. En concreto, debe asignar [elementos de datos](../../../ui/managing-resources/data-elements.md) a las distintas propiedades que representan su configuración de [!DNL Event Hub].
 
-![Las opciones de configuración para el tipo de acción [!UICONTROL Enviar datos a los centros de eventos] que se muestra en la interfaz de usuario.](../../../images/extensions/server/azure/event-hub-details.png)
+![Las opciones de configuración para el tipo de acción [!UICONTROL Send Data to Event Hubs] se muestran en la interfaz de usuario.](../../../images/extensions/server/azure/event-hub-details.png)
 
-**[!UICONTROL Detalles del centro de eventos]**
+**[!UICONTROL Event Hub Details]**
 
 | Entrada | Descripción |
 | --- | --- |
-| [!UICONTROL Área de nombres] | Nombre del área de nombres [!DNL Event Hubs] que creó al [configurar el centro de eventos](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace). |
-| [!UICONTROL Nombre] | Nombre del centro de eventos. |
-| [!UICONTROL Nombre de regla de autorización SAS] | Nombre de la regla de autorización de acceso compartido para todo el espacio de nombres [!DNL Event Hubs] o para la instancia específica del centro de eventos a la que desea enviar datos. Consulte la sección del apéndice sobre [obtención de valores de autorización SAS](#sas) para obtener más información. |
-| [!UICONTROL Clave de acceso SAS] | La clave principal de la regla de autorización de acceso compartido para todo el espacio de nombres [!DNL Event Hubs] o para la instancia específica del centro de eventos a la que desea enviar datos. Consulte la sección del apéndice sobre [obtención de valores de autorización SAS](#sas) para obtener más información. |
-| [!UICONTROL Id. de partición] | [!DNL Event Hubs] le permite [enviar eventos directamente a particiones específicas](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). Para aprovechar esta función, proporcione el ID de la partición que desea que reciba los eventos. |
+| [!UICONTROL Namespace] | Nombre del área de nombres [!DNL Event Hubs] que creó al [configurar el centro de eventos](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace). |
+| [!UICONTROL Name] | Nombre del centro de eventos. |
+| [!UICONTROL SAS Authorization Rule Name] | Nombre de la regla de autorización de acceso compartido para todo el espacio de nombres [!DNL Event Hubs] o para la instancia específica del centro de eventos a la que desea enviar datos. Consulte la sección del apéndice sobre [obtención de valores de autorización SAS](#sas) para obtener más información. |
+| [!UICONTROL SAS Access Key] | La clave principal de la regla de autorización de acceso compartido para todo el espacio de nombres [!DNL Event Hubs] o para la instancia específica del centro de eventos a la que desea enviar datos. Consulte la sección del apéndice sobre [obtención de valores de autorización SAS](#sas) para obtener más información. |
+| [!UICONTROL Partition ID] | [!DNL Event Hubs] le permite [enviar eventos directamente a particiones específicas](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). Para aprovechar esta función, proporcione el ID de la partición que desea que reciba los eventos. |
 
 {style="table-layout:auto"}
 
@@ -60,15 +56,15 @@ El panel derecho se actualiza para mostrar las opciones de configuración de có
 
 | Entrada | Descripción |
 | --- | --- |
-| [!UICONTROL Carga] | Este campo contiene los datos que se reenviarán a [!DNL Event Hubs]. Los datos pueden ser un objeto JSON, una cadena o un elemento de datos. |
+| [!UICONTROL Payload] | Este campo contiene los datos que se reenviarán a [!DNL Event Hubs]. Los datos pueden ser un objeto JSON, una cadena o un elemento de datos. |
 
 {style="table-layout:auto"}
 
-Cuando termine, seleccione **[!UICONTROL Conservar cambios]** para agregar la acción a la configuración de regla. Cuando esté satisfecho con la regla, seleccione **[!UICONTROL Guardar en biblioteca]**.
+Cuando termine, seleccione **[!UICONTROL Keep Changes]** para agregar la acción a la configuración de regla. Cuando esté satisfecho con la regla, seleccione **[!UICONTROL Save to Library]**.
 
 Por último, publique un nuevo reenvío de eventos [build](../../../ui/publishing/builds.md) para habilitar los cambios en la biblioteca.
 
-## Pasos siguientes
+## Próximos pasos
 
 Esta guía explica cómo enviar datos a [!DNL Event Hubs] mediante la extensión de reenvío de eventos [!DNL Microsoft Azure]. Para obtener más información sobre las funcionalidades de reenvío de eventos en Experience Platform, consulte la [descripción general del reenvío de eventos](../../../ui/event-forwarding/overview.md).
 
@@ -83,4 +79,4 @@ Al [configurar una regla de reenvío de eventos](#rule) con la extensión [!DNL 
 
 Una vez que tenga los valores requeridos, el nombre de la regla de autorización puede proporcionarse directamente como una cadena en la entrada de configuración o puede crear un elemento de datos de tipo cadena para hacer referencia a él en su lugar. Sin embargo, la clave principal debe estar contenida primero dentro de un secreto de reenvío de eventos antes de poder suministrarse en la configuración de reglas para proteger la seguridad de los datos.
 
-En la interfaz de usuario del reenvío de eventos, [cree un nuevo secreto](../../../ui/event-forwarding/secrets.md) y seleccione **[!UICONTROL Token]** como tipo de secreto. Para el valor del token en sí, proporcione la clave principal que copió anteriormente. Después de crear el secreto, cree un elemento de datos con el tipo **[!UICONTROL Secreto]** y seleccione el secreto [!DNL Event Hubs] de la lista. Una vez configurado el elemento de datos secreto, puede hacer referencia a él en el campo **[!UICONTROL Clave de acceso SAS]**.
+Dentro de la interfaz de usuario del reenvío de eventos, [cree un nuevo secreto](../../../ui/event-forwarding/secrets.md) y seleccione **[!UICONTROL Token]** como tipo de secreto. Para el valor del token en sí, proporcione la clave principal que copió anteriormente. Después de crear el secreto, cree un elemento de datos con el tipo **[!UICONTROL Secret]** y seleccione el secreto [!DNL Event Hubs] de la lista. Una vez configurado el elemento de datos secreto, puede hacer referencia a él en el campo **[!UICONTROL SAS Access Key]**.

@@ -2,18 +2,14 @@
 title: Referencia de extensiones de etiquetas
 description: Busque documentación sobre las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 12%
+source-wordcount: '427'
+ht-degree: 3%
 
 ---
 
 # Referencia de extensiones de etiqueta
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 A continuación se muestra una lista de la documentación de las extensiones de etiquetas del lado del cliente. Para obtener una lista de las extensiones del lado del servidor disponibles, consulte [referencia de las extensiones de reenvío de eventos](../server/overview.md).
 

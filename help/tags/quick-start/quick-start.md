@@ -2,18 +2,14 @@
 title: Guía de inicio rápido
 description: Aprenda a empezar rápidamente a usar etiquetas con Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1473'
 ht-degree: 88%
 
 ---
 
 # Guía de inicio rápido
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las etiquetas son la nueva generación de tecnología de administración de etiquetas de Adobe Experience Platform. Se desarrolla desde cero para ofrecer un ecosistema abierto y sostenible, donde cualquier persona puede crear sus propias integraciones que los clientes de Adobe pueden implementar en sus sitios. Es una aplicación API First, por lo que todo lo que se puede hacer a través de la IU también se puede hacer mediante una API.
 
@@ -27,7 +23,7 @@ Flujo de trabajo de etiquetas básico:
 6. Realizar pruebas en el entorno de desarrollo.
 7. Enviar a producción.
 
-## 1. Configurar grupos y usuarios
+## &#x200B;1. Configurar grupos y usuarios
 
 Las etiquetas están totalmente integradas con su Adobe ID. Los permisos de usuario se administran mediante la Admin Console con otros productos y soluciones de Adobe desde [!DNL Creative Cloud], [!DNL Document Cloud] y Experience Cloud.
 
@@ -35,29 +31,29 @@ Las etiquetas tienen un sistema de administración de usuarios basado en los der
 
 Para obtener instrucciones detalladas sobre cómo crear grupos y agregar usuarios para etiquetas, consulte la [guía de permisos de recopilación de datos](../../collection/permissions.md).
 
-## 2. Iniciar sesión
+## &#x200B;2. Iniciar sesión
 
-Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos. Para ello, vaya directamente a la [pantalla de inicio de sesión de Experience Cloud](https://experience.adobe.com/) y seleccione **[!UICONTROL Recopilación de datos]** o **[!UICONTROL Experience Platform]**.
+Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos. Para ello, vaya directamente a la [pantalla de inicio de sesión de Experience Cloud](https://experience.adobe.com/) y seleccione **[!UICONTROL Data Collection]** o **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
 >Si tiene una sola cuenta con derechos para varias organizaciones, se puede cambiar la organización seleccionando el nombre de la organización en la barra de control de la parte superior de la pantalla y eligiendo una organización diferente de la lista desplegable.
 
-## 3. Crear una propiedad
+## &#x200B;3. Crear una propiedad
 
 Una vez que haya iniciado sesión en la interfaz de usuario, lo primero que debe hacer es crear una propiedad. Una propiedad es básicamente un contenedor que se rellena con extensiones, reglas, elementos de datos y bibliotecas al implementar etiquetas en el sitio. Mucha gente crea una propiedad para cada sitio web (o grupo de sitios relacionados) donde desean implementar el mismo conjunto de etiquetas.
 
 Para obtener más información acerca de la creación de propiedades, consulte [Crear una propiedad](../ui/administration/companies-and-properties.md).
 
-## 4. Instalar extensiones
+## &#x200B;4. Instalar extensiones
 
 Una extensión es una integración desarrollada por Adobe o un socio de Adobe que añade nuevas e ilimitadas opciones para las etiquetas que usted puede implementar en sus sitios. Si piensa en una etiqueta como un sistema operativo, las extensiones son las aplicaciones que instala para que pueda hacer lo que necesite.
 
-Todas las propiedades nuevas llevan instalada la [Extensión principal](../extensions/client/core/overview.md). Las propiedades móviles incluyen extensiones adicionales. El equipo de Adobe desarrolla la Extensión principal para ofrecer un conjunto de elementos de datos sólido y robusto para sus reglas de datos y tipos de eventos para sus reglas. La mayoría de las acciones que puede querer realizar (obtener un ECID, enviar señalizaciones [!DNL Adobe Analytics], cargar el mbox global de [!DNL Target], etc.) provienen de las extensiones que se instalan del catálogo.
+Todas las propiedades nuevas llevan instalada la [Extensión principal](../extensions/client/core/overview.md). Las propiedades móviles incluyen extensiones adicionales. El equipo de Adobe desarrolla la Extensión principal para ofrecer un conjunto de elementos de datos sólido y robusto para sus capas de datos y tipos de eventos para sus reglas. La mayoría de las acciones que puede querer realizar (obtener un ECID, enviar señalizaciones [!DNL Adobe Analytics], cargar el mbox global de [!DNL Target], etc.) provienen de las extensiones que se instalan del catálogo.
 
 Lo que hace que las etiquetas de Experience Platform sean verdaderamente únicas es que cualquier persona puede crear estas extensiones. ¿Necesita soltar un píxel de remarketing de Facebook en el sitio? Compruebe la extensión desarrollada por Facebook. ¿Desea lo mismo para Twitter o Linked In? Use esas extensiones. ¿Necesita llevar a cabo una encuesta? Consulte Question Pro o Foresee. ¿Necesita administrar la privacidad y el consentimiento de los usuarios finales para ayudarles con [!DNL GDPR]? Eche un vistazo a Evidon y Trust Arc. ¿Desea ver una perspectiva granular del comportamiento de los usuarios individuales en el sitio? Puede probar con Clicktale. Para obtener más información, consulte la sección sobre [agregar una nueva extensión](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
-## 5. Crear elementos de datos y reglas
+## &#x200B;5. Crear elementos de datos y reglas
 
 **Los elementos de datos** señalan la información que desea recopilar y enviar a diferentes lugares de la página:
 
@@ -71,7 +67,7 @@ Una vez definido el elemento de datos, puede utilizarlo en cualquier lugar de la
 
 **Las reglas** son el núcleo lógico de la implementación y controlan el qué, el cuándo, el dónde y el cómo de todas las etiquetas del sitio. Defina un evento, establezca condiciones y excepciones y defina las acciones y el orden. Por último, publique los cambios para ver los resultados. Para obtener más información, consulte [Rules](../ui/managing-resources/rules.md).
 
-## 6. Realizar pruebas en el entorno de desarrollo
+## &#x200B;6. Realizar pruebas en el entorno de desarrollo
 
 ### Bibliotecas y compilaciones
 
@@ -116,7 +112,7 @@ El proceso de publicación se describe en los pasos siguientes.
 1. Crear una biblioteca y asignarla al entorno de desarrollo que ha creado.
 1. Crear su biblioteca.
 
-## 7. Enviar a producción
+## &#x200B;7. Enviar a producción
 
 Después de probar la compilación en el entorno de desarrollo, asegúrese de crear los entornos de ensayo y producción, y colocar los códigos incrustados en los lugares necesarios. Para ello, puede reutilizar los hosts existentes.
 
@@ -134,6 +130,6 @@ Para obtener más información sobre los distintos estados y opciones disponible
 
 Para obtener más información sobre las etiquetas, consulte los siguientes recursos:
 
-* **[La comunidad de recopilación de datos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=es)**: Formule y responda preguntas, aporte ideas, y vote las ideas de otros. Inicie sesión con su ID de Adobe.
+* **[La comunidad de recopilación de datos](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Formule y responda preguntas, aporte ideas, y vote las ideas de otros. Inicie sesión con su ID de Adobe.
 * **[Documentos de desarrolladores](../api/overview.md)**: Participe en la comunidad de desarrolladores de etiquetas para desarrollar extensiones o utilizar las API de etiquetas.
 * **[Información general sobre tutoriales](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=es)**: Estos documentos le presentan conceptos de etiquetas, incluidos el reenvío de eventos y SDK móvil en aplicaciones Android.

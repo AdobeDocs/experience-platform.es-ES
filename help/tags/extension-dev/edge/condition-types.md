@@ -2,18 +2,14 @@
 title: Tipos de condición para extensiones de Edge
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo condición para una extensión de Edge en Adobe Experience Platform.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 68%
+source-wordcount: '358'
+ht-degree: 69%
 
 ---
 
 # Tipos de condición para extensiones de Edge
-
->[!NOTE]
->
-> Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En una regla de etiqueta, una condición se evalúa después de que se haya producido un evento. Todas las condiciones deben devolver el valor verdadero para que la regla pueda continuar el procesamiento. Las extensiones proporcionan los tipos de condición y evalúan si algo es verdadero o falso, devolviendo un valor booleano.
 
@@ -29,7 +25,7 @@ Este documento explica cómo definir tipos de condición para una extensión de 
 
 Los tipos de condición suelen consistir en lo siguiente:
 
-1. Vista que se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos, y que permite a los usuarios modificar la configuración de la condición.
+1. Vista que se muestra dentro de la interfaz de usuario de Experience Platform y de la recopilación de datos, y que permite a los usuarios modificar la configuración de la condición.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y evaluar una condición.
 
 Por ejemplo, si desea evaluar si el usuario está en el host `example.com`, el módulo puede tener un aspecto similar al siguiente.

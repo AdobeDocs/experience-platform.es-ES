@@ -2,18 +2,14 @@
 title: Notas
 description: Obtenga información sobre cómo añadir anotaciones de texto a determinados recursos de etiquetas en Adobe Experience Platform.
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 93%
+source-wordcount: '262'
+ht-degree: 99%
 
 ---
 
 # Notas
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las notas son anotaciones de texto que se pueden añadir a determinados recursos de etiquetas en Adobe Experience Platform. Las notas se pueden adjuntar a los siguientes recursos:
 
@@ -39,7 +35,7 @@ Las notas son comentarios que no afectan al comportamiento de los recursos a los
 
 Los recursos a los que se puede adjuntar notas muestran un carril estrecho en el lado derecho de la pantalla. Este carril incluye un icono para las notas. Este icono muestra el número actual de notas adjuntas al recurso.
 
-Seleccione **[!UICONTROL Notas]** para expandir el carril derecho y mostrar las notas, con las notas más recientes en la parte superior. Para añadir una nota nueva, escriba el texto de la nota en el cuadro de la parte superior y seleccione **[!UICONTROL Añadir nota]**.
+Seleccione **[!UICONTROL Notes]** para expandir el carril derecho y mostrar las notas, con las notas más recientes en la parte superior.  Para añadir una nota nueva, escriba el texto de la nota en el cuadro de la parte superior y seleccione **[!UICONTROL Add Note]**.
 
 ## Otras
 

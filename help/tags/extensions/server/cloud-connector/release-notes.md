@@ -2,18 +2,14 @@
 title: Notas de la versión para la extensión Cloud Connector de Adobe Experience Platform
 description: Últimas notas de la versión de la extensión Cloud Connector en Adobe Experience Platform.
 exl-id: 5ee85d9f-71f4-46ee-9064-4ceee1cf90e7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '128'
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+workflow-type: tm+mt
+source-wordcount: '83'
 ht-degree: 100%
 
 ---
 
 # Información general sobre la extensión Cloud Connector de Adobe Experience Platform
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## 17 de enero de 2023
 

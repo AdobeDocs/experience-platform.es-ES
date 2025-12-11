@@ -2,18 +2,14 @@
 title: Información general sobre el desarrollo de extensiones
 description: Obtenga información acerca de los componentes principales de los distintos tipos de extensión de etiquetas y el proceso de desarrollo de extensión en Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 23%
+source-wordcount: '893'
+ht-degree: 20%
 
 ---
 
 # Información general sobre el desarrollo de extensiones
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Uno de los objetivos principales de las etiquetas en Adobe Experience Platform es crear un ecosistema abierto en el que los ingenieros que no pertenezcan a Adobe puedan exponer las funcionalidades adicionales de sus sitios web y aplicaciones móviles. Esto se logra mediante las extensiones de etiquetas. Una vez instalada una extensión en una propiedad de etiqueta, la funcionalidad de dicha extensión queda disponible para que la utilicen todos los usuarios de la propiedad.
 

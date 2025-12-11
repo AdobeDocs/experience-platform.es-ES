@@ -2,18 +2,14 @@
 title: Eliminación de recursos de una biblioteca
 description: Obtenga información sobre cómo quitar recursos de una biblioteca de etiquetas.
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 94%
+source-wordcount: '268'
+ht-degree: 100%
 
 ---
 
 # Eliminación de recursos de una biblioteca
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Cuando ya no desee que un recurso afecte a una compilación, debe eliminarlo de la biblioteca que contiene ese recurso y crear una nueva compilación.
 
@@ -47,7 +43,7 @@ En su lugar, debe deshabilitar el recurso. Esta deshabilitación es un cambio qu
 
 1. Deshabilite el recurso.
    1. Seleccione el recurso en la vista de lista.
-   1. Seleccione **[!UICONTROL Deshabilitar]**.
+   1. Seleccione **[!UICONTROL Disable]**.
 1. Cree una nueva biblioteca de desarrollo.
 1. Añada la versión `latest` del recurso deshabilitado.
 1. Guárdelo y compílelo.

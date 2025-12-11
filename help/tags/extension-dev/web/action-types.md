@@ -2,18 +2,14 @@
 title: Tipos de acción para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de acción para una extensión de etiqueta en una propiedad web.
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 70%
+source-wordcount: '367'
+ht-degree: 71%
 
 ---
 
 # Tipos de acción para extensiones web
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En el contexto de las etiquetas de recopilación de datos, una acción se realiza después de que se haya producido un evento de regla y de que todas las condiciones hayan superado la evaluación.
 
@@ -29,7 +25,7 @@ Este documento explica cómo definir tipos de acción para una extensión web en
 
 Los tipos de acción suelen consistir en lo siguiente:
 
-1. Una [vista](./views.md) que se muestra en la IU del Experience Platform y en la IU de recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
+1. Una [vista](./views.md) que se muestra en la IU de Experience Platform y en la IU de recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
 
 ```js

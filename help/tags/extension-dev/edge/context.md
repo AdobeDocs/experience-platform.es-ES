@@ -2,18 +2,14 @@
 title: Módulos de extensión de Edge en contexto
 description: Obtenga información acerca del objeto de contexto y la función que desempeña en la interacción con los módulos de biblioteca en las extensiones de las propiedades de Edge.
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 97%
+source-wordcount: '681'
+ht-degree: 100%
 
 ---
 
 # Módulos de extensión de Edge en contexto
-
->[!NOTE]
->
-> Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Todos los módulos de biblioteca de las extensiones de Edge reciben un objeto `context` cuando se ejecutan. Este documento describe las propiedades que proporciona el objeto `context` y la función que desempeñan en los módulos de biblioteca.
 
@@ -42,7 +38,7 @@ No debe confundirse con una solicitud del dispositivo cliente, `request` es un o
 logger.log(context.arc.request)
 ```
 
-El objeto `request` tiene dos propiedades de nivel superior: `body` y `head`. La propiedad `body` contiene información del modelo de datos de experiencia (XDM) y se puede inspeccionar en Adobe Experience Platform Debugger cuando se navega a **[!UICONTROL Launch]** y se selecciona la pestaña **[!UICONTROL Rastro de Edge]**.
+El objeto `request` tiene dos propiedades de nivel superior: `body` y `head`. La propiedad `body` contiene información del Modelo de datos de experiencia (XDM) y se puede inspeccionar en Adobe Experience Platform Debugger cuando se navega a **[!UICONTROL Launch]** y se selecciona la pestaña **[!UICONTROL Edge Trace]**.
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -52,11 +48,11 @@ El objeto `request` tiene dos propiedades de nivel superior: `body` y `head`. La
 logger.log(context.arc.ruleStash);
 ```
 
-Cada extensión tiene su propia área de nombres. Por ejemplo: si la extensión tiene el nombre `send-beacon`, todos los resultados de las acciones `send-beacon` se almacenarán en el área de nombres `ruleStash['send-beacon']`.
+Cada extensión tiene su propio espacio de nombres. Por ejemplo: si la extensión tiene el nombre `send-beacon`, todos los resultados de las acciones `send-beacon` se almacenarán en el espacio de nombres `ruleStash['send-beacon']`.
 
-El área de nombres es única para cada extensión y tiene un valor de `undefined` al principio.
+El espacio de nombres es único para cada extensión y tiene un valor de `undefined` al principio.
 
-El área de nombres se sobrescribe con el resultado que devuelve cada acción. Por ejemplo, considere una extensión `transform` que contenga dos acciones: `generate-fullname` y `generate-fulladdress`. Estas dos acciones se añaden a continuación a una regla.
+El espacio de nombres se sobrescribe con el resultado que devuelve cada acción. Por ejemplo, considere una extensión `transform` que contenga dos acciones: `generate-fullname` y `generate-fulladdress`. Estas dos acciones se añaden a continuación a una regla.
 
 Si el resultado de la acción `generate-fullname` es `Firstname Lastname`, la cadena de reglas aparecerá como se muestra a continuación una vez completada la acción:
 
@@ -76,7 +72,7 @@ Si el resultado de la acción `generate-address` es `3900 Adobe Way`, la cadena 
 
 Observe que el &quot;Nombre y apellido&quot; ya no existen dentro de la pila de reglas, porque la acción `generate-address` sobrescribió estos datos con un nuevo valor.
 
-Si desea que `ruleStash` almacene los resultados de ambas acciones dentro del área de nombres `transform`, puede escribir un módulo de acción similar al ejemplo siguiente:
+Si desea que `ruleStash` almacene los resultados de ambas acciones dentro del espacio de nombres `transform`, puede escribir un módulo de acción similar al ejemplo siguiente:
 
 ```js
 module.exports = (context) => {

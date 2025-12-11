@@ -2,18 +2,14 @@
 title: Información general sobre la extensión YouTube Video Tracking
 description: Obtenga información sobre la extensión de etiqueta de seguimiento de vídeo de YouTube en Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 78%
+source-wordcount: '852'
+ht-degree: 77%
 
 ---
 
 # Información general sobre la extensión YouTube Video Tracking
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 **Requisitos previos**
 
@@ -98,9 +94,9 @@ Se deben incluir los siguientes objetos de extensión de vídeo.
 
 >[!TIP]
 > 
->En el caso de las implementaciones en las que no se pueden usar varios eVars o props para cada elemento de vídeo, los valores de los elementos de datos se pueden concatenar en Experience Platform, analizarse en informes de clasificación con la herramienta Generador de reglas de clasificación, como se explica en [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es) y, luego, aplicarse como un segmento en Analysis Workspace.
+>En el caso de las implementaciones en las que no se pueden usar varios eVars o props para cada elemento de vídeo, los valores de los elementos de datos se pueden concatenar en Experience Platform, analizarse en informes de clasificación con la herramienta Generador de reglas de clasificación, como se explica en [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es) y, luego, aplicarse como un segmento en Analysis Workspace.
 
-Para concatenar valores de información del vídeo, cree un nuevo elemento de datos denominado Metadatos de vídeo y prográmelo para extraer todos los elementos de datos de vídeo (antes mencionados) y combinarlos. Por ejemplo:
+Para concatenar valores de información del vídeo, cree un nuevo elemento de datos denominado &quot;Datos de Video Meta&quot; y prográmelo para extraer todos los elementos de datos de vídeo (enumerados arriba) y combinarlos. Por ejemplo:
 
 ```javascript
 var r = [];

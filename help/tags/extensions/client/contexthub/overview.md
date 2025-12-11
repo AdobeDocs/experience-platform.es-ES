@@ -2,18 +2,14 @@
 title: Información general sobre la extensión Adobe ContextHub
 description: Obtenga información acerca de la extensión de etiquetas Adobe ContextHub en Adobe Experience Platform.
 exl-id: 90700ce2-14fd-4d15-bbb8-98a8bbca5005
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 91%
+source-wordcount: '172'
+ht-degree: 100%
 
 ---
 
 # Información general sobre la extensión Adobe ContextHub
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información sobre cómo configurar la extensión de Adobe ContextHub y las opciones disponibles al utilizar esta extensión para generar una regla.
 
@@ -21,9 +17,9 @@ Utilice esta referencia para obtener información sobre cómo configurar la exte
 
 Esta sección proporciona una referencia sobre las opciones disponibles al configurar la extensión de Adobe ContextHub.
 
-Si la extensión de Adobe ContextHub todavía no está instalada, abra su propiedad, seleccione **[!UICONTROL Extensiones > Catálogo]**, coloque el cursor sobre la extensión de Adobe ContextHub y seleccione **[!UICONTROL Instalar]**.
+Si la extensión de Adobe ContextHub aún no está instalada, abra la propiedad, seleccione **[!UICONTROL Extensions > Catalog]**, coloque el puntero por encima de la extensión de Adobe ContextHub y seleccione **[!UICONTROL Install]**.
 
-Para configurar la extensión, abra la pestaña [!UICONTROL Extensiones], pase el cursor sobre la extensión y, a continuación, seleccione **[!UICONTROL Configurar]**.
+Para configurar la extensión, abra la pestaña [!UICONTROL Extensions], coloque el puntero por encima de la extensión y, a continuación, seleccione **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-contexthub-config.png)
 

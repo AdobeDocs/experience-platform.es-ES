@@ -2,18 +2,14 @@
 title: Desarrollar una extensión
 description: Este documento proporciona una visión general del proceso de desarrollo de extensiones de etiquetas, con vínculos a documentación adicional para ver procesos más detallados.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 92%
+source-wordcount: '391'
+ht-degree: 91%
 
 ---
 
 # Desarrollar una extensión
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Una extensión de etiqueta debe considerarse como un producto (pequeño) con sus propios requisitos. Determinar cómo un usuario de Adobe Experience Platform querrá utilizar su extensión puede ayudarle a clasificar la funcionalidad según los tipos de evento, los tipos de condición, los tipos de acciones y los tipos de elementos de datos que debe proporcionar su extensión.
 

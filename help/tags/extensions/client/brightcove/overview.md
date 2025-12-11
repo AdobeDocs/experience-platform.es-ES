@@ -2,18 +2,14 @@
 title: Información general sobre la extensión BrightCove Video Tracking
 description: Obtenga información acerca de la extensión de etiquetas BrightCove Video Tracking en Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 95%
+source-wordcount: '853'
+ht-degree: 97%
 
 ---
 
 # Información general sobre la extensión BrightCove Video Tracking
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## Requisitos previos
 

@@ -2,18 +2,14 @@
 title: Navegadores admitidos
 description: Una lista de varios exploradores compatibles con un tiempo de ejecución de etiquetas de Adobe Experience Platform.
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
-source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 87%
+source-wordcount: '97'
+ht-degree: 100%
 
 ---
 
 # Navegadores admitidos
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 El tiempo de ejecución de las etiquetas en Adobe Experience Platform (entregado a los sitios web de los clientes) es compatible con varios exploradores:
 

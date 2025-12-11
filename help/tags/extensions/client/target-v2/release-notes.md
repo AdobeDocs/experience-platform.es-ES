@@ -2,18 +2,14 @@
 title: Notas de la versión de la extensión Adobe Target v2
 description: Notas de la versión de la extensión de etiquetas de Adobe Target v2 en Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 42%
+source-wordcount: '788'
+ht-degree: 41%
 
 ---
 
 # Notas de la versión de la extensión Adobe Target v2
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## v0.20.3 (23 de enero de 2024)
 
@@ -150,7 +146,7 @@ ht-degree: 42%
 ## v0.12.0 (10 de octubre de 2019)
 
 - Se ha actualizado `at.js` a la versión 2.2.
-- Se ha mejorado el rendimiento de las integraciones entre la biblioteca de ID de Experience Cloud (ECID) 4.4 y `at.js` 2.2.
+- Se ha mejorado el rendimiento de las integraciones entre la biblioteca de Experience Cloud ID (ECID) 4.4 y `at.js` 2.2.
 - Anteriormente, la biblioteca ECID realizaba dos llamadas de bloqueo antes de que `at.js` pudiera recuperar experiencias. Esto se ha reducido a una sola llamada, lo que mejora significativamente el rendimiento.
 
 >[!NOTE]

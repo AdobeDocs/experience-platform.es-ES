@@ -2,18 +2,14 @@
 title: Módulos compartidos para la extensión Adobe Analytics
 description: Obtenga información acerca de los módulos de biblioteca compartidos que proporciona la extensión de etiqueta de Adobe Analytics en Adobe Experience Platform.
 exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 95%
+source-wordcount: '380'
+ht-degree: 100%
 
 ---
 
 # Módulos compartidos para la extensión Adobe Analytics
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 La [extensión de Adobe Analytics](./overview.md) proporciona dos [módulos compartidos](../../../extension-dev/web/shared.md) diferentes que puede integrar en la aplicación de experiencia. Estos módulos se tratan en las secciones siguientes.
 

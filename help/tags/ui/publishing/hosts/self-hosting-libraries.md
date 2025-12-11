@@ -2,18 +2,14 @@
 title: Bibliotecas de alojamiento propio
 description: Aprenda a implementar el alojamiento propio para las compilaciones de su biblioteca de etiquetas en Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 90%
+source-wordcount: '446'
+ht-degree: 89%
 
 ---
 
 # Bibliotecas de alojamiento propio
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las etiquetas en Adobe Experience Platform permiten la producción de un conjunto de archivos llamados [compilación](../builds.md). Este conjunto de archivos controla el comportamiento de la aplicación en tiempo de ejecución.
 

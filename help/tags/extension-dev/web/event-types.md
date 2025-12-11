@@ -2,18 +2,14 @@
 title: Tipos de evento para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo evento para una extensión web en Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 72%
+source-wordcount: '1007'
+ht-degree: 71%
 
 ---
 
 # Tipos de eventos para extensiones web
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En una regla de etiqueta, un evento es una actividad que debe producirse para que se active una regla. Por ejemplo, una extensión web podría proporcionar un tipo de evento de &quot;gesto&quot; que supervise la producción de un determinado gesto táctil o movimiento del ratón. Una vez que se produce el gesto, la lógica de evento activaría la regla.
 

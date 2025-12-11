@@ -2,9 +2,9 @@
 title: Implementación asíncrona
 description: Obtenga información sobre cómo implementar de forma asíncrona las bibliotecas de Adobe Experience Platform Launch en su sitio web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1001'
 ht-degree: 98%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 98%
 >id="platform_tags_asynchronous_deployment"
 >title="Implementación asíncrona"
 >abstract="Si esta opción está habilitada, cuando se analiza esta etiqueta de script, el explorador debe comenzar a cargar el archivo JavaScript, pero en lugar de esperar a que se cargue y ejecute la biblioteca, continuará analizando y procesando el resto del documento. Esto puede mejorar el rendimiento de la página web, pero tiene implicaciones importantes en cuanto a cómo se ejecutan determinadas reglas. Consulte la documentación para obtener más detalles."
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 El rendimiento y la implementación sin bloqueo de las bibliotecas de JavaScript requeridas por nuestros productos es cada vez más importante para los usuarios de Adobe Experience Cloud. Las herramientas como [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recomiendan a los usuarios cambiar su forma de implementar las bibliotecas de Adobe en el sitio. Este artículo explica cómo utilizar las bibliotecas de JavaScript de Adobe de forma asíncrona.
 

@@ -2,20 +2,16 @@
 title: Volver a publicar una biblioteca
 description: Obtenga información sobre cómo volver a publicar una biblioteca de etiquetas anterior en Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 81%
+source-wordcount: '604'
+ht-degree: 80%
 
 ---
 
 # Volver a publicar una biblioteca
 
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
-
-Las cinco bibliotecas más recientes publicadas en el entorno de producción en una propiedad web se conservan para recuperarlas más adelante. Esta función es útil cuando se encuentra un error en la biblioteca de producción y se necesita volver a un estado correcto anterior inmediatamente.
+Las cinco bibliotecas más recientes publicadas en el entorno de producción en una propiedad web se conservan para recuperarlas más adelante. Esta función es útil cuando se encuentra un error en la biblioteca de producción y se necesita revertir a un estado correcto anterior inmediatamente.
 
 El proceso de recuperación depende de la configuración del entorno en el momento en que se publicó originalmente la biblioteca. Esto es importante porque la recuperación de una biblioteca archivada no cambia nada en el sitio activo, mientras que la recuperación de una biblioteca normal sí lo haría.
 
@@ -45,7 +41,7 @@ Esto significa que, cuando vuelve a publicar una biblioteca anterior:
 
 * La forma en que los entornos de ensayo y desarrollo calculan qué se encuentra en fase de desarrollo no varía
 
-Tenga en cuenta la situación específica cuando se restaure una versión anterior debido a un problema con una regla específica. La revisión de regla que está en proceso de producción podría, por ejemplo, tener tres revisiones anteriores. Cuando ve esa regla en la interfaz de usuario para corregirla, sigue mostrando los cambios guardados más recientes en lugar de los que están actualmente en producción.
+Tenga en cuenta la situación específica cuando se restablezca una versión anterior debido a un problema con una regla específica. La revisión de regla que está en proceso de producción podría, por ejemplo, tener tres revisiones anteriores. Cuando ve esa regla en la interfaz de usuario para corregirla, sigue mostrando los cambios guardados más recientes en lugar de los que están actualmente en producción.
 
 Por este motivo, Experience Platform le notifica que una propiedad está en estado de republicación como recordatorio de que lo que está viendo en la interfaz de usuario de recopilación de datos está más alejado de la fase de producción de lo habitual. Esta notificación se puede omitir y aparece una vez por cada sesión de explorador la primera vez que se ve la propiedad.
 
@@ -57,7 +53,7 @@ Desde la pantalla Publicación:
 
 1. Busque la biblioteca en la columna Publicado que desee volver a publicar.
 1. Seleccione los puntos suspensivos (`...`) en la esquina superior derecha de la tarjeta de biblioteca.
-1. Seleccione **[!UICONTROL Volver a publicar]**.
+1. Seleccione **[!UICONTROL Republish]**.
 
 ## Descargar
 
@@ -71,4 +67,4 @@ Desde la pantalla Publicación:
 
 1. Busque la biblioteca en la columna Publicado que desee descargar.
 1. Seleccione los puntos suspensivos (`...`) en la esquina superior derecha de la tarjeta de biblioteca.
-1. Seleccione **[!UICONTROL Descargar]**.
+1. Seleccione **[!UICONTROL Download]**.

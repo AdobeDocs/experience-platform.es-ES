@@ -2,20 +2,16 @@
 title: Notas de la versión de la extensión del servicio de identidad de Adobe Experience Cloud
 description: Últimas notas de la versión de la extensión de etiqueta del servicio de identidad de Adobe Experience Cloud en Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 75%
+source-wordcount: '643'
+ht-degree: 76%
 
 ---
 
 # Notas de la versión de la extensión del servicio de identidad de Adobe Experience Cloud
 
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
-
-Este documento describe las notas de la versión de la extensión de Adobe Experience Cloud Identity Service. Para obtener las notas de la versión del propio servicio de identidad del Experience Cloud, consulte la [documentación del servicio de identidad](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es).
+Este documento describe las notas de la versión de la extensión de Adobe Experience Cloud Identity Service. Para obtener las notas de la versión del propio Experience Cloud Identity Service, consulte la [documentación del servicio de identidad](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es).
 
 ## 17 de octubre de 2022
 

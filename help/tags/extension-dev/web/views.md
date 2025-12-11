@@ -2,18 +2,14 @@
 title: Vistas en extensiones web
 description: 'Obtenga información sobre cómo definir vistas para módulos de biblioteca en las extensiones web de Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2148'
-ht-degree: 92%
+source-wordcount: '2103'
+ht-degree: 91%
 
 ---
 
 # Vistas en extensiones web
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Cada tipo de evento, condición, acción o elemento de datos puede proporcionar una vista que permita al usuario proporcionar la configuración. La extensión también puede tener una [vista de configuración de extensión](../configuration.md) de nivel superior que permita a los usuarios proporcionar la configuración global de toda la extensión. El proceso de creación de una vista es idéntico en todos los tipos de vistas.
 
@@ -76,7 +72,7 @@ Las etiquetas llamárán al método `init` en cuanto la vista se haya cargado en
 | `company` | Un objeto que contiene `orgId` (su ID de Adobe Experience Cloud de 24 caracteres), `id` (el identificador único de su compañía dentro de la API de Reactor) y `tenantId` (el identificador único de una organización dentro del sistema de Identity Management de Adobe). |
 | `schema` | Objeto con el formato [Esquema JSON](https://json-schema.org/). Este objeto provendrá del [manifiesto de extensión](../manifest.md) y puede resultar útil para validar el formulario. |
 | `apiEndpoints` | Un objeto que contiene `reactor` y que contiene una referencia a la dirección web de la API de Reactor. |
-| `userConsentPermissions` | Objeto que contiene indicadores de consentimiento de [Datos de uso del producto](https://experienceleague.adobe.com/es/docs/core-services/interface/features/account-preferences#product-usage-data) de Adobe. Use el indicador almacenado en `globalDataCollectionAndUsage` para saber si su extensión tiene permiso para recopilar datos de clientes de *any*. |
+| `userConsentPermissions` | Objeto que contiene indicadores de consentimiento de [Datos de uso del producto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) de Adobe. Use el indicador almacenado en `globalDataCollectionAndUsage` para saber si su extensión tiene permiso para recopilar datos de clientes de *any*. |
 | `preferredLanguages` | Matriz de cadenas de idioma. |
 
 La vista debe utilizar esta información para procesar y administrar su formulario. Es probable que solo necesite tratar con `info.settings`, aunque también se proporciona la otra información por si es necesario.
@@ -137,7 +133,7 @@ Al llamar a este método, se mostrará un modal que permite al usuario probar y 
 | Propiedad | Descripción |
 | --- | --- |
 | `pattern` | Patrón de expresión regular que debe utilizarse como valor inicial del campo de patrón dentro del comprobador. Normalmente, esto se proporciona cuando el usuario está editando una expresión regular existente. Si no se proporciona, el campo de patrón estará vacío inicialmente. |
-| `flags` | Indicadores de expresión regular que debe utilizar el probador. Como ejemplo, `gi` indicaría el indicador de coincidencia global y el indicador de omisión de mayúsculas y minúsculas. Estos indicadores no son modificables por el usuario dentro del comprobador, pero se utilizan para mostrar los indicadores específicos que la extensión utilizará al ejecutar la expresión regular. Si no se proporciona, no se utilizarán indicadores dentro del comprobador. Consulte la [documentación de RegExp de MDN](https://developer.mozilla.org/es-ES/docs/Web/JavaScript/Reference/Global_Objects/RegExp) para obtener más información sobre los indicadores de expresiones regulares.<br><br>Un escenario común es una extensión que permite a los usuarios alternar entre mayúsculas y minúsculas para una expresión regular. Para admitir esto, la extensión suele incluir una casilla de verificación dentro de su vista de extensión que, al activarse, no hace distinción entre mayúsculas y minúsculas (representada por el indicador `i`). El objeto de configuración guardado por la vista tendría que representar si la casilla de verificación se marcó para que el módulo de biblioteca que ejecuta la expresión regular pueda saber si debe utilizar el indicador `i`. Además, cuando la vista de extensión desee abrir el comprobador de expresión regular, deberá pasar el indicador `i` si se marca la casilla de verificación para no hacer distinción entre mayúsculas y minúsculas. Esto permite al usuario probar correctamente la expresión regular con la omisión de distinción entre mayúsculas y minúsculas habilitada. |
+| `flags` | Indicadores de expresión regular que debe utilizar el probador. Como ejemplo, `gi` indicaría el indicador de coincidencia global y el indicador de omisión de mayúsculas y minúsculas. Estos indicadores no son modificables por el usuario dentro del comprobador, pero se utilizan para mostrar los indicadores específicos que la extensión utilizará al ejecutar la expresión regular. Si no se proporciona, no se utilizarán indicadores dentro del comprobador. Consulte la [documentación de RegExp de MDN](https://developer.mozilla.org/es-ES/docs/Web/JavaScript/Reference/Global_Objects/RegExp) para obtener más información sobre los indicadores de expresiones regulares.<br><br>Un escenario común es una extensión que permite a los usuarios alternar entre mayúsculas y minúsculas para una expresión regular. Para admitir esto, la extensión suele incluir una casilla de verificación dentro de su vista de extensión que, al habilitarse, no hace distinción entre mayúsculas y minúsculas (representada por el indicador `i`). El objeto de configuración guardado por la vista tendría que representar si la casilla de verificación se marcó para que el módulo de biblioteca que ejecuta la expresión regular pueda saber si debe utilizar el indicador `i`. Además, cuando la vista de extensión desee abrir el comprobador de expresión regular, deberá pasar el indicador `i` si se marca la casilla de verificación para no hacer distinción entre mayúsculas y minúsculas. Esto permite al usuario probar correctamente la expresión regular con la omisión de distinción entre mayúsculas y minúsculas habilitada. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 

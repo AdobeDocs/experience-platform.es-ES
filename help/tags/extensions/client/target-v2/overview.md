@@ -2,18 +2,14 @@
 title: Información general sobre la extensión Adobe Target v2
 description: Obtenga información sobre la extensión de etiqueta Adobe Target v2 en Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 88%
+source-wordcount: '1298'
+ht-degree: 87%
 
 ---
 
 # Información general sobre la extensión Adobe Target v2
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información sobre las opciones disponibles al utilizar esta extensión para generar una regla.
 
@@ -23,9 +19,9 @@ Utilice esta referencia para obtener información sobre las opciones disponibles
 >
 >La extensión Adobe Target requiere At.js 2.x.
 
-Si la extensión de Adobe Target todavía no está instalada, abra su propiedad, seleccione **[!UICONTROL Extensiones > Catálogo]**, coloque el puntero sobre la extensión de grupo de destinatarios y seleccione **[!UICONTROL Instalar]**.
+Si la extensión de Adobe Target todavía no está instalada, abra su propiedad, seleccione **[!UICONTROL Extensions > Catalog]**, pase el puntero por encima de la extensión de grupo de destinatarios y seleccione **[!UICONTROL Install]**.
 
-Para configurar la extensión, abra la pestaña Extensiones, pase el puntero sobre la extensión y, a continuación, seleccione **[!UICONTROL Configurar]**.
+Para configurar la extensión, abra la pestaña Extensiones, pase el puntero por encima de la extensión y, a continuación, seleccione **[!UICONTROL Configure]**.
 
 ![](../../../images/targetv2config.png)
 
@@ -71,7 +67,7 @@ No es necesaria ninguna configuración.
 
 ### Carga de Target con la toma de decisiones en el dispositivo
 
-Añada esta acción a la regla de etiqueta donde tiene sentido cargar Target con la [toma de decisiones en el dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=es) activada en el contexto de la regla. Esto carga la biblioteca at.js con la toma de decisiones en el dispositivo habilitada en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio. El Adobe recomienda utilizar la acción Load Target with on-device decisioning solo si va precedida de una llamada de Target. De lo contrario, podría tener problemas como la demora de la llamada de Analytics.
+Añada esta acción a la regla de etiqueta donde tiene sentido cargar Target con la [toma de decisiones en el dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=es) activada en el contexto de la regla. Esto carga la biblioteca at.js con la toma de decisiones en el dispositivo habilitada en la página. En la mayoría de las implementaciones, Target debe cargarse en todas las páginas del sitio. Adobe recomienda usar la acción Cargar destinatario con toma de decisiones en el dispositivo solo si va precedida de una llamada de Target. De lo contrario, podría tener problemas como la demora de la llamada de Analytics.
 
 >[!IMPORTANT]
 >
@@ -98,7 +94,7 @@ Este tipo de acción permite a Target activar una solicitud cuando se carga la p
 Especifique si desea habilitar la ocultación del cuerpo para evitar parpadeos y el estilo utilizado al ocultar el elemento de cuerpo. Las opciones disponibles son las siguientes:
 
 * **Ocultación del cuerpo:** puede habilitar o deshabilitar esta configuración. El valor predeterminado es Enabled, lo cual significa que BODY de HTML está oculto.
-* **Estilo oculto del cuerpo:** el valor predeterminado es body {opacity: 0}. Este valor se puede cambiar por otro, por ejemplo, body{display:none}.
+* **Estilo oculto del cuerpo:** El valor predeterminado es body{opacity:0}. Este valor se puede cambiar por otro, por ejemplo, body{display:none}.
 
 Para obtener más información, consulte la [documentación de ayuda en línea de Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=es).
 

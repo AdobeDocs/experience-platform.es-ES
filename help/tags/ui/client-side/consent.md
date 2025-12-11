@@ -2,18 +2,14 @@
 title: Implementar etiquetas de JavaScript para administrar el consentimiento del cliente
 description: Obtenga información sobre cómo administrar las señales de inclusión y exclusión de clientes para distintas soluciones de Adobe en Adobe Experience Platform.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '565'
 ht-degree: 94%
 
 ---
 
 # Implementar etiquetas de JavaScript para administrar el consentimiento del cliente
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Las regulaciones legales de privacidad, como el Reglamento General de Protección de Datos (RGPD), requieren que las compañías puedan administrar el consentimiento de los usuarios. Es posible que los clientes de Adobe exijan a los visitantes que acepten su inclusión antes de que se ejecuten las soluciones de Adobe para un visitante determinado. Los visitantes deben tener la capacidad de gestionar su estado de inclusión y exclusión.
 
@@ -25,7 +21,7 @@ Este documento contiene información sobre cómo evitar que las etiquetas de Ado
 
 ## Advertising Cloud
 
-Adobe Experience Platform no activa [!DNL Advertising Cloud] automáticamente. [!DNL Advertising Cloud] solo se activa si lo indica específicamente en una acción de regla. Utilice las condiciones de regla para determinar cuándo y qué se debe activar. Por ejemplo, para utilizar cookies para determinar el estado de inclusión, configure un elemento de datos para que lea esa cookie y úselo como una condición de la regla para determinar cuándo se debe activar la acción Track Conversion.
+Adobe Experience Platform no activa [!DNL Advertising Cloud] automáticamente. [!DNL Advertising Cloud] solo se activa si lo indica específicamente en una acción de regla. Utilice las condiciones de regla para determinar cuándo y qué se debe activar. Por ejemplo, para utilizar cookies para determinar el estado de inclusión, configure un elemento de datos para que lea esa cookie y úselo como una condición de la regla para determinar cuándo se debe activar la acción de seguimiento de conversión.
 
 Las integraciones con los gestores de consentimiento (como OneTrust) pueden configurar y rastrear las cookies de consentimiento de los clientes, que luego pueden utilizarse en el generador de reglas.
 

@@ -2,18 +2,14 @@
 title: Tipos de condición para extensiones web
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de condición para una extensión de etiqueta en una propiedad web.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 69%
+source-wordcount: '457'
+ht-degree: 70%
 
 ---
 
 # Tipos de condición para extensiones web
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En el contexto de una regla, una condición se evalúa después de que se haya producido un evento. Todas las condiciones deben devolver el valor verdadero para que la regla pueda continuar el procesamiento. La excepción se produce cuando los usuarios colocan explícitamente condiciones en un bloque de &quot;excepción&quot;, en cuyo caso todas las condiciones del bloque deben devolver el valor &quot;False&quot; para que la regla se pueda seguir procesando.
 
@@ -29,7 +25,7 @@ Este documento explica cómo definir los tipos de condición para una extensión
 
 Los tipos de condición suelen consistir en lo siguiente:
 
-1. Una [vista](./views.md) que se muestra dentro de la IU del Experience Platform y la IU de recopilación de datos y que permite a los usuarios modificar la configuración de la condición.
+1. Una [vista](./views.md) que se muestra dentro de la IU de Experience Platform y la IU de recopilación de datos y que permite a los usuarios modificar la configuración de la condición.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y evaluar una condición.
 
 Un módulo de biblioteca de tipo condición tiene un objetivo: evaluar si algo es verdadero o falso. Lo que evalúan depende de usted.

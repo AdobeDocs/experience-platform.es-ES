@@ -2,18 +2,14 @@
 title: Información general sobre la extensión de demostración de Adobe Experience Platform
 description: Obtenga más información sobre la extensión de demostración de Adobe Experience Platform en Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 99%
+source-wordcount: '1009'
+ht-degree: 97%
 
 ---
 
 # Extensión de la demostración de Adobe Experience Platform
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ Las características de esta extensión se transfieren a la nueva. Aquí tiene u
 
 Esta sección proporciona una referencia sobre las opciones disponibles al configurar la extensión de Adobe Experience Platform.
 
-Si la extensión de Adobe Experience Platform aún no está instalada, abra la propiedad, seleccione **[!UICONTROL Extensiones > Catálogo]**, pase el cursor sobre la extensión de Adobe Experience Platform y seleccione **[!UICONTROL Instalar]**.
+Si la extensión de Adobe Experience Platform aún no está instalada, abra la propiedad, seleccione **[!UICONTROL Extensions > Catalog]**, pase el puntero por encima de la extensión de Adobe Experience Platform y seleccione **[!UICONTROL Install]**.
 
-Para configurar la extensión, abra la pestaña [!UICONTROL Extensiones], pase el cursor sobre la extensión y, a continuación, seleccione **[!UICONTROL Configurar]**.
+Para configurar la extensión, abra la pestaña [!UICONTROL Extensions], coloque el puntero por encima de la extensión y, a continuación, seleccione **[!UICONTROL Configure]**.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### Conexión de flujo continuo
 
-La elección de una conexión de flujo continuo es el primer paso para iniciar la transmisión de datos a Adobe Experience Platform. Puede seleccionar una del combobox de conexión de flujo continuo. La conexión de flujo continuo es un campo obligatorio. Si no tiene ninguna conexión de flujo continuo creada, puede crearla seleccionando el botón **[!UICONTROL Crear una conexión de flujo continuo]**.
+La elección de una conexión de flujo continuo es el primer paso para iniciar la transmisión de datos a Adobe Experience Platform. Puede seleccionar una del combobox de conexión de flujo continuo. La conexión de flujo continuo es un campo obligatorio. Si no tiene ninguna conexión de flujo continuo creada, puede crearla seleccionando el botón **[!UICONTROL Create a streaming connection]**.
 
-Si selecciona **[!UICONTROL Crear una conexión de flujo continuo]**, aparecerá una ventana modal.
+Si selecciona **[!UICONTROL Create a streaming connection]** aparecerá una ventana modal.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-El modal contiene campos con valores prerrellenados que se pueden cambiar según sus necesidades. Si tiene pensado crear más de una conexión de flujo continuo, debe tener en cuenta que el campo **[!UICONTROL Fuente de datos]** debe ser único. Si intenta crear otra conexión de flujo continuo utilizando una **[!UICONTROL Fuente de datos]** utilizada en otra conexión, no podrá hacerlo.
+El modal contiene campos con valores prerrellenados que se pueden cambiar según sus necesidades. Si planea crear más de una conexión de flujo continuo, debe tener en cuenta que el campo **[!UICONTROL Data Source]** debe ser único. Si intenta crear otra conexión de flujo continuo utilizando una **[!UICONTROL Data Source]** utilizada en otra conexión, no podrá hacerlo.
 
 Una vez que haya seleccionado un extremo de flujo continuo, verá la URL del extremo de flujo continuo y la fuente.
 
@@ -95,7 +91,7 @@ Registrar esquemas de datos y esquemas de datos de series temporales puede conte
 
 Los campos de identidad se pueden definir de dos formas dentro del esquema:
 
-1. Los esquemas de registro y series temporales contienen un campo especial, llamado `xdm:identityMap`, que puede contener un mapa de identidades.
+1. Los esquemas de registro y serie temporal contienen un campo especial, llamado `xdm:identityMap`, que puede contener un mapa de identidades.
 1. Los campos clave pueden marcarse como campos de identidad dentro del esquema.
 
 ### Campos de identidad dentro de la extensión de Adobe Experience Platform

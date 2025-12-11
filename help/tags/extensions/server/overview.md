@@ -2,18 +2,14 @@
 title: Referencia de extensiones de reenvío de eventos
 description: Busque documentación sobre las extensiones de reenvío de eventos en Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 18%
+source-wordcount: '119'
+ht-degree: 4%
 
 ---
 
 # Referencia de extensiones de reenvío de eventos
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -26,7 +22,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 
 >[!NOTE]
 >
->Cualquier nombre de extensión seguido de un asterisco (*) vincula al listado de la extensión en el Adobe Exchange, que contiene las instrucciones de instalación y uso. El resto de vínculos apuntan a la documentación de la extensión en Adobe Experience League.
+>Cualquier nombre de extensión seguido de un asterisco (*) vincula al listado de la extensión en Adobe Exchange, que contiene las instrucciones de instalación y uso. El resto de vínculos apuntan a la documentación de la extensión en Adobe Experience League.
 
 * [Conector de Adobe Experience Platform Cloud](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)

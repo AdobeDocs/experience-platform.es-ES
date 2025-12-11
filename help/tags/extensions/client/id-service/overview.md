@@ -2,18 +2,14 @@
 title: Información general sobre la extensión del servicio de identidad de Adobe Experience Cloud
 description: Obtenga información acerca de la extensión de etiquetas del servicio de identidad de Adobe Experience Cloud en Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '739'
 ht-degree: 95%
 
 ---
 
 # Información general sobre la extensión del servicio de identidad de Adobe Experience Cloud
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Utilice esta referencia para obtener información acerca de cómo configurar la extensión del Adobe Experience Cloud ID y las opciones disponibles al utilizar esta extensión para generar una regla.
 
@@ -23,9 +19,9 @@ Utilice esta extensión para integrar el servicio de identidad de Experience Clo
 
 Esta sección proporciona una referencia para las opciones disponibles al configurar la extensión Experience Cloud ID.
 
-Si la extensión Experience Cloud ID aún no está instalada, abra su propiedad, haga clic en **[!UICONTROL Extensiones > Catálogo]**, sitúe el cursor sobre la extensión Experience Cloud ID y, a continuación, haga clic en **[!UICONTROL Instalar]**.
+Si la extensión Experience Cloud ID aún no está instalada, abra su propiedad, seleccione **[!UICONTROL Extensions > Catalog]**, coloque el puntero por encima de la extensión Experience Cloud ID y seleccione **[!UICONTROL Install]**.
 
-Para configurar la extensión, abra la pestaña Extensiones, pase el puntero sobre la extensión y, a continuación, seleccione **[!UICONTROL Configurar]**.
+Para configurar la extensión, abra la pestaña Extensiones, pase el puntero por encima de la extensión y, a continuación, seleccione **[!UICONTROL Configure]**.
 
 ![](../../../images/optin.jpg)
 
@@ -43,7 +39,7 @@ El Experience Cloud ID no se carga si la dirección URL coincide con cualquiera 
 
 (Opcional) Habilite Regex si es una expresión regular.
 
-Seleccione **[!UICONTROL Añadir]** para excluir otra ruta.
+Seleccione **[!UICONTROL Add]** para excluir otra ruta.
 
 ### Opt-in
 
@@ -73,7 +69,7 @@ Utilice esta configuración opcional para especificar el dominio donde la cookie
 
 Especifique cuando la cookie Opt In caduca si el almacenamiento está habilitado, en segundos.
 
-Indique un número y, a continuación, seleccione una unidad de tiempo en la lista desplegable. Por ejemplo, introduzca 2 y seleccione **[!UICONTROL Semanas]**. El valor predeterminado es de 13 meses.
+Indique un número y, a continuación, seleccione una unidad de tiempo en la lista desplegable. Por ejemplo, introduzca 2 y seleccione **[!UICONTROL Weeks]**. El valor predeterminado es de 13 meses.
 
 **¿Permisos?**
 
@@ -117,5 +113,5 @@ Establezca uno o más ID de cliente.
    * Authenticated
    * Logged out
 
-1. (Opcional) Seleccione **[!UICONTROL Añadir]** para configurar más ID de cliente.
-1. Seleccione **[!UICONTROL Conservar cambios]**.
+1. (Opcional) Seleccione **[!UICONTROL Add]** para configurar más ID de cliente.
+1. Seleccione **[!UICONTROL Keep Changes]**.

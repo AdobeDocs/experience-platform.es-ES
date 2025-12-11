@@ -2,10 +2,10 @@
 title: Notas de la versión para etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 88%
+source-wordcount: '770'
+ht-degree: 87%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!IMPORTANT]
 >
->En adelante, las notas de la versión para etiquetas y reenvío de eventos ya no se proporcionarán en esta página. Consulte las [notas de la versión de Adobe Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest#data-collection) más recientes para obtener información detallada sobre las actualizaciones de etiquetas y reenvío de eventos.
+>En adelante, las notas de la versión para etiquetas y reenvío de eventos ya no se proporcionarán en esta página. Consulte las [notas de la versión de Adobe Experience Platform](/help/release-notes/latest/latest.md) más recientes para obtener información detallada sobre las actualizaciones de etiquetas y reenvío de eventos.
 
 ## 26 de abril de 2023
 
@@ -45,7 +45,7 @@ Se han publicado nuevas extensiones:
    1. Propiedades, reglas y elementos de datos recientes
    1. Extensiones populares
    1. Nuevas actualizaciones de la extensión con una función de instalación rápida
-* **Enviar datos a [!DNL Google Ads] con el reenvío de eventos**: ahora puede utilizar la extensión de la API [[!DNL Google Ads Enhanced Conversions] &#x200B;](../extensions/server/google-ads-enhanced-conversions/overview.md) para el reenvío de eventos, junto con [Secretos de Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2), para enviar de forma segura los datos del lado del servidor a [!DNL Google Ads] en tiempo real.
+* **Enviar datos a [!DNL Google Ads] con el reenvío de eventos**: ahora puede utilizar la extensión de la API [[!DNL Google Ads Enhanced Conversions] ](../extensions/server/google-ads-enhanced-conversions/overview.md) para el reenvío de eventos, junto con [Secretos de Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2), para enviar de forma segura los datos del lado del servidor a [!DNL Google Ads] en tiempo real.
 
 ## 23 de noviembre de 2022
 
@@ -63,12 +63,12 @@ Se han publicado nuevas extensiones:
 
 * **Integración de navegación izquierda de Adobe Experience Platform**: todas las funcionalidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas y el reenvío de eventos) ahora también están disponibles a través de la navegación izquierda en la IU de Experience Platform, en la categoría **[!UICONTROL Data Collection]**. Esto elimina la necesidad de cambiar entre IU al trabajar con funciones de recopilación de datos en Experience Platform.
 * **Atribución de usuario en etiquetas y reenvío de eventos**: al enumerar propiedades disponibles en las etiquetas y el reenvío de eventos, cada propiedad enumerada ahora muestra cuándo se actualizó por última vez y quién lo hizo.
-* Extensión **[[!DNL Snap Conversions API] &#x200B;](https://exchange.adobe.com/apps/ec/108550) para el reenvío de eventos**: ahora puede enviar datos a [!DNL Snapchat Conversions API] mediante una extensión de [reenvío de eventos](../../tags/ui/event-forwarding/overview.md). Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html).
+* Extensión **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) para el reenvío de eventos**: ahora puede enviar datos a [!DNL Snapchat Conversions API] mediante una extensión de [reenvío de eventos](../../tags/ui/event-forwarding/overview.md). Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 27 de julio de 2022
 
 * El acceso a las capacidades de etiquetas y reenvío de eventos ahora se administra mediante Adobe Admin Console en la tarjeta para la recopilación de datos de Adobe Experience Platform. Para obtener más información, consulte la guía de [Permisos de recopilación de datps](../../collection/permissions.md).
-* La compatibilidad con Internet Explorer 10 y 11 ha quedado [obsoleta](../ie-deprecation.md).
+* La compatibilidad con Internet Explorer 10 y 11 ha quedado obsoleta.
 
 ## 22 de junio de 2022
 

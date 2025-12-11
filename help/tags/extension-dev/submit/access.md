@@ -2,18 +2,14 @@
 title: Conceder acceso al usuario
 description: Configure las cuentas de usuario y los permisos de etiquetas de los integrantes del equipo en Adobe Experience Platform.
 exl-id: c7235e50-13b3-4487-b171-873063875621
-source-git-commit: b0615a2fd2bd9d9dd729d506f71ce4a91c64a4fd
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 27%
+source-wordcount: '171'
+ht-degree: 18%
 
 ---
 
 # Conceder acceso al usuario
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Antes de comenzar a usar `extension_package`, debe configurar los integrantes del equipo con cuentas de usuario y permisos.  Esto se hace en [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -23,4 +19,4 @@ Para que un usuario pueda acceder a las funciones de las etiquetas, un administr
 
 ## Confirmación de aprovisionamiento
 
-Una vez que se haya proporcionado a su compañía acceso a las etiquetas y se hayan configurado los usuarios como se ha descrito anteriormente, deberá poder acceder a la IU de recopilación de datos y a la IU del Experience Platform desde el [tablero de Adobe Experience Cloud](https://experience.adobe.com/). Si sigue sin poder acceder a ninguna de las interfaces después de completar los pasos anteriores, póngase en contacto con el equipo de la cuenta de Adobe o con el Servicio de atención al cliente.
+Una vez que se haya proporcionado a su compañía acceso a las etiquetas y se hayan configurado los usuarios como se ha descrito anteriormente, deberá poder acceder a la IU de recopilación de datos y a la IU de Experience Platform desde el [tablero de Adobe Experience Cloud](https://experience.adobe.com/). Si sigue sin poder acceder a ninguna de las interfaces después de completar los pasos anteriores, póngase en contacto con el equipo de la cuenta de Adobe o con el Servicio de atención al cliente.

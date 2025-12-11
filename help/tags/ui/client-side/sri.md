@@ -2,18 +2,14 @@
 title: Ayuda sobre Integridad de los subrecursos (SRI)
 description: Conozca cómo se admite la Integridad de los subrecursos (SRI) en Adobe Experience Platform.
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 96%
+source-wordcount: '549'
+ht-degree: 100%
 
 ---
 
 # Ayuda sobre Integridad de los subrecursos (SRI)
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Este documento cubre cómo se admite la Integridad de los subrecursos (SRI) en Adobe Experience Platform.
 

@@ -2,18 +2,14 @@
 title: Información general sobre la extensión Cloud Connector
 description: Obtenga información acerca de la extensión de reenvío de eventos de Cloud Connector en Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 75%
+source-wordcount: '1636'
+ht-degree: 74%
 
 ---
 
 # Información general sobre la extensión Cloud Connector
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 La extensión de Cloud Connector para reenvío de eventos permite crear solicitudes HTTP personalizadas para enviar datos a un destino o recuperar datos de un destino. La extensión de conector de nube es como tener Postman en Adobe Experience Platform Edge Network y se puede usar para enviar datos a un punto final que aún no tiene una extensión dedicada.
 

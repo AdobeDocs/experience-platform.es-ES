@@ -2,18 +2,14 @@
 title: Versiones
 description: Obtenga información acerca del concepto de las compilaciones y cómo funcionan en Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '746'
 ht-degree: 86%
 
 ---
 
 # Versiones
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 Una compilación es el conjunto de archivos que contiene todo el código que se ejecuta en el dispositivo cliente.
 

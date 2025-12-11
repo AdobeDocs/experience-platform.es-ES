@@ -2,18 +2,14 @@
 title: Tipos de elementos de datos para extensiones de Edge
 description: Obtenga información sobre cómo definir un módulo de biblioteca de tipo de elemento de datos para una extensión de etiqueta en una propiedad Edge.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 51%
+source-wordcount: '394'
+ht-degree: 50%
 
 ---
 
 # Tipos de elementos de datos en extensiones de Edge
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En las etiquetas, los elementos de datos son alias de datos de una página web o móvil, independientemente de dónde se encuentren dichos datos dentro del evento que recibe el servidor. Las reglas pueden hacer referencia a un elemento de datos y este puede actuar como una abstracción para acceder a estos fragmentos de datos. Cuando la ubicación de los datos cambie en el futuro (por ejemplo, cambiando la clave del evento que contiene el valor), se puede volver a configurar un único elemento de datos y mantener sin cambios a todas las reglas que hacen referencia a dicho elemento de datos.
 
@@ -29,7 +25,7 @@ Este documento explica cómo definir tipos de elementos de datos para una extens
 
 Los tipos de elementos de datos suelen consistir en lo siguiente:
 
-1. Vista que se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos, y que permite a los usuarios modificar la configuración del elemento de datos.
+1. Vista que se muestra dentro de la interfaz de usuario de Experience Platform y de la recopilación de datos, y que permite a los usuarios modificar la configuración del elemento de datos.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y recuperar fragmentos de datos.
 
 Si desea permitir que los usuarios recuperen un fragmento de datos de la capa de datos personalizada, su módulo puede tener el aspecto de este ejemplo.

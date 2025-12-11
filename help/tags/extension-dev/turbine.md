@@ -2,18 +2,14 @@
 title: Variable gratuita turbine
 description: Obtenga información acerca del objeto turbine, una variable gratuita que proporciona información y utilidades específicas del tiempo de ejecución de la etiqueta de Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 86%
+source-wordcount: '561'
+ht-degree: 88%
 
 ---
 
 # Variable gratuita Turbine
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 El objeto `turbine` es una &quot;variable gratuita&quot; que entra en el ámbito de los módulos de biblioteca de su extensión. Esta variable proporciona información y utilidades específicas al tiempo de ejecución de la etiqueta de Adobe Experience Platform y siempre está disponible para los módulos de biblioteca sin utilizar `require()`.
 
@@ -112,7 +108,7 @@ Recupera un módulo que se ha compartido desde otra extensión. Si no se encuent
 turbine.logger.error('Error!');
 ```
 
-Utilidad de registro utilizada para registrar mensajes en la consola. Los mensajes solo se mostrarán en la consola si el usuario ha activado la depuración. La manera recomendada de activar la depuración es usar el [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Como alternativa, el usuario puede ejecutar el siguiente comando `_satellite.setDebug(true)` en la consola de desarrollo del explorador. El registrador tiene los métodos siguientes:
+Utilidad de registro utilizada para registrar mensajes en la consola. Los mensajes solo se mostrarán en la consola si el usuario ha activado la depuración. La manera recomendada de activar la depuración es usar [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Como alternativa, el usuario puede ejecutar el siguiente comando `_satellite.setDebug(true)` en la consola de desarrollo del explorador. El registrador tiene los métodos siguientes:
 
 * `logger.log(message: string)`: Registra un mensaje en la consola.
 * `logger.info(message: string)`: Registra un mensaje informativo en la consola.

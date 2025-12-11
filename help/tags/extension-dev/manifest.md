@@ -2,18 +2,14 @@
 title: Manifiesto de extensión
 description: Obtenga información sobre cómo configurar un archivo de manifiesto JSON que informe a Adobe Experience Platform sobre cómo utilizar correctamente su extensión.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2652'
+source-wordcount: '2607'
 ht-degree: 84%
 
 ---
 
 # Manifiesto de extensión
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 En el directorio base de la extensión debe crear un archivo llamado `extension.json`. Contiene detalles esenciales sobre su extensión que permiten a Adobe Experience Platform consumirla correctamente. Algunos de los contenidos se forman siguiendo [npm `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -75,20 +71,20 @@ El objeto de configuración debe estructurarse de la siguiente manera:
       <td><code>schema</code></td>
       <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto válido que se está guardando desde la vista de configuración de la extensión. Dado que usted es el desarrollador de la vista de configuración, es su responsabilidad asegurarse de que cualquier objeto de configuración guardado coincida con este esquema. Este esquema también se utilizará para la validación cuando los usuarios intenten guardar datos mediante los servicios de Experience Platform.<br><br>A continuación, se muestra un objeto de esquema de ejemplo:
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Recomendamos utilizar una herramienta como <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> para probar manualmente el esquema.</td>
     </tr>
@@ -135,20 +131,20 @@ Una definición de tipo es un objeto que se utiliza para describir un evento, un
       <td><code>schema</code></td>
       <td>Un objeto de <a href="https://json-schema.org/">esquema JSON</a> que describe el formato de un objeto de configuración válido que el usuario puede guardar. Por lo general, el usuario configura y guarda la configuración a través de la interfaz de usuario de recopilación de datos. En estos casos, la vista de la extensión puede realizar los pasos necesarios para validar la configuración proporcionada por el usuario. Por otro lado, algunos usuarios eligen utilizar API de etiquetas directamente sin la ayuda de ninguna interfaz de usuario. El propósito de este esquema es permitir que Experience Platform valide correctamente que los objetos de configuración guardados por los usuarios, independientemente de si se utiliza una interfaz de usuario, están en un formato compatible con el módulo de biblioteca que actuará en el objeto de configuración durante la ejecución.<br><br>A continuación, se muestra un objeto de esquema de ejemplo:<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Recomendamos utilizar una herramienta como <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> para probar manualmente el esquema.</td>
     </tr>

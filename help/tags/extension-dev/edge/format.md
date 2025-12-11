@@ -2,18 +2,14 @@
 title: Módulos de biblioteca de extensiones de Edge
 description: Formato de módulos de biblioteca para extensiones de etiqueta en una propiedad Edge.
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 93%
+source-wordcount: '256'
+ht-degree: 99%
 
 ---
 
 # Módulos de biblioteca de extensiones de Edge
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 >[!IMPORTANT]
 >

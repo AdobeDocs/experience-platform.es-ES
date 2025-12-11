@@ -2,20 +2,16 @@
 title: Información general sobre etiquetas
 description: Las etiquetas de Adobe Experience Platform son la próxima generación de funcionalidades de administración de etiquetas de Adobe. Las etiquetas ofrecen a los clientes una alternativa sencilla para implementar y administrar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 92%
+source-wordcount: '550'
+ht-degree: 91%
 
 ---
 
 # Información general sobre etiquetas
 
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](./term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
-
-Las etiquetas de Adobe Experience Platform son la próxima generación de funcionalidades de administración de etiquetas de Adobe. Las etiquetas ofrecen a los clientes una alternativa sencilla para implementar y administrar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
+Las etiquetas de Adobe Experience Platform (anteriormente, Adobe Experience Platform Launch) son la función de administración de etiquetas de próxima generación de Adobe. Las etiquetas ofrecen a los clientes una alternativa sencilla para implementar y administrar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 
 Las etiquetas ofrecen a los usuarios las herramientas necesarias para desarrollar y mantener sus propias integraciones, que se denominan *extensiones*. Los clientes de [!DNL Adobe Experience Cloud] pueden encontrar estas extensiones en las tiendas de aplicaciones para instalar, configurar e implementar rápidamente sus etiquetas.
 

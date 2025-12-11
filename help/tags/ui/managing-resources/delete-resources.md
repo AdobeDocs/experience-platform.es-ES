@@ -2,18 +2,14 @@
 title: Eliminación de recursos
 description: Obtenga información sobre cómo eliminar recursos en Adobe Experience Platform.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 90%
+source-wordcount: '512'
+ht-degree: 93%
 
 ---
 
 # Eliminación de recursos
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 La eliminación de un recurso es la eliminación permanente de ese recurso de Adobe Experience Platform. Si desea quitar un recurso de una biblioteca de etiquetas específica, pero desea que el recurso esté disponible para su uso en otras bibliotecas, consulte la guía sobre [eliminación de recursos de una biblioteca](remove-resources-from-library.md).
 
@@ -78,4 +74,4 @@ Para poder eliminar un recurso, debe eliminarlo de las bibliotecas que lo conten
 
 ## Elimine un recurso
 
-En la vista de la lista adecuada, seleccione el recurso que desee eliminar y, a continuación, seleccione **[!UICONTROL Eliminar]**.
+En la vista de la lista adecuada, seleccione el recurso que desee eliminar y, a continuación, seleccione **[!UICONTROL Delete]**.

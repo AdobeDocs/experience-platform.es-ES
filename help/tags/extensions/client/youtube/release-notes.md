@@ -2,18 +2,14 @@
 title: Notas de la versión de la extensión YouTube Video Tracking
 description: Últimas notas de la versión de la extensión de la etiqueta de seguimiento de YouTube Video en Adobe Experience Platform.
 exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 86%
+source-wordcount: '93'
+ht-degree: 100%
 
 ---
 
 # Notas de la versión de la extensión YouTube Video Tracking
-
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
 ## 4 de junio de 2021
 

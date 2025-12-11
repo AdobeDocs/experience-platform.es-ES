@@ -3,10 +3,10 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información sobre el reenvío de eventos en Adobe Experience Platform, que le permite utilizar Experience Platform Edge Network para ejecutar tareas sin cambiar la implementación de las etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 9%
+source-wordcount: '1144'
+ht-degree: 5%
 
 ---
 
@@ -16,11 +16,7 @@ ht-degree: 9%
 >
 >El reenvío de eventos es una función de pago que se incluye como parte de las ofertas de Adobe Real-Time Customer Data Platform Connections, Prime o Ultimate.
 
->[!NOTE]
->
->Adobe Experience Platform Launch se ha convertido en un grupo de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
-
-El reenvío de eventos en Adobe Experience Platform permite enviar datos de evento recopilados a un destino para el procesamiento en el servidor. El reenvío de eventos reduce el peso de páginas web y aplicaciones mediante Adobe Experience Platform Edge Network para ejecutar tareas que se realizan normalmente en el cliente. Las reglas de reenvío de eventos se implementan de forma similar a las etiquetas y pueden transformar y enviar datos a nuevos destinos, pero en lugar de enviar estos datos desde una aplicación cliente, como un explorador web, se envían desde los servidores de Adobe.
+El reenvío de eventos en Adobe Experience Platform (anteriormente conocido como Adobe Experience Platform Launch del lado del servidor) le permite enviar datos de evento recopilados a un destino para el procesamiento en el lado del servidor. El reenvío de eventos reduce el peso de páginas web y aplicaciones mediante Adobe Experience Platform Edge Network para ejecutar tareas que se realizan normalmente en el cliente. Las reglas de reenvío de eventos se implementan de forma similar a las etiquetas y pueden transformar y enviar datos a nuevos destinos, pero en lugar de enviar estos datos desde una aplicación cliente, como un explorador web, se envían desde los servidores de Adobe.
 
 Este documento proporciona información general de alto nivel sobre el reenvío de eventos en Experience Platform.
 
@@ -30,7 +26,7 @@ Este documento proporciona información general de alto nivel sobre el reenvío 
 >
 >Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Experience Platform, consulte la [descripción general de la recopilación de datos](/help/collection/home.md).
 
-El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=es) ofrece las siguientes ventajas:
+El reenvío de eventos combinado con el Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
 
 **Rendimiento**:
 
