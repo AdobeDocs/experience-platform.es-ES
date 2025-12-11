@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre gobernanza de datos
 description: Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9b1630a4876c0bcd7331f8da264e4f19ce00b59a
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 9%
+source-wordcount: '1656'
+ht-degree: 8%
 
 ---
 
@@ -132,8 +132,12 @@ En la tabla siguiente se describen los términos clave relacionados con la gober
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender el marco de trabajo de control de datos.
 
->[!VIDEO](https://video.tv.adobe.com/v/32682?captions=spa&quality=12&enable10seconds=on&speedcontrol=on)
+>[!IMPORTANT]
+>
+>El vídeo hace referencia a la aplicación de etiquetas a campos de conjuntos de datos individuales. Este flujo de trabajo ha quedado obsoleto. [Las etiquetas deben aplicarse ahora en el nivel de campo de esquema](./e2e.md#labels). Los conceptos del vídeo siguen siendo precisos, pero el flujo de trabajo de etiquetado ha cambiado.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 En el siguiente vídeo se explica cómo aplicar etiquetas de uso de datos a los esquemas o a la totalidad de un conjunto de datos en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422794/?captions=spa&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
