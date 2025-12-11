@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 216621652697c378164125a6d0e125a33ee008be
+source-git-commit: 0b607decfa687f89c74fb81055ac2bf4cc54d59b
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Esta página proporciona límites predeterminados de uso y velocidad con respecto al comportamiento de activación. Al revisar las siguientes protecciones, se supone que se ha [conectado correctamente a los destinos](/help/destinations/ui/connect-destination.md).
 
@@ -177,7 +177,7 @@ Obtenga más información sobre la [exportación de conjuntos de datos](/help/de
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
 | Número máximo de [destinos personalizados privados](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Protección de rendimiento | Puede crear un máximo de 5 destinos privados por lotes o de flujo continuo personalizados con Destination SDK. Póngase en contacto con un representante de atención personalizada si necesita crear más de 5 de estos destinos. |
-| Directiva de exportación de perfiles para Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 1800 y máximo 3600)</li><li>`maxNumEventsInBatch` (mínimo 1000 y máximo 10 000)</li></ul> | Protección impuesta por el sistema | Cuando uses la opción [agregación configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para tu destino, ten en cuenta los valores mínimos y máximos que determinan la frecuencia con la que los mensajes HTTP se envían a tu destino basado en API y cuántos perfiles deben incluir los mensajes. |
+| Directiva de exportación de perfiles para Destination SDK | <ul><li>`maxBatchAgeInSecs` (mínimo 301 y máximo 3.600)</li><li>`maxNumEventsInBatch` (mínimo 1000 y máximo 10 000)</li></ul> | Protección impuesta por el sistema | Cuando uses la opción [agregación configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) para tu destino, ten en cuenta los valores mínimos y máximos que determinan la frecuencia con la que los mensajes HTTP se envían a tu destino basado en API y cuántos perfiles deben incluir los mensajes. |
 | Duración del token de OAuth 2 para Destination SDK | Mínimo de 24 horas recomendado | Protección de rendimiento | Para destinos que utilizan la [autorización de OAuth 2](/help/destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md), Adobe recomienda establecer los valores de duración del token de acceso en un mínimo de 24 horas. Las conexiones con tokens que tengan una duración inferior a 1 hora provocarán que los perfiles se pierdan durante la activación. |
 
 {style="table-layout:auto"}
@@ -197,7 +197,7 @@ Detalles sobre los umbrales de restricción o las limitaciones para determinados
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
