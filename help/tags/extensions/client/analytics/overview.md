@@ -357,7 +357,7 @@ Si lo desea, configure jerarquías adicionales.
 
 #### Nombre de la página
 
-Este valor hace referencia al nombre de una página determinada y corresponde a la variable [`pageName` ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) de Analytics.
+Este valor hace referencia al nombre de una página determinada y corresponde a la variable [`pageName` &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) de Analytics.
 
 >[!IMPORTANT]
 >

@@ -45,7 +45,7 @@ Se han publicado nuevas extensiones:
    1. Propiedades, reglas y elementos de datos recientes
    1. Extensiones populares
    1. Nuevas actualizaciones de la extensión con una función de instalación rápida
-* **Enviar datos a [!DNL Google Ads] con el reenvío de eventos**: ahora puede utilizar la extensión de la API [[!DNL Google Ads Enhanced Conversions] ](../extensions/server/google-ads-enhanced-conversions/overview.md) para el reenvío de eventos, junto con [Secretos de Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2), para enviar de forma segura los datos del lado del servidor a [!DNL Google Ads] en tiempo real.
+* **Enviar datos a [!DNL Google Ads] con el reenvío de eventos**: ahora puede utilizar la extensión de la API [[!DNL Google Ads Enhanced Conversions] &#x200B;](../extensions/server/google-ads-enhanced-conversions/overview.md) para el reenvío de eventos, junto con [Secretos de Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2), para enviar de forma segura los datos del lado del servidor a [!DNL Google Ads] en tiempo real.
 
 ## 23 de noviembre de 2022
 
@@ -63,7 +63,7 @@ Se han publicado nuevas extensiones:
 
 * **Integración de navegación izquierda de Adobe Experience Platform**: todas las funcionalidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas y el reenvío de eventos) ahora también están disponibles a través de la navegación izquierda en la IU de Experience Platform, en la categoría **[!UICONTROL Data Collection]**. Esto elimina la necesidad de cambiar entre IU al trabajar con funciones de recopilación de datos en Experience Platform.
 * **Atribución de usuario en etiquetas y reenvío de eventos**: al enumerar propiedades disponibles en las etiquetas y el reenvío de eventos, cada propiedad enumerada ahora muestra cuándo se actualizó por última vez y quién lo hizo.
-* Extensión **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) para el reenvío de eventos**: ahora puede enviar datos a [!DNL Snapchat Conversions API] mediante una extensión de [reenvío de eventos](../../tags/ui/event-forwarding/overview.md). Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html).
+* Extensión **[[!DNL Snap Conversions API] &#x200B;](https://exchange.adobe.com/apps/ec/108550) para el reenvío de eventos**: ahora puede enviar datos a [!DNL Snapchat Conversions API] mediante una extensión de [reenvío de eventos](../../tags/ui/event-forwarding/overview.md). Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 27 de julio de 2022
 
