@@ -3,14 +3,20 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
+source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2293'
 ht-degree: 16%
 
 ---
 
 # Guía de IU de composición de audiencia
+
+>[!BEGINSHADEBOX]
+
+Si es cliente de Adobe Journey Optimizer, lea la [guía de introducción a la composición de audiencias](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) en la documentación de Adobe Journey Optimizer para obtener más información sobre cómo trabajar con la composición de audiencias en ese contexto.
+
+>[!ENDSHADEBOX]
 
 >[!AVAILABILITY]
 >
@@ -74,7 +80,7 @@ Para añadir audiencias al bloque Audiencia. seleccione **[!UICONTROL Add Audien
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que solo aparecerán **1&rbrace; audiencias definidas mediante la política de combinación predeterminada.**
+>Tenga en cuenta que solo aparecerán **1} audiencias definidas mediante la política de combinación predeterminada.**
 >
 >Además, solo se pueden usar **audiencias publicadas** creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencias y audiencias generadas externamente están disponibles **no**.
 
