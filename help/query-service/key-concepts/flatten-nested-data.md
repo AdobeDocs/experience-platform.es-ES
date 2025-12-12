@@ -3,10 +3,10 @@ keywords: Experience Platform;servicio de consultas;servicio de consultas;estruc
 title: Acoplar estructuras de datos anidadas para usarlas con herramientas de BI
 description: En este documento se explica cómo acoplar esquemas XDM para todas las tablas y vistas durante una sesión al utilizar herramientas de BI de terceros con el servicio de consulta.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fc98b111aa15cdeb64eacdc05cac33a00ee98d80
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 0%
+source-wordcount: '854'
+ht-degree: 1%
 
 ---
 
@@ -42,19 +42,19 @@ Al conectarse al servicio de consultas con el cliente de terceros elegido, anexe
 
 La entrada debe tener el siguiente formato:
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 Un ejemplo de cadena de conexión puede tener el siguiente aspecto:
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
 ## Ejemplo {#example}
 
-El esquema de ejemplo utilizado en esta guía emplea el grupo de campos estándar [!UICONTROL Commerce Details], que utiliza la estructura de objetos `commerce` y la matriz `productListItems`. Consulte la documentación de XDM para obtener [más información sobre el grupo de campos [!UICONTROL Detalles de Commerce]](../../xdm/field-groups/event/commerce-details.md). En la siguiente imagen se puede ver una representación de la estructura del esquema.
+El esquema de ejemplo utilizado en esta guía emplea el grupo de campos estándar [!UICONTROL Commerce Details], que utiliza la estructura de objetos `commerce` y la matriz `productListItems`. Consulte la documentación de XDM para obtener [más información sobre el grupo de campos [!UICONTROL Commerce Details]](../../xdm/field-groups/event/commerce-details.md). En la siguiente imagen se puede ver una representación de la estructura del esquema.
 
 ![Un diagrama de esquema del grupo de campos Detalles de Commerce que incluye las estructuras `commerce` y `productListItems`.](../images/key-concepts/commerce-details.png)
 
@@ -62,13 +62,13 @@ Si la herramienta de BI no admite estructuras de datos anidadas, puede resultar 
 
 Los siguientes valores representan `commerce.order.priceTotal` (3018.0), `commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180) y `commerce.purchases.value`(1.0) en campos anidados con formato incorrecto.
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 Si usa la configuración `FLATTEN`, puede tener acceso a campos independientes dentro del esquema o a secciones completas de la estructura de datos anidada mediante la notación de puntos y su nombre de ruta original. A continuación se muestra un ejemplo de este formato utilizando el grupo de campos `commerce`.
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value
@@ -113,6 +113,6 @@ Para resolver las limitaciones de Mapa y Matriz, debe utilizar las herramientas 
 
 Las herramientas de BI como la edición de SQL sin procesar son necesarias para resolver las limitaciones de asignaciones y matrices. Consulte la guía sobre cómo [usar las opciones avanzadas de Power BI para escribir una consulta SQL personalizada](../clients/power-bi.md#import-tables-using-custom-sql) en la sección de instrucciones SQL.
 
-## Pasos siguientes
+## Próximos pasos
 
 En este documento se explica cómo aplanar las estructuras de datos anidadas para utilizarlas con herramientas de BI de terceros. Si aún no ha conectado a su cliente, consulte [la descripción general de la conexión de cliente](../clients/overview.md) para obtener una lista de clientes de terceros admitidos.
