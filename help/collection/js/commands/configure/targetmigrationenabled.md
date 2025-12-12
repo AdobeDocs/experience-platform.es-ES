@@ -2,18 +2,20 @@
 title: targetMigrationEnabled
 description: Permitir que Web SDK lea y escriba cookies de Adobe Target.
 exl-id: 4b9203c6-31b7-45af-a6a6-a206d7edac3f
-source-git-commit: dade74bf4a5cfd7b60eaf216583deb67b93a61db
+source-git-commit: 051374def898d3797711525c5343e0a8454970a2
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
 # `targetMigrationEnabled`
 
-La propiedad `targetMigrationEnabled` es un booleano que permite a Web SDK leer y escribir las cookies [`mbox` y `mboxEdgeCluster`](https://experienceleague.adobe.com/es/docs/core-services/interface/data-collection/cookies/web-sdk) que utilizan las bibliotecas Adobe Target 1.x y 2.x. Esta opción le permite conservar el perfil del visitante entre páginas que utilizan implementaciones anteriores de Adobe Target y páginas que utilizan Web SDK.
+La propiedad `targetMigrationEnabled` es un booleano que permite a Web SDK leer y escribir las cookies [`mbox` y `mboxEdgeCluster`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) que utilizan las bibliotecas Adobe Target 1.x y 2.x. Esta opción le permite conservar el perfil del visitante entre páginas que utilizan implementaciones anteriores de Adobe Target y páginas que utilizan Web SDK.
 
 Establezca el booleano `targetMigrationEnabled` al ejecutar el comando `configure`. Si omite esta propiedad al configurar Web SDK, el valor predeterminado es `false`. Establezca este valor en `true` si tiene algunas páginas que todavía usan las bibliotecas Adobe Target 1.x o 2.x.
+
+Cuando use esta propiedad, asegúrese de habilitar también [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) en `targetGlobalSettings()` en su implementación de Adobe Target.
 
 ```js
 alloy("configure", {
