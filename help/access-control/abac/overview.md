@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 14028928362d8396c30babfc2279135011dd7c6f
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1929'
 ht-degree: 13%
 
 ---
@@ -24,7 +24,7 @@ Mediante el control de acceso basado en atributos, los administradores de su org
 
 El siguiente vídeo tiene como objetivo facilitar la comprensión del control de acceso basado en atributos y describe cómo configurar funciones, recursos y directivas.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451831?learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminología de control de acceso basado en atributos
 
@@ -80,7 +80,7 @@ Para obtener más información sobre el control de acceso, vea la [descripción 
 
 ### Destinos {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+Los [!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 Como administrador, puede utilizar las funcionalidades de control de acceso basadas en atributos para lo siguiente:
 
@@ -122,7 +122,7 @@ Para obtener más información sobre el perfil, consulte [Información general d
 
 ### Servicio de segmentación
 
-[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de serie temporal que representen las interacciones de los clientes con su marca.
 
 Como administrador, puede utilizar las funcionalidades de control de acceso basadas en atributos para lo siguiente:
 
@@ -141,3 +141,9 @@ Con el control de acceso basado en atributos, puede:
 * Configure el acceso de los usuarios a campos de esquema XDM específicos según los conjuntos de permisos aplicados a las funciones asignadas a los usuarios.
 
 Para obtener más información sobre XDM, consulte la [descripción general de XDM](../../xdm/home.md).
+
+### Customer Journey Analytics (CJA)
+
+Los permisos de acceso de Customer Journey Analytics (CJA) se administran en el nivel de aplicación en CJA. CJA utiliza sus propios controles de acceso basados en atributos y no hereda ni aplica los controles de acceso basados en atributos definidos en Adobe Experience Platform.
+
+Para obtener más información sobre el control de acceso de CJA, consulte la [documentación sobre el control de acceso de CJA](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control).
