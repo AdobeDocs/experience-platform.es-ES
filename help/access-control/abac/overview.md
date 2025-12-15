@@ -146,4 +146,4 @@ Para obtener más información sobre XDM, consulte la [descripción general de X
 
 Los permisos de acceso de Customer Journey Analytics (CJA) se administran en el nivel de aplicación en CJA. CJA utiliza sus propios controles de acceso basados en atributos y no hereda ni aplica los controles de acceso basados en atributos definidos en Adobe Experience Platform.
 
-Para obtener más información sobre el control de acceso de CJA, consulte la [documentación sobre el control de acceso de CJA](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control).
+Para obtener más información sobre el control de acceso de CJA, consulte la [documentación sobre el control de acceso de CJA](https://experienceleague.adobe.com/es/docs/analytics-platform/using/technotes/access-control).
