@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
+user-guide-title: Ayuda del Servicio de consultas de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
