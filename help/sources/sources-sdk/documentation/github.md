@@ -17,7 +17,7 @@ Este documento proporciona pasos sobre cómo utilizar la interfaz web de GitHub 
 
 >[!TIP]
 >
->Los siguientes documentos de la guía de contribución de Adobe se pueden utilizar para respaldar aún más su proceso de documentación: <ul><li>[Instalar las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar el repositorio Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Los siguientes documentos de la guía de contribución de Adobe se pueden utilizar para respaldar aún más su proceso de documentación: <ul><li>[Instalar las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=es)</li><li>[Configurar el repositorio Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=es)</li><li>[Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=es)</li></ul>
 
 ## Configuración del entorno de GitHub
 
@@ -33,11 +33,11 @@ Una vez completada la bifurcación, selecciona **main** e ingresa un nombre para
 
 ![create-branch](../assets/create-branch.png)
 
-En la estructura de carpetas de GitHub del repositorio ramificado, vaya a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) y, a continuación, seleccione la categoría adecuada para el origen en la lista. Por ejemplo, si está creando documentación para un nuevo origen de CRM, seleccione **crm**.
+En la estructura de carpetas de GitHub del repositorio ramificado, vaya a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.es-ES/tree/main/help/sources/tutorials/api/create) y, a continuación, seleccione la categoría adecuada para el origen en la lista. Por ejemplo, si está creando documentación para un nuevo origen de CRM, seleccione **crm**.
 
 >[!TIP]
 >
->Si está creando documentación para la interfaz de usuario, vaya a [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) y seleccione la categoría adecuada para el origen. Para agregar tus imágenes, ve a [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) y luego agrega tus capturas de pantalla a la carpeta `sdk`.
+>Si está creando documentación para la interfaz de usuario, vaya a [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.es-ES/tree/main/help/sources/tutorials/ui/create) y seleccione la categoría adecuada para el origen. Para agregar tus imágenes, ve a [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.es-ES/tree/main/help/sources/images/tutorials/create) y luego agrega tus capturas de pantalla a la carpeta `sdk`.
 
 ![crm](../assets/crm.png)
 
@@ -77,6 +77,6 @@ Asegúrese de que las ramas base y de comparación son correctas. Agregue una no
 
 En este punto, aparece una notificación que le solicita que firme el Acuerdo de licencia para colaboradores (CLA) de Adobe. Este es un paso obligatorio. Después de firmar el CLA, actualice la página PR y envíe la solicitud de extracción.
 
-Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la pestaña solicitudes de extracción en https://github.com/AdobeDocs/experience-platform.en.
+Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la pestaña solicitudes de extracción en https://github.com/AdobeDocs/experience-platform.es-ES.
 
 ![confirmar-pr](../assets/confirm-pr.png)
