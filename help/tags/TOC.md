@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '825'
 ht-degree: 43%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 43%
    * [Seguridad de capa de transporte](./ui/client-side/transport-layer-security.md)
 * Reenvío de eventos {#event-forwarding}
    * [Información general](./ui/event-forwarding/overview.md)
-   * [Primeros pasos](./ui/event-forwarding/getting-started.md)
+   * [Introducción](./ui/event-forwarding/getting-started.md)
    * [Configuración de secretos](./ui/event-forwarding/secrets.md)
    * [Monitorización (Beta)](./ui/event-forwarding/monitoring.md)
 * Administración {#admin}
@@ -105,7 +105,7 @@ ht-degree: 43%
          * [Información general](./extensions/client/platform-demo/overview.md)
       * SDK web de Adobe Experience Platform {#web-sdk}
          * [Información general](extensions/client/web-sdk/overview.md)
-         * [Primeros pasos](extensions/client/web-sdk/getting-started.md)
+         * [Introducción](extensions/client/web-sdk/getting-started.md)
          * Configurar {#configure}
             * [Información general](extensions/client/web-sdk/configure/config-overview.md)
             * [Componentes de compilación personalizados](extensions/client/web-sdk/configure/custom-build-components.md)
@@ -276,6 +276,8 @@ ht-degree: 43%
          * [Información general](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Información general](./extensions/server/mixpanel/overview.md)
+      * [!DNL Nextdoor] {#nextdoor}
+         * [Información general](./extensions/server/nextdoor/overview.md)
       * [Centro de decisiones de clientes de Pega](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Información general](./extensions/server/pinterest/overview.md)
@@ -297,7 +299,7 @@ ht-degree: 43%
          * [Información general](./extensions/server/zendesk/overview.md)
 * Desarrollo de extensiones {#extension-dev}
    * [Información general](./extension-dev/overview.md)
-   * [Primeros pasos](./extension-dev/getting-started.md)
+   * [Introducción](./extension-dev/getting-started.md)
    * [Navegadores admitidos](./extension-dev/browsers.md)
    * Proceso de envío {#submit}
       * [Información general](./extension-dev/submit/overview.md)
