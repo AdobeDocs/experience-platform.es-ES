@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de acceso;control de acceso basado en atributos;ABAC
 title: Control de acceso basado en atributos Administrar permisos de funciones
-description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
+description: Obtenga información sobre cómo configurar funciones a través de la interfaz Permisos en Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 157fb27ae492971a48ad62c2d6b3eddd674167f4
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1603'
 ht-degree: 17%
 
 ---
@@ -116,7 +116,7 @@ Para quitar un usuario de un rol, seleccione el icono **X** junto al nombre del 
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de una función nueva y a administrar usuarios para esa función.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475976/?captions=spa&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Administrar credenciales de API para un rol {#manage-api-credentials-for-role}
 
@@ -124,7 +124,7 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de un
 >id="platform_permissions_apicredentials_about"
 >title="¿Qué son las credenciales de API?"
 >abstract="Las credenciales de la API se asignan a funciones para conceder a los usuarios y desarrolladores acceso a las API de Experience Platform. Con las API de Experience Platform, puede realizar mediante programación operaciones CRUD básicas (crear, leer, actualizar, eliminar) en los datos, como, por ejemplo, configurar los atributos calculados, acceder a los datos o entidades, exportar datos, eliminar los datos o lotes innecesarios, etc."
->additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/landing/platform-apis/api-guide?lang=es" text="Guía de la API de Experience Platform"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide?lang=es" text="Guía de la API de Experience Platform"
 
 >[!IMPORTANT]
 >
@@ -160,7 +160,7 @@ Volverá a la ficha **[!UICONTROL API credentials]**.
 >id="platform_permissions_usergroups_about"
 >title="¿Qué son los grupos de usuario?"
 >abstract="Los grupos de usuarios son colecciones de varios usuarios que comparten el acceso a las mismas funciones. El acceso a los recursos de una organización se administra mediante las funciones asignadas a los grupos de usuarios."
->additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/access-control/abac/permissions-ui/roles?lang=es" text="Administrar funciones"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles?lang=es" text="Administrar funciones"
 
 Los grupos de usuarios son varios usuarios que se han agrupado y tienen acceso para ejecutar las mismas funciones.
 

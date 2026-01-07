@@ -1,213 +1,108 @@
 ---
 keywords: Experience Platform;inicio;temas populares;control de acceso;control de acceso basado en atributos;ABAC
 title: Administrar directivas de control de acceso
-description: Este documento proporciona información sobre la administración de directivas de control de acceso a través de la interfaz Permisos en Adobe Experience Cloud.
+description: Administre las políticas de control de acceso a través de la interfaz Permisos en Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
+source-git-commit: 2a26c8786adc412dc643c8a0c94b966e439e034b
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 11%
+source-wordcount: '725'
+ht-degree: 8%
 
 ---
 
 # Administrar directivas de control de acceso
 
-Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Las directivas de acceso pueden ser locales o globales, y pueden invalidar otras directivas. Adobe proporciona una directiva predeterminada que se puede activar inmediatamente o siempre que su organización esté lista para empezar a controlar el acceso a objetos específicos en función de las etiquetas. La directiva predeterminada aprovecha las etiquetas aplicadas a los recursos para denegar el acceso a menos que los usuarios tengan una función con una etiqueta coincidente.
+Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Adobe proporciona una directiva predeterminada que se puede activar inmediatamente o cuando su organización está lista para empezar a controlar el acceso a objetos específicos en función de [labels](./labels.md){target="_blank"}. La directiva predeterminada **[!UICONTROL Default-Label-Based-Access-Control-Policy]** aprovecha las etiquetas aplicadas a los recursos para denegar el acceso a menos que los usuarios tengan un rol con una etiqueta coincidente.
 
 >[!IMPORTANT]
 >
->Las políticas de acceso no se deben confundir con las políticas de uso de datos, que controlan cómo se utilizan los datos en Adobe Experience Platform en lugar de los usuarios de su organización que tienen acceso a ellos. Consulte la guía sobre la creación de [políticas de uso de datos](../../../data-governance/policies/create.md) para obtener más información.
+>Las políticas de control de acceso no deben confundirse con las políticas de uso de datos, que controlan cómo se utilizan los datos en Adobe Experience Platform. Consulte la guía sobre la creación de [políticas de uso de datos](../../../data-governance/policies/create.md){target="_blank"} para obtener más información.
 
-<!-- ## Create a new policy
+## Configuración de zonas protegidas para una directiva {#configure-policy}
 
-To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
-
-![flac-new-policy](../../images/flac-ui/flac-new-policy.png)
-
-The **[!UICONTROL Create a new policy]** dialog appears, prompting you to enter a name, and an optional description. When finished, select **[!UICONTROL Confirm]**.
-
-![flac-create-new-policy](../../images/flac-ui/flac-create-new-policy.png)
-
-Using the dropdown arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
-
-Next, select the resource that you would like to include in the policy using the dropdown menu and search access type, read or write.
-
-![flac-flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
-
-Next, using the dropdown arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
-
-Select the plus icon to **Add matches expression** or **Add expression group** for the resource. 
-
-![flac-policy-expression](../../images/flac-ui/flac-policy-expression.png)
-
-Using the dropdown, select the **Resource**.
-
-![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
-
-Next, using the dropdown select the **Matches**.
-
-![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
-
-Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
-
-![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
-
-Finally, select the **Sandbox** that you would like the policy conditions to apply to, using the dropdown menu.
-
-![flac-policy-sandboxes-dropdown](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
-
-Select **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
-
-![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
-
-The new policy is successfully created, and you are redirected to the **[!UICONTROL Policies]** tab, where you will see the newly created policy appear in the list. 
-
-![flac-policy-saved](../../images/flac-ui/flac-policy-saved.png)
-
-## Edit a policy
-
-To edit an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
-
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
-
-Next, select the ellipsis (`…`) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
-
-![flac-policy-edit](../../images/flac-ui/flac-policy-edit.png)
-
-The policy permissions screen appears. Make the updates then select **[!UICONTROL Save and exit]**.
-
-![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
-
-The policy is successfully updated, and you are redirected to the **[!UICONTROL Policies]** tab.
-
-## Duplicate a policy
-
-To duplicate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
-
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
-
-Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
-
-![flac-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
-
-The **[!UICONTROL Duplicate policy]** dialog appears, prompting you to confirm the duplication. 
-
-![flac-policy-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
-
-The new policy appears in the list as a copy of the original on the **[!UICONTROL Policies]** tab.
-
-![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
-
-## Delete a policy
-
-To delete an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
-
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
-
-Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
-
-![flac-policy-delete](../../images/flac-ui/flac-policy-delete.png)
-
-The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm the deletion. 
-
-![flac-policy-delete-confirm](../../images/flac-ui/flac-policy-delete-confirm.png)
-
-You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
-
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
-
-## Configurar la directiva de una zona protegida
-
->[!IMPORTANT]
->
->De manera predeterminada, la característica [!UICONTROL Auto-include] está activada para todos los clientes, lo que significa que todos los entornos limitados se agregan a la directiva.
+Las políticas se aplican en el nivel de zona protegida para controlar qué zonas protegidas aplican un control de acceso basado en etiquetas. De forma predeterminada, la característica **[!UICONTROL Auto-include]** está activada, lo que significa que todas las zonas protegidas actuales y futuras se agregan automáticamente a la directiva. Cuando **[!UICONTROL Auto-include]** está desactivado, solo las zonas protegidas que agregue manualmente estarán sujetas a las reglas de control de acceso de la directiva.
 
 >[!NOTE]
 >
 >La directiva **[!UICONTROL Default-Label-Based-Access-Control-Policy]** es la única disponible actualmente para la configuración.
 
-Para ver las zonas protegidas asociadas a una directiva, seleccione la directiva en la pestaña **[!UICONTROL Policies]**.
+Para comenzar a configurar las zonas protegidas de una directiva, vaya a **[!UICONTROL Permissions]** en [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Seleccione **[!UICONTROL Policies]** del panel izquierdo y, a continuación, seleccione **[!UICONTROL Default-Label-Based-Access-Control-Policy]** de la lista.
 
-![Página de directivas que muestra una lista de directivas disponibles.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![Espacio de trabajo de directivas que muestra una lista de directivas existentes.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
-A continuación, seleccione la directiva y, a continuación, seleccione la ficha **[!UICONTROL Sandboxes]**. Se muestra una lista de los entornos limitados asociados a la directiva.
+Aparecerá el espacio de trabajo de detalles de la política. Seleccione la pestaña **[!UICONTROL Sandboxes]** para ver la lista de zonas protegidas asociadas con la directiva y acceder a las opciones de configuración de la zona protegida.
 
-![Página de directivas que muestra una lista de directivas disponibles.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+![Espacio de trabajo de la zona protegida de la directiva que muestra una lista de zonas protegidas asociadas.](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
 
-### Agregar directiva a todas las zonas protegidas
-
-Utilice la opción **[!UICONTROL Auto-include]** de la pestaña **[!UICONTROL Sandboxes]** para activar la directiva en todas las zonas protegidas.
-
-![La ficha [!UICONTROL Sandboxes] que muestra la opción [!UICONTROL Auto-include].](../../images/flac-ui/abac-policies-auto-include.png)
-
-Aparecerá el cuadro de diálogo **[!UICONTROL Enable Auto-include]** pidiéndole que confirme su selección. Seleccione **[!UICONTROL Enable]** para completar la configuración.
-
-![Resaltando [!UICONTROL Enable Auto-include] el cuadro de diálogo [!UICONTROL Enable].](../../images/flac-ui/abac-policies-auto-include-enable.png)
-
->[!SUCCESS]
->
->La directiva se activa para todas las zonas protegidas existentes y se agregará automáticamente a cualquier zona protegida nueva cuando esté disponible.
-
-### Agregar directiva para seleccionar zonas protegidas
+### Administrar la inclusión automática {#manage-auto-include}
 
 >[!IMPORTANT]
 >
->Las zonas protegidas futuras no se incluirán en la directiva de forma predeterminada si se desactiva la opción [!UICONTROL Auto-include]. Deberá administrar y agregar entornos limitados manualmente a la directiva.
+>De forma predeterminada, **[!UICONTROL Auto-include]** está activado, lo que significa que todas las zonas protegidas actuales y futuras se agregan automáticamente a la directiva.
 
-Utilice la opción **[!UICONTROL Auto-include]** de la pestaña **[!UICONTROL Sandboxes]** para deshabilitar la directiva en todas las zonas protegidas.
+Para controlar qué zonas protegidas se incluyen en una directiva, puede activar o desactivar la característica **[!UICONTROL Auto-include]**. Al desactivar **[!UICONTROL Auto-include]**, las zonas protegidas futuras no se agregarán automáticamente a la directiva. Sin embargo, si se desactiva la función **, no se** quitará ninguna zona protegida que ya esté incluida en la directiva.
 
-![La ficha [!UICONTROL Sandboxes] que muestra la opción [!UICONTROL Auto-include].](../../images/flac-ui/abac-policies-auto-include.png)
+![Pestaña de zona protegida de la directiva con la opción de inclusión automática resaltada y en estado &quot;desactivado&quot;.](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
 
-En la ficha **[!UICONTROL Sandboxes]**, seleccione **[!UICONTROL Add Sandboxes]** para seleccionar las zonas protegidas a las que se aplicará esta directiva.
+Para volver a habilitar **[!UICONTROL Auto-include]**, use la opción para volver a activarlo. Aparecerá el cuadro de diálogo **[!UICONTROL Enable Auto-include]** pidiéndole que confirme su selección. Seleccione **[!UICONTROL Enable]** para completar la configuración.
 
-![La ficha [!UICONTROL Sandboxes] muestra una lista de zonas protegidas agregadas a la directiva.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
-
-Aparecerá una lista de zonas protegidas. Seleccione la zona protegida que desee añadir en la lista. También puede utilizar la barra de búsqueda para buscar la zona protegida. Seleccione **[!UICONTROL Save]**.
-
-![La página [!UICONTROL Add Sandboxes] muestra una lista de zonas protegidas existentes que se pueden agregar a la directiva.](../../images/flac-ui/abac-policies-sandboxes-list.png)
-
->[!SUCCESS]
+>[!NOTE]
 >
->Las zonas protegidas seleccionadas se han agregado correctamente a la directiva.
+>Al volver a habilitar **[!UICONTROL Auto-include]**, se volverán a agregar las zonas protegidas que quitó anteriormente de la directiva.
 
-### Eliminación de zonas protegidas de una directiva
+![Cuadro de diálogo Habilitar inclusión automática con la opción Habilitar resaltada.](../../images/ui/policies/policy-enable-auto-include.png){zoomable="yes"}
 
-Para quitar una zona protegida, seleccione el icono **X** junto al nombre de la zona protegida.
+### Administrar zonas protegidas manualmente {#manually-manage-sandboxes}
 
-![La ficha [!UICONTROL Sandboxes] muestra una lista de zonas protegidas, destacando la [!UICONTROL X] que se va a eliminar.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+Cuando **[!UICONTROL Auto-include]** está desactivado, puede agregar o quitar manualmente zonas protegidas específicas de la directiva. Esto le proporciona un control preciso sobre los entornos limitados que aplican las reglas de control de acceso de la directiva.
 
-Aparecerá el cuadro de diálogo **[!UICONTROL Remove]** pidiéndole que confirme su selección. Seleccione **[!UICONTROL Confirm]** para completar la eliminación.
-
-![Resaltando [!UICONTROL Remove] el cuadro de diálogo [!UICONTROL Confirm].](../../images/flac-ui/abac-policies-remove-sandbox.png)
-
->[!SUCCESS]
+>[!NOTE]
 >
->La zona protegida seleccionada se ha eliminado correctamente de la directiva.
+>Para agregar o quitar zonas protegidas manualmente, la opción **[!UICONTROL Auto-include]** **debe** estar desactivada.
+
+**Para agregar zonas protegidas:**
+
+Seleccione **[!UICONTROL Add Sandboxes]** del espacio de trabajo de la zona protegida de la directiva.
+
+![Espacio de trabajo de la directiva con la opción Agregar zonas protegidas resaltada.](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
+
+Aparecerá el cuadro de diálogo **[!UICONTROL Add Sandboxes]**, que mostrará la biblioteca de zonas protegidas disponibles. Seleccione las zonas protegidas que desee agregar a la directiva y luego seleccione **[!UICONTROL Save]**.
+
+![Cuadro de diálogo Agregar zonas protegidas con una zona protegida seleccionada y la opción Guardar resaltada.](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
+
+>[!NOTE]
+>
+>Si todas las zonas protegidas disponibles ya están incluidas en la directiva, verá el mensaje &quot;No tiene nada en la biblioteca&quot; dentro del cuadro de diálogo.
+
+**Para quitar zonas protegidas:**
+
+Busque la zona protegida que desee eliminar de la lista y seleccione el icono **X** junto a su nombre.
+
+![Lista de zonas protegidas de la directiva con una &quot;x&quot; resaltada para quitar una zona protegida.](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
+
+Aparecerá un cuadro de diálogo de confirmación. Seleccione **[!UICONTROL Confirm]** para finalizar la eliminación de la zona protegida de la directiva.
+
+![Cuadro de diálogo de confirmación de una zona protegida con la opción Confirmar resaltada.](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
 
 ## Activar una política {#activate-policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="¿Qué son las directivas?"
->abstract="Las directivas son declaraciones que reúnen atributos para establecer acciones permitidas y no permitidas. Cada organización viene con una directiva predeterminada que debe activar para comenzar a controlar el acceso a objetos específicos en función de las etiquetas. Las etiquetas aplicadas a los recursos deniegan el acceso a menos que se asigne a los usuarios una función con una etiqueta coincidente. Las directivas predeterminadas no se pueden editar ni eliminar, pero se pueden activar o desactivar."
->additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/access-control/abac/permissions-ui/labels?lang=es" text="Administrar etiquetas"
+>abstract="Las directivas son declaraciones que reúnen atributos para establecer acciones permitidas y no permitidas. Cada organización viene con una directiva predeterminada que debe activar para comenzar a controlar el acceso a objetos específicos en función de las etiquetas. Las etiquetas aplicadas a los recursos deniegan el acceso a menos que se asigne a los usuarios una función con una etiqueta coincidente. Las directivas no se pueden editar ni eliminar, pero se pueden activar o desactivar."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels?lang=es" text="Administrar etiquetas"
 
-Para activar una directiva existente, selecciónela en la ficha **[!UICONTROL Policies]**.
+Para activar una directiva existente, selecciónela en la ficha **[!UICONTROL Policies]** de **[!UICONTROL Permissions]**. El estado de activación de la directiva es visible en la sección **[!UICONTROL Status]**.
 
-![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![Espacio de trabajo de directivas con el estado de una directiva resaltado.](../../images/ui/policies/policy-status.png){zoomable="yes"}
 
-A continuación, seleccione los puntos suspensivos (`…`) junto al nombre de una directiva y aparecerá una lista desplegable con controles para editar, activar, eliminar o duplicar la función. Seleccione activar en el menú desplegable.
+Se mostrará el espacio de trabajo de detalles de la política. Seleccione **[!UICONTROL Activate]**.
 
-![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![Espacio de trabajo de detalles de la directiva con la opción Activar resaltada.](../../images/ui/policies/policy-activate.png){zoomable="yes"}
 
-Aparecerá el cuadro de diálogo **[!UICONTROL Activate policy]**, pidiéndole que confirme la activación.
+Aparecerá el cuadro de diálogo **[!UICONTROL Activate Policy]**. Seleccione **[!UICONTROL Confirm]** para finalizar la activación de la directiva.
 
-![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
-
-
-Ha vuelto a la ficha **[!UICONTROL policies]** y aparece una ventana emergente de confirmación de activación. El estado de la política se muestra como activa.
-
-![flac-policy-activated](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+![Cuadro de diálogo Activar directiva con la opción Confirmar resaltada.](../../images/ui/policies/policy-activate-confirm.png){zoomable="yes"}
 
 ## Próximos pasos
 
