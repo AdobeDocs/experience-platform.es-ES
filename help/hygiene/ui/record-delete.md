@@ -2,10 +2,10 @@
 title: Registrar solicitudes de eliminación (flujo de trabajo de IU)
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
-source-wordcount: '2358'
-ht-degree: 6%
+source-wordcount: '2520'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Use [[!UICONTROL Data Lifecycle] espacio de trabajo](./overview.md) para elimina
 
 ## Requisitos previos {#prerequisites}
 
-La eliminación de registros requiere una comprensión práctica del funcionamiento de los campos de identidad en Experience Platform. Específicamente, debe conocer los valores del área de nombres de identidad de las entidades cuyos registros desea eliminar, según el conjunto de datos (o conjuntos de datos) desde el que los elimine.
+La eliminación de registros requiere una comprensión práctica del funcionamiento de los campos de identidad en Experience Platform. En concreto, debe conocer el área de nombres de identidad principal y los valores de las entidades cuyos registros desee eliminar, según el conjunto de datos (o conjuntos de datos) desde el que los vaya a eliminar.
 
 Consulte la siguiente documentación para obtener más información sobre las identidades en Experience Platform:
 
@@ -28,6 +28,14 @@ Consulte la siguiente documentación para obtener más información sobre las id
 * [Perfil del cliente en tiempo real](../../profile/home.md): Utiliza gráficos de identidad para proporcionar perfiles de consumidor unificados basados en datos agregados de varias fuentes, actualizados en tiempo casi real.
 * [Modelo de datos de experiencia (XDM)](../../xdm/home.md): Proporciona definiciones y estructuras estándar para datos de Experience Platform mediante el uso de esquemas. Todos los conjuntos de datos de Experience Platform se ajustan a un esquema XDM específico y el esquema define qué campos son identidades.
 * [Campos de identidad](../../xdm/ui/fields/identity.md): Descubra cómo se define un campo de identidad en un esquema XDM.
+
+>[!IMPORTANT]
+>
+>Las eliminaciones de registros actúan exclusivamente en el campo **identidad principal** definido en el esquema del conjunto de datos. Se aplican las siguientes limitaciones:
+>
+>* **Las identidades secundarias no se analizan.** Si un conjunto de datos contiene varios campos de identidad, solo se utilizará la identidad principal para la coincidencia. Los registros no se pueden segmentar ni eliminar en función de identidades no principales.
+>* Se omiten **registros sin una identidad principal completada.** Si un registro no tiene rellenados los metadatos de identidad principales, no se puede eliminar.
+>* **Los datos ingeridos antes de la configuración de identidad no son elegibles.** Si el campo de identidad principal se agregó a un esquema después de la ingesta de datos, los registros ingeridos anteriormente no se pueden eliminar a través de este flujo de trabajo.
 
 ## Creación de una solicitud {#create-request}
 
@@ -53,13 +61,13 @@ Para eliminar de un conjunto de datos específico, seleccione **[!UICONTROL Sele
 
 ![Cuadro de diálogo [!UICONTROL Select dataset] con un conjunto de datos seleccionado y [!UICONTROL Done] resaltado.](../images/ui/record-delete/select-dataset.png)
 
-Para eliminar de todos los conjuntos de datos, seleccione **[!UICONTROL All datasets]**. Esta opción aumenta el ámbito de la operación y requiere que proporcione todos los tipos de identidad relevantes.
+Para eliminar de todos los conjuntos de datos, seleccione **[!UICONTROL All datasets]**. Esta opción aumenta el ámbito de la operación y requiere que proporcione el tipo de identidad principal para cada conjunto de datos que desee segmentar.
 
 ![Cuadro de diálogo [!UICONTROL Select dataset] con la opción [!UICONTROL All datasets] seleccionada.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->Al seleccionar **[!UICONTROL All datasets]**, se expande la operación a todos los conjuntos de datos de su organización. Cada conjunto de datos puede utilizar un tipo de identidad principal diferente. Debe proporcionar **todos los tipos de identidad** necesarios para garantizar una coincidencia precisa.
+>Al seleccionar **[!UICONTROL All datasets]**, se expande la operación a todos los conjuntos de datos de su organización. Cada conjunto de datos puede utilizar un tipo de identidad principal diferente. Debe proporcionar **el tipo de identidad principal para cada conjunto de datos** para garantizar una coincidencia precisa.
 >
 >Si falta algún tipo de identidad, es posible que algunos registros se omitan durante la eliminación. Esto puede ralentizar el procesamiento y generar **resultados parciales**.
 
@@ -72,17 +80,21 @@ Cada conjunto de datos de Experience Platform solo admite un tipo de identidad p
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Espacio de nombres de identidad"
->abstract="Un espacio de nombres de identidad es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo de espacio de nombres de identidad de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o espacio de nombres) para el espacio de nombres de identidad del registro, como `email` para direcciones de correo electrónico y `ecid` para los ID de Experience Cloud. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
+>title="Espacio de nombres de identidad principal"
+>abstract="El área de nombres de identidad principal es el atributo que vincula de forma exclusiva un registro al perfil de un consumidor en Experience Platform. El campo de identidad principal de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el área de nombres de identidad principal (como `email` para direcciones de correo electrónico o `ecid` para Experience Cloud ID) que coincida con el esquema del conjunto de datos. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidad principal"
 >abstract="En esta columna, debe proporcionar el valor del espacio de nombres de identidad del registro, que debe corresponder con el tipo de identidad proporcionado en la columna izquierda. Si el tipo de espacio de nombres de identidad es `email`, el valor debe ser la dirección de correo electrónico del registro. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
-Al eliminar registros, debe proporcionar información de identidad para que el sistema pueda determinar qué registros se eliminarán. Para cualquier conjunto de datos en Experience Platform, los registros se eliminan en función del campo **área de nombres de identidad** definido por el esquema del conjunto de datos.
+Al eliminar registros, debe proporcionar información de identidad para que el sistema pueda determinar qué registros se eliminarán. Para cualquier conjunto de datos en Experience Platform, los registros se eliminan en función del campo **identidad principal** definido por el esquema del conjunto de datos.
 
-Al igual que todos los campos de identidad de Experience Platform, un área de nombres de identidad consta de dos cosas: un **tipo** (a veces denominado área de nombres de identidad) y un **valor**. El tipo de identidad proporciona contexto sobre cómo el campo identifica un registro (como una dirección de correo electrónico). El valor representa la identidad específica de un registro para ese tipo (por ejemplo, `jdoe@example.com` para el tipo de identidad `email`). Los campos comunes utilizados como identidades incluyen información de la cuenta, ID de dispositivo e ID de cookie.
+>[!NOTE]
+>
+>Aunque la interfaz de usuario le permite seleccionar un área de nombres de identidad, solo se utiliza la **identidad principal** configurada en el esquema del conjunto de datos en el momento de la ejecución. Asegúrese de que los valores de identidad que proporcione correspondan al campo de identidad principal del conjunto de datos.
+
+Al igual que todos los campos de identidad de Experience Platform, una identidad principal se compone de dos cosas: un **type** (el área de nombres de identidad) y un **value**. El tipo de identidad proporciona contexto sobre cómo el campo identifica un registro (como una dirección de correo electrónico). El valor representa la identidad específica de un registro para ese tipo (por ejemplo, `jdoe@example.com` para el tipo de identidad `email`). Los campos comunes utilizados como identidades principales incluyen información de la cuenta, ID de dispositivo e ID de cookie.
 
 >[!TIP]
 >
@@ -101,7 +113,7 @@ Para cargar un archivo JSON, puede arrastrar y soltar el archivo en el área pro
 
 ![Flujo de trabajo de creación de solicitudes con la interfaz de elegir archivos y arrastrar y soltar para cargar archivos JSON resaltados.](../images/ui/record-delete/upload-json.png)
 
-El archivo JSON debe tener el formato de una matriz de objetos; cada objeto representa una identidad.
+El archivo JSON debe tener el formato de una matriz de objetos, cada uno de los cuales representa un valor de identidad principal para el conjunto de datos de destino.
 
 ```json
 [
@@ -118,7 +130,7 @@ El archivo JSON debe tener el formato de una matriz de objetos; cada objeto repr
 
 | Propiedad | Descripción |
 | --- | --- |
-| `namespaceCode` | El tipo de identidad. |
+| `namespaceCode` | El área de nombres de identidad principal del conjunto de datos de destinatario. |
 | `value` | El valor de identidad principal indicado por el tipo. |
 
 Una vez cargado el archivo, puede continuar [enviando la solicitud](#submit).

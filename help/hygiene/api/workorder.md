@@ -3,9 +3,9 @@ title: Registrar órdenes de trabajo eliminadas
 description: Aprenda a utilizar el extremo /workorder en la API de higiene de datos para administrar las órdenes de trabajo de eliminación de registros en Adobe Experience Platform. Esta guía cubre las cuotas, los plazos de procesamiento y el uso de la API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
+source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2541'
 ht-degree: 2%
 
 ---
@@ -202,6 +202,14 @@ POST /workorder
 >[!NOTE]
 >
 >Solo puede eliminar registros de conjuntos de datos cuyo esquema XDM asociado defina una identidad principal o un mapa de identidad.
+
+>[!IMPORTANT]
+>
+>Registrar órdenes de trabajo de eliminación actúa exclusivamente en el campo **identidad principal**. Se aplican las siguientes limitaciones:
+>
+>- **Las identidades secundarias no se analizan.** Si un conjunto de datos contiene varios campos de identidad, solo se utilizará la identidad principal para la coincidencia. Los registros no se pueden segmentar ni eliminar en función de identidades no principales.
+>- Se omiten **registros sin una identidad principal completada.** Si un registro no tiene rellenados los metadatos de identidad principales, no se puede eliminar.
+>- **Los datos ingeridos antes de la configuración de identidad no son elegibles.** Si el campo de identidad principal se agregó a un esquema después de la ingesta de datos, los registros ingeridos anteriormente no se pueden eliminar mediante órdenes de trabajo de eliminación de registros.
 
 >[!NOTE]
 >
