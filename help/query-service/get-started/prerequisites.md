@@ -3,20 +3,37 @@ keywords: Experience Platform;servicio de consultas;servicio de consultas;consul
 title: Introducción al servicio de consultas de Adobe Experience Platform
 description: Un desglose de los pasos necesarios para utilizar completamente Adobe Experience Platform Query Service
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa22a0ca0c79d5d62fd39de3a808f84a11a80c4d
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
 
 # Introducción a Adobe Experience Platform [!DNL Query Service] {#getting-started}
 
-Una vez que su organización esté aprovisionada para Adobe Experience Platform, el administrador puede concederle acceso a [!DNL Query Service]. Sin embargo, para poder usar todas las características que ofrece [!DNL Query Service], primero debe ingerir datos en Adobe Experience Platform.
+Utilice el servicio de consulta de Adobe Experience Platform para ejecutar consultas SQL en conjuntos de datos ingeridos, unir datos de varios orígenes y generar conjuntos de datos derivados para análisis, flujos de trabajo de aprendizaje automático o el perfil del cliente en tiempo real. Después de la ingesta de datos, acceda al servicio de consulta a través de la interfaz de usuario para realizar análisis interactivos y colaborar, o a través de la API para ejecutar consultas de forma automatizada y programática.
 
-Este tutorial de ingesta de datos [en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) proporciona información general sobre la creación de un conjunto de datos, la asignación de un conjunto de datos a un esquema, la adición de datos al conjunto de datos y la confirmación de su ingesta. La [documentación de información general sobre la ingesta](../../ingestion/home.md) complementa esto y proporciona información más detallada y vínculos a otros recursos de aprendizaje.
+## Requisitos previos {#prerequisites}
 
-Una vez que haya ingerido los datos en Adobe Experience Platform, puede empezar a trabajar con [!DNL Query Service] mediante [[!DNL Query Editor] en la interfaz de usuario de Experience Platform](../ui/user-guide.md) o la [[!DNL Query Service] API](../api/getting-started.md). Puede encontrar documentación completa sobre cómo utilizar cada una de estas herramientas en sus secciones respectivas.
+Antes de empezar a consultar datos, asegúrese de lo siguiente:
+
+- **Permisos necesarios**: su cuenta de usuario tiene acceso al servicio de consultas en Experience Platform. Si el servicio no está disponible en la interfaz de usuario, revise la [documentación de permisos](../../access-control/home.md#permissions) y póngase en contacto con el administrador del sistema.
+- **Ingesta de datos**: Se han ingerido datos en Experience Platform.
+
+Si necesita ingerir datos, consulte el [tutorial sobre ingesta de datos en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) para obtener una descripción general de la creación del conjunto de datos, la asignación de esquemas, la ingesta y la validación. Lea la [documentación de información general sobre la ingesta](../../ingestion/home.md) para obtener información detallada y vínculos a otros recursos de aprendizaje.
+
+## Rutas de inicio rápido
+
+Una vez que haya ingerido los datos en Experience Platform, puede empezar a trabajar con el servicio de consultas mediante [!DNL Query Editor] en Experience Platform o la API del servicio de consultas.
+
+### [!DNL Query Editor]
+
+Use [!DNL Query Editor] para análisis, exploración de datos y desarrollo de consultas de colaboración. Para obtener información general sobre la funcionalidad de la interfaz de usuario, consulte la [documentación de la interfaz de usuario del servicio de consultas](../ui/overview.md). Para obtener información sobre cómo escribir y ejecutar consultas en la interfaz de usuario, lea la [[!DNL Query Editor user guide]](../ui/user-guide.md).
+
+### API del servicio de consultas
+
+Utilice la API del servicio de consulta para flujos de trabajo automatizados, administración de plantillas de consulta e integraciones programáticas. Consulte la [Guía para desarrolladores de Query Service](../api/getting-started.md) para obtener instrucciones detalladas sobre el uso de la API de Query Service.
 
 ## Pasos siguientes
 
