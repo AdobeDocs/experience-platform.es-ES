@@ -21,7 +21,7 @@ Antes de empezar a consultar datos, asegúrese de lo siguiente:
 - **Permisos necesarios**: su cuenta de usuario tiene acceso al servicio de consultas en Experience Platform. Si el servicio no está disponible en la interfaz de usuario, revise la [documentación de permisos](../../access-control/home.md#permissions) y póngase en contacto con el administrador del sistema.
 - **Ingesta de datos**: Se han ingerido datos en Experience Platform.
 
-Si necesita ingerir datos, consulte el [tutorial sobre ingesta de datos en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) para obtener una descripción general de la creación del conjunto de datos, la asignación de esquemas, la ingesta y la validación. Lea la [documentación de información general sobre la ingesta](../../ingestion/home.md) para obtener información detallada y vínculos a otros recursos de aprendizaje.
+Si necesita ingerir datos, consulte el [tutorial sobre ingesta de datos en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) para obtener una descripción general de la creación del conjunto de datos, la asignación de esquemas, la ingesta y la validación. Lea la [documentación de información general sobre la ingesta](../../ingestion/home.md) para obtener información detallada y vínculos a otros recursos de aprendizaje.
 
 ## Rutas de inicio rápido
 
