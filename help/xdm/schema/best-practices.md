@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 7a763a978443c0a074e6368448320056759f72bb
 workflow-type: tm+mt
-source-wordcount: '3236'
+source-wordcount: '3429'
 ht-degree: 1%
 
 ---
@@ -83,10 +83,10 @@ Si desea analizar cómo cambian ciertos atributos dentro de una entidad con el p
 
 | ID de cliente | Tipo | ID del producto | Cantidad | Marca de tiempo |
 | --- | --- | --- | --- | --- |
-| 1234567 | Add | 275098 | 2 | 1 de octubre, 10:32 |
-| 1234567 | Quitar | 275098 | 1 | 1 de octubre, 10:33 |
-| 1234567 | Add | 486502 | 1 | 1 de octubre, 10:41 |
-| 1234567 | Add | 910482 | 5 | 3 de octubre, 14:15 |
+| 1234567 | Add | 275098 | 2 | 1 de octubre de 10:32 a.m. |
+| 1234567 | Eliminar | 275098 | 1 | 1 de octubre de 10:33 a.m. |
+| 1234567 | Add | 486502 | 1 | 1 de octubre de 10:41 a.m. |
+| 1234567 | Add | 910482 | 5 | 3 de octubre de 2:15 p.m. |
 
 {style="table-layout:auto"}
 
@@ -217,9 +217,9 @@ Experience Platform proporciona varios grupos de campos de esquema XDM predeterm
 * Adobe Campaign
 * Adobe Target
 
-Por ejemplo, puede utilizar la [[!UICONTROL plantilla de Adobe Analytics ExperienceEvent] grupo de campos](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) para asignar campos específicos de [!DNL Analytics] a sus esquemas XDM. Según las aplicaciones de Adobe con las que trabaje, debe utilizar estos grupos de campos proporcionados por Adobe en los esquemas.
+Por ejemplo, puede utilizar el grupo de campos [[!UICONTROL Adobe Analytics ExperienceEvent Template] ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) para asignar campos específicos de [!DNL Analytics] a los esquemas XDM. Según las aplicaciones de Adobe con las que trabaje, debe utilizar estos grupos de campos proporcionados por Adobe en los esquemas.
 
-![Diagrama de esquema de la [!UICONTROL plantilla de Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
+![Un diagrama de esquema de [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
 
 Los grupos de campos de aplicación de Adobe asignan automáticamente una identidad principal predeterminada mediante el uso del campo `identityMap`, que es un objeto de solo lectura generado por el sistema que asigna valores de identidad estándar para un cliente individual.
 
@@ -231,35 +231,55 @@ Para Adobe Analytics, ECID es la identidad principal predeterminada. Si un clien
 
 ## Campos de validación de datos {#data-validation-fields}
 
-Cuando se introducen datos en el lago de datos, la validación de datos solo se impone en el caso de campos restringidos. Para validar un campo determinado durante una ingesta por lotes, debe marcar el campo como restringido en el esquema XDM. Para evitar que se ingieran datos incorrectos en Experience Platform, se recomienda definir los criterios de validación de nivel de campo al crear los esquemas.
+Cuando se introducen datos en el lago de datos, la validación de datos solo se impone en el caso de campos restringidos. Para validar un campo determinado durante la ingesta por lotes, debe marcar el campo como restringido en el esquema XDM. Para evitar que entren datos incorrectos en Experience Platform, defina los requisitos de validación al crear los esquemas.
 
 >[!IMPORTANT]
 >
 >La validación no se aplica a columnas anidadas. Si el formato de campo se encuentra dentro de una columna de matriz, los datos no se validan.
 
-Para establecer restricciones en un campo determinado, seleccione el campo en el Editor de esquemas para abrir la barra lateral **[!UICONTROL Propiedades del campo]**. Consulte la documentación sobre [propiedades de campo específicas del tipo](../ui/fields/overview.md#type-specific-properties) para obtener descripciones exactas de los campos disponibles.
+Para establecer restricciones en un campo, seleccione el campo en el Editor de esquemas para abrir la barra lateral **[!UICONTROL Field properties]**. Consulte la documentación sobre [propiedades de campo específicas del tipo](../ui/fields/overview.md#type-specific-properties) para obtener descripciones exactas de los campos disponibles.
 
-![Editor de esquemas con los campos de restricción resaltados en la barra lateral de [!UICONTROL Propiedades del campo].](../images/best-practices/data-validation-fields.png)
+![Editor de esquemas con los campos de restricción resaltados en la barra lateral [!UICONTROL Field properties].](../images/best-practices/data-validation-fields.png)
 
 ### Sugerencias para mantener la integridad de los datos {#data-integrity-tips}
 
-A continuación se muestra una colección de sugerencias para mantener la integridad de los datos al crear un esquema.
+Las siguientes sugerencias le ayudan a mantener la integridad de los datos al crear un esquema.
 
 * **Tenga en cuenta las identidades principales**: Para productos de Adobe como Web SDK, SDK móvil, Adobe Analytics y Adobe Journey Optimizer, el campo `identityMap` suele servir como identidad principal. Evite designar campos adicionales como identidades principales para ese esquema.
-* **Asegúrese de que `_id` no se use como identidad**: el campo `_id` de los esquemas de Experience Event no se puede usar como identidad porque está pensado para la exclusividad de los registros.
+* **Asegúrese de que `_id` no se use como identidad**: el campo `_id` de los esquemas de Experience Event no se puede usar como identidad porque está diseñado para la exclusividad de los registros.
 * **Establecer restricciones de longitud**: se recomienda establecer longitudes mínimas y máximas en los campos marcados como identidades. Se muestra un déclencheur de advertencia si intenta asignar un área de nombres personalizada a un campo de identidad sin cumplir las restricciones de longitud mínima y máxima. Estas limitaciones ayudan a mantener la coherencia y la calidad de los datos.
-* **Aplicar patrones para valores coherentes**: Si los valores de identidad siguen un patrón específico, debe usar la configuración **[!UICONTROL Patrón]** para aplicar esta restricción. Esta configuración puede incluir reglas como solo dígitos, mayúsculas o minúsculas, o combinaciones de caracteres específicas. Utilice expresiones regulares para hacer coincidir patrones en las cadenas.
+* **Aplicar patrones para valores coherentes**: Si los valores de identidad siguen un patrón específico, use la configuración **[!UICONTROL Pattern]** para aplicar restricciones. Esta configuración puede incluir reglas como solo dígitos, mayúsculas o minúsculas, o combinaciones de caracteres específicas. Utilice expresiones regulares para hacer coincidir patrones en las cadenas.
 * **Limitar eVars en esquemas de Analytics**: normalmente, un esquema de Analytics solo debe tener una eVar designada como identidad. Si tiene intención de utilizar más de una eVar como identidad, debe comprobar si la estructura de datos se puede optimizar.
 * **Asegúrese de que un campo seleccionado sea único**: el campo elegido debe ser único en comparación con la identidad principal del esquema. Si no es así, no la marque como identidad. Por ejemplo, si varios clientes pueden proporcionar la misma dirección de correo electrónico, ese área de nombres no es una identidad adecuada. Este principio también se aplica a otras áreas de nombres de identidad, como los números de teléfono. Marcar un campo no único como identidad podría provocar el colapso no deseado del perfil.
 * **Verificar la longitud mínima de las cadenas**: todos los campos de cadena deben tener al menos un carácter, ya que los valores de cadena nunca deben estar vacíos. Sin embargo, se aceptan valores nulos para los campos no obligatorios. Los nuevos campos de cadena tienen una longitud mínima de uno de forma predeterminada.
 
-## Pasos siguientes
+## Administración de esquemas habilitados para perfiles {#managing-profile-enabled-schemas}
 
-Este documento abarcaba las directrices generales y las prácticas recomendadas para diseñar el modelo de datos para Experience Platform. Para resumir:
+En esta sección se explica cómo administrar los esquemas que ya están habilitados para el Perfil del cliente en tiempo real. Una vez habilitado un esquema, no se puede deshabilitar ni eliminarlo. Debe determinar cómo evitar un uso posterior y cómo administrar conjuntos de datos que no puede eliminar.
 
-* Utilice un enfoque descendente ordenando las tablas de datos en categorías de perfil, búsqueda y evento antes de construir los esquemas.
-* A menudo hay varios enfoques y opciones a la hora de diseñar esquemas para diferentes propósitos.
-* El modelo de datos debe admitir casos de uso empresarial, como la segmentación o el análisis del recorrido del cliente.
-* Simplifique los esquemas lo más posible y solo añada nuevos campos cuando sea absolutamente necesario.
+Una vez que un esquema está habilitado para el perfil, la configuración no se puede revertir. Si ya no se debe utilizar un esquema, renómbrelo para aclarar su estado y cree un esquema de reemplazo con la estructura y la configuración de identidad correctas. Esto ayuda a evitar la reutilización accidental del esquema obsoleto cuando los usuarios crean nuevos conjuntos de datos o configuran flujos de trabajo de ingesta.
 
-Una vez que esté listo, vea el tutorial de [creación de un esquema en la interfaz de usuario](../tutorials/create-schema-ui.md) para obtener instrucciones paso a paso sobre cómo crear un esquema, asignar la clase adecuada para la entidad y agregar campos a los que asignar los datos.
+Los conjuntos de datos del sistema a veces aparecen junto a esquemas habilitados para Perfil del cliente en tiempo real. No puede eliminar conjuntos de datos del sistema, aunque el esquema asociado esté obsoleto. Para evitar un uso no intencionado, cambie el nombre del esquema habilitado para perfiles obsoleto y confirme que no hay flujos de trabajo de ingesta que apunten al conjunto de datos del sistema que permanece en su lugar.
+
+Siga estas prácticas recomendadas para evitar la reutilización accidental de esquemas obsoletos habilitados para perfiles:
+
+* Utilice una convención de nombres clara cuando elimine un esquema. Incluya etiquetas como &quot;Obsoleto&quot;, &quot;No usar&quot; o una etiqueta de versión.
+* Detenga la ingesta de datos en cualquier conjunto de datos en función del esquema que desee retirar.
+* Cree un nuevo esquema con la estructura, la configuración de identidad y el patrón de nomenclatura correctos.
+* Revise los conjuntos de datos del sistema que no se pueden eliminar y compruebe que no hay flujos de trabajo de ingesta que hagan referencia a ellos.
+* Documente el cambio internamente para que otros usuarios entiendan por qué el esquema está obsoleto.
+
+>[!TIP]
+>
+>Consulte la [Guía de solución de problemas de XDM](../troubleshooting-guide.md#delete-profile-enabled) para obtener instrucciones adicionales sobre esquemas habilitados para perfiles y limitaciones relacionadas.
+
+## Próximos pasos
+
+Este documento cubre las directrices generales y las prácticas recomendadas para diseñar el modelo de datos para Experience Platform. Para resumir:
+
+* Ordene las tablas de datos en categorías de perfil, búsqueda y evento antes de construir los esquemas.
+* Evalúe varios enfoques al diseñar esquemas para diferentes casos de uso.
+* Asegúrese de que el modelo de datos sea compatible con los objetivos de segmentación o recorrido del cliente.
+* Mantenga los esquemas lo más simples posible. Agregue nuevos campos solo cuando sea necesario.
+
+Cuando esté listo, vea el tutorial de [creación de un esquema en la interfaz de usuario](../tutorials/create-schema-ui.md) para obtener instrucciones paso a paso sobre la creación de esquemas, la asignación de clases y la asignación de campos.
