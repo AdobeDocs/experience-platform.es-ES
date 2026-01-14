@@ -2,9 +2,9 @@
 title: Espacios de nombres y esquemas B2B
 description: Este documento proporciona información general sobre las áreas de nombres personalizadas necesarias al crear un conector de origen B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 5eeb0397ddc96a224919a776f94058ae3a539b69
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1538'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Debe tener acceso a [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) para que sus esquemas B2B califiquen en [Perfil del cliente en tiempo real](../../../../profile/home.md).
+>- Debe tener acceso a [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) para que sus esquemas B2B califiquen en [Perfil del cliente en tiempo real](../../../../profile/home.md).
+>
+>- A partir de enero de 2026, Real-Time CDP B2B edition dejará de admitir **relaciones no estándar** entre entidades B2B. Por lo tanto, se recomienda actualizar las entidades B2B para que utilicen las relaciones estándar descritas en la [guía de esquemas y áreas de nombres B2B](../../../../rtcdp/schemas/b2b.md).
 
 >[!NOTE]
 >
