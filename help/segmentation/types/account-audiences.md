@@ -1,17 +1,17 @@
 ---
 title: Audiencias de cuenta
 description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perfiles de cuenta en destinos de flujo descendente.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1461'
 ht-degree: 21%
 
 ---
 
-# Públicos de la cuenta
+# Públicos de cuenta
 
 >[!AVAILABILITY]
 >
@@ -60,10 +60,6 @@ Para crear una audiencia de cuenta, seleccione **[!UICONTROL Create audience]** 
 Aparecerá el Generador de segmentos. Los atributos y audiencias de la cuenta se muestran en la barra de navegación izquierda. En la ficha [!UICONTROL Attributes], puede agregar atributos creados y personalizados por Experience Platform.
 
 ![Se muestra el Generador de segmentos. Observe que sólo se muestran los atributos y las audiencias.](../images/types/account/segment-builder.png)
-
-Al crear audiencias de cuenta, tenga en cuenta que los eventos se enumeran en **[!UICONTROL People]**, en lugar de ser su propia pestaña, ya que estos atributos están asociados a personas.
-
-![Se resalta la ubicación para buscar eventos, que se encuentra dentro de la carpeta [!UICONTROL People].](../images/types/account/attributes.png)
 
 En la ficha [!UICONTROL Audiences], puede agregar audiencias basadas en personas creadas anteriormente a partir de al crear su propia audiencia de cuenta.
 
@@ -208,8 +204,8 @@ Al usar audiencias de cuenta, la audiencia **debe** cumplir con las siguientes r
    - Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro del público. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing.
 - El número máximo de valores que se pueden comprobar para un solo campo es **50**.
    - Por ejemplo, si tiene un campo de &quot;Nombre de ciudad&quot;, puede comprobar ese valor con 50 nombres de ciudades.
-- Las audiencias de cuenta **no pueden** usar eventos secuenciales.
 - Las audiencias de cuenta **no pueden** usar mapas.
+- Las audiencias de cuenta **no pueden** usar eventos.
 - La profundidad máxima de las matrices anidadas es **5**.
 - El número máximo de objetos anidados es de **10**.
 
