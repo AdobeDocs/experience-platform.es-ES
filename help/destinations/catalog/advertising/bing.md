@@ -1,11 +1,11 @@
 ---
-keywords: publicidad; Bing;
+keywords: publicidad; bing;
 title: Conexión de Microsoft Bing
 description: Con el destino de conexión de Microsoft Bing, puede ejecutar campañas digitales de retargeting y segmentación de audiencia en toda la red de Advertising de Microsoft, incluida la publicidad de visualización, la búsqueda y la segmentación nativa.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '897'
 ht-degree: 5%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Tras una actualización interna del servicio de destinos a partir de agosto de 2025, es posible que experiencia una **caída en el número de perfiles** activados en los flujos de datos a [!DNL Microsoft Bing].
+>Después de una actualización interna al servicio de destinos a partir de agosto de 2025, es posible que experimente una **caída en el número de perfiles activados** en sus flujos de datos a [!DNL Microsoft Bing].
 >
-> Esta caída se debe a la introducción del **requisito** de asignación de ECID para todas las activaciones en esta plataforma de destino. Consulte la sección de [asignación](#mandatory-mappings) obligatoria de este Página para obtener información detallada.
+> Esta caída se debe a la introducción del **requisito de asignación ECID** para todas las activaciones en esta plataforma de destino. Consulte la sección [asignación obligatoria](#mandatory-mappings) en esta página para obtener información detallada.
 >
->**Qué ha cambiado:**
+>**Qué cambió:**
 >
->* La asignación de ECID (ID Experience Cloud) es ahora **obligatoria** para todas las activaciones perfil.
->* Los perfiles sin asignación ECID se **eliminarán** de los flujos de datos activación existentes.
+>* La asignación ECID (Experience Cloud ID) ahora es **obligatoria** para todas las activaciones de perfil.
+>* Los perfiles sin asignación ECID se **eliminarán** de los flujos de datos de activación existentes.
 >
 >**Lo que debe hacer:**
 >
->* Revise los datos de su audiencia para confirmar que los perfiles tienen valores ECID válidos.
->* Supervise las métricas de activación para verificar los recuentos de perfil esperados.
+>* Revise los datos de audiencia para confirmar que los perfiles tienen valores ECID válidos.
+>* Monitorice las métricas de activación para verificar los recuentos de perfiles esperados.
 
 Use el destino [!DNL Microsoft Bing] para enviar datos de perfil a [!DNL Microsoft Advertising Network] completo, incluidos [!DNL Display Advertising], [!DNL Search] y [!DNL Native].
 
@@ -39,27 +39,27 @@ Para enviar datos de perfil a [!DNL Microsoft Bing], primero debe conectarse al 
 
 ## Casos de uso {#use-cases}
 
-Como experto en marketing, quiero poder utilizar audiencias creadas a partir de destino a los usuarios a través de [!DNL Microsoft Advertising IDs] publicidad gráfica o búsqueda en todos [!DNL Microsoft Advertising] los canales.
+Como especialista en marketing, quiero poder usar audiencias creadas a partir de [!DNL Microsoft Advertising IDs] para segmentar usuarios mediante anuncios de visualización o búsqueda en [!DNL Microsoft Advertising] canales.
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Microsoft Bing] Admite el activación de audiencias en función de las identidades que se muestran en la tabla siguiente. Obtenga más información sobre [las identidades](/help/identity-service/features/namespaces.md).
+[!DNL Microsoft Bing] admite la activación de audiencias en función de las identidades mostradas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad | Descripción |
 |---|---|
-| CRIADA | Microsoft Advertising ID |
-| ECID | Experience Cloud ID. Esta identidad es obligatoria para que la integración funcione correctamente, pero no se utiliza para audiencia activación. |
+| CRIADA | MICROSOFT ADVERTISING ID |
+| ECID | ID de Experience Cloud. Esta identidad es obligatoria para que la integración funcione correctamente, pero no se utiliza para la activación de audiencias. |
 
 {style="table-layout:auto"}
 
-## Audiencias admitidas {#supported-audiences}
+## Audiencias compatibles {#supported-audiences}
 
-En esta sección se describen los tipos de audiencias que se pueden exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
-| origen de audiencia | Admitido | Descripción |
+| Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generan a través del servicio[&#x200B; de segmentación Experience Platform](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | [Audiences importados](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde CSV archivos. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 |---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Audience export]** | Está exportando todos los miembros de una audiencia al [!DNL Microsoft Bing] destino. |
+| Tipo de exportación | **[!UICONTROL Audience export]** | Está exportando todos los miembros de una audiencia al destino [!DNL Microsoft Bing]. |
 | Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -80,11 +80,11 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino y [!DNL Microsoft Bing] no ha habilitado el [funcionalidad de sincronizar de ID en Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=es) servicio de ID en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Systems asesor o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Experience Platform.
+>Si desea crear su primer destino con [!DNL Microsoft Bing] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de Experience Cloud ID en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si ya había configurado [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID que configuró se transfieren a Experience Platform.
 
 Al configurar el destino, debe proporcionar la siguiente información:
 
-* [!UICONTROL Account ID]: este es su [!DNL Bing Ads CID], en entero formato.
+* [!UICONTROL Account ID]: este es su [!DNL Bing Ads CID], en formato entero.
 
 ## Conectar con el destino {#connect}
 
@@ -100,30 +100,35 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
 * **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Account ID]**: Su [!DNL Bing Ads Customer ID] (CID). Su CID es un número entero que se encuentra en la URL al iniciar sesión en [!DNL Microsoft Advertising].
+* **[!UICONTROL Account ID]**: su [!DNL Bing Ads Customer ID] (CID). Su CID es un número entero que se encuentra en la dirección URL cuando inicia sesión en [!DNL Microsoft Advertising].
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos hacia su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID de asignación"
->abstract="Introduzca el ID de público numérico de Bing al que desea asignar el segmento seleccionado. Si lo proporcionado [!UICONTROL Mapping ID] no corresponde a un identificador de audiencia en el destino de Bing, no verá los datos de audiencia esperados en su cuenta de Bing."
+>abstract="Introduzca el ID de público numérico de Bing al que desea asignar el segmento seleccionado. Si el [!UICONTROL Mapping ID] proporcionado no corresponde a un ID de audiencia en el destino de Bing, no verá los datos de audiencia esperados en su cuenta de Bing."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_bing"
+>title="Conjuntos de asignaciones preconfigurados"
+>abstract="Hemos preconfigurado estos dos conjuntos de asignaciones para usted. A medida que activa los datos en Microsoft Bing, los perfiles cualificados para las audiencias activadas deben tener al menos una identidad ECID asociada a su perfil para poder exportarse correctamente al destino."
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los **[!UICONTROL View Destinations]** permisos **[!UICONTROL Activate Destinations]** , **[!UICONTROL View Profiles]**, **[!UICONTROL View Segments]**, y [&#x200B; &#x200B;](/help/access-control/home.md#permissions)control de acceso. Lea la control de acceso descripción general[&#x200B; o póngase en contacto con el &#x200B;](/help/access-control/ui/overview.md)administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos](../../ui/activate-segment-streaming-destinations.md) de flujo continuo audiencia exportación para obtener instrucciones sobre cómo activar audiencias en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-En el paso de programación[&#x200B; de &#x200B;](../../ui/activate-segment-streaming-destinations.md#scheduling)audiencia, debe asignar manualmente el nombre del audiencia en el [!UICONTROL Mapping ID] campo. Esto garantiza que audiencia metadatos se transmita correctamente a [!DNL Bing].
+En el paso [Programación de audiencias](../../ui/activate-segment-streaming-destinations.md#scheduling), debe asignar manualmente el nombre de la audiencia en el campo [!UICONTROL Mapping ID]. Esto garantiza que los metadatos de la audiencia se pasen correctamente a [!DNL Bing].
 
-![IU imagen que muestra la pantalla de programación de audiencia con un ejemplo de cómo asignar el nombre de audiencia al ID de Asignación de Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
+![Imagen de la interfaz de usuario que muestra la pantalla de programación de audiencias con un ejemplo de cómo asignar el nombre de audiencia al identificador de asignación de Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ### Asignaciones obligatorias {#mandatory-mappings}
 
@@ -136,4 +141,4 @@ Si no se asignan todas las identidades necesarias, no se puede completar el fluj
 
 ## Datos exportados {#exported-data}
 
-Para verificar si los datos se han exportado correctamente al destino, compruebe su [!DNL Microsoft Bing] [!DNL Microsoft Bing Ads] cuenta. Si activación ha tenido éxito, las audiencias se rellenan en su cuenta.
+Para comprobar si los datos se han exportado correctamente al destino [!DNL Microsoft Bing], compruebe su cuenta de [!DNL Microsoft Bing Ads]. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.
