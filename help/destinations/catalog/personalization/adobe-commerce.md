@@ -2,7 +2,7 @@
 title: Conector de destino de Adobe Commerce
 description: Descubra cómo los comerciantes de Adobe Commerce y Real-Time CDP pueden personalizar la experiencia de compra ofreciendo promociones y contenido del sitio muy relevantes, personalizados para las audiencias de los clientes creadas y administradas dentro de Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: fb8a17b8ea2ba1ddd64ceee7544f17058b43a943
+source-git-commit: 70556134a96260ae111c71ee288d4d646481270b
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 4%
@@ -22,12 +22,12 @@ Este conector está disponible en el catálogo de destinos para clientes que han
 Para utilizar esta conexión de destino, asegúrese de que tiene acceso a:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Con acceso a la consola de desarrollador, puede ver la información de cuenta de servicio y credenciales que se necesita para [completar la configuración](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=es#configure-the-extension) de la extensión en Adobe Commerce.
-- [Adobe Commerce versión 2.4.4 o superior](https://business.adobe.com/es/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Con acceso a la consola de desarrollador, puede ver la información de cuenta de servicio y credenciales que se necesita para [completar la configuración](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) de la extensión en Adobe Commerce.
+- [Adobe Commerce versión 2.4.4 o superior](https://business.adobe.com/products/commerce.html)
 
 En Experience Platform, cree lo siguiente:
 
-- [Esquema](../../../xdm/schema/composition.md). El esquema que cree representa los datos que planea introducir desde Adobe Commerce. [Más información](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=es) sobre cómo crear un esquema que contenga grupos de campos específicos de Commerce.
+- [Esquema](../../../xdm/schema/composition.md). El esquema que cree representa los datos que planea introducir desde Adobe Commerce. [Más información](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) sobre cómo crear un esquema que contenga grupos de campos específicos de Commerce.
 - [Conjunto de datos](../../../catalog/datasets/user-guide.md#create). Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos. Puede crear este conjunto de datos a partir del esquema que ha creado anteriormente.
 - [Flujo de datos](../../../datastreams/overview.md#create). ID que permite que los datos fluyan desde Adobe Experience Platform a otros productos Adobe DX. Este ID debe estar asociado a un sitio web específico dentro de la instancia de Adobe Commerce específica. Cuando cree este flujo de datos, especifique el esquema XDM que ha creado anteriormente.
 
@@ -65,13 +65,13 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar perfiles y audiencias en destinos de solicitud de perfil](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar audiencias en el destino [!DNL Commerce].
 
 ## Pasos siguientes en [!DNL Adobe Commerce]
 
-Ahora que ha configurado el destino [!DNL Commerce] en Experience Platform, debe instalar la extensión [!DNL Audience Activation] en [!DNL Commerce] y configurar [!DNL Commerce Admin] para importar las audiencias de Real-Time CDP que ha creado. Consulte la [[!DNL Commerce] documentación](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=es) para obtener más información.
+Ahora que ha configurado el destino [!DNL Commerce] en Experience Platform, debe instalar la extensión [!DNL Audience Activation] en [!DNL Commerce] y configurar [!DNL Commerce Admin] para importar las audiencias de Real-Time CDP que ha creado. Consulte la [[!DNL Commerce] documentación](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) para obtener más información.
 
 ## Validar la activación de audiencias en Commerce {#exported-data}
 
