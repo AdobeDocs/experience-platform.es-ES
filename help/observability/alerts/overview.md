@@ -4,9 +4,9 @@ title: Resumen de alertas
 description: Obtenga información sobre las alertas en Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '791'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Las alertas de Experience Platform se pueden enviar una vez o pueden repetirse a
 | --- | --- |
 | No indica necesariamente un problema. | Indica un estado potencialmente no deseable. |
 | No repetir. | Se puede repetir si la condición anómala persiste. |
-| Algunos ejemplos son:<ul><li>La ingesta de datos se ha completado correctamente.</li><li>Ha finalizado la ejecución de una consulta.</li><li>Se han eliminado los datos.</li></ul> | Algunos ejemplos son:<ul><li>La duración de la ingesta supera el acuerdo de nivel de servicio (SLA).</li><li>La ingestión diaria no se ha producido en las últimas 24 horas.</li><li>La tasa de error del procesador de flujo está por encima del umbral configurado.</li><li>El número total de perfiles supera el derecho.</li></ul> |
+| Algunos ejemplos son:<ul><li>La ingesta de datos se ha completado correctamente.</li><li>Ha finalizado la ejecución de una consulta.</li><li>Se han eliminado los datos.</li></ul> | Algunos ejemplos son:<ul><li>La duración de la ingesta supera el acuerdo de nivel de servicio (SLA).</li><li>La ingestión diaria no se ha producido en las últimas 24 horas.</li><li>La tasa de error del procesador de flujo está por encima del umbral configurado.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Las alertas pueden enviarse a un webhook configurado para facilitar la automatiz
 
 La interfaz de usuario de Experience Platform permite ver las alertas recibidas y administrar las reglas de alerta. El siguiente vídeo ofrece una introducción a estas funciones.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423918?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Para trabajar con alertas en la interfaz de usuario de Experience Platform, debe tener los siguientes permisos de control de acceso habilitados a través de Adobe Admin Console:
 
