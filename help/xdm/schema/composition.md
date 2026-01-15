@@ -161,9 +161,9 @@ Experience Platform utiliza un enfoque de composición en el que los bloques de 
 
 Los esquemas se componen mediante la fórmula siguiente:
 
-**Clase + Grupo de campos de esquema&amp;ast; = Esquema XDM**
+**Clase + Grupo de campos de esquema&ast; = Esquema XDM**
 
-&amp;ast;Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Esto significa que puede componer un esquema de conjunto de datos sin utilizar grupos de campos.
+&ast;Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Esto significa que puede componer un esquema de conjunto de datos sin utilizar grupos de campos.
 
 ### Clase {#class}
 
