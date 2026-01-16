@@ -2,9 +2,9 @@
 description: En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para su destino.
 title: Autorización de OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
+source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2273'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ En esta página se describen los distintos flujos de autorización de OAuth 2 ad
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -109,7 +109,10 @@ Para configurar este método de autorización para su destino, agregue las sigui
       "refreshTokenUrl": "https://api.moviestar.com/OAuth/refresh_token",
       "clientId": "Experience-Platform-client-id",
       "clientSecret": "Experience-Platform-client-secret",
-      "scope": ["read", "write"]
+      "scope": ["read", "write"],
+      "options": {
+          "useBasicAuth": true 
+      }
     }
   ]
 //...
@@ -126,6 +129,7 @@ Para configurar este método de autorización para su destino, agregue las sigui
 | `clientId` | Cadena | El ID de cliente que el sistema asigna a Adobe Experience Platform. |
 | `clientSecret` | Cadena | Secreto de cliente que el sistema asigna a Adobe Experience Platform. |
 | `scope` | Lista de cadenas | *Opcional*. Establezca el ámbito de lo que el token de acceso permite que Experience Platform realice en sus recursos. Ejemplo: &quot;leer, escribir&quot;. |
+| `options.useBasicAuth` | Booleano | *Opcional*. Valor booleano que controla cómo se envían las credenciales del cliente (ID de cliente y secreto de cliente) al extremo de token del proveedor de OAuth al intercambiar un código de autorización por un token de acceso. <ul><li>Si se establece en `false` o no se define, las credenciales se envían como `client_id` y `client_secret` parámetros en el cuerpo de la petición POST (comportamiento predeterminado).</li><li>Si este parámetro se establece en `true`, las credenciales se enviarán en el encabezado HTTP `Authorization` con el formato de autenticación básica: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Establezca `useBasicAuth` en `true` cuando su proveedor de OAuth requiera que las credenciales del cliente se envíen en el encabezado `Authorization` en lugar de en el cuerpo de la solicitud. |
 
 {style="table-layout:auto"}
 
@@ -369,7 +373,7 @@ Puede usar los siguientes parámetros en `authenticationDataFields` para persona
 | `authenticationDataFields.isRequired` | Booleano | Especifica si el campo de datos personalizados es necesario en el flujo de autorización. |
 | `authenticationDataFields.format` | Cadena | Al seleccionar `"format":"password"`, Adobe cifra el valor del campo de datos de autorización. Cuando se utiliza con `"fieldType": "CUSTOMER"`, esto también oculta la entrada en la interfaz de usuario cuando el usuario escribe en el campo. |
 | `authenticationDataFields.fieldType` | Cadena | Indica si la entrada procede del socio (usted) o del usuario, cuando configuran el destino en Experience Platform. |
-| `authenticationDataFields.value` | Cadena. Booleano. Entero | El valor del campo de datos personalizado. El valor coincide con el tipo elegido de `authenticationDataFields.type`. |
+| `authenticationDataFields.value` | Cadena. Booleano. Número entero | El valor del campo de datos personalizado. El valor coincide con el tipo elegido de `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | Cadena | Indica a qué campo de la ruta de respuesta de API se hace referencia. |
 
 {style="table-layout:auto"}
