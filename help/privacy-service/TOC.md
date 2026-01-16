@@ -5,9 +5,9 @@ breadcrumb-title: Guía de Privacy Service
 user-guide-description: Administre las solicitudes de datos de los clientes para cumplir con las regulaciones legales de privacidad, como el RGPD y la CCPA.
 feature: Privacy
 role: User,Admin
-source-git-commit: 306f7fcd09f395895fde241b668c41a2479a8d2d
+source-git-commit: bc180437c42ab2eea946e1a4d6d9dbd77e0896c8
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '94'
 ht-degree: 93%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 93%
    * [Trabajos de privacidad](./api/privacy-jobs.md)
    * [Consentimiento](./api/consent.md)
    * [Contenido](./api/content.md)
+   * [Códigos de error](./api/error-codes.md)
    * [Apéndice](./api/appendix.md)
 * IU de Privacy Service {#ui}
    * [Información general](./ui/overview.md)
