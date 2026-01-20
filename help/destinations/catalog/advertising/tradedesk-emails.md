@@ -3,9 +3,9 @@ title: La conexión de Trade Desk con CRM
 description: Active los perfiles en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos de CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
+source-git-commit: 036d784014e7cdb101f39f63f9d6e8bac01fdc97
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1088'
 ht-degree: 5%
 
 ---
@@ -89,7 +89,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ### Rellene los detalles del destino {#fill-in-details}
 
-Para poder enviar o activar datos de audiencia a un destino, debe configurar una conexión con su propia plataforma de destino. Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) este destino, debe proporcionar la siguiente información:
+Para poder enviar o activar datos de audiencia a un destino, debe configurar una conexión con su propia plataforma de destino. Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Account Type]**: Elija la opción **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
@@ -102,14 +102,9 @@ Al conectarse al destino, la configuración de una directiva de control de datos
 
 ## Activar públicos en este destino {#activate}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_required_mappings_ttdg"
->title="Conjuntos de asignaciones preconfigurados"
->abstract="Hemos preconfigurado estos cuatro conjuntos de asignaciones para usted. A medida que activa los datos en Trade Desk, los perfiles cualificados para las audiencias activadas no necesariamente tienen que tener las cuatro identidades presentes en los perfiles, ya que este destino funciona con cualquiera de las identidades de destino mostradas aquí."
-
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en un destino.
@@ -150,7 +145,7 @@ Para validar que los datos se exportan correctamente desde Experience Platform a
 
 1. Primero, seleccione la ficha **[!UICONTROL Data]** y revise la sección **[!UICONTROL First-Party]**.
 2. Desplácese hacia abajo en la página, en **[!UICONTROL Imported Data]**, encontrará el **[!UICONTROL Adobe 1PD Tile]**.
-3. Haga clic en el mosaico&#x200B;**[!UICONTROL Adobe 1PD]** y se enumerarán todas las audiencias activadas en el destino [!DNL Trade Desk] para su anunciante. También puede utilizar la función de búsqueda.
+3. Haga clic en el mosaico**[!UICONTROL Adobe 1PD]** y se enumerarán todas las audiencias activadas en el destino [!DNL Trade Desk] para su anunciante. También puede utilizar la función de búsqueda.
 4. El ID de segmento # de Experience Platform aparecerá como el nombre del segmento en la interfaz de usuario de [!DNL Trade Desk].
 
 ## Uso de datos y gobernanza {#data-usage-governance}
