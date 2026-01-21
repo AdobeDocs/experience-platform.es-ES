@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
+source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 24%
+source-wordcount: '1395'
+ht-degree: 20%
 
 ---
 
@@ -54,11 +54,24 @@ Para obtener más información, consulte la [documentación de Agent Orchestrato
 
 Los [!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
+**Destinos nuevos o actualizados**
+
+| Destino | Descripción |
+| --- | --- |
+| Conector de destino de Kevel ya disponible | [[!DNL Kevel]](https://www.kevel.com/) proporciona la tecnología habilitada para IA y la guía de expertos que ayudan a los líderes innovadores en comercio a lanzar, escalar y tener éxito en los medios minoristas. Retail Media Cloud de [!DNL Kevel] alimenta los formatos de anuncio personalizables, atribuibles y orientados para la publicidad dentro y fuera del sitio. |
+| Ya está disponible el conector de destino de Index Exchange | [!DNL Index] es una plataforma global de suministro de publicidad que ayuda a los propietarios de medios a maximizar el valor de su contenido en todas las pantallas. Con más de 20 años de liderazgo en la industria, [!DNL Index] conecta las marcas más grandes del mundo con los creadores de experiencia premium para ofrecer experiencias de alta calidad a los consumidores. |
+| Compatibilidad con puntos finales regionales para conexiones de Brazo | Todos los [extremos específicos de región](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) admitidos por [!DNL Braze] están ahora disponibles para su selección durante el flujo de configuración de destino. Pregunte a su representante de [!DNL Braze] qué instancia de extremo debe utilizar. |
+| Soporte de programación semanal y mensual para la incorporación de Liveramp | Ahora puede configurar programas de exportación semanales y mensuales para el destino de incorporación de Liveramp. |
+| Compatibilidad con cifrado AES256 para destinos de Amazon S3 | Ahora puede configurar el cifrado AES256 para sus exportaciones de Amazon S3. |
+| Experiencia de activación mejorada para los destinos de Trade Desk y Microsoft Bing | Los destinos de Trade Desk y Microsoft Bing ahora incluyen asignaciones obligatorias predefinidas para una experiencia de activación optimizada. |
+
 **Funcionalidad nueva o actualizada**
 
 | Función | Descripción |
 | --- | --- |
-| Límites de protección actualizados para el destino de Adobe Target | El número máximo de audiencias que se pueden asignar a un único destino de Adobe Target ha aumentado de 50 a 250. Esto alinea Adobe Target con el límite de audiencia estándar para otros destinos, lo que proporciona una mayor flexibilidad para los flujos de trabajo de activación de audiencia. Ahora los clientes pueden activar más audiencias en destinos de Adobe Target sin necesidad de crear varios flujos de datos. |
+| Límites de protección actualizados para el destino de Adobe Target | El número máximo de audiencias que se pueden asignar a un único destino de Adobe Target ha aumentado de 50 a 250. Esto alinea Adobe Target con el límite de audiencia estándar para otros destinos, lo que proporciona una mayor flexibilidad para los flujos de trabajo de activación de audiencia. Ahora puede activar más audiencias en destinos de Adobe Target sin necesidad de crear varios flujos de datos. |
+| [Editar destinos](/help/destinations/ui/edit-destination.md) y [editar acciones de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) disponibilidad general | La opción para editar destinos y acciones de marketing ya está disponible para todos los usuarios. |
+| Alternar los nombres para mostrar de los campos en el paso Asignación | Al asignar campos de esquema a un destino, ahora puede alternar entre mostrar el nombre del campo XDM completo y mostrar solo el nombre para mostrar. |
 
 {style="table-layout:auto"}
 
