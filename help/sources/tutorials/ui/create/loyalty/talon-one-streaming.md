@@ -4,9 +4,9 @@ description: Aprenda a transmitir datos de Talon.One a Adobe Experience Platform
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
@@ -34,19 +34,19 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ## Navegar por el catálogo de fuentes
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Fuentes]*. Seleccione la categoría adecuada en el panel *[!UICONTROL Categorías]*. También puede utilizar la barra de búsqueda para desplazarse hasta el origen específico que desee utilizar.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Sources]*. Seleccione la categoría adecuada en el panel *[!UICONTROL Categories]*. También puede utilizar la barra de búsqueda para desplazarse hasta el origen específico que desee utilizar.
 
-Para transmitir datos de [!DNL Talon.One], seleccione la tarjeta de origen **[!UICONTROL Talon.One Streaming Events]** en *[!UICONTROL Fidelidad]* y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
+Para transmitir datos de [!DNL Talon.One], seleccione la tarjeta de origen **[!UICONTROL Talon.One Streaming Events]** en *[!UICONTROL Loyalty]* y, a continuación, seleccione **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez creada una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
+>Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez creada una cuenta autenticada, esta opción cambia a **[!UICONTROL Add data]**.
 
 ![El catálogo de orígenes de la interfaz de usuario con la tarjeta Eventos de transmisión Talon.One seleccionada.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## Seleccionar datos
 
-A continuación, utilice la interfaz *[!UICONTROL Select data]* para cargar un archivo JSON de muestra y definir el esquema de origen. Durante este paso, puede utilizar la interfaz de vista previa para ver la estructura de archivos de la carga útil. Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+A continuación, utilice la interfaz *[!UICONTROL Select data]* para cargar un archivo JSON de muestra y definir el esquema de origen. Durante este paso, puede utilizar la interfaz de vista previa para ver la estructura de archivos de la carga útil. Cuando termine, seleccione **[!UICONTROL Next]**.
 
 ![Paso para seleccionar datos del flujo de trabajo de orígenes](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
@@ -66,10 +66,10 @@ Durante este paso, puede utilizar un conjunto de datos existente o crear uno nue
 
 +++Seleccione para habilitar la Ingesta de perfiles, diagnósticos de error e ingesta parcial.
 
-Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos del perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
+Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Profile dataset]** para habilitar los datos para la ingesta de perfiles. También puede utilizar este paso para habilitar **[!UICONTROL Error diagnostics]** y **[!UICONTROL Partial ingestion]**.
 
-* **[!UICONTROL Diagnósticos de error]**: seleccione **[!UICONTROL Diagnósticos de error]** para indicar a la fuente que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
-* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
+* **[!UICONTROL Error diagnostics]**: seleccione **[!UICONTROL Error diagnostics]** para indicar al origen que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
+* **[!UICONTROL Partial ingestion]**: la ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
 
 +++
 
@@ -101,12 +101,12 @@ Utilice la interfaz de asignación para asignar los datos de origen a los campos
 
 ## Revisar
 
-Aparece el paso *[!UICONTROL Revisar]*, que le permite revisar los detalles del flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
+Aparece el paso *[!UICONTROL Review]*, que le permite revisar los detalles del flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
-* **[!UICONTROL Conexión]**: muestra el nombre de cuenta, la plataforma de origen y el nombre de origen.
-* **[!UICONTROL Asignar campos de conjunto de datos y asignación]**: muestra el conjunto de datos de destino y el esquema al que se adhiere el conjunto de datos.
+* **[!UICONTROL Connection]**: muestra el nombre de cuenta, la plataforma de origen y el nombre de origen.
+* **[!UICONTROL Assign dataset and map fields]**: muestra el conjunto de datos de destino y el esquema al que se adhiere el conjunto de datos.
 
-Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL Finalizar]**.
+Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL Finish]**.
 
 ![Paso de revisión en el flujo de trabajo de orígenes.](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
@@ -118,4 +118,8 @@ Con la conexión creada, aparecerá la página de detalles de orígenes. Esta p�
 
 ## Monitorización del flujo de datos
 
-Una vez creado el flujo de datos, puede monitorizar los datos que se están ingiriendo a través de él para ver información sobre las tasas de ingesta, el éxito y los errores. Para obtener más información sobre cómo supervisar el flujo de datos, consulte el tutorial sobre [supervisar cuentas y flujos de datos en la interfaz de usuario](../../monitor-streaming.md)
+Una vez creado el flujo de datos, puede monitorizar los datos que se están ingiriendo a través de él para ver información sobre las tasas de ingesta, el éxito y los errores. Para obtener más información sobre cómo supervisar el flujo de datos, consulte el tutorial sobre [supervisar cuentas y flujos de datos en la interfaz de usuario](../../monitor-streaming.md).
+
+## Limitaciones conocidas
+
+Para garantizar una ingesta de datos precisa, debe enviar al conector los datos de los puntos de lealtad modificados, la actualización de los niveles y las notificaciones de reducción de categoría de [!DNL Talon.One]. Dado que la notificación de cambios de puntos de lealtad no incluye información de nivel, debe enviar estas notificaciones a un conjunto de datos de perfil independiente. Si combina datos de puntos cambiados con notificaciones de actualización o reducción de nivel en el mismo conjunto de datos, la información del nivel se perderá o sobrescribirá con valores nulos. Las notificaciones de actualización y reducción de categoría pueden utilizar el mismo conjunto de datos, ya que ambos incluyen detalles de categoría. Después de la ingesta, las reglas de combinación de perfiles actualizarán automáticamente el perfil combinado para reflejar los puntos y la información de nivel más recientes.

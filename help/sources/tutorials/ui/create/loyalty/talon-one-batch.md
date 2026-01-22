@@ -4,9 +4,9 @@ description: Aprenda a ingerir datos por lotes de Talon.One en Adobe Experience 
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1420'
 ht-degree: 1%
 
 ---
@@ -34,29 +34,29 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ## Navegar por el catálogo de fuentes
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Fuentes]*. Seleccione la categoría adecuada en el panel *[!UICONTROL Categorías]*. También puede utilizar la barra de búsqueda para desplazarse hasta el origen específico que desee utilizar.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Sources]*. Seleccione la categoría adecuada en el panel *[!UICONTROL Categories]*. También puede utilizar la barra de búsqueda para desplazarse hasta el origen específico que desee utilizar.
 
-Para ingerir datos de [!DNL Talon.One], seleccione la tarjeta de origen **[!UICONTROL Talon.One Batch Source Connector]** en *[!UICONTROL Fidelidad]* y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
+Para introducir datos de [!DNL Talon.One], seleccione la tarjeta de origen **[!UICONTROL Talon.One Batch Source Connector]** en *[!UICONTROL Loyalty]* y, a continuación, seleccione **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez creada una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
+>Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez creada una cuenta autenticada, esta opción cambia a **[!UICONTROL Add data]**.
 
 ![El catálogo de orígenes con la tarjeta de conector de origen Talon.One seleccionada.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
 
 ### Crear una nueva cuenta
 
-Para crear una nueva cuenta para el origen de [!DNL Talon.One], seleccione **[!UICONTROL Nueva cuenta]** y proporcione un nombre y una descripción opcional para la cuenta. A continuación, proporcione su dominio [!DNL Talon.One] y su clave de API de administración [!UICONTROL Talon.One]. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y espere unos momentos para que se establezca la conexión.
+Para crear una nueva cuenta para el origen de [!DNL Talon.One], seleccione **[!UICONTROL New account]** y proporcione un nombre y una descripción opcional para la cuenta. A continuación, proporcione su dominio [!DNL Talon.One] y su [!UICONTROL Talon.One Management API Key]. Cuando termine, seleccione **[!UICONTROL Connect to source]** y espere unos momentos para que se establezca la conexión.
 
 ![Paso para crear una nueva cuenta del flujo de trabajo de orígenes.](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### Usar una cuenta existente
 
-Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y la cuenta [!DNL Talon.One] que desee usar en la interfaz de cuentas.
+Para usar una cuenta existente, seleccione **[!UICONTROL Existing account]** y la cuenta [!DNL Talon.One] que desee usar en la interfaz de cuentas.
 
 ## Seleccionar datos
 
-Una vez que se haya autenticado, proporcione valores para **applicationId** y **sessionType**. Durante este paso, puede utilizar las funcionalidades de previsualización para inspeccionar la estructura de los datos. Cuando termine, seleccione **[!UICONTROL Siguiente]** para continuar.
+Una vez que se haya autenticado, proporcione valores para **applicationId** y **sessionType**. Durante este paso, puede utilizar las funcionalidades de previsualización para inspeccionar la estructura de los datos. Cuando termine, seleccione **[!UICONTROL Next]** para continuar.
 
 ![Los pasos para seleccionar datos y obtener una vista previa del flujo de trabajo de orígenes.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
@@ -76,10 +76,10 @@ Durante este paso, puede utilizar un conjunto de datos existente o crear uno nue
 
 +++Seleccione para habilitar la Ingesta de perfiles, diagnósticos de error e ingesta parcial.
 
-Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos del perfil]** para habilitar los datos para la ingesta de perfiles. También puede usar este paso para habilitar **[!UICONTROL diagnósticos de error]** y **[!UICONTROL ingesta parcial]**.
+Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Profile dataset]** para habilitar los datos para la ingesta de perfiles. También puede utilizar este paso para habilitar **[!UICONTROL Error diagnostics]** y **[!UICONTROL Partial ingestion]**.
 
-* **[!UICONTROL Diagnósticos de error]**: seleccione **[!UICONTROL Diagnósticos de error]** para indicar a la fuente que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
-* **[!UICONTROL Ingesta parcial]**: La ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
+* **[!UICONTROL Error diagnostics]**: seleccione **[!UICONTROL Error diagnostics]** para indicar al origen que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al supervisar la actividad del conjunto de datos y el estado del flujo de datos.
+* **[!UICONTROL Partial ingestion]**: la ingesta parcial por lotes es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos exactos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
 
 +++
 
@@ -109,7 +109,7 @@ Con los detalles del conjunto de datos y del flujo de datos configurados, ahora 
 
 ## Programe la ingesta del flujo de datos
 
-Aparecerá el paso [!UICONTROL Programando]. Utilice la interfaz para configurar una programación de ingesta para introducir automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. De manera predeterminada, la programación se establece en `Once`. Para ajustar la frecuencia de ingesta, seleccione **[!UICONTROL Frecuencia]** y luego seleccione una opción en el menú desplegable.
+Aparecerá el paso [!UICONTROL Scheduling]. Utilice la interfaz para configurar una programación de ingesta para introducir automáticamente los datos de origen seleccionados mediante las asignaciones configuradas. De manera predeterminada, la programación se establece en `Once`. Para ajustar la frecuencia de ingesta, seleccione **[!UICONTROL Frequency]** y luego elija una opción en el menú desplegable.
 
 >[!TIP]
 >
@@ -132,15 +132,19 @@ Consulte la tabla siguiente para obtener más información sobre las configuraci
 
 ## Revisar
 
-Aparece el paso *[!UICONTROL Revisar]*, que le permite revisar los detalles del flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
+Aparece el paso *[!UICONTROL Review]*, que le permite revisar los detalles del flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
-* **[!UICONTROL Conexión]**: muestra el nombre de cuenta, la plataforma de origen y el nombre de origen.
-* **[!UICONTROL Asignar campos de conjunto de datos y asignación]**: muestra el conjunto de datos de destino y el esquema al que se adhiere el conjunto de datos.
+* **[!UICONTROL Connection]**: muestra el nombre de cuenta, la plataforma de origen y el nombre de origen.
+* **[!UICONTROL Assign dataset and map fields]**: muestra el conjunto de datos de destino y el esquema al que se adhiere el conjunto de datos.
 
-Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL Finalizar]**.
+Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL Finish]**.
 
 ![Paso de revisión del flujo de trabajo de orígenes.](../../../../images/tutorials/create/talon-one-batch/review.png)
 
 ## Monitorización del flujo de datos
 
 Una vez creado el flujo de datos, puede monitorizar los datos que se están ingiriendo a través de él para ver información sobre las tasas de ingesta, el éxito y los errores. Para obtener más información sobre cómo supervisar el flujo de datos, consulte el tutorial sobre [supervisar cuentas y flujos de datos en la interfaz de usuario](../../../../../dataflows/ui/monitor-sources.md).
+
+## Limitaciones conocidas
+
+Al asignar datos del esquema de [!DNL Talon.One] a Adobe Experience Platform, actualmente no es posible capturar varios efectos del mismo tipo en una sola transacción. Por ejemplo, si una transacción incluye varios efectos `setDiscount` (como descuentos de diferentes campañas), solo uno de esos efectos se conservará durante la asignación y los demás se sobrescribirán.
