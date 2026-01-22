@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
+source-git-commit: a55272e3124c3fceedcadc33883445132bfec6bd
 workflow-type: tm+mt
-source-wordcount: '4849'
+source-wordcount: '4853'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estas audiencias se configuran de forma centralizada y se mantienen en Experience Platform, y cualquier solución de Adobe puede acceder a ellas fácilmente. A continuación se muestra una lista de las preguntas más frecuentes sobre las audiencias y la segmentación.
 
-## Portal de audiencias
+## Portal de públicos
 
 En la siguiente sección se enumeran las preguntas relacionadas con Audience Portal.
 
@@ -120,7 +120,7 @@ Los atributos de enriquecimiento son atributos que provienen de un conjunto de d
 
 | Canal de activación | Audiencias de carga personalizada en CSV | Audiencias de la composición de audiencias |
 | --- | --- | --- |
-| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1&rbrace;.** |
+| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1}.** |
 | Adobe Journey Optimizer Campaigns | Ni los atributos de audiencia ni los de carga útil pueden activarse. | Se pueden activar tanto la audiencia como los atributos de ampliación. |
 
 ## Estados del ciclo vital {#lifecycle-states}
@@ -170,7 +170,7 @@ Si se vuelve a publicar una audiencia que se evalúa mediante segmentación por 
 
 El método para colocar una audiencia en el estado de borrador depende del origen de la audiencia.
 
-Para las audiencias creadas con el Generador de segmentos, puede establecer la audiencia en el estado de borrador seleccionando &quot;[!UICONTROL Guardar como borrador]&quot; en el Generador de segmentos.
+Para las audiencias creadas con el Generador de segmentos, puede establecer la audiencia en el estado de borrador al seleccionar &quot;[!UICONTROL Save as draft]&quot; en el Generador de segmentos.
 
 Para las audiencias creadas en Composición de audiencia, las audiencias se guardan automáticamente como borrador hasta su publicación.
 
@@ -180,13 +180,13 @@ Una vez que una audiencia se encuentra en el estado publicado, **no puede** volv
 
 ### ¿Cómo puedo colocar una audiencia en el estado publicado?
 
-Para las audiencias creadas con el Generador de segmentos o la Composición de audiencias, puede establecer la audiencia en el estado publicado seleccionando &quot;[!UICONTROL Publicar]&quot; en sus respectivas interfaces de usuario.
+Para las audiencias creadas con el Generador de segmentos o la Composición de audiencias, puede establecer la audiencia en el estado publicado seleccionando &quot;[!UICONTROL Publish]&quot; en sus respectivas interfaces de usuario.
 
 Las audiencias creadas externamente se establecen automáticamente como publicadas.
 
 ### ¿Cómo puedo poner una audiencia en estado inactivo?
 
-Puede poner una audiencia publicada en el estado inactivo abriendo el menú de acciones rápidas en Audience Portal y seleccionando &quot;[!UICONTROL Desactivar]&quot;.
+Puede poner una audiencia publicada en el estado inactivo abriendo el menú de acciones rápidas en Audience Portal y seleccionando &quot;[!UICONTROL Deactivate]&quot;.
 
 ### ¿Cómo puedo volver a publicar una audiencia?
 
@@ -194,7 +194,7 @@ Puede poner una audiencia publicada en el estado inactivo abriendo el menú de a
 >
 >El estado &quot;Volver a publicar&quot; es el mismo que el estado publicado para el comportamiento de audiencia.
 
-Para volver a publicar una audiencia, seleccione una audiencia que esté en estado inactivo, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Publicar].
+Para volver a publicar una audiencia, seleccione una audiencia que esté en estado inactivo, abra el menú de acciones rápidas en el portal de audiencia y seleccione [!UICONTROL Publish].
 
 ### ¿Cómo puedo poner una audiencia en el estado eliminado?
 
@@ -202,7 +202,7 @@ Para volver a publicar una audiencia, seleccione una audiencia que esté en esta
 >
 >Solo puede eliminar audiencias que sean **no** utilizadas en activaciones posteriores. Tampoco puede eliminar una audiencia a la que se haga referencia en otra audiencia. Si no puedes eliminar tu audiencia, asegúrate de que **no** la esté usando en ningún servicio descendente o como componente básico de otra audiencia.
 
-Para poner una audiencia en el estado de eliminación, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Eliminar].
+Para poner una audiencia en el estado de eliminación, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Delete].
 
 ### ¿Hay alguna advertencia para las transiciones de estado del ciclo vital?
 
@@ -304,11 +304,11 @@ En este momento, solo puede tener **10** composiciones publicadas por zona prote
 
 La colocación del componente de composición sigue una estructura rígida de la siguiente manera:
 
-1. Usted **siempre** comienza con el bloque [!UICONTROL Audiencia] para seleccionar su actividad de inicio. Puede tener un máximo de **un** bloque de [!UICONTROL Audiencia].
-2. Opcionalmente, puede agregar un bloque [!UICONTROL Exclude] que sigue al bloque [!UICONTROL Audience].
-3. Opcionalmente, puede agregar un bloque [!UICONTROL Enrich] que sigue al bloque [!UICONTROL Exclude]. Solo puedes usar **un** bloque [!UICONTROL Enrich] por composición.
-4. Si lo desea, puede agregar un bloque de [!UICONTROL Clasificación] o [!UICONTROL División]. Puede **solamente** tener uno de estos bloques por composición.
-5. Usted **siempre** termina con un bloque [!UICONTROL Guardar] para guardar su audiencia.
+1. Usted **siempre** comienza con el bloque [!UICONTROL Audience] para seleccionar su actividad de inicio. Puede tener un máximo de **un** [!UICONTROL Audience] bloque.
+2. Opcionalmente, puede agregar un bloque [!UICONTROL Exclude] que siga al bloque [!UICONTROL Audience].
+3. Opcionalmente, puede agregar un bloque [!UICONTROL Enrich] que siga al bloque [!UICONTROL Exclude]. Solo puede usar **un** bloque [!UICONTROL Enrich] por composición.
+4. Opcionalmente, puede agregar un bloque [!UICONTROL Rank] o [!UICONTROL Split]. Puede **solamente** tener uno de estos bloques por composición.
+5. Usted **siempre** termina con un bloque [!UICONTROL Save] para guardar su audiencia.
 
 Además, se aplican las siguientes restricciones al utilizar estos bloques:
 
@@ -360,7 +360,7 @@ En la siguiente sección se enumeran las preguntas relacionadas con la pertenenc
 
 ### ¿Cómo puedo confirmar la pertenencia de un perfil a una audiencia?
 
-Para confirmar la pertenencia de un perfil a la audiencia, visite la página de detalles del perfil que desee confirmar. Seleccione **[!UICONTROL Atributos]**, seguido de **[!UICONTROL Ver JSON]**, y podrá confirmar que el objeto `segmentMembership` contiene el ID de la audiencia.
+Para confirmar la pertenencia de un perfil a la audiencia, visite la página de detalles del perfil que desee confirmar. Seleccione **[!UICONTROL Attributes]**, seguido de **[!UICONTROL View JSON]**, y puede confirmar que el objeto `segmentMembership` contiene el identificador de la audiencia.
 
 ### ¿Puede la pertenencia a audiencias oscilar entre la pertenencia ideal y la real?
 
@@ -408,7 +408,7 @@ En la siguiente sección se enumeran las preguntas relacionadas con la segmentac
 
 ### ¿La &quot;descalificación&quot; de la segmentación de streaming también se produce en tiempo real?
 
-En la mayoría de los casos, la descalificación de la segmentación de streaming se produce en tiempo real. Sin embargo, los segmentos de streaming que usan segmentos de segmentos **no** descalifican en tiempo real, en lugar de descalificar después de 24 horas.
+La descalificación de la segmentación de streaming se produce según la composición de la audiencia. Para las audiencias basadas en eventos, la descalificación se produce en tiempo real a medida que caduca la ventana retrospectiva. Para audiencias basadas en perfiles o audiencias que utilizan atributos de perfil, la descalificación se produce cuando los valores de atributos de perfil se cambian a través de una fuente de flujo continuo o durante el trabajo diario de evaluación por lotes.
 
 ### ¿En qué datos funciona la segmentación por streaming?
 
