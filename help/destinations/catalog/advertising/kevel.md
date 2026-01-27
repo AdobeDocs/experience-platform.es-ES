@@ -51,7 +51,7 @@ El destino [!DNL Kevel] admite la activación de cualquier identidad que la apli
 
 ### Compatibilidad con áreas de nombres de identidad personalizadas
 
-El destino [!DNL Kevel]0} también acepta áreas de nombres personalizadas **, tal como se definieron en su implementación de Experience Platform.**
+El destino [!DNL Kevel]0&rbrace; también acepta áreas de nombres personalizadas **, tal como se definieron en su implementación de Experience Platform.**
 
 Esto significa que:
 
