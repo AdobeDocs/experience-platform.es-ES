@@ -2,10 +2,10 @@
 title: Uso de licencias y capacidad
 description: Obtenga información sobre el uso de licencias y los límites de capacidad en Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 5520e449b4cbe45eb9664ce3c913dd5d544e088c
+source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 6%
+source-wordcount: '1670'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +58,7 @@ Dentro de estos servicios, se rastrean las siguientes barreras:
    - De estas 500 audiencias de streaming, el número máximo de audiencias de Edge es de 150
 - El rendimiento inicial combinado para la ingesta de transmisión es de 1500 registros por segundo (rps)
    - Este rendimiento de flujo combinado mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al Perfil del cliente en tiempo real en los entornos limitados de producción y desarrollo.
-   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
@@ -68,7 +68,17 @@ Experience Platform calcula el rendimiento de la zona protegida en intervalos m�
 
 Si el uso alcanza el 80 % y el 90 % de la capacidad con licencia, Experience Platform emitirá una alerta en la que notificará que está alcanzando el máximo de la capacidad especificada. Puede modificar la configuración para personalizar el porcentaje de capacidad para recibir la alerta o eliminarla por completo.
 
-Si su uso supera el 100% de su capacidad con licencia, se considerará que ha incumplido su capacidad. En este punto, experimentará latencia de rendimiento y se garantizarán los objetivos de nivel de servicio (SLT, por sus siglas en inglés) **no**.
+Si su uso supera el 100% de su capacidad con licencia, se considerará que incumple su capacidad. Si incumple con su capacidad, se aplicarán las siguientes limitaciones:
+
+>[!NOTE]
+>
+>Si tiene acceso a Adobe Journey Optimizer, se aplicarán las siguientes limitaciones **no**.
+
+- Los datos de evento **se pueden** eliminar de la personalización de la transmisión si la cola de procesamiento de eventos supera las 12 horas
+- Los datos de evento eliminados **no** se incorporarán al perfil
+   - Podrá ver cuándo se eliminaron los eventos
+   - Los eventos estarán disponibles dentro del lago de datos, según sus autorizaciones
+   - Usted *puede* utilizar el servicio de consultas para volver a ingerir directamente los datos, si es necesario
 
 ## Acceso {#access}
 
@@ -175,7 +185,7 @@ Además, puede consultar los flujos de datos y ver si puede optimizar su estrate
 
 El siguiente vídeo proporciona información general sobre Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475276/?captions=spa&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Preguntas frecuentes {#faq}
 
