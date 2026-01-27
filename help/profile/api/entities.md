@@ -5,14 +5,22 @@ type: Documentation
 description: Adobe Experience Platform le permite acceder a los datos del perfil del cliente en tiempo real mediante las API de RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como "perfiles", mediante la API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
+source-git-commit: 17bd3494c2d9b2a05ca86903297ebec85c9350f2
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2290'
 ht-degree: 3%
 
 ---
 
 # Extremo de entidades (acceso a perfiles)
+
+>[!IMPORTANT]
+>
+>**solo** puede usar estos extremos si tiene Real-Time CDP Ultimate.
+>
+>Si tiene Real-Time CDP Prime, puede seguir ingiriendo y utilizando eventos de experiencia para casos de uso de personalización, así como eventos de vista dentro de la interfaz de usuario de Experience Platform, pero **no** podrá buscar eventos de experiencia mediante programación usando la API.
+>
+>Si tiene Real-Time CDP Ultimate y **no** busca eventos mediante programación actualmente, póngase en contacto con el Servicio de atención al cliente de Adobe para habilitar esta característica.
 
 Adobe Experience Platform le permite acceder a los datos de [!DNL Real-Time Customer Profile] mediante las API RESTful o la interfaz de usuario de. Esta guía describe cómo acceder a las entidades, más comúnmente conocidas como &quot;perfiles&quot;, mediante la API. Para obtener más información sobre el acceso a los perfiles mediante la interfaz de usuario de [!DNL Experience Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
 
@@ -445,9 +453,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 | `identities` | Matriz | **(Obligatorio)** Una matriz que contiene una lista de identidades para las entidades a las que desea tener acceso. |
 | `identities.entityId` | Cadena | El ID de una entidad a la que desea acceder. |
 | `identities.entityIdNS.code` | Cadena | El área de nombres de un ID de entidad al que desea acceder. |
-| `timeFilter.startTime` | Entero | Especifica la hora de inicio del filtro de entidades de perfil (en milisegundos). De forma predeterminada, este valor se establece como el principio del tiempo disponible. |
-| `timeFilter.endTime` | Entero | Especifica la hora de finalización para filtrar entidades de perfil (en milisegundos). De forma predeterminada, este valor se establece como el final del tiempo disponible. |
-| `limit` | Entero | Número máximo de registros que se van a devolver. De forma predeterminada, este valor se establece en 1000. |
+| `timeFilter.startTime` | Número entero | Especifica la hora de inicio del filtro de entidades de perfil (en milisegundos). De forma predeterminada, este valor se establece como el principio del tiempo disponible. |
+| `timeFilter.endTime` | Número entero | Especifica la hora de finalización para filtrar entidades de perfil (en milisegundos). De forma predeterminada, este valor se establece como el final del tiempo disponible. |
+| `limit` | Número entero | Número máximo de registros que se van a devolver. De forma predeterminada, este valor se establece en 1000. |
 | `orderby` | Cadena | Orden de los eventos de experiencia recuperados por marca de tiempo, escritos como `(+/-)timestamp` con el valor predeterminado `+timestamp`. |
 
 +++

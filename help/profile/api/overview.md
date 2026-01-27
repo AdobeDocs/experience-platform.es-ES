@@ -4,9 +4,9 @@ title: Guía de la API del perfil del cliente en tiempo real
 description: La API de perfil del cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos los perfiles de vista, crear y actualizar políticas de combinación, exportar o muestrear datos de perfil y eliminar datos de perfil que ya no sean necesarios o que se hayan añadido por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82a9b405a1d36155c84cd27a005c7ec469164ef3
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,10 @@ Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalú
 Puede crear, ver, editar y eliminar atributos calculados mediante el extremo `ca/attributes/`. Para aprender a utilizar los atributos calculados, consulte la [descripción general de los atributos calculados](../computed-attributes/overview.md). Para operaciones API, visite la [guía de extremo API de atributos calculados](../computed-attributes/api.md).
 
 ## Entidades (acceso de [!DNL Profile]) {#entities}
+
+>[!NOTE]
+>
+>Solo puede utilizar estos extremos si tiene Real-Time CDP Ultimate.
 
 A través de Adobe Experience Platform, puede acceder a los datos de [!DNL Real-Time Customer Profile] mediante las API de RESTful o la interfaz de usuario de. Para obtener información sobre cómo acceder a entidades, más conocidas como &quot;perfiles&quot;, mediante la API, siga los pasos descritos en la guía de extremo de [entidades](entities.md). Para obtener acceso a los perfiles mediante la interfaz de usuario de [!DNL Experience Platform], consulte la [Guía del usuario del perfil](../ui/user-guide.md).
 
@@ -55,6 +59,6 @@ Los datos con perfil habilitado que se han ingerido en [!DNL Experience Platform
 
 En ocasiones puede ser necesario actualizar los datos en el almacén de perfiles de su organización. Por ejemplo, es posible que tenga que corregir registros o cambiar un valor de atributo. Esto se puede hacer mediante la ingesta por lotes y requiere un conjunto de datos habilitado para el perfil y configurado con una etiqueta de actualización. Para obtener más información sobre cómo configurar un conjunto de datos para actualizaciones de atributos, consulte el tutorial de [habilitar un conjunto de datos para Perfil y actualizar](../../catalog/datasets/enable-upsert.md).
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Para empezar a realizar llamadas mediante la API [!DNL Real-Time Customer Profile], lea la [guía de introducción](getting-started.md) y, a continuación, seleccione una de las guías de extremos para aprender a utilizar extremos específicos relacionados con [!DNL Profile]. Para trabajar con datos de [!DNL Profile] usando la interfaz de usuario de [!DNL Experience Platform], consulte la [guía del usuario del perfil del cliente en tiempo real](../ui/user-guide.md).
