@@ -4,10 +4,10 @@ description: El perfil del cliente en tiempo real permite ver una vista integral
 title: Monitorización de flujos de datos para perfiles en la IU
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1d60afdf486642398a2d31302db339eb9cb45130
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 8%
+source-wordcount: '1240'
+ht-degree: 6%
 
 ---
 
@@ -65,8 +65,6 @@ Las siguientes métricas están disponibles para esta vista de panel:
 
 Puede seleccionar el icono de filtro ![Icono de filtro](/help/images/icons/filter.png) junto al nombre de origen para ver la información de procesamiento de perfil de los flujos de datos de ese origen seleccionado.
 
-![El icono de filtro está resaltado. Si selecciona este icono, podrá ver los flujos de datos del origen seleccionado.](../assets/ui/monitor-profiles/sources-filter.png)
-
 También puede seleccionar **[!UICONTROL Dataflows]** en el conmutador para ver los detalles de procesamiento del perfil de los flujos de datos de su organización durante las últimas 24 horas.
 
 ![Panel de perfiles. Se muestra información sobre el número de registros de perfil recibidos por flujo de datos.](../assets/ui/monitor-profiles/dataflows.png)
@@ -78,6 +76,7 @@ Las siguientes métricas están disponibles para esta vista de panel:
 | **[!UICONTROL Dataflow]** | Nombre del flujo de datos. |
 | **[!UICONTROL Dataset]** | Nombre del conjunto de datos en el que se inserta el flujo de datos. |
 | **[!UICONTROL Source name]** | Nombre de la fuente a la que pertenece el flujo de datos. |
+| **[!UICONTROL Data type]** | El tipo de datos que se reciben del conjunto de datos. |
 | **[!UICONTROL Records received**] | El número de registros recibidos del lago de datos. |
 | **[!UICONTROL Records failed]** | El número de registros que se ingerieron, pero no en [!DNL Profile] debido a errores. |
 | **[!UICONTROL Profile fragments created]** | El número de nuevos [!DNL Profile] fragmentos de red agregados. |
@@ -88,7 +87,31 @@ Las siguientes métricas están disponibles para esta vista de panel:
 
 Seleccione el icono de filtro ![filter](/help/images/icons/filter.png) al lado del tiempo de inicio de la ejecución del flujo de datos para ver más información sobre la ejecución del flujo de datos [!DNL Profile].
 
-![El icono de filtro está resaltado. Si selecciona este icono, podrá ver los detalles sobre el flujo de datos seleccionado.](../assets/ui/monitor-profiles/dataflows-filter.png)
+Aparecerá un panel que mostrará todas las ejecuciones del flujo de datos. Este tablero contiene métricas sobre las ejecuciones de flujo de datos, así como gráficos que muestran la tasa de éxito, los fragmentos de perfil creados y los fragmentos de perfil actualizados.
+
+![El flujo de datos ejecuta el panel. Se muestra información sobre las ejecuciones del flujo de datos.](../assets/ui/monitor-profiles/dataflow-run.png)
+
+Las siguientes métricas están disponibles para esta vista de panel:
+
+>[!NOTE]
+>
+>Cuando la ejecución del flujo de datos está en estado **[!UICONTROL Processing]**, puede ver información sobre la preparación viendo los estados de los puntos de comprobación en el proceso de ingesta.
+>
+>![Se muestra la burbuja de preparación para la ingesta de perfiles.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+
+| Métrica | Descripción |
+| ------ | ----------- |
+| **[!UICONTROL Dataflow run start]** | La hora a la que se inició la ejecución del flujo de datos en UTC. |
+| **[!UICONTROL Data type]** | El tipo de datos recibidos por el flujo de datos. |
+| **[!UICONTROL Records received]** | El número de registros recibidos del lago de datos. |
+| **[!UICONTROL Records failed]** | El número de registros que se ingerieron, pero no en [!DNL Profile] debido a errores. |
+| **[!UICONTROL Profile fragments created]** | El número de nuevos [!DNL Profile] fragmentos de red agregados. |
+| **[!UICONTROL Profile fragments updated]** | Se ha actualizado el número de fragmentos de [!DNL Profile] existentes. |
+| **[!UICONTROL Total profile fragments]** | Número total de registros escritos en [!DNL Profile], incluidos todos los fragmentos de [!DNL Profile] existentes actualizados y los nuevos [!DNL Profile] fragmentos creados. |
+| **[!UICONTROL Processing time]** | Cantidad de tiempo que tardó la ejecución del flujo de datos en procesarse. |
+| **[!UICONTROL Status]** | El estado de ejecución del flujo de datos. Los valores posibles incluyen [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] y [!UICONTROL Processing]. |
+| **[!UICONTROL Ready for customer segmentation]** | Un estado que muestra si los registros ingeridos están listos para utilizarse en la segmentación de clientes. Los valores posibles incluyen [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] y [!UICONTROL Processing]. Incluso si el **Estado** del flujo de datos se está procesando, si el valor de este campo es Sí, puede utilizar los perfiles en la segmentación de clientes. |
+| **[!UICONTROL Ready for lookup]** | Un estado que muestra si los registros ingeridos están listos para utilizarse en la búsqueda de Adobe Journey Optimizer.  Los valores posibles incluyen [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] y [!UICONTROL Processing]. Incluso si el **Estado** del flujo de datos se está procesando, si el valor de este campo es Sí, puede utilizar los perfiles en la búsqueda de Journey Optimizer. |
 
 La página [!UICONTROL Dataflow run details] muestra más información sobre la ejecución del flujo de datos [!DNL Profile], incluido su ID de organización y el ID de ejecución del flujo de datos. Esta página también muestra el código de error y el mensaje de error correspondientes proporcionados por [!DNL Profile], en caso de que se produzca algún error en el proceso de ingesta.
 
