@@ -3,9 +3,9 @@ title: Activar datos de audiencia en destinos de flujo continuo
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform asignándolas a destinos de flujo continuo.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2eb890f06097f1b9766408aad3b6ab11d5d12f9f
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
@@ -82,6 +82,10 @@ Algunos destinos de flujo de audiencia requieren que seleccione atributos de ori
    Utilice la opción **[!UICONTROL Show only fields with data]** para mostrar solo los campos de esquema rellenados con valores. De forma predeterminada, solo se muestran los campos de esquema rellenados.
 
    ![Seleccionar página de campo de origen que muestra varios campos de origen disponibles.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
+
+   Utilice la opción **[!UICONTROL Show display names for fields]** para mostrar los nombres descriptivos de los campos, en lugar de los nombres de los campos de esquema.
+
+   ![Seleccionar página de campo de origen que muestra la opción para mostrar nombres.](../assets/ui/activate-segment-streaming-destinations/show-display-names.gif)
 
 1. Seleccione el botón a la derecha de la entrada **[!UICONTROL Target field]**.
 

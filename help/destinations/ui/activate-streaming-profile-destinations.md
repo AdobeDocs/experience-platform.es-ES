@@ -4,9 +4,9 @@ type: Tutorial
 description: Obtenga información sobre cómo activar los datos de audiencia que tiene en Adobe Experience Platform enviando audiencias a destinos basados en perfiles de streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '762'
 ht-degree: 1%
 
 ---
@@ -75,9 +75,15 @@ En el paso **[!UICONTROL Mapping]**, seleccione los atributos de perfil que dese
 
    ![Imagen que resalta cómo seleccionar un campo de origen en el paso de asignación.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. En la página **[!UICONTROL Select field]**, seleccione los atributos XDM que desee enviar al destino y, a continuación, elija **[!UICONTROL Select]**.
+1. En la página **[!UICONTROL Select source field]**, seleccione los atributos XDM que desee enviar al destino y, a continuación, elija **[!UICONTROL Save]**.
 
-   ![Imagen que muestra una selección de campos XDM que puede seleccionar como campos de origen.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Imagen que muestra una selección de campos XDM que puede seleccionar como campos de origen.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+
+   Utilice la opción **[!UICONTROL Show only fields with data]** para mostrar solo los campos de esquema rellenados con valores. De forma predeterminada, solo se muestran los campos de esquema rellenados.
+
+   Utilice la opción **[!UICONTROL Show display names for fields]** para mostrar los nombres descriptivos de los campos, en lugar de los nombres de los campos de esquema.
+
+   ![Seleccionar página de campo de origen que muestra la opción para mostrar nombres.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. Para agregar más campos, repita los pasos del 1 al 3 y después seleccione **[!UICONTROL Next]**.
 
