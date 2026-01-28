@@ -2,11 +2,10 @@
 title: Editar destinos
 type: Tutorial
 description: Obtenga información sobre cómo editar y actualizar cuentas de destinos existentes en la IU de Adobe Experience Platform
-badgeBeta: label="Beta" type="Informative"
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: 990fe9162c5b2970f269a5b0668916b7b6e61f44
+source-git-commit: f91551c460c7d6fd4f98111210f29cf16ec5b565
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -15,20 +14,22 @@ ht-degree: 0%
 
 Obtenga información sobre cómo editar varios componentes de una conexión de destino existente, incluido cómo actualizar las credenciales de autenticación, la ubicación de exportación y mucho más mediante la interfaz de usuario de Experience Platform.
 
->[!IMPORTANT]
->
->Esta funcionalidad está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso, póngase en contacto con su representante de Adobe.
-
 >[!NOTE]
 >
 > Las operaciones de edición descritas en este tutorial también se admiten mediante operaciones de API. Lea el tutorial sobre cómo [editar destinos en la API](/help/destinations/api/edit-destination.md) para obtener más información.
 
+## Requisitos previos {#prerequisites}
+
+Para editar conexiones de destino, necesita el **[!UICONTROL Manage Destinations]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+
+## Editar conexiones de destino {#edit}
+
 Para editar varios componentes de una conexión de destino existente:
 
-1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]**.
+1. Vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Seleccione el destino que desee editar.
-3. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar control de destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino &#x200B;]**&#x200B;para editar las conexiones de destino existentes.
-4. En la ventana modal, edite la configuración que desee. Seleccione **[!UICONTROL Guardar]** cuando haya terminado.
+3. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Editar control de destino ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**para editar las conexiones de destino existentes.
+4. En la ventana modal, edite la configuración que desee. Seleccione **[!UICONTROL Save]** cuando haya terminado.
 
 En la ventana de edición de destino, puede actualizar cualquier configuración que haya configurado al conectarse inicialmente al destino. Esta configuración es diferente en función de la plataforma de destino que esté actualizando.
 
@@ -60,6 +61,6 @@ Mediante la interfaz de usuario de Experience Platform o la API de Flow Service,
 
 ## Próximos pasos
 
-Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL destinos]** para actualizar las conexiones de destino existentes.
+Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL destinations]** para actualizar las conexiones de destino existentes.
 
 Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../catalog/overview.md).
