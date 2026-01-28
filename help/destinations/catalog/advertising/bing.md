@@ -118,12 +118,12 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="Conjuntos de asignaciones preconfigurados"
->abstract="Hemos preconfigurado estos dos conjuntos de asignaciones para usted. Al activar datos en Microsoft Bing, los perfiles cualificados para las audiencias activadas deben tener al menos una identidad ECID asociada a su perfil para poder exportarse correctamente al destino.
+>abstract="Hemos preconfigurado estos dos conjuntos de asignaciones para usted. Al activar datos en Microsoft Bing, los perfiles cualificados para las audiencias activadas deben tener al menos una identidad ECID asociada a su perfil para poder exportarse correctamente al destino."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Más información sobre las asignaciones preconfiguradas"
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

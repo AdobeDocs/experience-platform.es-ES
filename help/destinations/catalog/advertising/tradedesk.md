@@ -119,7 +119,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -133,7 +133,7 @@ Al asignar audiencias, Adobe recomienda utilizar el nombre de audiencia de Exper
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Conjuntos de asignaciones preconfigurados"
->abstract="Hemos preconfigurado estos cuatro conjuntos de asignaciones para usted. Al activar los datos en Trade Desk, los perfiles cualificados para las audiencias activadas no necesariamente tienen que tener las cuatro identidades presentes en los perfiles, ya que este destino funciona con cualquiera de las identidades de destino mostradas aquí.
+>abstract="Hemos preconfigurado estos cuatro conjuntos de asignaciones para usted. Al activar los datos en Trade Desk, los perfiles cualificados para las audiencias activadas no necesariamente tienen que tener las cuatro identidades presentes en los perfiles, ya que este destino funciona con cualquiera de las identidades de destino mostradas aquí."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Más información sobre las asignaciones preconfiguradas"
 
 Todas las identidades de destino descritas en la sección [identidades admitidas](#supported-identities) deben asignarse en el paso de asignación del flujo de trabajo de activación de audiencia. Esto incluye lo siguiente:
