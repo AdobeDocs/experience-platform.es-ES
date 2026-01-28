@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
+source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
 workflow-type: tm+mt
-source-wordcount: '5175'
+source-wordcount: '5355'
 ht-degree: 12%
 
 ---
@@ -21,31 +21,6 @@ ht-degree: 12%
 ![Se muestra la interfaz de usuario del Generador de segmentos.](../images/ui/segment-builder/segment-builder.png)
 
 ## Bloques de creación de definición de segmento {#building-blocks}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="Complejidad lógica"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="Límite de secuencia de eventos"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="Alerta de eficacia de consultas"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Contar advertencia de filtro"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="Advertencia de datos anidados"
->abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -214,6 +189,45 @@ Tenga en cuenta que se permite un máximo de 250 valores. Si supera esta cantida
 
 ![Se muestra una advertencia que indica que se ha alcanzado el número máximo de valores.](../images/ui/segment-builder/maximum-values.png)
 
+### Validación de consulta {#query-validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="Complejidad lógica"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="Límite de secuencia de eventos"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="Alerta de eficacia de consultas"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="Contar advertencia de filtro"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="Advertencia de datos anidados"
+>abstract=""
+
+El Generador de segmentos analiza y valida automáticamente las consultas de audiencia para garantizar que se adhiere a las prácticas recomendadas de definición de audiencia. Estas prácticas recomendadas se pueden clasificar en dos categorías: validación crítica y optimización del rendimiento.
+
+Si una definición de audiencia infringe una práctica recomendada de validación crítica, **no** podrá guardar los cambios para mantener estable el espacio aislado. Si una definición de audiencia infringe una práctica recomendada de optimización del rendimiento, podrá guardar los cambios, pero es *muy recomendable* actualizar la definición de audiencia para evitar problemas de rendimiento.
+
+| Comprobación de validación | Tipo | Umbral |
+| ---------------- | ---- | --------- |
+| Complejidad lógica | Validación crítica | La definición de audiencia es demasiado complicada. |
+| Eventos secuenciales | Validación crítica | Hay más de 6 eventos secuenciales dentro de una definición de audiencia. |
+| Recuento agregado | Optimización del rendimiento | Hay más de tres funciones de agregación dentro de una definición de audiencia. |
+| Datos anidados | Optimización del rendimiento | Hay más de dos niveles de profundidad de datos anidados (tipos de datos de matriz o mapa) dentro de una definición de audiencia. |
+| Tamaño de público | Optimización del rendimiento | El tamaño de calificación de audiencia es superior al 30 % del número total de perfiles en la zona protegida. |
+
 ### Adición de públicos
 
 >[!CONTEXTUALHELP]
@@ -241,7 +255,7 @@ También puede ver una versión basada en código de una regla creada en [!DNL S
 
 La vista de código proporciona un botón que le permite copiar el valor de la definición del segmento para utilizarlo en las llamadas de API. Para obtener la última versión de la definición del segmento, asegúrese de haber guardado los cambios más recientes en la definición del segmento.
 
-![El botón Copiar código está resaltado, lo que le permite &#x200B;](../images/ui/segment-builder/copy-code.png)
+![El botón Copiar código está resaltado, lo que le permite ](../images/ui/segment-builder/copy-code.png)
 
 ### Funciones de agregación
 
