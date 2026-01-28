@@ -2,14 +2,18 @@
 title: Habilite la captura de datos modificados para las conexiones de origen en la API
 description: Obtenga información sobre cómo habilitar la captura de datos de cambios para conexiones de origen en la API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: bd28d5be932823b8bf9c98280f97694ff221d76d
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
 
 # Habilite la captura de datos modificados para las conexiones de origen en la API
+
+>[!AVAILABILITY]
+>
+>Ahora puede usar la captura de datos modificados para los orígenes [!DNL Amazon S3] y [!DNL Data Landing Zone] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS) mientras está conectado a un centro de datos de VA6. Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
 
 Utilice la captura de datos modificados en las fuentes de Adobe Experience Platform para mantener los sistemas de origen y destino sincronizados en tiempo casi real.
 
