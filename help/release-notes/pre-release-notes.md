@@ -2,9 +2,9 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1316'
 ht-degree: 20%
 
 ---
@@ -113,7 +113,6 @@ Para obtener más información, lea la [[!DNL Schemas] información general](../
 
 | Función | Descripción |
 | ------- | ----------- |
-| Monitorización de segmentación de streaming | La monitorización en tiempo real de la segmentación de streaming ofrece transparencia en la tasa de evaluación, la latencia y las métricas de calidad de datos en los niveles de zona protegida, conjunto de datos y audiencia. Esto admite alertas proactivas y perspectivas procesables para ayudar a los ingenieros de datos a identificar infracciones de capacidad y problemas de ingesta. Las métricas de monitorización incluyen la tasa de evaluación, la latencia de ingesta de P95, así como los registros recibidos, evaluados, fallidos y omitidos. Las funciones de vista por conjunto de datos y vista por audiencia proporcionan una visibilidad completa de los nuevos perfiles netos calificados y descalificados. |
 | Actualización del TTL de audiencia externa | Las audiencias externas (como las cargas de CSV) ahora admiten la función de actualización forzada para la configuración del tiempo de vida (TTL). Esta función permite a los usuarios actualizar manualmente la caducidad del TTL para audiencias externas, lo que proporciona un mayor control sobre la administración del ciclo vital de la audiencia. Esto es especialmente útil para las audiencias que deben persistir más allá de su periodo TTL inicial o que requieren reactivación sin volver a cargar los datos. |
 
 Para obtener más información, lea la [[!DNL Segmentation Service] información general](../segmentation/home.md).
