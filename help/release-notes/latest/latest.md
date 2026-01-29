@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2026
 description: Las notas de la versión de enero de 2026 de Adobe Experience Platform.
-source-git-commit: 8ce256234be0917242f117ee7e9b806abe90888c
+source-git-commit: cbe9dd4babb31061405dee3ebe4bd40acad82e90
 workflow-type: tm+mt
-source-wordcount: '1287'
-ht-degree: 21%
+source-wordcount: '1454'
+ht-degree: 19%
 
 ---
 
@@ -25,27 +25,26 @@ ht-degree: 21%
 
 Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 
-<!-- - [Agent Orchestrator](#agent-orchestrator) -->
-
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinos](#destinations)
 - [Perfil del cliente en tiempo real](#real-time-customer-profile)
 - [Esquemas](#schemas)
 - [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
 
-<!-- ## Agent Orchestrator {#agent-orchestrator}
+## Agent Orchestrator {#agent-orchestrator}
 
-Agent Orchestrator enables you to build and deploy AI-powered agents that can automate workflows and interact with customers across multiple channels.
+Agent Orchestrator le permite crear e implementar agentes con tecnología de IA que pueden automatizar flujos de trabajo e interactuar con los clientes en varios canales.
 
-**New or updated features**
+**Funciones nuevas o actualizadas**
 
-| Feature | Description |
+| Función | Descripción |
 | --- | --- |
-| Trial motion for Adobe Experience Platform Agents | **Select customers now have access to Adobe Experience Platform Agents for a complimentary trial**, enabling them to explore and interact with these Agents through the AI Assistant interface powered by Adobe Experience Platform Agent Orchestrator. The trial offers hands-on experience with AI Agents that operate within the context of customers' existing Experience Cloud products and environments, allowing teams to evaluate value before committing to a full purchase. Adobe Experience Platform Agents are guided by user input and oversight and respect existing product-level access controls, ensuring users can only perform actions or view data for which they are authorized within the underlying Experience Cloud applications.|
+| Prueba enlazada al uso de agentes de Adobe Experience Platform | **Algunos clientes ahora tienen acceso de prueba gratuito a los agentes de Adobe Experience Platform**. Puede utilizar la prueba para explorar e interactuar con agentes a través de la interfaz del asistente de IA con tecnología de Adobe Experience Platform Agent Orchestrator. La prueba ofrece experiencia práctica con agentes de IA que operan en el contexto de los productos y entornos de Experience Cloud existentes de los clientes, lo que permite a los equipos evaluar el valor antes de comprometerse a realizar una compra completa. Los agentes de Adobe Experience Platform se guían por la entrada y supervisión del usuario y respetan los controles de acceso de nivel de producto existentes, lo que garantiza que los usuarios solo puedan realizar acciones o ver los datos para los que están autorizados dentro de las aplicaciones de Experience Cloud subyacentes. Lea la [descripción general de la versión de prueba de los agentes de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obtener información sobre cómo empezar. |
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+Para obtener más información, consulte la [documentación de Agent Orchestrator](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinos {#destinations}
 
