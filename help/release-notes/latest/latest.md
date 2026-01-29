@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2026
 description: Las notas de la versión de enero de 2026 de Adobe Experience Platform.
-source-git-commit: 436e65f22b8866fb9922afcf51811f537c05fc9f
+source-git-commit: 8ce256234be0917242f117ee7e9b806abe90888c
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1287'
 ht-degree: 21%
 
 ---
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## Destinos {#destinations}
 
@@ -59,7 +59,7 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 | Ya está disponible el conector [Index Exchange destination](/help/destinations/catalog/advertising/index-exchange.md) | Utilice este conector de destino para exportar segmentos de audiencia de Adobe Experience Platform directamente a la plataforma de publicidad programática de [!DNL Index Exchange]. [!DNL Index] es una plataforma global de suministro de publicidad que ayuda a los propietarios de medios a maximizar el valor de su contenido en todas las pantallas. Con más de 20 años de liderazgo en la industria, [!DNL Index] conecta las marcas más grandes del mundo con los creadores de experiencia premium para ofrecer experiencias de alta calidad a los consumidores. |
 | Compatibilidad con puntos finales regionales para conexiones de Brazo | Todos los [extremos específicos de región](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) admitidos por [!DNL Braze] están ahora disponibles para su selección durante el flujo de configuración de destino. Pregunte a su representante de [!DNL Braze] qué instancia de extremo debe utilizar. |
 | Soporte de programación semanal y mensual para [Liveramp Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | Ahora puede configurar programas de exportación semanales y mensuales para el destino de incorporación de Liveramp. <br> Esta versión se está implementando gradualmente y se completará para el 30 de enero. |
-| Experiencia de activación mejorada para [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) y [Microsoft Bing](../../destinations/catalog/advertising/bing.md) destinos | Los destinos de Trade Desk y Microsoft Bing ahora incluyen asignaciones obligatorias predefinidas para una experiencia de activación optimizada.  <br> Esta versión se está implementando gradualmente y se completará para el 30 de enero. |
+| Experiencia de activación mejorada para [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) y [Microsoft Bing](../../destinations/catalog/advertising/bing.md) destinos | Los destinos de Trade Desk y Microsoft Bing ahora incluyen asignaciones obligatorias predefinidas para una experiencia de activación optimizada.  <br> Esta versión se está implementando gradualmente y se completará para el 30 de enero. ![Imagen que muestra asignaciones predefinidas para la oficina de ventas](../2026/assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Imagen que muestra asignaciones predefinidas para Microsoft Bing](../2026/assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | Compatibilidad con cifrado AES256 para [destinos de Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Ahora puede configurar el cifrado AES256 para sus exportaciones de Amazon S3. Hay dos opciones disponibles: <ul><li>**[!UICONTROL Default]**: los datos se cifrarán en reposo con el algoritmo de cifrado predeterminado establecido en su bloque.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform agrega el encabezado `s3:x-amz-server-side-encryption": "AES256` en la exportación y los datos se cifrarán en reposo con el algoritmo AES256 cuando aterrice en S3. **Esta opción tiene prioridad sobre cualquier algoritmo de cifrado predeterminado configurado en su compartimento de S3**.</li></ul> Esta versión se está implementando gradualmente y estará completa para el 30 de enero. |
 | Compatibilidad con activación de número de teléfono para [la conexión de Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | El destino de Trade Desk - CRM ahora admite la activación de números de teléfono además de direcciones de correo electrónico. Puede activar números de teléfono sin hash en formato E.164 y números de teléfono con hash (formato SHA256_E.164) en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos de CRM. Los números de teléfono deben normalizarse al formato E.164 antes de la activación. |
 
