@@ -3,9 +3,9 @@ title: 'LiveRamp: conexión de incorporación'
 description: Aprenda a utilizar el conector LiveRamp para incorporar audiencias de Adobe Real-Time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b8540eb20838e7f2228d71bfc002392d07daffe4
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1872'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ Como especialista en marketing, quiero enviar audiencias de Adobe Experience Pla
 
 ## Requisitos previos {#prerequisites}
 
-La conexión [!DNL LiveRamp - Onboarding] exporta archivos mediante el almacenamiento SFTP[&#x200B; de &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+La conexión [!DNL LiveRamp - Onboarding] exporta archivos mediante el almacenamiento SFTP[ de ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Para poder enviar datos de Experience Platform a [!DNL LiveRamp - Onboarding], necesita sus credenciales de [!DNL LiveRamp]. Póngase en contacto con su representante de [!DNL LiveRamp] para obtener sus credenciales, si aún no las tiene.
 
@@ -50,7 +50,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 |---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Audience export]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino [!DNL LiveRamp - Onboarding]. |
-| Frecuencia de exportación | **[!UICONTROL Daily batch]** | A medida que los perfiles se actualizan en Experience Platform en función de la evaluación de audiencias, los perfiles (identidades) se actualizan una vez al día de forma descendente a la plataforma de destino. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+| Frecuencia de exportación | **[!UICONTROL Batch]** | A medida que los perfiles se actualizan en Experience Platform en función de la evaluación de audiencias, los perfiles (identidades) se actualizan y se pueden enviar a la plataforma de destino de forma descendente en cadencia diaria, semanal o mensual. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -132,7 +132,7 @@ Lea [Activar datos de audiencia en destinos de exportación de perfiles por lote
 En el paso [!UICONTROL Scheduling], cree una programación de exportación para cada audiencia con la configuración que se muestra a continuación.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Actualmente no se admiten exportaciones de archivos incrementales](../../ui/activate-batch-profile-destinations.md#export-incremental-files) para el destino [!DNL LiveRamp].
-* **[!UICONTROL Frequency]**: [!UICONTROL Daily]
+* **[!UICONTROL Frequency]**: [!UICONTROL Daily], [!UICONTROL Weekly] o [!UICONTROL Monthly]
 * **[!UICONTROL Date]**: seleccione las horas de inicio y finalización de la exportación como desee.
 
 ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra el paso de programación de audiencias.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
@@ -255,6 +255,7 @@ Esta sección recoge la funcionalidad y las actualizaciones significativas de la
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
+| Febrero de 2025 | Actualización de funcionalidad y documentación | <ul><li> Se ha agregado compatibilidad con las cadencias de envío semanales y mensuales. |
 | Marzo de 2024 | Actualización de funcionalidad y documentación | <ul><li>Se agregó compatibilidad con envíos a Europa y Australia [!DNL LiveRamp] [!DNL SFTP] instancias.</li><li>Se ha actualizado la documentación para describir configuraciones específicas para regiones de reciente compatibilidad.</li><li>Se ha aumentado el tamaño máximo de archivo a 10 millones de filas (de 5 millones, anteriormente).</li><li>Se ha actualizado la documentación para reflejar el aumento del tamaño de los archivos.</li></ul> |
 | Julio de 2023 | Versión inicial | Versión de destino inicial y documentación publicada. |
 
