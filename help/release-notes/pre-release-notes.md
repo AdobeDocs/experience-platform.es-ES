@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
+source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 20%
+source-wordcount: '1110'
+ht-degree: 22%
 
 ---
 
@@ -32,7 +32,6 @@ Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinos](#destinations)
 - [Perfil del cliente en tiempo real](#real-time-customer-profile)
-- [Esquemas](#schemas)
 - [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
 
@@ -92,18 +91,6 @@ El perfil del cliente en tiempo real permite ver una vista integral de cada clie
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [[!DNL Real-Time Customer Profile] información general](../profile/home.md).
-
-## Esquemas {#schemas}
-
-Experience Platform utiliza esquemas para describir la estructura de los datos de una manera uniforme y reutilizable. Al definir los datos de forma coherente en todos los sistemas, resulta más fácil conservar el significado y, por lo tanto, obtener valor de los datos. Los esquemas están compuestos por una clase base y cero o más grupos de campos de esquema.
-
-**Funciones nuevas o actualizadas**
-
-| Función | Descripción |
-| ------- | ----------- |
-| Modernización del inventario de esquemas con búsqueda, filtro, etiquetas y carpetas | La página de exploración de esquemas se ha modernizado para proporcionar capacidades de organización y descubrimiento mejoradas. Las nuevas funciones incluyen opciones avanzadas de búsqueda y filtrado, compatibilidad con etiquetas y carpetas generadas por el usuario para organizar esquemas y acciones en línea para optimizar los flujos de trabajo. Las mejoras clave incluyen: columnas actualizadas (Nombre, Clase, Conjuntos de datos, Identidades, Relaciones, Habilitar para perfil, Comportamiento, Tipo de esquema, Etiquetas, Fecha de creación, Última modificación), filtros avanzados (Mostrar perfiles, Tipo de esquema, Clase, Tiene cualquier etiqueta, Creado por, Fecha de creación, Fecha de modificación, Tiene identidad principal, Tiene relación, Área de nombres de identidad principal), acciones en línea (Editar, Eliminar, Aplicar etiquetas, Crear conjunto de datos para esquemas no relacionales, Administrar etiquetas, Mover a carpeta, Agregar a paquete, Copiar estructura JSON, Descargar archivo de muestra) y la capacidad de organizar esquemas mediante etiquetas y carpetas. Estas mejoras proporcionan una visibilidad completa de los recursos de esquema y permiten una administración de esquemas más eficiente a nivel de entorno limitado. |
-
-Para obtener más información, lea la [[!DNL Schemas] información general](../xdm/home.md).
 
 ## Servicio de segmentación {#segmentation-service}
 
