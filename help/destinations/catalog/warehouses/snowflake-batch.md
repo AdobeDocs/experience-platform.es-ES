@@ -4,9 +4,9 @@ description: Cree un recurso compartido de datos de Snowflake activo para recibi
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1662'
 ht-degree: 4%
 
 ---
@@ -25,11 +25,11 @@ Lea las siguientes secciones para comprender cómo funciona el destino de Snowfl
 
 ### Funcionamiento del uso compartido de datos Snowflake {#data-sharing}
 
-Este destino usa un recurso compartido de datos de [!DNL Snowflake], lo que significa que no se exportarán ni transferirán físicamente datos a su propia instancia de Snowflake. En su lugar, Adobe Systems le concede acceso de solo lectura a una tabla activa alojada en el entorno de Snowflake de Adobe Systems. Puede consultar esta tabla compartida directamente desde su cuenta de Snowflake, pero no es el propietario de la tabla y no puede modificarla ni conservarla más allá del período de retención especificado. Adobe Systems administra completamente el ciclo de vida y la estructura de la tabla compartida.
+Este destino usa un recurso compartido de datos de [!DNL Snowflake], lo que significa que no se exportarán ni transferirán físicamente datos a su propia instancia de Snowflake. En su lugar, Adobe le concede acceso de solo lectura a una tabla activa alojada en el entorno de Snowflake de Adobe. Puede consultar esta tabla compartida directamente desde su cuenta de Snowflake, pero no es el propietario de la tabla y no puede modificarla ni conservarla más allá del período de retención especificado. Adobe administra completamente el ciclo de vida y la estructura de la tabla compartida.
 
-La primera vez después de configurar un flujo de datos de Adobe Systems a su cuenta de Snowflake, se le pedirá que acepte la lista privada de Adobe Systems.
+La primera vez que configure un flujo de datos de Adobe a su cuenta de Snowflake, se le pedirá que acepte el anuncio privado de Adobe.
 
-![Captura de pantalla que muestra la pantalla de aceptación de listado privado Snowflake](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
+![Captura de pantalla que muestra la pantalla de aceptación de anuncios privados de Snowflake](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
 
 ### Retención de datos y tiempo de vida (TTL) {#ttl}
 
@@ -93,11 +93,11 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino. L
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | ✓ | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Systems Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | ✓ | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
-Audiencias admitidas por tipo audiencia datos:
+Audiencias compatibles por tipo de datos de audiencia:
 
 | Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
 |--------------------|-----------|-------------|-----------|
@@ -149,7 +149,8 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Snowflake Account ID]**: su ID de cuenta de Snowflake. Utilice el siguiente formato de ID de cuenta en función de si su cuenta está vinculada a una organización:
    * Si su cuenta está vinculada a una organización:`OrganizationName.AccountName`.
    * Si su cuenta no está vinculada a una organización:`AccountName`.
-* **[!UICONTROL Account acknowledgment]**: active la confirmación de ID de cuenta de Snowflake para confirmar que el ID de cuenta es correcto y le pertenece.
+* **[!UICONTROL Select Snowflake Region]**: seleccione la región donde está aprovisionada su instancia de Snowflake. Consulte la [documentación](https://docs.snowflake.com/en/user-guide/intro-regions) de Snowflake para obtener información detallada sobre las regiones de nube admitidas.
+* **[!UICONTROL Account acknowledgment]**: después de escribir su **[!UICONTROL Snowflake Account ID]**, seleccione **[!UICONTROL Yes]** en este menú desplegable para confirmar que su **[!UICONTROL Snowflake Account ID]** es correcto y que le pertenece.
 
 >[!IMPORTANT]
 >
@@ -165,12 +166,12 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el espacio de nombres de identidad resaltado en la flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Consulte [Activar audiencia datos para lotes perfil destinos de exportación](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-### Atributos de mapa {#map}
+### Asignar atributos {#map}
 
 Puede exportar identidades y atributos de perfil a este destino.
 
@@ -196,14 +197,10 @@ La tabla dinámica contiene las siguientes columnas:
 
 ## Limitaciones conocidas {#known-limitations}
 
-### Restricción de política de combinación predeterminada {#default-merge-policy-restriction}
-
-Actualmente, solo se pueden exportar las audiencias asignadas al directiva de combinación predeterminado.
-
 ### Disponibilidad regional {#regional-availability}
 
-Actualmente, el [!DNL Snowflake] destino del lote solo está disponible para los clientes de CDP en tiempo real aprovisionados en el área geográfica Experience Platform VA7.
+En este momento, el destino de lote [!DNL Snowflake] solo está disponible para los clientes de Real-Time CDP aprovisionados en la región de Experience Platform VA7.
 
-## Uso y control de datos {#data-usage-governance}
+## Uso de datos y gobernanza {#data-usage-governance}
 
 Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](/help/data-governance/home.md).

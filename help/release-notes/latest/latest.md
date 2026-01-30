@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2026
 description: Las notas de la versión de enero de 2026 de Adobe Experience Platform.
-source-git-commit: cbe9dd4babb31061405dee3ebe4bd40acad82e90
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1454'
-ht-degree: 19%
+source-wordcount: '1529'
+ht-degree: 18%
 
 ---
 
@@ -40,7 +40,7 @@ Agent Orchestrator le permite crear e implementar agentes con tecnología de IA 
 
 | Función | Descripción |
 | --- | --- |
-| Prueba enlazada al uso de agentes de Adobe Experience Platform | **Algunos clientes ahora tienen acceso de prueba gratuito a los agentes de Adobe Experience Platform**. Puede utilizar la prueba para explorar e interactuar con agentes a través de la interfaz del asistente de IA con tecnología de Adobe Experience Platform Agent Orchestrator. La prueba ofrece experiencia práctica con agentes de IA que operan en el contexto de los productos y entornos de Experience Cloud existentes de los clientes, lo que permite a los equipos evaluar el valor antes de comprometerse a realizar una compra completa. Los agentes de Adobe Experience Platform se guían por la entrada y supervisión del usuario y respetan los controles de acceso de nivel de producto existentes, lo que garantiza que los usuarios solo puedan realizar acciones o ver los datos para los que están autorizados dentro de las aplicaciones de Experience Cloud subyacentes. Lea la [descripción general de la versión de prueba de los agentes de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obtener información sobre cómo empezar. |
+| Prueba enlazada al uso de agentes de Adobe Experience Platform | **Algunos clientes ahora tienen acceso de prueba gratuito a los agentes de Adobe Experience Platform**. Puede utilizar la prueba para explorar e interactuar con agentes a través de la interfaz del asistente de IA con tecnología de Adobe Experience Platform Agent Orchestrator. La prueba ofrece experiencia práctica con agentes de IA que operan en el contexto de los productos y entornos de Experience Cloud existentes de los clientes, lo que permite a los equipos evaluar el valor antes de comprometerse a realizar una compra completa. Los agentes de Adobe Experience Platform se guían por la entrada y supervisión del usuario y respetan los controles de acceso de nivel de producto existentes, lo que garantiza que los usuarios solo puedan realizar acciones o ver los datos para los que están autorizados dentro de las aplicaciones de Experience Cloud subyacentes. Lea la [descripción general de la versión de prueba de los agentes de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obtener información sobre cómo empezar. |
 
 {style="table-layout:auto"}
 
@@ -61,6 +61,7 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 | Experiencia de activación mejorada para [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) y [Microsoft Bing](../../destinations/catalog/advertising/bing.md) destinos | Los destinos de Trade Desk y Microsoft Bing ahora incluyen asignaciones obligatorias predefinidas para una experiencia de activación optimizada.  <br> Esta versión se está implementando gradualmente y se completará para el 30 de enero. ![Imagen que muestra asignaciones predefinidas para la oficina de ventas](../2026/assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Imagen que muestra asignaciones predefinidas para Microsoft Bing](../2026/assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | Compatibilidad con cifrado AES256 para [destinos de Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Ahora puede configurar el cifrado AES256 para sus exportaciones de Amazon S3. Hay dos opciones disponibles: <ul><li>**[!UICONTROL Default]**: los datos se cifrarán en reposo con el algoritmo de cifrado predeterminado establecido en su bloque.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform agrega el encabezado `s3:x-amz-server-side-encryption": "AES256` en la exportación y los datos se cifrarán en reposo con el algoritmo AES256 cuando aterrice en S3. **Esta opción tiene prioridad sobre cualquier algoritmo de cifrado predeterminado configurado en su compartimento de S3**.</li></ul> Esta versión se está implementando gradualmente y estará completa para el 30 de enero. |
 | Compatibilidad con activación de número de teléfono para [la conexión de Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | El destino de Trade Desk - CRM ahora admite la activación de números de teléfono además de direcciones de correo electrónico. Puede activar números de teléfono sin hash en formato E.164 y números de teléfono con hash (formato SHA256_E.164) en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos de CRM. Los números de teléfono deben normalizarse al formato E.164 antes de la activación. |
+| [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) actualizaciones de destino | El destino de lote de Snowflake ahora incluye la capacidad de selección de regiones durante la configuración del destino. Ahora puede seleccionar la región de Snowflake específica en la que está aprovisionada la instancia, lo que garantiza una transferencia de datos óptima y el cumplimiento de los requisitos regionales. Además, se ha eliminado la restricción predeterminada de la política de combinación, lo que le permite exportar audiencias asignadas a cualquier política de combinación. <br>: actualmente, el destino de lote [!DNL Snowflake] solo está disponible para los clientes de Real-Time CDP aprovisionados en la región de Experience Platform VA7. |
 
 **Funcionalidad nueva o actualizada**
 
