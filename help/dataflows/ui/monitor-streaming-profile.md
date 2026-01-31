@@ -1,5 +1,5 @@
 ---
-title: Monitorización de la ingesta de perfiles de streaming
+title: Monitorizar la ingesta de perfiles de streaming
 description: Aprenda a utilizar el tablero de monitorización para monitorizar la ingesta de perfiles de flujo continuo
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
@@ -9,7 +9,7 @@ ht-degree: 18%
 
 ---
 
-# Monitorización de la ingesta de perfiles de streaming
+# Monitorizar la ingesta de perfiles de streaming
 
 Puede utilizar el panel de monitorización de la interfaz de usuario de Adobe Experience Platform para llevar a cabo una monitorización en tiempo real de la ingesta de perfiles de streaming dentro de la organización. Utilice esta función para acceder a una mayor transparencia en el rendimiento y en las métricas de calidad de datos relacionadas con los datos de streaming. Además, utilice esta función para alertas proactivas y la recuperación de perspectivas procesables para ayudar a identificar posibles infracciones de capacidad y problemas de ingesta de datos.
 
@@ -26,13 +26,13 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 >[!NOTE]
 >
->La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacidad de rendimiento de streaming admite hasta 1500 eventos entrantes por segundo. Puede adquirir la segmentación de flujo adicional para admitir hasta un máximo de 13 500 eventos entrantes adicionales por segundo&#x200B;. Para obtener más información, consulte las [descripciones de los paquetes B2C Edition - Prime y Ultimate de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Monitorización de métricas para la ingesta de perfiles de streaming {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
->title="Monitorización de la ingesta de perfiles de streaming"
+>title="Monitorizar la ingesta de perfiles de streaming"
 >abstract="El panel de monitorización de perfiles de flujo continuo muestra información sobre el rendimiento y las tasas de ingesta. Utilice este panel de control para ver, comprender y analizar las métricas de procesamiento de datos. de sus perfiles de streaming en Experience Platform."
 >text="Learn more in documentation"
 

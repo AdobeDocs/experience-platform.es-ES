@@ -25,7 +25,7 @@ ht-degree: 29%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitorización de actividades de los usuarios en Experience Platform"
+>title="Monitorizar actividades de los usuarios en Experience Platform"
 >abstract="<h2>Descripción</h2><p>Puede monitorizar la actividad de los usuarios para los distintos servicios y funcionalidades de Experience Platform en forma de registros de auditoría. Estos registros forman una pista de auditoría que registra <b>quién</b> realizó <b>qué</b> acción y <b>cuándo</b>. Los registros de auditoría pueden ayudar a solucionar problemas en Experience Platform y a que su empresa cumpla de manera eficaz con las políticas corporativas de administración de datos y los requisitos normativos.</p>"
 
 Para aumentar la transparencia y la visibilidad de las actividades realizadas en el sistema, Adobe Experience Platform le permite auditar la actividad del usuario para varios servicios y funcionalidades en forma de &quot;registros de auditoría&quot;. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas en Experience Platform y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.
@@ -169,7 +169,7 @@ Todas las acciones que puede realizar en la interfaz de usuario también se pued
 
 ## Administración de registros de auditoría para Adobe Admin Console
 
-Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/es/enterprise/using/audit-logs.html).
+Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Pasos siguientes y recursos adicionales
 
@@ -177,4 +177,4 @@ En esta guía se explica cómo administrar los registros de auditoría en Experi
 
 Para comprender mejor los registros de auditoría en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/344645?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

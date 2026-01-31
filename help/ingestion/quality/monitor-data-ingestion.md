@@ -17,14 +17,14 @@ La ingesta de datos le permite introducir sus datos en Adobe Experience Platform
 
 Esta guía del usuario proporciona pasos sobre cómo monitorizar los datos en la interfaz de usuario de Adobe Experience Platform. Esta guía requiere que tenga un Adobe ID y acceso a Adobe Experience Platform.
 
-## Monitorización de la transmisión de ingesta de datos de extremo a extremo {#monitor-streaming-end-to-end-data-ingestion}
+## Monitorizar la transmisión de ingesta de datos de extremo a extremo {#monitor-streaming-end-to-end-data-ingestion}
 
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"
 >title="Tasa de ingesta"
 >abstract="Número de eventos que se procesan correctamente por segundo."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=es" text="Monitorización de flujos de datos para orígenes en la interfaz de usuario"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=es" text="Monitorizar flujos de datos para orígenes en la interfaz de usuario"
 
 >[!TIP]
 >
