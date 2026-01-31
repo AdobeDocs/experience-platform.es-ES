@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo crear los metadatos para una audie
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
+source-git-commit: ea7fd13675a95941be7267f1cf75056b224efcd3
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '264'
 ht-degree: 7%
 
 ---
@@ -61,7 +61,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
  -H 'Accept: application/vnd.adobe.external.audiences+json; version=2'
  -d '{
     "name": "Sample audience name",
-    "description" "A sample description for the audience.",
+    "description": "A sample description for the audience.",
+    "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7",
     "namespace": "agora",
     "originName": "Agora_Collaboration"
  }'
@@ -71,6 +72,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 | -------- | ---- | ----------- |
 | `name` | Cadena | Nombre de la audiencia. |
 | `description` | Cadena | Una descripción opcional para la audiencia. |
+| `audienceId` | Cadena | Un ID generado externamente para la audiencia. |
 | `namespace` | Cadena | El área de nombres de la audiencia. |
 | `originName` | Cadena | Nombre del origen de la audiencia. |
 
@@ -80,6 +82,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 
 ```json
 {
+    "id": "6bb1ee15-8f64-49fd-bce3-d5c2f22f1f14",
     "name": "Sample audience name",
     "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7"
 }
@@ -87,5 +90,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 
 | Propiedad | Tipo | Descripción |
 | -------- | ---- | ----------- |
+| `id` | Cadena | ID generado por el sistema para la audiencia. |
 | `name` | Cadena | Nombre de la audiencia que ha creado. |
-| `audienceId` | Cadena | El ID de la audiencia que ha creado. |
+| `audienceId` | Cadena | El ID de la audiencia que ha creado proporcionado externamente. |

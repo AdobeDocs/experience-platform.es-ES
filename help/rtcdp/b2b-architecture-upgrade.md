@@ -1,12 +1,12 @@
 ---
 title: Actualizaciones de arquitectura en Real-Time CDP B2B edition
 description: Lea este documento para obtener más información sobre las completas actualizaciones de la arquitectura en Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
+source-git-commit: da288d1a917df85b3c003bc6592fda7a6f1eafe7
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 0%
+source-wordcount: '1096'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ Utilice la arquitectura mejorada para las siguientes ventajas:
 
 Lea lo siguiente para ver las mejoras clave incluidas en la actualización de la arquitectura.
 
-### Instantáneas de cuenta para miembros de audiencia
+### Instantáneas de cuenta del abono de público
 
 Con la nueva arquitectura B2B, los detalles de pertenencia a audiencias ahora se incluyen para entidades de cuenta en exportaciones de instantáneas. Esta función le permite acceder a indicadores de estado de audiencia, marcas de tiempo y abono de nivel de cuenta.
 
@@ -39,7 +39,7 @@ Con esta actualización, ahora puede:
 
 Lea la documentación sobre [audiencias de cuenta](../segmentation/types/account-audiences.md) para obtener más información.
 
-### Recuentos de audiencias para audiencias que incluyen entidades B2B
+### Recuentos de público para audiencias que incluyen entidades B2B
 
 Las estimaciones de tamaño de audiencia para audiencias con entidades B2B ahora se calculan con precisión exacta. Estas estimaciones están disponibles durante la vista previa y proporcionan perspectivas más precisas y fiables para las audiencias que implican relaciones B2B complejas.
 
@@ -123,6 +123,10 @@ Las solicitudes de eliminación para las siguientes entidades B2B que utilizan l
 * Miembros de lista de marketing
 
 Lea la [[!DNL Profile Access] API](../profile/api/entities.md) para obtener más información.
+
+### Obsolescencia de la API de trabajos de segmentos
+
+En la nueva arquitectura, el punto final &quot;crear un trabajo de segmentación&quot; y la evaluación de audiencia flexible *no son compatibles.
 
 ### Búsquedas de perfil de cuenta y oportunidad
 

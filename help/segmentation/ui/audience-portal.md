@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 8fed1f034cd530bd84bf9d9b180d9db3c4ee0faf
+source-git-commit: 1a2536437ae8aa34dac13406dd4b36afa9585ae5
 workflow-type: tm+mt
-source-wordcount: '4434'
+source-wordcount: '4457'
 ht-degree: 5%
 
 ---
@@ -102,7 +102,7 @@ Puede agregar campos adicionales al Portal de audiencias seleccionando ![el icon
 | ----- | ----------- |
 | [!UICONTROL Name] | Nombre de la audiencia. |
 | [!UICONTROL Profile count] | Número total de perfiles aptos para la audiencia. |
-| [!UICONTROL Origin] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen [Servicio de segmentación](#segment-builder), [Carga personalizada](#import-audience), [Composición de audiencias](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/es/docs/audience-manager/user-guide/aam-home), [Audiencia similar](../types/lookalike-audiences.md), [Composición de audiencias federada](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller de datos](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/guide-overview) y [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen [Servicio de segmentación](#segment-builder), [Carga personalizada](#import-audience), [Composición de audiencias](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audiencia similar](../types/lookalike-audiences.md), [Composición de audiencias federada](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller de datos](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/guide-overview) y [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Lifecycle status] | El estado de la audiencia. Los valores posibles de este campo incluyen `Draft`, `Inactive` y `Published`. Para obtener más información sobre los estados del ciclo vital, incluidos el significado de los distintos estados y cómo mover audiencias a diferentes estados del ciclo vital, lea la sección [estado del ciclo vital de las Preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles de este campo incluyen [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] y [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | El nombre de la persona que actualizó la audiencia por última vez. |
@@ -138,7 +138,7 @@ Para usar [!DNL Unified Search], agregue el término que desea buscar en la barr
 
 ![La barra de búsqueda está resaltada.](../images/ui/audience-portal/browse-audience-search.png)
 
-Para obtener más información acerca de [!DNL Unified Search], incluidas las características compatibles, lea la [documentación de búsqueda unificada](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=es).
+Para obtener más información acerca de [!DNL Unified Search], incluidas las características compatibles, lea la [documentación de búsqueda unificada](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 #### Etiquetas {#tags}
 
@@ -203,7 +203,7 @@ Se muestra la lista de filtros disponibles.
 
 | Filtro | Descripción |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Le permite filtrar según el origen de la audiencia. Los valores posibles incluyen [Servicio de segmentación](#segment-builder), [Carga personalizada](#import-audience), [Composición de audiencias](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/es/docs/audience-manager/user-guide/aam-home), [Audiencia similar](../types/lookalike-audiences.md), [Composición de audiencias federada](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller de datos](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/guide-overview) y [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | Le permite filtrar según el origen de la audiencia. Los valores posibles incluyen [Servicio de segmentación](#segment-builder), [Carga personalizada](#import-audience), [Composición de audiencias](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audiencia similar](../types/lookalike-audiences.md), [Composición de audiencias federada](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller de datos](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/guide-overview) y [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Has any tag] | Le permite filtrar por etiquetas. Puede seleccionar entre **[!UICONTROL Has any tag]** y **[!UICONTROL Has all tags]**. Cuando se selecciona **[!UICONTROL Has any tag]**, las audiencias filtradas incluirán **cualquiera** de las etiquetas que haya agregado. Cuando se selecciona **[!UICONTROL Has all tags]**, las audiencias filtradas deben incluir **todas** las etiquetas que haya agregado. |
 | [!UICONTROL Lifecycle status] | Le permite filtrar según el estado del ciclo vital de la audiencia. Las opciones disponibles son [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive] y [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Le permite filtrar según la frecuencia de actualización de la audiencia (método de evaluación). Las opciones disponibles incluyen [!UICONTROL Batch], [!UICONTROL Streaming] y [!UICONTROL Edge] |
@@ -269,14 +269,14 @@ Si la audiencia está a siete días de caducar, puede seleccionar **[!UICONTROL 
 
 ![El botón [!UICONTROL Refresh data expiration] está resaltado en la página de detalles de la audiencia.](../images/ui/audience-portal/refresh-data-expiration.png)
 
-Esto amplía la caducidad de los datos en 30 días y utiliza los mismos metadatos de audiencia. Una vez que se ha presionado el botón, no se puede seleccionar durante otros 20 minutos.
+Esto amplía la caducidad de los datos en el número de días definido en la carga inicial y utiliza los mismos metadatos de audiencia. Si la caducidad de los datos no se ha definido anteriormente, se amplía en 30 días. Una vez que se ha presionado el botón, no se puede seleccionar durante otros 20 minutos.
 
 Este botón **no** se podrá seleccionar en las siguientes situaciones:
 
 - No hay lotes correctos para la audiencia
 - Error en la actualización inicial
 - La caducidad de los datos supera los siete días
-- La audiencia no tiene datos
+- La audiencia ya ha caducado
 
 >[!TAB Servicio de segmentación]
 
@@ -467,7 +467,7 @@ También puede añadir algunos detalles adicionales a la audiencia generada exte
 
 >[!NOTE]
 >
->La caducidad de los datos personalizados establece el número de días que los perfiles permanecerán **1&rbrace; en la pertenencia a audiencias.** Una vez finalizada la caducidad de los datos, los perfiles abandonan la pertenencia a la audiencia. Este valor puede establecerse de 1 a 90 días.
+>La caducidad de los datos personalizados establece el número de días que los perfiles permanecerán **1} en la pertenencia a audiencias.** Una vez finalizada la caducidad de los datos, los perfiles abandonan la pertenencia a la audiencia. Este valor puede establecerse de 1 a 90 días.
 
 Después de rellenar los detalles de la audiencia, seleccione **[!UICONTROL Next]**.
 
