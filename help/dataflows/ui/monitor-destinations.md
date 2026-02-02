@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
+source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3542'
 ht-degree: 10%
 
 ---
@@ -371,7 +371,7 @@ La página de detalles de ejecución del flujo de datos, además de los detalles
 - **[!UICONTROL IMS org ID]**: organización a la que pertenece el flujo de datos.
 - **[!UICONTROL Last updated]**: hora a la que se ejecutó el flujo de datos por última vez.
 
-La página de detalles también tiene un conmutador para cambiar entre los errores de ejecución del flujo de datos y las audiencias. Esta opción solo está disponible para ejecuciones de flujo de datos en destinos por lotes y para el destino de flujo continuo [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+La página de detalles también tiene un conmutador para cambiar entre los errores de ejecución del flujo de datos y las audiencias. Esta opción está disponible para los destinos enumerados en la sección [vista de nivel de audiencia](#segment-level-view).
 
 La vista de errores de ejecución del flujo de datos muestra una lista de los registros que han fallado y los que se han omitido. Se muestra información tanto de los registros fallidos como de los omitidos, incluido el código de error, el recuento de identidades y la descripción. De forma predeterminada, la lista muestra los registros con errores. Para mostrar los registros omitidos, seleccione la opción **[!UICONTROL Records skipped]**.
 
