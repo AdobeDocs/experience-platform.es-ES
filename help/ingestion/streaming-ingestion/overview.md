@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de ingesta de streaming
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
+source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '433'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de transmisión y describe los conceptos anteriores.
 
->[!VIDEO](https://video.tv.adobe.com/v/31628?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Registros de perfil de flujo y [!DNL ExperienceEvents]
 
@@ -43,7 +43,7 @@ Para obtener más información sobre cómo habilitar un conjunto de datos para [
 
 | Destino | Latencia esperada |
 | --------- | ---------------- |
-| Perfil del cliente en tiempo real | &lt; 15 minutos en el percentil 95 |
+| Perfil del cliente en tiempo real | <ul><li>&lt; 15 minutos en el percentil 95 para la ingesta de datos B2C.</li><li>&lt; 30 minutos en el percentil 95 para la ingesta de datos B2B.</li></ul> |
 | Lago de datos | &lt; 60 minutos |
 
 ## Solicitud de guía por segundos (RPS) sobre la ingesta de transmisión
