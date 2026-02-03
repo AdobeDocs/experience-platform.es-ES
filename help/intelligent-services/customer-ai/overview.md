@@ -3,7 +3,7 @@ keywords: Experience Platform;información general;inteligencia artificial aplic
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: 'Información general sobre Customer AI '
-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
+description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades empresariales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 landing-page-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
 short-description: La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
@@ -23,7 +23,7 @@ Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cli
 
 ## Explicación de Customer AI
 
-La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
+La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades empresariales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 
 La inteligencia artificial aplicada al cliente está diseñada para:
 
@@ -44,7 +44,7 @@ El cliente no está diseñado para:
 
 El siguiente vídeo está diseñado para ayudarle a comprender la inteligencia artificial aplicada al cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/36461?captions=spa&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Funcionamiento
 
