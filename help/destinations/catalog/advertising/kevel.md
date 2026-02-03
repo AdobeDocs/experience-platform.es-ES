@@ -1,7 +1,8 @@
 ---
 title: Kevel Connection
 description: Utilice el destino de streaming de Kevel para activar audiencias directamente en las API de UserDB y Administración de segmentos de Kevel y admitir la segmentación en tiempo real en el momento de la decisión.
-source-git-commit: d820485fd81efd08d8626f8476338558c4585c20
+last-substantial-update: 2026-01-27T00:00:00Z
+source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 3%
@@ -51,7 +52,7 @@ El destino [!DNL Kevel] admite la activación de cualquier identidad que la apli
 
 ### Compatibilidad con áreas de nombres de identidad personalizadas
 
-El destino [!DNL Kevel]0&rbrace; también acepta áreas de nombres personalizadas **, tal como se definieron en su implementación de Experience Platform.**
+El destino [!DNL Kevel]0} también acepta áreas de nombres personalizadas **, tal como se definieron en su implementación de Experience Platform.**
 
 Esto significa que:
 
