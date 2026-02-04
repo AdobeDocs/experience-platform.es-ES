@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inicio;temas populares;aplicación de políticas;aplicación automática;aplicación basada en API;gobernanza de datos
+keywords: Experience Platform;inicio;temas populares;Aplicación de políticas;Aplicación automática;Aplicación basada en API;Gobernanza de datos
 solution: Experience Platform
 title: Extremos de API de evaluación de directiva
 description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API del servicio de políticas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Los extremos de API utilizados en esta guía forman parte de la [[!DNL Policy Se
 
 ## Evaluar infracciones de directivas mediante etiquetas de uso de datos {#labels}
 
-Puede evaluar infracciones de directivas en función de la presencia de un conjunto específico de etiquetas de uso de datos mediante el parámetro de consulta `duleLabels` en una solicitud de GET.
+Puede evaluar infracciones de directivas en función de la presencia de un conjunto específico de etiquetas de uso de datos mediante el parámetro de consulta `duleLabels` en una petición GET.
 
 **Formato de API**
 
@@ -41,7 +41,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con un conjunto de etiquetas de uso de datos. GET Puede recuperar una lista de acciones de marketing disponibles realizando una [solicitud al extremo de acciones de marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con un conjunto de etiquetas de uso de datos. Puede recuperar una lista de acciones de marketing disponibles realizando una [petición GET al extremo de las acciones de marketing](./marketing-actions.md#list). |
 | `{LABELS_LIST}` | Una lista de nombres de etiquetas de uso de datos separados por comas con los que probar la acción de marketing. Por ejemplo: `duleLabels=C1,C2,C3`<br><br>Observe que los nombres de etiqueta distinguen entre mayúsculas y minúsculas. Asegúrese de utilizar las mayúsculas y minúsculas correctas al incluirlas en el parámetro `duleLabels`. |
 
 **Solicitud**
@@ -123,7 +123,11 @@ Una respuesta correcta incluye una matriz `violatedPolicies`, que contiene los d
 
 ## Evaluar infracciones de directivas mediante conjuntos de datos {#datasets}
 
-Puede evaluar las infracciones de directivas en función de un conjunto de uno o más conjuntos de datos de los que se pueden recopilar etiquetas de uso de datos. Para ello, realice una solicitud de POST al extremo `/constraints` para una acción de marketing específica y proporcione una lista de ID de conjuntos de datos dentro del cuerpo de la solicitud.
+>[!WARNING]
+>
+>El extremo `/constraints` para la evaluación basada en conjuntos de datos está obsoleto. Para evaluar una infracción de directiva o realizar varios trabajos de evaluación, use la [API de evaluación masiva (`/bulk-eval`)](#evaluate-policies-in-bulk) en su lugar.
+
+Puede evaluar las infracciones de directivas en función de un conjunto de uno o más conjuntos de datos de los que se pueden recopilar etiquetas de uso de datos. Para ello, realice una petición POST al extremo `/constraints` para una acción de marketing específica y proporcione una lista de ID de conjuntos de datos dentro del cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -134,7 +138,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con uno o varios conjuntos de datos. GET Puede recuperar una lista de acciones de marketing disponibles realizando una [solicitud al extremo de acciones de marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con uno o varios conjuntos de datos. Puede recuperar una lista de acciones de marketing disponibles realizando una [petición GET al extremo de las acciones de marketing](./marketing-actions.md#list). |
 
 **Solicitud**
 
@@ -167,7 +171,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `entityType` | El tipo de entidad cuyo identificador se indica en la propiedad `entityId` del mismo nivel. Actualmente, el único valor aceptado es `dataSet`. |
-| `entityId` | El ID de un conjunto de datos con el que probar la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una solicitud de GET al extremo `/dataSets` en la API [!DNL Catalog Service]. Consulte la guía de [listar [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
+| `entityId` | El ID de un conjunto de datos con el que probar la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una petición GET al extremo `/dataSets` en la API [!DNL Catalog Service]. Consulte la guía de [listar [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
 
 **Respuesta**
 
@@ -365,7 +369,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con un subconjunto de campos de conjuntos de datos. GET Puede recuperar una lista de acciones de marketing disponibles realizando una [solicitud al extremo de acciones de marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nombre de la acción de marketing que se va a probar con un subconjunto de campos de conjuntos de datos. Puede recuperar una lista de acciones de marketing disponibles realizando una [petición GET al extremo de las acciones de marketing](./marketing-actions.md#list). |
 
 **Solicitud**
 
@@ -415,7 +419,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `entityType` | El tipo de entidad cuyo identificador se indica en la propiedad `entityId` del mismo nivel. Actualmente, el único valor aceptado es `dataSet`. |
-| `entityId` | El ID de un conjunto de datos cuyos campos se van a evaluar con la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una solicitud de GET al extremo `/dataSets` en la API [!DNL Catalog Service]. Consulte la guía de [listar [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
+| `entityId` | El ID de un conjunto de datos cuyos campos se van a evaluar con la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una petición GET al extremo `/dataSets` en la API [!DNL Catalog Service]. Consulte la guía de [listar [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
 | `entityMeta.fields` | Una matriz de rutas a campos específicos dentro del esquema del conjunto de datos, proporcionadas en forma de cadenas de puntero JSON. Consulte la sección sobre el [puntero JSON](../../landing/api-fundamentals.md#json-pointer) en la guía de aspectos básicos de la API para obtener más información sobre la sintaxis aceptada para estas cadenas. |
 
 **Respuesta**

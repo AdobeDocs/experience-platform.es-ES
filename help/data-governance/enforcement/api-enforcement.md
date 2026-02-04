@@ -5,9 +5,9 @@ title: Aplicar directivas de uso de datos mediante la API del servicio de direct
 type: Tutorial
 description: Una vez que haya creado etiquetas de uso de datos para los datos y haya creado políticas de uso para acciones de marketing contra esas etiquetas, puede utilizar la API del servicio de políticas para evaluar si una acción de marketing realizada en un conjunto de datos o en un grupo arbitrario de etiquetas constituye una infracción de política. A continuación, puede configurar sus propios protocolos internos para gestionar las infracciones de directivas en función de la respuesta de la API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1021'
 ht-degree: 2%
 
 ---
@@ -131,6 +131,10 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
 | `violatedPolicies` | Una matriz que enumera todas las directivas que se violaron al probar la acción de marketing (especificada en `marketingActionRef`) con el `duleLabels` proporcionado. |
 
 ## Evaluar mediante conjuntos de datos
+
+>[!WARNING]
+>
+>El extremo `/constraints` para la evaluación basada en conjuntos de datos está obsoleto. Para evaluar una infracción de directiva o realizar varios trabajos de evaluación, use la [API de evaluación masiva (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk) en su lugar.
 
 Puede evaluar una política de uso de datos probando una acción de marketing con uno o más conjuntos de datos de los que se pueden recopilar etiquetas. Para ello, realice una petición POST a `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` y proporcione los ID del conjunto de datos dentro del cuerpo de la solicitud, como se muestra en el ejemplo siguiente.
 
@@ -372,7 +376,7 @@ Una respuesta correcta devuelve la dirección URL de la acción de marketing, la
 | `discoveredLabels` | Una lista de los conjuntos de datos que se proporcionaron en la carga útil de la solicitud, que muestra las etiquetas de nivel de conjunto de datos y de nivel de campo que se encontraron en cada uno. |
 | `violatedPolicies` | Una matriz que enumera todas las directivas que se violaron al probar la acción de marketing (especificada en `marketingActionRef`) con el `duleLabels` proporcionado. |
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ha comprobado correctamente las infracciones de directivas al realizar una acción de marketing en un conjunto de datos o en un conjunto de etiquetas de uso de datos. Con los datos devueltos en las respuestas de API, puede configurar protocolos dentro de su aplicación de experiencia para aplicar correctamente infracciones de directivas cuando se producen.
 
