@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2026
 description: Las notas de la versión de enero de 2026 de Adobe Experience Platform.
-source-git-commit: 1761acbcab12acf1596daf5461476d5b91bb0e9b
+source-git-commit: f4d5ddc430b0f5b895c1c3ff462c5a79b31956d7
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 22%
@@ -17,8 +17,8 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/e-release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/analytics-platform/using/releases/latest)
+>- [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/latest)
 
 **Fecha de la versión: miércoles, 27 de enero de 2026**
@@ -39,7 +39,7 @@ Agent Orchestrator le permite crear e implementar agentes con tecnología de IA 
 
 | Función | Descripción |
 | --- | --- |
-| Prueba enlazada al uso de agentes de Adobe Experience Platform | **Algunos clientes ahora tienen acceso de prueba gratuito a los agentes de Adobe Experience Platform**. Puede utilizar la prueba para explorar e interactuar con agentes a través de la interfaz del asistente de IA con tecnología de Adobe Experience Platform Agent Orchestrator. La prueba ofrece experiencia práctica con agentes de IA que operan en el contexto de los productos y entornos de Experience Cloud existentes de los clientes, lo que permite a los equipos evaluar el valor antes de comprometerse a realizar una compra completa. Los agentes de Adobe Experience Platform se guían por la entrada y supervisión del usuario y respetan los controles de acceso de nivel de producto existentes, lo que garantiza que los usuarios solo puedan realizar acciones o ver los datos para los que están autorizados dentro de las aplicaciones de Experience Cloud subyacentes. Lea la [descripción general de la versión de prueba de los agentes de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obtener información sobre cómo empezar. |
+| Prueba enlazada al uso de agentes de Adobe Experience Platform | **Algunos clientes ahora tienen acceso de prueba gratuito a los agentes de Adobe Experience Platform**. Puede utilizar la prueba para explorar e interactuar con agentes a través de la interfaz del asistente de IA con tecnología de Adobe Experience Platform Agent Orchestrator. La prueba ofrece experiencia práctica con agentes de IA que operan en el contexto de los productos y entornos de Experience Cloud existentes de los clientes, lo que permite a los equipos evaluar el valor antes de comprometerse a realizar una compra completa. Los agentes de Adobe Experience Platform se guían por la entrada y supervisión del usuario y respetan los controles de acceso de nivel de producto existentes, lo que garantiza que los usuarios solo puedan realizar acciones o ver los datos para los que están autorizados dentro de las aplicaciones de Experience Cloud subyacentes. Lea la [descripción general de la versión de prueba de los agentes de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obtener información sobre cómo empezar. |
 
 {style="table-layout:auto"}
 
