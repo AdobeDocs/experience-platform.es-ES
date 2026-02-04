@@ -67,7 +67,7 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -96,7 +96,7 @@ Para que el destino [!DNL Acxiom Audience Connection] reciba correctamente los d
 | Correo electrónico | Correo electrónico principal De forma predeterminada, este campo se utiliza como clave de anulación de duplicación para hacer que los registros sean únicos | No | 10 | 255 |
 | Teléfono | Número de teléfono del individuo (código de área + número)<br> De forma predeterminada, este campo se utiliza como clave de anulación de duplicación para que los registros sean únicos. | No | 11 | 10 |
 
-En la columna **[!UICONTROL Source Field]**, escriba el nombre de cada uno de los atributos de origen que desee asignar al campo de destino correspondiente o seleccione el icono de flecha para abrir la pantalla **[!UICONTROL  Select source field]**.<br>
+En la columna **[!UICONTROL Source Field]**, escriba el nombre de cada uno de los atributos de origen que desee asignar al campo de destino correspondiente o seleccione el icono de flecha para abrir la pantalla **[!UICONTROL &#x200B; Select source field]**.<br>
 ![Pantalla de asignación](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 Después de asignar todos los campos, seleccione **[!UICONTROL Next]**.
