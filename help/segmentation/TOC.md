@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree públicos a partir de los datos de su perfil del cliente en tiempo real utilizando definiciones de segmentos generadas por Adobe Experience Platform o fuentes externas.
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 43%
+source-wordcount: '212'
+ht-degree: 42%
 
 ---
 
@@ -17,10 +17,11 @@ ht-degree: 43%
 
 - [Resumen del servicio de segmentación](home.md)
 - [Tipos de datos de segmentación](data-types.md)
-- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=es#segmentation-guardrails)
+- [Protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Validación de audiencia](./validation.md)
 - API de segmentación {#api}
    - [Información general](api/overview.md)
-   - [Primeros pasos](api/getting-started.md)
+   - [Introducción](api/getting-started.md)
    - [Crear metadatos de audiencia](api/create-audience.md)
    - [Públicos](api/audiences.md)
    - [Exportar trabajos](api/export-jobs.md)
@@ -42,7 +43,7 @@ ht-degree: 43%
    - [Refactorización de restricciones de tiempo](ui/segment-refactoring.md)
    - Coincidencia de segmento {#segment-match}
       - [Resumen de coincidencia de segmentos](ui/segment-match/overview.md)
-      - [Resolución de problemas](ui/segment-match/troubleshooting.md)
+      - [Solución de problemas](ui/segment-match/troubleshooting.md)
 - Métodos de segmentación {#methods}
    - [Información general](methods/overview.md)
    - [Segmentación por lotes](methods/batch-segmentation.md)
@@ -53,7 +54,7 @@ ht-degree: 43%
    - [Información general](types/overview.md)
    - [Audiencias de personas](types/people-audiences.md)
    - [Públicos de clientes potenciales](types/prospect-audiences.md)
-   - [Públicos de la cuenta](types/account-audiences.md)
+   - [Públicos de cuenta](types/account-audiences.md)
    - [Públicos de similitud](types/lookalike-audiences.md)
 - Tutoriales {#tutorials}
    - [Creación de una definición de segmento](tutorials/create-a-segment.md)

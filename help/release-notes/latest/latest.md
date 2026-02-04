@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2026
 description: Las notas de la versión de enero de 2026 de Adobe Experience Platform.
-source-git-commit: a8eefb3330d0de21fbb8648593eb912c063529d7
+source-git-commit: 1761acbcab12acf1596daf5461476d5b91bb0e9b
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1570'
 ht-degree: 22%
 
 ---
@@ -39,7 +39,7 @@ Agent Orchestrator le permite crear e implementar agentes con tecnología de IA 
 
 | Función | Descripción |
 | --- | --- |
-| Prueba enlazada al uso de agentes de Adobe Experience Platform | **Algunos clientes ahora tienen acceso de prueba gratuito a los agentes de Adobe Experience Platform**. Puede utilizar la prueba para explorar e interactuar con agentes a través de la interfaz del asistente de IA con tecnología de Adobe Experience Platform Agent Orchestrator. La prueba ofrece experiencia práctica con agentes de IA que operan en el contexto de los productos y entornos de Experience Cloud existentes de los clientes, lo que permite a los equipos evaluar el valor antes de comprometerse a realizar una compra completa. Los agentes de Adobe Experience Platform se guían por la entrada y supervisión del usuario y respetan los controles de acceso de nivel de producto existentes, lo que garantiza que los usuarios solo puedan realizar acciones o ver los datos para los que están autorizados dentro de las aplicaciones de Experience Cloud subyacentes. Lea la [descripción general de la versión de prueba de los agentes de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obtener información sobre cómo empezar. |
+| Prueba enlazada al uso de agentes de Adobe Experience Platform | **Algunos clientes ahora tienen acceso de prueba gratuito a los agentes de Adobe Experience Platform**. Puede utilizar la prueba para explorar e interactuar con agentes a través de la interfaz del asistente de IA con tecnología de Adobe Experience Platform Agent Orchestrator. La prueba ofrece experiencia práctica con agentes de IA que operan en el contexto de los productos y entornos de Experience Cloud existentes de los clientes, lo que permite a los equipos evaluar el valor antes de comprometerse a realizar una compra completa. Los agentes de Adobe Experience Platform se guían por la entrada y supervisión del usuario y respetan los controles de acceso de nivel de producto existentes, lo que garantiza que los usuarios solo puedan realizar acciones o ver los datos para los que están autorizados dentro de las aplicaciones de Experience Cloud subyacentes. Lea la [descripción general de la versión de prueba de los agentes de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obtener información sobre cómo empezar. |
 
 {style="table-layout:auto"}
 
@@ -101,6 +101,7 @@ Para obtener más información, lea la [[!DNL Real-Time Customer Profile] inform
 | Función | Descripción |
 | ------- | ----------- |
 | Actualización de caducidad de datos de audiencia externa | Las audiencias externas (como las cargas de CSV) ahora admiten la función de actualización forzada de la configuración de caducidad de los datos. Esta función permite a los usuarios actualizar de forma manual la caducidad de los datos de las audiencias externas, lo que proporciona un mayor control sobre la administración del ciclo vital de las audiencias. Esto resulta particularmente útil en audiencias que deben persistir más allá del periodo de caducidad inicial de los datos o que requieren reactivación sin volver a cargar los datos. Para obtener más información acerca de esta característica, lea la [descripción general de Audience Portal](../../segmentation/ui/audience-portal.md#audience-summary). |
+| Validación de audiencia | Experience Platform ahora proporciona validaciones integradas para garantizar que sus audiencias sean precisas, estables y escalables. Estas comprobaciones se ejecutan automáticamente en tiempo real mientras crea las definiciones de audiencia. Para obtener más información, lea la [descripción general de validación de audiencias](/help/segmentation/validation.md). |
 
 Para obtener más información, lea la [[!DNL Segmentation Service] información general](../../segmentation/home.md).
 
