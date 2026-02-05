@@ -5,7 +5,7 @@ title: Extremos de API de evaluación de directiva
 description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API del servicio de políticas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -125,7 +125,7 @@ Una respuesta correcta incluye una matriz `violatedPolicies`, que contiene los d
 
 >[!WARNING]
 >
->El extremo `/constraints` para la evaluación basada en conjuntos de datos está obsoleto. Para evaluar una infracción de directiva o realizar varios trabajos de evaluación, use la [API de evaluación masiva (`/bulk-eval`)](#evaluate-policies-in-bulk) en su lugar.
+>El extremo `/constraints` para la evaluación basada en conjuntos de datos está obsoleto. Para evaluar una infracción de directiva o realizar varios trabajos de evaluación, use la [API de evaluación masiva (`/bulk-eval`)](#bulk) en su lugar.
 
 Puede evaluar las infracciones de directivas en función de un conjunto de uno o más conjuntos de datos de los que se pueden recopilar etiquetas de uso de datos. Para ello, realice una petición POST al extremo `/constraints` para una acción de marketing específica y proporcione una lista de ID de conjuntos de datos dentro del cuerpo de la solicitud.
 
