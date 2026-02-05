@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Conector de Marketo Engage
 description: Este documento proporciona información general sobre el conector de origen de Marketo Engage, incluida la información sobre su autenticación, asignación y latencia de datos.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 659e873f9bccdbc0e52a1943a924dc70d3170e96
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 1%
+source-wordcount: '740'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 >
 >Ahora puede usar el origen [!DNL Marketo Engage] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../../landing/multi-cloud.md).
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) es una solución completa para la administración de posibles clientes y para los especialistas en marketing B2B que buscan transformar las experiencias de los clientes al interactuar en todas las etapas de los recorridos de compra complejos.
 
@@ -31,7 +31,7 @@ Este documento proporciona información general sobre el conector de origen [!DN
 
 ## Configuración de la asignación de organización de Adobe
 
-Para poder establecer conjuntos de asignaciones para [!DNL Marketo Engage], primero debe configurar Adobe Organization Mapping. Para ver los pasos detallados sobre cómo completar esto, consulte la guía sobre [configuración de la asignación de organización de Adobe para [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=es).
+Para poder establecer conjuntos de asignaciones para [!DNL Marketo Engage], primero debe configurar Adobe Organization Mapping. Para ver los pasos detallados sobre cómo completar esto, consulte la guía sobre [configuración de la asignación de organización de Adobe para [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## Autenticar el conector [!DNL Marketo Engage]
 
@@ -74,12 +74,12 @@ En la tabla siguiente se describe la latencia esperada para llevar los datos de 
 
 | Destino | Latencia esperada |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | &lt; 10 minutos |
+| [!DNL Real-Time Customer Profile] | &lt; 20 minutos |
 | Lago de datos | &lt; 60 minutos |
 
 >[!NOTE]
 >
->Las cifras de latencia anteriores representan expectativas con un nivel de confianza del 95 %. Las latencias reales variarán y pueden superar esas cifras en un 50 % en casos excepcionales.
+>Las cifras de latencia anteriores representan expectativas con un nivel de confianza del 95 %. Las latencias reales variarán y, en algunos casos, se extenderán más allá de esas cifras.
 
 ## Pasos siguientes y recursos adicionales
 
