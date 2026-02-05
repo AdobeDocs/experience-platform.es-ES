@@ -4,9 +4,9 @@ title: Punto final de API de previsualización de estado de muestra (previsualiz
 description: El punto final de vista previa del estado de muestra de la API de Perfil del cliente en tiempo real le permite obtener una vista previa de la última muestra correcta de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar informes que muestren la superposición de conjuntos de datos, la superposición de identidades y perfiles no enlazados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
+source-git-commit: 399b76f260732015f691fd199c977d6f7e772b01
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2119'
 ht-degree: 1%
 
 ---
@@ -434,110 +434,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre las es
 | `profileFragments` | Número total de fragmentos de perfil que existen en el conjunto de datos. |
 | `records` | Número total de registros de perfil introducidos en el conjunto de datos. |
 | `totalProfiles` | Número total de perfiles introducidos en el conjunto de datos. |
-
-+++
-
-## Obtener el tamaño del conjunto de datos {#character-count}
-
-Puede utilizar este extremo para obtener el tamaño del conjunto de datos en bytes semana a semana.
-
-**Formato de API**
-
-```http
-GET /previewsamplestatus/report/character_count
-```
-
-**Solicitud**
-
-+++Una solicitud de ejemplo para generar el informe de recuento de caracteres.
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-```
-
-+++
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 200 con información sobre el tamaño del conjunto de datos a lo largo de las semanas.
-
-+++ Una respuesta de ejemplo que contiene información sobre el tamaño del conjunto de datos después de la caducidad de los datos.
-
->[!NOTE]
->
->La siguiente respuesta se ha truncado para mostrar tres conjuntos de datos.
-
-```json
-{
-    "data": [
-        {
-            "datasetIds": [
-                {
-                    "datasetId": "67aba91a453f7d298cd2a643",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 107773533894,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "67aa6c867c3110298b017f0e",
-                    "recordType": "timeseries",
-                    "weeks": [
-                        {
-                            "size": 242902062440,
-                            "week": "2025-10-26"
-                        },
-                        {
-                            "size": 837539413062,
-                            "week": "2025-10-19"
-                        },
-                        {
-                            "size": 479253986484,
-                            "week": "2025-10-12"
-                        },
-                        {
-                            "size": 358911988990,
-                            "week": "2025-10-05"
-                        },
-                        {
-                            "size": 349701073042,
-                            "week": "2025-09-28"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "680c043667c0d7298c9ea275",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 18392459832,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                }
-            ],
-            "modelName": "_xdm.context.profile",
-            "reportTimestamp": "2025-10-30T00:28:30.069Z"
-        }
-    ],
-    "reportTimestamp": "2025-10-30T00:28:30.069Z"
-}
-```
-
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `datasetId` | El ID del conjunto de datos. |
-| `recordType` | El tipo de datos dentro del conjunto de datos. El tipo de registro afecta al valor de la variable `weeks`. Los valores admitidos son `keyvalue` y `timeseries`. |
-| `weeks` | Matriz que contiene la información de tamaño sobre el conjunto de datos. Para conjuntos de datos del tipo de registro `keyvalue`, contiene la semana más reciente, así como el tamaño total del conjunto de datos en bytes. Para conjuntos de datos del tipo de registro `timeseries`, contiene cada semana desde la ingesta del conjunto de datos hasta la semana más reciente y el tamaño total del conjunto de datos en bytes para cada una de esas semanas. |
-| `modelName` | Nombre del modelo del conjunto de datos. Los valores posibles incluyen `_xdm.context.profile` y `_xdm.context.experienceevent`. |
-| `reportTimestamp` | La fecha y la hora en que se generó el informe. |
 
 +++
 
