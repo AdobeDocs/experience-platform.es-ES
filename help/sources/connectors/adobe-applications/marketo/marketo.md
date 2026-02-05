@@ -31,7 +31,7 @@ Este documento proporciona información general sobre el conector de origen [!DN
 
 ## Configuración de la asignación de organización de Adobe
 
-Para poder establecer conjuntos de asignaciones para [!DNL Marketo Engage], primero debe configurar Adobe Organization Mapping. Para ver los pasos detallados sobre cómo completar esto, consulte la guía sobre [configuración de la asignación de organización de Adobe para [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+Para poder establecer conjuntos de asignaciones para [!DNL Marketo Engage], primero debe configurar Adobe Organization Mapping. Para ver los pasos detallados sobre cómo completar esto, consulte la guía sobre [configuración de la asignación de organización de Adobe para [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=es).
 
 ## Autenticar el conector [!DNL Marketo Engage]
 
