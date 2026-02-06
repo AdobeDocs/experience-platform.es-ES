@@ -3,7 +3,7 @@ keywords: ver perfiles rtcdp;vista de perfil rtcdp;perfiles rtcdp
 title: Examen de perfiles en Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform permite examinar los datos del perfil del cliente en tiempo real mediante la interfaz de usuario de Adobe Experience Platform.
 feature: Get Started, Profiles
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions" newtab=true
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: Casos de uso de segmentación para Real-Time Customer Data Platform B2B edition
 description: Una descripción general de los distintos casos de uso de Adobe Real-Time Customer Data Platform B2B edition disponibles.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

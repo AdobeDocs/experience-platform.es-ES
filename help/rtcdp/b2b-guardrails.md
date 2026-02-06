@@ -3,7 +3,7 @@ keywords: perfil;perfil de cliente en tiempo real;solución de problemas;protecc
 title: Protecciones predeterminadas para Real-Time Customer Data Platform B2B edition
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos para obtener un rendimiento óptimo del sistema con Adobe Real-Time Customer Data Platform B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions" newtab=true
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c

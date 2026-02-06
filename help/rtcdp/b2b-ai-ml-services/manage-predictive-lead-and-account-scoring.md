@@ -3,7 +3,7 @@ title: Administre la puntuación predictiva de clientes potenciales y cuentas en
 type: Documentation
 description: Este documento proporciona información sobre la administración de la función de puntuación de cuenta y posible cliente predictivo en Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
