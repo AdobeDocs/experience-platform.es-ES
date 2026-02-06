@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
+source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
 workflow-type: tm+mt
-source-wordcount: '5354'
-ht-degree: 12%
+source-wordcount: '6311'
+ht-degree: 11%
 
 ---
 
@@ -61,6 +61,97 @@ Puede ver estos componentes básicos en la sección **[!UICONTROL Fields]** a la
 La ficha **[!UICONTROL Attributes]** le permite examinar [!DNL Profile] atributos que pertenecen a la clase [!DNL XDM Individual Profile]. Cada carpeta se puede expandir para mostrar atributos adicionales, donde cada atributo es un mosaico que se puede arrastrar al lienzo del generador de reglas en el centro del espacio de trabajo. El [lienzo del generador de reglas](#rule-builder-canvas) se analiza con más detalle más adelante en esta guía.
 
 ![Se resalta la sección de atributos de los campos del Generador de segmentos.](../images/ui/segment-builder/attributes.png)
+
+Los atributos que agregue pueden ser de uno de los siguientes tipos de datos:
+
+| Tipo de datos | Casos de uso comunes |
+| --------- | ---------------- |
+| Cadena | Nombres, direcciones de correo electrónico y categorías de productos |
+| Numérico | Edad, ingresos, cantidades de productos, puntuaciones de fidelidad |
+| Booleano | Preferencias, indicadores de estado, indicadores de usuario |
+| Enumeración | Listas predefinidas como sexo o estado |
+| Fecha/hora | Fechas de compra, horas de visita, cumpleaños |
+
+Puede utilizar los siguientes operadores para los tipos de datos respectivos:
+
++++ Operadores de cadena
+
+| Operador | Descripción | Ejemplo |
+| -------- | ----------- | ------- |
+| Es igual a | Buscar una coincidencia exacta con el valor especificado | Correo electrónico **igual a** &quot;sample@example.com&quot; |
+| No es igual a | Excluye el valor especificado | El estado **no es igual a** &quot;Cancelado&quot; |
+| Contiene | El texto incluye el valor especificado | El nombre de producto **contiene** &quot;iPhone&quot; |
+| No contiene | El texto no incluye el valor especificado | La descripción **no contiene** &quot;descontinuado&quot; |
+| Comienza por | El texto comienza con el valor especificado | El identificador de cliente **comienza con** &quot;PREM&quot; |
+| Termina por | El texto finaliza con el valor especificado | El correo electrónico **termina con** &quot;@company.com&quot; |
+| Existe | El valor existe | El segundo nombre **existe** |
+| No existe | El valor no existe | El estado de fidelización **no existe** |
+
++++
+
++++ Operadores numéricos
+
+| Operador | Descripción | Ejemplo |
+| -------- | ----------- | ------- |
+| Es igual a | Buscar una coincidencia exacta con el valor especificado | Edad **igual a** 25 |
+| No es igual a | Excluye el valor especificado | El recuento de pedidos **no es igual a** 0 |
+| Mayor que | El número es **mayor** que el valor especificado. Este valor es **exclusive** del número especificado. | Ingresos anuales **superiores a** 50000 |
+| Mayor o igual que | El número es **mayor** que el valor especificado. Este valor es **inclusive** del número especificado. | Edad **mayor o igual que** 21 |
+| Menor que | El número es **menor** que el valor especificado. Este valor es **exclusive** del número especificado. | Días transcurridos desde la compra **menos de** 30 |
+| Menor o igual que | El número es **menor** que el valor especificado. Este valor es **inclusive** del número especificado. | Valor de carrito **menor o igual que** 100 |
+| Entre | El número es **entre** los valores especificados. Estos valores son **inclusive** de los números especificados. | **entre** 25 y 45 años |
+| Existe | El valor existe | La puntuación de crédito **existe** |
+| No existe | El valor no existe | La puntuación de crédito **no existe** |
+
++++
+
++++ Operadores booleanos
+
+| Operador | Descripción | Ejemplo |
+| -------- | ----------- | ------- |
+| Es igual a | El valor booleano se establece en el valor especificado (True o False) | Inclusión de correo electrónico **es igual a verdadero** |
+| No es igual a | El valor booleano es **not** establecido en el valor especificado (True o False) | La aplicación móvil instalada **no es igual a True** |
+
++++
+
++++ Operadores de enumeración
+
+| Operador | Descripción | Ejemplo |
+| -------- | ----------- | ------- |
+| Es igual a | El valor es igual a los valores de enumeración especificados | Sexo **igual a** femenino |
+| No es igual a | El valor no es igual al valor de enumeración especificado | El estado del pedido **no es igual a** Cancelado |
+| Existe | Se ha establecido el valor de enumeración | El idioma preferido **existe** |
+| No existe | No se ha establecido el valor de enumeración | El idioma preferido **no existe** |
+
++++
+
++++ Operadores de fecha y hora
+
+| Operador | Descripción | Ejemplo |
+| -------- | ----------- | ------- |
+| Hoy | El valor se produjo hoy. Puede seleccionar la casilla de verificación **Ignorar año** para que la comparación ignore el año. | La fecha de nacimiento **es** hoy |
+| Ayer | El valor ocurrió ayer. | La compra del carro **es** ayer |
+| Este mes | El valor se produjo en este mes natural. | El mes de nacimiento **es** este mes |
+| Este año | El valor se produjo este año natural. | La fecha de registro **es** este año |
+| Fecha personalizada | El valor se produjo en la fecha determinada. | La fecha de compra **es el** Fecha personalizada |
+| En los últimos | El valor se produjo en el último período de tiempo seleccionado. Cumpleaños **is** en el último mes |
+| Desde (hasta) | El valor se produjo dentro de las dos fechas de calendario seleccionadas. Este período de tiempo es **inclusive** de ambas fechas. | La fecha de creación de la cuenta **es** del 20 de abril al 13 de julio |
+| Durante | El valor ocurrió dentro del mes o año seleccionado. | Venta **es** durante marzo |
+| Dentro (+/-) | El valor se produjo en los días, semanas, meses o años posteriores a la fecha seleccionada. Este período de tiempo es **inclusive** de ambas fechas. | El abandono del carro de compras está **en** 3 días |
+| Antes | El valor ocurrió antes de la fecha seleccionada. | La fecha de unión de la membresía es **antes del** 3 de enero de 2025 |
+| Después | El valor se produjo después de la fecha seleccionada. | La fecha de compra es **después del** 14 de marzo de 2024 |
+| Rango móvil | El valor ocurrió entre las dos fechas relativas. | La fecha de la última compra está en el rango móvil de hace siete días a hace tres días. |
+| En el siguiente | El valor se produjo en el siguiente período de tiempo seleccionado. | El abandono del carro de compras se producirá en los próximos 2 días |
+
+Para obtener información más detallada sobre las funciones de fecha y hora, lea la [sección de restricciones de tiempo](#time-constraints).
+
++++
+
+#### Atributos calculados {#computed-attributes}
+
+Los atributos calculados son campos que se calculan desde otros atributos mediante acumulaciones o fórmulas. Puede utilizar atributos calculados si necesita datos agregados como sumas, recuentos o promedios en varios eventos, o si está creando audiencias que se utilizan con frecuencia y que requieren cálculos complejos.
+
+Para obtener más información sobre los atributos calculados, incluido cómo crearlos, qué funciones puede utilizar en ellos y cómo administrarlos, lea la [descripción general de los atributos calculados](/help/profile/computed-attributes/overview.md).
 
 ### Eventos
 
@@ -232,7 +323,7 @@ También puede ver una versión basada en código de una regla creada en [!DNL S
 
 La vista de código proporciona un botón que le permite copiar el valor de la definición del segmento para utilizarlo en las llamadas de API. Para obtener la última versión de la definición del segmento, asegúrese de haber guardado los cambios más recientes en la definición del segmento.
 
-![El botón Copiar código está resaltado, lo que le permite &#x200B;](../images/ui/segment-builder/copy-code.png)
+![El botón Copiar código está resaltado, lo que le permite ](../images/ui/segment-builder/copy-code.png)
 
 ### Funciones de agregación
 
@@ -356,7 +447,7 @@ La lista de restricciones de tiempo disponibles para esta operación difiere de 
 
 ## Contenedores {#containers}
 
-Las reglas de segmentos se evalúan en el orden en que aparecen en la lista. Los contenedores permiten controlar el orden de ejecución mediante el uso de consultas anidadas.
+Las audiencias se evalúan en el orden en que aparecen en la lista. Los contenedores permiten controlar el orden de ejecución mediante el uso de consultas anidadas.
 
 Una vez que haya agregado al menos un mosaico al lienzo del generador de reglas, puede empezar a agregar contenedores. Para crear un nuevo contenedor, seleccione los puntos suspensivos (...) en la esquina superior derecha del mosaico y, a continuación, seleccione **[!UICONTROL Add container]**.
 
@@ -375,6 +466,36 @@ Una vez que seleccione **[!UICONTROL Unwrap container]**, el contenedor secundar
 >Al desajustar contenedores, tenga cuidado de que la lógica siga cumpliendo con la definición de segmento deseada.
 
 ![El contenedor se muestra después de haberse desenvuelto.](../images/ui/segment-builder/unwrapped-container.png)
+
+### Ejemplos {#container-examples}
+
+Puede utilizar los contenedores dentro del Generador de segmentos de tres formas diferentes: para agrupar las reglas con lógica booleana, para controlar si se incluyen o excluyen perfiles que coincidan con los criterios del contenedor y para definir secuencias de eventos con restricciones de tiempo.
+
++++ Lógica booleana mixta
+
+En el ejemplo siguiente se combina la lógica **both** AND y OR dentro de una sola expresión. Sin utilizar contenedores, no puede mezclar la lógica AND con OR en un solo nivel.
+
+![Imagen que muestra cómo usar contenedores para combinar lógica booleana y usar lógica de inclusión/exclusión.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+
++++
+
++++ Secuencia de eventos
+
+El ejemplo siguiente utiliza contenedores para generar la secuencia de eventos.
+
+![Imagen que muestra cómo secuenciar eventos mediante contenedores.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+
++++
+
+### Prácticas recomendadas {#container-best-practices}
+
+Cuando añada contenedores a su audiencia, tenga en cuenta las siguientes directrices:
+
+- Genere los contenedores gradualmente y pruebe la lógica con cada paso que agregue
+   - Esto es especialmente importante si utiliza la lógica &quot;Excluir&quot;, ya que puede cambiar significativamente los resultados
+- Asigne claramente un nombre a los contenedores para comprender qué deben hacer
+- Evite tener demasiados niveles anidados de contenedores, ya que reduce el rendimiento
+- Asegúrese de que el orden de los contenedores sea preciso, ya que el orden de los eventos afecta en gran medida a los contenedores de secuencia
 
 ## Combinar políticas
 
@@ -461,7 +582,7 @@ Encontrará más información sobre los distintos métodos de evaluación de def
 El Generador de segmentos proporciona un flujo de trabajo enriquecido que le permite aislar audiencias comercializables de [!DNL Real-Time Customer Profile] datos. Después de leer esta guía, debería poder:
 
 - Cree definiciones de segmentos utilizando una combinación de atributos, eventos y audiencias existentes como componentes básicos.
-- Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de segmentos.
+- Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de audiencia.
 - Vea estimaciones de su audiencia potencial, lo que le permite ajustar sus definiciones de segmento según sea necesario.
 - Habilite todas las definiciones de segmentos para la segmentación programada.
 - Habilite las definiciones de segmento especificadas para la segmentación de flujo continuo.
