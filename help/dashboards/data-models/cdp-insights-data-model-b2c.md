@@ -121,7 +121,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### Perfiles de identidad únicos por caso de uso de identidad {#single-identity-profiles-by-identity}
 
-La lógica utilizada para el widget [!UICONTROL Single identity profiles by identity] ilustra el número total de perfiles que se identifican con un solo identificador único. Consulte la [documentación del widget de identidad ](../guides/profiles.md#single-identity-profiles-by-identity) para obtener más información.
+La lógica utilizada para el widget [!UICONTROL Single identity profiles by identity] ilustra el número total de perfiles que se identifican con un solo identificador único. Consulte la [documentación del widget de identidad &#x200B;](../guides/profiles.md#single-identity-profiles-by-identity) para obtener más información.
 
 El SQL que genera el widget [!UICONTROL Single identity profiles by identity] se ve en la sección contraíble a continuación.
 
