@@ -1,13 +1,11 @@
 ---
 title: Conexión De Bombora Intent A Experience Platform Mediante La Interfaz De Usuario
 description: Aprenda a conectar Bombora Intent a Experience Platform
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 4%
+source-wordcount: '933'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 4%
 
 Lea esta guía para obtener información sobre cómo conectar su cuenta de [!DNL Bombora Intent] a Adobe Experience Platform mediante la interfaz de usuario.
 
-## Introducción 
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -29,13 +27,13 @@ Lea la [[!DNL Bombora Intent] descripción general](../../../../connectors/data-
 
 ## Navegar por el catálogo de fuentes
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Fuentes]*. Puede seleccionar la categoría adecuada en el panel *[!UICONTROL Categorías]*. También puede utilizar la barra de búsqueda para desplazarse al origen específico que desee utilizar.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo *[!UICONTROL Sources]*. Puede seleccionar la categoría adecuada en el panel *[!UICONTROL Categories]*. También puede utilizar la barra de búsqueda para desplazarse al origen específico que desee utilizar.
 
-Para usar [!DNL Bombora], seleccione la tarjeta de origen **[!UICONTROL Bombora Intent]** en *[!UICONTROL Socios de datos e identidad]* y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
+Para usar [!DNL Bombora], seleccione la tarjeta de origen **[!UICONTROL Bombora Intent]** en *[!UICONTROL Data & Identity Partners]* y luego seleccione **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
+>Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Add data]**.
 
 ![El catálogo de fuentes con la tarjeta &quot;Bombora Intent&quot; seleccionada.](../../../../images/tutorials/create/bombora/catalog.png)
 
@@ -43,9 +41,9 @@ Para usar [!DNL Bombora], seleccione la tarjeta de origen **[!UICONTROL Bombora 
 
 ### Usar una cuenta existente {#existing}
 
-Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la cuenta que desee usar de la lista de cuentas en la interfaz.
+Para usar una cuenta existente, seleccione **[!UICONTROL Existing account]** y luego seleccione la cuenta que desee usar en la lista de cuentas de la interfaz.
 
-Una vez que haya seleccionado su cuenta, seleccione **[!UICONTROL Siguiente]** para continuar con el paso siguiente.
+Una vez que haya seleccionado su cuenta, seleccione **[!UICONTROL Next]** para continuar con el paso siguiente.
 
 ![Interfaz de cuenta existente en el flujo de trabajo de orígenes.](../../../../images/tutorials/create/bombora/existing.png)
 
@@ -53,7 +51,7 @@ Una vez que haya seleccionado su cuenta, seleccione **[!UICONTROL Siguiente]** p
 
 Si no tiene una cuenta existente, debe crear una nueva cuenta proporcionando las credenciales de autenticación necesarias que se correspondan con su origen.
 
-Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y, a continuación, proporciona un nombre de cuenta y, opcionalmente, una descripción para los detalles de la cuenta. A continuación, proporcione los valores de autenticación adecuados para autenticar el origen con Experience Platform. Para conectar su cuenta de [!DNL Bombora], debe tener las siguientes credenciales:
+Para crear una cuenta nueva, seleccione **[!UICONTROL New account]** y después proporcione un nombre de cuenta y, opcionalmente, una descripción para los detalles de la cuenta. A continuación, proporcione los valores de autenticación adecuados para autenticar el origen con Experience Platform. Para conectar su cuenta de [!DNL Bombora], debe tener las siguientes credenciales:
 
 * **Id. de clave de acceso**: Su id. de clave de acceso [!DNL Bombora]. Se trata de una cadena alfanumérica de 61 caracteres que es necesaria para autenticar su cuenta en Experience Platform.
 * **Clave de acceso secreta**: Su clave de acceso secreta [!DNL Bombora]. Es una cadena de 40 caracteres con codificación base 64 necesaria para autenticar su cuenta en Experience Platform.
@@ -77,24 +75,24 @@ A continuación, utilice la interfaz de programación para configurar una progra
 
 * **Frecuencia**: configure la frecuencia para indicar con qué frecuencia debe ejecutarse el flujo de datos. Puede programar su flujo de datos de [!DNL Bombora] para que ingrese datos con una frecuencia semanal.
 * **Intervalo**: el intervalo representa la cantidad de tiempo entre cada ciclo de ingesta. El único intervalo admitido para un flujo de datos de [!DNL Bombora] es 1. Esto significa que el flujo de datos ingerirá datos una vez a la semana, cada semana.
-* **Hora de inicio**: La hora de inicio dicta cuándo se producirá la primera iteración de ejecución del flujo de datos. [!DNL Bombora] envía datos a Adobe una vez a la semana, los lunes, a las 12:00 p.m. UTC. Por lo tanto, debe establecer la hora de inicio de la ingesta después de las 12:00 PM UTC. Además, debe confirmar el tiempo de ingesta con [!DNL Bombora], ya que pueden alterar su programación al soltar archivos en Adobe.
+* **Hora de inicio**: La hora de inicio dicta cuándo se producirá la primera iteración de ejecución del flujo de datos. [!DNL Bombora] envía datos a Adobe una vez a la semana, los lunes, a las 12:00 PM UTC. Por lo tanto, debe establecer la hora de inicio de la ingesta después de las 12:00 PM UTC. Además, debe confirmar el tiempo de ingesta con [!DNL Bombora], ya que pueden alterar su programación al soltar archivos en Adobe.
 
-Una vez que haya configurado la programación de ingesta del flujo de datos, seleccione **[!UICONTROL Siguiente]**.
+Una vez que haya configurado la programación de ingesta del flujo de datos, seleccione **[!UICONTROL Next]**.
 
 ![Interfaz de programación del flujo de trabajo de orígenes.](../../../../images/tutorials/create/bombora/scheduling.png)
 
 ## Revisar flujo de datos {#review-dataflow}
 
-El paso final del proceso de creación del flujo de datos es revisar el flujo de datos antes de ejecutarlo. Use el paso *[!UICONTROL Revisar]* para revisar los detalles del nuevo flujo de datos antes de que se ejecute. Los detalles se agrupan en las siguientes categorías:
+El paso final del proceso de creación del flujo de datos es revisar el flujo de datos antes de ejecutarlo. Utilice el paso *[!UICONTROL Review]* para revisar los detalles del nuevo flujo de datos antes de que se ejecute. Los detalles se agrupan en las siguientes categorías:
 
 * **Conexión**: muestra el tipo de origen, la ruta de acceso relevante del archivo de origen elegido y el número de columnas dentro de ese archivo de origen.
 * **Programación**: muestra el período activo, la frecuencia y el intervalo de la programación de ingesta.
 
-Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finalizar]**.
+Una vez que haya revisado el flujo de datos, seleccione **[!UICONTROL Finish]**.
 
 ![Interfaz de revisión del flujo de trabajo de orígenes.](../../../../images/tutorials/create/bombora/review.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de intención de su origen de [!DNL Bombora] a Experience Platform. Para obtener recursos adicionales, visite la documentación descrita a continuación.
 
@@ -108,4 +106,4 @@ Para actualizar configuraciones para la programación, asignación e informació
 
 ### Eliminar el flujo de datos
 
-Puede eliminar flujos de datos que ya no sean necesarios o que se hayan creado incorrectamente mediante la función **[!UICONTROL Delete]** disponible en el área de trabajo **[!UICONTROL Flujos de datos]**. Para obtener más información sobre cómo eliminar flujos de datos, visite el tutorial sobre [eliminar flujos de datos en la interfaz de usuario](../../delete.md).
+Puede eliminar los flujos de datos que ya no son necesarios o que se crearon incorrectamente mediante la función **[!UICONTROL Delete]** disponible en el área de trabajo **[!UICONTROL Dataflows]**. Para obtener más información sobre cómo eliminar flujos de datos, visite el tutorial sobre [eliminar flujos de datos en la interfaz de usuario](../../delete.md).

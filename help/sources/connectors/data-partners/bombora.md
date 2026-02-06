@@ -2,12 +2,10 @@
 title: Bombora Intent
 description: Obtenga información sobre la fuente Bombora Intent en Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1593'
 ht-degree: 1%
 
 ---
@@ -48,7 +46,7 @@ Se debe agregar una lista de direcciones IP a una lista de permitidos antes de t
 
 ### Configuración de permisos en Experience Platform
 
-Debe tener los permisos para **[!UICONTROL Ver fuentes]** y **[!UICONTROL Administrar fuentes]** habilitados en su cuenta para conectar su cuenta de [!DNL Bombora] a Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../access-control/abac/ui/permissions.md).
+Debe tener los permisos **[!UICONTROL View Sources]** y **[!UICONTROL Manage Sources]** habilitados para su cuenta a fin de conectar su cuenta de [!DNL Bombora] a Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../access-control/abac/ui/permissions.md).
 
 ### Restricciones de nomenclatura para archivos y directorios
 

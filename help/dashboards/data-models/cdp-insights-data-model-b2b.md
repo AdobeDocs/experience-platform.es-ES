@@ -1,23 +1,22 @@
 ---
-title: B2B edition del modelo de datos de Real-time Customer Data Platform Insights
-description: Aprenda a utilizar consultas SQL con los modelos de datos de perspectivas de Real-time Customer Data Platform (B2B edition) para personalizar sus propios informes de Real-Time CDP para los casos de uso de KPI y marketing.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+title: B2B edition del modelo de datos de Real-Time Customer Data Platform Insights
+description: Aprenda a utilizar consultas SQL con los modelos de datos de perspectivas de Real-Time Customer Data Platform (B2B edition) para personalizar sus propios informes de Real-Time CDP para los casos de uso de KPI y marketing.
+badgeB2B: null
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 0%
+source-wordcount: '438'
+ht-degree: 1%
 
 ---
 
 # B2B edition del modelo de datos de Real-Time CDP Insights
 
-El modelo de datos de Real-Time CDP Insights para B2B edition expone los modelos de datos y SQL que alimentan las perspectivas para [perfiles de cuenta](https://experienceleague.adobe.com/es/docs/experience-platform/rtcdp/account/account-profile-overview). Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de indicadores clave de rendimiento (KPI) y marketing B2B. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles.
+El modelo de datos de Real-Time CDP Insights para B2B edition expone los modelos de datos y SQL que alimentan las perspectivas para [perfiles de cuenta](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de indicadores clave de rendimiento (KPI) y marketing B2B. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles.
 
 >[!AVAILABILITY]
 >
->Esta funcionalidad está disponible para los clientes que han adquirido el paquete Real-Time CDP Prime y Ultimate. Consulte la documentación de las [ediciones de Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) disponibles para obtener más información o póngase en contacto con el representante del Adobe.
+>Esta funcionalidad está disponible para los clientes que han adquirido el paquete Real-Time CDP Prime y Ultimate. Consulte la documentación de las [ediciones de Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) disponibles para obtener más información o póngase en contacto con su representante de Adobe.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
@@ -27,7 +26,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 Esta guía requiere una comprensión práctica de los paneles personalizados. Lea la documentación sobre [cómo crear un tablero personalizado](../standard-dashboards.md) antes de continuar con esta guía.
 
-## Informes de perspectivas y casos de uso de Real-Time CDP B2B {#B2B-insight-reports-and-use-cases}
+## Informes y casos de uso de Real-Time CDP B2B insight {#B2B-insight-reports-and-use-cases}
 
 Los informes de Real-Time CDP B2B proporcionan perspectivas sobre los datos de perfiles de su cuenta y la relación entre las cuentas y las oportunidades. Los siguientes modelos de esquema de estrella se desarrollaron para responder a una variedad de casos de uso de marketing comunes y cada modelo de datos puede admitir varios casos de uso.
 
@@ -52,13 +51,13 @@ El diagrama siguiente muestra los campos de datos relevantes en cada conjunto de
 
 #### Las nuevas cuentas por caso de uso del sector {#accounts-by-industry}
 
-La lógica usada para la perspectiva [!UICONTROL Nuevas cuentas por sector] devuelve las cinco industrias principales de acuerdo con su número de perfiles de cuenta y su tamaño relativo entre sí. Consulte la [[!UICONTROL Documentación del widget de nuevas cuentas por sector]](../guides/account-profiles.md#accounts-by-industry) para obtener más información.
+La lógica utilizada para [!UICONTROL New accounts by industry] insight devuelve los cinco sectores principales según el número de perfiles de cuenta y el tamaño relativo entre ellos. Consulte la documentación del widget [[!UICONTROL New accounts By Industry]](../guides/account-profiles.md#accounts-by-industry) para obtener más información.
 
 >[!TIP]
 >
 >Puede personalizar esta consulta SQL para que devuelva más o menos que las cinco industrias principales.
 
-El SQL que genera la perspectiva [!UICONTROL Nuevas cuentas por sector] se ve en la sección contraíble a continuación.
+El SQL que genera el insight [!UICONTROL New accounts by industry] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -97,9 +96,9 @@ LIMIT 5000;
 
 #### El caso de uso Nuevas cuentas por tipo {#accounts-by-type}
 
-La lógica usada para la perspectiva [!UICONTROL Nuevas cuentas por tipo] devuelve el desglose numérico de las cuentas por tipo. Esta perspectiva puede ayudar a guiar la estrategia y las operaciones empresariales, incluidas las estrategias de asignación de recursos o marketing. Consulte la [[!UICONTROL Documentación de nuevas cuentas por tipo] widget](../guides/account-profiles.md#accounts-by-type) para obtener más información.
+La lógica usada para la insight [!UICONTROL New accounts by type] devuelve el desglose numérico de las cuentas por tipo. Esta insight puede ayudar a guiar la estrategia y las operaciones empresariales, incluidas las estrategias de asignación de recursos o marketing. Consulte la documentación del widget [[!UICONTROL New accounts by type]](../guides/account-profiles.md#accounts-by-type) para obtener más información.
 
-El SQL que genera la perspectiva [!UICONTROL Nuevas cuentas por tipo] se ve en la sección contraíble a continuación.
+El SQL que genera el insight [!UICONTROL New accounts by type] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 

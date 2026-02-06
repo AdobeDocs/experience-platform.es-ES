@@ -1,12 +1,11 @@
 ---
 title: Perspectivas del perfil de cuenta
 description: Descubra el SQL que alimenta las perspectivas de su perfil de cuenta y utilice estas consultas para generar perspectivas personalizadas que exploren aún más a sus clientes y sus experiencias como consumidores.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -23,11 +22,11 @@ Las siguientes perspectivas están disponibles para que las use como parte del [
 
 ## Perfiles de cuenta añadidos {#account-profiles-added}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántos perfiles de cuenta se han añadido durante un periodo determinado?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -49,11 +48,11 @@ ORDER BY date_key limit 5000;
 
 ## Nuevas cuentas por sector {#accounts-by-industry}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuáles son los cinco sectores principales a los que pertenecen los perfiles de cuenta?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH rankedindustries AS
@@ -85,11 +84,11 @@ ORDER BY total_accounts DESC limit 5000;
 
 ## Nuevas cuentas por tipo {#accounts-by-type}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es el recuento de cuentas por tipo?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT t.account_type,
@@ -108,11 +107,11 @@ LIMIT  5000;
 
 ## Oportunidades añadidas {#opportunities-added}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántas oportunidades se han agregado en un período determinado?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT d.date_key,
@@ -131,11 +130,11 @@ LIMIT  5000;
 
 ## Nuevas oportunidades por función de persona {#opportunities-by-person-role}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es el tamaño relativo y el recuento de las distintas funciones de una oportunidad?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT p.person_role,
@@ -153,11 +152,11 @@ LIMIT  5000;
 
 ## Nuevas oportunidades por ingresos {#opportunities-by-revenue}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuáles son las 20 oportunidades clasificadas por sus ingresos (en USD)?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH ranked_opportunities AS
@@ -193,12 +192,12 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 ## Nuevas oportunidades por estado y etapa {#opportunities-by-status-and-stage}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
-- ¿Qué oportunidades abiertas existen y en qué fase del canal de ventas o marketing se encuentran?
-- ¿Qué oportunidades cerradas existen y en qué fase del canal de ventas o marketing se encuentran?
+- ¿Qué oportunidades abiertas hay y en qué fase del funnel de ventas o marketing se encuentran?
+- ¿Qué oportunidades cerradas existen y en qué fase del funnel de ventas o marketing se encuentran?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -226,11 +225,11 @@ FROM   opportunities_by_isclosed limit 5000;
 
 ## Nuevas oportunidades ganadas {#opportunities-won}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es el recuento de oportunidades que se han cerrado o finalizado correctamente?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -255,11 +254,11 @@ FROM   opportunities_by_iswon limit 5000;
 
 <!-- Q) Can we change this name? -->
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántas oportunidades se han cerrado o finalizado correctamente (ganadas) durante un periodo determinado?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH opportunities_won_counts AS
@@ -285,13 +284,13 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->El gráfico [!UICONTROL Información general de clientes por cuenta] incluye tres detalles de obtención de detalles: [!UICONTROL Clientes por detalle de cuenta], [!UICONTROL Información general de oportunidades por cuenta] y [!UICONTROL Oportunidades por detalle de cuenta]. Estos desgloses de detalles proporcionan perspectivas más granulares, desglosando los recuentos de clientes y oportunidades por categorías (como clientes directos e indirectos) e intervalos (como clientes y bandas de recuento de oportunidades). Estos gráficos no se ven afectados por los filtros de fecha globales que haya establecido.
+>El gráfico [!UICONTROL Customers per Account Overview] incluye tres datos de obtención de detalles: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] y [!UICONTROL Opportunities per Account Detail]. Estos desgloses de detalles proporcionan perspectivas más granulares, desglosando los recuentos de clientes y oportunidades por categorías (como clientes directos e indirectos) e intervalos (como clientes y bandas de recuento de oportunidades). Estos gráficos no se ven afectados por los filtros de fecha globales que haya establecido.
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la distribución de las cuentas en función de si tienen clientes directos o indirectos?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -329,13 +328,13 @@ ORDER BY ac.Account_Category;
 
 >[!NOTE]
 >
->Esta perspectiva no se ve afectada por los filtros de fecha globales.
+>Esta insight no se ve afectada por los filtros de fecha globales.
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántas cuentas tienen distintos rangos de clientes directos o indirectos?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->Esta perspectiva no se ve afectada por los filtros de fecha globales.
+>Esta insight no se ve afectada por los filtros de fecha globales.
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es la distribución de las cuentas en función de si tienen oportunidades asociadas?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH LatestDate AS (
@@ -453,13 +452,13 @@ ORDER BY ac.Opportunity_Category;
 
 >[!NOTE]
 >
->Esta perspectiva no se ve afectada por los filtros de fecha globales.
+>Esta insight no se ve afectada por los filtros de fecha globales.
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántas cuentas tienen diferentes rangos de oportunidades asociadas?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 WITH opportunity_ranges AS (
@@ -505,7 +504,7 @@ ORDER BY CASE opportunity_ranges.opportunity_range
 
 +++
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora comprende el SQL que genera las perspectivas del panel de perfiles de cuenta y qué preguntas comunes resuelve este análisis. Ahora puede editar e iterar en SQL para generar sus propias perspectivas. Consulte la [descripción general del modo Query Pro](../sql-insights-query-pro-mode/overview.md) para obtener información sobre cómo generar perspectivas personalizadas con SQL.
 

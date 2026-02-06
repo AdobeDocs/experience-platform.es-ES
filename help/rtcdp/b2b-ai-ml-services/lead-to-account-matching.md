@@ -1,14 +1,14 @@
 ---
 title: Coincidencia de clientes potenciales con cuentas en Real-Time CDP B2B
 type: Documentation
-description: Información general y más detalles sobre la función de coincidencia de clientes potenciales con cuentas de Experience Platform CDP B2B.
+description: Información general y más sobre la función de coincidencia de clientes potenciales con cuentas de Experience Platform CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 3%
+source-wordcount: '402'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ El marketing basado en cuentas es una estrategia cada vez más importante para e
 
 El marketing basado en cuentas permite vincular clientes conocidos con cuentas de ventas. Esto permite a los equipos de marketing interactuar con posibles clientes potenciales de las cuentas de Target al principio del recorrido del cliente para aumentar sus posibilidades de conversión. Un registro de persona conocida suele incluir parte o la totalidad de la siguiente información:
 
-- Nombre de la persona
+- Nombre de persona
 - Dirección de correo electrónico
 - Número de contacto
 - Nombre de la compañía
@@ -62,11 +62,11 @@ El servicio de coincidencia de cliente potencial con cuenta se ejecuta cuando es
 
 Después de la ejecución del trabajo, los resultados se guardan en un nuevo conjunto de datos del XDM de relación de persona de cuenta existente.
 
-Para obtener una vista previa del conjunto de datos, seleccione **[!UICONTROL Vista previa del conjunto de datos]** en la parte superior derecha.
+Para obtener una vista previa del conjunto de datos, seleccione **[!UICONTROL Preview dataset]** en la parte superior derecha.
 
 ![Nuevo conjunto de datos](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-El conjunto de datos incluye la información de la cuenta coincidente, así como la puntuación de coincidencia del conjunto de datos elegido. El campo **[!UICONTROL Source de relación]** indica si procede del proceso de coincidencia de cliente potencial con cuenta.
+El conjunto de datos incluye la información de la cuenta coincidente, así como la puntuación de coincidencia del conjunto de datos elegido. El campo **[!UICONTROL Relationship Source]** indica si procede del proceso de coincidencia de cliente potencial con cuenta.
 
 ![Previsualizar resultados y puntuaciones de confianza del conjunto de datos](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 

@@ -1,19 +1,18 @@
 ---
-title: Real-time Customer Data Platform Insights Data Model B2C Edition
-description: Aprenda a utilizar consultas SQL con los modelos de datos de Real-time Customer Data Platform Insights (edición B2C) para personalizar sus propios informes de Real-Time CDP para los casos de uso de KPI y marketing.
-badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+title: B2C Edition del modelo de datos de Real-Time Customer Data Platform Insights
+description: Aprenda a utilizar consultas SQL con los modelos de datos de perspectivas de Real-Time Customer Data Platform (B2C Edition) para personalizar sus propios informes de Real-Time CDP para los casos de uso de KPI y marketing.
+badgeB2C: null
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 0%
+source-wordcount: '1051'
+ht-degree: 2%
 
 ---
 
-# Real-time Customer Data Platform Insights Data Model B2C Edition
+# B2C Edition del modelo de datos de Real-Time Customer Data Platform Insights
 
-El modelo de datos de Real-time Customer Data Platform Insights para [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) expone los modelos de datos y SQL que alimentan las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de indicadores clave de rendimiento (KPI) y marketing. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles definidos por el usuario. Consulte la documentación de perspectivas de informes de almacén acelerado de consultas para aprender [a crear un modelo de datos de perspectivas de informes a través del servicio de consultas para utilizarlo con datos de almacén acelerados y paneles definidos por el usuario](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
+El modelo de datos de Real-Time Customer Data Platform Insights para [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) expone los modelos de datos y SQL que alimentan las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de indicadores clave de rendimiento (KPI) y marketing. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles definidos por el usuario. Consulte la documentación de perspectivas de informes de almacén acelerado de consultas para aprender [a crear un modelo de datos de perspectivas de informes a través del servicio de consultas para utilizarlo con datos de almacén acelerados y paneles definidos por el usuario](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
 
 >[!NOTE]
 >
@@ -23,7 +22,7 @@ El modelo de datos de Real-time Customer Data Platform Insights para [B2C Editio
 
 Esta guía requiere una comprensión práctica de la [función de paneles definida por el usuario](../standard-dashboards.md). Lea la documentación antes de continuar con esta guía.
 
-## Informes de perspectivas y casos de uso de Real-Time CDP
+## Informes y casos de uso de Real-Time CDP insight
 
 Los informes de Real-Time CDP proporcionan perspectivas sobre los datos de perfil y su relación con las audiencias y los destinos. Se desarrollaron varios modelos de esquema de estrella para responder a una variedad de casos de uso de marketing comunes y cada modelo de datos puede admitir varios casos de uso.
 
@@ -45,9 +44,9 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### El caso de uso de recuento de perfiles {#profile-count}
 
-La lógica utilizada para el widget [!UICONTROL Recuento de perfiles] devuelve el número total de perfiles combinados dentro del almacén de perfiles en el momento en que se tomó la instantánea. Consulte la [[!UICONTROL documentación del widget] recuento de perfiles](../guides/profiles.md#profile-count) para obtener más información.
+La lógica utilizada para el widget [!UICONTROL Profile count] devuelve el número total de perfiles combinados dentro del almacén de perfiles en el momento en que se tomó la instantánea. Consulte la documentación del widget [[!UICONTROL Profile count]](../guides/profiles.md#profile-count) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL Profile count] se ve en la sección contraíble que aparece a continuación.
+El SQL que genera el widget [!UICONTROL Profile count] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -65,9 +64,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### Caso de uso de perfiles de identidad única {#single-identity-profiles}
 
-La lógica usada para el widget [!UICONTROL Perfiles de identidad únicos] proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad. Consulte la [[!UICONTROL documentación del widget de perfiles de identidad única]](../guides/profiles.md#single-identity-profiles) para obtener más información.
+La lógica utilizada para el widget [!UICONTROL Single identity profiles] proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad. Consulte la documentación del widget [[!UICONTROL Single identity profiles]](../guides/profiles.md#single-identity-profiles) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL Perfiles de identidad únicos] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Single identity profiles] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -98,9 +97,9 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### Perfiles por caso de uso de identidad {#profiles-by-identity}
 
-El widget [!UICONTROL Perfiles por identidad] muestra el desglose de identidades en todos los perfiles combinados del almacén de perfiles. Consulte la [[!UICONTROL documentación del widget Perfiles por identidad]](../guides/profiles.md#profiles-by-identity) para obtener más información.
+El widget [!UICONTROL Profiles by identity] muestra el desglose de identidades en todos los perfiles combinados del almacén de perfiles. Consulte la documentación del widget [[!UICONTROL Profiles by identity]](../guides/profiles.md#profiles-by-identity) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL Perfiles por identidad] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Profiles by identity] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -122,9 +121,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### Perfiles de identidad únicos por caso de uso de identidad {#single-identity-profiles-by-identity}
 
-La lógica usada para el widget [!UICONTROL Perfiles de identidad únicos por identidad] ilustra el número total de perfiles que se identifican con un solo identificador único. Consulte la [documentación del widget de identidad &#x200B;](../guides/profiles.md#single-identity-profiles-by-identity) para obtener más información.
+La lógica utilizada para el widget [!UICONTROL Single identity profiles by identity] ilustra el número total de perfiles que se identifican con un solo identificador único. Consulte la [documentación del widget de identidad ](../guides/profiles.md#single-identity-profiles-by-identity) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL Perfiles de identidad únicos por identidad] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Single identity profiles by identity] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -161,9 +160,9 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### Caso de uso de tamaño de audiencia {#audience-size}
 
-La lógica utilizada para el widget [!UICONTROL Tamaño de audiencia] devuelve el número total de perfiles combinados dentro de la audiencia seleccionada en el momento de la instantánea más reciente. Consulte la [[!UICONTROL documentación del widget de tamaño de audiencia]](../guides/audiences.md#audience-size) para obtener más información.
+La lógica utilizada para el widget [!UICONTROL Audience size] devuelve el número total de perfiles combinados dentro de la audiencia seleccionada en el momento de la instantánea más reciente. Consulte la documentación del widget [[!UICONTROL Audience size]](../guides/audiences.md#audience-size) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL Tamaño de audiencia] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Audience size] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -185,9 +184,9 @@ WHERE
 
 #### Caso de uso de tendencia de cambio de tamaño de audiencia {#audience-size-change-trend}
 
-La lógica utilizada para el widget [!UICONTROL Tendencia de cambio de tamaño de audiencia] proporciona una ilustración de gráfico de líneas de la diferencia en el número total de perfiles que cumplen los requisitos para una audiencia determinada entre las instantáneas diarias más recientes. Consulte la [[!UICONTROL tendencia de cambio de tamaño de audiencia] documentación del widget](../guides/audiences.md#audience-size-change-trend) para obtener más información.
+La lógica utilizada para el widget [!UICONTROL Audience size change trend] proporciona una ilustración de gráfico de líneas de la diferencia en el número total de perfiles aptos para una audiencia determinada entre las instantáneas diarias más recientes. Consulte la documentación del widget [[!UICONTROL Audience size change trend]](../guides/audiences.md#audience-size-change-trend) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL Tendencia de cambio de tamaño de audiencia] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Audience size change trend] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -222,9 +221,9 @@ SELECT date_key,
 
 #### Caso de uso de destinos más utilizados {#most-used-destinations}
 
-La lógica usada en el widget [!UICONTROL destinos más usados] enumera los destinos más usados de su organización según el número de audiencias asignadas a ellos. Esta clasificación proporciona una perspectiva de los destinos que se están utilizando, pero también muestra potencialmente aquellos que pueden estar infrautilizados. Consulte la documentación del widget [[!UICONTROL destinos más utilizados]](../guides/destinations.md#most-used-destinations) para obtener más información.
+La lógica utilizada en el widget [!UICONTROL Most used destinations] enumera los destinos más utilizados de su organización según el número de audiencias asignadas a ellos. Esta clasificación proporciona a insight los destinos que se están utilizando, pero también muestra potencialmente los que pueden estar infrautilizados. Consulte la documentación del widget [[!UICONTROL Most used destinations]](../guides/destinations.md#most-used-destinations) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL destinos más usados] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Most used destinations] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -247,9 +246,9 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### Caso de uso de audiencias activadas recientemente {#recently-activated-audiences}
 
-La lógica del widget [!UICONTROL Audiencias activadas recientemente] proporciona una lista de las audiencias asignadas más recientemente a un destino. Esta lista proporciona una instantánea de las audiencias y los destinos que se utilizan de forma activa en el sistema y puede ayudar a solucionar cualquier asignación errónea. Para obtener más información, consulte la [[!UICONTROL documentación del widget de audiencias activadas recientemente]](../guides/destinations.md#recently-activated-audiences).
+La lógica del widget [!UICONTROL Recently activated audiences] proporciona una lista de las audiencias asignadas más recientemente a un destino. Esta lista proporciona una instantánea de las audiencias y los destinos que se utilizan de forma activa en el sistema y puede ayudar a solucionar cualquier asignación errónea. Consulte la documentación del widget [[!UICONTROL Recently activated audiences]](../guides/destinations.md#recently-activated-audiences) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL Audiencias activadas recientemente] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Recently activated audiences] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -291,9 +290,9 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### Perfiles por identidad para un caso de uso de audiencia {#audience-profiles-by-identity}
 
-La lógica utilizada en el widget [!UICONTROL Perfiles por identidad] proporciona un desglose de identidades en todos los perfiles combinados en el almacén de perfiles de una audiencia determinada. Consulte la [[!UICONTROL documentación del widget Perfiles por identidad]](../guides/audiences.md#profiles-by-identity) para obtener más información.
+La lógica utilizada en el widget [!UICONTROL Profiles by identity] proporciona un desglose de identidades en todos los perfiles combinados del almacén de perfiles para una audiencia determinada. Consulte la documentación del widget [[!UICONTROL Profiles by identity]](../guides/audiences.md#profiles-by-identity) para obtener más información.
 
-El SQL que genera el widget [!UICONTROL Perfiles por identidad] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Profiles by identity] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -327,9 +326,9 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### Caso de uso de superposición de identidad (perfiles) {#profiles-identity-overlap}
 
-La lógica usada en el widget [!UICONTROL Superposición de identidades] muestra la superposición de perfiles en tu **almacén de perfiles** que contienen las dos identidades seleccionadas. Para obtener más información, consulte la sección del widget [[!UICONTROL Superposición de identidad] de la documentación del panel [!UICONTROL Perfiles]](../guides/profiles.md#identity-overlap).
+La lógica usada en el widget [!UICONTROL Identity overlap] muestra la superposición de perfiles en tu **almacén de perfiles** que contienen las dos identidades seleccionadas. Para obtener más información, consulte la sección del widget [[!UICONTROL Identity overlap] de la documentación del panel [!UICONTROL Profiles]](../guides/profiles.md#identity-overlap).
 
-El SQL que genera el widget [!UICONTROL Superposición de identidad] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Identity overlap] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -396,9 +395,9 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### Caso de uso de superposición de identidad (audiencias) {#audiences-identity-overlap}
 
-La lógica usada en el widget [!UICONTROL Audiencias] del panel [!UICONTROL Superposición de identidades] ilustra la superposición de perfiles que contienen las dos identidades seleccionadas para una audiencia en particular. Para obtener más información, consulte la sección del widget [[!UICONTROL Superposición de identidad] de la documentación del panel [!UICONTROL Audiencias]](../guides/audiences.md#identity-overlap).
+La lógica utilizada en el widget [!UICONTROL Audiences] del tablero [!UICONTROL Identity overlap] ilustra la superposición de perfiles que contienen las dos identidades seleccionadas para una audiencia en particular. Para obtener más información, consulte la sección del widget [[!UICONTROL Identity overlap] de la documentación del panel [!UICONTROL Audiences]](../guides/audiences.md#identity-overlap).
 
-El SQL que genera el widget [!UICONTROL Superposición de identidad] se ve en la sección contraíble a continuación.
+El SQL que genera el widget [!UICONTROL Identity overlap] se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 

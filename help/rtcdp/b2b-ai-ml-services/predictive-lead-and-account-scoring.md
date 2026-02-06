@@ -3,18 +3,18 @@ title: Puntuación predictiva de clientes potenciales y cuentas en Real-Time CDP
 type: Documentation
 description: Información general y más detalles sobre la función de puntuación de cuenta y posible cliente predictivo de Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 2%
+source-wordcount: '853'
+ht-degree: 3%
 
 ---
 
 # Puntuación predictiva de clientes potenciales y cuentas en Real-Time CDP B2B
 
-Los especialistas en marketing B2B se enfrentan a múltiples desafíos en la parte superior del canal de marketing. Para ser eficaces, los especialistas en marketing B2B necesitan una forma automatizada de cualificar al gran número de personas para que puedan centrarse en los objetivos de alto valor. La calificación debe estar alineada con el resultado final de ventas, no solo con la conversión de marketing.
+Los especialistas en marketing B2B se enfrentan a múltiples desafíos en la parte superior de la funnel de marketing. Para ser eficaces, los especialistas en marketing B2B necesitan una forma automatizada de cualificar al gran número de personas para que puedan centrarse en los objetivos de alto valor. La calificación debe estar alineada con el resultado final de ventas, no solo con la conversión de marketing.
 
 Las cuentas son las entidades finales que adquieren productos y servicios B2B. Para comercializar y vender de forma eficaz, los especialistas en marketing B2B deben conocer no solo la probabilidad de compra de la persona, sino también la de la cuenta.
 
@@ -52,7 +52,7 @@ El algoritmo tiene en cuenta los siguientes atributos y datos de entrada:
 
 >[!NOTE]
 > 
->El algoritmo solo inspecciona el campo `sourceAccountKey.sourceKey` en el grupo de campos Persona:personaComponentes.
+>El algoritmo solo inspecciona el campo `sourceAccountKey.sourceKey` en el grupo de campos Persona:personComponents.
 
 * Perfil de cuenta
 
@@ -102,7 +102,7 @@ Después de la ejecución del trabajo, los resultados se guardan en un nuevo con
 
 ### Ver puntuaciones del perfil del cliente
 
-Para ver las puntuaciones predictivas de un perfil de persona, seleccione **[!UICONTROL Perfiles]** en la sección cliente del panel izquierdo y, a continuación, escriba el área de nombres de identidad y el valor de identidad. Una vez finalizado, seleccione **[!UICONTROL Ver]**.
+Para ver las puntuaciones predictivas de un perfil de persona, seleccione **[!UICONTROL Profiles]** en la sección cliente del panel izquierdo y, a continuación, introduzca el área de nombres de identidad y el valor de identidad. Una vez finalizado, seleccione **[!UICONTROL View]**.
 
 A continuación, seleccione el perfil en la lista.
 

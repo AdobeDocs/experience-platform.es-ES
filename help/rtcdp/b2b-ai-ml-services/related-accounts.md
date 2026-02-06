@@ -1,24 +1,24 @@
 ---
-title: Cuentas relacionadas en Real-Time CDP B2B Edition
+title: Cuentas relacionadas en Real-Time CDP B2B edition
 type: Documentation
-description: Información general y más información sobre las funciones de cuentas relacionadas en Experience Platform Real-Time CDP B2B.
+description: Información general y más información sobre las cuentas relacionadas en Experience Platform Real-Time CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '427'
 ht-degree: 5%
 
 ---
 
-# Cuentas relacionadas en Real-Time CDP B2B Edition
+# Cuentas relacionadas en Real-Time CDP B2B edition
 
 ## Información general {#overview}
 
 Las empresas B2B a menudo almacenan la información de sus clientes en varios sistemas, cada uno de los cuales incluye solo datos parciales o incluso en conflicto para la misma entidad comercial del mundo real. Esto crea un desafío masivo de llegar a una vista precisa de sus clientes, reduciendo así la eficiencia y eficacia de sus esfuerzos de marketing y ventas B2B.
 
-| ID | Nombre | Sitio web | Sector | Estado | Teléfono | Tiene una oportunidad abierta con un importe > `$1 million` |
+| ID | Nombre | Sitio web | Industria | Estado | Teléfono | Tiene una oportunidad abierta con un importe > `$1 million` |
 |---|---|---|---|---|---|---|
 | 1 | Acme | acme.com | Software | CA | (408) 536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
@@ -30,17 +30,17 @@ Las empresas B2B a menudo almacenan la información de sus clientes en varios si
 
 Con las cuentas relacionadas, [!DNL Real-Time CDP B2B] ahora muestra una lista de cuentas similares a la cuenta que está explorando.
 
-![Pantalla que muestra cuentas relacionadas en la interfaz de usuario del Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
+![Pantalla que muestra cuentas relacionadas en la interfaz de usuario de Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Utilice esta función para ver los perfiles de cuenta relacionados de un perfil de cuenta en la interfaz de usuario de Experience Platform y, a continuación, incluya las cuentas relacionadas en las definiciones de segmentos para ampliar su alcance o aplicar criterios más amplios a las audiencias.
 
 ## Habilitar el servicio de cuentas relacionadas {#enable}
 
-Para habilitar el servicio, selecciona **[!UICONTROL Perfiles]** en la barra lateral seguido de **[!UICONTROL Configuración]**.
+Para habilitar el servicio, seleccione **[!UICONTROL Profiles]** en la barra lateral seguida de **[!UICONTROL Settings]**.
 
 ![IU de Experience Platform que resalta perfiles y configuraciones.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-Seleccione la opción junto a [!UICONTROL Habilitar cuentas relacionadas] para habilitar el servicio y, a continuación, seleccione **[!UICONTROL Guardar]**.
+Seleccione el conmutador situado junto a [!UICONTROL Enable related accounts] para habilitar el servicio y, a continuación, seleccione **[!UICONTROL Save]**.
 
 ![Pantalla de configuración de la cuenta que resalta la opción y guarda.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
@@ -50,7 +50,7 @@ Los trabajos de aprendizaje automático de ejecución diaria utilizan un algorit
 
 * Vínculo de cuenta principal
 * Dominio web
-* Nombre de la cuenta
+* Nombre de cuenta
 
 Después de un trabajo de procesamiento correcto, cada miembro del grupo de perfiles de cuenta se etiqueta con la lista Cuentas relacionadas. Puede ver la lista en la ficha **Cuentas relacionadas** de la página Perfil de cuenta y usar las cuentas relacionadas en las definiciones de segmentos.
 

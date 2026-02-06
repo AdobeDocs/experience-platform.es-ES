@@ -2,11 +2,11 @@
 title: Casos de uso de segmentación para Real-Time Customer Data Platform B2B edition
 description: Una descripción general de los distintos casos de uso de Adobe Real-Time Customer Data Platform B2B edition disponibles.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ La siguiente imagen ilustra las relaciones entre las clases B2B disponibles en R
 
 Dado que el modelo de datos puede ser complicado, puede utilizar la interfaz de usuario de Platform para ver una representación visual más detallada del modelo de datos y encontrar los atributos relevantes para su caso de uso. Para empezar, vaya a la interfaz de usuario de Platform y seleccione Esquemas en el panel de navegación izquierdo.
 
-Seleccione el esquema apropiado de la lista disponible y seleccione la relación apropiada en el carril lateral [!UICONTROL Composition]. En el ejemplo siguiente, al seleccionar la relación &quot;Persona&quot;, se muestra qué atributo del esquema actual hace referencia al esquema &quot;Persona&quot; relacionado (si es el esquema de origen de la relación) o se hace referencia a él mediante el esquema &quot;Persona&quot; (si es el esquema de referencia de la relación).
+Seleccione el esquema apropiado de la lista disponible y seleccione la relación adecuada en el carril lateral [!UICONTROL Composition]. En el ejemplo siguiente, al seleccionar la relación &quot;Persona&quot;, se muestra qué atributo del esquema actual hace referencia al esquema &quot;Persona&quot; relacionado (si es el esquema de origen de la relación) o se hace referencia a él mediante el esquema &quot;Persona&quot; (si es el esquema de referencia de la relación).
 
 ![ejemplo de clave de origen con la relación people en el espacio de trabajo de esquema](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
@@ -74,7 +74,7 @@ Los casos de uso siguientes proporcionan información sobre qué clases se utili
 
 ## Ejemplos de diferentes casos de uso de segmentación {#use-cases}
 
-Los siguientes casos de uso están disponibles para la segmentación con B2B edition. Cada ejemplo proporciona una descripción de lo que hace la audiencia y una descripción de las clases utilizadas para crearlas. Las imágenes proporcionadas resaltan la ruta de archivo en el carril lateral de [!UICONTROL Atributos], que refleja la estructura del esquema. La sección [!UICONTROL Propiedades del segmento] a la derecha de la pantalla contiene un desglose por escrito de los atributos de la audiencia.
+Los siguientes casos de uso están disponibles para la segmentación con B2B edition. Cada ejemplo proporciona una descripción de lo que hace la audiencia y una descripción de las clases utilizadas para crearlas. Las imágenes proporcionadas resaltan la ruta de acceso del archivo en el carril lateral [!UICONTROL Attributes], lo que refleja la estructura del esquema. La sección [!UICONTROL Segment properties] de la derecha de la pantalla contiene un desglose por escrito de los atributos de la audiencia.
 
 ### Ejemplo 1: Encuentre a los responsables de la toma de decisiones sobre las oportunidades B2B {#find-decision-maker}
 
@@ -84,13 +84,13 @@ Encuentre a todas las personas que son las &quot;decisoras&quot; de cualquier op
 
 ### Ejemplo 2: Encuentre perfiles B2B asignados a oportunidades por encima de una determinada cantidad de dólares {#find-opportunities-amount}
 
-Encuentre todas las personas que estén asignadas directamente a cualquier oportunidad cuya cantidad de oportunidad sea mayor que la cantidad dada (1 millón de dólares). Esta audiencia requiere un vínculo entre la clase [!UICONTROL XDM Individual Profile], la clase [!UICONTROL XDM Business Opportunity Person Relation] y la clase [!UICONTROL XDM Business Opportunity].
+Encuentre todas las personas que estén asignadas directamente a cualquier oportunidad cuya cantidad de oportunidad sea mayor que la cantidad dada (1 millón de dólares). Esta audiencia requiere un vínculo entre las clases [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Opportunity Person Relation] y [!UICONTROL XDM Business Opportunity].
 
 ![IU que muestra la configuración del ejemplo 2](../assets/segmentation/b2b/example-2.png)
 
 ### Ejemplo 3: Buscar perfiles B2B asignados a oportunidades por ubicación {#find-opportunities-location}
 
-Encuentre todas las personas que estén asignadas directamente a cualquier oportunidad donde la cuenta esté ubicada en una ubicación determinada (Canadá). Esta audiencia requiere un vínculo entre la clase [!UICONTROL XDM Individual Profile], la clase [!UICONTROL XDM Business Opportunity Person Relation], la clase [!UICONTROL XDM Business Opportunity] y la clase [!UICONTROL XDM Business Account].
+Encuentre todas las personas que estén asignadas directamente a cualquier oportunidad donde la cuenta esté ubicada en una ubicación determinada (Canadá). Esta audiencia requiere un vínculo entre las clases [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Opportunity Person Relation], [!UICONTROL XDM Business Opportunity] y [!UICONTROL XDM Business Account].
 
 ![IU que muestra la configuración del ejemplo 3](../assets/segmentation/b2b/example-3.png)
 
@@ -108,13 +108,13 @@ Después de crear la primera audiencia, puede combinarla con otra audiencia de p
 
 ### Ejemplo 5: Búsqueda de perfiles B2B para oportunidades por nombre de departamento y cantidad de oportunidad {#find-department-opportunity-amount}
 
-Encuentre a todas las personas que trabajan en un departamento de Recursos Humanos (RRHH) y tienen cualquier cuenta que tiene al menos una oportunidad abierta por valor de la cantidad dada (1 millón de dólares) o más. Esta audiencia requiere un vínculo entre la clase [!UICONTROL XDM Individual Profile], la clase [!UICONTROL XDM Business Account] y la clase [!UICONTROL XDM Business Opportunity].
+Encuentre a todas las personas que trabajan en un departamento de Recursos Humanos (RRHH) y tienen cualquier cuenta que tiene al menos una oportunidad abierta por valor de la cantidad dada (1 millón de dólares) o más. Esta audiencia requiere un vínculo entre las clases [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Account] y [!UICONTROL XDM Business Opportunity].
 
 ![IU que muestra la configuración del ejemplo 5](../assets/segmentation/b2b/example-5.png)
 
 ### Ejemplo 6: Búsqueda de perfiles B2B por puesto e ingresos de cuenta anual {#find-by-job-title-and-revenue}
 
-Encuentre a todas las personas cuyo cargo sea Vicepresidente y tenga una cuenta con ingresos anuales de la cantidad determinada (100 millones de dólares) o más, y haya visitado la página de precios al menos 3 veces en el último mes. Esta audiencia requiere un vínculo entre la clase [!UICONTROL XDM Individual Profile], la clase [!UICONTROL XDM Business Account] y la clase [!UICONTROL XDM ExperienceEvent].
+Encuentre a todas las personas cuyo cargo sea Vicepresidente y tenga una cuenta con ingresos anuales de la cantidad determinada (100 millones de dólares) o más, y haya visitado la página de precios al menos 3 veces en el último mes. Esta audiencia requiere un vínculo entre las clases [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Account] y [!UICONTROL XDM ExperienceEvent].
 
 ![IU que muestra la configuración del ejemplo 6](../assets/segmentation/b2b/example-6.png)
 
@@ -132,7 +132,7 @@ Después de crear la primera audiencia, puede combinarla con otra audiencia de p
 
 ### Ejemplo 8: Uso de cuentas relacionadas para expandir el alcance de la segmentación {#related-accounts}
 
-Encuentre a todas las personas que trabajan en un departamento de Recursos Humanos (RRHH) y están relacionadas con cualquier cuenta *o con cualquiera de las cuentas relacionadas de la cuenta* que tenga al menos una oportunidad abierta por un valor de la cantidad determinada (1 millón de dólares) o más. Esta audiencia requiere un vínculo entre la clase [!UICONTROL XDM Individual Profile], la clase [!UICONTROL XDM Business Account] y la clase [!UICONTROL XDM Business Opportunity].
+Encuentre a todas las personas que trabajan en un departamento de Recursos Humanos (RRHH) y están relacionadas con cualquier cuenta *o con cualquiera de las cuentas relacionadas de la cuenta* que tenga al menos una oportunidad abierta por un valor de la cantidad determinada (1 millón de dólares) o más. Esta audiencia requiere un vínculo entre las clases [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Account] y [!UICONTROL XDM Business Opportunity].
 
 ![IU que muestra la segmentación para cuentas relacionadas](../assets/segmentation/b2b/example-8.png)
 

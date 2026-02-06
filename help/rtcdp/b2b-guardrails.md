@@ -1,14 +1,14 @@
 ---
-keywords: perfil;perfil del cliente en tiempo real;solución de problemas;protecciones;directrices;límite;entidad;entidad principal;entidad de dimensión;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;plataforma de datos del cliente en tiempo real;cdp en tiempo real;b2b;cdp;
+keywords: perfil;perfil de cliente en tiempo real;solución de problemas;protecciones;directrices;límite;entidad;entidad principal;entidad de dimensión;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;
 title: Protecciones predeterminadas para Real-Time Customer Data Platform B2B edition
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos para obtener un rendimiento óptimo del sistema con Adobe Real-Time Customer Data Platform B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1815'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Real-Time Customer Data Platform B2B edition le permite ofrecer experiencias mul
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos para obtener un rendimiento óptimo del sistema. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
 
@@ -116,7 +116,7 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 | --------- | ----- | ---------- | ----------- |
 | Definiciones de segmentos por zona protegida B2B | 400 | Protección de rendimiento | Una organización puede tener más de 400 definiciones de segmentos en total, siempre y cuando haya menos de 400 definiciones de segmentos en cada zona protegida B2B individual. El intento de crear definiciones de segmento adicionales puede afectar al rendimiento del sistema. |
 
-## Pasos siguientes
+## Próximos pasos
 
 Los límites descritos en este documento representan los cambios habilitados por Real-Time Customer Data Platform B2B edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B edition, combine estos límites con los límites generales de Adobe Experience Platform descritos en las [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 

@@ -1,13 +1,11 @@
 ---
 title: Conexión de Demandbase
-description: Utilice este destino para activar los públicos de su cuenta para los casos de uso de Account-Based Marketing (ABM). Anuncie para personas y funciones relevantes en sus cuentas de destino a través de B2B Demand Side Platform (DSP) de DemandBase. Las cuentas de destino también se pueden enriquecer con datos de terceros de Demandbase para otros casos de uso posteriores en marketing y ventas.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
-badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions newtab=true"
+description: Utilice este destino para activar los públicos de cuenta para los casos de uso de Account-Based Marketing (ABM). Anuncie para personas y funciones relevantes en sus cuentas de destino a través de B2B Demand Side Platform (DSP) de DemandBase. Las cuentas de destino también se pueden enriquecer con datos de terceros de Demandbase para otros casos de uso posteriores en marketing y ventas.
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
+source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '781'
 ht-degree: 16%
 
 ---
@@ -22,7 +20,7 @@ Active perfiles para sus campañas de Demandbase para la segmentación, personal
 
 ## Ejemplo de uso {#use-case}
 
-Utilice este destino para activar los públicos de su cuenta para los casos de uso de Account-Based Marketing (ABM). Anuncie para personas y funciones relevantes en sus cuentas de destino a través de B2B Demand Side Platform (DSP) de DemandBase. Las cuentas de destino también se pueden enriquecer con datos de terceros de Demandbase para otros casos de uso posteriores en marketing y ventas.
+Utilice este destino para activar los públicos de cuenta para los casos de uso de Account-Based Marketing (ABM). Anuncie para personas y funciones relevantes en sus cuentas de destino a través de B2B Demand Side Platform (DSP) de DemandBase. Las cuentas de destino también se pueden enriquecer con datos de terceros de Demandbase para otros casos de uso posteriores en marketing y ventas.
 
 Por ejemplo, aproveche la tecnología de publicidad de DSP de Demandbase para dirigirse a personas o funciones específicas dentro de cuentas clave para la generación de posibles clientes de la parte superior de funnel, o cree y aumente grupos de compra. Utilice el destino de Demandbase para explorar otros casos de uso y dirigir las cuentas de forma eficaz.
 
@@ -61,7 +59,7 @@ Para exportar audiencias de cuenta a Demandbase, necesita lo siguiente:
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -89,7 +87,7 @@ Ahora está listo para activar sus audiencias en Demandbase.
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md) para obtener instrucciones sobre cómo activar audiencias de cuenta en este destino.
