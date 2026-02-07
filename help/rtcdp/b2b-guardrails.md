@@ -23,7 +23,7 @@ Real-Time Customer Data Platform B2B edition le permite ofrecer experiencias mul
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos para obtener un rendimiento óptimo del sistema. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
 
