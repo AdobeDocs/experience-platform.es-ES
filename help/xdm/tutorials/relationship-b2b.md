@@ -1,10 +1,11 @@
 ---
 title: Definición de una relación entre dos esquemas en Real-Time Customer Data Platform B2B edition
 description: Aprenda a definir una relación de varios a uno entre dos esquemas en Adobe Real-Time Customer Data Platform B2B edition.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cb036262ff81d245fe436fc337b3911170c61425
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1729'
 ht-degree: 12%
 
 ---

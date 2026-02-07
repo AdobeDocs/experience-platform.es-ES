@@ -1,17 +1,22 @@
 ---
 title: Grupo de campos de esquema de componentes de persona de negocio XDM
 description: Obtenga información acerca del grupo de campos de esquema Componentes de persona de negocio XDM.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Componentes de persona de negocios XDM] grupo de campos de esquema
+# [!UICONTROL XDM Business Person Components] grupo de campos de esquema
 
-[!UICONTROL Componentes de persona de negocios de XDM] es un grupo de campos de esquema estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md) que captura varios registros de origen para una persona, y otros atributos que son necesarios para la segmentación de personas.
+>[!AVAILABILITY]
+>
+>Este grupo de campos solo está disponible para organizaciones con acceso a Real-Time CDP B2B edition.
+
+[!UICONTROL XDM Business Person Components] es un grupo de campos de esquema estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md) que captura varios registros de origen para una persona y otros atributos que son necesarios para la segmentación de personas.
 
 Cuando se crea un perfil para una persona a través de [Perfil del cliente en tiempo real](../../../profile/home.md) en B2B edition of Real-Time CDP, la información utilizada para crear ese perfil podría provenir de muchos registros de origen. Por ejemplo, si una persona trabaja para dos empresas diferentes, muchos sistemas CRM crearían una copia duplicada intencionalmente de esa persona para que una copia esté vinculada a la compañía A, mientras que la otra está vinculada a la compañía B. Al llevar esos datos a Adobe Experience Platform, este grupo de campos se utiliza para combinar esos registros de origen diferentes en una sola representación.
 
@@ -30,11 +35,11 @@ El grupo de campos proporciona un campo `personComponents` de nivel raíz, que e
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `sourceAccountKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificador compuesto de la cuenta asociada con la persona. |
-| `sourceConvertedContactKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificador compuesto para el contacto relacionado si se convirtió este posible cliente. |
-| `sourceExternalKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificador compuesto para el sistema de origen desde el que se originaron los datos de la persona. |
-| `sourcePersonKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificador compuesto de la persona. |
-| `workEmail` | [[!UICONTROL Dirección de correo electrónico]](../../data-types/b2b-source.md) | El ID de correo electrónico de trabajo de la persona. |
+| `sourceAccountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificador compuesto de la cuenta asociada con la persona. |
+| `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificador compuesto para el contacto relacionado si se convirtió este posible cliente. |
+| `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificador compuesto para el sistema de origen desde el que se originaron los datos de la persona. |
+| `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificador compuesto de la persona. |
+| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | El ID de correo electrónico de trabajo de la persona. |
 | `personGroupID` | Cadena | Un identificador de grupo de la persona. |
 | `personScore` | Cadena | Una puntuación generada para la persona por un sistema CRM. |
 | `personSource` | Cadena | Un identificador único basado en cadenas para el sistema de origen desde el que se originaron los datos de la persona. |

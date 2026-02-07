@@ -1,26 +1,31 @@
 ---
 title: Grupo de campos de esquema de detalles de persona de negocio XDM
 description: Obtenga información acerca del grupo de campos de esquema Detalles de persona de negocio de XDM.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 5%
+source-wordcount: '572'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Detalles de persona de negocios de XDM] grupo de campos de esquema
+# [!UICONTROL XDM Business Person Details] grupo de campos de esquema
 
-[!UICONTROL Detalles de persona de negocios de XDM] es un grupo de campos de esquema estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md) que captura información sobre una persona individual en el contexto de una empresa de empresa a empresa (B2B).
+>[!AVAILABILITY]
+>
+>Este grupo de campos solo está disponible para organizaciones con acceso a Real-Time CDP B2B edition.
+
+[!UICONTROL XDM Business Person Details] es un grupo de campos de esquema estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md) que captura información sobre una persona individual en el contexto de una empresa de empresa a empresa (B2B).
 
 ![](../../images/field-groups/business-person-details.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `b2b` | Objeto | Un objeto que captura los detalles específicos de B2B sobre la persona. |
-| `b2b.accountKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificador compuesto de la cuenta empresarial relacionada con la persona. |
-| `b2b.convertedContactKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificador compuesto para el contacto asociado si se convirtió el posible cliente. |
-| `b2b.personKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificador compuesto para la persona o el fragmento de perfil. |
+| `b2b.accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificador compuesto de la cuenta empresarial relacionada con la persona. |
+| `b2b.convertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificador compuesto para el contacto asociado si se convirtió el posible cliente. |
+| `b2b.personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificador compuesto para la persona o el fragmento de perfil. |
 | `b2b.accountID` | Cadena | Un ID único para la cuenta comercial a la que está asociada esta persona. |
 | `b2b.blockedCause` | Cadena | Si la persona está bloqueada, esta propiedad proporciona el motivo por el que. |
 | `b2b.convertedContactID` | Cadena | ID de contacto si el posible cliente se convirtió correctamente. |
@@ -47,13 +52,13 @@ ht-degree: 5%
 | `mobilePhone` | [Número de teléfono](../../data-types/phone-number.md) | Número de teléfono móvil de la persona. |
 | `otherAddress` | [Dirección postal](../../data-types/postal-address.md) | Una dirección alternativa para la persona. |
 | `otherPhone` | [Número de teléfono](../../data-types/phone-number.md) | Un número de teléfono alternativo para la persona. |
-| `person` | [Persona](../../data-types/person.md) | Un actor, contacto o propietario particular. |
+| `person` | [Persona](../../data-types/person.md) | Un actor, contacto o propietario individual. |
 | `personalEmail` | [Dirección de correo electrónico](../../data-types/email-address.md) | La dirección de correo electrónico personal de la persona. |
 | `workAddress` | [Dirección postal](../../data-types/postal-address.md) | La dirección de trabajo de la persona. |
 | `workEmail` | [Dirección de correo electrónico](../../data-types/email-address.md) | La dirección de correo electrónico de trabajo de la persona. |
 | `workPhone` | [Número de teléfono](../../data-types/phone-number.md) | Número de teléfono del trabajo de la persona. |
 | `identityMap` | Mapa | Campo de asignación que contiene un conjunto de identidades con espacio de nombres para la persona. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los [conceptos básicos de la composición de esquemas](../../schema/composition.md#identityMap) para obtener más información sobre su caso de uso. |
-| `isDeleted` | Booleano | Indica si esta persona se ha eliminado en el Marketo Engage.<br><br>Al usar el [conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Al establecer `isDeleted` en `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
+| `isDeleted` | Booleano | Indica si esta persona se ha eliminado en Marketo Engage.<br><br>Al usar el [conector de origen de Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), cualquier registro que se elimine en Marketo se reflejará automáticamente en el perfil del cliente en tiempo real. Sin embargo, los registros relacionados con estos perfiles pueden persistir en el lago de datos. Al establecer `isDeleted` en `true`, puede utilizar el campo para filtrar qué registros se han eliminado de sus orígenes al consultar el lago de datos. |
 | `organizations` | Matriz de cadenas | Una lista de nombres de organizaciones donde trabaja la persona. |
 
 {style="table-layout:auto"}
