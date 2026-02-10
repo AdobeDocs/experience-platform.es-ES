@@ -1,11 +1,11 @@
 ---
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
-exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
+exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
+source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 22%
+source-wordcount: '1052'
+ht-degree: 32%
 
 ---
 
@@ -21,18 +21,20 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/es/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/e-release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/es/docs/analytics-platform/using/releases/latest)
+>- [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/latest)
 
-**Fecha de la versión: Enero de 2026**
+**Fecha de lanzamiento: febrero de 2026**
 
 Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 
 - [Agent Orchestrator](#agent-orchestrator)
+- [Alertas](#alerts)
+- [Recopilación de datos](#data-collection)
 - [Destinos](#destinations)
-- [Perfil del cliente en tiempo real](#real-time-customer-profile)
-- [Servicio de segmentación](#segmentation-service)
+- [Modelo de datos de experiencia (XDM)](#xdm)
+- [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -43,11 +45,41 @@ Agent Orchestrator le permite crear e implementar agentes con tecnología de IA 
 
 | Función | Descripción |
 | --- | --- |
-| Moción de prueba para Agent Orchestrator | Agent Orchestrator ahora ofrece un movimiento de prueba, que permite a los clientes explorar y probar el servicio antes de comprometerse a realizar una compra completa. Esta opción de prueba antes de la compra permite a las organizaciones evaluar las capacidades de Agent Orchestrator, incluidas las habilidades y las funciones de orquestación, en su propio entorno. La prueba proporciona experiencia práctica con la creación de agentes con tecnología de IA y la comprensión de cómo se pueden integrar en flujos de trabajo existentes. |
+| Agente de incorporación de datos | Utilice el agente de incorporación de datos para configurar conexiones de origen, validar la calidad de los datos, aplicar un enriquecimiento semántico, revisar y validar esquemas y ejecutar la ingesta de datos. Siga los flujos de trabajo paso a paso para los flujos B2C y B2B, revise las salidas esperadas y solucione problemas comunes. |
+| Agente de Data Distiller | Utilice el agente de Data Distiller para crear trabajos de SQL a partir de lenguaje natural, optimizar el rendimiento de SQL, recuperarse de errores de SQL, programar y administrar trabajos de SQL y supervisar el estado del trabajo. Revise las protecciones, los permisos necesarios y las directrices para solucionar problemas para empezar. |
+| Agente de recopilación de datos | Utilice el agente de recopilación de datos para obtener orientación en contexto sobre configuraciones de recopilación de datos complejas y para explorar el linaje, las dependencias y las relaciones en los objetos de recopilación de datos a través de perspectivas conversacionales. |
 
 {style="table-layout:auto"}
 
 Para obtener más información, consulte la [documentación de Agent Orchestrator](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Alertas {#alerts}
+
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a distintas reglas de alerta a través de la ficha [!UICONTROL Alerts] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Integración de [!DNL Slack] para alertas de cara al cliente | Ahora puede enviar alertas de cara al cliente a [!DNL Slack]. Siga el tutorial paso a paso para configurar la integración de [!DNL Slack] y recibir notificaciones de alerta directamente en el área de trabajo de [!DNL Slack]. |
+
+{style="table-layout:auto"}
+
+Para obtener más información, lea la [[!DNL Observability Insights] información general](../observability/home.md).
+
+## Recopilación de datos {#data-collection}
+
+La recopilación de datos de Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a Adobe Experience Platform Edge Network y otros destinos.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Administración de extensiones de etiquetas de Adobe Platform | Utilice la nueva capacidad Extension Management para cargar, empaquetar y publicar las extensiones de su organización en desarrollo y distribución pública y privada. Encuentre extensiones privadas compartidas junto con sus extensiones propias en la vista de empresa de nivel superior. Esta función es compatible con extensiones web, Edge y móviles. |
+
+{style="table-layout:auto"}
+
+Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinos {#destinations}
 
@@ -57,52 +89,40 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 
 | Destino | Descripción |
 | --- | --- |
-| Conector de destino de Kevel ya disponible | [[!DNL Kevel]](https://www.kevel.com/) proporciona la tecnología habilitada para IA y la guía de expertos que ayudan a los líderes innovadores en comercio a lanzar, escalar y tener éxito en los medios minoristas. Retail Media Cloud de [!DNL Kevel] alimenta los formatos de anuncio personalizables, atribuibles y orientados para la publicidad dentro y fuera del sitio. |
-| Ya está disponible el conector de destino de Index Exchange | [!DNL Index] es una plataforma global de suministro de publicidad que ayuda a los propietarios de medios a maximizar el valor de su contenido en todas las pantallas. Con más de 20 años de liderazgo en la industria, [!DNL Index] conecta las marcas más grandes del mundo con los creadores de experiencia premium para ofrecer experiencias de alta calidad a los consumidores. |
-| Compatibilidad con puntos finales regionales para conexiones de Brazo | Todos los [extremos específicos de región](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) admitidos por [!DNL Braze] están ahora disponibles para su selección durante el flujo de configuración de destino. Pregunte a su representante de [!DNL Braze] qué instancia de extremo debe utilizar. |
-| Soporte de programación semanal y mensual para la incorporación de Liveramp | Ahora puede configurar programas de exportación semanales y mensuales para el destino de incorporación de Liveramp. |
-| Compatibilidad con cifrado AES256 para destinos de Amazon S3 | Ahora puede configurar el cifrado AES256 para sus exportaciones de Amazon S3. |
-| Experiencia de activación mejorada para los destinos de Trade Desk y Microsoft Bing | Los destinos de Trade Desk y Microsoft Bing ahora incluyen asignaciones obligatorias predefinidas para una experiencia de activación optimizada. |
-
-**Funcionalidad nueva o actualizada**
-
-| Función | Descripción |
-| --- | --- |
-| Límites de protección actualizados para el destino de Adobe Target | El número máximo de audiencias que se pueden asignar a un único destino de Adobe Target ha aumentado de 50 a 250. Esto alinea Adobe Target con el límite de audiencia estándar para otros destinos, lo que proporciona una mayor flexibilidad para los flujos de trabajo de activación de audiencia. Ahora puede activar más audiencias en destinos de Adobe Target sin necesidad de crear varios flujos de datos. |
-| [Editar destinos](/help/destinations/ui/edit-destination.md) y [editar acciones de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) disponibilidad general | La opción para editar destinos y acciones de marketing ya está disponible para todos los usuarios. |
-| Alternar los nombres para mostrar de los campos en el paso Asignación | Al asignar campos de esquema a un destino, ahora puede alternar entre mostrar el nombre del campo XDM completo y mostrar solo el nombre para mostrar. |
+| [!DNL ZoomInfo] destino de cuenta | Los usuarios de B2B CDP ahora pueden activar datos de nivel de cuenta en [!DNL ZoomInfo] a través del nuevo conector de destino de cuenta [!DNL ZoomInfo]. Configure el conector para empezar a enviar las audiencias de su cuenta a [!DNL ZoomInfo]. |
+| [!DNL Snowflake] lote disponible en general | El destino del lote [!DNL Snowflake] se ha trasladado a la disponibilidad general. Ahora puede ver la columna de ID de la política de combinación en los datos exportados junto con las columnas existentes, como la marca de tiempo, los atributos de asignación y la pertenencia a audiencias. |
+| Compatibilidad con cifrado AES256 para [destinos de Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Ahora puede configurar el cifrado AES256 para sus exportaciones de Amazon S3. Elija entre dos opciones: <ul><li>**[!UICONTROL Default]**: Experience Platform cifra los datos en reposo con el algoritmo de cifrado predeterminado establecido en su bloque.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform agrega el encabezado `s3:x-amz-server-side-encryption": "AES256` a la exportación y cifra los datos en reposo con el algoritmo AES256 cuando aterriza en S3. **Esta opción tiene prioridad sobre cualquier algoritmo de cifrado predeterminado que configure en su compartimento de S3**.</li></ul> |
 
 {style="table-layout:auto"}
 
 Para obtener más información, consulte la [Información general sobre destinos](../destinations/home.md).
 
-## Perfil del cliente en tiempo real {#real-time-customer-profile}
+## Modelo de datos de experiencia (XDM) {#xdm}
 
-El perfil del cliente en tiempo real permite ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
-
-**Funciones nuevas o actualizadas**
-
-| Función | Descripción |
-| --- | --- |
-| Aplicación de capacidad de streaming | Experience Platform ahora impone capacidades de rendimiento de flujo continuo para el perfil del cliente en tiempo real y el servicio de identidad. Cuando los clientes exceden su capacidad de transmisión contratada, los datos se ponen en cola y se procesan del primer ingreso al primer envío. Esto garantiza un rendimiento predecible del sistema y evita que las infracciones de capacidad afecten a la calidad de la ingesta de datos. Notas importantes: Las actualizaciones de streaming no estarán disponibles en el lago de datos cuando se exceda la capacidad, esta aplicación no se aplica a los clientes con licencias de Adobe Journey Optimizer y los datos en cola se procesarán secuencialmente una vez que la capacidad esté disponible. |
-| Obsolescencia de acceso a API para Real-Time CDP Prime | El acceso a la API para eventos de experiencia ya no se utiliza para todos los clientes de Real-Time CDP Prime. Este cambio afecta a la capacidad de consultar eventos de experiencia directamente mediante API. Los clientes de Real-Time CDP Ultimate pueden solicitar una excepción a través de un proceso de excepción formal para habilitar el acceso a la API de eventos de experiencia si es necesario para sus casos de uso. Esta desaprobación ayuda a alinear Real-Time CDP con la funcionalidad de las licencias. |
-| Monitorización de ejecución de flujo de datos | Ahora puede monitorizar el progreso y la preparación de las ejecuciones de flujo de datos en el perfil. |
-
-{style="table-layout:auto"}
-
-Para obtener más información, lea la [[!DNL Real-Time Customer Profile] información general](../profile/home.md).
-
-## Servicio de segmentación {#segmentation-service}
-
-[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de serie temporal que representen las interacciones de los clientes con su marca.
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | ------- | ----------- |
-| Actualización del TTL de audiencia externa | Las audiencias externas (como las cargas de CSV) ahora admiten la función de actualización forzada para la configuración del tiempo de vida (TTL). Esta función permite a los usuarios actualizar manualmente la caducidad del TTL para audiencias externas, lo que proporciona un mayor control sobre la administración del ciclo vital de la audiencia. Esto es especialmente útil para las audiencias que deben persistir más allá de su periodo TTL inicial o que requieren reactivación sin volver a cargar los datos. |
+| Búsqueda y Organización de Inventario de Esquema | La página de exploración de esquemas ahora incluye búsqueda y filtrado mejorados, acciones en línea y compatibilidad con etiquetas y carpetas definidas por el usuario. Estas actualizaciones facilitan la búsqueda, organización y administración de esquemas en entornos limitados, a la vez que reducen la navegación manual y el esfuerzo de mantenimiento. |
 
-Para obtener más información, lea la [[!DNL Segmentation Service] información general](../segmentation/home.md).
+Para obtener más información, lea la [[!DNL Schemas] descripción general] (../xdm/home.md).
+
+## Servicio de consultas {#query-service}
+
+El Servicio de consultas le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos del [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su ingesta en el Perfil del cliente en tiempo real.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Alineación de fechas de restablecimiento de proceso anual de Data Distiller (versión limitada) | Las horas de cálculo anuales de Data Distiller ahora se restablecen en la fecha de aniversario de su contrato de Data Distiller, en función del momento en que se compró o renovó la licencia. Esto alinea los informes de Uso de licencias con los términos del contrato y puede resultar en un ajuste único a los valores de uso actuales. |
+| Administración de sesiones de Data Distiller (versión limitada) | Como administrador autorizado, puede ver y administrar sesiones activas del servicio de consultas y de Data Distiller dentro de su organización y zona protegida a través de la interfaz de usuario de. Utilice la administración de sesiones para identificar sesiones inactivas y finalizarlas para liberar capacidad. Las protecciones integradas evitan que termine las sesiones con consultas activas. La función registra todas las acciones de desalojo para auditar y notifica a los usuarios afectados. Necesita el permiso **Administrar sesiones de consulta** para tener acceso a esta característica. |
+
+{style="table-layout:auto"}
+
+Para obtener más información, lea [Introducción al servicio de consultas](../query-service/home.md).
 
 ## Fuentes {#sources}
 
@@ -112,8 +132,8 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Fuente | Descripción |
 | --- | --- |
-| [!DNL Oracle Eloqua] V2 de origen | Ya está disponible un nuevo conector de origen [!DNL Oracle Eloqua] que reemplaza el conector obsoleto. Este conector actualizado proporciona funcionalidad y confiabilidad mejoradas para la ingesta de datos de [!DNL Oracle Eloqua] en Experience Platform. Los clientes que utilicen el conector existente deben migrar a la nueva implementación, ya que las conexiones existentes dejarán de funcionar. El nuevo conector admite todos los pasos de instalación y configuración necesarios para conectarse a [!DNL Oracle Eloqua] e introducir datos de automatización de marketing. |
-| [!DNL Salesforce Marketing Cloud] V2 de origen | Ya está disponible un nuevo conector de origen [!DNL Salesforce Marketing Cloud] que reemplaza el conector obsoleto. Este conector actualizado proporciona un rendimiento mejorado y capacidades adicionales para la ingesta de datos de [!DNL Salesforce Marketing Cloud] en Experience Platform. Los clientes que utilicen el conector existente deben realizar la transición a la nueva implementación. El nuevo conector incluye instrucciones de configuración completas para conectarse a [!DNL Salesforce Marketing Cloud] e ingerir datos de automatización de marketing. |
+| Compatibilidad con el catálogo Unity en el conector de origen [!DNL Databricks] | El conector de origen [!DNL Databricks] ahora es compatible con Unity Catalog. Lea la documentación actualizada de [[!DNL Databricks]](../sources/connectors/databases/databricks.md) para aprender a utilizar el catálogo Unity al configurar la conexión de origen. |
+
+{style="table-layout:auto"}
 
 Para obtener más información, lea la [Información general de las fuentes](../sources/home.md).
-
