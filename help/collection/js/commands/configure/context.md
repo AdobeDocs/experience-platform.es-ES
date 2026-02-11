@@ -97,7 +97,7 @@ Consulte [Sugerencias del cliente del agente de usuario](/help/collection/use-ca
 
 ### Referente de Analytics único {#one-time-analytics-referrer}
 
-La palabra clave `"oneTimeAnalyticsReferrer"` envía un valor de referente a Adobe Analytics solamente en la primera llamada sin toma de decisiones `sendEvent` para una página. El caso de uso principal de esta palabra clave de contexto es evitar que la dimensión [Referente](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) de Adobe Analytics se vea inflada por las visitas que se usan principalmente en integraciones de Analytics y Target.
+La palabra clave `"oneTimeAnalyticsReferrer"` envía un valor de referente a Adobe Analytics solamente en la primera llamada sin toma de decisiones `sendEvent` para una página. El caso de uso principal de esta palabra clave de contexto es evitar que la dimensión [Referente](https://experienceleague.adobe.com/es/docs/analytics/components/dimensions/referrer) de Adobe Analytics se vea inflada por las visitas que se usan principalmente en integraciones de Analytics y Target.
 
 Si un comando `sendEvent` determinado usa un tipo de evento de toma de decisiones (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), se omitirá al calcular el primer `sendEvent` de una página. Si el valor del referente cambia en la página y se activa otro `sendEvent`, el nuevo valor del referente se incluye en la carga útil. Esta condición permite utilizar la función con aplicaciones de una sola página.
 
