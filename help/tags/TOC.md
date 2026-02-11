@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
+source-git-commit: b1666521d135ac953dbde5b4ff64138a187e4b9e
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '827'
 ht-degree: 43%
 
 ---
@@ -117,6 +117,7 @@ ht-degree: 43%
             * [Recopilación de datos](extensions/client/web-sdk/configure/data-collection.md)
             * [Medios de streaming](extensions/client/web-sdk/configure/streaming-media.md)
             * [Notificaciones push](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Brand Concierge](extensions/client/web-sdk/configure/brand-concierge.md)
             * [Advertising](extensions/client/web-sdk/configure/advertising.md)
             * [Anulaciones de configuración](extensions/client/web-sdk/configure/configuration-overrides.md)
             * [Configuración avanzada](extensions/client/web-sdk/configure/advanced-settings.md)

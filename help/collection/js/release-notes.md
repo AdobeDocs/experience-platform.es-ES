@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2673'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,22 @@ ht-degree: 5%
 
 Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
 Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.31.0: 9 de febrero de 2026
+
+**Nuevas funciones**
+
+- Se agregó la disponibilidad de `"oneTimeAnalyticsReferrer"` a la matriz de cadenas [`context`](commands/configure/context.md).
+- Se ha añadido el componente Brand Concierge.
+- Se agregó `meta.queueTimeMillis` a la solicitud de red para registrar el tiempo entre la creación del evento y el tiempo de envío.
+- Posibilidad de mantener el mapa de identidad para que se pueda rellenar con llamadas a posteriores.
+
+**Correcciones y mejoras**
+
+- Los atributos `aria-label` y `name` ahora se consideran en [recopilación automática de vínculos](commands/configure/clickcollectionenabled.md).
+- Se ha corregido una posible condición de carrera con integraciones de mapa de identidad.
+- Se corrigió un problema en el cual la marca de tiempo no se incluía en `streamingMedia`.
+- Se ha corregido un problema en el cual las acciones de código personalizado solo se ejecutaban una vez.
 
 ## Versión 2.30.0: 24 de septiembre de 2025
 
@@ -50,7 +66,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
-- Se ha mejorado la administración de identidades [1&rbrace; para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
 - Se ha resuelto un problema en el cual el contenido de personalización con elementos de contenido de HTML no se podía procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
 - Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 

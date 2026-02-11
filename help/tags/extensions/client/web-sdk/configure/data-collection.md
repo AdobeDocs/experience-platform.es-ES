@@ -1,9 +1,10 @@
 ---
 title: Ajustes de configuración de recopilación de datos
 description: Configure las opciones de recopilación de datos en la extensión de etiquetas Web SDK.
-source-git-commit: 46c8748e9ab972705b8283c174c285e571acb2ed
+exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -119,3 +120,4 @@ Recopile automáticamente información del visitante, que rellena automáticamen
 * **[!UICONTROL Environment]**: recopila información acerca del explorador del usuario.
 * **[!UICONTROL Place context]**: recopila información sobre la ubicación del usuario.
 * **[!UICONTROL High entropy user-agent hints]**: recopila información más detallada acerca del dispositivo del usuario.
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**: Impedir que se envíen datos de referente duplicados a Adobe Analytics.

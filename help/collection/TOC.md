@@ -6,10 +6,10 @@ breadcrumb-title: Recopilación de datos
 user-guide-description: Obtenga información sobre cómo enviar datos a Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 30%
+source-wordcount: '142'
+ht-degree: 32%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 30%
    + [Notas de la versión](js/release-notes.md)
    + Instalación {#install}
       + [Resumen de instalación](js/install/overview.md)
+      + [Código base](js/install/base-code.md)
       + [Biblioteca](js/install/library.md)
       + [NPM](js/install/npm.md)
       + [Compilación personalizada](js/install/create-custom-build.md)
@@ -37,7 +38,8 @@ ht-degree: 30%
          + [autoCollectPropositionInteractions](js/commands/configure/autocollectpropositioninteractions.md)
          + [clickCollection](js/commands/configure/clickcollection.md)
          + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
-         + [contexto](js/commands/configure/context.md)
+         + [el contexto](js/commands/configure/context.md)
+         + [conversación](js/commands/configure/conversation.md)
          + [datastreamId](js/commands/configure/datastreamid.md)
          + [debugEnabled](js/commands/configure/debugenabled.md)
          + [defaultConsent](js/commands/configure/defaultconsent.md)
@@ -88,7 +90,7 @@ ht-degree: 30%
    + [_monitores](tags/monitors.md)
    + [setDebug](tags/setdebug.md)
    + [setVar](tags/setvar.md)
-   + [track](tags/track.md)
+   + [rastrear](tags/track.md)
 + Casos de uso {#use-cases}
    + [Información general](use-cases/overview.md)
    + [Client hints](use-cases/client-hints.md)

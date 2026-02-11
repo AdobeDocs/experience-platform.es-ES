@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Experience Platform Web SDK
 description: Extensión de etiqueta de Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '2949'
-ht-degree: 26%
+source-wordcount: '3118'
+ht-degree: 25%
 
 ---
 
@@ -13,6 +13,29 @@ ht-degree: 26%
 # Notas de la versión de Web SDK
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión de SDK, consulte las [notas de la versión de Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Versión 2.34.0: 9 de febrero de 2026
+
+**Nuevas funciones**
+
+- Contiene [versión 2.31.0](/help/collection/js/release-notes.md#2-31-0) de Adobe Experience Platform Web SDK.
+- Se agregó [compatibilidad con código base](/help/collection/js/install/base-code.md) para la extensión de etiqueta.
+- Se agregó **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [contexto](configure/data-collection.md#context-settings) a la configuración de la extensión.
+- Se ha añadido el componente Brand Concierge.
+- Se ha añadido una opción para permitir el uso de una instancia de aleación autoalojada con Etiquetas.
+
+**Correcciones y mejoras**
+
+- Se ha actualizado [dominio perimetral predeterminado](configure/general.md#edge-domain) para incluir el identificador de la compañía como subdominio.
+- Se agregó una opción **[!UICONTROL No overrides]** a [anulaciones de configuración de secuencia de datos](configure/configuration-overrides.md).
+- Se ha añadido el botón de actualización para rellenar de nuevo los elementos de algunos campos de entrada.
+- Los nombres de instancia únicos ahora se generan automáticamente cada vez que se crea una instancia.
+- Se corrigió un error en el cual `combinedValidator` generaba un error cuando el valor era `undefined` o `null`.
+- Se ha corregido un error que aparecía cuando se eliminaba una instancia de.
+- Se ha corregido un problema en el cual un error al recuperar esquemas provocaba que el elemento de datos Objeto XDM no se pudiera utilizar.
+- Se ha corregido la configuración de guardado en la acción [Enviar evento multimedia](actions/send-media-event.md).
+- Se ha corregido un problema en el cual los campos de medios de streaming en la vista de configuración no se restauraban correctamente.
+- Se han corregido alertas de rellenado automático erróneas en el editor de objetos XDM para valores anidados.
 
 ## Versión 2.33.0: 24 de septiembre de 2025
 

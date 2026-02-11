@@ -1,10 +1,10 @@
 ---
-title: contexto
+title: el contexto
 description: Recopilar automáticamente datos de dispositivos, entornos o ubicaciones.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: c2564f1b9ff036a49c9fa4b9e9ffbdbc598a07a8
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '998'
 ht-degree: 5%
 
 ---
@@ -88,24 +88,35 @@ Si usa búsquedas de dispositivos al [configurar su secuencia de datos](/help/da
 | Versión de sistema operativo | La versión del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
 | Arquitectura | La arquitectura de CPU subyacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
 | Modelo de dispositivo | Nombre del dispositivo utilizado. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
-| Mordacidad | El número de bits que admite la arquitectura de CPU subyacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| Tasa de bits | El número de bits que admite la arquitectura de CPU subyacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
 | Proveedor del explorador | Compañía que creó el explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
 | Nombre del explorador | El explorador utilizado. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Versión del explorador | La versión significativa del explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. La versión exacta del explorador no se recopila automáticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 Consulte [Sugerencias del cliente del agente de usuario](/help/collection/use-cases/client-hints.md) para obtener más información.
 
-Establezca la matriz de cadenas `context` al ejecutar el comando `configure`. Si omite esta propiedad al configurar SDK, toda la información de contexto excepto `"highEntropyUserAgentHints"` se recopilará de forma predeterminada. Establezca esta propiedad si desea recopilar sugerencias de cliente de alta entropía o si desea omitir otra información de contexto de la recopilación de datos. Las cadenas se pueden incluir en cualquier orden.
+### Referente de Analytics único {#one-time-analytics-referrer}
 
->[!NOTE]
+La palabra clave `"oneTimeAnalyticsReferrer"` envía un valor de referente a Adobe Analytics solamente en la primera llamada sin toma de decisiones `sendEvent` para una página. El caso de uso principal de esta palabra clave de contexto es evitar que la dimensión [Referente](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) de Adobe Analytics se vea inflada por las visitas que se usan principalmente en integraciones de Analytics y Target.
+
+Si un comando `sendEvent` determinado usa un tipo de evento de toma de decisiones (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), se omitirá al calcular el primer `sendEvent` de una página. Si el valor del referente cambia en la página y se activa otro `sendEvent`, el nuevo valor del referente se incluye en la carga útil. Esta condición permite utilizar la función con aplicaciones de una sola página.
+
+Cuando se detecta un valor de referente duplicado, la biblioteca establece `data.__adobe.analytics.referrer` en una cadena vacía (`""`).
+Si se establece este campo de objeto de datos en una cadena vacía, se borra el valor cuando una visita llega a Adobe Analytics, ya que el objeto de datos sobrescribe cualquier campo equivalente de objeto XDM. Esto no afecta al objeto XDM, lo que permite que los datos se sigan enviando a un conjunto de datos de Experience Platform si se incluyen varios servicios en un conjunto de datos.
+
+## Implementación
+
+Establezca la matriz de cadenas `context` al ejecutar el comando `configure`. Si omite esta propiedad al configurar SDK, toda la información de contexto excepto `"highEntropyUserAgentHints"` y `"oneTimeAnalyticsReferrer"` se recopilará de forma predeterminada. Establezca esta propiedad si desea recopilar sugerencias de cliente de alta entropía o si desea omitir otra información de contexto de la recopilación de datos. Las cadenas se pueden incluir en cualquier orden.
+
+>[!TIP]
 >
->Si desea recopilar toda la información de contexto, incluidas las sugerencias de cliente de alta entropía, debe incluir todos los valores de la cadena de matriz `context`. El valor predeterminado `context` omite `highEntropyUserAgentHints` y, si establece la propiedad `context`, los valores omitidos no recopilarán datos.
+>Si desea recopilar toda la información de contexto, incluidas las sugerencias de cliente de alta entropía, debe incluir todos los valores de la cadena de matriz `context`. El valor predeterminado `context` omite `"highEntropyUserAgentHints"` y `"oneTimeAnalyticsReferrer"`; si establece la propiedad `context`, los valores omitidos no recopilarán datos.
 
 ```js
 alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"]
 });
 ```
 

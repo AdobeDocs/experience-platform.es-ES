@@ -1,9 +1,10 @@
 ---
 title: Componentes de compilación personalizados
 description: Cree una compilación personalizada de Web SDK que deshabilite las características para reducir el tamaño de compilación.
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -31,6 +32,7 @@ Adobe ofrece la capacidad de deshabilitar los siguientes componentes de compilac
 | **[!UICONTROL Activity collector]** | Permite la recopilación automática de vínculos y el seguimiento de Activity Map. | |
 | **[!UICONTROL Advertising]** | Habilita la integración de Adobe Advertising con Customer Journey Analytics. | |
 | **[!UICONTROL Audiences]** | Admite la integración con Adobe Audience Manager, como sincronizaciones de ID. | |
+| **[!UICONTROL Brand concierge]** | Habilita la integración con Brand concierge. |
 | **[!UICONTROL Consent]** | Permite utilizar funciones de consentimiento. | [[!UICONTROL Set consent]](../actions/set-consent.md) acción |
 | **[!UICONTROL Event merge]** | Obsoleto. | [[!UICONTROL Event merge ID]](../data-element-types.md) elemento de datos (obsoleto)<br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) acción (obsoleto) |
 | **[!UICONTROL Media Analytics bridge]** | Admite la integración con Media Analytics heredados. | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) acción |

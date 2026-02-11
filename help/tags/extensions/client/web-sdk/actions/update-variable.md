@@ -1,7 +1,8 @@
 ---
 title: Actualizar variable
 description: Modifica el contenido de un elemento de datos variable.
-source-git-commit: f87e6a0e969aa0924656cdb2ea56aa79d2d7c841
+exl-id: 6c558d1e-85b4-45f9-ba4d-5fed1ec6e308
+source-git-commit: 50881ef9498196f2de5519f050800334019a2586
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
@@ -20,6 +21,6 @@ El esquema XDM utilizado en el editor coincide con el esquema seleccionado dentr
 
 ![Captura de pantalla de la interfaz de configuración de acción que muestra una propiedad actualizada](../assets/update-variable-set-property.png)
 
-Si selecciona un elemento de datos variable que utiliza un objeto de datos en lugar de un objeto XDM, los campos disponibles dependen de los productos seleccionados al configurar el elemento de datos. Por ejemplo, si crea un objeto de datos que incluye Adobe Analytics, campos y selecciona el elemento de datos de la variable en esta interfaz de usuario proporcionarán campos que puede rellenar específicos de Adobe Analytics.
+Si selecciona un elemento de datos variable que utiliza un objeto de datos en lugar de un objeto XDM, los campos disponibles dependen de los productos seleccionados al configurar el elemento de datos. Por ejemplo, si crea un objeto de datos que incluye Adobe Analytics, campos y selecciona el elemento de datos variable en esta interfaz de usuario proporcionarán campos que puede rellenar específicos de Adobe Analytics.
 
 ![Captura de pantalla de la interfaz de configuración de acción que muestra un elemento de datos variable basado en un objeto de datos](../assets/variable-data-element-data.png)

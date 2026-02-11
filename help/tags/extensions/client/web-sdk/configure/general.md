@@ -1,9 +1,10 @@
 ---
 title: Ajustes de configuración de instancia de SDK
 description: Configure las opciones generales de la instancia de Web SDK.
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
+source-git-commit: 50881ef9498196f2de5519f050800334019a2586
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 2%
 
 ---
@@ -32,4 +33,6 @@ El ID de la organización a la que desea que se envíen los datos en Adobe. La m
 
 ## [!UICONTROL Edge domain]
 
-Dominio desde el cual la extensión envía y recibe datos. Aunque el valor predeterminado de `edge.adobedc.net` funciona, Adobe recomienda usar un dominio de origen en la mayoría de los casos. Consulte el [programa de certificados administrados por Adobe](https://experienceleague.adobe.com/es/docs/core-services/interface/data-collection/adobe-managed-cert) para obtener instrucciones sobre cómo configurar un dominio de origen adecuado para la recopilación de datos. Consulte también [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) en la documentación de la biblioteca de JavaScript para obtener instrucciones sobre cómo establecer este valor.
+Dominio desde el cual la extensión envía y recibe datos. De manera predeterminada, el campo contiene `<COMPANYID>.data.adobedc.net`. Las implementaciones más antiguas pueden contener un valor predeterminado de `edge.adobedc.net`, que también es válido.
+
+Adobe recomienda utilizar un dominio de origen en la mayoría de los casos. Consulte el [programa de certificados administrados por Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) para obtener instrucciones sobre cómo configurar un dominio de origen adecuado para la recopilación de datos. Consulte también [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) en la documentación de la biblioteca de JavaScript para obtener instrucciones sobre cómo establecer este valor.
