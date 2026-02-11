@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
+source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 33%
+source-wordcount: '1022'
+ht-degree: 34%
 
 ---
 
@@ -79,7 +79,7 @@ La recopilación de datos de Adobe Experience Platform proporciona un conjunto d
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/es/docs/experience-platform/collection/home).
+Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinos {#destinations}
 
@@ -89,7 +89,6 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 
 | Destino | Descripción |
 | --- | --- |
-| [!DNL ZoomInfo] destino de cuenta | Los usuarios de B2B CDP ahora pueden activar datos de nivel de cuenta en [!DNL ZoomInfo] a través del nuevo conector de destino de cuenta [!DNL ZoomInfo]. Configure el conector para empezar a enviar las audiencias de su cuenta a [!DNL ZoomInfo]. |
 | [!DNL Snowflake] lote disponible en general | El destino del lote [!DNL Snowflake] se ha trasladado a la disponibilidad general. Ahora puede ver la columna de ID de la política de combinación en los datos exportados junto con las columnas existentes, como la marca de tiempo, los atributos de asignación y la pertenencia a audiencias. |
 | Compatibilidad con cifrado AES256 para [destinos de Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Ahora puede configurar el cifrado AES256 para sus exportaciones de Amazon S3. Elija entre dos opciones: <ul><li>**[!UICONTROL Default]**: Experience Platform cifra los datos en reposo con el algoritmo de cifrado predeterminado establecido en su bloque.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform agrega el encabezado `s3:x-amz-server-side-encryption": "AES256` a la exportación y cifra los datos en reposo con el algoritmo AES256 cuando aterriza en S3. **Esta opción tiene prioridad sobre cualquier algoritmo de cifrado predeterminado que configure en su compartimento de S3**.</li></ul> |
 
