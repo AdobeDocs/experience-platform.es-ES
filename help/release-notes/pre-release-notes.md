@@ -1,11 +1,11 @@
 ---
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
-exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
-source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
+source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1050'
+ht-degree: 33%
 
 ---
 
@@ -79,7 +79,7 @@ La recopilación de datos de Adobe Experience Platform proporciona un conjunto d
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/es/docs/experience-platform/collection/home).
+Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinos {#destinations}
 
@@ -107,7 +107,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | ------- | ----------- |
 | Búsqueda y Organización de Inventario de Esquema | La página de exploración de esquemas ahora incluye búsqueda y filtrado mejorados, acciones en línea y compatibilidad con etiquetas y carpetas definidas por el usuario. Estas actualizaciones facilitan la búsqueda, organización y administración de esquemas en entornos limitados, a la vez que reducen la navegación manual y el esfuerzo de mantenimiento. |
 
-Para obtener más información, lea la [[!DNL Schemas] descripción general] (../xdm/home.md).
+Para obtener más información, lea la [[!DNL XDM] información general](../xdm/home.md).
 
 ## Servicio de consultas {#query-service}
 
