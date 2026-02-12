@@ -79,7 +79,7 @@ La recopilación de datos de Adobe Experience Platform proporciona un conjunto d
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
+Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/es/docs/experience-platform/collection/home).
 
 ## Destinos {#destinations}
 
