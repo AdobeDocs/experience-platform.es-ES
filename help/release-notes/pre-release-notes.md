@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 34%
+source-wordcount: '1086'
+ht-degree: 32%
 
 ---
 
@@ -79,7 +79,7 @@ La recopilación de datos de Adobe Experience Platform proporciona un conjunto d
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/es/docs/experience-platform/collection/home).
+Para obtener más información, lea la [Documentación de recopilación de datos](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinos {#destinations}
 
@@ -105,6 +105,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Función | Descripción |
 | ------- | ----------- |
 | Búsqueda y Organización de Inventario de Esquema | La página de exploración de esquemas ahora incluye búsqueda y filtrado mejorados, acciones en línea y compatibilidad con etiquetas y carpetas definidas por el usuario. Estas actualizaciones facilitan la búsqueda, organización y administración de esquemas en entornos limitados, a la vez que reducen la navegación manual y el esfuerzo de mantenimiento. |
+| Edición restringida para esquemas con conjuntos de datos | Las operaciones de edición que resultan en cambios importantes ahora están restringidas una vez que existe un conjunto de datos para un esquema. Cuando se asocia un conjunto de datos, ya no puede cambiar el nombre ni eliminar campos, cambiar los tipos de datos o formatos de los campos, modificar los descriptores de identidad, administrar campos relacionados para eliminar campos existentes o cambiar la clase asignada; los cambios aditivos y la obsolescencia de los campos siguen siendo compatibles. |
 
 Para obtener más información, lea la [[!DNL XDM] información general](../xdm/home.md).
 

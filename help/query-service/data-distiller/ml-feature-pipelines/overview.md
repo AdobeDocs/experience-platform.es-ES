@@ -2,9 +2,9 @@
 title: Canalizaciones de funciones de IA/ML
 description: Aprenda a utilizar Data Distiller para enriquecer sus canalizaciones de aprendizaje automático con funciones derivadas de los datos de Adobe Experience Platform. Transforme datos sin procesar en funciones y entregue los datos de las funciones para entrenar o puntuar un modelo que sea compatible con los casos de uso de marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '465'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Data Distiller permite a los científicos e ingenieros de datos enriquecer sus c
 
 >[!IMPORTANT]
 >
->Este flujo de trabajo requiere Data Distiller y una licencia de Adobe Experience Platform Intelligence. Si no dispone de ninguno de estos productos, póngase en contacto con su representante de servicios de Adobe.
+>Este flujo de trabajo requiere una licencia de Data Distiller. Si no dispone de este producto, póngase en contacto con su representante de servicios de Adobe.
 
 ![Una infografía que detalla la canalización de características AI-ML.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
@@ -35,7 +35,7 @@ Este flujo de trabajo requiere una comprensión práctica de los distintos aspec
 - Zonas protegidas: [Permisos de control de acceso basados en atributos](../../../access-control/abac/overview.md) y cómo crear y administrar roles, así como asignar los permisos de recursos deseados para estos roles.
 - Administración de datos: cómo [aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada uno](../../../data-governance/labels/overview.md) según las políticas de administración de datos y de control de acceso relacionadas.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, se le han introducido los conceptos importantes subyacentes al uso de las herramientas de aprendizaje automático que prefiere para crear modelos personalizados que sean compatibles con los casos prácticos de marketing.
 
