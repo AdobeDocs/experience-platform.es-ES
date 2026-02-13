@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
 workflow-type: tm+mt
-source-wordcount: '2725'
+source-wordcount: '2718'
 ht-degree: 5%
 
 ---
@@ -72,7 +72,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
-- Se ha mejorado la administración de identidades [1&rbrace; para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
 - Se ha resuelto un problema en el cual el contenido de personalización con elementos de contenido de HTML no se podía procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
 - Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 
@@ -293,7 +293,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Nuevas funciones**
 
 - Ahora puede ofrecer experiencias personalizadas con mayor precisión si comparte los ID de visitante entre aplicaciones móviles y contenido de la web móvil, así como entre dominios. Consulte la [documentación dedicada](../use-cases/identity/id-sharing.md) para obtener más información.
-- Ahora puede procesar o ejecutar una matriz de propuestas de [!DNL Adobe Target] en aplicaciones de una sola página, sin incrementar las métricas de Analytics. Esto reduce los errores de creación de informes y aumenta la precisión del análisis. Consulte la [documentación dedicada](../use-cases/personalization/rendering-personalization-content.md) para obtener más información.
+- Ahora puede procesar o ejecutar una matriz de propuestas de [!DNL Adobe Target] en aplicaciones de una sola página, sin incrementar las métricas de Analytics. Esto reduce los errores de creación de informes y aumenta la precisión del análisis.
 - Se ha agregado información adicional al comando `getLibraryInfo`, incluidos los comandos disponibles y la configuración final de la instancia.
 
 **Correcciones y mejoras**

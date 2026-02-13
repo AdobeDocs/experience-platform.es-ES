@@ -2,9 +2,9 @@
 title: Configuración de la parte superior e inferior de los eventos de página en Web SDK
 description: Este artículo explica cómo utilizar la parte superior e inferior de los eventos de página en Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Parámetro | Obligatorio/Opcional | Descripción |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Requerido | Esta sección define las propuestas procesadas manualmente. Debe incluir las propuestas `ID`, `scope` y `scopeDetails`. Consulte la documentación sobre cómo [procesar manualmente la personalización](../personalization/rendering-personalization-content.md#manually) para obtener más información sobre cómo registrar eventos de visualización para el contenido procesado manualmente. El contenido de personalización procesado manualmente debe incluirse en la parte inferior de la visita individual a la página. |
+| `xdm._experience.decisioning.propositions` | Requerido | Esta sección define las propuestas procesadas manualmente. Debe incluir las propuestas `ID`, `scope` y `scopeDetails`. Consulte [Administrar eventos de visualización](display-events.md) para obtener más información. El contenido de personalización procesado manualmente debe incluirse en la parte inferior de la visita individual a la página. |
 | `xdm._experience.decisioning.propositionEventType` | Requerido | Establezca este parámetro en `display: 1`. |
 | `xdm` | Opcional | Utilice esta sección para incluir todos los datos necesarios para la parte inferior del evento de página. |
 

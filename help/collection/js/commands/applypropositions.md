@@ -2,9 +2,9 @@
 title: applyPropositions
 description: Volver a procesar propuestas que ya se hayan procesado con sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Este comando admite los campos siguientes:
    * Ámbito
    * Selector
    * Tipo de acción
+
+>[!NOTE]
+>
+>El comando `applyPropositions` no envía automáticamente eventos de visualización. Si desea grabar las pantallas, utilice el comando `sendEvent` tal como se describe en [Administrar eventos de visualización](/help/collection/use-cases/personalization/display-events.md).
 
 Ejecute el comando `applyPropositions` al llamar a la instancia configurada de Web SDK. El objeto que contiene las opciones de configuración admite los siguientes campos:
 

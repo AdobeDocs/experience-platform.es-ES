@@ -6,10 +6,10 @@ breadcrumb-title: Recopilación de datos
 user-guide-description: Obtenga información sobre cómo enviar datos a Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 32%
+source-wordcount: '149'
+ht-degree: 30%
 
 ---
 
@@ -106,7 +106,9 @@ ht-degree: 32%
    + [Varias instancias de SDK](use-cases/multiple-instances.md)
    + Personalización {#personalization}
       + [Información general](use-cases/personalization/pers-overview.md)
-      + [Mostrar eventos](use-cases/personalization/display-events.md)
+      + [Procesar acciones DOM automáticamente](use-cases/personalization/render-auto-pers-content.md)
+      + [Procesar ofertas de HTML](use-cases/personalization/render-html-offers.md)
+      + [Procesar propuestas manualmente](use-cases/personalization/render-manual-propositions.md)
       + [Administrar parpadeo](use-cases/personalization/manage-flicker.md)
-      + [Representación de contenido personalizado](use-cases/personalization/rendering-personalization-content.md)
+      + [Mostrar eventos](use-cases/personalization/display-events.md)
       + [Eventos de página superior e inferior](use-cases/personalization/top-bottom-page-events.md)

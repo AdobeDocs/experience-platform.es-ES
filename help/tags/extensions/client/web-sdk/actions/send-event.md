@@ -1,9 +1,10 @@
 ---
 title: Enviar evento
 description: Envíe datos a Adobe Experience Platform Edge Network.
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 4ac7750e-48ab-4eb6-873d-bb2556dbf788
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -48,8 +49,8 @@ La acción **[!UICONTROL Send event]** envía una carga útil a un conjunto de d
 ![Imagen de la interfaz de usuario de Experience Platform Tags que muestra la configuración de Personalization para el tipo de acción Enviar evento.](../assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**: matriz de ámbitos que desea solicitar explícitamente desde la personalización. Puede introducir los ámbitos manualmente o proporcionar un elemento de datos. Al escribir ámbitos manualmente, cada campo representa un ámbito. Seleccione **[!UICONTROL Add scope]** para agregar más ámbitos a la acción.
-* **[!UICONTROL Surfaces]**: una matriz de superficies para consultar con el evento. Consulte [Crear experiencias web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=es) en la documentación de Adobe Journey Optimizer para obtener más información. Al introducir superficies manualmente, cada campo representa una superficie. Seleccione **[!UICONTROL Add surface]** para agregar más superficies a la acción.
-* **Procesar decisiones de personalización visuales:** Casilla de verificación que, cuando está habilitada, permite procesar contenido personalizado en la página. Consulte [Procesar contenido personalizado](/help/collection/use-cases/personalization/rendering-personalization-content.md#automatically-rendering-content) para obtener más información.
+* **[!UICONTROL Surfaces]**: una matriz de superficies para consultar con el evento. Consulte [Crear experiencias web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) en la documentación de Adobe Journey Optimizer para obtener más información. Al introducir superficies manualmente, cada campo representa una superficie. Seleccione **[!UICONTROL Add surface]** para agregar más superficies a la acción.
+* **Procesar decisiones de personalización visuales:** Casilla de verificación que, cuando está habilitada, permite procesar contenido personalizado en la página. Consulte [Procesar acciones DOM automáticamente](/help/collection/use-cases/personalization/render-auto-pers-content.md) para obtener más información.
 * **[!UICONTROL Request default personalization]**: controla si se solicita el ámbito de toda la página y la superficie predeterminada. De manera predeterminada, se solicita automáticamente durante la primera llamada de `sendEvent` de la carga de la página. El equivalente de la biblioteca JavaScript de estos botones de opción es [`requestDefaultPersonalization`](/help/collection/js/commands/sendevent/personalization.md). Puede elegir entre las siguientes opciones:
    * **[!UICONTROL Automatic]**: comportamiento predeterminado. Solicitar solo la personalización predeterminada cuando aún no se ha solicitado.
    * **[!UICONTROL Enabled]**: solicite explícitamente el ámbito de página y la superficie predeterminada. Esto actualiza la caché de la vista SPA.
