@@ -1,14 +1,20 @@
 ---
 title: Ajustes de configuración de flujo de datos
 description: Configure la secuencia de datos para enviar datos a mediante la extensión de etiquetas Web SDK.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 0%
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
-# Ajustes de configuración de flujo de datos
+# Ajustes de configuración de flujo de datos {#datastreams}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datastreams"
+>title="Corrientes de datos"
+>abstract="Requerido. Establece el flujo de datos dentro de Edge Network al que desea enviar los datos."
 
 Esta sección de configuración le permite determinar a qué [secuencia de datos](/help/datastreams/overview.md) desea enviar datos. **Se requiere un id. de secuencia de datos para todos los datos enviados a Edge Network.**
 

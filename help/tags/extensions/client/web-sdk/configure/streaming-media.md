@@ -1,14 +1,20 @@
 ---
 title: Ajustes de configuración de medios de streaming
 description: Personalice el modo en que la extensión de etiquetas Web SDK recopila datos de medios de streaming.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 4%
+source-wordcount: '310'
+ht-degree: 3%
 
 ---
 
-# Ajustes de configuración de medios de streaming
+# Ajustes de configuración de medios de streaming {#streaming-media}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_streamingmedia"
+>title="Medios de streaming"
+>abstract="Determina cómo se recopilan los datos de medios de streaming durante las sesiones de reproducción de medios."
 
 La función de recopilación de contenido le ayuda a recopilar datos relacionados con las sesiones de contenido, como reproducciones de contenido, pausas, finalizaciones y otros eventos relacionados. Una vez recopilados, puede enviar estos datos a Adobe Experience Platform o Adobe Analytics para generar informes. Esta función proporciona una solución completa para realizar el seguimiento y comprender el comportamiento del consumo de medios en el sitio web.
 

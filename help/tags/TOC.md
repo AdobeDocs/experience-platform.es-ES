@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: b1666521d135ac953dbde5b4ff64138a187e4b9e
+source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '826'
 ht-degree: 43%
 
 ---
@@ -108,7 +108,7 @@ ht-degree: 43%
          * [Introducción](extensions/client/web-sdk/getting-started.md)
          * Configurar {#configure}
             * [Información general](extensions/client/web-sdk/configure/config-overview.md)
-            * [Componentes de compilación personalizados](extensions/client/web-sdk/configure/custom-build-components.md)
+            * [Opciones de compilación](extensions/client/web-sdk/configure/custom-build-components.md)
             * [Instancia de SDK](extensions/client/web-sdk/configure/general.md)
             * [Secuencias de datos](extensions/client/web-sdk/configure/datastreams.md)
             * [Consentimiento](extensions/client/web-sdk/configure/consent.md)

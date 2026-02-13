@@ -1,18 +1,24 @@
 ---
 title: Ajustes de configuración de Adobe Advertising
 description: Habilitar o deshabilitar la funcionalidad de la plataforma del lado de la demanda.
-source-git-commit: 526cb473a6288f367db9cb00c0277cce7543cd57
+exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 0%
+source-wordcount: '209'
+ht-degree: 1%
 
 ---
 
-# Ajustes de configuración de Adobe Advertising
+# Ajustes de configuración de Adobe Advertising {#advertising}
 
 >[!AVAILABILITY]
 >
 >Adobe Advertising para Web SDK se encuentra actualmente en **beta**. La funcionalidad y la documentación están sujetas a cambios.
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_advertising"
+>title="Adobe Advertising"
+>abstract="Configure las opciones de las integraciones de Adobe Advertising. Tenga en cuenta que no es necesaria ninguna configuración de publicidad para habilitar la medición de clics. Los clientes de Search, Social y Commerce no tienen que realizar más acciones; sin embargo, los usuarios de Demand-side Platform (DSP) deben configurar anunciantes en esta sección para medir las conversiones de visualización."
 
 La sección **[!UICONTROL Adobe Advertising]** le permite habilitar o deshabilitar la funcionalidad de la plataforma del lado de la demanda (DSP) si se utiliza en la implementación. Solo debe definir este campo si la implementación utiliza un DSP.
 

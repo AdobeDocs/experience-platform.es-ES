@@ -1,14 +1,15 @@
 ---
 title: Información general sobre ajustes de configuración
 description: Obtenga información sobre las opciones disponibles al configurar la extensión de etiquetas Web SDK.
-source-git-commit: 5f0203cfff3cb5c8b892142ff9b1c121925c3c46
+exl-id: 03f7bc0a-05c9-48ae-ae57-478db6d18f52
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
-# Información general sobre ajustes de configuración
+# Información general sobre ajustes de configuración {#config-overview}
 
 La extensión de etiquetas Adobe Experience Platform Web SDK proporciona varias opciones que se pueden personalizar. Estas opciones de configuración son el equivalente de etiqueta de usar el comando [`configure`](/help/collection/js/commands/configure/overview.md) en la biblioteca de JavaScript.
 

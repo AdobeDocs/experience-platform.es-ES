@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
 workflow-type: tm+mt
-source-wordcount: '2673'
+source-wordcount: '2725'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 5%
 
 Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
 Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.31.1: 11 de febrero de 2026
+
+- Se ha corregido un problema en el cual Web SDK se bloqueaba cuando había varios parámetros `s_kwcid` o `ef_id` relacionados con la publicidad en la dirección URL.
+- Se ha corregido un problema por el cual los datos de Advertising se enviaban y las cookies se creaban antes de dar el consentimiento.
+- Se ha corregido un problema en Safari por el cual los flujos de Brand Concierge no se analizaban correctamente.
 
 ## Versión 2.31.0: 9 de febrero de 2026
 
@@ -66,7 +72,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
-- Se ha mejorado la administración de identidades [1&rbrace; para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
 - Se ha resuelto un problema en el cual el contenido de personalización con elementos de contenido de HTML no se podía procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
 - Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 

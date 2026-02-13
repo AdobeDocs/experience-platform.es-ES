@@ -2,14 +2,19 @@
 title: Ajustes de configuración de instancia de SDK
 description: Configure las opciones generales de la instancia de Web SDK.
 exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
-source-git-commit: 50881ef9498196f2de5519f050800334019a2586
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '278'
 ht-degree: 2%
 
 ---
 
-# Ajustes de configuración de instancia de SDK
+# Ajustes de configuración de instancia de SDK {#sdk-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_sdkinstance"
+>title="Instancias de SDK"
+>abstract="Establece el nombre de la instancia de SDK, la organización de IMS a la que pertenece y el dominio Edge."
 
 Esta sección de configuración rige el nombre de la instancia de Web SDK, la organización de IMS a la que se aplica y la ubicación a la que desea enviar datos. De manera predeterminada, una instancia se denomina `alloy`.
 
@@ -35,4 +40,4 @@ El ID de la organización a la que desea que se envíen los datos en Adobe. La m
 
 Dominio desde el cual la extensión envía y recibe datos. De manera predeterminada, el campo contiene `<COMPANYID>.data.adobedc.net`. Las implementaciones más antiguas pueden contener un valor predeterminado de `edge.adobedc.net`, que también es válido.
 
-Adobe recomienda utilizar un dominio de origen en la mayoría de los casos. Consulte el [programa de certificados administrados por Adobe](https://experienceleague.adobe.com/es/docs/core-services/interface/data-collection/adobe-managed-cert) para obtener instrucciones sobre cómo configurar un dominio de origen adecuado para la recopilación de datos. Consulte también [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) en la documentación de la biblioteca de JavaScript para obtener instrucciones sobre cómo establecer este valor.
+Adobe recomienda utilizar un dominio de origen en la mayoría de los casos. Consulte el [programa de certificados administrados por Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) para obtener instrucciones sobre cómo configurar un dominio de origen adecuado para la recopilación de datos. Consulte también [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) en la documentación de la biblioteca de JavaScript para obtener instrucciones sobre cómo establecer este valor.

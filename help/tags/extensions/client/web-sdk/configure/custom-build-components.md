@@ -1,15 +1,20 @@
 ---
-title: Componentes de compilación personalizados
+title: Opciones de compilación
 description: Cree una compilación personalizada de Web SDK que deshabilite las características para reducir el tamaño de compilación.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
-# Componentes de compilación personalizados
+# Opciones de compilación {#build-options}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="Opciones de compilación"
+>abstract="Incluya o excluya módulos de forma selectiva de la biblioteca JavaScript, reduciendo el tamaño de la biblioteca y mejorando el rendimiento."
 
 La biblioteca Web SDK incluye varios módulos para varias funciones, como personalización, identidad, seguimiento de vínculos y mucho más. Según sus casos de uso, es posible que solo necesite funciones específicas en lugar de toda la biblioteca. Deshabilitar los componentes de compilación le permite utilizar solo los módulos que necesita, reducir el tamaño de la biblioteca y mejorar el rendimiento.
 

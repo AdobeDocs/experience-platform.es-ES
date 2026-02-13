@@ -1,14 +1,20 @@
 ---
 title: Ajustes de configuración de consentimiento
 description: Configure los ajustes predeterminados de consentimiento y privacidad para la extensión de etiqueta.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
-# Ajustes de configuración de consentimiento
+# Ajustes de configuración de consentimiento {#consent}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_consent"
+>title="Consentimiento"
+>abstract="Selecciona el nivel de consentimiento predeterminado que se asume si no se proporciona ninguna otra preferencia de consentimiento explícita."
 
 La sección **[!UICONTROL Consent]** le permite seleccionar el nivel de consentimiento predeterminado que se asume si no se proporciona ninguna otra preferencia de consentimiento explícita. El nivel de consentimiento predeterminado no se guarda en los perfiles de usuario.
 
