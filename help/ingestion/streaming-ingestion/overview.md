@@ -2,38 +2,38 @@
 keywords: Experience Platform;inicio;temas populares;ingesta de datos;ingesta de datos;transmisión;información general;transmisión de datos;latencia;transmisión de datos;
 solution: Experience Platform
 title: Resumen de ingesta de streaming
-description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.
+description: Obtenga información acerca de la ingesta de transmisión en Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
+source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '431'
 ht-degree: 3%
 
 ---
 
 # Resumen de ingesta de streaming
 
-La transmisión por secuencias de ingesta para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a [!DNL Experience Platform] en tiempo real.
+La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a Experience Platform en tiempo real.
 
 ## ¿Qué puede hacer con la ingesta de transmisión?
 
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes generando un [!DNL Real-Time Customer Profile] para cada uno de sus clientes individuales. La transmisión por secuencias de ingesta desempeña un papel clave en la creación de estos perfiles al permitirle entregar los datos de [!DNL Profile] en [!DNL Data Lake] con la menor latencia posible.
+Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes mediante la generación de un perfil del cliente en tiempo real para cada uno de sus clientes individuales. La introducción por transmisión juega un papel clave en la creación de estos perfiles, ya que permite entregar datos de perfil al lago de datos con la menor latencia posible.
 
 El siguiente vídeo está diseñado para ayudarle a comprender la ingesta de transmisión y describe los conceptos anteriores.
 
->[!VIDEO](https://video.tv.adobe.com/v/31628?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Registros de perfil de flujo y [!DNL ExperienceEvents]
 
-Con la ingesta por transmisión, los usuarios pueden transmitir registros de perfil y de [!DNL ExperienceEvents] a [!DNL Experience Platform] en segundos para ayudar a impulsar la personalización en tiempo real. Todos los datos enviados a las API de ingesta de transmisión se mantienen automáticamente en [!DNL Data Lake].
+Con la ingesta por transmisión, los usuarios pueden transmitir los registros de perfil y [!DNL ExperienceEvents] a Experience Platform en segundos para ayudar a impulsar la personalización en tiempo real. Todos los datos enviados a las API de ingesta de transmisión persisten automáticamente en el lago de datos.
 
 Lea [crear una guía de conexión de flujo continuo](../tutorials/create-streaming-connection.md) para obtener más información.
 
 ### Transmitir a conjuntos de datos
 
-Una vez que sepa que los datos están limpios, puede habilitar los conjuntos de datos para [!DNL Real-Time Customer Profile] y [!DNL Identity Service].
+Una vez que esté seguro de que los datos están limpios, puede habilitar los conjuntos de datos para el Perfil del cliente en tiempo real y [!DNL Identity Service].
 
-Para obtener más información sobre cómo habilitar un conjunto de datos para [!DNL Profile] y [!DNL Identity Service], lea la guía [configurar un conjunto de datos](/help/profile/tutorials/dataset-configuration.md).
+Para obtener más información sobre cómo habilitar un conjunto de datos para el perfil y [!DNL Identity Service], lea la [guía de configuración de un conjunto de datos](/help/profile/tutorials/dataset-configuration.md).
 
 ## ¿Cuál es la latencia esperada para la ingesta de transmisión en Experience Platform?
 

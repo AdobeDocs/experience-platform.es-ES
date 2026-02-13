@@ -3,7 +3,7 @@ keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
 description: Obtenga información sobre las protecciones para la ingesta de datos en Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: b5b975308d28ae82ea4d811652681215bc2cfbdb
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Las protecciones son umbrales que proporcionan directrices para el uso de datos 
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Este documento proporciona instrucciones sobre las protecciones para la ingesta de datos en Adobe Experience Platform.
 
@@ -49,16 +49,16 @@ La siguiente tabla describe las protecciones que se deben tener en cuenta al uti
 
 | Tipo de ingesta | Directrices | Notas |
 | --- | --- | --- |
-| Fuentes de streaming | <ul><li>El tamaño máximo de registro es 1 MB, con un tamaño recomendado de 10 KB.</li><li>Las fuentes de streaming admiten entre 4000 y 5000 solicitudes por segundo al ingerir en el lago de datos. Esto se aplica tanto a las conexiones de origen recién creadas como a las conexiones de origen existentes. **Nota**: la transmisión de datos puede tardar hasta 30 minutos en procesarse completamente en el lago de datos.</li><li>Las fuentes de streaming admiten un máximo de 1500 solicitudes por segundo al ingerir datos en un perfil o una segmentación de streaming.</li></ul> | Los orígenes de transmisión por secuencias como [!DNL Kafka], [!DNL Azure Event Hubs] y [!DNL Amazon Kinesis] no utilizan la ruta [!DNL Data Collection Core Service] (DCCS) y pueden tener límites de rendimiento diferentes. Consulte la [descripción general de orígenes](../sources/home.md) para ver un catálogo de orígenes que puede usar para la ingesta de datos. |
+| Fuentes de streaming | <ul><li>El tamaño máximo de registro es 1 MB, con un tamaño recomendado de 10 KB.</li><li>Las fuentes de streaming admiten entre 4000 y 5000 solicitudes por segundo al ingerir en el lago de datos. Esto se aplica tanto a las conexiones de origen recién creadas como a las conexiones de origen existentes. **Nota**: la transmisión de datos puede tardar hasta 60 minutos en procesarse completamente en el lago de datos.</li><li>Las fuentes de streaming admiten un máximo de 1500 solicitudes por segundo al ingerir datos en un perfil o una segmentación de streaming.</li></ul> | Los orígenes de transmisión por secuencias como [!DNL Kafka], [!DNL Azure Event Hubs] y [!DNL Amazon Kinesis] no utilizan la ruta [!DNL Data Collection Core Service] (DCCS) y pueden tener límites de rendimiento diferentes. Consulte la [descripción general de orígenes](../sources/home.md) para ver un catálogo de orígenes que puede usar para la ingesta de datos. |
 
 {style="table-layout:auto"}
 
-## Pasos siguientes
+## Próximos pasos
 
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
