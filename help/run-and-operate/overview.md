@@ -2,8 +2,7 @@
 title: Información general sobre Ejecutar y operar
 description: Inspeccione, solucione problemas y optimice las implementaciones de Adobe Experience Platform con las herramientas Ejecutar y operar. Obtenga visibilidad sobre las activaciones por lotes programadas, identifique los problemas de configuración y mejore la fiabilidad del sistema.
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 1%
@@ -56,7 +55,7 @@ Para acceder a las herramientas Ejecutar y Operar desde la interfaz de usuario d
 
 Las siguientes herramientas le ayudan a inspeccionar y optimizar sus operaciones de datos.
 
-### Programaciones de trabajos {#job-schedules}
+### Programaciones de trabajo {#job-schedules}
 
 >[!IMPORTANT]
 >

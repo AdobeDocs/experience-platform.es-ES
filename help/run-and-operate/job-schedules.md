@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Inspeccionar horarios de trabajo
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -45,7 +44,7 @@ Antes de usar [!UICONTROL Job Schedules], debe estar familiarizado con los sigui
 
 La comprensión de estos componentes le ayuda a interpretar los patrones de ejecución del trabajo y a diagnosticar problemas cuando se producen.
 
-## Explicación de la interfaz Planificaciones de trabajos {#understanding-interface}
+## Explicación de la interfaz de programación de trabajos {#understanding-interface}
 
 Para acceder a [!UICONTROL Job Schedules]:
 
@@ -79,7 +78,7 @@ Utilice los selectores de período de tiempo para elegir cuánto se retrocede pa
 * **Ayer**: vea los trabajos que se ejecutaron ayer.
 * **Últimos 7 días**: vea los trabajos de la semana pasada.
 
-### Detalles de programaciones de trabajo por lotes {#job-schedules-details}
+### Detalles de programaciones de trabajos por lotes {#job-schedules-details}
 
 La vista principal muestra cuándo está programado que los trabajos por lotes se ejecuten a lo largo del día. Puede hacer lo siguiente:
 

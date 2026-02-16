@@ -4,10 +4,9 @@ solution: Experience Platform
 title: Ver detalles de programación del trabajo
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -67,6 +66,8 @@ La vista de cronología utiliza un diseño horizontal y vertical para ayudarle a
 Este diseño le permite identificar rápidamente las relaciones de tiempo entre los trabajos de la canalización de datos y el procesamiento descendente. Lo ideal es que los trabajos de subida (como el lago de datos y la ingesta de perfiles) se completen a la izquierda de estos marcadores verticales, lo que garantiza que los datos estén listos antes de que comiencen la segmentación y la activación. Los trabajos que se extienden más allá de estos marcadores indican posibles problemas de tiempo en los que los procesos descendentes pueden iniciarse antes de que los datos estén completamente preparados.
 
 ### ¿Qué vista debo usar? {#which-view}
+
+Utilice la tabla siguiente para elegir la vista correcta para la tarea. Haga coincidir lo que necesita hacer con la vista recomendada para navegar de forma eficaz.
 
 | Tengo que... | Usar esta vista |
 |--------------|---------------|
