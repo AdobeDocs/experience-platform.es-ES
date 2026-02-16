@@ -1,10 +1,10 @@
 ---
 title: Información general sobre Ejecutar y operar
-description: Inspeccione, solucione problemas y optimice las implementaciones de Adobe Experience Platform con las herramientas Ejecutar y operar. Obtenga visibilidad sobre las activaciones por lotes programadas, identifique los problemas de configuración y mejore la fiabilidad del sistema.
+description: Inspeccione, solucione problemas y optimice las implementaciones de Experience Platform con las herramientas Ejecutar y operar. Obtenga visibilidad sobre las activaciones por lotes programadas, identifique los problemas de configuración y mejore la fiabilidad del sistema.
 hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
