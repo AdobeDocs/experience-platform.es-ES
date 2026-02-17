@@ -1,8 +1,7 @@
 ---
-title: Notas de la versión de Adobe Experience Platform, enero de 2026
-description: Las notas de la versión de enero de 2026 de Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fda9bb00dd77115c8085492cbf5883c0533588d8
+title: 'Notas de la versión de Adobe Experience Platform: febrero de 2026'
+description: Las notas de la versión de febrero de 2026 de Adobe Experience Platform.
+source-git-commit: afb1e0266b4c5485ba574f95aab3a56485d176b3
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 46%
