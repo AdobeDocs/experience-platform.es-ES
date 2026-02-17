@@ -4,10 +4,10 @@ title: Panel de control de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
+source-git-commit: a4381d034463571d2f69e9a2b04b7fbec1828cb9
 workflow-type: tm+mt
-source-wordcount: '3275'
-ht-degree: 40%
+source-wordcount: '3421'
+ht-degree: 39%
 
 ---
 
@@ -132,9 +132,9 @@ ht-degree: 40%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=es" text="Caducidades de eventos de experiencia"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de los datos de perfiles seudónimos"
 
-Puede ver información importante sobre el uso de licencias de su organización en el panel de Adobe Experience Platform [!UICONTROL License usage]. La información que se muestra aquí se captura durante una captura diaria de la instancia de Experience Platform.
+Puede ver información importante sobre el uso de licencias de su organización en el panel **[!UICONTROL License usage]**. El tablero está disponible para las organizaciones de Experience Cloud aptas, incluidas las que conceden licencias a Adobe Experience Platform y las que no lo hacen. La información mostrada se captura durante una instantánea diaria del entorno de su organización y no se actualiza en tiempo real.
 
-Los informes de uso de licencias proporcionan un alto grado de granularidad. La mayoría de las métricas se comparten en varios productos y reflejan el uso agregado en todos los productos que las utilizan, no los totales por producto. El panel proporciona el uso consolidado de estas métricas en todos los entornos limitados de producción o desarrollo, y el uso Métrica de un entorno limitado específico. Se puede realizar un seguimiento de las siguientes aplicaciones Experience Platform con métricas de uso: Platform de datos del cliente en tiempo real, Adobe Systems Journey Optimizer y Customer Journey Analytics.
+Los informes de uso de licencias proporcionan un alto grado de granularidad. La mayoría de las métricas se comparten en varios productos y reflejan el uso agregado en todos los productos que las utilizan, no los totales por producto.
 
 Esta guía describe cómo acceder y trabajar con el tablero de uso de licencias en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el tablero.
 
@@ -146,6 +146,8 @@ El panel [!UICONTROL License usage] muestra una lista de todos los productos de 
 
 Los datos de este tablero se muestran exactamente como aparecían en el momento específico en el que se tomó la instantánea. No es una aproximación ni una muestra, pero el panel no se actualiza en tiempo real.
 
+En el caso de las organizaciones sin una aplicación de Adobe Experience Platform (como Real-time Customer Data Platform, Adobe Journey Optimizer, Customer Journey Analytics, etc.), el panel solo muestra las métricas de uso de crédito de IA.
+
 >[!NOTE]
 >
 >La mayoría de las métricas del tablero se actualizan a diario, según una instantánea de la instancia de Experience Platform. [!UICONTROL CJA Rows Available] es una excepción y se actualiza mensualmente. Las métricas etiquetadas con &quot;paquetes&quot;, como [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs] y [!UICONTROL Streaming Segmentation No of Packs], reflejan los derechos de licencia de las ofertas de complementos y no hacen un seguimiento del uso continuo. Los cambios realizados después de la instantánea no serán visibles hasta que se tome la siguiente instantánea.
@@ -156,7 +158,11 @@ Para navegar al panel de uso de licencias dentro de la interfaz de usuario de Ex
 
 >[!NOTE]
 >
->El panel de uso de licencias no está habilitado de forma predeterminada. Los usuarios deben tener permiso para &quot;Ver tablero de uso de licencias&quot; para ver el tablero. Para ver los pasos sobre la concesión de permisos de acceso, consulte la [guía de permisos de tablero](../permissions.md).
+>El panel de uso de licencias no está habilitado de forma predeterminada. Se le debe otorgar el permiso **&quot;[!UICONTROL View License Usage Dashboard]&quot;** para acceder a él.
+>
+>Si su organización concede licencias a aplicaciones de Adobe Experience Platform, conceda este permiso en el perfil de producto y la zona protegida aplicables.
+>
+>Para organizaciones sin una aplicación de Adobe Experience Platform (por ejemplo, organizaciones solo de AEM o solo de flujo de trabajo), este permiso está disponible en Adobe Admin Console en la tarjeta de producto de Adobe Experience Platform (si está aprovisionado para su organización). Un administrador debe agregar el permiso a un perfil de producto para que los usuarios puedan ver el tablero.
 
 ## [!UICONTROL Metrics]Ficha {#metrics-tab}
 
@@ -169,7 +175,7 @@ La tabla de métricas incluye las siguientes columnas:
 | **[!UICONTROL Metric Name]** | Nombre de la métrica de uso de licencias. Cada entrada incluye un icono de información (`ⓘ`) que muestra una descripción y una lista de productos asociados. |
 | **[!UICONTROL Licensed]** | El número de unidades que puede utilizar su organización, tal como se define en el contrato. Esta métrica tiene el mismo valor que **Cantidad de licencia** en la ficha Productos. |
 | **[!UICONTROL Measured]** | Cantidad de la métrica que su organización utiliza actualmente. |
-| **[!UICONTROL Usage %]** | El porcentaje del valor con licencia que está en uso actualmente. |
+| **[!UICONTROL Usage %]** | Porcentaje del valor de la licencia que está en uso actualmente. |
 | **[!UICONTROL Predicted Usage %]** | El rango previsto de uso de métricas en las próximas 6 semanas. |
 
 Utilice la opción de zona protegida **[!UICONTROL Production]** o **[!UICONTROL Development]** para filtrar las métricas que se muestran en las zonas protegidas.
@@ -188,21 +194,21 @@ Utilice la opción de zona protegida **[!UICONTROL Production]** o **[!UICONTROL
 >2. En Permiso en la categoría Zona protegida, agregue todas las zonas protegidas que desee ver en el panel de uso de licencias.
 >3. En la categoría Permiso del tablero de usuarios, agregue el permiso &quot;Ver tablero de uso de licencias&quot;.
 
-### Ver Métrica detalles {#view-metric-details}
+### Ver detalles de métricas {#view-metric-details}
 
-Para vista detalles de uso de un Métrica específico, seleccione un nombre de Métrica en el lista. Aparece un vista detallado del Métrica, que incluye:
+Para ver los detalles de uso de una métrica específica, seleccione un nombre de métrica en la lista. Aparece una vista detallada de la métrica, que incluye:
 
-- Un gráfico de líneas histórico que muestre el uso a lo largo del tiempo
+- Un gráfico de líneas histórico que muestra el uso a lo largo del tiempo
 - Una comparación de valores medidos y con licencia
 - Uso por zona protegida individual
-- Un simulador de pruebas selector para filtrar datos
-- Opción de exportación para CSV descargar
+- Un selector de zona protegida para filtrar datos
+- Una opción de exportación para la descarga de CSV
 
-Esta visualización le permite realizar un seguimiento de las tendencias, comprender cómo cada entorno de pruebas contribuye al uso general y exportar los datos para sin conexión análisis.
+Esta visualización le permite realizar un seguimiento de las tendencias, comprender cómo contribuye cada zona protegida al uso general y exportar los datos para su análisis sin conexión.
 
-Cada gráfico incluye menús desplegables para filtrar los datos. Use el menú desplegable intervalo de fecha para ajustar el período retroactivo (predeterminado: últimos 30 días) o use el menú desplegable de espacio aislado para vista el uso de un entorno limitado de producción o desarrollo específico.
+Cada gráfico incluye menús desplegables para filtrar los datos. Utilice el menú desplegable de intervalo de fechas para ajustar el período retrospectivo (predeterminado: últimos 30 días) o utilice el menú desplegable de zona protegida para ver el uso de una zona protegida de producción o desarrollo específica.
 
-![La audiencia direccionable Métrica detalles vista con gráfico de uso histórico, tabla de espacio aislado y botón de exportación.](../images/license-usage/metric-details-view.png)
+![La vista de detalles de la métrica Audiencia direccionable con el gráfico de uso histórico, la tabla de espacio aislado y el botón de exportación.](../images/license-usage/metric-details-view.png)
 
 También puede seleccionar un(a) **[!UICONTROL Custom date]** para elegir el período de tiempo que se muestra.
 
@@ -223,8 +229,8 @@ La ficha **[!UICONTROL Products]** presenta los datos de uso de licencias agrupa
 |---|---|
 | **[!UICONTROL Product]** | La solución de Adobe con licencia de su organización. |
 | **[!UICONTROL Primary Metric]** | La métrica principal utilizada para el seguimiento dentro de ese producto. |
-| **[!UICONTROL License Amount]** | Valor contratado para la cantidad máxima del Métrica principal. |
-| **[!UICONTROL Usage]** | La cantidad de su Métrica principal utilizada. |
+| **[!UICONTROL License Amount]** | El valor contratado para la cantidad máxima de la métrica principal. |
+| **[!UICONTROL Usage]** | Cantidad de la métrica principal utilizada. |
 | **[!UICONTROL Usage %]** | El porcentaje de la métrica principal utilizado según la cantidad de licencia. |
 | **[!UICONTROL Predicted Usage]** | El porcentaje de uso previsto de la métrica principal. |
 
@@ -268,11 +274,11 @@ El porcentaje de uso previsto se determina de la siguiente manera:
 
 - Si los límites inferior y superior son significativamente diferentes, se muestran como un rango (por ejemplo, 32 % - 35 %).
 - Si los límites inferior y superior son casi idénticos y no son cero, se muestran como un valor aproximado (por ejemplo, ~34%).
-- Si los límites inferior y superior son casi idénticos y cero, se muestran exactamente como 0 %.
+- Si los límites inferior y superior son casi idénticos y cero, se muestran exactamente como 0%.
 
 >[!NOTE]
 >
->&quot;Casi idéntico&quot; en este contexto significa que los valores son estadísticamente significativos a dos decimales (por ejemplo, un límite inferior de 0,342 y un límite superior de 0,344 se redondean al 34%).
+>&quot;Casi idéntico&quot; en este contexto significa que los valores son estadísticamente significativos para dos decimales (por ejemplo, un límite inferior de 0,342 y un límite superior de 0,344 se redondean al 34 %).
 
 La función de uso previsto admite las siguientes métricas:
 
@@ -287,12 +293,13 @@ La función de uso previsto admite las siguientes métricas:
 
 >[!IMPORTANT]
 >
->A partir del 20 de agosto, los clientes con derechos para &#39;[!UICONTROL Average Profile Richness]&#39; y &#39;[!UICONTROL Total Storage]&#39; vieron &#39;[!UICONTROL Total Data Volume]&#39; en el tablero de uso de licencias. No se han realizado cambios en los derechos de los clientes, solo una simplificación de las métricas de seguimiento. [!UICONTROL Total Data Volume] representa los datos disponibles en el perfil del cliente en tiempo real para los flujos de trabajo de participación y personalización. Este Métrica simplificado mejoró la administración y medición del uso del perfil del cliente en tiempo real. Se recomienda a los clientes que se pongan en contacto con su representante de Adobe para obtener más aclaraciones sobre este cambio.
+>A partir del 20 de agosto, los clientes con derechos para &#39;[!UICONTROL Average Profile Richness]&#39; y &#39;[!UICONTROL Total Storage]&#39; vieron &#39;[!UICONTROL Total Data Volume]&#39; en el tablero de uso de licencias. No se han realizado cambios en los derechos de los clientes, solo una simplificación de las métricas de seguimiento. [!UICONTROL Total Data Volume] representa los datos disponibles en el perfil del cliente en tiempo real para los flujos de trabajo de participación y personalización. Esta métrica simplificada mejoró la administración y la medición del uso del Perfil del cliente en tiempo real. Se recomienda a los clientes que se pongan en contacto con su representante de Adobe para obtener más aclaraciones sobre este cambio.
 
-El panel de uso de licencias informa sobre varias métricas únicas que son aplicables a varios productos de la organización. Las métricas disponibles son:
+Las métricas que aparecen en el panel dependen de los productos y las autorizaciones asociados a su organización. Si su organización participa en la [prueba de uso de agentes de Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) o concede licencias a agentes de Adobe Experience Platform, el tablero incluye la métrica [!UICONTROL AI credits]. Si su organización no obtiene una licencia de Adobe Experience Platform, el uso del crédito de IA aparece como la métrica principal.
 
 | Métrica | Descripción |
 |---|---|
+| [!UICONTROL AI credits] | El número de créditos de IA consumidos por su organización al utilizar agentes de Adobe Experience Platform. Los créditos de IA se utilizan durante la prueba enlazada al uso de Adobe Experience Platform Agents y cuando se dispone de licencia para el uso de agentes de pago. Esta métrica le permite monitorizar el consumo de crédito de IA en relación con sus derechos disponibles. |
 | [!UICONTROL Audience Activation Size] | El tamaño total de los perfiles activados en cualquier destino basado en archivos en un año. Nota: Esto no incluye los perfiles enviados a través de destinos de streaming. |
 | [!UICONTROL Addressable Audience] | El conjunto de perfiles de personas en el Perfil del cliente en tiempo real al que puede acceder su organización, incluidos los perfiles directamente identificables y seudónimos. Estos perfiles pueden contener atributos, comportamientos y datos de abono a segmentos. Los volúmenes de perfil se calculan mediante el Identity Graph determinístico predeterminado de Adobe Experience Platform y se consideran una función compartida. |
 | [!UICONTROL Adhoc Query Service Users Packs] | Un complemento para aumentar el derecho de usuarios del servicio de consultas simultáneas autorizados en cinco usuarios del servicio de consultas simultáneos adicionales y una consulta ad hoc adicional por paquete que se ejecuta simultáneamente. Es posible que haya varios paquetes de usuarios de consultas ad hoc adicionales con licencia. |
@@ -323,19 +330,19 @@ La disponibilidad de estas métricas y la definición específica de cada una de
 
 | Licencia | Descripción del producto |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD ESTÁNDAR</li><li>ADOBE EXPERIENCE PLATFORM:OD PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/es/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, servicios de aplicaciones y servicios inteligentes](https://helpx.adobe.com/es/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>PLATAFORMA DE DATOS DEL CLIENTE RT:OD</li><li>RT PLATAFORMA DE DATOS DE CLIENTES:OD PRFL A 10M</li><li>RT PLATAFORMA DE DATOS DE CLIENTES:OD PRFL A 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) |
-| <ul><li>ACTIVACIÓN DE AEP:OD</li><li>PRFL DE ACTIVACIÓN DE AEP:OD HASTA 10M</li><li>PERFIL DE ACTIVACIÓN DE AEP:OD DE HASTA 50 M</li></ul> | [Activación de Adobe Experience Platform](https://helpx.adobe.com/es/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/es/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>DESACTIVAR AJO PRIME STARTER:OD</li><li>DESACTIVAR AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time ORQUESTACIÓN DE PERFILES DE CDP:OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/es/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD ESTÁNDAR</li><li>ADOBE EXPERIENCE PLATFORM:OD PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, servicios de aplicaciones y servicios inteligentes](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>PLATAFORMA DE DATOS DEL CLIENTE RT:OD</li><li>RT PLATAFORMA DE DATOS DE CLIENTES:OD PRFL A 10M</li><li>RT PLATAFORMA DE DATOS DE CLIENTES:OD PRFL A 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) |
+| <ul><li>ACTIVACIÓN DE AEP:OD</li><li>PRFL DE ACTIVACIÓN DE AEP:OD HASTA 10M</li><li>PERFIL DE ACTIVACIÓN DE AEP:OD DE HASTA 50 M</li></ul> | [Activación de Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>DESACTIVAR AJO PRIME STARTER:OD</li><li>DESACTIVAR AJO ULTIMATE STARTER:OD</li><li>DESHABILITAR LA ORQUESTACIÓN DE PERFILES Real-Time CDP:OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/es/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
->El panel de uso de licencias solo informa sobre la licencia más reciente que se ha aprovisionado para su organización. Si la licencia más reciente aprovisionada para su organización no aparece en la tabla anterior, es posible que el panel de uso de licencias no se muestre correctamente. La compatibilidad con licencias adicionales y múltiples licencias en una sola organización está planificada para una versión futura.
+>El tablero de uso de licencias solo informa de la licencia más reciente aprovisionada para su organización. Si la licencia más reciente aprovisionada para su organización no aparece en la tabla anterior, es posible que el panel de uso de licencias no se muestre correctamente. La compatibilidad con licencias adicionales y múltiples licencias en una sola organización está planificada para una versión futura.
 
 ## Próximos pasos
 
-Después de leer este documento, puede localizar el panel de uso de licencias y vista métricas de uso para cada producto comprado, para todos los entornos limitados de producción o desarrollo y para un entorno limitado específico. Puede encontrar más información sobre las métricas disponibles para su organización, en función de la licencia que su organización haya adquirido.
+Después de leer este documento, puede localizar el panel de uso de licencias y ver las métricas de uso de cada producto comprado, de todas las zonas protegidas de producción o desarrollo y de una zona protegida específica. Puede encontrar más información sobre las métricas disponibles para su organización, en función de las licencias que haya adquirido su organización.
 
-Para obtener más información sobre otras funciones disponibles en el Experience Platform IU, consulte el [Experience Platform IU guía](../../landing/ui-guide.md).
+Para obtener más información acerca de otras características disponibles en la interfaz de usuario de Experience Platform, consulte la [guía de la interfaz de usuario de Experience Platform](../../landing/ui-guide.md).
