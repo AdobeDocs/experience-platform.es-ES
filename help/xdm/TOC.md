@@ -5,10 +5,10 @@ breadcrumb-title: Guía del Modelo de datos de experiencia (XDM)
 user-guide-description: Explore una descripción general del sistema Modelo de datos de experiencia (XDM) en Experience Platform y aprenda a utilizar clases y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
 role: Developer
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 20%
+source-wordcount: '711'
+ht-degree: 21%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 20%
 * Esquemas {#schema}
    * [Conceptos básicos de composición de esquemas](schema/composition.md)
    * [Prácticas recomendadas para el modelado de datos](schema/best-practices.md)
+   * [Planificación de la habilitación de perfiles](./schema/profile-enablement-planning.md)
    * [Datos confidenciales y personales](./schema/sensitive-and-personal-data.md)
    * [Restricciones de tipo de campo XDM](schema/field-constraints.md)
    * [Esquema relacional](./schema/relational.md)
@@ -39,7 +40,7 @@ ht-degree: 20%
          * [Cita](./schema/healthcare/field-groups/appointment.md)
          * [Plan de atención](./schema/healthcare/field-groups/care-plan.md)
          * [Cobertura](./schema/healthcare/field-groups/coverage.md)
-         * [Meta](./schema/healthcare/field-groups/goal.md)
+         * [Objetivo](./schema/healthcare/field-groups/goal.md)
          * [Inmunización](./schema/healthcare/field-groups/immunization.md)
          * [Ubicación](./schema/healthcare/field-groups/location.md)
          * [Medicación](./schema/healthcare/field-groups/medication.md)
@@ -81,7 +82,7 @@ ht-degree: 20%
    * [ExperienceEvent de XDM](./classes/experienceevent.md)
    * [Medicación](./classes/medication.md)
    * [Pagador](./classes/payer.md)
-   * [Plan](./classes/plan.md)
+   * [Planificar ](./classes/plan.md)
    * [Política](./classes/policy.md)
    * [Producto](./classes/product.md)
    * [Cliente potencial](./classes/prospect.md)
@@ -146,7 +147,7 @@ ht-degree: 20%
       * [Detalles de miembros de XDM Business Campaign](./field-groups/b2b-campaign-members/details.md)
    * Medicación {#medication}
       * [Medicación sanitaria](./field-groups/medication/healthcare-medication.md)
-   * Plan {#plan}
+   * Planificar  {#plan}
       * [Detalles del plan de atención médica](./field-groups/plan/healthcare-plan-details.md)
    * Producto {#product}
       * [Catálogo de productos](./field-groups/product/product-catalog.md)
@@ -194,7 +195,7 @@ ht-degree: 20%
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Detalles de interacción geográfica](./data-types/geo-interaction-details.md)
-   * [Geo](./data-types/geo.md)
+   * [Geografía](./data-types/geo.md)
    * [Identidad](./data-types/identity.md)
    * [Detalles de implementación](./data-types/implementation-details.md)
    * [Impresiones](./data-types/impressions.md)
@@ -234,7 +235,7 @@ ht-degree: 20%
    * [Información web](./data-types/web-information.md)
    * [Interacción web](./data-types/web-interaction.md)
    * [Detalles de la página web](./data-types/webpage-details.md)
-* IU [!UICONTROL Schemas] {#ui}
+* IU de [!UICONTROL Schemas] {#ui}
    * [Información general](./ui/overview.md)
    * [Exploración de recursos XDM](./ui/explore.md)
    * Creación y edición de recursos {#resources}
@@ -257,7 +258,7 @@ ht-degree: 20%
    * [Exportación de esquemas XDM](./ui/export.md)
 * API de Registro de esquemas {#api}
    * [Información general](api/overview.md)
-   * [Primeros pasos](api/getting-started.md)
+   * [Introducción](api/getting-started.md)
    * [Esquemas](api/schemas.md)
    * [Comportamientos](api/behaviors.md)
    * [Clases](api/classes.md)
