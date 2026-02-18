@@ -3,10 +3,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
+source-git-commit: 8019f7426f6e6dd3faef131ada8e307c1d075556
 workflow-type: tm+mt
-source-wordcount: '4578'
-ht-degree: 12%
+source-wordcount: '4783'
+ht-degree: 11%
 
 ---
 
@@ -182,6 +182,29 @@ Utilice la opción **[!UICONTROL Scheduled]** para que el trabajo de activación
 
 4. Seleccione **[!UICONTROL Create]** para guardar la programación.
 
+### Explicación del comportamiento de exportación programado {#export-behavior}
+
+Las exportaciones programadas incluyen datos de instantáneas de audiencia además de cualquier cambio de perfil o identidad incremental que se produzca entre la creación de la instantánea y el momento de la exportación. Esto difiere de [las exportaciones a petición](export-file-now.md), que solo usan datos de instantánea.
+
+En la tabla siguiente se destaca cómo las exportaciones programadas difieren de las exportaciones bajo demanda, especialmente en términos de actualización de los datos y uso previsto:
+
+|  | Exportaciones programadas | Exportar archivo ahora |
+|--------|-------------------|-----------------|
+| **Origen de datos** | Instantánea + cambios incrementales | Solo instantánea |
+| **Atributos de perfil** | Valores actuales en el momento de la exportación | Valores en tiempo de instantánea |
+
+Si los perfiles se actualizan después de la evaluación de audiencia, las exportaciones programadas incluirán los valores de atributo actualizados aunque la pertenencia a la audiencia se haya determinado en el momento de la evaluación.
+
+**Ejemplo**: una audiencia de &quot;perfiles donde retailID es nulo&quot; puede exportar perfiles con retailID rellenado si ese campo se actualizó *después de* la evaluación pero *antes* de la exportación programada.
+
+**Recommendations**
+
+* Configure una [clave de anulación de duplicación](#deduplication-keys) para evitar registros duplicados
+* Usar exportaciones bajo demanda para datos exactos basados en instantáneas
+* Alinee la ingesta por lotes con las programaciones de evaluación para minimizar las discrepancias
+
+Para exportaciones a petición, consulte la documentación sobre [exportación de archivos a petición](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
+
 ### Exportación de archivos incrementales
 
 >[!CONTEXTUALHELP]
@@ -338,7 +361,11 @@ Se recomienda que uno de los atributos sea un [identificador único](../../desti
 >title="Acerca de las claves de deduplicación"
 >abstract="Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de deduplicación. Seleccione un solo espacio de nombres o hasta dos atributos de esquema XDM como clave de deduplicación. Si no se selecciona una clave de deduplicación, es posible que se dupliquen entradas de perfil en los archivos de exportación."
 
-Una clave de anulación de duplicación es una clave principal definida por el usuario que determina la identidad por la que los usuarios desean que se dedupliquen sus perfiles&#x200B;
+>[!IMPORTANT]
+>
+>Configure siempre una clave de anulación de duplicación para las exportaciones programadas. Sin anulación de duplicación, es posible que vea filas duplicadas o abonos de segmentos en conflicto para el mismo perfil, ya que las exportaciones programadas procesan tanto los datos instantáneos como los incrementales.
+
+Una clave de deduplicación es una clave principal definida por el usuario que determina cómo se deduplican los perfiles. Cuando existen varios registros para la misma persona, la deduplicación garantiza que solo se exporte el registro más reciente.
 
 Las claves de deduplicación eliminan la posibilidad de tener varios registros del mismo perfil en un archivo de exportación.
 
@@ -469,7 +496,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave
 
