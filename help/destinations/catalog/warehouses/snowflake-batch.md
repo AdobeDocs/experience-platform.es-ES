@@ -4,9 +4,9 @@ description: Cree un recurso compartido de datos de Snowflake activo para recibi
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
+source-git-commit: 2ad61b1b7e728429e047c4801b9a79e479a3aa18
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1735'
 ht-degree: 3%
 
 ---
@@ -153,6 +153,10 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Snowflake Region]**: seleccione la región donde está aprovisionada su instancia de Snowflake. Consulte la [documentación](https://docs.snowflake.com/en/user-guide/intro-regions) de Snowflake para obtener información detallada sobre las regiones de nube admitidas.
 * **[!UICONTROL Account acknowledgment]**: después de escribir su **[!UICONTROL Snowflake Account ID]**, seleccione **[!UICONTROL Yes]** en este menú desplegable para confirmar que su **[!UICONTROL Snowflake Account ID]** es correcto y que le pertenece.
 
+>[!NOTE]
+>
+> **[!UICONTROL Snowflake Account ID]** y **[!UICONTROL Snowflake Region]** no se pueden editar a través del flujo de trabajo [editar destino](../../ui/edit-destination.md) después de crear el destino. Para usar valores de cuenta o región diferentes, [cree una nueva conexión de destino](../../ui/connect-destination.md).
+
 >[!IMPORTANT]
 >
 > Los caracteres especiales utilizados en el nombre de destino y en el nombre de la zona protegida de Experience Platform se convierten automáticamente en guiones bajos (`_`) en Snowflake. Para evitar confusiones, no utilice caracteres especiales en el nombre del destino y de la zona protegida.
@@ -167,7 +171,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
