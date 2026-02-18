@@ -1,13 +1,13 @@
 ---
 title: Validación de audiencia
 description: Descubra cómo Experience Platform valida sus audiencias para asegurarse de que funcionan bien en el flujo descendente.
-source-git-commit: 52439e55d3c48631488b17b6b04256bcbbe37bcb
+exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '1630'
 ht-degree: 1%
 
 ---
-
 
 # Validación de audiencia
 

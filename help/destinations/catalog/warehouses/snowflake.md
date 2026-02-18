@@ -23,21 +23,21 @@ Use el conector de destino de Snowflake para exportar datos a la instancia de Sn
 
 Lea las siguientes secciones para comprender cómo funciona el destino de Snowflake y cómo se transfieren los datos entre Adobe y Snowflake.
 
-### Cómo funciona Snowflake uso compartido de datos {#data-sharing}
+### Funcionamiento del uso compartido de datos Snowflake {#data-sharing}
 
-Este destino utiliza un uso compartido de [!DNL Snowflake] datos, lo que significa que no se exporta ni transfiere físicamente ningún dato a su propio instancia Snowflake. En su lugar, Adobe Systems le concede acceso de solo lectura a una tabla activa alojada en el entorno de Snowflake de Adobe Systems. Puede consulta esta tabla compartida directamente desde su cuenta Snowflake, pero no es propietario de la tabla y no puede modificarla ni conservarla más allá del período de retención especificado. Adobe Systems administra completamente el ciclo de vida y la estructura de la tabla compartida.
+Este destino usa un recurso compartido de datos de [!DNL Snowflake], lo que significa que no se exportarán ni transferirán físicamente datos a su propia instancia de Snowflake. En su lugar, Adobe le concede acceso de solo lectura a una tabla activa alojada en el entorno de Snowflake de Adobe. Puede consultar esta tabla compartida directamente desde su cuenta de Snowflake, pero no es el propietario de la tabla y no puede modificarla ni conservarla más allá del período de retención especificado. Adobe administra completamente el ciclo de vida y la estructura de la tabla compartida.
 
-La primera vez que compartas datos del instancia de Snowflake de Adobe Systems con el tuyo, se te pedirá que aceptes el anuncio privado de Adobe Systems.
+La primera vez que comparta datos de la instancia de Snowflake de Adobe con la suya, se le pedirá que acepte el anuncio privado de Adobe.
 
-![Captura de pantalla que muestra la pantalla de aceptación de listado privado Snowflake](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![Captura de pantalla que muestra la pantalla de aceptación de anuncios privados de Snowflake](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
 
 ### Retención de datos y tiempo de vida (TTL) {#ttl}
 
-Todos los datos compartidos a través de esta integración tienen un tiempo de vida (TTL) fijo de siete días. Siete días después de la última exportación, la tabla compartida caduca automáticamente y se vuelve inaccesible, independientemente de si el flujo de datos sigue activo. Si necesita conservar los datos durante más de siete días, debe copiar el contenido en una tabla que posea en su propio Snowflake instancia antes de que caduque el TTL.
+Todos los datos compartidos a través de esta integración tienen un tiempo de vida (TTL) fijo de siete días. Siete días después de la última exportación, la tabla compartida caduca automáticamente y se vuelve inaccesible, independientemente de si el flujo de datos sigue activo. Si necesita conservar los datos durante más de siete días, debe copiar el contenido en una tabla suya en su propia instancia de Snowflake antes de que caduque el TTL.
 
 ### Comportamiento de actualización de audiencia {#audience-update-behavior}
 
-Si su audiencia se evalúa en [modo](../../../segmentation/methods/batch-segmentation.md) por lotes, los datos de la tabla compartida se actualizan cada 24 horas. Esto significa que puede haber un retraso de hasta 24 horas entre los cambios en audiencia abono y cuando esos cambios se reflejan en la tabla compartida.
+Si la audiencia se evalúa en [modo por lotes](../../../segmentation/methods/batch-segmentation.md), los datos de la tabla compartida se actualizarán cada 24 horas. Esto significa que puede haber un retraso de hasta 24 horas entre los cambios en la pertenencia a la audiencia y cuando esos cambios se reflejan en la tabla compartida.
 
 ### Lógica de exportación incremental {#incremental-export}
 
@@ -87,18 +87,18 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino. L
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | ✓ | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Systems Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | ✓ | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
-## Tipo de exportación y Frecuencia {#export-type-frequency}
+## Tipo y frecuencia de exportación {#export-type-frequency}
 
-Consulte la tabla siguiente para obtener información sobre el tipo de exportación de destino y Frecuencia.
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 |---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Audience export]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el [!DNL Snowflake] destino. |
-| Exportar Frecuencia | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Audience export]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino [!DNL Snowflake]. |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -173,7 +173,7 @@ Actualmente, solo se pueden exportar las audiencias asignadas a la política de 
 
 ### Disponibilidad regional {#regional-availability}
 
-Actualmente, el [!DNL Snowflake] destino de streaming solo está disponible para los clientes de CDP en tiempo real aprovisionados en el área geográfica Experience Platform VA7.
+El destino de streaming [!DNL Snowflake] solo está disponible actualmente para los clientes de Real-Time CDP aprovisionados en la región Experience Platform VA7.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

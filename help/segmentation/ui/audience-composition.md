@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-Si es cliente de Adobe Journey Optimizer, lea la [guía de introducción a la composición de audiencias](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=es) en la documentación de Adobe Journey Optimizer para obtener más información sobre cómo trabajar con la composición de audiencias en ese contexto.
+Si es cliente de Adobe Journey Optimizer, lea la [guía de introducción a la composición de audiencias](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) en la documentación de Adobe Journey Optimizer para obtener más información sobre cómo trabajar con la composición de audiencias en ese contexto.
 
 >[!ENDSHADEBOX]
 
@@ -80,7 +80,7 @@ Para añadir audiencias al bloque Audiencia. seleccione **[!UICONTROL Add Audien
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que solo aparecerán **1&rbrace; audiencias definidas mediante la política de combinación predeterminada.**
+>Tenga en cuenta que solo aparecerán **1} audiencias definidas mediante la política de combinación predeterminada.**
 >
 >Además, solo se pueden usar **audiencias publicadas** creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencias y audiencias generadas externamente están disponibles **no**.
 

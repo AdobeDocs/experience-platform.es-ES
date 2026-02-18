@@ -148,7 +148,7 @@ Seleccione **[!UICONTROL Export full files]** para almacenar en déclencheur la 
    > Actualmente, las opciones de programación semanales y mensuales solo se admiten para los siguientes destinos de almacenamiento en la nube basados en archivos y solo cuando se activan [audiencias de personas](../../segmentation/types/overview.md#people-audience) y [audiencias de clientes potenciales](../../segmentation/types/overview.md#prospect-audience).
    > 
    > * [Amazon S3](../catalog/cloud-storage/amazon-s3.md)
-   > * [Almacenamiento de blob de Azure](../catalog/cloud-storage/azure-blob.md)
+   > * [Almacenamiento de Azure Blob](../catalog/cloud-storage/azure-blob.md)
    > * [Zona de aterrizaje de datos](../catalog/cloud-storage/data-landing-zone.md)
    > * [Almacenamiento en la nube de Google](../catalog/cloud-storage/google-cloud-storage.md)
    > * [SFTP](../catalog/cloud-storage/sftp.md)
@@ -469,7 +469,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave
 
