@@ -82,7 +82,7 @@ ht-degree: 21%
    * [ExperienceEvent de XDM](./classes/experienceevent.md)
    * [Medicación](./classes/medication.md)
    * [Pagador](./classes/payer.md)
-   * [Planificar ](./classes/plan.md)
+   * [Planificar &#x200B;](./classes/plan.md)
    * [Política](./classes/policy.md)
    * [Producto](./classes/product.md)
    * [Cliente potencial](./classes/prospect.md)
