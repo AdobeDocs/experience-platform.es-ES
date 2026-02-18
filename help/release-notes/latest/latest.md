@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2026'
 description: Las notas de la versión de febrero de 2026 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cb35f5b35878b655dc668c0b26e22a41d675161
+source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 46%
+source-wordcount: '606'
+ht-degree: 49%
 
 ---
 
@@ -28,6 +28,7 @@ Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 - [Alertas](#alerts)
 - [Destinos](#destinations)
 - [Fuentes](#sources)
+- [Modelo de datos de experiencia (XDM)](#xdm)
 
 ## Alertas {#alerts}
 
@@ -79,3 +80,14 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [Información general de las fuentes](../../sources/home.md).
+
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
+
+| Función | Descripción |
+| --- | --- |
+| Edición restringida para esquemas con conjuntos de datos | Las operaciones de edición que resultan en cambios importantes ahora están restringidas una vez que existe un conjunto de datos para un esquema. Cuando se asocia un conjunto de datos, ya no puede cambiar el nombre ni eliminar campos, cambiar los tipos de datos o formatos de los campos, modificar los descriptores de identidad, administrar campos relacionados para eliminar campos existentes o cambiar la clase asignada; los cambios aditivos y la obsolescencia de los campos siguen siendo compatibles. |
+
+Para obtener más información, lea la [información general sobre XDM](../../xdm/home.md).
+
