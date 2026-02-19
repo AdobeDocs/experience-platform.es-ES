@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 11ef8fe8b64a7c2bb698c62093aafe3fb11d3789
+source-git-commit: 67dec10b0d1343fffd522ee3e615ac2823894a67
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1755'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Esta página proporciona límites predeterminados de uso y velocidad con respecto al comportamiento de activación. Al revisar las siguientes protecciones, se supone que se ha [conectado correctamente a los destinos](/help/destinations/ui/connect-destination.md).
 
@@ -63,7 +63,7 @@ Las siguientes protecciones se aplican a la activación a través de [destinos d
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Número de activaciones (mensajes HTTP con exportaciones de perfil) por segundo | N/A | - | Actualmente no hay límite en el número de mensajes por segundo enviados desde Experience Platform a los extremos de API de los destinos del socio. <br>: los límites o latencias los dicta el extremo al que Experience Platform envía datos. Asegúrese de consultar también la página [catálogo](/help/destinations/catalog/overview.md) del destino al que se está conectando y activando los datos. |
+| Número de activaciones (mensajes HTTP con exportaciones de perfil) por segundo | N/D | - | Actualmente no hay límite en el número de mensajes por segundo enviados desde Experience Platform a los extremos de API de los destinos del socio. <br>: los límites o latencias los dicta el extremo al que Experience Platform envía datos. Asegúrese de consultar también la página [catálogo](/help/destinations/catalog/overview.md) del destino al que se está conectando y activando los datos. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ Las siguientes protecciones se aplican a la activación mediante [destinos por l
 | Frecuencia de activación | Una exportación completa diaria o exportaciones incrementales más frecuentes cada 3, 6, 8 o 12 horas. | Protección impuesta por el sistema | Lea las secciones de la documentación [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) para obtener más información sobre los incrementos de frecuencia para las exportaciones por lotes. |
 | Número máximo de audiencias que pueden exportarse a una hora determinada | 100 | Protección de rendimiento | Se recomienda añadir un máximo de 100 audiencias a los flujos de datos de destino por lotes. |
 | Número máximo de filas (registros) por archivo que activar | 5 millones | Protección impuesta por el sistema | Adobe Experience Platform divide automáticamente los archivos exportados en 5 millones de registros (filas) por archivo. Cada fila representa un perfil. Los nombres de los archivos divididos se anexan con un número que indica que el archivo forma parte de una exportación mayor, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Para obtener más información, lea la [sección de programación](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) del tutorial para activar destinos por lotes. |
-| Número máximo de audiencias de carga personalizadas para activar en un flujo de datos | 10 | Protección impuesta por el sistema | Al activar [audiencias de carga personalizadas](/help/segmentation/ui/audience-portal.md#import-audience) en destinos basados en archivos por lotes, hay un límite de 10 de esas audiencias que puede activar en un flujo de datos. Obtenga más información sobre el flujo de trabajo para [activar audiencias de carga personalizadas en destinos basados en archivos por lotes](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Número máximo de audiencias externas (por ejemplo, FAC, carga personalizada, Composición de audiencia) que se pueden activar en un flujo de datos | 10 | Protección impuesta por el sistema | Al activar audiencias externas (por ejemplo, [Composición de audiencias federada](/help/segmentation/ui/audience-portal.md#fac), [carga personalizada](/help/segmentation/ui/audience-portal.md#import-audience), [Composición de audiencias](/help/segmentation/ui/audience-portal.md#audience-composition)) en destinos basados en archivos por lotes, existe un límite de 10 audiencias de este tipo que puede activar en un flujo de datos. Consulte [Tipos de audiencias y personalización](/help/segmentation/ui/audience-portal.md#customize) para obtener más información sobre estos tipos de audiencias. Obtenga más información sobre el flujo de trabajo para [activar audiencias externas en destinos basados en archivos por lotes](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -196,7 +196,7 @@ Detalles sobre los umbrales de restricción o las limitaciones para determinados
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
