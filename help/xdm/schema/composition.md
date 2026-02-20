@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conceptos básicos de composición de esquemas
 description: Obtenga información acerca de los esquemas XDM (Experience Data Model) y los componentes básicos, los principios y las prácticas recomendadas para componer esquemas en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 5b59d491834854829a89a240ccd612367cf558d4
+source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4331'
 ht-degree: 8%
 
 ---
@@ -123,7 +123,7 @@ Dado que el mantenimiento de la compatibilidad con versiones anteriores es cruci
 
 >[!NOTE]
 >
->Solo puede introducir un cambio radical en un esquema si aún no se ha utilizado para introducir datos en Experience Platform y no se ha habilitado para su uso en el Perfil del cliente en tiempo real. Sin embargo, una vez que el esquema se ha utilizado en Experience Platform, debe adherirse a la política de versiones aditiva.
+>Solo puede introducir un cambio radical en un esquema si aún no se ha utilizado para introducir datos en Experience Platform y no se ha habilitado para su uso en el Perfil del cliente en tiempo real. Sin embargo, una vez que el esquema se ha utilizado en Experience Platform, debe adherirse a la política de versiones aditiva. Una vez creado un conjunto de datos para el esquema, el sistema aplica estrictamente las reglas de Evolución de esquema para todos los campos del esquema. Los campos pasarán a ser no editables en todos los esquemas XDM en los que se haga referencia a ellos.
 
 La siguiente tabla desglosa qué cambios se admiten al editar esquemas, grupos de campos y tipos de datos:
 
@@ -161,9 +161,9 @@ Experience Platform utiliza un enfoque de composición en el que los bloques de 
 
 Los esquemas se componen mediante la fórmula siguiente:
 
-**Clase + Grupo de campos de esquema&ast; = Esquema XDM**
+**Clase + Grupo de campos de esquema&amp;ast; = Esquema XDM**
 
-&ast;Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Esto significa que puede componer un esquema de conjunto de datos sin utilizar grupos de campos.
+&amp;ast;Un esquema está compuesto por una clase y cero o más grupos de campos de esquema. Esto significa que puede componer un esquema de conjunto de datos sin utilizar grupos de campos.
 
 ### Clase {#class}
 
@@ -269,7 +269,7 @@ Los intervalos válidos de estos tipos escalares se pueden restringir aún más 
 * Corto
 * Byte
 * Fecha
-* Fecha-hora
+* Fecha y hora
 * Mapa
 
 >[!NOTE]
