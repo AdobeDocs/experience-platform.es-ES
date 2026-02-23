@@ -1,11 +1,11 @@
 ---
 title: Actualizaciones de arquitectura en Real-Time CDP B2B edition
 description: Lea este documento para obtener más información sobre las completas actualizaciones de la arquitectura en Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: a48196d369cec9e9927d9320475e06457e575691
+source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1155'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,13 @@ Utilice la arquitectura mejorada para las siguientes ventajas:
 
 * **Escalabilidad de la ingesta de datos**: se ha mejorado la compatibilidad con las relaciones B2B de alta cardinalidad, como las cuentas conectadas a miles de personas.
 * **Evaluación de audiencia fiable y eficaz**: Segmentación más rápida y resistente para audiencias B2B complejas.
-* **resolución de entidades**: resolución de identidades mejorada para entidades B2B, calidad de datos mejorada y duplicación reducida para permitir una segmentación y agregación más precisas.
+* **Resolución de entidad**: resolución de identidad mejorada para entidades B2B, calidad de datos mejorada y duplicación reducida para permitir una segmentación y agregación más precisas.
+
+>[!TIP]
+>
+>Según el tamaño y la complejidad de la audiencia, puede experimentar cambios menores en el tiempo necesario para la evaluación de audiencias y la activación de audiencias.
+>
+>Se le recomienda monitorizar los tiempos de ejecución de la segmentación, especialmente si los procesos empresariales dependen de la finalización oportuna de la segmentación y la activación. Esto le ayuda a garantizar que los flujos de trabajo se sigan ejecutando sin problemas y le permite abordar de forma proactiva cualquier cambio inesperado.
 
 ## Nuevas funciones
 
