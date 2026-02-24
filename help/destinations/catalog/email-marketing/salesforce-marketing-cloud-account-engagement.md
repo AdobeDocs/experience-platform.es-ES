@@ -34,7 +34,7 @@ Consulte las secciones siguientes para conocer los requisitos previos que debe c
 
 ### Requisitos previos en Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL Marketing Cloud Account Engagement], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Marketing Cloud Account Engagement], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
 
 ### Requisitos previos en [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
