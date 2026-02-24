@@ -2,25 +2,16 @@
 title: Información general sobre Advanced Data Lifecycle Management
 description: La administración avanzada del ciclo de vida de los datos permite administrar el ciclo de vida de los datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: a1502e8f1515ff73840b2926f5be355032dd4bab
+source-git-commit: fc71e61fd33fe216f8cd326b9df048958c07077a
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 1%
+source-wordcount: '691'
+ht-degree: 2%
 
 ---
 
 # Administración avanzada del ciclo de vida de los datos en Adobe Experience Platform
 
 Adobe Experience Platform proporciona un conjunto sólido de herramientas para administrar operaciones de datos grandes y complicadas a fin de organizar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, es cada vez más importante administrar los almacenes de datos para que se utilicen según lo esperado, se actualicen cuando sea necesario corregir datos incorrectos y se eliminen cuando las políticas de la organización lo consideren necesario.
-
-<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
-
-* Scheduling automated dataset expirations
-* Deleting individual records from one or all datasets
-
->[!IMPORTANT]
->
->Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 Estas actividades se pueden realizar usando el área de trabajo de la interfaz de usuario [[!UICONTROL Data Lifecycle]](#ui) o la [API de higiene de datos](#api). Cuando se ejecuta un trabajo del ciclo vital de datos, el sistema proporciona actualizaciones de transparencia en cada paso del proceso. Consulte la sección sobre [cronologías y transparencia](#timelines-and-transparency) para obtener más información sobre cómo se representa cada tipo de trabajo en el sistema.
 
@@ -55,32 +46,10 @@ Lo siguiente ocurre cuando se crea una [solicitud de caducidad del conjunto de d
 | El conjunto de datos se borra del lago de datos | 1 hora | El conjunto de datos se quitó de la [página de inventario del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario. Los datos dentro del lago de datos solo se eliminan de forma suave y permanecerán así hasta el final del proceso, después del cual se eliminarán de forma dura. |
 | El conjunto de datos se ha eliminado del servicio de perfil | 3 horas | A partir de este punto, las operaciones que incluyen la segmentación por lotes y de flujo continuo, la previsualización o estimación, la exportación y el acceso a entidades ya no leerán los datos de este conjunto de datos. Los datos del servicio de perfil solo se eliminan de forma suave y permanecerán así hasta el final del proceso, después del cual se eliminarán de forma dura. |
 | Recuento de perfiles y audiencias actualizadas | 48 horas | Una vez que se hayan actualizado todos los perfiles afectados, todas las [audiencias](../segmentation/home.md) relacionadas se actualizarán para reflejar su nuevo tamaño. Según el conjunto de datos eliminado y los atributos por los que esté segmentando, el tamaño de cada audiencia podría aumentar o disminuir debido a la eliminación. En este punto, cualquier cambio resultante en los recuentos generales de perfiles se reflejará en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
-| Recorridos y destinos actualizados | 50 horas | Los [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=es), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=es) y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
+| Recorridos y destinos actualizados | 50 horas | Los [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
 | Eliminación completa del hardware | 15 días | Todos los datos relacionados con el conjunto de datos se eliminan del lago de datos y del servicio de perfil. El [estado del trabajo del ciclo de vida de datos](./ui/browse.md#view-details) que eliminó el conjunto de datos se ha actualizado para reflejarlo. |
 
 {style="table-layout:auto"}
-
->[!IMPORTANT]
->
->Las eliminaciones de conjuntos de datos en Amazon Web Service (AWS) están sujetas a una latencia de unas tres horas antes de que los cambios se apliquen completamente. Esto incluye hasta dos horas para que el conjunto de datos se marque para su eliminación, seguidas de una hora adicional antes de que se elimine completamente del sistema. Por el contrario, las solicitudes de eliminación para instancias de Experience Platform que utilizan el lago de datos de Azure producen cambios inmediatos en las funciones empresariales.
->
->Para los usuarios de AWS, este retraso puede afectar a la segmentación por lotes, la segmentación por flujo continuo, las vistas previas, las estimaciones, las exportaciones y el acceso a los datos. Esta latencia solo afecta a los clientes que utilizan AWS, ya que los usuarios del lago de datos de Azure experimentan actualizaciones inmediatas. Para los usuarios de AWS, las solicitudes de eliminación pueden tardar hasta tres horas en propagarse completamente a través de todos los sistemas afectados. Ajuste sus expectativas en consecuencia.
-
-
-<!-- ### Record deletes {#record-delete-transparency}
-
-The following takes place when a [record delete request](./ui/record-delete.md) is created:
-
-| Stage | Time after request submission | Description |
-| --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted. |
-| Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
-| Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
-| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=es), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=es), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
-| Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
-| Data vacuuming completed | 14 days | The [status of the lifecycle job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
-
-{style="table-layout:auto"} -->
 
 ## Próximos pasos
 
