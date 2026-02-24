@@ -3,9 +3,9 @@ title: Conector De Perfil Pega
 description: Utilice el conector de perfil Pega para Amazon S3 en Adobe Experience Platform para exportar datos de perfil completos o incrementales, o ambos, al almacenamiento en la nube de Amazon S3. En el centro de decisiones del cliente de Pega, los trabajos de datos se pueden programar en el perfil del cliente de Designer para importar datos de perfil periódicamente desde el almacenamiento de Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1256'
 ht-degree: 4%
 
 ---
@@ -53,28 +53,53 @@ Antes de poder usar este destino para exportar datos desde Adobe Experience Plat
 
 {style="table-layout:auto"}
 
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
+
+| Origen de audiencia | Admitido | Descripción |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Audiencias compatibles por tipo de datos de audiencia:
+
+| Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
+| [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+
+{style="table-layout:auto"}
+
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 |---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfil]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frecuencia de exportación | **[!UICONTROL Lote]** | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+| Tipo de exportación | **[!UICONTROL Profile-based]** | Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados (por ejemplo: dirección de correo electrónico, número de teléfono, apellidos), tal como se eligió en la pantalla Seleccionar atributos de perfil del [flujo de trabajo de activación de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frecuencia de exportación | **[!UICONTROL Batch]** | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Connect to destination]**.
 
 * **[!DNL Amazon S3]clave de acceso** y **[!DNL Amazon S3]clave secreta**: en [!DNL Amazon S3], genere un par de `access key - secret access key` para conceder acceso a Adobe Experience Platform a su cuenta de [!DNL Amazon S3]. Obtenga más información en la [documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
@@ -84,13 +109,13 @@ Después de establecer la conexión de autenticación con [!DNL Amazon S3], prop
 
 ![Imagen de la pantalla de la interfaz de usuario que muestra los campos completados para los detalles de destino del conector de perfil Pega](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
-Para configurar los detalles del destino, rellena los campos obligatorios y selecciona **[!UICONTROL Siguiente]**. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
+Para configurar los detalles del destino, rellene los campos obligatorios y seleccione **[!UICONTROL Next]**. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-* **[!UICONTROL Nombre]**: escriba un nombre que le ayude a identificar este destino.
-* **[!UICONTROL Descripción]**: escriba una descripción para este destino.
-* **[!UICONTROL Nombre del contenedor]**: escriba el nombre del contenedor [!DNL Amazon S3] que usará este destino.
-* **[!UICONTROL Ruta de la carpeta]**: escriba la ruta de acceso a la carpeta de destino que alojará los archivos exportados.
-* **[!UICONTROL Tipo de compresión]**: seleccione el tipo de compresión como GZIP o NONE.
+* **[!UICONTROL Name]**: escriba un nombre que le ayude a identificar este destino.
+* **[!UICONTROL Description]**: escriba una descripción para este destino.
+* **[!UICONTROL Bucket name]**: escriba el nombre del contenedor [!DNL Amazon S3] que utilizará este destino.
+* **[!UICONTROL Folder path]**: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
+* **[!UICONTROL Compression Type]**: seleccione el tipo de compresión como GZIP o NONE.
 
 >[!TIP]
 >
@@ -100,20 +125,20 @@ Para configurar los detalles del destino, rellena los campos obligatorios y sele
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#map}
 
-En el paso **[!UICONTROL Asignación]**, puede seleccionar qué campos de atributo e identidad desea exportar para sus perfiles. También puede seleccionar cambiar los encabezados del archivo exportado por cualquier nombre descriptivo que desee. Para obtener más información, vea el [paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) en el tutorial de la interfaz de usuario para activar destinos por lotes.
+En el paso **[!UICONTROL Mapping]**, puede seleccionar qué campos de atributo e identidad desea exportar para sus perfiles. También puede seleccionar cambiar los encabezados del archivo exportado por cualquier nombre descriptivo que desee. Para obtener más información, vea el [paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) en el tutorial de la interfaz de usuario para activar destinos por lotes.
 
 ## Validar exportación de datos {#exported-data}
 

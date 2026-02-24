@@ -2,9 +2,9 @@
 title: Conexión de Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: f0db626401d76997e19632c3e27a133f577bc571
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1781'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Esta integración funciona con [Adobe Campaign versión 8.4 o superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=es#release-8-4-1).
+>Esta integración funciona con [Adobe Campaign versión 8.4 o superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
 ## Información general {#overview}
 
-Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=es)
+Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Utilice Campaign para lo siguiente:
 
@@ -78,6 +78,31 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Ado
 
 {style="table-layout:auto"}
 
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
+
+| Origen de audiencia | Admitido | Descripción |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Audiencias compatibles por tipo de datos de audiencia:
+
+| Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
+| [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+
+{style="table-layout:auto"}
+
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
@@ -106,7 +131,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL Select instance]**: su instancia de marketing **[!DNL Campaign]**.
-* **[!UICONTROL Target mapping]**: seleccione la asignación de destino que está utilizando en **[!DNL Adobe Campaign]** para realizar envíos. [Más información](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=es).
+* **[!UICONTROL Target mapping]**: seleccione la asignación de destino que está utilizando en **[!DNL Adobe Campaign]** para realizar envíos. [Más información](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Select sync type]**:
 
    * **[!UICONTROL Audience sync]**: utilice esta opción para enviar audiencias de Adobe Experience Platform a Adobe Campaign.
@@ -128,10 +153,10 @@ Para obtener más información acerca de las acciones de marketing, consulte la 
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es) para obtener instrucciones sobre cómo activar datos de audiencia en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) para obtener instrucciones sobre cómo activar datos de audiencia en este destino.
 
 ### Asignar atributos e identidades {#map}
 

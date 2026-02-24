@@ -3,10 +3,10 @@ title: Destino de identidad empresarial de Merkury
 description: Obtenga información sobre cómo crear una conexión de destino de Enterprise Identity de Mercury mediante la interfaz de usuario de Adobe Experience Platform.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: a5452183-289c-49c3-9574-e09b0153dc00
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1462'
-ht-degree: 3%
+source-wordcount: '1593'
+ht-degree: 4%
 
 ---
 
@@ -46,8 +46,8 @@ El destino [!DNL Merkury Enterprise Identity] proporciona la capacidad de transf
 
 >[!IMPORTANT]
 >
->* Para conectarse al destino, necesita **Ver destinos** y **Administrar destinos**, **Activar destinos**, **Ver perfiles** y **Ver segmentos** [[permisos de control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions). Lea [[descripción general del control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/ui/overview) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **Ver gráfico de identidad** [[permiso de control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions).\![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
+>* Para conectarse al destino, necesita **Ver destinos** y **Administrar destinos**, **Activar destinos**, **Ver perfiles** y **Ver segmentos** [[permisos de control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lea [[descripción general del control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **Ver gráfico de identidad** [[permiso de control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
 
 ## Identidades admitidas {#supported-identities}
 
@@ -62,16 +62,30 @@ El destino [!DNL Merkury Enterprise Identity] proporciona la capacidad de transf
 
 {style="table-layout:auto"}
 
-## Audiencias compatibles
+## Audiencias compatibles {#supported-audiences}
 
 Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-| **Audiencia** | **Compatible** | **Descripción** |
-|---|---|---|
-| Servicio de segmentación | ✓ | Audiencias generadas a través de Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
-| Cargas personalizadas | x | Audiencias [[importadas]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
+| Origen de audiencia | Admitido | Descripción |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Audiencias compatibles por tipo de datos de audiencia:
+
+| Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
+| [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+
+{style="table-layout:auto"}
+
 
 ## Tipo y frecuencia de exportación
 
@@ -79,8 +93,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | **Audiencia** | **Compatible** | **Origen de la descripción** |
 |---|---|---|      
-| Servicio de segmentación | ✓ | Audiencias generadas a través de Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
-| Cargas personalizadas | X | Audiencias [[importadas]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
+| Servicio de segmentación | Sí | Audiencias generadas a través de Experience Platform [[Servicio de segmentación]](https://experienceleague.adobe.com/es/docs/experience-platform/segmentation/home). |
+| Cargas personalizadas | No | Audiencias [[importadas]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -88,9 +102,9 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Para conectarse al destino, necesita **Ver destinos** y **Administrar y activar destinos de conjuntos de datos** [[permisos de control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions). Lea [[descripción general del control de acceso]](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/ui/overview) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita **Ver destinos** y **Administrar y activar destinos de conjuntos de datos** [[permisos de control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lea [[descripción general del control de acceso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en [[tutorial de configuración de destino]](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/connect-destination). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
+Para conectarse a este destino, siga los pasos descritos en [[tutorial de configuración de destino]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino
 
@@ -136,7 +150,7 @@ Las cuentas ya definidas con el destino de identidad de empresa de Merkury apare
 
 ### Habilitar alertas
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/alerts).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
 Cuando termine de proporcionar detalles para la conexión de destino, seleccione **Siguiente**.
 
@@ -147,7 +161,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 >* Para activar los datos, necesita los permisos de control de acceso de **Ver destinos**, **Activar destinos**, **Ver perfiles** y **Ver segmentos**. Lea la descripción general del control de acceso o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar identidades, necesita el permiso de control de acceso **Ver gráfico de identidad**.
 
-Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Sugerencias de asignación
 
@@ -157,7 +171,7 @@ Las sugerencias de asignación se proporcionan en la tabla siguiente, que enumer
 
 | Campo de destino | Descripción de Source |
 |---|---|
-| Identificación | Campo de identidad que se utilizará para asignar datos de [!DNL Merkury] a Experience Platform a través del conector de Source [!DNL Merkury Enterprise Identity] |
+| id | Campo de identidad que se utilizará para asignar datos de [!DNL Merkury] a Experience Platform a través del conector de Source [!DNL Merkury Enterprise Identity] |
 | Input_First_Name | El valor `person.name.firstName` en Experience Platform. |
 | Input_Last_Name | El valor `person.name.lastName` en Experience Platform. |
 | Input_Address_Line_1 | El valor `mailingAddress.street` en Experience Platform. |
@@ -176,7 +190,7 @@ Para comprobar si los datos se han exportado correctamente, compruebe el contene
 
 ## Uso de datos y gobernanza
 
-Todos los destinos de Adobe Experience Platform cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo Adobe Experience Platform aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/es/docs/experience-platform/data-governance/home).
+Todos los destinos de Adobe Experience Platform cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo Adobe Experience Platform aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Próximos pasos
 

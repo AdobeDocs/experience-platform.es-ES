@@ -1,15 +1,15 @@
 ---
 title: Algolia
 description: Utilice este conector para activar audiencias en Algolia para la personalización y el uso en búsquedas y recomendaciones. A continuación, puede utilizar el conector de origen del perfil de usuario de Algolia para importar los perfiles en Real-Time CDP y crear audiencias enriquecidas.
-source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
+exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 3%
+source-wordcount: '1140'
+ht-degree: 4%
 
 ---
 
-
-# [!DNL Algolia] conexión
+# [!DNL Algolia] conexión
 
 ## Información general {#overview}
 
@@ -43,8 +43,8 @@ A continuación, utilice el conector de origen [[!DNL Algolia User Profiles]](/h
 
 >[!IMPORTANT]
 >
->* Para conectarte al destino, necesitas los **[[!UICONTROL permisos de &#x200B;]](/help/access-control/home.md#permissions)Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** &lbrack;permisos de control de acceso. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para conectarse al destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [6}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 ## Identidades admitidas {#supported-identities}
 
@@ -62,10 +62,24 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|---------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Audiencias compatibles por tipo de datos de audiencia:
+
+| Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
+| [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+
+{style="table-layout:auto"}
+
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -74,24 +88,24 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 |---------|----------|---------|
 | Tipo de exportación | **[!DNL Audience export]** | Está exportando todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino [!DNL Algolia]. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 >
->Para conectarse al destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar y activar destinos de conjuntos de datos]**&lbrack;5&rbrace;. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage and Activate Dataset Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL ID de aplicación]**: el ID de aplicación [!DNL Algolia] es un identificador único asignado a su cuenta de [!DNL Algolia].
-* **[!UICONTROL Clave API]**: La clave API [!DNL Algolia] es una credencial que se usa para autenticar y autorizar solicitudes de API para los servicios de búsqueda e indexación de [!DNL Algolia].
+* **[!UICONTROL Application ID]**: el id. de aplicación [!DNL Algolia] es un identificador único asignado a su cuenta de [!DNL Algolia].
+* **[!UICONTROL API Key]**: la clave de API [!DNL Algolia] es una credencial que se usa para autenticar y autorizar solicitudes de API para los servicios de búsqueda e indexación de [!DNL Algolia].
 
 Para obtener más información sobre estas credenciales, consulte la [!DNL Algolia] [documentación de autenticación](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
@@ -101,9 +115,9 @@ Para obtener más información sobre estas credenciales, consulte la [!DNL Algol
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-* **[!UICONTROL Nombre]**: rellene el nombre preferido para este destino.
-* **[!UICONTROL Descripción]**: breve explicación del propósito del destino.
-* **[!UICONTROL Región]**: las opciones son **US** o **EU**. Seleccione la región donde se almacenan los datos del cliente.
+* **[!UICONTROL Name]**: rellene el nombre preferido para este destino.
+* **[!UICONTROL Description]**: breve explicación del propósito del destino.
+* **[!UICONTROL Region]**: las opciones son **US** o **EU**. Seleccione la región donde se almacenan los datos del cliente.
 
 
 ![Detalles de la cuenta](../../assets/catalog/personalization/algolia/account.png)
@@ -112,26 +126,26 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar identidades, necesita el permiso Ver gráfico de identidad [control de acceso](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions).
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar identidades, necesita el permiso Ver gráfico de identidad [control de acceso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#mapping-attributes-identities}
 
-Durante el [!UICONTROL paso de asignación], debe asignar la identidad de origen de AlgoliaUserToken a la identidad de destino userId.
+Durante [!UICONTROL Mapping step], debe asignar la identidad de origen AlgoliaUserToken a la identidad de destino userId.
 
 ![Asignación completa](../../assets/catalog/personalization/algolia/mapping-complete.png)
 
 ## Validar exportación de datos {#exported-data}
 
-Para comprobar si las audiencias se han exportado correctamente a los perfiles de usuario, compruebe el panel [!DNL Algolia], vaya a **[!UICONTROL Personalization avanzado]** y haga clic en **[!UICONTROL Inspector de usuario]**. Busque un perfil de usuario asociado a la audiencia de Adobe Experience Platform exportada y búsquelo en el Inspector de usuario. Verá el ID de audiencia en la sección del segmento.
+Para comprobar si las audiencias se han exportado correctamente a los perfiles de usuario, compruebe el panel [!DNL Algolia], navegue hasta **[!UICONTROL Advanced Personalization]** y haga clic en **[!UICONTROL User Inspector]**. Busque un perfil de usuario asociado a la audiencia de Adobe Experience Platform exportada y búsquelo en el Inspector de usuario. Verá el ID de audiencia en la sección del segmento.
 
 ![Inspector de usuario de Algolia](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 
@@ -147,6 +161,6 @@ Consulte la siguiente documentación de [!DNL Algolia] para obtener más informa
 * [Perfiles de usuario](https://www.algolia.com/doc/guides/personalization/advanced-personalization/what-is-advanced-personalization/concepts/user-profiles/)
 * [Usuarios de segmentos con contextos de regla](https://www.algolia.com/doc/guides/personalization/advanced-personalization/implement/guides/segment-users-with-rule-contexts/#assign-a-segment-context-at-query-time)
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para exportar audiencias de Experience Platform a su aplicación [!DNL Algolia]. Para obtener más información acerca de la plataforma [!DNL Algolia], consulte la [documentación de Algolia](https://www.algolia.com/doc/).

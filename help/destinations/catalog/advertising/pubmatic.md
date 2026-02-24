@@ -1,12 +1,12 @@
 ---
 title: PubMatic Connect
-description: PubMatic maximiza el valor del cliente al ofrecer la cadena de suministro de marketing digital programática del futuro. PubMatic Connect combina la tecnología de la plataforma y el servicio dedicado para mejorar la forma en que se empaquetan y se realizan las transacciones de inventario y datos.
+description: PubMatic maximiza el valor del cliente al ofrecer el supply chain de marketing digital programático del futuro. PubMatic Connect combina la tecnología de la plataforma y el servicio dedicado para mejorar la forma en que se empaquetan y se realizan las transacciones de inventario y datos.
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: 2041c06e660e24f63d4c44adc0e8f3082bb007ae
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 2%
+source-wordcount: '1151'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Utilice [!DNL PubMatic Connect] para maximizar el valor de los clientes mediante la entrega de la cadena de suministro de marketing digital programática del futuro. [!DNL PubMatic Connect] combina tecnología de plataforma y servicio dedicado para mejorar la forma en que se empaquetan y se realizan transacciones de datos e inventarios.
+Use [!DNL PubMatic Connect] para maximizar el valor de los clientes mediante la entrega de la supply chain de marketing digital programática del futuro. [!DNL PubMatic Connect] combina tecnología de plataforma y servicio dedicado para mejorar la forma en que se empaquetan y se realizan transacciones de datos e inventarios.
 
 Hay dos destinos disponibles que le permiten enviar datos de audiencia a la plataforma PubMatic Connect. Difieren ligeramente en su funcionalidad:
 
@@ -62,11 +62,25 @@ Hable con el administrador de cuentas de [!DNL PubMatic] para asegurarse de que 
 Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
-| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Audiencias compatibles por tipo de datos de audiencia:
+
+| Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
+| [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+
+{style="table-layout:auto"}
+
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -74,26 +88,26 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 | ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en el destino de PubMatic Connect. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Cuando se actualiza un perfil en Experience Platform en función de la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Segment export]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en el destino de PubMatic Connect. |
+| Frecuencia de exportación | **[!UICONTROL Streaming]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Cuando se actualiza un perfil en Experience Platform en función de la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 >
-> Para conectarse al destino, necesita el **[!UICONTROL permiso Administrar destinos]** [control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> Para conectarse al destino, necesita el **[!UICONTROL Manage Destinations]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino {#authenticate}
 
-Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
+Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Connect to destination]**.
 
 ![Cómo autenticarse](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
 
-- **[!UICONTROL Token de portador]**: complete el token de portador para autenticarse en el destino.
+- **[!UICONTROL Bearer token]**: complete el token de portador para autenticarse en el destino.
 
 ### Rellenar detalles de destino {#destination-details}
 
@@ -101,29 +115,29 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 ![Detalles del destino](../../assets/catalog/advertising/pubmatic/destination-details.png)
 
-- **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
-- **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
-- **[!UICONTROL ID del socio de datos]**: El ID del socio de datos configurado en su cuenta de [!DNL PubMatic] para esta integración.
-- **[!UICONTROL Código de país predeterminado]**: El código de país predeterminado que debe aplicarse a todas las identidades si no se proporciona ninguna en el perfil.
-- **[!UICONTROL ID de cuenta]**: Su ID de cuenta [!DNL PubMatic Connect].
-- **[!UICONTROL Tipo de cuenta]**: El tipo de cuenta de su cuenta de plataforma [!DNL PubMatic]. Hable con el administrador de cuentas de [!DNL PubMatic] si tiene alguna pregunta sobre la cual elegir. Las opciones disponibles son:
-   - [!UICONTROL EDITOR]
-   - [!UICONTROL SOCIO_DEMANDA]
-   - [!UICONTROL COMPRADOR]
+- **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
+- **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
+- **[!UICONTROL Data partner ID]**: el ID del socio de datos configurado en su cuenta de [!DNL PubMatic] para esta integración.
+- **[!UICONTROL Default country code]**: el código de país predeterminado que debe aplicarse a todas las identidades si no se proporciona ninguna en el perfil.
+- **[!UICONTROL Account ID]**: su ID de cuenta de [!DNL PubMatic Connect].
+- **[!UICONTROL Account type]**: el tipo de cuenta de su cuenta de plataforma [!DNL PubMatic]. Hable con el administrador de cuentas de [!DNL PubMatic] si tiene alguna pregunta sobre la cual elegir. Las opciones disponibles son:
+   - [!UICONTROL PUBLISHER]
+   - [!UICONTROL DEMAND_PARTNER]
+   - [!UICONTROL BUYER]
 
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
 ## Activar segmentos en este destino {#activate}
 
 >[!IMPORTANT]
 >
-> - Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> - Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >
-> - Para exportar _identidades_, necesita el **[[!UICONTROL permiso de control de acceso]](/help/access-control/home.md#permissions) de&rbrack;** Ver gráfico de identidad&lbrack;. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+> - Para exportar _identidades_, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 

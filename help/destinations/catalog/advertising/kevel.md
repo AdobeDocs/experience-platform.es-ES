@@ -2,13 +2,13 @@
 title: Kevel Connection
 description: Utilice el destino de streaming de Kevel para activar audiencias directamente en las API de UserDB y Administración de segmentos de Kevel y admitir la segmentación en tiempo real en el momento de la decisión.
 last-substantial-update: 2026-01-27T00:00:00Z
-source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
+exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 3%
+source-wordcount: '1172'
+ht-degree: 4%
 
 ---
-
 
 # [!DNL Kevel] conexión {#kevel}
 
@@ -52,7 +52,7 @@ El destino [!DNL Kevel] admite la activación de cualquier identidad que la apli
 
 ### Compatibilidad con áreas de nombres de identidad personalizadas
 
-El destino [!DNL Kevel]0&rbrace; también acepta áreas de nombres personalizadas **, tal como se definieron en su implementación de Experience Platform.**
+El destino [!DNL Kevel]0} también acepta áreas de nombres personalizadas **, tal como se definieron en su implementación de Experience Platform.**
 
 Esto significa que:
 
@@ -73,9 +73,23 @@ Esto significa que:
 | Origen de audiencia | Admitido | Descripción |
 |-----------------------|-----------|---------------------------------------------------------- |
 | Servicio de segmentación | Sí | Audiencias de perfil de Adobe evaluadas por el motor de segmentación. |
-| Cargas personalizadas | No | No compatible en este momento. |
+| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Audiencias compatibles por tipo de datos de audiencia:
+
+| Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
+| [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+
+{style="table-layout:auto"}
+
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 

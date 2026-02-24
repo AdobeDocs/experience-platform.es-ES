@@ -3,10 +3,10 @@ title: Marketo Measure Ultimate destination
 description: Obtenga información sobre cómo conectar y activar datos en el destino de Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 2%
+source-wordcount: '794'
+ht-degree: 3%
 
 ---
 
@@ -33,6 +33,31 @@ Tenga en cuenta los siguientes requisitos previos para el destino de Marketo Mea
 * El administrador debe completar la asignación de la zona protegida de Experience Platform en la página de configuración de Marketo Measure. Sin la asignación de zona protegida, no puede completar el flujo de trabajo para conectarse al destino, guardar y activar datos.
 * Solo se pueden exportar conjuntos de datos de clases XDM B2B (consulte, por ejemplo, las clases Cuenta empresarial de XDM y Oportunidad empresarial de XDM). No se pueden incluir varios conjuntos de datos de la misma clase XDM B2B para una fuente de datos determinada.
 * Cada conjunto de datos solo se puede incluir en un flujo de datos al destino de Marketo Measure.
+
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
+
+| Origen de audiencia | Admitido | Descripción |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Audiencias compatibles por tipo de datos de audiencia:
+
+| Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Audiencias de personas](/help/segmentation/types/people-audiences.md) | No | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
+| [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | Sí | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+
+{style="table-layout:auto"}
+
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -78,7 +103,7 @@ Lea el tutorial [Exportar conjuntos de datos](/help/destinations/ui/export-datas
 
 ## Validar exportación de datos {#exported-data}
 
-Para validar una exportación correcta del conjunto de datos, puede comprobar que el conjunto de datos ha llegado correctamente a [Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=es).
+Para validar una exportación correcta del conjunto de datos, puede comprobar que el conjunto de datos ha llegado correctamente a [Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

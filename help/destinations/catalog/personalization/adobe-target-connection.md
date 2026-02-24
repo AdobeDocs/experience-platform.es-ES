@@ -3,9 +3,9 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión de Adobe Target
 description: Adobe Target es una aplicación que proporciona capacidades de personalización y experimentación en tiempo real impulsadas por IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: f8863b79d0524ad3221d594756c027956e836070
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1888'
 ht-degree: 9%
 
 ---
@@ -33,7 +33,7 @@ Adobe Target es una conexión de personalización del catálogo de destinos de A
 
 Vea el siguiente vídeo para obtener una breve descripción general sobre cómo configurar la conexión de Adobe Target en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449796/?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## Casos de uso admitidos basados en el tipo de implementación {#supported-use-cases}
 
@@ -41,7 +41,7 @@ La tabla siguiente muestra los casos de uso admitidos para el destino de Adobe T
 
 | Implementación de Adobe Target *sin* Web SDK | Implementación de Adobe Target *con* Web SDK | Implementación de Adobe Target *con* Web SDK *y* segmentación de Edge desactivada |
 |---|---|---|
-| <ul><li>No se requiere una secuencia de datos. Adobe Target se puede implementar mediante los métodos de implementación [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [del lado del servidor](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=es#server-side-implementation) o [híbrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=es#hybrid-implementation).</li><li>[No se admite la segmentación de Edge](../../../segmentation/methods/edge-segmentation.md).</li><li>[No se admite la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md).</li><li>Puede compartir audiencias y atributos de perfil con la conexión de Adobe Target para la *zona protegida de producción predeterminada* y las zonas protegidas no predeterminadas.</li><li>Para configurar la personalización de la sesión siguiente sin usar una secuencia de datos, usa [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=es).</li></ul> | <ul><li>Se requiere un flujo de datos con Adobe Target y Experience Platform configurados como servicios.</li><li>La segmentación de Edge funciona según lo esperado.</li><li>[Se admite la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md#use-cases).</li><li>Se admite el uso compartido de audiencias y atributos de perfil desde otras zonas protegidas.</li></ul> | <ul><li>Se requiere un flujo de datos con Adobe Target y Experience Platform configurados como servicios.</li><li>Al [configurar la secuencia de datos](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), no active la casilla de verificación **Segmentación de Edge**.</li><li>[Se admite la personalización para la próxima sesión](../../ui/activate-edge-personalization-destinations.md#next-session).</li><li>Se admite el uso compartido de audiencias y atributos de perfil desde otras zonas protegidas.</li></ul> |
+| <ul><li>No se requiere una secuencia de datos. Adobe Target se puede implementar mediante los métodos de implementación [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=es), [del lado del servidor](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) o [híbrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation).</li><li>[No se admite la segmentación de Edge](../../../segmentation/methods/edge-segmentation.md).</li><li>[No se admite la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md).</li><li>Puede compartir audiencias y atributos de perfil con la conexión de Adobe Target para la *zona protegida de producción predeterminada* y las zonas protegidas no predeterminadas.</li><li>Para configurar la personalización de la sesión siguiente sin usar una secuencia de datos, usa [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Se requiere un flujo de datos con Adobe Target y Experience Platform configurados como servicios.</li><li>La segmentación de Edge funciona según lo esperado.</li><li>[Se admite la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md#use-cases).</li><li>Se admite el uso compartido de audiencias y atributos de perfil desde otras zonas protegidas.</li></ul> | <ul><li>Se requiere un flujo de datos con Adobe Target y Experience Platform configurados como servicios.</li><li>Al [configurar la secuencia de datos](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), no active la casilla de verificación **Segmentación de Edge**.</li><li>[Se admite la personalización para la próxima sesión](../../ui/activate-edge-personalization-destinations.md#next-session).</li><li>Se admite el uso compartido de audiencias y atributos de perfil desde otras zonas protegidas.</li></ul> |
 
 
 ## Requisitos previos {#prerequisites}
@@ -60,10 +60,10 @@ La configuración de la conexión de Adobe Target sin utilizar un conjunto de da
 
 En Adobe Target, asegúrese de que el usuario tenga:
 
-* Acceso al [espacio de trabajo predeterminado](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=es#default-workspace);
-* El **aprobador** [rol](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=es#roles-and-permissions).
+* Acceso al [espacio de trabajo predeterminado](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace);
+* El **aprobador** [rol](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-Obtenga más información sobre la concesión de permisos para [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=es#section_8C425E43E5DD4111BBFC734A2B7ABC80) y para [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=es#roles-permissions).
+Obtenga más información sobre la concesión de permisos para [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) y para [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
 ## Audiencias compatibles {#supported-audiences}
 
@@ -78,10 +78,24 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Cargas personalizadas | X | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
+| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Audiencias compatibles por tipo de datos de audiencia:
+
+| Tipo de datos de audiencia | Admitido | Descripción | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
+| [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+
+{style="table-layout:auto"}
+
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -136,7 +150,7 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 
   | Implementación de Adobe Target *sin* Web SDK | Implementación de Adobe Target *con* Web SDK | Implementación de Adobe Target *con* Web SDK *y* segmentación de Edge desactivada |
   |---|---|---|
-  | <ul><li>No se requiere una secuencia de datos. Adobe Target se puede implementar mediante los métodos de implementación [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [del lado del servidor](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=es#server-side-implementation) o [híbrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=es#hybrid-implementation).</li><li>[No se admite la segmentación de Edge](../../../segmentation/methods/edge-segmentation.md).</li><li>[No se admite la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md).</li><li>Puede compartir audiencias y atributos de perfil con la conexión de Adobe Target para la *zona protegida de producción predeterminada* y las zonas protegidas no predeterminadas.</li><li>Para configurar la personalización de la sesión siguiente sin usar una secuencia de datos, usa [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=es).</li></ul> | <ul><li>Se requiere un flujo de datos con Adobe Target y Experience Platform configurados como servicios.</li><li>La segmentación de Edge funciona según lo esperado.</li><li>[Se admite la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md#use-cases).</li><li>Se admite el uso compartido de audiencias y atributos de perfil desde otras zonas protegidas.</li></ul> | <ul><li>Se requiere un flujo de datos con Adobe Target y Experience Platform configurados como servicios.</li><li>Al [configurar la secuencia de datos](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), no active la casilla de verificación **Segmentación de Edge**.</li><li>[Se admite la personalización para la próxima sesión](../../ui/activate-edge-personalization-destinations.md#next-session).</li><li>Se admite el uso compartido de audiencias y atributos de perfil desde otras zonas protegidas.</li></ul> |
+  | <ul><li>No se requiere una secuencia de datos. Adobe Target se puede implementar mediante los métodos de implementación [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=es), [del lado del servidor](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) o [híbrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation).</li><li>[No se admite la segmentación de Edge](../../../segmentation/methods/edge-segmentation.md).</li><li>[No se admite la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md).</li><li>Puede compartir audiencias y atributos de perfil con la conexión de Adobe Target para la *zona protegida de producción predeterminada* y las zonas protegidas no predeterminadas.</li><li>Para configurar la personalización de la sesión siguiente sin usar una secuencia de datos, usa [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Se requiere un flujo de datos con Adobe Target y Experience Platform configurados como servicios.</li><li>La segmentación de Edge funciona según lo esperado.</li><li>[Se admite la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md#use-cases).</li><li>Se admite el uso compartido de audiencias y atributos de perfil desde otras zonas protegidas.</li></ul> | <ul><li>Se requiere un flujo de datos con Adobe Target y Experience Platform configurados como servicios.</li><li>Al [configurar la secuencia de datos](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), no active la casilla de verificación **Segmentación de Edge**.</li><li>[Se admite la personalización para la próxima sesión](../../ui/activate-edge-personalization-destinations.md#next-session).</li><li>Se admite el uso compartido de audiencias y atributos de perfil desde otras zonas protegidas.</li></ul> |
 
 * **Workspace**: seleccione el [espacio de trabajo](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=es) de Adobe Target en el que se compartirán las audiencias. Puede seleccionar un único espacio de trabajo para cada conexión de Adobe Target. Tras la activación, las audiencias se enrutan al espacio de trabajo seleccionado siguiendo las [etiquetas de uso de datos de Experience Platform](../../../data-governance/labels/overview.md) aplicables.
 
@@ -156,13 +170,13 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar audiencias en destinos de personalización Edge](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Eliminación de audiencias de un destino de Target {#remove}
 
-Se requieren pasos adicionales para quitar una audiencia de una conexión de Adobe Target existente cuando esa audiencia ya se está usando en una [actividad](https://experienceleague.adobe.com/es/docs/target/using/activities/activities) de Adobe Target. Si se intenta eliminar una audiencia de una conexión de Adobe Target, se produce un error si una actividad de Adobe Target utiliza la audiencia.
+Se requieren pasos adicionales para quitar una audiencia de una conexión de Adobe Target existente cuando esa audiencia ya se está usando en una [actividad](https://experienceleague.adobe.com/en/docs/target/using/activities/activities) de Adobe Target. Si se intenta eliminar una audiencia de una conexión de Adobe Target, se produce un error si una actividad de Adobe Target utiliza la audiencia.
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra un error provocado al intentar quitar una audiencia que usa una actividad de Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
