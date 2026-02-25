@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 67dec10b0d1343fffd522ee3e615ac2823894a67
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1747'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Esta página proporciona límites predeterminados de uso y velocidad con respecto al comportamiento de activación. Al revisar las siguientes protecciones, se supone que se ha [conectado correctamente a los destinos](/help/destinations/ui/connect-destination.md).
 
@@ -49,8 +49,8 @@ Las protecciones siguientes generalmente se aplican a la activación mediante [t
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Número máximo de audiencias a un solo destino | 250 | Protección de rendimiento | La recomendación es asignar un máximo de 250 audiencias a un solo destino en un flujo de datos. <br><br> Si necesita activar más de 250 audiencias en un destino, puede: <ul><li> Anule la asignación de audiencias que ya no desee activar, o</li><li>Cree un nuevo flujo de datos al destino deseado y asigne las audiencias a este nuevo flujo de datos.</li></ul> <br> Tenga en cuenta que en el caso de algunos destinos, se puede limitar a menos de 250 audiencias asignadas al destino. Estos destinos se indican más adelante en la página, en sus secciones respectivas. |
-| Número máximo de atributos asignados a un destino | 50 | Protección de rendimiento | En el caso de varios destinos y tipos de destino, puede seleccionar atributos e identidades de perfil para asignar para la exportación. Para obtener un rendimiento óptimo, se debe asignar un máximo de 50 atributos en un flujo de datos a un destino. |
+| Número máximo de audiencias a un solo destino | 250 | Protección de rendimiento | La recomendación es asignar un máximo de 250 audiencias a una sola instancia de destino. <br><br> Si necesita activar más de 250 audiencias en un destino, puede: <ul><li> Anule la asignación de audiencias que ya no desee activar, o</li><li>[Cree una nueva instancia de destino](ui/connect-destination.md) y asígnele audiencias.</li></ul> <br> Tenga en cuenta que en el caso de algunos destinos, se puede limitar a menos de 250 audiencias asignadas al destino. Estos destinos se indican más adelante en la página, en sus secciones respectivas. |
+| Número máximo de atributos asignados a un destino | 50 | Protección de rendimiento | En el caso de varios destinos y tipos de destino, puede seleccionar atributos e identidades de perfil para asignar para la exportación. Para obtener un rendimiento óptimo, se debe asignar un máximo de 50 atributos a una instancia de destino. |
 | Número máximo de destinos | 100 | Protección impuesta por el sistema | Puede crear un máximo de 100 destinos a los que conectar y activar datos, *por espacio aislado*. [Los destinos de personalización de Edge (personalización personalizada)](#edge-destinations-activation) pueden constituir un máximo de 10 de los 100 destinos recomendados. |
 | Tipo de datos activados en los destinos | Datos de perfil, incluidas identidades y mapa de identidad | Protección impuesta por el sistema | Actualmente, solo es posible exportar *atributos de registro de perfil* a destinos. Los atributos XDM que describen datos de evento no son compatibles con la exportación en este momento. |
 | Tipo de datos activados para destinos: compatibilidad con atributos de matriz y asignación | Disponible parcialmente | Protección impuesta por el sistema | Puede exportar atributos de matriz a [destinos basados en archivos](/help/destinations/destination-types.md#file-based). [Más información](/help/destinations/ui/export-arrays-maps-objects.md) sobre la nueva funcionalidad. |
@@ -74,9 +74,9 @@ Las siguientes protecciones se aplican a la activación mediante [destinos por l
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
 | Frecuencia de activación | Una exportación completa diaria o exportaciones incrementales más frecuentes cada 3, 6, 8 o 12 horas. | Protección impuesta por el sistema | Lea las secciones de la documentación [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) para obtener más información sobre los incrementos de frecuencia para las exportaciones por lotes. |
-| Número máximo de audiencias que pueden exportarse a una hora determinada | 100 | Protección de rendimiento | Se recomienda añadir un máximo de 100 audiencias a los flujos de datos de destino por lotes. |
+| Número máximo de audiencias que pueden exportarse a una hora determinada | 100 | Protección de rendimiento | La recomendación es agregar un máximo de 100 audiencias a las instancias de destino por lotes. |
 | Número máximo de filas (registros) por archivo que activar | 5 millones | Protección impuesta por el sistema | Adobe Experience Platform divide automáticamente los archivos exportados en 5 millones de registros (filas) por archivo. Cada fila representa un perfil. Los nombres de los archivos divididos se anexan con un número que indica que el archivo forma parte de una exportación mayor, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Para obtener más información, lea la [sección de programación](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) del tutorial para activar destinos por lotes. |
-| Número máximo de audiencias externas (por ejemplo, FAC, carga personalizada, Composición de audiencia) que se pueden activar en un flujo de datos | 10 | Protección impuesta por el sistema | Al activar audiencias externas (por ejemplo, [Composición de audiencias federada](/help/segmentation/ui/audience-portal.md#fac), [carga personalizada](/help/segmentation/ui/audience-portal.md#import-audience), [Composición de audiencias](/help/segmentation/ui/audience-portal.md#audience-composition)) en destinos basados en archivos por lotes, existe un límite de 10 audiencias de este tipo que puede activar en un flujo de datos. Consulte [Tipos de audiencias y personalización](/help/segmentation/ui/audience-portal.md#customize) para obtener más información sobre estos tipos de audiencias. Obtenga más información sobre el flujo de trabajo para [activar audiencias externas en destinos basados en archivos por lotes](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Número máximo de audiencias externas (por ejemplo, FAC, carga personalizada, Composición de audiencia) que se pueden activar en una instancia de destino | 10 | Protección impuesta por el sistema | Al activar audiencias externas (por ejemplo, [Composición de audiencias federada](/help/segmentation/ui/audience-portal.md#fac), [carga personalizada](/help/segmentation/ui/audience-portal.md#import-audience), [Composición de audiencias](/help/segmentation/ui/audience-portal.md#audience-composition)) en destinos basados en archivos por lotes, hay un límite de 10 audiencias de este tipo que puede activar en una instancia de destino. Consulte [Tipos de audiencias y personalización](/help/segmentation/ui/audience-portal.md#customize) para obtener más información sobre estos tipos de audiencias. Obtenga más información sobre el flujo de trabajo para [activar audiencias externas en destinos basados en archivos por lotes](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -97,8 +97,8 @@ Las siguientes protecciones se aplican a la activación a través de [destinos d
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Número máximo de [destinos de personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Protección de rendimiento | Puede configurar flujos de datos a 10 destinos de personalización personalizados por zona protegida. |
-| Número máximo de atributos asignados a un destino de personalización por zona protegida | 30 | Protección de rendimiento | Se puede asignar un máximo de 30 atributos en un flujo de datos a un destino de personalización por zona protegida. |
+| Número máximo de [destinos de personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Protección de rendimiento | Puede configurar un máximo de 10 instancias de destino de personalización personalizadas por zona protegida. |
+| Número máximo de atributos asignados a un destino de personalización por zona protegida | 30 | Protección de rendimiento | Se puede asignar un máximo de 30 atributos a una instancia de destino de personalización, por zona protegida. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +143,7 @@ Para exportaciones de conjuntos de datos programadas o recurrentes, las protecci
 | Tipo de conjunto de datos | Barrera | Tipo de protección | Descripción |
 |---------|----------|---------|-------|
 | Conjuntos de datos basados en el esquema **XDM Experience Events** | Últimos 365 días de datos | Protección impuesta por el sistema | Se exportan los datos del último año natural. |
-| Conjuntos de datos basados en **cualquier esquema aparte del esquema de eventos de experiencia XDM** | Diez mil millones de registros en todos los archivos exportados de un flujo de datos | Protección impuesta por el sistema | El recuento de registros del conjunto de datos debe ser inferior a diez mil millones para archivos JSON o parquet comprimidos y un millón para archivos de parquet no comprimidos; de lo contrario, la exportación falla. Reduzca el tamaño del conjunto de datos que está intentando exportar si supera el umbral permitido. |
+| Conjuntos de datos basados en **cualquier esquema aparte del esquema de eventos de experiencia XDM** | Diez mil millones de registros en todos los archivos exportados en una instancia de destino | Protección impuesta por el sistema | El recuento de registros del conjunto de datos debe ser inferior a diez mil millones para archivos JSON o parquet comprimidos y un millón para archivos de parquet no comprimidos; de lo contrario, la exportación falla. Reduzca el tamaño del conjunto de datos que está intentando exportar si supera el umbral permitido. |
 
 {style="table-layout:auto"}
 
@@ -160,7 +160,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 |Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
 |---------|---------|-----------|-----------|------------|
 | Datasets based on the **XDM Experience Events schema** |  <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
-| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a dataflow | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
@@ -187,7 +187,7 @@ Detalles sobre los umbrales de restricción o las limitaciones para determinados
 
 | Tipo de destino | Descripción |
 | --- | --- |
-| Destinos empresariales (API HTTP, Amazon Kinesis, Azure EventHubs) | En el 95 por ciento de los casos, Experience Platform intenta ofrecer una latencia de rendimiento de menos de 10 minutos para los mensajes enviados correctamente con una tasa de menos de 10 000 solicitudes por segundo para cada flujo de datos a un destino empresarial. <br>: en caso de solicitudes con errores al destino de empresa, Experience Platform almacena las solicitudes con errores y reintenta enviarlas dos veces al extremo. |
+| Destinos empresariales (API HTTP, Amazon Kinesis, Azure EventHubs) | En el 95 por ciento de los casos, Experience Platform intenta ofrecer una latencia de rendimiento de menos de 10 minutos para los mensajes enviados correctamente con una tasa de menos de 10 000 solicitudes por segundo para cada instancia de destino empresarial. <br>: en caso de solicitudes con errores al destino de empresa, Experience Platform almacena las solicitudes con errores y reintenta enviarlas dos veces al extremo. |
 
 {style="table-layout:auto"}
 
@@ -196,7 +196,7 @@ Detalles sobre los umbrales de restricción o las limitaciones para determinados
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

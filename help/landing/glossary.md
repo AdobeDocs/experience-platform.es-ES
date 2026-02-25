@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de Adobe Experience Platform
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '8169'
+source-wordcount: '8224'
 ht-degree: 0%
 
 ---
@@ -177,7 +177,7 @@ ht-degree: 0%
 
 **Etiquetas de uso de datos**: Las etiquetas de uso de datos le permiten categorizar los datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las regulaciones y políticas corporativas. Las etiquetas de uso de datos agregadas a un conjunto de datos se heredan o se aplican a todos los campos dentro de ese conjunto de datos. Las etiquetas de uso de datos también se pueden aplicar directamente a los campos.
 
-**Flujo de datos**: Un flujo de datos es una canalización virtual de datos que fluye a Experience Platform desde un origen hacia destinos.
+**Flujo de datos**: Un flujo de datos es una canalización virtual de datos que fluye a Experience Platform desde un origen hacia destinos. En el contexto de los destinos, un flujo de datos es sinónimo de [instancia de destino](#destination-instance). {#dataflow}
 
 **Ejecución de flujo de datos**: Una ejecución de flujo de datos es un flujo de datos que aterriza en Experience Platform según una programación especificada por el usuario.
 
@@ -200,6 +200,8 @@ ht-degree: 0%
 **Categoría de destino**: Una categoría de destino es una agrupación de destinos que tienen características similares.
 
 **Catálogo de destino**: Un catálogo de destino es una lista de destinos disponibles en Experience Platform.
+
+**Instancia de destino**: una instancia de destino es una conexión individual y configurada a un destino específico en Experience Platform, creada a través de la interfaz de usuario o la API. Representa una sola canalización de activación desde Experience Platform a un extremo de destino. También conocido como [flujo de datos](#dataflow). {#destination-instance}
 
 **Reglas de llamada directa**: en el contexto de las etiquetas, una regla de llamada directa es una regla que se ejecuta cuando se la llama directamente desde la página, omitiendo la detección de eventos y los sistemas de búsqueda.
 
