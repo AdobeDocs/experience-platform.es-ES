@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en el lago de datos
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según lo establecido por las regulaciones de privacidad legales y organizativas. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad de datos de clientes almacenados en el lago de datos.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1430'
-ht-degree: 0%
+source-wordcount: '1446'
+ht-degree: 1%
 
 ---
 
@@ -57,15 +57,15 @@ Esta sección muestra los pasos para agregar un descriptor de identidad al esque
 Existen dos métodos para agregar un descriptor de identidad a un esquema de conjunto de datos:
 
 * [Uso de la IU](#identity-ui)
-* [Uso de la API](#identity-api)
+* [Utilización de la API](#identity-api)
 
 ### Uso de la IU {#identity-ui}
 
-En la interfaz de usuario [!DNL Experience Platform], el área de trabajo **[!UICONTROL Esquemas]** le permite editar los esquemas XDM existentes. Para agregar un descriptor de identidad a un esquema, seleccione el esquema de la lista y siga los pasos para [establecer un campo de esquema como campo de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) en el tutorial [!DNL Schema Editor].
+En la interfaz de usuario [!DNL Experience Platform], el espacio de trabajo **[!UICONTROL Schemas]** le permite editar los esquemas XDM existentes. Para agregar un descriptor de identidad a un esquema, seleccione el esquema de la lista y siga los pasos para [establecer un campo de esquema como campo de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) en el tutorial [!DNL Schema Editor].
 
 Una vez que haya establecido los campos apropiados dentro del esquema como campos de identidad, puede continuar con la siguiente sección sobre [envío de solicitudes de privacidad](#submit).
 
-### Uso de la API {#identity-api}
+### Utilización de la API {#identity-api}
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ curl -X POST \
 | `xdm:sourceVersion` | La versión del esquema XDM especificada en `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Ruta al campo de esquema al que se aplica el descriptor. |
 | `xdm:namespace` | Una de las [áreas de nombres de identidad estándar](../privacy-service/api/appendix.md#standard-namespaces) reconocida por [!DNL Privacy Service], o un área de nombres personalizada definida por su organización. |
-| `xdm:property` | &quot;xdm:id&quot; o &quot;xdm:code&quot;, según el área de nombres que se utilice en `xdm:namespace`. |
+| `xdm:property` | &quot;xdm:id&quot; o &quot;xdm:code&quot;, según el área de nombres que se esté usando en `xdm:namespace`. |
 | `xdm:isPrimary` | Un valor booleano opcional. Cuando es True, esto indica que el campo es una identidad principal. Los esquemas solo pueden contener una identidad principal. Si no se incluye, el valor predeterminado es false. |
 
 **Respuesta**
@@ -147,13 +147,15 @@ En la siguiente sección se describe cómo realizar solicitudes de privacidad pa
 
 ### Uso de la IU
 
-Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL AEP Data Lake]** en **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en el lago de datos.
+Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL AEP Data Lake]** en **[!UICONTROL Products]** para procesar los trabajos de los datos almacenados en el lago de datos.
 
 ![Imagen que muestra el producto del lago de datos seleccionado en el cuadro de diálogo de creación de solicitud de privacidad](./images/privacy/product-value.png)
 
-### Uso de la API
+### Utilización de la API
 
-Al crear solicitudes de trabajo en la API, cualquier `userIDs` que se proporcione debe utilizar un `namespace` y `type` específicos según el almacén de datos al que se apliquen. Los identificadores del lago de datos deben usar `unregistered` para su valor `type` y un valor `namespace` que coincida con una de las [etiquetas de privacidad](#privacy-labels) que se han agregado a los conjuntos de datos aplicables.
+Al crear solicitudes de trabajo en la API, cualquier `userIDs` que se proporcione debe utilizar un `namespace` y `type` específicos según el almacén de datos al que se apliquen. Se debe proporcionar un área de nombres de identidad válida reconocida por el servicio de identidad para el valor del área de nombres. Use `standard` para áreas de nombres estándar y `custom` para áreas de nombres personalizadas.
+
+Los identificadores del lago de datos deben usar `unregistered` para su valor `type` y un valor `namespace` que coincida con una de las [etiquetas de privacidad](#privacy-labels) que se han agregado a los conjuntos de datos aplicables.
 
 Además, la matriz `include` de la carga útil de la solicitud debe incluir los valores de producto de los diferentes almacenes de datos a los que se realiza la solicitud. Al realizar solicitudes al lago de datos, la matriz debe incluir el valor `aepDataLake`.
 
@@ -181,12 +183,12 @@ curl -X POST \
           {
             "namespace": "email_label",
             "value": "ajones@acme.com",
-            "type": "unregistered"
+            "type": "custom"
           },
           {
             "namespace": "email_label",
             "value": "jdoe@example.com",
-            "type": "unregistered"
+            "type": "custom"
           }
         ]
       }
@@ -208,7 +210,7 @@ Cuando [!DNL Experience Platform] recibe una solicitud de eliminación de [!DNL 
 
 Si también incluyó `ProfileService` o `identity` en la solicitud de privacidad, sus datos asociados se administran por separado. Consulte la sección sobre [eliminar el procesamiento de solicitudes para el perfil](../profile/privacy.md#delete) para obtener más información.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad para el lago de datos. Se recomienda continuar leyendo la documentación proporcionada a través de esta guía para profundizar en la comprensión de cómo administrar los datos de identidad y crear trabajos de privacidad.
 

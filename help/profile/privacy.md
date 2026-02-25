@@ -5,9 +5,9 @@ title: Procesamiento de solicitudes de privacidad en el perfil del cliente en ti
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el Perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6eaa384feb1b84e6081f03cb4de9687ad26f437d
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1746'
 ht-degree: 1%
 
 ---
@@ -55,9 +55,9 @@ Las secciones siguientes describen cómo realizar solicitudes de privacidad para
 >Tenga en cuenta que las solicitudes de privacidad se procesan de forma asíncrona dentro de los requisitos regulatorios y que la cantidad de tiempo que tardan en completarse puede variar. Si se producen cambios en los datos de [!DNL Profile] mientras se sigue procesando una solicitud, no se garantiza que esos registros entrantes también se procesen en esa solicitud. Solo se garantiza la eliminación de los perfiles que se mantienen en el lago de datos o en el almacén de perfiles en el momento en que se solicita el trabajo de privacidad. Si ingiere datos de perfil relacionados con el asunto de una solicitud de eliminación durante el trabajo de eliminación, no se garantiza que se eliminen todos los fragmentos de perfil.
 >Es responsabilidad del cliente tener en cuenta los datos entrantes en Experience Platform o el servicio de perfil en el momento de una solicitud de eliminación, ya que esos datos se insertarán en los almacenes de registros. Debe ser prudente con la ingesta de datos que se han eliminado o que se están eliminando.
 
-### Uso de la API
+### Utilización de la API
 
-Al crear solicitudes de trabajo en la API, los identificadores proporcionados en `userIDs` deben usar un `namespace` y un `type` específicos. Se debe proporcionar un [área de nombres de identidad](#namespaces) válida reconocida por [!DNL Identity Service] para el valor `namespace`, mientras que `type` debe ser `standard` o `unregistered` (para áreas de nombres estándar y personalizadas, respectivamente).
+Al crear solicitudes de trabajo en la API, los identificadores proporcionados en `userIDs` deben usar un `namespace` y un `type` específicos. Se debe proporcionar un [área de nombres de identidad](#namespaces) válida reconocida por el servicio de identidad para el valor del área de nombres. Use `standard` para áreas de nombres estándar y `custom` para áreas de nombres personalizadas.
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ En el caso del servicio de perfil, una vez completado el trabajo de privacidad, 
 
 ### Uso de la IU
 
-Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL AEP Data Lake]** y/o **[!UICONTROL Perfil]** en **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en el lago de datos o [!DNL Real-Time Customer Profile], respectivamente.
+Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL AEP Data Lake]** o **[!UICONTROL Profile]** en **[!UICONTROL Products]** para procesar los trabajos de los datos almacenados en el lago de datos o [!DNL Real-Time Customer Profile], respectivamente.
 
 ![Se está creando una solicitud de trabajo de acceso en la interfaz de usuario, con la opción Perfil seleccionada en Productos](./images/privacy/product-value.png)
 
@@ -217,11 +217,11 @@ Para eliminar el perfil y todas las asociaciones de identidad de un cliente dete
 
 ### Limitaciones de políticas de combinación {#merge-policy-limitations}
 
-Privacy Service solo puede procesar datos de [!DNL Profile] mediante una directiva de combinación que no realice la vinculación de identidad. Si utiliza la interfaz de usuario para confirmar si se están procesando sus solicitudes de privacidad, asegúrese de utilizar una directiva con **[!DNL None]** como tipo de [!UICONTROL vinculación de ID]. En otras palabras, no puede usar una política de combinación en la que [!UICONTROL vinculación de ID] esté establecida en [!UICONTROL gráfico privado].
+Privacy Service solo puede procesar datos de [!DNL Profile] mediante una directiva de combinación que no realice la vinculación de identidad. Si utiliza la interfaz de usuario para confirmar si se están procesando sus solicitudes de privacidad, asegúrese de utilizar una directiva con **[!DNL None]** como tipo [!UICONTROL ID stitching]. En otras palabras, no puede usar una política de combinación en la que [!UICONTROL ID stitching] esté establecido en [!UICONTROL Private graph].
 
 >![La vinculación de ID de la política de combinación se ha establecido en Ninguno](./images/privacy/no-id-stitch.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, se le han presentado los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad en [!DNL Experience Platform]. Para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad, siga leyendo la documentación proporcionada en esta guía.
 

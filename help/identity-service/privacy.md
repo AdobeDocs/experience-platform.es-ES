@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares
 title: Procesamiento de solicitudes de privacidad en Identity Service
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para Identity Service.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -42,9 +42,9 @@ Para obtener más información sobre áreas de nombres de identidad en [!DNL Exp
 
 Las secciones siguientes describen cómo realizar solicitudes de privacidad para [!DNL Identity Service] mediante la API o la interfaz de usuario de [!DNL Privacy Service]. Antes de leer estas secciones, es muy recomendable que revise la documentación de la [API de Privacy Service](../privacy-service/api/getting-started.md) o la [IU de Privacy Service](../privacy-service/ui/overview.md) para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluido cómo dar formato correcto a los datos de usuario en las cargas útiles de solicitudes.
 
-### Uso de la API
+### Utilización de la API
 
-Al crear solicitudes de trabajo en la API, los identificadores proporcionados en `userIDs` deben usar un `namespace` y un `type` específicos. Se debe proporcionar un [área de nombres de identidad](#namespaces) válida reconocida por [!DNL Identity Service] para el valor `namespace`, mientras que `type` debe ser `standard` o `unregistered` (para áreas de nombres estándar y personalizadas, respectivamente).
+Al crear solicitudes de trabajo en la API, cualquier ID proporcionado en userIDs debe utilizar un área de nombres y tipo específicos. Se debe proporcionar un área de nombres de identidad válida reconocida por el servicio de identidad para el valor del área de nombres. Use `standard` para áreas de nombres estándar y `custom` para áreas de nombres personalizadas.
 
 Además, la matriz `include` de la carga útil de la solicitud debe incluir los valores de producto de los diferentes almacenes de datos a los que se realiza la solicitud. Al realizar solicitudes a [!DNL Identity], la matriz debe incluir el valor `Identity`.
 
@@ -98,7 +98,7 @@ curl -X POST \
 >
 >Debe especificar el símbolo de identidad como el área de nombres en lugar del nombre para mostrar, al eliminar identidades mediante la eliminación del RGPD.
 
-Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Identidad]** en **[!UICONTROL Productos]** para procesar los trabajos de los datos almacenados en [!DNL Identity Service].
+Al crear solicitudes de trabajo en la interfaz de usuario, asegúrese de seleccionar **[!UICONTROL Identity]** en **[!UICONTROL Products]** para procesar los trabajos de los datos almacenados en [!DNL Identity Service].
 
 ![identity-gdpr](./images/identity-gdpr.png)
 
@@ -117,6 +117,6 @@ Dependiendo de si también incluyó el Perfil del cliente en tiempo real (`Profi
 
 Consulte la [[!DNL Privacy Service] documentación](../privacy-service/home.md#monitor) para obtener más información sobre el seguimiento de estados de trabajos.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, se le han presentado los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad en [!DNL Identity Service]. Para obtener información sobre cómo procesar solicitudes de privacidad para otras [!DNL Experience Cloud] aplicaciones, consulte el documento sobre [[!DNL Privacy Service] y [!DNL Experience Cloud] aplicaciones](../privacy-service/experience-cloud-apps.md).
