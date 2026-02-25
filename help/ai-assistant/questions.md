@@ -2,9 +2,9 @@
 title: Guía de preguntas para el asistente de IA
 description: Lea este documento para conocer las preguntas de ejemplo que puede utilizar al consultar el Ayudante de IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
+source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2063'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Las siguientes preguntas de ejemplo se agrupan por objetivos que puede lograr al
 | Conceptos de aprendizaje y flujos de trabajo continuos | <ul><li>Como usuario novato, puede utilizar el asistente de IA para aprender los conceptos de Real-Time CDP y Adobe Journey Optimizer e incorporarse a productos y funciones con los que no está familiarizado.</li><li>Como usuario experimentado, puede utilizar el Asistente de IA para resolver un caso extremo que pueda estar bloqueando el flujo de trabajo. | <ul><li>¿Cómo configuro un tablero en Recorrido Analytics?</li><li>Dime algunos casos de uso para Real-Time CDP.</li></ul> |
 | Resolución de problemas | Utilice el Asistente de IA para aprender a depurar los errores básicos que pueden producirse en el flujo de trabajo. | <ul><li>¿Qué significa este error {ERROR_MESSAGE}?</li><li>¿Por qué no puedo eliminar la audiencia denominada &quot;Luma: Audiencia por correo electrónico&quot;?</li></ul> |
 | Higiene de zona protegida | Utilice el asistente de IA para identificar duplicados u objetos que no se utilicen, de modo que pueda mantener de forma eficaz la zona protegida. | <ul><li>¿Puede mostrarme audiencias que sean similares?</li><li>¿Hay algún esquema que no tenga un conjunto de datos asociado?</li></ul> |
-| Análisis de valor | Utilice el asistente de IA para identificar los objetos de datos más utilizados, evaluar cualquier indicador de rendimiento o encontrar los objetos de datos más valiosos. | <ul><li>¿Cuántos perfiles hay en nuestra definición de segmento &quot;Luma: Audiencia de correo electrónico&quot;?</li><li>¿Cuándo se activaron las audiencias en el destino de Audiencias del Experience Cloud?</li></ul> |
+| Análisis de valor | Utilice el asistente de IA para identificar los objetos de datos más utilizados, evaluar cualquier indicador de rendimiento o encontrar los objetos de datos más valiosos. | <ul><li>¿Cuántos perfiles hay en nuestra definición de segmento &quot;Luma: Audiencia de correo electrónico&quot;?</li><li>¿Cuándo se activaron las audiencias en el destino de Audiencias de Experience Cloud?</li></ul> |
 | Buscar | Utilice el Ayudante de IA para buscar objetos de Experience Platform admitidos, como audiencias, conjuntos de datos, destinos, esquemas y fuentes. | <ul><li>Enumere las audiencias que contienen &quot;Luma&quot; en el nombre y que se crearon en el último trimestre.</li><li>¿Qué atributos hay en el esquema XDM &quot;Luma: Custom Actions&quot;?</li></ul> |
 | Análisis de impacto | Utilice el asistente de IA para identificar objetos de datos que se han utilizado en determinados flujos de trabajo y así poder evaluar el impacto de cualquier cambio. | <ul><li>¿Qué audiencias utilizan `homeAddress.city` en el esquema &quot;Luma: PersonProfiles&quot;?</li><li>¿En qué conjuntos de datos está almacenado el atributo de perfil `consents.marketing.push.val`?</li></ul> |
 
@@ -196,12 +196,10 @@ A continuación se muestra una lista de ejemplos de preguntas que el asistente d
 * ¿Cuántos perfiles de esta zona protegida viven en California? (**Nota**: para preguntas similares, debe proporcionar un criterio específico para dar contexto suficiente a la solicitud, en este caso, el criterio específico es &quot;vivir en California&quot;).
 * ¿En qué segmentos se encuentra este perfil {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * ¿Cuántos perfiles del conjunto de datos tienen un correo electrónico?
-* ¿Qué conjunto de datos constituye el máximo número de perfiles en esta zona protegida?
-* ¿Qué conjunto de datos tiene el número más alto de registros?
+* ¿Qué conjunto de datos constituye hasta el número máximo de perfiles en esta zona protegida?
 * ¿Cuántos segmentos se han eliminado en {RELATIVE_DATE}?
-* ¿Cuál de mis conjuntos de datos tiene el tamaño más grande?
 * Dame un perfil en {AUDIENCE_NAME}.
-* Cuál es el número total de perfiles en mi zona protegida
+* ¿Cuál es el número total de perfiles en mi zona protegida?
 * ¿Cuántas áreas de nombres de identidad están asociadas con la audiencia {AUDIENCE_NAME}?
 * Mostrarme un informe de todos los segmentos de audiencia que se evaluaron hoy
 * ¿Cuántos segmentos tienen perfiles superpuestos?
@@ -230,6 +228,6 @@ A continuación se muestra una lista de ejemplos de preguntas que el asistente d
 
 +++
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora comprende cómo optimizar sus preguntas para AI Assistant. Para obtener información sobre cómo usar la característica durante los flujos de trabajo, lea la [guía de la interfaz de usuario del Asistente de IA](ui-guide.md).
