@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
-title: Apéndice de Guía de API de Privacy Service
+title: Apéndice de la Guía de API de Privacy Service
 description: Este documento contiene información adicional para trabajar con la API de Privacy Service.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
+source-git-commit: 9b3fb0d545408369d96a3fc7c5c6e9c098af9933
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 5%
+source-wordcount: '552'
+ht-degree: 6%
 
 ---
 
-# apéndice de la guía de API de Privacy Service
+# Apéndice de guía de API de Privacy Service
 
 Las secciones siguientes contienen información adicional para trabajar con la API de Adobe Experience Platform Privacy Service.
 
@@ -26,7 +26,7 @@ En la tabla siguiente se describen varios tipos de identidad predefinidos utiliz
 | --- | --- | --- |
 | Correo electrónico | `Email` | `6` |
 | Teléfono | `Phone` | `7` |
-| ADOBE ADVERTISING CLOUD ID | `AdCloud` | `411` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
 | UUID DE ADOBE AUDIENCE MANAGER | `CORE` | `0` |
 | ADOBE EXPERIENCE CLOUD ID | `ECID` | `4` |
 | ADOBE TARGET ID | `TNTID` | `9` |
@@ -40,9 +40,9 @@ En la tabla siguiente se describen varios tipos de identidad predefinidos utiliz
 >
 >Cada tipo de identidad también tiene un valor entero `namespaceId`, que se puede usar en lugar de la cadena `namespace` al establecer la propiedad `type` de la identidad en &quot;namespaceId&quot;. Consulte la sección sobre [calificadores de área de nombres](#namespace-qualifiers) para obtener más información.
 
-Puede recuperar una lista de áreas de nombres de identidad en uso por su organización realizando una solicitud de GET al extremo `idnamespace/identities` en la API [!DNL Identity Service]. Consulte la [Guía para desarrolladores de Identity Service](../../identity-service/api/getting-started.md) para obtener más información.
+Puede recuperar una lista de áreas de nombres de identidad en uso por su organización realizando una petición GET al extremo `idnamespace/identities` en la API [!DNL Identity Service]. Consulte la [Guía para desarrolladores de Identity Service](../../identity-service/api/getting-started.md) para obtener más información.
 
-## Calificadores de área de nombres
+## Calificadores de área de nombres {#namespace-qualifiers}
 
 Al especificar un valor `namespace` en la API [!DNL Privacy Service], se debe incluir un calificador **namespace** en un parámetro `type` correspondiente. En la tabla siguiente se describen los diferentes calificadores de área de nombres aceptados.
 
@@ -58,28 +58,31 @@ Al especificar un valor `namespace` en la API [!DNL Privacy Service], se debe in
 
 {style="table-layout:auto"}
 
-## Valores de producto aceptados
+## Valores de producto aceptados {#accepted-product-values}
 
-En la tabla siguiente se describen los valores aceptados para especificar un producto de Adobe en el atributo `include` de una solicitud de creación de trabajo.
+Esta sección enumera los valores de identificador de producto aceptados en el atributo `include` al crear trabajos de Privacy Service (API o IU). Utilice estos valores en la matriz `include` de su solicitud de trabajo.
+
+En la tabla siguiente se enumeran los productos compatibles, sus nombres para mostrar en la interfaz de usuario y los valores de código correspondientes.
 
 >[!NOTE]
 >
->Los valores de la lista de productos no distinguen entre mayúsculas y minúsculas. Se recomienda el uso de Camel-case, pero no se aplica.
+>- Los valores de producto no distinguen entre mayúsculas y minúsculas; se recomienda utilizar mayúsculas y minúsculas para mantener la coherencia.
+>- La interfaz de usuario y la API solo admiten los productos enumerados anteriormente. Si un producto no está aprovisionado para su organización, se puede ignorar o provocar un error de validación. Consulte la documentación de contrato o aprovisionamiento de Adobe para confirmar la asignación de derechos.
 
-| Producto | Valor para usar en el atributo `include` |
-| --- | --- |
-| Adobe Advertising Cloud | `adCloud` |
-| Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `audienceManager` |
-| Adobe Campaign | `campaign` |
-| Adobe Experience Platform (lago de datos) | `aepDataLake` |
-| Adobe Experience Platform (Perfil del cliente en tiempo real) | `profileService` |
-| Adobe Pass Authentication | `primetimeAuthentication` |
-| Adobe Target | `target` |
-| Atributos del cliente (CRS) | `CRS` |
-| Administración del Recorrido del cliente | `cjm` |
-| Servicio de identidad | `identity` |
-| Marketo Engage | `marketo` |
-| Marketo Measure | `marketomeasure` |
+| Nombre de producto de marca | Nombre para mostrar de IU | `include` valor |
+| ------------------------------------------------------ | -------------------------- | ---------------------------------------- |
+| Adobe Analytics | [!UICONTROL Analytics] | `analytics` |
+| Adobe Audience Manager | [!UICONTROL Audience Manager] | `audienceManager` |
+| Adobe Advertising | [!UICONTROL Ad Cloud] | `adCloud` |
+| Adobe Experience Platform (almacén de perfiles) | [!UICONTROL Profile] | `profileService` |
+| Adobe Experience Platform (lago de datos) | [!UICONTROL AEP Data Lake] | `aepDataLake` |
+| Adobe Campaign | [!UICONTROL Campaign] | `campaign` |
+| Adobe Target | [!UICONTROL Target] | `target` |
+| Atributos del cliente | [!UICONTROL Customer Attributes (CRS)] | `CRS` |
+| Adobe Journey Optimizer | [!UICONTROL Adobe Journey Optimizer] | `cjm` |
+| Marketo Engage | [!UICONTROL Marketo Engage / AJO B2B] | `marketo` |
+| Servicio de identidad | [!UICONTROL Identity] | `identity` |
+| Marketo Measure | [!UICONTROL Marketo Measure] | `marketomeasure` |
+| Adobe Commerce | [!UICONTROL Commerce (Personalization)] | `commerceMarketingData` |
 
 {style="table-layout:auto"}
