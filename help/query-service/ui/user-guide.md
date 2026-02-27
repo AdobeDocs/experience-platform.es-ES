@@ -312,7 +312,7 @@ El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Exp
 >
 >La interfaz de usuario que se muestra en el vídeo está obsoleta, pero la lógica utilizada en el flujo de trabajo sigue siendo la misma.
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34045?captions=spa&quality=12&learn=on)
 
 ## Monitorización y administración de sesiones simultáneas {#monitor-manage-sessions}
 
