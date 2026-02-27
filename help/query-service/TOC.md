@@ -5,9 +5,9 @@ breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
+source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '411'
 ht-degree: 26%
 
 ---
@@ -108,7 +108,8 @@ ht-degree: 26%
    - [Consultas parametrizadas](ui/parameterized-queries.md)
    - [Programaciones de consultas](ui/query-schedules.md)
    - [Registros de consultas](ui/query-logs.md)
-   - [Monitorización de consultas programadas](ui/monitor-queries.md)
+   - [Monitorizar consultas programadas](ui/monitor-queries.md)
+   - [Administrar sesiones](ui/session-management.md)
    - [Guía de credenciales](ui/credentials.md)
    - [Migrar credenciales de JWT a OAuth](ui/migrate-jwt-to-oauth.md)
    - [Generar conjuntos de datos de salida a partir de resultados de consulta](ui/create-datasets.md)
@@ -123,7 +124,7 @@ ht-degree: 26%
    - [Suscripciones de alerta](api/alert-subscriptions.md)
 - API de autorización de Data Distiller {#auth-api}
    - [Información general](auth-api/overview.md)
-   - [Primeros pasos](auth-api/getting-started.md)
+   - [Introducción](auth-api/getting-started.md)
    - [Acceso IP](auth-api/ip-access.md)
    - [Validación](auth-api/validate.md)
 - Gobernanza de datos {#data-governance}
