@@ -2,9 +2,9 @@
 title: Conexión de Demandbase People
 description: Utilice este destino para activar sus audiencias y enriquecerlas con datos de terceros de Demandbase, para otros casos de uso descendente en marketing y ventas.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 1ceafcccf3f95e401fdce8e00b1755fafe004343
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1018'
 ht-degree: 4%
 
 ---
@@ -82,7 +82,7 @@ Para exportar audiencias a Demandbase, necesita lo siguiente:
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -109,26 +109,26 @@ Ahora está listo para activar sus audiencias en Demandbase People.
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignaciones obligatorias {#mandatory-mappings}
 
-Al activar audiencias en el destino [!DNL Demandbase People], debe configurar la siguiente asignación de campo obligatoria en el paso de asignación:
+Al activar audiencias en el destino [!DNL Demandbase People], debe configurar las siguientes asignaciones de campos obligatorias en el paso de asignación:
 
 | Campo de origen | Campo de destino | Descripción |
 |--------------|--------------|-------------|
 | `xdm: workEmail.address` | `Identity: email` | La dirección de correo electrónico de trabajo de la persona |
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | El identificador único de la persona |
 
 ### Asignaciones recomendadas {#recommended-mappings}
 
-Para obtener una precisión de coincidencia óptima, incluya las siguientes asignaciones opcionales en el flujo de activación, además de la [asignación obligatoria](#mandatory-mappings) anterior.
+Para obtener una precisión de coincidencia óptima, incluya las siguientes asignaciones opcionales en el flujo de activación, además de las [asignaciones obligatorias](#mandatory-mappings) anteriores.
 
 | Campo de origen | Campo de destino | Descripción |
 |--------------|--------------|-------------|
-| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | El identificador único de la persona |
 | `xdm: person.name.lastName` | `xdm: lastName` | El apellido de la persona |
 | `xdm: person.name.firstName` | `xdm: firstName` | El nombre de la persona |
 
@@ -136,9 +136,9 @@ Para obtener una precisión de coincidencia óptima, incluya las siguientes asig
 
 Al asignar campos a [!DNL Demandbase People], tenga en cuenta el siguiente comportamiento coincidente:
 
-* **Coincidencia principal**: Si `externalPersonId` está presente, Demandbase lo usa como identificador principal de la coincidencia de personas.
+* **Coincidencia principal**: Demandbase utiliza `externalPersonId` como identificador principal de la coincidencia de personas.
 * **Coincidencia alternativa**: Si `externalPersonId` no está disponible, Demandbase utiliza el campo `email` para la identificación.
-* **Obligatorio frente a recomendado**: aunque Demandbase solo requiere `email`, Adobe recomienda asignar todos los campos disponibles de la tabla de asignaciones recomendadas anteriormente para mejorar la precisión de las coincidencias y el rendimiento de la campaña.
+* **Campos recomendados**: Aunque solo se requieren `email` y `externalPersonId`, Adobe recomienda asignar todos los campos disponibles de la tabla de asignaciones recomendadas anteriormente para mejorar la precisión de coincidencia y el rendimiento de la campaña.
 
 ![Asignaciones de personas de Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
