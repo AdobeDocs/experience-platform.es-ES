@@ -3,13 +3,13 @@ title: Mejoras en la composición de audiencias
 description: Obtenga información acerca de las mejoras realizadas en la Composición de audiencia con enriquecimiento de audiencia y activación más rápida.
 hide: true
 hidefromtoc: true
-source-git-commit: 42e639b403edbaf666d8bc21eb35b2b75530d6b0
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
-
 
 # Mejoras de Composición de audiencia
 
@@ -26,15 +26,15 @@ Para agregar enriquecimientos de audiencia a la composición, seleccione el bloq
 
 ![El bloque Audiencia está resaltado, así como el botón Generar regla.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-Aparecerá el lienzo del generador de reglas. Ahora puede crear criterios de filtro para el enriquecimiento de audiencia. Los criterios de filtro **debe** incluir un atributo que se encuentre dentro de una matriz. El atributo que es una matriz depende de la estructura de esquema de su organización. Después de crear los criterios de filtro, seleccione **[!UICONTROL Delivery]** en el panel derecho.
+Aparecerá el lienzo del generador de reglas. Ahora puede crear criterios de filtro para el enriquecimiento de audiencia. Los criterios de filtro **debe** incluir un atributo que se encuentre dentro de una matriz. El atributo que es una matriz depende de la estructura de esquema de su organización. Después de crear los criterios de filtro, seleccione **[!UICONTROL View enrichment]** en el panel derecho.
 
-![El lienzo del generador de reglas muestra un ejemplo de una audiencia que puede tener enriquecimientos. El botón Entrega también está resaltado.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![El lienzo del generador de reglas muestra un ejemplo de una audiencia que puede tener enriquecimientos. El botón Entrega también está resaltado.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-Elija la matriz de objetos que desee utilizar para el enriquecimiento en la lista del panel izquierdo. Si solo hay una matriz en el perfil, la matriz se selecciona automáticamente. Seleccione **[!UICONTROL Save]** para volver a la composición de audiencias.
+Elija la matriz de objetos, así como los campos que desee utilizar en el enriquecimiento, en la lista del panel izquierdo. Si solo hay una matriz en el perfil, la matriz se selecciona automáticamente. Seleccione **[!UICONTROL Save]** para volver a la composición de audiencias.
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![Se muestra el árbol de esquema para el árbol de enriquecimiento.](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![Se muestra el árbol de esquema para el árbol de enriquecimiento.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
 Dentro de la composición de audiencias, el bloque [!UICONTROL Audience] es ahora de tipo &quot;[!UICONTROL Rule builder with enhancement]&quot;. Seleccione **[!UICONTROL Publish]** para activar su audiencia con el siguiente lote diario.
 
