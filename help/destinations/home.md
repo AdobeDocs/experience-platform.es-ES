@@ -1,17 +1,17 @@
 ---
 title: Información general sobre los destinos
-description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar Destinos en la Adobe Experience Platform para activar sus datos conocidos y desconocidos para campañas de marketing multicanal, campañas de correo electrónico, publicidad dirigida y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1308'
 ht-degree: 3%
 
 ---
 
 # Información general de [!DNL Destinations] {#overview}
 
-![Titular de información general sobre destinos.](./assets/overview/destinations-overview-banner.png)
+![Banner de descripción general de destinos.](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
@@ -47,9 +47,9 @@ Los controles del área de trabajo [destinos](./ui/destinations-workspace.md) le
 
 Con Experience Platform, puede activar datos en varios tipos de destinos para satisfacer los casos de uso de activación. Los destinos van desde integraciones basadas en API hasta integraciones con sistemas de recepción de archivos, destinos de búsqueda de perfiles y mucho más. Para obtener información detallada sobre todos los destinos disponibles, lea la [descripción general de tipos y categorías de destinos](./destination-types.md).
 
-## Destinos creados por Adobe y por socios {#adobe-and-partner-built-destinations}
+## Destinos creados por el Adobe y los partners {#adobe-and-partner-built-destinations}
 
-Algunos de los conectores del catálogo de destinos de Experience Platform los ha creado y mantenido Adobe, mientras que otros los crean y mantienen empresas asociadas que utilizan [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota en la parte superior de la página de documentación para cada conector creado por el socio indica si el socio crea y mantiene un destino. Por ejemplo, el [conector Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) lo crea Adobe, mientras que el [conector TikTok](/help/destinations/catalog/social/tiktok.md) lo crea y mantiene el equipo de TikTok.
+Algunos de los conectores del catálogo de destinos de Experience Platform se crean y mantienen mediante Adobe, mientras que otros son creados y mantenidos por empresas asociadas que usan [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota en la parte superior de la página de documentación de cada conector creado por el socio indica si el socio ha creado y mantenido un destino. Por ejemplo, el [conector Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) se crea por Adobe, mientras que el [conector TikTok](/help/destinations/catalog/social/tiktok.md) lo crea y lo mantiene el equipo de TikTok.
 
 En el caso de los conectores creados y mantenidos por el socio, esto significa que es posible que el equipo del socio tenga que resolver los problemas con el conector (método de contacto proporcionado en la nota de la página de documentación). Para problemas con los conectores creados y mantenidos por Adobe, póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente.
 
@@ -63,18 +63,18 @@ En la tabla siguiente se describen los permisos y las combinaciones de permisos 
 | ---- | ---- |
 | **[!UICONTROL View Destinations]** | Para acceder a la pestaña destinos en la interfaz de usuario de Experience Platform, necesita el **[!UICONTROL View Destinations]** [permiso de control de acceso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Para conectarse a destinos, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** | Para activar audiencias en destinos y habilitar el [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** | Para agregar o quitar audiencias de flujos de datos existentes sin tener acceso al [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, y **[!UICONTROL View Segments]** | Para activar las audiencias en los destinos y habilitar el [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesitas los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, y **[!UICONTROL View Segments]** | Para agregar o quitar audiencias de flujos de datos existentes sin tener acceso al [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Para exportar conjuntos de datos a destinos, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage and Activate Dataset Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Identity Graph]** | Para exportar *identidades* a destinos, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Identity Graph]** | Para exportar *identidades* a destinos, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Selecciona el espacio de nombres de identidad resaltado en el flujo de trabajo para activar las audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el espacio de nombres de identidad resaltado en el flujo de trabajo para activar las audiencias en los destinos."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-El diagrama siguiente muestra visualmente qué permisos necesita según las operaciones que desee realizar en los destinos.
+El diagrama siguiente muestra visualmente qué permisos necesita en función de las operaciones que desea realizar en los destinos.
 
 ![Diagrama que muestra los permisos necesarios para realizar determinadas acciones en los destinos.](/help/destinations/assets/overview/permissions-diagram.png)
 
-Para obtener más información acerca de los controles de acceso, consulte la [Guía del usuario de control de acceso](../access-control/ui/overview.md).
+Para obtener más información sobre los controles de acceso, consulta la [Guía del usuario de control de acceso](../access-control/ui/overview.md).
 
 ### Control de acceso basado en atributos para destinos {#attribute-based-access}
 
@@ -86,7 +86,7 @@ Para obtener más información sobre cómo funcionan los destinos con los contro
 
 ## Eliminación de perfiles de destinos {#profile-removal}
 
-Cuando se elimina un perfil de una audiencia activada en un destino, ese perfil también se elimina de la audiencia correspondiente en la plataforma de destino. Por ejemplo, si se quita un perfil de una audiencia que se activó anteriormente en LinkedIn, ese perfil se eliminará de [!UICONTROL LinkedIn Matched Audience] asociado.
+Cuando se elimina un perfil de una audiencia activada en un destino, ese perfil también se elimina de la audiencia correspondiente en la plataforma de destino. Por ejemplo, si se quita un perfil de una audiencia previamente activada en LinkedIn, ese perfil se quitará de la [!UICONTROL LinkedIn Matched Audience] asociada.
 
 La eliminación de perfiles de los destinos, también conocida como &quot;no segmentación&quot;, se produce en la misma cadencia que la segmentación. Tan pronto como un perfil se elimina de una audiencia en Experience Platform, el siguiente flujo de datos programado al destino refleja ese cambio y elimina el perfil de la audiencia de destino.
 
@@ -98,11 +98,11 @@ Después de establecer una conexión con un destino y completar el flujo de trab
 
 ![Ejemplo de página de supervisión de destinos.](./assets/overview/monitoring-page-example.png)
 
-También puede validar si los datos llegan a su destino correctamente. La mayoría de las páginas de documentación de destino del catálogo tienen una *sección Validar exportación de datos*, que indica cómo se puede comprobar en la plataforma de destino que los datos se están introduciendo correctamente desde Experience Platform. Vea un ejemplo de esta sección para [Amazon Ads destination](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+También puede validar si los datos llegan correctamente a su destino. La mayoría de las páginas de documentación de destino del catálogo tienen una sección *Validar exportación de datos*, que indica cómo puede comprobar en la plataforma de destino que los datos se han transferido correctamente desde Experience Platform. Vea un ejemplo de esta sección para el [destino de Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
-## Restricciones de la gobernanza de datos al activar datos en destinos {#data-governance}
+## Restricciones de control de datos al activar datos en destinos {#data-governance}
 
-La gobernanza de datos se aplica a los destinos de Experience Platform mediante:
+La gobernanza de datos se aplica a los destinos de los Experience Platform mediante:
 
 * *Acciones de marketing* que puede seleccionar en el flujo de trabajo Crear destinos;
 * *Políticas de uso de datos* que restringen la activación de datos que contienen determinadas etiquetas de uso a destinos con determinadas acciones de marketing.
@@ -114,6 +114,8 @@ Para obtener más información sobre la selección de acciones de marketing en e
 * [Destinos de Advertising: Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Destinos Advertising - Google Ads](./catalog/advertising/google-ads-destination.md)
 * [Destinos Advertising - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
+* [Destinos de cuenta Advertising - Bombora ABM Audience connection](./catalog/advertising/bombora.md)
+* [Destinos de cuenta de Advertising: conexión de Demandbase](./catalog/advertising/demandbase.md)
 * [Destinos de almacenamiento en nube](./catalog/cloud-storage/overview.md)
 * [Destinos de marketing por correo electrónico](./catalog/email-marketing/overview.md)
 * [Destinos sociales](./catalog/social/overview.md)
@@ -126,10 +128,10 @@ Para obtener más información sobre las infracciones de directivas de datos en 
 
 ## Términos y condiciones {#terms-and-conditions}
 
-Al usar cualquiera de los destinos etiquetados como beta (&quot;Beta&quot;), el Cliente reconoce por la presente que Beta se proporciona ***&quot;tal cual&quot; sin garantía de ningún tipo***.
+Al usar cualquiera de los Destinos etiquetados como beta (&quot;Beta&quot;), por la presente el Cliente reconoce que la Beta se proporciona ***&quot;tal cual&quot; sin garantía de ningún tipo***.
 
-Adobe no tiene obligación de mantener, corregir, actualizar, cambiar, modificar o apoyar de otro modo Beta. Se le aconseja utilizar Informativo y no confiar en modo alguno en el correcto funcionamiento o rendimiento de dicho Beta y/o materiales de acompañamiento. Beta se considera información confidencial de Adobe.
+El Adobe no tendrá obligación de mantener, corregir, actualizar, cambiar, modificar ni ofrecer ningún otro tipo de asistencia para la versión beta. Se recomienda utilizar Informativo y no confiar en modo alguno en el correcto funcionamiento o rendimiento de dichos Beta y/o materiales de acompañamiento. La versión beta se considera información confidencial de Adobe.
 
-Cualquier &quot;comentario&quot; (información sobre Beta, incluidos, entre otros, problemas o defectos que encuentre al utilizar Beta, sugerencias, mejoras y recomendaciones) proporcionado por usted a Adobe se asigna a Adobe, incluidos todos los derechos, el título y el interés en y para dichos comentarios.
+Cualquier &quot;Comentario&quot; (información relativa a la versión beta, incluidos, entre otros, los problemas o defectos que encuentre al utilizar la versión beta, las sugerencias, las mejoras y las recomendaciones) proporcionado por usted al Adobe se asigna por el presente al Adobe, incluidos todos los derechos, el título y el interés en y para dichos Comentarios.
 
-Envíe comentarios abiertos o cree un ticket de asistencia para compartir sus sugerencias o informar de un error, y busque una mejora de las funciones.
+Envíe comentarios abiertos o cree una incidencia de asistencia para compartir sus sugerencias o informar de un error, y busque una mejora de la función.

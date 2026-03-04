@@ -1,19 +1,19 @@
 ---
-title: Conexión de Bombora
+title: Conexión de audiencias ABM de Bombora
 description: Active perfiles para sus campañas Bombora para la segmentación, personalización y supresión de audiencias, en función de las audiencias de la cuenta.
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 4%
+source-wordcount: '1170'
+ht-degree: 3%
 
 ---
 
-# Conexión de Bombora {#bombora}
+# Conexión de audiencias ABM de Bombora {#bombora}
 
 >[!AVAILABILITY]
 >
->La funcionalidad para activar audiencias de cuenta en el destino Bombora está disponible para compañías que compren las ediciones [De empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [De empresa a persona](/help/rtcdp/overview.md#rtcdp-b2p) de Real-Time Customer Data Platform.
+>La funcionalidad para activar audiencias de cuenta en el destino de audiencias ABM de Bombora está disponible para compañías que compren las ediciones de Real-Time Customer Data Platform [De empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [De empresa a persona](/help/rtcdp/overview.md#rtcdp-b2p).
 
 Active perfiles para sus campañas Bombora para la segmentación, personalización y supresión de audiencias, según [audiencias de la cuenta](/help/segmentation/types/account-audiences.md).
 
@@ -43,16 +43,14 @@ Este enfoque multicanal garantiza una mensajería coherente entre plataformas, m
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+En esta sección se describe qué tipo de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+| [!DNL Segmentation Service] | Sí | Audiencias generadas a través del Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas mediante [!DNL Segmentation Service]. Obtenga más información sobre los [distintos orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos incluyen: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en Experience Platform desde archivos CSV,</li><li> audiencias parecidas, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 Audiencias compatibles por tipo de datos de audiencia:
 
@@ -60,15 +58,15 @@ Audiencias compatibles por tipo de datos de audiencia:
 |--------------------|-----------|-------------|-----------|
 | [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
-| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirígete a personas que aún no son clientes, pero que comparten características con tu público objetivo. | Prospección con datos de terceros |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilación de datos estructurados almacenados en Adobe Experience Platform Data Lake. | Informes, flujos de trabajo de ciencia de datos |
 
 {style="table-layout:auto"}
 
 
 ## Identidades admitidas {#supported-identities}
 
-Bombora requiere el mapeo de la identidad objetivo descrita en la tabla a continuación. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
+Bombora requiere la asignación de la identidad de destino descrita en la siguiente tabla. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción |
 |---|---|
@@ -91,14 +89,15 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 Para exportar audiencias de cuenta a Bombora, necesita la siguiente información.
 
-1. Una cuenta de Bombora.
+1. Una cuenta de Bombora. Si no tiene una, puede solicitar una cuenta Bombora usando el [formulario de solicitud de activación de audiencia de Bombora](https://customers.bombora.com/artcdp/audience-activation-request).
 2. Una Bombora **[!UICONTROL client ID]** y **[!UICONTROL client secret]**.
+3. Los datos enviados a Bombora deben ser de conjuntos de datos que tengan **Perfil habilitado**, de manera que el conjunto de datos se incluya en el perfil. Asegúrese de que los conjuntos de datos estén [habilitados para el perfil](/help/catalog/datasets/enable-for-profile.md) antes de activar audiencias en este destino.
 
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -108,17 +107,17 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 ![Agregar token de portador](../../assets/catalog/advertising/bombora/add-bearer-token.png)
 
-* **[!UICONTROL Client ID]**: escriba su ID de cliente [!DNL Bombora].
-* **[!UICONTROL Client secret]**: escriba el secreto de cliente [!DNL Bombora].
+* **[!UICONTROL Client ID]**: Escriba su Id. de cliente [!DNL Bombora].
+* **[!UICONTROL Client secret]**: Escriba el secreto de cliente [!DNL Bombora].
 
 ### Rellenar detalles de destino {#destination-details}
 
-Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
+Para configurar los detalles del destino, rellene los campos obligatorios y opcionales que aparecen a continuación. Un asterisco junto a un campo de la interfaz de usuario indica que el campo es obligatorio.
 
 ![Agregar información sobre la conexión de destino](../..//assets/catalog/advertising/bombora/name-and-description.png)
 
-* **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL Name]**: nombre por el que reconocerá este destino en el futuro.
+* **[!UICONTROL Description]**: descripción que le ayudará a identificar este destino en el futuro.
 
 Ahora está listo para activar sus audiencias en Bombora.
 
@@ -126,25 +125,34 @@ Ahora está listo para activar sus audiencias en Bombora.
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Selecciona el espacio de nombres de identidad resaltado en el flujo de trabajo para activar las audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el espacio de nombres de identidad resaltado en el flujo de trabajo para activar las audiencias en los destinos."){width="100" zoomable="yes"}
 
-Lea [Activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md) para obtener instrucciones sobre cómo activar audiencias de cuenta en este destino.
+Lee [Activar audiencias de cuentas](/help/destinations/ui/activate-account-audiences.md) para obtener instrucciones sobre cómo activar audiencias de cuentas en este destino.
 
-### Asignaciones obligatorias {#mapping}
+### Asignación obligatoria {#mapping}
 
-El destino Bombora requiere que configure las siguientes asignaciones para que la activación de datos se realice correctamente.
-
-
+El destino de Bombora requiere que configure las siguientes asignaciones para que la activación de los datos se realice correctamente.
 
 | Campo de origen | Campo de destino | Descripción |
 |---------|----------|---------|
-| Cualquier valor | `Identity: primaryId` | Esta asignación es obligatoria para que Experience Platform establezca una conexión con Bombora. Este valor no se exporta a Bombora, pero es necesario para la configuración de destino. Puede seleccionar cualquier atributo para el campo de origen. |
-| `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora utiliza direcciones de sitios web o dominios para crear una lista de cuentas. |
+| Cualquier valor | `Identity: primaryId` | Este mapeo es obligatorio para que el Experience Platform establezca una conexión con Bombora. Este valor no se exporta a Bombora, pero es necesario para la configuración de destino. Puede seleccionar cualquier atributo para el campo de origen. |
+| `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora utiliza direcciones de dominios o sitios web para crear una lista de cuentas. |
 
 ![Agregar asignaciones obligatorias](../..//assets/catalog/advertising/bombora/mappings.png)
 
+## Comportamiento de sincronización de audiencia {#sync-behavior}
 
-## Notas adicionales y llamadas importantes {#additional-notes}
+Después de la activación inicial de la audiencia, las actualizaciones posteriores de la audiencia en Experience Platform se sincronizan gradualmente con Bombora. Se aplican los siguientes comportamientos:
 
-Si una audiencia de cuenta con el mismo nombre se activó anteriormente en Bombora, recibirá un error si intenta activarla de nuevo a través de un flujo de datos diferente al destino de Bombora.
+* **Cuenta agregada a la audiencia**: Cuando se agrega una cuenta a la audiencia en Experience Platform, se agrega automáticamente a la audiencia correspondiente en Bombora.
+* **Cuenta eliminada o ya no califica**: Cuando una cuenta ya no califica para la audiencia o es eliminada de la audiencia en Experience Platform, es eliminada de la audiencia correspondiente en Bombora.
+* **Eliminación de cuenta o perfil**: Cuando se elimina una cuenta o perfil del Experience Platform y esa cuenta ya no cumple los requisitos para ser considerada como audiencia, se elimina de la audiencia correspondiente en Bombora.
+
+### Comportamiento de eliminación y desconexión de audiencia {#deletion-disconnect}
+
+Si elimina una audiencia en Experience Platform o elimina una audiencia de un flujo de datos de activación de Bombora, se elimina la audiencia de su cuenta de Bombora.
+
+## Notas adicionales y rótulos importantes {#additional-notes}
+
+Si una audiencia de cuenta con el mismo nombre fue activada anteriormente en Bombora, recibirá un error si intenta activarla nuevamente a través de un flujo de datos diferente al destino de Bombora.
