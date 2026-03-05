@@ -4,10 +4,10 @@ title: Resumen de alertas
 description: Obtenga información sobre las alertas en Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
+source-git-commit: bdddcdb19fe248af8f83d42bf885f07b9749a399
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 12%
+source-wordcount: '865'
+ht-degree: 11%
 
 ---
 
@@ -58,13 +58,13 @@ Las alertas se pueden recibir y administrar a través de dos canales:
 
 ### I/O Events {#events}
 
-Las alertas pueden enviarse a un webhook configurado para facilitar la automatización eficaz de la supervisión de la actividad. Para recibir alertas a través de webhook, debe registrar su webhook para recibir alertas de Experience Platform en Adobe Developer Console. Consulte la guía [suscripción a notificaciones de eventos de Adobe I/O](./subscribe.md) para ver los pasos específicos.
+Las alertas pueden enviarse a un webhook configurado para facilitar la automatización eficaz de la monitorización de la actividad. Para recibir alertas a través de webhook, debe registrar su webhook para recibir alertas de Experience Platform en Adobe Developer Console. Consulte la guía [suscripción a notificaciones de eventos de Adobe I/O](./subscribe.md) para ver los pasos específicos.
 
 ### IU de Experience Platform {#ui}
 
 La interfaz de usuario de Experience Platform permite ver las alertas recibidas y administrar las reglas de alerta. El siguiente vídeo ofrece una introducción a estas funciones.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423918?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Para trabajar con alertas en la interfaz de usuario de Experience Platform, debe tener los siguientes permisos de control de acceso habilitados a través de Adobe Admin Console:
 
@@ -92,6 +92,14 @@ Con el permiso Ver alertas, puede ver las alertas recibidas seleccionando el ico
 > Seleccione una alerta para navegar a un panel relacionado y obtener información más detallada sobre por qué se ha activado la alerta.
 
 Además, la ficha [!UICONTROL Alerts] de la interfaz de usuario permite a los usuarios individuales suscribirse a tipos de alertas específicos y a los administradores habilitar o deshabilitar por completo las reglas de alerta. Consulte la [guía de la interfaz de usuario](./ui.md) para obtener más información sobre la administración de alertas.
+
+### Integración de Slack {#slack-integration}
+
+Puede usar un proxy webhook en [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) para recibir [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) de Experience Platform a su [!DNL Slack]. El proxy administra el protocolo de enlace de verificación de Adobe y convierte las cargas de evento en [!DNL Slack] mensajes, para que pueda recibir alertas de cara al cliente directamente en su espacio de trabajo.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+
+Para obtener más información sobre cómo recibir notificaciones de Experience Platform en [!DNL Slack] mediante la integración con un proxy de gancho web de Adobe App Builder, consulte [supervisar eventos de Experience Platform en [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
 ## Próximos pasos
 
