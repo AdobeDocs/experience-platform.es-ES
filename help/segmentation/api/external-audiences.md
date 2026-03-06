@@ -2,9 +2,9 @@
 title: Punto final de API de audiencias externas
 description: Aprenda a utilizar la API de audiencias externas para crear, actualizar, activar y eliminar audiencias externas de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: de18b8292f07c143d63d26a45ca541e50b2ed2f3
+source-git-commit: b024571a33c8c9313e0814c090e496a8ffa98009
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2622'
 ht-degree: 4%
 
 ---
@@ -92,7 +92,11 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": "40",
@@ -108,7 +112,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | Cadena | Una descripción opcional para la audiencia externa. |
 | `customAudienceId` | Cadena | Un identificador opcional para la audiencia externa. |
 | `fields` | Matriz de objetos | La lista de campos y sus tipos de datos. Debe tener un mínimo de 1 campo y un máximo de 41 campos en la matriz. Uno de los campos **debe** ser un campo de identidad e incluir `identityNs`. Al crear la lista de campos, puede agregar los siguientes elementos: <ul><li>`name`: **Requerido** El nombre del campo que forma parte de la especificación de audiencia externa.</li><li>`type`: **Requerido** Tipo de datos que van al campo. Los valores admitidos son `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) y `boolean`.</li><li>`identityNs`: **Requerido para el campo de identidad** El área de nombres que usa el campo de identidad. Los valores admitidos incluyen todas las áreas de nombres válidas, como `ECID` o `email`.</li><li>`labels`: *Opcional* Una matriz de etiquetas de control de acceso para el campo. Encontrará más información sobre las etiquetas de control de acceso disponibles en el [glosario de etiquetas de uso de datos](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objeto | Un objeto que contiene la información donde se encuentra la audiencia externa. Al usar este objeto, **debe** incluir la siguiente información: <ul><li>`path`: **Requerido**: La ubicación de la audiencia externa o la carpeta que contiene la audiencia externa dentro del origen. La ruta de acceso de archivo **no puede** contener espacios. Por ejemplo, si la ruta es `activation/sample-source/Example CSV File.csv`, establezca la ruta en `activation/sample-source/ExampleCSVFile.csv`. Puede encontrar la ruta a su origen en la columna **datos de Source** de la sección de flujos de datos.</li><li>`type`: **Requerido** El tipo de objeto que está recuperando del origen. Este valor puede ser `file` o `folder`.</li><li>`sourceType`: *Opcional* El tipo de origen desde el que está recuperando. Actualmente, el único valor admitido es `Cloud Storage`.</li><li>`cloudType`: **Requerido** El tipo de almacenamiento en la nube, basado en el tipo de origen. Los valores admitidos son `S3`, `DLZ`, `GCS`, `Azure` y `SFTP`.</li><li>`baseConnectionId`: el identificador de la conexión base y se proporciona desde el proveedor de origen. Este valor es **obligatorio** si se usa un valor `cloudType` de `S3`, `GCS` o `SFTP`. De lo contrario, **no** necesita incluir este parámetro. Para obtener más información, lea la [descripción general de los conectores de origen](../../sources/home.md).</li></ul> |
+| `sourceSpec` | Objeto | Un objeto que contiene la información donde se encuentra la audiencia externa. Al usar este objeto, **debe** incluir la siguiente información: <ul><li>`path`: **Requerido**: La ubicación de la audiencia externa o la carpeta que contiene la audiencia externa dentro del origen. La ruta de acceso de archivo **no puede** contener espacios. Por ejemplo, si la ruta es `activation/sample-source/Example CSV File.csv`, establezca la ruta en `activation/sample-source/ExampleCSVFile.csv`. Puede encontrar la ruta a su origen en la columna **datos de Source** de la sección de flujos de datos.</li><li>`type`: **Requerido** El tipo de objeto que está recuperando del origen. Este valor puede ser `file` o `folder`.</li><li>`sourceType`: *Opcional* El tipo de origen desde el que está recuperando. Actualmente, el único valor admitido es `Cloud Storage`.</li><li>`cloudType`: **Requerido** El tipo de almacenamiento en la nube, basado en el tipo de origen. Los valores admitidos son `S3`, `DLZ`, `GCS`, `Azure` y `SFTP`.</li><li>`baseConnectionId`: el identificador de la conexión base y se proporciona desde el proveedor de origen. Este valor es **obligatorio** si se usa un valor `cloudType` de `S3`, `GCS` o `SFTP`. De lo contrario, **no** necesita incluir este parámetro. Para obtener más información, lea la [descripción general de los conectores de origen](../../sources/home.md).</li><li>`encryption`: *Opcional* Un objeto que contiene la clave de cifrado necesaria para la ingesta asincrónica de datos cifrados.</li><ul><li>`publicKeyId`: **Requerido**: El identificador de clave pública que se devolvió al generar el par de claves de cifrado. Para obtener más información, lea [cifrar guía de datos](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair). </li><li>`signVerificationKeyId`: *Opcional*: El identificador de clave pública que se devolvió al compartir la clave administrada por el cliente con Experience Platform. **Nota:** Este campo está etiquetado como `publicKeyId` en la respuesta para esa solicitud de API. Para obtener más información, lea [cifrar guía de datos](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform).</li></ul></ul> |
 | `ttlInDays` | Número entero | La caducidad de los datos de la audiencia externa en días. Este valor puede establecerse de 1 a 90. De forma predeterminada, la caducidad de los datos se establece en 30 días. |
 | `audienceType` | Cadena | Tipo de audiencia de la audiencia externa. Actualmente, solo se admite `people`. |
 | `originName` | Cadena | **Requerido**: el origen de la audiencia. Indica de dónde proviene la audiencia. Para audiencias externas, debe usar `CUSTOM_UPLOAD`. |
@@ -155,7 +159,11 @@ Una respuesta correcta devuelve el estado HTTP 202 con detalles de la audiencia 
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": 40,
@@ -390,6 +398,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia 
 >[!NOTE]
 >
 >Para usar el siguiente punto de conexión, necesita tener `audienceId` de su audiencia externa. Puede obtener su `audienceId` desde una llamada correcta al extremo `GET /external-audiences/operations/{OPERATION_ID}`.
+>
+>Además, este extremo se puede utilizar para actualizar los datos de la audiencia si se han introducido anteriormente.
 
 Puede iniciar una ingesta de audiencia realizando una petición POST al siguiente punto de conexión, proporcionando al mismo tiempo el ID de audiencia.
 
