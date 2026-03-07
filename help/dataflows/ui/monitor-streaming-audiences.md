@@ -3,13 +3,13 @@ title: Monitorización de audiencias de streaming
 description: Aprenda a utilizar el panel de monitorización para monitorizar las audiencias que se evalúan mediante la segmentación de streaming
 hide: true
 hidefromtoc: true
-source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
+exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 6%
+ht-degree: 16%
 
 ---
-
 
 # Monitorización de audiencias de streaming
 
@@ -23,7 +23,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 * [Servicio de segmentación](../../segmentation/home.md):
 * [Capacidades](../../landing/license-usage-and-guardrails/capacity.md): en Experience Platform, las capacidades le permiten saber si su organización ha superado alguna de sus protecciones y le proporcionan información sobre cómo solucionar estos problemas.
 
-## Métricas de monitorización para audiencias de streaming {#streaming-audience-metrics}
+## Métricas de monitorización para públicos de streaming {#streaming-audience-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_evaluation_rate"
@@ -34,7 +34,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_p95_latency"
 >title="Latencia de ingesta de P95"
->abstract="Esta métrica mide la latencia del percentil 95 de un evento que llega a Adobe Experience Platform para una evaluación correcta de la audiencia."
+>abstract="Esta métrica mide la latencia del percentil 95 de un evento que llega a Adobe Experience Platform para una evaluación correcta del público."
 >text="Learn more in documentation"
 
 La siguiente tabla proporciona información más detallada sobre las métricas que se utilizan para las audiencias de streaming.

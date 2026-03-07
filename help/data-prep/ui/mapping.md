@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;inicio;temas populares;asignar csv;asignar archivo csv;asignar archivo csv a xdm;asignar csv a xdm;guía de iu;asignador;asignación;preparación de datos;preparación de datos;
-title: Guía de IU de preparación de datos
+title: Guía de la IU de preparación de datos
 description: Aprenda a utilizar las funciones de preparación de datos en la IU de Experience Platform para asignar archivos CSV a un esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Guía de IU de preparación de datos {#data-prep-ui-guide}
+# Guía de la IU de preparación de datos {#data-prep-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_import_mapping"
 >title="Descargar plantilla"
->abstract="Descargue la plantilla csv para realizar la asignación sin conexión."
+>abstract="Descargue la plantilla CSV para realizar la asignación sin conexión."
 
 Lea esta guía para aprender a utilizar las funciones de asignación de [preparación de datos](../home.md) en la interfaz de usuario de Adobe Experience Platform para asignar archivos CSV a un esquema [Experience Data Model (XDM)](../../xdm/home.md).
 

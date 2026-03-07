@@ -326,7 +326,7 @@ Después de confirmar que se enumeran las audiencias correctas, puede continuar 
 
 En el siguiente vídeo se muestra cómo acceder y utilizar la evaluación de audiencia flexible en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453643?captions=spa&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Preguntas frecuentes {#faq}
 

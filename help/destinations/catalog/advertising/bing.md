@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 5%
+ht-degree: 10%
 
 ---
 
@@ -79,7 +79,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 El destino [!DNL Microsoft Bing] requiere la siguiente configuración para funcionar correctamente:
 
-1. **Habilitar la funcionalidad de sincronización de ID**: Si esta es la primera vez que configura la activación de [!DNL Microsoft Bing] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=es) en el servicio de Experience Cloud ID anteriormente (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar la sincronización de ID.
+1. **Habilitar la funcionalidad de sincronización de ID**: Si esta es la primera vez que configura la activación de [!DNL Microsoft Bing] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de Experience Cloud ID anteriormente (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar la sincronización de ID.
    * Si anteriormente configuró [!DNL Microsoft Bing] integraciones en Audience Manager, las sincronizaciones de ID existentes se transfieren automáticamente a Experience Platform.
 
 2. **Asegúrese de que ECID esté en los perfiles**: todos los perfiles deben tener un ECID presente para que se pueda exportar correctamente. El ECID es **obligatorio** para este destino.
@@ -119,13 +119,13 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
->title="Conjuntos de asignaciones preconfigurados"
->abstract="Hemos preconfigurado estos dos conjuntos de asignaciones para usted. Al activar datos en Microsoft Bing, los perfiles cualificados para las audiencias activadas deben tener al menos una identidad ECID asociada a su perfil para poder exportarse correctamente al destino."
+>title="Conjuntos de asignaciones preconfiguradas"
+>abstract="Hemos preconfigurado estos dos conjuntos de asignaciones para usted. Al activar datos en Microsoft Bing, los perfiles cualificados para los públicos activados deben tener al menos una identidad ECID asociada a su perfil para poder exportarse correctamente al destino."
 >additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Más información sobre las asignaciones preconfiguradas"
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

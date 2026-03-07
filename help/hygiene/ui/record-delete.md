@@ -5,7 +5,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
 source-wordcount: '2520'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -81,7 +81,7 @@ Cada conjunto de datos de Experience Platform solo admite un tipo de identidad p
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Espacio de nombres de identidad principal"
->abstract="El área de nombres de identidad principal es el atributo que vincula de forma exclusiva un registro al perfil de un consumidor en Experience Platform. El campo de identidad principal de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el área de nombres de identidad principal (como `email` para direcciones de correo electrónico o `ecid` para Experience Cloud ID) que coincida con el esquema del conjunto de datos. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
+>abstract="El espacio de nombres de identidad principal es el atributo que vincula de forma exclusiva un registro al perfil de un consumidor en Experience Platform. El campo de identidad principal de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el espacio de nombre de identidad principal (como `email` para direcciones de correo electrónico o `ecid` para Experience Cloud ID) que coincida con el esquema del conjunto de datos. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"

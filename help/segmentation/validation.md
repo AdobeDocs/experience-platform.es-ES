@@ -5,7 +5,7 @@ exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
 source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '1630'
-ht-degree: 1%
+ht-degree: 13%
 
 ---
 
@@ -40,12 +40,12 @@ Actualmente, se admiten las siguientes validaciones:
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_rewritescheck"
 >title="Alerta de eficacia de consultas"
->abstract="La audiencia contiene demasiadas consultas, lo que resulta en una complejidad lógica innecesaria. Simplifique la definición de la audiencia antes de continuar."
+>abstract="Su público contiene demasiadas consultas, lo que resulta en una complejidad lógica innecesaria. Simplifique la definición de su público antes de continuar."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
 >title="Complejidad lógica"
->abstract="La audiencia contiene demasiadas consultas, lo que resulta en una complejidad lógica innecesaria. Simplifique la definición de la audiencia antes de continuar."
+>abstract="Su público contiene demasiadas consultas, lo que resulta en una complejidad lógica innecesaria. Simplifique la definición de su público antes de continuar."
 
 La validación de complejidad lógica analiza la estructura de las sentencias lógicas (Y, O, NO) dentro de la definición de audiencia. Específicamente, busca definiciones de audiencia que obliguen al sistema a realizar un número excesivo de comparaciones por perfil.
 
@@ -110,7 +110,7 @@ plan.equals("trial") AND region.equals("canada")
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
 >title="Límite de secuencia de eventos"
->abstract="La audiencia contiene demasiados eventos secuenciales. Solo puede tener un máximo de 6 eventos secuenciales dentro de la definición de audiencia. Elimine algunos eventos secuenciales de su definición de audiencia antes de continuar."
+>abstract="Su público contiene demasiados eventos secuenciales. Solo puede tener un máximo de 6 eventos secuenciales dentro de la definición de su público. Elimine algunos eventos secuenciales de su definición de público antes de continuar."
 
 La validación de la complejidad del evento secuencial limita el número de eventos secuenciales en una secuencia a 6 eventos.
 
@@ -140,12 +140,12 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 
 +++
 
-### [!BADGE Optimización del rendimiento]{type=Caution} Recuento agregado {#aggregated-count}
+### [!BADGE Optimización de rendimiento]{type=Caution} Cuenta agregada {#aggregated-count}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Contar advertencia de filtro"
->abstract="La audiencia tiene demasiados eventos de agregación. Debe usar un máximo de 3 eventos de agregación dentro de la audiencia. Para evitar problemas de rendimiento, debe eliminar algunos eventos de agregación de la definición de audiencia."
+>title="Advertencia de filtro de recuento"
+>abstract="Su público tiene demasiados eventos de agregación. Debe usar un máximo de tres eventos de agregación dentro de su público. Para evitar problemas de rendimiento, debe eliminar algunos eventos de agregación de la definición de su público."
 
 La comprobación de recuento agregado limita el número de eventos de agregación utilizados en la audiencia a 3 condiciones.
 
@@ -158,7 +158,7 @@ Para evitar activar esta validación, utilice únicamente recuentos específicos
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_arraydepthcheck"
 >title="Advertencia de datos anidados"
->abstract="La audiencia tiene demasiadas capas de datos anidadas. Debe utilizar un máximo de dos capas de datos dentro de la audiencia. Para evitar problemas de rendimiento, debe aplanar la definición de audiencia."
+>abstract="Su público tiene demasiadas capas de datos anidadas. Debe utilizar un máximo de dos capas de datos dentro de su público Para evitar problemas de rendimiento, debe aplanar la definición de su público."
 
 La validación de la complejidad de los datos anidados limita el número de datos anidados dentro de una definición de audiencia a dos capas.
 
@@ -166,12 +166,12 @@ Aunque Experience Platform admite el uso de objetos de matriz y asignación para
 
 Si realiza la segmentación con frecuencia en un atributo profundamente anidado, es posible que deba ponerse en contacto con el equipo de ingeniería de datos para copiar el atributo en un nivel superior dentro del esquema del perfil y facilitar el acceso.
 
-### [!BADGE Optimización de rendimiento]{type=Caution} Tamaño de audiencia {#audience-size}
+### [!BADGE Optimización de rendimiento]{type=Caution} Tamaño de público {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_profilestorecheck"
->title="Advertencia de tamaño de audiencia"
->abstract="Su audiencia está escrita de forma demasiado amplia. Evite escribir una definición de audiencia que clasifique más del 30 % del total de perfiles en la zona protegida. Para evitar problemas de rendimiento, debe ajustar la definición de audiencia."
+>title="Advertencia de tamaño de público"
+>abstract="Su público está escrito de forma demasiado amplia. Evite escribir una definición de público que clasifique más del 30 % del total de perfiles en su zona protegida. Para evitar problemas de rendimiento, debe ajustar la definición de su público."
 
 La validación del tamaño de la audiencia comprueba si la definición de audiencia es tan amplia que más del 30 % de los perfiles totales de la zona protegida cumplen los requisitos de audiencia.
 

@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 9bfad453b74afce848ca3b00cd66a2336edf8479
 workflow-type: tm+mt
 source-wordcount: '4294'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -57,7 +57,7 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campañas orquestadas"
->abstract="Active esta opción para permitir que el conjunto de datos seleccionado se utilice en campañas Adobe Journey Optimizer Orchestrated. El conjunto de datos debe utilizar un esquema relacional y solo se puede crear un conjunto de datos por esquema."
+>abstract="Habilite esta opción para permitir que el conjunto de datos seleccionado se utilice en las campañas orquestadas de Adobe Journey Optimizer. El conjunto de datos debe utilizar un esquema relacional y solo se puede crear un conjunto de datos por esquema."
 >additional-url="https://experienceleague.adobe.com/es/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Habilitar conjunto de datos para campañas orquestadas"
 
 >[!CONTEXTUALHELP]
