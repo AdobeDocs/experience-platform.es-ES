@@ -75,7 +75,7 @@ El conocimiento del producto hace referencia a conceptos y temas basados en la d
 
 Vea el siguiente vídeo para obtener información adicional sobre los conocimientos del producto AI Assistant (Legacy):
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475933/?captions=spa&learn=on)
 
 ### Datos operativos {#operational-insights}
 
@@ -104,7 +104,7 @@ Para las preguntas de información operativa, es posible que las respuestas no r
 
 Vea el siguiente vídeo para obtener información adicional sobre las perspectivas operativas del asistente de IA (heredado):
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444035?captions=spa&learn=on&enablevpops)
 
 ### Funcionalidad del ámbito {#feature-scope}
 
