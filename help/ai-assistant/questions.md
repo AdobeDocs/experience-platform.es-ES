@@ -1,32 +1,32 @@
 ---
-title: Guía de preguntas para el asistente de IA
-description: Lea este documento para conocer las preguntas de ejemplo que puede utilizar al consultar el Ayudante de IA.
+title: Guía de preguntas para el asistente de IA (heredado)
+description: Lea este documento para conocer las preguntas de ejemplo que puede utilizar al consultar el asistente de IA (heredado).
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
+source-git-commit: 077c42f2190316a00168bbeca685c08677c2b13a
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2086'
 ht-degree: 2%
 
 ---
 
-# Guía de preguntas para el asistente de IA
+# Guía de preguntas para el asistente de IA (heredado)
 
-Lea este documento en para ver un conjunto de preguntas de ejemplo que puede utilizar al consultar el asistente de IA.
+Lea este documento para ver un conjunto de preguntas de ejemplo que puede utilizar al consultar el asistente de IA (heredado).
 
-También puede usar este documento para obtener sugerencias sobre [cómo formular sus preguntas](#phrasing-your-questions) para obtener respuestas óptimas del Asistente de IA.
+También puede usar este documento para obtener sugerencias sobre [cómo formular sus preguntas](#phrasing-your-questions) para obtener respuestas óptimas del Asistente de IA (heredado).
 
 ## Preguntas basadas en objetivos {#objectives-questions}
 
-Las siguientes preguntas de ejemplo se agrupan por objetivos que puede lograr al utilizar el Asistente para IA:
+Las siguientes preguntas de ejemplo se agrupan por objetivos que puede lograr al utilizar el asistente de IA (heredado):
 
 | Objetivo | Descripción | Ejemplo |
 | --- | --- | --- |
-| Conceptos de aprendizaje y flujos de trabajo continuos | <ul><li>Como usuario novato, puede utilizar el asistente de IA para aprender los conceptos de Real-Time CDP y Adobe Journey Optimizer e incorporarse a productos y funciones con los que no está familiarizado.</li><li>Como usuario experimentado, puede utilizar el Asistente de IA para resolver un caso extremo que pueda estar bloqueando el flujo de trabajo. | <ul><li>¿Cómo configuro un tablero en Recorrido Analytics?</li><li>Dime algunos casos de uso para Real-Time CDP.</li></ul> |
-| Resolución de problemas | Utilice el Asistente de IA para aprender a depurar los errores básicos que pueden producirse en el flujo de trabajo. | <ul><li>¿Qué significa este error {ERROR_MESSAGE}?</li><li>¿Por qué no puedo eliminar la audiencia denominada &quot;Luma: Audiencia por correo electrónico&quot;?</li></ul> |
-| Higiene de zona protegida | Utilice el asistente de IA para identificar duplicados u objetos que no se utilicen, de modo que pueda mantener de forma eficaz la zona protegida. | <ul><li>¿Puede mostrarme audiencias que sean similares?</li><li>¿Hay algún esquema que no tenga un conjunto de datos asociado?</li></ul> |
-| Análisis de valor | Utilice el asistente de IA para identificar los objetos de datos más utilizados, evaluar cualquier indicador de rendimiento o encontrar los objetos de datos más valiosos. | <ul><li>¿Cuántos perfiles hay en nuestra definición de segmento &quot;Luma: Audiencia de correo electrónico&quot;?</li><li>¿Cuándo se activaron las audiencias en el destino de Audiencias de Experience Cloud?</li></ul> |
-| Buscar | Utilice el Ayudante de IA para buscar objetos de Experience Platform admitidos, como audiencias, conjuntos de datos, destinos, esquemas y fuentes. | <ul><li>Enumere las audiencias que contienen &quot;Luma&quot; en el nombre y que se crearon en el último trimestre.</li><li>¿Qué atributos hay en el esquema XDM &quot;Luma: Custom Actions&quot;?</li></ul> |
-| Análisis de impacto | Utilice el asistente de IA para identificar objetos de datos que se han utilizado en determinados flujos de trabajo y así poder evaluar el impacto de cualquier cambio. | <ul><li>¿Qué audiencias utilizan `homeAddress.city` en el esquema &quot;Luma: PersonProfiles&quot;?</li><li>¿En qué conjuntos de datos está almacenado el atributo de perfil `consents.marketing.push.val`?</li></ul> |
+| Conceptos de aprendizaje y flujos de trabajo continuos | <ul><li>Como usuario novato, puede utilizar el asistente de IA (heredado) para aprender los conceptos de Real-Time CDP y Adobe Journey Optimizer e incorporarse a productos y funciones con los que no está familiarizado.</li><li>Como usuario experimentado, puede utilizar el asistente de IA (heredado) para resolver un caso extremo que pueda estar bloqueando el flujo de trabajo. | <ul><li>¿Cómo configuro un tablero en Recorrido Analytics?</li><li>Dime algunos casos de uso para Real-Time CDP.</li></ul> |
+| Resolución de problemas | Utilice el asistente de IA (heredado) para aprender a depurar los errores básicos que pueden surgir en el flujo de trabajo. | <ul><li>¿Qué significa este error {ERROR_MESSAGE}?</li><li>¿Por qué no puedo eliminar la audiencia denominada &quot;Luma: Audiencia por correo electrónico&quot;?</li></ul> |
+| Higiene de zona protegida | Utilice el asistente de IA (heredado) para identificar cualquier objeto duplicado o no utilizado y mantener de forma eficaz la zona protegida. | <ul><li>¿Puede mostrarme audiencias que sean similares?</li><li>¿Hay algún esquema que no tenga un conjunto de datos asociado?</li></ul> |
+| Análisis de valor | Utilice el asistente de IA (heredado) para identificar los objetos de datos más utilizados y evaluar cualquier indicador de rendimiento o encontrar los objetos de datos más valiosos. | <ul><li>¿Cuántos perfiles hay en nuestra definición de segmento &quot;Luma: Audiencia de correo electrónico&quot;?</li><li>¿Cuándo se activaron las audiencias en el destino de Audiencias de Experience Cloud?</li></ul> |
+| Buscar | Utilice el asistente de IA (heredado) para buscar objetos de Experience Platform admitidos, como audiencias, conjuntos de datos, destinos, esquemas y fuentes. | <ul><li>Enumere las audiencias que contienen &quot;Luma&quot; en el nombre y que se crearon en el último trimestre.</li><li>¿Qué atributos hay en el esquema XDM &quot;Luma: Custom Actions&quot;?</li></ul> |
+| Análisis de impacto | Utilice el asistente de IA (heredado) para identificar los objetos de datos que se han utilizado en determinados flujos de trabajo y así poder evaluar el impacto de cualquier cambio. | <ul><li>¿Qué audiencias utilizan `homeAddress.city` en el esquema &quot;Luma: PersonProfiles&quot;?</li><li>¿En qué conjuntos de datos está almacenado el atributo de perfil `consents.marketing.push.val`?</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -81,26 +81,26 @@ Las preguntas siguientes están agrupadas por objetos de datos y se clasifican c
    * ¿Cuándo debo usar un tipo de datos o un grupo de campos?
    * ¿Cuál es la diferencia entre una identidad y una clave principal o externa?
 * **Solución de problemas - Conocimiento del producto (Real-Time CDP y Journey Optimizer)**
-   * ¿En qué puede ayudar el asistente de IA?
+   * ¿En qué puede ayudar el Asistente de IA (heredado)?
    * ¿Puedo eliminar un esquema habilitado para perfiles después de la ingesta de datos?
    * ¿Por qué no puedo eliminar una audiencia?
    * ¿Cuánto tiempo tardan las audiencias en evaluarse y los resultados en estar disponibles para la segmentación?
 
 ## Formulación de preguntas {#phrasing-your-questions}
 
-Debe formular sus preguntas al asistente de IA con claridad y contexto para obtener una respuesta lo más precisa posible. Consulte la siguiente lista de sugerencias para obtener instrucciones sobre cómo hacer una pregunta clara con contexto:
+Debe formular sus preguntas a AI Assistant (Legacy) con claridad y contexto para obtener una respuesta lo más precisa posible. Consulte la siguiente lista de sugerencias para obtener instrucciones sobre cómo hacer una pregunta clara con contexto:
 
 * Exponga su tarea y/o pregunta de forma concisa.
 * Evite el lenguaje ambiguo o la sintaxis demasiado compleja para facilitar la comprensión.
-* Proporcione un contexto relevante con respecto a su tarea o pregunta, ya que el contexto puede ayudar al Asistente de IA a generar respuestas más relevantes.
+* Proporcione un contexto relevante con respecto a su tarea o pregunta, ya que el contexto puede ayudar al asistente de IA (heredado) a generar respuestas más relevantes.
 
-Lea las tablas siguientes para obtener más orientación sobre las prácticas recomendadas que deben seguirse al hacer preguntas al asistente de IA.
+Lea las tablas siguientes para obtener más orientación sobre las prácticas recomendadas a seguir al hacer preguntas al asistente de IA (heredado).
 
-En las tablas siguientes se describen las prácticas recomendadas que puede seguir al utilizar el Asistente para IA:
+En las siguientes tablas se describen las prácticas recomendadas que puede seguir al utilizar el asistente de IA (heredado):
 
 | Hacer | Ejemplo |
 | --- | --- |
-| <ul><li>Sea específico sobre el objeto o la información que desea recuperar o analizar.</li><li>Intente poner los nombres de los objetos de datos entre comillas. Si sólo conoce una parte del nombre del objeto, también puede especificarlo en la pregunta.</li><li>Use [autocompletar objeto](./ui-guide.md#use-auto-complete) para ayudar al Asistente de IA a comprender mejor el contexto de su consulta.</li></ul> | <ul><li>¿Qué conjuntos de datos utilizan el esquema &quot;Lealtad de Luma&quot;?</li><li>Muéstreme los segmentos activados que tienen &quot;Luma&quot; en sus nombres. Clasificarlos por recuento de perfiles.</li></ul> |
+| <ul><li>Sea específico sobre el objeto o la información que desea recuperar o analizar.</li><li>Intente poner los nombres de los objetos de datos entre comillas. Si sólo conoce una parte del nombre del objeto, también puede especificarlo en la pregunta.</li><li>Use [autocompletar objeto](./ui-guide.md#use-auto-complete) para ayudar al Asistente de IA (heredado) a comprender mejor el contexto de su consulta.</li></ul> | <ul><li>¿Qué conjuntos de datos utilizan el esquema &quot;Lealtad de Luma&quot;?</li><li>Muéstreme los segmentos activados que tienen &quot;Luma&quot; en sus nombres. Clasificarlos por recuento de perfiles.</li></ul> |
 | <ul><li>Evite la ambigüedad y utilice un lenguaje claro</li><li>Utilice una terminología precisa para garantizar una mejor claridad en la consulta.</li><li>Cuando haga preguntas sobre Adobe Experience Platform, intente utilizar una terminología específica de Experience Platform para mejorar la relevancia de las respuestas.</li></ul> | <ul><li>¿Cuántos perfiles tengo en &quot;Audiencia ACME&quot;?</li><li>Mostrar los 5 atributos XDM principales utilizados en audiencias activadas.</li></ul> |
 | <ul><li>Proporcione contexto o especifique un criterio para filtrar los resultados.</li><li>Utilice un criterio de filtro en las preguntas para limitar el volumen de datos en la respuesta.</li></ul> | <ul><li>Mostrar audiencias que no se hayan activado y creado hace más de 6 meses y que nunca se hayan modificado.</li><li>Mostrar las audiencias activadas en &quot;Destino ACME&quot; y tener más de 10000 perfiles.</li></ul> |
 
@@ -118,7 +118,7 @@ En las tablas siguientes se describen las prácticas recomendadas que puede segu
 
 ## Observabilidad de conjuntos de datos {#dataset-observability}
 
-El asistente de IA ahora puede responder preguntas sobre métricas de conjuntos de datos específicas, como el tamaño de almacenamiento y el recuento de filas.
+El asistente de IA (heredado) ahora puede responder preguntas sobre métricas de conjuntos de datos específicas, como el tamaño de almacenamiento y el recuento de filas.
 
 * ¿Cuáles son mis conjuntos de datos más grandes por tamaño?
 * ¿Cuál es mi conjunto de datos más grande por filas?
@@ -187,7 +187,7 @@ También puede perfeccionar las preguntas de observación de datos con un califi
 
 ## Ejemplos de preguntas no admitidas {#unsupported-questions}
 
-A continuación se muestra una lista de ejemplos de preguntas que el asistente de IA no admite actualmente.
+A continuación se muestra una lista de ejemplos de preguntas que actualmente no son compatibles con AI Assistant (heredado).
 
 +++Seleccione esta opción para ver ejemplos de preguntas no admitidas
 
@@ -230,4 +230,4 @@ A continuación se muestra una lista de ejemplos de preguntas que el asistente d
 
 ## Próximos pasos
 
-Al leer este documento, ahora comprende cómo optimizar sus preguntas para AI Assistant. Para obtener información sobre cómo usar la característica durante los flujos de trabajo, lea la [guía de la interfaz de usuario del Asistente de IA](ui-guide.md).
+Al leer este documento, ahora comprende cómo optimizar sus preguntas para el asistente de IA (heredado). Para obtener información sobre cómo usar la característica durante los flujos de trabajo, lea la [guía de la interfaz de usuario del Asistente de IA (heredada)](ui-guide.md).

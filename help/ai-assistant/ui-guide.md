@@ -2,28 +2,42 @@
 title: Asistente de IA en Adobe Experience Platform
 description: Aprenda a utilizar el Asistente de IA para navegar y comprender los conceptos de Experience Platform y Real-Time Customer Data Platform, así como la información de uso sobre los objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
+source-git-commit: 8b0632efe10e280149d68facea44ea1f62267e3e
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1946'
 ht-degree: 0%
 
 ---
 
-# Guía de IU del asistente de IA
+# Guía de la interfaz de usuario del asistente de IA (heredada)
+
+>[!IMPORTANT]
+>
+>Este documento se aplica al asistente de IA (heredado). Para obtener información sobre el asistente de IA (próxima generación), lee la [guía de la interfaz de usuario del asistente de IA](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) en la documentación de [AI en Experience Cloud](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/home).
+
+Consulte la siguiente tabla para ver una comparación de AI Assistant (Legacy) y AI Assistant (Next-Gen):
+
+| Área de funciones | Asistente de IA (heredado) | Asistente de IA (próxima generación) |
+| --- | --- | --- |
+| Experiencia del usuario | El asistente de IA (heredado) solo está disponible en un panel del carril derecho. | El asistente de IA (próxima generación) está disponible tanto en el panel derecho como en la experiencia de pantalla completa envolvente. |
+| Ámbito de las capacidades | Puede utilizar el asistente de IA (heredado) para obtener conocimientos del producto y perspectivas operativas. | Puede utilizar el asistente de IA (próxima generación) para obtener conocimientos del producto, perspectivas operativas, así como habilidades agénticas avanzadas y ejecución de tareas de varios pasos. |
+| Arquitectura de plataforma | El asistente de IA (heredado) no se crea en la pila de Agent Orchestrator. | El Asistente de IA (próxima generación) cuenta con la tecnología [Adobe Experience Platform Agent Orchestrator](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), lo que permite la extensibilidad y la coordinación avanzada entre las distintas funcionalidades. |
+| Cobertura de aplicación | El asistente de IA (heredado) es una implementación específica de la aplicación. | Puede utilizar el asistente de IA (próxima generación) para obtener una experiencia de asistente de IA unificada en todas las aplicaciones de Adobe Experience Cloud. |
+| Modelo de acceso y permiso | Modelo de acceso con ámbito de aplicación alineado con los límites de cada producto. | Todos los usuarios tienen acceso al asistente de IA (próxima generación) y a los agentes de Experience Platform asociados. **Nota**: <ul><li>**Adobe Experience Manager**: el administrador debe concederle permiso para acceder al Asistente de IA (próxima generación) a través de [Adobe Admin Console](https://helpx.adobe.com/es/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics**: el administrador debe concederle permiso para acceder al Asistente de IA a través de [Control de acceso de Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en). Esto le permite hacer preguntas sobre el conocimiento del producto y las perspectivas de datos. |
 
 Lea esta guía para aprender a utilizar el asistente de IA en la interfaz de usuario de Adobe Experience Platform.
 
 ## Acceso al Asistente de IA en la IU de Experience Platform
 
-Para iniciar el Asistente de IA, seleccione el **[!UICONTROL icono del Asistente de IA]** en el encabezado superior de la interfaz de usuario de Experience Platform.
+Para iniciar el Ayudante de IA, seleccione **[!UICONTROL AI Assistant icon]** en el encabezado superior de la interfaz de usuario de Experience Platform.
 
 ![Página de inicio de Experience Platform, con el icono Asistente de IA seleccionado y la interfaz del Asistente de IA abierta.](./images/ai-assistant-full-icon.png)
 
-Aparecerá la interfaz del Asistente de IA, que le proporcionará inmediatamente información para empezar. Puede usar las opciones que se proporcionan en [!UICONTROL Ideas para empezar] a responder preguntas y comandos como:
+Aparecerá la interfaz del Asistente de IA, que le proporcionará inmediatamente información para empezar. Puede utilizar las opciones proporcionadas en [!UICONTROL Ideas to get started] para responder preguntas y comandos como los siguientes:
 
-* [!UICONTROL ¿Cuál de mis audiencias está activada?]
-* [!UICONTROL ¿Qué es un esquema?]
-* [!UICONTROL Dime algunos casos de uso comunes de Real-Time CDP]
+* [!UICONTROL Which of my audiences are activated?]
+* [!UICONTROL What is a schema?]
+* [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
 ## Guía de IU del asistente de IA
 
@@ -49,11 +63,11 @@ Esta sección describe las diferentes funciones del asistente de IA que puede ut
 
 ### Ver objetos de datos operativos {#view-operational-data-objects}
 
-Según la consulta, el asistente de IA proporciona información adicional perteneciente a los datos de la zona protegida. Para ver cómo se aplica la respuesta a su consulta a su zona protegida en particular, seleccione **[!UICONTROL En su zona protegida].**
+Según la consulta, el asistente de IA proporciona información adicional perteneciente a los datos de la zona protegida. Para ver cómo se aplica la respuesta a la consulta a su zona protegida en particular, seleccione **[!UICONTROL In your sandbox].**
 
 Al ver datos pertenecientes a su zona protegida, el Asistente de IA puede proporcionar vínculos directos a páginas de interfaz de usuario específicas que muestran los datos consultados.
 
-+++Seleccione para ver el ejemplo
++++Seleccione esta opción para ver el ejemplo
 
 En este ejemplo, el asistente de IA devuelve información adicional sobre los esquemas XDM existentes en la zona protegida, incluido su recuento total y los cinco campos más utilizados.
 
@@ -65,9 +79,9 @@ En este ejemplo, el asistente de IA devuelve información adicional sobre los es
 
 Puede verificar las respuestas que le devuelve AI Assistant revisando las citas disponibles con cada respuesta de conocimiento del producto.
 
-+++Seleccione esta opción para ver un ejemplo de cómo mostrar orígenes
++++Seleccione esta opción para ver un ejemplo de cómo visualizar orígenes
 
-Para ver las citas y validar la respuesta del asistente de inteligencia artificial, seleccione **[!UICONTROL Mostrar orígenes]**.
+Para ver las citas y validar la respuesta del asistente de inteligencia artificial, seleccione **[!UICONTROL Show sources]**.
 
 ![Respuesta del Asistente de IA con &quot;Mostrar orígenes&quot; seleccionado.](./images/show-sources.png)
 
@@ -107,9 +121,9 @@ También puede proporcionar filtros y modificaciones a las preguntas, y puede in
 
 Puede verificar cada respuesta relacionada con las preguntas de información operativa mediante una consulta SQL que proporciona el Asistente de inteligencia artificial.
 
-+++Selecciónelo para ver un ejemplo de verificación de las respuestas de perspectivas operativas
++++Seleccione esta opción para ver un ejemplo de verificación de las respuestas de perspectivas operativas
 
-Después de recibir una respuesta para una pregunta de información operativa, seleccione **[!UICONTROL Mostrar orígenes]** y, a continuación, seleccione **[!UICONTROL Ver consulta de origen]**.
+Después de recibir una respuesta para una pregunta de información operativa, seleccione **[!UICONTROL Show sources]** y luego seleccione **[!UICONTROL View source query]**.
 
 ![consulta de origen de vista](./images/view-source-query.png)
 
@@ -123,7 +137,7 @@ Cuando se consulta con una pregunta de información operativa, el Asistente de I
 
 Puede utilizar la función de autocompletar para recibir una lista de los objetos de datos que existen en su zona protegida. Las recomendaciones de autocompletar están disponibles para los siguientes dominios: audiencias, esquemas, conjuntos de datos, recorridos, fuentes y destinos.
 
-+++Seleccione esta opción para ver un ejemplo de autocompletado
++++Seleccione esta opción para ver un ejemplo de autocompletar
 
 Puede utilizar el completado automático incluyendo el símbolo más (**`+`**) en la consulta. Como alternativa, también puede seleccionar el signo más (**`+`**) situado en la parte inferior del cuadro de entrada de texto. Aparece una ventana con una lista de los objetos de datos recomendados de la zona protegida.
 
@@ -147,9 +161,9 @@ En el siguiente ejemplo, se solicita al asistente de IA primero el número total
 
 Puede cambiar los temas con el Asistente de IA restableciendo e iniciando una nueva conversación.
 
-+++Seleccione esta opción para ver un ejemplo de cómo restablecer la conversación
++++Seleccione para ver un ejemplo de restablecimiento de la conversación
 
-Para restablecer, selecciona los puntos suspensivos (**`...`**) en la interfaz del Asistente de IA y, a continuación, selecciona **[!UICONTROL Iniciar nueva conversación]**. Esto informa al Asistente de IA de que tiene intención de cambiar los temas y puede resultar especialmente útil para solucionar problemas de consultas que dan error o hacen referencia a información incorrecta.
+Para restablecer, seleccione los puntos suspensivos (**`...`**) en la interfaz del Asistente de IA y, a continuación, seleccione **[!UICONTROL Start new conversation]**. Esto informa al Asistente de IA de que tiene intención de cambiar los temas y puede resultar especialmente útil para solucionar problemas de consultas que dan error o hacen referencia a información incorrecta.
 
 ![Los puntos suspensivos seleccionados y la opción Iniciar nueva conversación seleccionada.](./images/reset.png)
 
@@ -159,7 +173,7 @@ Para restablecer, selecciona los puntos suspensivos (**`...`**) en la interfaz d
 
 Puede utilizar la función de detección del asistente de IA para ver una lista de los temas generales, agrupados en entidades, que admite.
 
-+++Seleccione esta opción para ver un ejemplo de la capacidad de detección
++++Seleccione esta opción para ver un ejemplo de capacidad de detección
 
 Para ver la detección, seleccione el icono de la bombilla en el encabezado superior de la interfaz del asistente de IA.
 
@@ -187,7 +201,7 @@ Es posible que tenga que actualizar los marcadores de posición en algunos casos
 
 Los marcadores de posición se resaltan en azul. Seleccione el marcador de posición para empezar a actualizar su valor. Para obtener mejores resultados en los marcadores de posición numéricos, asegúrese de utilizar dígitos en lugar de texto. También puede utilizar la función de autocompletar entidad para actualizar los valores de marcador de posición. No puede enviar una pregunta con marcadores de posición sin rellenar.
 
-**NOTA**: las sugerencias están habilitadas de manera predeterminada. Seleccione la opción **[!UICONTROL Sugerir ideas]** para deshabilitar la característica.
+**NOTA**: las sugerencias están habilitadas de manera predeterminada. Seleccione el conmutador **[!UICONTROL Suggest ideas]** para deshabilitar la característica.
 
 ![Sugerencia del Asistente de IA con marcadores de posición actualizados.](./images/updated_placeholder.png)
 
