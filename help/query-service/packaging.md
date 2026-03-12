@@ -2,7 +2,7 @@
 title: Empaquetado de servicio de consultas
 description: En el siguiente documento se describe el empaquetado de las funciones y los productos disponibles para el servicio de consultas, y se destacan las diferencias entre las consultas ad hoc y por lotes.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 3%
@@ -39,7 +39,7 @@ En la tabla siguiente se describen los derechos clave del servicio de consulta e
 | Asignación de exportación de datos | El derecho total a la exportación depende de las licencias de las aplicaciones basadas en la plataforma. Por ejemplo, Real-Time CDP, AJO, CJA, etc. | Sí: se proporciona un derecho de exportación adicional para permitir la exportación de conjuntos de datos derivados creados con Data Distiller.<br>Su asignación de exportación de datos anual se mide en terabytes (TB) y depende de la cantidad de horas de Compute que haya comprado. Consulte la descripción del producto para obtener más información. |
 | Interfaz de ejecución de consultas | <ul><li>IU del servicio de consultas</li><li>IU de cliente de terceros</li><li>IU de cliente [!DNL PostgresSQL]</li></ul> | <ul><li>IU del servicio de consultas </li><li>IU de cliente de terceros</li><li>IU de cliente [!DNL PostgresSQL]</li><li>API de REST</li></ul> |
 | Resultados de consulta devueltos mediante | IU de cliente | Conjunto de datos derivado almacenado en el lago de datos |
-| Límite de resultados | <ul><li>IU del servicio de consultas: el número de filas de salida se puede [configurar con una configuración de IU](./ui/user-guide.md#result-count) entre 50 y 500 filas.</li><li>Clientes de terceros: 50 000</li><li>[!DNL PostgresSQL] cliente: 50 000</li></ul> | Las consultas CTAS e ITAS solo generan mensajes de éxito, ya que el resultado de la consulta se almacena en conjuntos de datos derivados. |
+| Límite de resultados | <ul><li>IU del servicio de consultas: el número de filas de salida se puede [configurar con una configuración de IU](./ui/user-guide.md#result-count) entre 50 y 1000 filas.</li><li>Clientes de terceros: 50 000</li><li>[!DNL PostgresSQL] cliente: 50 000</li></ul> | Las consultas CTAS e ITAS solo generan mensajes de éxito, ya que el resultado de la consulta se almacena en conjuntos de datos derivados. |
 | Leer capacidad del conjunto de datos | Sí | Sí |
 | Escribir capacidad del conjunto de datos | No | Sí |
 | Capacidad de programación | No | Sí |

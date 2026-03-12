@@ -3,22 +3,24 @@ title: Administración de sesiones del servicio de consultas en Adobe Experience
 description: Descubra cómo los administradores pueden ver, monitorizar y finalizar sesiones de servicio de consultas activas para liberar la capacidad de inactividad y mantener flujos de trabajo de Data Distiller fiables.
 keywords: Experience Platform;Servicio de consultas;sesiones;administración de sesiones;Data Distiller;admin
 solution: Experience Platform
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+badgeLimitedAvailability: label="Disponibilidad limitada" type="Informative"
+exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
 
 # Administrar sesiones del servicio de consultas
 
+>[!AVAILABILITY]
+>
+>La administración de sesiones para el servicio de consultas está actualmente en disponibilidad limitada y solo está disponible para organizaciones con derechos de **Data Distiller**. Para solicitar acceso, póngase en contacto con el equipo de cuenta de Adobe.
+
 Utilice esta guía para administrar sesiones del servicio de consultas activas desde la interfaz de usuario de Adobe Experience Platform. La administración de sesiones ayuda a los administradores a monitorizar las sesiones simultáneas del Editor de consultas en entornos limitados y a liberar capacidad cuando los usuarios dejan las sesiones abiertas.
 
 ## Permisos necesarios para la administración de sesiones {#permissions}
-
->[!AVAILABILITY]
->
->La administración de sesiones solo está disponible para organizaciones con derechos de Data Distiller.
 
 >[!IMPORTANT]
 >
@@ -93,4 +95,3 @@ Tenga en cuenta los siguientes recursos para ampliar el uso del servicio de cons
 
 * [Obtenga información sobre cómo los usuarios crean y ejecutan consultas en la guía del usuario del Editor de consultas](user-guide.md)
 * [Monitorización de cargas de trabajo programadas mediante la documentación de monitorización de consultas programadas](monitor-queries.md)
-
