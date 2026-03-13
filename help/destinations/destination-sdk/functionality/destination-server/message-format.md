@@ -2,9 +2,9 @@
 description: Esta página aborda el formato de mensaje y la transformación de perfil en datos exportados de Adobe Experience Platform a destinos.
 title: Formato del mensaje
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
+source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2512'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Para comprender el formato de mensaje y el proceso de configuración y transform
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -176,9 +176,9 @@ Adobe usa [Pebble templates](https://pebbletemplates.io/), un lenguaje de creaci
 
 Esta sección proporciona varios ejemplos de cómo se realizan estas transformaciones: desde el esquema XDM de entrada, pasando por la plantilla, y la salida en formatos de carga útil aceptados por el destino. Los ejemplos siguientes se presentan por el aumento de la complejidad, de la siguiente manera:
 
-1. Ejemplos de transformación simples. Descubra cómo funciona la creación de plantillas con transformaciones sencillas para los campos [Atributos de perfil](#attributes), [Pertenencia a audiencias](#segment-membership) e [Identidad](#identities).
+1. Ejemplos de transformación simples. Descubra cómo funciona la creación de plantillas con transformaciones sencillas para los campos [Atributos de perfil](#attributes), [Pertenencia a audiencias](#audience-membership) e [Identidad](#identities).
 2. Ejemplos de complejidad aumentada de plantillas que combinan los campos anteriores: [Cree una plantilla que envíe audiencias e identidades](./message-format.md#segments-and-identities) y [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](#segments-identities-attributes).
-3. Plantillas que incluyen la clave de agregación. Cuando usa [la agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, Experience Platform agrupa los perfiles exportados a su destino en función de criterios como ID de audiencia, estado de audiencia o áreas de nombres de identidad.
+3. Plantillas que incluyen la clave de agregación. Cuando usa [la agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, Experience Platform agrupa los perfiles exportados a su destino en función de criterios como ID de audiencia, área de nombres de audiencia, estado de audiencia o áreas de nombres de identidad.
 
 ### Atributos de perfil {#attributes}
 
@@ -794,7 +794,8 @@ Perfil 2:
                 {% endfor %}
                 ]
             }
-        }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
     ]
 }
 ```
@@ -838,7 +839,7 @@ El(la) `json` siguiente representa los datos exportados fuera de Adobe Experienc
         {
             "attributes": {
                 "firstName": "Harry",
-                "birthDate": "1980/07/21"
+                "birthDate": "1980/07/31"
             },
             "identities": [
                 {
@@ -859,21 +860,21 @@ El(la) `json` siguiente representa los datos exportados fuera de Adobe Experienc
 
 ### Incluya una clave de agregación en la plantilla para acceder a los perfiles exportados agrupados por varios criterios {#template-aggregation-key}
 
-Cuando usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino según criterios como ID de audiencia, alias de audiencia, pertenencia de audiencia o áreas de nombres de identidad.
+Cuando usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino según criterios como ID de audiencia, área de nombres de audiencia, alias de audiencia, pertenencia a audiencias o áreas de nombres de identidad.
 
 En la plantilla de transformación de mensajes, puede acceder a las claves de agregación mencionadas anteriormente, como se muestra en los ejemplos de las secciones siguientes. Utilice claves de agregación para estructurar el mensaje HTTP exportado desde Experience Platform de modo que coincida con los límites de formato y velocidad esperados por el destino.
 
 #### Usar clave de agregación de ID de audiencia en la plantilla {#aggregation-key-segment-id}
 
-Si usa [la agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, los perfiles de los mensajes HTTP exportados a su destino se agrupan por ID de audiencia. Consulte a continuación cómo puede acceder al ID de audiencia en la plantilla.
+Si usa [la agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, los perfiles de los mensajes HTTP exportados a su destino se agrupan por ID de audiencia. Consulte a continuación cómo puede acceder al ID de audiencia y al área de nombres de audiencia en la plantilla.
 
 **Entrada**
 
 Considere los cuatro perfiles siguientes, donde:
 
-* los dos primeros forman parte de la audiencia con el ID de audiencia `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* el tercer perfil forma parte de la audiencia con el ID de audiencia `8f812592-3f06-416b-bd50-e7831848a31a`
-* el cuarto perfil forma parte de las dos audiencias anteriores.
+* los dos primeros forman parte de la audiencia con el id. de audiencia `788d8874-8007-4253-92b7-ee6b6c20c6f3` en el área de nombres `ups`
+* el tercer perfil forma parte de la audiencia con el id. de audiencia `8f812592-3f06-416b-bd50-e7831848a31a` en el área de nombres `CustomerAudienceUpload`
+* el cuarto perfil forma parte de las dos audiencias anteriores, cada una bajo su área de nombres respectiva.
 
 Perfil 1:
 
@@ -925,7 +926,7 @@ Perfil 3:
       }
    },
    "segmentMembership":{
-      "ups":{
+      "CustomerAudienceUpload":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
@@ -946,12 +947,14 @@ Perfil 4:
    },
    "segmentMembership":{
       "ups":{
-         "8f812592-3f06-416b-bd50-e7831848a31a":{
-            "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"realized"
-         },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"realized"
+         }
+      },
+      "CustomerAudienceUpload":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
          }
       }
@@ -965,11 +968,12 @@ Perfil 4:
 >
 >Para todas las plantillas que use, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar la [plantilla](../../functionality/destination-server/templating-specs.md) en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre cómo escapar comillas dobles, consulte el capítulo 9 del [estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Observe a continuación cómo se utiliza `audienceId` en la plantilla para acceder a los ID de audiencia. En este ejemplo se supone que se usa `audienceId` para la pertenencia a audiencias en la taxonomía de destino. Puede utilizar cualquier otro nombre de campo en su lugar, según su propia taxonomía.
+Observe a continuación cómo se utilizan `audienceId` y `audienceNamespace` en la plantilla para acceder al ID de audiencia y al área de nombres. En este ejemplo se supone que se usa `audienceId` para la pertenencia a audiencias en la taxonomía de destino. Puede utilizar cualquier otro nombre de campo en su lugar, según su propia taxonomía.
 
 ```python
 {
     "audienceId": "{{ input.aggregationKey.segmentId }}",
+    "audienceNamespace": "{{ input.aggregationKey.segmentNamespace }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
@@ -982,11 +986,12 @@ Observe a continuación cómo se utiliza `audienceId` en la plantilla para acced
 
 **Resultado**
 
-Cuando se exportan al destino, los perfiles se dividen en dos grupos, según su ID de audiencia.
+Cuando se exportan al destino, los perfiles se dividen en dos grupos, en función de su ID de audiencia y área de nombres.
 
 ```json
 {
    "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "audienceNamespace":"ups",
    "profiles":[
       {
          "firstName":"Hermione"
@@ -1004,6 +1009,7 @@ Cuando se exportan al destino, los perfiles se dividen en dos grupos, según su 
 ```json
 {
    "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "audienceNamespace":"CustomerAudienceUpload",
    "profiles":[
       {
          "firstName":"Tom"
