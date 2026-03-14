@@ -3,9 +3,9 @@ title: Guía flexible de evaluación de audiencias
 description: Aprenda a utilizar la evaluación de audiencia flexible para ejecutar trabajos de segmentación por lotes bajo demanda.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1206'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,9 @@ Cuando ejecute una evaluación de audiencia flexible, tenga en cuenta las siguie
 
 - Solo puede usar la evaluación de audiencia flexible **dos veces** al día por zona protegida. Este límite se restablece a medianoche (UTC).
 - Tiene un **máximo** de 50 ejecuciones flexibles de evaluación de audiencia por año por cada zona protegida de **producción**.
+   - Un año se define como un año a partir de la fecha del contrato de Experience Platform para una evaluación flexible de la audiencia. Por ejemplo, si el contrato se inició el 18 de mayo, el número de ejecuciones flexibles de evaluación de audiencia se restablecerá cada 18 de mayo.
 - Tiene un **máximo** de 100 ejecuciones flexibles de evaluación de audiencia por año por cada zona protegida de **desarrollo**.
+   - Un año se define como un año a partir de la fecha del contrato de Experience Platform para una evaluación flexible de la audiencia. Por ejemplo, si el contrato se inició el 18 de mayo, el número de ejecuciones flexibles de evaluación de audiencia se restablecerá cada 18 de mayo.
 - Todas las audiencias **deben** tener un origen de &quot;Servicio de segmentación&quot;.
 - Todas las audiencias **deben** evaluarse mediante la segmentación por lotes.
 - Todas las audiencias **deben** estar basadas en personas.
@@ -326,7 +328,7 @@ Después de confirmar que se enumeran las audiencias correctas, puede continuar 
 
 En el siguiente vídeo se muestra cómo acceder y utilizar la evaluación de audiencia flexible en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453643?captions=spa&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Preguntas frecuentes {#faq}
 
