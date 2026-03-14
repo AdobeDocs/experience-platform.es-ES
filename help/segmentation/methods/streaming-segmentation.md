@@ -134,7 +134,7 @@ Tenga en cuenta las siguientes directrices que se aplican a las consultas de seg
 | Tipo de consulta | Pauta |
 | ---------- | -------- |
 | Conjunto de reglas de evento único | La ventana retrospectiva está limitada a **un día**. |
-| Consulta con historial de eventos | <ul><li>La ventana de retrospectiva está limitada a **un día**.</li><li>Entre los eventos debe existir una condición estricta de ordenación de tiempo ****.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **no puede** ser una negación.</li></ul> |
+| Consulta con historial de eventos | <ul><li>La ventana de retrospectiva está limitada a **un día**.</li><li>Entre los eventos debe existir una condición estricta de ordenación de tiempo **&#x200B;**.</li><li>Se admiten consultas con al menos un evento denegado. Sin embargo, todo el evento **no puede** ser una negación.</li></ul> |
 
 Si se modifica una definición de segmento para que ya no cumpla los criterios de segmentación por secuencias, la definición de segmento cambiará automáticamente de &quot;Transmisión&quot; a &quot;Lote&quot;.
 
