@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
+source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1089'
 ht-degree: 34%
 
 ---
@@ -47,10 +47,10 @@ ht-degree: 34%
       - [Conector Kinesis de Amazon](connectors/cloud-storage/kinesis.md)
       - [Conector de Amazon S3](connectors/cloud-storage/s3.md)
       - [Conector de Apache HDFS](connectors/cloud-storage/hdfs.md)
-      - [Conector de Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md)
+      - [Conector Gen2 de Azure Data Lake Storage](connectors/cloud-storage/adls-gen2.md)
       - [Conector de Azure Blob](connectors/cloud-storage/blob.md)
       - [Conector de Azure Event Hubs](connectors/cloud-storage/eventhub.md)
-      - [Conector de Azure File Storage](connectors/cloud-storage/azure-file-storage.md)
+      - [Conector de almacenamiento de archivos Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Zona de aterrizaje de datos](connectors/cloud-storage/data-landing-zone.md)
       - [Conector de FTP](connectors/cloud-storage/ftp.md)
       - [Conector de Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md)
@@ -72,10 +72,10 @@ ht-degree: 34%
       - [Conector de Zendesk](connectors/customer-success/zendesk.md)
    - Bases de datos {#databases}
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
-      - [Apache Hive en el conector de Azure HDInsights](connectors/databases/hive.md)
+      - [Apache Hive en el conector Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark en el conector Azure HDInsights](connectors/databases/spark.md)
-      - [Conector de Azure Databricks](connectors/databases/databricks.md)
-      - [Conector de Azure Data Explorer](connectors/databases/data-explorer.md)
+      - [Conector Databricks de Azure](connectors/databases/databricks.md)
+      - [Conector Data Explorer de Azure](connectors/databases/data-explorer.md)
       - [Conector de Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de Azure Table Storage](connectors/databases/ats.md)
       - [Conector de Google BigQuery](connectors/databases/bigquery.md)
@@ -97,6 +97,8 @@ ht-degree: 34%
       - [Bombora Intent](connectors/data-partners/bombora.md)
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Resolución de identidad de Merkury Enterprise](connectors/data-partners/merkury.md)
+   - Intercambio de datos {#data-sharing}
+      - [Deltashare](connectors/data-sharing/deltashare.md)
    - eCommerce {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -310,6 +312,8 @@ ht-degree: 34%
          - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Resolución de identidad de Merkury Enterprise](tutorials/ui/create/data-partners/merkury.md)
+      - Intercambio de datos {#data-sharing}
+         - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
       - eCommerce {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
