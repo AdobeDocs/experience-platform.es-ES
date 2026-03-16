@@ -4,9 +4,9 @@ description: Aprenda a crear una conexión de origen y un flujo de datos para in
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '677'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecb
 
 ### Recuperación del token de acceso
 
-Ahora que tiene su ID de cliente, secreto de cliente y código de autorización, puede recuperar su token de acceso. Para recuperar su token de acceso, realice una solicitud de POST a la dirección URL `myshopify.com` de su dominio mientras anexa esta dirección URL con el extremo de la API [!DNL Shopify's]: `/admin/oauth/access_token`.
+Ahora que tiene su ID de cliente, secreto de cliente y código de autorización, puede recuperar su token de acceso. Para recuperar su token de acceso, realice una petición POST a la URL `myshopify.com` de su dominio mientras anexa esta URL con el extremo de la API [!DNL Shopify's]: `/admin/oauth/access_token`.
 
 **Formato de API**
 
@@ -104,7 +104,7 @@ Una respuesta correcta devuelve el token de acceso y los ámbitos de permisos.
 
 ## Crear un webhook para transmitir datos de [!DNL Shopify] {#webhook}
 
-Los webhooks permiten que las aplicaciones permanezcan sincronizadas con sus datos de [!DNL Shopify] o que realicen una acción después de que un evento en particular ocurra en una tienda. Para transmitir datos de [!DNL Shopify] al Experience Platform, se pueden usar los enlaces web para definir el extremo http y los temas de la suscripción.
+Los webhooks permiten que las aplicaciones permanezcan sincronizadas con sus datos de [!DNL Shopify] o que realicen una acción después de que un evento en particular ocurra en una tienda. Para transmitir datos de [!DNL Shopify] a Experience Platform, se pueden usar webhooks para definir el extremo http y los temas de la suscripción.
 
 **Solicitud**
 
@@ -117,7 +117,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "format": "json"
   }
@@ -126,7 +126,7 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --- | --- | 
-| `webhook.address` | Punto final http al que se envían los mensajes de flujo continuo. |
+| `webhook.address` | Punto final http al que se envían los mensajes de flujo continuo. La plantilla para el webhook es: `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
 | `webhook.topic` | El tema de la suscripción al webhook. Para obtener más información, lea la [[!DNL Shopify] guía de temas de eventos de ganchos web](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | El formato de los datos. |
 
@@ -138,7 +138,7 @@ Una respuesta correcta devuelve información sobre el webhook, incluido su `id`,
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",
@@ -159,9 +159,9 @@ A continuación se muestra una lista de limitaciones conocidas que pueden surgir
 * Puede configurar el webhook para que envíe eventos de webhook a un punto final al menos una vez. Esto significa que un extremo puede recibir el mismo evento más de una vez. Puede buscar eventos de webhook duplicados comparando el encabezado `X-Shopify-Webhook-Id` con eventos anteriores.
 * [!DNL Shopify] trata las respuestas de estado HTTP 2xx como notificaciones correctas. Cualquier otra respuesta del código de estado se considera un error. [!DNL Shopify] proporciona un mecanismo de reintento para las notificaciones de ganchos web con errores. Si no hay **ninguna respuesta después de esperar cinco segundos**, [!DNL Shopify] reintenta la conexión **19 veces** durante las siguientes **48 horas**. Si al final del período de reintento aún no hay respuestas, [!DNL Shopify] elimina el webhook.
 
-## Pasos siguientes
+## Próximos pasos
 
-Los siguientes tutoriales proporcionan los pasos para conectar el origen de [!DNL Shopify Streaming] al Experience Platform mediante la API y la interfaz de usuario:
+Los siguientes tutoriales proporcionan instrucciones sobre cómo conectar el origen de [!DNL Shopify Streaming] a Experience Platform mediante la API y la interfaz de usuario:
 
 * [Cree una conexión de origen y un flujo de datos de Shopify Streaming mediante la API de Flow Service](../../tutorials/api/create/ecommerce/shopify-streaming.md)
 * [Cree una conexión de origen y un flujo de datos de Shopify Streaming en la interfaz de usuario](../../tutorials/ui/create/ecommerce/shopify-streaming.md)
