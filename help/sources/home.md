@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 73244fe6f7413fc66773789da2b5491a1ed49f15
+source-git-commit: 6142801c9008c10a3d1a0a11976a2c99fb6cee86
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 12%
+source-wordcount: '1721'
+ht-degree: 11%
 
 ---
 
@@ -38,6 +38,10 @@ En el caso de los conectores creados y mantenidos por el socio, esto significa q
 
 ## Catálogo de fuentes
 
+>[!NOTE]
+>
+>Los flujos de datos de ingesta de Source que fallan continuamente durante 30 días se deshabilitarán automáticamente. Use [Panel de supervisión](/help/dataflows/ui/monitor-sources.md) para revisar el flujo de datos, identificar por qué falló (por ejemplo, credenciales, permisos o cambios de esquema o asignación), aplicar las actualizaciones necesarias y volver a habilitar el flujo de datos una vez resuelto.
+
 Lea las secciones siguientes para obtener una lista de todas las fuentes disponibles en el catálogo de fuentes.
 
 ### Aplicaciones de Adobe {#adobe-applications}
@@ -61,7 +65,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 ### Fuentes empresariales avanzadas {#advanced-enterprise-sources}
 
-Las siguientes fuentes solo están disponibles para [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) o clientes que tengan licencia del SKU independiente de Advanced Enterprise Source Connectors.
+Las siguientes fuentes solo están disponibles para [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) o clientes que tengan licencia del SKU independiente de Advanced Enterprise Source Connectors.
 
 | Fuente | Categoría | Tipo de ingesta | Nube |
 | --- | --- | --- | --- |
