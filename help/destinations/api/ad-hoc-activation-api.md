@@ -5,9 +5,9 @@ title: Activar audiencias en destinos por lotes mediante la API de activación a
 description: Este artículo ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: e5a757fcd73fc743b570c6456a66907e4720e8b6
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Los administradores de TI pueden utilizar la API de activación ad hoc de Experi
 Tenga en cuenta las siguientes protecciones al utilizar la API de activación ad-hoc.
 
 * Actualmente, cada trabajo de activación ad-hoc puede activar hasta 80 audiencias. Si se intentan activar más de 80 audiencias por trabajo, el trabajo fallará. Este comportamiento está sujeto a cambios en futuras versiones.
-* Los trabajos de activación específicos no se pueden ejecutar en paralelo con los [trabajos de exportación de audiencias](../../segmentation/api/export-jobs.md) programados. Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de audiencia programado haya finalizado. Consulte [supervisión del flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo supervisar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra el estado **[!UICONTROL Procesando]**, espere a que finalice antes de ejecutar el trabajo de activación ad-hoc.
+* Los trabajos de activación específicos no se pueden ejecutar en paralelo con los [trabajos de exportación de audiencias](../../segmentation/api/export-jobs.md) programados. Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de audiencia programado haya finalizado. Consulte [supervisión del flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo supervisar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra un estado **[!UICONTROL Processing]**, espere a que finalice antes de ejecutar el trabajo de activación ad-hoc.
 * No ejecute más de un trabajo de activación ad hoc simultáneo por audiencia.
 
 ## Consideraciones de segmentación {#segmentation-considerations}
@@ -126,7 +126,7 @@ Adobe Experience Platform ejecuta trabajos de segmentación programados una vez 
 >
 >Tenga en cuenta la siguiente restricción de una sola vez: antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que haya transcurrido al menos una hora desde el momento en que la audiencia se activó por primera vez según la programación establecida en [Paso 3: crear flujo de activación en la interfaz de usuario de Experience Platform](#activation-flow).
 
-Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de audiencias programado para sus audiencias haya finalizado. Consulte [supervisión del flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo supervisar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra el estado **[!UICONTROL Procesando]**, espere a que finalice antes de ejecutar el trabajo de activación ad-hoc para exportar un archivo completo.
+Antes de ejecutar un trabajo de activación ad-hoc, asegúrese de que el trabajo de exportación de audiencias programado para sus audiencias haya finalizado. Consulte [supervisión del flujo de datos de destino](../../dataflows/ui/monitor-destinations.md) para obtener información sobre cómo supervisar el estado de los flujos de activación. Por ejemplo, si el flujo de datos de activación muestra un estado **[!UICONTROL Processing]**, espere a que finalice antes de ejecutar el trabajo de activación ad-hoc para exportar un archivo completo.
 
 Una vez completado el trabajo de exportación de audiencias, puede almacenar la activación en déclencheur.
 
@@ -139,6 +139,10 @@ Una vez completado el trabajo de exportación de audiencias, puede almacenar la 
 >[!IMPORTANT]
 >
 >Es obligatorio incluir el encabezado `Accept: application/vnd.adobe.adhoc.activation+json; version=2` en su solicitud para utilizar la versión 2 de la API de activación ad-hoc.
+
+Para las audiencias de servicio que no son de segmentación (por ejemplo, [audiencias de carga externas o personalizadas](../../segmentation/ui/audience-portal.md#import-audience)), debe especificar en la solicitud el ID de audiencia generado por Experience Platform, no el ID de audiencia externa. Puede encontrar el ID generado por el sistema en la parte superior del [panel de resumen de audiencias](../../segmentation/ui/audience-portal.md#audience-summary), que se muestra como **ID#** seguido de un UUID, al abrir la página de detalles de audiencia en la interfaz de usuario de audiencias.
+
+![El panel Resumen de audiencia muestra el campo de ID generado por el sistema resaltado en la parte superior del panel.](../assets/api/ad-hoc-activation/audience-summary-id.png)
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun' \
@@ -164,7 +168,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos identificadores desde la interfaz de usuario de Experience Platform: para ello, vaya a la pestaña **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haga clic en la fila de destino que desee para que aparezca el identificador de destino en el carril derecho. Para obtener más información, lea la [documentación del área de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos ID desde la interfaz de usuario de Experience Platform, navegando hasta la pestaña **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** y haciendo clic en la fila de destino deseada para que aparezca el ID de destino en el carril derecho. Para obtener más información, lea la [documentación del área de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Los ID de las audiencias que desea activar en el destino seleccionado. Puede utilizar la API específica para exportar audiencias generadas por Experience Platform, así como audiencias externas (carga personalizada). Cuando active audiencias externas, utilice el ID generado por el sistema en lugar del ID de audiencia. Puede encontrar el ID generado por el sistema en la vista Resumen de audiencias de la interfaz de usuario de audiencias. <br> ![Vista del ID de audiencia que no debería estar seleccionado.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Vista del ID de audiencia que no debería seleccionarse."){width="100" zoomable="yes"} <br> ![Vista del ID de audiencia generado por el sistema que se debe usar.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Vista del ID de audiencia generado por el sistema que se debe usar."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -205,7 +209,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos identificadores desde la interfaz de usuario de Experience Platform: para ello, vaya a la pestaña **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haga clic en la fila de destino que desee para que aparezca el identificador de destino en el carril derecho. Para obtener más información, lea la [documentación del área de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos ID desde la interfaz de usuario de Experience Platform, navegando hasta la pestaña **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** y haciendo clic en la fila de destino deseada para que aparezca el ID de destino en el carril derecho. Para obtener más información, lea la [documentación del área de trabajo de destinos](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Los ID de las audiencias que desea activar en el destino seleccionado. |
 | <ul><li>`exportId1`</li></ul> | El identificador devuelto en la respuesta del trabajo [exportación de audiencia](../../segmentation/api/export-jobs.md#retrieve-list). Consulte [Paso 4: Obtenga la última ID de trabajo de exportación de audiencias](#segment-export-id) para obtener instrucciones sobre cómo encontrar esta ID. |
 
@@ -251,4 +255,4 @@ Al utilizar la API de activación ad hoc, puede encontrar mensajes de error espe
 ## Información relacionada {#related-information}
 
 * [Conéctese a destinos por lotes y active los datos mediante la API de Flow Service](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Beta) Exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform](/help/destinations/ui/export-file-now.md)
+* [Exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform](/help/destinations/ui/export-file-now.md)
