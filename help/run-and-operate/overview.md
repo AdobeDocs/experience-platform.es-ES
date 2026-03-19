@@ -2,13 +2,13 @@
 title: Información general sobre Ejecutar y operar
 description: Inspeccione, solucione problemas y optimice las implementaciones de Experience Platform con las herramientas Ejecutar y operar. Obtenga visibilidad sobre las activaciones por lotes programadas, identifique los problemas de configuración y mejore la fiabilidad del sistema.
 hide: true
-source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
+exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
+source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
-
 
 # Información general sobre Ejecutar y operar
 
@@ -47,7 +47,7 @@ Para acceder a las herramientas Ejecutar y Operar desde la interfaz de usuario d
 
    >[!NOTE]
    >
-   >Actualmente, la única capacidad disponible es [Horarios de trabajo](job-schedules.md).
+   >Actualmente, las capacidades disponibles son [Programaciones de trabajos](job-schedules.md) y [Comprobaciones de estado](health-checks.md).
 
 ![Interfaz de usuario de Experience Platform que muestra la navegación izquierda Ejecutar y operar.](assets/overview/run-and-operate.png)
 
@@ -78,12 +78,28 @@ Los horarios de trabajo ofrecen tres niveles de investigación:
 
 También puede comprender las dependencias entre las fases de procesamiento de datos, lo que le ayuda a garantizar un flujo de datos fiable a través de los flujos de trabajo de Experience Platform.
 
+### Comprobaciones de estado {#health-checks}
+
+>[!IMPORTANT]
+>
+>[!UICONTROL Health checks] están disponibles actualmente como una versión limitada.
+
+Con las [comprobaciones de estado](health-checks.md), puede detectar de forma proactiva los problemas de configuración de identidades y esquemas antes de que afecten a las operaciones empresariales. En este momento, las comprobaciones de estado ejecutan análisis estáticos diarios en los esquemas y áreas de nombres de identidad, mostrando las prácticas recomendadas, las configuraciones incorrectas y los patrones que faltan y que conducen a errores descendentes.
+
+Actualmente se evalúan cinco áreas fundacionales:
+
+* **[Validación de campo de identidad](health-checks.md#identity-field-validation)**: compruebe que los campos de identidad tengan las restricciones de longitud y patrón adecuadas.
+* **[Reglas de vinculación de gráficos de identidad](health-checks.md#identity-graph-linking-rules)**: confirme que las reglas de vinculación están configuradas para evitar el colapso del perfil.
+* **[Configuración de identidad de personas y no personas](health-checks.md#people-non-people-identity)**: valide el uso correcto del tipo de identidad en todas las clases de esquema.
+* **[Descripciones del área de nombres de identidad personalizada](health-checks.md#namespace-missing-description)**: Asegúrese de que los metadatos del área de nombres estén completos.
+* **[Áreas de nombres de identidad obsoletas](health-checks.md#deprecated-namespace)**: detecte áreas de nombres obsoletas para la limpieza.
+
 ## Próximos pasos {#next-steps}
 
 Ahora que comprende el propósito y las capacidades de las herramientas de [!UICONTROL Run and Operate], explore los siguientes recursos para profundizar sus conocimientos:
 
-* Obtenga información sobre la [ingesta por lotes](../ingestion/batch-ingestion/overview.md) para comprender cómo se incorporan los datos en Experience Platform
+* Aprenda a utilizar [comprobaciones de estado](health-checks.md) para detectar problemas de configuración de identidad y esquema
 * Aprenda a [inspeccionar los horarios de trabajo](job-schedules.md) para la ingesta y las activaciones por lotes
+* Obtenga información sobre la [ingesta por lotes](../ingestion/batch-ingestion/overview.md) para comprender cómo se incorporan los datos en Experience Platform
 * Obtenga información sobre cómo [configurar activaciones programadas](../destinations/ui/activate-batch-profile-destinations.md) para destinos por lotes
 * Explorar [monitorización de flujo de datos](../dataflows/ui/monitor-destinations.md) para destinos
-
