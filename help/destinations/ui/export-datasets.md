@@ -78,7 +78,7 @@ Utilice la siguiente tabla para comprender qué tipos de conjuntos de datos pued
 
 Vea el siguiente vídeo para obtener una explicación completa del flujo de trabajo descrito en esta página, los beneficios de utilizar la funcionalidad de exportar conjunto de datos y algunos casos de uso sugeridos.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448821?captions=spa)
 
 ## Destinos admitidos {#supported-destinations}
 
