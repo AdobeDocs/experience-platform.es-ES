@@ -42,7 +42,7 @@ Seleccione la propiedad de etiqueta en la que desea instalar la extensión. Tamb
 
 El flujo de trabajo le lleva a la IU de recopilación de datos para completar la instalación.
 
-Para obtener información sobre las opciones de configuración de la extensión, consulte la [página de extensión de Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) en la documentación de etiquetas.
+Para obtener información sobre las opciones de configuración de la extensión, consulte la [página de extensión de Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=es) en la documentación de etiquetas.
 
 También puede instalar la extensión directamente en la [IU de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía de [adición de una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 

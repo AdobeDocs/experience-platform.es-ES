@@ -45,7 +45,7 @@ Pueden activar sus audiencias en Marketo Engage y utilizar el tipo de sincroniza
 
 ## Requisitos previos {#prerequisites}
 
-* El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en su instancia y partición de Marketo.
+* El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en su instancia y partición de Marketo.
 * Al configurar este destino, solo estarán disponibles las instancias de Marketo Engage en la misma organización de Adobe Real-Time CDP.
 * Solo las instancias de Marketo Engage que tienen sus usuarios administrados en Adobe Admin Console pueden utilizar este destino.
 
@@ -146,7 +146,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
    * **[!UICONTROL Profile only]**: seleccione esta opción cuando desee mantener los perfiles de posibles clientes de Marketo actualizados con la información más reciente de Experience Platform.
    * **[!UICONTROL Audience only]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo sin actualizar su información de perfil.
 * **[!UICONTROL Partition]**: *La selección de particiones solo está disponible al elegir **[!UICONTROL Profile only]**&#x200B;o **[!UICONTROL Audience and profile]**&#x200B;tipos de sincronización*. Seleccione un ID de partición de Marketo asociado al espacio de trabajo elegido. Esto le permite especificar qué partición de posible cliente en Marketo recibirá los datos exportados. Si no elige una partición específica, los datos se enviarán a la partición **[!UICONTROL Default]** en Marketo.
-* **[!UICONTROL Marketo deduplication field]**: seleccione el campo de anulación de duplicación de Marketo que desee utilizar al actualizar posibles clientes de Marketo existentes. Este selector muestra los campos que ha marcado como campos de anulación de duplicación en Marketo. Si desea que un campo específico de Marketo se muestre como un campo de anulación de duplicación, debe marcar el campo como [campo en el que se puede buscar](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) en Marketo.
+* **[!UICONTROL Marketo deduplication field]**: seleccione el campo de anulación de duplicación de Marketo que desee utilizar al actualizar posibles clientes de Marketo existentes. Este selector muestra los campos que ha marcado como campos de anulación de duplicación en Marketo. Si desea que un campo específico de Marketo se muestre como un campo de anulación de duplicación, debe marcar el campo como [campo en el que se puede buscar](https://experienceleague.adobe.com/es/docs/marketo-developer/marketo/rest/lead-database/lead-database) en Marketo.
 
   >[!NOTE]
   >

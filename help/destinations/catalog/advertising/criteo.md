@@ -35,7 +35,7 @@ Criteo potencia una publicidad fiable e impactante para llevar experiencias más
 
 ## Identidades admitidas {#supported-identities}
 
-Criteo admite la activación de identidades descritas en la siguiente tabla. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+Criteo admite la activación de identidades descritas en la siguiente tabla. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es#getting-started).
 
 | Identidad de destino | Descripción | Consideraciones |
 | --- | --- | --- |
