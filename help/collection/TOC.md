@@ -3,13 +3,13 @@ audience: user
 solution: Data Collection
 user-guide-title: Recopilación de datos
 breadcrumb-title: Recopilación de datos
-user-guide-description: Obtenga información sobre cómo enviar datos a Adobe Experience Platform.
+user-guide-description: Aprenda a enviar datos a Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
+source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 30%
+source-wordcount: '152'
+ht-degree: 36%
 
 ---
 
@@ -103,6 +103,8 @@ ht-degree: 30%
       + [Información general](use-cases/identity/id-overview.md)
       + [ID de dispositivos propios](use-cases/identity/first-party-device-ids.md)
       + [Uso compartido de ID](use-cases/identity/id-sharing.md)
+   + MCP {#mcp}
+      + [Aplicaciones de ChatGPT](use-cases/mcp/chatgpt.md)
    + [Varias instancias de SDK](use-cases/multiple-instances.md)
    + Personalización {#personalization}
       + [Información general](use-cases/personalization/pers-overview.md)
